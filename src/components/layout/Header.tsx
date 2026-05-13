@@ -45,20 +45,29 @@ export default function Header() {
         `}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          {/* ── Logo / Brand — light weight, wide tracking ── */}
-          <Link href="/" className="group">
+          {/* ── Logo / Brand — Barrett Henry with NOW Team subtitle ── */}
+          <Link href="/" className="group flex flex-col">
             <span
               className={`
-                font-heading font-light text-lg tracking-[0.25em] uppercase
+                font-heading font-light text-lg tracking-[0.25em] uppercase leading-tight
                 transition-colors duration-500
                 ${scrolled ? "text-primary" : "text-white"}
               `}
             >
               Barrett Henry
             </span>
+            <span
+              className={`
+                font-body text-[9px] tracking-[0.2em] uppercase leading-tight
+                transition-colors duration-500
+                ${scrolled ? "text-primary/40" : "text-white/40"}
+              `}
+            >
+              The NOW Team &nbsp;|&nbsp; REMAX
+            </span>
           </Link>
 
-          {/* ── Desktop nav links — small uppercase with animated underline ── */}
+          {/* ── Desktop nav links + phone number ── */}
           <ul className="hidden md:flex items-center gap-10">
             {NAV_LINKS.map((link) => {
               // Highlight the active link by matching the current pathname
@@ -89,6 +98,18 @@ export default function Header() {
               );
             })}
           </ul>
+
+          {/* ── Phone number — visible on desktop, right-aligned ── */}
+          <a
+            href="tel:+18137337907"
+            className={`
+              hidden md:block font-body text-xs tracking-[0.15em] uppercase
+              transition-colors duration-500
+              ${scrolled ? "text-primary/50 hover:text-primary" : "text-white/50 hover:text-white"}
+            `}
+          >
+            (813) 733-7907
+          </a>
 
           {/* ── Mobile hamburger toggle ── */}
           <MobileNav scrolled={scrolled} />

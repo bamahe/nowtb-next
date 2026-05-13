@@ -5,6 +5,7 @@
 // =============================================================================
 
 import type { Metadata } from "next";
+import Image from "next/image";
 import HeroSection from "@/components/ui/HeroSection";
 import ContactForm from "@/components/ui/ContactForm";
 
@@ -37,9 +38,9 @@ export default function ContactPage() {
     <>
       {/* ---- Hero Section — full viewport ---- */}
       <HeroSection
-        title="Contact"
-        label="GET IN TOUCH"
-        subtitle="Have a question about buying, selling, or investing? Let's talk."
+        title="Let&apos;s Talk"
+        label="BARRETT HENRY | THE NOW TEAM"
+        subtitle="Have a question about buying, selling, or investing? I'd rather talk than text. Call me directly or drop a message below."
         fullHeight
       />
 
@@ -47,23 +48,37 @@ export default function ContactPage() {
       <section className="section-white">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-            {/* Left column — large heading + contact details, spacious */}
+            {/* Left column — Barrett's photo + contact details */}
             <div className="py-8">
+              {/* Barrett's headshot */}
+              <div className="mb-8 w-32 h-32 relative overflow-hidden">
+                <Image
+                  src="/images/barrett-henry.jpg"
+                  alt="Barrett Henry, REALTOR® and Broker Associate"
+                  width={128}
+                  height={128}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+
               <p className="heading-label mb-6">Barrett Henry, REALTOR®</p>
               <h2 className="font-heading font-extralight text-3xl md:text-4xl lg:text-5xl tracking-[0.1em] uppercase text-primary leading-tight">
-                Let&apos;s Start a Conversation
+                Talk to Barrett Directly
               </h2>
               <div className="section-divider !mx-0 !ml-0" />
 
-              {/* Phone — large and prominent */}
+              {/* Phone — large and prominent, primary CTA */}
               <div className="mb-10">
-                <p className="heading-label mb-3">Phone</p>
+                <p className="heading-label mb-3">Call Me</p>
                 <a
                   href="tel:+18137337907"
                   className="font-heading font-extralight text-2xl md:text-3xl text-primary hover:text-accent transition-colors duration-300"
                 >
                   (813) 733-7907
                 </a>
+                <p className="font-body text-muted text-sm font-light mt-2">
+                  I pick up. If I miss you, I&apos;ll call back.
+                </p>
               </div>
 
               {/* Email */}
@@ -144,7 +159,11 @@ export default function ContactPage() {
           <div className="section-divider mt-12" />
           <p className="font-body text-white/50 font-light mt-8 text-sm">
             Whether you&apos;re buying, selling, or investing anywhere in the
-            Tampa Bay metro, Barrett and The NOW Team are ready to help.
+            Tampa Bay metro — call Barrett directly at{" "}
+            <a href="tel:+18137337907" className="text-white/70 hover:text-accent transition-colors duration-300">
+              (813) 733-7907
+            </a>.
+            The NOW Team is ready when you are.
           </p>
         </div>
       </section>

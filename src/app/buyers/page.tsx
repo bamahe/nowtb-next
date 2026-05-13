@@ -25,19 +25,19 @@ export const metadata: Metadata = {
 // --- Benefits data for "Why Work With Barrett" section ---
 const benefits = [
   {
-    title: "Market Expertise",
+    title: "I Know This Market",
     description:
-      "Deep knowledge of Tampa Bay's 7-county market means you get accurate pricing data, neighborhood insights, and investment-grade analysis before you make a move.",
+      "I work across all 7 Tampa Bay counties every day. You get real pricing data, honest neighborhood insights, and investment-grade analysis — not guesswork from a part-timer.",
   },
   {
-    title: "Negotiation Skills",
+    title: "I Fight for Your Deal",
     description:
-      "23+ years of deal-making experience translates to stronger offers, better terms, and more money in your pocket at the closing table.",
+      "23+ years of negotiation experience means I know how to write offers that win, terms that protect you, and strategies that keep more money in your pocket.",
   },
   {
-    title: "Full-Service Support",
+    title: "The NOW Team Has Your Back",
     description:
-      "From pre-approval to closing day, you get hands-on guidance at every step — lender referrals, inspections, title coordination, and beyond.",
+      "From pre-approval to closing day, my team and I handle every detail — lender referrals, inspections, title coordination, and everything in between. You're never on your own.",
   },
 ];
 
@@ -53,7 +53,7 @@ const buyingSteps = [
     step: 2,
     title: "Define Your Criteria",
     description:
-      "Bedrooms, neighborhoods, school districts, commute — we'll nail down exactly what you need so we're only looking at homes that fit.",
+      "Bedrooms, neighborhoods, school districts, commute — I'll nail down exactly what you need so we're only looking at homes that actually fit your life.",
   },
   {
     step: 3,
@@ -65,13 +65,13 @@ const buyingSteps = [
     step: 4,
     title: "Make an Offer",
     description:
-      "We'll analyze comparable sales, craft a competitive offer, and negotiate terms that protect your interests.",
+      "I'll analyze comparable sales, craft a competitive offer, and negotiate terms that protect your interests. This is where 23+ years of experience pays off.",
   },
   {
     step: 5,
     title: "Inspections & Appraisal",
     description:
-      "Home inspection, appraisal, and any specialty inspections happen here. We'll handle repair negotiations if anything comes up.",
+      "Home inspection, appraisal, and any specialty inspections happen here. The NOW Team handles repair negotiations if anything comes up — you won't be left guessing.",
   },
   {
     step: 6,
@@ -87,8 +87,8 @@ export default function BuyersPage() {
       {/* ---- Hero Section — full viewport ---- */}
       <HeroSection
         title="Buying a Home"
-        label="TAMPA BAY REAL ESTATE"
-        subtitle="Your step-by-step guide with a Broker who has 23+ years of experience."
+        label="BARRETT HENRY | THE NOW TEAM"
+        subtitle="I've helped hundreds of buyers find the right home at the right price. Here's how we do it."
         fullHeight
       />
 
@@ -166,7 +166,7 @@ export default function BuyersPage() {
           <div className="section-divider" />
           <p className="font-body text-white/70 font-light text-base md:text-lg max-w-2xl mx-auto mb-10">
             Browse active listings across Tampa Bay — updated every 5 minutes from
-            Stellar MLS.
+            Stellar MLS. See something you like? Call me directly at (813) 733-7907.
           </p>
           <Link href="/properties" className="btn-secondary">
             View All Properties

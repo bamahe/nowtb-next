@@ -41,21 +41,21 @@ export const metadata: Metadata = {
 const VALUE_PROPS = [
   {
     icon: Shield,
-    title: "23+ Years Experience",
+    title: "23+ Years Closing Deals",
     description:
-      "Navigating complex deals with confidence built from two decades of closings.",
+      "I've been in this business since 2003. That means I've seen every market cycle, every curveball, and every creative solution. Experience isn't a bullet point — it's your safety net.",
   },
   {
     icon: TrendingUp,
-    title: "Data-Driven Strategy",
+    title: "Numbers Don't Lie",
     description:
-      "Market analysis and pricing strategies that maximize your investment.",
+      "I price homes with data, not wishful thinking. My team and I pull the comps, track the trends, and give you the honest numbers so you make smart moves — not emotional ones.",
   },
   {
     icon: Users,
-    title: "Local Market Expert",
+    title: "Tampa Bay, Inside and Out",
     description:
-      "Deep knowledge of Tampa Bay's neighborhoods, schools, and lifestyle.",
+      "From Riverview to St. Pete, Brandon to Sarasota — I know the neighborhoods, the school zones, the flood maps, and what's actually happening on the ground across all 7 counties.",
   },
 ] as const;
 
@@ -110,8 +110,8 @@ export default async function HomePage() {
           ================================================================= */}
       <HeroSection
         title="Find Your Home"
-        label="TAMPA BAY REAL ESTATE"
-        subtitle="Broker Associate at REMAX Collective with 23+ years of real estate experience."
+        label="BARRETT HENRY | THE NOW TEAM"
+        subtitle="Broker Associate with 23+ years in the business. I help buyers, sellers, and investors across Tampa Bay get the deal done."
         fullHeight
       >
         {/* Dual CTA buttons — transparent with white border for luxury feel */}
@@ -252,7 +252,7 @@ export default async function HomePage() {
         <div className="container-wide text-center">
           {/* Light-weight heading */}
           <h2 className="font-heading font-extralight text-3xl md:text-4xl lg:text-5xl tracking-[0.1em] uppercase text-white mb-2">
-            Let&apos;s Connect
+            Let&apos;s Talk Real Estate
           </h2>
           <div className="section-divider" />
 

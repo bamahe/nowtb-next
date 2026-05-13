@@ -84,21 +84,29 @@ export default function AboutPage() {
               <p className="font-body text-muted text-sm tracking-wide uppercase">Barrett Henry</p>
             </div>
 
-            {/* Bio text (right column) */}
+            {/* Bio text (right column) — first-person, personal tone */}
             <div className="py-8">
-              <p className="heading-label mb-4">{agent.title}</p>
+              <p className="heading-label mb-4">Broker Associate | REMAX Collective</p>
               <h2 className="font-heading font-extralight text-3xl md:text-4xl tracking-[0.1em] uppercase text-primary mb-2">
-                {agent.name}
+                Barrett Henry
               </h2>
               <div className="section-divider !mx-0 !ml-0" />
               <div className="font-body text-muted font-light space-y-4 leading-relaxed">
-                <p>{agent.bio}</p>
                 <p>
-                  As team lead of The NOW Team, Barrett combines deep market
-                  knowledge with a no-nonsense, results-driven approach. Whether
-                  you&apos;re buying your first home, selling a luxury property,
-                  or building an investment portfolio, Barrett provides the
-                  data-driven guidance and relentless negotiation you need to win.
+                  I&apos;ve been in real estate since 2003 — 23+ years and
+                  counting. I&apos;m a licensed Broker Associate with REMAX
+                  Collective and the team lead of The NOW Team. My focus is
+                  simple: get my clients the best possible outcome, whether
+                  that&apos;s buying, selling, or investing.
+                </p>
+                <p>
+                  I specialize in residential sales, investment properties, new
+                  construction, and military relocation across Tampa Bay. My
+                  approach is data-driven and no-nonsense — I give you the real
+                  numbers, the honest advice, and the relentless negotiation it
+                  takes to win in this market. The NOW Team and I serve buyers
+                  and sellers across 7 counties, and we treat every transaction
+                  like our reputation depends on it — because it does.
                 </p>
               </div>
             </div>
@@ -115,8 +123,8 @@ export default function AboutPage() {
               <p className="heading-label mt-4">Counties Served</p>
             </div>
             <div>
-              <p className="stat-number text-primary">3,500+</p>
-              <p className="heading-label mt-4">Pages on Site</p>
+              <p className="stat-number text-primary">TNT</p>
+              <p className="heading-label mt-4">The NOW Team</p>
             </div>
           </div>
         </div>

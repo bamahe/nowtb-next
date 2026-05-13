@@ -63,10 +63,10 @@ export default function HeroSection({
           fullHeight ? "pb-24 md:pb-32 pt-16" : "py-16 md:py-20"
         )}
       >
-        {/* Optional small label above title — brand identifier */}
-        {label && (
-          <p className="heading-label text-white/50 mb-8">{label}</p>
-        )}
+        {/* Small label above title — defaults to Barrett's brand if none passed */}
+        <p className="heading-label text-white/50 mb-8">
+          {label || "BARRETT HENRY | THE NOW TEAM"}
+        </p>
 
         {/* Heading — ultra-light weight, wide tracking, large fluid sizing */}
         <h1 className="font-heading font-extralight text-4xl md:text-5xl lg:text-7xl tracking-[0.1em] uppercase text-white mb-0">

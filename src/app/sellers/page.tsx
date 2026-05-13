@@ -26,27 +26,27 @@ export const metadata: Metadata = {
 const pillars = [
   {
     step: 1,
-    title: "Pricing Analysis",
+    title: "Honest Pricing",
     description:
-      "We pull comparable sales, analyze market trends, and price your home to attract the most qualified buyers — no guessing, no overpricing traps.",
+      "I pull the comps, run the numbers, and give you a price that's based on data — not ego. Overpricing kills deals. I won't let that happen to you.",
   },
   {
     step: 2,
-    title: "Professional Marketing",
+    title: "The NOW Team Marketing Plan",
     description:
-      "HDR photography, 3D tours, targeted social ads, MLS syndication, and print materials. Your home gets maximum exposure to serious buyers.",
+      "HDR photography, 3D tours, targeted social ads, MLS syndication, and print materials. My team and I make sure every serious buyer in the market sees your home.",
   },
   {
     step: 3,
-    title: "Strategic Negotiation",
+    title: "Relentless Negotiation",
     description:
-      "23+ years of deal experience means stronger counter-offers, better contract terms, and more net proceeds at closing.",
+      "23+ years of deal-making means I know how to get you more at the closing table. Better terms, stronger counter-offers, and more net proceeds — that's the whole point.",
   },
   {
     step: 4,
-    title: "Smooth Closing",
+    title: "Closing Without the Drama",
     description:
-      "From accepted offer through closing day, we coordinate inspections, appraisals, title work, and repairs so nothing derails your sale.",
+      "From accepted offer through closing day, The NOW Team coordinates inspections, appraisals, title work, and repairs. I keep things on track so you don't have to stress.",
   },
 ];
 
@@ -56,8 +56,8 @@ export default function SellersPage() {
       {/* ---- Hero Section — full viewport ---- */}
       <HeroSection
         title="Sell Your Home"
-        label="TAMPA BAY REAL ESTATE"
-        subtitle="A data-driven selling strategy backed by 23+ years of real estate experience."
+        label="BARRETT HENRY | THE NOW TEAM"
+        subtitle="I don't guess on price and I don't cut corners on marketing. 23+ years of getting sellers top dollar."
         fullHeight
       />
 
@@ -67,7 +67,7 @@ export default function SellersPage() {
           <div className="text-center mb-16">
             <p className="heading-label mb-6">The Strategy</p>
             <h2 className="heading-section text-display-sm text-primary">
-              Barrett&apos;s Selling Strategy
+              How I Sell Your Home
             </h2>
             <div className="section-divider" />
           </div>
@@ -105,8 +105,8 @@ export default function SellersPage() {
           </h2>
           <div className="section-divider" />
           <p className="font-body text-muted font-light text-base md:text-lg max-w-2xl mx-auto mb-10">
-            Get a free, no-obligation home valuation from a local expert who
-            knows your neighborhood. Find out what buyers are paying right now.
+            I&apos;ll run the numbers on your home — no obligation, no pressure.
+            Find out what buyers are actually paying in your neighborhood right now.
           </p>
           <Link href="/sell-your-home" className="btn-primary">
             Get Your Home Value
