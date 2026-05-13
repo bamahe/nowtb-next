@@ -67,79 +67,84 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* ---- Hero Section ---- */}
-      <HeroSection title="About Barrett Henry" />
+      {/* ---- Hero Section — full viewport with label ---- */}
+      <HeroSection
+        title="About"
+        label="BARRETT HENRY, REALTOR®"
+        fullHeight
+      />
 
-      {/* ---- Bio Section ---- */}
-      <section className="container-wide py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          {/* Photo placeholder (left column) */}
-          <div className="aspect-[3/4] bg-gray-200 rounded-lg flex items-center justify-center">
-            {/* Replace with next/image once the photo file is added */}
-            <p className="font-body text-muted text-sm">Photo: Barrett Henry</p>
-          </div>
-
-          {/* Bio text (right column) */}
-          <div>
-            <h2 className="heading-section text-display-sm text-primary mb-2">
-              {agent.name}
-            </h2>
-            <p className="font-body text-accent font-medium mb-6">
-              {agent.title}
-            </p>
-            <div className="font-body text-muted space-y-4">
-              <p>{agent.bio}</p>
-              <p>
-                As team lead of The NOW Team, Barrett combines deep market
-                knowledge with a no-nonsense, results-driven approach. Whether
-                you&apos;re buying your first home, selling a luxury property,
-                or building an investment portfolio, Barrett provides the
-                data-driven guidance and relentless negotiation you need to win.
-              </p>
+      {/* ---- Bio Section — luxury 2-column layout ---- */}
+      <section className="section-white">
+        <div className="container-wide">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 items-start">
+            {/* Photo placeholder (left column) — large, no rounded corners */}
+            <div className="aspect-[3/4] bg-[#e8e4df] flex items-center justify-center">
+              {/* Replace with next/image once the photo file is added */}
+              <p className="font-body text-muted text-sm tracking-wide uppercase">Barrett Henry</p>
             </div>
 
-            {/* Quick facts */}
-            <div className="mt-8 grid grid-cols-2 gap-4">
-              <div className="card p-4 text-center">
-                <p className="font-heading font-bold text-2xl text-accent">
-                  23+
-                </p>
-                <p className="font-body text-muted text-sm">
-                  Years of Experience
+            {/* Bio text (right column) */}
+            <div className="py-8">
+              <p className="heading-label mb-4">{agent.title}</p>
+              <h2 className="font-heading font-extralight text-3xl md:text-4xl tracking-[0.1em] uppercase text-primary mb-2">
+                {agent.name}
+              </h2>
+              <div className="section-divider !mx-0 !ml-0" />
+              <div className="font-body text-muted font-light space-y-4 leading-relaxed">
+                <p>{agent.bio}</p>
+                <p>
+                  As team lead of The NOW Team, Barrett combines deep market
+                  knowledge with a no-nonsense, results-driven approach. Whether
+                  you&apos;re buying your first home, selling a luxury property,
+                  or building an investment portfolio, Barrett provides the
+                  data-driven guidance and relentless negotiation you need to win.
                 </p>
               </div>
-              <div className="card p-4 text-center">
-                <p className="font-heading font-bold text-2xl text-accent">
-                  7
-                </p>
-                <p className="font-body text-muted text-sm">
-                  Counties Served
-                </p>
-              </div>
+            </div>
+          </div>
+
+          {/* Stats row — large ultra-light numbers */}
+          <div className="grid grid-cols-3 gap-8 mt-24 max-w-3xl mx-auto text-center">
+            <div>
+              <p className="stat-number text-primary">23+</p>
+              <p className="heading-label mt-4">Years Experience</p>
+            </div>
+            <div>
+              <p className="stat-number text-primary">7</p>
+              <p className="heading-label mt-4">Counties Served</p>
+            </div>
+            <div>
+              <p className="stat-number text-primary">3,500+</p>
+              <p className="heading-label mt-4">Pages on Site</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ---- Designations & Specialties ---- */}
-      <section className="bg-gray-50 py-16">
+      {/* ---- Designations & Specialties — warm cream bg ---- */}
+      <section className="section-light">
         <div className="container-wide">
-          <h2 className="heading-section text-display-sm text-primary text-center mb-12">
-            Designations & Specialties
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="heading-label mb-6">Credentials</p>
+            <h2 className="heading-section text-display-sm text-primary">
+              Designations & Specialties
+            </h2>
+            <div className="section-divider" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-3xl mx-auto">
             {/* Designations */}
             <div>
-              <h3 className="heading-section text-lg text-primary mb-4">
+              <h3 className="heading-section text-sm text-primary mb-6">
                 Designations
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {agent.designations.map((d) => (
                   <li
                     key={d}
-                    className="font-body text-muted flex items-center gap-2"
+                    className="font-body text-muted font-light flex items-center gap-3"
                   >
-                    <span className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
+                    <span className="w-6 h-[1px] bg-accent flex-shrink-0" />
                     {d}
                   </li>
                 ))}
@@ -148,16 +153,16 @@ export default function AboutPage() {
 
             {/* Specialties */}
             <div>
-              <h3 className="heading-section text-lg text-primary mb-4">
+              <h3 className="heading-section text-sm text-primary mb-6">
                 Specialties
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {agent.specialties.map((s) => (
                   <li
                     key={s}
-                    className="font-body text-muted flex items-center gap-2"
+                    className="font-body text-muted font-light flex items-center gap-3"
                   >
-                    <span className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
+                    <span className="w-6 h-[1px] bg-accent flex-shrink-0" />
                     {s}
                   </li>
                 ))}
@@ -167,13 +172,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ---- Why Tampa Bay ---- */}
-      <section className="container-wide py-16">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="heading-section text-display-sm text-primary text-center mb-6">
+      {/* ---- Why Tampa Bay — dark navy section ---- */}
+      <section className="section-dark">
+        <div className="container-wide max-w-3xl mx-auto text-center">
+          <p className="heading-label text-white/50 mb-6">The Region</p>
+          <h2 className="font-heading font-extralight text-3xl md:text-4xl tracking-[0.1em] uppercase text-white">
             Why Tampa Bay
           </h2>
-          <div className="font-body text-muted space-y-4 text-lg">
+          <div className="section-divider" />
+          <div className="font-body text-white/70 font-light space-y-6 text-base md:text-lg leading-relaxed">
             <p>
               Tampa Bay is one of the fastest-growing metro areas in the
               country — and for good reason. Year-round sunshine, no state
@@ -191,13 +198,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ---- REMAX Collective Section ---- */}
-      <section className="bg-accent/10 py-16">
+      {/* ---- REMAX Collective Section — white bg ---- */}
+      <section className="section-white">
         <div className="container-wide text-center max-w-3xl mx-auto">
-          <h2 className="heading-section text-display-sm text-primary mb-6">
+          <p className="heading-label mb-6">Brokerage</p>
+          <h2 className="heading-section text-display-sm text-primary">
             REMAX Collective
           </h2>
-          <div className="font-body text-muted space-y-4 text-lg">
+          <div className="section-divider" />
+          <div className="font-body text-muted font-light space-y-6 text-base md:text-lg leading-relaxed">
             <p>
               Barrett Henry is proudly affiliated with REMAX Collective, a
               brokerage known for attracting top-producing agents and providing
@@ -213,13 +222,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ---- Contact Form ---- */}
-      <section className="container-wide py-16">
-        <div className="max-w-xl mx-auto">
+      {/* ---- Contact CTA — warm cream bg ---- */}
+      <section className="section-light">
+        <div className="container-wide max-w-xl mx-auto">
           <ContactForm
             webhookUrl="/api/contact"
             source="about-page"
-            title="Get in Touch With Barrett"
+            title="Get in Touch"
             submitLabel="Send Message"
           />
         </div>

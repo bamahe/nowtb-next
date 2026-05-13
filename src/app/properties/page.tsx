@@ -121,23 +121,25 @@ export default async function PropertiesPage({
   return (
     <>
       {/* =================================================================
-          SECTION 1: Hero — compact hero with search bar
+          SECTION 1: Hero — shorter 50vh with search bar
           ================================================================= */}
       <HeroSection
-        title="Search Tampa Bay Properties"
-        subtitle="Updated daily from the Stellar MLS. Find your next home today."
+        title="Properties"
+        label="TAMPA BAY REAL ESTATE"
+        subtitle="Updated daily from the Stellar MLS."
+        fullHeight={false}
       >
         <SearchBar />
       </HeroSection>
 
       {/* =================================================================
-          SECTION 2: Filter summary bar
+          SECTION 2: Filter summary bar — minimal, clean
           ================================================================= */}
-      <div className="container-wide py-4 border-b border-gray-200">
+      <div className="container-wide py-6 border-b border-black/5">
         <div className="flex items-center justify-between">
-          <p className="font-body text-muted text-sm">{filterSummary}</p>
-          <p className="font-body text-muted text-sm">
-            {total.toLocaleString()} {total === 1 ? "listing" : "listings"} found
+          <p className="font-body text-muted text-xs font-light tracking-wide">{filterSummary}</p>
+          <p className="font-body text-muted text-xs font-light tracking-wide">
+            {total.toLocaleString()} {total === 1 ? "listing" : "listings"}
           </p>
         </div>
       </div>
@@ -148,15 +150,17 @@ export default async function PropertiesPage({
       {listings.length > 0 ? (
         <ListingGrid listings={listings} />
       ) : (
-        /* Empty state when no listings match the filters */
-        <section className="container-wide py-16 text-center">
+        /* Empty state — minimal luxury styling */
+        <section className="container-wide py-24 md:py-32 text-center">
+          <p className="heading-label mb-6">No Results</p>
           <h2 className="heading-section text-xl text-primary mb-4">
             No Listings Found
           </h2>
-          <p className="font-body text-muted mb-6">
+          <div className="section-divider" />
+          <p className="font-body text-muted font-light mb-10">
             Try adjusting your search criteria or browse all available properties.
           </p>
-          <Link href="/properties" className="btn-primary px-8 py-3">
+          <Link href="/properties" className="btn-primary">
             View All Listings
           </Link>
         </section>
@@ -165,41 +169,44 @@ export default async function PropertiesPage({
       {/* =================================================================
           SECTION 4: Pagination — prev/next links
           ================================================================= */}
+      {/* =================================================================
+          SECTION 4: Pagination — minimal prev/next with page indicator
+          ================================================================= */}
       {totalPages > 1 && (
         <nav
-          className="container-wide py-8 flex items-center justify-center gap-4"
+          className="container-wide py-16 flex items-center justify-center gap-8"
           aria-label="Listing pagination"
         >
           {/* Previous page link */}
           {currentPage > 1 ? (
             <Link
               href={paginationHref(currentPage - 1)}
-              className="btn-outline px-6 py-2 text-sm"
+              className="text-xs font-body font-medium tracking-[0.2em] uppercase text-primary hover:text-accent transition-colors duration-300"
             >
-              Previous
+              &larr; Previous
             </Link>
           ) : (
-            <span className="px-6 py-2 text-sm text-muted opacity-50 cursor-not-allowed">
-              Previous
+            <span className="text-xs font-body font-medium tracking-[0.2em] uppercase text-muted/30 cursor-not-allowed">
+              &larr; Previous
             </span>
           )}
 
           {/* Page indicator */}
-          <span className="font-body text-sm text-muted">
-            Page {currentPage} of {totalPages}
+          <span className="font-body text-xs text-muted font-light tracking-wide">
+            {currentPage} / {totalPages}
           </span>
 
           {/* Next page link */}
           {currentPage < totalPages ? (
             <Link
               href={paginationHref(currentPage + 1)}
-              className="btn-outline px-6 py-2 text-sm"
+              className="text-xs font-body font-medium tracking-[0.2em] uppercase text-primary hover:text-accent transition-colors duration-300"
             >
-              Next
+              Next &rarr;
             </Link>
           ) : (
-            <span className="px-6 py-2 text-sm text-muted opacity-50 cursor-not-allowed">
-              Next
+            <span className="text-xs font-body font-medium tracking-[0.2em] uppercase text-muted/30 cursor-not-allowed">
+              Next &rarr;
             </span>
           )}
         </nav>

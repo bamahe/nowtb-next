@@ -1,11 +1,10 @@
 // =============================================================================
-// CityGrid — Grid of city cards linking to city hub pages
+// CityGrid — Grid of luxury city tiles linking to city hub pages
 // Server component (no "use client" directive)
-// Enhanced: taller cards, gradient overlays, accent border on hover, "Explore" text
+// Tall aspect ratio tiles, minimal borders, light heading font
 // =============================================================================
 
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { slugify } from "@/lib/utils";
 
 /** Tier 1 cities — the core Tampa Bay service areas */
@@ -44,20 +43,17 @@ export default function CityGrid({
         <Link
           key={city}
           href={`/${slugify(city)}`}
-          className="group relative flex flex-col items-center justify-center rounded-xl
-                     bg-gradient-to-br from-[#0f2847] to-primary border border-white/10
-                     px-4 py-12 text-center overflow-hidden
-                     transition-all duration-300 hover:shadow-xl hover:shadow-accent/10
-                     hover:-translate-y-1 hover:border-accent/50"
+          className="group relative flex items-center justify-center aspect-[3/4]
+                     bg-gradient-to-br from-[#0f2847] to-primary
+                     border border-white/10
+                     overflow-hidden
+                     transition-all duration-500
+                     hover:border-accent/30"
         >
-          {/* City name — large, white, bold */}
-          <span className="font-heading font-bold text-white text-xl group-hover:text-accent transition-colors duration-300">
+          {/* City name — ultra-light, wide tracking, centered */}
+          <span className="font-heading font-extralight text-2xl tracking-[0.15em] uppercase text-white
+                           transition-colors duration-500 group-hover:text-accent">
             {city}
-          </span>
-
-          {/* "Explore" text + arrow — appears on hover */}
-          <span className="flex items-center gap-1 mt-2 text-sm font-body text-white/0 group-hover:text-accent/80 transition-all duration-300">
-            Explore <ArrowRight className="h-3.5 w-3.5" />
           </span>
         </Link>
       ))}
@@ -73,15 +69,12 @@ export default function CityGrid({
       <div className="container-wide">
         {/* Section heading — can be hidden when parent provides its own */}
         {!hideHeading && (
-          <div className="text-center">
+          <div className="text-center mb-16">
+            <p className="heading-label mb-6">Communities</p>
             <h2 className="heading-section text-3xl md:text-4xl text-white">
-              Explore Tampa Bay Communities
+              Explore Tampa Bay
             </h2>
             <div className="section-divider" />
-            <p className="font-body text-white/70 text-lg max-w-2xl mx-auto mb-10">
-              Browse homes for sale in the most sought-after neighborhoods across
-              Tampa Bay.
-            </p>
           </div>
         )}
         {grid}

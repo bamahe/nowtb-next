@@ -106,22 +106,21 @@ export default async function HomePage() {
       />
 
       {/* =================================================================
-          SECTION 1: Hero — dramatic dark navy with tagline, dual CTAs, search
+          SECTION 1: Hero — full viewport, content at bottom, luxury feel
           ================================================================= */}
       <HeroSection
-        title="Find Your Home in Tampa Bay"
-        subtitle="Broker Associate at REMAX Collective with 23+ years of real estate experience — guiding buyers, sellers, and investors across 7 counties."
+        title="Find Your Home"
+        label="TAMPA BAY REAL ESTATE"
+        subtitle="Broker Associate at REMAX Collective with 23+ years of real estate experience."
+        fullHeight
       >
-        {/* Dual CTA buttons — primary filled + secondary outlined */}
+        {/* Dual CTA buttons — transparent with white border for luxury feel */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link href="/properties" className="btn-accent px-10 py-4 text-base">
-            Search Homes
+          <Link href="/properties" className="btn-secondary">
+            Search Properties
           </Link>
-          <Link
-            href="/sell-your-home"
-            className="btn-secondary px-10 py-4 text-base"
-          >
-            Get a Home Valuation
+          <Link href="/sell-your-home" className="btn-secondary">
+            Home Valuation
           </Link>
         </div>
 
@@ -136,32 +135,28 @@ export default async function HomePage() {
           ListingGrid gets className override so it doesn't add its own
           container-wide / padding (the parent section handles that).
           ================================================================= */}
+      {/* =================================================================
+          SECTION 2: Featured Listings — dark navy, label-only heading
+          ================================================================= */}
       <section className="section-dark">
         <div className="container-wide">
-          {/* Section heading — white on dark */}
-          <div className="text-center mb-12">
-            <h2 className="heading-section text-display-sm text-white">
-              Featured Tampa Bay Properties
-            </h2>
-            {/* Accent divider bar */}
+          {/* Minimal heading — just label + divider, no heavy h2 */}
+          <div className="text-center mb-16">
+            <p className="heading-label mb-6">Featured Properties</p>
             <div className="section-divider" />
-            <p className="font-body text-accent text-lg max-w-2xl mx-auto">
-              Handpicked listings across Tampa Bay&apos;s most desirable communities.
-            </p>
           </div>
 
           {/* Listing grid — className override removes default wrapper padding */}
           <ListingGrid listings={featuredListings} className="" />
 
-          {/* "View All Listings" link in accent color */}
+          {/* "View All" link — minimal uppercase style */}
           {featuredListings.length > 0 && (
-            <div className="text-center mt-10">
+            <div className="text-center mt-16">
               <Link
                 href="/properties"
-                className="btn-accent inline-flex items-center gap-2 px-10 py-4 text-base"
+                className="text-xs font-body font-medium tracking-[0.2em] uppercase text-accent hover:text-white transition-colors duration-300"
               >
-                View All Listings
-                <span aria-hidden="true">&rarr;</span>
+                View All &rarr;
               </Link>
             </div>
           )}
@@ -173,16 +168,19 @@ export default async function HomePage() {
           CityGrid gets className + hideHeading so we control the wrapper
           and heading from here instead of inside the component.
           ================================================================= */}
+      {/* =================================================================
+          SECTION 3: Communities — white background, label + heading
+          ================================================================= */}
       <section className="section-white">
         <div className="container-wide">
-          {/* Section heading */}
-          <div className="text-center mb-12">
+          {/* Section heading with label */}
+          <div className="text-center mb-16">
+            <p className="heading-label mb-6">Communities</p>
             <h2 className="heading-section text-display-sm text-primary">
-              Explore Tampa Bay Communities
+              Explore Tampa Bay
             </h2>
-            {/* Accent divider bar */}
             <div className="section-divider" />
-            <p className="font-body text-muted text-lg max-w-2xl mx-auto">
+            <p className="font-body text-muted text-lg font-light max-w-2xl mx-auto">
               Browse homes for sale in the most sought-after neighborhoods across
               Tampa Bay.
             </p>
@@ -192,7 +190,7 @@ export default async function HomePage() {
           <CityGrid bare />
 
           {/* Supporting copy about service area */}
-          <p className="text-center font-body text-muted mt-10 max-w-3xl mx-auto">
+          <p className="text-center font-body text-muted text-sm font-light mt-12 max-w-3xl mx-auto">
             Barrett Henry and The NOW Team proudly serve buyers and sellers
             across Hillsborough, Pinellas, Pasco, Polk, Manatee, Sarasota, and
             Hernando counties.
@@ -203,37 +201,38 @@ export default async function HomePage() {
       {/* =================================================================
           SECTION 4: Value Props — soft gray background, 3 premium cards
           ================================================================= */}
+      {/* =================================================================
+          SECTION 4: Value Props — warm cream bg, minimal card style
+          ================================================================= */}
       <section className="section-light">
         <div className="container-wide">
-          {/* Section heading */}
-          <div className="text-center mb-12">
-            <h2 className="heading-section text-display-sm text-primary">
-              Why Work With Barrett
-            </h2>
+          {/* Section heading with label */}
+          <div className="text-center mb-16">
+            <p className="heading-label mb-6">Why Barrett Henry</p>
             <div className="section-divider" />
           </div>
 
-          {/* 3-column card grid */}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          {/* 3-column card grid — minimal style, no card background */}
+          <div className="grid grid-cols-1 gap-16 md:grid-cols-3">
             {VALUE_PROPS.map((prop) => {
               const Icon = prop.icon;
               return (
                 <div
                   key={prop.title}
-                  className="card text-center p-8"
+                  className="text-center"
                 >
-                  {/* Icon in a circular accent-colored background */}
-                  <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-accent/20">
-                    <Icon className="h-8 w-8 text-accent" />
+                  {/* Icon — bare, no circular background */}
+                  <div className="mx-auto mb-8">
+                    <Icon className="h-8 w-8 text-accent mx-auto" strokeWidth={1} />
                   </div>
 
-                  {/* Card heading */}
-                  <h3 className="font-heading font-bold text-xl text-primary mb-3">
+                  {/* Card heading — light weight, uppercase, tracked */}
+                  <h3 className="heading-section text-sm text-primary mb-4">
                     {prop.title}
                   </h3>
 
                   {/* Card description */}
-                  <p className="font-body text-muted text-base leading-relaxed">
+                  <p className="font-body text-sm text-muted font-light leading-relaxed">
                     {prop.description}
                   </p>
                 </div>
@@ -246,43 +245,34 @@ export default async function HomePage() {
       {/* =================================================================
           SECTION 5: CTA — dramatic dark navy call-to-action
           ================================================================= */}
+      {/* =================================================================
+          SECTION 5: CTA — clean, minimal dark navy
+          ================================================================= */}
       <section className="section-dark">
         <div className="container-wide text-center">
-          <h2 className="heading-section text-display text-white mb-4">
-            Ready to Make Your Move?
+          {/* Light-weight heading */}
+          <h2 className="font-heading font-extralight text-3xl md:text-4xl lg:text-5xl tracking-[0.1em] uppercase text-white mb-2">
+            Let&apos;s Connect
           </h2>
           <div className="section-divider" />
-          <p className="font-body text-accent text-lg md:text-xl max-w-2xl mx-auto mb-4">
-            Whether you are buying, selling, or investing in Tampa Bay real
-            estate, Barrett Henry has the experience and market knowledge to get
-            it done.
-          </p>
 
-          {/* Phone number — prominent display */}
-          <p className="font-heading text-white text-2xl md:text-3xl font-bold mb-8">
+          {/* Phone number — large and prominent, light weight */}
+          <p className="font-heading text-white text-3xl md:text-4xl font-extralight tracking-wide mt-8 mb-10">
             <a
               href={`tel:${agent.phone}`}
-              className="hover:text-accent transition-colors duration-200"
+              className="hover:text-accent transition-colors duration-300"
             >
               {agent.phone}
             </a>
           </p>
 
-          {/* Dual CTA buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/contact"
-              className="btn-accent px-10 py-4 text-base"
-            >
-              Contact Barrett
-            </Link>
-            <Link
-              href="/properties"
-              className="btn-secondary px-10 py-4 text-base"
-            >
-              Search Homes
-            </Link>
-          </div>
+          {/* Single CTA button */}
+          <Link
+            href="/contact"
+            className="btn-secondary"
+          >
+            Contact
+          </Link>
         </div>
       </section>
     </>

@@ -4,9 +4,10 @@
 
 /* ============================================
    NOWTB Design System — globals.css
+   Luxury Minimalist Aesthetic
    Primary: #0c1829 (dark navy)
    Accent:  #93b4d4 (steel blue)
-   NO gold. NO yellow. Clean, editorial, modern.
+   Warm cream base: #F8F6F3
    ============================================ */
 
 :root {
@@ -14,16 +15,16 @@
   --color-accent: #93b4d4;
   --color-text-light: #ffffff;
   --color-text-dark: #1a2332;
-  --color-bg-light: #f8f9fb;
+  --color-bg-light: #F8F6F3;
   --color-bg-dark: #0c1829;
   --color-border: #e2e6ed;
   --color-muted: #6b7a8d;
 }
 
-/* Base resets */
+/* Base body — warm cream default instead of pure white */
 body {
   color: var(--color-text-dark);
-  background: var(--color-bg-light);
+  background: #F8F6F3;
 }
 
 /* Smooth scrolling for anchor links */
@@ -31,44 +32,60 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Typography helpers */
+/* ── Luxury Heading Styles — light weights, letter-spacing ── */
+
+/* Display headings — ultra-light, wide tracking, uppercase */
 .heading-display {
-  @apply font-heading font-extrabold tracking-tight;
+  @apply font-heading font-extralight tracking-[0.15em] uppercase;
 }
 
+/* Section headings — light weight, moderate tracking, uppercase */
 .heading-section {
-  @apply font-heading font-bold tracking-tight;
+  @apply font-heading font-light tracking-[0.1em] uppercase;
 }
 
-/* Button base styles — generous padding, hover elevation, shadow on hover */
+/* Label text — small, medium weight, very wide tracking */
+.heading-label {
+  @apply font-body text-xs font-medium tracking-[0.2em] uppercase text-accent;
+}
+
+/* ── Luxury Buttons — minimal, refined, no rounded corners ── */
+
+/* Primary — solid navy, inverts on hover */
 .btn-primary {
-  @apply inline-flex items-center justify-center rounded-lg bg-primary px-8 py-3.5
-         font-body font-semibold text-white transition-all duration-300
-         hover:bg-primary/90 hover:shadow-lg hover:-translate-y-0.5
-         focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  @apply inline-flex items-center justify-center px-12 py-4
+         font-body text-xs font-medium tracking-[0.2em] uppercase
+         bg-primary text-white border border-primary
+         transition-all duration-300 ease-in-out
+         hover:bg-transparent hover:text-primary;
 }
 
+/* Secondary — transparent with white border, fills on hover */
 .btn-secondary {
-  @apply inline-flex items-center justify-center rounded-lg border-2 border-white
-         px-8 py-3.5 font-body font-semibold text-white transition-all duration-300
-         hover:bg-white hover:text-primary hover:shadow-lg hover:-translate-y-0.5
-         focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  @apply inline-flex items-center justify-center px-12 py-4
+         font-body text-xs font-medium tracking-[0.2em] uppercase
+         bg-transparent text-white border border-white/50
+         transition-all duration-300 ease-in-out
+         hover:bg-white hover:text-primary;
 }
 
+/* Accent — glass-morphism accent tint, fills on hover */
 .btn-accent {
-  @apply inline-flex items-center justify-center rounded-lg bg-accent px-8 py-3.5
-         font-body font-semibold text-primary transition-all duration-300
-         hover:bg-accent/80 hover:shadow-lg hover:-translate-y-0.5
-         focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  @apply inline-flex items-center justify-center px-12 py-4
+         font-body text-xs font-medium tracking-[0.2em] uppercase
+         bg-accent/20 text-primary border border-accent/30
+         backdrop-blur-sm transition-all duration-300 ease-in-out
+         hover:bg-accent hover:text-primary hover:border-accent;
 }
 
-/* Card base — enhanced hover elevation with upward lift */
+/* ── Luxury Card — minimal shadow, glass on hover ── */
 .card {
-  @apply rounded-xl bg-white shadow-sm border border-border transition-all
-         duration-300 hover:shadow-lg hover:-translate-y-1;
+  @apply bg-white/80 backdrop-blur-sm border border-black/5
+         transition-all duration-500 ease-out
+         hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1;
 }
 
-/* Container widths */
+/* ── Container widths ── */
 .container-narrow {
   @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8;
 }
@@ -77,26 +94,26 @@ html {
   @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
 }
 
-/* Form input styles */
+/* ── Form input styles ── */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="search"],
 textarea,
 select {
-  @apply rounded-lg border border-border bg-white px-4 py-3 text-dark
+  @apply border border-border bg-white px-4 py-3 text-dark
          placeholder:text-muted focus:border-accent focus:outline-none
          focus:ring-2 focus:ring-accent/30;
 }
 
-/* Property listing price format */
+/* ── Property listing price format ── */
 .price-display {
-  @apply font-heading font-bold text-primary;
+  @apply font-heading font-light text-primary;
 }
 
-/* Blog post content — styles WordPress HTML output */
-.blog-content h2 { @apply font-heading text-2xl font-bold text-primary mt-8 mb-4; }
-.blog-content h3 { @apply font-heading text-xl font-bold text-primary mt-6 mb-3; }
+/* ── Blog post content — styles WordPress HTML output ── */
+.blog-content h2 { @apply font-heading text-2xl font-light tracking-wide text-primary mt-8 mb-4; }
+.blog-content h3 { @apply font-heading text-xl font-light tracking-wide text-primary mt-6 mb-3; }
 .blog-content p { @apply font-body text-dark leading-relaxed mb-4; }
 .blog-content ul, .blog-content ol { @apply mb-4 pl-6; }
 .blog-content li { @apply mb-2; }
@@ -104,36 +121,48 @@ select {
 .blog-content table { @apply w-full border-collapse mb-6; }
 .blog-content th { @apply bg-primary text-white p-3 text-left; }
 .blog-content td { @apply border border-border p-3; }
-.blog-content img { @apply rounded-lg max-w-full h-auto my-4; }
+.blog-content img { @apply max-w-full h-auto my-4; }
 .blog-content blockquote { @apply border-l-4 border-accent pl-4 italic my-4; }
 
-/* Alternating section backgrounds — 60-80px vertical padding */
+/* ── Section backgrounds — alternating warm tones, generous padding ── */
 .section-dark {
-  @apply bg-primary text-white py-16 md:py-20;
+  @apply bg-primary text-white py-24 md:py-32;
 }
 .section-light {
-  @apply bg-light py-16 md:py-20;
+  @apply bg-[#F8F6F3] py-24 md:py-32;
 }
 .section-white {
-  @apply bg-white py-16 md:py-20;
+  @apply bg-white py-24 md:py-32;
 }
 
-/* Gradient overlay for hero images — matches WordPress site */
+/* ── Hero overlay gradient — darker at bottom for text readability ── */
 .hero-gradient {
-  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.75) 100%);
+  background: linear-gradient(to bottom, rgba(12, 24, 41, 0.1) 0%, rgba(12, 24, 41, 0.7) 100%);
 }
 
-/* Stat/metric display numbers */
-.stat-number {
-  @apply font-heading text-4xl md:text-5xl font-extrabold;
-}
-
-/* Section divider — accent bar below headings */
+/* ── Accent divider — thinner, more elegant ── */
 .section-divider {
-  @apply w-16 h-1 bg-accent rounded-full mx-auto mt-4 mb-8;
+  @apply w-12 h-[1px] bg-accent mx-auto mt-6 mb-8;
 }
 
-/* Hide scrollbar utility */
+/* ── Animated underline link — line grows from left on hover ── */
+.link-underline {
+  @apply relative inline-block;
+}
+.link-underline::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-[1px] bg-current transition-all duration-300;
+}
+.link-underline:hover::after {
+  @apply w-full;
+}
+
+/* ── Stat numbers — luxury display, ultra-light weight ── */
+.stat-number {
+  @apply font-heading text-5xl md:text-6xl font-extralight tracking-wide;
+}
+
+/* ── Hide scrollbar utility ── */
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;

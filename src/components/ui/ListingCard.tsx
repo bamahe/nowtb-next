@@ -1,12 +1,11 @@
 // =============================================================================
-// ListingCard — Displays a single property listing as a clickable card
+// ListingCard — Luxury property card with glass-morphism overlay
 // Server component (no "use client" directive)
-// Enhanced: hover zoom on photo, glass-morphism badge, better typography
+// Info overlaid on the image bottom with backdrop-blur, no separate white section
 // =============================================================================
 
 import Image from "next/image";
 import Link from "next/link";
-import { Bed, Bath, Ruler } from "lucide-react";
 import type { Listing } from "@/lib/types";
 import {
   cn,
@@ -52,67 +51,58 @@ export default function ListingCard({ listing }: ListingCardProps) {
     statusColors[listing.StandardStatus] ?? "bg-muted/80 text-white";
 
   return (
-    <Link href={url} className="card group block overflow-hidden">
-      {/* --- Photo with hover zoom effect --- */}
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-xl bg-light">
+    <Link href={url} className="group block overflow-hidden relative">
+      {/* --- Photo with tall aspect ratio and hover scale --- */}
+      <div className="relative aspect-[3/4] w-full overflow-hidden bg-primary/10">
         <Image
           src={photoUrl}
           alt={displayAddress}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+        />
+
+        {/* --- Gradient overlay on image — dark at bottom for text --- */}
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"
+          aria-hidden="true"
         />
 
         {/* --- Status Badge — glass-morphism effect over photo --- */}
         <span
           className={cn(
-            "absolute left-3 top-3 rounded-md px-2.5 py-1 text-xs font-semibold font-body uppercase tracking-wide backdrop-blur-sm",
+            "absolute left-4 top-4 px-3 py-1.5 text-[10px] font-medium font-body uppercase tracking-[0.15em] backdrop-blur-sm",
             badgeClass
           )}
         >
           {listing.StandardStatus}
         </span>
-      </div>
 
-      {/* --- Card Body --- */}
-      <div className="p-5">
-        {/* Price — larger and bolder */}
-        <p className="price-display text-xl font-extrabold mb-1">
-          {formatPrice(listing.ListPrice)}
-        </p>
+        {/* --- Info overlay at bottom with backdrop-blur glass effect --- */}
+        <div className="absolute bottom-0 left-0 right-0 p-5 backdrop-blur-[2px]">
+          {/* Price — light weight heading font */}
+          <p className="font-heading font-light text-xl tracking-wide text-white mb-1">
+            {formatPrice(listing.ListPrice)}
+          </p>
 
-        {/* Address — street address bold, city/state/zip smaller and muted */}
-        <p className="font-body font-semibold text-dark text-sm truncate">
-          {displayAddress}
-        </p>
-        <p className="font-body text-muted text-xs mb-3">{cityStateZip}</p>
+          {/* Address — slightly transparent white */}
+          <p className="font-body text-sm text-white/80 font-light truncate">
+            {displayAddress}
+          </p>
+          <p className="font-body text-xs text-white/60 mb-3">{cityStateZip}</p>
 
-        {/* Beds / Baths / SqFt — with dot separators */}
-        <div className="flex items-center gap-1 text-sm text-muted font-body">
-          {listing.BedroomsTotal != null && (
-            <span className="flex items-center gap-1">
-              <Bed className="h-4 w-4" />
-              {listing.BedroomsTotal} bd
-            </span>
-          )}
-          {listing.BedroomsTotal != null && listing.BathroomsTotalInteger != null && (
-            <span className="text-border" aria-hidden="true">&middot;</span>
-          )}
-          {listing.BathroomsTotalInteger != null && (
-            <span className="flex items-center gap-1">
-              <Bath className="h-4 w-4" />
-              {listing.BathroomsTotalInteger} ba
-            </span>
-          )}
-          {listing.BathroomsTotalInteger != null && listing.LivingArea != null && (
-            <span className="text-border" aria-hidden="true">&middot;</span>
-          )}
-          {listing.LivingArea != null && (
-            <span className="flex items-center gap-1">
-              <Ruler className="h-4 w-4" />
-              {formatSqFt(listing.LivingArea)}
-            </span>
-          )}
+          {/* Beds / Baths / SqFt — tiny uppercase stats */}
+          <div className="flex items-center gap-3 text-[10px] text-white/60 font-body tracking-widest uppercase">
+            {listing.BedroomsTotal != null && (
+              <span>{listing.BedroomsTotal} Bed</span>
+            )}
+            {listing.BathroomsTotalInteger != null && (
+              <span>{listing.BathroomsTotalInteger} Bath</span>
+            )}
+            {listing.LivingArea != null && (
+              <span>{formatSqFt(listing.LivingArea)} Sqft</span>
+            )}
+          </div>
         </div>
       </div>
     </Link>

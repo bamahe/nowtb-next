@@ -1,7 +1,7 @@
 // =============================================================================
-// SearchBar — Property search input that redirects to /properties?q=...
+// SearchBar — Elegant property search with underline-style input
 // "use client" because it manages input state and handles form submission
-// Enhanced: pill shape, larger input, integrated search button, prominent shadow
+// Minimal: transparent bg, bottom border only, uppercase submit text
 // =============================================================================
 
 "use client";
@@ -26,27 +26,26 @@ export default function SearchBar() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex w-full max-w-2xl mx-auto items-center rounded-full bg-white shadow-xl px-2 py-1.5"
+      className="flex w-full max-w-xl mx-auto items-center gap-4 border-b border-white/30 pb-2"
     >
-      {/* Search icon — inside the input on the left */}
-      <div className="flex items-center justify-center pl-4 pr-2">
-        <Search className="h-5 w-5 text-muted flex-shrink-0" />
-      </div>
+      {/* Search icon — subtle, on the left */}
+      <Search className="h-4 w-4 text-white/40 flex-shrink-0" />
 
-      {/* Text input — large, blends into the rounded pill container */}
+      {/* Text input — transparent, no border except parent's bottom border */}
       <input
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search by city, zip, or address..."
-        className="flex-1 border-0 bg-transparent px-2 py-3 text-dark placeholder:text-muted
-                   focus:outline-none focus:ring-0 font-body text-lg"
+        className="flex-1 border-0 bg-transparent px-0 py-2 text-white placeholder:text-white/40
+                   focus:outline-none focus:ring-0 font-body text-base font-light tracking-wide"
       />
 
-      {/* Submit button — integrated into the right side of the pill */}
+      {/* Submit — text only, uppercase, wide tracking */}
       <button
         type="submit"
-        className="btn-primary rounded-full px-6 py-3 text-base whitespace-nowrap"
+        className="font-body text-xs font-medium tracking-[0.2em] uppercase text-white/70
+                   transition-colors duration-300 hover:text-white whitespace-nowrap"
       >
         Search
       </button>

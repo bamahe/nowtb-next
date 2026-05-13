@@ -1,6 +1,7 @@
 // =============================================================================
 // /contact — Contact Page
-// Two-column layout: form on left, contact info on right + map placeholder
+// Luxury minimalist: full-viewport hero, spacious 2-column layout
+// Left: large heading + contact details. Right: minimal contact form.
 // =============================================================================
 
 import type { Metadata } from "next";
@@ -34,74 +35,62 @@ const counties = [
 export default function ContactPage() {
   return (
     <>
-      {/* ---- Hero Section ---- */}
+      {/* ---- Hero Section — full viewport ---- */}
       <HeroSection
-        title="Get in Touch"
+        title="Contact"
+        label="GET IN TOUCH"
         subtitle="Have a question about buying, selling, or investing? Let's talk."
+        fullHeight
       />
 
-      {/* ---- Two-Column: Form + Contact Info ---- */}
-      <section className="container-wide py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left column — Contact form */}
-          <ContactForm
-            webhookUrl="/api/contact"
-            source="contact-page"
-            title="Send a Message"
-            submitLabel="Send Message"
-          />
+      {/* ---- Two-Column: Contact Info (left) + Form (right) ---- */}
+      <section className="section-white">
+        <div className="container-wide">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+            {/* Left column — large heading + contact details, spacious */}
+            <div className="py-8">
+              <p className="heading-label mb-6">Barrett Henry, REALTOR®</p>
+              <h2 className="font-heading font-extralight text-3xl md:text-4xl lg:text-5xl tracking-[0.1em] uppercase text-primary leading-tight">
+                Let&apos;s Start a Conversation
+              </h2>
+              <div className="section-divider !mx-0 !ml-0" />
 
-          {/* Right column — Contact info card */}
-          <div className="space-y-6">
-            <div className="card p-6 sm:p-8">
-              <h3 className="heading-section text-xl text-primary mb-6">
-                Contact Information
-              </h3>
-
-              {/* Phone */}
-              <div className="mb-4">
-                <p className="font-body text-sm font-medium text-dark mb-1">
-                  Phone
-                </p>
+              {/* Phone — large and prominent */}
+              <div className="mb-10">
+                <p className="heading-label mb-3">Phone</p>
                 <a
                   href="tel:+18137337907"
-                  className="font-body text-accent hover:underline text-lg"
+                  className="font-heading font-extralight text-2xl md:text-3xl text-primary hover:text-accent transition-colors duration-300"
                 >
                   (813) 733-7907
                 </a>
               </div>
 
               {/* Email */}
-              <div className="mb-4">
-                <p className="font-body text-sm font-medium text-dark mb-1">
-                  Email
-                </p>
+              <div className="mb-10">
+                <p className="heading-label mb-3">Email</p>
                 <a
                   href="mailto:barrett@nowtb.com"
-                  className="font-body text-accent hover:underline text-lg"
+                  className="font-body text-lg font-light text-muted hover:text-accent transition-colors duration-300"
                 >
                   barrett@nowtb.com
                 </a>
               </div>
 
-              {/* Office address placeholder */}
-              <div className="mb-4">
-                <p className="font-body text-sm font-medium text-dark mb-1">
-                  Office
-                </p>
-                <p className="font-body text-muted">
+              {/* Office */}
+              <div className="mb-10">
+                <p className="heading-label mb-3">Office</p>
+                <p className="font-body text-muted font-light text-lg">
                   REMAX Collective
                   <br />
                   Tampa Bay, FL
                 </p>
               </div>
 
-              {/* Business hours */}
+              {/* Hours */}
               <div>
-                <p className="font-body text-sm font-medium text-dark mb-1">
-                  Hours
-                </p>
-                <p className="font-body text-muted">
+                <p className="heading-label mb-3">Hours</p>
+                <p className="font-body text-muted font-light">
                   Monday – Friday: 9:00 AM – 6:00 PM
                   <br />
                   Saturday: 10:00 AM – 4:00 PM
@@ -110,36 +99,50 @@ export default function ContactPage() {
                 </p>
               </div>
             </div>
+
+            {/* Right column — Contact form */}
+            <div className="py-8">
+              <ContactForm
+                webhookUrl="/api/contact"
+                source="contact-page"
+                title="Send a Message"
+                submitLabel="Send Message"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* ---- Map Placeholder ---- */}
-      <section className="container-wide pb-16">
-        <div className="aspect-[16/9] md:aspect-[21/9] bg-gray-200 rounded-lg flex items-center justify-center">
-          {/* Replace with Google Maps embed once API key is configured */}
-          <p className="font-body text-muted text-sm">
-            Google Maps embed coming soon
-          </p>
+      <section className="section-light">
+        <div className="container-wide">
+          <div className="aspect-[16/9] md:aspect-[21/9] bg-[#e8e4df] flex items-center justify-center">
+            {/* Replace with Google Maps embed once API key is configured */}
+            <p className="font-body text-muted text-sm tracking-wide uppercase">
+              Map Coming Soon
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* ---- Serving Tampa Bay's 7 Counties ---- */}
-      <section className="bg-gray-50 py-16">
+      {/* ---- Serving Tampa Bay's 7 Counties — dark navy ---- */}
+      <section className="section-dark">
         <div className="container-wide text-center">
-          <h2 className="heading-section text-display-sm text-primary mb-8">
+          <p className="heading-label text-white/50 mb-6">Service Area</p>
+          <h2 className="heading-section text-display-sm text-white mb-16">
             Serving Tampa Bay&apos;s 7 Counties
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
             {counties.map((county) => (
-              <div key={county} className="card p-4 text-center">
-                <p className="font-body text-primary font-medium text-sm">
+              <div key={county} className="text-center">
+                <p className="font-body text-white/70 font-light text-sm">
                   {county}
                 </p>
               </div>
             ))}
           </div>
-          <p className="font-body text-muted mt-6">
+          <div className="section-divider mt-12" />
+          <p className="font-body text-white/50 font-light mt-8 text-sm">
             Whether you&apos;re buying, selling, or investing anywhere in the
             Tampa Bay metro, Barrett and The NOW Team are ready to help.
           </p>
