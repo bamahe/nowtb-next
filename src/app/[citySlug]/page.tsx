@@ -42,6 +42,7 @@ import { comparisons, getComparisonBySlug, type ComparisonData } from "@/data/co
 import { regionalPages, getRegionalPageBySlug, type RegionalPageData } from "@/data/regional-pages";
 import { miscPages, getMiscPageBySlug, type MiscPageData } from "@/data/misc-pages";
 import { guides, type GuideData } from "@/data/guides";
+import { getGuideContent } from "@/lib/guides-loader";
 import { getListings, getListingsByCity } from "@/lib/bridge";
 
 // --- County data for county pages ---
@@ -441,20 +442,37 @@ export default async function CityPage({
     case "misc":
       return <MiscCatchAllPage page={parsed.page} />;
     case "guide": {
-      // Render guide inline — reuse the same layout as /guides/[slug]
+      // Render guide inline — use real WP content when available, fall back to sections
       const g = parsed.guide;
+      const wpContent = getGuideContent(g.slug);
       return (
         <>
           <HeroSection title={g.title} subtitle={g.excerpt} />
           <div className="container-wide py-12">
             <div className="max-w-3xl mx-auto">
               <p className="text-sm text-muted mb-8">{g.category} · {g.readingTime}</p>
-              {g.sections.map((s) => (
-                <div key={s.id} className="mb-8">
-                  <h2 className="font-heading text-2xl font-bold text-primary mb-4">{s.heading}</h2>
-                  <div className="blog-content" dangerouslySetInnerHTML={{ __html: s.content }} />
-                </div>
-              ))}
+
+              {wpContent ? (
+                /* Real WordPress content */
+                <div
+                  className="blog-content prose prose-lg font-body text-dark max-w-none
+                    prose-headings:font-heading prose-headings:text-primary
+                    prose-a:text-accent prose-a:no-underline hover:prose-a:underline
+                    prose-p:leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: wpContent }}
+                />
+              ) : (
+                /* Fallback: placeholder sections */
+                <>
+                  {g.sections.map((s) => (
+                    <div key={s.id} className="mb-8">
+                      <h2 className="font-heading text-2xl font-bold text-primary mb-4">{s.heading}</h2>
+                      <div className="blog-content" dangerouslySetInnerHTML={{ __html: s.content }} />
+                    </div>
+                  ))}
+                </>
+              )}
+
               <div className="mt-12 p-6 bg-primary rounded-xl text-center">
                 <h3 className="font-heading text-xl font-bold text-white mb-2">Have Questions?</h3>
                 <p className="text-accent mb-4">Barrett Henry has 23+ years of real estate experience.</p>

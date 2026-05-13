@@ -34,8 +34,12 @@ async function bridgeFetch<T>(
   endpoint: string,
   params?: Record<string, string>
 ): Promise<BridgeResponse<T>> {
-  // Build the full URL: base + dataset + endpoint + query params
-  const url = new URL(`${BRIDGE_BASE}/${DATASET}${endpoint}`);
+  // Build the full URL using OData format: base/OData/dataset/resource
+  // For test dataset, use the REST endpoint; for real MLS, use OData
+  const basePath = DATASET === 'test'
+    ? `${BRIDGE_BASE}/${DATASET}${endpoint}`
+    : `${BRIDGE_BASE}/OData/${DATASET}${endpoint.replace('/listings', '/Property')}`;
+  const url = new URL(basePath);
   if (params) {
     Object.entries(params).forEach(([k, v]) => {
       if (v) url.searchParams.set(k, v);

@@ -9,7 +9,37 @@ const N8N_BASE = process.env.N8N_WEBHOOK_BASE!;
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { type, ...formData } = body;
+    const { type, turnstileToken, ...formData } = body;
+
+    // --- Turnstile spam verification (Cloudflare) ---
+    // Reject the request early if the token is missing or invalid
+    if (!turnstileToken) {
+      return NextResponse.json(
+        { error: "Spam check failed — no token provided" },
+        { status: 403 }
+      );
+    }
+
+    const verifyRes = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          secret: process.env.TURNSTILE_SECRET_KEY,
+          response: turnstileToken,
+        }),
+      }
+    );
+    const verification = await verifyRes.json();
+
+    if (!verification.success) {
+      console.warn("Turnstile verification failed:", verification);
+      return NextResponse.json(
+        { error: "Spam check failed" },
+        { status: 403 }
+      );
+    }
 
     // Map form type to the correct n8n webhook
     const webhookMap: Record<string, string> = {

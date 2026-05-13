@@ -1,13 +1,14 @@
 // =============================================================================
 // CityContent — "About {City}" content section
-// Server component. Generates descriptive paragraphs about the city
-// using available city data (county, zip codes, tagline).
+// Server component. Tries to load REAL WordPress content first. If none found,
+// falls back to auto-generated placeholder paragraphs.
 // Includes Barrett's phone number and a CTA.
 // =============================================================================
 
 import Link from "next/link";
 import type { CityData } from "@/data/cities";
 import type { SPOKE_TOPICS } from "@/data/cities";
+import { getPageContent } from "@/lib/page-content";
 
 interface CityContentProps {
   /** The city to generate content about */
@@ -17,7 +18,13 @@ interface CityContentProps {
 }
 
 export default function CityContent({ city, topic }: CityContentProps) {
-  // Format zip codes as a readable list: "33594 and 33596" or "33510, 33511, and 33512"
+  // Build the slug to look up: hub = "valrico", spoke = "valrico-homes-for-sale"
+  const pageSlug = topic ? `${city.slug}-${topic.slug}` : city.slug;
+
+  // Try to load real WordPress content for this page
+  const wpContent = getPageContent(pageSlug);
+
+  // Format zip codes as a readable list (used in placeholder fallback)
   const zipList = formatZipList(city.zip_codes);
 
   return (
@@ -29,67 +36,75 @@ export default function CityContent({ city, topic }: CityContentProps) {
           : `About ${city.name}, Florida`}
       </h2>
 
-      {/* Content paragraphs — different copy for hub vs. spoke */}
-      <div className="prose prose-lg max-w-none text-muted font-body space-y-4">
-        {topic ? (
-          // ---- Spoke page content: focused on the specific topic ----
-          <>
-            <p>
-              Looking for {topic.label.toLowerCase()} in {city.name}? You are in
-              the right place. {city.name} is located in {city.county} County,
-              Florida, and covers ZIP codes {zipList}. {city.tagline}.
-            </p>
-            <p>
-              Barrett Henry is a licensed Broker Associate with REMAX Collective
-              and has 23+ years of real estate experience. Whether you are
-              searching for {topic.label.toLowerCase()} or exploring other
-              options in {city.name}, Barrett provides expert guidance from
-              first showing to closing day.
-            </p>
-            <p>
-              Call{" "}
-              <a
-                href="tel:+18137337907"
-                className="text-accent font-semibold hover:underline"
-              >
-                (813) 733-7907
-              </a>{" "}
-              to schedule a showing or get a personalized list of{" "}
-              {topic.label.toLowerCase()} in {city.name} delivered straight to
-              your inbox.
-            </p>
-          </>
-        ) : (
-          // ---- Hub page content: general city overview ----
-          <>
-            <p>
-              {city.name} is a sought-after community in {city.county} County,
-              Florida, spanning ZIP codes {zipList}. {city.tagline}. From
-              first-time buyers to seasoned investors, {city.name} offers
-              something for everyone.
-            </p>
-            <p>
-              Barrett Henry is a licensed Broker Associate with REMAX Collective
-              and brings 23+ years of real estate experience to every
-              transaction. As a local market expert, Barrett helps buyers and
-              sellers in {city.name} navigate pricing, negotiations, and
-              inspections with confidence.
-            </p>
-            <p>
-              Ready to explore homes in {city.name}? Call{" "}
-              <a
-                href="tel:+18137337907"
-                className="text-accent font-semibold hover:underline"
-              >
-                (813) 733-7907
-              </a>{" "}
-              or use the contact form below to get started. Barrett will send
-              you a curated list of {city.name} properties that match your
-              criteria.
-            </p>
-          </>
-        )}
-      </div>
+      {wpContent ? (
+        // ---- REAL WordPress content found — render it as-is ----
+        <div
+          className="blog-content prose prose-lg max-w-none text-muted font-body"
+          dangerouslySetInnerHTML={{ __html: wpContent }}
+        />
+      ) : (
+        // ---- No WP content — fall back to generated placeholder ----
+        <div className="prose prose-lg max-w-none text-muted font-body space-y-4">
+          {topic ? (
+            // ---- Spoke page placeholder: focused on the specific topic ----
+            <>
+              <p>
+                Looking for {topic.label.toLowerCase()} in {city.name}? You are in
+                the right place. {city.name} is located in {city.county} County,
+                Florida, and covers ZIP codes {zipList}. {city.tagline}.
+              </p>
+              <p>
+                Barrett Henry is a licensed Broker Associate with REMAX Collective
+                and has 23+ years of real estate experience. Whether you are
+                searching for {topic.label.toLowerCase()} or exploring other
+                options in {city.name}, Barrett provides expert guidance from
+                first showing to closing day.
+              </p>
+              <p>
+                Call{" "}
+                <a
+                  href="tel:+18137337907"
+                  className="text-accent font-semibold hover:underline"
+                >
+                  (813) 733-7907
+                </a>{" "}
+                to schedule a showing or get a personalized list of{" "}
+                {topic.label.toLowerCase()} in {city.name} delivered straight to
+                your inbox.
+              </p>
+            </>
+          ) : (
+            // ---- Hub page placeholder: general city overview ----
+            <>
+              <p>
+                {city.name} is a sought-after community in {city.county} County,
+                Florida, spanning ZIP codes {zipList}. {city.tagline}. From
+                first-time buyers to seasoned investors, {city.name} offers
+                something for everyone.
+              </p>
+              <p>
+                Barrett Henry is a licensed Broker Associate with REMAX Collective
+                and brings 23+ years of real estate experience to every
+                transaction. As a local market expert, Barrett helps buyers and
+                sellers in {city.name} navigate pricing, negotiations, and
+                inspections with confidence.
+              </p>
+              <p>
+                Ready to explore homes in {city.name}? Call{" "}
+                <a
+                  href="tel:+18137337907"
+                  className="text-accent font-semibold hover:underline"
+                >
+                  (813) 733-7907
+                </a>{" "}
+                or use the contact form below to get started. Barrett will send
+                you a curated list of {city.name} properties that match your
+                criteria.
+              </p>
+            </>
+          )}
+        </div>
+      )}
 
       {/* CTA button */}
       <div className="mt-8">

@@ -5,8 +5,9 @@
 
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, useCallback, type FormEvent } from "react";
 import { cn } from "@/lib/utils";
+import TurnstileWidget from "@/components/ui/TurnstileWidget";
 
 interface ContactFormProps {
   /** URL the form data will be POSTed to (e.g. n8n webhook) */
@@ -38,6 +39,13 @@ export default function ContactForm({
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
+  // --- Turnstile spam protection token ---
+  const [turnstileToken, setTurnstileToken] = useState("");
+  // Memoized callback so TurnstileWidget doesn't re-render unnecessarily
+  const handleTurnstileVerify = useCallback((token: string) => {
+    setTurnstileToken(token);
+  }, []);
+
   /** Handle form submission — POST data as JSON to the webhook */
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -48,7 +56,7 @@ export default function ContactForm({
       const res = await fetch(webhookUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, message, source }),
+        body: JSON.stringify({ name, email, phone, message, source, turnstileToken }),
       });
 
       if (!res.ok) {
@@ -170,13 +178,17 @@ export default function ContactForm({
           />
         </div>
 
-        {/* Submit Button */}
+        {/* Turnstile spam protection — must verify before submitting */}
+        <TurnstileWidget onVerify={handleTurnstileVerify} />
+
+        {/* Submit Button — disabled until Turnstile passes */}
         <button
           type="submit"
-          disabled={status === "loading"}
+          disabled={status === "loading" || !turnstileToken}
           className={cn(
             "btn-primary w-full",
-            status === "loading" && "opacity-60 cursor-not-allowed"
+            (status === "loading" || !turnstileToken) &&
+              "opacity-60 cursor-not-allowed"
           )}
         >
           {status === "loading" ? "Sending..." : submitLabel}

@@ -5,8 +5,9 @@
 
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, useCallback, type FormEvent } from "react";
 import { cn } from "@/lib/utils";
+import TurnstileWidget from "@/components/ui/TurnstileWidget";
 
 // --- Form submission status ---
 type FormStatus = "idle" | "loading" | "success" | "error";
@@ -22,6 +23,12 @@ export default function ValuationForm() {
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorMessage, setErrorMessage] = useState("");
+
+  // --- Turnstile spam protection token ---
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const handleTurnstileVerify = useCallback((token: string) => {
+    setTurnstileToken(token);
+  }, []);
 
   /** Submit the valuation request to the API */
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -43,6 +50,7 @@ export default function ValuationForm() {
           message,
           source: "valuation",
           type: "valuation",
+          turnstileToken,
         }),
       });
 
@@ -220,13 +228,17 @@ export default function ValuationForm() {
           />
         </div>
 
-        {/* Submit */}
+        {/* Turnstile spam protection — must verify before submitting */}
+        <TurnstileWidget onVerify={handleTurnstileVerify} />
+
+        {/* Submit — disabled until Turnstile passes */}
         <button
           type="submit"
-          disabled={status === "loading"}
+          disabled={status === "loading" || !turnstileToken}
           className={cn(
             "btn-primary w-full",
-            status === "loading" && "opacity-60 cursor-not-allowed"
+            (status === "loading" || !turnstileToken) &&
+              "opacity-60 cursor-not-allowed"
           )}
         >
           {status === "loading" ? "Submitting..." : "Get My Home Value"}
