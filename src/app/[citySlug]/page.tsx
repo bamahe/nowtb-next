@@ -34,6 +34,7 @@ import {
   SPOKE_TOPICS,
   type CityData,
 } from "@/data/cities";
+import { getNeighborhoodBySlug, getNeighborhoodsByCity } from "@/data/neighborhoods";
 import { getListings, getListingsByCity } from "@/lib/bridge";
 
 // --- County data for county pages ---
@@ -73,7 +74,7 @@ type PageType =
   | { kind: "realtor"; city: CityData }
   | { kind: "sell-city"; city: CityData }
   | { kind: "loan"; loanType: string; slug: string; label: string }
-  | { kind: "neighborhood"; slug: string; name: string };
+  | { kind: "neighborhood"; slug: string; name: string; city: string };
 
 /**
  * Parses a URL slug into a page type.
@@ -118,9 +119,12 @@ function parseSlug(slug: string): PageType | null {
     }
   }
 
-  // 6. Neighborhood fallback — any slug we don't recognize but exists in data
-  // For now, treat unknown slugs as potential neighborhood pages
-  // (the full neighborhood list will be loaded from data later)
+  // 6. Neighborhood fallback — check if the slug matches a known neighborhood
+  const neighborhood = getNeighborhoodBySlug(slug);
+  if (neighborhood) {
+    return { kind: "neighborhood", slug: neighborhood.slug, name: neighborhood.name, city: neighborhood.city };
+  }
+
   return null;
 }
 
@@ -156,6 +160,12 @@ export async function generateStaticParams() {
   // Loan guide pages
   for (const loan of LOAN_TYPES) {
     params.push({ citySlug: loan.slug });
+  }
+
+  // Neighborhood pages (461 neighborhoods from data export)
+  const { neighborhoods } = await import("@/data/neighborhoods");
+  for (const neighborhood of neighborhoods) {
+    params.push({ citySlug: neighborhood.slug });
   }
 
   return params;
@@ -197,6 +207,15 @@ export async function generateMetadata({
         title: `Sell Your ${parsed.city.name} Home`,
         description: `Sell your ${parsed.city.name} home for top dollar. Free home valuation from Barrett Henry, Broker Associate at REMAX Collective.`,
       };
+    case "neighborhood": {
+      // Look up the parent city name for the metadata
+      const nCity = getCityBySlug(parsed.city);
+      const cityName = nCity ? nCity.name : "Tampa Bay";
+      return {
+        title: `${parsed.name} Real Estate — Homes for Sale`,
+        description: `Explore homes for sale in ${parsed.name}, ${cityName}, FL. Updated daily from Stellar MLS. Barrett Henry, Broker Associate at REMAX Collective — 23+ years of real estate experience.`,
+      };
+    }
     default:
       break;
   }
@@ -268,6 +287,22 @@ export default async function CityPage({
       return <SellYourHomeCityPage cityName={parsed.city.name} citySlug={parsed.city.slug} />;
     case "loan":
       return <LoanGuidePage loanType={parsed.loanType} slug={parsed.slug} />;
+    case "neighborhood": {
+      // Look up the parent city for back-links and nearby neighborhoods
+      const neighborhoodCity = getCityBySlug(parsed.city) || cities[0]; // fallback to first city
+      const nearbyNeighborhoods = getNeighborhoodsByCity(parsed.city)
+        .filter((n) => n.slug !== parsed.slug) // exclude current neighborhood
+        .map((n) => ({ name: n.name, slug: n.slug }));
+      return (
+        <NeighborhoodPage
+          name={parsed.name}
+          slug={parsed.slug}
+          city={neighborhoodCity.name}
+          citySlug={neighborhoodCity.slug}
+          nearbyNeighborhoods={nearbyNeighborhoods}
+        />
+      );
+    }
     default:
       notFound();
   }

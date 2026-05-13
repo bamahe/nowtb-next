@@ -91,6 +91,19 @@ select {
   @apply font-heading font-bold text-primary;
 }
 
+/* Blog post content — styles WordPress HTML output */
+.blog-content h2 { @apply font-heading text-2xl font-bold text-primary mt-8 mb-4; }
+.blog-content h3 { @apply font-heading text-xl font-bold text-primary mt-6 mb-3; }
+.blog-content p { @apply font-body text-dark leading-relaxed mb-4; }
+.blog-content ul, .blog-content ol { @apply mb-4 pl-6; }
+.blog-content li { @apply mb-2; }
+.blog-content a { @apply text-accent underline hover:text-primary; }
+.blog-content table { @apply w-full border-collapse mb-6; }
+.blog-content th { @apply bg-primary text-white p-3 text-left; }
+.blog-content td { @apply border border-border p-3; }
+.blog-content img { @apply rounded-lg max-w-full h-auto my-4; }
+.blog-content blockquote { @apply border-l-4 border-accent pl-4 italic my-4; }
+
 /* Hide scrollbar utility */
 .scrollbar-hide {
   -ms-overflow-style: none;

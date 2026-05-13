@@ -1,13 +1,16 @@
 // =============================================================================
 // /blog — Blog index page
-// Displays a grid of blog post cards with category filtering and pagination.
-// Posts will eventually come from a CMS or markdown files; for now uses
-// placeholder data so the template is ready.
+// Displays a paginated grid of blog post cards (24 per page).
+// Posts come from the WordPress JSON export via src/lib/posts.ts.
 // =============================================================================
 
 import type { Metadata } from "next";
 import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
+import { getAllPosts } from "@/lib/posts";
+
+// Force dynamic so the JSON is read at runtime, not cached at build
+export const dynamic = "force-dynamic";
 
 // --- SEO metadata ---
 export const metadata: Metadata = {
@@ -22,88 +25,12 @@ export const metadata: Metadata = {
   },
 };
 
-// --- Blog post type (placeholder until CMS integration) ---
-interface BlogPostSummary {
-  slug: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  category: string;
-  readingTime: string;
-}
+// How many posts to show per page
+const POSTS_PER_PAGE = 24;
 
-// --- Category list for filter tabs ---
-const CATEGORIES = [
-  "All",
-  "Market Updates",
-  "Buying Tips",
-  "Selling Tips",
-  "Neighborhood Guides",
-  "Investment",
-  "Mortgage & Finance",
-] as const;
-
-// --- Placeholder blog posts (replaced by CMS data later) ---
-const PLACEHOLDER_POSTS: BlogPostSummary[] = [
-  {
-    slug: "tampa-bay-housing-market-2026",
-    title: "Tampa Bay Housing Market 2026: What Buyers and Sellers Need to Know",
-    excerpt:
-      "A deep dive into current median prices, inventory levels, and days-on-market trends across Hillsborough, Pinellas, and Pasco counties.",
-    date: "2026-05-01",
-    category: "Market Updates",
-    readingTime: "6 min read",
-  },
-  {
-    slug: "first-time-homebuyer-guide-florida",
-    title: "First-Time Homebuyer Guide: 7 Steps to Your Florida Home",
-    excerpt:
-      "From pre-approval to closing day, here is exactly what first-time buyers in Florida need to do — and what to avoid.",
-    date: "2026-04-22",
-    category: "Buying Tips",
-    readingTime: "8 min read",
-  },
-  {
-    slug: "sell-your-home-fast-tampa-bay",
-    title: "How to Sell Your Home Fast in Tampa Bay Without Leaving Money on the Table",
-    excerpt:
-      "Pricing strategy, staging, and marketing tactics that get Tampa Bay homes sold quickly and for top dollar.",
-    date: "2026-04-15",
-    category: "Selling Tips",
-    readingTime: "5 min read",
-  },
-  {
-    slug: "valrico-neighborhood-guide",
-    title: "Valrico Neighborhood Guide: Schools, Parks, and Home Values",
-    excerpt:
-      "Everything you need to know about living in Valrico — from Bloomingdale to FishHawk and everywhere in between.",
-    date: "2026-04-08",
-    category: "Neighborhood Guides",
-    readingTime: "7 min read",
-  },
-  {
-    slug: "investment-property-tampa-bay",
-    title: "Is Tampa Bay Still a Good Market for Investment Properties?",
-    excerpt:
-      "Cap rates, rental demand, and appreciation trends that make Tampa Bay a compelling market for real estate investors.",
-    date: "2026-03-30",
-    category: "Investment",
-    readingTime: "6 min read",
-  },
-  {
-    slug: "fha-vs-conventional-loan-florida",
-    title: "FHA vs. Conventional Loan in Florida: Which Is Right for You?",
-    excerpt:
-      "Comparing down payments, credit requirements, and long-term costs to help you choose the right mortgage.",
-    date: "2026-03-20",
-    category: "Mortgage & Finance",
-    readingTime: "5 min read",
-  },
-];
-
-/** Format a date string (YYYY-MM-DD) into a human-readable format */
+/** Format a date string (YYYY-MM-DD or full datetime) into human-readable format */
 function formatDate(dateStr: string): string {
-  const date = new Date(dateStr + "T00:00:00");
+  const date = new Date(dateStr);
   return date.toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
@@ -111,9 +38,40 @@ function formatDate(dateStr: string): string {
   });
 }
 
-export default function BlogIndexPage() {
-  // TODO: Replace with CMS data fetching and server-side category filtering
-  const posts = PLACEHOLDER_POSTS;
+/** Strip HTML tags and truncate to a max length */
+function truncateExcerpt(html: string, maxLen = 150): string {
+  // Remove HTML tags, then trim to maxLen characters
+  const text = html.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+  if (text.length <= maxLen) return text;
+  return text.substring(0, maxLen).trimEnd() + "...";
+}
+
+/** Estimate reading time from HTML content */
+function readingTime(html: string): string {
+  const text = html.replace(/<[^>]*>/g, "");
+  const words = text.split(/\s+/).length;
+  const minutes = Math.max(1, Math.ceil(words / 250));
+  return `${minutes} min read`;
+}
+
+export default async function BlogIndexPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string }>;
+}) {
+  const { page: pageParam } = await searchParams;
+  const allPosts = getAllPosts();
+
+  // Parse current page from searchParams (default to 1)
+  const currentPage = Math.max(1, parseInt(pageParam || "1", 10) || 1);
+  const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE);
+
+  // Clamp page number to valid range
+  const safePage = Math.min(currentPage, totalPages);
+
+  // Slice posts for current page
+  const startIdx = (safePage - 1) * POSTS_PER_PAGE;
+  const posts = allPosts.slice(startIdx, startIdx + POSTS_PER_PAGE);
 
   return (
     <>
@@ -123,22 +81,12 @@ export default function BlogIndexPage() {
         subtitle="Market updates, buying and selling tips, neighborhood guides, and expert insights from Barrett Henry."
       />
 
-      {/* === Category filter tabs === */}
-      <section className="container-wide pt-8 pb-4">
-        <div className="flex flex-wrap gap-2 justify-center">
-          {CATEGORIES.map((category) => (
-            <button
-              key={category}
-              className={`px-4 py-2 rounded-full text-sm font-body font-medium transition-colors ${
-                category === "All"
-                  ? "bg-primary text-white"
-                  : "bg-gray-100 text-muted hover:bg-accent/10 hover:text-primary"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+      {/* === Post count + page info === */}
+      <section className="container-wide pt-8 pb-2">
+        <p className="font-body text-muted text-sm text-center">
+          Showing {startIdx + 1}–{Math.min(startIdx + POSTS_PER_PAGE, allPosts.length)} of{" "}
+          {allPosts.length} posts
+        </p>
       </section>
 
       {/* === Blog post grid === */}
@@ -150,7 +98,7 @@ export default function BlogIndexPage() {
               href={`/blog/${post.slug}`}
               className="group card overflow-hidden hover:shadow-lg transition-shadow"
             >
-              {/* Placeholder image area — replaced with real images from CMS */}
+              {/* Placeholder image area */}
               <div className="h-48 bg-primary/10 flex items-center justify-center">
                 <span className="font-body text-muted text-sm">
                   Featured Image
@@ -158,26 +106,21 @@ export default function BlogIndexPage() {
               </div>
 
               <div className="p-5">
-                {/* Category badge */}
-                <span className="inline-block px-3 py-1 rounded-full text-xs font-body font-semibold bg-accent/20 text-primary mb-3">
-                  {post.category}
-                </span>
-
                 {/* Title */}
                 <h2 className="font-heading font-bold text-lg text-primary mb-2 group-hover:text-accent transition-colors line-clamp-2">
                   {post.title}
                 </h2>
 
-                {/* Excerpt */}
+                {/* Excerpt — strip HTML and truncate to 150 chars */}
                 <p className="font-body text-muted text-sm mb-3 line-clamp-3">
-                  {post.excerpt}
+                  {truncateExcerpt(post.excerpt || post.content, 150)}
                 </p>
 
                 {/* Date + reading time */}
                 <div className="flex items-center gap-3 text-xs font-body text-muted">
                   <time dateTime={post.date}>{formatDate(post.date)}</time>
                   <span className="w-1 h-1 rounded-full bg-gray-300" />
-                  <span>{post.readingTime}</span>
+                  <span>{readingTime(post.content)}</span>
                 </div>
               </div>
             </Link>
@@ -185,27 +128,75 @@ export default function BlogIndexPage() {
         </div>
       </section>
 
-      {/* === Pagination placeholder === */}
+      {/* === Pagination === */}
       <section className="container-wide pb-12">
-        <div className="flex items-center justify-center gap-2">
-          <button
-            disabled
-            className="px-4 py-2 rounded-lg text-sm font-body font-medium bg-gray-100 text-muted cursor-not-allowed"
-          >
-            Previous
-          </button>
-          <span className="px-4 py-2 rounded-lg text-sm font-body font-bold bg-primary text-white">
-            1
-          </span>
-          <button className="px-4 py-2 rounded-lg text-sm font-body font-medium bg-gray-100 text-muted hover:bg-accent/10 hover:text-primary transition-colors">
-            2
-          </button>
-          <button className="px-4 py-2 rounded-lg text-sm font-body font-medium bg-gray-100 text-muted hover:bg-accent/10 hover:text-primary transition-colors">
-            3
-          </button>
-          <button className="px-4 py-2 rounded-lg text-sm font-body font-medium bg-gray-100 text-muted hover:bg-accent/10 hover:text-primary transition-colors">
-            Next
-          </button>
+        <div className="flex items-center justify-center gap-2 flex-wrap">
+          {/* Previous button */}
+          {safePage > 1 ? (
+            <Link
+              href={`/blog?page=${safePage - 1}`}
+              className="px-4 py-2 rounded-lg text-sm font-body font-medium bg-gray-100 text-muted hover:bg-accent/10 hover:text-primary transition-colors"
+            >
+              Previous
+            </Link>
+          ) : (
+            <span className="px-4 py-2 rounded-lg text-sm font-body font-medium bg-gray-100 text-muted cursor-not-allowed">
+              Previous
+            </span>
+          )}
+
+          {/* Page numbers — show up to 7 pages around current */}
+          {Array.from({ length: totalPages }, (_, i) => i + 1)
+            .filter((p) => {
+              // Always show first, last, and pages near current
+              if (p === 1 || p === totalPages) return true;
+              if (Math.abs(p - safePage) <= 2) return true;
+              return false;
+            })
+            .reduce<(number | "ellipsis")[]>((acc, p, idx, arr) => {
+              // Insert ellipsis markers between non-consecutive pages
+              if (idx > 0 && p - (arr[idx - 1] as number) > 1) {
+                acc.push("ellipsis");
+              }
+              acc.push(p);
+              return acc;
+            }, [])
+            .map((item, idx) =>
+              item === "ellipsis" ? (
+                <span
+                  key={`ellipsis-${idx}`}
+                  className="px-2 py-2 text-sm font-body text-muted"
+                >
+                  ...
+                </span>
+              ) : (
+                <Link
+                  key={item}
+                  href={`/blog?page=${item}`}
+                  className={`px-4 py-2 rounded-lg text-sm font-body font-medium transition-colors ${
+                    item === safePage
+                      ? "bg-primary text-white"
+                      : "bg-gray-100 text-muted hover:bg-accent/10 hover:text-primary"
+                  }`}
+                >
+                  {item}
+                </Link>
+              )
+            )}
+
+          {/* Next button */}
+          {safePage < totalPages ? (
+            <Link
+              href={`/blog?page=${safePage + 1}`}
+              className="px-4 py-2 rounded-lg text-sm font-body font-medium bg-gray-100 text-muted hover:bg-accent/10 hover:text-primary transition-colors"
+            >
+              Next
+            </Link>
+          ) : (
+            <span className="px-4 py-2 rounded-lg text-sm font-body font-medium bg-gray-100 text-muted cursor-not-allowed">
+              Next
+            </span>
+          )}
         </div>
       </section>
     </>

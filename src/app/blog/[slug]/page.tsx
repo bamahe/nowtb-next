@@ -1,8 +1,8 @@
 // =============================================================================
 // /blog/[slug] — Individual blog post page
-// Article layout with author bio sidebar, related posts, and CTA.
-// Posts will eventually come from a CMS or markdown files; for now uses
-// placeholder content so the template is ready.
+// Renders real WordPress HTML content from the JSON export.
+// Uses dangerouslySetInnerHTML for the post body with custom .blog-content
+// styles defined in globals.css.
 // =============================================================================
 
 import type { Metadata } from "next";
@@ -10,54 +10,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ContactForm from "@/components/ui/ContactForm";
 import { getPrimaryAgent } from "@/data/agents";
-
-// --- Placeholder blog post data (replaced by CMS later) ---
-interface BlogPost {
-  slug: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  category: string;
-  readingTime: string;
-  /** HTML content for the post body */
-  content: string;
-}
-
-// Placeholder posts — same slugs as blog index so links work
-const PLACEHOLDER_POSTS: BlogPost[] = [
-  {
-    slug: "tampa-bay-housing-market-2026",
-    title: "Tampa Bay Housing Market 2026: What Buyers and Sellers Need to Know",
-    excerpt:
-      "A deep dive into current median prices, inventory levels, and days-on-market trends across Hillsborough, Pinellas, and Pasco counties.",
-    date: "2026-05-01",
-    category: "Market Updates",
-    readingTime: "6 min read",
-    content: `
-      <p>The Tampa Bay housing market continues to evolve in 2026. After years of rapid appreciation, the market is finding a new equilibrium that presents opportunities for both buyers and sellers.</p>
-      <h2>Current Market Conditions</h2>
-      <p>Median home prices across the Tampa Bay metro area have stabilized, with Hillsborough County seeing modest year-over-year gains. Inventory levels have improved compared to the pandemic-era lows, giving buyers more options without flooding the market.</p>
-      <h2>What This Means for Buyers</h2>
-      <p>Buyers now have more negotiating power than they have had in years. With interest rates normalizing and inventory improving, it is an excellent time to lock in a home before the next wave of demand hits. Barrett Henry recommends getting pre-approved early and moving quickly on well-priced homes.</p>
-      <h2>What This Means for Sellers</h2>
-      <p>Sellers who price strategically and invest in presentation are still seeing strong results. Overpriced homes sit, but properly positioned listings in desirable areas continue to attract multiple offers. Barrett's data-driven pricing approach helps sellers hit the sweet spot.</p>
-      <h2>FAQ</h2>
-      <h3>Is now a good time to buy in Tampa Bay?</h3>
-      <p>Yes. Improved inventory and stabilized prices create a favorable environment for buyers who are pre-approved and ready to act.</p>
-      <h3>Are home prices dropping in Tampa Bay?</h3>
-      <p>Prices have not dropped significantly. Instead, the rate of appreciation has slowed to a sustainable pace, which is healthy for long-term market stability.</p>
-    `,
-  },
-];
-
-/** Look up a post by slug */
-function getPost(slug: string): BlogPost | undefined {
-  return PLACEHOLDER_POSTS.find((p) => p.slug === slug);
-}
+import { getAllPosts, getPostBySlug, getRelatedPosts } from "@/lib/posts";
 
 /** Format a date string into human-readable format */
 function formatDate(dateStr: string): string {
-  const date = new Date(dateStr + "T00:00:00");
+  const date = new Date(dateStr);
   return date.toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
@@ -65,9 +22,22 @@ function formatDate(dateStr: string): string {
   });
 }
 
-// --- generateStaticParams — pre-render all known blog posts at build ---
+/** Estimate reading time from HTML content (roughly 250 words/min) */
+function readingTime(html: string): string {
+  const text = html.replace(/<[^>]*>/g, "");
+  const words = text.split(/\s+/).length;
+  const minutes = Math.max(1, Math.ceil(words / 250));
+  return `${minutes} min read`;
+}
+
+/** Strip HTML tags for plain-text excerpt */
+function stripHtml(html: string): string {
+  return html.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+}
+
+// --- generateStaticParams — pre-render all 624 blog posts at build ---
 export async function generateStaticParams() {
-  return PLACEHOLDER_POSTS.map((post) => ({ slug: post.slug }));
+  return getAllPosts().map((post) => ({ slug: post.slug }));
 }
 
 // --- Dynamic SEO metadata ---
@@ -77,15 +47,20 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = getPost(slug);
+  const post = getPostBySlug(slug);
   if (!post) return {};
+
+  // Use excerpt if available, otherwise pull first 160 chars from content
+  const description = post.excerpt
+    ? stripHtml(post.excerpt).substring(0, 160)
+    : stripHtml(post.content).substring(0, 160);
 
   return {
     title: `${post.title} | Barrett Henry, REALTOR®`,
-    description: post.excerpt,
+    description,
     openGraph: {
       title: post.title,
-      description: post.excerpt,
+      description,
       type: "article",
       publishedTime: post.date,
     },
@@ -98,12 +73,14 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = getPost(slug);
+  const post = getPostBySlug(slug);
 
   // 404 if post slug doesn't match anything
   if (!post) notFound();
 
   const agent = getPrimaryAgent();
+  const related = getRelatedPosts(slug, 3);
+  const estimatedReadTime = readingTime(post.content);
 
   return (
     <>
@@ -115,7 +92,9 @@ export default async function BlogPostPage({
             "@context": "https://schema.org",
             "@type": "Article",
             headline: post.title,
-            description: post.excerpt,
+            description: post.excerpt
+              ? stripHtml(post.excerpt).substring(0, 160)
+              : stripHtml(post.content).substring(0, 160),
             datePublished: post.date,
             author: {
               "@type": "Person",
@@ -134,11 +113,6 @@ export default async function BlogPostPage({
       {/* === Article header === */}
       <section className="bg-primary py-16">
         <div className="container-wide max-w-3xl text-center">
-          {/* Category badge */}
-          <span className="inline-block px-4 py-1 rounded-full text-xs font-body font-semibold bg-accent/20 text-accent mb-4">
-            {post.category}
-          </span>
-
           {/* Title */}
           <h1 className="heading-display text-display md:text-display-lg text-white mb-4">
             {post.title}
@@ -148,7 +122,7 @@ export default async function BlogPostPage({
           <div className="flex items-center justify-center gap-3 text-sm font-body text-accent">
             <time dateTime={post.date}>{formatDate(post.date)}</time>
             <span className="w-1 h-1 rounded-full bg-accent/50" />
-            <span>{post.readingTime}</span>
+            <span>{estimatedReadTime}</span>
           </div>
         </div>
       </section>
@@ -158,13 +132,13 @@ export default async function BlogPostPage({
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* --- Main article content --- */}
           <article className="lg:col-span-2">
+            {/*
+              Render WordPress HTML content.
+              The .blog-content class in globals.css styles headings,
+              paragraphs, lists, tables, images, links, and blockquotes.
+            */}
             <div
-              className="prose prose-lg font-body text-dark max-w-none
-                prose-headings:font-heading prose-headings:text-primary
-                prose-a:text-accent prose-a:no-underline hover:prose-a:underline
-                prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
-                prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
-                prose-p:leading-relaxed"
+              className="blog-content"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
 
@@ -201,7 +175,7 @@ export default async function BlogPostPage({
                 About the Author
               </h3>
               <div className="flex items-start gap-4 mb-4">
-                {/* Agent photo placeholder */}
+                {/* Agent photo */}
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex-shrink-0 overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
@@ -228,31 +202,30 @@ export default async function BlogPostPage({
               </Link>
             </div>
 
-            {/* Related posts placeholder */}
-            <div className="card p-6">
-              <h3 className="font-heading font-bold text-lg text-primary mb-4">
-                Related Posts
-              </h3>
-              <div className="space-y-4">
-                {/* Placeholder related posts — replaced by CMS logic */}
-                {PLACEHOLDER_POSTS.filter((p) => p.slug !== post.slug)
-                  .slice(0, 3)
-                  .map((related) => (
+            {/* Related posts — matched by city name in slug */}
+            {related.length > 0 && (
+              <div className="card p-6">
+                <h3 className="font-heading font-bold text-lg text-primary mb-4">
+                  Related Posts
+                </h3>
+                <div className="space-y-4">
+                  {related.map((rel) => (
                     <Link
-                      key={related.slug}
-                      href={`/blog/${related.slug}`}
+                      key={rel.slug}
+                      href={`/blog/${rel.slug}`}
                       className="block group"
                     >
                       <p className="font-body text-sm font-semibold text-primary group-hover:text-accent transition-colors line-clamp-2">
-                        {related.title}
+                        {rel.title}
                       </p>
                       <p className="font-body text-xs text-muted mt-1">
-                        {formatDate(related.date)}
+                        {formatDate(rel.date)}
                       </p>
                     </Link>
                   ))}
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Quick contact card */}
             <div className="card p-6 bg-primary/5">
