@@ -74,7 +74,8 @@ async function bridgeFetch<T>(
 function buildFilter(params: ListingSearchParams): string {
   const filters: string[] = [];
 
-  if (params.city) filters.push(`City eq '${params.city}'`);
+  // Stellar MLS stores city names in UPPERCASE — normalize for OData filter
+  if (params.city) filters.push(`City eq '${params.city.toUpperCase()}'`);
   if (params.zip) filters.push(`PostalCode eq '${params.zip}'`);
   if (params.min_price) filters.push(`ListPrice ge ${params.min_price}`);
   if (params.max_price) filters.push(`ListPrice le ${params.max_price}`);
@@ -83,7 +84,7 @@ function buildFilter(params: ListingSearchParams): string {
   if (params.property_type) filters.push(`PropertyType eq '${params.property_type}'`);
 
   // Default to active listings unless caller explicitly sets a status
-  // Note: fresh Stellar MLS feeds may only have Closed data initially
+  // Filter by listing status — default to Active
   if (params.status) filters.push(`StandardStatus eq '${params.status}'`);
   else filters.push(`StandardStatus eq 'Active'`);
 
