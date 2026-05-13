@@ -1,101 +1,218 @@
-import Image from "next/image";
+// =============================================================================
+// Homepage — Barrett Henry, REALTOR® | Tampa Bay Homes for Sale
+// Server component: fetches featured listings at build/revalidation time
+// =============================================================================
 
-export default function Home() {
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Shield, TrendingUp, Users } from "lucide-react";
+
+import HeroSection from "@/components/ui/HeroSection";
+import SearchBar from "@/components/ui/SearchBar";
+import ListingGrid from "@/components/ui/ListingGrid";
+import CityGrid from "@/components/ui/CityGrid";
+import { getFeaturedListings } from "@/lib/bridge";
+import { getPrimaryAgent } from "@/data/agents";
+
+// -----------------------------------------------------------------------------
+// Metadata — SEO title, description, and Open Graph tags
+// -----------------------------------------------------------------------------
+
+export const metadata: Metadata = {
+  title: "Tampa Bay Homes for Sale | Barrett Henry, REALTOR® | REMAX Collective",
+  description:
+    "Search Tampa Bay homes for sale with Barrett Henry, Broker Associate at REMAX Collective. 23+ years of real estate experience. Browse listings in Valrico, Brandon, Riverview, Tampa, and more.",
+  openGraph: {
+    title: "Tampa Bay Homes for Sale | Barrett Henry, REALTOR®",
+    description:
+      "Search Tampa Bay homes for sale with Barrett Henry, Broker Associate at REMAX Collective. 23+ years of real estate experience.",
+    url: "/",
+    type: "website",
+  },
+};
+
+// -----------------------------------------------------------------------------
+// Value proposition data — rendered as a 3-column grid
+// -----------------------------------------------------------------------------
+
+const VALUE_PROPS = [
+  {
+    icon: Shield,
+    title: "23+ Years Experience",
+    description:
+      "Navigating complex deals with confidence built from two decades of closings.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Data-Driven Strategy",
+    description:
+      "Market analysis and pricing strategies that maximize your investment.",
+  },
+  {
+    icon: Users,
+    title: "Local Market Expert",
+    description:
+      "Deep knowledge of Tampa Bay's neighborhoods, schools, and lifestyle.",
+  },
+] as const;
+
+// -----------------------------------------------------------------------------
+// Page component
+// -----------------------------------------------------------------------------
+
+export default async function HomePage() {
+  // Fetch featured listings server-side (cached via ISR in bridge.ts)
+  const featuredListings = await getFeaturedListings();
+
+  // Pull primary agent info for JSON-LD structured data
+  const agent = getPrimaryAgent();
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      {/* === JSON-LD: RealEstateAgent structured data === */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "RealEstateAgent",
+            name: agent.name,
+            description: agent.bio,
+            url: "https://nowtb.com",
+            telephone: agent.phone,
+            email: agent.email,
+            image: "https://nowtb.com/images/barrett-henry.jpg",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Tampa Bay",
+              addressRegion: "FL",
+              addressCountry: "US",
+            },
+            memberOf: {
+              "@type": "RealEstateOrganization",
+              name: "REMAX Collective",
+            },
+            knowsAbout: [
+              "Residential Real Estate",
+              "Tampa Bay Homes for Sale",
+              "Investment Properties",
+              "New Construction",
+            ],
+          }),
+        }}
+      />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      {/* =================================================================
+          SECTION 1: Hero — full-width dark navy with search bar and CTAs
+          ================================================================= */}
+      <HeroSection
+        title="Find Your Home in Tampa Bay"
+        subtitle="23+ years of real estate experience. Your trusted local expert."
+      >
+        {/* Search bar in the hero */}
+        <SearchBar />
+
+        {/* CTA buttons below the search bar */}
+        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Link href="/properties" className="btn-primary px-8 py-3 text-base">
+            Browse Listings
+          </Link>
+          <Link
+            href="/sell-your-home"
+            className="btn-outline px-8 py-3 text-base text-white border-white hover:bg-white hover:text-primary"
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            Get a Home Valuation
+          </Link>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </HeroSection>
+
+      {/* =================================================================
+          SECTION 2: Featured Listings — grid of top listings from MLS
+          ================================================================= */}
+      <ListingGrid
+        listings={featuredListings}
+        title="Featured Tampa Bay Properties"
+        subtitle="Handpicked listings across Tampa Bay's most desirable communities."
+      />
+
+      {/* "View All Listings" link below the grid */}
+      {featuredListings.length > 0 && (
+        <div className="container-wide pb-8 text-center">
+          <Link
+            href="/properties"
+            className="btn-primary inline-block px-8 py-3"
+          >
+            View All Listings
+          </Link>
+        </div>
+      )}
+
+      {/* =================================================================
+          SECTION 3: City Grid — links to city hub pages
+          ================================================================= */}
+      <CityGrid />
+
+      {/* =================================================================
+          SECTION 4: Value Props — 3-column grid with icons
+          ================================================================= */}
+      <section className="container-wide py-16">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          {VALUE_PROPS.map((prop) => {
+            const Icon = prop.icon;
+            return (
+              <div
+                key={prop.title}
+                className="text-center px-6 py-8 rounded-xl bg-white shadow-sm"
+              >
+                {/* Icon circle */}
+                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-accent/20">
+                  <Icon className="h-7 w-7 text-accent" />
+                </div>
+
+                {/* Title */}
+                <h3 className="font-heading font-bold text-lg text-primary mb-2">
+                  {prop.title}
+                </h3>
+
+                {/* Description */}
+                <p className="font-body text-muted text-sm leading-relaxed">
+                  {prop.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* =================================================================
+          SECTION 5: CTA — dark background call-to-action
+          ================================================================= */}
+      <section className="bg-primary py-16">
+        <div className="container-wide text-center">
+          <h2 className="heading-section text-display-sm text-white mb-4">
+            Ready to Make Your Move?
+          </h2>
+          <p className="font-body text-accent text-lg max-w-2xl mx-auto mb-8">
+            Whether you are buying, selling, or investing in Tampa Bay real estate,
+            Barrett Henry has the experience and market knowledge to get it done.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="btn-primary bg-accent text-primary hover:bg-accent/90 px-8 py-3 text-base font-semibold"
+            >
+              Contact Barrett
+            </Link>
+            <Link
+              href="/properties"
+              className="btn-outline border-white text-white hover:bg-white hover:text-primary px-8 py-3 text-base"
+            >
+              Search Homes
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
