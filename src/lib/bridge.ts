@@ -17,9 +17,9 @@ const BRIDGE_BASE = process.env.BRIDGE_API_BASE!;   // e.g. https://api.bridgeda
 const BRIDGE_TOKEN = process.env.BRIDGE_SERVER_TOKEN!; // Server-side Bearer token
 const DATASET = process.env.BRIDGE_DATASET || 'test';  // 'test' for dev, MLS dataset ID for prod
 
-// Use mock data until real MLS dataset is configured
-// Change to: const USE_MOCK = DATASET === 'test'; when going live
-const USE_MOCK = true;
+// Mock data used as fallback when live feed returns empty (fresh feed may only have Closed data)
+const USE_MOCK = DATASET === 'test';
+const FALLBACK_TO_MOCK = true; // Set to false once Active listings are flowing
 
 // -----------------------------------------------------------------------------
 // Base fetcher — adds auth header, builds URL, caches with ISR (5 min)
@@ -83,6 +83,7 @@ function buildFilter(params: ListingSearchParams): string {
   if (params.property_type) filters.push(`PropertyType eq '${params.property_type}'`);
 
   // Default to active listings unless caller explicitly sets a status
+  // Note: fresh Stellar MLS feeds may only have Closed data initially
   if (params.status) filters.push(`StandardStatus eq '${params.status}'`);
   else filters.push(`StandardStatus eq 'Active'`);
 
@@ -155,10 +156,13 @@ export async function getFeaturedListings(): Promise<Listing[]> {
       limit: '12',
       sort: 'ListPrice desc',
     });
-    return res.value || [];
+    const listings = res.value || [];
+    // Fall back to mock data if live feed is empty (fresh feed transition)
+    if (listings.length === 0 && FALLBACK_TO_MOCK) return getMockFeatured();
+    return listings;
   } catch (error) {
     console.error('Failed to fetch featured listings:', error);
-    return [];
+    return FALLBACK_TO_MOCK ? getMockFeatured() : [];
   }
 }
 
@@ -199,10 +203,12 @@ export async function getListingsByCity(
   if (USE_MOCK) return getMockListingsByCity(city).slice(0, limit);
   try {
     const res = await getListings({ city, limit: String(limit) });
-    return res.value || [];
+    const listings = res.value || [];
+    if (listings.length === 0 && FALLBACK_TO_MOCK) return getMockListingsByCity(city).slice(0, limit);
+    return listings;
   } catch (error) {
     console.error(`Failed to fetch listings for ${city}:`, error);
-    return [];
+    return FALLBACK_TO_MOCK ? getMockListingsByCity(city).slice(0, limit) : [];
   }
 }
 
