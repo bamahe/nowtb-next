@@ -26,6 +26,9 @@ import RealtorPage from "@/components/pages/RealtorPage";
 import NeighborhoodPage from "@/components/pages/NeighborhoodPage";
 import SellYourHomeCityPage from "@/components/pages/SellYourHomeCityPage";
 import LoanGuidePage from "@/components/pages/LoanGuidePage";
+import ComparisonPage from "@/components/pages/ComparisonPage";
+import RegionalPage from "@/components/pages/RegionalPage";
+import MiscCatchAllPage from "@/components/pages/MiscCatchAllPage";
 import {
   cities,
   getCityBySlug,
@@ -34,7 +37,10 @@ import {
   SPOKE_TOPICS,
   type CityData,
 } from "@/data/cities";
-import { getNeighborhoodBySlug, getNeighborhoodsByCity } from "@/data/neighborhoods";
+import { neighborhoods, getNeighborhoodBySlug, getNeighborhoodsByCity } from "@/data/neighborhoods";
+import { comparisons, getComparisonBySlug, type ComparisonData } from "@/data/comparisons";
+import { regionalPages, getRegionalPageBySlug, type RegionalPageData } from "@/data/regional-pages";
+import { miscPages, getMiscPageBySlug, type MiscPageData } from "@/data/misc-pages";
 import { getListings, getListingsByCity } from "@/lib/bridge";
 
 // --- County data for county pages ---
@@ -74,7 +80,12 @@ type PageType =
   | { kind: "realtor"; city: CityData }
   | { kind: "sell-city"; city: CityData }
   | { kind: "loan"; loanType: string; slug: string; label: string }
-  | { kind: "neighborhood"; slug: string; name: string; city: string };
+  | { kind: "neighborhood"; slug: string; name: string; city: string }
+  | { kind: "neighborhood-spoke"; slug: string; name: string; city: string }
+  | { kind: "neighborhood-realtor"; slug: string; name: string; city: string }
+  | { kind: "comparison"; comparison: ComparisonData }
+  | { kind: "regional"; page: RegionalPageData }
+  | { kind: "misc"; page: MiscPageData };
 
 /**
  * Parses a URL slug into a page type.
@@ -125,6 +136,29 @@ function parseSlug(slug: string): PageType | null {
     return { kind: "neighborhood", slug: neighborhood.slug, name: neighborhood.name, city: neighborhood.city };
   }
 
+  // 7. Neighborhood spoke + realtor pages: {neighborhood}-homes-for-sale, {neighborhood}-realtor
+  //    Matches ~260 neighborhoods x 2 page types = ~520 pages from WordPress
+  for (const n of neighborhoods) {
+    if (slug === `${n.slug}-homes-for-sale`) {
+      return { kind: "neighborhood-spoke", slug: n.slug, name: n.name, city: n.city };
+    }
+    if (slug === `${n.slug}-realtor`) {
+      return { kind: "neighborhood-realtor", slug: n.slug, name: n.name, city: n.city };
+    }
+  }
+
+  // 8. Comparison pages: brandon-vs-riverview, buying-vs-renting-tampa-bay (24 pages)
+  const comparison = getComparisonBySlug(slug);
+  if (comparison) return { kind: "comparison", comparison };
+
+  // 9. Tampa Bay regional and other city-prefixed pages (34 pages)
+  const regional = getRegionalPageBySlug(slug);
+  if (regional) return { kind: "regional", page: regional };
+
+  // 10. Misc/uncategorized catch-all pages (40+ pages)
+  const misc = getMiscPageBySlug(slug);
+  if (misc && misc.handling === "catch-all") return { kind: "misc", page: misc };
+
   return null;
 }
 
@@ -163,9 +197,31 @@ export async function generateStaticParams() {
   }
 
   // Neighborhood pages (461 neighborhoods from data export)
-  const { neighborhoods } = await import("@/data/neighborhoods");
-  for (const neighborhood of neighborhoods) {
+  const { neighborhoods: allNeighborhoods } = await import("@/data/neighborhoods");
+  for (const neighborhood of allNeighborhoods) {
+    // Base neighborhood page: /bloomingdale
     params.push({ citySlug: neighborhood.slug });
+    // Neighborhood homes-for-sale spoke: /bloomingdale-homes-for-sale
+    params.push({ citySlug: `${neighborhood.slug}-homes-for-sale` });
+    // Neighborhood realtor page: /bloomingdale-realtor
+    params.push({ citySlug: `${neighborhood.slug}-realtor` });
+  }
+
+  // Comparison pages (24 city-vs-city and concept comparisons)
+  for (const comp of comparisons) {
+    params.push({ citySlug: comp.slug });
+  }
+
+  // Tampa Bay regional pages (34 pages)
+  for (const rp of regionalPages) {
+    params.push({ citySlug: rp.slug });
+  }
+
+  // Misc catch-all pages (40+ uncategorized pages)
+  for (const mp of miscPages) {
+    if (mp.handling === "catch-all") {
+      params.push({ citySlug: mp.slug });
+    }
   }
 
   return params;
@@ -216,6 +272,39 @@ export async function generateMetadata({
         description: `Explore homes for sale in ${parsed.name}, ${cityName}, FL. Updated daily from Stellar MLS. Barrett Henry, Broker Associate at REMAX Collective — 23+ years of real estate experience.`,
       };
     }
+    case "neighborhood-spoke": {
+      // Neighborhood homes-for-sale page (e.g. /bloomingdale-homes-for-sale)
+      const nsCity = getCityBySlug(parsed.city);
+      const nsCityName = nsCity ? nsCity.name : "Tampa Bay";
+      return {
+        title: `${parsed.name} Homes for Sale — ${nsCityName}, FL`,
+        description: `Browse homes for sale in ${parsed.name}, ${nsCityName}, FL. Updated daily from Stellar MLS. Barrett Henry, Broker Associate at REMAX Collective — 23+ years of real estate experience.`,
+      };
+    }
+    case "neighborhood-realtor": {
+      // Neighborhood realtor page (e.g. /bloomingdale-realtor)
+      const nrCity = getCityBySlug(parsed.city);
+      const nrCityName = nrCity ? nrCity.name : "Tampa Bay";
+      return {
+        title: `${parsed.name} REALTOR® — Barrett Henry | ${nrCityName}, FL`,
+        description: `Looking for a trusted REALTOR® in ${parsed.name}, ${nrCityName}? Barrett Henry has 23+ years of real estate experience. REMAX Collective.`,
+      };
+    }
+    case "comparison":
+      return {
+        title: `${parsed.comparison.title} | Barrett Henry, REALTOR®`,
+        description: parsed.comparison.excerpt,
+      };
+    case "regional":
+      return {
+        title: `${parsed.page.title} | Barrett Henry, REALTOR®`,
+        description: parsed.page.excerpt,
+      };
+    case "misc":
+      return {
+        title: `${parsed.page.title} | Barrett Henry, REALTOR®`,
+        description: parsed.page.excerpt,
+      };
     default:
       break;
   }
@@ -303,6 +392,38 @@ export default async function CityPage({
         />
       );
     }
+    case "neighborhood-spoke": {
+      // Neighborhood homes-for-sale page — reuses NeighborhoodPage with listings focus
+      const nsCityData = getCityBySlug(parsed.city) || cities[0];
+      const nsNearby = getNeighborhoodsByCity(parsed.city)
+        .filter((n) => n.slug !== parsed.slug)
+        .map((n) => ({ name: n.name, slug: n.slug }));
+      return (
+        <NeighborhoodPage
+          name={parsed.name}
+          slug={parsed.slug}
+          city={nsCityData.name}
+          citySlug={nsCityData.slug}
+          nearbyNeighborhoods={nsNearby}
+        />
+      );
+    }
+    case "neighborhood-realtor": {
+      // Neighborhood realtor page — reuses RealtorPage with neighborhood name
+      const nrCityData = getCityBySlug(parsed.city) || cities[0];
+      return (
+        <RealtorPage
+          cityName={parsed.name}
+          citySlug={nrCityData.slug}
+        />
+      );
+    }
+    case "comparison":
+      return <ComparisonPage comparison={parsed.comparison} />;
+    case "regional":
+      return <RegionalPage page={parsed.page} />;
+    case "misc":
+      return <MiscCatchAllPage page={parsed.page} />;
     default:
       notFound();
   }

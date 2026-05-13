@@ -1,7 +1,7 @@
 // =============================================================================
 // /guides/[slug] — Individual guide page
 // Long-form article layout with table of contents sidebar, content sections,
-// inline CTAs, and related guides. (42 guide pages)
+// inline CTAs, and related guides. (51 guide pages from nowtb.com)
 // =============================================================================
 
 import type { Metadata } from "next";
@@ -9,102 +9,12 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ContactForm from "@/components/ui/ContactForm";
 import { getPrimaryAgent } from "@/data/agents";
-
-// --- Guide data type (placeholder until CMS integration) ---
-interface GuideSection {
-  id: string;
-  heading: string;
-  content: string;
-}
-
-interface Guide {
-  slug: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  category: string;
-  readingTime: string;
-  sections: GuideSection[];
-}
-
-// --- Placeholder guides ---
-const PLACEHOLDER_GUIDES: Guide[] = [
-  {
-    slug: "first-time-homebuyer-florida",
-    title: "The Complete First-Time Homebuyer Guide for Florida",
-    excerpt:
-      "Step-by-step walkthrough of buying your first home in Florida — from budgeting and pre-approval through closing day.",
-    date: "2026-04-10",
-    category: "Buying",
-    readingTime: "12 min read",
-    sections: [
-      {
-        id: "getting-started",
-        heading: "Getting Started: Is Now the Right Time to Buy?",
-        content:
-          "<p>Buying your first home is one of the biggest financial decisions you will make. The Florida market offers strong long-term appreciation, no state income tax, and a wide range of housing options from condos to single-family homes.</p><p>Barrett Henry recommends starting the process by assessing your financial readiness: stable income, manageable debt, and enough savings for a down payment and closing costs.</p>",
-      },
-      {
-        id: "pre-approval",
-        heading: "Step 1: Get Pre-Approved for a Mortgage",
-        content:
-          "<p>Pre-approval tells you exactly how much house you can afford and shows sellers you are a serious buyer. Barrett works with a network of trusted lenders in Tampa Bay who can get you pre-approved quickly.</p><p>You will need: two years of tax returns, recent pay stubs, bank statements, and a credit report. Most Florida buyers qualify for conventional, FHA, or VA loans depending on their situation.</p>",
-      },
-      {
-        id: "home-search",
-        heading: "Step 2: Search for Your Home",
-        content:
-          "<p>With pre-approval in hand, Barrett will set up custom MLS searches based on your criteria — location, price range, bedrooms, and must-have features. You will receive new listings the moment they hit the market.</p><p>Pro tip: In competitive areas like Valrico, Brandon, and Riverview, be ready to tour homes within 24 hours of listing. Barrett's local market knowledge helps you identify the best values quickly.</p>",
-      },
-      {
-        id: "making-offer",
-        heading: "Step 3: Make an Offer and Negotiate",
-        content:
-          "<p>Barrett will run a comparative market analysis (CMA) to determine the right offer price. His 23+ years of real estate experience mean he knows how to structure offers that win — whether it is a competitive market or a buyer's market.</p><p>Negotiation covers more than price: closing costs, inspection contingencies, closing date, and included items are all on the table.</p>",
-      },
-      {
-        id: "closing",
-        heading: "Step 4: Inspections, Appraisal, and Closing",
-        content:
-          "<p>Once your offer is accepted, you will enter the due diligence period. Barrett coordinates home inspections, appraisal scheduling, and title work so nothing falls through the cracks.</p><p>At closing, you will sign the final documents, fund the purchase, and receive your keys. Barrett walks you through every line item so there are no surprises.</p>",
-      },
-    ],
-  },
-  {
-    slug: "selling-your-home-tampa-bay",
-    title: "The Complete Guide to Selling Your Home in Tampa Bay",
-    excerpt:
-      "Everything Tampa Bay sellers need to know — from pricing strategy and staging to marketing and closing.",
-    date: "2026-03-28",
-    category: "Selling",
-    readingTime: "10 min read",
-    sections: [
-      {
-        id: "pricing",
-        heading: "Pricing Your Home Right from Day One",
-        content:
-          "<p>The most critical decision in selling your home is the list price. Price too high and your home sits. Price too low and you leave money on the table.</p><p>Barrett uses a data-driven CMA that analyzes recent sales, active competition, and market trends specific to your neighborhood. This approach consistently delivers above-market results for his sellers.</p>",
-      },
-      {
-        id: "preparation",
-        heading: "Preparing Your Home to Sell",
-        content:
-          "<p>First impressions drive offers. Barrett provides a personalized preparation checklist that focuses on high-ROI improvements — not expensive renovations that never pay back.</p><p>Common recommendations include fresh paint, decluttering, deep cleaning, and minor repairs. Professional staging may be recommended for vacant or luxury properties.</p>",
-      },
-      {
-        id: "marketing",
-        heading: "Marketing That Gets Results",
-        content:
-          "<p>Barrett's marketing plan includes professional photography, 3D virtual tours, targeted social media ads, email campaigns to active buyer agents, and syndication to 100+ real estate websites.</p><p>Every listing gets maximum exposure from day one. No waiting for buyers to find you — Barrett puts your home in front of them.</p>",
-      },
-    ],
-  },
-];
-
-/** Look up a guide by slug */
-function getGuide(slug: string): Guide | undefined {
-  return PLACEHOLDER_GUIDES.find((g) => g.slug === slug);
-}
+import {
+  guides,
+  getGuideBySlug,
+  getRelatedGuides,
+  type GuideData,
+} from "@/data/guides";
 
 /** Format date string */
 function formatDate(dateStr: string): string {
@@ -118,7 +28,7 @@ function formatDate(dateStr: string): string {
 
 // --- generateStaticParams — pre-render all known guides at build ---
 export async function generateStaticParams() {
-  return PLACEHOLDER_GUIDES.map((guide) => ({ slug: guide.slug }));
+  return guides.map((guide) => ({ slug: guide.slug }));
 }
 
 // --- Dynamic SEO metadata ---
@@ -128,7 +38,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const guide = getGuide(slug);
+  const guide = getGuideBySlug(slug);
   if (!guide) return {};
 
   return {
@@ -149,7 +59,7 @@ export default async function GuidePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const guide = getGuide(slug);
+  const guide = getGuideBySlug(slug);
 
   // 404 if the slug doesn't match any guide
   if (!guide) notFound();
@@ -157,9 +67,7 @@ export default async function GuidePage({
   const agent = getPrimaryAgent();
 
   // Get related guides (same category, excluding current)
-  const relatedGuides = PLACEHOLDER_GUIDES.filter(
-    (g) => g.slug !== guide.slug
-  ).slice(0, 3);
+  const relatedGuides = getRelatedGuides(guide.slug, 3);
 
   return (
     <>

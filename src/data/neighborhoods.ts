@@ -475,6 +475,24 @@ export const neighborhoods: NeighborhoodData[] = [
   { slug: "lake-shipp", name: "Lake Shipp", city: "winter-haven" },
   { slug: "silver-oaks", name: "Silver Oaks", city: "zephyrhills" },
   { slug: "the-villages-of-zephyrhills", name: "The Villages of Zephyrhills", city: "zephyrhills" },
+
+  // --- Additional neighborhoods from URL audit (not in original WP export) ---
+  { slug: "boyette", name: "Boyette", city: "riverview" },
+  { slug: "buckhorn-springs", name: "Buckhorn Springs", city: "valrico" },
+  { slug: "canterbury-oaks", name: "Canterbury Oaks", city: "valrico" },
+  { slug: "carrollwood-meadows", name: "Carrollwood Meadows", city: "carrollwood" },
+  { slug: "mango", name: "Mango", city: "seffner" },
+  { slug: "river-hills-country-club", name: "River Hills Country Club", city: "valrico" },
+  { slug: "twin-lakes", name: "Twin Lakes", city: "brandon" },
+  { slug: "village-green", name: "Village Green", city: "brandon" },
+  { slug: "north-clearwater", name: "North Clearwater", city: "clearwater" },
+  { slug: "north-lakeland", name: "North Lakeland", city: "lakeland" },
+  { slug: "south-lakeland", name: "South Lakeland", city: "lakeland" },
+  { slug: "south-tampa", name: "South Tampa", city: "tampa" },
+  { slug: "north-river-ranch-parrish", name: "North River Ranch Parrish", city: "parrish" },
+  { slug: "seffner-mango", name: "Seffner-Mango", city: "seffner" },
+  { slug: "clearwater-beach", name: "Clearwater Beach", city: "clearwater" },
+  { slug: "st-pete-beach", name: "St. Pete Beach", city: "st-petersburg" },
 ];
 
 /** Get all neighborhoods for a given city */
