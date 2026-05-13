@@ -40,29 +40,32 @@ html {
   @apply font-heading font-bold tracking-tight;
 }
 
-/* Button base styles */
+/* Button base styles — generous padding, hover elevation, shadow on hover */
 .btn-primary {
-  @apply inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3
-         font-body font-semibold text-white transition-all duration-200
-         hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  @apply inline-flex items-center justify-center rounded-lg bg-primary px-8 py-3.5
+         font-body font-semibold text-white transition-all duration-300
+         hover:bg-primary/90 hover:shadow-lg hover:-translate-y-0.5
+         focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
 }
 
 .btn-secondary {
-  @apply inline-flex items-center justify-center rounded-lg border-2 border-primary
-         px-6 py-3 font-body font-semibold text-primary transition-all duration-200
-         hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  @apply inline-flex items-center justify-center rounded-lg border-2 border-white
+         px-8 py-3.5 font-body font-semibold text-white transition-all duration-300
+         hover:bg-white hover:text-primary hover:shadow-lg hover:-translate-y-0.5
+         focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
 }
 
 .btn-accent {
-  @apply inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3
-         font-body font-semibold text-primary transition-all duration-200
-         hover:bg-accent/80 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  @apply inline-flex items-center justify-center rounded-lg bg-accent px-8 py-3.5
+         font-body font-semibold text-primary transition-all duration-300
+         hover:bg-accent/80 hover:shadow-lg hover:-translate-y-0.5
+         focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
 }
 
-/* Card base */
+/* Card base — enhanced hover elevation with upward lift */
 .card {
-  @apply rounded-xl bg-white shadow-sm border border-border transition-shadow
-         duration-200 hover:shadow-md;
+  @apply rounded-xl bg-white shadow-sm border border-border transition-all
+         duration-300 hover:shadow-lg hover:-translate-y-1;
 }
 
 /* Container widths */
@@ -103,6 +106,32 @@ select {
 .blog-content td { @apply border border-border p-3; }
 .blog-content img { @apply rounded-lg max-w-full h-auto my-4; }
 .blog-content blockquote { @apply border-l-4 border-accent pl-4 italic my-4; }
+
+/* Alternating section backgrounds — 60-80px vertical padding */
+.section-dark {
+  @apply bg-primary text-white py-16 md:py-20;
+}
+.section-light {
+  @apply bg-light py-16 md:py-20;
+}
+.section-white {
+  @apply bg-white py-16 md:py-20;
+}
+
+/* Gradient overlay for hero images — matches WordPress site */
+.hero-gradient {
+  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.75) 100%);
+}
+
+/* Stat/metric display numbers */
+.stat-number {
+  @apply font-heading text-4xl md:text-5xl font-extrabold;
+}
+
+/* Section divider — accent bar below headings */
+.section-divider {
+  @apply w-16 h-1 bg-accent rounded-full mx-auto mt-4 mb-8;
+}
 
 /* Hide scrollbar utility */
 .scrollbar-hide {

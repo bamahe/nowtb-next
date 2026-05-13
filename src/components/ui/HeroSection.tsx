@@ -1,6 +1,7 @@
 // =============================================================================
 // HeroSection — Full-width hero banner with optional background image
 // Server component (no "use client" directive)
+// Dramatic design: 500px+ height, gradient overlays, large typography
 // =============================================================================
 
 import { cn } from "@/lib/utils";
@@ -10,7 +11,7 @@ interface HeroSectionProps {
   title: string;
   /** Optional subtitle displayed below the heading */
   subtitle?: string;
-  /** Background image URL — a dark overlay is applied on top */
+  /** Background image URL — a gradient overlay is applied on top */
   bgImage?: string;
   /** Slot for CTA buttons, search bar, or other interactive content */
   children?: React.ReactNode;
@@ -26,8 +27,8 @@ export default function HeroSection({
     <section
       className={cn(
         "relative flex items-center justify-center min-h-[400px] md:min-h-[500px] w-full overflow-hidden",
-        // Use dark navy background when there's no image
-        !bgImage && "bg-primary"
+        // Dramatic dark gradient when there's no background image
+        !bgImage && "bg-gradient-to-br from-primary via-[#0f2847] to-primary"
       )}
     >
       {/* --- Background Image (if provided) --- */}
@@ -39,27 +40,30 @@ export default function HeroSection({
         />
       )}
 
-      {/* --- Dark Overlay — ensures text is readable over any image --- */}
+      {/* --- Gradient Overlay — matches WordPress site's hero treatment --- */}
       {bgImage && (
-        <div className="absolute inset-0 bg-primary/70" aria-hidden="true" />
+        <div className="absolute inset-0 hero-gradient" aria-hidden="true" />
       )}
 
-      {/* --- Content --- */}
-      <div className="relative z-10 container-wide text-center py-16">
-        {/* Heading */}
-        <h1 className="heading-display text-display md:text-display-lg text-white mb-4">
+      {/* --- Content — centered vertically and horizontally --- */}
+      <div className="relative z-10 container-wide text-center py-16 md:py-20">
+        {/* Heading — large, impactful, fluid sizing */}
+        <h1 className="heading-display text-4xl md:text-5xl lg:text-6xl text-white mb-2">
           {title}
         </h1>
 
-        {/* Subtitle */}
+        {/* Accent bar divider below title */}
+        <div className="section-divider" />
+
+        {/* Subtitle — slightly transparent for depth */}
         {subtitle && (
-          <p className="font-body text-accent text-lg md:text-xl max-w-2xl mx-auto mb-8">
+          <p className="font-body text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
             {subtitle}
           </p>
         )}
 
         {/* Children slot — CTA buttons, search bar, etc. */}
-        {children && <div className="mt-6">{children}</div>}
+        {children && <div className="mt-8">{children}</div>}
       </div>
     </section>
   );
