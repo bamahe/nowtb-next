@@ -17,8 +17,9 @@ const BRIDGE_BASE = process.env.BRIDGE_API_BASE!;   // e.g. https://api.bridgeda
 const BRIDGE_TOKEN = process.env.BRIDGE_SERVER_TOKEN!; // Server-side Bearer token
 const DATASET = process.env.BRIDGE_DATASET || 'test';  // 'test' for dev, MLS dataset ID for prod
 
-// When dataset is 'test', use mock data instead of hitting the API
-const USE_MOCK = DATASET === 'test';
+// Use mock data until real MLS dataset is configured
+// Change to: const USE_MOCK = DATASET === 'test'; when going live
+const USE_MOCK = true;
 
 // -----------------------------------------------------------------------------
 // Base fetcher — adds auth header, builds URL, caches with ISR (5 min)
