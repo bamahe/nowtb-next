@@ -21,6 +21,11 @@ import ListingGrid from "@/components/ui/ListingGrid";
 import ContactForm from "@/components/ui/ContactForm";
 import SpokeNav from "@/components/city/SpokeNav";
 import CityContent from "@/components/city/CityContent";
+import CountyPage from "@/components/pages/CountyPage";
+import RealtorPage from "@/components/pages/RealtorPage";
+import NeighborhoodPage from "@/components/pages/NeighborhoodPage";
+import SellYourHomeCityPage from "@/components/pages/SellYourHomeCityPage";
+import LoanGuidePage from "@/components/pages/LoanGuidePage";
 import {
   cities,
   getCityBySlug,
@@ -31,49 +36,91 @@ import {
 } from "@/data/cities";
 import { getListings, getListingsByCity } from "@/lib/bridge";
 
+// --- County data for county pages ---
+const COUNTIES = [
+  { slug: "hillsborough-county", name: "Hillsborough" },
+  { slug: "pinellas-county", name: "Pinellas" },
+  { slug: "pasco-county", name: "Pasco" },
+  { slug: "manatee-county", name: "Manatee" },
+  { slug: "polk-county", name: "Polk" },
+  { slug: "sarasota-county", name: "Sarasota" },
+  { slug: "hernando-county", name: "Hernando" },
+  { slug: "citrus-county", name: "Citrus" },
+];
+
+// --- Loan guide data ---
+const LOAN_TYPES = [
+  { slug: "fha-loan-florida", loanType: "FHA Loan", label: "FHA Loans in Florida" },
+  { slug: "va-loan-florida", loanType: "VA Loan", label: "VA Loans in Florida" },
+  { slug: "usda-loan-florida", loanType: "USDA Loan", label: "USDA Loans in Florida" },
+  { slug: "conventional-loan-florida", loanType: "Conventional Loan", label: "Conventional Loans in Florida" },
+  { slug: "jumbo-loan-florida", loanType: "Jumbo Loan", label: "Jumbo Loans in Florida" },
+  { slug: "renovation-loan-florida", loanType: "Renovation Loan", label: "Renovation Loans in Florida" },
+  { slug: "reverse-mortgage-florida", loanType: "Reverse Mortgage", label: "Reverse Mortgages in Florida" },
+  { slug: "construction-loan-florida", loanType: "Construction Loan", label: "Construction Loans in Florida" },
+];
+
 // -----------------------------------------------------------------------------
 // Slug parser — determines if the URL is a hub page or a spoke page
 // Returns the matched city (and optional topic), or null for 404
 // -----------------------------------------------------------------------------
 
-/** Result of parsing a [citySlug] value */
-interface ParsedSlug {
-  city: CityData;
-  topic?: (typeof SPOKE_TOPICS)[number];
-}
+/** All the different page types this route can render */
+type PageType =
+  | { kind: "hub"; city: CityData }
+  | { kind: "spoke"; city: CityData; topic: (typeof SPOKE_TOPICS)[number] }
+  | { kind: "county"; countyName: string; countySlug: string }
+  | { kind: "realtor"; city: CityData }
+  | { kind: "sell-city"; city: CityData }
+  | { kind: "loan"; loanType: string; slug: string; label: string }
+  | { kind: "neighborhood"; slug: string; name: string };
 
 /**
- * Parses a URL slug into a city + optional topic.
- *
- * Examples:
- *   "valrico"                -> { city: Valrico }
- *   "valrico-homes-for-sale" -> { city: Valrico, topic: homes-for-sale }
- *   "brandon-pool-homes"     -> { city: Brandon, topic: pool-homes }
- *   "nonsense"               -> null (404)
+ * Parses a URL slug into a page type.
+ * Checks in priority order: county, loan, sell-your-home-{city}, {city}-realtor,
+ * direct city hub, {city}-{topic} spoke, then neighborhood fallback.
  */
-function parseSlug(slug: string): ParsedSlug | null {
-  // First: check if it's a direct city slug match (hub page)
-  const directCity = getCityBySlug(slug);
-  if (directCity) return { city: directCity };
+function parseSlug(slug: string): PageType | null {
+  // 1. County pages: hillsborough-county, pinellas-county, etc.
+  const county = COUNTIES.find((c) => c.slug === slug);
+  if (county) return { kind: "county", countyName: county.name, countySlug: county.slug };
 
-  // Second: check if it matches a {city}-{topic} pattern (spoke page)
-  // We iterate cities longest-slug-first so "apollo-beach" matches before "apollo"
+  // 2. Loan guide pages: fha-loan-florida, va-loan-florida, etc.
+  const loan = LOAN_TYPES.find((l) => l.slug === slug);
+  if (loan) return { kind: "loan", loanType: loan.loanType, slug: loan.slug, label: loan.label };
+
+  // 3. Sell-your-home city pages: sell-your-home-valrico, sell-your-home-brandon
+  if (slug.startsWith("sell-your-home-")) {
+    const citySlug = slug.replace("sell-your-home-", "");
+    const city = getCityBySlug(citySlug);
+    if (city) return { kind: "sell-city", city };
+  }
+
+  // 4. Direct city slug match (hub page): /valrico, /brandon
+  const directCity = getCityBySlug(slug);
+  if (directCity) return { kind: "hub", city: directCity };
+
+  // 5. City spoke or realtor pages — iterate longest-slug-first
   const sortedCities = [...cities].sort(
     (a, b) => b.slug.length - a.slug.length
   );
 
   for (const city of sortedCities) {
+    // Realtor pages: valrico-realtor, brandon-realtor
+    if (slug === `${city.slug}-realtor`) {
+      return { kind: "realtor", city };
+    }
+    // Spoke pages: valrico-homes-for-sale, brandon-luxury-homes
     for (const topic of SPOKE_TOPICS) {
       if (slug === `${city.slug}-${topic.slug}`) {
-        // Only allow topics that are actually enabled for this city
-        if (city.topics.includes(topic.slug)) {
-          return { city, topic };
-        }
+        return { kind: "spoke", city, topic };
       }
     }
   }
 
-  // No match — this slug doesn't correspond to any city or spoke page
+  // 6. Neighborhood fallback — any slug we don't recognize but exists in data
+  // For now, treat unknown slugs as potential neighborhood pages
+  // (the full neighborhood list will be loaded from data later)
   return null;
 }
 
@@ -86,18 +133,29 @@ export const revalidate = 300;
 // -----------------------------------------------------------------------------
 
 export async function generateStaticParams() {
-  const tier1 = getTier1Cities();
+  const allCities = cities;
   const params: { citySlug: string }[] = [];
 
-  for (const city of tier1) {
-    // Hub page: e.g. { citySlug: "valrico" }
+  // City hubs + spokes + realtor + sell-your-home per city
+  for (const city of allCities) {
     params.push({ citySlug: city.slug });
+    params.push({ citySlug: `${city.slug}-realtor` });
+    params.push({ citySlug: `sell-your-home-${city.slug}` });
 
-    // Spoke pages: e.g. { citySlug: "valrico-homes-for-sale" }
     const topics = getCityTopics(city);
     for (const topic of topics) {
       params.push({ citySlug: `${city.slug}-${topic.slug}` });
     }
+  }
+
+  // County pages
+  for (const county of COUNTIES) {
+    params.push({ citySlug: county.slug });
+  }
+
+  // Loan guide pages
+  for (const loan of LOAN_TYPES) {
+    params.push({ citySlug: loan.slug });
   }
 
   return params;
@@ -118,7 +176,34 @@ export async function generateMetadata({
   // If the slug doesn't resolve, Next.js will render notFound() in the page
   if (!parsed) return {};
 
-  const { city, topic } = parsed;
+  switch (parsed.kind) {
+    case "county":
+      return {
+        title: `${parsed.countyName} County Real Estate`,
+        description: `Search homes for sale in ${parsed.countyName} County, FL. Browse cities, listings, and market data. Barrett Henry, REALTOR® at REMAX Collective.`,
+      };
+    case "loan":
+      return {
+        title: parsed.label,
+        description: `Learn about ${parsed.loanType.toLowerCase()}s in Florida. Eligibility, benefits, and how to apply. Barrett Henry, REALTOR® at REMAX Collective.`,
+      };
+    case "realtor":
+      return {
+        title: `${parsed.city.name} REALTOR® — Barrett Henry`,
+        description: `Looking for a trusted REALTOR® in ${parsed.city.name}, FL? Barrett Henry has 23+ years of real estate experience. REMAX Collective.`,
+      };
+    case "sell-city":
+      return {
+        title: `Sell Your ${parsed.city.name} Home`,
+        description: `Sell your ${parsed.city.name} home for top dollar. Free home valuation from Barrett Henry, Broker Associate at REMAX Collective.`,
+      };
+    default:
+      break;
+  }
+
+  // Hub and spoke pages — city is guaranteed here since other kinds returned above
+  const city = (parsed as { city: CityData }).city;
+  const topic = parsed.kind === "spoke" ? parsed.topic : null;
 
   if (topic) {
     // Spoke page metadata
@@ -159,17 +244,33 @@ export default async function CityPage({
   const { citySlug } = await params;
   const parsed = parseSlug(citySlug);
 
-  // Slug doesn't match any city or spoke page — show 404
   if (!parsed) notFound();
 
-  const { city, topic } = parsed;
-
-  // Decide if this is a hub page or a spoke page
-  if (topic) {
-    return <SpokePage city={city} topic={topic} slug={citySlug} />;
+  // Dispatch to the correct page component based on type
+  switch (parsed.kind) {
+    case "hub":
+      return <HubPage city={parsed.city} />;
+    case "spoke":
+      return <SpokePage city={parsed.city} topic={parsed.topic} slug={citySlug} />;
+    case "county": {
+      const countyCities = cities.filter((c) => c.county === parsed.countyName);
+      return (
+        <CountyPage
+          countyName={parsed.countyName}
+          countySlug={parsed.countySlug}
+          cities={countyCities}
+        />
+      );
+    }
+    case "realtor":
+      return <RealtorPage cityName={parsed.city.name} citySlug={parsed.city.slug} />;
+    case "sell-city":
+      return <SellYourHomeCityPage cityName={parsed.city.name} citySlug={parsed.city.slug} />;
+    case "loan":
+      return <LoanGuidePage loanType={parsed.loanType} slug={parsed.slug} />;
+    default:
+      notFound();
   }
-
-  return <HubPage city={city} />;
 }
 
 // =============================================================================

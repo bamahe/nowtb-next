@@ -18,15 +18,30 @@ export interface CityData {
   lng: number;
 }
 
-/** Spoke topics — each becomes a /{city}-{topic} page */
+/** Spoke topics — each becomes a /{city}-{topic} page
+ *  Matches all 15 property-type spokes from the WordPress site */
 export const SPOKE_TOPICS = [
   { slug: "homes-for-sale", label: "Homes for Sale", filter: {} },
-  { slug: "pool-homes", label: "Pool Homes", filter: { pool: true } },
+  { slug: "homes-with-pool", label: "Pool Homes", filter: { pool: true } },
   { slug: "new-construction", label: "New Construction", filter: { property_type: "New Construction" } },
   { slug: "luxury-homes", label: "Luxury Homes", filter: { min_price: "750000" } },
   { slug: "waterfront-homes", label: "Waterfront Homes", filter: { waterfront: true } },
-  { slug: "55-plus-communities", label: "55+ Communities", filter: { senior: true } },
+  { slug: "55-plus-homes", label: "55+ Communities", filter: { senior: true } },
   { slug: "open-houses", label: "Open Houses", filter: { open_house: true } },
+  { slug: "investment-property", label: "Investment Properties", filter: { property_type: "Investment" } },
+  { slug: "new-listings", label: "New Listings", filter: { sort: "OriginalEntryTimestamp desc" } },
+  { slug: "single-story-homes", label: "Single-Story Homes", filter: { stories: "1" } },
+  { slug: "land-for-sale", label: "Land for Sale", filter: { property_type: "Land" } },
+  { slug: "condos-townhomes", label: "Condos & Townhomes", filter: { property_type: "Condominium" } },
+  { slug: "gated-community-homes", label: "Gated Communities", filter: { gated: true } },
+  { slug: "neighborhood-guide", label: "Neighborhood Guide", filter: {} },
+  { slug: "housing-market", label: "Housing Market", filter: {} },
+] as const;
+
+/** Additional city page types — not property-type spokes */
+export const CITY_PAGE_TYPES = [
+  { slug: "realtor", label: "Your {City} REALTOR®" },
+  { slug: "sell-your-home", prefix: "sell-your-home-", label: "Sell Your {City} Home" },
 ] as const;
 
 export const cities: CityData[] = [
