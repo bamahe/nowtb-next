@@ -41,6 +41,7 @@ import { neighborhoods, getNeighborhoodBySlug, getNeighborhoodsByCity } from "@/
 import { comparisons, getComparisonBySlug, type ComparisonData } from "@/data/comparisons";
 import { regionalPages, getRegionalPageBySlug, type RegionalPageData } from "@/data/regional-pages";
 import { miscPages, getMiscPageBySlug, type MiscPageData } from "@/data/misc-pages";
+import { guides, type GuideData } from "@/data/guides";
 import { getListings, getListingsByCity } from "@/lib/bridge";
 
 // --- County data for county pages ---
@@ -85,7 +86,8 @@ type PageType =
   | { kind: "neighborhood-realtor"; slug: string; name: string; city: string }
   | { kind: "comparison"; comparison: ComparisonData }
   | { kind: "regional"; page: RegionalPageData }
-  | { kind: "misc"; page: MiscPageData };
+  | { kind: "misc"; page: MiscPageData }
+  | { kind: "guide"; guide: GuideData };
 
 /**
  * Parses a URL slug into a page type.
@@ -155,7 +157,11 @@ function parseSlug(slug: string): PageType | null {
   const regional = getRegionalPageBySlug(slug);
   if (regional) return { kind: "regional", page: regional };
 
-  // 10. Misc/uncategorized catch-all pages (40+ pages)
+  // 10. Guide pages at root level (e.g., /first-time-home-buyer-guide)
+  const guide = guides.find((g) => g.slug === slug);
+  if (guide) return { kind: "guide", guide };
+
+  // 11. Misc/uncategorized catch-all pages (40+ pages)
   const misc = getMiscPageBySlug(slug);
   if (misc && misc.handling === "catch-all") return { kind: "misc", page: misc };
 
@@ -215,6 +221,11 @@ export async function generateStaticParams() {
   // Tampa Bay regional pages (34 pages)
   for (const rp of regionalPages) {
     params.push({ citySlug: rp.slug });
+  }
+
+  // Guide pages at root level (e.g., /first-time-home-buyer-guide)
+  for (const guide of guides) {
+    params.push({ citySlug: guide.slug });
   }
 
   // Misc catch-all pages (40+ uncategorized pages)
@@ -304,6 +315,11 @@ export async function generateMetadata({
       return {
         title: `${parsed.page.title} | Barrett Henry, REALTOR®`,
         description: parsed.page.excerpt,
+      };
+    case "guide":
+      return {
+        title: `${parsed.guide.title} | Barrett Henry, REALTOR®`,
+        description: parsed.guide.excerpt,
       };
     default:
       break;
@@ -424,6 +440,31 @@ export default async function CityPage({
       return <RegionalPage page={parsed.page} />;
     case "misc":
       return <MiscCatchAllPage page={parsed.page} />;
+    case "guide": {
+      // Render guide inline — reuse the same layout as /guides/[slug]
+      const g = parsed.guide;
+      return (
+        <>
+          <HeroSection title={g.title} subtitle={g.excerpt} />
+          <div className="container-wide py-12">
+            <div className="max-w-3xl mx-auto">
+              <p className="text-sm text-muted mb-8">{g.category} · {g.readingTime}</p>
+              {g.sections.map((s) => (
+                <div key={s.id} className="mb-8">
+                  <h2 className="font-heading text-2xl font-bold text-primary mb-4">{s.heading}</h2>
+                  <div className="blog-content" dangerouslySetInnerHTML={{ __html: s.content }} />
+                </div>
+              ))}
+              <div className="mt-12 p-6 bg-primary rounded-xl text-center">
+                <h3 className="font-heading text-xl font-bold text-white mb-2">Have Questions?</h3>
+                <p className="text-accent mb-4">Barrett Henry has 23+ years of real estate experience.</p>
+                <a href="/contact" className="btn-accent">Contact Barrett</a>
+              </div>
+            </div>
+          </div>
+        </>
+      );
+    }
     default:
       notFound();
   }
