@@ -1,68 +1,64 @@
-// =============================================================================
-// TurnstileWidget — Cloudflare Turnstile spam protection widget
-// "use client" because it loads an external script and manages widget state
-// Renders an invisible/visible CAPTCHA challenge from Cloudflare
-// =============================================================================
-
+// Cloudflare Turnstile spam protection widget
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
 
 interface TurnstileProps {
-  /** Called with the verification token when the user passes the challenge */
   onVerify: (token: string) => void;
 }
 
 export default function TurnstileWidget({ onVerify }: TurnstileProps) {
-  // Ref to the container div where Turnstile renders its widget
   const containerRef = useRef<HTMLDivElement>(null);
-  // Track whether the Turnstile script has finished loading
   const [loaded, setLoaded] = useState(false);
-  // Track the widget ID so we don't render it twice
   const widgetIdRef = useRef<string | null>(null);
-
-  // Memoize the onVerify callback to avoid re-rendering the widget
   const stableOnVerify = useCallback(onVerify, [onVerify]);
 
-  // --- Load the Turnstile script once ---
+  const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+
+  // If no site key configured, skip turnstile entirely and auto-verify
   useEffect(() => {
-    // If script is already on the page, mark as loaded
+    if (!siteKey) {
+      stableOnVerify("no-turnstile-key-configured");
+    }
+  }, [siteKey, stableOnVerify]);
+
+  // Load the Turnstile script
+  useEffect(() => {
+    if (!siteKey) return;
     if (document.getElementById("cf-turnstile-script")) {
       setLoaded(true);
       return;
     }
-
     const script = document.createElement("script");
     script.id = "cf-turnstile-script";
-    // "render=explicit" means we control when/where the widget appears
-    script.src =
-      "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+    script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
     script.async = true;
     script.onload = () => setLoaded(true);
+    script.onerror = () => {
+      // If script fails to load, auto-verify so form isn't permanently locked
+      stableOnVerify("turnstile-script-failed");
+    };
     document.head.appendChild(script);
-  }, []);
+  }, [siteKey, stableOnVerify]);
 
-  // --- Render the Turnstile widget once the script is ready ---
+  // Render the widget
   useEffect(() => {
-    if (!loaded || !containerRef.current) return;
-
-    const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
-    if (!siteKey) {
-      console.error("TurnstileWidget: NEXT_PUBLIC_TURNSTILE_SITE_KEY is not set");
-      return;
+    if (!loaded || !containerRef.current || !siteKey) return;
+    try {
+      const w = (window as Record<string, unknown>).turnstile as Record<string, Function> | undefined;
+      if (w?.render && widgetIdRef.current === null) {
+        widgetIdRef.current = w.render(containerRef.current, {
+          sitekey: siteKey,
+          callback: stableOnVerify,
+          theme: "light",
+        }) as string;
+      }
+    } catch (err) {
+      console.error("Turnstile render error:", err);
+      stableOnVerify("turnstile-render-failed");
     }
+  }, [loaded, stableOnVerify, siteKey]);
 
-    // Only render if we haven't already and the container is empty
-    // @ts-ignore — window.turnstile is injected by the Cloudflare script
-    if (window.turnstile && widgetIdRef.current === null) {
-      // @ts-ignore
-      widgetIdRef.current = window.turnstile.render(containerRef.current, {
-        sitekey: siteKey,
-        callback: stableOnVerify,
-        theme: "light",
-      });
-    }
-  }, [loaded, stableOnVerify]);
-
+  if (!siteKey) return null;
   return <div ref={containerRef} className="mt-2" />;
 }
