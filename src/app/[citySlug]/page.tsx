@@ -78,6 +78,9 @@ function parseSlug(slug: string): ParsedSlug | null {
 }
 
 // -----------------------------------------------------------------------------
+// Revalidate city pages every 5 minutes so mock/live data stays fresh
+export const revalidate = 300;
+
 // generateStaticParams — pre-render all hub + spoke URLs at build time
 // Returns all city slugs AND all city-topic combos for Tier 1 cities
 // -----------------------------------------------------------------------------

@@ -9,6 +9,8 @@ import HeroSection from "@/components/ui/HeroSection";
 import ListingGrid from "@/components/ui/ListingGrid";
 import { getOpenHouses } from "@/lib/bridge";
 
+export const dynamic = "force-dynamic";
+
 // --- SEO metadata + Open Graph tags ---
 export const metadata: Metadata = {
   title: "Open Houses This Week in Tampa Bay",

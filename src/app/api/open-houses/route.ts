@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { getOpenHouses } from "@/lib/bridge";
 
+export const dynamic = "force-dynamic";
+
 /**
  * GET /api/open-houses — Open houses in the next 7 days
  */

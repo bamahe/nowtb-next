@@ -14,6 +14,9 @@ import CityGrid from "@/components/ui/CityGrid";
 import { getFeaturedListings } from "@/lib/bridge";
 import { getPrimaryAgent } from "@/data/agents";
 
+// Force dynamic rendering so mock/live data uses runtime env vars
+export const dynamic = "force-dynamic";
+
 // -----------------------------------------------------------------------------
 // Metadata — SEO title, description, and Open Graph tags
 // -----------------------------------------------------------------------------

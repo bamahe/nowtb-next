@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import { getFeaturedListings } from "@/lib/bridge";
 
+// Force dynamic — listings depend on runtime env vars
+export const dynamic = "force-dynamic";
+
 /**
  * GET /api/featured — Featured/highlighted listings
  */
