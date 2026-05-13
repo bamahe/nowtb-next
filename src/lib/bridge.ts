@@ -17,9 +17,11 @@ const BRIDGE_BASE = process.env.BRIDGE_API_BASE!;   // e.g. https://api.bridgeda
 const BRIDGE_TOKEN = process.env.BRIDGE_SERVER_TOKEN!; // Server-side Bearer token
 const DATASET = process.env.BRIDGE_DATASET || 'test';  // 'test' for dev, MLS dataset ID for prod
 
-// Mock data used as fallback when live feed returns empty (fresh feed may only have Closed data)
-const USE_MOCK = DATASET === 'test';
-const FALLBACK_TO_MOCK = true; // Set to false once Active listings are flowing
+// During build (next build), always use mock data to avoid burning API rate limits.
+// At runtime (ISR revalidation / dynamic requests), use real Bridge API.
+const IS_BUILD_TIME = process.env.NEXT_PHASE === 'phase-production-build';
+const USE_MOCK = DATASET === 'test' || IS_BUILD_TIME;
+const FALLBACK_TO_MOCK = true; // Falls back to mock when API returns empty or errors
 
 // -----------------------------------------------------------------------------
 // Base fetcher — adds auth header, builds URL, caches with ISR (5 min)
