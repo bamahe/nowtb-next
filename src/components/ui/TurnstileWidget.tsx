@@ -45,7 +45,8 @@ export default function TurnstileWidget({ onVerify }: TurnstileProps) {
   useEffect(() => {
     if (!loaded || !containerRef.current || !siteKey) return;
     try {
-      const w = (window as Record<string, unknown>).turnstile as Record<string, Function> | undefined;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const w = (window as any).turnstile as Record<string, Function> | undefined;
       if (w?.render && widgetIdRef.current === null) {
         widgetIdRef.current = w.render(containerRef.current, {
           sitekey: siteKey,
