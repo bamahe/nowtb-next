@@ -17,24 +17,58 @@ const BRIDGE_BASE = process.env.BRIDGE_API_BASE!;   // e.g. https://api.bridgeda
 const BRIDGE_TOKEN = process.env.BRIDGE_SERVER_TOKEN!; // Server-side Bearer token
 const DATASET = process.env.BRIDGE_DATASET || 'test';  // 'test' for dev, MLS dataset ID for prod
 
-// TEMPORARY: Mock data on until we confirm Active listings + rate limit resets
-// TODO: Switch to real API once Stellar MLS Active data is confirmed
-const USE_MOCK = true;
+// Live API is ON — mock data is the fallback if Bridge returns errors or rate limits
+const USE_MOCK = false;
 const FALLBACK_TO_MOCK = true;
+
+// Skip API calls during build to avoid rate limits (3,400+ pages all fetching at once).
+// Pages still get their full SEO content; listings load on first visitor request via ISR.
+const IS_BUILD_TIME = process.env.NEXT_PHASE === 'phase-production-build';
+
+// -----------------------------------------------------------------------------
+// Rate limit protection — tracks 429s and auto-pauses API calls for 5 minutes
+// This prevents cascading failures if Bridge throttles us
+// -----------------------------------------------------------------------------
+
+let rateLimitedUntil = 0; // timestamp (ms) when we can try the API again
+
+/**
+ * Check if we're currently rate-limited.
+ * Returns true if Bridge returned a 429 recently and cooldown hasn't expired.
+ */
+function isRateLimited(): boolean {
+  return Date.now() < rateLimitedUntil;
+}
+
+/**
+ * Mark the API as rate-limited for 5 minutes.
+ * All calls during cooldown will fall back to mock data instead of hammering Bridge.
+ */
+function markRateLimited(): void {
+  rateLimitedUntil = Date.now() + 5 * 60 * 1000; // 5-minute cooldown
+  console.warn('[Bridge] Rate limited — falling back to mock data for 5 minutes');
+}
 
 // -----------------------------------------------------------------------------
 // Base fetcher — adds auth header, builds URL, caches with ISR (5 min)
+// Includes rate limit detection and a single retry with 2-second backoff
 // -----------------------------------------------------------------------------
 
 /**
  * Low-level fetch wrapper for Bridge API.
  * Adds Bearer auth, merges query params, and returns typed response.
  * Uses Next.js ISR caching (revalidate every 300 seconds / 5 minutes).
+ * If Bridge returns 429 (rate limited), marks cooldown and throws.
  */
 async function bridgeFetch<T>(
   endpoint: string,
   params?: Record<string, string>
 ): Promise<BridgeResponse<T>> {
+  // If we're in cooldown from a recent 429, don't even try — throw immediately
+  if (isRateLimited()) {
+    throw new Error('Bridge API rate limited — in cooldown period');
+  }
+
   // Build the full URL using OData format: base/OData/dataset/resource
   // For test dataset, use the REST endpoint; for real MLS, use OData
   const basePath = DATASET === 'test'
@@ -56,7 +90,28 @@ async function bridgeFetch<T>(
     next: { revalidate: 300 },
   });
 
-  // If Bridge returns an error, throw so callers can handle it
+  // If rate limited, wait 2 seconds and retry once before giving up
+  if (res.status === 429) {
+    await new Promise(r => setTimeout(r, 2000));
+    const retry = await fetch(url.toString(), {
+      headers: {
+        Authorization: `Bearer ${BRIDGE_TOKEN}`,
+        Accept: 'application/json',
+      },
+      next: { revalidate: 300 },
+    });
+    if (retry.status === 429) {
+      // Still rate limited after retry — activate cooldown so we stop hammering
+      markRateLimited();
+      throw new Error('Bridge API rate limited after retry');
+    }
+    if (!retry.ok) {
+      throw new Error(`Bridge API error: ${retry.status} ${retry.statusText}`);
+    }
+    return retry.json();
+  }
+
+  // If Bridge returns any other error, throw so callers can handle it
   if (!res.ok) {
     throw new Error(`Bridge API error: ${res.status} ${res.statusText}`);
   }
@@ -103,6 +158,11 @@ function buildFilter(params: ListingSearchParams): string {
 export async function getListings(
   params: ListingSearchParams = {}
 ): Promise<BridgeResponse<Listing>> {
+  // At build time, return empty — listings load on first request via ISR
+  if (IS_BUILD_TIME) {
+    return { bundle: 'build-skip', total: 0, value: [] };
+  }
+
   // Use mock data when Bridge dataset is 'test'
   if (USE_MOCK) {
     let filtered = [...mockListings];
@@ -136,12 +196,40 @@ export async function getListings(
  * Returns null if not found or on error (404, network issue, etc.).
  */
 export async function getListing(id: string): Promise<Listing | null> {
+  if (IS_BUILD_TIME) return null;
   if (USE_MOCK) return getMockListing(id);
   try {
-    const res = await bridgeFetch<Listing>(`/listings/${id}`);
-    return res.value?.[0] || null;
+    // OData single entity format: Property('ListingKey') — NOT Property/ListingKey
+    // bridgeFetch handles the /listings → /Property replacement,
+    // but we need the OData key syntax for single-entity lookups
+    if (isRateLimited()) {
+      return FALLBACK_TO_MOCK ? getMockListing(id) : null;
+    }
+
+    const url = DATASET === 'test'
+      ? `${BRIDGE_BASE}/${DATASET}/listings/${id}`
+      : `${BRIDGE_BASE}/OData/${DATASET}/Property('${id}')`;
+
+    const res = await fetch(url, {
+      headers: {
+        Authorization: `Bearer ${BRIDGE_TOKEN}`,
+        Accept: 'application/json',
+      },
+      next: { revalidate: 300 },
+    });
+
+    if (res.status === 429) {
+      markRateLimited();
+      return FALLBACK_TO_MOCK ? getMockListing(id) : null;
+    }
+
+    if (!res.ok) return null;
+
+    // OData single entity returns the object directly (not wrapped in .value)
+    const data = await res.json();
+    return data as Listing;
   } catch {
-    return null;
+    return FALLBACK_TO_MOCK ? getMockListing(id) : null;
   }
 }
 
@@ -150,6 +238,7 @@ export async function getListing(id: string): Promise<Listing | null> {
  * Pulls the 12 most expensive active listings above $400K.
  */
 export async function getFeaturedListings(): Promise<Listing[]> {
+  if (IS_BUILD_TIME) return [];
   if (USE_MOCK) return getMockFeatured();
   try {
     const res = await getListings({
@@ -173,6 +262,7 @@ export async function getFeaturedListings(): Promise<Listing[]> {
  * Sorted by soonest open house first.
  */
 export async function getOpenHouses(): Promise<Listing[]> {
+  if (IS_BUILD_TIME) return [];
   if (USE_MOCK) return getMockOpenHouses();
   try {
     const now = new Date().toISOString();
@@ -202,6 +292,7 @@ export async function getListingsByCity(
   city: string,
   limit = 24
 ): Promise<Listing[]> {
+  if (IS_BUILD_TIME) return [];
   if (USE_MOCK) return getMockListingsByCity(city).slice(0, limit);
   try {
     const res = await getListings({ city, limit: String(limit) });
