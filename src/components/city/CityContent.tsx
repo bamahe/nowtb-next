@@ -5,7 +5,6 @@
 // Includes Barrett's phone number and a CTA.
 // =============================================================================
 
-import Link from "next/link";
 import type { CityData } from "@/data/cities";
 import type { SPOKE_TOPICS } from "@/data/cities";
 import { getPageContent } from "@/lib/page-content";
@@ -110,15 +109,6 @@ export default function CityContent({ city, topic }: CityContentProps) {
         </div>
       )}
 
-      {/* CTA button */}
-      <div className="mt-8">
-        <Link
-          href="/contact"
-          className="btn-primary inline-block px-8 py-3 text-base"
-        >
-          Contact Barrett About {city.name} Homes
-        </Link>
-      </div>
     </section>
   );
 }

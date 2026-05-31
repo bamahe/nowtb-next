@@ -637,63 +637,101 @@ async function SpokePage({
         }}
       />
 
-      {/* === Hero section with topic + city name === */}
-      <HeroSection
-        title={`${topic.label} in ${city.name}`}
-        subtitle={`Browse ${topic.label.toLowerCase()} in ${city.name}, ${city.county} County, Florida.`}
-      >
-        {/* Back link to city hub */}
-        <Link
-          href={`/${city.slug}`}
-          className="inline-flex items-center gap-2 text-accent hover:text-white transition-colors mt-4 text-sm font-semibold"
-        >
-          {/* Left arrow */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-4 w-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-          All {city.name} Homes
-        </Link>
-      </HeroSection>
+      {/* === Hero — compact with breadcrumb + CTA === */}
+      <section className="bg-primary pt-12 pb-16">
+        <div className="container-wide max-w-5xl">
+          {/* Breadcrumb trail */}
+          <nav className="flex items-center gap-2 text-xs font-body text-white/50 mb-6 tracking-wide uppercase">
+            <Link href="/" className="hover:text-white/80 transition-colors">Home</Link>
+            <span>/</span>
+            <Link href={`/${city.slug}`} className="hover:text-white/80 transition-colors">{city.name}</Link>
+            <span>/</span>
+            <span className="text-accent">{topic.label}</span>
+          </nav>
 
-      {/* === Filtered listings grid === */}
-      <ListingGrid
-        listings={listings}
-        title={`${topic.label} in ${city.name}`}
-        subtitle={
-          listings.length > 0
-            ? `Showing ${listings.length} ${topic.label.toLowerCase()} in ${city.name}.`
-            : `No ${topic.label.toLowerCase()} are currently listed in ${city.name}. Check back soon or contact Barrett for off-market options.`
-        }
-      />
+          {/* Title */}
+          <h1 className="heading-display text-display md:text-display-lg text-white mb-3">
+            {topic.label} in {city.name}
+          </h1>
+          <p className="font-body text-white/70 text-lg max-w-2xl mb-6">
+            {city.county} County, Florida — Updated daily from Stellar MLS
+          </p>
 
-      {/* === About section — topic-specific content for this city === */}
+          {/* CTA row */}
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="tel:+18137337907"
+              className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 rounded text-sm hover:bg-accent/90 transition-colors"
+            >
+              (813) 733-7907
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
+            >
+              Schedule a Tour
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* === Listings grid — front and center === */}
+      {listings.length > 0 ? (
+        <ListingGrid
+          listings={listings}
+          title={`${listings.length} ${topic.label} in ${city.name}`}
+          className="container-wide py-12"
+        />
+      ) : (
+        <section className="container-wide py-12">
+          <div className="rounded-xl border border-gray-200 bg-gray-50 p-8 text-center max-w-2xl mx-auto">
+            <p className="font-heading text-lg font-bold text-primary mb-2">
+              No {topic.label.toLowerCase()} currently listed in {city.name}
+            </p>
+            <p className="font-body text-muted text-sm mb-4">
+              New listings hit the MLS daily. Barrett can set up alerts so you are first to know.
+            </p>
+            <a
+              href="tel:+18137337907"
+              className="btn-primary inline-block px-6 py-2 text-sm"
+            >
+              Call (813) 733-7907
+            </a>
+          </div>
+        </section>
+      )}
+
+      {/* === SEO content — clean single column, no boilerplate === */}
       <CityContent city={city} topic={topic} />
 
-      {/* === Other spoke links for this city (highlights current topic) === */}
+      {/* === Explore more — spoke nav === */}
       <SpokeNav city={city} currentTopic={topic.slug} />
 
-      {/* === Contact form === */}
-      <section className="bg-gray-50 py-16">
-        <div className="container-wide max-w-2xl">
-          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2 text-center">
-            Find {topic.label} in {city.name}
-          </h2>
-          <p className="font-body text-muted text-center mb-8">
-            Barrett Henry can help you find the perfect{" "}
-            {topic.label.toLowerCase()} in {city.name}. Reach out today.
-          </p>
-          <ContactForm webhookUrl="/api/contact" source={`${city.slug}-${topic.slug}`} />
+      {/* === Contact — single clean CTA bar, no full form === */}
+      <section className="bg-primary py-12">
+        <div className="container-wide max-w-4xl flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h2 className="font-heading font-bold text-xl md:text-2xl text-white mb-1">
+              Looking for {topic.label.toLowerCase()} in {city.name}?
+            </h2>
+            <p className="font-body text-white/70 text-sm">
+              Barrett Henry, REALTOR® — 23+ years of real estate experience
+            </p>
+          </div>
+          <div className="flex gap-3 flex-shrink-0">
+            <a
+              href="tel:+18137337907"
+              className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 rounded text-sm hover:bg-accent/90 transition-colors"
+            >
+              Call Now
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
+            >
+              Send a Message
+            </Link>
+          </div>
         </div>
       </section>
     </>

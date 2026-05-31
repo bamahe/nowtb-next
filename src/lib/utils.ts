@@ -72,8 +72,11 @@ export function formatSqFt(sqft: number): string {
  *   so images keep working during and after migration
  */
 export function cleanWpContent(html: string): string {
-  return html
+  let cleaned = html
+    // Strip WordPress shortcodes that have no Next.js equivalent
     .replace(/\[showcaseidx[^\]]*\]/g, '')
+    .replace(/\[nowtb_[^\]]*\]/g, '')
+    // Rewrite relative WP image paths to the live domain
     .replace(
       /src="\/wp-content\/uploads\//g,
       'src="https://nowtb.com/wp-content/uploads/'
@@ -84,6 +87,20 @@ export function cleanWpContent(html: string): string {
         'https://nowtb.com/wp-content/uploads/'
       )}"`
     );
+
+  // Strip boilerplate footer sections that the Next.js layout already provides
+  // (Related Resources, Related Articles, Explore Communities, Helpful Resources, big CTA)
+  // These start at the "Related Resources" heading in the WP content
+  const boilerplateStart = cleaned.indexOf('<h2');
+  if (boilerplateStart > -1) {
+    // Find the specific "Related Resources" h2 that starts the boilerplate
+    const relatedIdx = cleaned.search(/<h2[^>]*>\s*Related Resources\s*<\/h2>/i);
+    if (relatedIdx > -1) {
+      cleaned = cleaned.substring(0, relatedIdx).trim();
+    }
+  }
+
+  return cleaned;
 }
 
 // -----------------------------------------------------------------------------
