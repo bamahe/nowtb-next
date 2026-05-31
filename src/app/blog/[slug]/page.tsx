@@ -11,6 +11,7 @@ import { notFound } from "next/navigation";
 import ContactForm from "@/components/ui/ContactForm";
 import { getPrimaryAgent } from "@/data/agents";
 import { getAllPosts, getPostBySlug, getRelatedPosts } from "@/lib/posts";
+import { cleanWpContent } from "@/lib/utils";
 
 /** Format a date string into human-readable format */
 function formatDate(dateStr: string): string {
@@ -139,7 +140,7 @@ export default async function BlogPostPage({
             */}
             <div
               className="blog-content"
-              dangerouslySetInnerHTML={{ __html: post.content }}
+              dangerouslySetInnerHTML={{ __html: cleanWpContent(post.content) }}
             />
 
             {/* --- Back to blog link --- */}

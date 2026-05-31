@@ -62,6 +62,31 @@ export function formatSqFt(sqft: number): string {
 }
 
 // -----------------------------------------------------------------------------
+// WordPress content cleanup
+// -----------------------------------------------------------------------------
+
+/**
+ * Sanitize WordPress HTML content for rendering in Next.js.
+ * - Strips leftover shortcodes (e.g. [showcaseidx_hotsheet ...])
+ * - Rewrites /wp-content/uploads/ image paths to the live WP domain
+ *   so images keep working during and after migration
+ */
+export function cleanWpContent(html: string): string {
+  return html
+    .replace(/\[showcaseidx[^\]]*\]/g, '')
+    .replace(
+      /src="\/wp-content\/uploads\//g,
+      'src="https://nowtb.com/wp-content/uploads/'
+    )
+    .replace(/srcset="([^"]*)"/g, (_match, srcset: string) =>
+      `srcset="${srcset.replace(
+        /\/wp-content\/uploads\//g,
+        'https://nowtb.com/wp-content/uploads/'
+      )}"`
+    );
+}
+
+// -----------------------------------------------------------------------------
 // URL helpers
 // -----------------------------------------------------------------------------
 

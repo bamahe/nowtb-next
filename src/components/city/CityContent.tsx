@@ -9,6 +9,7 @@ import Link from "next/link";
 import type { CityData } from "@/data/cities";
 import type { SPOKE_TOPICS } from "@/data/cities";
 import { getPageContent } from "@/lib/page-content";
+import { cleanWpContent } from "@/lib/utils";
 
 interface CityContentProps {
   /** The city to generate content about */
@@ -27,6 +28,9 @@ export default function CityContent({ city, topic }: CityContentProps) {
   // Format zip codes as a readable list (used in placeholder fallback)
   const zipList = formatZipList(city.zip_codes);
 
+  // Clean WordPress artifacts: strip shortcodes, fix image URLs
+  const cleanContent = wpContent ? cleanWpContent(wpContent) : null;
+
   return (
     <section className="container-wide py-12">
       {/* Section heading */}
@@ -36,11 +40,11 @@ export default function CityContent({ city, topic }: CityContentProps) {
           : `About ${city.name}, Florida`}
       </h2>
 
-      {wpContent ? (
-        // ---- REAL WordPress content found — render it as-is ----
+      {cleanContent ? (
+        // ---- REAL WordPress content found — render it (shortcodes stripped) ----
         <div
           className="blog-content prose prose-lg max-w-none text-muted font-body"
-          dangerouslySetInnerHTML={{ __html: wpContent }}
+          dangerouslySetInnerHTML={{ __html: cleanContent }}
         />
       ) : (
         // ---- No WP content — fall back to generated placeholder ----

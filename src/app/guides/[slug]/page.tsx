@@ -9,6 +9,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ContactForm from "@/components/ui/ContactForm";
 import { getPrimaryAgent } from "@/data/agents";
+import { cleanWpContent } from "@/lib/utils";
 import {
   guides,
   getGuideBySlug,
@@ -154,7 +155,7 @@ export default async function GuidePage({
                   prose-headings:font-heading prose-headings:text-primary
                   prose-a:text-accent prose-a:no-underline hover:prose-a:underline
                   prose-p:leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: wpContent }}
+                dangerouslySetInnerHTML={{ __html: cleanWpContent(wpContent) }}
               />
 
               {/* Back to guides link */}

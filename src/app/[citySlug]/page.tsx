@@ -21,6 +21,7 @@ import ListingGrid from "@/components/ui/ListingGrid";
 import ContactForm from "@/components/ui/ContactForm";
 import SpokeNav from "@/components/city/SpokeNav";
 import CityContent from "@/components/city/CityContent";
+import { cleanWpContent } from "@/lib/utils";
 import CountyPage from "@/components/pages/CountyPage";
 import RealtorPage from "@/components/pages/RealtorPage";
 import NeighborhoodPage from "@/components/pages/NeighborhoodPage";
@@ -459,7 +460,7 @@ export default async function CityPage({
                     prose-headings:font-heading prose-headings:text-primary
                     prose-a:text-accent prose-a:no-underline hover:prose-a:underline
                     prose-p:leading-relaxed"
-                  dangerouslySetInnerHTML={{ __html: wpContent }}
+                  dangerouslySetInnerHTML={{ __html: cleanWpContent(wpContent) }}
                 />
               ) : (
                 /* Fallback: placeholder sections */
