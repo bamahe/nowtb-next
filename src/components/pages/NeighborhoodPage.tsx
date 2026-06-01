@@ -2,13 +2,15 @@
 // NeighborhoodPage — Neighborhood-level page within a city
 // Rendered inside the [citySlug] route for slugs like /valrico-bloomingdale
 // (452 neighborhood pages)
+//
+// Design pattern: matches the SpokePage compact hero + listings-first layout
 // =============================================================================
 
 import Link from "next/link";
-import HeroSection from "@/components/ui/HeroSection";
-import ContactForm from "@/components/ui/ContactForm";
 import ListingGrid from "@/components/ui/ListingGrid";
-import { getListingsByCity } from "@/lib/bridge";
+import SpokeNav from "@/components/city/SpokeNav";
+import { getListings } from "@/lib/bridge";
+import { getCityBySlug } from "@/data/cities";
 
 interface NeighborhoodPageProps {
   /** Display name of the neighborhood (e.g. "Bloomingdale") */
@@ -30,9 +32,24 @@ export default async function NeighborhoodPage({
   citySlug,
   nearbyNeighborhoods = [],
 }: NeighborhoodPageProps) {
-  // Fetch listings for the parent city (filtered by neighborhood later when
-  // the Bridge API supports it; for now we pull city-level data)
-  const listings = await getListingsByCity(city, 12);
+  // Look up parent city data for zip codes and county info
+  const parentCity = getCityBySlug(citySlug);
+  const county = parentCity?.county ?? "Hillsborough";
+
+  // Fetch listings by parent city's zip codes (more reliable than city name)
+  let listings: import("@/lib/types").Listing[] = [];
+  try {
+    if (parentCity?.zip_codes?.length) {
+      const res = await getListings({
+        zip_codes: parentCity.zip_codes,
+        limit: "24",
+      });
+      listings = res.value || [];
+    }
+  } catch {
+    // If the API call fails, render the page with an empty listing grid
+    listings = [];
+  }
 
   return (
     <>
@@ -59,7 +76,7 @@ export default async function NeighborhoodPage({
               {
                 "@type": "ListItem",
                 position: 3,
-                name: `${name} Real Estate`,
+                name: `${name} Homes for Sale`,
                 item: `https://nowtb.com/${slug}`,
               },
             ],
@@ -67,35 +84,71 @@ export default async function NeighborhoodPage({
         }}
       />
 
-      {/* === Hero section === */}
-      <HeroSection
-        title={`${name} Real Estate`}
-        subtitle={`Explore homes for sale in ${name}, ${city}, Florida. Updated daily from Stellar MLS.`}
-      >
-        {/* Back link to parent city hub */}
-        <Link
-          href={`/${citySlug}`}
-          className="inline-flex items-center gap-2 text-accent hover:text-white transition-colors mt-4 text-sm font-semibold"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-4 w-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-          All {city} Homes
-        </Link>
-      </HeroSection>
+      {/* === Hero — compact with breadcrumb + CTA (matches SpokePage pattern) === */}
+      <section className="bg-primary pt-12 pb-16">
+        <div className="container-wide max-w-5xl">
+          {/* Breadcrumb trail */}
+          <nav className="flex items-center gap-2 text-xs font-body text-white/50 mb-6 tracking-wide uppercase">
+            <Link href="/" className="hover:text-white/80 transition-colors">Home</Link>
+            <span>/</span>
+            <Link href={`/${citySlug}`} className="hover:text-white/80 transition-colors">{city}</Link>
+            <span>/</span>
+            <span className="text-accent">{name}</span>
+          </nav>
 
-      {/* === About the neighborhood === */}
+          {/* Title */}
+          <h1 className="heading-display text-display md:text-display-lg text-white mb-3">
+            {name} Homes for Sale
+          </h1>
+          <p className="font-body text-white/70 text-lg max-w-2xl mb-6">
+            {county} County, Florida — Updated daily from Stellar MLS
+          </p>
+
+          {/* CTA row */}
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="tel:+18137337907"
+              className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 rounded text-sm hover:bg-accent/90 transition-colors"
+            >
+              (813) 733-7907
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
+            >
+              Schedule a Tour
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* === Listings grid — front and center === */}
+      {listings.length > 0 ? (
+        <ListingGrid
+          listings={listings}
+          title={`${listings.length} Homes for Sale Near ${name}`}
+          className="container-wide py-12"
+        />
+      ) : (
+        <section className="container-wide py-12">
+          <div className="rounded-xl border border-gray-200 bg-gray-50 p-8 text-center max-w-2xl mx-auto">
+            <p className="font-heading text-lg font-bold text-primary mb-2">
+              No homes currently listed near {name}
+            </p>
+            <p className="font-body text-muted text-sm mb-4">
+              New listings hit the MLS daily. Barrett can set up alerts so you are first to know.
+            </p>
+            <a
+              href="tel:+18137337907"
+              className="btn-primary inline-block px-6 py-2 text-sm"
+            >
+              Call (813) 733-7907
+            </a>
+          </div>
+        </section>
+      )}
+
+      {/* === About the neighborhood — SEO content === */}
       <section className="container-wide py-12">
         <div className="max-w-3xl mx-auto">
           <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6">
@@ -119,12 +172,8 @@ export default async function NeighborhoodPage({
         </div>
       </section>
 
-      {/* === Active listings === */}
-      <ListingGrid
-        listings={listings}
-        title={`Homes for Sale Near ${name}`}
-        subtitle={`Active listings in and around ${name}, ${city}.`}
-      />
+      {/* === Spoke nav — explore more in the parent city === */}
+      {parentCity && <SpokeNav city={parentCity} />}
 
       {/* === Nearby neighborhoods — cross-linking === */}
       {nearbyNeighborhoods.length > 0 && (
@@ -148,20 +197,31 @@ export default async function NeighborhoodPage({
         </section>
       )}
 
-      {/* === Contact form === */}
-      <section className="bg-gray-50 py-16">
-        <div className="container-wide max-w-2xl">
-          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2 text-center">
-            Interested in {name}?
-          </h2>
-          <p className="font-body text-muted text-center mb-8">
-            Barrett Henry can help you buy or sell in {name}, {city}. Reach out
-            today.
-          </p>
-          <ContactForm
-            webhookUrl="/api/contact"
-            source={`${slug}-neighborhood`}
-          />
+      {/* === CTA bar — clean dark bar, no full form (matches SpokePage) === */}
+      <section className="bg-primary py-12">
+        <div className="container-wide max-w-4xl flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h2 className="font-heading font-bold text-xl md:text-2xl text-white mb-1">
+              Looking for homes in {name}?
+            </h2>
+            <p className="font-body text-white/70 text-sm">
+              Barrett Henry, REALTOR® — 23+ years of real estate experience
+            </p>
+          </div>
+          <div className="flex gap-3 flex-shrink-0">
+            <a
+              href="tel:+18137337907"
+              className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 rounded text-sm hover:bg-accent/90 transition-colors"
+            >
+              Call Now
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
+            >
+              Send a Message
+            </Link>
+          </div>
         </div>
       </section>
     </>

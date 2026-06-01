@@ -5,8 +5,8 @@
 // =============================================================================
 
 import Link from "next/link";
-import HeroSection from "@/components/ui/HeroSection";
-import ContactForm from "@/components/ui/ContactForm";
+import ListingGrid from "@/components/ui/ListingGrid";
+import { getListings } from "@/lib/bridge";
 import type { CityData } from "@/data/cities";
 
 interface CountyPageProps {
@@ -18,11 +18,24 @@ interface CountyPageProps {
   cities: CityData[];
 }
 
-export default function CountyPage({
+export default async function CountyPage({
   countyName,
   countySlug,
   cities,
 }: CountyPageProps) {
+  // Collect all ZIP codes across every city in this county for listing search
+  const allZipCodes = cities.flatMap((c) => c.zip_codes);
+
+  // Fetch the first 12 listings across all county ZIP codes
+  let listings: import("@/lib/types").Listing[] = [];
+  try {
+    const res = await getListings({ zip_codes: allZipCodes, limit: "12" });
+    listings = res.value || [];
+  } catch {
+    // If the API call fails, render the page with an empty listing grid
+    listings = [];
+  }
+
   return (
     <>
       {/* --- JSON-LD BreadcrumbList for SEO --- */}
@@ -42,7 +55,7 @@ export default function CountyPage({
               {
                 "@type": "ListItem",
                 position: 2,
-                name: `${countyName} County Real Estate`,
+                name: `${countyName} County`,
                 item: `https://nowtb.com/${countySlug}`,
               },
             ],
@@ -50,11 +63,41 @@ export default function CountyPage({
         }}
       />
 
-      {/* === Hero section === */}
-      <HeroSection
-        title={`${countyName} County Real Estate`}
-        subtitle={`Explore homes for sale across ${countyName} County, Florida. Browse cities, neighborhoods, and listings with Barrett Henry, REALTOR® at REMAX Collective.`}
-      />
+      {/* === Hero — compact with breadcrumb + CTA (matches spoke page pattern) === */}
+      <section className="bg-primary pt-12 pb-16">
+        <div className="container-wide max-w-5xl">
+          {/* Breadcrumb trail */}
+          <nav className="flex items-center gap-2 text-xs font-body text-white/50 mb-6 tracking-wide uppercase">
+            <Link href="/" className="hover:text-white/80 transition-colors">Home</Link>
+            <span>/</span>
+            <span className="text-accent">{countyName} County</span>
+          </nav>
+
+          {/* Title */}
+          <h1 className="heading-display text-display md:text-display-lg text-white mb-3">
+            {countyName} County Real Estate
+          </h1>
+          <p className="font-body text-white/70 text-lg max-w-2xl mb-6">
+            Florida — Updated daily from Stellar MLS
+          </p>
+
+          {/* CTA row */}
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="tel:+18137337907"
+              className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 rounded text-sm hover:bg-accent/90 transition-colors"
+            >
+              (813) 733-7907
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
+            >
+              Schedule a Tour
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* === Cities in this county — clickable grid of city hub links === */}
       <section className="container-wide py-12">
@@ -83,6 +126,13 @@ export default function CountyPage({
           ))}
         </div>
       </section>
+
+      {/* === Listings across the county === */}
+      <ListingGrid
+        listings={listings}
+        title={`Recent Listings in ${countyName} County`}
+        subtitle={`Browse active homes for sale across ${countyName} County, Florida.`}
+      />
 
       {/* === County overview content === */}
       <section className="bg-gray-50 py-12">
@@ -139,20 +189,21 @@ export default function CountyPage({
         </div>
       </section>
 
-      {/* === Contact form === */}
-      <section className="bg-gray-50 py-16">
-        <div className="container-wide max-w-2xl">
-          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2 text-center">
-            Buying or Selling in {countyName} County?
-          </h2>
-          <p className="font-body text-muted text-center mb-8">
-            Connect with Barrett Henry for expert guidance on {countyName} County
-            real estate.
-          </p>
-          <ContactForm
-            webhookUrl="/api/contact"
-            source={`${countySlug}`}
-          />
+      {/* === CTA bar — dark bg with call + message buttons === */}
+      <section className="bg-primary py-12">
+        <div className="container-wide max-w-4xl flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h2 className="font-heading font-bold text-xl md:text-2xl text-white mb-1">
+              Buying or Selling in {countyName} County?
+            </h2>
+            <p className="font-body text-white/70 text-sm">
+              REALTOR&reg; &amp; Broker Associate — 23+ years of real estate experience
+            </p>
+          </div>
+          <div className="flex gap-3 flex-shrink-0">
+            <a href="tel:+18137337907" className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 rounded text-sm hover:bg-accent/90 transition-colors">Call Now</a>
+            <Link href="/contact" className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors">Send a Message</Link>
+          </div>
         </div>
       </section>
     </>
