@@ -6,7 +6,7 @@
 
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight, X, Grid } from "lucide-react";
 
 interface Photo {
@@ -21,10 +21,24 @@ interface PhotoGalleryProps {
   autoScroll?: boolean;
 }
 
-export default function PhotoGallery({ photos, address }: PhotoGalleryProps) {
-  // Which photo is shown in the lightbox
-  const [lightboxIndex, setLightboxIndex] = useState(-1); // -1 = closed
+export default function PhotoGallery({ photos, address, autoScroll = false }: PhotoGalleryProps) {
+  // Which photo is shown as the hero (auto-advances)
+  const [heroIndex, setHeroIndex] = useState(0);
+  // Which photo is shown in the lightbox (-1 = closed)
+  const [lightboxIndex, setLightboxIndex] = useState(-1);
   const lightboxOpen = lightboxIndex >= 0;
+  // Pause auto-scroll on hover or after user clicks
+  const [paused, setPaused] = useState(false);
+  const userClicked = useRef(false);
+
+  // Auto-scroll hero image every 4 seconds
+  useEffect(() => {
+    if (!autoScroll || paused || lightboxOpen || userClicked.current || photos.length <= 1) return;
+    const timer = setInterval(() => {
+      setHeroIndex((current) => (current === photos.length - 1 ? 0 : current + 1));
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [autoScroll, paused, lightboxOpen, photos.length]);
 
   // Navigate lightbox
   const goTo = useCallback(
@@ -56,7 +70,6 @@ export default function PhotoGallery({ photos, address }: PhotoGalleryProps) {
   }
 
   // Show up to 5 photos in the grid layout (1 hero + 4 small)
-  const hero = photos[0];
   const gridPhotos = photos.slice(1, 5);
   const remainingCount = Math.max(0, photos.length - 5);
 
@@ -64,19 +77,50 @@ export default function PhotoGallery({ photos, address }: PhotoGalleryProps) {
     <>
       {/* ===== Photo Grid — hero left + 2x2 right ===== */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 rounded-xl overflow-hidden max-h-[520px]">
-        {/* Hero image — takes full height on left */}
-        <button
-          onClick={() => setLightboxIndex(0)}
-          className="relative w-full h-64 md:h-full min-h-[300px] md:min-h-[520px] cursor-pointer group overflow-hidden"
-          aria-label="View photo 1"
+        {/* Hero image — auto-scrolls through all photos, click to open lightbox */}
+        <div
+          className="relative w-full h-64 md:h-full min-h-[300px] md:min-h-[520px] overflow-hidden"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={hero.MediaURL}
-            alt={hero.ShortDescription || `${address} — photo 1`}
-            className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
-          />
-        </button>
+          <button
+            onClick={() => { userClicked.current = true; setLightboxIndex(heroIndex); }}
+            className="w-full h-full cursor-pointer group"
+            aria-label={`View photo ${heroIndex + 1}`}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={photos[heroIndex].MediaURL}
+              alt={photos[heroIndex].ShortDescription || `${address} — photo ${heroIndex + 1}`}
+              className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+            />
+          </button>
+
+          {/* Hero navigation arrows */}
+          {photos.length > 1 && (
+            <>
+              <button
+                onClick={() => { userClicked.current = true; setHeroIndex((i) => i === 0 ? photos.length - 1 : i - 1); }}
+                className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-2 transition-colors"
+                aria-label="Previous photo"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <button
+                onClick={() => { userClicked.current = true; setHeroIndex((i) => i === photos.length - 1 ? 0 : i + 1); }}
+                className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-2 transition-colors"
+                aria-label="Next photo"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </>
+          )}
+
+          {/* Photo counter */}
+          <span className="absolute bottom-3 right-3 bg-black/60 text-white text-xs font-body px-3 py-1.5 rounded-full">
+            {heroIndex + 1} / {photos.length}
+          </span>
+        </div>
 
         {/* 2x2 grid on right — hidden on mobile, show on md+ */}
         {gridPhotos.length > 0 && (

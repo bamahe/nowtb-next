@@ -86,8 +86,8 @@ async function bridgeFetch<T>(
       Authorization: `Bearer ${BRIDGE_TOKEN}`,
       Accept: 'application/json',
     },
-    // Next.js ISR: cache response for 5 minutes, then revalidate in background
-    next: { revalidate: 300 },
+    // Cache Bridge API responses for 60 seconds, then revalidate
+    next: { revalidate: 60 },
   });
 
   // If rate limited, wait 2 seconds and retry once before giving up

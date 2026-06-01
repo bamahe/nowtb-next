@@ -16,9 +16,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import HeroSection from "@/components/ui/HeroSection";
-import SearchBar from "@/components/ui/SearchBar";
 import ListingGrid from "@/components/ui/ListingGrid";
-import ContactForm from "@/components/ui/ContactForm";
 import SpokeNav from "@/components/city/SpokeNav";
 import CityContent from "@/components/city/CityContent";
 import { cleanWpContent } from "@/lib/utils";
@@ -171,8 +169,9 @@ function parseSlug(slug: string): PageType | null {
 }
 
 // -----------------------------------------------------------------------------
-// Revalidate city pages every 5 minutes so mock/live data stays fresh
-export const revalidate = 300;
+// Revalidate every 60 seconds — ensures fresh MLS listings on each visit
+// Pages are still pre-rendered at build for SEO, but listings refresh quickly
+export const revalidate = 60;
 
 // generateStaticParams — pre-render all hub + spoke URLs at build time
 // Returns all city slugs AND all city-topic combos for Tier 1 cities
@@ -389,7 +388,7 @@ export default async function CityPage({
       );
     }
     case "realtor":
-      return <RealtorPage cityName={parsed.city.name} citySlug={parsed.city.slug} />;
+      return <RealtorPage city={parsed.city} />;
     case "sell-city":
       return <SellYourHomeCityPage cityName={parsed.city.name} citySlug={parsed.city.slug} />;
     case "loan":
@@ -428,11 +427,11 @@ export default async function CityPage({
     }
     case "neighborhood-realtor": {
       // Neighborhood realtor page — reuses RealtorPage with neighborhood name
+      // Spread the parent city data but override the display name with the neighborhood name
       const nrCityData = getCityBySlug(parsed.city) || cities[0];
       return (
         <RealtorPage
-          cityName={parsed.name}
-          citySlug={nrCityData.slug}
+          city={{ ...nrCityData, name: parsed.name }}
         />
       );
     }
@@ -497,7 +496,7 @@ async function HubPage({ city }: { city: CityData }) {
   // Fetch listings by ZIP codes (city names often don't match MLS)
   let listings: import("@/lib/types").Listing[] = [];
   try {
-    const res = await getListings({ zip_codes: city.zip_codes, limit: "12" });
+    const res = await getListings({ zip_codes: city.zip_codes, limit: "24" });
     listings = res.value || [];
   } catch {
     listings = [];
@@ -510,13 +509,66 @@ async function HubPage({ city }: { city: CityData }) {
 
   return (
     <>
-      {/* === Hero section with city name and search bar === */}
-      <HeroSection
-        title={`${city.name} Homes for Sale`}
-        subtitle={city.tagline}
-      >
-        <SearchBar />
-      </HeroSection>
+      {/* === BreadcrumbList JSON-LD structured data === */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://nowtb.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: `${city.name} Homes for Sale`,
+                item: `https://nowtb.com/${city.slug}`,
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* === Compact hero with breadcrumb + CTA (matches spoke pattern) === */}
+      <section className="bg-primary pt-12 pb-16">
+        <div className="container-wide max-w-5xl">
+          {/* Breadcrumb trail */}
+          <nav className="flex items-center gap-2 text-xs font-body text-white/50 mb-6 tracking-wide uppercase">
+            <Link href="/" className="hover:text-white/80 transition-colors">Home</Link>
+            <span>/</span>
+            <span className="text-accent">{city.name}</span>
+          </nav>
+
+          {/* Title */}
+          <h1 className="heading-display text-display md:text-display-lg text-white mb-3">
+            Homes for Sale in {city.name}
+          </h1>
+          <p className="font-body text-white/70 text-lg max-w-2xl mb-6">
+            {city.county} County, Florida — Updated daily from Stellar MLS
+          </p>
+
+          {/* CTA row */}
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="tel:+18137337907"
+              className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 rounded text-sm hover:bg-accent/90 transition-colors"
+            >
+              (813) 733-7907
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
+            >
+              Schedule a Tour
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* === Latest listings grid === */}
       <ListingGrid
@@ -524,18 +576,6 @@ async function HubPage({ city }: { city: CityData }) {
         title={`Latest Listings in ${city.name}`}
         subtitle={`Active homes for sale in ${city.name}, ${city.county} County.`}
       />
-
-      {/* "View all" link if listings were returned */}
-      {listings.length > 0 && (
-        <div className="container-wide pb-8 text-center">
-          <Link
-            href={`/${city.slug}-homes-for-sale`}
-            className="btn-primary inline-block px-8 py-3"
-          >
-            View All {city.name} Listings
-          </Link>
-        </div>
-      )}
 
       {/* === Spoke navigation — links to all topic pages for this city === */}
       <SpokeNav city={city} />
@@ -563,17 +603,31 @@ async function HubPage({ city }: { city: CityData }) {
         </section>
       )}
 
-      {/* === Contact form === */}
-      <section className="bg-gray-50 py-16">
-        <div className="container-wide max-w-2xl">
-          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2 text-center">
-            Get Expert Help in {city.name}
-          </h2>
-          <p className="font-body text-muted text-center mb-8">
-            Have questions about {city.name} real estate? Barrett Henry is ready
-            to help.
-          </p>
-          <ContactForm webhookUrl="/api/contact" source={`${city.slug}-hub`} />
+      {/* === CTA bar (matches spoke pattern) === */}
+      <section className="bg-primary py-12">
+        <div className="container-wide max-w-4xl flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h2 className="font-heading font-bold text-xl md:text-2xl text-white mb-1">
+              Looking for homes in {city.name}?
+            </h2>
+            <p className="font-body text-white/70 text-sm">
+              Barrett Henry, REALTOR® — 23+ years of real estate experience
+            </p>
+          </div>
+          <div className="flex gap-3 flex-shrink-0">
+            <a
+              href="tel:+18137337907"
+              className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 rounded text-sm hover:bg-accent/90 transition-colors"
+            >
+              Call Now
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
+            >
+              Send a Message
+            </Link>
+          </div>
         </div>
       </section>
     </>
