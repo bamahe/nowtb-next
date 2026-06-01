@@ -130,8 +130,15 @@ async function bridgeFetch<T>(
 function buildFilter(params: ListingSearchParams): string {
   const filters: string[] = [];
 
-  // Stellar MLS stores city names in UPPERCASE — normalize for OData filter
-  if (params.city) filters.push(`City eq '${params.city.toUpperCase()}'`);
+  // Location filter: prefer zip_codes (multiple ZIPs with OR), fall back to city name
+  // Many communities (Carrollwood, Brandon, etc.) aren't MLS "cities" — they're
+  // under Tampa or unincorporated county. ZIP codes always work.
+  if (params.zip_codes && params.zip_codes.length > 0) {
+    const zipFilters = params.zip_codes.map(z => `PostalCode eq '${z}'`).join(' or ');
+    filters.push(`(${zipFilters})`);
+  } else if (params.city) {
+    filters.push(`City eq '${params.city.toUpperCase()}'`);
+  }
   if (params.zip) filters.push(`PostalCode eq '${params.zip}'`);
   if (params.min_price) filters.push(`ListPrice ge ${params.min_price}`);
   if (params.max_price) filters.push(`ListPrice le ${params.max_price}`);
@@ -139,8 +146,20 @@ function buildFilter(params: ListingSearchParams): string {
   if (params.baths) filters.push(`BathroomsTotalInteger ge ${params.baths}`);
   if (params.property_type) filters.push(`PropertyType eq '${params.property_type}'`);
 
+  // Topic-specific MLS boolean/numeric filters
+  if (params.senior) filters.push(`SeniorCommunityYN eq true`);
+  if (params.waterfront) filters.push(`WaterfrontYN eq true`);
+  if (params.pool) filters.push(`PoolPrivateYN eq true`);
+  if (params.new_construction) filters.push(`NewConstructionYN eq true`);
+  if (params.single_story) filters.push(`Stories eq 1`);
+  if (params.open_house) {
+    // Only show listings with an open house in the next 7 days
+    const now = new Date().toISOString();
+    const week = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString();
+    filters.push(`OpenHouseStartTime ge ${now} and OpenHouseStartTime le ${week}`);
+  }
+
   // Default to active listings unless caller explicitly sets a status
-  // Filter by listing status — default to Active
   if (params.status) filters.push(`StandardStatus eq '${params.status}'`);
   else filters.push(`StandardStatus eq 'Active'`);
 

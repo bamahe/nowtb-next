@@ -51,30 +51,108 @@ export interface Listing {
 
   // --- Features ---
   PoolPrivateYN?: boolean;
+  PoolFeatures?: string[];           // Heated, In Ground, Screened, etc.
+  SpaFeatures?: string[];            // In Ground, Heated, etc.
   WaterfrontYN?: boolean;
+  WaterfrontFeatures?: string[];
+  ViewYN?: boolean;
+  View?: string[];                   // Pool, Water, Golf Course, etc.
+  FireplaceYN?: boolean;
+  FireplacesTotal?: number;
+
+  // --- Interior ---
+  InteriorFeatures?: string[];       // Ceiling Fan(s), Walk-In Closet(s), etc.
+  Flooring?: string[];               // Carpet, Tile, Hardwood, etc.
+  Appliances?: string[];             // Dishwasher, Range, Refrigerator, etc.
+  LaundryFeatures?: string[];        // Inside, Laundry Room, etc.
+  WindowFeatures?: string[];         // Low-E Windows, etc.
+  Cooling?: string[];                // Central Air, etc.
+  Heating?: string[];                // Central, Electric, etc.
+  RoomsTotal?: number;
+
+  // --- Exterior / Structure ---
+  ConstructionMaterials?: string[];  // Block, Stucco, Frame, etc.
+  Roof?: string[];                   // Shingle, Tile, Metal, etc.
+  FoundationDetails?: string[];      // Slab, etc.
+  Fencing?: string[];                // Fenced, Wood, Vinyl, etc.
+  ExteriorFeatures?: string[];       // Sliding Doors, Storage, etc.
+  OtherStructures?: string[];        // Shed(s), Guest House, etc.
+  StoriesTotal?: number;
+  Levels?: string[];                 // One, Two, etc.
+  DirectionFaces?: string;           // East, West, etc.
+  SecurityFeatures?: string[];       // Alarm, Smoke Detector(s), etc.
+  RoadSurfaceType?: string[];        // Paved, Asphalt, etc.
+
+  // --- Lot ---
+  LotFeatures?: string[];            // Near Golf Course, Corner Lot, etc.
+  LotSizeSquareFeet?: number;
+  LotSizeDimensions?: string;        // 70 x 100
+
+  // --- Utilities ---
+  WaterSource?: string[];            // Public, Well, etc.
+  Sewer?: string[];                  // Public Sewer, Septic, etc.
+  Utilities?: string[];              // Cable, Electric, etc.
+
+  // --- Parking ---
+  GarageYN?: boolean;
+  CarportYN?: boolean;
 
   // --- HOA ---
+  AssociationYN?: boolean;
   AssociationFee?: number;
   AssociationFeeFrequency?: string;  // Monthly, Quarterly, Annually, etc.
 
+  // --- Financial ---
+  TaxAnnualAmount?: number;
+  TaxYear?: number;
+  ListingTerms?: string[];           // Cash, Conventional, FHA, VA, etc.
+  Ownership?: string;                // Fee Simple, Condo, etc.
+  Zoning?: string;
+
+  // --- Schools ---
+  ElementarySchool?: string;
+  MiddleOrJuniorSchool?: string;
+  HighSchool?: string;
+
+  // --- Location extras ---
+  CountyOrParish?: string;
+  SubdivisionName?: string;
+  MLSAreaMajor?: string;
+  Directions?: string;
+  ParcelNumber?: string;
+
   // --- Market stats ---
   DaysOnMarket?: number;
+  CumulativeDaysOnMarket?: number;
+  OriginalListPrice?: number;
+  OnMarketDate?: string;
 
   // --- Description ---
   PublicRemarks?: string;
+  VirtualTourURLUnbranded?: string;
 
   // --- Listing agent/office ---
   ListOfficeName?: string;
+  ListOfficePhone?: string;
   ListAgentFullName?: string;
   ListAgentEmail?: string;
   ListAgentDirectPhone?: string;
+  ListAgentPreferredPhone?: string;
 
   // --- Photos ---
   Media?: ListingMedia[];
+  PhotosCount?: number;
 
   // --- Open house ---
   OpenHouseStartTime?: string;       // ISO 8601 datetime
   OpenHouseEndTime?: string;         // ISO 8601 datetime
+
+  // --- Building ---
+  BuildingAreaTotal?: number;        // Total area including non-living
+  NewConstructionYN?: boolean;
+  PropertyCondition?: string[];      // Completed, Updated, etc.
+  SeniorCommunityYN?: boolean;
+  Furnished?: string;                // Unfurnished, Furnished, Partially
 
   // --- Timestamps ---
   ModificationTimestamp: string;     // Last modified in MLS
@@ -89,6 +167,7 @@ export interface Listing {
 export interface ListingSearchParams {
   city?: string;
   zip?: string;
+  zip_codes?: string[];              // Multiple ZIP codes (OR filter)
   min_price?: string;
   max_price?: string;
   beds?: string;
@@ -98,6 +177,13 @@ export interface ListingSearchParams {
   limit?: string;
   offset?: string;
   sort?: string;                     // OData $orderby value
+  // Topic-specific filters (mapped to MLS boolean/numeric fields)
+  senior?: boolean;                  // SeniorCommunityYN
+  waterfront?: boolean;              // WaterfrontYN
+  pool?: boolean;                    // PoolPrivateYN
+  new_construction?: boolean;        // NewConstructionYN
+  single_story?: boolean;            // Stories eq 1
+  open_house?: boolean;              // Has upcoming open house
 }
 
 /**

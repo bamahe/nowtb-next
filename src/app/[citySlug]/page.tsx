@@ -494,8 +494,14 @@ export default async function CityPage({
 // =============================================================================
 
 async function HubPage({ city }: { city: CityData }) {
-  // Fetch the latest listings for this city from Bridge API
-  const listings = await getListingsByCity(city.name, 12);
+  // Fetch listings by ZIP codes (city names often don't match MLS)
+  let listings: import("@/lib/types").Listing[] = [];
+  try {
+    const res = await getListings({ zip_codes: city.zip_codes, limit: "12" });
+    listings = res.value || [];
+  } catch {
+    listings = [];
+  }
 
   // Get neighboring cities (same county, excluding current)
   const neighbors = cities.filter(
@@ -587,12 +593,13 @@ async function SpokePage({
   topic: (typeof SPOKE_TOPICS)[number];
   slug: string;
 }) {
-  // Build filter params from the topic's filter config + the city name
-  const filterParams = {
-    city: city.name,
+  // Build filter params: use ZIP codes (reliable) instead of city name
+  // Many communities aren't MLS "cities" — Carrollwood = Tampa, Brandon = unincorporated, etc.
+  const filterParams: import("@/lib/types").ListingSearchParams = {
+    zip_codes: city.zip_codes,
     ...topic.filter,
     limit: "24",
-  } as Record<string, string>;
+  };
 
   // Fetch filtered listings from Bridge API
   let listings: import("@/lib/types").Listing[] = [];
