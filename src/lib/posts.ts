@@ -79,4 +79,20 @@ export function getRelatedPosts(currentSlug: string, limit = 3): BlogPost[] {
     .slice(0, limit);
 }
 
+/**
+ * Extract the first image URL from a post's HTML content.
+ * Rewrites /wp-content/uploads/ to the live domain.
+ * Returns null if no image found.
+ */
+export function getPostThumbnail(post: BlogPost): string | null {
+  const match = post.content.match(/src="([^"]*\/wp-content\/uploads\/[^"]+)"/);
+  if (!match) return null;
+  const src = match[1];
+  // Rewrite relative paths to the live WP domain
+  if (src.startsWith('/wp-content/')) {
+    return `https://nowtb.com${src}`;
+  }
+  return src;
+}
+
 export type { BlogPost };

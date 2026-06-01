@@ -74,8 +74,10 @@ export function formatSqFt(sqft: number): string {
 export function cleanWpContent(html: string): string {
   let cleaned = html
     // Strip WordPress shortcodes that have no Next.js equivalent
+    // (but NOT [open] — that's a CSS attribute inside <style> tags, not a shortcode)
     .replace(/\[showcaseidx[^\]]*\]/g, '')
     .replace(/\[nowtb_[^\]]*\]/g, '')
+    .replace(/\[last_updated\]/g, 'June 2026')
     // Rewrite relative WP image paths to the live domain
     .replace(
       /src="\/wp-content\/uploads\//g,
@@ -86,18 +88,22 @@ export function cleanWpContent(html: string): string {
         /\/wp-content\/uploads\//g,
         'https://nowtb.com/wp-content/uploads/'
       )}"`
-    );
+    )
+    // Rewrite internal WP links: href="/city-slug/" → href="/city-slug"
+    // and href="/blog/post-slug/" stays as-is (already correct)
+    .replace(/href="\/wp-content\/uploads\//g, 'href="https://nowtb.com/wp-content/uploads/');
 
   // Strip boilerplate footer sections that the Next.js layout already provides
   // (Related Resources, Related Articles, Explore Communities, Helpful Resources, big CTA)
-  // These start at the "Related Resources" heading in the WP content
-  const boilerplateStart = cleaned.indexOf('<h2');
-  if (boilerplateStart > -1) {
-    // Find the specific "Related Resources" h2 that starts the boilerplate
-    const relatedIdx = cleaned.search(/<h2[^>]*>\s*Related Resources\s*<\/h2>/i);
-    if (relatedIdx > -1) {
-      cleaned = cleaned.substring(0, relatedIdx).trim();
-    }
+  const relatedIdx = cleaned.search(/<h2[^>]*>\s*Related Resources\s*<\/h2>/i);
+  if (relatedIdx > -1) {
+    cleaned = cleaned.substring(0, relatedIdx).trim();
+  }
+
+  // Also strip "Related Articles" if it appears without "Related Resources"
+  const articlesIdx = cleaned.search(/<h2[^>]*>\s*Related Articles\s*<\/h2>/i);
+  if (articlesIdx > -1) {
+    cleaned = cleaned.substring(0, articlesIdx).trim();
   }
 
   return cleaned;

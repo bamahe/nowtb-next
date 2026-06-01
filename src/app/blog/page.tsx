@@ -7,7 +7,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
-import { getAllPosts } from "@/lib/posts";
+import { getAllPosts, getPostThumbnail } from "@/lib/posts";
 
 // Force dynamic so the JSON is read at runtime, not cached at build
 export const dynamic = "force-dynamic";
@@ -92,22 +92,36 @@ export default async function BlogIndexPage({
       {/* === Blog post grid === */}
       <section className="container-wide py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {posts.map((post) => (
+          {posts.map((post) => {
+            const thumbnail = getPostThumbnail(post);
+            return (
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
               className="group card overflow-hidden hover:shadow-lg transition-shadow"
             >
-              {/* Placeholder image area */}
-              <div className="h-48 bg-primary/10 flex items-center justify-center">
-                <span className="font-body text-muted text-sm">
-                  Featured Image
-                </span>
-              </div>
+              {/* Post thumbnail — extracted from content, or gradient fallback */}
+              {thumbnail ? (
+                <div className="h-48 overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={thumbnail}
+                    alt={post.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+              ) : (
+                <div className="h-48 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
+                  <span className="font-heading text-primary/30 text-4xl font-bold">
+                    {post.title.charAt(0)}
+                  </span>
+                </div>
+              )}
 
               <div className="p-5">
                 {/* Title */}
-                <h2 className="font-heading font-bold text-lg text-primary mb-2 group-hover:text-accent transition-colors line-clamp-2">
+                <h2 className="font-heading font-light text-lg text-primary mb-2 group-hover:text-accent transition-colors line-clamp-2">
                   {post.title}
                 </h2>
 
@@ -124,7 +138,8 @@ export default async function BlogIndexPage({
                 </div>
               </div>
             </Link>
-          ))}
+            );
+          })}
         </div>
       </section>
 
