@@ -53,9 +53,9 @@ export default async function LuxuryPage() {
       />
 
       {/* === Luxury communities === */}
-      <section className="bg-gray-50 py-12">
+      <section className="section-light">
         <div className="container-wide">
-          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6 text-center">
+          <h2 className="heading-section text-xl text-primary mb-6 text-center">
             Top Luxury Communities
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
@@ -63,7 +63,7 @@ export default async function LuxuryPage() {
               <Link
                 key={city.slug}
                 href={`/${city.slug}-luxury-homes`}
-                className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10"
+                className="card block px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10"
               >
                 {city.name} Luxury Homes
               </Link>
@@ -91,9 +91,9 @@ export default async function LuxuryPage() {
       </section>
 
       {/* === Contact === */}
-      <section className="bg-gray-50 py-16">
+      <section className="section-light">
         <div className="container-wide max-w-2xl">
-          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2 text-center">
+          <h2 className="heading-section text-xl text-primary mb-2 text-center">
             Explore Tampa Bay Luxury Living
           </h2>
           <p className="font-body text-muted text-center mb-8">

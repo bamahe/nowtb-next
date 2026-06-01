@@ -9,11 +9,29 @@ import { useState, useCallback, type FormEvent } from "react";
 import { cn } from "@/lib/utils";
 import TurnstileWidget from "@/components/ui/TurnstileWidget";
 
+/** Property details attached to showing requests so FUB shows what they want */
+interface PropertyContext {
+  address?: string;
+  city?: string;
+  state?: string;
+  price?: number;
+  mlsNumber?: string;
+  url?: string;
+  beds?: number;
+  baths?: number;
+  sqft?: number;
+}
+
 interface ContactFormProps {
-  /** URL the form data will be POSTed to (e.g. n8n webhook) */
+  /** URL the form data will be POSTed to — always use "/api/contact" */
   webhookUrl: string;
   /** Identifies where this form lives (page URL or form ID) */
   source: string;
+  /** Form type — tells /api/contact which n8n webhook to forward to
+   *  Options: "contact" | "showing" | "valuation" | "newsletter" | "buyer-reg" */
+  type?: string;
+  /** Property details to attach — used on listing pages for showing requests */
+  property?: PropertyContext;
   /** Optional heading displayed above the form */
   title?: string;
   /** Custom label for the submit button (default: "Send Message") */
@@ -26,6 +44,8 @@ type FormStatus = "idle" | "loading" | "success" | "error";
 export default function ContactForm({
   webhookUrl,
   source,
+  type = "contact",
+  property,
   title,
   submitLabel = "Send Message",
 }: ContactFormProps) {
@@ -56,7 +76,7 @@ export default function ContactForm({
       const res = await fetch(webhookUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, message, source, turnstileToken }),
+        body: JSON.stringify({ name, email, phone, message, source, type, property, turnstileToken }),
       });
 
       if (!res.ok) {

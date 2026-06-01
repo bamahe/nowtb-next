@@ -38,9 +38,9 @@ export default function InspectorsPage() {
           </ul>
         </div>
       </section>
-      <section className="bg-gray-50 py-16">
+      <section className="section-light py-12">
         <div className="container-wide max-w-2xl">
-          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2 text-center">
+          <h2 className="font-heading heading-section text-xl text-primary mb-2 text-center">
             Need an Inspector Recommendation?
           </h2>
           <ContactForm webhookUrl="/api/contact" source="inspectors" />

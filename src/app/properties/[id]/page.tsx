@@ -4,11 +4,12 @@
 // =============================================================================
 
 import type { Metadata } from "next";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Bed, Bath, Ruler, Calendar, LandPlot, Car } from "lucide-react";
 
 import ContactForm from "@/components/ui/ContactForm";
+import FavoriteButton from "@/components/ui/FavoriteButton";
+import PhotoGallery from "@/components/ui/PhotoGallery";
 import { getListing } from "@/lib/bridge";
 import { formatPrice, formatSqFt } from "@/lib/utils";
 import type { Listing } from "@/lib/types";
@@ -180,48 +181,11 @@ export default async function ListingDetailPage({
 
       {/* =================================================================
           SECTION 1: Photo Gallery
-          First photo large on top, remaining in a 2x2 grid below
+          Big hero photo on top, clickable thumbnails below,
+          click main photo for fullscreen lightbox with arrow navigation
           ================================================================= */}
-      <section className="container-wide py-8">
-        {photos.length > 0 ? (
-          <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
-            {/* Primary photo — spans full width on mobile, left column on desktop */}
-            <div className="relative aspect-[4/3] overflow-hidden rounded-xl md:row-span-2">
-              <Image
-                src={photos[0].MediaURL}
-                alt={`${listing.UnparsedAddress} — primary photo`}
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-                priority
-              />
-            </div>
-
-            {/* Secondary photos — 2x2 grid in the right column */}
-            {photos.slice(1, 5).map((photo, index) => (
-              <div
-                key={photo.MediaURL}
-                className="relative aspect-[4/3] overflow-hidden rounded-xl"
-              >
-                <Image
-                  src={photo.MediaURL}
-                  alt={
-                    photo.ShortDescription ||
-                    `${listing.UnparsedAddress} — photo ${index + 2}`
-                  }
-                  fill
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                  className="object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        ) : (
-          /* Placeholder when there are no photos */
-          <div className="flex items-center justify-center aspect-[16/9] rounded-xl bg-gray-100">
-            <p className="font-body text-muted">No photos available</p>
-          </div>
-        )}
+      <section className="container-wide pt-24 pb-8">
+        <PhotoGallery photos={photos} address={listing.UnparsedAddress} autoScroll />
       </section>
 
       {/* =================================================================
@@ -242,8 +206,21 @@ export default async function ListingDetailPage({
             </h1>
           </div>
 
-          {/* Status badge + days on market */}
+          {/* Status badge + favorite + days on market */}
           <div className="flex items-center gap-3">
+            <FavoriteButton
+              listingKey={listing.ListingKey}
+              listingData={{
+                address: listing.UnparsedAddress,
+                city: listing.City,
+                price: listing.ListPrice,
+                beds: listing.BedroomsTotal,
+                baths: listing.BathroomsTotalInteger,
+                sqft: listing.LivingArea,
+                photo: listing.Media?.[0]?.MediaURL,
+              }}
+              size="lg"
+            />
             <span
               className={`inline-block rounded-full px-4 py-1 text-sm font-semibold ${statusColor}`}
             >
@@ -287,6 +264,20 @@ export default async function ListingDetailPage({
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {/* Left column: Description (takes 2/3 on desktop) */}
           <div className="lg:col-span-2 space-y-8">
+            {/* Virtual Tour — prominent placement right at the top */}
+            {listing.VirtualTourURLUnbranded && (
+              <div>
+                <a
+                  href={listing.VirtualTourURLUnbranded}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary inline-block"
+                >
+                  View Virtual Tour
+                </a>
+              </div>
+            )}
+
             {/* Public Remarks */}
             {listing.PublicRemarks && (
               <div>
@@ -299,80 +290,165 @@ export default async function ListingDetailPage({
               </div>
             )}
 
-            {/* Property Details — two-column key/value grid */}
-            <div>
-              <h2 className="heading-section text-xl text-primary mb-4">
-                Property Details
-              </h2>
-              <div className="grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
-                <DetailRow label="Property Type" value={listing.PropertyType} />
-                <DetailRow
-                  label="Sub Type"
-                  value={listing.PropertySubType}
-                />
-                <DetailRow label="MLS #" value={listing.ListingId} />
-                <DetailRow
-                  label="HOA Fee"
-                  value={
-                    listing.AssociationFee
-                      ? `${formatPrice(listing.AssociationFee)} / ${listing.AssociationFeeFrequency || "Monthly"}`
-                      : "None"
-                  }
-                />
-                <DetailRow
-                  label="Pool"
-                  value={listing.PoolPrivateYN ? "Yes" : "No"}
-                />
-                <DetailRow
-                  label="Waterfront"
-                  value={listing.WaterfrontYN ? "Yes" : "No"}
-                />
-                <DetailRow
-                  label="Year Built"
-                  value={listing.YearBuilt?.toString()}
-                />
-                <DetailRow
-                  label="Lot Size"
-                  value={
-                    listing.LotSizeAcres
-                      ? `${listing.LotSizeAcres.toFixed(2)} acres`
-                      : undefined
-                  }
-                />
-              </div>
-            </div>
+            {/* ---- Property Overview ---- */}
+            <DetailSection title="Property Overview">
+              <DetailRow label="Property Type" value={listing.PropertyType} />
+              <DetailRow label="Sub Type" value={listing.PropertySubType} />
+              <DetailRow label="MLS #" value={listing.ListingId} />
+              <DetailRow label="Status" value={listing.StandardStatus} />
+              <DetailRow label="Year Built" value={listing.YearBuilt?.toString()} />
+              <DetailRow label="Stories" value={listing.StoriesTotal?.toString()} />
+              <DetailRow label="Total Rooms" value={listing.RoomsTotal?.toString()} />
+              <DetailRow label="Construction" value={listing.ConstructionMaterials?.join(", ")} />
+              <DetailRow label="Roof" value={listing.Roof?.join(", ")} />
+              <DetailRow label="Foundation" value={listing.FoundationDetails?.join(", ")} />
+              <DetailRow label="Faces" value={listing.DirectionFaces} />
+              <DetailRow label="Subdivision" value={listing.SubdivisionName} />
+              <DetailRow label="County" value={listing.CountyOrParish} />
+              <DetailRow label="Ownership" value={listing.Ownership} />
+              <DetailRow label="New Construction" value={listing.NewConstructionYN ? "Yes" : undefined} />
+              <DetailRow label="Furnished" value={listing.Furnished !== "Unfurnished" ? listing.Furnished : undefined} />
+            </DetailSection>
 
-            {/* Listing Agent / Office info from MLS data */}
-            {(listing.ListAgentFullName || listing.ListOfficeName) && (
+            {/* ---- Interior Features ---- */}
+            <DetailSection title="Interior Features">
+              <DetailRow label="Interior" value={listing.InteriorFeatures?.join(", ")} />
+              <DetailRow label="Flooring" value={listing.Flooring?.join(", ")} />
+              <DetailRow label="Appliances" value={listing.Appliances?.join(", ")} />
+              <DetailRow label="Laundry" value={listing.LaundryFeatures?.join(", ")} />
+              <DetailRow label="Windows" value={listing.WindowFeatures?.join(", ")} />
+              <DetailRow label="Cooling" value={listing.Cooling?.join(", ")} />
+              <DetailRow label="Heating" value={listing.Heating?.join(", ")} />
+              <DetailRow label="Fireplace" value={listing.FireplaceYN ? `Yes (${listing.FireplacesTotal || ""})` : undefined} />
+              <DetailRow label="Security" value={listing.SecurityFeatures?.join(", ")} />
+            </DetailSection>
+
+            {/* ---- Exterior & Lot ---- */}
+            <DetailSection title="Exterior & Lot">
+              <DetailRow label="Exterior" value={listing.ExteriorFeatures?.join(", ")} />
+              <DetailRow label="Fencing" value={listing.Fencing?.join(", ")} />
+              <DetailRow label="Other Structures" value={listing.OtherStructures?.join(", ")} />
+              <DetailRow label="Lot Size" value={
+                listing.LotSizeAcres
+                  ? `${listing.LotSizeAcres.toFixed(2)} acres (${listing.LotSizeSquareFeet?.toLocaleString() || ""} sq ft)`
+                  : undefined
+              } />
+              <DetailRow label="Lot Dimensions" value={listing.LotSizeDimensions} />
+              <DetailRow label="Lot Features" value={listing.LotFeatures?.join(", ")} />
+              <DetailRow label="Road Surface" value={listing.RoadSurfaceType?.join(", ")} />
+              <DetailRow label="View" value={listing.View?.join(", ")} />
+            </DetailSection>
+
+            {/* ---- Pool & Spa ---- */}
+            {(listing.PoolPrivateYN || listing.SpaFeatures?.length) && (
+              <DetailSection title="Pool & Spa">
+                <DetailRow label="Private Pool" value={listing.PoolPrivateYN ? "Yes" : "No"} />
+                <DetailRow label="Pool Features" value={listing.PoolFeatures?.join(", ")} />
+                <DetailRow label="Spa" value={listing.SpaFeatures?.join(", ")} />
+              </DetailSection>
+            )}
+
+            {/* ---- Waterfront ---- */}
+            {listing.WaterfrontYN && (
+              <DetailSection title="Waterfront">
+                <DetailRow label="Waterfront" value="Yes" />
+                <DetailRow label="Features" value={listing.WaterfrontFeatures?.join(", ")} />
+              </DetailSection>
+            )}
+
+            {/* ---- Utilities ---- */}
+            <DetailSection title="Utilities">
+              <DetailRow label="Water" value={listing.WaterSource?.join(", ")} />
+              <DetailRow label="Sewer" value={listing.Sewer?.join(", ")} />
+              <DetailRow label="Utilities" value={listing.Utilities?.join(", ")} />
+            </DetailSection>
+
+            {/* ---- Parking ---- */}
+            <DetailSection title="Parking">
+              <DetailRow label="Garage" value={
+                listing.GarageYN
+                  ? `Yes${listing.GarageSpaces ? ` (${listing.GarageSpaces} spaces)` : ""}`
+                  : "No"
+              } />
+              <DetailRow label="Carport" value={listing.CarportYN ? "Yes" : undefined} />
+            </DetailSection>
+
+            {/* ---- HOA & Community ---- */}
+            <DetailSection title="HOA & Community">
+              <DetailRow label="HOA" value={listing.AssociationYN ? "Yes" : "No"} />
+              <DetailRow label="HOA Fee" value={
+                listing.AssociationFee
+                  ? `${formatPrice(listing.AssociationFee)} / ${listing.AssociationFeeFrequency || "Monthly"}`
+                  : undefined
+              } />
+              <DetailRow label="Senior Community" value={listing.SeniorCommunityYN ? "Yes" : "No"} />
+            </DetailSection>
+
+            {/* ---- Financial ---- */}
+            <DetailSection title="Financial Details">
+              <DetailRow label="List Price" value={formatPrice(listing.ListPrice)} />
+              <DetailRow label="Original Price" value={
+                listing.OriginalListPrice && listing.OriginalListPrice !== listing.ListPrice
+                  ? formatPrice(listing.OriginalListPrice)
+                  : undefined
+              } />
+              <DetailRow label="Annual Taxes" value={
+                listing.TaxAnnualAmount
+                  ? `${formatPrice(listing.TaxAnnualAmount)} (${listing.TaxYear || ""})`
+                  : undefined
+              } />
+              <DetailRow label="Financing" value={listing.ListingTerms?.join(", ")} />
+              <DetailRow label="Zoning" value={listing.Zoning} />
+              <DetailRow label="Parcel #" value={listing.ParcelNumber} />
+            </DetailSection>
+
+            {/* ---- Schools ---- */}
+            {(listing.ElementarySchool || listing.MiddleOrJuniorSchool || listing.HighSchool) && (
+              <DetailSection title="Schools">
+                <DetailRow label="Elementary" value={listing.ElementarySchool} />
+                <DetailRow label="Middle" value={listing.MiddleOrJuniorSchool} />
+                <DetailRow label="High" value={listing.HighSchool} />
+              </DetailSection>
+            )}
+
+            {/* ---- Directions ---- */}
+            {listing.Directions && (
               <div>
-                <h2 className="heading-section text-xl text-primary mb-4">
-                  Listing Information
-                </h2>
-                <div className="rounded-xl bg-white shadow-sm p-6">
-                  {listing.ListAgentFullName && (
-                    <p className="font-body text-dark">
-                      <span className="font-semibold">Agent:</span>{" "}
-                      {listing.ListAgentFullName}
-                    </p>
-                  )}
-                  {listing.ListOfficeName && (
-                    <p className="font-body text-dark mt-1">
-                      <span className="font-semibold">Office:</span>{" "}
-                      {listing.ListOfficeName}
-                    </p>
-                  )}
-                </div>
+                <h2 className="heading-section text-xl text-primary mb-4">Directions</h2>
+                <p className="font-body text-dark leading-relaxed">{listing.Directions}</p>
               </div>
+            )}
+
+            {/* ---- Listing Office / Date ---- */}
+            {listing.ListOfficeName && (
+              <DetailSection title="Listing Information">
+                <DetailRow label="Office" value={listing.ListOfficeName} />
+                <DetailRow label="Listed" value={
+                  listing.OnMarketDate
+                    ? new Date(listing.OnMarketDate).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })
+                    : undefined
+                } />
+              </DetailSection>
             )}
           </div>
 
           {/* Right column: Request Showing CTA form */}
           <div>
             <ContactForm
-              webhookUrl={
-                process.env.NEXT_PUBLIC_CONTACT_WEBHOOK || "/api/contact"
-              }
+              webhookUrl="/api/contact"
               source={`showing-request:${listing.ListingId}`}
+              type="showing"
+              property={{
+                address: listing.UnparsedAddress,
+                city: listing.City,
+                state: listing.StateOrProvince,
+                price: listing.ListPrice,
+                mlsNumber: listing.ListingId,
+                url: `https://nowtb.com/properties/${listing.ListingKey}`,
+                beds: listing.BedroomsTotal,
+                baths: listing.BathroomsTotalInteger,
+                sqft: listing.LivingArea,
+              }}
               title="Schedule a Showing"
               submitLabel="Request Showing"
             />
@@ -408,6 +484,28 @@ export default async function ListingDetailPage({
 }
 
 // -----------------------------------------------------------------------------
+// DetailSection — groups related property details under a heading
+// -----------------------------------------------------------------------------
+
+/** Wraps a group of DetailRows with a section heading */
+function DetailSection({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div>
+      <h2 className="heading-section text-xl text-primary mb-4">{title}</h2>
+      <div className="grid grid-cols-1 gap-x-8 gap-y-0 sm:grid-cols-2">
+        {children}
+      </div>
+    </div>
+  );
+}
+
+// -----------------------------------------------------------------------------
 // DetailRow — small helper component for the property details grid
 // -----------------------------------------------------------------------------
 
@@ -424,7 +522,7 @@ function DetailRow({
   return (
     <div className="flex justify-between border-b border-gray-100 py-2">
       <span className="font-body text-sm text-muted">{label}</span>
-      <span className="font-body text-sm text-dark font-medium">{value}</span>
+      <span className="font-body text-sm text-dark font-medium text-right max-w-[60%]">{value}</span>
     </div>
   );
 }

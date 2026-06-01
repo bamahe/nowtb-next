@@ -38,7 +38,7 @@ export default function GuidesIndexPage() {
         {guidesByCategory.map(({ category, guides: catGuides }) => (
           <div key={category} className="mb-12">
             {/* Category heading */}
-            <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6 border-b border-gray-200 pb-3">
+            <h2 className="font-heading heading-section text-xl text-primary mb-6 border-b border-gray-200 pb-3">
               {category} Guides
             </h2>
 
@@ -77,9 +77,9 @@ export default function GuidesIndexPage() {
       </section>
 
       {/* === CTA section === */}
-      <section className="bg-gray-50 py-16">
+      <section className="section-light py-12">
         <div className="container-wide text-center max-w-2xl">
-          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-4">
+          <h2 className="font-heading heading-section text-xl text-primary mb-4">
             Need Personalized Advice?
           </h2>
           <p className="font-body text-muted mb-6">

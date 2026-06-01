@@ -21,9 +21,19 @@ const NAV_LINKS = [
   { href: "/contact", label: "Contact" },
 ];
 
+// Pages that don't have a dark hero background behind the header
+// On these pages, use dark text even when not scrolled
+const LIGHT_BG_PATTERNS = ["/properties/"];
+
 export default function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+
+  // Does this page have a light background behind the header? (no dark hero)
+  const hasLightBg = LIGHT_BG_PATTERNS.some((p) => pathname.startsWith(p));
+
+  // When the page has a light bg, always use dark text (same as scrolled style)
+  const useDarkText = scrolled || hasLightBg;
 
   // Track scroll position to toggle between transparent and solid backgrounds
   useEffect(() => {
@@ -38,7 +48,7 @@ export default function Header() {
       <nav
         className={`
           transition-all duration-500 ease-in-out
-          ${scrolled
+          ${scrolled || hasLightBg
             ? "bg-[#F8F6F3] shadow-[0_1px_0_rgba(0,0,0,0.05)]"
             : "bg-transparent"
           }
@@ -51,7 +61,7 @@ export default function Header() {
               className={`
                 font-heading font-light text-lg tracking-[0.25em] uppercase leading-tight
                 transition-colors duration-500
-                ${scrolled ? "text-primary" : "text-white"}
+                ${useDarkText ? "text-primary" : "text-white"}
               `}
             >
               Barrett Henry
@@ -60,7 +70,7 @@ export default function Header() {
               className={`
                 font-body text-[9px] tracking-[0.2em] uppercase leading-tight
                 transition-colors duration-500
-                ${scrolled ? "text-primary/40" : "text-white/40"}
+                ${useDarkText ? "text-primary/40" : "text-white/40"}
               `}
             >
               The NOW Team &nbsp;|&nbsp; REMAX
@@ -82,7 +92,7 @@ export default function Header() {
                     className={`
                       link-underline font-body text-xs tracking-[0.15em] uppercase
                       transition-colors duration-300
-                      ${scrolled
+                      ${useDarkText
                         ? isActive
                           ? "text-primary"
                           : "text-primary/60 hover:text-primary"
@@ -99,20 +109,32 @@ export default function Header() {
             })}
           </ul>
 
-          {/* ── Phone number — visible on desktop, right-aligned ── */}
-          <a
-            href="tel:+18137337907"
-            className={`
-              hidden md:block font-body text-xs tracking-[0.15em] uppercase
-              transition-colors duration-500
-              ${scrolled ? "text-primary/50 hover:text-primary" : "text-white/50 hover:text-white"}
-            `}
-          >
-            (813) 733-7907
-          </a>
+          {/* ── Phone + Sign In — visible on desktop, right-aligned ── */}
+          <div className="hidden md:flex items-center gap-6">
+            <a
+              href="tel:+18137337907"
+              className={`
+                font-body text-xs tracking-[0.15em] uppercase
+                transition-colors duration-500
+                ${useDarkText ? "text-primary/50 hover:text-primary" : "text-white/50 hover:text-white"}
+              `}
+            >
+              (813) 733-7907
+            </a>
+            <Link
+              href="/login"
+              className={`
+                font-body text-xs tracking-[0.15em] uppercase
+                transition-colors duration-500
+                ${useDarkText ? "text-primary/50 hover:text-primary" : "text-white/50 hover:text-white"}
+              `}
+            >
+              Sign In
+            </Link>
+          </div>
 
           {/* ── Mobile hamburger toggle ── */}
-          <MobileNav scrolled={scrolled} />
+          <MobileNav scrolled={useDarkText} />
         </div>
       </nav>
     </header>

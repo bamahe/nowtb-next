@@ -1,10 +1,31 @@
 import { NextRequest, NextResponse } from "next/server";
+import { pushLeadToFub } from "@/lib/fub";
 
 const N8N_BASE = process.env.N8N_WEBHOOK_BASE!;
 
+// Map form type → FUB source label (shows up in FUB's "Source" column)
+const fubSourceMap: Record<string, string> = {
+  contact: "nowtb.com — Contact Form",
+  showing: "nowtb.com — Showing Request",
+  valuation: "nowtb.com — Home Valuation",
+  newsletter: "nowtb.com — Newsletter",
+  "buyer-reg": "nowtb.com — Buyer Registration",
+};
+
+// Map form type → FUB tags (for smart lists and automations)
+const fubTagMap: Record<string, string[]> = {
+  contact: ["Website Lead", "Contact Form"],
+  showing: ["Website Lead", "Showing Request", "Buyer"],
+  valuation: ["Website Lead", "Home Valuation", "Seller"],
+  newsletter: ["Website Lead", "Newsletter"],
+  "buyer-reg": ["Website Lead", "Buyer Registration", "Buyer"],
+};
+
 /**
- * POST /api/contact — Proxy form submissions to n8n webhooks.
- * Body: { type: "contact"|"showing"|"valuation"|"newsletter"|"buyer-reg", ...formData }
+ * POST /api/contact — Handles all form submissions from the site.
+ * 1. Verifies Cloudflare Turnstile (spam protection)
+ * 2. Pushes the lead to Follow Up Boss with property details + tags
+ * 3. Forwards to n8n webhook for automations (email alerts, drip campaigns)
  */
 export async function POST(request: NextRequest) {
   try {
@@ -41,7 +62,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Map form type to the correct n8n webhook
+    // Validate form type
     const webhookMap: Record<string, string> = {
       contact: `${N8N_BASE}/nowtb-contact`,
       showing: `${N8N_BASE}/nowtb-showing`,
@@ -58,19 +79,39 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Forward to n8n
-    const res = await fetch(webhookUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        ...formData,
-        submitted_at: new Date().toISOString(),
-        source_url: request.headers.get("referer") || "unknown",
-      }),
-    });
+    // --- Push lead to Follow Up Boss ---
+    // FUB dedupes by email, so repeat submissions update the existing contact
+    // Property details are attached as a note so Barrett sees what they want
+    if (formData.email) {
+      await pushLeadToFub({
+        name: formData.name || "Unknown",
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        source: fubSourceMap[type] || "nowtb.com",
+        sourceId: formData.source,
+        tags: fubTagMap[type] || ["Website Lead"],
+        // Property details come from the form's hidden fields (set by listing page)
+        property: formData.property || undefined,
+      });
+    }
 
-    if (!res.ok) {
-      throw new Error(`n8n webhook returned ${res.status}`);
+    // --- Forward to n8n for additional automations ---
+    // n8n handles: email/SMS notifications, drip sequences, etc.
+    // This is fire-and-forget — don't block the response if n8n is slow
+    try {
+      await fetch(webhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          submitted_at: new Date().toISOString(),
+          source_url: request.headers.get("referer") || "unknown",
+        }),
+      });
+    } catch (n8nError) {
+      // Log but don't fail — FUB already has the lead, n8n is a bonus
+      console.warn("n8n webhook failed (non-critical):", n8nError);
     }
 
     return NextResponse.json({ success: true });

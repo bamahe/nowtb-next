@@ -58,9 +58,9 @@ export default function BuildersPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-16">
+      <section className="section-light">
         <div className="container-wide max-w-2xl">
-          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2 text-center">
+          <h2 className="heading-section text-xl text-center">
             Interested in New Construction?
           </h2>
           <p className="font-body text-muted text-center mb-8">

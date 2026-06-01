@@ -37,7 +37,7 @@ export default function CommunitiesPage() {
         {citiesByCounty.map(({ county, cities: countyCities }) => (
           <div key={county} className="mb-12">
             {/* County heading with link */}
-            <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2">
+            <h2 className="heading-section text-xl text-primary mb-2">
               <Link
                 href={`/${county.toLowerCase()}-county`}
                 className="hover:text-accent transition-colors"
@@ -71,9 +71,9 @@ export default function CommunitiesPage() {
       </section>
 
       {/* === CTA === */}
-      <section className="bg-gray-50 py-16">
+      <section className="section-light">
         <div className="container-wide text-center max-w-2xl">
-          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-4">
+          <h2 className="heading-section text-xl text-primary mb-4">
             Not Sure Where to Start?
           </h2>
           <p className="font-body text-muted mb-6">

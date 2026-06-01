@@ -14,6 +14,7 @@ import {
   getListingUrl,
   getListingPhotoUrl,
 } from "@/lib/utils";
+import FavoriteButton from "@/components/ui/FavoriteButton";
 
 interface ListingCardProps {
   listing: Listing;
@@ -77,6 +78,21 @@ export default function ListingCard({ listing }: ListingCardProps) {
         >
           {listing.StandardStatus}
         </span>
+
+        {/* --- Favorite heart button — top right corner --- */}
+        <FavoriteButton
+          listingKey={listing.ListingKey}
+          listingData={{
+            address: displayAddress,
+            city: listing.City,
+            price: listing.ListPrice,
+            beds: listing.BedroomsTotal,
+            baths: listing.BathroomsTotalInteger,
+            sqft: listing.LivingArea,
+            photo: photoUrl,
+          }}
+          size="sm"
+        />
 
         {/* --- Info overlay at bottom with backdrop-blur glass effect --- */}
         <div className="absolute bottom-0 left-0 right-0 p-5 backdrop-blur-[2px]">

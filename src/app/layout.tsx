@@ -3,6 +3,7 @@ import { Playfair_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import FubPixel from "@/components/tracking/FubPixel";
 
 // Heading font — Playfair Display 800 (editorial, elegant)
 const playfair = Playfair_Display({
@@ -53,6 +54,9 @@ export default function RootLayout({
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
+        {/* FUB tracking pixel — tracks page views across the site
+            so you can see which listings leads browsed in Follow Up Boss */}
+        <FubPixel />
       </body>
     </html>
   );

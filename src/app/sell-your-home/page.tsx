@@ -94,7 +94,7 @@ export default function SellYourHomePage() {
       </section>
 
       {/* ---- Valuation Request Form ---- */}
-      <section className="bg-gray-50 py-16">
+      <section className="section-light">
         <div className="container-wide max-w-xl mx-auto">
           <ValuationForm />
         </div>
@@ -124,7 +124,7 @@ export default function SellYourHomePage() {
       </section>
 
       {/* ---- Testimonial Placeholder ---- */}
-      <section className="bg-accent/10 py-16">
+      <section className="section-light">
         <div className="container-wide text-center max-w-3xl mx-auto">
           <h2 className="heading-section text-display-sm text-primary mb-8">
             What Sellers Are Saying

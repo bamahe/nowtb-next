@@ -61,7 +61,7 @@ export default async function OpenHousesPage() {
       )}
 
       {/* ---- Private Showing CTA ---- */}
-      <section className="bg-accent/10 py-16">
+      <section className="section-light">
         <div className="container-wide text-center max-w-2xl mx-auto">
           <h2 className="heading-section text-display-sm text-primary mb-4">
             Want a Private Showing?
@@ -76,7 +76,7 @@ export default async function OpenHousesPage() {
             </a>
             <Link
               href="/contact"
-              className="inline-block px-6 py-3 rounded-lg border-2 border-primary text-primary font-body font-medium hover:bg-primary hover:text-white transition-colors"
+              className="btn-secondary inline-block"
             >
               Request a Showing
             </Link>

@@ -28,7 +28,7 @@ export default function InvestingPage() {
 
       {/* === Investment types === */}
       <section className="container-wide py-12">
-        <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-8 text-center">
+        <h2 className="heading-section text-xl text-primary mb-8 text-center">
           Investment Strategies
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -64,9 +64,9 @@ export default function InvestingPage() {
       </section>
 
       {/* === Investment by city === */}
-      <section className="bg-gray-50 py-12">
+      <section className="section-light">
         <div className="container-wide">
-          <h2 className="font-heading font-bold text-2xl text-primary mb-6 text-center">
+          <h2 className="heading-section text-xl text-primary mb-6 text-center">
             Investment Properties by City
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
@@ -76,7 +76,7 @@ export default function InvestingPage() {
                 <Link
                   key={city.slug}
                   href={`/${city.slug}-investment-property`}
-                  className="block rounded-lg border border-gray-200 bg-white px-3 py-2 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10"
+                  className="card block px-3 py-2 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10"
                 >
                   {city.name}
                 </Link>
@@ -88,7 +88,7 @@ export default function InvestingPage() {
       {/* === Contact === */}
       <section className="py-16">
         <div className="container-wide max-w-2xl">
-          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2 text-center">
+          <h2 className="heading-section text-xl text-primary mb-2 text-center">
             Ready to Invest in Tampa Bay?
           </h2>
           <p className="font-body text-muted text-center mb-8">

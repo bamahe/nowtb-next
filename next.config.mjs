@@ -1,8 +1,35 @@
 /** @type {import('next').NextConfig} */
+
+// Blog post slugs from WordPress — these lived at /slug/ on WP but now live at /blog/slug
+// We load them at build time to generate individual 301 redirects
+import fs from 'fs';
+import path from 'path';
+
+function getBlogRedirects() {
+  try {
+    const filePath = path.join(process.cwd(), 'src/data/posts-export.json');
+    const posts = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    return posts.map((post) => ({
+      source: `/${post.slug}`,
+      destination: `/blog/${post.slug}`,
+      permanent: true,
+    }));
+  } catch {
+    console.warn('Could not load posts for redirects');
+    return [];
+  }
+}
+
 const nextConfig = {
-  // Redirects for pages that should point to equivalent pages
+  // Remove trailing slashes to match Next.js conventions
+  // WordPress uses /slug/ but Next.js uses /slug
+  trailingSlash: false,
+
   async redirects() {
+    const blogRedirects = getBlogRedirects();
+
     return [
+      // ── Manual redirects ──
       // /home -> / (homepage)
       { source: "/home", destination: "/", permanent: true },
       // /st-pete-homes-for-sale -> /st-petersburg-homes-for-sale (canonical)
@@ -11,8 +38,25 @@ const nextConfig = {
       { source: "/terms", destination: "/terms-of-use", permanent: true },
       // /privacy -> /privacy-policy
       { source: "/privacy", destination: "/privacy-policy", permanent: true },
-      // /first-time-home-buyer-guide also exists as /guides/first-time-home-buyer-guide
-      // Keep both active (catch-all handles the non-/guides/ version)
+
+      // ── WordPress nested city spoke pages → flat structure ──
+      // WordPress used /city/city-topic/ but new site uses /city-topic
+      // Catches patterns like /valrico/valrico-homes-with-pool/ → /valrico-homes-with-pool
+      { source: "/:city/:city-:topic", destination: "/:city-:topic", permanent: true },
+
+      // ── WordPress nested neighborhood pages → flat structure ──
+      // WordPress used /city/neighborhood/ but new site uses /neighborhood
+      { source: "/:city/:neighborhood", destination: "/:neighborhood", permanent: true },
+
+      // ── WordPress Showcase IDX property pages ──
+      // Old IDX pages at /properties/slug → new listing pages
+      // These will 404 until we map old Showcase IDX IDs to Bridge ListingKeys
+      // For now, send them to the properties search page
+      { source: "/properties/:path*", destination: "/properties", permanent: false },
+
+      // ── Blog posts: /slug → /blog/slug (624 individual redirects) ──
+      // WordPress served posts at root, new site nests under /blog/
+      ...blogRedirects,
     ];
   },
   // Allow Bridge API listing photos and Showcase IDX images

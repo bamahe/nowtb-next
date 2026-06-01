@@ -36,9 +36,9 @@ export default function LendersPage() {
       </section>
 
       {/* === Related guides === */}
-      <section className="bg-gray-50 py-12">
+      <section className="section-light py-12">
         <div className="container-wide">
-          <h2 className="font-heading font-bold text-2xl text-primary mb-6 text-center">
+          <h2 className="font-heading heading-section text-xl text-primary mb-6 text-center">
             Mortgage Guides
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
@@ -58,9 +58,9 @@ export default function LendersPage() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-12">
         <div className="container-wide max-w-2xl">
-          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2 text-center">
+          <h2 className="font-heading heading-section text-xl text-primary mb-2 text-center">
             Get a Lender Referral
           </h2>
           <p className="font-body text-muted text-center mb-8">
