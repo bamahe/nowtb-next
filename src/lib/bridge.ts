@@ -4,22 +4,11 @@
 // =============================================================================
 
 import { Listing, ListingSearchParams, BridgeResponse } from './types';
-import {
-  mockListings,
-  getMockListingsByCity,
-  getMockOpenHouses,
-  getMockFeatured,
-  getMockListing,
-} from '@/data/mock-listings';
 
 // Pull config from environment (set in .env.local, never committed)
 const BRIDGE_BASE = process.env.BRIDGE_API_BASE!;   // e.g. https://api.bridgedataoutput.com/api/v2/OData
 const BRIDGE_TOKEN = process.env.BRIDGE_SERVER_TOKEN!; // Server-side Bearer token
 const DATASET = process.env.BRIDGE_DATASET || 'test';  // 'test' for dev, MLS dataset ID for prod
-
-// Live API is ON — mock data is the fallback if Bridge returns errors or rate limits
-const USE_MOCK = false;
-const FALLBACK_TO_MOCK = true;
 
 // Skip API calls during build to avoid rate limits (3,400+ pages all fetching at once).
 // Pages still get their full SEO content; listings load on first visitor request via ISR.
@@ -42,11 +31,11 @@ function isRateLimited(): boolean {
 
 /**
  * Mark the API as rate-limited for 5 minutes.
- * All calls during cooldown will fall back to mock data instead of hammering Bridge.
+ * All calls during cooldown will return empty results instead of hammering Bridge.
  */
 function markRateLimited(): void {
   rateLimitedUntil = Date.now() + 5 * 60 * 1000; // 5-minute cooldown
-  console.warn('[Bridge] Rate limited — falling back to mock data for 5 minutes');
+  console.warn('[Bridge] Rate limited — returning empty results for 5 minutes');
 }
 
 // -----------------------------------------------------------------------------
@@ -182,20 +171,6 @@ export async function getListings(
     return { bundle: 'build-skip', total: 0, value: [] };
   }
 
-  // Use mock data when Bridge dataset is 'test'
-  if (USE_MOCK) {
-    let filtered = [...mockListings];
-    if (params.city) filtered = filtered.filter(l => l.City.toLowerCase() === params.city!.toLowerCase());
-    if (params.zip) filtered = filtered.filter(l => l.PostalCode === params.zip);
-    if (params.min_price) filtered = filtered.filter(l => (l.ListPrice || 0) >= Number(params.min_price));
-    if (params.max_price) filtered = filtered.filter(l => (l.ListPrice || 0) <= Number(params.max_price));
-    if (params.beds) filtered = filtered.filter(l => (l.BedroomsTotal || 0) >= Number(params.beds));
-    if (params.baths) filtered = filtered.filter(l => (l.BathroomsTotalInteger || 0) >= Number(params.baths));
-    const limit = params.limit ? Number(params.limit) : 24;
-    const offset = params.offset ? Number(params.offset) : 0;
-    return { bundle: 'mock', total: filtered.length, value: filtered.slice(offset, offset + limit) };
-  }
-
   try {
     const queryParams: Record<string, string> = {};
     const filter = buildFilter(params);
@@ -216,14 +191,9 @@ export async function getListings(
  */
 export async function getListing(id: string): Promise<Listing | null> {
   if (IS_BUILD_TIME) return null;
-  if (USE_MOCK) return getMockListing(id);
   try {
     // OData single entity format: Property('ListingKey') — NOT Property/ListingKey
-    // bridgeFetch handles the /listings → /Property replacement,
-    // but we need the OData key syntax for single-entity lookups
-    if (isRateLimited()) {
-      return FALLBACK_TO_MOCK ? getMockListing(id) : null;
-    }
+    if (isRateLimited()) return null;
 
     const url = DATASET === 'test'
       ? `${BRIDGE_BASE}/${DATASET}/listings/${id}`
@@ -239,7 +209,7 @@ export async function getListing(id: string): Promise<Listing | null> {
 
     if (res.status === 429) {
       markRateLimited();
-      return FALLBACK_TO_MOCK ? getMockListing(id) : null;
+      return null;
     }
 
     if (!res.ok) return null;
@@ -248,7 +218,7 @@ export async function getListing(id: string): Promise<Listing | null> {
     const data = await res.json();
     return data as Listing;
   } catch {
-    return FALLBACK_TO_MOCK ? getMockListing(id) : null;
+    return null;
   }
 }
 
@@ -258,7 +228,6 @@ export async function getListing(id: string): Promise<Listing | null> {
  */
 export async function getFeaturedListings(): Promise<Listing[]> {
   if (IS_BUILD_TIME) return [];
-  if (USE_MOCK) return getMockFeatured();
   try {
     const res = await getListings({
       status: 'Active',
@@ -266,13 +235,10 @@ export async function getFeaturedListings(): Promise<Listing[]> {
       limit: '12',
       sort: 'ListPrice desc',
     });
-    const listings = res.value || [];
-    // Fall back to mock data if live feed is empty (fresh feed transition)
-    if (listings.length === 0 && FALLBACK_TO_MOCK) return getMockFeatured();
-    return listings;
+    return res.value || [];
   } catch (error) {
     console.error('Failed to fetch featured listings:', error);
-    return FALLBACK_TO_MOCK ? getMockFeatured() : [];
+    return [];
   }
 }
 
@@ -282,7 +248,6 @@ export async function getFeaturedListings(): Promise<Listing[]> {
  */
 export async function getOpenHouses(): Promise<Listing[]> {
   if (IS_BUILD_TIME) return [];
-  if (USE_MOCK) return getMockOpenHouses();
   try {
     const now = new Date().toISOString();
     const weekFromNow = new Date(
@@ -312,15 +277,12 @@ export async function getListingsByCity(
   limit = 24
 ): Promise<Listing[]> {
   if (IS_BUILD_TIME) return [];
-  if (USE_MOCK) return getMockListingsByCity(city).slice(0, limit);
   try {
     const res = await getListings({ city, limit: String(limit) });
-    const listings = res.value || [];
-    if (listings.length === 0 && FALLBACK_TO_MOCK) return getMockListingsByCity(city).slice(0, limit);
-    return listings;
+    return res.value || [];
   } catch (error) {
     console.error(`Failed to fetch listings for ${city}:`, error);
-    return FALLBACK_TO_MOCK ? getMockListingsByCity(city).slice(0, limit) : [];
+    return [];
   }
 }
 
