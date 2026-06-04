@@ -21,16 +21,6 @@ const NAV_LINKS = [
   { href: "/blog", label: "Blog" },
 ];
 
-/* Cross-site links — Barrett's network of sites for SEO backlinking */
-const CROSS_SITE_LINKS = [
-  { href: "https://parrishagent.com", label: "Parrish Real Estate" },
-  { href: "https://flforeclosurehelp.com", label: "FL Foreclosure Help" },
-  { href: "https://flpermithelp.com", label: "FL Permit Help" },
-  { href: "https://bestbayservices.com", label: "Best Bay Services" },
-  { href: "https://vivipm.com", label: "ViVi Property Management" },
-  { href: "https://barretthenry.remax.com", label: "Barrett Henry — REMAX" },
-];
-
 export default function Footer() {
   return (
     <footer className="bg-primary text-white font-body">
@@ -81,30 +71,6 @@ export default function Footer() {
               </Link>
             </span>
           ))}
-        </div>
-      </div>
-
-      {/* ── Cross-site links — Barrett's network ── */}
-      <div className="border-t border-white/5">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-2">
-            {CROSS_SITE_LINKS.map((link, i) => (
-              <span key={link.href} className="flex items-center gap-2">
-                {i > 0 && (
-                  <span className="text-white/30 text-xs" aria-hidden="true">|</span>
-                )}
-                <a
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[10px] tracking-[0.1em] uppercase text-white/40
-                             transition-colors duration-300 hover:text-accent"
-                >
-                  {link.label}
-                </a>
-              </span>
-            ))}
-          </div>
         </div>
       </div>
 
