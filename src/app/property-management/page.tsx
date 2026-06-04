@@ -25,7 +25,8 @@ export default function PropertyManagementPage() {
         <div className="max-w-3xl mx-auto prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-accent">
           <h2>ViVi Property Management</h2>
           <p>
-            ViVi PM provides full-service property management for residential rental
+            <a href="https://vivipm.com" target="_blank" rel="noopener noreferrer">ViVi PM</a> provides
+            full-service property management for residential rental
             properties across Tampa Bay. From tenant screening and lease execution to
             maintenance coordination and monthly accounting, we handle everything so
             you can enjoy passive income without the headaches.
@@ -44,9 +45,11 @@ export default function PropertyManagementPage() {
 
           <h2>Maintenance by Best Bay Services</h2>
           <p>
-            Our properties are maintained by Best Bay Services, providing fast and
-            reliable repairs at competitive rates. This in-house maintenance team
-            means faster response times and lower costs for property owners.
+            Our properties are maintained by{" "}
+            <a href="https://bestbayservices.com" target="_blank" rel="noopener noreferrer">Best Bay Services</a>,
+            providing fast and reliable repairs at competitive rates. This in-house
+            maintenance team means faster response times and lower costs for property
+            owners.
           </p>
         </div>
       </section>

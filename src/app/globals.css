@@ -177,3 +177,71 @@ select {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* ── Reduced motion — respect user OS preference ── */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Print stylesheet — clean, ink-friendly output ── */
+@media print {
+  /* Hide nav, footer, forms, and interactive elements */
+  header,
+  footer,
+  nav,
+  form,
+  button,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Reset backgrounds and colors for readability */
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  /* Show link URLs inline */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #555;
+  }
+
+  /* Don't show URLs for internal/anchor links */
+  a[href^="#"]::after,
+  a[href^="tel:"]::after,
+  a[href^="mailto:"]::after,
+  a[href^="/"]::after {
+    content: "";
+  }
+
+  /* Avoid page breaks inside cards/sections */
+  section,
+  article,
+  .card {
+    break-inside: avoid;
+  }
+
+  /* Remove shadows */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+}

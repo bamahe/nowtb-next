@@ -95,6 +95,17 @@ export default async function HomePage() {
               "@type": "RealEstateOrganization",
               name: "REMAX Collective",
             },
+            sameAs: [
+              "https://parrishagent.com",
+              "https://flforeclosurehelp.com",
+              "https://flpermithelp.com",
+              "https://bestbayservices.com",
+              "https://vivipm.com",
+              "https://barretthenry.remax.com",
+              "https://www.facebook.com/BarrettHenryREALTOR",
+              "https://www.instagram.com/thenowteam",
+              "https://www.linkedin.com/in/barretthenry",
+            ],
             knowsAbout: [
               "Residential Real Estate",
               "Tampa Bay Homes for Sale",
@@ -243,10 +254,43 @@ export default async function HomePage() {
       </section>
 
       {/* =================================================================
-          SECTION 5: CTA — dramatic dark navy call-to-action
+          SECTION 5: Quick Links — internal navigation to key pages
           ================================================================= */}
+      <section className="section-light">
+        <div className="container-wide">
+          <div className="text-center mb-16">
+            <p className="heading-label mb-6">Resources</p>
+            <div className="section-divider" />
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            {[
+              { href: "/buyers", label: "Buyer Guide" },
+              { href: "/sellers", label: "Seller Guide" },
+              { href: "/investing", label: "Investing" },
+              { href: "/luxury", label: "Luxury Homes" },
+              { href: "/open-houses", label: "Open Houses" },
+              { href: "/builders", label: "Builders" },
+              { href: "/mortgage-calculator", label: "Mortgage Calculator" },
+              { href: "/property-management", label: "Property Management" },
+              { href: "/guides", label: "Market Guides" },
+              { href: "/relocation", label: "Relocation" },
+              { href: "/blog", label: "Blog" },
+              { href: "/about", label: "About Barrett" },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="card block px-4 py-3 text-center text-xs font-body font-medium tracking-[0.1em] uppercase text-primary transition-colors hover:text-accent hover:border-accent"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* =================================================================
-          SECTION 5: CTA — clean, minimal dark navy
+          SECTION 6: CTA — clean, minimal dark navy
           ================================================================= */}
       <section className="section-dark">
         <div className="container-wide text-center">

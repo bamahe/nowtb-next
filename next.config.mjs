@@ -21,6 +21,9 @@ function getBlogRedirects() {
 }
 
 const nextConfig = {
+  // Don't expose "X-Powered-By: Next.js" header
+  poweredByHeader: false,
+
   // Remove trailing slashes to match Next.js conventions
   // WordPress uses /slug/ but Next.js uses /slug
   trailingSlash: false,
@@ -60,6 +63,8 @@ const nextConfig = {
   },
   // Allow Bridge API listing photos and Showcase IDX images
   images: {
+    // Prefer modern image formats — avif first, then webp
+    formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
         protocol: "https",
