@@ -148,6 +148,15 @@ export default async function NeighborhoodPage({
         </section>
       )}
 
+      {/* === MLS disclaimer — only shown when listings are displayed === */}
+      {listings.length > 0 && (
+        <section className="container-wide pb-4">
+          <p className="font-body text-xs text-muted/60 leading-relaxed max-w-4xl">
+            Listing information provided by Stellar MLS. IDX information is for personal, non-commercial use only. Data is deemed reliable but not guaranteed. All properties are subject to prior sale, change, or withdrawal.
+          </p>
+        </section>
+      )}
+
       {/* === About the neighborhood — SEO content === */}
       <section className="container-wide py-12">
         <div className="max-w-3xl mx-auto">
