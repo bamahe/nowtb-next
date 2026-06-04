@@ -59,6 +59,9 @@ export async function generateMetadata({
   return {
     title: `${post.title} | Barrett Henry, REALTOR®`,
     description,
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
     openGraph: {
       title: post.title,
       description,

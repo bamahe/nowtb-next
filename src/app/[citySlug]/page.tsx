@@ -169,9 +169,9 @@ function parseSlug(slug: string): PageType | null {
 }
 
 // -----------------------------------------------------------------------------
-// Revalidate every 60 seconds — ensures fresh MLS listings on each visit
-// Pages are still pre-rendered at build for SEO, but listings refresh quickly
-export const revalidate = 60;
+// Force dynamic rendering — every request fetches live MLS listings.
+// Without this, ISR serves stale empty cache on first visit after deploy.
+export const dynamic = 'force-dynamic';
 
 // generateStaticParams — pre-render all hub + spoke URLs at build time
 // Returns all city slugs AND all city-topic combos for Tier 1 cities
@@ -254,6 +254,9 @@ export async function generateMetadata({
   // If the slug doesn't resolve, Next.js will render notFound() in the page
   if (!parsed) return {};
 
+  // All dynamic pages get a canonical URL to prevent duplicate content
+  const canonical = `/${citySlug}`;
+
   switch (parsed.kind) {
     case "county":
       return {
@@ -335,6 +338,7 @@ export async function generateMetadata({
     return {
       title: `${topic.label} in ${city.name}`,
       description: `Browse ${topic.label.toLowerCase()} in ${city.name}, ${city.county} County, FL. Updated daily from Stellar MLS. Barrett Henry, Broker Associate at REMAX Collective — 23+ years of real estate experience.`,
+      alternates: { canonical },
       openGraph: {
         title: `${topic.label} in ${city.name} | Barrett Henry, REALTOR®`,
         description: `Search ${topic.label.toLowerCase()} in ${city.name}, FL. Expert guidance from Barrett Henry at REMAX Collective.`,
@@ -348,6 +352,7 @@ export async function generateMetadata({
   return {
     title: `${city.name} Homes for Sale`,
     description: `Search homes for sale in ${city.name}, ${city.county} County, FL. Updated daily from Stellar MLS. Barrett Henry, Broker Associate at REMAX Collective — 23+ years of real estate experience.`,
+    alternates: { canonical },
     openGraph: {
       title: `${city.name} Homes for Sale | Barrett Henry, REALTOR®`,
       description: `Explore ${city.name} real estate with Barrett Henry at REMAX Collective. Browse listings, market data, and neighborhood info.`,
@@ -577,6 +582,15 @@ async function HubPage({ city }: { city: CityData }) {
         subtitle={`Active homes for sale in ${city.name}, ${city.county} County.`}
       />
 
+      {/* === MLS disclaimer — only shown when listings are displayed === */}
+      {listings.length > 0 && (
+        <section className="container-wide pb-4">
+          <p className="font-body text-xs text-muted/60 leading-relaxed max-w-4xl">
+            Listing information provided by Stellar MLS. IDX information is for personal, non-commercial use only. Data is deemed reliable but not guaranteed. All properties are subject to prior sale, change, or withdrawal.
+          </p>
+        </section>
+      )}
+
       {/* === Spoke navigation — links to all topic pages for this city === */}
       <SpokeNav city={city} />
 
@@ -759,6 +773,15 @@ async function SpokePage({
               Call (813) 733-7907
             </a>
           </div>
+        </section>
+      )}
+
+      {/* === MLS disclaimer — only shown when listings are displayed === */}
+      {listings.length > 0 && (
+        <section className="container-wide pb-4">
+          <p className="font-body text-xs text-muted/60 leading-relaxed max-w-4xl">
+            Listing information provided by Stellar MLS. IDX information is for personal, non-commercial use only. Data is deemed reliable but not guaranteed. All properties are subject to prior sale, change, or withdrawal.
+          </p>
         </section>
       )}
 

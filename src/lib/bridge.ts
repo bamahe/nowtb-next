@@ -6,9 +6,14 @@
 import { Listing, ListingSearchParams, BridgeResponse } from './types';
 
 // Pull config from environment (set in .env.local, never committed)
-const BRIDGE_BASE = process.env.BRIDGE_API_BASE!;   // e.g. https://api.bridgedataoutput.com/api/v2/OData
-const BRIDGE_TOKEN = process.env.BRIDGE_SERVER_TOKEN!; // Server-side Bearer token
-const DATASET = process.env.BRIDGE_DATASET || 'test';  // 'test' for dev, MLS dataset ID for prod
+const BRIDGE_BASE = process.env.BRIDGE_API_BASE || '';
+const BRIDGE_TOKEN = process.env.BRIDGE_SERVER_TOKEN || '';
+const DATASET = process.env.BRIDGE_DATASET;
+
+// Fail fast if required env vars are missing (except during build)
+if (!DATASET && process.env.NEXT_PHASE !== 'phase-production-build') {
+  console.error('[Bridge] BRIDGE_DATASET env var is missing — listings will not load');
+}
 
 // Skip API calls during build to avoid rate limits (3,400+ pages all fetching at once).
 // Pages still get their full SEO content; listings load on first visitor request via ISR.

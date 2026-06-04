@@ -13,8 +13,8 @@ import { Menu, X } from "lucide-react";
 
 // Navigation links (same as desktop Header)
 const NAV_LINKS = [
-  { href: "/buy", label: "Buy" },
-  { href: "/sell", label: "Sell" },
+  { href: "/buyers", label: "Buy" },
+  { href: "/sellers", label: "Sell" },
   { href: "/communities", label: "Communities" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },

@@ -49,10 +49,9 @@ const nextConfig = {
       { source: "/:city/:neighborhood", destination: "/:neighborhood", permanent: true },
 
       // ── WordPress Showcase IDX property pages ──
-      // Old IDX pages at /properties/slug → new listing pages
-      // These will 404 until we map old Showcase IDX IDs to Bridge ListingKeys
-      // For now, send them to the properties search page
-      { source: "/properties/:path*", destination: "/properties", permanent: false },
+      // Old IDX used /properties/slug-name format. Bridge uses /properties/ListingKey.
+      // Don't redirect — let the [id] route handle it. Old Showcase URLs will 404
+      // naturally since they won't match a Bridge ListingKey.
 
       // ── Blog posts: /slug → /blog/slug (624 individual redirects) ──
       // WordPress served posts at root, new site nests under /blog/

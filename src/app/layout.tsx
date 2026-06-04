@@ -33,9 +33,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Barrett Henry, REALTOR® — REMAX Collective",
+    images: [
+      {
+        url: "/og-default.png",
+        width: 1200,
+        height: 630,
+        alt: "Barrett Henry, REALTOR® — Tampa Bay Homes for Sale",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/og-default.png"],
+  },
+  alternates: {
+    canonical: "./",
   },
   robots: {
     index: true,

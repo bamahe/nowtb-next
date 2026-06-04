@@ -14,8 +14,8 @@ import MobileNav from "@/components/layout/MobileNav";
 
 // Desktop navigation links
 const NAV_LINKS = [
-  { href: "/buy", label: "Buy" },
-  { href: "/sell", label: "Sell" },
+  { href: "/buyers", label: "Buy" },
+  { href: "/sellers", label: "Sell" },
   { href: "/communities", label: "Communities" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
