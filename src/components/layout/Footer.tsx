@@ -25,7 +25,7 @@ export default function Footer() {
         <p className="font-heading font-extralight text-3xl md:text-4xl tracking-[0.2em] uppercase mb-1">
           Barrett Henry
         </p>
-        <p className="font-body text-[10px] tracking-[0.2em] uppercase text-white/30 mb-0">
+        <p className="font-body text-[10px] tracking-[0.2em] uppercase text-white/50 mb-0">
           The NOW Team &nbsp;|&nbsp; REMAX Collective
         </p>
 
@@ -55,11 +55,11 @@ export default function Footer() {
           {NAV_LINKS.map((link, i) => (
             <span key={link.href} className="flex items-center gap-2">
               {i > 0 && (
-                <span className="text-white/20 text-xs" aria-hidden="true">|</span>
+                <span className="text-white/30 text-xs" aria-hidden="true">|</span>
               )}
               <Link
                 href={link.href}
-                className="link-underline text-xs tracking-[0.15em] uppercase text-white/40
+                className="link-underline text-xs tracking-[0.15em] uppercase text-white/60
                            transition-colors duration-300 hover:text-white"
               >
                 {link.label}
@@ -73,17 +73,17 @@ export default function Footer() {
       <div className="border-t border-white/5">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-8 text-center space-y-3">
           {/* Hashtags — subtle brand identifiers */}
-          <p className="text-[10px] tracking-[0.15em] uppercase text-white/15 mb-2">
+          <p className="text-[10px] tracking-[0.15em] uppercase text-white/40 mb-2">
             #TNT &nbsp; #BHRE &nbsp; #REMAX &nbsp; #nowtb
           </p>
 
           {/* Copyright */}
-          <p className="text-[10px] tracking-[0.1em] uppercase text-white/20">
+          <p className="text-[10px] tracking-[0.1em] uppercase text-white/40">
             &copy; 2026 Barrett Henry, REALTOR&reg; &nbsp;|&nbsp; REMAX Collective &nbsp;|&nbsp; Equal Housing Opportunity
           </p>
 
-          {/* MLS disclaimer — intentionally very small and subdued */}
-          <p className="text-[10px] text-white/15 leading-relaxed max-w-2xl mx-auto">
+          {/* MLS disclaimer */}
+          <p className="text-[10px] text-white/35 leading-relaxed max-w-2xl mx-auto">
             Listing information provided by Stellar MLS. IDX information is for
             personal, non-commercial use only. Data is deemed reliable but not
             guaranteed. All properties are subject to prior sale, change, or

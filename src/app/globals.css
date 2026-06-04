@@ -121,8 +121,15 @@ select {
 .blog-content table { @apply w-full border-collapse mb-6; }
 .blog-content th { @apply bg-primary text-white p-3 text-left; }
 .blog-content td { @apply border border-border p-3; }
-.blog-content img { @apply max-w-full h-auto my-4; }
+.blog-content img { @apply max-w-full h-auto my-4 rounded-lg; }
 .blog-content blockquote { @apply border-l-4 border-accent pl-4 italic my-4; }
+.blog-content hr { @apply border-t border-border my-8; }
+.blog-content pre { @apply bg-gray-100 rounded-lg p-4 overflow-x-auto mb-4 text-sm; }
+.blog-content code { @apply bg-gray-100 rounded px-1.5 py-0.5 text-sm; }
+.blog-content pre code { @apply bg-transparent p-0; }
+.blog-content iframe, .blog-content video { @apply w-full aspect-video rounded-lg my-4; }
+.blog-content figure { @apply my-6; }
+.blog-content figcaption { @apply text-center text-sm text-muted mt-2; }
 
 /* ── Section backgrounds — alternating warm tones, generous padding ── */
 .section-dark {
