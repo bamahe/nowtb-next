@@ -10,11 +10,14 @@ import { agents } from "@/data/agents";
 
 // --- SEO metadata + Open Graph tags ---
 export const metadata: Metadata = {
-  title: "Meet Your Tampa Bay Real Estate Team",
+  title: "Tampa Bay Real Estate Team | The NOW Team | REMAX Collective",
   description:
-    "Meet Barrett Henry and The NOW Team at REMAX Collective. Experienced REALTORS® serving Tampa Bay's 7 counties — residential sales, investment properties, new construction, and more.",
+    "Meet Barrett Henry and The NOW Team at REMAX Collective. Experienced REALTORS serving Tampa Bay's 7 counties — residential sales, investment properties, and more. Call (813) 733-7907.",
+  alternates: {
+    canonical: "/agents",
+  },
   openGraph: {
-    title: "Meet Your Tampa Bay Real Estate Team | Barrett Henry, REALTOR®",
+    title: "Tampa Bay Real Estate Team | Barrett Henry, REALTOR®",
     description:
       "The NOW Team at REMAX Collective — experienced agents serving all of Tampa Bay.",
     type: "website",

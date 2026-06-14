@@ -8,9 +8,12 @@ import HeroSection from "@/components/ui/HeroSection";
 import ContactForm from "@/components/ui/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Tampa Bay Property Management — ViVi PM | Barrett Henry",
+  title: "Property Management Tampa Bay | ViVi PM | Barrett Henry",
   description:
-    "Professional property management for Tampa Bay rental owners. Tenant screening, maintenance coordination, and accounting. ViVi PM by Barrett Henry.",
+    "Professional property management for Tampa Bay rental owners. Tenant screening, maintenance coordination, and accounting. ViVi PM by Barrett Henry. Call (813) 733-7907.",
+  alternates: {
+    canonical: "/property-management",
+  },
 };
 
 export default function PropertyManagementPage() {

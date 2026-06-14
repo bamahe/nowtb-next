@@ -13,9 +13,12 @@ export const dynamic = "force-dynamic";
 
 // --- SEO metadata + Open Graph tags ---
 export const metadata: Metadata = {
-  title: "Open Houses This Week in Tampa Bay",
+  title: "Open Houses Tampa Bay This Week | Barrett Henry, REALTOR®",
   description:
-    "Browse open houses happening this week across Tampa Bay. Updated daily from Stellar MLS. Barrett Henry, REALTOR® with REMAX Collective.",
+    "Browse open houses happening this week across Tampa Bay. Updated daily from Stellar MLS. Barrett Henry, REALTOR with REMAX Collective. Call (813) 733-7907.",
+  alternates: {
+    canonical: "/open-houses",
+  },
   openGraph: {
     title: "Open Houses This Week in Tampa Bay | Barrett Henry, REALTOR®",
     description:

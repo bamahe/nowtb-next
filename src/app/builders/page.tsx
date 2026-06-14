@@ -9,8 +9,11 @@ import SearchBar from "@/components/ui/SearchBar";
 import ContactForm from "@/components/ui/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Tampa Bay Home Builders | Barrett Henry, REALTOR®",
-  description: "Top home builders in Tampa Bay — DR Horton, Lennar, Pulte, Taylor Morrison, Toll Brothers, and more. Barrett Henry, REMAX Collective.",
+  title: "Tampa Bay Home Builders | New Construction | Barrett Henry",
+  description: "Top home builders in Tampa Bay — DR Horton, Lennar, Pulte, Taylor Morrison, Toll Brothers, and more. Free buyer representation. Call Barrett Henry at (813) 733-7907.",
+  alternates: {
+    canonical: "/builders",
+  },
 };
 
 export default function BuildersPage() {

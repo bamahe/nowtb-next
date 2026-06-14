@@ -1,21 +1,57 @@
 # nowtb.com
 
 ## Purpose
-The NOW Team at REMAX Collective — Tampa Bay real estate services for buyers, sellers, and investors.
+The official real estate website of Barrett Henry, REALTOR and Broker Associate at REMAX Collective. Barrett leads The NOW Team, serving buyers, sellers, and investors across Tampa Bay's 7 counties.
 
 ## Authority
-Barrett Henry, licensed Florida REALTOR® and Broker Associate with 23+ years of real estate experience. Team leader of The NOW Team at REMAX Collective.
+- Barrett Henry, licensed Florida REALTOR and Broker Associate
+- 23+ years of real estate experience
+- Team leader of The NOW Team at REMAX Collective
+- REMAX Hall of Fame (2024), 10-Year Anniversary Award
+- Designations: CRE, e-PRO, MRP (Military Relocation Professional), SRS (Seller Representative Specialist)
+- Serves Hillsborough, Pinellas, Pasco, Polk, Manatee, Sarasota, and Hernando counties
 
-## Key Content
-- Tampa Bay homes for sale
-- Home buying guides
-- Home selling guides
-- Real estate investing
-- Luxury homes
-- Property management referrals
+## Content Areas
+- Tampa Bay homes for sale (MLS-powered property search)
+- Home buying guides (first-time buyers, VA loans, FHA loans, conventional, USDA)
+- Home selling guides (pricing strategy, staging, marketing)
+- Real estate investing (rental properties, 1031 exchanges, short-term rentals)
+- Luxury homes ($750K+)
+- City and neighborhood guides (69+ cities, 460+ neighborhoods)
 - Market reports and data
-- Neighborhood guides
+- Open houses
+- New construction / builder communities
+- Property management referrals (ViVi PM)
+- Relocation services (military PCS, out-of-state moves)
+- Mortgage calculator
+- Commercial real estate
 
 ## Contact
-Phone: (813) 761-0133
-Website: https://nowtb.com
+- Phone: (813) 733-7907
+- Email: barrett@nowtb.com
+- Website: https://nowtb.com
+- Brokerage: REMAX Collective, Tampa Bay, FL
+
+## Key Pages
+- /properties — Search all Tampa Bay homes for sale
+- /buyers — Buyer's guide and registration
+- /sellers — Seller's guide and home valuation
+- /sell-your-home — Free home valuation request
+- /investing — Investment property resources
+- /luxury — Luxury homes $750K+
+- /communities — Browse all 69+ cities by county
+- /guides — Free real estate guides
+- /blog — Tampa Bay real estate blog
+- /about — About Barrett Henry
+- /contact — Contact Barrett directly
+- /open-houses — Open houses this week
+- /mortgage-calculator — Monthly payment estimator
+- /property-management — ViVi PM property management
+- /relocation — Tampa Bay relocation services
+
+## Related Sites
+- https://vivipm.com — ViVi Property Management
+- https://bestbayservices.com — Best Bay Services (handyman/maintenance)
+- https://hencre.com — Barrett Henry CRE authority site
+- https://flforeclosurehelp.com — Florida foreclosure help
+- https://barretthenry.remax.com — REMAX team site

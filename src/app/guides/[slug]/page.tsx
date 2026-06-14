@@ -46,6 +46,9 @@ export async function generateMetadata({
   return {
     title: `${guide.title} | Barrett Henry, REALTOR®`,
     description: guide.excerpt,
+    alternates: {
+      canonical: `/guides/${slug}`,
+    },
     openGraph: {
       title: guide.title,
       description: guide.excerpt,
@@ -89,13 +92,35 @@ export default async function GuidePage({
             author: {
               "@type": "Person",
               name: agent.name,
+              jobTitle: "Broker Associate",
               url: "https://nowtb.com/about",
+              image: "https://nowtb.com/images/barrett-henry.jpg",
+              sameAs: [
+                "https://www.linkedin.com/in/barretthenry",
+                "https://www.facebook.com/BarrettHenryREALTOR",
+                "https://barretthenry.remax.com",
+              ],
             },
             publisher: {
               "@type": "Organization",
               name: "Barrett Henry, REALTOR\u00AE",
               url: "https://nowtb.com",
             },
+          }),
+        }}
+      />
+      {/* --- BreadcrumbList schema --- */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://nowtb.com" },
+              { "@type": "ListItem", position: 2, name: "Guides", item: "https://nowtb.com/guides" },
+              { "@type": "ListItem", position: 3, name: guide.title, item: `https://nowtb.com/guides/${slug}` },
+            ],
           }),
         }}
       />

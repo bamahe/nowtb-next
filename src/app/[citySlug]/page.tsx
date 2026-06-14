@@ -260,31 +260,36 @@ export async function generateMetadata({
   switch (parsed.kind) {
     case "county":
       return {
-        title: `${parsed.countyName} County Real Estate`,
-        description: `Search homes for sale in ${parsed.countyName} County, FL. Browse cities, listings, and market data. Barrett Henry, REALTOR® at REMAX Collective.`,
+        title: `${parsed.countyName} County Homes for Sale | Barrett Henry`,
+        description: `Search homes for sale in ${parsed.countyName} County, FL. Browse cities, listings, and market data. Barrett Henry, REALTOR at REMAX Collective. Call (813) 733-7907.`,
+        alternates: { canonical },
       };
     case "loan":
       return {
-        title: parsed.label,
-        description: `Learn about ${parsed.loanType.toLowerCase()}s in Florida. Eligibility, benefits, and how to apply. Barrett Henry, REALTOR® at REMAX Collective.`,
+        title: `${parsed.label} | Barrett Henry, REALTOR®`,
+        description: `Learn about ${parsed.loanType.toLowerCase()}s in Florida. Eligibility, benefits, and how to apply. Barrett Henry, REALTOR at REMAX Collective. Call (813) 733-7907.`,
+        alternates: { canonical },
       };
     case "realtor":
       return {
-        title: `${parsed.city.name} REALTOR® — Barrett Henry`,
-        description: `Looking for a trusted REALTOR® in ${parsed.city.name}, FL? Barrett Henry has 23+ years of real estate experience. REMAX Collective.`,
+        title: `${parsed.city.name} REALTOR® — Barrett Henry | REMAX Collective`,
+        description: `Looking for a trusted REALTOR in ${parsed.city.name}, FL? Barrett Henry has 23+ years of real estate experience. REMAX Collective. Call (813) 733-7907.`,
+        alternates: { canonical },
       };
     case "sell-city":
       return {
-        title: `Sell Your ${parsed.city.name} Home`,
-        description: `Sell your ${parsed.city.name} home for top dollar. Free home valuation from Barrett Henry, Broker Associate at REMAX Collective.`,
+        title: `Sell Your ${parsed.city.name} Home | Free Valuation`,
+        description: `Sell your ${parsed.city.name} home for top dollar. Free home valuation from Barrett Henry, Broker Associate at REMAX Collective. Call (813) 733-7907.`,
+        alternates: { canonical },
       };
     case "neighborhood": {
       // Look up the parent city name for the metadata
       const nCity = getCityBySlug(parsed.city);
       const cityName = nCity ? nCity.name : "Tampa Bay";
       return {
-        title: `${parsed.name} Real Estate — Homes for Sale`,
+        title: `${parsed.name} Homes for Sale | ${cityName}, FL`,
         description: `Explore homes for sale in ${parsed.name}, ${cityName}, FL. Updated daily from Stellar MLS. Barrett Henry, Broker Associate at REMAX Collective — 23+ years of real estate experience.`,
+        alternates: { canonical },
       };
     }
     case "neighborhood-spoke": {
@@ -294,6 +299,7 @@ export async function generateMetadata({
       return {
         title: `${parsed.name} Homes for Sale — ${nsCityName}, FL`,
         description: `Browse homes for sale in ${parsed.name}, ${nsCityName}, FL. Updated daily from Stellar MLS. Barrett Henry, Broker Associate at REMAX Collective — 23+ years of real estate experience.`,
+        alternates: { canonical },
       };
     }
     case "neighborhood-realtor": {
@@ -302,28 +308,33 @@ export async function generateMetadata({
       const nrCityName = nrCity ? nrCity.name : "Tampa Bay";
       return {
         title: `${parsed.name} REALTOR® — Barrett Henry | ${nrCityName}, FL`,
-        description: `Looking for a trusted REALTOR® in ${parsed.name}, ${nrCityName}? Barrett Henry has 23+ years of real estate experience. REMAX Collective.`,
+        description: `Looking for a trusted REALTOR in ${parsed.name}, ${nrCityName}? Barrett Henry has 23+ years of real estate experience. REMAX Collective. Call (813) 733-7907.`,
+        alternates: { canonical },
       };
     }
     case "comparison":
       return {
         title: `${parsed.comparison.title} | Barrett Henry, REALTOR®`,
         description: parsed.comparison.excerpt,
+        alternates: { canonical },
       };
     case "regional":
       return {
         title: `${parsed.page.title} | Barrett Henry, REALTOR®`,
         description: parsed.page.excerpt,
+        alternates: { canonical },
       };
     case "misc":
       return {
         title: `${parsed.page.title} | Barrett Henry, REALTOR®`,
         description: parsed.page.excerpt,
+        alternates: { canonical },
       };
     case "guide":
       return {
         title: `${parsed.guide.title} | Barrett Henry, REALTOR®`,
         description: parsed.guide.excerpt,
+        alternates: { canonical },
       };
     default:
       break;

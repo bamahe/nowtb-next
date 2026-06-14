@@ -24,7 +24,10 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Tampa Bay Homes for Sale | Barrett Henry, REALTOR® | REMAX Collective",
   description:
-    "Search Tampa Bay homes for sale with Barrett Henry, Broker Associate at REMAX Collective. 23+ years of real estate experience. Browse listings in Valrico, Brandon, Riverview, Tampa, and more.",
+    "Search Tampa Bay homes for sale with Barrett Henry, Broker Associate at REMAX Collective. 23+ years of real estate experience. Browse listings in Valrico, Brandon, Riverview, Tampa, and more. Call (813) 733-7907.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Tampa Bay Homes for Sale | Barrett Henry, REALTOR®",
     description:
@@ -96,12 +99,14 @@ export default async function HomePage() {
               name: "REMAX Collective",
             },
             sameAs: [
-              "https://parrishagent.com",
+              "https://barretthenry.remax.com",
+              "https://vivipm.com",
+              "https://hencre.com",
+              "https://valricopropertymgmt.com",
+              "https://bestbayservices.com",
               "https://flforeclosurehelp.com",
               "https://flpermithelp.com",
-              "https://bestbayservices.com",
-              "https://vivipm.com",
-              "https://barretthenry.remax.com",
+              "https://parrishagent.com",
               "https://www.facebook.com/BarrettHenryREALTOR",
               "https://www.instagram.com/thenowteam",
               "https://www.linkedin.com/in/barretthenry",

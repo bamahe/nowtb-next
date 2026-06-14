@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FubPixel from "@/components/tracking/FubPixel";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // Heading font — Playfair Display 800 (editorial, elegant)
 const playfair = Playfair_Display({
@@ -76,6 +78,8 @@ export default function RootLayout({
         {/* FUB tracking pixel — tracks page views across the site
             so you can see which listings leads browsed in Follow Up Boss */}
         <FubPixel />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

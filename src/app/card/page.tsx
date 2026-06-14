@@ -7,8 +7,11 @@ import Link from "next/link";
 import { getPrimaryAgent } from "@/data/agents";
 
 export const metadata: Metadata = {
-  title: "Barrett Henry — Digital Business Card",
-  description: "Barrett Henry, Broker Associate at REMAX Collective. (813) 733-7907 | barrett@nowtb.com",
+  title: "Barrett Henry — Digital Business Card | REMAX Collective",
+  description: "Barrett Henry, Broker Associate at REMAX Collective. Call (813) 733-7907 or email barrett@nowtb.com. The NOW Team, Tampa Bay.",
+  alternates: {
+    canonical: "/card",
+  },
 };
 
 export default function CardPage() {

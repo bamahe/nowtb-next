@@ -10,9 +10,12 @@ import SearchBar from "@/components/ui/SearchBar";
 import { guides } from "@/data/guides";
 
 export const metadata: Metadata = {
-  title: "Real Estate Guides | Barrett Henry, REALTOR®",
+  title: "Real Estate Guides Tampa Bay | Free Buyer & Seller Guides",
   description:
     "Free real estate guides for Tampa Bay buyers, sellers, and investors. First-time buyer guides, mortgage guides, selling guides, and more from Barrett Henry at REMAX Collective.",
+  alternates: {
+    canonical: "/guides",
+  },
 };
 
 export default function GuidesIndexPage() {
@@ -25,6 +28,21 @@ export default function GuidesIndexPage() {
 
   return (
     <>
+      {/* BreadcrumbList schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://nowtb.com" },
+              { "@type": "ListItem", position: 2, name: "Real Estate Guides", item: "https://nowtb.com/guides" },
+            ],
+          }),
+        }}
+      />
+
       {/* === Hero === */}
       <HeroSection
         title="Real Estate Guides"

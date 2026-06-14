@@ -8,8 +8,11 @@ import HeroSection from "@/components/ui/HeroSection";
 import ContactForm from "@/components/ui/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Recommended Home Inspectors | Barrett Henry, REALTOR®",
-  description: "Barrett Henry's recommended home inspectors in Tampa Bay — trusted professionals for thorough home inspections.",
+  title: "Home Inspectors Tampa Bay | Recommended by Barrett Henry",
+  description: "Barrett Henry's recommended home inspectors in Tampa Bay — trusted professionals for thorough home inspections. Call (813) 733-7907 for a referral.",
+  alternates: {
+    canonical: "/inspectors",
+  },
 };
 
 export default function InspectorsPage() {

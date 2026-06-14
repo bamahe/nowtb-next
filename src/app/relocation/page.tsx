@@ -9,8 +9,11 @@ import SearchBar from "@/components/ui/SearchBar";
 import ContactForm from "@/components/ui/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Tampa Bay Relocation Services | Barrett Henry, REALTOR®",
-  description: "Relocating to Tampa Bay? Barrett Henry provides full relocation services for individuals, families, and military.",
+  title: "Relocating to Tampa Bay | Relocation Services | Barrett Henry",
+  description: "Relocating to Tampa Bay? Barrett Henry provides full relocation services for individuals, families, and military PCS moves. MRP certified. Call (813) 733-7907.",
+  alternates: {
+    canonical: "/relocation",
+  },
 };
 
 export default function RelocationPage() {

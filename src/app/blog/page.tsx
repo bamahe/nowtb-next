@@ -16,7 +16,10 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Tampa Bay Real Estate Blog | Barrett Henry, REALTOR®",
   description:
-    "Expert insights on Tampa Bay real estate — market updates, buying & selling tips, neighborhood guides, and more from Barrett Henry, Broker Associate at REMAX Collective.",
+    "Expert insights on Tampa Bay real estate — market updates, buying and selling tips, neighborhood guides, and more from Barrett Henry, Broker Associate at REMAX Collective.",
+  alternates: {
+    canonical: "/blog",
+  },
   openGraph: {
     title: "Tampa Bay Real Estate Blog | Barrett Henry, REALTOR®",
     description:
@@ -75,6 +78,21 @@ export default async function BlogIndexPage({
 
   return (
     <>
+      {/* BreadcrumbList schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://nowtb.com" },
+              { "@type": "ListItem", position: 2, name: "Blog", item: "https://nowtb.com/blog" },
+            ],
+          }),
+        }}
+      />
+
       {/* === Hero section === */}
       <HeroSection
         title="Tampa Bay Real Estate Blog"

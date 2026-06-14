@@ -13,7 +13,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "My Account | Barrett Henry | REMAX Collective",
   description:
-    "View your saved searches, favorite listings, and account settings.",
+    "View your saved searches, favorite listings, and account settings on nowtb.com.",
+  alternates: {
+    canonical: "/account",
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 // --- TypeScript types for data from Supabase ---

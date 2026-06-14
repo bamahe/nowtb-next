@@ -50,8 +50,14 @@ export function realEstateAgentSchema() {
       "First-Time Home Buyers",
     ],
     sameAs: [
-      "https://www.facebook.com/barretthenryrealtor",
-      "https://www.instagram.com/barretthenryrealtor",
+      "https://barretthenry.remax.com",
+      "https://vivipm.com",
+      "https://hencre.com",
+      "https://valricopropertymgmt.com",
+      "https://bestbayservices.com",
+      "https://flforeclosurehelp.com",
+      "https://www.facebook.com/BarrettHenryREALTOR",
+      "https://www.instagram.com/thenowteam",
       "https://www.linkedin.com/in/barretthenry",
     ],
   };

@@ -12,7 +12,10 @@ import { getPrimaryAgent } from "@/data/agents";
 export const metadata: Metadata = {
   title: "About Barrett Henry | Broker Associate | REMAX Collective",
   description:
-    "Barrett Henry is a licensed Broker Associate with REMAX Collective and team lead of The NOW Team. 23+ years of real estate experience serving Tampa Bay buyers, sellers, and investors.",
+    "Barrett Henry is a licensed Broker Associate with REMAX Collective and team lead of The NOW Team. 23+ years of real estate experience serving Tampa Bay buyers, sellers, and investors. Call (813) 733-7907.",
+  alternates: {
+    canonical: "/about",
+  },
   openGraph: {
     title: "About Barrett Henry | Broker Associate | REMAX Collective",
     description:
@@ -31,7 +34,7 @@ const jsonLd = {
   telephone: "(813) 733-7907",
   email: "barrett@nowtb.com",
   url: "https://nowtb.com",
-  image: "/images/barrett-henry.jpg",
+  image: "https://nowtb.com/images/barrett-henry.jpg",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Tampa",
@@ -55,6 +58,58 @@ const jsonLd = {
   priceRange: "$$",
 };
 
+// --- JSON-LD Person schema for Barrett Henry ---
+const personLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Barrett Henry",
+  jobTitle: "Broker Associate",
+  description: "Licensed Florida REALTOR and Broker Associate with 23+ years of real estate experience.",
+  url: "https://nowtb.com/about",
+  image: "https://nowtb.com/images/barrett-henry.jpg",
+  telephone: "(813) 733-7907",
+  email: "barrett@nowtb.com",
+  hasCredential: [
+    { "@type": "EducationalOccupationalCredential", credentialCategory: "designation", name: "CRE (Certified Real Estate)" },
+    { "@type": "EducationalOccupationalCredential", credentialCategory: "designation", name: "e-PRO" },
+    { "@type": "EducationalOccupationalCredential", credentialCategory: "designation", name: "MRP (Military Relocation Professional)" },
+    { "@type": "EducationalOccupationalCredential", credentialCategory: "designation", name: "SRS (Seller Representative Specialist)" },
+  ],
+  memberOf: {
+    "@type": "Organization",
+    name: "REMAX Collective",
+  },
+  sameAs: [
+    "https://barretthenry.remax.com",
+    "https://www.linkedin.com/in/barretthenry",
+    "https://www.facebook.com/BarrettHenryREALTOR",
+    "https://www.instagram.com/thenowteam",
+    "https://vivipm.com",
+    "https://hencre.com",
+    "https://bestbayservices.com",
+    "https://flforeclosurehelp.com",
+    "https://valricopropertymgmt.com",
+  ],
+  knowsAbout: [
+    "Residential Real Estate",
+    "Tampa Bay Homes for Sale",
+    "Investment Properties",
+    "New Construction",
+    "Military Relocation",
+    "Property Management",
+  ],
+};
+
+// --- BreadcrumbList JSON-LD ---
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://nowtb.com" },
+    { "@type": "ListItem", position: 2, name: "About Barrett Henry", item: "https://nowtb.com/about" },
+  ],
+};
+
 export default function AboutPage() {
   // Pull Barrett's data from the agents data file
   const agent = getPrimaryAgent();
@@ -65,6 +120,16 @@ export default function AboutPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {/* Person schema for Barrett Henry */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }}
+      />
+      {/* BreadcrumbList schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
 
       {/* ---- Hero Section — full viewport with label ---- */}
@@ -225,6 +290,62 @@ export default function AboutPage() {
               The REMAX network gives Barrett&apos;s listings global exposure
               across 110+ countries and territories — meaning more eyes on your
               property and faster results.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ---- Barrett's Services — contextual cross-site links ---- */}
+      <section className="section-light">
+        <div className="container-wide max-w-3xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="heading-label mb-6">Full-Service Real Estate</p>
+            <h2 className="heading-section text-display-sm text-primary">
+              Beyond Buying &amp; Selling
+            </h2>
+            <div className="section-divider" />
+          </div>
+          <div className="font-body text-muted font-light space-y-6 text-base md:text-lg leading-relaxed">
+            <p>
+              Barrett&apos;s real estate services extend well beyond traditional
+              buying and selling. For investors who need professional property
+              management,{" "}
+              <a
+                href="https://vivipm.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent hover:underline"
+              >
+                ViVi Property Management
+              </a>{" "}
+              handles tenant screening, rent collection, and monthly accounting
+              across Tampa Bay.
+            </p>
+            <p>
+              Barrett also publishes in-depth commercial real estate insights at{" "}
+              <a
+                href="https://hencre.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent hover:underline"
+              >
+                hencre.com
+              </a>
+              , covering CRE trends, investment analysis, and market data for
+              the Tampa Bay region.
+            </p>
+            <p>
+              For property owners looking for reliable, local property management
+              in the Valrico and Brandon area,{" "}
+              <a
+                href="https://valricopropertymgmt.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent hover:underline"
+              >
+                Valrico Property Management
+              </a>{" "}
+              provides dedicated service for residential rental portfolios.
             </p>
           </div>
         </div>

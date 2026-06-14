@@ -7,8 +7,11 @@ import HeroSection from "@/components/ui/HeroSection";
 import ContactForm from "@/components/ui/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Commercial Real Estate — Tampa Bay | Barrett Henry",
-  description: "Commercial real estate opportunities in Tampa Bay — office, retail, industrial, and investment properties.",
+  title: "Commercial Real Estate Tampa Bay | Barrett Henry, REALTOR®",
+  description: "Commercial real estate in Tampa Bay — office, retail, industrial, and investment properties. Contact Barrett Henry at REMAX Collective. Call (813) 733-7907.",
+  alternates: {
+    canonical: "/commercial",
+  },
 };
 
 export default function CommercialPage() {

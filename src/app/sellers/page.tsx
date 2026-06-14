@@ -11,9 +11,12 @@ import ContactForm from "@/components/ui/ContactForm";
 
 // --- SEO metadata + Open Graph tags ---
 export const metadata: Metadata = {
-  title: "Sell Your Tampa Bay Home for Top Dollar",
+  title: "Sell Your Tampa Bay Home for Top Dollar | Barrett Henry",
   description:
-    "Barrett Henry's proven selling strategy gets Tampa Bay homes sold faster and for more money. Pricing analysis, professional marketing, strategic negotiation, and smooth closings. REMAX Collective.",
+    "Barrett Henry's proven selling strategy gets Tampa Bay homes sold faster and for more money. Pricing analysis, professional marketing, and negotiation. Call (813) 733-7907.",
+  alternates: {
+    canonical: "/sellers",
+  },
   openGraph: {
     title: "Sell Your Tampa Bay Home for Top Dollar | Barrett Henry, REALTOR®",
     description:
@@ -53,6 +56,20 @@ const pillars = [
 export default function SellersPage() {
   return (
     <>
+      {/* BreadcrumbList schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://nowtb.com" },
+              { "@type": "ListItem", position: 2, name: "Sell Your Home", item: "https://nowtb.com/sellers" },
+            ],
+          }),
+        }}
+      />
       {/* ---- Hero Section — full viewport ---- */}
       <HeroSection
         title="Sell Your Home"

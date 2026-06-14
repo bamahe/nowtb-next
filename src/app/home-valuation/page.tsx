@@ -7,8 +7,11 @@ import HeroSection from "@/components/ui/HeroSection";
 import ContactForm from "@/components/ui/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Home Valuation | Barrett Henry, REALTOR®",
-  description: "Request a free home valuation for your Tampa Bay property from Barrett Henry at REMAX Collective.",
+  title: "Home Valuation Tampa Bay | What Is Your Home Worth?",
+  description: "Request a free home valuation for your Tampa Bay property from Barrett Henry, Broker Associate at REMAX Collective. Professional CMA within 24 hours. Call (813) 733-7907.",
+  alternates: {
+    canonical: "/home-valuation",
+  },
 };
 
 export default function HomeValuationPage() {

@@ -12,7 +12,10 @@ import ValuationForm from "@/components/ui/ValuationForm";
 export const metadata: Metadata = {
   title: "What Is Your Tampa Bay Home Worth? | Free Home Valuation",
   description:
-    "Get a free, no-obligation home valuation from Barrett Henry, Broker Associate with REMAX Collective. Find out what your Tampa Bay home is worth in today's market.",
+    "Get a free, no-obligation home valuation from Barrett Henry, Broker Associate with REMAX Collective. Find out what your Tampa Bay home is worth today. Call (813) 733-7907.",
+  alternates: {
+    canonical: "/sell-your-home",
+  },
   openGraph: {
     title:
       "What Is Your Tampa Bay Home Worth? | Barrett Henry, REALTOR®",
@@ -65,6 +68,21 @@ const sellingSteps = [
 export default function SellYourHomePage() {
   return (
     <>
+      {/* BreadcrumbList schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://nowtb.com" },
+              { "@type": "ListItem", position: 2, name: "Free Home Valuation", item: "https://nowtb.com/sell-your-home" },
+            ],
+          }),
+        }}
+      />
+
       {/* ---- Hero Section ---- */}
       <HeroSection
         title="What Is Your Tampa Bay Home Worth?"

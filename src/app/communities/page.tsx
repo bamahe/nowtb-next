@@ -9,9 +9,22 @@ import SearchBar from "@/components/ui/SearchBar";
 import { cities } from "@/data/cities";
 
 export const metadata: Metadata = {
-  title: "Tampa Bay Communities | Barrett Henry, REALTOR®",
+  title: "Tampa Bay Communities | 69+ Cities | Barrett Henry, REALTOR®",
   description:
-    "Explore all Tampa Bay communities by county — Hillsborough, Pinellas, Pasco, Manatee, Polk, and Sarasota. Barrett Henry, Broker Associate at REMAX Collective.",
+    "Explore all Tampa Bay communities by county — Hillsborough, Pinellas, Pasco, Manatee, Polk, Sarasota, and Hernando. Browse homes for sale with Barrett Henry at REMAX Collective.",
+  alternates: {
+    canonical: "/communities",
+  },
+};
+
+// BreadcrumbList JSON-LD for communities index
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://nowtb.com" },
+    { "@type": "ListItem", position: 2, name: "Tampa Bay Communities", item: "https://nowtb.com/communities" },
+  ],
 };
 
 export default function CommunitiesPage() {
@@ -24,6 +37,12 @@ export default function CommunitiesPage() {
 
   return (
     <>
+      {/* BreadcrumbList schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+
       {/* === Hero === */}
       <HeroSection
         title="Tampa Bay Communities"

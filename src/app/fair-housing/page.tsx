@@ -6,7 +6,10 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Fair Housing Statement | Barrett Henry, REALTOR®",
-  description: "Our commitment to fair housing — equal opportunity in housing for all.",
+  description: "Barrett Henry and The NOW Team at REMAX Collective are committed to fair housing and equal opportunity in housing for all. Read our full statement.",
+  alternates: {
+    canonical: "/fair-housing",
+  },
 };
 
 export default function FairHousingPage() {

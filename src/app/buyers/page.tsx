@@ -11,9 +11,12 @@ import ContactForm from "@/components/ui/ContactForm";
 
 // --- SEO metadata + Open Graph tags ---
 export const metadata: Metadata = {
-  title: "Buy a Home in Tampa Bay",
+  title: "Buy a Home in Tampa Bay | Buyer Guide | Barrett Henry",
   description:
-    "Your step-by-step guide to buying a home in Tampa Bay. Barrett Henry, Broker Associate with REMAX Collective, brings 23+ years of real estate experience to help you find and close on your perfect home.",
+    "Step-by-step guide to buying a home in Tampa Bay. Barrett Henry, Broker Associate with REMAX Collective, brings 23+ years of real estate experience. Call (813) 733-7907.",
+  alternates: {
+    canonical: "/buyers",
+  },
   openGraph: {
     title: "Buy a Home in Tampa Bay | Barrett Henry, REALTOR®",
     description:
@@ -84,6 +87,20 @@ const buyingSteps = [
 export default function BuyersPage() {
   return (
     <>
+      {/* BreadcrumbList schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://nowtb.com" },
+              { "@type": "ListItem", position: 2, name: "Buy a Home in Tampa Bay", item: "https://nowtb.com/buyers" },
+            ],
+          }),
+        }}
+      />
       {/* ---- Hero Section — full viewport ---- */}
       <HeroSection
         title="Buying a Home"

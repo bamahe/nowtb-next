@@ -8,8 +8,11 @@ import HeroSection from "@/components/ui/HeroSection";
 import ContactForm from "@/components/ui/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Recommended Lenders | Barrett Henry, REALTOR®",
-  description: "Barrett Henry's recommended mortgage lenders in Tampa Bay — trusted partners for conventional, FHA, VA, and specialty loans.",
+  title: "Mortgage Lenders Tampa Bay | Recommended by Barrett Henry",
+  description: "Barrett Henry's recommended mortgage lenders in Tampa Bay — trusted partners for conventional, FHA, VA, and specialty loans. Call (813) 733-7907 for a referral.",
+  alternates: {
+    canonical: "/lenders",
+  },
 };
 
 export default function LendersPage() {

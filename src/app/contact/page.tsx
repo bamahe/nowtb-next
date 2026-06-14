@@ -11,9 +11,12 @@ import ContactForm from "@/components/ui/ContactForm";
 
 // --- SEO metadata + Open Graph tags ---
 export const metadata: Metadata = {
-  title: "Contact Barrett Henry | Tampa Bay REALTOR®",
+  title: "Contact Barrett Henry | Tampa Bay REALTOR® | (813) 733-7907",
   description:
     "Get in touch with Barrett Henry, Broker Associate with REMAX Collective. Call (813) 733-7907 or send a message. Serving Tampa Bay's 7 counties.",
+  alternates: {
+    canonical: "/contact",
+  },
   openGraph: {
     title: "Contact Barrett Henry | Tampa Bay REALTOR®",
     description:
@@ -36,6 +39,20 @@ const counties = [
 export default function ContactPage() {
   return (
     <>
+      {/* BreadcrumbList schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://nowtb.com" },
+              { "@type": "ListItem", position: 2, name: "Contact Barrett Henry", item: "https://nowtb.com/contact" },
+            ],
+          }),
+        }}
+      />
       {/* ---- Hero Section — full viewport ---- */}
       <HeroSection
         title="Let&apos;s Talk"

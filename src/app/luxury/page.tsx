@@ -12,9 +12,12 @@ import { getListings } from "@/lib/bridge";
 import { cities } from "@/data/cities";
 
 export const metadata: Metadata = {
-  title: "Tampa Bay Luxury Homes for Sale | Barrett Henry, REALTOR®",
+  title: "Luxury Homes Tampa Bay | $750K+ | Barrett Henry, REALTOR®",
   description:
-    "Browse luxury homes for sale across Tampa Bay — waterfront estates, gated communities, and premium properties starting at $750K. Barrett Henry, REMAX Collective.",
+    "Browse luxury homes for sale across Tampa Bay — waterfront estates, gated communities, and premium properties starting at $750K. Barrett Henry, REMAX Collective. Call (813) 733-7907.",
+  alternates: {
+    canonical: "/luxury",
+  },
 };
 
 // Revalidate luxury listings every 5 minutes
@@ -37,6 +40,21 @@ export default async function LuxuryPage() {
 
   return (
     <>
+      {/* BreadcrumbList schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://nowtb.com" },
+              { "@type": "ListItem", position: 2, name: "Luxury Homes", item: "https://nowtb.com/luxury" },
+            ],
+          }),
+        }}
+      />
+
       {/* === Hero === */}
       <HeroSection
         title="Tampa Bay Luxury Real Estate"

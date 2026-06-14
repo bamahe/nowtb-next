@@ -18,9 +18,12 @@ import { formatPrice } from "@/lib/utils";
 // -----------------------------------------------------------------------------
 
 export const metadata: Metadata = {
-  title: "Search Tampa Bay Properties",
+  title: "Tampa Bay Homes for Sale | Search Properties | MLS Listings",
   description:
-    "Browse homes for sale across Tampa Bay. Filter by city, price, bedrooms, and more. Updated daily from the Stellar MLS.",
+    "Browse homes for sale across Tampa Bay. Filter by city, price, bedrooms, and more. Updated daily from Stellar MLS. Barrett Henry, REMAX Collective. Call (813) 733-7907.",
+  alternates: {
+    canonical: "/properties",
+  },
   openGraph: {
     title: "Search Tampa Bay Properties | Barrett Henry, REALTOR®",
     description:
@@ -120,6 +123,21 @@ export default async function PropertiesPage({
 
   return (
     <>
+      {/* BreadcrumbList schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://nowtb.com" },
+              { "@type": "ListItem", position: 2, name: "Properties", item: "https://nowtb.com/properties" },
+            ],
+          }),
+        }}
+      />
+
       {/* =================================================================
           SECTION 1: Hero — shorter 50vh with search bar
           ================================================================= */}

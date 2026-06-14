@@ -10,14 +10,31 @@ import ContactForm from "@/components/ui/ContactForm";
 import { cities } from "@/data/cities";
 
 export const metadata: Metadata = {
-  title: "Real Estate Investing in Tampa Bay | Barrett Henry, REALTOR®",
+  title: "Investment Properties Tampa Bay | Real Estate Investing",
   description:
-    "Tampa Bay investment property opportunities — rental analysis, ROI projections, and expert investor guidance. Barrett Henry, REMAX Collective.",
+    "Tampa Bay investment property opportunities — rental analysis, ROI projections, and expert investor guidance from Barrett Henry, REMAX Collective. Call (813) 733-7907.",
+  alternates: {
+    canonical: "/investing",
+  },
 };
 
 export default function InvestingPage() {
   return (
     <>
+      {/* BreadcrumbList schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://nowtb.com" },
+              { "@type": "ListItem", position: 2, name: "Real Estate Investing", item: "https://nowtb.com/investing" },
+            ],
+          }),
+        }}
+      />
       {/* === Hero === */}
       <HeroSection
         title="Real Estate Investing in Tampa Bay"

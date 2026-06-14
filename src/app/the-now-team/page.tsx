@@ -9,9 +9,12 @@ import ContactForm from "@/components/ui/ContactForm";
 import { agents } from "@/data/agents";
 
 export const metadata: Metadata = {
-  title: "The NOW Team at REMAX Collective | Barrett Henry",
+  title: "The NOW Team | Tampa Bay Real Estate | REMAX Collective",
   description:
-    "Meet The NOW Team — Barrett Henry and his real estate team at REMAX Collective serving Tampa Bay since 2015.",
+    "Meet The NOW Team — Barrett Henry and his real estate team at REMAX Collective serving Tampa Bay since 2015. Call (813) 733-7907.",
+  alternates: {
+    canonical: "/the-now-team",
+  },
 };
 
 export default function TheNowTeamPage() {
