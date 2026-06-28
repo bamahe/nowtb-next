@@ -6,8 +6,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { Suspense } from "react";
+
 import HeroSection from "@/components/ui/HeroSection";
 import SearchBar from "@/components/ui/SearchBar";
+import PropertyFilters from "@/components/ui/PropertyFilters";
 import ListingGrid from "@/components/ui/ListingGrid";
 import { getListings } from "@/lib/bridge";
 import type { ListingSearchParams } from "@/lib/types";
@@ -52,6 +55,13 @@ function buildFilterSummary(params: ListingSearchParams): string {
   }
   if (params.beds) parts.push(`${params.beds}+ beds`);
   if (params.baths) parts.push(`${params.baths}+ baths`);
+  if (params.property_type) parts.push(params.property_type);
+  if (params.pool) parts.push("Pool");
+  if (params.waterfront) parts.push("Waterfront");
+  if (params.new_construction) parts.push("New Construction");
+  if (params.senior) parts.push("55+");
+  if (params.single_story) parts.push("Single Story");
+  if (params.open_house) parts.push("Open Houses");
 
   // If no filters applied, show a generic message
   if (parts.length === 0) return "Showing all active listings";
@@ -77,16 +87,41 @@ export default async function PropertiesPage({
   // Await and extract search params from the URL
   const rawParams = await searchParams;
 
+  // Parse the free-text "q" param from SearchBar — could be a city name or ZIP code
+  const qRaw = typeof rawParams.q === "string" ? rawParams.q.trim() : "";
+  const qIsZip = /^\d{5}$/.test(qRaw); // 5-digit number = ZIP code
+
   // Build the typed search params object from URL query strings
+  // Explicit city/zip params override the free-text q param
   const filters: ListingSearchParams = {
-    city: typeof rawParams.city === "string" ? rawParams.city : undefined,
-    zip: typeof rawParams.zip === "string" ? rawParams.zip : undefined,
+    city:
+      typeof rawParams.city === "string"
+        ? rawParams.city
+        : !qIsZip && qRaw
+          ? qRaw
+          : undefined,
+    zip:
+      typeof rawParams.zip === "string"
+        ? rawParams.zip
+        : qIsZip
+          ? qRaw
+          : undefined,
     min_price:
       typeof rawParams.min_price === "string" ? rawParams.min_price : undefined,
     max_price:
       typeof rawParams.max_price === "string" ? rawParams.max_price : undefined,
     beds: typeof rawParams.beds === "string" ? rawParams.beds : undefined,
     baths: typeof rawParams.baths === "string" ? rawParams.baths : undefined,
+    property_type:
+      typeof rawParams.property_type === "string" ? rawParams.property_type : undefined,
+    sort: typeof rawParams.sort === "string" ? rawParams.sort : undefined,
+    // Topic filters — boolean flags from URL params
+    pool: rawParams.pool === "true" || undefined,
+    waterfront: rawParams.waterfront === "true" || undefined,
+    new_construction: rawParams.new_construction === "true" || undefined,
+    senior: rawParams.senior === "true" || undefined,
+    single_story: rawParams.single_story === "true" || undefined,
+    open_house: rawParams.open_house === "true" || undefined,
     limit: String(PAGE_SIZE),
     offset:
       typeof rawParams.page === "string"
@@ -110,12 +145,22 @@ export default async function PropertiesPage({
   // Build base URL for pagination links (preserves current filters)
   function paginationHref(page: number): string {
     const params = new URLSearchParams();
-    if (filters.city) params.set("city", filters.city);
-    if (filters.zip) params.set("zip", filters.zip);
+    // Preserve the original q param if it was used (not the parsed city/zip)
+    if (qRaw) params.set("q", qRaw);
+    if (rawParams.city && typeof rawParams.city === "string") params.set("city", rawParams.city);
+    if (rawParams.zip && typeof rawParams.zip === "string") params.set("zip", rawParams.zip);
     if (filters.min_price) params.set("min_price", filters.min_price);
     if (filters.max_price) params.set("max_price", filters.max_price);
     if (filters.beds) params.set("beds", filters.beds);
     if (filters.baths) params.set("baths", filters.baths);
+    if (filters.property_type) params.set("property_type", filters.property_type);
+    if (filters.sort) params.set("sort", filters.sort);
+    if (filters.pool) params.set("pool", "true");
+    if (filters.waterfront) params.set("waterfront", "true");
+    if (filters.new_construction) params.set("new_construction", "true");
+    if (filters.senior) params.set("senior", "true");
+    if (filters.single_story) params.set("single_story", "true");
+    if (filters.open_house) params.set("open_house", "true");
     if (page > 1) params.set("page", String(page));
     const qs = params.toString();
     return qs ? `/properties?${qs}` : "/properties";
@@ -151,9 +196,15 @@ export default async function PropertiesPage({
       </HeroSection>
 
       {/* =================================================================
-          SECTION 2: Filter summary bar — minimal, clean
+          SECTION 2: Interactive filter bar — sort, type, features
+          Wrapped in Suspense because PropertyFilters uses useSearchParams
           ================================================================= */}
-      <div className="container-wide py-6 border-b border-black/5">
+      <Suspense fallback={<div className="container-wide py-5 border-b border-black/5" />}>
+        <PropertyFilters />
+      </Suspense>
+
+      {/* Filter summary + count */}
+      <div className="container-wide py-4">
         <div className="flex items-center justify-between">
           <p className="font-body text-muted text-xs font-light tracking-wide">{filterSummary}</p>
           <p className="font-body text-muted text-xs font-light tracking-wide">

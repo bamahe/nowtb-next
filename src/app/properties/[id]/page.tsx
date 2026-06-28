@@ -422,6 +422,26 @@ export default async function ListingDetailPage({
               </div>
             )}
 
+            {/* ---- Map — OpenStreetMap embed (free, no API key) ---- */}
+            {listing.Latitude && listing.Longitude && (
+              <div>
+                <h2 className="heading-section text-xl text-primary mb-4">Location</h2>
+                <div className="w-full aspect-[16/9] bg-gray-100">
+                  <iframe
+                    title={`Map of ${listing.UnparsedAddress}`}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    src={`https://www.openstreetmap.org/export/embed.html?bbox=${listing.Longitude - 0.01},${listing.Latitude - 0.008},${listing.Longitude + 0.01},${listing.Latitude + 0.008}&layer=mapnik&marker=${listing.Latitude},${listing.Longitude}`}
+                  />
+                  <p className="font-body text-xs text-muted mt-2">
+                    {listing.UnparsedAddress}, {listing.City}, {listing.StateOrProvince} {listing.PostalCode}
+                  </p>
+                </div>
+              </div>
+            )}
+
             {/* ---- Listing Office / Date ---- */}
             {listing.ListOfficeName && (
               <DetailSection title="Listing Information">
