@@ -10,10 +10,17 @@ export async function middleware(request: NextRequest) {
   // Create a response that we can modify (add/update cookies)
   let supabaseResponse = NextResponse.next({ request });
 
+  // Skip auth refresh if Supabase isn't configured (avoids crash on missing env vars)
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  if (!supabaseUrl || !supabaseKey) {
+    return supabaseResponse;
+  }
+
   // Create a Supabase client that can read and write cookies on the response
   createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    supabaseUrl,
+    supabaseKey,
     {
       cookies: {
         getAll() {
