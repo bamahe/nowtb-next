@@ -50,6 +50,9 @@ export default function FavoriteButton({
   // -- Check initial favorite status on mount ---------------------------------
   useEffect(() => {
     async function checkFavorite() {
+      // Skip if Supabase isn't configured
+      if (!supabase) return;
+
       // Get the current user (returns null if not logged in)
       const {
         data: { user },
@@ -82,6 +85,9 @@ export default function FavoriteButton({
       e.stopPropagation();
 
       if (isLoading) return; // Already processing a toggle
+
+      // Skip if Supabase isn't configured
+      if (!supabase) return;
 
       setIsLoading(true);
 

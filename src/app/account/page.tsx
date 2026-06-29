@@ -58,6 +58,12 @@ interface Favorite {
 export default async function AccountPage() {
   // --- Auth check: redirect if not logged in ---
   const supabase = await createClient();
+
+  // If Supabase isn't configured, redirect to login
+  if (!supabase) {
+    redirect("/login");
+  }
+
   const {
     data: { user },
   } = await supabase.auth.getUser();

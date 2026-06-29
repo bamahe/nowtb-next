@@ -21,6 +21,7 @@ export default function LoginPage() {
 
     try {
       const supabase = createClient();
+      if (!supabase) { setErrorMessage("Authentication is not configured."); setStatus("error"); return; }
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: { redirectTo: `${window.location.origin}/auth/callback` },
@@ -52,6 +53,7 @@ export default function LoginPage() {
 
     try {
       const supabase = createClient();
+      if (!supabase) { setErrorMessage("Authentication is not configured."); setStatus("error"); return; }
       const { error } = await supabase.auth.signInWithOtp({
         email,
         options: { emailRedirectTo: `${window.location.origin}/auth/callback` },
