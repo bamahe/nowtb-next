@@ -184,7 +184,7 @@ export default function AboutPage() {
               <p className="heading-label mt-4">Years Experience</p>
             </div>
             <div>
-              <p className="stat-number text-primary">7</p>
+              <p className="stat-number text-primary">8</p>
               <p className="heading-label mt-4">Counties Served</p>
             </div>
             <div>
