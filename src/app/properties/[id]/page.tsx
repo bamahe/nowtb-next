@@ -422,7 +422,7 @@ export default async function ListingDetailPage({
               </div>
             )}
 
-            {/* ---- Map — OpenStreetMap embed (free, no API key) ---- */}
+            {/* ---- Map — Google Maps embed using listing coordinates ---- */}
             {listing.Latitude && listing.Longitude && (
               <div>
                 <h2 className="heading-section text-xl text-primary mb-4">Location</h2>
@@ -433,7 +433,8 @@ export default async function ListingDetailPage({
                     height="100%"
                     style={{ border: 0 }}
                     loading="lazy"
-                    src={`https://www.openstreetmap.org/export/embed.html?bbox=${listing.Longitude - 0.01},${listing.Latitude - 0.008},${listing.Longitude + 0.01},${listing.Latitude + 0.008}&layer=mapnik&marker=${listing.Latitude},${listing.Longitude}`}
+                    referrerPolicy="no-referrer-when-downgrade"
+                    src={`https://www.google.com/maps?q=${listing.Latitude},${listing.Longitude}&z=15&output=embed`}
                   />
                   <p className="font-body text-xs text-muted mt-2">
                     {listing.UnparsedAddress}, {listing.City}, {listing.StateOrProvince} {listing.PostalCode}

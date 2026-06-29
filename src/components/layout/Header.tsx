@@ -115,16 +115,19 @@ export default function Header() {
             >
               (813) 733-7907
             </a>
-            <Link
-              href="/login"
-              className={`
-                font-body text-xs tracking-[0.15em] uppercase
-                transition-colors duration-500
-                ${useDarkText ? "text-primary/50 hover:text-primary" : "text-white/50 hover:text-white"}
-              `}
-            >
-              Sign In
-            </Link>
+            {/* Only show Sign In link when Supabase is configured */}
+            {process.env.NEXT_PUBLIC_SUPABASE_URL && (
+              <Link
+                href="/login"
+                className={`
+                  font-body text-xs tracking-[0.15em] uppercase
+                  transition-colors duration-500
+                  ${useDarkText ? "text-primary/50 hover:text-primary" : "text-white/50 hover:text-white"}
+                `}
+              >
+                Sign In
+              </Link>
+            )}
           </div>
 
           {/* ── Mobile hamburger toggle ── */}

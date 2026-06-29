@@ -84,7 +84,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-[10px] tracking-[0.1em] uppercase text-white/40">
-            &copy; 2026 Barrett Henry, REALTOR&reg; &nbsp;|&nbsp; REMAX Collective &nbsp;|&nbsp; Equal Housing Opportunity
+            &copy; 2026 Barrett Henry, REALTOR&reg; &nbsp;|&nbsp; REMAX Collective &nbsp;|&nbsp; FL License #SL3527553 &nbsp;|&nbsp; Equal Housing Opportunity
           </p>
 
           {/* MLS disclaimer */}

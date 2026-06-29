@@ -58,6 +58,20 @@ const nextConfig = {
       // Don't redirect — let the [id] route handle it. Old Showcase URLs will 404
       // naturally since they won't match a Bridge ListingKey.
 
+      // ── WordPress legacy URL patterns — redirect to relevant pages ──
+      { source: "/category/:slug*", destination: "/blog", permanent: true },
+      { source: "/tag/:slug*", destination: "/blog", permanent: true },
+      { source: "/author/:slug*", destination: "/about", permanent: true },
+      { source: "/page/:num(\\d+)", destination: "/blog", permanent: true },
+      { source: "/feed/:slug*", destination: "/", permanent: true },
+      { source: "/feed", destination: "/", permanent: true },
+      { source: "/comments/feed", destination: "/", permanent: true },
+      { source: "/wp-admin/:slug*", destination: "/", permanent: false },
+      { source: "/wp-login.php", destination: "/", permanent: false },
+      { source: "/wp-content/:slug*", destination: "/", permanent: false },
+      { source: "/tampa-bay-area-homes-for-sale", destination: "/properties", permanent: true },
+      { source: "/tampa-bay-area-homes-for-sale/:slug*", destination: "/properties", permanent: true },
+
       // ── Blog posts: /slug → /blog/slug (624 individual redirects) ──
       // WordPress served posts at root, new site nests under /blog/
       ...blogRedirects,

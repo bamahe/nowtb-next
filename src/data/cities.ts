@@ -816,7 +816,7 @@ export const cities: CityData[] = [
   },
 
   // =========================================================================
-  // SARASOTA COUNTY (1 city)
+  // SARASOTA COUNTY (7 cities)
   // =========================================================================
   {
     name: "Sarasota",
@@ -828,6 +828,72 @@ export const cities: CityData[] = [
     tagline: "Cultural capital of the Gulf Coast with world-class arts, dining, and beaches",
     lat: 27.3364,
     lng: -82.5307,
+  },
+  {
+    name: "Venice",
+    slug: "venice",
+    county: "Sarasota",
+    zip_codes: ["34285", "34292", "34293"],
+    tier: 2,
+    topics: ["homes-for-sale", "homes-with-pool", "new-construction", "luxury-homes", "waterfront-homes", "55-plus-homes", "open-houses", "investment-property", "new-listings", "single-story-homes", "land-for-sale", "condos-townhomes", "gated-community-homes", "neighborhood-guide", "housing-market"],
+    tagline: "Charming Gulf Coast city known for shark tooth beaches and Italian-inspired architecture",
+    lat: 27.0998,
+    lng: -82.4543,
+  },
+  {
+    name: "North Port",
+    slug: "north-port",
+    county: "Sarasota",
+    zip_codes: ["34286", "34287", "34288", "34289"],
+    tier: 2,
+    topics: ["homes-for-sale", "homes-with-pool", "new-construction", "luxury-homes", "waterfront-homes", "55-plus-homes", "open-houses", "investment-property", "new-listings", "single-story-homes", "land-for-sale", "condos-townhomes", "gated-community-homes", "neighborhood-guide", "housing-market"],
+    tagline: "Fast-growing city with affordable new construction and Myakka River access",
+    lat: 27.0442,
+    lng: -82.2359,
+  },
+  {
+    name: "Englewood",
+    slug: "englewood",
+    county: "Sarasota",
+    zip_codes: ["34223", "34224"],
+    tier: 3,
+    topics: ["homes-for-sale", "homes-with-pool", "new-construction", "luxury-homes", "waterfront-homes", "55-plus-homes", "open-houses", "investment-property", "new-listings", "single-story-homes", "land-for-sale", "condos-townhomes", "neighborhood-guide", "housing-market"],
+    tagline: "Laid-back beach town straddling Sarasota and Charlotte counties",
+    lat: 26.9620,
+    lng: -82.3526,
+  },
+  {
+    name: "Osprey",
+    slug: "osprey",
+    county: "Sarasota",
+    zip_codes: ["34229"],
+    tier: 3,
+    topics: ["homes-for-sale", "homes-with-pool", "new-construction", "luxury-homes", "waterfront-homes", "open-houses", "investment-property", "new-listings", "single-story-homes", "land-for-sale", "neighborhood-guide", "housing-market"],
+    tagline: "Quiet bayfront community between Sarasota and Venice with nature preserves",
+    lat: 27.1945,
+    lng: -82.4921,
+  },
+  {
+    name: "Nokomis",
+    slug: "nokomis",
+    county: "Sarasota",
+    zip_codes: ["34275"],
+    tier: 3,
+    topics: ["homes-for-sale", "homes-with-pool", "new-construction", "waterfront-homes", "open-houses", "investment-property", "new-listings", "single-story-homes", "land-for-sale", "neighborhood-guide", "housing-market"],
+    tagline: "Small beach community with drum circles, Casey Key access, and old Florida charm",
+    lat: 27.1170,
+    lng: -82.4432,
+  },
+  {
+    name: "Siesta Key",
+    slug: "siesta-key",
+    county: "Sarasota",
+    zip_codes: ["34242"],
+    tier: 3,
+    topics: ["homes-for-sale", "homes-with-pool", "luxury-homes", "waterfront-homes", "open-houses", "investment-property", "new-listings", "condos-townhomes", "neighborhood-guide", "housing-market"],
+    tagline: "World-famous #1 beach with luxury waterfront homes and resort-style living",
+    lat: 27.2678,
+    lng: -82.5463,
   },
 
   // =========================================================================

@@ -122,6 +122,7 @@ export default async function BlogPostPage({
               name: "Barrett Henry, REALTOR®",
               url: "https://nowtb.com",
             },
+            url: `https://nowtb.com/blog/${slug}`,
           }),
         }}
       />

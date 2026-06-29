@@ -21,7 +21,7 @@ const FEATURED_SLUGS = [
   // Polk
   "lakeland", "winter-haven",
   // Sarasota
-  "sarasota",
+  "sarasota", "venice", "north-port", "siesta-key",
   // Hernando
   "spring-hill", "brooksville",
   // Citrus

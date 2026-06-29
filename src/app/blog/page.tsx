@@ -9,8 +9,8 @@ import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
 import { getAllPosts, getPostThumbnail } from "@/lib/posts";
 
-// Force dynamic so the JSON is read at runtime, not cached at build
-export const dynamic = "force-dynamic";
+// Revalidate every hour (3600 seconds) via ISR
+export const revalidate = 3600;
 
 // --- SEO metadata ---
 export const metadata: Metadata = {
