@@ -128,7 +128,6 @@ export default async function HomePage() {
         title="Find Your Home"
         label="BARRETT HENRY | THE NOW TEAM"
         subtitle="Broker Associate with 23+ years in the business. I help buyers, sellers, and investors across Tampa Bay get the deal done."
-        fullHeight
       >
         {/* Dual CTA buttons — transparent with white border for luxury feel */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

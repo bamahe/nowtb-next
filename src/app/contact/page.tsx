@@ -5,20 +5,10 @@
 // =============================================================================
 
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import HeroSection from "@/components/ui/HeroSection";
 import ContactForm from "@/components/ui/ContactForm";
 
-// Leaflet requires window/DOM — load client-side only
-const TampaBayMap = dynamic(() => import("@/components/ui/TampaBayMap"), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full aspect-[16/9] md:aspect-[21/9] bg-gray-100 flex items-center justify-center">
-      <p className="font-body text-muted text-sm">Loading map...</p>
-    </div>
-  ),
-});
 
 // --- SEO metadata + Open Graph tags ---
 export const metadata: Metadata = {
@@ -171,39 +161,94 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ---- Office Locations Map ---- */}
+      {/* ---- Office Locations with Google Maps ---- */}
       <section className="section-light">
         <div className="container-wide">
-          <p className="heading-label text-center mb-6">Our Offices</p>
-          <TampaBayMap
-            markers={[
-              { name: "REMAX Collective — Tampa", lat: 28.0753, lng: -82.5035, label: "Tampa Office<br>14310 N. Dale Mabry Hwy, Ste 100", type: "office" },
-              { name: "REMAX Collective — Largo", lat: 27.8839, lng: -82.7873, label: "Largo Office<br>11200 Seminole Blvd, Ste 202", type: "office" },
-              { name: "REMAX Collective — Brandon", lat: 27.9295, lng: -82.2859, label: "Brandon Office<br>417 Lithia Pinecrest Rd", type: "office" },
-            ]}
-            zoom={10}
-            centerLat={27.96}
-            centerLng={-82.50}
-          />
-          {/* Office cards below map */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-            <div className="bg-white p-6 text-center">
-              <p className="font-body text-dark font-medium mb-1">Tampa Office</p>
-              <p className="font-body text-muted font-light text-sm">
-                14310 N. Dale Mabry Hwy, Ste 100<br />Tampa, FL 33618
-              </p>
+          <p className="heading-label text-center mb-4">Our Offices</p>
+          <h2 className="heading-section text-xl text-primary text-center mb-12">
+            REMAX Collective — 3 Tampa Bay Locations
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Tampa Office */}
+            <div className="bg-white overflow-hidden shadow-sm">
+              <iframe
+                title="REMAX Collective Tampa Office"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3523.5!2d-82.5057!3d28.0753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDA0JzMxLjEiTiA4MsKwMzAnMjAuNSJX!5e0!3m2!1sen!2sus!4v1"
+                width="100%"
+                height="250"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <div className="p-6 text-center">
+                <p className="font-body text-dark font-medium mb-1">Tampa Office</p>
+                <p className="font-body text-muted font-light text-sm">
+                  14310 N. Dale Mabry Hwy, Ste 100<br />Tampa, FL 33618
+                </p>
+                <a
+                  href="https://www.google.com/maps/dir//14310+N+Dale+Mabry+Hwy+Ste+100+Tampa+FL+33618"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 font-body text-xs tracking-[0.15em] uppercase text-accent hover:text-primary transition-colors"
+                >
+                  Get Directions →
+                </a>
+              </div>
             </div>
-            <div className="bg-white p-6 text-center">
-              <p className="font-body text-dark font-medium mb-1">Largo Office</p>
-              <p className="font-body text-muted font-light text-sm">
-                11200 Seminole Blvd, Ste 202<br />Largo, FL 33778
-              </p>
+            {/* Largo Office */}
+            <div className="bg-white overflow-hidden shadow-sm">
+              <iframe
+                title="REMAX Collective Largo Office"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3530.5!2d-82.7895!3d27.8839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDUzJzAyLjAiTiA4MsijNDcnMjEuNSJX!5e0!3m2!1sen!2sus!4v1"
+                width="100%"
+                height="250"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <div className="p-6 text-center">
+                <p className="font-body text-dark font-medium mb-1">Largo Office</p>
+                <p className="font-body text-muted font-light text-sm">
+                  11200 Seminole Blvd, Ste 202<br />Largo, FL 33778
+                </p>
+                <a
+                  href="https://www.google.com/maps/dir//11200+Seminole+Blvd+Ste+202+Largo+FL+33778"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 font-body text-xs tracking-[0.15em] uppercase text-accent hover:text-primary transition-colors"
+                >
+                  Get Directions →
+                </a>
+              </div>
             </div>
-            <div className="bg-white p-6 text-center">
-              <p className="font-body text-dark font-medium mb-1">Brandon Office</p>
-              <p className="font-body text-muted font-light text-sm">
-                417 Lithia Pinecrest Rd<br />Brandon, FL 33511
-              </p>
+            {/* Brandon Office */}
+            <div className="bg-white overflow-hidden shadow-sm">
+              <iframe
+                title="REMAX Collective Brandon Office"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3527.5!2d-82.2881!3d27.9295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDU1JzQ2LjIiTiA4MsKwMTcnMDkuMiJX!5e0!3m2!1sen!2sus!4v1"
+                width="100%"
+                height="250"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <div className="p-6 text-center">
+                <p className="font-body text-dark font-medium mb-1">Brandon Office</p>
+                <p className="font-body text-muted font-light text-sm">
+                  417 Lithia Pinecrest Rd<br />Brandon, FL 33511
+                </p>
+                <a
+                  href="https://www.google.com/maps/dir//417+Lithia+Pinecrest+Rd+Brandon+FL+33511"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 font-body text-xs tracking-[0.15em] uppercase text-accent hover:text-primary transition-colors"
+                >
+                  Get Directions →
+                </a>
+              </div>
             </div>
           </div>
         </div>
