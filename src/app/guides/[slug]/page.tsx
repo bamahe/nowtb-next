@@ -264,7 +264,7 @@ export default async function GuidePage({
                       prose-headings:font-heading prose-headings:text-primary
                       prose-a:text-accent prose-a:no-underline hover:prose-a:underline
                       prose-p:leading-relaxed"
-                    dangerouslySetInnerHTML={{ __html: section.content }}
+                    dangerouslySetInnerHTML={{ __html: cleanWpContent(section.content) }}
                   />
                   {index > 0 && index % 2 === 1 && index < guide.sections.length - 1 && (
                     <div className="my-8 p-6 rounded-lg bg-accent/10 border border-accent/20">

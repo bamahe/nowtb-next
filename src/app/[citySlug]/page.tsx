@@ -483,7 +483,7 @@ export default async function CityPage({
                   {g.sections.map((s) => (
                     <div key={s.id} className="mb-8">
                       <h2 className="font-heading text-2xl font-bold text-primary mb-4">{s.heading}</h2>
-                      <div className="blog-content" dangerouslySetInnerHTML={{ __html: s.content }} />
+                      <div className="blog-content" dangerouslySetInnerHTML={{ __html: cleanWpContent(s.content) }} />
                     </div>
                   ))}
                 </>
