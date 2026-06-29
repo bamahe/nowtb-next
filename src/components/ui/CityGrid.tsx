@@ -49,26 +49,27 @@ export default function CityGrid({
 }: CityGridProps = {}) {
   // --- The grid itself (shared between bare and wrapped modes) ---
   const grid = (
-    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+    <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
       {FEATURED_CITIES.map((city) => (
         <Link
           key={city.slug}
           href={`/${city.slug}`}
-          className="group relative flex flex-col items-center justify-center aspect-[3/4]
+          className="group relative flex flex-col items-center justify-center py-8 px-3
                      bg-gradient-to-br from-[#0f2847] to-primary
                      border border-white/10
                      overflow-hidden
                      transition-all duration-500
                      hover:border-accent/30"
         >
-          {/* City name */}
-          <span className="font-heading font-extralight text-xl md:text-2xl tracking-[0.15em] uppercase text-white
+          {/* City name — smaller text, centered, no overflow */}
+          <span className="font-heading font-extralight text-sm md:text-base tracking-[0.12em] uppercase text-white
+                           text-center leading-tight
                            transition-colors duration-500 group-hover:text-accent">
             {city.name}
           </span>
           {/* County label */}
-          <span className="font-body text-[10px] tracking-[0.15em] uppercase text-white/30 mt-2">
-            {city.county} County
+          <span className="font-body text-[9px] tracking-[0.12em] uppercase text-white/30 mt-1.5">
+            {city.county}
           </span>
         </Link>
       ))}
