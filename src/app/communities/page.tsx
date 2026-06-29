@@ -51,6 +51,21 @@ export default function CommunitiesPage() {
         <SearchBar />
       </HeroSection>
 
+      {/* === Interactive Tampa Bay Area Map === */}
+      <section className="container-wide pt-12 pb-6">
+        <p className="heading-label text-center mb-6">Tampa Bay Service Area</p>
+        <div className="aspect-[16/9] md:aspect-[21/9]">
+          <iframe
+            title="Tampa Bay Area Map — 8 Counties"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            loading="lazy"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-83.10,27.30,-81.80,28.95&layer=mapnik"
+          />
+        </div>
+      </section>
+
       {/* === Cities by county === */}
       <section className="container-wide py-12">
         {citiesByCounty.map(({ county, cities: countyCities }) => (

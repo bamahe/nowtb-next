@@ -109,14 +109,29 @@ export default function ContactPage() {
                 </a>
               </div>
 
-              {/* Office */}
+              {/* Office Locations */}
               <div className="mb-10">
-                <p className="heading-label mb-3">Office</p>
-                <p className="font-body text-muted font-light text-lg">
-                  REMAX Collective
-                  <br />
-                  Tampa Bay, FL
-                </p>
+                <p className="heading-label mb-3">Office Locations</p>
+                <div className="space-y-4">
+                  <div>
+                    <p className="font-body text-dark font-medium">Tampa</p>
+                    <p className="font-body text-muted font-light text-sm">
+                      14310 N. Dale Mabry Hwy, Ste 100<br />Tampa, FL 33618
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-body text-dark font-medium">Largo</p>
+                    <p className="font-body text-muted font-light text-sm">
+                      11200 Seminole Blvd, Ste 202<br />Largo, FL 33778
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-body text-dark font-medium">Brandon</p>
+                    <p className="font-body text-muted font-light text-sm">
+                      417 Lithia Pinecrest Rd<br />Brandon, FL 33511
+                    </p>
+                  </div>
+                </div>
               </div>
 
               {/* Hours */}
@@ -145,14 +160,40 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ---- Map Placeholder ---- */}
+      {/* ---- Office Locations Map ---- */}
       <section className="section-light">
         <div className="container-wide">
-          <div className="aspect-[16/9] md:aspect-[21/9] bg-[#e8e4df] flex items-center justify-center">
-            {/* Replace with Google Maps embed once API key is configured */}
-            <p className="font-body text-muted text-sm tracking-wide uppercase">
-              Map Coming Soon
-            </p>
+          <p className="heading-label text-center mb-6">Our Offices</p>
+          <div className="aspect-[16/9] md:aspect-[21/9]">
+            <iframe
+              title="REMAX Collective Office Locations — Tampa Bay"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-82.85,27.75,-82.20,28.15&layer=mapnik&marker=28.0753,-82.5035"
+            />
+          </div>
+          {/* Office cards below map */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <div className="bg-white p-6 text-center">
+              <p className="font-body text-dark font-medium mb-1">Tampa Office</p>
+              <p className="font-body text-muted font-light text-sm">
+                14310 N. Dale Mabry Hwy, Ste 100<br />Tampa, FL 33618
+              </p>
+            </div>
+            <div className="bg-white p-6 text-center">
+              <p className="font-body text-dark font-medium mb-1">Largo Office</p>
+              <p className="font-body text-muted font-light text-sm">
+                11200 Seminole Blvd, Ste 202<br />Largo, FL 33778
+              </p>
+            </div>
+            <div className="bg-white p-6 text-center">
+              <p className="font-body text-dark font-medium mb-1">Brandon Office</p>
+              <p className="font-body text-muted font-light text-sm">
+                417 Lithia Pinecrest Rd<br />Brandon, FL 33511
+              </p>
+            </div>
           </div>
         </div>
       </section>
