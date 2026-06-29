@@ -8,6 +8,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import MobileNav from "@/components/layout/MobileNav";
@@ -55,26 +56,19 @@ export default function Header() {
         `}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          {/* ── Logo / Brand — Barrett Henry with NOW Team subtitle ── */}
-          <Link href="/" className="group flex flex-col">
-            <span
+          {/* ── Logo — REMAX branded logo, swaps between dark and light ── */}
+          <Link href="/" className="group flex items-center">
+            <Image
+              src="/images/remax-logo.png"
+              alt="Barrett Henry — REMAX Collective"
+              width={180}
+              height={50}
               className={`
-                font-heading font-light text-lg tracking-[0.25em] uppercase leading-tight
-                transition-colors duration-500
-                ${useDarkText ? "text-primary" : "text-white"}
+                h-10 w-auto transition-all duration-500
+                ${useDarkText ? "" : "brightness-0 invert"}
               `}
-            >
-              Barrett Henry
-            </span>
-            <span
-              className={`
-                font-body text-[9px] tracking-[0.2em] uppercase leading-tight
-                transition-colors duration-500
-                ${useDarkText ? "text-primary/40" : "text-white/40"}
-              `}
-            >
-              The NOW Team &nbsp;|&nbsp; REMAX
-            </span>
+              priority
+            />
           </Link>
 
           {/* ── Desktop nav links + phone number ── */}
