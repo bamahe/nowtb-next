@@ -73,6 +73,12 @@ export function formatSqFt(sqft: number): string {
  */
 export function cleanWpContent(html: string): string {
   let cleaned = html
+    // Strip entire <style> blocks from WP content — they have max-width:840px
+    // and other constraints that break the Next.js layout
+    .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+    // Strip inline style attributes that set max-width (causes staggered widths)
+    .replace(/style="[^"]*max-width[^"]*"/gi, '')
+    .replace(/style='[^']*max-width[^']*'/gi, '')
     // Strip WordPress shortcodes that have no Next.js equivalent
     // (but NOT [open] — that's a CSS attribute inside <style> tags, not a shortcode)
     .replace(/\[showcaseidx[^\]]*\]/g, '')
