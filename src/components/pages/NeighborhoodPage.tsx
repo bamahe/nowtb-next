@@ -86,7 +86,7 @@ export default async function NeighborhoodPage({
 
       {/* === Hero — compact with breadcrumb + CTA (matches SpokePage pattern) === */}
       <section className="bg-primary pt-12 pb-16">
-        <div className="container-wide max-w-5xl">
+        <div className="container-wide">
           {/* Breadcrumb trail */}
           <nav className="flex items-center gap-2 text-xs font-body text-white/50 mb-6 tracking-wide uppercase">
             <Link href="/" className="hover:text-white/80 transition-colors">Home</Link>
@@ -208,7 +208,7 @@ export default async function NeighborhoodPage({
 
       {/* === CTA bar — clean dark bar, no full form (matches SpokePage) === */}
       <section className="bg-primary py-12">
-        <div className="container-wide max-w-4xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="container-wide flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h2 className="font-heading font-bold text-xl md:text-2xl text-white mb-1">
               Looking for homes in {name}?
