@@ -41,6 +41,7 @@ export function realEstateAgentSchema() {
       "Polk County, FL",
       "Sarasota County, FL",
       "Hernando County, FL",
+      "Citrus County, FL",
     ],
     knowsAbout: [
       "Residential Real Estate",

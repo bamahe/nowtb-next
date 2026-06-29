@@ -9,9 +9,9 @@ import SearchBar from "@/components/ui/SearchBar";
 import { cities } from "@/data/cities";
 
 export const metadata: Metadata = {
-  title: "Tampa Bay Communities | 69+ Cities | Barrett Henry, REALTOR®",
+  title: "Tampa Bay Communities | 78+ Cities | Barrett Henry, REALTOR®",
   description:
-    "Explore all Tampa Bay communities by county — Hillsborough, Pinellas, Pasco, Manatee, Polk, Sarasota, and Hernando. Browse homes for sale with Barrett Henry at REMAX Collective.",
+    "Explore all Tampa Bay communities by county — Hillsborough, Pinellas, Pasco, Manatee, Polk, Sarasota, Hernando, and Citrus. Browse homes for sale with Barrett Henry at REMAX Collective.",
   alternates: {
     canonical: "/communities",
   },
@@ -46,7 +46,7 @@ export default function CommunitiesPage() {
       {/* === Hero === */}
       <HeroSection
         title="Tampa Bay Communities"
-        subtitle="Explore homes for sale across 7 counties and 69+ cities in the Tampa Bay metro area."
+        subtitle="Explore homes for sale across 8 counties and 78+ cities in the Tampa Bay metro area."
       >
         <SearchBar />
       </HeroSection>

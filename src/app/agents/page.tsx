@@ -12,7 +12,7 @@ import { agents } from "@/data/agents";
 export const metadata: Metadata = {
   title: "Tampa Bay Real Estate Team | The NOW Team | REMAX Collective",
   description:
-    "Meet Barrett Henry and The NOW Team at REMAX Collective. Experienced REALTORS serving Tampa Bay's 7 counties — residential sales, investment properties, and more. Call (813) 733-7907.",
+    "Meet Barrett Henry and The NOW Team at REMAX Collective. Experienced REALTORS serving Tampa Bay's 8 counties — residential sales, investment properties, and more. Call (813) 733-7907.",
   alternates: {
     canonical: "/agents",
   },

@@ -13,7 +13,7 @@ import ContactForm from "@/components/ui/ContactForm";
 export const metadata: Metadata = {
   title: "Contact Barrett Henry | Tampa Bay REALTOR® | (813) 733-7907",
   description:
-    "Get in touch with Barrett Henry, Broker Associate with REMAX Collective. Call (813) 733-7907 or send a message. Serving Tampa Bay's 7 counties.",
+    "Get in touch with Barrett Henry, Broker Associate with REMAX Collective. Call (813) 733-7907 or send a message. Serving Tampa Bay's 8 counties.",
   alternates: {
     canonical: "/contact",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
 };
 
-// --- Tampa Bay's 7 counties ---
+// --- Tampa Bay's 8 counties ---
 const counties = [
   "Hillsborough County",
   "Pinellas County",
@@ -34,6 +34,7 @@ const counties = [
   "Manatee County",
   "Sarasota County",
   "Hernando County",
+  "Citrus County",
 ];
 
 export default function ContactPage() {
@@ -157,12 +158,12 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ---- Serving Tampa Bay's 7 Counties — dark navy ---- */}
+      {/* ---- Serving Tampa Bay's 8 Counties — dark navy ---- */}
       <section className="section-dark">
         <div className="container-wide text-center">
           <p className="heading-label text-white/50 mb-6">Service Area</p>
           <h2 className="heading-section text-display-sm text-white mb-16">
-            Serving Tampa Bay&apos;s 7 Counties
+            Serving Tampa Bay&apos;s 8 Counties
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
             {counties.map((county) => (

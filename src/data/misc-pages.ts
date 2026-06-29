@@ -21,7 +21,7 @@ export interface MiscPageData {
 /** All misc/uncategorized pages from nowtb.com */
 export const miscPages: MiscPageData[] = [
   // --- Pages that get their own /route ---
-  { slug: "communities", title: "Tampa Bay Communities", excerpt: "Explore all Tampa Bay communities by county — Hillsborough, Pinellas, Pasco, Manatee, Polk, and Sarasota.", handling: "static-page" },
+  { slug: "communities", title: "Tampa Bay Communities", excerpt: "Explore all Tampa Bay communities by county — Hillsborough, Pinellas, Pasco, Manatee, Polk, Sarasota, Hernando, and Citrus.", handling: "static-page" },
   { slug: "luxury", title: "Tampa Bay Luxury Real Estate", excerpt: "Browse luxury homes for sale across Tampa Bay. Waterfront estates, gated communities, and premium properties.", handling: "static-page" },
   { slug: "investing", title: "Real Estate Investing in Tampa Bay", excerpt: "Tampa Bay investment property opportunities — rental analysis, ROI projections, and expert investor guidance.", handling: "static-page" },
   { slug: "property-management", title: "Tampa Bay Property Management — ViVi PM", excerpt: "Professional property management for Tampa Bay rental owners. Tenant screening, maintenance, and accounting.", handling: "static-page" },

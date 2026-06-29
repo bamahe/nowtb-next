@@ -23,7 +23,7 @@ export const agents: Agent[] = [
     title: "Broker Associate | Team Lead",
     phone: "(813) 733-7907",
     email: "barrett@nowtb.com",
-    bio: "Barrett Henry is a licensed real estate Broker Associate with REMAX Collective and team lead of The NOW Team. With 23+ years of real estate experience, Barrett specializes in residential sales, investment properties, new construction, and military relocation across Tampa Bay's 7-county region. Known for data-driven market analysis, relentless negotiation, and a no-nonsense approach to getting deals closed.",
+    bio: "Barrett Henry is a licensed real estate Broker Associate with REMAX Collective and team lead of The NOW Team. With 23+ years of real estate experience, Barrett specializes in residential sales, investment properties, new construction, and military relocation across Tampa Bay's 8-county region. Known for data-driven market analysis, relentless negotiation, and a no-nonsense approach to getting deals closed.",
     photoUrl: "/images/barrett-henry.jpg",
     designations: ["Broker Associate", "GRI", "MRP"],
     specialties: [

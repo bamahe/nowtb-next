@@ -1,6 +1,6 @@
 /**
  * City data for hub/spoke pages.
- * 69 cities across 6 counties (Hillsborough, Pinellas, Pasco, Manatee, Polk, Sarasota).
+ * 78 cities across 8 counties (Hillsborough, Pinellas, Pasco, Manatee, Polk, Sarasota, Hernando, Citrus).
  * Merged from WordPress site export on 2026-05-12.
  * Tier 1 cities ship at launch. Tier 2+ added later.
  */
@@ -887,6 +887,54 @@ export const cities: CityData[] = [
     tagline: "Quiet rural living near the Withlacoochee State Forest",
     lat: 28.4940,
     lng: -82.1702,
+  },
+
+  // =========================================================================
+  // CITRUS COUNTY (4 cities)
+  // =========================================================================
+  {
+    name: "Crystal River",
+    slug: "crystal-river",
+    county: "Citrus",
+    zip_codes: ["34428", "34429"],
+    tier: 3,
+    topics: ["homes-for-sale", "homes-with-pool", "new-construction", "luxury-homes", "waterfront-homes", "55-plus-homes", "open-houses", "investment-property", "new-listings", "single-story-homes", "land-for-sale", "condos-townhomes", "gated-community-homes", "neighborhood-guide", "housing-market"],
+    tagline: "Manatee capital of Florida with crystal-clear springs and Gulf access",
+    lat: 28.9023,
+    lng: -82.5926,
+  },
+  {
+    name: "Inverness",
+    slug: "inverness",
+    county: "Citrus",
+    zip_codes: ["34450", "34452", "34453"],
+    tier: 3,
+    topics: ["homes-for-sale", "homes-with-pool", "new-construction", "luxury-homes", "waterfront-homes", "55-plus-homes", "open-houses", "investment-property", "new-listings", "single-story-homes", "land-for-sale", "neighborhood-guide", "housing-market"],
+    tagline: "Citrus County seat with chain of lakes, trails, and small-town charm",
+    lat: 28.8358,
+    lng: -82.3301,
+  },
+  {
+    name: "Homosassa",
+    slug: "homosassa",
+    county: "Citrus",
+    zip_codes: ["34446", "34448"],
+    tier: 3,
+    topics: ["homes-for-sale", "homes-with-pool", "new-construction", "waterfront-homes", "open-houses", "investment-property", "new-listings", "single-story-homes", "land-for-sale", "neighborhood-guide", "housing-market"],
+    tagline: "Old Florida fishing village with springs, wildlife, and river access",
+    lat: 28.7814,
+    lng: -82.6154,
+  },
+  {
+    name: "Lecanto",
+    slug: "lecanto",
+    county: "Citrus",
+    zip_codes: ["34461"],
+    tier: 3,
+    topics: ["homes-for-sale", "homes-with-pool", "new-construction", "55-plus-homes", "open-houses", "investment-property", "new-listings", "single-story-homes", "land-for-sale", "neighborhood-guide", "housing-market"],
+    tagline: "Central Citrus County community with affordable homes and nature preserve access",
+    lat: 28.8417,
+    lng: -82.4876,
   },
 ];
 

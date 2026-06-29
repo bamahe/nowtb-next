@@ -58,7 +58,7 @@ const VALUE_PROPS = [
     icon: Users,
     title: "Tampa Bay, Inside and Out",
     description:
-      "From Riverview to St. Pete, Brandon to Sarasota — I know the neighborhoods, the school zones, the flood maps, and what's actually happening on the ground across all 7 counties.",
+      "From Riverview to St. Pete, Brandon to Sarasota — I know the neighborhoods, the school zones, the flood maps, and what's actually happening on the ground across all 8 counties.",
   },
 ] as const;
 
@@ -208,8 +208,8 @@ export default async function HomePage() {
           {/* Supporting copy about service area */}
           <p className="text-center font-body text-muted text-sm font-light mt-12 max-w-3xl mx-auto">
             Barrett Henry and The NOW Team proudly serve buyers and sellers
-            across Hillsborough, Pinellas, Pasco, Polk, Manatee, Sarasota, and
-            Hernando counties.
+            across Hillsborough, Pinellas, Pasco, Polk, Manatee, Sarasota,
+            Hernando, and Citrus counties.
           </p>
         </div>
       </section>

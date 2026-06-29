@@ -65,7 +65,7 @@ export default function TheNowTeamPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               { title: "23+ Years Experience", desc: "Decades of real estate experience across residential, investment, and new construction." },
-              { title: "7-County Coverage", desc: "We serve Hillsborough, Pinellas, Pasco, Manatee, Polk, Sarasota, and Hernando counties." },
+              { title: "8-County Coverage", desc: "We serve Hillsborough, Pinellas, Pasco, Manatee, Polk, Sarasota, Hernando, and Citrus counties." },
               { title: "REMAX Network", desc: "Backed by the global reach and brand recognition of REMAX Collective." },
               { title: "Data-Driven Approach", desc: "Every recommendation is backed by market data, not guesswork." },
             ].map((item) => (

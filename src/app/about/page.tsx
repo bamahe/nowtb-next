@@ -53,6 +53,7 @@ const jsonLd = {
     "Manatee County",
     "Sarasota County",
     "Hernando County",
+    "Citrus County",
   ],
   openingHours: "Mo-Fr 09:00-18:00",
   priceRange: "$$",
@@ -170,7 +171,7 @@ export default function AboutPage() {
                   approach is data-driven and no-nonsense — I give you the real
                   numbers, the honest advice, and the relentless negotiation it
                   takes to win in this market. The NOW Team and I serve buyers
-                  and sellers across 7 counties, and we treat every transaction
+                  and sellers across 8 counties, and we treat every transaction
                   like our reputation depends on it — because it does.
                 </p>
               </div>
@@ -265,7 +266,7 @@ export default function AboutPage() {
               From the urban energy of downtown Tampa and St. Petersburg to the
               suburban charm of Brandon, Riverview, and Valrico, there&apos;s a
               neighborhood for every lifestyle and budget. Barrett and The NOW
-              Team serve all 7 counties in the Tampa Bay region.
+              Team serve all 8 counties in the Tampa Bay region.
             </p>
           </div>
         </div>
