@@ -5,9 +5,20 @@
 // =============================================================================
 
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import HeroSection from "@/components/ui/HeroSection";
 import ContactForm from "@/components/ui/ContactForm";
+
+// Leaflet requires window/DOM — load client-side only
+const TampaBayMap = dynamic(() => import("@/components/ui/TampaBayMap"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full aspect-[16/9] md:aspect-[21/9] bg-gray-100 flex items-center justify-center">
+      <p className="font-body text-muted text-sm">Loading map...</p>
+    </div>
+  ),
+});
 
 // --- SEO metadata + Open Graph tags ---
 export const metadata: Metadata = {
@@ -164,16 +175,16 @@ export default function ContactPage() {
       <section className="section-light">
         <div className="container-wide">
           <p className="heading-label text-center mb-6">Our Offices</p>
-          <div className="aspect-[16/9] md:aspect-[21/9]">
-            <iframe
-              title="REMAX Collective Office Locations — Tampa Bay"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              loading="lazy"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-82.85,27.75,-82.20,28.15&layer=mapnik&marker=28.0753,-82.5035"
-            />
-          </div>
+          <TampaBayMap
+            markers={[
+              { name: "REMAX Collective — Tampa", lat: 28.0753, lng: -82.5035, label: "Tampa Office<br>14310 N. Dale Mabry Hwy, Ste 100", type: "office" },
+              { name: "REMAX Collective — Largo", lat: 27.8839, lng: -82.7873, label: "Largo Office<br>11200 Seminole Blvd, Ste 202", type: "office" },
+              { name: "REMAX Collective — Brandon", lat: 27.9295, lng: -82.2859, label: "Brandon Office<br>417 Lithia Pinecrest Rd", type: "office" },
+            ]}
+            zoom={10}
+            centerLat={27.96}
+            centerLng={-82.50}
+          />
           {/* Office cards below map */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
             <div className="bg-white p-6 text-center">

@@ -3,10 +3,21 @@
 // =============================================================================
 
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
 import SearchBar from "@/components/ui/SearchBar";
 import { cities } from "@/data/cities";
+
+// Leaflet requires window/DOM — load client-side only
+const TampaBayMap = dynamic(() => import("@/components/ui/TampaBayMap"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full aspect-[16/9] md:aspect-[21/9] bg-gray-100 flex items-center justify-center">
+      <p className="font-body text-muted text-sm">Loading map...</p>
+    </div>
+  ),
+});
 
 export const metadata: Metadata = {
   title: "Tampa Bay Communities | 78+ Cities | Barrett Henry, REALTOR®",
@@ -51,19 +62,22 @@ export default function CommunitiesPage() {
         <SearchBar />
       </HeroSection>
 
-      {/* === Interactive Tampa Bay Area Map === */}
+      {/* === Interactive Tampa Bay Area Map — click cities to explore === */}
       <section className="container-wide pt-12 pb-6">
         <p className="heading-label text-center mb-6">Tampa Bay Service Area</p>
-        <div className="aspect-[16/9] md:aspect-[21/9]">
-          <iframe
-            title="Tampa Bay Area Map — 8 Counties"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            loading="lazy"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=-83.10,27.30,-81.80,28.95&layer=mapnik"
-          />
-        </div>
+        <TampaBayMap
+          markers={cities.map((c) => ({
+            name: c.name,
+            lat: c.lat,
+            lng: c.lng,
+            href: `/${c.slug}`,
+            label: `${c.name} — ${c.county} County`,
+            type: "city" as const,
+          }))}
+        />
+        <p className="font-body text-muted text-xs text-center mt-3">
+          Click any city marker to explore homes for sale in that area.
+        </p>
       </section>
 
       {/* === Cities by county === */}
