@@ -1,13 +1,13 @@
 // =============================================================================
-// PhotoGallery — Modern real estate photo layout
-// Hero image (left) + 2x2 grid (right) on desktop, single hero on mobile
-// Click any photo to open fullscreen lightbox with arrow navigation
+// PhotoGallery — Full-width hero image + horizontal thumbnail strip below
+// Click any thumbnail to swap the hero; click the hero to open lightbox
+// Lightbox has arrow navigation + thumbnail strip at the bottom
 // =============================================================================
 
 "use client";
 
 import { useState, useCallback, useEffect, useRef } from "react";
-import { ChevronLeft, ChevronRight, X, Grid } from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 interface Photo {
   MediaURL: string;
@@ -63,138 +63,82 @@ export default function PhotoGallery({ photos, address, autoScroll = false }: Ph
 
   if (photos.length === 0) {
     return (
-      <div className="flex items-center justify-center aspect-[16/9] rounded-xl bg-gray-100">
+      <div className="flex items-center justify-center aspect-[16/9] bg-gray-100">
         <p className="font-body text-muted">No photos available</p>
       </div>
     );
   }
 
-  // Show up to 5 photos in the grid layout (1 hero + 4 small)
-  const gridPhotos = photos.slice(1, 5);
-  const remainingCount = Math.max(0, photos.length - 5);
-
   return (
     <>
-      {/* ===== Photo Grid — hero left + 2x2 right ===== */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 rounded-xl overflow-hidden max-h-[520px]">
-        {/* Hero image — auto-scrolls through all photos, click to open lightbox */}
-        <div
-          className="relative w-full h-64 md:h-full min-h-[300px] md:min-h-[520px] overflow-hidden"
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
+      {/* ===== Full-width hero image — click to open lightbox ===== */}
+      <div
+        className="relative w-full overflow-hidden"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+      >
+        <button
+          onClick={() => { userClicked.current = true; setLightboxIndex(heroIndex); }}
+          className="w-full cursor-pointer group"
+          aria-label={`View photo ${heroIndex + 1} fullscreen`}
         >
-          <button
-            onClick={() => { userClicked.current = true; setLightboxIndex(heroIndex); }}
-            className="w-full h-full cursor-pointer group"
-            aria-label={`View photo ${heroIndex + 1}`}
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={photos[heroIndex].MediaURL}
-              alt={photos[heroIndex].ShortDescription || `${address} — photo ${heroIndex + 1}`}
-              className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
-            />
-          </button>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={photos[heroIndex].MediaURL}
+            alt={photos[heroIndex].ShortDescription || `${address} — photo ${heroIndex + 1}`}
+            className="w-full aspect-[2/1] object-cover group-hover:scale-[1.01] transition-transform duration-500"
+          />
+        </button>
 
-          {/* Hero navigation arrows */}
-          {photos.length > 1 && (
-            <>
-              <button
-                onClick={() => { userClicked.current = true; setHeroIndex((i) => i === 0 ? photos.length - 1 : i - 1); }}
-                className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-2 transition-colors"
-                aria-label="Previous photo"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-              <button
-                onClick={() => { userClicked.current = true; setHeroIndex((i) => i === photos.length - 1 ? 0 : i + 1); }}
-                className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-2 transition-colors"
-                aria-label="Next photo"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </button>
-            </>
-          )}
-
-          {/* Photo counter */}
-          <span className="absolute bottom-3 right-3 bg-black/60 text-white text-xs font-body px-3 py-1.5 rounded-full">
-            {heroIndex + 1} / {photos.length}
-          </span>
-        </div>
-
-        {/* 2x2 grid on right — hidden on mobile, show on md+ */}
-        {gridPhotos.length > 0 && (
-          <div className="hidden md:grid grid-cols-2 grid-rows-2 gap-2">
-            {gridPhotos.map((photo, i) => (
-              <button
-                key={photo.MediaURL}
-                onClick={() => setLightboxIndex(i + 1)}
-                className="relative w-full h-full overflow-hidden cursor-pointer group"
-                aria-label={`View photo ${i + 2}`}
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={photo.MediaURL}
-                  alt={photo.ShortDescription || `${address} — photo ${i + 2}`}
-                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
-                  loading="lazy"
-                />
-                {/* "View all" overlay on last grid photo if there are more */}
-                {i === gridPhotos.length - 1 && remainingCount > 0 && (
-                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center transition-colors group-hover:bg-black/50">
-                    <div className="text-center text-white">
-                      <Grid className="w-6 h-6 mx-auto mb-1" />
-                      <span className="font-body text-sm font-semibold">
-                        +{remainingCount} more
-                      </span>
-                    </div>
-                  </div>
-                )}
-              </button>
-            ))}
-          </div>
-        )}
-
-        {/* Mobile: photo count badge + View All button */}
+        {/* Hero navigation arrows */}
         {photos.length > 1 && (
-          <button
-            onClick={() => setLightboxIndex(0)}
-            className="md:hidden absolute bottom-4 right-4 bg-white/90 text-primary text-sm font-semibold px-4 py-2 rounded-lg shadow-md"
-          >
-            View all {photos.length} photos
-          </button>
+          <>
+            <button
+              onClick={() => { userClicked.current = true; setHeroIndex((i) => i === 0 ? photos.length - 1 : i - 1); }}
+              className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-2 transition-colors"
+              aria-label="Previous photo"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => { userClicked.current = true; setHeroIndex((i) => i === photos.length - 1 ? 0 : i + 1); }}
+              className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-2 transition-colors"
+              aria-label="Next photo"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </>
         )}
+
+        {/* Photo counter badge */}
+        <span className="absolute bottom-3 right-3 bg-black/60 text-white text-xs font-body px-3 py-1.5 rounded-full">
+          {heroIndex + 1} / {photos.length}
+        </span>
       </div>
 
-      {/* Mobile thumbnail strip */}
+      {/* ===== Thumbnail strip below the hero — horizontal scroll ===== */}
       {photos.length > 1 && (
-        <div className="flex gap-2 overflow-x-auto py-3 md:hidden scrollbar-thin">
-          {photos.slice(0, 8).map((photo, index) => (
+        <div className="flex gap-1.5 overflow-x-auto py-2 scrollbar-thin">
+          {photos.map((photo, index) => (
             <button
               key={photo.MediaURL}
-              onClick={() => setLightboxIndex(index)}
-              className="relative flex-shrink-0 w-20 h-16 rounded-lg overflow-hidden"
+              onClick={() => { userClicked.current = true; setHeroIndex(index); }}
+              className={`relative flex-shrink-0 w-20 h-14 md:w-24 md:h-16 overflow-hidden transition-all ${
+                index === heroIndex
+                  ? "ring-2 ring-[#1B2A4A] opacity-100"
+                  : "opacity-50 hover:opacity-80"
+              }`}
               aria-label={`View photo ${index + 1}`}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={photo.MediaURL}
-                alt={`${address} — thumbnail ${index + 1}`}
+                alt={photo.ShortDescription || `${address} — thumbnail ${index + 1}`}
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
             </button>
           ))}
-          {photos.length > 8 && (
-            <button
-              onClick={() => setLightboxIndex(0)}
-              className="flex-shrink-0 w-20 h-16 rounded-lg bg-gray-100 flex items-center justify-center"
-            >
-              <span className="font-body text-xs text-muted font-semibold">
-                +{photos.length - 8}
-              </span>
-            </button>
-          )}
         </div>
       )}
 

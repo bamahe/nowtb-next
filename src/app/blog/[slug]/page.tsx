@@ -11,6 +11,7 @@ import { notFound } from "next/navigation";
 import ContactForm from "@/components/ui/ContactForm";
 import { getPrimaryAgent } from "@/data/agents";
 import { getAllPosts, getPostBySlug, getRelatedPosts } from "@/lib/posts";
+import ShareButtons from "@/components/ui/ShareButtons";
 import { cleanWpContent } from "@/lib/utils";
 
 /** Format a date string into human-readable format */
@@ -151,11 +152,14 @@ export default async function BlogPostPage({
           </h1>
 
           {/* Date + reading time */}
-          <div className="flex items-center justify-center gap-3 text-sm font-body text-accent">
+          <div className="flex items-center justify-center gap-3 text-sm font-body text-accent mb-6">
             <time dateTime={post.date}>{formatDate(post.date)}</time>
             <span className="w-1 h-1 rounded-full bg-accent/50" />
             <span>{estimatedReadTime}</span>
           </div>
+
+          {/* Share buttons */}
+          <ShareButtons title={post.title} />
         </div>
       </section>
 

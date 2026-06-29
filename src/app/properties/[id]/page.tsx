@@ -10,6 +10,7 @@ import { Bed, Bath, Ruler, Calendar, LandPlot, Car } from "lucide-react";
 import ContactForm from "@/components/ui/ContactForm";
 import FavoriteButton from "@/components/ui/FavoriteButton";
 import PhotoGallery from "@/components/ui/PhotoGallery";
+import ShareButtons from "@/components/ui/ShareButtons";
 import { getListing } from "@/lib/bridge";
 import { formatPrice, formatSqFt } from "@/lib/utils";
 import type { Listing } from "@/lib/types";
@@ -209,8 +210,12 @@ export default async function ListingDetailPage({
             </h1>
           </div>
 
-          {/* Status badge + favorite + days on market */}
+          {/* Status badge + favorite + share + days on market */}
           <div className="flex items-center gap-3">
+            <ShareButtons
+              title={`${listing.UnparsedAddress} — ${formatPrice(listing.ListPrice)}`}
+              description={`${listing.BedroomsTotal || 0} bed, ${listing.BathroomsTotalInteger || 0} bath home in ${listing.City}, FL`}
+            />
             <FavoriteButton
               listingKey={listing.ListingKey}
               listingData={{

@@ -1,15 +1,23 @@
 "use client";
 
 // =============================================================================
-// FavoriteButton — Heart icon that toggles listing favorites via Supabase
+// FavoriteButton — Heart icon that toggles listing favorites
 // Shows on listing cards (sm) and listing detail pages (lg)
-// Redirects to /login if user isn't authenticated
+// Works locally (visual-only) when Supabase isn't configured
+// Persists favorites via Supabase when it IS configured + user is logged in
 // =============================================================================
 
 import { useEffect, useState, useCallback } from "react";
-import { useRouter } from "next/navigation";
 import { Heart } from "lucide-react";
-import { createClient } from "@/lib/supabase/client";
+
+// -- Try to import Supabase client; may not be configured ---------------------
+let createClient: (() => ReturnType<typeof import("@/lib/supabase/client").createClient>) | null = null;
+try {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  createClient = require("@/lib/supabase/client").createClient;
+} catch {
+  // Supabase not configured — that's fine, we'll use local-only mode
+}
 
 // -- Props --------------------------------------------------------------------
 
@@ -37,20 +45,20 @@ export default function FavoriteButton({
   listingData,
   size = "sm",
 }: FavoriteButtonProps) {
-  const router = useRouter();
-  const supabase = createClient();
+  // Try to create Supabase client — returns null if not configured
+  const supabase = createClient ? createClient() : null;
 
   // Whether the listing is currently favorited by the logged-in user
   const [isFavorited, setIsFavorited] = useState(false);
-  // Prevents double-clicks while a toggle is in progress
+  // Prevents double-clicks while a Supabase toggle is in progress
   const [isLoading, setIsLoading] = useState(false);
   // Triggers the pop animation on toggle
   const [animate, setAnimate] = useState(false);
 
-  // -- Check initial favorite status on mount ---------------------------------
+  // -- Check initial favorite status on mount (Supabase only) -----------------
   useEffect(() => {
     async function checkFavorite() {
-      // Skip if Supabase isn't configured
+      // Skip if Supabase isn't configured — local mode starts unfavorited
       if (!supabase) return;
 
       // Get the current user (returns null if not logged in)
@@ -78,15 +86,24 @@ export default function FavoriteButton({
   }, [listingKey]);
 
   // -- Toggle handler ---------------------------------------------------------
+  // Always toggles the visual state (filled/unfilled heart) immediately.
+  // If Supabase is configured AND user is logged in, also persists to the DB.
+  // If Supabase isn't configured or user isn't logged in, still works visually.
   const handleToggle = useCallback(
     async (e: React.MouseEvent<HTMLButtonElement>) => {
       // Stop the click from bubbling up to parent links (e.g., listing card)
       e.preventDefault();
       e.stopPropagation();
 
-      if (isLoading) return; // Already processing a toggle
+      if (isLoading) return; // Already processing a Supabase toggle
 
-      // Skip if Supabase isn't configured
+      // Always toggle the visual state and play the animation
+      const newFavorited = !isFavorited;
+      setIsFavorited(newFavorited);
+      setAnimate(true);
+      setTimeout(() => setAnimate(false), 300);
+
+      // If Supabase isn't configured, we're done — visual-only toggle
       if (!supabase) return;
 
       setIsLoading(true);
@@ -97,42 +114,36 @@ export default function FavoriteButton({
           data: { user },
         } = await supabase.auth.getUser();
 
+        // Not logged in — visual toggle already happened, just skip DB persist
         if (!user) {
-          // Not logged in — redirect to login with a return URL
-          router.push(`/login?next=/properties/${listingKey}`);
+          setIsLoading(false);
           return;
         }
 
-        if (isFavorited) {
-          // -- Remove favorite ------------------------------------------------
+        if (!newFavorited) {
+          // -- Remove favorite from DB ----------------------------------------
           await supabase
             .from("favorites")
             .delete()
             .eq("user_id", user.id)
             .eq("listing_key", listingKey);
-
-          setIsFavorited(false);
         } else {
-          // -- Add favorite ---------------------------------------------------
+          // -- Add favorite to DB ---------------------------------------------
           await supabase.from("favorites").insert({
             user_id: user.id,
             listing_key: listingKey,
             listing_data: listingData,
           });
-
-          setIsFavorited(true);
         }
-
-        // Trigger the pop animation
-        setAnimate(true);
-        setTimeout(() => setAnimate(false), 300);
       } catch (err) {
+        // If DB operation fails, revert the visual state
         console.error("FavoriteButton toggle error:", err);
+        setIsFavorited(!newFavorited);
       } finally {
         setIsLoading(false);
       }
     },
-    [isLoading, isFavorited, listingKey, listingData, supabase, router]
+    [isLoading, isFavorited, listingKey, listingData, supabase]
   );
 
   // -- Size-dependent styles --------------------------------------------------

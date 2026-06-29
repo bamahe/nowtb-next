@@ -74,25 +74,36 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* ── Bottom bar — copyright + MLS disclaimer, very subdued ── */}
+      {/* ── Bottom bar — copyright, license, MLS/IDX disclaimer ── */}
       <div className="border-t border-white/5">
-        <div className="container-wide py-8 text-center space-y-3">
-          {/* Hashtags — subtle brand identifiers */}
-          <p className="text-[10px] tracking-[0.15em] uppercase text-white/40 mb-2">
-            #TNT &nbsp; #BHRE &nbsp; #REMAX &nbsp; #nowtb
-          </p>
-
-          {/* Copyright */}
+        <div className="container-wide py-8 text-center space-y-4">
+          {/* Copyright + license */}
           <p className="text-[10px] tracking-[0.1em] uppercase text-white/40">
-            &copy; 2026 Barrett Henry, REALTOR&reg; &nbsp;|&nbsp; REMAX Collective &nbsp;|&nbsp; FL License #SL3527553 &nbsp;|&nbsp; Equal Housing Opportunity
+            &copy; 2026 Barrett Henry, REALTOR&reg; &nbsp;|&nbsp; Broker Associate, REMAX Collective
+          </p>
+          <p className="text-[10px] tracking-[0.1em] text-white/35">
+            Florida Real Estate Broker License #BK3313308 &nbsp;|&nbsp; Designations: e-PRO, MRP, SRS
+          </p>
+          <p className="text-[10px] tracking-[0.1em] text-white/35">
+            REMAX Collective &nbsp;|&nbsp; 14310 N. Dale Mabry Hwy, Ste 100, Tampa, FL 33618
           </p>
 
-          {/* MLS disclaimer */}
-          <p className="text-[10px] text-white/35 leading-relaxed max-w-2xl mx-auto">
-            Listing information provided by Stellar MLS. IDX information is for
-            personal, non-commercial use only. Data is deemed reliable but not
-            guaranteed. All properties are subject to prior sale, change, or
-            withdrawal.
+          {/* MLS/IDX disclaimer — required by Stellar MLS */}
+          <p className="text-[10px] text-white/30 leading-relaxed max-w-3xl mx-auto">
+            The data relating to real estate for sale on this website comes in part from
+            the Internet Data Exchange (IDX) program of the Stellar MLS. All listing
+            information is deemed reliable but not guaranteed and should be independently
+            verified through personal inspection by appropriate professionals. Listings
+            displayed on this website may be subject to prior sale or removal from sale.
+            Availability of any listing should always be independently verified. Listing
+            information is provided exclusively for consumers&apos; personal, non-commercial
+            use, and may not be used for any purpose other than to identify prospective
+            properties consumers may be interested in purchasing.
+          </p>
+
+          {/* Equal Housing + site credit */}
+          <p className="text-[10px] tracking-[0.1em] uppercase text-white/30">
+            Equal Housing Opportunity &nbsp;|&nbsp; Site by Vyrabyte
           </p>
         </div>
       </div>
