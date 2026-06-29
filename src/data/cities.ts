@@ -829,6 +829,65 @@ export const cities: CityData[] = [
     lat: 27.3364,
     lng: -82.5307,
   },
+
+  // =========================================================================
+  // HERNANDO COUNTY (5 cities)
+  // =========================================================================
+  {
+    name: "Brooksville",
+    slug: "brooksville",
+    county: "Hernando",
+    zip_codes: ["34601", "34602", "34604", "34613", "34614"],
+    tier: 2,
+    topics: ["homes-for-sale", "homes-with-pool", "new-construction", "luxury-homes", "waterfront-homes", "55-plus-homes", "open-houses", "investment-property", "new-listings", "single-story-homes", "land-for-sale", "condos-townhomes", "gated-community-homes", "neighborhood-guide", "housing-market"],
+    tagline: "Historic county seat with rolling hills, nature trails, and affordable homes",
+    lat: 28.5553,
+    lng: -82.3879,
+  },
+  {
+    name: "Spring Hill",
+    slug: "spring-hill",
+    county: "Hernando",
+    zip_codes: ["34606", "34607", "34608", "34609", "34610", "34611"],
+    tier: 2,
+    topics: ["homes-for-sale", "homes-with-pool", "new-construction", "luxury-homes", "waterfront-homes", "55-plus-homes", "open-houses", "investment-property", "new-listings", "single-story-homes", "land-for-sale", "condos-townhomes", "gated-community-homes", "neighborhood-guide", "housing-market"],
+    tagline: "Hernando's largest community with Weeki Wachee Springs and Gulf access",
+    lat: 28.4767,
+    lng: -82.5276,
+  },
+  {
+    name: "Weeki Wachee",
+    slug: "weeki-wachee",
+    county: "Hernando",
+    zip_codes: ["34606", "34607", "34613"],
+    tier: 3,
+    topics: ["homes-for-sale", "homes-with-pool", "new-construction", "luxury-homes", "waterfront-homes", "55-plus-homes", "open-houses", "investment-property", "new-listings", "single-story-homes", "land-for-sale", "condos-townhomes", "gated-community-homes", "neighborhood-guide", "housing-market"],
+    tagline: "Florida's mermaid city with natural springs and waterfront living",
+    lat: 28.5166,
+    lng: -82.5726,
+  },
+  {
+    name: "Hernando Beach",
+    slug: "hernando-beach",
+    county: "Hernando",
+    zip_codes: ["34607"],
+    tier: 3,
+    topics: ["homes-for-sale", "homes-with-pool", "new-construction", "luxury-homes", "waterfront-homes", "open-houses", "investment-property", "new-listings", "single-story-homes", "land-for-sale", "neighborhood-guide", "housing-market"],
+    tagline: "Gulf-front boating community with deep-water canal access",
+    lat: 28.4689,
+    lng: -82.6651,
+  },
+  {
+    name: "Ridge Manor",
+    slug: "ridge-manor",
+    county: "Hernando",
+    zip_codes: ["33523", "33597"],
+    tier: 3,
+    topics: ["homes-for-sale", "homes-with-pool", "new-construction", "55-plus-homes", "open-houses", "investment-property", "new-listings", "single-story-homes", "land-for-sale", "neighborhood-guide", "housing-market"],
+    tagline: "Quiet rural living near the Withlacoochee State Forest",
+    lat: 28.4940,
+    lng: -82.1702,
+  },
 ];
 
 /** Get all Tier 1 cities (launch set) */
