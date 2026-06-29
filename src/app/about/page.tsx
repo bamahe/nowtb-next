@@ -3,6 +3,8 @@
 // Bio, designations, brokerage info, and JSON-LD LocalBusiness schema
 // =============================================================================
 
+import Image from "next/image";
+
 import type { Metadata } from "next";
 import HeroSection from "@/components/ui/HeroSection";
 import ContactForm from "@/components/ui/ContactForm";
@@ -143,10 +145,16 @@ export default function AboutPage() {
       <section className="section-white">
         <div className="container-wide">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 items-start">
-            {/* Photo placeholder (left column) — large, no rounded corners */}
-            <div className="aspect-[3/4] bg-[#e8e4df] flex items-center justify-center">
-              {/* Replace with next/image once the photo file is added */}
-              <p className="font-body text-muted text-sm tracking-wide uppercase">Barrett Henry</p>
+            {/* Barrett's headshot (left column) */}
+            <div className="aspect-[3/4] bg-[#e8e4df] overflow-hidden">
+              <Image
+                src="/images/barrett-headshot.png"
+                alt="Barrett Henry, REALTOR® and Broker Associate at REMAX Collective — Tampa Bay real estate expert with 23+ years experience"
+                width={378}
+                height={373}
+                className="w-full h-full object-cover object-top"
+                priority
+              />
             </div>
 
             {/* Bio text (right column) — first-person, personal tone */}

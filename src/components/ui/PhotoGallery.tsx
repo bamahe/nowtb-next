@@ -274,7 +274,7 @@ export default function PhotoGallery({ photos, address, autoScroll = false }: Ph
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={photo.MediaURL}
-                      alt=""
+                      alt={photo.ShortDescription || `${address} — photo ${index + 1}`}
                       className="w-full h-full object-cover"
                       loading="lazy"
                     />
