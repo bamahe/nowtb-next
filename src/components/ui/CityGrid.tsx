@@ -5,21 +5,33 @@
 // =============================================================================
 
 import Link from "next/link";
-import { slugify } from "@/lib/utils";
+import { cities } from "@/data/cities";
 
-/** Tier 1 cities — the core Tampa Bay service areas */
-const TIER_1_CITIES = [
-  "Valrico",
-  "Brandon",
-  "Riverview",
-  "Tampa",
-  "Lithia",
-  "FishHawk",
-  "Apollo Beach",
-  "Plant City",
-  "Seffner",
-  "Dover",
-] as const;
+// Pull featured cities from each county for a representative spread across Tampa Bay
+// Prioritizes Tier 1, then Tier 2, picks top cities per county
+const FEATURED_CITIES = (() => {
+  // Get unique counties in order
+  const countyOrder = Array.from(new Set(cities.map((c) => c.county)));
+  const picked: typeof cities = [];
+  // First pass: grab Tier 1 cities from each county
+  for (const county of countyOrder) {
+    const tier1 = cities.filter((c) => c.county === county && c.tier === 1);
+    picked.push(...tier1);
+  }
+  // Second pass: fill in Tier 2 cities if county has no Tier 1
+  for (const county of countyOrder) {
+    if (picked.some((c) => c.county === county)) continue;
+    const tier2 = cities.filter((c) => c.county === county && c.tier === 2);
+    if (tier2.length > 0) picked.push(tier2[0]);
+  }
+  // Third pass: fill remaining counties with Tier 3
+  for (const county of countyOrder) {
+    if (picked.some((c) => c.county === county)) continue;
+    const tier3 = cities.filter((c) => c.county === county && c.tier === 3);
+    if (tier3.length > 0) picked.push(tier3[0]);
+  }
+  return picked;
+})();
 
 interface CityGridProps {
   /** Override the outer section className (default: "section-dark") */
@@ -38,22 +50,26 @@ export default function CityGrid({
 }: CityGridProps = {}) {
   // --- The grid itself (shared between bare and wrapped modes) ---
   const grid = (
-    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
-      {TIER_1_CITIES.map((city) => (
+    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+      {FEATURED_CITIES.map((city) => (
         <Link
-          key={city}
-          href={`/${slugify(city)}`}
-          className="group relative flex items-center justify-center aspect-[3/4]
+          key={city.slug}
+          href={`/${city.slug}`}
+          className="group relative flex flex-col items-center justify-center aspect-[3/4]
                      bg-gradient-to-br from-[#0f2847] to-primary
                      border border-white/10
                      overflow-hidden
                      transition-all duration-500
                      hover:border-accent/30"
         >
-          {/* City name — ultra-light, wide tracking, centered */}
-          <span className="font-heading font-extralight text-2xl tracking-[0.15em] uppercase text-white
+          {/* City name */}
+          <span className="font-heading font-extralight text-xl md:text-2xl tracking-[0.15em] uppercase text-white
                            transition-colors duration-500 group-hover:text-accent">
-            {city}
+            {city.name}
+          </span>
+          {/* County label */}
+          <span className="font-body text-[10px] tracking-[0.15em] uppercase text-white/30 mt-2">
+            {city.county} County
           </span>
         </Link>
       ))}
