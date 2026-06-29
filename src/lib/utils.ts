@@ -99,7 +99,10 @@ export function cleanWpContent(html: string): string {
       )}"`
     )
     .replace(/href="\/wp-content\/uploads\//g, 'href="https://nowtb.com/wp-content/uploads/')
-    // 7. Clean up empty divs left after stripping classes/styles
+    // 7. Fix MySQL newline corruption: literal "nn" between tags from WP migration
+    .replace(/>nn</g, '><')
+    .replace(/>nn/g, '>\n')
+    // 8. Clean up empty divs left after stripping classes/styles
     .replace(/<div>\s*<\/div>/gi, '')
     // 8. Unwrap unnecessary div wrappers (keeps content, removes the div tags)
     .replace(/<div>\s*/gi, '')
