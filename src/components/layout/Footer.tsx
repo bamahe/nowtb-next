@@ -88,17 +88,17 @@ export default function Footer() {
             REMAX Collective &nbsp;|&nbsp; 14310 N. Dale Mabry Hwy, Ste 100, Tampa, FL 33618
           </p>
 
-          {/* MLS/IDX disclaimer — required by Stellar MLS */}
+          {/* MLS/IDX disclaimer — required by MFRMLS/Stellar MLS */}
           <p className="text-[10px] text-white/30 leading-relaxed max-w-3xl mx-auto">
-            The data relating to real estate for sale on this website comes in part from
-            the Internet Data Exchange (IDX) program of the Stellar MLS. All listing
-            information is deemed reliable but not guaranteed and should be independently
-            verified through personal inspection by appropriate professionals. Listings
-            displayed on this website may be subject to prior sale or removal from sale.
-            Availability of any listing should always be independently verified. Listing
-            information is provided exclusively for consumers&apos; personal, non-commercial
-            use, and may not be used for any purpose other than to identify prospective
-            properties consumers may be interested in purchasing.
+            Copyright © MFRMLS.com. All information deemed reliable but not guaranteed.
+            All properties are subject to prior sale, change or withdrawal. Neither
+            listing broker(s) or information provider(s) shall be responsible for any
+            typographical errors, misinformation, misprints and shall be held totally
+            harmless. Listing(s) information is provided for consumers&apos; personal,
+            non-commercial use and may not be used for any purpose other than to
+            identify prospective properties consumers may be interested in purchasing.
+            The data relating to real estate for sale on this website comes in part
+            from the Internet Data Exchange program of MFR MLS.
           </p>
 
           {/* Equal Housing + site credit */}

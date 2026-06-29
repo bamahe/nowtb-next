@@ -13,6 +13,7 @@ import ListingGrid from "@/components/ui/ListingGrid";
 import CityGrid from "@/components/ui/CityGrid";
 import { getFeaturedListings } from "@/lib/bridge";
 import { getPrimaryAgent } from "@/data/agents";
+import { testimonials } from "@/data/testimonials";
 
 // Force dynamic rendering so mock/live data uses runtime env vars
 export const dynamic = "force-dynamic";
@@ -72,6 +73,9 @@ export default async function HomePage() {
 
   // Pull primary agent info for JSON-LD structured data
   const agent = getPrimaryAgent();
+
+  // Pick 6 testimonials for homepage display
+  const featuredTestimonials = testimonials.slice(0, 6);
 
   return (
     <>
@@ -260,7 +264,37 @@ export default async function HomePage() {
       </section>
 
       {/* =================================================================
-          SECTION 5: Quick Links — internal navigation to key pages
+          SECTION 5: Testimonials — real Google reviews
+          ================================================================= */}
+      <section className="section-dark">
+        <div className="container-wide">
+          <div className="text-center mb-16">
+            <p className="heading-label text-white/50 mb-6">What Clients Say</p>
+            <h2 className="heading-section text-display-sm text-white">
+              Real Reviews from Real Clients
+            </h2>
+            <div className="section-divider" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredTestimonials.map((t) => (
+              <div key={t.name} className="border border-white/10 p-8">
+                {/* Stars */}
+                <p className="text-accent text-lg mb-4">★★★★★</p>
+                {/* Quote */}
+                <p className="font-body text-white/80 font-light text-sm leading-relaxed mb-6">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+                {/* Attribution */}
+                <p className="font-body text-white font-medium text-sm">{t.name}</p>
+                <p className="font-body text-white/40 text-xs">{t.location}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* =================================================================
+          SECTION 6: Quick Links — internal navigation to key pages
           ================================================================= */}
       <section className="section-light">
         <div className="container-wide">
