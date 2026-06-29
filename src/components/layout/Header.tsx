@@ -8,7 +8,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import MobileNav from "@/components/layout/MobileNav";
@@ -57,8 +56,10 @@ export default function Header() {
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           {/* ── Logo — REMAX branded logo, swaps between dark and light ── */}
+          {/* Using <img> instead of next/image to avoid optimization proxy issues */}
           <Link href="/" className="group flex items-center">
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="/images/remax-logo.png"
               alt="Barrett Henry — REMAX Collective"
               width={180}
@@ -67,7 +68,6 @@ export default function Header() {
                 h-10 w-auto transition-all duration-500
                 ${useDarkText ? "" : "brightness-0 invert"}
               `}
-              priority
             />
           </Link>
 
