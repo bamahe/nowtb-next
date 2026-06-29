@@ -7,31 +7,30 @@
 import Link from "next/link";
 import { cities } from "@/data/cities";
 
-// Pull featured cities from each county for a representative spread across Tampa Bay
-// Prioritizes Tier 1, then Tier 2, picks top cities per county
-const FEATURED_CITIES = (() => {
-  // Get unique counties in order
-  const countyOrder = Array.from(new Set(cities.map((c) => c.county)));
-  const picked: typeof cities = [];
-  // First pass: grab Tier 1 cities from each county
-  for (const county of countyOrder) {
-    const tier1 = cities.filter((c) => c.county === county && c.tier === 1);
-    picked.push(...tier1);
-  }
-  // Second pass: fill in Tier 2 cities if county has no Tier 1
-  for (const county of countyOrder) {
-    if (picked.some((c) => c.county === county)) continue;
-    const tier2 = cities.filter((c) => c.county === county && c.tier === 2);
-    if (tier2.length > 0) picked.push(tier2[0]);
-  }
-  // Third pass: fill remaining counties with Tier 3
-  for (const county of countyOrder) {
-    if (picked.some((c) => c.county === county)) continue;
-    const tier3 = cities.filter((c) => c.county === county && c.tier === 3);
-    if (tier3.length > 0) picked.push(tier3[0]);
-  }
-  return picked;
-})();
+// Curated featured cities — major cities from every county for homepage display
+// Hand-picked for name recognition and geographic spread across Tampa Bay
+const FEATURED_SLUGS = [
+  // Hillsborough
+  "tampa", "brandon", "riverview", "valrico", "apollo-beach", "westchase",
+  // Pinellas
+  "st-petersburg", "clearwater", "largo", "dunedin", "safety-harbor", "seminole",
+  // Pasco
+  "wesley-chapel", "trinity", "new-port-richey", "land-o-lakes",
+  // Manatee
+  "bradenton", "lakewood-ranch", "palmetto", "anna-maria",
+  // Polk
+  "lakeland", "winter-haven",
+  // Sarasota
+  "sarasota",
+  // Hernando
+  "spring-hill", "brooksville",
+  // Citrus
+  "crystal-river", "inverness",
+];
+
+const FEATURED_CITIES = FEATURED_SLUGS
+  .map((slug) => cities.find((c) => c.slug === slug))
+  .filter((c): c is (typeof cities)[number] => c !== undefined);
 
 interface CityGridProps {
   /** Override the outer section className (default: "section-dark") */
