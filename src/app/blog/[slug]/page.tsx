@@ -33,7 +33,12 @@ function readingTime(html: string): string {
 
 /** Strip HTML tags for plain-text excerpt */
 function stripHtml(html: string): string {
-  return html.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+  return html
+    .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, "")
+    .replace(/<!--[\s\S]*?-->/g, "")
+    .replace(/<[^>]*>/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 // --- generateStaticParams — pre-render all 624 blog posts at build ---

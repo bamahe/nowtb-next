@@ -43,8 +43,13 @@ function formatDate(dateStr: string): string {
 
 /** Strip HTML tags and truncate to a max length */
 function truncateExcerpt(html: string, maxLen = 150): string {
-  // Remove HTML tags, then trim to maxLen characters
-  const text = html.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+  // Strip <style> blocks (tag + contents), then HTML comments, then remaining tags
+  const text = html
+    .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, "")
+    .replace(/<!--[\s\S]*?-->/g, "")
+    .replace(/<[^>]*>/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
   if (text.length <= maxLen) return text;
   return text.substring(0, maxLen).trimEnd() + "...";
 }
