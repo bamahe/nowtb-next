@@ -45,11 +45,13 @@ const nextConfig = {
       // ── WordPress nested city spoke pages → flat structure ──
       // WordPress used /city/city-topic/ but new site uses /city-topic
       // Catches patterns like /valrico/valrico-homes-with-pool/ → /valrico-homes-with-pool
-      { source: "/:city/:city-:topic", destination: "/:city-:topic", permanent: true },
+      // EXCLUDE /blog/, /api/, /auth/, /properties/, /guides/ to prevent redirect loops
+      { source: "/:city((?!blog|api|auth|properties|guides|_next).[^/]+)/:city-:topic", destination: "/:city-:topic", permanent: true },
 
       // ── WordPress nested neighborhood pages → flat structure ──
       // WordPress used /city/neighborhood/ but new site uses /neighborhood
-      { source: "/:city/:neighborhood", destination: "/:neighborhood", permanent: true },
+      // EXCLUDE known app routes to prevent /blog/post → /post → /blog/post loops
+      { source: "/:city((?!blog|api|auth|properties|guides|_next).[^/]+)/:neighborhood", destination: "/:neighborhood", permanent: true },
 
       // ── WordPress Showcase IDX property pages ──
       // Old IDX used /properties/slug-name format. Bridge uses /properties/ListingKey.
