@@ -75,7 +75,6 @@ export default function SellersPage() {
         title="Sell Your Home"
         label="BARRETT HENRY | THE NOW TEAM"
         subtitle="I don't guess on price and I don't cut corners on marketing. 23+ years of getting sellers top dollar."
-        fullHeight
       />
 
       {/* ---- Barrett's Selling Strategy — white bg, numbered steps ---- */}

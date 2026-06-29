@@ -137,7 +137,6 @@ export default function AboutPage() {
       <HeroSection
         title="About"
         label="BARRETT HENRY, REALTOR®"
-        fullHeight
       />
 
       {/* ---- Bio Section — luxury 2-column layout ---- */}

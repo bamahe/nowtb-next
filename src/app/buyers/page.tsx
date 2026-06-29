@@ -30,7 +30,7 @@ const benefits = [
   {
     title: "I Know This Market",
     description:
-      "I work across all 7 Tampa Bay counties every day. You get real pricing data, honest neighborhood insights, and investment-grade analysis — not guesswork from a part-timer.",
+      "I work across all 8 Tampa Bay counties every day. You get real pricing data, honest neighborhood insights, and investment-grade analysis — not guesswork from a part-timer.",
   },
   {
     title: "I Fight for Your Deal",
@@ -106,7 +106,6 @@ export default function BuyersPage() {
         title="Buying a Home"
         label="BARRETT HENRY | THE NOW TEAM"
         subtitle="I've helped hundreds of buyers find the right home at the right price. Here's how we do it."
-        fullHeight
       />
 
       {/* ---- Why Work With Barrett — white background ---- */}

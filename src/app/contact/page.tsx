@@ -59,7 +59,6 @@ export default function ContactPage() {
         title="Let&apos;s Talk"
         label="BARRETT HENRY | THE NOW TEAM"
         subtitle="Have a question about buying, selling, or investing? I'd rather talk than text. Call me directly or drop a message below."
-        fullHeight
       />
 
       {/* ---- Two-Column: Contact Info (left) + Form (right) ---- */}
