@@ -25,7 +25,7 @@ export default function Footer() {
   return (
     <footer className="bg-primary text-white font-body">
       {/* ── Main footer content — centered, generous vertical padding ── */}
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-24 text-center">
+      <div className="container-wide py-24 text-center">
         {/* Brand name — Barrett Henry with NOW Team + brokerage underneath */}
         <p className="font-heading font-extralight text-3xl md:text-4xl tracking-[0.2em] uppercase mb-1">
           Barrett Henry
@@ -76,7 +76,7 @@ export default function Footer() {
 
       {/* ── Bottom bar — copyright + MLS disclaimer, very subdued ── */}
       <div className="border-t border-white/5">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-8 text-center space-y-3">
+        <div className="container-wide py-8 text-center space-y-3">
           {/* Hashtags — subtle brand identifiers */}
           <p className="text-[10px] tracking-[0.15em] uppercase text-white/40 mb-2">
             #TNT &nbsp; #BHRE &nbsp; #REMAX &nbsp; #nowtb
