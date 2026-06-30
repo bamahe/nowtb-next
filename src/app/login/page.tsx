@@ -5,14 +5,25 @@
 // Uses Supabase auth for both sign-in methods
 // =============================================================================
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 
 export default function LoginPage() {
+  const router = useRouter();
   // Track form state: idle, loading, magic-link-sent, or error
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "magic-link-sent" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+
+  // If already logged in, redirect to account page
+  useEffect(() => {
+    const supabase = createClient();
+    if (!supabase) return;
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      if (user) router.push("/account");
+    });
+  }, [router]);
 
   // --- Google OAuth sign-in ---
   const handleGoogleLogin = async () => {
