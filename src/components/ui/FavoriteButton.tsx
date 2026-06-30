@@ -1,15 +1,16 @@
 // =============================================================================
-// FavoriteButton — Heart icon that saves favorites to localStorage
-// Persists across page loads without login. If Supabase is configured AND
-// user is logged in, also syncs to the database.
+// FavoriteButton — Heart icon that saves favorites
+// Always saves to localStorage (works without login).
+// If Supabase is configured AND user is logged in, also syncs to DB.
 // =============================================================================
 
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
 import { Heart } from "lucide-react";
+import { createClient } from "@/lib/supabase/client";
 
-// -- localStorage helpers for favorites --------------------------------------
+// -- localStorage helpers ----------------------------------------------------
 const STORAGE_KEY = "nowtb_favorites";
 
 function getLocalFavorites(): string[] {
@@ -21,29 +22,20 @@ function getLocalFavorites(): string[] {
   }
 }
 
-function setLocalFavorites(keys: string[]) {
-  if (typeof window === "undefined") return;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(keys));
-}
-
-function addLocalFavorite(key: string) {
+function toggleLocalFavorite(key: string): boolean {
   const favs = getLocalFavorites();
-  if (!favs.includes(key)) {
-    favs.push(key);
-    setLocalFavorites(favs);
+  const exists = favs.includes(key);
+  const updated = exists ? favs.filter((k) => k !== key) : [...favs, key];
+  if (typeof window !== "undefined") {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
   }
-}
-
-function removeLocalFavorite(key: string) {
-  setLocalFavorites(getLocalFavorites().filter((k) => k !== key));
+  return !exists; // returns new favorited state
 }
 
 // -- Props --------------------------------------------------------------------
 
 interface FavoriteButtonProps {
-  /** MLS listing key (unique identifier for the property) */
   listingKey: string;
-  /** Snapshot of listing data (not used for localStorage, kept for Supabase compat) */
   listingData: {
     address?: string;
     city?: string;
@@ -53,7 +45,6 @@ interface FavoriteButtonProps {
     sqft?: number;
     photo?: string;
   };
-  /** "sm" for listing cards (20px, absolute-positioned), "lg" for detail pages (28px) */
   size?: "sm" | "lg";
 }
 
@@ -61,39 +52,83 @@ interface FavoriteButtonProps {
 
 export default function FavoriteButton({
   listingKey,
+  listingData,
   size = "sm",
 }: FavoriteButtonProps) {
   const [isFavorited, setIsFavorited] = useState(false);
   const [animate, setAnimate] = useState(false);
 
-  // Check localStorage on mount to see if this listing is already favorited
+  // Check localStorage + Supabase on mount
   useEffect(() => {
-    setIsFavorited(getLocalFavorites().includes(listingKey));
+    // Always check localStorage first (instant)
+    const localFav = getLocalFavorites().includes(listingKey);
+    setIsFavorited(localFav);
+
+    // Also check Supabase if configured
+    const supabase = createClient();
+    if (!supabase) return;
+
+    (async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) return;
+
+      const { data } = await supabase
+        .from("favorites")
+        .select("id")
+        .eq("user_id", user.id)
+        .eq("listing_key", listingKey)
+        .single();
+
+      if (data && !localFav) {
+        // Synced from Supabase — also save to localStorage
+        toggleLocalFavorite(listingKey);
+        setIsFavorited(true);
+      }
+    })();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [listingKey]);
 
-  // Toggle favorite — saves to localStorage immediately
+  // Toggle handler
   const handleToggle = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
+    async (e: React.MouseEvent<HTMLButtonElement>) => {
       e.preventDefault();
       e.stopPropagation();
 
-      const newFavorited = !isFavorited;
+      // Toggle localStorage (always works)
+      const newFavorited = toggleLocalFavorite(listingKey);
       setIsFavorited(newFavorited);
       setAnimate(true);
       setTimeout(() => setAnimate(false), 300);
 
-      // Persist to localStorage
-      if (newFavorited) {
-        addLocalFavorite(listingKey);
-      } else {
-        removeLocalFavorite(listingKey);
+      // Sync to Supabase if configured + logged in
+      const supabase = createClient();
+      if (!supabase) return;
+
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        if (!user) return;
+
+        if (newFavorited) {
+          await supabase.from("favorites").insert({
+            user_id: user.id,
+            listing_key: listingKey,
+            listing_data: listingData,
+          });
+        } else {
+          await supabase
+            .from("favorites")
+            .delete()
+            .eq("user_id", user.id)
+            .eq("listing_key", listingKey);
+        }
+      } catch {
+        // DB sync failed — localStorage still has the favorite, no big deal
       }
     },
-    [isFavorited, listingKey]
+    [listingKey, listingData]
   );
 
   const iconSize = size === "sm" ? 20 : 28;
-
   const buttonClasses =
     size === "sm"
       ? "absolute top-2 right-2 z-10 bg-white/80 backdrop-blur-sm rounded-full p-2 shadow-sm hover:bg-white/95 transition-colors"
