@@ -4,6 +4,7 @@
 // Redirects to /login if not authenticated
 // =============================================================================
 
+import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import SignOutButton from "@/components/ui/SignOutButton";
@@ -41,13 +42,14 @@ interface SavedSearch {
 
 interface Favorite {
   id: string;
-  listing_id: string;
+  listing_key: string;
   listing_data: {
     address?: string;
     price?: number;
     beds?: number;
     baths?: number;
     sqft?: number;
+    photo?: string;
     photo_url?: string;
     city?: string;
     status?: string;
@@ -188,17 +190,22 @@ export default async function AccountPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {favorites.map((fav) => {
                 const listing = fav.listing_data || {};
+                // Photo field: FavoriteButton saves as "photo", old data may use "photo_url"
+                const photoUrl = listing.photo || listing.photo_url;
                 return (
-                  <div key={fav.id} className="card overflow-hidden">
+                  <Link
+                    key={fav.id}
+                    href={`/properties/${fav.listing_key}`}
+                    className="card overflow-hidden group hover:shadow-lg transition-shadow"
+                  >
                     {/* Listing photo */}
-                    {listing.photo_url ? (
-                      <div className="aspect-[4/3] bg-neutral-100">
-                        {/* Using img here since listing photos are external MLS URLs */}
+                    {photoUrl ? (
+                      <div className="aspect-[4/3] bg-neutral-100 overflow-hidden">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                          src={listing.photo_url}
+                          src={photoUrl}
                           alt={listing.address || "Listing photo"}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                       </div>
                     ) : (
@@ -211,14 +218,11 @@ export default async function AccountPage() {
 
                     {/* Listing details */}
                     <div className="p-4">
-                      {/* Price */}
                       {listing.price && (
                         <p className="font-heading font-semibold text-lg">
                           ${listing.price.toLocaleString()}
                         </p>
                       )}
-
-                      {/* Beds / Baths / Sqft */}
                       <p className="text-neutral-500 text-sm mt-1">
                         {[
                           listing.beds && `${listing.beds} bed`,
@@ -229,23 +233,17 @@ export default async function AccountPage() {
                           .filter(Boolean)
                           .join(" · ") || "Details unavailable"}
                       </p>
-
-                      {/* Address + City */}
                       {listing.address && (
                         <p className="text-neutral-600 text-sm mt-1">
                           {listing.address}
                           {listing.city ? `, ${listing.city}` : ""}
                         </p>
                       )}
-
-                      {/* Status badge */}
-                      {listing.status && (
-                        <span className="inline-block mt-2 text-xs uppercase tracking-wide text-neutral-400">
-                          {listing.status}
-                        </span>
-                      )}
+                      <p className="text-accent text-xs mt-2 font-medium group-hover:underline">
+                        View Listing →
+                      </p>
                     </div>
-                  </div>
+                  </Link>
                 );
               })}
             </div>

@@ -10,6 +10,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { createClient } from "@/lib/supabase/client";
 import MobileNav from "@/components/layout/MobileNav";
 
 // Desktop navigation links
@@ -28,12 +29,22 @@ const LIGHT_BG_PATTERNS = ["/properties/"];
 export default function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // Does this page have a light background behind the header? (no dark hero)
   const hasLightBg = LIGHT_BG_PATTERNS.some((p) => pathname.startsWith(p));
 
   // When the page has a light bg, always use dark text (same as scrolled style)
   const useDarkText = scrolled || hasLightBg;
+
+  // Check auth state
+  useEffect(() => {
+    const supabase = createClient();
+    if (!supabase) return;
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      setIsLoggedIn(!!user);
+    });
+  }, [pathname]);
 
   // Track scroll position to toggle between transparent and solid backgrounds
   useEffect(() => {
@@ -115,17 +126,17 @@ export default function Header() {
             >
               (813) 733-7907
             </a>
-            {/* Only show Sign In link when Supabase is configured */}
+            {/* Auth link — shows "Account" when logged in, "Sign In" when not */}
             {process.env.NEXT_PUBLIC_SUPABASE_URL && (
               <Link
-                href="/login"
+                href={isLoggedIn ? "/account" : "/login"}
                 className={`
                   font-body text-xs tracking-[0.15em] uppercase
                   transition-colors duration-500
                   ${useDarkText ? "text-primary/50 hover:text-primary" : "text-white/50 hover:text-white"}
                 `}
               >
-                Sign In
+                {isLoggedIn ? "Account" : "Sign In"}
               </Link>
             )}
           </div>
