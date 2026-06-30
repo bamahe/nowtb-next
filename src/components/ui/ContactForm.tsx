@@ -105,13 +105,34 @@ export default function ContactForm({
         <h3 className="heading-section text-xl text-primary mb-6">{title}</h3>
       )}
 
-      {/* --- Success Message --- */}
-      {status === "success" && (
-        <div className="rounded-lg bg-green-50 border border-green-200 p-4 mb-6 text-green-800 font-body text-sm">
-          Thanks for reaching out! We&apos;ll get back to you shortly.
+      {/* --- Success Message — replaces the form after submission --- */}
+      {status === "success" ? (
+        <div className="text-center py-8">
+          <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
+            <svg className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <h3 className="font-heading text-xl text-primary mb-2">Message Sent!</h3>
+          <p className="font-body text-muted text-sm mb-2">
+            Thanks for reaching out! Barrett will get back to you within 2 hours.
+          </p>
+          <p className="font-body text-muted text-xs mb-6">
+            Need a faster response? Call{" "}
+            <a href="tel:+18137337907" className="text-accent hover:underline font-medium">
+              (813) 733-7907
+            </a>
+          </p>
+          <button
+            type="button"
+            onClick={() => setStatus("idle")}
+            className="font-body text-xs text-accent hover:text-primary underline transition-colors"
+          >
+            Send another message
+          </button>
         </div>
-      )}
-
+      ) : (
+      <>
       {/* --- Error Message --- */}
       {status === "error" && errorMessage && (
         <div className="rounded-lg bg-red-50 border border-red-200 p-4 mb-6 text-red-800 font-body text-sm">
@@ -214,6 +235,8 @@ export default function ContactForm({
           {status === "loading" ? "Sending..." : submitLabel}
         </button>
       </form>
+      </>
+      )}
     </div>
   );
 }

@@ -31,7 +31,7 @@ export default function LendersPage() {
             deliver competitive rates, fast closings, and excellent communication.
           </p>
           <p>
-            Contact Barrett at <a href="tel:8137337907">(813) 733-7907</a> for a
+            Contact Barrett at <a href="tel:+18137337907">(813) 733-7907</a> for a
             personalized lender referral based on your specific situation — whether
             you need conventional, FHA, VA, USDA, or specialty financing.
           </p>

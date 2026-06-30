@@ -3,6 +3,8 @@ import { Playfair_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import MobileBottomBar from "@/components/ui/MobileBottomBar";
+import BackToTop from "@/components/ui/BackToTop";
 import FubPixel from "@/components/tracking/FubPixel";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -73,8 +75,13 @@ export default function RootLayout({
           Skip to main content
         </a>
         <Header />
-        <main id="main-content" className="min-h-screen">{children}</main>
+        {/* pb-16 md:pb-0 adds bottom padding on mobile so sticky MobileBottomBar doesn't cover content */}
+        <main id="main-content" className="min-h-screen pb-16 md:pb-0">{children}</main>
         <Footer />
+        {/* Mobile sticky bottom bar — Call + Contact buttons, iPhone safe-area aware */}
+        <MobileBottomBar />
+        {/* Floating back-to-top button — appears after scrolling 400px */}
+        <BackToTop />
         {/* FUB tracking pixel — tracks page views across the site
             so you can see which listings leads browsed in Follow Up Boss */}
         <FubPixel />

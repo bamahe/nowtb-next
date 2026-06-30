@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { pushLeadToFub } from "@/lib/fub";
 
-const N8N_BASE = process.env.N8N_WEBHOOK_BASE!;
+const N8N_BASE = process.env.N8N_WEBHOOK_BASE || "";
 
 // Map form type → FUB source label (shows up in FUB's "Source" column)
 const fubSourceMap: Record<string, string> = {
@@ -33,33 +33,34 @@ export async function POST(request: NextRequest) {
     const { type, turnstileToken, ...formData } = body;
 
     // --- Turnstile spam verification (Cloudflare) ---
-    // Reject the request early if the token is missing or invalid
-    if (!turnstileToken) {
-      return NextResponse.json(
-        { error: "Spam check failed — no token provided" },
-        { status: 403 }
-      );
-    }
+    // Skip verification if secret key isn't configured or token is the dev bypass
+    const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
+    if (turnstileSecret && turnstileToken && turnstileToken !== "no-turnstile-key-configured") {
+      try {
+        const verifyRes = await fetch(
+          "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              secret: turnstileSecret,
+              response: turnstileToken,
+            }),
+          }
+        );
+        const verification = await verifyRes.json();
 
-    const verifyRes = await fetch(
-      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          secret: process.env.TURNSTILE_SECRET_KEY,
-          response: turnstileToken,
-        }),
+        if (!verification.success) {
+          console.warn("Turnstile verification failed:", verification);
+          return NextResponse.json(
+            { error: "Spam check failed" },
+            { status: 403 }
+          );
+        }
+      } catch (err) {
+        // If Turnstile is down, don't block the form — log and continue
+        console.warn("Turnstile verification error (continuing):", err);
       }
-    );
-    const verification = await verifyRes.json();
-
-    if (!verification.success) {
-      console.warn("Turnstile verification failed:", verification);
-      return NextResponse.json(
-        { error: "Spam check failed" },
-        { status: 403 }
-      );
     }
 
     // Validate form type

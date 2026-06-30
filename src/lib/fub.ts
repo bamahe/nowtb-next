@@ -3,7 +3,7 @@
 // NEVER import this in client components — uses server-only API key
 // =============================================================================
 
-const FUB_API_KEY = process.env.FUB_API_KEY!;
+const FUB_API_KEY = process.env.FUB_API_KEY || "";
 const FUB_BASE = "https://api.followupboss.com/v1";
 
 /**

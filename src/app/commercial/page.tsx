@@ -29,7 +29,7 @@ export default function CommercialPage() {
             multi-family investment opportunities across the Tampa Bay area.
           </p>
           <p>
-            Contact Barrett at <a href="tel:8137337907">(813) 733-7907</a> to discuss
+            Contact Barrett at <a href="tel:+18137337907">(813) 733-7907</a> to discuss
             your commercial real estate needs.
           </p>
         </div>

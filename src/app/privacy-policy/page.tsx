@@ -59,7 +59,7 @@ export default function PrivacyPolicyPage() {
           <a href="mailto:barrett@nowtb.com" className="text-accent">
             barrett@nowtb.com
           </a>{" "}
-          or call <a href="tel:8137337907" className="text-accent">(813) 733-7907</a>.
+          or call <a href="tel:+18137337907" className="text-accent">(813) 733-7907</a>.
         </p>
       </div>
     </section>

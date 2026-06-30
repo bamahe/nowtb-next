@@ -30,7 +30,7 @@ export default function InspectorsPage() {
             homes — including common issues like roofing, moisture, and foundation concerns.
           </p>
           <p>
-            Contact Barrett at <a href="tel:8137337907">(813) 733-7907</a> for a
+            Contact Barrett at <a href="tel:+18137337907">(813) 733-7907</a> for a
             personalized inspector recommendation.
           </p>
           <h2>Related Guides</h2>

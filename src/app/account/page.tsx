@@ -136,34 +136,68 @@ export default async function AccountPage() {
           ) : (
             /* --- Saved search list --- */
             <div className="grid gap-4">
-              {savedSearches.map((search) => (
-                <div
-                  key={search.id}
-                  className="card p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
-                >
-                  <div>
-                    {/* Search name */}
-                    <h3 className="font-heading font-semibold text-lg">
-                      {search.name}
-                    </h3>
+              {savedSearches.map((search) => {
+                /* Build a URL that re-runs this saved search on /properties */
+                const filterParams = new URLSearchParams(
+                  Object.entries(search.filters || {})
+                    .filter(([, v]) => v != null && v !== "")
+                    .map(([k, v]) => [k, String(v)])
+                ).toString();
+                const runHref = filterParams
+                  ? `/properties?${filterParams}`
+                  : "/properties";
 
-                    {/* Filters summary — show key/value pairs from the JSON */}
-                    <p className="text-neutral-500 text-sm mt-1">
-                      {Object.entries(search.filters || {})
-                        .map(
-                          ([key, val]) =>
-                            `${key.replace(/_/g, " ")}: ${val}`
-                        )
-                        .join(" · ") || "All listings"}
-                    </p>
+                return (
+                  <div
+                    key={search.id}
+                    className="card p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
+                  >
+                    <div>
+                      {/* Search name */}
+                      <h3 className="font-heading font-semibold text-lg">
+                        {search.name}
+                      </h3>
+
+                      {/* Filters summary — show key/value pairs from the JSON */}
+                      <p className="text-neutral-500 text-sm mt-1">
+                        {Object.entries(search.filters || {})
+                          .map(
+                            ([key, val]) =>
+                              `${key.replace(/_/g, " ")}: ${val}`
+                          )
+                          .join(" · ") || "All listings"}
+                      </p>
+                    </div>
+
+                    {/* Actions — run search + delete + frequency badge */}
+                    <div className="flex items-center gap-3 shrink-0">
+                      {/* Run Search — re-opens /properties with saved filters */}
+                      <Link
+                        href={runHref}
+                        className="text-xs font-body font-medium tracking-wide text-accent hover:text-primary border border-accent hover:border-primary px-3 py-1.5 transition-colors duration-200"
+                      >
+                        Run Search
+                      </Link>
+
+                      {/* Delete — form-based so it works without JS hydration */}
+                      <form action={`/api/saved-searches/${search.id}/delete`} method="POST">
+                        <button
+                          type="submit"
+                          className="text-xs font-body font-medium tracking-wide text-red-400 hover:text-red-600 border border-red-300 hover:border-red-500 px-3 py-1.5 transition-colors duration-200"
+                          title="Delete this saved search"
+                        >
+                          Delete
+                        </button>
+                      </form>
+
+                      {/* Frequency badge */}
+                      <span className="text-xs text-neutral-400 uppercase tracking-wide">
+                        {search.frequency || "Instant"}
+                      </span>
+                    </div>
                   </div>
-
-                  {/* Frequency badge */}
-                  <span className="text-xs text-neutral-400 uppercase tracking-wide shrink-0">
-                    {search.frequency || "Instant"}
-                  </span>
-                </div>
-              ))}
+                );
+              })}
             </div>
           )}
         </div>

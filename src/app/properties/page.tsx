@@ -225,19 +225,33 @@ export default async function PropertiesPage({
       {listings.length > 0 ? (
         <ListingGrid listings={listings} />
       ) : (
-        /* Empty state — minimal luxury styling */
+        /* Empty state — helpful suggestions to broaden the search */
         <section className="container-wide py-24 md:py-32 text-center">
           <p className="heading-label mb-6">No Results</p>
           <h2 className="heading-section text-xl text-primary mb-4">
-            No Listings Found
+            No Listings Match Your Search
           </h2>
           <div className="section-divider" />
-          <p className="font-body text-muted font-light mb-10">
-            Try adjusting your search criteria or browse all available properties.
+          <p className="font-body text-muted font-light mb-4 max-w-lg mx-auto">
+            Try broadening your search by adjusting your filters:
           </p>
-          <Link href="/properties" className="btn-primary">
-            View All Listings
-          </Link>
+          <ul className="font-body text-muted font-light text-sm mb-10 space-y-1 max-w-md mx-auto">
+            <li>Expand the price range or remove the price filter</li>
+            <li>Reduce the minimum bedrooms or bathrooms</li>
+            <li>Try a different city or remove the location filter</li>
+            <li>Turn off feature filters like pool or waterfront</li>
+          </ul>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link href="/properties" className="btn-primary">
+              View All Listings
+            </Link>
+            <a
+              href="tel:+18137337907"
+              className="font-body text-sm text-accent hover:text-primary transition-colors"
+            >
+              Or call Barrett at (813) 733-7907
+            </a>
+          </div>
         </section>
       )}
 

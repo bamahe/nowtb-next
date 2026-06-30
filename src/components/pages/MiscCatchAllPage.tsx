@@ -32,7 +32,7 @@ export default function MiscCatchAllPage({ page }: MiscCatchAllPageProps) {
           </p>
           <p>
             Contact Barrett directly at{" "}
-            <a href="tel:8137337907">(813) 733-7907</a> or{" "}
+            <a href="tel:+18137337907">(813) 733-7907</a> or{" "}
             <a href="mailto:barrett@nowtb.com">barrett@nowtb.com</a> for
             personalized assistance.
           </p>

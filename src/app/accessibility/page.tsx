@@ -49,7 +49,7 @@ export default function AccessibilityPage() {
           </li>
           <li>
             Phone:{" "}
-            <a href="tel:8137337907" className="text-accent">
+            <a href="tel:+18137337907" className="text-accent">
               (813) 733-7907
             </a>
           </li>
