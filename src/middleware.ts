@@ -44,9 +44,10 @@ export async function middleware(request: NextRequest) {
   return supabaseResponse;
 }
 
-// Run middleware on all routes except static files and images
+// Run middleware on all routes except static files, images, and auth callback
+// Auth callback MUST be excluded — middleware intercepts the OAuth code exchange
 export const config = {
   matcher: [
-    "/((?!_next/static|_next/image|favicon.ico|images/|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
+    "/((?!_next/static|_next/image|favicon.ico|images/|auth/callback|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
   ],
 };
