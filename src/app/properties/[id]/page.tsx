@@ -9,6 +9,7 @@ import { Bed, Bath, Ruler, Calendar, LandPlot, Car } from "lucide-react";
 
 import ContactForm from "@/components/ui/ContactForm";
 import FavoriteButton from "@/components/ui/FavoriteButton";
+import MiniCalc from "@/components/ui/MiniCalc";
 import PhotoGallery from "@/components/ui/PhotoGallery";
 import ShareButtons from "@/components/ui/ShareButtons";
 import { getListing } from "@/lib/bridge";
@@ -508,6 +509,9 @@ export default async function ListingDetailPage({
           </p>
         </div>
       </section>
+
+      {/* === Floating mortgage calculator — pre-filled with listing price === */}
+      <MiniCalc listingPrice={listing.ListPrice} />
     </>
   );
 }
