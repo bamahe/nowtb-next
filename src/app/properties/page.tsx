@@ -11,6 +11,7 @@ import { Suspense } from "react";
 import HeroSection from "@/components/ui/HeroSection";
 import SearchBar from "@/components/ui/SearchBar";
 import PropertyFilters from "@/components/ui/PropertyFilters";
+import SaveSearchButton from "@/components/ui/SaveSearchButton";
 import ListingGrid from "@/components/ui/ListingGrid";
 import { getListings } from "@/lib/bridge";
 import type { ListingSearchParams } from "@/lib/types";
@@ -203,13 +204,18 @@ export default async function PropertiesPage({
         <PropertyFilters />
       </Suspense>
 
-      {/* Filter summary + count */}
+      {/* Filter summary + count + save search */}
       <div className="container-wide py-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between flex-wrap gap-3">
           <p className="font-body text-muted text-xs font-light tracking-wide">{filterSummary}</p>
-          <p className="font-body text-muted text-xs font-light tracking-wide">
-            {total.toLocaleString()} {total === 1 ? "listing" : "listings"}
-          </p>
+          <div className="flex items-center gap-4">
+            <Suspense fallback={null}>
+              <SaveSearchButton />
+            </Suspense>
+            <p className="font-body text-muted text-xs font-light tracking-wide">
+              {total.toLocaleString()} {total === 1 ? "listing" : "listings"}
+            </p>
+          </div>
         </div>
       </div>
 
