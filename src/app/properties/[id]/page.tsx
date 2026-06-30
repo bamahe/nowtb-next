@@ -11,6 +11,7 @@ import ContactForm from "@/components/ui/ContactForm";
 import FavoriteButton from "@/components/ui/FavoriteButton";
 import MiniCalc from "@/components/ui/MiniCalc";
 import PhotoGallery from "@/components/ui/PhotoGallery";
+import RecentlyViewedTracker from "@/components/ui/RecentlyViewedTracker";
 import ShareButtons from "@/components/ui/ShareButtons";
 import { getListing } from "@/lib/bridge";
 import { formatPrice, formatSqFt } from "@/lib/utils";
@@ -135,6 +136,18 @@ export default async function ListingDetailPage({
 
   return (
     <>
+      {/* === Recently Viewed Tracker — saves this listing to localStorage === */}
+      <RecentlyViewedTracker
+        listingKey={listing.ListingKey}
+        address={listing.UnparsedAddress}
+        city={listing.City}
+        price={listing.ListPrice}
+        beds={listing.BedroomsTotal}
+        baths={listing.BathroomsTotalInteger}
+        sqft={listing.LivingArea}
+        photo={listing.Media?.[0]?.MediaURL}
+      />
+
       {/* === JSON-LD: RealEstateListing structured data === */}
       <script
         type="application/ld+json"
