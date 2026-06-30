@@ -509,13 +509,19 @@ export default async function CityPage({
 // =============================================================================
 
 async function HubPage({ city }: { city: CityData }) {
-  // Fetch listings by ZIP codes (city names often don't match MLS)
+  // Fetch active + recently sold listings by ZIP codes
   let listings: import("@/lib/types").Listing[] = [];
+  let soldListings: import("@/lib/types").Listing[] = [];
   try {
-    const res = await getListings({ zip_codes: city.zip_codes, limit: "24" });
-    listings = res.value || [];
+    const [activeRes, soldRes] = await Promise.all([
+      getListings({ zip_codes: city.zip_codes, limit: "24" }),
+      getListings({ zip_codes: city.zip_codes, limit: "8", status: "Closed", sort: "ClosePrice desc" }),
+    ]);
+    listings = activeRes.value || [];
+    soldListings = soldRes.value || [];
   } catch {
     listings = [];
+    soldListings = [];
   }
 
   // Get neighboring cities (same county, excluding current)
@@ -607,6 +613,110 @@ async function HubPage({ city }: { city: CityData }) {
 
       {/* === About section — city overview content === */}
       <CityContent city={city} />
+
+      {/* === Recently Sold Homes — real closed listings from MLS === */}
+      {soldListings.length > 0 && (
+        <ListingGrid
+          listings={soldListings}
+          title={`Recently Sold Homes in ${city.name}`}
+          subtitle={`See what homes recently sold for in ${city.name} to understand current market values.`}
+        />
+      )}
+
+      {/* === FAQ Section — city-specific with FAQPage schema === */}
+      <section className="container-wide py-12">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: `What is the average home price in ${city.name}, FL?`,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: `Home prices in ${city.name} vary by neighborhood, property type, and condition. Browse current active listings above for the most up-to-date pricing. Contact Barrett Henry at (813) 733-7907 for a personalized market analysis.`,
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: `Is ${city.name} a good place to live?`,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: `${city.name} is located in ${city.county} County, Florida. ${city.tagline}. With access to Tampa Bay's job market, beaches, and amenities, ${city.name} is a popular choice for families, retirees, and investors.`,
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: `How do I buy a home in ${city.name}?`,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: `Start by getting pre-approved for a mortgage, then work with a local REALTOR who knows the ${city.name} market. Barrett Henry and The NOW Team have 23+ years of experience helping buyers in ${city.county} County. Call (813) 733-7907 to get started.`,
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: `What ZIP codes are in ${city.name}?`,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: `${city.name} covers ZIP codes ${city.zip_codes.join(", ")}. Each ZIP code may include different neighborhoods and school zones.`,
+                  },
+                },
+              ],
+            }),
+          }}
+        />
+        <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-8">
+          Frequently Asked Questions About {city.name}
+        </h2>
+        <div className="space-y-6">
+          <div className="border-b border-gray-100 pb-6">
+            <h3 className="font-heading font-bold text-lg text-primary mb-2">
+              What is the average home price in {city.name}, FL?
+            </h3>
+            <p className="font-body text-muted font-light leading-relaxed">
+              Home prices in {city.name} vary by neighborhood, property type, and condition.
+              Browse current active listings above for the most up-to-date pricing.
+              Contact Barrett Henry at{" "}
+              <a href="tel:+18137337907" className="text-accent hover:underline">(813) 733-7907</a>{" "}
+              for a personalized market analysis.
+            </p>
+          </div>
+          <div className="border-b border-gray-100 pb-6">
+            <h3 className="font-heading font-bold text-lg text-primary mb-2">
+              Is {city.name} a good place to live?
+            </h3>
+            <p className="font-body text-muted font-light leading-relaxed">
+              {city.name} is located in {city.county} County, Florida. {city.tagline}.
+              With access to Tampa Bay&apos;s job market, beaches, and amenities,{" "}
+              {city.name} is a popular choice for families, retirees, and investors.
+            </p>
+          </div>
+          <div className="border-b border-gray-100 pb-6">
+            <h3 className="font-heading font-bold text-lg text-primary mb-2">
+              How do I buy a home in {city.name}?
+            </h3>
+            <p className="font-body text-muted font-light leading-relaxed">
+              Start by getting pre-approved for a mortgage, then work with a local REALTOR®
+              who knows the {city.name} market. Barrett Henry and The NOW Team have 23+ years
+              of experience helping buyers in {city.county} County. Call{" "}
+              <a href="tel:+18137337907" className="text-accent hover:underline">(813) 733-7907</a>{" "}
+              to get started.
+            </p>
+          </div>
+          <div className="pb-6">
+            <h3 className="font-heading font-bold text-lg text-primary mb-2">
+              What ZIP codes are in {city.name}?
+            </h3>
+            <p className="font-body text-muted font-light leading-relaxed">
+              {city.name} covers ZIP codes {city.zip_codes.join(", ")}.
+              Each ZIP code may include different neighborhoods and school zones.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* === Neighboring cities === */}
       {neighbors.length > 0 && (
