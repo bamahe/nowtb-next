@@ -20,6 +20,27 @@ function getBlogRedirects() {
   }
 }
 
+// Guide slugs — WordPress served at /slug/ but new site uses /guides/slug
+// Parse guide slugs from the TS data file at build time
+function getGuideRedirects() {
+  try {
+    const filePath = path.join(process.cwd(), 'src/data/guides.ts');
+    const content = fs.readFileSync(filePath, 'utf-8');
+    const slugMatches = content.match(/slug:\s*"([^"]+)"/g) || [];
+    return slugMatches
+      .map((m) => m.match(/"([^"]+)"/)?.[1])
+      .filter(Boolean)
+      .map((slug) => ({
+        source: `/${slug}`,
+        destination: `/guides/${slug}`,
+        permanent: true,
+      }));
+  } catch {
+    console.warn('Could not load guides for redirects');
+    return [];
+  }
+}
+
 const nextConfig = {
   // Don't expose "X-Powered-By: Next.js" header
   poweredByHeader: false,
@@ -71,6 +92,10 @@ const nextConfig = {
       { source: "/wp-content/:slug*", destination: "/", permanent: false },
       { source: "/tampa-bay-area-homes-for-sale", destination: "/properties", permanent: true },
       { source: "/tampa-bay-area-homes-for-sale/:slug*", destination: "/properties", permanent: true },
+
+      // ── Guide pages: /slug → /guides/slug (51 individual redirects) ──
+      // WordPress served guides at root, new site nests under /guides/
+      ...getGuideRedirects(),
 
       // ── Blog posts: /slug → /blog/slug (624 individual redirects) ──
       // WordPress served posts at root, new site nests under /blog/
