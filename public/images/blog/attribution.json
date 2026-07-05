@@ -1222,5 +1222,77 @@
     "photographer_url": "https://unsplash.com/@ubeyonroad",
     "unsplash_url": "https://unsplash.com/photos/modern-house-with-manicured-hedges-and-gate-4b25Ic2VjiQ",
     "alt": "Real estate in Temple Terrace: Builders FL"
+  },
+  {
+    "slug": "luxury-homes-seminole-guide",
+    "unsplash_id": "LZi4eWdQncI",
+    "photographer": "Maria Lysenko",
+    "photographer_url": "https://unsplash.com/@manunalys",
+    "unsplash_url": "https://unsplash.com/photos/green-banana-tree-during-daytime-LZi4eWdQncI",
+    "alt": "Luxury home in Seminole: What Your Money Gets You FL"
+  },
+  {
+    "slug": "waterfront-homes-clearwater-guide",
+    "unsplash_id": "cx1d-rvfSeY",
+    "photographer": "Hilda Trinidad",
+    "photographer_url": "https://unsplash.com/@htrinidad",
+    "unsplash_url": "https://unsplash.com/photos/white-wooden-bird-house-near-green-trees-during-daytime-cx1d-rvfSeY",
+    "alt": "Waterfront property in Clearwater: Pricing FL"
+  },
+  {
+    "slug": "luxury-homes-clearwater-guide",
+    "unsplash_id": "XlFBK9AQcmg",
+    "photographer": "Patrick Konior",
+    "photographer_url": "https://unsplash.com/@patrickkonior",
+    "unsplash_url": "https://unsplash.com/photos/a-black-and-white-photo-of-the-sun-setting-over-the-ocean-XlFBK9AQcmg",
+    "alt": "Luxury home in Clearwater: What Your Money Gets You FL"
+  },
+  {
+    "slug": "new-construction-st-petersburg-guide",
+    "unsplash_id": "L3hyEbDk194",
+    "photographer": "Aniston Grace",
+    "photographer_url": "https://unsplash.com/@anistongrace",
+    "unsplash_url": "https://unsplash.com/photos/yellow-and-red-flower-garden-L3hyEbDk194",
+    "alt": "Real estate in St Petersburg: Builders FL"
+  },
+  {
+    "slug": "waterfront-homes-thonotosassa-guide",
+    "unsplash_id": "0KYw9Q2mX0Y",
+    "photographer": "Marcus Urbenz",
+    "photographer_url": "https://unsplash.com/@marcusurbenz",
+    "unsplash_url": "https://unsplash.com/photos/white-wooden-dock-on-body-of-water-during-daytime-0KYw9Q2mX0Y",
+    "alt": "Waterfront property in Thonotosassa: Pricing FL"
+  },
+  {
+    "slug": "guide-to-living-in-gibsonton-fl",
+    "unsplash_id": "_m-rXiCdUEI",
+    "photographer": "Anton Mishin",
+    "photographer_url": "https://unsplash.com/@anton_mishin",
+    "unsplash_url": "https://unsplash.com/photos/blue-and-white-house-at-daytime-_m-rXiCdUEI",
+    "alt": "Real estate in Gibsonton FL"
+  },
+  {
+    "slug": "waterfront-homes-wimauma-guide",
+    "unsplash_id": "-NNk2EV2RLk",
+    "photographer": "Ken Cheung",
+    "photographer_url": "https://unsplash.com/@kencheungphoto",
+    "unsplash_url": "https://unsplash.com/photos/white-wooden-house-on-beach-during-sunset--NNk2EV2RLk",
+    "alt": "Waterfront property in Wimauma: Pricing FL"
+  },
+  {
+    "slug": "new-construction-wimauma-guide",
+    "unsplash_id": "hfFvVm2BSp0",
+    "photographer": "Zoshua Colah",
+    "photographer_url": "https://unsplash.com/@zoshuacolah",
+    "unsplash_url": "https://unsplash.com/photos/cars-parked-along-a-sunny-street-lined-with-palm-trees-hfFvVm2BSp0",
+    "alt": "Real estate in Wimauma: Builders FL"
+  },
+  {
+    "slug": "waterfront-homes-westchase-guide",
+    "unsplash_id": "KXM26LCjZrI",
+    "photographer": "Mitchell Luo",
+    "photographer_url": "https://unsplash.com/@mitchel3uo",
+    "unsplash_url": "https://unsplash.com/photos/white-and-brown-concrete-building-KXM26LCjZrI",
+    "alt": "Waterfront property in Westchase: Pricing FL"
   }
 ]
