@@ -382,6 +382,15 @@ export default function AccountDashboard({
       {/* ================================================================= */}
       <section className="bg-white py-12">
         <div className="container-wide">
+          {/* Back to site link */}
+          <div className="mb-6">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 font-body text-xs tracking-[0.15em] uppercase text-accent hover:text-primary transition-colors"
+            >
+              <Home size={14} /> Back to Site
+            </Link>
+          </div>
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
               <h1 className="heading-section font-heading text-2xl md:text-3xl">
@@ -389,7 +398,15 @@ export default function AccountDashboard({
               </h1>
               <p className="text-muted text-sm mt-1">{email}</p>
             </div>
-            {signOutButton}
+            <div className="flex items-center gap-3">
+              <Link
+                href="/properties/"
+                className="font-body text-xs tracking-[0.15em] uppercase px-4 py-2 border border-accent text-accent hover:bg-accent hover:text-primary transition-all duration-300"
+              >
+                Search Homes
+              </Link>
+              {signOutButton}
+            </div>
           </div>
         </div>
       </section>
