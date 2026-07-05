@@ -19,7 +19,7 @@ import HeroSection from "@/components/ui/HeroSection";
 import ListingGrid from "@/components/ui/ListingGrid";
 import SpokeNav from "@/components/city/SpokeNav";
 import CityContent from "@/components/city/CityContent";
-import { cleanWpContent } from "@/lib/utils";
+import { cleanWpContent, formatPrice } from "@/lib/utils";
 import CountyPage from "@/components/pages/CountyPage";
 import RealtorPage from "@/components/pages/RealtorPage";
 import NeighborhoodPage from "@/components/pages/NeighborhoodPage";
