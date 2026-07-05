@@ -438,5 +438,93 @@
     "photographer_url": "https://unsplash.com/@bettysubrizi_",
     "unsplash_url": "https://unsplash.com/photos/people-on-beach-during-daytime-rW2pJmaag14",
     "alt": "Waterfront property in Dade City: Pricing FL"
+  },
+  {
+    "slug": "new-construction-dade-city-guide",
+    "unsplash_id": "HFIpbJUFDJI",
+    "photographer": "Eric Ardito",
+    "photographer_url": "https://unsplash.com/@ericardito",
+    "unsplash_url": "https://unsplash.com/photos/a-two-story-house-with-a-balcony-and-balconies-HFIpbJUFDJI",
+    "alt": "Real estate in Dade City: Builders FL"
+  },
+  {
+    "slug": "luxury-homes-dade-city-guide",
+    "unsplash_id": "kF3KNcoXQXY",
+    "photographer": "Brian Zajac",
+    "photographer_url": "https://unsplash.com/@brianzajac",
+    "unsplash_url": "https://unsplash.com/photos/modern-white-kitchen-with-marble-island-and-dining-area-kF3KNcoXQXY",
+    "alt": "Luxury home in Dade City: What Your Money Gets You FL"
+  },
+  {
+    "slug": "waterfront-homes-zephyrhills-guide",
+    "unsplash_id": "Mq0_1GEKxUc",
+    "photographer": "Julien Maculan",
+    "photographer_url": "https://unsplash.com/@maculan",
+    "unsplash_url": "https://unsplash.com/photos/white-and-yellow-wooden-house-near-green-trees-during-daytime-Mq0_1GEKxUc",
+    "alt": "Waterfront property in Zephyrhills: Pricing FL"
+  },
+  {
+    "slug": "new-construction-zephyrhills-guide",
+    "unsplash_id": "SHb20XQreeg",
+    "photographer": "Brian Zajac",
+    "photographer_url": "https://unsplash.com/@brianzajac",
+    "unsplash_url": "https://unsplash.com/photos/a-row-of-white-houses-sitting-next-to-a-lush-green-park-SHb20XQreeg",
+    "alt": "Real estate in Zephyrhills: Builders FL"
+  },
+  {
+    "slug": "waterfront-homes-port-richey-guide",
+    "unsplash_id": "CJ5sQWazN-g",
+    "photographer": "Laurent B",
+    "photographer_url": "https://unsplash.com/@wafflespice",
+    "unsplash_url": "https://unsplash.com/photos/a-bunch-of-boats-that-are-sitting-in-the-water-CJ5sQWazN-g",
+    "alt": "Waterfront property in Port Richey: Pricing FL"
+  },
+  {
+    "slug": "new-construction-port-richey-guide",
+    "unsplash_id": "KYpBCjYlcTg",
+    "photographer": "Jeffrey Eisen",
+    "photographer_url": "https://unsplash.com/@jeisen",
+    "unsplash_url": "https://unsplash.com/photos/waterfront-houses-reflect-beautifully-in-the-water-KYpBCjYlcTg",
+    "alt": "Real estate in Port Richey: Builders FL"
+  },
+  {
+    "slug": "luxury-homes-port-richey-guide",
+    "unsplash_id": "n8wF-38dASg",
+    "photographer": "Brian Zajac",
+    "photographer_url": "https://unsplash.com/@brianzajac",
+    "unsplash_url": "https://unsplash.com/photos/a-kitchen-with-a-marble-counter-top-and-white-cabinets-n8wF-38dASg",
+    "alt": "Luxury home in Port Richey: What Your Money Gets You FL"
+  },
+  {
+    "slug": "waterfront-homes-new-port-richey-guide",
+    "unsplash_id": "EIagl5ns4oE",
+    "photographer": "Chris Norberg",
+    "photographer_url": "https://unsplash.com/@activityauthority",
+    "unsplash_url": "https://unsplash.com/photos/white-and-green-boat-on-water-EIagl5ns4oE",
+    "alt": "Waterfront property in New Port Richey: Pricing FL"
+  },
+  {
+    "slug": "new-construction-new-port-richey-guide",
+    "unsplash_id": "zh9LAc3vynE",
+    "photographer": "Zoshua Colah",
+    "photographer_url": "https://unsplash.com/@zoshuacolah",
+    "unsplash_url": "https://unsplash.com/photos/a-street-lined-with-palm-trees-and-parked-cars-zh9LAc3vynE",
+    "alt": "Real estate in New Port Richey: Builders FL"
+  },
+  {
+    "slug": "luxury-homes-new-port-richey-guide",
+    "unsplash_id": "L6dJu7Bcpww",
+    "photographer": "Freddy G",
+    "photographer_url": "https://unsplash.com/@freddygmedia",
+    "unsplash_url": "https://unsplash.com/photos/a-living-room-filled-with-furniture-and-a-flat-screen-tv-L6dJu7Bcpww",
+    "alt": "Luxury home in New Port Richey: What Your Money Gets You FL"
+  },
+  {
+    "slug": "waterfront-homes-trinity-guide",
+    "unsplash_id": "r0As4EUPlPE",
+    "photographer": "Rostyslav Sipakov",
+    "photographer_url": "https://unsplash.com/@rsipakov",
+    "unsplash_url": "https://unsplash.com/photos/green-grass-field-beside-body-of-water-under-blue-sky-and-white-clouds-during-daytime-r0As4EUPlPE",
+    "alt": "Waterfront property in Trinity: Pricing FL"
   }
 ]
