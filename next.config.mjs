@@ -12,8 +12,8 @@ function getBlogRedirects() {
     // Generate both with and without trailing slash to avoid 2-hop chains
     // WordPress used /slug/ (trailing slash), new site uses /blog/slug
     return posts.flatMap((post) => [
-      { source: `/${post.slug}`, destination: `/blog/${post.slug}`, permanent: true },
-      { source: `/${post.slug}/`, destination: `/blog/${post.slug}`, permanent: true },
+      { source: `/${post.slug}`, destination: `/blog/${post.slug}/`, permanent: true },
+      { source: `/${post.slug}/`, destination: `/blog/${post.slug}/`, permanent: true },
     ]);
   } catch {
     console.warn('Could not load posts for redirects');
@@ -33,8 +33,8 @@ function getGuideRedirects() {
       .filter(Boolean);
     // Generate both with and without trailing slash to avoid 2-hop chains
     return slugs.flatMap((slug) => [
-      { source: `/${slug}`, destination: `/guides/${slug}`, permanent: true },
-      { source: `/${slug}/`, destination: `/guides/${slug}`, permanent: true },
+      { source: `/${slug}`, destination: `/guides/${slug}/`, permanent: true },
+      { source: `/${slug}/`, destination: `/guides/${slug}/`, permanent: true },
     ]);
   } catch {
     console.warn('Could not load guides for redirects');
@@ -54,34 +54,27 @@ const nextConfig = {
     const blogRedirects = getBlogRedirects();
 
     return [
-      // ── Manual redirects ──
-      // /home -> / (homepage)
+      // ── Manual redirects (all destinations end with / for trailingSlash: true) ──
       { source: "/home", destination: "/", permanent: true },
-      // /st-pete-homes-for-sale -> /st-petersburg-homes-for-sale (canonical)
-      { source: "/st-pete-homes-for-sale", destination: "/st-petersburg-homes-for-sale", permanent: true },
-      // /terms -> /terms-of-use
-      { source: "/terms", destination: "/terms-of-use", permanent: true },
-      // /privacy -> /privacy-policy
-      { source: "/privacy", destination: "/privacy-policy", permanent: true },
+      { source: "/st-pete-homes-for-sale", destination: "/st-petersburg-homes-for-sale/", permanent: true },
+      { source: "/terms", destination: "/terms-of-use/", permanent: true },
+      { source: "/privacy", destination: "/privacy-policy/", permanent: true },
 
-      // ── GSC indexed URLs with no exact match — manual redirects ──
-      { source: "/luxury/belleair", destination: "/belleair-luxury-homes", permanent: true },
-      { source: "/snell-isle-homes", destination: "/snell-isle", permanent: true },
-      // /blog/page/N → /blog (blog pagination)
-      { source: "/blog/page/:num(\\d+)", destination: "/blog", permanent: true },
-      // /properties/listing/* → /properties (old Showcase IDX listing URLs)
-      { source: "/properties/listing/:path*", destination: "/properties", permanent: true },
+      // ── GSC indexed URLs with no exact match ──
+      { source: "/luxury/belleair", destination: "/belleair-luxury-homes/", permanent: true },
+      { source: "/luxury/belleair/", destination: "/belleair-luxury-homes/", permanent: true },
+      { source: "/snell-isle-homes", destination: "/snell-isle/", permanent: true },
+      { source: "/snell-isle-homes/", destination: "/snell-isle/", permanent: true },
+      { source: "/blog/page/:num(\\d+)", destination: "/blog/", permanent: true },
+      { source: "/blog/page/:num(\\d+)/", destination: "/blog/", permanent: true },
+      { source: "/properties/listing/:path*", destination: "/properties/", permanent: true },
+      { source: "/properties/listing", destination: "/properties/", permanent: true },
 
       // ── WordPress nested city spoke pages → flat structure ──
-      // WordPress used /city/city-topic/ but new site uses /city-topic
-      // Catches patterns like /valrico/valrico-homes-with-pool/ → /valrico-homes-with-pool
-      // EXCLUDE /blog/, /api/, /auth/, /properties/, /guides/ to prevent redirect loops
-      { source: "/:city((?!blog|api|auth|properties|guides|_next).[^/]+)/:city-:topic", destination: "/:city-:topic", permanent: true },
+      { source: "/:city((?!blog|api|auth|properties|guides|_next).[^/]+)/:city-:topic", destination: "/:city-:topic/", permanent: true },
 
       // ── WordPress nested neighborhood pages → flat structure ──
-      // WordPress used /city/neighborhood/ but new site uses /neighborhood
-      // EXCLUDE known app routes to prevent /blog/post → /post → /blog/post loops
-      { source: "/:city((?!blog|api|auth|properties|guides|_next).[^/]+)/:neighborhood", destination: "/:neighborhood", permanent: true },
+      { source: "/:city((?!blog|api|auth|properties|guides|_next).[^/]+)/:neighborhood", destination: "/:neighborhood/", permanent: true },
 
       // ── WordPress Showcase IDX property pages ──
       // Old IDX used /properties/slug-name format. Bridge uses /properties/ListingKey.
@@ -96,18 +89,18 @@ const nextConfig = {
       { source: "/sitemap-categories.xml", destination: "/sitemap.xml", permanent: true },
 
       // ── WordPress legacy URL patterns — redirect to relevant pages ──
-      { source: "/category/:slug*", destination: "/blog", permanent: true },
-      { source: "/tag/:slug*", destination: "/blog", permanent: true },
-      { source: "/author/:slug*", destination: "/about", permanent: true },
-      { source: "/page/:num(\\d+)", destination: "/blog", permanent: true },
+      { source: "/category/:slug*", destination: "/blog/", permanent: true },
+      { source: "/tag/:slug*", destination: "/blog/", permanent: true },
+      { source: "/author/:slug*", destination: "/about/", permanent: true },
+      { source: "/page/:num(\\d+)", destination: "/blog/", permanent: true },
       { source: "/feed/:slug*", destination: "/", permanent: true },
       { source: "/feed", destination: "/", permanent: true },
       { source: "/comments/feed", destination: "/", permanent: true },
       { source: "/wp-admin/:slug*", destination: "/", permanent: false },
       { source: "/wp-login.php", destination: "/", permanent: false },
       { source: "/wp-content/:slug*", destination: "/", permanent: false },
-      { source: "/tampa-bay-area-homes-for-sale", destination: "/properties", permanent: true },
-      { source: "/tampa-bay-area-homes-for-sale/:slug*", destination: "/properties", permanent: true },
+      { source: "/tampa-bay-area-homes-for-sale", destination: "/properties/", permanent: true },
+      { source: "/tampa-bay-area-homes-for-sale/:slug*", destination: "/properties/", permanent: true },
 
       // ── Guide pages: /slug → /guides/slug (51 individual redirects) ──
       // WordPress served guides at root, new site nests under /guides/
