@@ -41,6 +41,8 @@ const FEATURE_FILTERS = [
   { label: "55+", param: "senior" },
   { label: "Single Story", param: "single_story" },
   { label: "Open Houses", param: "open_house" },
+  { label: "Rentals Only", param: "rental" },
+  { label: "Exclude Rentals", param: "exclude_rental" },
 ] as const;
 
 export default function PropertyFilters() {

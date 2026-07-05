@@ -146,6 +146,8 @@ function buildFilter(params: ListingSearchParams): string {
   if (params.pool) filters.push(`PoolPrivateYN eq true`);
   if (params.new_construction) filters.push(`NewConstructionYN eq true`);
   if (params.single_story) filters.push(`Stories eq 1`);
+  if (params.rental) filters.push(`PropertyType eq 'Residential Lease'`);
+  if (params.exclude_rental) filters.push(`PropertyType ne 'Residential Lease'`);
   if (params.open_house) {
     // Only show listings with an open house in the next 7 days
     const now = new Date().toISOString();

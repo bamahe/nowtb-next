@@ -184,6 +184,8 @@ export interface ListingSearchParams {
   new_construction?: boolean;        // NewConstructionYN
   single_story?: boolean;            // Stories eq 1
   open_house?: boolean;              // Has upcoming open house
+  rental?: boolean;                  // PropertyType eq 'Residential Lease'
+  exclude_rental?: boolean;          // PropertyType ne 'Residential Lease'
 }
 
 /**

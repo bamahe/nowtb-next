@@ -71,7 +71,7 @@ export default function ContactPage() {
               {/* Barrett's headshot */}
               <div className="mb-8 w-32 h-32 relative overflow-hidden">
                 <Image
-                  src="/images/barrett-henry.jpg"
+                  src="https://nowtb.com/wp-content/uploads/2026/02/Tampa-Bay-Real-Estate-Agent-Barrett-Henry-REMAX-REALTOR.png"
                   alt="Barrett Henry, REALTOR® and Broker Associate"
                   width={128}
                   height={128}

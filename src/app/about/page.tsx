@@ -148,7 +148,7 @@ export default function AboutPage() {
             {/* Barrett's headshot (left column) */}
             <div className="aspect-[3/4] bg-[#e8e4df] overflow-hidden">
               <Image
-                src="/images/barrett-headshot.png"
+                src="https://nowtb.com/wp-content/uploads/2026/02/Tampa-Bay-Real-Estate-Agent-Barrett-Henry-REMAX-REALTOR.png"
                 alt="Barrett Henry, REALTOR® and Broker Associate at REMAX Collective — Tampa Bay real estate expert with 23+ years experience"
                 width={378}
                 height={373}

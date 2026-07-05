@@ -63,6 +63,8 @@ function buildFilterSummary(params: ListingSearchParams): string {
   if (params.senior) parts.push("55+");
   if (params.single_story) parts.push("Single Story");
   if (params.open_house) parts.push("Open Houses");
+  if (params.rental) parts.push("Rentals");
+  if (params.exclude_rental) parts.push("No Rentals");
 
   // If no filters applied, show a generic message
   if (parts.length === 0) return "Showing all active listings";
@@ -123,6 +125,8 @@ export default async function PropertiesPage({
     senior: rawParams.senior === "true" || undefined,
     single_story: rawParams.single_story === "true" || undefined,
     open_house: rawParams.open_house === "true" || undefined,
+    rental: rawParams.rental === "true" || undefined,
+    exclude_rental: rawParams.exclude_rental === "true" || undefined,
     limit: String(PAGE_SIZE),
     offset:
       typeof rawParams.page === "string"
@@ -162,6 +166,8 @@ export default async function PropertiesPage({
     if (filters.senior) params.set("senior", "true");
     if (filters.single_story) params.set("single_story", "true");
     if (filters.open_house) params.set("open_house", "true");
+    if (filters.rental) params.set("rental", "true");
+    if (filters.exclude_rental) params.set("exclude_rental", "true");
     if (page > 1) params.set("page", String(page));
     const qs = params.toString();
     return qs ? `/properties?${qs}` : "/properties";
