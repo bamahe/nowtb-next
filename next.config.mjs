@@ -71,10 +71,10 @@ const nextConfig = {
       { source: "/properties/listing", destination: "/properties/", permanent: true },
 
       // ── WordPress nested city spoke pages → flat structure ──
-      { source: "/:city((?!blog|api|auth|properties|guides|_next).[^/]+)/:city-:topic", destination: "/:city-:topic/", permanent: true },
+      { source: "/:city((?!blog|api|auth|properties|guides|images|wp-content|_next).[^/]+)/:city-:topic", destination: "/:city-:topic/", permanent: true },
 
       // ── WordPress nested neighborhood pages → flat structure ──
-      { source: "/:city((?!blog|api|auth|properties|guides|_next).[^/]+)/:neighborhood", destination: "/:neighborhood/", permanent: true },
+      { source: "/:city((?!blog|api|auth|properties|guides|images|wp-content|_next).[^/]+)/:neighborhood", destination: "/:neighborhood/", permanent: true },
 
       // ── WordPress Showcase IDX property pages ──
       // Old IDX used /properties/slug-name format. Bridge uses /properties/ListingKey.
