@@ -230,17 +230,50 @@ export async function getListing(id: string): Promise<Listing | null> {
 }
 
 /**
- * Get featured/premium listings for the homepage hero section.
- * Pulls the 12 most expensive active listings above $400K.
+ * Get featured listings for the homepage — newest active listings
+ * across Barrett's 8-county Tampa Bay service area.
+ * Uses a representative set of ZIP codes from each county to ensure
+ * geographic spread. Sorted by most recently listed.
  */
 export async function getFeaturedListings(): Promise<Listing[]> {
   if (IS_BUILD_TIME) return [];
   try {
+    // Representative ZIPs from each of the 8 counties (not all 202 — keeps query manageable)
+    // Hillsborough: Tampa, Brandon, Riverview, Valrico
+    // Pinellas: St Pete, Clearwater, Largo
+    // Pasco: Wesley Chapel, Trinity, New Port Richey
+    // Manatee: Bradenton, Lakewood Ranch
+    // Polk: Lakeland, Winter Haven
+    // Sarasota: Sarasota, Venice
+    // Hernando: Spring Hill, Brooksville
+    // Citrus: Crystal River
+    const serviceAreaZips = [
+      '33602','33604','33606','33609','33611','33614','33617','33619','33647', // Tampa
+      '33510','33511', // Brandon
+      '33578','33579', // Riverview
+      '33594','33596', // Valrico
+      '33572', // Apollo Beach
+      '33701','33702','33703','33704','33705','33706','33710','33712', // St Pete
+      '33755','33756','33763','33765', // Clearwater
+      '33770','33771','33778', // Largo
+      '33543','33544','33545', // Wesley Chapel
+      '33655', // Trinity (using nearby)
+      '34652','34653','34654','34655', // New Port Richey area
+      '34637','34638','34639', // Land O Lakes/Lutz
+      '34201','34202','34205','34207','34208','34211','34212', // Bradenton/LWR
+      '33801','33803','33809','33810','33813', // Lakeland
+      '33880','33881','33884', // Winter Haven
+      '34231','34232','34236','34237','34239', // Sarasota
+      '34285','34292', // Venice
+      '34606','34608','34609', // Spring Hill
+      '34601','34602', // Brooksville
+      '34428','34429', // Crystal River
+    ];
     const res = await getListings({
+      zip_codes: serviceAreaZips,
       status: 'Active',
-      min_price: '400000',
       limit: '12',
-      sort: 'ListPrice desc',
+      sort: 'ModificationTimestamp desc',
     });
     return res.value || [];
   } catch (error) {
