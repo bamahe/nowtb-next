@@ -48,7 +48,7 @@ const nextConfig = {
 
   // Remove trailing slashes to match Next.js conventions
   // WordPress uses /slug/ but Next.js uses /slug
-  trailingSlash: false,
+  trailingSlash: true,
 
   async redirects() {
     const blogRedirects = getBlogRedirects();
@@ -63,6 +63,14 @@ const nextConfig = {
       { source: "/terms", destination: "/terms-of-use", permanent: true },
       // /privacy -> /privacy-policy
       { source: "/privacy", destination: "/privacy-policy", permanent: true },
+
+      // ── GSC indexed URLs with no exact match — manual redirects ──
+      { source: "/luxury/belleair", destination: "/belleair-luxury-homes", permanent: true },
+      { source: "/snell-isle-homes", destination: "/snell-isle", permanent: true },
+      // /blog/page/N → /blog (blog pagination)
+      { source: "/blog/page/:num(\\d+)", destination: "/blog", permanent: true },
+      // /properties/listing/* → /properties (old Showcase IDX listing URLs)
+      { source: "/properties/listing/:path*", destination: "/properties", permanent: true },
 
       // ── WordPress nested city spoke pages → flat structure ──
       // WordPress used /city/city-topic/ but new site uses /city-topic

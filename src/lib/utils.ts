@@ -87,18 +87,18 @@ export function cleanWpContent(html: string): string {
     .replace(/\[showcaseidx[^\]]*\]/g, '')
     .replace(/\[nowtb_[^\]]*\]/g, '')
     .replace(/\[last_updated\]/g, 'June 2026')
-    // 6. Rewrite relative WP image paths to the live domain
-    .replace(
-      /src="\/wp-content\/uploads\//g,
-      'src="https://nowtb.com/wp-content/uploads/'
-    )
+    // 6. WP image paths — images now live in public/wp-content/uploads/
+    // Rewrite absolute URLs to local paths so they serve from Vercel
+    .replace(/https?:\/\/nowtb\.com\/wp-content\/uploads\//g, '/wp-content/uploads/')
+    // Ensure relative paths also work
+    .replace(/src="\/wp-content\/uploads\//g, 'src="/wp-content/uploads/')
     .replace(/srcset="([^"]*)"/g, (_match, srcset: string) =>
       `srcset="${srcset.replace(
-        /\/wp-content\/uploads\//g,
-        'https://nowtb.com/wp-content/uploads/'
+        /https?:\/\/nowtb\.com\/wp-content\/uploads\//g,
+        '/wp-content/uploads/'
       )}"`
     )
-    .replace(/href="\/wp-content\/uploads\//g, 'href="https://nowtb.com/wp-content/uploads/')
+    .replace(/href="\/wp-content\/uploads\//g, 'href="/wp-content/uploads/')
     // 7. Fix MySQL newline corruption: literal "nn" between tags from WP migration
     .replace(/>nn</g, '><')
     .replace(/>nn/g, '>\n')
