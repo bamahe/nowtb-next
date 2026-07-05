@@ -1150,5 +1150,77 @@
     "photographer_url": "https://unsplash.com/@julianauribbe",
     "unsplash_url": "https://unsplash.com/photos/a-large-pink-house-sitting-on-the-side-of-a-road-DPUThyopCk4",
     "alt": "Luxury home in Gibsonton: What Your Money Gets You FL"
+  },
+  {
+    "slug": "waterfront-homes-st-petersburg-guide",
+    "unsplash_id": "aXw4yBROFIg",
+    "photographer": "Pedro Bariak",
+    "photographer_url": "https://unsplash.com/@vjpedro",
+    "unsplash_url": "https://unsplash.com/photos/white-and-blue-houses-under-blue-sky-and-white-clouds-during-daytime-aXw4yBROFIg",
+    "alt": "Waterfront property in St Petersburg: Pricing FL"
+  },
+  {
+    "slug": "luxury-homes-dover-guide",
+    "unsplash_id": "076jDtQ9saE",
+    "photographer": "Gunavel Raja A",
+    "photographer_url": "https://unsplash.com/@guna_01",
+    "unsplash_url": "https://unsplash.com/photos/red-and-green-plant-on-green-grass-during-daytime-076jDtQ9saE",
+    "alt": "Luxury home in Dover: What Your Money Gets You FL"
+  },
+  {
+    "slug": "waterfront-homes-gibsonton-guide",
+    "unsplash_id": "sPU2kzPIf28",
+    "photographer": "Keith Luke",
+    "photographer_url": "https://unsplash.com/@lukephotography",
+    "unsplash_url": "https://unsplash.com/photos/white-canoe-near-palm-tree-sPU2kzPIf28",
+    "alt": "Waterfront property in Gibsonton: Pricing FL"
+  },
+  {
+    "slug": "luxury-homes-wimauma-guide",
+    "unsplash_id": "VgcTzWQzfUA",
+    "photographer": "Levi Grossbaum",
+    "photographer_url": "https://unsplash.com/@lg_photography",
+    "unsplash_url": "https://unsplash.com/photos/two-palm-trees-on-a-beach-with-a-boat-in-the-distance-VgcTzWQzfUA",
+    "alt": "Luxury home in Wimauma: What Your Money Gets You FL"
+  },
+  {
+    "slug": "new-construction-westchase-guide",
+    "unsplash_id": "oAljZYduZWM",
+    "photographer": "Kellen Riggin",
+    "photographer_url": "https://unsplash.com/@kalaniparker",
+    "unsplash_url": "https://unsplash.com/photos/modern-building-facade-with-blue-checkered-pattern-oAljZYduZWM",
+    "alt": "Real estate in Westchase: Builders FL"
+  },
+  {
+    "slug": "luxury-homes-westchase-guide",
+    "unsplash_id": "48Vx_lSmf0w",
+    "photographer": "Rowan Heuvel",
+    "photographer_url": "https://unsplash.com/@insolitus",
+    "unsplash_url": "https://unsplash.com/photos/lush-green-plants-surround-a-tranquil-pond-48Vx_lSmf0w",
+    "alt": "Luxury home in Westchase: What Your Money Gets You FL"
+  },
+  {
+    "slug": "luxury-homes-town-n-country-guide",
+    "unsplash_id": "yq2FPI6z8Kg",
+    "photographer": "Juan Pablo",
+    "photographer_url": "https://unsplash.com/@who0ne",
+    "unsplash_url": "https://unsplash.com/photos/a-car-parked-in-front-of-a-house-entrance-yq2FPI6z8Kg",
+    "alt": "Luxury home in Town n Country: What Your Money Gets You FL"
+  },
+  {
+    "slug": "waterfront-homes-temple-terrace-guide",
+    "unsplash_id": "KvwxgsbxyIM",
+    "photographer": "Zac Gudakov",
+    "photographer_url": "https://unsplash.com/@zacgudakov",
+    "unsplash_url": "https://unsplash.com/photos/brown-and-white-wooden-house-KvwxgsbxyIM",
+    "alt": "Waterfront property in Temple Terrace: Pricing FL"
+  },
+  {
+    "slug": "new-construction-temple-terrace-guide",
+    "unsplash_id": "4b25Ic2VjiQ",
+    "photographer": "ubeyonroad",
+    "photographer_url": "https://unsplash.com/@ubeyonroad",
+    "unsplash_url": "https://unsplash.com/photos/modern-house-with-manicured-hedges-and-gate-4b25Ic2VjiQ",
+    "alt": "Real estate in Temple Terrace: Builders FL"
   }
 ]
