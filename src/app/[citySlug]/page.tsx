@@ -512,6 +512,7 @@ async function HubPage({ city }: { city: CityData }) {
   // Fetch active + recently sold listings by ZIP codes
   let listings: import("@/lib/types").Listing[] = [];
   let soldListings: import("@/lib/types").Listing[] = [];
+  let totalActive = 0;
   try {
     const [activeRes, soldRes] = await Promise.all([
       getListings({ zip_codes: city.zip_codes, limit: "24" }),
@@ -519,10 +520,22 @@ async function HubPage({ city }: { city: CityData }) {
     ]);
     listings = activeRes.value || [];
     soldListings = soldRes.value || [];
+    totalActive = activeRes.total || listings.length;
   } catch {
     listings = [];
     soldListings = [];
   }
+
+  // Compute market stats from the listings we have
+  const avgPrice = listings.length > 0
+    ? Math.round(listings.reduce((sum, l) => sum + (l.ListPrice || 0), 0) / listings.length)
+    : 0;
+  const avgDom = listings.length > 0
+    ? Math.round(listings.filter(l => l.DaysOnMarket != null).reduce((sum, l) => sum + (l.DaysOnMarket || 0), 0) / Math.max(listings.filter(l => l.DaysOnMarket != null).length, 1))
+    : 0;
+  const priceRange = listings.length > 0
+    ? { low: Math.min(...listings.map(l => l.ListPrice)), high: Math.max(...listings.map(l => l.ListPrice)) }
+    : { low: 0, high: 0 };
 
   // Get neighboring cities (same county, excluding current)
   const neighbors = cities.filter(
@@ -591,6 +604,56 @@ async function HubPage({ city }: { city: CityData }) {
           </div>
         </div>
       </section>
+
+      {/* === Market Stats Bar === */}
+      {listings.length > 0 && (
+        <section className="bg-white border-b border-border">
+          <div className="container-wide py-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+              <div>
+                <p className="font-heading font-bold text-2xl md:text-3xl text-primary">
+                  {totalActive.toLocaleString()}
+                </p>
+                <p className="font-body text-xs tracking-[0.15em] uppercase text-muted mt-1">
+                  Active Listings
+                </p>
+              </div>
+              <div>
+                <p className="font-heading font-bold text-2xl md:text-3xl text-primary">
+                  {formatPrice(avgPrice)}
+                </p>
+                <p className="font-body text-xs tracking-[0.15em] uppercase text-muted mt-1">
+                  Avg. List Price
+                </p>
+              </div>
+              <div>
+                <p className="font-heading font-bold text-2xl md:text-3xl text-primary">
+                  {formatPrice(priceRange.low)} – {formatPrice(priceRange.high)}
+                </p>
+                <p className="font-body text-xs tracking-[0.15em] uppercase text-muted mt-1">
+                  Price Range
+                </p>
+              </div>
+              <div>
+                <p className="font-heading font-bold text-2xl md:text-3xl text-primary">
+                  {avgDom}
+                </p>
+                <p className="font-body text-xs tracking-[0.15em] uppercase text-muted mt-1">
+                  Avg. Days on Market
+                </p>
+              </div>
+            </div>
+            <div className="text-center mt-6">
+              <Link
+                href={`/properties/?q=${encodeURIComponent(city.name)}`}
+                className="font-body text-xs tracking-[0.15em] uppercase text-accent hover:text-primary transition-colors"
+              >
+                View All {totalActive.toLocaleString()} Listings in {city.name} →
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* === Latest listings grid === */}
       <ListingGrid
