@@ -108,20 +108,16 @@ export function cleanWpContent(html: string): string {
     .replace(/<div>\s*/gi, '')
     .replace(/\s*<\/div>/gi, '');
 
-  // 9. Cut everything from the first boilerplate footer section onward
-  //    These are WP template sections the Next.js layout already provides
-  const boilerplatePatterns = [
+  // 9. Cut boilerplate footer sections — but ONLY when they appear in the
+  //    last 30% of the content. These are WP template footer blocks, NOT
+  //    legitimate content headings. Early matches would destroy real content.
+
+  // "Always cut" patterns — these are ALWAYS boilerplate regardless of position
+  const alwaysCutPatterns = [
     /<h2[^>]*>\s*Related (?:Resources|Articles)\s*<\/h2>/i,
     /<h2[^>]*>\s*Explore (?:Tampa Bay )?Communities\s*<\/h2>/i,
     /<h2[^>]*>\s*More .* Resources\s*<\/h2>/i,
     /<h2[^>]*>\s*Helpful Resources\s*<\/h2>/i,
-    /<h2[^>]*>\s*About Barrett\s*<\/h2>/i,
-    /<h2[^>]*>\s*Contact Barrett\s*<\/h2>/i,
-    /<h2[^>]*>\s*Work with Barrett\s*<\/h2>/i,
-    /<h2[^>]*>[^<]*Homes for Sale\s*<\/h2>/i,
-    /<h2[^>]*>\s*Recently Sold\s*<\/h2>/i,
-    /<h2[^>]*>[^<]*Real Estate\s*<\/h2>/i,
-    /<h2[^>]*>\s*Frequently Asked Questions\s*<\/h2>/i,
     /class="nowtb-footer-section"/i,
     /class="nowtb-related"/i,
     /class="nowtb-communities"/i,
@@ -129,10 +125,39 @@ export function cleanWpContent(html: string): string {
     /class="nowtb-disclaimer"/i,
   ];
 
-  for (const pattern of boilerplatePatterns) {
+  for (const pattern of alwaysCutPatterns) {
     const idx = cleaned.search(pattern);
     if (idx > -1) {
       cleaned = cleaned.substring(0, idx).trim();
+    }
+  }
+
+  // "Late cut" patterns — only cut if found in the last 30% of content
+  // These headings appear legitimately in content but are boilerplate at the end
+  const lateCutPatterns = [
+    /<h2[^>]*>\s*About Barrett\s*<\/h2>/i,
+    /<h2[^>]*>\s*Contact Barrett\s*<\/h2>/i,
+    /<h2[^>]*>\s*Work(?:ing)? with Barrett\s*<\/h2>/i,
+    /<h2[^>]*>[^<]*Homes for Sale\s*<\/h2>/i,
+    /<h2[^>]*>\s*Recently Sold\s*<\/h2>/i,
+    /<h2[^>]*>[^<]*(?:Real Estate|Explore)[^<]*<\/h2>/i,
+    /<h2[^>]*>\s*Frequently Asked Questions\s*<\/h2>/i,
+  ];
+
+  const contentLength = cleaned.length;
+  const lateThreshold = Math.floor(contentLength * 0.7); // last 30%
+
+  for (const pattern of lateCutPatterns) {
+    // Find the LAST match, not the first
+    let lastIdx = -1;
+    let match;
+    const regex = new RegExp(pattern.source, pattern.flags + (pattern.flags.includes('g') ? '' : 'g'));
+    while ((match = regex.exec(cleaned)) !== null) {
+      lastIdx = match.index;
+    }
+    // Only cut if the match is in the last 30% of content
+    if (lastIdx > lateThreshold) {
+      cleaned = cleaned.substring(0, lastIdx).trim();
     }
   }
 

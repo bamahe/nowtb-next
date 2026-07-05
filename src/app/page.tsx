@@ -125,6 +125,69 @@ export default async function HomePage() {
         }}
       />
 
+      {/* === JSON-LD: WebSite schema with SearchAction (sitelinks search box) === */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Barrett Henry, REALTOR® — The NOW Team",
+            url: "https://nowtb.com",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: {
+                "@type": "EntryPoint",
+                urlTemplate: "https://nowtb.com/properties?q={search_term_string}",
+              },
+              "query-input": "required name=search_term_string",
+            },
+          }),
+        }}
+      />
+
+      {/* === JSON-LD: AggregateRating from Google Reviews === */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "RealEstateAgent",
+            name: "Barrett Henry, REALTOR® — REMAX Collective",
+            url: "https://nowtb.com",
+            image: "https://nowtb.com/images/barrett-henry.jpg",
+            telephone: "(813) 733-7907",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5.0",
+              reviewCount: "31",
+              bestRating: "5",
+              worstRating: "1",
+            },
+            review: [
+              {
+                "@type": "Review",
+                author: { "@type": "Person", name: "Regina Castillo" },
+                reviewRating: { "@type": "Rating", ratingValue: "5" },
+                reviewBody: "Working with Barrett Henry has truly been THE BEST experience I've ever had with a realtor.",
+              },
+              {
+                "@type": "Review",
+                author: { "@type": "Person", name: "Ryan Mauk" },
+                reviewRating: { "@type": "Rating", ratingValue: "5" },
+                reviewBody: "I've had Barrett as my realtor for 10 years now. After using his services to sell my first house, I never needed to find another agent.",
+              },
+              {
+                "@type": "Review",
+                author: { "@type": "Person", name: "Adam Marburger" },
+                reviewRating: { "@type": "Rating", ratingValue: "5" },
+                reviewBody: "Barrett is without question the most professional real estate agent I have ever done business with.",
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* =================================================================
           SECTION 1: Hero — full viewport, content at bottom, luxury feel
           ================================================================= */}

@@ -79,6 +79,13 @@ const nextConfig = {
       // Don't redirect — let the [id] route handle it. Old Showcase URLs will 404
       // naturally since they won't match a Bridge ListingKey.
 
+      // ── WordPress sitemap URLs — redirect to new sitemap ──
+      { source: "/sitemap_index.xml", destination: "/sitemap.xml", permanent: true },
+      { source: "/sitemap-home.xml", destination: "/sitemap.xml", permanent: true },
+      { source: "/sitemap-posts.xml", destination: "/sitemap.xml", permanent: true },
+      { source: "/sitemap-pages.xml", destination: "/sitemap.xml", permanent: true },
+      { source: "/sitemap-categories.xml", destination: "/sitemap.xml", permanent: true },
+
       // ── WordPress legacy URL patterns — redirect to relevant pages ──
       { source: "/category/:slug*", destination: "/blog", permanent: true },
       { source: "/tag/:slug*", destination: "/blog", permanent: true },
