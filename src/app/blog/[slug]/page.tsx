@@ -10,7 +10,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ContactForm from "@/components/ui/ContactForm";
 import { getPrimaryAgent } from "@/data/agents";
-import { getAllPosts, getPostBySlug, getRelatedPosts } from "@/lib/posts";
+import { getAllPosts, getPostBySlug, getPostThumbnail, getRelatedPosts } from "@/lib/posts";
 import ShareButtons from "@/components/ui/ShareButtons";
 import { cleanWpContent } from "@/lib/utils";
 
@@ -62,6 +62,9 @@ export async function generateMetadata({
     ? stripHtml(post.excerpt).substring(0, 160)
     : stripHtml(post.content).substring(0, 160);
 
+  // Get the best available image for OG tags
+  const ogImage = getPostThumbnail(post) || "/og-default.png";
+
   return {
     title: `${post.title} | Barrett Henry, REALTOR®`,
     description,
@@ -73,6 +76,7 @@ export async function generateMetadata({
       description,
       type: "article",
       publishedTime: post.date,
+      images: [{ url: ogImage, width: 1200, height: 630 }],
     },
   };
 }
