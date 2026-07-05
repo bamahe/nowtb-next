@@ -118,5 +118,165 @@
     "photographer_url": "https://unsplash.com/@thewildflowerpress",
     "unsplash_url": "https://unsplash.com/photos/white-wooden-house-near-palm-trees-t1rycmptPQU",
     "alt": "New construction home in Haines City FL"
+  },
+  {
+    "slug": "best-neighborhoods-lithia",
+    "unsplash_id": "YBo2vos1w4U",
+    "photographer": "Adrian Diaz-Sieckel",
+    "photographer_url": "https://unsplash.com/@adrian_ds",
+    "unsplash_url": "https://unsplash.com/photos/grayscale-photo-of-trees-and-road-YBo2vos1w4U",
+    "alt": "Real estate in Lithia FL"
+  },
+  {
+    "slug": "dunedin-housing-market-update",
+    "unsplash_id": "olFlnjzapjk",
+    "photographer": "Lesia",
+    "photographer_url": "https://unsplash.com/@imxla",
+    "unsplash_url": "https://unsplash.com/photos/aerial-view-of-green-trees-and-brown-concrete-building-olFlnjzapjk",
+    "alt": "Residential neighborhood in Housing Market Update Q1 2026: Prices FL"
+  },
+  {
+    "slug": "seminole-housing-market-update",
+    "unsplash_id": "rfOk3ApsK9w",
+    "photographer": "Mitya Kramar",
+    "photographer_url": "https://unsplash.com/@mitya_kramar",
+    "unsplash_url": "https://unsplash.com/photos/a-view-of-a-street-with-houses-and-palm-trees-rfOk3ApsK9w",
+    "alt": "Residential neighborhood in Tampa Bay FL"
+  },
+  {
+    "slug": "guide-to-living-in-largo-fl",
+    "unsplash_id": "0XHB-nEieW8",
+    "photographer": "Baron Alloway",
+    "photographer_url": "https://unsplash.com/@baronalloway",
+    "unsplash_url": "https://unsplash.com/photos/a-birds-eye-view-of-a-large-body-of-water-0XHB-nEieW8",
+    "alt": "Real estate in Largo FL"
+  },
+  {
+    "slug": "clearwater-housing-market-update",
+    "unsplash_id": "FI3SBA4NNsw",
+    "photographer": "Osmany M Leyva Aldana",
+    "photographer_url": "https://unsplash.com/@ozym",
+    "unsplash_url": "https://unsplash.com/photos/american-flag-waves-proudly-over-suburban-homes-FI3SBA4NNsw",
+    "alt": "Residential neighborhood in Tampa Bay FL"
+  },
+  {
+    "slug": "guide-to-living-in-clearwater-fl",
+    "unsplash_id": "4EChQxBtXEQ",
+    "photographer": "Juliana Uribbe",
+    "photographer_url": "https://unsplash.com/@julianauribbe",
+    "unsplash_url": "https://unsplash.com/photos/a-couple-of-houses-that-are-next-to-each-other-4EChQxBtXEQ",
+    "alt": "Real estate in Clearwater FL"
+  },
+  {
+    "slug": "st-petersburg-housing-market-update",
+    "unsplash_id": "jYgDGMCH4_8",
+    "photographer": "Juliana Uribbe",
+    "photographer_url": "https://unsplash.com/@julianauribbe",
+    "unsplash_url": "https://unsplash.com/photos/a-large-yellow-house-sitting-on-top-of-a-lush-green-field-jYgDGMCH4_8",
+    "alt": "Residential neighborhood in Tampa Bay FL"
+  },
+  {
+    "slug": "guide-to-living-in-st-petersburg-fl",
+    "unsplash_id": "1gHN7elAk7Y",
+    "photographer": "Anita Denunzio",
+    "photographer_url": "https://unsplash.com/@dronepilot",
+    "unsplash_url": "https://unsplash.com/photos/an-aerial-view-of-a-highway-and-the-ocean-1gHN7elAk7Y",
+    "alt": "Real estate in St. Petersburg FL"
+  },
+  {
+    "slug": "thonotosassa-housing-market-update",
+    "unsplash_id": "SncOlKOY7NY",
+    "photographer": "Ward Mercer",
+    "photographer_url": "https://unsplash.com/@wardm",
+    "unsplash_url": "https://unsplash.com/photos/aerial-photography-of-city-SncOlKOY7NY",
+    "alt": "Residential neighborhood in Tampa Bay FL"
+  },
+  {
+    "slug": "gibsonton-housing-market-update",
+    "unsplash_id": "ncO9sZRc8OI",
+    "photographer": "Tessa Edmiston",
+    "photographer_url": "https://unsplash.com/@thewildflowerpress",
+    "unsplash_url": "https://unsplash.com/photos/palm-trees-beside-house-ncO9sZRc8OI",
+    "alt": "Residential neighborhood in Tampa Bay FL"
+  },
+  {
+    "slug": "wimauma-housing-market-update",
+    "unsplash_id": "Pg7ZPx-cvHc",
+    "photographer": "TopSphere Media",
+    "photographer_url": "https://unsplash.com/@zvessels55",
+    "unsplash_url": "https://unsplash.com/photos/aerial-view-of-city-near-sea-during-daytime-Pg7ZPx-cvHc",
+    "alt": "Residential neighborhood in Tampa Bay FL"
+  },
+  {
+    "slug": "westchase-housing-market-update",
+    "unsplash_id": "T8HQlSPZSfo",
+    "photographer": "Tommy Fawcett",
+    "photographer_url": "https://unsplash.com/@tommyfawcett",
+    "unsplash_url": "https://unsplash.com/photos/palm-tree-near-body-of-water-during-sunset-T8HQlSPZSfo",
+    "alt": "Residential neighborhood in Tampa Bay FL"
+  },
+  {
+    "slug": "town-n-country-housing-market-update",
+    "unsplash_id": "ZA6KIwNAJ-A",
+    "photographer": "Luiz Cent",
+    "photographer_url": "https://unsplash.com/@luizcent",
+    "unsplash_url": "https://unsplash.com/photos/aerial-view-of-island-with-body-of-water-during-daytime-ZA6KIwNAJ-A",
+    "alt": "Residential neighborhood in Tampa Bay FL"
+  },
+  {
+    "slug": "temple-terrace-housing-market-update",
+    "unsplash_id": "d3fCvj-ZiJ8",
+    "photographer": "Tom Nora",
+    "photographer_url": "https://unsplash.com/@tomnora",
+    "unsplash_url": "https://unsplash.com/photos/a-white-building-with-palm-trees-in-front-of-it-d3fCvj-ZiJ8",
+    "alt": "Residential neighborhood in Tampa Bay FL"
+  },
+  {
+    "slug": "sun-city-center-housing-market-update",
+    "unsplash_id": "p2UZu5Fq7pE",
+    "photographer": "Martin Zangerl",
+    "photographer_url": "https://unsplash.com/@zmart",
+    "unsplash_url": "https://unsplash.com/photos/green-palm-trees-near-body-of-water-during-daytime-p2UZu5Fq7pE",
+    "alt": "Residential neighborhood in Tampa Bay FL"
+  },
+  {
+    "slug": "ruskin-housing-market-update",
+    "unsplash_id": "SBeSUc7X00o",
+    "photographer": "E Mens",
+    "photographer_url": "https://unsplash.com/@kwakus",
+    "unsplash_url": "https://unsplash.com/photos/white-and-brown-house-near-green-trees-under-blue-sky-during-daytime-SBeSUc7X00o",
+    "alt": "Residential neighborhood in Housing Market Update Q1 2026: Prices FL"
+  },
+  {
+    "slug": "lutz-housing-market-update",
+    "unsplash_id": "qCb5nW38Yys",
+    "photographer": "Austin Hervias",
+    "photographer_url": "https://unsplash.com/@ahervias77",
+    "unsplash_url": "https://unsplash.com/photos/palm-trees-line-a-waterfront-on-a-sunny-day-qCb5nW38Yys",
+    "alt": "Residential neighborhood in Tampa Bay FL"
+  },
+  {
+    "slug": "carrollwood-housing-market-update",
+    "unsplash_id": "_oxDNUxhAcw",
+    "photographer": "Kateryna T",
+    "photographer_url": "https://unsplash.com/@katerryna",
+    "unsplash_url": "https://unsplash.com/photos/green-coconut-palm-trees-on-green-grass-field-under-blue-sky-during-daytime-_oxDNUxhAcw",
+    "alt": "Residential neighborhood in Tampa Bay FL"
+  },
+  {
+    "slug": "apollo-beach-housing-market-update",
+    "unsplash_id": "euyV2Ae_KX0",
+    "photographer": "Ameer Basheer",
+    "photographer_url": "https://unsplash.com/@24ameer",
+    "unsplash_url": "https://unsplash.com/photos/aerial-photography-of-brown-houses-euyV2Ae_KX0",
+    "alt": "Residential neighborhood in Tampa Bay FL"
+  },
+  {
+    "slug": "plant-city-housing-market-update",
+    "unsplash_id": "IGnkqEZdQX0",
+    "photographer": "Hector Falcon",
+    "photographer_url": "https://unsplash.com/@hectorfalcon",
+    "unsplash_url": "https://unsplash.com/photos/white-concrete-building-near-palm-trees-during-daytime-IGnkqEZdQX0",
+    "alt": "Residential neighborhood in Tampa Bay FL"
   }
 ]
