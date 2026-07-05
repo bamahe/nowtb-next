@@ -1542,5 +1542,29 @@
     "photographer_url": "https://unsplash.com/@yudiono182",
     "unsplash_url": "https://unsplash.com/photos/modern-wooden-house-with-stone-driveway-and-green-lawn-BWwOd21Y6mk",
     "alt": "Luxury home in Riverview: What Your Money Gets You FL"
+  },
+  {
+    "slug": "waterfront-homes-valrico-guide",
+    "unsplash_id": "ufFIweqSPd4",
+    "photographer": "Aaron Burden",
+    "photographer_url": "https://unsplash.com/@aaronburden",
+    "unsplash_url": "https://unsplash.com/photos/grey-canoe-on-calm-body-of-water-near-tall-trees-at-daytime-ufFIweqSPd4",
+    "alt": "Waterfront property in Valrico: Pricing FL"
+  },
+  {
+    "slug": "new-construction-valrico-guide",
+    "unsplash_id": "mrSuM73pmsw",
+    "photographer": "Aubrey Odom",
+    "photographer_url": "https://unsplash.com/@octoberroses",
+    "unsplash_url": "https://unsplash.com/photos/white-and-gray-wooden-house-surrounded-by-green-plants-during-daytime-mrSuM73pmsw",
+    "alt": "Real estate in Valrico: Builders FL"
+  },
+  {
+    "slug": "luxury-homes-valrico-guide",
+    "unsplash_id": "BSPZp2QvHuU",
+    "photographer": "Ragét Ri",
+    "photographer_url": "https://unsplash.com/@visualsbyamor",
+    "unsplash_url": "https://unsplash.com/photos/white-truck-parked-in-a-yellow-garage-BSPZp2QvHuU",
+    "alt": "Luxury home in Valrico: What Your Money Gets You FL"
   }
 ]
