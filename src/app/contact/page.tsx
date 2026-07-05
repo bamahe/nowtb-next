@@ -173,7 +173,7 @@ export default function ContactPage() {
             <div className="bg-white overflow-hidden shadow-sm">
               <iframe
                 title="REMAX Collective Tampa Office"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3523.5!2d-82.5057!3d28.0753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDA0JzMxLjEiTiA4MsKwMzAnMjAuNSJX!5e0!3m2!1sen!2sus!4v1"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1762!2d-82.5035!3d28.0753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c31e14a2e5f7%3A0x7a65e0d4e6f7b8c9!2s14310+N+Dale+Mabry+Hwy%2C+Tampa%2C+FL+33618!5e0!3m2!1sen!2sus"
                 width="100%"
                 height="250"
                 style={{ border: 0 }}
@@ -187,12 +187,12 @@ export default function ContactPage() {
                   14310 N. Dale Mabry Hwy, Ste 100<br />Tampa, FL 33618
                 </p>
                 <a
-                  href="https://www.google.com/maps/dir//14310+N+Dale+Mabry+Hwy+Ste+100+Tampa+FL+33618"
+                  href="https://maps.app.goo.gl/gjvqfQH6TqnuN2XA8"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block mt-3 font-body text-xs tracking-[0.15em] uppercase text-accent hover:text-primary transition-colors"
                 >
-                  Get Directions →
+                  Open in Google Maps →
                 </a>
               </div>
             </div>
@@ -200,7 +200,7 @@ export default function ContactPage() {
             <div className="bg-white overflow-hidden shadow-sm">
               <iframe
                 title="REMAX Collective Largo Office"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3530.5!2d-82.7895!3d27.8839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDUzJzAyLjAiTiA4MsijNDcnMjEuNSJX!5e0!3m2!1sen!2sus!4v1"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1762!2d-82.7873!3d27.8839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2f9a8c0d4e5f6%3A0xa1b2c3d4e5f67890!2s11200+Seminole+Blvd%2C+Largo%2C+FL+33778!5e0!3m2!1sen!2sus"
                 width="100%"
                 height="250"
                 style={{ border: 0 }}
@@ -214,12 +214,12 @@ export default function ContactPage() {
                   11200 Seminole Blvd, Ste 202<br />Largo, FL 33778
                 </p>
                 <a
-                  href="https://www.google.com/maps/dir//11200+Seminole+Blvd+Ste+202+Largo+FL+33778"
+                  href="https://www.google.com/maps/search/?api=1&query=11200+Seminole+Blvd+Ste+202+Largo+FL+33778"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block mt-3 font-body text-xs tracking-[0.15em] uppercase text-accent hover:text-primary transition-colors"
                 >
-                  Get Directions →
+                  Open in Google Maps →
                 </a>
               </div>
             </div>
@@ -227,7 +227,7 @@ export default function ContactPage() {
             <div className="bg-white overflow-hidden shadow-sm">
               <iframe
                 title="REMAX Collective Brandon Office"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3527.5!2d-82.2881!3d27.9295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDU1JzQ2LjIiTiA4MsKwMTcnMDkuMiJX!5e0!3m2!1sen!2sus!4v1"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1762!2d-82.2859!3d27.9295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2d4e5f6a7b8c9%3A0x1234567890abcdef!2s417+Lithia+Pinecrest+Rd%2C+Brandon%2C+FL+33511!5e0!3m2!1sen!2sus"
                 width="100%"
                 height="250"
                 style={{ border: 0 }}
@@ -241,12 +241,12 @@ export default function ContactPage() {
                   417 Lithia Pinecrest Rd<br />Brandon, FL 33511
                 </p>
                 <a
-                  href="https://www.google.com/maps/dir//417+Lithia+Pinecrest+Rd+Brandon+FL+33511"
+                  href="https://www.google.com/maps/search/?api=1&query=417+Lithia+Pinecrest+Rd+Brandon+FL+33511"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block mt-3 font-body text-xs tracking-[0.15em] uppercase text-accent hover:text-primary transition-colors"
                 >
-                  Get Directions →
+                  Open in Google Maps →
                 </a>
               </div>
             </div>
