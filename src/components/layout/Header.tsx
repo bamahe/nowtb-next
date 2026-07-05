@@ -71,7 +71,7 @@ export default function Header() {
           <Link href="/" className="group flex items-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://nowtb.com/wp-content/uploads/2026/02/REMAX_Logo_Barrett_Henry__Black_.png"
+              src="/images/remax-logo.png"
               alt="Barrett Henry — REMAX Collective"
               width={180}
               height={50}
