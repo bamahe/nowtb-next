@@ -9,11 +9,12 @@ function getBlogRedirects() {
   try {
     const filePath = path.join(process.cwd(), 'src/data/posts-export.json');
     const posts = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-    return posts.map((post) => ({
-      source: `/${post.slug}`,
-      destination: `/blog/${post.slug}`,
-      permanent: true,
-    }));
+    // Generate both with and without trailing slash to avoid 2-hop chains
+    // WordPress used /slug/ (trailing slash), new site uses /blog/slug
+    return posts.flatMap((post) => [
+      { source: `/${post.slug}`, destination: `/blog/${post.slug}`, permanent: true },
+      { source: `/${post.slug}/`, destination: `/blog/${post.slug}`, permanent: true },
+    ]);
   } catch {
     console.warn('Could not load posts for redirects');
     return [];
@@ -27,14 +28,14 @@ function getGuideRedirects() {
     const filePath = path.join(process.cwd(), 'src/data/guides.ts');
     const content = fs.readFileSync(filePath, 'utf-8');
     const slugMatches = content.match(/slug:\s*"([^"]+)"/g) || [];
-    return slugMatches
+    const slugs = slugMatches
       .map((m) => m.match(/"([^"]+)"/)?.[1])
-      .filter(Boolean)
-      .map((slug) => ({
-        source: `/${slug}`,
-        destination: `/guides/${slug}`,
-        permanent: true,
-      }));
+      .filter(Boolean);
+    // Generate both with and without trailing slash to avoid 2-hop chains
+    return slugs.flatMap((slug) => [
+      { source: `/${slug}`, destination: `/guides/${slug}`, permanent: true },
+      { source: `/${slug}/`, destination: `/guides/${slug}`, permanent: true },
+    ]);
   } catch {
     console.warn('Could not load guides for redirects');
     return [];
