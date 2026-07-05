@@ -47,9 +47,9 @@ export default function MiniCalc({ listingPrice }: MiniCalcProps) {
     return (
       <button
         onClick={() => setOpen(true)}
-        className="fixed bottom-24 right-4 z-40 bg-primary text-white px-4 py-3 shadow-lg
+        className="fixed bottom-36 right-4 z-40 bg-primary text-white px-4 py-3 shadow-lg
                    flex items-center gap-2 font-body text-sm font-medium
-                   hover:bg-primary/90 transition-colors md:bottom-6"
+                   hover:bg-primary/90 transition-colors md:bottom-20"
       >
         <Calculator size={18} />
         <span>Est. {fmt(Math.round(total))}/mo</span>

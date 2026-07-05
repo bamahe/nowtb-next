@@ -515,7 +515,7 @@ async function HubPage({ city }: { city: CityData }) {
   let totalActive = 0;
   try {
     const [activeRes, soldRes] = await Promise.all([
-      getListings({ zip_codes: city.zip_codes, limit: "24" }),
+      getListings({ zip_codes: city.zip_codes, limit: "48" }),
       getListings({ zip_codes: city.zip_codes, limit: "8", status: "Closed", sort: "ClosePrice desc" }),
     ]);
     listings = activeRes.value || [];
@@ -659,8 +659,20 @@ async function HubPage({ city }: { city: CityData }) {
       <ListingGrid
         listings={listings}
         title={`Latest Listings in ${city.name}`}
-        subtitle={`Active homes for sale in ${city.name}, ${city.county} County.`}
+        subtitle={`Showing ${listings.length} of ${totalActive.toLocaleString()} active homes for sale in ${city.name}, ${city.county} County.`}
       />
+
+      {/* === View All button — when more listings exist than shown === */}
+      {totalActive > listings.length && (
+        <section className="container-wide py-8 text-center">
+          <Link
+            href={`/properties/?q=${encodeURIComponent(city.name)}`}
+            className="btn-primary inline-block px-10 py-4"
+          >
+            View All {totalActive.toLocaleString()} Listings in {city.name}
+          </Link>
+        </section>
+      )}
 
       {/* === MLS disclaimer — only shown when listings are displayed === */}
       {listings.length > 0 && (
@@ -850,16 +862,17 @@ async function SpokePage({
   const filterParams: import("@/lib/types").ListingSearchParams = {
     zip_codes: city.zip_codes,
     ...topic.filter,
-    limit: "24",
+    limit: "48",
   };
 
   // Fetch filtered listings from Bridge API
   let listings: import("@/lib/types").Listing[] = [];
+  let totalFiltered = 0;
   try {
     const res = await getListings(filterParams);
     listings = res.value || [];
+    totalFiltered = res.total || listings.length;
   } catch {
-    // If the API call fails, render the page with an empty listing grid
     listings = [];
   }
 
@@ -936,11 +949,23 @@ async function SpokePage({
 
       {/* === Listings grid — front and center === */}
       {listings.length > 0 ? (
-        <ListingGrid
-          listings={listings}
-          title={`${listings.length} ${topic.label} in ${city.name}`}
-          className="container-wide py-12"
-        />
+        <>
+          <ListingGrid
+            listings={listings}
+            title={`${totalFiltered > listings.length ? `Showing ${listings.length} of ${totalFiltered.toLocaleString()}` : listings.length} ${topic.label} in ${city.name}`}
+            className="container-wide py-12"
+          />
+          {totalFiltered > listings.length && (
+            <section className="container-wide pb-8 text-center">
+              <Link
+                href={`/properties/?q=${encodeURIComponent(city.name)}${Object.entries(topic.filter).map(([k,v]) => `&${k}=${v}`).join('')}`}
+                className="btn-primary inline-block px-10 py-4"
+              >
+                View All {totalFiltered.toLocaleString()} {topic.label} in {city.name}
+              </Link>
+            </section>
+          )}
+        </>
       ) : (
         <section className="container-wide py-12">
           <div className="rounded-xl border border-gray-200 bg-gray-50 p-8 text-center max-w-2xl mx-auto">
