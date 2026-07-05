@@ -187,7 +187,7 @@ export default function ContactPage() {
                   14310 N. Dale Mabry Hwy, Ste 100<br />Tampa, FL 33618
                 </p>
                 <a
-                  href="https://maps.app.goo.gl/gjvqfQH6TqnuN2XA8"
+                  href="https://www.google.com/maps/search/?api=1&query=14310+N+Dale+Mabry+Hwy+Ste+100+Tampa+FL+33618"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block mt-3 font-body text-xs tracking-[0.15em] uppercase text-accent hover:text-primary transition-colors"
@@ -241,7 +241,7 @@ export default function ContactPage() {
                   417 Lithia Pinecrest Rd<br />Brandon, FL 33511
                 </p>
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=417+Lithia+Pinecrest+Rd+Brandon+FL+33511"
+                  href="https://maps.app.goo.gl/gjvqfQH6TqnuN2XA8"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block mt-3 font-body text-xs tracking-[0.15em] uppercase text-accent hover:text-primary transition-colors"
