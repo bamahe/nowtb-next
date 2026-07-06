@@ -382,19 +382,20 @@ export default function ChatWidget() {
       {/* ── Floating Chat Bubble ── */}
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        aria-label={isOpen ? "Close chat" : "Open chat assistant"}
+        aria-label={isOpen ? "Close chat" : "Ask a question"}
         className={`
           fixed z-50 right-4
           bottom-[4.5rem] sm:bottom-20 md:bottom-8
-          w-14 h-14 rounded-full
+          h-14 rounded-full px-5
           bg-primary text-white shadow-lg
-          flex items-center justify-center
+          flex items-center justify-center gap-2
           hover:bg-primary/90 hover:shadow-xl
           transition-all duration-300
           ${isOpen ? "scale-0 opacity-0 pointer-events-none" : "scale-100 opacity-100"}
         `}
       >
-        <MessageCircle size={24} />
+        <MessageCircle size={20} />
+        <span className="font-body text-sm font-medium hidden sm:inline">Ask a Question</span>
       </button>
     </>
   );

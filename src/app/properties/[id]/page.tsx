@@ -483,13 +483,17 @@ export default async function ListingDetailPage({
             )}
           </div>
 
-          {/* Right column: Tour Scheduler */}
+          {/* Right column: Tour Scheduler + Payment Estimate */}
           <div>
             <TourScheduler
               listingAddress={`${listing.UnparsedAddress}, ${listing.City}, ${listing.StateOrProvince} ${listing.PostalCode}`}
               listingId={listing.ListingId}
               listingPrice={listing.ListPrice}
             />
+            {/* Inline mortgage calculator — directly below the tour form */}
+            {listing.PropertyType !== 'Residential Lease' && (
+              <MiniCalc listingPrice={listing.ListPrice} />
+            )}
           </div>
         </div>
       </section>
@@ -546,11 +550,7 @@ export default async function ListingDetailPage({
         </div>
       </section>
 
-      {/* === Floating mortgage calculator — pre-filled with listing price === */}
-      {/* Floating calculator — only for for-sale listings */}
-      {listing.PropertyType !== 'Residential Lease' && (
-        <MiniCalc listingPrice={listing.ListPrice} />
-      )}
+      {/* MiniCalc is now inline in the sidebar next to TourScheduler */}
     </>
   );
 }
