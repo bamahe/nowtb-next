@@ -209,11 +209,18 @@ export default async function PropertiesPage({
         <PropertyFilters />
       </Suspense>
 
-      {/* Filter summary + count + save search */}
+      {/* Filter summary + count + save search + map search link */}
       <div className="container-wide py-4">
         <div className="flex items-center justify-between flex-wrap gap-3">
           <p className="font-body text-muted text-xs font-light tracking-wide">{filterSummary}</p>
           <div className="flex items-center gap-4">
+            <Link
+              href="/properties/search"
+              className="font-body text-[10px] font-medium tracking-[0.15em] uppercase
+                         text-accent hover:text-primary transition-colors"
+            >
+              Advanced Map Search &rarr;
+            </Link>
             <Suspense fallback={null}>
               <SaveSearchButton />
             </Suspense>

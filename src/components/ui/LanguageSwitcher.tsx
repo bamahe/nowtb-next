@@ -50,10 +50,14 @@ export default function LanguageSwitcher() {
   return (
     <div
       id="google_translate_element"
-      className="[&_.goog-te-gadget]:font-body [&_.goog-te-gadget]:text-xs
-                 [&_.goog-te-gadget-simple]:border-0 [&_.goog-te-gadget-simple]:bg-transparent
-                 [&_.goog-te-gadget-simple]:p-0 [&_a]:text-inherit [&_a]:no-underline
-                 [&_span]:text-inherit [&_.goog-te-banner-frame]:hidden"
+      className="[&_.goog-te-gadget]:font-body [&_.goog-te-gadget]:text-[10px]
+                 [&_.goog-te-gadget-simple]:border [&_.goog-te-gadget-simple]:border-white/20
+                 [&_.goog-te-gadget-simple]:bg-transparent [&_.goog-te-gadget-simple]:px-2
+                 [&_.goog-te-gadget-simple]:py-1
+                 [&_a]:text-inherit [&_a]:no-underline
+                 [&_span]:text-inherit
+                 [&_.goog-te-gadget>span]:hidden
+                 [&_img]:hidden"
     />
   );
 }

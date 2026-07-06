@@ -42,7 +42,8 @@ export default async function NeighborhoodPage({
     if (parentCity?.zip_codes?.length) {
       const res = await getListings({
         zip_codes: parentCity.zip_codes,
-        limit: "24",
+        exclude_rental: true,
+        limit: "48",
       });
       listings = res.value || [];
     }
