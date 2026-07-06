@@ -44,7 +44,7 @@ const OFFICES: Record<string, OfficeData> = {
 export function getRemaxOffice(slug: string): OfficeData | null {
   const s = slug.toLowerCase();
   for (const key of Object.keys(OFFICES)) {
-    if (s === `remax-${key}` || s === `${key}-remax`) return OFFICES[key];
+    if (s === `remax-${key}`) return OFFICES[key];
   }
   return null;
 }
