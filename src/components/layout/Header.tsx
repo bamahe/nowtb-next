@@ -225,15 +225,23 @@ export default function Header() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           {/* ── Logo — REMAX branded logo, swaps between dark and light ── */}
           {/* Using <img> instead of next/image to avoid optimization proxy issues */}
-          <Link href="/" className="group flex items-center">
+          <Link href="/" className="group flex items-center gap-3">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/remax-logo.png"
               alt="Barrett Henry — REMAX Collective"
-              width={180}
-              height={50}
-              className="h-10 w-auto transition-all duration-500 brightness-0 invert"
+              width={140}
+              height={40}
+              className="h-8 w-auto brightness-0 invert"
             />
+            <div className="hidden lg:block">
+              <span className="font-heading font-light text-sm tracking-[0.15em] uppercase text-white leading-tight block">
+                Barrett Henry
+              </span>
+              <span className="font-body text-[8px] tracking-[0.15em] uppercase text-white/40 leading-tight block">
+                The NOW Team
+              </span>
+            </div>
           </Link>
 
           {/* ── Desktop nav links with mega-menu dropdowns ── */}
@@ -264,13 +272,9 @@ export default function Header() {
                       className={`
                         font-body text-xs tracking-[0.15em] uppercase
                         transition-colors duration-300 flex items-center gap-1
-                        ${useDarkText
-                          ? isActive
-                            ? "text-primary"
-                            : "text-primary/60 hover:text-primary"
-                          : isActive
-                            ? "text-white"
-                            : "text-white/60 hover:text-white"
+                        ${isActive
+                          ? "text-white"
+                          : "text-white/60 hover:text-white"
                         }
                       `}
                       aria-expanded={openDropdown === index}
@@ -296,13 +300,9 @@ export default function Header() {
                       className={`
                         font-body text-xs tracking-[0.15em] uppercase
                         transition-colors duration-300
-                        ${useDarkText
-                          ? isActive
-                            ? "text-primary"
-                            : "text-primary/60 hover:text-primary"
-                          : isActive
-                            ? "text-white"
-                            : "text-white/60 hover:text-white"
+                        ${isActive
+                          ? "text-white"
+                          : "text-white/60 hover:text-white"
                         }
                       `}
                     >

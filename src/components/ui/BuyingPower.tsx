@@ -171,8 +171,8 @@ export default function BuyingPower({ listingPrice, city, county }: BuyingPowerP
         </div>
       </div>}
 
-      {/* === Quick Qualification Check === */}
-      <div className="bg-gray-50 border border-border p-6 md:p-8">
+      {/* === Quick Qualification Check — hidden for luxury homes === */}
+      {!isLuxury && <div className="bg-gray-50 border border-border p-6 md:p-8">
         <h3 className="font-heading font-bold text-primary text-lg mb-2">
           Can You Afford This Home?
         </h3>
@@ -244,7 +244,7 @@ export default function BuyingPower({ listingPrice, city, county }: BuyingPowerP
             VA Loan Guide →
           </Link>
         </div>
-      </div>
+      </div>}
     </section>
   );
 }

@@ -483,28 +483,8 @@ export default async function ListingDetailPage({
             )}
           </div>
 
-          {/* Right column: Request Showing CTA form + Tour Scheduler */}
+          {/* Right column: Tour Scheduler */}
           <div>
-            <ContactForm
-              webhookUrl="/api/contact"
-              source={`showing-request:${listing.ListingId}`}
-              type="showing"
-              property={{
-                address: listing.UnparsedAddress,
-                city: listing.City,
-                state: listing.StateOrProvince,
-                price: listing.ListPrice,
-                mlsNumber: listing.ListingId,
-                url: `https://nowtb.com/properties/${listing.ListingKey}`,
-                beds: listing.BedroomsTotal,
-                baths: listing.BathroomsTotalInteger,
-                sqft: listing.LivingArea,
-              }}
-              title="Schedule a Showing"
-              submitLabel="Request Showing"
-            />
-
-            {/* Tour Scheduler — date/time picker for in-person or video tours */}
             <TourScheduler
               listingAddress={`${listing.UnparsedAddress}, ${listing.City}, ${listing.StateOrProvince} ${listing.PostalCode}`}
               listingId={listing.ListingId}
