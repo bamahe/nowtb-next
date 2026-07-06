@@ -62,7 +62,7 @@ export default function HeroSection({
       <div
         className={cn(
           "relative z-10 container-wide text-center",
-          fullHeight ? "pb-24 md:pb-32 pt-16" : "py-16 md:py-20"
+          fullHeight ? "pb-24 md:pb-32 pt-16" : "pt-28 pb-16 md:pt-32 md:pb-20"
         )}
       >
         {/* Small label above title — defaults to Barrett's brand if none passed */}
