@@ -113,7 +113,8 @@ const nextConfig = {
       { source: "/comments/feed", destination: "/", permanent: true },
       { source: "/wp-admin/:slug*", destination: "/", permanent: false },
       { source: "/wp-login.php", destination: "/", permanent: false },
-      { source: "/wp-content/:slug*", destination: "/", permanent: false },
+      // wp-content redirect removed — static files in public/wp-content/ need to serve
+      // (e.g. headshot image used in email signature)
       { source: "/tampa-bay-area-homes-for-sale", destination: "/properties/", permanent: true },
       { source: "/tampa-bay-area-homes-for-sale/:slug*", destination: "/properties/", permanent: true },
 
