@@ -198,23 +198,25 @@ export function getListingUrl(listing: Listing): string {
   const addressSlug = slugify(
     `${listing.UnparsedAddress} ${listing.City} FL ${listing.PostalCode}`
   );
-  // Use first 8 chars of ListingKey as the unique suffix
-  const keyShort = listing.ListingKey.substring(0, 8);
-  return `/properties/${addressSlug}-${keyShort}`;
+  // Append full ListingKey so the detail page can look it up
+  return `/properties/${addressSlug}-${listing.ListingKey}`;
 }
 
 /**
  * Extract the ListingKey from an SEO-friendly listing URL slug.
- * Tries the slug as a direct ListingKey first (backwards compat),
- * then extracts the last 8-char hex suffix from an address slug.
+ * The key is the last 32-char hex segment (appended by getListingUrl).
+ * Also handles raw ListingKey URLs for backwards compatibility.
  */
 export function extractListingKey(slug: string): string {
-  // If the slug looks like a raw ListingKey (32 hex chars), use as-is
+  // If the slug IS just a raw ListingKey (32 hex chars), use as-is
   if (/^[a-f0-9]{20,}$/i.test(slug)) return slug;
-  // Otherwise extract the last segment after the final hyphen (8+ hex chars)
+  // Look for a 32-char hex key at the end of the slug
+  const match = slug.match(/([a-f0-9]{32})$/i);
+  if (match) return match[1];
+  // Try the last hyphen-separated segment if it looks like a key
   const parts = slug.split('-');
   const lastPart = parts[parts.length - 1];
-  if (/^[a-f0-9]{8,}$/i.test(lastPart)) return lastPart;
+  if (/^[a-f0-9]{16,}$/i.test(lastPart)) return lastPart;
   // Fallback: use the whole slug as the key
   return slug;
 }

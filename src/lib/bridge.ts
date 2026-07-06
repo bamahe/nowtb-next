@@ -277,6 +277,7 @@ export async function getFeaturedListings(): Promise<Listing[]> {
     const res = await getListings({
       zip_codes: serviceAreaZips,
       status: 'Active',
+      exclude_rental: true,
       limit: '12',
       sort: 'ModificationTimestamp desc',
     });

@@ -37,7 +37,9 @@ export default function HeroSection({
         // Full viewport — content at bottom; shorter — content centered
         fullHeight
           ? "min-h-[100dvh] items-end"
-          : "min-h-[50vh] items-center justify-center",
+          : bgImage
+            ? "min-h-[70vh] items-center justify-center"
+            : "min-h-[50vh] items-center justify-center",
         // Dramatic dark gradient when there's no background image
         !bgImage && "bg-gradient-to-br from-primary via-[#0f2847] to-primary"
       )}
