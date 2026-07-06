@@ -186,6 +186,7 @@ export interface ListingSearchParams {
   open_house?: boolean;              // Has upcoming open house
   rental?: boolean;                  // PropertyType eq 'Residential Lease'
   exclude_rental?: boolean;          // PropertyType ne 'Residential Lease'
+  subdivision?: string;              // SubdivisionName eq 'value'
 }
 
 /**

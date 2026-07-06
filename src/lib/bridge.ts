@@ -141,6 +141,9 @@ function buildFilter(params: ListingSearchParams): string {
     filters.push(`OpenHouseStartTime ge ${now} and OpenHouseStartTime le ${week}`);
   }
 
+  // Subdivision name filter (for neighborhood-specific searches)
+  if (params.subdivision) filters.push(`SubdivisionName eq '${params.subdivision.toUpperCase()}'`);
+
   // Default to active listings unless caller explicitly sets a status
   if (params.status) filters.push(`StandardStatus eq '${params.status}'`);
   else filters.push(`StandardStatus eq 'Active'`);

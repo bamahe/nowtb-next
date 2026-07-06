@@ -36,19 +36,33 @@ export default async function NeighborhoodPage({
   const parentCity = getCityBySlug(citySlug);
   const county = parentCity?.county ?? "Hillsborough";
 
-  // Fetch listings by parent city's zip codes (more reliable than city name)
+  // First try to fetch listings by subdivision name (neighborhood-specific)
+  // If no results, fall back to parent city ZIP codes
   let listings: import("@/lib/types").Listing[] = [];
+  let isSubdivisionMatch = false;
+  let totalListings = 0;
   try {
-    if (parentCity?.zip_codes?.length) {
-      const res = await getListings({
+    // Try subdivision name first — this gives neighborhood-specific results
+    const subdivRes = await getListings({
+      subdivision: name,
+      exclude_rental: true,
+      limit: "48",
+    });
+    if (subdivRes.value && subdivRes.value.length > 0) {
+      listings = subdivRes.value;
+      totalListings = subdivRes.total || listings.length;
+      isSubdivisionMatch = true;
+    } else if (parentCity?.zip_codes?.length) {
+      // Fall back to parent city ZIP codes
+      const zipRes = await getListings({
         zip_codes: parentCity.zip_codes,
         exclude_rental: true,
         limit: "48",
       });
-      listings = res.value || [];
+      listings = zipRes.value || [];
+      totalListings = zipRes.total || listings.length;
     }
   } catch {
-    // If the API call fails, render the page with an empty listing grid
     listings = [];
   }
 
@@ -127,7 +141,14 @@ export default async function NeighborhoodPage({
       {listings.length > 0 ? (
         <ListingGrid
           listings={listings}
-          title={`${listings.length} Homes for Sale Near ${name}`}
+          title={isSubdivisionMatch
+            ? `${totalListings > listings.length ? `Showing ${listings.length} of ${totalListings}` : listings.length} Homes for Sale in ${name}`
+            : `${totalListings > listings.length ? `Showing ${listings.length} of ${totalListings}` : listings.length} Homes for Sale Near ${name}`
+          }
+          subtitle={isSubdivisionMatch
+            ? `Active listings in the ${name} subdivision.`
+            : `Showing homes in the ${city} area. No active listings in ${name} right now.`
+          }
           className="container-wide py-12"
         />
       ) : (
