@@ -30,6 +30,13 @@ export const metadata: Metadata = {
     default: "Barrett Henry, REALTOR® | Tampa Bay Homes for Sale | REMAX Collective",
     template: "%s | Barrett Henry, REALTOR®",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
   description:
     "Barrett Henry is a licensed real estate Broker Associate with REMAX Collective serving Tampa Bay. 23+ years of real estate experience. Search homes, get market data, and connect with a trusted local expert.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://nowtb.com"),
