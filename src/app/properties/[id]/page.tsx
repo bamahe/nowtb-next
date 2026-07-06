@@ -15,7 +15,7 @@ import PhotoGallery from "@/components/ui/PhotoGallery";
 import RecentlyViewedTracker from "@/components/ui/RecentlyViewedTracker";
 import ShareButtons from "@/components/ui/ShareButtons";
 import { getListing } from "@/lib/bridge";
-import { formatPrice, formatSqFt } from "@/lib/utils";
+import { formatPrice, formatSqFt, extractListingKey } from "@/lib/utils";
 import type { Listing } from "@/lib/types";
 
 // -----------------------------------------------------------------------------
@@ -34,14 +34,15 @@ export async function generateMetadata({
   params,
 }: ListingPageProps): Promise<Metadata> {
   const { id } = await params;
-  const listing = await getListing(id);
+  const listingKey = extractListingKey(id);
+  const listing = await getListing(listingKey);
 
   // If the listing doesn't exist, Next.js will show the not-found page
   if (!listing) {
     return { title: "Listing Not Found" };
   }
 
-  const title = `${listing.UnparsedAddress} | ${formatPrice(listing.ListPrice)}`;
+  const title = `${listing.UnparsedAddress}, ${listing.City} FL | ${formatPrice(listing.ListPrice)} | Barrett Henry`;
   const description = listing.PublicRemarks
     ? listing.PublicRemarks.slice(0, 160)
     : `${listing.BedroomsTotal || 0} bed, ${listing.BathroomsTotalInteger || 0} bath home in ${listing.City}, FL listed at ${formatPrice(listing.ListPrice)}.`;
@@ -112,7 +113,8 @@ export default async function ListingDetailPage({
   params,
 }: ListingPageProps) {
   const { id } = await params;
-  const listing = await getListing(id);
+  const listingKey = extractListingKey(id);
+  const listing = await getListing(listingKey);
 
   // If Bridge API returned null (not found or error), show 404
   if (!listing) {

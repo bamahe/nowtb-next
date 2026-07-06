@@ -188,12 +188,35 @@ export function slugify(text: string): string {
 }
 
 /**
- * Build the canonical URL path for a listing detail page.
- * Uses ListingKey as the unique identifier in the URL.
- * Example: "/properties/abc123"
+ * Build an SEO-friendly URL for a listing detail page.
+ * Format: /properties/{address-slug}-{listingKey-short}/
+ * Example: /properties/6528-simone-shores-circle-apollo-beach-fl-33572-05bf6e2f/
+ * The last segment (after the last hyphen group of 8+ hex chars) is the ListingKey
+ * used for the API lookup. The address part is for SEO only.
  */
 export function getListingUrl(listing: Listing): string {
-  return `/properties/${listing.ListingKey}`;
+  const addressSlug = slugify(
+    `${listing.UnparsedAddress} ${listing.City} FL ${listing.PostalCode}`
+  );
+  // Use first 8 chars of ListingKey as the unique suffix
+  const keyShort = listing.ListingKey.substring(0, 8);
+  return `/properties/${addressSlug}-${keyShort}`;
+}
+
+/**
+ * Extract the ListingKey from an SEO-friendly listing URL slug.
+ * Tries the slug as a direct ListingKey first (backwards compat),
+ * then extracts the last 8-char hex suffix from an address slug.
+ */
+export function extractListingKey(slug: string): string {
+  // If the slug looks like a raw ListingKey (32 hex chars), use as-is
+  if (/^[a-f0-9]{20,}$/i.test(slug)) return slug;
+  // Otherwise extract the last segment after the final hyphen (8+ hex chars)
+  const parts = slug.split('-');
+  const lastPart = parts[parts.length - 1];
+  if (/^[a-f0-9]{8,}$/i.test(lastPart)) return lastPart;
+  // Fallback: use the whole slug as the key
+  return slug;
 }
 
 /**
