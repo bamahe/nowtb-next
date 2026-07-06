@@ -96,7 +96,7 @@ const OFFICES: Record<string, OfficeData> = {
       "Brandon, Riverview, and Valrico consistently rank among the best places for families in Florida \u2014 top-rated schools, low crime, and affordable price points",
       "The I-75 and SR-60 corridors give Brandon residents direct access to Tampa, MacDill AFB, and the Selmon Expressway for fast commutes",
     ],
-    serviceAreas: ["Valrico", "Riverview", "FishHawk Ranch", "Lithia", "Bloomingdale", "Providence", "Dover", "Plant City", "Seffner", "Mango", "Palm River"],
+    serviceAreas: ["Valrico", "Riverview", "FishHawk Ranch", "Lithia", "Bloomingdale", "Providence", "Dover", "Plant City", "Seffner", "Mango", "Palm River", "Parrish", "Bradenton", "Sarasota"],
     marketContext: "East Hillsborough County is where Tampa Bay families go to find space, value, and top-rated schools. Brandon and its surrounding communities \u2014 Valrico, Riverview, FishHawk, Lithia \u2014 offer everything from starter homes in the $300s to estate properties on acreage. New construction is booming along the SR-60 and Lithia Pinecrest corridors, and Barrett knows every builder, every phase, and every incentive available.",
     commercialNote: "Brandon\u2019s commercial real estate market is driven by the explosive residential growth in East Hillsborough. Retail centers along SR-60 (Brandon Blvd), medical office space near Brandon Regional Hospital, and industrial flex space along I-75 are all active sectors. Barrett handles REMAX Commercial deals for investors looking to capitalize on the area\u2019s growth trajectory.",
     referralAngle: "Brandon is a magnet for military families from MacDill AFB and for corporate relocations to Tampa\u2019s east side. REMAX\u2019s referral network means Barrett regularly receives incoming referrals from agents across the country whose clients are PCSing to MacDill or transferring to employers along the I-4 corridor.",
@@ -714,16 +714,16 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {/* Current office — highlighted */}
             <div className="border-2 border-accent p-6 text-center bg-accent/5">
-              <p className="font-heading font-bold text-lg text-primary mb-1">{office.city} Office</p>
+              <p className="font-heading font-bold text-lg text-primary mb-1">REMAX Collective {office.city}</p>
               <p className="font-body text-muted text-sm font-light mb-2">{office.address}</p>
               <p className="font-body text-accent text-xs font-bold uppercase tracking-wider">You Are Here</p>
             </div>
-            {/* Other two offices */}
+            {/* Other two offices — full name + address */}
             {office.otherOffices.map((other) => {
               const otherData = OFFICES[other.key];
               return (
                 <Link key={other.key} href={`/remax-${other.key}/`} className="border border-gray-200 p-6 text-center hover:border-accent hover:bg-accent/5 transition-colors">
-                  <p className="font-heading font-bold text-lg text-primary mb-1">{other.city} Office</p>
+                  <p className="font-heading font-bold text-lg text-primary mb-1">REMAX Collective {other.city}</p>
                   <p className="font-body text-muted text-sm font-light mb-2">{otherData.address}</p>
                   <p className="font-body text-accent text-xs tracking-[0.15em] uppercase">View REMAX {other.city} &rarr;</p>
                 </Link>
