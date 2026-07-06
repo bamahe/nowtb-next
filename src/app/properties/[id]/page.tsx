@@ -506,8 +506,11 @@ export default async function ListingDetailPage({
 
       {/* =================================================================
           SECTION 6: Buying Power — loan programs, DPA, qualification
+          Only show for for-sale listings, NOT rentals
           ================================================================= */}
-      <BuyingPower listingPrice={listing.ListPrice} city={listing.City} county={listing.CountyOrParish} />
+      {listing.PropertyType !== 'Residential Lease' && (
+        <BuyingPower listingPrice={listing.ListPrice} city={listing.City} county={listing.CountyOrParish} />
+      )}
 
       {/* =================================================================
           SECTION 7: MLS Disclaimer — required Stellar MLS compliance
@@ -534,7 +537,10 @@ export default async function ListingDetailPage({
       </section>
 
       {/* === Floating mortgage calculator — pre-filled with listing price === */}
-      <MiniCalc listingPrice={listing.ListPrice} />
+      {/* Floating calculator — only for for-sale listings */}
+      {listing.PropertyType !== 'Residential Lease' && (
+        <MiniCalc listingPrice={listing.ListPrice} />
+      )}
     </>
   );
 }

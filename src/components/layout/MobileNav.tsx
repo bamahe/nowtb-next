@@ -10,6 +10,7 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import { createClient } from "@/lib/supabase/client";
 
 // Navigation links (same as desktop Header)
 const NAV_LINKS = [
@@ -27,7 +28,17 @@ interface MobileNavProps {
 
 export default function MobileNav({ scrolled = false }: MobileNavProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const pathname = usePathname();
+
+  // Check auth state
+  useEffect(() => {
+    const supabase = createClient();
+    if (!supabase) return;
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      setIsLoggedIn(!!user);
+    });
+  }, [pathname]);
 
   // Close the menu when the route changes (user taps a link)
   useEffect(() => {
@@ -110,8 +121,17 @@ export default function MobileNav({ scrolled = false }: MobileNavProps) {
             })}
           </nav>
 
-          {/* ── Bottom section — contact info in small uppercase ── */}
-          <div className="absolute bottom-12 left-0 right-0 flex flex-col items-center gap-3">
+          {/* ── Bottom section — auth + contact info ── */}
+          <div className="absolute bottom-12 left-0 right-0 flex flex-col items-center gap-4">
+            {/* Sign In / Account link */}
+            <Link
+              href={isLoggedIn ? "/account/" : "/login/"}
+              onClick={close}
+              className="text-sm tracking-[0.15em] uppercase text-accent
+                         transition-colors duration-300 hover:text-white font-medium"
+            >
+              {isLoggedIn ? "My Account" : "Sign In"}
+            </Link>
             <a
               href="tel:+18137337907"
               className="text-xs tracking-[0.15em] uppercase text-white/40
