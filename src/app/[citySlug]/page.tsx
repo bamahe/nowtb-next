@@ -631,6 +631,12 @@ async function HubPage({ city }: { city: CityData }) {
                 Recently Sold
               </a>
             )}
+            <a href="#neighborhoods" className="font-body text-xs tracking-[0.12em] uppercase px-5 py-4 border-b-2 border-transparent text-muted hover:text-primary transition-colors">
+              Neighborhoods
+            </a>
+            <a href="#about" className="font-body text-xs tracking-[0.12em] uppercase px-5 py-4 border-b-2 border-transparent text-muted hover:text-primary transition-colors">
+              About {city.name}
+            </a>
             <a href="#faq" className="font-body text-xs tracking-[0.12em] uppercase px-5 py-4 border-b-2 border-transparent text-muted hover:text-primary transition-colors">
               FAQ
             </a>
@@ -721,6 +727,7 @@ async function HubPage({ city }: { city: CityData }) {
       <SpokeNav city={city} />
 
       {/* === About section — city overview content === */}
+      <div id="about" />
       <CityContent city={city} />
 
       {/* === Recently Sold Homes — real closed listings from MLS === */}
@@ -850,7 +857,42 @@ async function HubPage({ city }: { city: CityData }) {
         </div>
       </section>
 
-      {/* === Neighboring cities === */}
+      {/* === Neighborhoods in this city === */}
+      {(() => {
+        const cityNeighborhoods = getNeighborhoodsByCity(city.slug);
+        if (cityNeighborhoods.length === 0) return null;
+        return (
+          <section id="neighborhoods" className="container-wide py-12">
+            <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2">
+              Neighborhoods in {city.name}
+            </h2>
+            <p className="font-body text-muted font-light mb-6">
+              Explore {cityNeighborhoods.length} neighborhoods and communities in {city.name}, {city.county} County.
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+              {cityNeighborhoods.slice(0, 20).map((n) => (
+                <Link
+                  key={n.slug}
+                  href={`/${n.slug}/`}
+                  className="block border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10 hover:text-accent"
+                >
+                  {n.name}
+                </Link>
+              ))}
+            </div>
+            {cityNeighborhoods.length > 20 && (
+              <p className="font-body text-xs text-muted mt-4 text-center">
+                + {cityNeighborhoods.length - 20} more neighborhoods.{" "}
+                <Link href={`/${city.slug}-neighborhood-guide/`} className="text-accent hover:text-primary">
+                  View all →
+                </Link>
+              </p>
+            )}
+          </section>
+        );
+      })()}
+
+      {/* === Nearby cities in the same county === */}
       {neighbors.length > 0 && (
         <section className="container-wide py-12">
           <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6">
@@ -860,8 +902,8 @@ async function HubPage({ city }: { city: CityData }) {
             {neighbors.map((neighbor) => (
               <Link
                 key={neighbor.slug}
-                href={`/${neighbor.slug}`}
-                className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10"
+                href={`/${neighbor.slug}/`}
+                className="block border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10"
               >
                 {neighbor.name} Homes
               </Link>

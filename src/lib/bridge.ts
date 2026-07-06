@@ -204,14 +204,14 @@ export async function getListings(
 export async function getListing(id: string): Promise<Listing | null> {
   if (IS_BUILD_TIME) return null;
   try {
-    // OData single entity format: Property('ListingKey') — NOT Property/ListingKey
     if (isRateLimited()) return null;
 
+    // Try direct lookup first (full 32-char ListingKey)
     const url = DATASET === 'test'
       ? `${BRIDGE_BASE}/${DATASET}/listings/${id}`
       : `${BRIDGE_BASE}/OData/${DATASET}/Property('${id}')`;
 
-    const res = await fetch(url, {
+    let res = await fetch(url, {
       headers: {
         Authorization: `Bearer ${BRIDGE_TOKEN}`,
         Accept: 'application/json',
@@ -221,6 +221,25 @@ export async function getListing(id: string): Promise<Listing | null> {
 
     if (res.status === 429) {
       markRateLimited();
+      return null;
+    }
+
+    // If direct lookup fails and the key is short (partial), try a filter search
+    if (!res.ok && id.length < 32 && /^[a-f0-9]+$/i.test(id)) {
+      const searchUrl = `${BRIDGE_BASE}/OData/${DATASET}/Property?$filter=startswith(ListingKey,'${id}')&$top=1`;
+      res = await fetch(searchUrl, {
+        headers: {
+          Authorization: `Bearer ${BRIDGE_TOKEN}`,
+          Accept: 'application/json',
+        },
+        next: { revalidate: 300 },
+      });
+      if (res.ok) {
+        const searchData = await res.json();
+        if (searchData.value && searchData.value.length > 0) {
+          return searchData.value[0] as Listing;
+        }
+      }
       return null;
     }
 
