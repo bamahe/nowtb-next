@@ -100,9 +100,8 @@ const NAV_ITEMS: NavItem[] = [
       { href: "/guides/first-time-home-buyer-guide/", label: "First-Time Buyers" },
       { href: "/properties/", label: "Browse Homes" },
       { href: "/mortgage-calculator/", label: "Mortgage Calculator" },
-      { href: "/guides/florida-down-payment-assistance/", label: "Down Payment Assistance" },
+      { href: "/guides/fha-loan-guide/", label: "FHA & Down Payment Help" },
       { href: "/guides/va-home-loan-guide/", label: "VA Home Loans" },
-      { href: "/guides/fha-loan-guide/", label: "FHA Loans" },
     ],
   },
   {
@@ -218,8 +217,8 @@ export default function Header() {
         className={`
           transition-all duration-500 ease-in-out
           ${scrolled || hasLightBg
-            ? "bg-[#F8F6F3] shadow-[0_1px_0_rgba(0,0,0,0.05)]"
-            : "bg-transparent"
+            ? "bg-primary shadow-[0_1px_0_rgba(0,0,0,0.2)]"
+            : "bg-primary/80 backdrop-blur-sm"
           }
         `}
       >
@@ -233,10 +232,7 @@ export default function Header() {
               alt="Barrett Henry — REMAX Collective"
               width={180}
               height={50}
-              className={`
-                h-10 w-auto transition-all duration-500
-                ${useDarkText ? "" : "brightness-0 invert"}
-              `}
+              className="h-10 w-auto transition-all duration-500 brightness-0 invert"
             />
           </Link>
 
@@ -325,22 +321,11 @@ export default function Header() {
               className={`
                 font-body text-xs tracking-[0.15em] uppercase
                 transition-colors duration-500
-                ${useDarkText ? "text-primary/50 hover:text-primary" : "text-white/50 hover:text-white"}
+                text-white/50 hover:text-white
               `}
             >
               (813) 733-7907
             </a>
-            {/* Blog link */}
-            <Link
-              href="/blog/"
-              className={`
-                font-body text-xs tracking-[0.15em] uppercase
-                transition-colors duration-500
-                ${useDarkText ? "text-primary/50 hover:text-primary" : "text-white/50 hover:text-white"}
-              `}
-            >
-              Blog
-            </Link>
             {/* Auth link — Login/Register or Account */}
             {process.env.NEXT_PUBLIC_SUPABASE_URL && (
               <Link
@@ -348,7 +333,7 @@ export default function Header() {
                 className={`
                   font-body text-xs tracking-[0.15em] uppercase
                   transition-colors duration-500
-                  ${useDarkText ? "text-primary/50 hover:text-primary" : "text-white/50 hover:text-white"}
+                  text-white/50 hover:text-white
                 `}
               >
                 {isLoggedIn ? "My Account" : "Login / Register"}
