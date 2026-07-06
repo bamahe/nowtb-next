@@ -126,7 +126,8 @@ export default async function PropertiesPage({
     single_story: rawParams.single_story === "true" || undefined,
     open_house: rawParams.open_house === "true" || undefined,
     rental: rawParams.rental === "true" || undefined,
-    exclude_rental: rawParams.exclude_rental === "true" || undefined,
+    // Exclude rentals by default — only show rentals when explicitly requested
+    exclude_rental: rawParams.rental === "true" ? undefined : true,
     limit: String(PAGE_SIZE),
     offset:
       typeof rawParams.page === "string"

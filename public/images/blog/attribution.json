@@ -1862,5 +1862,13 @@
     "photographer_url": "https://unsplash.com/@quillofspirit",
     "unsplash_url": "https://unsplash.com/photos/a-garden-with-plants-and-pots-BOv0-Qn2hMA",
     "alt": "Residential neighborhood in Tampa Bay FL"
+  },
+  {
+    "slug": "manatee-county-real-estate-guide",
+    "unsplash_id": "manual-copy",
+    "photographer": "Grant Durr",
+    "photographer_url": "",
+    "unsplash_url": "",
+    "alt": "Manatee County FL real estate"
   }
 ]
