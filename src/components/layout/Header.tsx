@@ -227,11 +227,11 @@ export default function Header() {
           <Link href="/" className="group flex items-center gap-3">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/remax-logo.png"
+              src="/images/remax-logo-color.png"
               alt="Barrett Henry — REMAX Collective"
               width={200}
               height={55}
-              className="h-11 w-auto brightness-0 invert"
+              className="h-11 w-auto"
             />
           </Link>
 

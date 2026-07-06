@@ -288,7 +288,7 @@ export async function generateMetadata({
       const cityName = nCity ? nCity.name : "Tampa Bay";
       return {
         title: `${parsed.name} Homes for Sale | ${cityName}, FL`,
-        description: `Explore homes for sale in ${parsed.name}, ${cityName}, FL. Updated daily from Stellar MLS. Barrett Henry, Broker Associate at REMAX Collective — 23+ years of real estate experience.`,
+        description: `Explore homes for sale in ${parsed.name}, ${cityName}, FL. Updated daily from Stellar MLS. Barrett Henry, REMAX Collective. Call (813) 733-7907.`,
         alternates: { canonical },
       };
     }
@@ -298,7 +298,7 @@ export async function generateMetadata({
       const nsCityName = nsCity ? nsCity.name : "Tampa Bay";
       return {
         title: `${parsed.name} Homes for Sale — ${nsCityName}, FL`,
-        description: `Browse homes for sale in ${parsed.name}, ${nsCityName}, FL. Updated daily from Stellar MLS. Barrett Henry, Broker Associate at REMAX Collective — 23+ years of real estate experience.`,
+        description: `Browse homes for sale in ${parsed.name}, ${nsCityName}, FL. Updated daily from Stellar MLS. Barrett Henry, REMAX Collective. Call (813) 733-7907.`,
         alternates: { canonical },
       };
     }
@@ -348,13 +348,14 @@ export async function generateMetadata({
     // Spoke page metadata
     return {
       title: `${topic.label} in ${city.name}`,
-      description: `Browse ${topic.label.toLowerCase()} in ${city.name}, ${city.county} County, FL. Updated daily from Stellar MLS. Barrett Henry, Broker Associate at REMAX Collective — 23+ years of real estate experience.`,
+      description: `Browse ${topic.label.toLowerCase()} in ${city.name}, FL. Updated daily from Stellar MLS. Barrett Henry, REMAX Collective. Call (813) 733-7907.`,
       alternates: { canonical },
       openGraph: {
         title: `${topic.label} in ${city.name} | Barrett Henry, REALTOR®`,
         description: `Search ${topic.label.toLowerCase()} in ${city.name}, FL. Expert guidance from Barrett Henry at REMAX Collective.`,
         url: `/${citySlug}`,
         type: "website",
+        images: [{ url: "/og-default.png", width: 1200, height: 630 }],
       },
     };
   }
@@ -362,13 +363,14 @@ export async function generateMetadata({
   // Hub page metadata
   return {
     title: `${city.name} Homes for Sale`,
-    description: `Search homes for sale in ${city.name}, ${city.county} County, FL. Updated daily from Stellar MLS. Barrett Henry, Broker Associate at REMAX Collective — 23+ years of real estate experience.`,
+    description: `Search homes for sale in ${city.name}, FL. Updated daily from Stellar MLS. Barrett Henry, REMAX Collective. Call (813) 733-7907.`,
     alternates: { canonical },
     openGraph: {
       title: `${city.name} Homes for Sale | Barrett Henry, REALTOR®`,
       description: `Explore ${city.name} real estate with Barrett Henry at REMAX Collective. Browse listings, market data, and neighborhood info.`,
       url: `/${citySlug}`,
       type: "website",
+      images: [{ url: "/og-default.png", width: 1200, height: 630 }],
     },
   };
 }
@@ -816,10 +818,10 @@ async function HubPage({ city }: { city: CityData }) {
               What is the average home price in {city.name}, FL?
             </h3>
             <p className="font-body text-muted font-light leading-relaxed">
-              Home prices in {city.name} vary by neighborhood, property type, and condition.
+              Home prices in <strong>{city.name}</strong> vary by neighborhood, property type, and condition.
               Browse current active listings above for the most up-to-date pricing.
-              Contact Barrett Henry at{" "}
-              <a href="tel:+18137337907" className="text-accent hover:underline">(813) 733-7907</a>{" "}
+              Contact <strong>Barrett Henry</strong> at{" "}
+              <a href="tel:+18137337907" className="text-accent hover:underline"><strong>(813) 733-7907</strong></a>{" "}
               for a personalized market analysis.
             </p>
           </div>
@@ -838,10 +840,10 @@ async function HubPage({ city }: { city: CityData }) {
               How do I buy a home in {city.name}?
             </h3>
             <p className="font-body text-muted font-light leading-relaxed">
-              Start by getting pre-approved for a mortgage, then work with a local REALTOR®
-              who knows the {city.name} market. Barrett Henry and The NOW Team have 23+ years
-              of experience helping buyers in {city.county} County. Call{" "}
-              <a href="tel:+18137337907" className="text-accent hover:underline">(813) 733-7907</a>{" "}
+              Start by getting pre-approved for a mortgage, then work with a local <strong>REALTOR®</strong>{" "}
+              who knows the {city.name} market. <strong>Barrett Henry</strong> and The NOW Team have 23+ years
+              of experience helping buyers in <strong>{city.county} County</strong>. Call{" "}
+              <a href="tel:+18137337907" className="text-accent hover:underline"><strong>(813) 733-7907</strong></a>{" "}
               to get started.
             </p>
           </div>
