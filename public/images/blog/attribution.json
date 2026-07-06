@@ -1870,5 +1870,117 @@
     "photographer_url": "",
     "unsplash_url": "",
     "alt": "Manatee County FL real estate"
+  },
+  {
+    "slug": "best-neighborhoods-lake-wales",
+    "unsplash_id": "-SCsxJTvo5M",
+    "photographer": "Point Blanq",
+    "photographer_url": "https://unsplash.com/@pointblanq",
+    "unsplash_url": "https://unsplash.com/photos/grayscale-photo-of-people-walking-on-sidewalk--SCsxJTvo5M",
+    "alt": "Real estate in Tampa Bay FL"
+  },
+  {
+    "slug": "lake-wales-housing-market-update",
+    "unsplash_id": "i1ZyJN2ft7s",
+    "photographer": "Sartori Holdings LLC",
+    "photographer_url": "https://unsplash.com/@sartoriholdings",
+    "unsplash_url": "https://unsplash.com/photos/a-suburban-house-with-a-white-garage-and-green-tree-i1ZyJN2ft7s",
+    "alt": "Residential neighborhood in Tampa Bay FL"
+  },
+  {
+    "slug": "best-neighborhoods-haines-city",
+    "unsplash_id": "19PWibCKzgI",
+    "photographer": "Gunnar Ridderström",
+    "photographer_url": "https://unsplash.com/@gunnarridder",
+    "unsplash_url": "https://unsplash.com/photos/buildings-line-a-calm-river-under-a-clear-blue-sky-19PWibCKzgI",
+    "alt": "Real estate in Tampa Bay FL"
+  },
+  {
+    "slug": "haines-city-housing-market-update",
+    "unsplash_id": "QFmfen6KjD8",
+    "photographer": "Henry St.Martin",
+    "photographer_url": "https://unsplash.com/@quantah",
+    "unsplash_url": "https://unsplash.com/photos/aerial-view-of-a-suburban-neighborhood-with-houses-and-snow-QFmfen6KjD8",
+    "alt": "Residential neighborhood in Tampa Bay FL"
+  },
+  {
+    "slug": "best-neighborhoods-auburndale",
+    "unsplash_id": "6Oq9Nm4sbHA",
+    "photographer": "Bruce Barrow",
+    "photographer_url": "https://unsplash.com/@bruceb_uk",
+    "unsplash_url": "https://unsplash.com/photos/canal-lined-with-buildings-and-trees-in-amsterdam-6Oq9Nm4sbHA",
+    "alt": "Real estate in Tampa Bay FL"
+  },
+  {
+    "slug": "auburndale-housing-market-update",
+    "unsplash_id": "0GGrKlPHJqs",
+    "photographer": "PJH",
+    "photographer_url": "https://unsplash.com/@dokae",
+    "unsplash_url": "https://unsplash.com/photos/orange-poppies-bloom-beside-a-quaint-street-0GGrKlPHJqs",
+    "alt": "Residential neighborhood in Tampa Bay FL"
+  },
+  {
+    "slug": "best-neighborhoods-bartow",
+    "unsplash_id": "-xuTMs2hP2s",
+    "photographer": "Ali AOUF",
+    "photographer_url": "https://unsplash.com/@40uf411",
+    "unsplash_url": "https://unsplash.com/photos/yellow-house-with-red-roof-white-windows-and-green-foliage--xuTMs2hP2s",
+    "alt": "Real estate in Tampa Bay FL"
+  },
+  {
+    "slug": "bartow-housing-market-update",
+    "unsplash_id": "_9DwGGmyKI0",
+    "photographer": "Osmany M Leyva Aldana",
+    "photographer_url": "https://unsplash.com/@ozym",
+    "unsplash_url": "https://unsplash.com/photos/modern-townhouses-with-garages-and-a-large-oak-tree-_9DwGGmyKI0",
+    "alt": "Residential neighborhood in Tampa Bay FL"
+  },
+  {
+    "slug": "winter-haven-housing-market-update",
+    "unsplash_id": "a570mEmLMII",
+    "photographer": "Matthew Moloney",
+    "photographer_url": "https://unsplash.com/@mattmoloney",
+    "unsplash_url": "https://unsplash.com/photos/suburban-neighborhood-with-houses-and-palm-trees-a570mEmLMII",
+    "alt": "Residential neighborhood in Tampa Bay FL"
+  },
+  {
+    "slug": "best-neighborhoods-holiday",
+    "unsplash_id": "MYtHcHYXE5s",
+    "photographer": "Max Power",
+    "photographer_url": "https://unsplash.com/@nopower",
+    "unsplash_url": "https://unsplash.com/photos/trees-line-a-street-with-a-building-in-the-background-MYtHcHYXE5s",
+    "alt": "Real estate in Holiday: Where to Live in 2026 FL"
+  },
+  {
+    "slug": "holiday-housing-market-update",
+    "unsplash_id": "lNfBUTl8PlI",
+    "photographer": "Eric Gonzalez",
+    "photographer_url": "https://unsplash.com/@nscreativeco",
+    "unsplash_url": "https://unsplash.com/photos/high-angle-photography-of-blue-body-of-water-lNfBUTl8PlI",
+    "alt": "Residential neighborhood in Tampa Bay FL"
+  },
+  {
+    "slug": "best-neighborhoods-san-antonio",
+    "unsplash_id": "0tH28I91PTk",
+    "photographer": "Bruno Guerrero",
+    "photographer_url": "https://unsplash.com/@pray4bokeh",
+    "unsplash_url": "https://unsplash.com/photos/a-white-picket-fence-lines-a-tree-lined-street-in-autumn-0tH28I91PTk",
+    "alt": "Real estate in San Antonio: Where to Live in 2026 FL"
+  },
+  {
+    "slug": "san-antonio-housing-market-update",
+    "unsplash_id": "GGoGr9MXaSk",
+    "photographer": "Srini Somanchi",
+    "photographer_url": "https://unsplash.com/@sriniunsplash",
+    "unsplash_url": "https://unsplash.com/photos/a-suburban-neighborhood-with-houses-and-trees-at-dusk-GGoGr9MXaSk",
+    "alt": "Residential neighborhood in Tampa Bay FL"
+  },
+  {
+    "slug": "best-neighborhoods-dade-city",
+    "unsplash_id": "rafblRbne3o",
+    "photographer": "Karsten Würth",
+    "photographer_url": "https://unsplash.com/@karsten_wuerth",
+    "unsplash_url": "https://unsplash.com/photos/long-straight-road-with-trees-on-the-side-rafblRbne3o",
+    "alt": "Real estate in Dade City: Where to Live in 2026 FL"
   }
 ]
