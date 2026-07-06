@@ -11,7 +11,6 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
-import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 import MobileNav from "@/components/layout/MobileNav";
 
 // ---------------------------------------------------------------------------
@@ -340,7 +339,6 @@ export default function Header() {
               </Link>
             )}
             {/* Language switcher */}
-            <LanguageSwitcher />
           </div>
 
           {/* ── Mobile hamburger toggle ── */}
