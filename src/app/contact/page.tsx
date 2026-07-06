@@ -6,6 +6,7 @@
 
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
 import ContactForm from "@/components/ui/ContactForm";
 
@@ -169,14 +170,16 @@ export default function ContactPage() {
             REMAX Collective — 3 Tampa Bay Locations
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Tampa Office */}
+            {/* Tampa Office — links to /remax-tampa/ */}
             <div className="bg-white overflow-hidden shadow-sm">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/office-tampa.jpg"
-                alt="REMAX Collective Tampa Office — 14310 N. Dale Mabry Hwy"
-                className="w-full h-48 object-cover"
-              />
+              <Link href="/remax-tampa/" className="block overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/office-tampa.jpg"
+                  alt="REMAX Collective Tampa Office — 14310 N. Dale Mabry Hwy"
+                  className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </Link>
               <iframe
                 title="REMAX Collective Tampa Office"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2714!2d-82.508415!3d28.075781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c16b3871f5af%3A0x94e614d601928a5d!2sBarrett+Henry%2C+REALTOR%C2%AE+-+REMAX+Collective!5e0!3m2!1sen!2sus"
@@ -188,28 +191,28 @@ export default function ContactPage() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
               <div className="p-6 text-center">
-                <p className="font-body text-dark font-medium mb-1">Tampa Office</p>
-                <p className="font-body text-muted font-light text-sm">
+                <Link href="/remax-tampa/" className="font-body text-dark font-medium mb-1 hover:text-accent transition-colors">Tampa Office</Link>
+                <p className="font-body text-muted font-light text-sm mt-1">
                   14310 N. Dale Mabry Hwy, Ste 100<br />Tampa, FL 33618
                 </p>
-                <a
-                  href="https://www.google.com/maps/place/Barrett+Henry,+REALTOR%C2%AE+-+REMAX+Collective/@28.075781,-82.508415,17z"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/remax-tampa/"
                   className="inline-block mt-3 font-body text-xs tracking-[0.15em] uppercase text-accent hover:text-primary transition-colors"
                 >
-                  Open in Google Maps →
-                </a>
+                  View REMAX Tampa →
+                </Link>
               </div>
             </div>
-            {/* Largo Office */}
+            {/* Largo Office — links to /remax-largo/ */}
             <div className="bg-white overflow-hidden shadow-sm">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/office-largo.jpg"
-                alt="REMAX Collective Largo Office — 11200 Seminole Blvd"
-                className="w-full h-48 object-cover"
-              />
+              <Link href="/remax-largo/" className="block overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/office-largo.jpg"
+                  alt="REMAX Collective Largo Office — 11200 Seminole Blvd"
+                  className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </Link>
               <iframe
                 title="REMAX Collective Largo Office"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1762!2d-82.7873!3d27.8839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2f9a8c0d4e5f6%3A0xa1b2c3d4e5f67890!2s11200+Seminole+Blvd%2C+Largo%2C+FL+33778!5e0!3m2!1sen!2sus"
@@ -221,28 +224,28 @@ export default function ContactPage() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
               <div className="p-6 text-center">
-                <p className="font-body text-dark font-medium mb-1">Largo Office</p>
-                <p className="font-body text-muted font-light text-sm">
+                <Link href="/remax-largo/" className="font-body text-dark font-medium mb-1 hover:text-accent transition-colors">Largo Office</Link>
+                <p className="font-body text-muted font-light text-sm mt-1">
                   11200 Seminole Blvd, Ste 202<br />Largo, FL 33778
                 </p>
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=11200+Seminole+Blvd+Ste+202+Largo+FL+33778"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/remax-largo/"
                   className="inline-block mt-3 font-body text-xs tracking-[0.15em] uppercase text-accent hover:text-primary transition-colors"
                 >
-                  Open in Google Maps →
-                </a>
+                  View REMAX Largo →
+                </Link>
               </div>
             </div>
-            {/* Brandon Office */}
+            {/* Brandon Office — links to /remax-brandon/ */}
             <div className="bg-white overflow-hidden shadow-sm">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/office-brandon.jpg"
-                alt="REMAX Collective Brandon Office — 417 Lithia Pinecrest Rd"
-                className="w-full h-48 object-cover"
-              />
+              <Link href="/remax-brandon/" className="block overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/office-brandon.jpg"
+                  alt="REMAX Collective Brandon Office — 417 Lithia Pinecrest Rd"
+                  className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </Link>
               <iframe
                 title="REMAX Collective Brandon Office"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1762!2d-82.2859!3d27.9295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2d4e5f6a7b8c9%3A0x1234567890abcdef!2s417+Lithia+Pinecrest+Rd%2C+Brandon%2C+FL+33511!5e0!3m2!1sen!2sus"
@@ -254,18 +257,16 @@ export default function ContactPage() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
               <div className="p-6 text-center">
-                <p className="font-body text-dark font-medium mb-1">Brandon Office</p>
-                <p className="font-body text-muted font-light text-sm">
+                <Link href="/remax-brandon/" className="font-body text-dark font-medium mb-1 hover:text-accent transition-colors">Brandon Office</Link>
+                <p className="font-body text-muted font-light text-sm mt-1">
                   417 Lithia Pinecrest Rd<br />Brandon, FL 33511
                 </p>
-                <a
-                  href="https://maps.app.goo.gl/gjvqfQH6TqnuN2XA8"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/remax-brandon/"
                   className="inline-block mt-3 font-body text-xs tracking-[0.15em] uppercase text-accent hover:text-primary transition-colors"
                 >
-                  Open in Google Maps →
-                </a>
+                  View REMAX Brandon →
+                </Link>
               </div>
             </div>
           </div>
