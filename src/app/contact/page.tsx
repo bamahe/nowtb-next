@@ -171,6 +171,12 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Tampa Office */}
             <div className="bg-white overflow-hidden shadow-sm">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/office-tampa.jpg"
+                alt="REMAX Collective Tampa Office — 14310 N. Dale Mabry Hwy"
+                className="w-full h-48 object-cover"
+              />
               <iframe
                 title="REMAX Collective Tampa Office"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2714!2d-82.508415!3d28.075781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c16b3871f5af%3A0x94e614d601928a5d!2sBarrett+Henry%2C+REALTOR%C2%AE+-+REMAX+Collective!5e0!3m2!1sen!2sus"
