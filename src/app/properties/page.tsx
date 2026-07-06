@@ -197,11 +197,9 @@ export default async function PropertiesPage({
       <HeroSection
         title="Properties"
         label="TAMPA BAY REAL ESTATE"
-        subtitle="Updated daily from the Stellar MLS."
+        subtitle="Search homes for sale across 8 Tampa Bay counties. Updated daily from Stellar MLS."
         fullHeight={false}
-      >
-        <SearchBar />
-      </HeroSection>
+      />
 
       {/* =================================================================
           SECTION 2: Interactive filter bar — sort, type, features
