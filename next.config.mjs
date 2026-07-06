@@ -9,12 +9,19 @@ function getBlogRedirects() {
   try {
     const filePath = path.join(process.cwd(), 'src/data/posts-export.json');
     const posts = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-    // Generate both with and without trailing slash to avoid 2-hop chains
-    // WordPress used /slug/ (trailing slash), new site uses /blog/slug
-    return posts.flatMap((post) => [
-      { source: `/${post.slug}`, destination: `/blog/${post.slug}/`, permanent: true },
-      { source: `/${post.slug}/`, destination: `/blog/${post.slug}/`, permanent: true },
-    ]);
+
+    // Slugs that match city hub pages — these should NOT redirect to /blog/
+    // because the city page at /{slug}/ takes priority
+    const citiesPath = path.join(process.cwd(), 'src/data/cities.ts');
+    const citiesContent = fs.readFileSync(citiesPath, 'utf-8');
+    const citySlugs = new Set([...citiesContent.matchAll(/slug: "([^"]+)"/g)].map(m => m[1]));
+
+    return posts
+      .filter((post) => !citySlugs.has(post.slug))
+      .flatMap((post) => [
+        { source: `/${post.slug}`, destination: `/blog/${post.slug}/`, permanent: true },
+        { source: `/${post.slug}/`, destination: `/blog/${post.slug}/`, permanent: true },
+      ]);
   } catch {
     console.warn('Could not load posts for redirects');
     return [];
