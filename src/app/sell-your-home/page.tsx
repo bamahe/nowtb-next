@@ -141,23 +141,56 @@ export default function SellYourHomePage() {
         </div>
       </section>
 
-      {/* ---- Testimonial Placeholder ---- */}
+      {/* ---- Real Seller Testimonials ---- */}
       <section className="section-light">
-        <div className="container-wide text-center max-w-3xl mx-auto">
-          <h2 className="heading-section text-display-sm text-primary mb-8">
+        <div className="container-wide">
+          <h2 className="heading-section text-display-sm text-primary text-center mb-12">
             What Sellers Are Saying
           </h2>
-          <blockquote className="font-body text-lg text-muted italic">
-            &ldquo;Barrett made selling our home effortless. His pricing
-            strategy was spot-on — we had multiple offers in the first weekend
-            and closed above asking price.&rdquo;
-          </blockquote>
-          <p className="font-body text-primary font-medium mt-4">
-            — Happy Seller, Tampa Bay
-          </p>
-          <p className="font-body text-muted text-sm mt-2">
-            More testimonials coming soon.
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="border border-border p-8">
+              <p className="text-accent text-lg mb-4">★★★★★</p>
+              <blockquote className="font-body text-muted font-light text-sm leading-relaxed mb-6">
+                &ldquo;I sold my townhome in Riverview with The NOW Team and the whole process was incredibly smooth. Barrett and his team had a plan from day one. Professional photos, strategic pricing, and a marketing push that had my phone blowing up with showing requests within the first 48 hours.&rdquo;
+              </blockquote>
+              <p className="font-body text-primary font-medium text-sm">Kevin T.</p>
+              <p className="font-body text-muted text-xs">Riverview</p>
+            </div>
+            <div className="border border-border p-8">
+              <p className="text-accent text-lg mb-4">★★★★★</p>
+              <blockquote className="font-body text-muted font-light text-sm leading-relaxed mb-6">
+                &ldquo;We had a terrible experience with our previous agent and almost gave up on selling. A friend told us to call The NOW Team and it was the best decision we made. Our Valrico home sold for more than our original agent had even suggested listing it for.&rdquo;
+              </blockquote>
+              <p className="font-body text-primary font-medium text-sm">Danielle F.</p>
+              <p className="font-body text-muted text-xs">Valrico</p>
+            </div>
+            <div className="border border-border p-8">
+              <p className="text-accent text-lg mb-4">★★★★★</p>
+              <blockquote className="font-body text-muted font-light text-sm leading-relaxed mb-6">
+                &ldquo;We have bought and sold several homes over the years and The NOW Team is by far the best experience we have had. Barrett&apos;s market knowledge in South Tampa is outstanding and his team backs it up with flawless execution.&rdquo;
+              </blockquote>
+              <p className="font-body text-primary font-medium text-sm">Greg &amp; Pamela T.</p>
+              <p className="font-body text-muted text-xs">Tampa</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <div className="border border-border p-8">
+              <p className="text-accent text-lg mb-4">★★★★★</p>
+              <blockquote className="font-body text-muted font-light text-sm leading-relaxed mb-6">
+                &ldquo;Barrett Sold my house and did an excellent job. The process was quick and easy. Definitely will use Barrett again in the future!&rdquo;
+              </blockquote>
+              <p className="font-body text-primary font-medium text-sm">Rachel Mauk</p>
+              <p className="font-body text-muted text-xs">Tampa Bay — Google Review</p>
+            </div>
+            <div className="border border-border p-8">
+              <p className="text-accent text-lg mb-4">★★★★★</p>
+              <blockquote className="font-body text-muted font-light text-sm leading-relaxed mb-6">
+                &ldquo;This was our third transaction with The NOW Team and we keep coming back because they keep delivering. We have referred at least six families over the years and every single one has had a great experience.&rdquo;
+              </blockquote>
+              <p className="font-body text-primary font-medium text-sm">Michelle &amp; Scott L.</p>
+              <p className="font-body text-muted text-xs">Valrico</p>
+            </div>
+          </div>
         </div>
       </section>
 
