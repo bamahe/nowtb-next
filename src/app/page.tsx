@@ -214,12 +214,44 @@ export default async function HomePage() {
         </div>
       </HeroSection>
 
-
       {/* =================================================================
-          SECTION 2: Featured Listings — dark navy background for contrast
-          ListingGrid gets className override so it doesn't add its own
-          container-wide / padding (the parent section handles that).
+          SECTION 1b: Quick-action CTA row — big buttons between hero & listings
           ================================================================= */}
+      <section className="bg-primary/95 border-t border-white/10">
+        <div className="container-wide py-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-4xl mx-auto">
+            <Link
+              href="/properties"
+              className="flex flex-col items-center gap-2 py-5 px-4 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-center"
+            >
+              <span className="text-2xl">🏠</span>
+              <span className="font-body text-white text-sm font-semibold">Search Homes</span>
+            </Link>
+            <Link
+              href="/guides/first-time-home-buyer-guide"
+              className="flex flex-col items-center gap-2 py-5 px-4 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-center"
+            >
+              <span className="text-2xl">🔑</span>
+              <span className="font-body text-white text-sm font-semibold">First-Time Buyers</span>
+            </Link>
+            <Link
+              href="/sell-your-home"
+              className="flex flex-col items-center gap-2 py-5 px-4 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-center"
+            >
+              <span className="text-2xl">💰</span>
+              <span className="font-body text-white text-sm font-semibold">Sell Your Home</span>
+            </Link>
+            <Link
+              href="/home-valuation"
+              className="flex flex-col items-center gap-2 py-5 px-4 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-center"
+            >
+              <span className="text-2xl">📊</span>
+              <span className="font-body text-white text-sm font-semibold">Home Valuation</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* =================================================================
           SECTION 2: Featured Listings — dark navy, label-only heading
           ================================================================= */}

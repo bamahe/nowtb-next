@@ -139,10 +139,32 @@ export default async function GuidePage({
           </h1>
 
           {/* Date + reading time */}
-          <div className="flex items-center justify-center gap-3 text-sm font-body text-accent">
+          <div className="flex items-center justify-center gap-3 text-sm font-body text-accent mb-8">
             <time dateTime={guide.date}>{formatDate(guide.date)}</time>
             <span className="w-1 h-1 rounded-full bg-accent/50" />
             <span>{guide.readingTime}</span>
+          </div>
+
+          {/* CTA buttons in header */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a
+              href={`tel:${agent.phone.replace(/[^\d]/g, "")}`}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary font-bold text-sm rounded-lg hover:bg-accent/10 transition-colors"
+            >
+              <span>📞</span> Schedule a Strategy Call
+            </a>
+            <a
+              href="/mortgage-calculator"
+              className="inline-block px-6 py-3 border-2 border-white/40 text-white font-bold text-sm rounded-lg hover:border-white/70 transition-colors"
+            >
+              Calculate Your Payment
+            </a>
+            <a
+              href="/properties"
+              className="inline-block px-6 py-3 border-2 border-white/40 text-white font-bold text-sm rounded-lg hover:border-white/70 transition-colors"
+            >
+              Search Homes
+            </a>
           </div>
         </div>
       </section>

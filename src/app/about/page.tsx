@@ -9,6 +9,7 @@ import type { Metadata } from "next";
 import HeroSection from "@/components/ui/HeroSection";
 import ContactForm from "@/components/ui/ContactForm";
 import { getPrimaryAgent } from "@/data/agents";
+import { testimonials } from "@/data/testimonials";
 
 // --- SEO metadata + Open Graph tags ---
 export const metadata: Metadata = {
@@ -73,7 +74,6 @@ const personLd = {
   telephone: "(813) 733-7907",
   email: "barrett@nowtb.com",
   hasCredential: [
-    { "@type": "EducationalOccupationalCredential", credentialCategory: "designation", name: "CRE (Certified Real Estate)" },
     { "@type": "EducationalOccupationalCredential", credentialCategory: "designation", name: "e-PRO" },
     { "@type": "EducationalOccupationalCredential", credentialCategory: "designation", name: "MRP (Military Relocation Professional)" },
     { "@type": "EducationalOccupationalCredential", credentialCategory: "designation", name: "SRS (Seller Representative Specialist)" },
@@ -355,6 +355,52 @@ export default function AboutPage() {
               </a>{" "}
               provides dedicated service for residential rental portfolios.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ---- Testimonials — real Google reviews ---- */}
+      <section id="testimonials" className="section-dark">
+        <div className="container-wide">
+          <div className="text-center mb-16">
+            <p className="heading-label text-white/50 mb-6">Client Reviews</p>
+            <h2 className="font-heading font-extralight text-3xl md:text-4xl tracking-[0.1em] uppercase text-white">
+              What Clients Say
+            </h2>
+            <div className="section-divider" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {testimonials.map((t) => (
+              <div key={t.name} className="card p-6 bg-white/5 border border-white/10">
+                {/* Stars */}
+                <div className="text-amber-400 text-sm mb-3">★★★★★</div>
+                {/* Quote */}
+                <p className="font-body text-white/80 font-light text-sm leading-relaxed mb-4">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+                {/* Attribution */}
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent text-xs font-bold">
+                    {t.name.charAt(0)}
+                  </div>
+                  <div>
+                    <p className="font-body text-white text-xs font-semibold">{t.name}</p>
+                    <p className="font-body text-white/50 text-xs">{t.source === "google" ? "Google Review" : "Client Review"}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          {/* Google reviews link */}
+          <div className="text-center mt-12">
+            <a
+              href="https://www.google.com/search?kgmid=/g/11xvn_2943&hl=en-US&q=Barrett+Henry,+REALTOR%C2%AE+-+REMAX+Collective"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary inline-block"
+            >
+              See All Google Reviews
+            </a>
           </div>
         </div>
       </section>

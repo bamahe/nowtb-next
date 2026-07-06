@@ -194,6 +194,144 @@ select {
 }
 
 /* ── Print stylesheet — clean, ink-friendly output ── */
+/* ── WordPress Content Layout Classes ──
+   Styles for migrated WP content: stat grids, CTA boxes, highlight boxes,
+   FAQ sections, warning boxes, and quick-answer callouts. */
+
+/* Outer content wrapper */
+.nowtb-post-content {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #1e293b;
+}
+
+/* Highlight/intro box */
+.nowtb-highlight-box {
+  background: #f8fafc;
+  border-left: 4px solid var(--color-accent);
+  border-radius: 8px;
+  padding: 24px;
+  margin: 24px 0;
+}
+
+/* Stat grid — 4 columns on desktop, 2 on mobile */
+.nowtb-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+@media (max-width: 768px) {
+  .nowtb-stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.nowtb-stat-cell {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+}
+.nowtb-stat-number {
+  display: block;
+  font-size: 1.8em;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+.nowtb-stat-label {
+  display: block;
+  font-size: 0.8em;
+  color: #64748b;
+  margin-top: 4px;
+  line-height: 1.3;
+}
+
+/* CTA box — dark gradient with white text */
+.nowtb-cta-box {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 12px;
+  padding: 32px;
+  margin: 40px 0;
+  text-align: center;
+  color: #fff;
+}
+.nowtb-cta-box p { color: #fff; }
+.nowtb-cta-box a { color: #fff; }
+.nowtb-cta-box .nowtb-cta-btn-primary {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #fff;
+  color: var(--color-primary) !important;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 6px;
+}
+.nowtb-cta-box .nowtb-cta-btn-secondary {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 6px;
+}
+
+/* Quick answer callout */
+.bbs-quick-answer {
+  background: #f8fafc;
+  border-left: 4px solid var(--color-accent);
+  border-radius: 8px;
+  padding: 24px;
+  margin: 24px 0;
+}
+
+/* Warning box */
+.nowtb-warning-box {
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 24px 0;
+}
+
+/* FAQ items */
+.nowtb-faq-item {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 16px 0;
+}
+.nowtb-faq-item h3 {
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+/* Footer grid / related articles grid (in WP content) */
+.nowtb-footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  margin: 24px 0;
+}
+
+/* CTA buttons row (inline in WP content) */
+.nowtb-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 0 0 40px;
+}
+@media (max-width: 600px) {
+  .nowtb-cta-buttons { flex-direction: column; }
+  .nowtb-cta-buttons a { width: 100%; min-width: auto; text-align: center; }
+}
+
+/* ── End WordPress Content Layout Classes ── */
+
 @media print {
   /* Hide nav, footer, forms, and interactive elements */
   header,

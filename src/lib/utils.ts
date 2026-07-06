@@ -66,31 +66,26 @@ export function formatSqFt(sqft: number): string {
 // -----------------------------------------------------------------------------
 
 /**
- * Sanitize WordPress HTML content for rendering in Next.js.
- * Aggressively strips all WP styling, boilerplate sections, shortcodes,
- * and inline styles. Keeps only clean semantic HTML (headings, paragraphs,
- * lists, tables, images, links).
+ * Clean WordPress post_content HTML for rendering in Next.js.
+ * Preserves layout classes (nowtb-*, bbs-*) and inline styles so that
+ * stat grids, CTA boxes, FAQ sections, and highlight boxes render properly.
+ * Strips WP boilerplate <style> blocks, shortcodes, and comments.
  */
 export function cleanWpContent(html: string): string {
   let cleaned = html
-    // 1. Strip entire <style> blocks (WP theme CSS with !important everywhere)
+    // 1. Strip entire <style> blocks (WP theme CSS — we define styles in globals.css)
     .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
     // 2. Strip HTML comments (<!-- wp:html --> etc.)
     .replace(/<!--[\s\S]*?-->/g, '')
-    // 3. Strip ALL inline style attributes — let our CSS handle styling
-    .replace(/\s*style="[^"]*"/gi, '')
-    .replace(/\s*style='[^']*'/gi, '')
-    // 4. Strip WordPress-specific class wrappers but keep the inner content
-    //    (nowtb-post-content, nowtb-tldr, nowtb-toc, bbs-quick-answer, etc.)
-    .replace(/\s*class="[^"]*"/gi, '')
-    // 5. Strip WordPress shortcodes
+    // 3. Strip WordPress shortcodes
     .replace(/\[showcaseidx[^\]]*\]/g, '')
     .replace(/\[nowtb_[^\]]*\]/g, '')
-    .replace(/\[last_updated\]/g, 'June 2026')
-    // 6. WP image paths — images now live in public/wp-content/uploads/
-    // Rewrite absolute URLs to local paths so they serve from Vercel
+    .replace(/\[last_updated\]/g, 'July 2026')
+    // 3b. Strip inline CTA divs (Schedule a Buyer Strategy Call / Calculate Your Payment)
+    //     These are now rendered as proper buttons in the page header component
+    .replace(/<div[^>]*>(?:<a[^>]*>(?:Schedule a (?:Buyer )?Strategy Call|Calculate Your Payment|Talk to a Tampa Bay Expert|Search All Homes)<\/a>\s*)+<\/div>/gi, '')
+    // 4. WP image paths — rewrite to local public/ folder
     .replace(/https?:\/\/nowtb\.com\/wp-content\/uploads\//g, '/wp-content/uploads/')
-    // Ensure relative paths also work
     .replace(/src="\/wp-content\/uploads\//g, 'src="/wp-content/uploads/')
     .replace(/srcset="([^"]*)"/g, (_match, srcset: string) =>
       `srcset="${srcset.replace(
@@ -99,14 +94,11 @@ export function cleanWpContent(html: string): string {
       )}"`
     )
     .replace(/href="\/wp-content\/uploads\//g, 'href="/wp-content/uploads/')
-    // 7. Fix MySQL newline corruption: literal "nn" between tags from WP migration
+    // 5. Fix MySQL newline corruption
     .replace(/>nn</g, '><')
     .replace(/>nn/g, '>\n')
-    // 8. Clean up empty divs left after stripping classes/styles
-    .replace(/<div>\s*<\/div>/gi, '')
-    // 8. Unwrap unnecessary div wrappers (keeps content, removes the div tags)
-    .replace(/<div>\s*/gi, '')
-    .replace(/\s*<\/div>/gi, '');
+    // 6. Clean up truly empty divs (no class, no content)
+    .replace(/<div>\s*<\/div>/gi, '');
 
   // 9. Cut boilerplate footer sections — but ONLY when they appear in the
   //    last 30% of the content. These are WP template footer blocks, NOT
