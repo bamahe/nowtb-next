@@ -2790,5 +2790,45 @@
     "photographer_url": "https://unsplash.com/@oakandmotion",
     "unsplash_url": "https://unsplash.com/photos/a-large-white-house-with-a-driveway-in-front-of-it-7iC0Npl7Hds",
     "alt": "Real estate in Lithia FL"
+  },
+  {
+    "slug": "sell-home-fast-lutz",
+    "unsplash_id": "g8dgQYXowb8",
+    "photographer": "Erik Mclean",
+    "photographer_url": "https://unsplash.com/@introspectivedsgn",
+    "unsplash_url": "https://unsplash.com/photos/white-and-black-wooden-signage-g8dgQYXowb8",
+    "alt": "Real estate in Lutz FL"
+  },
+  {
+    "slug": "best-realtor-lithia",
+    "unsplash_id": "xwv7ep3n8HQ",
+    "photographer": "Jakub Żerdzicki",
+    "photographer_url": "https://unsplash.com/@jakubzerdzicki",
+    "unsplash_url": "https://unsplash.com/photos/a-river-with-a-bunch-of-buildings-in-the-background-xwv7ep3n8HQ",
+    "alt": "Real estate in 2026 FL"
+  },
+  {
+    "slug": "sell-home-fast-seffner",
+    "unsplash_id": "CPv7g7CK-K0",
+    "photographer": "Alex santiago",
+    "photographer_url": "https://unsplash.com/@santiago_92",
+    "unsplash_url": "https://unsplash.com/photos/a-stylish-motel-and-palm-trees-on-a-sunny-day-CPv7g7CK-K0",
+    "alt": "Real estate in Seffner FL"
+  },
+  {
+    "slug": "buying-home-seffner-guide",
+    "unsplash_id": "qfp_DOodtiA",
+    "photographer": "Zetong Li",
+    "photographer_url": "https://unsplash.com/@zetong",
+    "unsplash_url": "https://unsplash.com/photos/a-group-of-boats-on-a-river-qfp_DOodtiA",
+    "alt": "Real estate in Seffner FL"
+  },
+  {
+    "slug": "best-realtor-seffner",
+    "unsplash_id": "IepJDIVwqiU",
+    "photographer": "Dan Yu",
+    "photographer_url": "https://unsplash.com/@dan11151",
+    "unsplash_url": "https://unsplash.com/photos/white-concrete-building-near-road-during-daytime-IepJDIVwqiU",
+    "alt": "Real estate in 2026 FL"
   }
 ]
