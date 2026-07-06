@@ -70,10 +70,16 @@ const nextConfig = {
       // ── REMAX office pages → city realtor pages ──
       { source: "/remax-largo", destination: "/largo-realtor/", permanent: true },
       { source: "/remax-largo/", destination: "/largo-realtor/", permanent: true },
+      { source: "/largo-remax", destination: "/largo-realtor/", permanent: true },
+      { source: "/largo-remax/", destination: "/largo-realtor/", permanent: true },
       { source: "/remax-tampa", destination: "/tampa-realtor/", permanent: true },
       { source: "/remax-tampa/", destination: "/tampa-realtor/", permanent: true },
+      { source: "/tampa-remax", destination: "/tampa-realtor/", permanent: true },
+      { source: "/tampa-remax/", destination: "/tampa-realtor/", permanent: true },
       { source: "/remax-brandon", destination: "/brandon-realtor/", permanent: true },
       { source: "/remax-brandon/", destination: "/brandon-realtor/", permanent: true },
+      { source: "/brandon-remax", destination: "/brandon-realtor/", permanent: true },
+      { source: "/brandon-remax/", destination: "/brandon-realtor/", permanent: true },
 
       // ── GSC indexed URLs with no exact match ──
       { source: "/luxury/belleair", destination: "/belleair-luxury-homes/", permanent: true },
