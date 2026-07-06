@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Bed, Bath, Ruler, Calendar, LandPlot, Car } from "lucide-react";
 
+import BuyingPower from "@/components/ui/BuyingPower";
 import ContactForm from "@/components/ui/ContactForm";
 import FavoriteButton from "@/components/ui/FavoriteButton";
 import MiniCalc from "@/components/ui/MiniCalc";
@@ -279,6 +280,21 @@ export default async function ListingDetailPage({
         </div>
       </section>
 
+      {/* === Trust Bar — credentials + experience === */}
+      <section className="container-wide pb-8">
+        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 py-4 border-y border-border text-center">
+          <span className="font-body text-xs tracking-[0.12em] uppercase text-muted">23+ Years Experience</span>
+          <span className="text-border">|</span>
+          <span className="font-body text-xs tracking-[0.12em] uppercase text-muted">FL Broker #BK3313308</span>
+          <span className="text-border">|</span>
+          <span className="font-body text-xs tracking-[0.12em] uppercase text-muted">REMAX Collective</span>
+          <span className="text-border">|</span>
+          <span className="font-body text-xs tracking-[0.12em] uppercase text-muted">5.0 ★ Google Reviews</span>
+          <span className="text-border">|</span>
+          <a href="tel:+18137337907" className="font-body text-xs tracking-[0.12em] uppercase text-accent hover:text-primary transition-colors">(813) 733-7907</a>
+        </div>
+      </section>
+
       {/* =================================================================
           SECTION 4 & 5: Description + Property Details (two-column layout)
           ================================================================= */}
@@ -500,7 +516,12 @@ export default async function ListingDetailPage({
       </section>
 
       {/* =================================================================
-          SECTION 6: MLS Disclaimer — required Stellar MLS compliance
+          SECTION 6: Buying Power — loan programs, DPA, qualification
+          ================================================================= */}
+      <BuyingPower listingPrice={listing.ListPrice} city={listing.City} />
+
+      {/* =================================================================
+          SECTION 7: MLS Disclaimer — required Stellar MLS compliance
           ================================================================= */}
       <section className="container-wide pb-12">
         <div className="rounded-xl bg-gray-50 border border-gray-200 p-6">
