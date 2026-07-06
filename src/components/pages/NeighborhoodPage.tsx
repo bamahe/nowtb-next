@@ -50,8 +50,11 @@ export default async function NeighborhoodPage({
       .replace(new RegExp(`\\s+${parentCityName}$`, 'i'), '')
       .replace(/,?\s*(FL|Florida)$/i, '')
       .trim();
+    // Include parent city ZIP codes to constrain results to the right county
+    // (e.g. "La Collina" exists in multiple counties — we only want Hillsborough)
     const subdivRes = await getListings({
       subdivision: searchName,
+      zip_codes: parentCity?.zip_codes,
       exclude_rental: true,
       limit: "48",
     });
