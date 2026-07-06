@@ -33,10 +33,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=2", sizes: "any" },
-      { url: "/favicon-32x32.png?v=2", sizes: "32x32", type: "image/png" },
+      { url: "/remax-favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/remax-favicon.png", sizes: "192x192", type: "image/png" },
     ],
-    apple: "/apple-touch-icon.png?v=2",
+    apple: { url: "/remax-favicon.png", sizes: "180x180" },
+    shortcut: "/remax-favicon-32.png",
   },
   description:
     "Barrett Henry is a licensed real estate Broker Associate with REMAX Collective serving Tampa Bay. 23+ years of real estate experience. Search homes, get market data, and connect with a trusted local expert.",
