@@ -511,18 +511,27 @@ export default async function CityPage({
 async function HubPage({ city }: { city: CityData }) {
   // Fetch active + recently sold listings by ZIP codes
   let listings: import("@/lib/types").Listing[] = [];
+  let rentalListings: import("@/lib/types").Listing[] = [];
   let soldListings: import("@/lib/types").Listing[] = [];
   let totalActive = 0;
+  let totalRentals = 0;
   try {
-    const [activeRes, soldRes] = await Promise.all([
-      getListings({ zip_codes: city.zip_codes, limit: "48" }),
+    const [activeRes, rentalRes, soldRes] = await Promise.all([
+      // For-sale listings only (exclude rentals)
+      getListings({ zip_codes: city.zip_codes, limit: "48", exclude_rental: true }),
+      // Rentals separately
+      getListings({ zip_codes: city.zip_codes, limit: "12", rental: true }),
+      // Recently sold
       getListings({ zip_codes: city.zip_codes, limit: "8", status: "Closed", sort: "ClosePrice desc" }),
     ]);
     listings = activeRes.value || [];
+    rentalListings = rentalRes.value || [];
     soldListings = soldRes.value || [];
     totalActive = activeRes.total || listings.length;
+    totalRentals = rentalRes.total || rentalListings.length;
   } catch {
     listings = [];
+    rentalListings = [];
     soldListings = [];
   }
 
@@ -696,6 +705,27 @@ async function HubPage({ city }: { city: CityData }) {
           title={`Recently Sold Homes in ${city.name}`}
           subtitle={`See what homes recently sold for in ${city.name} to understand current market values.`}
         />
+      )}
+
+      {/* === Homes for Rent — separate rental listings section === */}
+      {rentalListings.length > 0 && (
+        <>
+          <ListingGrid
+            listings={rentalListings}
+            title={`Homes for Rent in ${city.name}`}
+            subtitle={`${totalRentals > rentalListings.length ? `Showing ${rentalListings.length} of ${totalRentals.toLocaleString()}` : rentalListings.length} rental listings in ${city.name}, ${city.county} County.`}
+          />
+          {totalRentals > rentalListings.length && (
+            <section className="container-wide pb-8 text-center">
+              <Link
+                href={`/properties/?q=${encodeURIComponent(city.name)}&rental=true`}
+                className="btn-secondary inline-block px-8 py-3"
+              >
+                View All {totalRentals.toLocaleString()} Rentals in {city.name}
+              </Link>
+            </section>
+          )}
+        </>
       )}
 
       {/* === FAQ Section — city-specific with FAQPage schema === */}
