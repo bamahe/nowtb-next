@@ -58,7 +58,7 @@ export default function MiniCalc({ listingPrice }: MiniCalcProps) {
   }
 
   return (
-    <div className="fixed bottom-0 right-0 z-50 w-full sm:w-96 sm:bottom-4 sm:right-4 bg-white border border-border shadow-2xl">
+    <div className="fixed bottom-0 right-0 z-50 w-full sm:w-96 sm:bottom-4 sm:right-20 bg-white border border-border shadow-2xl">
       {/* Header */}
       <div className="bg-primary px-5 py-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
