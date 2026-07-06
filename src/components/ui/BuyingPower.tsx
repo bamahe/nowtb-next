@@ -18,8 +18,8 @@ interface BuyingPowerProps {
   county?: string;
 }
 
-// Loan program data
-const LOAN_PROGRAMS = [
+// Standard loan programs (homes under $800K)
+const STANDARD_LOANS = [
   {
     name: "FHA Loan",
     downPct: 3.5,
@@ -46,6 +46,34 @@ const LOAN_PROGRAMS = [
   },
 ];
 
+// Luxury/high-value loan programs (homes $800K+)
+const LUXURY_LOANS = [
+  {
+    name: "Jumbo Loan",
+    downPct: 10,
+    description: "For homes exceeding conforming loan limits. Typically requires 10-20% down, strong credit, and reserves.",
+    icon: "💎",
+  },
+  {
+    name: "VA Jumbo",
+    downPct: 0,
+    description: "VA-eligible borrowers can go above conforming limits with zero down in many cases.",
+    icon: "🎖️",
+  },
+  {
+    name: "Portfolio Loan",
+    downPct: 15,
+    description: "Held by the lender, not sold. Flexible terms for high-net-worth buyers with non-traditional income.",
+    icon: "🏦",
+  },
+  {
+    name: "Bridge Loan",
+    downPct: 20,
+    description: "Short-term financing to buy before selling. Ideal for move-up buyers in competitive markets.",
+    icon: "🔑",
+  },
+];
+
 // Florida down payment assistance programs (statewide)
 const STATE_DPA = [
   { name: "Florida Hometown Heroes", amount: "Up to $35,000", who: "First-time buyers working in FL" },
@@ -66,9 +94,13 @@ const COUNTY_SHIP: Record<string, { name: string; amount: string; who: string }>
 };
 
 export default function BuyingPower({ listingPrice, city, county }: BuyingPowerProps) {
-  // Build DPA list — statewide programs + county-specific SHIP if applicable
+  // Luxury threshold — homes $800K+ get jumbo/luxury loan options
+  const isLuxury = listingPrice >= 800000;
+  const LOAN_PROGRAMS = isLuxury ? LUXURY_LOANS : STANDARD_LOANS;
+
+  // DPA only for non-luxury homes — assistance programs don't apply to $800K+ purchases
   const countyShip = county ? COUNTY_SHIP[county.toUpperCase()] : null;
-  const DPA_PROGRAMS = [...STATE_DPA, ...(countyShip ? [countyShip] : [])];
+  const DPA_PROGRAMS = isLuxury ? [] : [...STATE_DPA, ...(countyShip ? [countyShip] : [])];
   const [showQualify, setShowQualify] = useState(false);
   const [income, setIncome] = useState("");
   const [result, setResult] = useState<string | null>(null);
@@ -97,10 +129,13 @@ export default function BuyingPower({ listingPrice, city, county }: BuyingPowerP
   return (
     <section className="container-wide py-12">
       <h2 className="heading-section text-xl text-primary mb-2">
-        How to Buy This Home
+        {isLuxury ? "Financing a Luxury Home" : "How to Buy This Home"}
       </h2>
       <p className="font-body text-muted font-light mb-8">
-        Multiple financing options available for this {fmt(listingPrice)} home in {city}.
+        {isLuxury
+          ? `Specialized financing for this ${fmt(listingPrice)} property in ${city}. Luxury purchases typically require jumbo or portfolio lending.`
+          : `Multiple financing options available for this ${fmt(listingPrice)} home in ${city}.`
+        }
       </p>
 
       {/* === Loan Programs Grid === */}
@@ -117,8 +152,8 @@ export default function BuyingPower({ listingPrice, city, county }: BuyingPowerP
         ))}
       </div>
 
-      {/* === Down Payment Assistance === */}
-      <div className="bg-primary p-6 md:p-8 mb-10">
+      {/* === Down Payment Assistance — only for non-luxury homes === */}
+      {DPA_PROGRAMS.length > 0 && <div className="bg-primary p-6 md:p-8 mb-10">
         <h3 className="font-heading font-bold text-white text-lg mb-4">
           Florida Down Payment Assistance Programs
         </h3>
@@ -134,7 +169,7 @@ export default function BuyingPower({ listingPrice, city, county }: BuyingPowerP
             </div>
           ))}
         </div>
-      </div>
+      </div>}
 
       {/* === Quick Qualification Check === */}
       <div className="bg-gray-50 border border-border p-6 md:p-8">
