@@ -9,6 +9,8 @@ import HeroSection from "@/components/ui/HeroSection";
 import SearchBar from "@/components/ui/SearchBar";
 import ContactForm from "@/components/ui/ContactForm";
 import type { RegionalPageData } from "@/data/regional-pages";
+import { getPageContent } from "@/lib/page-content";
+import { cleanWpContent } from "@/lib/utils";
 
 interface RegionalPageProps {
   page: RegionalPageData;
@@ -16,6 +18,9 @@ interface RegionalPageProps {
 
 export default function RegionalPage({ page }: RegionalPageProps) {
   const { title, excerpt, category } = page;
+
+  // Check for real content from pages-content.json
+  const wpContent = getPageContent(page.slug);
 
   return (
     <>
@@ -32,79 +37,77 @@ export default function RegionalPage({ page }: RegionalPageProps) {
             {category}
           </span>
 
-          {/* Page content — placeholder until WP content is imported */}
-          <div className="prose prose-lg font-body text-dark max-w-none prose-headings:font-heading prose-headings:text-primary prose-a:text-accent">
-            <p>
-              {excerpt} Barrett Henry, Broker Associate at REMAX Collective,
-              brings 23+ years of real estate experience to help you navigate
-              the Tampa Bay market.
-            </p>
+          {wpContent ? (
+            /* --- Real content from pages-content.json --- */
+            <div
+              className="blog-content prose prose-lg font-body text-dark max-w-none
+                prose-headings:font-heading prose-headings:text-primary
+                prose-a:text-accent prose-a:no-underline hover:prose-a:underline
+                prose-p:leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: cleanWpContent(wpContent) }}
+            />
+          ) : (
+            /* --- Placeholder content (fallback) --- */
+            <div className="prose prose-lg font-body text-dark max-w-none prose-headings:font-heading prose-headings:text-primary prose-a:text-accent">
+              <p>
+                {excerpt} Barrett Henry, Broker Associate at REMAX Collective,
+                brings 23+ years of real estate experience to help you navigate
+                the Tampa Bay market.
+              </p>
 
-            {/* Builder pages get builder-specific content */}
-            {category === "Builders" && (
-              <>
-                <h2>Why Work with Barrett When Buying New Construction?</h2>
-                <p>
-                  Builder sales agents represent the builder, not you. Having your own
-                  REALTOR costs you nothing — the builder pays the commission — and Barrett
-                  negotiates upgrades, lot premiums, and closing costs on your behalf.
-                </p>
-                <p>
-                  Barrett has helped hundreds of buyers purchase new construction homes
-                  across Tampa Bay and knows which builders deliver the best value in each area.
-                </p>
-              </>
-            )}
+              {category === "Builders" && (
+                <>
+                  <h2>Why Work with Barrett When Buying New Construction?</h2>
+                  <p>
+                    Builder sales agents represent the builder, not you. Having your own
+                    REALTOR costs you nothing — the builder pays the commission — and Barrett
+                    negotiates upgrades, lot premiums, and closing costs on your behalf.
+                  </p>
+                </>
+              )}
 
-            {/* Relocation pages get relocation content */}
-            {category === "Relocation" && (
-              <>
-                <h2>Barrett Henry: Your Tampa Bay Relocation Expert</h2>
-                <p>
-                  Whether you are moving from out of state, across the country, or across
-                  town, Barrett Henry provides comprehensive relocation services. From
-                  neighborhood tours to school zone research to coordinating with your
-                  current agent, Barrett handles the details so you can focus on your move.
-                </p>
-              </>
-            )}
+              {category === "Relocation" && (
+                <>
+                  <h2>Barrett Henry: Your Tampa Bay Relocation Expert</h2>
+                  <p>
+                    Whether you are moving from out of state, across the country, or across
+                    town, Barrett Henry provides comprehensive relocation services.
+                  </p>
+                </>
+              )}
 
-            {/* Search pages get listing CTA */}
-            {category === "Search" && (
-              <>
-                <h2>Search Tampa Bay Listings</h2>
-                <p>
-                  Browse the latest listings across Tampa Bay, updated daily from Stellar MLS.
-                  Use the search bar above to filter by city, price, property type, and more.
-                </p>
-              </>
-            )}
+              {category === "Search" && (
+                <>
+                  <h2>Search Tampa Bay Listings</h2>
+                  <p>
+                    Browse the latest listings across Tampa Bay, updated daily from Stellar MLS.
+                  </p>
+                </>
+              )}
 
-            {/* Financing pages get loan info */}
-            {category === "Financing" && (
-              <>
-                <h2>Financing Your Tampa Bay Home</h2>
-                <p>
-                  Barrett works with a network of trusted local lenders who offer competitive
-                  rates on conventional, FHA, VA, and specialty loan programs. Get a referral
-                  for your specific situation.
-                </p>
-              </>
-            )}
+              {category === "Financing" && (
+                <>
+                  <h2>Financing Your Tampa Bay Home</h2>
+                  <p>
+                    Barrett works with a network of trusted local lenders who offer competitive
+                    rates on conventional, FHA, VA, and specialty loan programs.
+                  </p>
+                </>
+              )}
 
-            {/* Agent pages get bio content */}
-            {(category === "Agent") && (
-              <>
-                <h2>About Barrett Henry</h2>
-                <p>
-                  Barrett Henry is a licensed real estate Broker Associate with REMAX Collective
-                  and team lead of The NOW Team. With 23+ years of real estate experience,
-                  Barrett specializes in residential sales, investment properties, new construction,
-                  and military relocation across Tampa Bay.
-                </p>
-              </>
-            )}
-          </div>
+              {category === "Agent" && (
+                <>
+                  <h2>About Barrett Henry</h2>
+                  <p>
+                    Barrett Henry is a licensed real estate Broker Associate with REMAX Collective
+                    and team lead of The NOW Team. With 23+ years of real estate experience,
+                    Barrett specializes in residential sales, investment properties, new construction,
+                    and military relocation across Tampa Bay.
+                  </p>
+                </>
+              )}
+            </div>
+          )}
         </div>
       </section>
 
