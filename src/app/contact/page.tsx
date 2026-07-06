@@ -204,6 +204,12 @@ export default function ContactPage() {
             </div>
             {/* Largo Office */}
             <div className="bg-white overflow-hidden shadow-sm">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/office-largo.jpg"
+                alt="REMAX Collective Largo Office — 11200 Seminole Blvd"
+                className="w-full h-48 object-cover"
+              />
               <iframe
                 title="REMAX Collective Largo Office"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1762!2d-82.7873!3d27.8839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2f9a8c0d4e5f6%3A0xa1b2c3d4e5f67890!2s11200+Seminole+Blvd%2C+Largo%2C+FL+33778!5e0!3m2!1sen!2sus"
@@ -231,6 +237,12 @@ export default function ContactPage() {
             </div>
             {/* Brandon Office */}
             <div className="bg-white overflow-hidden shadow-sm">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/office-brandon.jpg"
+                alt="REMAX Collective Brandon Office — 417 Lithia Pinecrest Rd"
+                className="w-full h-48 object-cover"
+              />
               <iframe
                 title="REMAX Collective Brandon Office"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1762!2d-82.2859!3d27.9295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2d4e5f6a7b8c9%3A0x1234567890abcdef!2s417+Lithia+Pinecrest+Rd%2C+Brandon%2C+FL+33511!5e0!3m2!1sen!2sus"
