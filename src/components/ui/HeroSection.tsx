@@ -3,6 +3,7 @@
 // Server component (no "use client" directive)
 // Content positioned in the lower portion for dramatic negative space above
 // Supports full-height (100dvh) or shorter (50vh) modes
+// Supports optional background video (auto-plays muted, loops, hidden on mobile)
 // =============================================================================
 
 import { cn } from "@/lib/utils";
@@ -14,8 +15,10 @@ interface HeroSectionProps {
   subtitle?: string;
   /** Small uppercase label above the title (e.g. "TAMPA BAY REAL ESTATE") */
   label?: string;
-  /** Background image URL — a gradient overlay is applied on top */
+  /** Background image URL — a gradient overlay is applied on top. Also used as video poster/fallback. */
   bgImage?: string;
+  /** Background video URL — plays behind content, muted+looping. Falls back to bgImage on mobile. */
+  bgVideo?: string;
   /** Use full viewport height (true) or shorter 50vh hero (false). Defaults to false. */
   fullHeight?: boolean;
   /** Slot for CTA buttons, search bar, or other interactive content */
@@ -27,6 +30,7 @@ export default function HeroSection({
   subtitle,
   label,
   bgImage,
+  bgVideo,
   fullHeight = false,
   children,
 }: HeroSectionProps) {
@@ -44,7 +48,7 @@ export default function HeroSection({
         !bgImage && "bg-gradient-to-br from-primary via-[#0f2847] to-primary"
       )}
     >
-      {/* --- Background Image (if provided) --- */}
+      {/* --- Background Image (fallback / poster for video, or standalone) --- */}
       {bgImage && (
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -53,8 +57,24 @@ export default function HeroSection({
         />
       )}
 
+      {/* --- Background Video (hidden on mobile to save bandwidth) --- */}
+      {bgVideo && (
+        <video
+          className="absolute inset-0 w-full h-full object-cover hidden md:block"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster={bgImage}
+          aria-hidden="true"
+        >
+          <source src={bgVideo} type="video/mp4" />
+        </video>
+      )}
+
       {/* --- Gradient Overlay — darker at bottom for text legibility --- */}
-      {bgImage && (
+      {(bgImage || bgVideo) && (
         <div className="absolute inset-0 hero-gradient" aria-hidden="true" />
       )}
 
