@@ -95,6 +95,7 @@ export default async function BlogPostPage({
   const agent = getPrimaryAgent();
   const related = getRelatedPosts(slug, 3);
   const estimatedReadTime = readingTime(post.content);
+  const heroImage = getPostThumbnail(post);
 
   return (
     <>
@@ -148,8 +149,19 @@ export default async function BlogPostPage({
       />
 
       {/* === Article header === */}
-      <section className="bg-primary py-16">
-        <div className="container-wide max-w-3xl text-center">
+      <section className="relative bg-primary pt-32 pb-16 overflow-hidden">
+        {/* Hero background image from the blog post */}
+        {heroImage && (
+          <>
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${heroImage})` }}
+              aria-hidden="true"
+            />
+            <div className="absolute inset-0 bg-primary/80" aria-hidden="true" />
+          </>
+        )}
+        <div className="relative z-10 container-wide max-w-3xl text-center">
           {/* Title */}
           <h1 className="heading-display text-display md:text-display-lg text-white mb-4">
             {post.title}

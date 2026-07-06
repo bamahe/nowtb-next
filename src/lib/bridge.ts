@@ -39,7 +39,7 @@ function isRateLimited(): boolean {
  * All calls during cooldown will return empty results instead of hammering Bridge.
  */
 function markRateLimited(): void {
-  rateLimitedUntil = Date.now() + 5 * 60 * 1000; // 5-minute cooldown
+  rateLimitedUntil = Date.now() + 30 * 60 * 1000; // 30-minute cooldown to preserve API quota
   console.warn('[Bridge] Rate limited — returning empty results for 5 minutes');
 }
 
@@ -80,29 +80,15 @@ async function bridgeFetch<T>(
       Authorization: `Bearer ${BRIDGE_TOKEN}`,
       Accept: 'application/json',
     },
-    // Cache Bridge API responses for 60 seconds, then revalidate
-    next: { revalidate: 60 },
+    // Cache Bridge API responses for 15 minutes to reduce API calls
+    // With 4,000+ pages, shorter cache = thousands of requests/hour
+    next: { revalidate: 900 },
   });
 
-  // If rate limited, wait 2 seconds and retry once before giving up
+  // If rate limited, activate cooldown immediately — don't waste another request
   if (res.status === 429) {
-    await new Promise(r => setTimeout(r, 2000));
-    const retry = await fetch(url.toString(), {
-      headers: {
-        Authorization: `Bearer ${BRIDGE_TOKEN}`,
-        Accept: 'application/json',
-      },
-      next: { revalidate: 300 },
-    });
-    if (retry.status === 429) {
-      // Still rate limited after retry — activate cooldown so we stop hammering
-      markRateLimited();
-      throw new Error('Bridge API rate limited after retry');
-    }
-    if (!retry.ok) {
-      throw new Error(`Bridge API error: ${retry.status} ${retry.statusText}`);
-    }
-    return retry.json();
+    markRateLimited();
+    throw new Error('Bridge API rate limited — cooldown active for 30 minutes');
   }
 
   // If Bridge returns any other error, throw so callers can handle it
@@ -216,7 +202,7 @@ export async function getListing(id: string): Promise<Listing | null> {
         Authorization: `Bearer ${BRIDGE_TOKEN}`,
         Accept: 'application/json',
       },
-      next: { revalidate: 300 },
+      next: { revalidate: 900 },
     });
 
     if (res.status === 429) {
@@ -232,7 +218,7 @@ export async function getListing(id: string): Promise<Listing | null> {
           Authorization: `Bearer ${BRIDGE_TOKEN}`,
           Accept: 'application/json',
         },
-        next: { revalidate: 300 },
+        next: { revalidate: 900 },
       });
       if (res.ok) {
         const searchData = await res.json();
