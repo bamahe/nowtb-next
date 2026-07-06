@@ -13,7 +13,10 @@ import FavoriteButton from "@/components/ui/FavoriteButton";
 import MiniCalc from "@/components/ui/MiniCalc";
 import PhotoGallery from "@/components/ui/PhotoGallery";
 import RecentlyViewedTracker from "@/components/ui/RecentlyViewedTracker";
+import SchoolsNearby from "@/components/ui/SchoolsNearby";
 import ShareButtons from "@/components/ui/ShareButtons";
+import SimilarListings from "@/components/ui/SimilarListings";
+import TourScheduler from "@/components/ui/TourScheduler";
 import { getListing } from "@/lib/bridge";
 import { formatPrice, formatSqFt, extractListingKey } from "@/lib/utils";
 import type { Listing } from "@/lib/types";
@@ -480,7 +483,7 @@ export default async function ListingDetailPage({
             )}
           </div>
 
-          {/* Right column: Request Showing CTA form */}
+          {/* Right column: Request Showing CTA form + Tour Scheduler */}
           <div>
             <ContactForm
               webhookUrl="/api/contact"
@@ -500,9 +503,26 @@ export default async function ListingDetailPage({
               title="Schedule a Showing"
               submitLabel="Request Showing"
             />
+
+            {/* Tour Scheduler — date/time picker for in-person or video tours */}
+            <TourScheduler
+              listingAddress={`${listing.UnparsedAddress}, ${listing.City}, ${listing.StateOrProvince} ${listing.PostalCode}`}
+              listingId={listing.ListingId}
+              listingPrice={listing.ListPrice}
+            />
           </div>
         </div>
       </section>
+
+      {/* =================================================================
+          SECTION 5.5: Schools Nearby — links to GreatSchools.org
+          ================================================================= */}
+      <SchoolsNearby
+        elementary={listing.ElementarySchool}
+        middle={listing.MiddleOrJuniorSchool}
+        high={listing.HighSchool}
+        city={listing.City}
+      />
 
       {/* =================================================================
           SECTION 6: Buying Power — loan programs, DPA, qualification
@@ -511,6 +531,16 @@ export default async function ListingDetailPage({
       {listing.PropertyType !== 'Residential Lease' && (
         <BuyingPower listingPrice={listing.ListPrice} city={listing.City} county={listing.CountyOrParish} />
       )}
+
+      {/* =================================================================
+          SECTION 6.5: Similar Listings — same ZIP, similar price range
+          ================================================================= */}
+      <SimilarListings
+        currentListingKey={listing.ListingKey}
+        zipCode={listing.PostalCode}
+        price={listing.ListPrice}
+        city={listing.City}
+      />
 
       {/* =================================================================
           SECTION 7: MLS Disclaimer — required Stellar MLS compliance
