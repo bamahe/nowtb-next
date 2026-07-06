@@ -28,6 +28,7 @@ import LoanGuidePage from "@/components/pages/LoanGuidePage";
 import ComparisonPage from "@/components/pages/ComparisonPage";
 import RegionalPage from "@/components/pages/RegionalPage";
 import MiscCatchAllPage from "@/components/pages/MiscCatchAllPage";
+import RemaxOfficePage, { getRemaxOffice } from "@/components/pages/RemaxOfficePage";
 import {
   cities,
   getCityBySlug,
@@ -87,14 +88,21 @@ type PageType =
   | { kind: "comparison"; comparison: ComparisonData }
   | { kind: "regional"; page: RegionalPageData }
   | { kind: "misc"; page: MiscPageData }
-  | { kind: "guide"; guide: GuideData };
+  | { kind: "guide"; guide: GuideData }
+  | { kind: "remax-office"; officeKey: string };
 
 /**
  * Parses a URL slug into a page type.
- * Checks in priority order: county, loan, sell-your-home-{city}, {city}-realtor,
- * direct city hub, {city}-{topic} spoke, then neighborhood fallback.
  */
 function parseSlug(slug: string): PageType | null {
+  // 0. REMAX office pages: remax-largo, largo-remax, remax-tampa, etc.
+  const remaxOffice = getRemaxOffice(slug);
+  if (remaxOffice) {
+    // Extract the city key from the slug
+    const key = slug.replace(/^remax-/, '').replace(/-remax$/, '');
+    return { kind: "remax-office", officeKey: key };
+  }
+
   // 1. County pages: hillsborough-county, pinellas-county, etc.
   const county = COUNTIES.find((c) => c.slug === slug);
   if (county) return { kind: "county", countyName: county.name, countySlug: county.slug };
@@ -258,6 +266,20 @@ export async function generateMetadata({
   const canonical = `/${citySlug}`;
 
   switch (parsed.kind) {
+    case "remax-office": {
+      const ofc = getRemaxOffice(citySlug);
+      const cityName = ofc?.city || parsed.officeKey;
+      return {
+        title: `REMAX ${cityName} | Barrett Henry, Broker Associate | REMAX Collective`,
+        description: `Barrett Henry, Broker Associate at REMAX Collective ${cityName}. 23+ years experience. Search homes, get market data. Call (813) 733-7907.`,
+        alternates: { canonical },
+        openGraph: {
+          title: `REMAX ${cityName} — Barrett Henry, REALTOR®`,
+          description: `Your REMAX expert in ${cityName}. 23+ years, FL Broker #BK3313308.`,
+          images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+        },
+      };
+    }
     case "county":
       return {
         title: `${parsed.countyName} County Homes for Sale | Barrett Henry`,
@@ -395,6 +417,8 @@ export default async function CityPage({
       return <HubPage city={parsed.city} />;
     case "spoke":
       return <SpokePage city={parsed.city} topic={parsed.topic} slug={citySlug} />;
+    case "remax-office":
+      return <RemaxOfficePage officeKey={parsed.officeKey} />;
     case "county": {
       const countyCities = cities.filter((c) => c.county === parsed.countyName);
       return (
