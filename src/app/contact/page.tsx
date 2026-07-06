@@ -173,7 +173,7 @@ export default function ContactPage() {
             <div className="bg-white overflow-hidden shadow-sm">
               <iframe
                 title="REMAX Collective Tampa Office"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1762!2d-82.5035!3d28.0753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c31e14a2e5f7%3A0x7a65e0d4e6f7b8c9!2s14310+N+Dale+Mabry+Hwy%2C+Tampa%2C+FL+33618!5e0!3m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2714!2d-82.508415!3d28.075781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c16b3871f5af%3A0x94e614d601928a5d!2sBarrett+Henry%2C+REALTOR%C2%AE+-+REMAX+Collective!5e0!3m2!1sen!2sus"
                 width="100%"
                 height="250"
                 style={{ border: 0 }}
@@ -187,7 +187,7 @@ export default function ContactPage() {
                   14310 N. Dale Mabry Hwy, Ste 100<br />Tampa, FL 33618
                 </p>
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=14310+N+Dale+Mabry+Hwy+Ste+100+Tampa+FL+33618"
+                  href="https://www.google.com/maps/place/Barrett+Henry,+REALTOR%C2%AE+-+REMAX+Collective/@28.075781,-82.508415,17z"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block mt-3 font-body text-xs tracking-[0.15em] uppercase text-accent hover:text-primary transition-colors"
