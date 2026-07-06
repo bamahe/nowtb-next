@@ -11,6 +11,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 import MobileNav from "@/components/layout/MobileNav";
 
 // Desktop navigation links
@@ -126,19 +127,32 @@ export default function Header() {
             >
               (813) 733-7907
             </a>
-            {/* Auth link — shows "Account" when logged in, "Sign In" when not */}
+            {/* Blog link */}
+            <Link
+              href="/blog/"
+              className={`
+                font-body text-xs tracking-[0.15em] uppercase
+                transition-colors duration-500
+                ${useDarkText ? "text-primary/50 hover:text-primary" : "text-white/50 hover:text-white"}
+              `}
+            >
+              Blog
+            </Link>
+            {/* Auth link — Login/Register or Account */}
             {process.env.NEXT_PUBLIC_SUPABASE_URL && (
               <Link
-                href={isLoggedIn ? "/account" : "/login"}
+                href={isLoggedIn ? "/account/" : "/login/"}
                 className={`
                   font-body text-xs tracking-[0.15em] uppercase
                   transition-colors duration-500
                   ${useDarkText ? "text-primary/50 hover:text-primary" : "text-white/50 hover:text-white"}
                 `}
               >
-                {isLoggedIn ? "Account" : "Sign In"}
+                {isLoggedIn ? "My Account" : "Login / Register"}
               </Link>
             )}
+            {/* Language switcher */}
+            <LanguageSwitcher />
           </div>
 
           {/* ── Mobile hamburger toggle ── */}
