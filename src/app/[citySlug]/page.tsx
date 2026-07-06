@@ -614,6 +614,30 @@ async function HubPage({ city }: { city: CityData }) {
         </div>
       </section>
 
+      {/* === Quick Nav Tabs — jump to For Sale / Rentals / Sold === */}
+      <section className="bg-white border-b border-border sticky top-16 z-20">
+        <div className="container-wide">
+          <nav className="flex items-center gap-0" aria-label="Listing sections">
+            <a href="#for-sale" className="font-body text-xs tracking-[0.12em] uppercase px-5 py-4 border-b-2 border-primary text-primary font-medium">
+              For Sale ({totalActive.toLocaleString()})
+            </a>
+            {totalRentals > 0 && (
+              <a href="#rentals" className="font-body text-xs tracking-[0.12em] uppercase px-5 py-4 border-b-2 border-transparent text-muted hover:text-primary transition-colors">
+                Rentals ({totalRentals.toLocaleString()})
+              </a>
+            )}
+            {soldListings.length > 0 && (
+              <a href="#sold" className="font-body text-xs tracking-[0.12em] uppercase px-5 py-4 border-b-2 border-transparent text-muted hover:text-primary transition-colors">
+                Recently Sold
+              </a>
+            )}
+            <a href="#faq" className="font-body text-xs tracking-[0.12em] uppercase px-5 py-4 border-b-2 border-transparent text-muted hover:text-primary transition-colors">
+              FAQ
+            </a>
+          </nav>
+        </div>
+      </section>
+
       {/* === Market Stats Bar === */}
       {listings.length > 0 && (
         <section className="bg-white border-b border-border">
@@ -665,6 +689,7 @@ async function HubPage({ city }: { city: CityData }) {
       )}
 
       {/* === Latest listings grid === */}
+      <div id="for-sale" />
       <ListingGrid
         listings={listings}
         title={`Latest Listings in ${city.name}`}
@@ -699,6 +724,7 @@ async function HubPage({ city }: { city: CityData }) {
       <CityContent city={city} />
 
       {/* === Recently Sold Homes — real closed listings from MLS === */}
+      <div id="sold" />
       {soldListings.length > 0 && (
         <ListingGrid
           listings={soldListings}
@@ -708,6 +734,7 @@ async function HubPage({ city }: { city: CityData }) {
       )}
 
       {/* === Homes for Rent — separate rental listings section === */}
+      <div id="rentals" />
       {rentalListings.length > 0 && (
         <>
           <ListingGrid
@@ -773,7 +800,7 @@ async function HubPage({ city }: { city: CityData }) {
             }),
           }}
         />
-        <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-8">
+        <h2 id="faq" className="font-heading font-bold text-2xl md:text-3xl text-primary mb-8">
           Frequently Asked Questions About {city.name}
         </h2>
         <div className="space-y-6">

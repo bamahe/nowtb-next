@@ -520,7 +520,7 @@ export default async function ListingDetailPage({
       {/* =================================================================
           SECTION 6: Buying Power — loan programs, DPA, qualification
           ================================================================= */}
-      <BuyingPower listingPrice={listing.ListPrice} city={listing.City} />
+      <BuyingPower listingPrice={listing.ListPrice} city={listing.City} county={listing.CountyOrParish} />
 
       {/* =================================================================
           SECTION 7: MLS Disclaimer — required Stellar MLS compliance

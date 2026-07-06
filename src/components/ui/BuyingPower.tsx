@@ -15,6 +15,7 @@ const fmt = (n: number) =>
 interface BuyingPowerProps {
   listingPrice: number;
   city: string;
+  county?: string;
 }
 
 // Loan program data
@@ -45,15 +46,29 @@ const LOAN_PROGRAMS = [
   },
 ];
 
-// Florida down payment assistance programs
-const DPA_PROGRAMS = [
+// Florida down payment assistance programs (statewide)
+const STATE_DPA = [
   { name: "Florida Hometown Heroes", amount: "Up to $35,000", who: "First-time buyers working in FL" },
   { name: "FL Assist", amount: "Up to $10,000", who: "FHA, VA, or USDA borrowers" },
   { name: "FL HLP Second Mortgage", amount: "Up to $10,000", who: "First-time buyers, 0% deferred" },
-  { name: "Hillsborough County SHIP", amount: "Varies", who: "Income-qualifying Hillsborough residents" },
 ];
 
-export default function BuyingPower({ listingPrice, city }: BuyingPowerProps) {
+// County-specific SHIP programs
+const COUNTY_SHIP: Record<string, { name: string; amount: string; who: string }> = {
+  "HILLSBOROUGH": { name: "Hillsborough County SHIP", amount: "Varies", who: "Income-qualifying Hillsborough residents" },
+  "PINELLAS": { name: "Pinellas County SHIP", amount: "Varies", who: "Income-qualifying Pinellas residents" },
+  "PASCO": { name: "Pasco County SHIP", amount: "Varies", who: "Income-qualifying Pasco residents" },
+  "MANATEE": { name: "Manatee County SHIP", amount: "Varies", who: "Income-qualifying Manatee residents" },
+  "POLK": { name: "Polk County SHIP", amount: "Varies", who: "Income-qualifying Polk residents" },
+  "SARASOTA": { name: "Sarasota County SHIP", amount: "Varies", who: "Income-qualifying Sarasota residents" },
+  "HERNANDO": { name: "Hernando County SHIP", amount: "Varies", who: "Income-qualifying Hernando residents" },
+  "CITRUS": { name: "Citrus County SHIP", amount: "Varies", who: "Income-qualifying Citrus residents" },
+};
+
+export default function BuyingPower({ listingPrice, city, county }: BuyingPowerProps) {
+  // Build DPA list — statewide programs + county-specific SHIP if applicable
+  const countyShip = county ? COUNTY_SHIP[county.toUpperCase()] : null;
+  const DPA_PROGRAMS = [...STATE_DPA, ...(countyShip ? [countyShip] : [])];
   const [showQualify, setShowQualify] = useState(false);
   const [income, setIncome] = useState("");
   const [result, setResult] = useState<string | null>(null);

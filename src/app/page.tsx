@@ -213,6 +213,25 @@ export default async function HomePage() {
         </div>
       </HeroSection>
 
+      {/* === Trust Bar — credentials === */}
+      <section className="bg-white border-b border-border">
+        <div className="container-wide py-4">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-center">
+            <span className="font-body text-xs tracking-[0.12em] uppercase text-muted">23+ Years Experience</span>
+            <span className="text-border hidden sm:inline">|</span>
+            <span className="font-body text-xs tracking-[0.12em] uppercase text-muted">FL Broker #BK3313308</span>
+            <span className="text-border hidden sm:inline">|</span>
+            <span className="font-body text-xs tracking-[0.12em] uppercase text-muted">REMAX Collective</span>
+            <span className="text-border hidden sm:inline">|</span>
+            <span className="font-body text-xs tracking-[0.12em] uppercase text-muted">5.0 ★ Google Reviews (31)</span>
+            <span className="text-border hidden sm:inline">|</span>
+            <span className="font-body text-xs tracking-[0.12em] uppercase text-muted">8 Counties Served</span>
+            <span className="text-border hidden sm:inline">|</span>
+            <a href="tel:+18137337907" className="font-body text-xs tracking-[0.12em] uppercase text-accent hover:text-primary transition-colors">(813) 733-7907</a>
+          </div>
+        </div>
+      </section>
+
       {/* =================================================================
           SECTION 2: Featured Listings — dark navy background for contrast
           ListingGrid gets className override so it doesn't add its own

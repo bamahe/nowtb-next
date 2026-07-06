@@ -185,7 +185,12 @@ export async function getListings(
     if (params.limit) queryParams['$top'] = String(params.limit);
     if (params.offset) queryParams['$skip'] = String(params.offset);
     queryParams['$orderby'] = params.sort || 'ModificationTimestamp desc';
-    return await bridgeFetch<Listing>('/listings', queryParams);
+    queryParams['$count'] = 'true'; // Get total count for pagination/stats
+    const raw = await bridgeFetch<Listing>('/listings', queryParams);
+    // OData returns count as @odata.count, map it to our 'total' field
+    const odataCount = (raw as unknown as Record<string, unknown>)['@odata.count'];
+    if (typeof odataCount === 'number') raw.total = odataCount;
+    return raw;
   } catch (error) {
     console.error('Failed to fetch listings:', error);
     return { bundle: '', total: 0, value: [] };
