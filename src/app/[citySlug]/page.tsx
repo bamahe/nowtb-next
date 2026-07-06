@@ -1077,7 +1077,7 @@ async function SpokePage({
         <>
           <ListingGrid
             listings={listings}
-            title={`${totalFiltered > listings.length ? `Showing ${listings.length} of ${totalFiltered.toLocaleString()}` : listings.length} ${topic.label} in ${city.name}`}
+            title={`${totalFiltered > listings.length ? `Showing ${listings.length} of ${totalFiltered.toLocaleString()}` : listings.length} ${topic.slug === "neighborhood-guide" || topic.slug === "housing-market" ? "Homes for Sale" : topic.label} in ${city.name}`}
             className="container-wide py-12"
           />
           {totalFiltered > listings.length && (
@@ -1086,7 +1086,7 @@ async function SpokePage({
                 href={`/properties/?q=${encodeURIComponent(city.name)}${Object.entries(topic.filter).map(([k,v]) => `&${k}=${v}`).join('')}`}
                 className="btn-primary inline-block px-10 py-4"
               >
-                View All {totalFiltered.toLocaleString()} {topic.label} in {city.name}
+                View All {totalFiltered.toLocaleString()} {topic.slug === "neighborhood-guide" || topic.slug === "housing-market" ? "Homes for Sale" : topic.label} in {city.name}
               </Link>
             </section>
           )}
