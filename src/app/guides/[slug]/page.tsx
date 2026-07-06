@@ -7,6 +7,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Phone, Calculator, Search } from "lucide-react";
 import ContactForm from "@/components/ui/ContactForm";
 import { getPrimaryAgent } from "@/data/agents";
 import { cleanWpContent } from "@/lib/utils";
@@ -151,7 +152,7 @@ export default async function GuidePage({
               href={`tel:${agent.phone.replace(/[^\d]/g, "")}`}
               className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary font-bold text-sm rounded-lg hover:bg-accent/10 transition-colors"
             >
-              <span>📞</span> Schedule a Strategy Call
+              <Phone className="w-4 h-4" /> Schedule a Strategy Call
             </a>
             <a
               href="/mortgage-calculator"

@@ -370,26 +370,33 @@ export default function AboutPage() {
             <div className="section-divider" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {testimonials.map((t) => (
-              <div key={t.name} className="card p-6 bg-white/5 border border-white/10">
-                {/* Stars */}
-                <div className="text-amber-400 text-sm mb-3">★★★★★</div>
-                {/* Quote */}
-                <p className="font-body text-white/80 font-light text-sm leading-relaxed mb-4">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                {/* Attribution */}
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent text-xs font-bold">
-                    {t.name.charAt(0)}
-                  </div>
-                  <div>
-                    <p className="font-body text-white text-xs font-semibold">{t.name}</p>
-                    <p className="font-body text-white/50 text-xs">{t.source === "google" ? "Google Review" : "Client Review"}</p>
+            {testimonials.map((t) => {
+              // First name + last initial (e.g. "Regina C.")
+              const parts = t.name.split(" ");
+              const displayName = parts.length > 1
+                ? `${parts[0]} ${parts[parts.length - 1].charAt(0)}.`
+                : parts[0];
+              return (
+                <div key={t.name} className="card p-6 bg-white/5 border border-white/10">
+                  {/* Stars */}
+                  <div className="text-amber-400 text-sm mb-3">★★★★★</div>
+                  {/* Quote */}
+                  <p className="font-body text-white/80 font-light text-sm leading-relaxed mb-4">
+                    &ldquo;{t.quote}&rdquo;
+                  </p>
+                  {/* Attribution */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent text-xs font-bold">
+                      {t.name.charAt(0)}
+                    </div>
+                    <div>
+                      <p className="font-body text-white text-xs font-semibold">{displayName}</p>
+                      <p className="font-body text-white/50 text-xs">{t.source === "google" ? "Google Review" : "Client Review"}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
           {/* Google reviews link */}
           <div className="text-center mt-12">

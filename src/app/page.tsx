@@ -5,7 +5,7 @@
 
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Shield, TrendingUp, Users } from "lucide-react";
+import { Shield, TrendingUp, Users, Search, Key, DollarSign, BarChart3 } from "lucide-react";
 
 import HeroSection from "@/components/ui/HeroSection";
 import SearchBar from "@/components/ui/SearchBar";
@@ -224,28 +224,28 @@ export default async function HomePage() {
               href="/properties"
               className="flex flex-col items-center gap-2 py-5 px-4 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-center"
             >
-              <span className="text-2xl">🏠</span>
+              <Search className="w-6 h-6 text-accent" />
               <span className="font-body text-white text-sm font-semibold">Search Homes</span>
             </Link>
             <Link
               href="/guides/first-time-home-buyer-guide"
               className="flex flex-col items-center gap-2 py-5 px-4 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-center"
             >
-              <span className="text-2xl">🔑</span>
+              <Key className="w-6 h-6 text-accent" />
               <span className="font-body text-white text-sm font-semibold">First-Time Buyers</span>
             </Link>
             <Link
               href="/sell-your-home"
               className="flex flex-col items-center gap-2 py-5 px-4 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-center"
             >
-              <span className="text-2xl">💰</span>
+              <DollarSign className="w-6 h-6 text-accent" />
               <span className="font-body text-white text-sm font-semibold">Sell Your Home</span>
             </Link>
             <Link
               href="/home-valuation"
               className="flex flex-col items-center gap-2 py-5 px-4 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-center"
             >
-              <span className="text-2xl">📊</span>
+              <BarChart3 className="w-6 h-6 text-accent" />
               <span className="font-body text-white text-sm font-semibold">Home Valuation</span>
             </Link>
           </div>
@@ -372,19 +372,25 @@ export default async function HomePage() {
             <div className="section-divider" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredTestimonials.map((t) => (
-              <div key={t.name} className="border border-white/10 p-8">
-                {/* Stars */}
-                <p className="text-accent text-lg mb-4">★★★★★</p>
-                {/* Quote */}
-                <p className="font-body text-white/80 font-light text-sm leading-relaxed mb-6">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                {/* Attribution */}
-                <p className="font-body text-white font-medium text-sm">{t.name}</p>
-                <p className="font-body text-white/40 text-xs">{t.location}</p>
-              </div>
-            ))}
+            {featuredTestimonials.map((t) => {
+              const parts = t.name.split(" ");
+              const displayName = parts.length > 1
+                ? `${parts[0]} ${parts[parts.length - 1].charAt(0)}.`
+                : parts[0];
+              return (
+                <div key={t.name} className="border border-white/10 p-8">
+                  {/* Stars */}
+                  <p className="text-accent text-lg mb-4">★★★★★</p>
+                  {/* Quote */}
+                  <p className="font-body text-white/80 font-light text-sm leading-relaxed mb-6">
+                    &ldquo;{t.quote}&rdquo;
+                  </p>
+                  {/* Attribution */}
+                  <p className="font-body text-white font-medium text-sm">{displayName}</p>
+                  <p className="font-body text-white/40 text-xs">{t.location}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
