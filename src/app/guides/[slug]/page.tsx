@@ -126,7 +126,7 @@ export default async function GuidePage({
       />
 
       {/* === Article header === */}
-      <section className="bg-primary py-16">
+      <section className="bg-primary pt-32 pb-16">
         <div className="container-wide max-w-3xl text-center">
           {/* Category badge */}
           <span className="inline-block px-4 py-1 rounded-full text-xs font-body font-semibold bg-accent/20 text-accent mb-4">
