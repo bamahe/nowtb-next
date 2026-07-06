@@ -60,10 +60,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "./",
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  // robots: index,follow is the default — omitting to avoid redundant meta tag
 };
 
 export default function RootLayout({

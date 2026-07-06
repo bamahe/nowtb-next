@@ -26,16 +26,6 @@ export default function Footer() {
     <footer className="bg-primary text-white font-body">
       {/* ── Main footer content — centered, generous vertical padding ── */}
       <div className="container-wide py-24 text-center">
-        {/* REMAX branded logo — full version with Barrett Henry text */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/images/remax-logo.png"
-          alt="Barrett Henry — REMAX Collective"
-          width={250}
-          height={70}
-          className="h-16 w-auto mx-auto brightness-0 invert mb-1"
-        />
-
         {/* Accent divider */}
         <div className="section-divider" />
 
