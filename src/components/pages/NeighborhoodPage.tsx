@@ -43,8 +43,15 @@ export default async function NeighborhoodPage({
   let totalListings = 0;
   try {
     // Try subdivision name first — this gives neighborhood-specific results
+    // Strip city name suffixes (e.g. "Diamond Hill Valrico" → "Diamond Hill")
+    // because MLS SubdivisionName doesn't include the city
+    const parentCityName = parentCity?.name || "";
+    const searchName = name
+      .replace(new RegExp(`\\s+${parentCityName}$`, 'i'), '')
+      .replace(/,?\s*(FL|Florida)$/i, '')
+      .trim();
     const subdivRes = await getListings({
-      subdivision: name,
+      subdivision: searchName,
       exclude_rental: true,
       limit: "48",
     });

@@ -142,7 +142,9 @@ function buildFilter(params: ListingSearchParams): string {
   }
 
   // Subdivision name filter (for neighborhood-specific searches)
-  if (params.subdivision) filters.push(`SubdivisionName eq '${params.subdivision.toUpperCase()}'`);
+  // Uses 'contains' instead of 'eq' because MLS subdivision names have variations
+  // e.g. "BLOOMINGDALE SEC U V PH", "VILLAGES OF BLOOMINGDALE", etc.
+  if (params.subdivision) filters.push(`contains(SubdivisionName,'${params.subdivision.toUpperCase()}')`);
 
   // Default to active listings unless caller explicitly sets a status
   if (params.status) filters.push(`StandardStatus eq '${params.status}'`);
