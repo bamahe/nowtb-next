@@ -83,7 +83,8 @@ export function cleanWpContent(html: string): string {
     .replace(/\[last_updated\]/g, 'July 2026')
     // 3b. Strip inline CTA divs (Schedule a Buyer Strategy Call / Calculate Your Payment)
     //     These are now rendered as proper buttons in the page header component
-    .replace(/<div[^>]*>(?:<a[^>]*>(?:Schedule a (?:Buyer )?Strategy Call|Calculate Your Payment|Talk to a Tampa Bay Expert|Search All Homes)<\/a>\s*)+<\/div>/gi, '')
+    .replace(/<div[^>]*>(?:<a[^>]*>(?:Schedule a (?:Buyer )?Strategy Call|Calculate Your Payment|Talk to a Tampa Bay Expert|Search All Homes|Talk to Barrett About Investing|See Investment Properties)<\/a>\s*)+<\/div>/gi, '')
+    // 3c. (highlight-box dark backgrounds handled by CSS !important override in globals.css)
     // 4. WP image paths — rewrite to local public/ folder
     .replace(/https?:\/\/nowtb\.com\/wp-content\/uploads\//g, '/wp-content/uploads/')
     .replace(/src="\/wp-content\/uploads\//g, 'src="/wp-content/uploads/')

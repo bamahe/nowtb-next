@@ -206,13 +206,26 @@ select {
   color: #1e293b;
 }
 
-/* Highlight/intro box */
+/* Highlight/intro box — force light background regardless of WP inline styles */
 .nowtb-highlight-box {
-  background: #f8fafc;
+  background: #f8fafc !important;
   border-left: 4px solid var(--color-accent);
   border-radius: 8px;
-  padding: 24px;
+  padding: 24px !important;
   margin: 24px 0;
+  color: var(--color-text-dark) !important;
+  text-align: left !important;
+}
+/* Override dark text colors inside highlight boxes from WP inline styles */
+.nowtb-highlight-box h2,
+.nowtb-highlight-box h3,
+.nowtb-highlight-box p,
+.nowtb-highlight-box a {
+  color: var(--color-text-dark) !important;
+}
+.nowtb-highlight-box a {
+  color: var(--color-accent) !important;
+  text-decoration: underline;
 }
 
 /* Stat grid — 4 columns on desktop, 2 on mobile */
