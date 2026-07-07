@@ -106,7 +106,7 @@ const services = [
   {
     title: "Property Management",
     description:
-      "Through ViVi Property Management, we handle tenant screening, rent collection, maintenance, and monthly accounting for rental property owners.",
+      "Through ViVi PM, we handle tenant screening, rent collection, maintenance, and monthly accounting for rental property owners.",
   },
 ];
 
@@ -258,7 +258,7 @@ export default function TheNowTeamPage() {
                 rel="noopener noreferrer"
                 className="text-accent hover:underline"
               >
-                ViVi Property Management
+                ViVi PM
               </a>
               .
             </p>
@@ -425,7 +425,7 @@ export default function TheNowTeamPage() {
                 rel="noopener noreferrer"
                 className="text-accent hover:underline"
               >
-                ViVi Property Management
+                ViVi PM
               </a>{" "}
               handles tenant screening, rent collection, maintenance
               coordination, and monthly financial reporting across Tampa Bay.
@@ -440,7 +440,7 @@ export default function TheNowTeamPage() {
               >
                 hencre.com
               </a>
-              , covering CRE trends, investment strategy, cap rate analysis, and
+              , covering commercial real estate trends, investment strategy, cap rate analysis, and
               market data for the Tampa Bay region and beyond.
             </p>
           </div>

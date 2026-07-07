@@ -339,7 +339,7 @@ export default function AboutPage() {
               >
                 hencre.com
               </a>
-              , covering CRE trends, investment analysis, and market data for
+              , covering commercial real estate trends, investment analysis, and market data for
               the Tampa Bay region.
             </p>
             <p>

@@ -44,7 +44,7 @@ export default function PropertyManagementPage() {
             <div>
               <p className="heading-label mb-6">Full-Service Management</p>
               <h2 className="font-heading font-extralight text-3xl md:text-4xl tracking-[0.1em] uppercase text-primary leading-tight">
-                ViVi Property Management
+                ViVi PM
               </h2>
               <div className="section-divider !mx-0 !ml-0" />
               <p className="font-body text-muted font-light text-lg leading-relaxed mb-6">
@@ -68,7 +68,7 @@ export default function PropertyManagementPage() {
                   {[
                     "No hidden fees — flat monthly rate",
                     "Trusted local vendor network for fast maintenance",
-                    "Tampa Bay market expertise (23+ years)",
+                    "23+ years of real estate experience",
                     "Online owner portal with real-time reporting",
                     "Licensed Broker oversight on every property",
                   ].map((item) => (

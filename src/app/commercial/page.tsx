@@ -355,7 +355,7 @@ export default function CommercialPage() {
               className="card p-4 text-center hover:shadow-lg transition-shadow"
             >
               <span className="font-heading font-bold text-sm text-primary">
-                CRE Research &mdash; hencre.com
+                Commercial RE Research &mdash; hencre.com
               </span>
             </a>
           </div>

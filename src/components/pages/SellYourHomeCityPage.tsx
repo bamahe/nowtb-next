@@ -6,7 +6,6 @@
 
 import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
-import ContactForm from "@/components/ui/ContactForm";
 import ValuationForm from "@/components/ui/ValuationForm";
 import { getPrimaryAgent } from "@/data/agents";
 
@@ -234,22 +233,20 @@ export default function SellYourHomeCityPage({
         </div>
       </section>
 
-      {/* === Testimonial placeholder === */}
+      {/* === Why Barrett for selling === */}
       <section className="bg-gray-50 py-12">
-        <div className="container-wide">
-          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6 text-center">
-            {cityName} Seller Success
+        <div className="container-wide max-w-2xl mx-auto text-center">
+          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-4">
+            Why Sellers in {cityName} Choose Barrett Henry
           </h2>
-          <div className="max-w-2xl mx-auto card p-8 text-center">
-            <blockquote className="font-body text-dark text-lg italic mb-4">
-              &ldquo;Barrett sold our {cityName} home in under two weeks and
-              above asking price. His marketing plan and negotiation skills are
-              the real deal.&rdquo;
-            </blockquote>
-            <p className="font-body text-muted text-sm">
-              — {cityName} Home Seller
-            </p>
-          </div>
+          <p className="font-body text-muted mb-4">
+            Professional photography, strategic pricing, MLS syndication to Zillow, Realtor.com, and Redfin,
+            targeted social media marketing, and aggressive negotiation — Barrett&apos;s 23+ years of real estate
+            experience means your {cityName} home gets maximum exposure and top dollar.
+          </p>
+          <a href={`tel:${agent.phone.replace(/[^\d]/g, "")}`} className="text-accent font-bold hover:underline">
+            {agent.phone}
+          </a>
         </div>
       </section>
 
