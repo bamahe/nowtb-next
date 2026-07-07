@@ -95,9 +95,13 @@ type PageType =
  * Parses a URL slug into a page type.
  */
 function parseSlug(slug: string): PageType | "market-update" | null {
-  // 0a. Market update slugs — render inline (also accessible at /market-updates/[slug])
-  if (/housing-market|real-estate-market/.test(slug) && /q[12]-20\d{2}|market-update|market-report/.test(slug)) {
-    return "market-update";
+  // 0a. Market update slugs — check directly against market updates data
+  if (/housing-market|real-estate-market/.test(slug)) {
+    // Lazy-import to avoid circular deps at module level
+    const { getMarketUpdateBySlug } = require("@/lib/market-updates");
+    if (getMarketUpdateBySlug(slug)) {
+      return "market-update";
+    }
   }
 
   // 0. REMAX office pages: remax-largo, largo-remax, remax-tampa, etc.
