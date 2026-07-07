@@ -119,6 +119,7 @@ const NAV_ITEMS: NavItem[] = [
       { href: "/the-now-team/", label: "The NOW Team" },
       { href: "/about/#testimonials", label: "Reviews & Testimonials" },
       { href: "/blog/", label: "Blog" },
+      { href: "/market-updates/", label: "Market Updates" },
       { href: "/contact/", label: "Contact" },
     ],
   },
