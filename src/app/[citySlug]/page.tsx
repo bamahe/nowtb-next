@@ -94,14 +94,19 @@ type PageType =
 /**
  * Parses a URL slug into a page type.
  */
-function parseSlug(slug: string): PageType | "market-update" | null {
+function parseSlug(slug: string): PageType | "market-update" | "blog-post" | null {
   // 0a. Market update slugs — check directly against market updates data
   if (/housing-market|real-estate-market/.test(slug)) {
-    // Lazy-import to avoid circular deps at module level
     const { getMarketUpdateBySlug } = require("@/lib/market-updates");
     if (getMarketUpdateBySlug(slug)) {
       return "market-update";
     }
+  }
+
+  // 0b. Blog post slugs — served at root level for better SEO
+  const { getPostBySlug } = require("@/lib/posts");
+  if (getPostBySlug(slug)) {
+    return "blog-post";
   }
 
   // 0. REMAX office pages: remax-largo, largo-remax, remax-tampa, etc.
@@ -253,7 +258,13 @@ export async function generateStaticParams() {
     }
   }
 
-  // Market update pages (131 slugs)
+  // Blog posts at root level (525 slugs)
+  const { getAllPosts } = await import("@/lib/posts");
+  for (const post of getAllPosts()) {
+    params.push({ citySlug: post.slug });
+  }
+
+  // Market update pages
   const { getAllMarketUpdateSlugs } = await import("@/lib/market-updates");
   for (const muSlug of getAllMarketUpdateSlugs()) {
     params.push({ citySlug: muSlug });
@@ -276,6 +287,20 @@ export async function generateMetadata({
 
   // If the slug doesn't resolve, Next.js will render notFound() in the page
   if (!parsed) return {};
+
+  // Blog posts at root level
+  if (parsed === "blog-post") {
+    const { getPostBySlug } = await import("@/lib/posts");
+    const post = getPostBySlug(citySlug);
+    if (post) {
+      return {
+        title: post.title,
+        description: post.excerpt || `${post.title} — Barrett Henry, REALTOR® at REMAX Collective.`,
+        alternates: { canonical: `/${citySlug}` },
+      };
+    }
+    return {};
+  }
 
   // Market updates — serve with proper metadata
   if (parsed === "market-update") {
@@ -439,6 +464,64 @@ export default async function CityPage({
   const parsed = parseSlug(citySlug);
 
   if (!parsed) notFound();
+
+  // Blog posts — render at root level (same layout as /blog/[slug])
+  if (parsed === "blog-post") {
+    const { getPostBySlug, getPostThumbnail, getRelatedPosts } = await import("@/lib/posts");
+    const { cleanWpContent } = await import("@/lib/utils");
+    const { getPrimaryAgent } = await import("@/data/agents");
+    const post = getPostBySlug(citySlug);
+    if (!post) notFound();
+    const agent = getPrimaryAgent();
+    const thumbnail = getPostThumbnail(post);
+    const related = getRelatedPosts(citySlug, 3);
+    return (
+      <>
+        <section className="bg-primary pt-32 pb-16">
+          <div className="container-wide max-w-3xl text-center">
+            <h1 className="heading-display text-display md:text-display-lg text-white mb-4">{post.title}</h1>
+            <div className="flex items-center justify-center gap-3 text-sm font-body text-accent">
+              <time dateTime={post.date}>{new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</time>
+            </div>
+          </div>
+        </section>
+        <section className="container-wide py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+            <aside className="lg:col-span-1 order-2 lg:order-1">
+              <div className="lg:sticky lg:top-24 space-y-6">
+                <div className="card p-5 bg-primary/5">
+                  <h3 className="font-heading font-bold text-sm text-primary mb-2">Need Help?</h3>
+                  <p className="font-body text-muted text-xs mb-3">Barrett Henry has 23+ years of real estate experience. Call or text anytime.</p>
+                  <a href={`tel:${agent.phone.replace(/[^\d]/g, "")}`} className="btn-primary inline-block px-4 py-2 text-xs text-center w-full">{agent.phone}</a>
+                </div>
+                {related.length > 0 && (
+                  <div className="card p-5">
+                    <h3 className="font-heading font-bold text-sm text-primary mb-3">Related Posts</h3>
+                    <ul className="space-y-2">
+                      {related.map((r) => (
+                        <li key={r.slug}><Link href={`/${r.slug}`} className="font-body text-xs text-accent hover:underline">{r.title}</Link></li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </aside>
+            <article className="lg:col-span-3 order-1 lg:order-2">
+              {thumbnail && (
+                <div className="mb-8 rounded-lg overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={thumbnail} alt={post.title} className="w-full h-auto" loading="eager" />
+                </div>
+              )}
+              <div className="blog-content prose prose-lg font-body text-dark max-w-none prose-headings:font-heading prose-headings:text-primary prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-p:leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: cleanWpContent(post.content) }}
+              />
+            </article>
+          </div>
+        </section>
+      </>
+    );
+  }
 
   // Market updates — render the same page as /market-updates/[slug]
   if (parsed === "market-update") {
