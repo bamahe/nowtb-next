@@ -7,6 +7,16 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
 export async function middleware(request: NextRequest) {
+  const pathname = request.nextUrl.pathname;
+
+  // Redirect old root-level market update URLs to /market-updates/
+  if (
+    pathname.match(/^\/([\w-]+-housing-market[\w-]*|[\w-]+-real-estate-market[\w-]*)\/?$/)
+  ) {
+    const slug = pathname.replace(/^\/|\/$/g, '');
+    return NextResponse.redirect(new URL(`/market-updates/${slug}`, request.url), 301);
+  }
+
   // Create a response that we can modify (add/update cookies)
   let supabaseResponse = NextResponse.next({ request });
 

@@ -98,7 +98,15 @@ export function cleanWpContent(html: string): string {
     // 5. Fix MySQL newline corruption
     .replace(/>nn</g, '><')
     .replace(/>nn/g, '>\n')
-    // 6. Clean up truly empty divs (no class, no content)
+    // 6. Strip width-constraining inline styles that fight the template layout
+    //    (max-width:800-840px, margin:0 auto, padding:0 20px wrappers from WP)
+    .replace(/style="[^"]*max-width:\s*8[0-4]\dpx[^"]*"/gi, '')
+    // 7. Strip useless WP inline styles: font-family overrides, empty styles
+    .replace(/style="\s*font-family:[^"]*"/gi, '')
+    .replace(/style="\s*"/gi, '')
+    // 8. Strip WP wrapper divs that only add spacing/width constraints
+    .replace(/<div style="[^"]*margin:\s*\d+px auto[^"]*">/gi, '<div>')
+    // 9. Clean up truly empty divs (no class, no content)
     .replace(/<div>\s*<\/div>/gi, '');
 
   // 9. Cut boilerplate footer sections — but ONLY when they appear in the
