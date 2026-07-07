@@ -253,26 +253,18 @@ export default function SellYourHomeCityPage({
         </div>
       </section>
 
-      {/* === Contact form === */}
-      <section className="py-16">
-        <div className="container-wide max-w-2xl">
-          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2 text-center">
-            Let&apos;s Talk About Selling Your {cityName} Home
-          </h2>
-          <p className="font-body text-muted text-center mb-8">
-            Call Barrett at{" "}
-            <a
-              href={`tel:${agent.phone.replace(/[^\d]/g, "")}`}
-              className="text-accent font-semibold hover:underline"
-            >
-              {agent.phone}
-            </a>{" "}
-            or send a message below.
+      {/* === Phone CTA bar === */}
+      <section className="bg-primary py-8">
+        <div className="container-wide text-center">
+          <p className="font-heading font-bold text-lg text-white mb-2">
+            Ready to sell your {cityName} home?
           </p>
-          <ContactForm
-            webhookUrl="/api/contact"
-            source={`sell-your-home-${citySlug}`}
-          />
+          <a
+            href={`tel:${agent.phone.replace(/[^\d]/g, "")}`}
+            className="inline-block px-8 py-3 bg-white text-primary font-bold rounded-lg hover:bg-accent/10 transition-colors"
+          >
+            Call {agent.phone}
+          </a>
         </div>
       </section>
     </>
