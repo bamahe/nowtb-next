@@ -103,12 +103,6 @@ function parseSlug(slug: string): PageType | "market-update" | "blog-post" | nul
     }
   }
 
-  // 0b. Blog post slugs — served at root level for better SEO
-  const { getPostBySlug } = require("@/lib/posts");
-  if (getPostBySlug(slug)) {
-    return "blog-post";
-  }
-
   // 0. REMAX office pages: remax-largo, largo-remax, remax-tampa, etc.
   const remaxOffice = getRemaxOffice(slug);
   if (remaxOffice) {
@@ -186,6 +180,12 @@ function parseSlug(slug: string): PageType | "market-update" | "blog-post" | nul
   // 11. Misc/uncategorized catch-all pages (40+ pages)
   const misc = getMiscPageBySlug(slug);
   if (misc && misc.handling === "catch-all") return { kind: "misc", page: misc };
+
+  // 12. Blog posts — checked LAST so they don't interfere with other routes
+  const { getPostBySlug } = require("@/lib/posts");
+  if (getPostBySlug(slug)) {
+    return "blog-post";
+  }
 
   return null;
 }
