@@ -47,19 +47,9 @@ export function getAllMarketUpdateSlugs(): string[] {
 }
 
 /** Get the featured image for a market update. */
-export function getMarketUpdateThumbnail(post: MarketUpdate): string | null {
-  // Check for a dedicated image
-  const dedicatedPath = `/images/blog/${post.slug}.jpg`;
-
-  // Try extracting from post content
-  const match = post.content.match(/src="([^"]*\/wp-content\/uploads\/[^"]+)"/);
-  if (match) {
-    const src = match[1];
-    return src.replace(/https?:\/\/nowtb\.com/, '').replace(/-\d+x\d+\./, '.');
-  }
-
-  // Fall back to dedicated blog image
-  return dedicatedPath;
+export function getMarketUpdateThumbnail(post: MarketUpdate): string {
+  // Always use the dedicated blog image — every market update has one
+  return `/images/blog/${post.slug}.jpg`;
 }
 
 /** Get related market updates by city name pattern. */

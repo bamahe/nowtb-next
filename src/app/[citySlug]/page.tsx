@@ -94,10 +94,10 @@ type PageType =
 /**
  * Parses a URL slug into a page type.
  */
-function parseSlug(slug: string): PageType | "market-update-redirect" | null {
-  // 0a. Market update slugs — redirect to /market-updates/[slug]
+function parseSlug(slug: string): PageType | "market-update" | null {
+  // 0a. Market update slugs — render inline (also accessible at /market-updates/[slug])
   if (/housing-market|real-estate-market/.test(slug) && /q[12]-20\d{2}|market-update|market-report/.test(slug)) {
-    return "market-update-redirect";
+    return "market-update";
   }
 
   // 0. REMAX office pages: remax-largo, largo-remax, remax-tampa, etc.
@@ -249,6 +249,12 @@ export async function generateStaticParams() {
     }
   }
 
+  // Market update pages (131 slugs)
+  const { getAllMarketUpdateSlugs } = await import("@/lib/market-updates");
+  for (const muSlug of getAllMarketUpdateSlugs()) {
+    params.push({ citySlug: muSlug });
+  }
+
   return params;
 }
 
@@ -267,9 +273,18 @@ export async function generateMetadata({
   // If the slug doesn't resolve, Next.js will render notFound() in the page
   if (!parsed) return {};
 
-  // Market update redirects don't need metadata
-  if (parsed === "market-update-redirect") {
-    return { title: "Redirecting..." };
+  // Market updates — serve with proper metadata
+  if (parsed === "market-update") {
+    const { getMarketUpdateBySlug } = await import("@/lib/market-updates");
+    const update = getMarketUpdateBySlug(citySlug);
+    if (update) {
+      return {
+        title: update.title,
+        description: update.excerpt || `${update.title} — housing market data from Barrett Henry, REALTOR® at REMAX Collective.`,
+        alternates: { canonical: `/market-updates/${citySlug}` },
+      };
+    }
+    return {};
   }
 
   // All dynamic pages get a canonical URL to prevent duplicate content
@@ -421,10 +436,39 @@ export default async function CityPage({
 
   if (!parsed) notFound();
 
-  // Market update slugs redirect to /market-updates/
-  if (parsed === "market-update-redirect") {
-    const { redirect } = await import("next/navigation");
-    return redirect(`/market-updates/${citySlug}`);
+  // Market updates — render the same page as /market-updates/[slug]
+  if (parsed === "market-update") {
+    const { getMarketUpdateBySlug } = await import("@/lib/market-updates");
+    const { cleanWpContent } = await import("@/lib/utils");
+    const { getPrimaryAgent } = await import("@/data/agents");
+    const update = getMarketUpdateBySlug(citySlug);
+    if (!update) notFound();
+    const agent = getPrimaryAgent();
+    const city = update.title.split(" Housing Market")[0].split(" Real Estate")[0];
+    return (
+      <>
+        <section className="bg-primary pt-32 pb-16">
+          <div className="container-wide max-w-3xl text-center">
+            <span className="inline-block px-4 py-1 rounded-full text-xs font-body font-semibold bg-accent/20 text-accent mb-4">Market Update</span>
+            <h1 className="heading-display text-display md:text-display-lg text-white mb-4">{update.title}</h1>
+            <div className="flex items-center justify-center gap-3 text-sm font-body text-accent mb-8">
+              <time dateTime={update.date}>{new Date(update.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</time>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a href={`tel:${agent.phone.replace(/[^\d]/g, "")}`} className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary font-bold text-sm rounded-lg">Call {agent.phone}</a>
+              <Link href="/home-valuation" className="inline-block px-6 py-3 border-2 border-white/40 text-white font-bold text-sm rounded-lg">Free Home Valuation</Link>
+            </div>
+          </div>
+        </section>
+        <section className="container-wide py-12">
+          <div className="max-w-3xl mx-auto">
+            <div className="blog-content prose prose-lg font-body text-dark max-w-none prose-headings:font-heading prose-headings:text-primary prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-p:leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: cleanWpContent(update.content) }}
+            />
+          </div>
+        </section>
+      </>
+    );
   }
 
   // Dispatch to the correct page component based on type
