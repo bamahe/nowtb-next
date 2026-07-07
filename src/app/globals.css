@@ -198,10 +198,10 @@ select {
    Styles for migrated WP content: stat grids, CTA boxes, highlight boxes,
    FAQ sections, warning boxes, and quick-answer callouts. */
 
-/* Outer content wrapper */
+/* Outer content wrapper — let the parent template control width */
 .nowtb-post-content {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: none !important;
+  margin: 0 !important;
   line-height: 1.8;
   color: #1e293b;
 }
