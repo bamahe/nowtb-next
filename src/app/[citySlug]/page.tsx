@@ -94,7 +94,12 @@ type PageType =
 /**
  * Parses a URL slug into a page type.
  */
-function parseSlug(slug: string): PageType | null {
+function parseSlug(slug: string): PageType | "market-update-redirect" | null {
+  // 0a. Market update slugs — redirect to /market-updates/[slug]
+  if (/housing-market|real-estate-market/.test(slug) && /q[12]-20\d{2}|market-update|market-report/.test(slug)) {
+    return "market-update-redirect";
+  }
+
   // 0. REMAX office pages: remax-largo, largo-remax, remax-tampa, etc.
   const remaxOffice = getRemaxOffice(slug);
   if (remaxOffice) {
@@ -262,6 +267,11 @@ export async function generateMetadata({
   // If the slug doesn't resolve, Next.js will render notFound() in the page
   if (!parsed) return {};
 
+  // Market update redirects don't need metadata
+  if (parsed === "market-update-redirect") {
+    return { title: "Redirecting..." };
+  }
+
   // All dynamic pages get a canonical URL to prevent duplicate content
   const canonical = `/${citySlug}`;
 
@@ -411,40 +421,47 @@ export default async function CityPage({
 
   if (!parsed) notFound();
 
+  // Market update slugs redirect to /market-updates/
+  if (parsed === "market-update-redirect") {
+    const { redirect } = await import("next/navigation");
+    return redirect(`/market-updates/${citySlug}`);
+  }
+
   // Dispatch to the correct page component based on type
-  switch (parsed.kind) {
+  const page = parsed as PageType;
+  switch (page.kind) {
     case "hub":
-      return <HubPage city={parsed.city} />;
+      return <HubPage city={page.city} />;
     case "spoke":
-      return <SpokePage city={parsed.city} topic={parsed.topic} slug={citySlug} />;
+      return <SpokePage city={page.city} topic={page.topic} slug={citySlug} />;
     case "remax-office":
-      return <RemaxOfficePage officeKey={parsed.officeKey} />;
+      return <RemaxOfficePage officeKey={page.officeKey} />;
     case "county": {
-      const countyCities = cities.filter((c) => c.county === parsed.countyName);
+      const countyCities = cities.filter((c) => c.county === page.countyName);
       return (
         <CountyPage
-          countyName={parsed.countyName}
-          countySlug={parsed.countySlug}
+          countyName={page.countyName}
+          countySlug={page.countySlug}
           cities={countyCities}
         />
       );
     }
     case "realtor":
-      return <RealtorPage city={parsed.city} />;
+      return <RealtorPage city={page.city} />;
     case "sell-city":
-      return <SellYourHomeCityPage cityName={parsed.city.name} citySlug={parsed.city.slug} />;
+      return <SellYourHomeCityPage cityName={page.city.name} citySlug={page.city.slug} />;
     case "loan":
-      return <LoanGuidePage loanType={parsed.loanType} slug={parsed.slug} />;
+      return <LoanGuidePage loanType={page.loanType} slug={page.slug} />;
     case "neighborhood": {
       // Look up the parent city for back-links and nearby neighborhoods
-      const neighborhoodCity = getCityBySlug(parsed.city) || cities[0]; // fallback to first city
-      const nearbyNeighborhoods = getNeighborhoodsByCity(parsed.city)
-        .filter((n) => n.slug !== parsed.slug) // exclude current neighborhood
+      const neighborhoodCity = getCityBySlug(page.city) || cities[0]; // fallback to first city
+      const nearbyNeighborhoods = getNeighborhoodsByCity(page.city)
+        .filter((n) => n.slug !== page.slug) // exclude current neighborhood
         .map((n) => ({ name: n.name, slug: n.slug }));
       return (
         <NeighborhoodPage
-          name={parsed.name}
-          slug={parsed.slug}
+          name={page.name}
+          slug={page.slug}
           city={neighborhoodCity.name}
           citySlug={neighborhoodCity.slug}
           nearbyNeighborhoods={nearbyNeighborhoods}
@@ -453,14 +470,14 @@ export default async function CityPage({
     }
     case "neighborhood-spoke": {
       // Neighborhood homes-for-sale page — reuses NeighborhoodPage with listings focus
-      const nsCityData = getCityBySlug(parsed.city) || cities[0];
-      const nsNearby = getNeighborhoodsByCity(parsed.city)
-        .filter((n) => n.slug !== parsed.slug)
+      const nsCityData = getCityBySlug(page.city) || cities[0];
+      const nsNearby = getNeighborhoodsByCity(page.city)
+        .filter((n) => n.slug !== page.slug)
         .map((n) => ({ name: n.name, slug: n.slug }));
       return (
         <NeighborhoodPage
-          name={parsed.name}
-          slug={parsed.slug}
+          name={page.name}
+          slug={page.slug}
           city={nsCityData.name}
           citySlug={nsCityData.slug}
           nearbyNeighborhoods={nsNearby}
@@ -470,22 +487,22 @@ export default async function CityPage({
     case "neighborhood-realtor": {
       // Neighborhood realtor page — reuses RealtorPage with neighborhood name
       // Spread the parent city data but override the display name with the neighborhood name
-      const nrCityData = getCityBySlug(parsed.city) || cities[0];
+      const nrCityData = getCityBySlug(page.city) || cities[0];
       return (
         <RealtorPage
-          city={{ ...nrCityData, name: parsed.name }}
+          city={{ ...nrCityData, name: page.name }}
         />
       );
     }
     case "comparison":
-      return <ComparisonPage comparison={parsed.comparison} />;
+      return <ComparisonPage comparison={page.comparison} />;
     case "regional":
-      return <RegionalPage page={parsed.page} />;
+      return <RegionalPage page={page.page} />;
     case "misc":
-      return <MiscCatchAllPage page={parsed.page} />;
+      return <MiscCatchAllPage page={page.page} />;
     case "guide": {
       // Render guide inline — use real WP content when available, fall back to sections
-      const g = parsed.guide;
+      const g = page.guide;
       const wpContent = getGuideContent(g.slug);
       return (
         <>
