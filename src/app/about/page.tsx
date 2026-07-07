@@ -377,7 +377,7 @@ export default function AboutPage() {
                 ? `${parts[0]} ${parts[parts.length - 1].charAt(0)}.`
                 : parts[0];
               return (
-                <div key={t.name} className="card p-6 bg-white/5 border border-white/10">
+                <div key={t.name} className="p-6 bg-white/5 border border-white/10 rounded-lg transition-all duration-300 hover:-translate-y-1">
                   {/* Stars */}
                   <div className="text-amber-400 text-sm mb-3">★★★★★</div>
                   {/* Quote */}
