@@ -21,7 +21,7 @@ const services = [
   { title: "Tenant Screening", desc: "Full background checks, credit reports, income verification, and rental history review before any lease is signed." },
   { title: "Lease Preparation", desc: "Legally compliant lease agreements tailored to Florida landlord-tenant law, executed and stored digitally." },
   { title: "Rent Collection", desc: "On-time rent collection with online payment portals and direct disbursement to your account." },
-  { title: "24/7 Maintenance", desc: "Round-the-clock maintenance coordination through Best Bay Services — fast response, competitive rates." },
+  { title: "24/7 Maintenance", desc: "Round-the-clock maintenance coordination with trusted local vendors — fast response, competitive rates." },
   { title: "Financial Reporting", desc: "Monthly owner statements, year-end tax documents, and full transparency on every dollar." },
   { title: "Property Inspections", desc: "Regular move-in, move-out, and periodic inspections to protect your investment." },
   { title: "Eviction Management", desc: "If it comes to it, we handle the legal process from notice to court filing so you don't have to." },
@@ -55,10 +55,9 @@ export default function PropertyManagementPage() {
                 you can enjoy passive income without the headaches.
               </p>
               <p className="font-body text-muted font-light leading-relaxed">
-                Our properties are maintained by{" "}
-                <a href="https://bestbayservices.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-primary transition-colors font-medium">Best Bay Services</a>,
-                providing fast and reliable repairs at competitive rates. This in-house
-                maintenance team means faster response times and lower costs for property
+                We coordinate all maintenance through a network of trusted local vendors,
+                ensuring fast and reliable repairs at competitive rates. Our vendor
+                relationships mean faster response times and lower costs for property
                 owners.
               </p>
             </div>
@@ -68,7 +67,7 @@ export default function PropertyManagementPage() {
                 <ul className="space-y-4">
                   {[
                     "No hidden fees — flat monthly rate",
-                    "In-house maintenance via Best Bay Services",
+                    "Trusted local vendor network for fast maintenance",
                     "Tampa Bay market expertise (23+ years)",
                     "Online owner portal with real-time reporting",
                     "Licensed Broker oversight on every property",
