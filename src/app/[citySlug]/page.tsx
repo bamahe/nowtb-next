@@ -384,8 +384,8 @@ export async function generateMetadata({
 
   // Hub page metadata
   return {
-    title: `${city.name} Homes for Sale`,
-    description: `Search homes for sale in ${city.name}, FL. Updated daily from Stellar MLS. Barrett Henry, REMAX Collective. Call (813) 733-7907.`,
+    title: `${city.name} Real Estate & Homes for Sale`,
+    description: `Search ${city.name} real estate and homes for sale in FL. Updated daily from Stellar MLS. Barrett Henry, Broker Associate at REMAX Collective. Call (813) 733-7907.`,
     alternates: { canonical },
     openGraph: {
       title: `${city.name} Homes for Sale | Barrett Henry, REALTOR®`,
@@ -763,6 +763,7 @@ async function HubPage({ city }: { city: CityData }) {
           listings={soldListings}
           title={`Recently Sold Homes in ${city.name}`}
           subtitle={`See what homes recently sold for in ${city.name} to understand current market values.`}
+          headingLevel="h3"
         />
       )}
 
@@ -773,6 +774,7 @@ async function HubPage({ city }: { city: CityData }) {
           <ListingGrid
             listings={rentalListings}
             title={`Homes for Rent in ${city.name}`}
+            headingLevel="h3"
             subtitle={`${totalRentals > rentalListings.length ? `Showing ${rentalListings.length} of ${totalRentals.toLocaleString()}` : rentalListings.length} rental listings in ${city.name}, ${city.county} County.`}
           />
           {totalRentals > rentalListings.length && (
@@ -889,9 +891,9 @@ async function HubPage({ city }: { city: CityData }) {
         if (cityNeighborhoods.length === 0) return null;
         return (
           <section id="neighborhoods" className="container-wide py-12">
-            <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2">
+            <h3 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2">
               Neighborhoods in {city.name}
-            </h2>
+            </h3>
             <p className="font-body text-muted font-light mb-6">
               Explore {cityNeighborhoods.length} neighborhoods and communities in {city.name}, {city.county} County.
             </p>
@@ -921,9 +923,9 @@ async function HubPage({ city }: { city: CityData }) {
       {/* === Nearby cities in the same county === */}
       {neighbors.length > 0 && (
         <section className="container-wide py-12">
-          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6">
+          <h3 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6">
             Nearby Communities
-          </h2>
+          </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             {neighbors.map((neighbor) => (
               <Link
@@ -942,9 +944,9 @@ async function HubPage({ city }: { city: CityData }) {
       <section className="bg-primary py-12">
         <div className="container-wide flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h2 className="font-heading font-bold text-xl md:text-2xl text-white mb-1">
+            <p className="font-heading font-bold text-xl md:text-2xl text-white mb-1">
               Looking for homes in {city.name}?
-            </h2>
+            </p>
             <p className="font-body text-white/70 text-sm">
               Barrett Henry, REALTOR® — 23+ years of real estate experience
             </p>

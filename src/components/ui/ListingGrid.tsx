@@ -16,6 +16,8 @@ interface ListingGridProps {
   subtitle?: string;
   /** Optional className override for the outer wrapper (e.g. remove padding when nested) */
   className?: string;
+  /** Heading level for the section title — h2 (default) or h3 for secondary sections */
+  headingLevel?: "h2" | "h3";
 }
 
 export default function ListingGrid({
@@ -23,6 +25,7 @@ export default function ListingGrid({
   title,
   subtitle,
   className,
+  headingLevel = "h2",
 }: ListingGridProps) {
   // Don't render anything if there are no listings
   if (!listings || listings.length === 0) return null;
@@ -32,9 +35,11 @@ export default function ListingGrid({
       {/* --- Section Heading — clean, minimal --- */}
       {title && (
         <div className="text-center mb-16">
-          <h2 className="heading-section text-3xl md:text-4xl text-primary">
-            {title}
-          </h2>
+          {headingLevel === "h3" ? (
+            <h3 className="heading-section text-2xl md:text-3xl text-primary">{title}</h3>
+          ) : (
+            <h2 className="heading-section text-3xl md:text-4xl text-primary">{title}</h2>
+          )}
           <div className="section-divider" />
           {subtitle && (
             <p className="font-body text-muted text-base font-light max-w-xl mx-auto">

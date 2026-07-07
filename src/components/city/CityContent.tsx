@@ -29,7 +29,13 @@ export default function CityContent({ city, topic }: CityContentProps) {
   const zipList = formatZipList(city.zip_codes);
 
   // Clean WordPress artifacts: strip shortcodes, fix image URLs
-  const cleanContent = wpContent ? cleanWpContent(wpContent) : null;
+  // Also demote H2→H3 since CityContent already has an H2 wrapper —
+  // prevents duplicate H2 headings that hurt SEO
+  const cleanContent = wpContent
+    ? cleanWpContent(wpContent)
+        .replace(/<h2([^>]*)>/gi, '<h3$1>')
+        .replace(/<\/h2>/gi, '</h3>')
+    : null;
 
   return (
     <section className="container-wide py-12">
