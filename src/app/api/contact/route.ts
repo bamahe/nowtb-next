@@ -51,11 +51,8 @@ export async function POST(request: NextRequest) {
         const verification = await verifyRes.json();
 
         if (!verification.success) {
-          console.warn("Turnstile verification failed:", verification);
-          return NextResponse.json(
-            { error: "Spam check failed" },
-            { status: 403 }
-          );
+          // Log but don't block — Turnstile has known issues with expired/stuck tokens
+          console.warn("Turnstile verification failed (allowing submission):", verification);
         }
       } catch (err) {
         // If Turnstile is down, don't block the form — log and continue
@@ -84,17 +81,21 @@ export async function POST(request: NextRequest) {
     // FUB dedupes by email, so repeat submissions update the existing contact
     // Property details are attached as a note so Barrett sees what they want
     if (formData.email) {
-      await pushLeadToFub({
-        name: formData.name || "Unknown",
-        email: formData.email,
-        phone: formData.phone,
-        message: formData.message,
-        source: fubSourceMap[type] || "nowtb.com",
-        sourceId: formData.source,
-        tags: fubTagMap[type] || ["Website Lead"],
-        // Property details come from the form's hidden fields (set by listing page)
-        property: formData.property || undefined,
-      });
+      try {
+        await pushLeadToFub({
+          name: formData.name || "Unknown",
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          source: fubSourceMap[type] || "nowtb.com",
+          sourceId: formData.source,
+          tags: fubTagMap[type] || ["Website Lead"],
+          property: formData.property || undefined,
+        });
+      } catch (fubError) {
+        // Log but don't fail — n8n will still get the lead
+        console.warn("FUB push failed (continuing):", fubError);
+      }
     }
 
     // --- Forward to n8n for additional automations ---

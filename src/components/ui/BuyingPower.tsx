@@ -16,6 +16,8 @@ interface BuyingPowerProps {
   listingPrice: number;
   city: string;
   county?: string;
+  /** Listing's accepted financing terms (e.g. ["Cash", "Conventional"]) */
+  listingTerms?: string[];
 }
 
 // Standard loan programs (homes under $800K)
@@ -93,10 +95,35 @@ const COUNTY_SHIP: Record<string, { name: string; amount: string; who: string }>
   "CITRUS": { name: "Citrus County SHIP", amount: "Varies", who: "Income-qualifying Citrus residents" },
 };
 
-export default function BuyingPower({ listingPrice, city, county }: BuyingPowerProps) {
+export default function BuyingPower({ listingPrice, city, county, listingTerms }: BuyingPowerProps) {
+  // Normalize listing terms to lowercase for matching
+  const terms = (listingTerms || []).map(t => t.toLowerCase());
+
+  // If listing only accepts Cash — hide the entire financing section
+  const cashOnly = terms.length > 0 && terms.every(t => t === 'cash');
+  if (cashOnly) return null;
+
   // Luxury threshold — homes $800K+ get jumbo/luxury loan options
   const isLuxury = listingPrice >= 800000;
-  const LOAN_PROGRAMS = isLuxury ? LUXURY_LOANS : STANDARD_LOANS;
+
+  // Filter loan programs based on listing's accepted financing terms
+  // If terms are specified, only show matching programs
+  const hasTerms = terms.length > 0;
+  const LOAN_PROGRAMS = (isLuxury ? LUXURY_LOANS : STANDARD_LOANS).filter(loan => {
+    if (!hasTerms) return true; // No terms specified = show all
+    const loanLower = loan.name.toLowerCase();
+    return terms.some(t =>
+      t.includes(loanLower) || loanLower.includes(t) ||
+      (t === 'conventional' && loanLower === 'conventional') ||
+      (t === 'fha' && loanLower.includes('fha')) ||
+      (t === 'va' && loanLower.includes('va')) ||
+      (t === 'usda' && loanLower.includes('usda')) ||
+      (t === 'jumbo' && loanLower.includes('jumbo'))
+    );
+  });
+
+  // If no loan programs match after filtering, hide the section
+  if (LOAN_PROGRAMS.length === 0) return null;
 
   // DPA only for non-luxury homes — assistance programs don't apply to $800K+ purchases
   const countyShip = county ? COUNTY_SHIP[county.toUpperCase()] : null;

@@ -513,7 +513,7 @@ export default async function ListingDetailPage({
           Only show for for-sale listings, NOT rentals
           ================================================================= */}
       {listing.PropertyType !== 'Residential Lease' && (
-        <BuyingPower listingPrice={listing.ListPrice} city={listing.City} county={listing.CountyOrParish} />
+        <BuyingPower listingPrice={listing.ListPrice} city={listing.City} county={listing.CountyOrParish} listingTerms={listing.ListingTerms} />
       )}
 
       {/* =================================================================
