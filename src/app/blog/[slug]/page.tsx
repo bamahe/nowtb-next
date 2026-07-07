@@ -7,6 +7,7 @@
 
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import ContactForm from "@/components/ui/ContactForm";
 import { getPrimaryAgent } from "@/data/agents";
@@ -229,11 +230,12 @@ export default async function BlogPostPage({
               <div className="flex items-start gap-4 mb-4">
                 {/* Agent photo */}
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex-shrink-0 overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={agent.photoUrl}
+                  <Image
+                    src="/images/barrett-headshot.png"
                     alt={agent.name}
-                    className="w-full h-full object-cover"
+                    width={64}
+                    height={64}
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
                 <div>
