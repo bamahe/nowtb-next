@@ -562,11 +562,9 @@ export default async function CityPage({
           </div>
         </section>
         <section className="container-wide py-12">
-          <div className="max-w-3xl mx-auto">
-            <div className="blog-content prose prose-lg font-body text-dark max-w-none prose-headings:font-heading prose-headings:text-primary prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-p:leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: cleanWpContent(update.content) }}
-            />
-          </div>
+          <div className="blog-content prose prose-lg font-body text-dark max-w-none prose-headings:font-heading prose-headings:text-primary prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-p:leading-relaxed"
+            dangerouslySetInnerHTML={{ __html: cleanWpContent(update.content) }}
+          />
         </section>
       </>
     );
