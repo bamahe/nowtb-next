@@ -120,7 +120,7 @@ export default async function BlogIndexPage({
             return (
             <Link
               key={post.slug}
-              href={`/blog/${post.slug}`}
+              href={`/${post.slug}`}
               className="group card overflow-hidden hover:shadow-lg transition-shadow"
             >
               {/* Post thumbnail — extracted from content, or gradient fallback */}
