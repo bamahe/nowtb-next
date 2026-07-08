@@ -85,28 +85,9 @@ export function getRelatedPosts(currentSlug: string, limit = 3): BlogPost[] {
  *           2) first wp-content image in the post body
  *           3) null (template shows gradient fallback)
  */
-export function getPostThumbnail(post: BlogPost): string | null {
-  // Check for a dedicated blog featured image (downloaded from Unsplash)
-  // These are checked at render time — the file must exist in public/images/blog/
-  const dedicatedPath = `/images/blog/${post.slug}.jpg`;
-  // We can't do fs.existsSync in edge/client, so check a known set
-  // For now, always try the dedicated path first — it returns 404 gracefully if missing
-  // and the img tag's onerror can fall back. But for SSR, let's check the content.
-
-  // Try extracting from post content
-  const match = post.content.match(/src="([^"]*\/wp-content\/uploads\/[^"]+)"/);
-  if (match) {
-    const src = match[1];
-    // Use local path (images downloaded to public/wp-content/uploads/)
-    if (src.startsWith('/wp-content/')) return src;
-    if (src.includes('nowtb.com/wp-content/')) {
-      return src.replace(/https?:\/\/nowtb\.com/, '');
-    }
-    return src;
-  }
-
-  // Fall back to dedicated blog image if no content image
-  return dedicatedPath;
+export function getPostThumbnail(post: BlogPost): string {
+  // Always use the dedicated blog image — every post has one at /images/blog/{slug}.jpg
+  return `/images/blog/${post.slug}.jpg`;
 }
 
 export type { BlogPost };
