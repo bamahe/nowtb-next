@@ -31,7 +31,7 @@ export default function RegionalPage({ page }: RegionalPageProps) {
 
       {/* === Main content === */}
       <section className="container-wide py-12">
-        <div className="max-w-3xl mx-auto">
+        <div>
           {/* Category badge */}
           <span className="inline-block px-4 py-1 rounded-full text-xs font-body font-semibold bg-accent/20 text-primary mb-6">
             {category}

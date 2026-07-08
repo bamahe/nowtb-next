@@ -88,7 +88,7 @@ export default function LoanGuidePage({
 
       {/* === How this loan works === */}
       <section className="container-wide py-12">
-        <div className="max-w-3xl mx-auto">
+        <div>
           <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6">
             How a {loanType} Works
           </h2>
@@ -106,7 +106,7 @@ export default function LoanGuidePage({
 
       {/* === Eligibility requirements === */}
       <section className="bg-gray-50 py-12">
-        <div className="container-wide max-w-3xl">
+        <div className="container-wide">
           <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6">
             {loanType} Eligibility Requirements
           </h2>
@@ -137,7 +137,7 @@ export default function LoanGuidePage({
 
       {/* === Benefits === */}
       <section className="container-wide py-12">
-        <div className="max-w-3xl mx-auto">
+        <div>
           <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6">
             Benefits of a {loanType}
           </h2>

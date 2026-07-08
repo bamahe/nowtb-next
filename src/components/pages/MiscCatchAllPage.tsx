@@ -24,7 +24,7 @@ export default function MiscCatchAllPage({ page }: MiscCatchAllPageProps) {
 
       {/* === Content === */}
       <section className="container-wide py-12">
-        <div className="max-w-3xl mx-auto prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-accent">
+        <div className="prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-accent">
           <p>
             {page.excerpt} Barrett Henry, Broker Associate at REMAX Collective,
             brings 23+ years of real estate experience to help you with every

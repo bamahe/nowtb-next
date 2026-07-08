@@ -191,7 +191,7 @@ export default async function NeighborhoodPage({
 
       {/* === About the neighborhood — SEO content === */}
       <section className="container-wide py-12">
-        <div className="max-w-3xl mx-auto">
+        <div>
           <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6">
             About {name}
           </h2>
