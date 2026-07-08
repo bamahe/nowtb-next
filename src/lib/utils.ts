@@ -98,9 +98,8 @@ export function cleanWpContent(html: string): string {
     // 5. Fix MySQL newline corruption
     .replace(/>nn</g, '><')
     .replace(/>nn/g, '>\n')
-    // 6. Strip width-constraining inline styles that fight the template layout
-    //    (max-width:800-840px, margin:0 auto, padding:0 20px wrappers from WP)
-    .replace(/style="[^"]*max-width:\s*8[0-4]\dpx[^"]*"/gi, '')
+    // 6. Strip ALL max-width inline styles that fight the template layout
+    .replace(/\s*max-width:\s*\d+px;?/gi, '')
     // 7. Strip useless WP inline styles: font-family overrides, empty styles
     .replace(/style="\s*font-family:[^"]*"/gi, '')
     .replace(/style="\s*"/gi, '')
