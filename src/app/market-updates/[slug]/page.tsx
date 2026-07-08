@@ -30,6 +30,9 @@ export async function generateMetadata({
   const update = getMarketUpdateBySlug(slug);
   if (!update) return { title: "Market Update Not Found" };
 
+  const ogImage = slug === "florida-housing-market-2026"
+    ? "/images/florida-housing-market-2026-og.png"
+    : "/og-default.png";
   return {
     title: update.title,
     description: update.excerpt || `${update.title} — latest housing market data from Barrett Henry, REALTOR® at REMAX Collective.`,
@@ -38,6 +41,12 @@ export async function generateMetadata({
       title: update.title,
       description: update.excerpt,
       type: "article",
+      images: [{ url: ogImage, width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: update.title,
+      images: [ogImage],
     },
   };
 }

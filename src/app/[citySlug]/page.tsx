@@ -307,10 +307,24 @@ export async function generateMetadata({
     const { getMarketUpdateBySlug } = await import("@/lib/market-updates");
     const update = getMarketUpdateBySlug(citySlug);
     if (update) {
+      // Custom OG image for florida-housing-market-2026
+      const ogImage = citySlug === "florida-housing-market-2026"
+        ? "/images/florida-housing-market-2026-og.png"
+        : "/og-default.png";
       return {
         title: update.title,
         description: update.excerpt || `${update.title} — housing market data from Barrett Henry, REALTOR® at REMAX Collective.`,
         alternates: { canonical: `/market-updates/${citySlug}` },
+        openGraph: {
+          title: update.title,
+          description: update.excerpt,
+          images: [{ url: ogImage, width: 1200, height: 630 }],
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: update.title,
+          images: [ogImage],
+        },
       };
     }
     return {};
