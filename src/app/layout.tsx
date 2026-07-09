@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import MobileBottomBar from "@/components/ui/MobileBottomBar";
 import BackToTop from "@/components/ui/BackToTop";
 import ClientChatWidget from "@/components/ui/ClientChatWidget";
+import CookieConsent from "@/components/ui/CookieConsent";
 import FubPixel from "@/components/tracking/FubPixel";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -95,6 +96,8 @@ export default function RootLayout({
         <FubPixel />
         <Analytics />
         <SpeedInsights />
+        {/* Cookie consent banner — shows on first visit, dismissible */}
+        <CookieConsent />
       </body>
     </html>
   );
