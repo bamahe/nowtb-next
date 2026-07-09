@@ -43,7 +43,7 @@ import { regionalPages, getRegionalPageBySlug, type RegionalPageData } from "@/d
 import { miscPages, getMiscPageBySlug, type MiscPageData } from "@/data/misc-pages";
 import { guides, type GuideData } from "@/data/guides";
 import { getGuideContent } from "@/lib/guides-loader";
-import { getListings, getListingsByCity } from "@/lib/bridge";
+import { getListings, getListingsByCity, getOpenHouses } from "@/lib/bridge";
 
 // --- County data for county pages ---
 const COUNTIES = [
@@ -1144,21 +1144,30 @@ async function SpokePage({
   topic: (typeof SPOKE_TOPICS)[number];
   slug: string;
 }) {
-  // Build filter params: use ZIP codes (reliable) instead of city name
-  // Many communities aren't MLS "cities" — Carrollwood = Tampa, Brandon = unincorporated, etc.
-  const filterParams: import("@/lib/types").ListingSearchParams = {
-    zip_codes: city.zip_codes,
-    ...topic.filter,
-    limit: "48",
-  };
-
   // Fetch filtered listings from Bridge API
   let listings: import("@/lib/types").Listing[] = [];
   let totalFiltered = 0;
+
+  // Open house pages use the dedicated getOpenHouses function which handles
+  // the OpenHouseStartTime date range filter correctly
+  const isOpenHouse = topic.slug === "open-houses";
+
   try {
-    const res = await getListings(filterParams);
-    listings = res.value || [];
-    totalFiltered = res.total || listings.length;
+    if (isOpenHouse) {
+      listings = await getOpenHouses(city.zip_codes);
+      totalFiltered = listings.length;
+    } else {
+      // Build filter params: use ZIP codes (reliable) instead of city name
+      // Many communities aren't MLS "cities" — Carrollwood = Tampa, Brandon = unincorporated, etc.
+      const filterParams: import("@/lib/types").ListingSearchParams = {
+        zip_codes: city.zip_codes,
+        ...topic.filter,
+        limit: "48",
+      };
+      const res = await getListings(filterParams);
+      listings = res.value || [];
+      totalFiltered = res.total || listings.length;
+    }
   } catch {
     listings = [];
   }

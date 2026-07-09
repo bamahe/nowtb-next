@@ -301,8 +301,9 @@ export async function getFeaturedListings(): Promise<Listing[]> {
 /**
  * Get listings with open houses in the next 7 days.
  * Sorted by soonest open house first.
+ * Optionally filter by ZIP codes (for city-specific open house pages).
  */
-export async function getOpenHouses(): Promise<Listing[]> {
+export async function getOpenHouses(zipCodes?: string[]): Promise<Listing[]> {
   if (IS_BUILD_TIME) return [];
   try {
     const now = new Date().toISOString();
@@ -310,8 +311,20 @@ export async function getOpenHouses(): Promise<Listing[]> {
       Date.now() + 7 * 24 * 60 * 60 * 1000
     ).toISOString();
 
+    const filters = [
+      `OpenHouseStartTime ge ${now}`,
+      `OpenHouseStartTime le ${weekFromNow}`,
+      `StandardStatus eq 'Active'`,
+    ];
+
+    // Filter by ZIP codes for city-specific open house pages
+    if (zipCodes && zipCodes.length > 0) {
+      const zipFilter = zipCodes.map(z => `PostalCode eq '${z}'`).join(' or ');
+      filters.push(`(${zipFilter})`);
+    }
+
     const queryParams: Record<string, string> = {
-      '$filter': `OpenHouseStartTime ge ${now} and OpenHouseStartTime le ${weekFromNow} and StandardStatus eq 'Active'`,
+      '$filter': filters.join(' and '),
       '$orderby': 'OpenHouseStartTime asc',
       '$top': '50',
     };
