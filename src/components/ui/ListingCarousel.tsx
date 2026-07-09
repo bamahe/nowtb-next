@@ -123,7 +123,7 @@ export default function ListingCarousel({ title, listings, badge, badgeClass = "
                   {listing.LivingArea && <span>{listing.LivingArea.toLocaleString()} Sq.Ft.</span>}
                 </div>
                 {listing.ListOfficeName && (
-                  <p className="font-body text-[10px] text-muted/60 mt-2 truncate">
+                  <p className="font-body text-[10px] text-gray-400 mt-2 truncate">
                     Listed by {listing.ListOfficeName}
                   </p>
                 )}
