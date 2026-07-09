@@ -1015,7 +1015,8 @@ export function getCityBySlug(slug: string): CityData | undefined {
 }
 
 /** Look up a city by its MLS City name (case-insensitive, handles common mismatches) */
-export function getCityByName(mlsCity: string): CityData | undefined {
+export function getCityByName(mlsCity: string | null | undefined): CityData | undefined {
+  if (!mlsCity) return undefined;
   const normalized = mlsCity.trim().toLowerCase();
   // Direct match first
   const direct = cities.find((c) => c.name.toLowerCase() === normalized);

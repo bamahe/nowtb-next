@@ -195,8 +195,8 @@ export function slugify(text: string): string {
  * Example: /properties/StellarMLS/TB8526478/tampa/5120-n-matanzas-avenue
  */
 export function getListingUrl(listing: Listing): string {
-  const citySlug = slugify(listing.City);
-  const addressSlug = slugify(listing.UnparsedAddress);
+  const citySlug = slugify(listing.City || 'florida');
+  const addressSlug = slugify(listing.UnparsedAddress || 'listing');
   const mlsId = listing.ListingId || listing.ListingKey;
   return `/properties/StellarMLS/${mlsId}/${citySlug}/${addressSlug}`;
 }
