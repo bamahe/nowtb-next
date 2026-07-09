@@ -1014,6 +1014,24 @@ export function getCityBySlug(slug: string): CityData | undefined {
   return cities.find((c) => c.slug === slug);
 }
 
+/** Look up a city by its MLS City name (case-insensitive, handles common mismatches) */
+export function getCityByName(mlsCity: string): CityData | undefined {
+  const normalized = mlsCity.trim().toLowerCase();
+  // Direct match first
+  const direct = cities.find((c) => c.name.toLowerCase() === normalized);
+  if (direct) return direct;
+  // Handle common MLS name mismatches
+  const aliases: Record<string, string> = {
+    "land o lakes": "Land O' Lakes",
+    "st petersburg": "St. Petersburg",
+    "st pete": "St. Petersburg",
+    "saint petersburg": "St. Petersburg",
+  };
+  const aliasName = aliases[normalized];
+  if (aliasName) return cities.find((c) => c.name === aliasName);
+  return undefined;
+}
+
 /** All topic slugs as a flat array — used to populate every city's topics */
 export const ALL_TOPIC_SLUGS = SPOKE_TOPICS.map((t) => t.slug);
 

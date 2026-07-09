@@ -1,14 +1,16 @@
 // =============================================================================
-// Single Listing Detail Page — /properties/[id]
-// Server component: fetches one listing by ListingKey from Bridge API
+// Single Listing Detail Page — /properties/[...slug]
+// Handles new SEO URLs: /properties/StellarMLS/{MlsId}/{city}/{address}
+// Also handles old URLs: /properties/{address-slug}-{listingKey} via redirect
 // =============================================================================
 
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import { Bed, Bath, Ruler, Calendar, LandPlot, Car } from "lucide-react";
+import Link from "next/link";
+import { notFound, redirect } from "next/navigation";
+import { Suspense } from "react";
+import { Bed, Bath, Ruler, Calendar, LandPlot, Car, Home, ChevronRight } from "lucide-react";
 
 import BuyingPower from "@/components/ui/BuyingPower";
-import ContactForm from "@/components/ui/ContactForm";
 import FavoriteButton from "@/components/ui/FavoriteButton";
 import MiniCalc from "@/components/ui/MiniCalc";
 import PhotoGallery from "@/components/ui/PhotoGallery";
@@ -17,49 +19,73 @@ import SchoolsNearby from "@/components/ui/SchoolsNearby";
 import ShareButtons from "@/components/ui/ShareButtons";
 import SimilarListings from "@/components/ui/SimilarListings";
 import TourScheduler from "@/components/ui/TourScheduler";
-import { getListing } from "@/lib/bridge";
-import { formatPrice, formatSqFt, extractListingKey } from "@/lib/utils";
+import { getListing, getListingByMlsId, getJustListed, getPriceReduced, getRecentSales } from "@/lib/bridge";
+import { formatPrice, formatSqFt, extractMlsId, extractListingKey, getListingUrl } from "@/lib/utils";
+import { getCityByName } from "@/data/cities";
 import type { Listing } from "@/lib/types";
+import ListingCarousel from "@/components/ui/ListingCarousel";
 
 // -----------------------------------------------------------------------------
 // Types
 // -----------------------------------------------------------------------------
 
 interface ListingPageProps {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string[] }>;
 }
 
 // -----------------------------------------------------------------------------
-// Dynamic metadata — listing-specific title and description
+// Resolve listing from URL segments — new format or old format with redirect
 // -----------------------------------------------------------------------------
 
-export async function generateMetadata({
-  params,
-}: ListingPageProps): Promise<Metadata> {
-  const { id } = await params;
-  const listingKey = extractListingKey(id);
-  const listing = await getListing(listingKey);
+async function resolveListing(segments: string[]): Promise<Listing | 'not-found' | { redirect: string }> {
+  // New format: ["StellarMLS", "TB8526478", "tampa", "5120-n-matanzas-avenue"]
+  const mlsId = extractMlsId(segments);
+  if (mlsId) {
+    const listing = await getListingByMlsId(mlsId);
+    if (!listing) return 'not-found';
+    return listing;
+  }
 
-  // If the listing doesn't exist, Next.js will show the not-found page
-  if (!listing) {
+  // Old format: single segment with address-slug-{listingKey}
+  if (segments.length === 1) {
+    const listingKey = extractListingKey(segments[0]);
+    const listing = await getListing(listingKey);
+    if (!listing) return 'not-found';
+    // Redirect to new URL format
+    return { redirect: getListingUrl(listing) };
+  }
+
+  return 'not-found';
+}
+
+// -----------------------------------------------------------------------------
+// Dynamic metadata
+// -----------------------------------------------------------------------------
+
+export async function generateMetadata({ params }: ListingPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const result = await resolveListing(slug);
+
+  if (result === 'not-found' || 'redirect' in result) {
     return { title: "Listing Not Found" };
   }
 
+  const listing = result;
   const title = `${listing.UnparsedAddress}, ${listing.City} FL | ${formatPrice(listing.ListPrice)} | Barrett Henry`;
   const description = listing.PublicRemarks
     ? listing.PublicRemarks.slice(0, 160)
     : `${listing.BedroomsTotal || 0} bed, ${listing.BathroomsTotalInteger || 0} bath home in ${listing.City}, FL listed at ${formatPrice(listing.ListPrice)}.`;
 
+  const canonicalUrl = getListingUrl(listing);
+
   return {
     title,
     description,
-    alternates: {
-      canonical: `/properties/${listing.ListingKey}`,
-    },
+    alternates: { canonical: canonicalUrl },
     openGraph: {
       title,
       description,
-      url: `/properties/${listing.ListingKey}`,
+      url: canonicalUrl,
       images: listing.Media?.[0]?.MediaURL
         ? [{ url: listing.Media[0].MediaURL, width: 1200, height: 630 }]
         : [],
@@ -73,66 +99,65 @@ export async function generateMetadata({
 
 function getQuickStats(listing: Listing) {
   return [
-    {
-      icon: Bed,
-      label: "Beds",
-      value: listing.BedroomsTotal ?? "—",
-    },
-    {
-      icon: Bath,
-      label: "Baths",
-      value: listing.BathroomsTotalInteger ?? "—",
-    },
-    {
-      icon: Ruler,
-      label: "Sq Ft",
-      value: listing.LivingArea ? formatSqFt(listing.LivingArea) : "—",
-    },
-    {
-      icon: Calendar,
-      label: "Year Built",
-      value: listing.YearBuilt ?? "—",
-    },
-    {
-      icon: LandPlot,
-      label: "Lot Size",
-      value: listing.LotSizeAcres
-        ? `${listing.LotSizeAcres.toFixed(2)} acres`
-        : "—",
-    },
-    {
-      icon: Car,
-      label: "Garage",
-      value: listing.GarageSpaces ?? "—",
-    },
+    { icon: Bed, label: "Beds", value: listing.BedroomsTotal ?? "—" },
+    { icon: Bath, label: "Baths", value: listing.BathroomsTotalInteger ?? "—" },
+    { icon: Ruler, label: "Sq Ft", value: listing.LivingArea ? formatSqFt(listing.LivingArea) : "—" },
+    { icon: Calendar, label: "Year Built", value: listing.YearBuilt ?? "—" },
+    { icon: LandPlot, label: "Lot Size", value: listing.LotSizeAcres ? `${listing.LotSizeAcres.toFixed(2)} acres` : "—" },
+    { icon: Car, label: "Garage", value: listing.GarageSpaces ?? "—" },
   ];
+}
+
+// -----------------------------------------------------------------------------
+// Carousel data loaders — wrapped in async components for Suspense streaming
+// -----------------------------------------------------------------------------
+
+async function JustListedSection({ zipCodes, city, excludeKey }: { zipCodes: string[]; city: string; excludeKey: string }) {
+  const listings = await getJustListed(zipCodes, excludeKey);
+  if (listings.length === 0) return null;
+  return <ListingCarousel title={`Just Listed near ${city}`} listings={listings} />;
+}
+
+async function PriceReducedSection({ zipCodes, city, excludeKey }: { zipCodes: string[]; city: string; excludeKey: string }) {
+  const listings = await getPriceReduced(zipCodes, excludeKey);
+  if (listings.length === 0) return null;
+  return <ListingCarousel title={`Price Reduced near ${city}`} listings={listings} />;
+}
+
+async function RecentSalesSection({ zipCodes, city, excludeKey }: { zipCodes: string[]; city: string; excludeKey: string }) {
+  const listings = await getRecentSales(zipCodes, excludeKey);
+  if (listings.length === 0) return null;
+  return <ListingCarousel title={`Recently Sold near ${city}`} listings={listings} />;
 }
 
 // -----------------------------------------------------------------------------
 // Page component
 // -----------------------------------------------------------------------------
 
-export default async function ListingDetailPage({
-  params,
-}: ListingPageProps) {
-  const { id } = await params;
-  const listingKey = extractListingKey(id);
-  const listing = await getListing(listingKey);
+export default async function ListingDetailPage({ params }: ListingPageProps) {
+  const { slug } = await params;
+  const result = await resolveListing(slug);
 
-  // If Bridge API returned null (not found or error), show 404
-  if (!listing) {
-    notFound();
-  }
+  // 404 if not found
+  if (result === 'not-found') notFound();
 
-  // Sort photos by Order so the primary photo comes first
+  // 301 redirect for old URL format
+  if ('redirect' in result) redirect(result.redirect);
+
+  const listing = result;
+
+  // Match the listing's city to our city data for backlinks
+  const cityData = getCityByName(listing.City);
+  const cityHref = cityData ? `/${cityData.slug}-homes-for-sale/` : null;
+  const zipCodes = cityData?.zip_codes || [listing.PostalCode];
+
+  // Sort photos by Order
   const photos = listing.Media
     ? [...listing.Media].sort((a, b) => a.Order - b.Order)
     : [];
 
-  // Quick stats for the horizontal bar
   const quickStats = getQuickStats(listing);
 
-  // Status badge color based on MLS status
   const statusColor =
     listing.StandardStatus === "Active"
       ? "bg-green-100 text-green-800"
@@ -140,9 +165,11 @@ export default async function ListingDetailPage({
         ? "bg-yellow-100 text-yellow-800"
         : "bg-gray-100 text-gray-700";
 
+  const canonicalUrl = `https://nowtb.com${getListingUrl(listing)}`;
+
   return (
     <>
-      {/* === Recently Viewed Tracker — saves this listing to localStorage === */}
+      {/* === Recently Viewed Tracker === */}
       <RecentlyViewedTracker
         listingKey={listing.ListingKey}
         address={listing.UnparsedAddress}
@@ -154,83 +181,115 @@ export default async function ListingDetailPage({
         photo={listing.Media?.[0]?.MediaURL}
       />
 
-      {/* === JSON-LD: RealEstateListing structured data === */}
+      {/* === JSON-LD: RealEstateListing + BreadcrumbList === */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "RealEstateListing",
-            name: listing.UnparsedAddress,
-            description: listing.PublicRemarks || "",
-            url: `https://nowtb.com/properties/${listing.ListingKey}`,
-            datePosted: listing.OriginalEntryTimestamp,
-            dateModified: listing.ModificationTimestamp,
-            image: photos.map((p) => p.MediaURL),
-            offers: {
-              "@type": "Offer",
-              price: listing.ListPrice,
-              priceCurrency: "USD",
-              availability:
-                listing.StandardStatus === "Active"
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "RealEstateListing",
+              name: listing.UnparsedAddress,
+              description: listing.PublicRemarks || "",
+              url: canonicalUrl,
+              datePosted: listing.OriginalEntryTimestamp,
+              dateModified: listing.ModificationTimestamp,
+              image: photos.map((p) => p.MediaURL),
+              offers: {
+                "@type": "Offer",
+                price: listing.ListPrice,
+                priceCurrency: "USD",
+                availability: listing.StandardStatus === "Active"
                   ? "https://schema.org/InStock"
                   : "https://schema.org/SoldOut",
+              },
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: listing.UnparsedAddress,
+                addressLocality: listing.City,
+                addressRegion: listing.StateOrProvince,
+                postalCode: listing.PostalCode,
+                addressCountry: "US",
+              },
+              geo: listing.Latitude && listing.Longitude
+                ? { "@type": "GeoCoordinates", latitude: listing.Latitude, longitude: listing.Longitude }
+                : undefined,
+              numberOfRooms: listing.BedroomsTotal,
+              floorSize: listing.LivingArea
+                ? { "@type": "QuantitativeValue", value: listing.LivingArea, unitCode: "FTK" }
+                : undefined,
             },
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: listing.UnparsedAddress,
-              addressLocality: listing.City,
-              addressRegion: listing.StateOrProvince,
-              postalCode: listing.PostalCode,
-              addressCountry: "US",
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://nowtb.com" },
+                ...(cityData ? [{
+                  "@type": "ListItem",
+                  position: 2,
+                  name: `${cityData.name} Homes for Sale`,
+                  item: `https://nowtb.com/${cityData.slug}-homes-for-sale/`,
+                }] : []),
+                {
+                  "@type": "ListItem",
+                  position: cityData ? 3 : 2,
+                  name: listing.UnparsedAddress,
+                  item: canonicalUrl,
+                },
+              ],
             },
-            geo: listing.Latitude && listing.Longitude
-              ? {
-                  "@type": "GeoCoordinates",
-                  latitude: listing.Latitude,
-                  longitude: listing.Longitude,
-                }
-              : undefined,
-            numberOfRooms: listing.BedroomsTotal,
-            floorSize: listing.LivingArea
-              ? {
-                  "@type": "QuantitativeValue",
-                  value: listing.LivingArea,
-                  unitCode: "FTK",
-                }
-              : undefined,
-          }),
+          ]),
         }}
       />
 
-      {/* =================================================================
-          SECTION 1: Photo Gallery
-          Big hero photo on top, clickable thumbnails below,
-          click main photo for fullscreen lightbox with arrow navigation
-          ================================================================= */}
-      <section className="container-wide pt-24 pb-8">
+      {/* === BREADCRUMBS — city backlink for SEO/AEO/GEO === */}
+      <nav aria-label="Breadcrumb" className="container-wide pt-24 pb-2">
+        <ol className="flex items-center gap-1.5 text-sm font-body text-muted">
+          <li>
+            <Link href="/" className="hover:text-accent transition-colors" aria-label="Home">
+              <Home className="w-4 h-4" />
+            </Link>
+          </li>
+          <ChevronRight className="w-3.5 h-3.5 text-gray-300" />
+          <li>
+            <Link href="/properties/" className="hover:text-accent transition-colors">
+              Properties
+            </Link>
+          </li>
+          {cityHref && (
+            <>
+              <ChevronRight className="w-3.5 h-3.5 text-gray-300" />
+              <li>
+                <Link href={cityHref} className="hover:text-accent transition-colors">
+                  {cityData!.name} Homes for Sale
+                </Link>
+              </li>
+            </>
+          )}
+          <ChevronRight className="w-3.5 h-3.5 text-gray-300" />
+          <li aria-current="page" className="text-dark font-medium truncate max-w-[200px]">
+            {listing.UnparsedAddress}
+          </li>
+        </ol>
+      </nav>
+
+      {/* === PHOTO GALLERY === */}
+      <section className="container-wide pb-8">
         <PhotoGallery photos={photos} address={listing.UnparsedAddress} autoScroll />
       </section>
 
-      {/* =================================================================
-          SECTION 2: Listing Header — price, address, status, DOM
-          ================================================================= */}
+      {/* === LISTING HEADER — price, address, status === */}
       <section className="container-wide pb-8">
         <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
           <div>
-            {/* Price */}
             <p className="font-heading font-bold text-3xl md:text-4xl text-primary">
               {formatPrice(listing.ListPrice)}
             </p>
-
-            {/* Full address */}
             <h1 className="font-body text-lg text-dark mt-1">
               {listing.UnparsedAddress}, {listing.City},{" "}
               {listing.StateOrProvince} {listing.PostalCode}
             </h1>
           </div>
-
-          {/* Status badge + favorite + share + days on market */}
           <div className="flex items-center gap-3">
             <ShareButtons
               title={`${listing.UnparsedAddress} — ${formatPrice(listing.ListPrice)}`}
@@ -249,9 +308,7 @@ export default async function ListingDetailPage({
               }}
               size="lg"
             />
-            <span
-              className={`inline-block rounded-full px-4 py-1 text-sm font-semibold ${statusColor}`}
-            >
+            <span className={`inline-block rounded-full px-4 py-1 text-sm font-semibold ${statusColor}`}>
               {listing.StandardStatus}
             </span>
             {listing.DaysOnMarket !== undefined && (
@@ -263,9 +320,7 @@ export default async function ListingDetailPage({
         </div>
       </section>
 
-      {/* =================================================================
-          SECTION 3: Quick Stats — horizontal bar with icons
-          ================================================================= */}
+      {/* === QUICK STATS === */}
       <section className="container-wide pb-8">
         <div className="grid grid-cols-3 gap-4 md:grid-cols-6 rounded-xl bg-white shadow-sm p-6">
           {quickStats.map((stat) => {
@@ -273,54 +328,34 @@ export default async function ListingDetailPage({
             return (
               <div key={stat.label} className="text-center">
                 <Icon className="mx-auto h-5 w-5 text-accent mb-1" />
-                <p className="font-body text-xs text-muted uppercase tracking-wide">
-                  {stat.label}
-                </p>
-                <p className="font-heading font-bold text-lg text-primary">
-                  {stat.value}
-                </p>
+                <p className="font-body text-xs text-muted uppercase tracking-wide">{stat.label}</p>
+                <p className="font-heading font-bold text-lg text-primary">{stat.value}</p>
               </div>
             );
           })}
         </div>
       </section>
 
-
-
-      {/* =================================================================
-          SECTION 4 & 5: Description + Property Details (two-column layout)
-          ================================================================= */}
+      {/* === DESCRIPTION + PROPERTY DETAILS (two-column) === */}
       <section className="container-wide pb-12">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-          {/* Left column: Description (takes 2/3 on desktop) */}
+          {/* Left column */}
           <div className="lg:col-span-2 space-y-8">
-            {/* Virtual Tour — prominent placement right at the top */}
             {listing.VirtualTourURLUnbranded && (
               <div>
-                <a
-                  href={listing.VirtualTourURLUnbranded}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary inline-block"
-                >
+                <a href={listing.VirtualTourURLUnbranded} target="_blank" rel="noopener noreferrer" className="btn-primary inline-block">
                   View Virtual Tour
                 </a>
               </div>
             )}
 
-            {/* Public Remarks */}
             {listing.PublicRemarks && (
               <div>
-                <h2 className="heading-section text-xl text-primary mb-4">
-                  About This Property
-                </h2>
-                <p className="font-body text-dark leading-relaxed whitespace-pre-line">
-                  {listing.PublicRemarks}
-                </p>
+                <h2 className="heading-section text-xl text-primary mb-4">About This Property</h2>
+                <p className="font-body text-dark leading-relaxed whitespace-pre-line">{listing.PublicRemarks}</p>
               </div>
             )}
 
-            {/* ---- Property Overview ---- */}
             <DetailSection title="Property Overview">
               <DetailRow label="Property Type" value={listing.PropertyType} />
               <DetailRow label="Sub Type" value={listing.PropertySubType} />
@@ -340,7 +375,6 @@ export default async function ListingDetailPage({
               <DetailRow label="Furnished" value={listing.Furnished !== "Unfurnished" ? listing.Furnished : undefined} />
             </DetailSection>
 
-            {/* ---- Interior Features ---- */}
             <DetailSection title="Interior Features">
               <DetailRow label="Interior" value={listing.InteriorFeatures?.join(", ")} />
               <DetailRow label="Flooring" value={listing.Flooring?.join(", ")} />
@@ -353,7 +387,6 @@ export default async function ListingDetailPage({
               <DetailRow label="Security" value={listing.SecurityFeatures?.join(", ")} />
             </DetailSection>
 
-            {/* ---- Exterior & Lot ---- */}
             <DetailSection title="Exterior & Lot">
               <DetailRow label="Exterior" value={listing.ExteriorFeatures?.join(", ")} />
               <DetailRow label="Fencing" value={listing.Fencing?.join(", ")} />
@@ -369,7 +402,6 @@ export default async function ListingDetailPage({
               <DetailRow label="View" value={listing.View?.join(", ")} />
             </DetailSection>
 
-            {/* ---- Pool & Spa ---- */}
             {(listing.PoolPrivateYN || listing.SpaFeatures?.length) && (
               <DetailSection title="Pool & Spa">
                 <DetailRow label="Private Pool" value={listing.PoolPrivateYN ? "Yes" : "No"} />
@@ -378,7 +410,6 @@ export default async function ListingDetailPage({
               </DetailSection>
             )}
 
-            {/* ---- Waterfront ---- */}
             {listing.WaterfrontYN && (
               <DetailSection title="Waterfront">
                 <DetailRow label="Waterfront" value="Yes" />
@@ -386,14 +417,12 @@ export default async function ListingDetailPage({
               </DetailSection>
             )}
 
-            {/* ---- Utilities ---- */}
             <DetailSection title="Utilities">
               <DetailRow label="Water" value={listing.WaterSource?.join(", ")} />
               <DetailRow label="Sewer" value={listing.Sewer?.join(", ")} />
               <DetailRow label="Utilities" value={listing.Utilities?.join(", ")} />
             </DetailSection>
 
-            {/* ---- Parking ---- */}
             <DetailSection title="Parking">
               <DetailRow label="Garage" value={
                 listing.GarageYN
@@ -403,7 +432,6 @@ export default async function ListingDetailPage({
               <DetailRow label="Carport" value={listing.CarportYN ? "Yes" : undefined} />
             </DetailSection>
 
-            {/* ---- HOA & Community ---- */}
             <DetailSection title="HOA & Community">
               <DetailRow label="HOA" value={listing.AssociationYN ? "Yes" : "No"} />
               <DetailRow label="HOA Fee" value={
@@ -414,7 +442,6 @@ export default async function ListingDetailPage({
               <DetailRow label="Senior Community" value={listing.SeniorCommunityYN ? "Yes" : "No"} />
             </DetailSection>
 
-            {/* ---- Financial ---- */}
             <DetailSection title="Financial Details">
               <DetailRow label="List Price" value={formatPrice(listing.ListPrice)} />
               <DetailRow label="Original Price" value={
@@ -432,7 +459,6 @@ export default async function ListingDetailPage({
               <DetailRow label="Parcel #" value={listing.ParcelNumber} />
             </DetailSection>
 
-            {/* ---- Schools ---- */}
             {(listing.ElementarySchool || listing.MiddleOrJuniorSchool || listing.HighSchool) && (
               <DetailSection title="Schools">
                 <DetailRow label="Elementary" value={listing.ElementarySchool} />
@@ -441,7 +467,6 @@ export default async function ListingDetailPage({
               </DetailSection>
             )}
 
-            {/* ---- Directions ---- */}
             {listing.Directions && (
               <div>
                 <h2 className="heading-section text-xl text-primary mb-4">Directions</h2>
@@ -449,7 +474,6 @@ export default async function ListingDetailPage({
               </div>
             )}
 
-            {/* ---- Map — Google Maps embed using listing coordinates ---- */}
             {listing.Latitude && listing.Longitude && (
               <div>
                 <h2 className="heading-section text-xl text-primary mb-4">Location</h2>
@@ -470,7 +494,6 @@ export default async function ListingDetailPage({
               </div>
             )}
 
-            {/* ---- Listing Office / Date ---- */}
             {listing.ListOfficeName && (
               <DetailSection title="Listing Information">
                 <DetailRow label="Office" value={listing.ListOfficeName} />
@@ -483,14 +506,13 @@ export default async function ListingDetailPage({
             )}
           </div>
 
-          {/* Right column: Tour Scheduler + Payment Estimate */}
+          {/* Right column */}
           <div>
             <TourScheduler
               listingAddress={`${listing.UnparsedAddress}, ${listing.City}, ${listing.StateOrProvince} ${listing.PostalCode}`}
               listingId={listing.ListingId}
               listingPrice={listing.ListPrice}
             />
-            {/* Inline mortgage calculator — directly below the tour form */}
             {listing.PropertyType !== 'Residential Lease' && (
               <MiniCalc listingPrice={listing.ListPrice} />
             )}
@@ -498,9 +520,7 @@ export default async function ListingDetailPage({
         </div>
       </section>
 
-      {/* =================================================================
-          SECTION 5.5: Schools Nearby — links to GreatSchools.org
-          ================================================================= */}
+      {/* === SCHOOLS NEARBY === */}
       <SchoolsNearby
         elementary={listing.ElementarySchool}
         middle={listing.MiddleOrJuniorSchool}
@@ -508,17 +528,12 @@ export default async function ListingDetailPage({
         city={listing.City}
       />
 
-      {/* =================================================================
-          SECTION 6: Buying Power — loan programs, DPA, qualification
-          Only show for for-sale listings, NOT rentals
-          ================================================================= */}
+      {/* === BUYING POWER === */}
       {listing.PropertyType !== 'Residential Lease' && (
         <BuyingPower listingPrice={listing.ListPrice} city={listing.City} county={listing.CountyOrParish} listingTerms={listing.ListingTerms} />
       )}
 
-      {/* =================================================================
-          SECTION 6.5: Similar Listings — same ZIP, similar price range
-          ================================================================= */}
+      {/* === SIMILAR LISTINGS === */}
       <SimilarListings
         currentListingKey={listing.ListingKey}
         zipCode={listing.PostalCode}
@@ -526,9 +541,49 @@ export default async function ListingDetailPage({
         city={listing.City}
       />
 
-      {/* =================================================================
-          SECTION 7: MLS Disclaimer — required Stellar MLS compliance
-          ================================================================= */}
+      {/* === JUST LISTED CAROUSEL === */}
+      <Suspense fallback={null}>
+        <JustListedSection zipCodes={zipCodes} city={listing.City} excludeKey={listing.ListingKey} />
+      </Suspense>
+
+      {/* === PRICE REDUCED CAROUSEL === */}
+      <Suspense fallback={null}>
+        <PriceReducedSection zipCodes={zipCodes} city={listing.City} excludeKey={listing.ListingKey} />
+      </Suspense>
+
+      {/* === RECENTLY SOLD CAROUSEL === */}
+      <Suspense fallback={null}>
+        <RecentSalesSection zipCodes={zipCodes} city={listing.City} excludeKey={listing.ListingKey} />
+      </Suspense>
+
+      {/* === MORE HOMES IN {CITY} — backlink section === */}
+      {cityData && (
+        <section className="container-wide py-12">
+          <h2 className="heading-section text-2xl text-primary mb-6">
+            More Homes in {cityData.name}
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <Link href={`/${cityData.slug}-homes-for-sale/`} className="rounded-lg bg-white shadow-sm border border-gray-100 p-4 hover:shadow-md hover:border-accent/30 transition-all text-center no-underline">
+              <p className="font-heading font-bold text-primary text-sm">All Homes</p>
+              <p className="font-body text-xs text-muted mt-1">Browse listings</p>
+            </Link>
+            <Link href={`/${cityData.slug}-homes-with-pool/`} className="rounded-lg bg-white shadow-sm border border-gray-100 p-4 hover:shadow-md hover:border-accent/30 transition-all text-center no-underline">
+              <p className="font-heading font-bold text-primary text-sm">Pool Homes</p>
+              <p className="font-body text-xs text-muted mt-1">{cityData.name}</p>
+            </Link>
+            <Link href={`/${cityData.slug}-new-construction/`} className="rounded-lg bg-white shadow-sm border border-gray-100 p-4 hover:shadow-md hover:border-accent/30 transition-all text-center no-underline">
+              <p className="font-heading font-bold text-primary text-sm">New Construction</p>
+              <p className="font-body text-xs text-muted mt-1">{cityData.name}</p>
+            </Link>
+            <Link href={`/${cityData.slug}-open-houses/`} className="rounded-lg bg-white shadow-sm border border-gray-100 p-4 hover:shadow-md hover:border-accent/30 transition-all text-center no-underline">
+              <p className="font-heading font-bold text-primary text-sm">Open Houses</p>
+              <p className="font-body text-xs text-muted mt-1">{cityData.name}</p>
+            </Link>
+          </div>
+        </section>
+      )}
+
+      {/* === MLS DISCLAIMER === */}
       <section className="container-wide pb-12">
         <div className="rounded-xl bg-gray-50 border border-gray-200 p-6">
           <p className="font-body text-xs text-muted leading-relaxed">
@@ -549,48 +604,25 @@ export default async function ListingDetailPage({
           </p>
         </div>
       </section>
-
-      {/* MiniCalc is now inline in the sidebar next to TourScheduler */}
     </>
   );
 }
 
 // -----------------------------------------------------------------------------
-// DetailSection — groups related property details under a heading
+// DetailSection & DetailRow helpers
 // -----------------------------------------------------------------------------
 
-/** Wraps a group of DetailRows with a section heading */
-function DetailSection({
-  title,
-  children,
-}: {
-  title: string;
-  children: React.ReactNode;
-}) {
+function DetailSection({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div>
       <h2 className="heading-section text-xl text-primary mb-4">{title}</h2>
-      <div className="grid grid-cols-1 gap-x-8 gap-y-0 sm:grid-cols-2">
-        {children}
-      </div>
+      <div className="grid grid-cols-1 gap-x-8 gap-y-0 sm:grid-cols-2">{children}</div>
     </div>
   );
 }
 
-// -----------------------------------------------------------------------------
-// DetailRow — small helper component for the property details grid
-// -----------------------------------------------------------------------------
-
-/** Renders a label/value pair; skips rendering if value is missing */
-function DetailRow({
-  label,
-  value,
-}: {
-  label: string;
-  value?: string | null;
-}) {
+function DetailRow({ label, value }: { label: string; value?: string | null }) {
   if (!value) return null;
-
   return (
     <div className="flex justify-between border-b border-gray-100 py-2">
       <span className="font-body text-sm text-muted">{label}</span>

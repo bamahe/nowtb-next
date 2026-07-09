@@ -245,6 +245,92 @@ export async function getListing(id: string): Promise<Listing | null> {
 }
 
 /**
+ * Look up a listing by its MLS ID (e.g. "TB8526478") instead of ListingKey.
+ * Used by the new SEO-friendly URL format: /properties/StellarMLS/TB8526478/city/address
+ */
+export async function getListingByMlsId(mlsId: string): Promise<Listing | null> {
+  if (IS_BUILD_TIME) return null;
+  try {
+    if (isRateLimited()) return null;
+    const queryParams: Record<string, string> = {
+      '$filter': `ListingId eq '${mlsId}'`,
+      '$top': '1',
+    };
+    const data = await bridgeFetch<Listing>('/listings', queryParams);
+    return data.value?.[0] || null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Get just-listed properties in a city (by ZIP codes).
+ * Returns the 8 most recently listed active properties.
+ */
+export async function getJustListed(zipCodes: string[], excludeKey?: string): Promise<Listing[]> {
+  if (IS_BUILD_TIME) return [];
+  try {
+    const zipFilter = zipCodes.map(z => `PostalCode eq '${z}'`).join(' or ');
+    const filters = [`(${zipFilter})`, `StandardStatus eq 'Active'`];
+    if (excludeKey) filters.push(`ListingKey ne '${excludeKey}'`);
+    const res = await bridgeFetch<Listing>('/listings', {
+      '$filter': filters.join(' and '),
+      '$orderby': 'OriginalEntryTimestamp desc',
+      '$top': '8',
+    });
+    return res.value || [];
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Get price-reduced properties in a city (by ZIP codes).
+ * Filters for active listings where current price is below original price.
+ */
+export async function getPriceReduced(zipCodes: string[], excludeKey?: string): Promise<Listing[]> {
+  if (IS_BUILD_TIME) return [];
+  try {
+    const zipFilter = zipCodes.map(z => `PostalCode eq '${z}'`).join(' or ');
+    const filters = [
+      `(${zipFilter})`,
+      `StandardStatus eq 'Active'`,
+      `OriginalListPrice gt ListPrice`,
+    ];
+    if (excludeKey) filters.push(`ListingKey ne '${excludeKey}'`);
+    const res = await bridgeFetch<Listing>('/listings', {
+      '$filter': filters.join(' and '),
+      '$orderby': 'PriceChangeTimestamp desc',
+      '$top': '8',
+    });
+    return res.value || [];
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Get recently sold properties in a city (by ZIP codes).
+ * Returns the 8 most recently closed sales.
+ */
+export async function getRecentSales(zipCodes: string[], excludeKey?: string): Promise<Listing[]> {
+  if (IS_BUILD_TIME) return [];
+  try {
+    const zipFilter = zipCodes.map(z => `PostalCode eq '${z}'`).join(' or ');
+    const filters = [`(${zipFilter})`, `StandardStatus eq 'Closed'`];
+    if (excludeKey) filters.push(`ListingKey ne '${excludeKey}'`);
+    const res = await bridgeFetch<Listing>('/listings', {
+      '$filter': filters.join(' and '),
+      '$orderby': 'CloseDate desc',
+      '$top': '8',
+    });
+    return res.value || [];
+  } catch {
+    return [];
+  }
+}
+
+/**
  * Get featured listings for the homepage — newest active listings
  * across Barrett's 8-county Tampa Bay service area.
  * Uses a representative set of ZIP codes from each county to ensure

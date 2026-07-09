@@ -191,23 +191,33 @@ export function slugify(text: string): string {
 
 /**
  * Build an SEO-friendly URL for a listing detail page.
- * Format: /properties/{address-slug}-{listingKey-short}/
- * Example: /properties/6528-simone-shores-circle-apollo-beach-fl-33572-05bf6e2f/
- * The last segment (after the last hyphen group of 8+ hex chars) is the ListingKey
- * used for the API lookup. The address part is for SEO only.
+ * Format: /properties/StellarMLS/{MlsId}/{city-slug}/{address-slug}
+ * Example: /properties/StellarMLS/TB8526478/tampa/5120-n-matanzas-avenue
  */
 export function getListingUrl(listing: Listing): string {
-  const addressSlug = slugify(
-    `${listing.UnparsedAddress} ${listing.City} FL ${listing.PostalCode}`
-  );
-  // Append full ListingKey so the detail page can look it up
-  return `/properties/${addressSlug}-${listing.ListingKey}`;
+  const citySlug = slugify(listing.City);
+  const addressSlug = slugify(listing.UnparsedAddress);
+  const mlsId = listing.ListingId || listing.ListingKey;
+  return `/properties/StellarMLS/${mlsId}/${citySlug}/${addressSlug}`;
 }
 
 /**
- * Extract the ListingKey from an SEO-friendly listing URL slug.
- * The key is the last 32-char hex segment (appended by getListingUrl).
- * Also handles raw ListingKey URLs for backwards compatibility.
+ * Parse the new SEO-friendly listing URL segments.
+ * Expected: ["StellarMLS", "TB8526478", "tampa", "5120-n-matanzas-avenue"]
+ * Returns the MLS ID for API lookup.
+ */
+export function extractMlsId(segments: string[]): string | null {
+  // New format: /properties/StellarMLS/{mlsId}/{city}/{address}
+  if (segments.length >= 2 && segments[0] === 'StellarMLS') {
+    return segments[1];
+  }
+  return null;
+}
+
+/**
+ * Extract the ListingKey from an old-format listing URL slug.
+ * Used for backward compatibility redirects from old URLs.
+ * Old format: /properties/{address-slug}-{listingKey}
  */
 export function extractListingKey(slug: string): string {
   // If the slug IS just a raw ListingKey (32 hex chars), use as-is
