@@ -187,6 +187,13 @@ export interface ListingSearchParams {
   rental?: boolean;                  // PropertyType eq 'Residential Lease'
   exclude_rental?: boolean;          // PropertyType ne 'Residential Lease'
   subdivision?: string;              // SubdivisionName eq 'value'
+  // Advanced filters added by FilterPanel
+  min_sqft?: string;                 // LivingArea ge value
+  max_sqft?: string;                 // LivingArea le value
+  min_year?: string;                 // YearBuilt ge value
+  price_reduced?: boolean;           // OriginalListPrice gt ListPrice
+  garage?: boolean;                  // GarageYN eq true
+  keyword?: string;                  // Client-side text search in remarks
 }
 
 /**

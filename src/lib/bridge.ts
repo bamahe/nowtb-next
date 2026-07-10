@@ -137,6 +137,15 @@ function buildFilter(params: ListingSearchParams): string {
   // open_house filter is handled separately by getOpenHouses() — skip here
   // The OData Property endpoint does not support OpenHouseStartTime filtering
 
+  // Advanced FilterPanel filters
+  if (params.min_sqft) filters.push(`LivingArea ge ${params.min_sqft}`);
+  if (params.max_sqft) filters.push(`LivingArea le ${params.max_sqft}`);
+  if (params.min_year) filters.push(`YearBuilt ge ${params.min_year}`);
+  if (params.price_reduced) filters.push(`OriginalListPrice gt ListPrice`);
+  if (params.garage) filters.push(`GarageYN eq true`);
+  // Note: keyword search (PublicRemarks) is not supported by Bridge OData $filter.
+  // It is applied as a client-side filter in the /api/listings route instead.
+
   // Subdivision name filter (for neighborhood-specific searches)
   // Uses 'contains' instead of 'eq' because MLS subdivision names have variations
   // e.g. "BLOOMINGDALE SEC U V PH", "VILLAGES OF BLOOMINGDALE", etc.

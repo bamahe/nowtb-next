@@ -34,6 +34,14 @@ export async function GET(request: NextRequest) {
       rental: searchParams.get("rental") === "true" || undefined,
       // Exclude rentals by default unless explicitly requesting rentals
       exclude_rental: searchParams.get("rental") === "true" ? undefined : true,
+      // Advanced FilterPanel filters
+      min_sqft: searchParams.get("min_sqft") || undefined,
+      max_sqft: searchParams.get("max_sqft") || undefined,
+      min_year: searchParams.get("min_year") || undefined,
+      price_reduced: searchParams.get("price_reduced") === "true" || undefined,
+      garage: searchParams.get("garage") === "true" || undefined,
+      // keyword is not forwarded to Bridge (OData doesn't support PublicRemarks text search)
+      // It could be applied as a client-side filter here if needed in the future
     });
 
     return NextResponse.json(result, {
