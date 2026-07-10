@@ -85,9 +85,18 @@ export function getRelatedPosts(currentSlug: string, limit = 3): BlogPost[] {
  *           2) first wp-content image in the post body
  *           3) null (template shows gradient fallback)
  */
-export function getPostThumbnail(post: BlogPost): string {
-  // Always use the dedicated blog image — every post has one at /images/blog/{slug}.jpg
-  return `/images/blog/${post.slug}.jpg`;
+export function getPostThumbnail(post: BlogPost): string | null {
+  // Check if a dedicated blog image exists at /images/blog/{slug}.jpg
+  // Posts without a local image return null (template shows no hero)
+  try {
+    const fs = require('fs');
+    const path = require('path');
+    const imgPath = path.join(process.cwd(), 'public', 'images', 'blog', `${post.slug}.jpg`);
+    if (fs.existsSync(imgPath)) {
+      return `/images/blog/${post.slug}.jpg`;
+    }
+  } catch {}
+  return null;
 }
 
 export type { BlogPost };

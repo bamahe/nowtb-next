@@ -119,9 +119,15 @@ function parseSlug(slug: string): PageType | "market-update" | "blog-post" | nul
   const loan = LOAN_TYPES.find((l) => l.slug === slug);
   if (loan) return { kind: "loan", loanType: loan.loanType, slug: loan.slug, label: loan.label };
 
-  // 3. Sell-your-home city pages: sell-your-home-valrico, sell-your-home-brandon
+  // 3. Sell-your-home city pages: both formats supported
+  //    sell-your-home-brandon OR brandon-sell-your-home
   if (slug.startsWith("sell-your-home-")) {
     const citySlug = slug.replace("sell-your-home-", "");
+    const city = getCityBySlug(citySlug);
+    if (city) return { kind: "sell-city", city };
+  }
+  if (slug.endsWith("-sell-your-home")) {
+    const citySlug = slug.replace("-sell-your-home", "");
     const city = getCityBySlug(citySlug);
     if (city) return { kind: "sell-city", city };
   }
