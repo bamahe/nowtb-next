@@ -423,9 +423,11 @@ export async function getOpenHouses(zipCodes?: string[]): Promise<Listing[]> {
     if (openHouseRecords.length === 0) return [];
 
     // Step 2: Get unique listing keys from open house records
-    const listingKeys: string[] = [...new Set(
-      openHouseRecords.map((oh: { ListingKey: string }) => oh.ListingKey).filter(Boolean)
-    )] as string[];
+    const keySet = new Set<string>();
+    for (const oh of openHouseRecords) {
+      if (oh.ListingKey) keySet.add(oh.ListingKey);
+    }
+    const listingKeys = Array.from(keySet);
 
     if (listingKeys.length === 0) return [];
 
