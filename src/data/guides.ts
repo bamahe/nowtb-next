@@ -68,7 +68,7 @@ export const guides: GuideData[] = [
   },
   {
     slug: "first-time-homebuyer-guide-tampa-bay",
-    title: "First-Time Homebuyer Guide: Tampa Bay Edition",
+    title: "First-Time Homebuyer Guide: Tampa Bay",
     excerpt: "Tampa Bay-specific guide for first-time buyers covering neighborhoods, prices, and local programs.",
     date: "2026-04-10",
     category: "Buying",
@@ -98,7 +98,7 @@ export const guides: GuideData[] = [
   },
   {
     slug: "home-inspection-guide-florida",
-    title: "Home Inspection Guide for Florida Buyers",
+    title: "Home Inspection Guide for Florida",
     excerpt: "Florida-specific home inspection guide covering humidity damage, roofing, sinkholes, and insurance requirements.",
     date: "2026-03-15",
     category: "Buying",
@@ -304,7 +304,7 @@ export const guides: GuideData[] = [
   },
   {
     slug: "mortgage-pre-approval-guide-florida",
-    title: "Mortgage Pre-Approval Guide for Florida",
+    title: "Mortgage Pre-Approval Guide: Florida",
     excerpt: "Florida-specific mortgage pre-approval guide including state programs and lender recommendations.",
     date: "2026-03-18",
     category: "Financing",
