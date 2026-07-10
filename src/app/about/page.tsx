@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description:
     "Barrett Henry is a licensed Broker Associate with REMAX Collective and team lead of The NOW Team. 23+ years of real estate experience serving Tampa Bay buyers, sellers, and investors. Call (813) 733-7907.",
   alternates: {
-    canonical: "/about",
+    canonical: "/about/",
   },
   openGraph: {
     title: "About Barrett Henry | Broker Associate | REMAX Collective",

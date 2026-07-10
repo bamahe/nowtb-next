@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Calculate your monthly mortgage payment for a Tampa Bay home. Adjust price, down payment, interest rate, and more. Barrett Henry, REMAX Collective. Call (813) 733-7907.",
   alternates: {
-    canonical: "/mortgage-calculator",
+    canonical: "/mortgage-calculator/",
   },
 };
 

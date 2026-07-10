@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "Find a trusted home inspector in Tampa Bay. Barrett Henry connects buyers and sellers with experienced inspectors for general, 4-point, wind mitigation, and WDO inspections. Call (813) 733-7907.",
   alternates: {
-    canonical: "/inspectors",
+    canonical: "/inspectors/",
   },
 };
 

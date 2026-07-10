@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   description:
     "Explore all Tampa Bay communities by county — Hillsborough, Pinellas, Pasco, Manatee, Polk, Sarasota, Hernando, and Citrus. Browse homes for sale with Barrett Henry at REMAX Collective.",
   alternates: {
-    canonical: "/communities",
+    canonical: "/communities/",
   },
 };
 

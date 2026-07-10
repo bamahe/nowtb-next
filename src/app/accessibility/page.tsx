@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Accessibility Statement | Barrett Henry, REALTOR®",
   description: "Our commitment to digital accessibility on nowtb.com. Barrett Henry and The NOW Team ensure nowtb.com meets WCAG 2.1 AA standards for all users.",
   alternates: {
-    canonical: "/accessibility",
+    canonical: "/accessibility/",
   },
 };
 

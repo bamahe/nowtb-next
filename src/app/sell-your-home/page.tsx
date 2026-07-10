@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "Get a free, no-obligation home valuation from Barrett Henry, Broker Associate with REMAX Collective. Find out what your Tampa Bay home is worth today. Call (813) 733-7907.",
   alternates: {
-    canonical: "/sell-your-home",
+    canonical: "/sell-your-home/",
   },
   openGraph: {
     title:

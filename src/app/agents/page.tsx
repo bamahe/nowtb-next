@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "Meet Barrett Henry and The NOW Team at REMAX Collective. Experienced REALTORS serving Tampa Bay's 8 counties — residential sales, investment properties, and more. Call (813) 733-7907.",
   alternates: {
-    canonical: "/agents",
+    canonical: "/agents/",
   },
   openGraph: {
     title: "Tampa Bay Real Estate Team | Barrett Henry, REALTOR®",

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description:
     "Get a free, professional home valuation from Barrett Henry, Broker Associate at REMAX Collective. Accurate CMA — not a Zillow guess. Call (813) 733-7907.",
   alternates: {
-    canonical: "/free-home-valuation",
+    canonical: "/free-home-valuation/",
   },
   openGraph: {
     title: "Free Home Valuation | Barrett Henry, Broker Associate",

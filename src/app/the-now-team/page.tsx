@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description:
     "The NOW Team is Barrett Henry's real estate team at REMAX Collective. Buying, selling, investing, and property management across 8 Tampa Bay counties. Call (813) 733-7907.",
   alternates: {
-    canonical: "/the-now-team",
+    canonical: "/the-now-team/",
   },
   openGraph: {
     title: "The NOW Team | Tampa Bay Real Estate | REMAX Collective",

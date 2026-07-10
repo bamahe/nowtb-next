@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "Free real estate guides for Tampa Bay buyers, sellers, and investors. First-time buyer guides, mortgage guides, selling guides, and more from Barrett Henry at REMAX Collective.",
   alternates: {
-    canonical: "/guides",
+    canonical: "/guides/",
   },
 };
 

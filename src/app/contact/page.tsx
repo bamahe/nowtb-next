@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description:
     "Get in touch with Barrett Henry, Broker Associate with REMAX Collective. Call (813) 733-7907 or send a message. Serving Tampa Bay's 8 counties.",
   alternates: {
-    canonical: "/contact",
+    canonical: "/contact/",
   },
   openGraph: {
     title: "Contact Barrett Henry | Tampa Bay REALTOR®",

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Barrett Henry, REALTOR®",
   description: "Privacy policy for nowtb.com — how we collect, use, and protect your personal information. Barrett Henry, REMAX Collective.",
   alternates: {
-    canonical: "/privacy-policy",
+    canonical: "/privacy-policy/",
   },
 };
 

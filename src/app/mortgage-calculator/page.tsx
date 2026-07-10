@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Use our free mortgage calculator to estimate your monthly payment or find out how much home you can afford in Tampa Bay. Includes property tax, insurance, and PMI estimates. Call Barrett Henry at (813) 733-7907.",
   alternates: {
-    canonical: "/mortgage-calculator",
+    canonical: "/mortgage-calculator/",
   },
   openGraph: {
     title: "Mortgage Calculator | Estimate Your Monthly Payment",

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description:
     "Top home builders in Tampa Bay — Lennar, DR Horton, Pulte, Taylor Morrison, Toll Brothers, and more. Free buyer representation from a Broker with 23+ years of experience. Call (813) 733-7907.",
   alternates: {
-    canonical: "/builders",
+    canonical: "/builders/",
   },
   openGraph: {
     title: "Tampa Bay Home Builders & New Construction | Barrett Henry",

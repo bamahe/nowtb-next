@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "DMCA Notice | Barrett Henry, REALTOR®",
   description: "DMCA copyright notice and takedown request process for nowtb.com. Submit copyright infringement claims to barrett@nowtb.com.",
   alternates: {
-    canonical: "/dmca-notice",
+    canonical: "/dmca-notice/",
   },
 };
 

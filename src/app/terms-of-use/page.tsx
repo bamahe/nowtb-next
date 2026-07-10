@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Terms of Use | Barrett Henry, REALTOR®",
   description: "Terms of use for nowtb.com — website usage terms and conditions for Barrett Henry and The NOW Team at REMAX Collective.",
   alternates: {
-    canonical: "/terms-of-use",
+    canonical: "/terms-of-use/",
   },
 };
 

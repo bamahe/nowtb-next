@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description:
     "Find the right mortgage lender for your Tampa Bay home purchase. Barrett Henry connects buyers with trusted local lenders for conventional, FHA, VA, USDA, and jumbo loans. Call (813) 733-7907.",
   alternates: {
-    canonical: "/lenders",
+    canonical: "/lenders/",
   },
   openGraph: {
     title: "Mortgage Lenders Tampa Bay | Barrett Henry, REALTOR",

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description:
     "Barrett Henry's proven selling strategy gets Tampa Bay homes sold faster and for more money. Pricing analysis, professional marketing, and negotiation. Call (813) 733-7907.",
   alternates: {
-    canonical: "/sellers",
+    canonical: "/sellers/",
   },
   openGraph: {
     title: "Sell Your Tampa Bay Home for Top Dollar | Barrett Henry, REALTOR®",

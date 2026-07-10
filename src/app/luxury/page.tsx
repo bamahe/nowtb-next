@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description:
     "Tampa Bay luxury homes for sale starting at $750K. Waterfront estates, golf communities, and new construction. Barrett Henry, Broker Associate, REMAX Collective. (813) 733-7907.",
   alternates: {
-    canonical: "/luxury",
+    canonical: "/luxury/",
   },
   openGraph: {
     title: "Luxury Homes for Sale in Tampa Bay | Barrett Henry",

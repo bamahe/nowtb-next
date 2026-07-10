@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Sign in to your nowtb.com account to view saved searches, favorites, and more. Barrett Henry, REMAX Collective.",
   alternates: {
-    canonical: "/login",
+    canonical: "/login/",
   },
   robots: {
     index: false,

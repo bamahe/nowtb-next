@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description:
     "Relocating to Tampa Bay? Barrett Henry, Broker Associate at REMAX Collective, provides full relocation services — virtual tours, neighborhood research, and selling-agent coordination. Call (813) 733-7907.",
   alternates: {
-    canonical: "/relocation",
+    canonical: "/relocation/",
   },
   openGraph: {
     title: "Relocating to Tampa Bay | Barrett Henry, REALTOR®",

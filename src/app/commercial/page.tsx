@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "Tampa Bay commercial real estate — office, retail, industrial, multifamily, and land. 23+ years of experience. Barrett Henry, REMAX Collective. (813) 733-7907.",
   alternates: {
-    canonical: "/commercial",
+    canonical: "/commercial/",
   },
 };
 

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description:
     "Step-by-step guide to buying a home in Tampa Bay. Barrett Henry, Broker Associate with REMAX Collective, brings 23+ years of real estate experience. Call (813) 733-7907.",
   alternates: {
-    canonical: "/buyers",
+    canonical: "/buyers/",
   },
   openGraph: {
     title: "Buy a Home in Tampa Bay | Barrett Henry, REALTOR®",

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   description:
     "Browse homes for sale across Tampa Bay. Filter by city, price, bedrooms, and more. Updated daily from Stellar MLS. Barrett Henry, REMAX Collective. Call (813) 733-7907.",
   alternates: {
-    canonical: "/properties",
+    canonical: "/properties/",
   },
   openGraph: {
     title: "Search Tampa Bay Properties | Barrett Henry, REALTOR®",

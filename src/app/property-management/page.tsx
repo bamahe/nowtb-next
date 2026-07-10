@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Professional property management for Tampa Bay rental owners. Tenant screening, maintenance coordination, and accounting. ViVi PM by Barrett Henry. Call (813) 733-7907.",
   alternates: {
-    canonical: "/property-management",
+    canonical: "/property-management/",
   },
 };
 

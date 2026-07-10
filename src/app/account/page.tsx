@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description:
     "View your saved searches, favorite listings, recently viewed homes, and account settings on nowtb.com.",
   alternates: {
-    canonical: "/account",
+    canonical: "/account/",
   },
   robots: {
     index: false,

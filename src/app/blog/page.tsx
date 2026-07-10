@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description:
     "Expert insights on Tampa Bay real estate — market updates, buying and selling tips, neighborhood guides, and more from Barrett Henry, Broker Associate at REMAX Collective.",
   alternates: {
-    canonical: "/blog",
+    canonical: "/blog/",
   },
   openGraph: {
     title: "Tampa Bay Real Estate Blog | Barrett Henry, REALTOR®",

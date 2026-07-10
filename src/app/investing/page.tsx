@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "Tampa Bay investment property opportunities — rental analysis, ROI projections, and expert investor guidance from Barrett Henry, REMAX Collective. Call (813) 733-7907.",
   alternates: {
-    canonical: "/investing",
+    canonical: "/investing/",
   },
 };
 

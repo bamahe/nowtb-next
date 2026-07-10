@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description:
       "Tampa Bay Real Estate — Straight talk. Smart strategy.",
   },
-  alternates: { canonical: "/card" },
+  alternates: { canonical: "/card/" },
 };
 
 export default function CardLayout({
