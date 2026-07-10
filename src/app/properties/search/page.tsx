@@ -55,7 +55,7 @@ const TYPE_OPTIONS = [
   { label: "Residential", value: "Residential" },
   { label: "Condo", value: "Condominium" },
   { label: "Land", value: "Land" },
-  { label: "Commercial", value: "Commercial" },
+  { label: "Commercial", value: "Commercial Sale" },
 ] as const;
 
 const SORT_OPTIONS = [

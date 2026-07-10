@@ -62,7 +62,7 @@ export default async function CommercialPage() {
   let totalCommercial = 0;
   try {
     const res = await getListings({
-      property_type: "Commercial",
+      property_type: "Commercial Sale",
       limit: "24",
       sort: "ModificationTimestamp desc",
     });
@@ -206,7 +206,7 @@ export default async function CommercialPage() {
           />
           <section className="container-wide py-4 text-center">
             <Link
-              href="/properties/search/?property_type=Commercial"
+              href="/properties/search/?property_type=Commercial+Sale"
               className="btn-primary inline-block px-10 py-4"
             >
               View All {totalCommercial.toLocaleString()} Commercial Listings
@@ -234,7 +234,7 @@ export default async function CommercialPage() {
             {AREA_SEARCHES.map((area) => (
               <Link
                 key={area.name}
-                href={`/properties/search/?property_type=Commercial&q=${encodeURIComponent(area.name)}`}
+                href={`/properties/search/?property_type=Commercial+Sale&q=${encodeURIComponent(area.name)}`}
                 className="block rounded-lg border border-gray-200 bg-white px-4 py-4 text-center hover:shadow-md hover:border-accent/30 transition-all no-underline"
               >
                 <p className="font-heading font-bold text-primary text-sm">{area.name}</p>
