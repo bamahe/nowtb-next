@@ -447,7 +447,29 @@ export async function getOpenHouses(zipCodes?: string[]): Promise<Listing[]> {
       if (res.value) allListings.push(...res.value);
     }
 
-    // Step 4: Filter by ZIP codes for city-specific open house pages
+    // Step 4: Attach open house date/time to each listing
+    // Build a map of ListingKey -> earliest open house schedule
+    const ohMap = new Map<string, { start: string; end: string }>();
+    for (const oh of openHouseRecords) {
+      if (oh.ListingKey && oh.OpenHouseStartTime) {
+        // Keep the earliest upcoming open house for each listing
+        if (!ohMap.has(oh.ListingKey)) {
+          ohMap.set(oh.ListingKey, {
+            start: oh.OpenHouseStartTime,
+            end: oh.OpenHouseEndTime || '',
+          });
+        }
+      }
+    }
+    for (const listing of allListings) {
+      const oh = ohMap.get(listing.ListingKey);
+      if (oh) {
+        listing.OpenHouseStartTime = oh.start;
+        listing.OpenHouseEndTime = oh.end;
+      }
+    }
+
+    // Step 5: Filter by ZIP codes for city-specific open house pages
     if (zipCodes && zipCodes.length > 0) {
       const zipSet = new Set(zipCodes);
       return allListings.filter(l => l.PostalCode && zipSet.has(l.PostalCode));

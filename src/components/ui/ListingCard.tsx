@@ -20,6 +20,20 @@ interface ListingCardProps {
   listing: Listing;
 }
 
+/** Format open house date/time for display: "Sat, Jul 12 · 1:00–4:00 PM" */
+function formatOpenHouse(start?: string, end?: string): string {
+  if (!start) return '';
+  const s = new Date(start);
+  const dayStr = s.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+  const startTime = s.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }).replace(' ', '');
+  if (end) {
+    const e = new Date(end);
+    const endTime = e.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }).replace(' ', '');
+    return `${dayStr} · ${startTime}–${endTime}`;
+  }
+  return `${dayStr} · ${startTime}`;
+}
+
 /** Color map for listing status badges */
 const statusColors: Record<string, string> = {
   Active: "bg-green-600/80 text-white",
@@ -69,10 +83,23 @@ export default function ListingCard({ listing }: ListingCardProps) {
           aria-hidden="true"
         />
 
+        {/* --- Open House Banner — across the top of the photo --- */}
+        {listing.OpenHouseStartTime && (
+          <div className="absolute top-0 left-0 right-0 bg-accent/95 text-primary px-4 py-2 text-center z-10">
+            <p className="font-body text-[10px] font-bold uppercase tracking-[0.12em]">
+              Open House
+            </p>
+            <p className="font-body text-xs font-semibold">
+              {formatOpenHouse(listing.OpenHouseStartTime, listing.OpenHouseEndTime)}
+            </p>
+          </div>
+        )}
+
         {/* --- Status Badge — glass-morphism effect over photo --- */}
         <span
           className={cn(
-            "absolute left-4 top-4 px-3 py-1.5 text-[10px] font-medium font-body uppercase tracking-[0.15em] backdrop-blur-sm",
+            "absolute left-4 px-3 py-1.5 text-[10px] font-medium font-body uppercase tracking-[0.15em] backdrop-blur-sm",
+            listing.OpenHouseStartTime ? "top-14" : "top-4",
             badgeClass
           )}
         >
