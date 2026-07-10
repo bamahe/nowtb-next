@@ -399,7 +399,6 @@ export async function getOpenHouses(zipCodes?: string[]): Promise<Listing[]> {
     // does NOT support OpenHouseStartTime filtering (returns 400).
     // The REST endpoint format: /api/v2/{dataset}/openhouses
     const url = new URL(`${BRIDGE_BASE}/${DATASET}/openhouses`);
-    url.searchParams.set('access_token', BRIDGE_TOKEN);
     url.searchParams.set('OpenHouseStartTime.gte', now);
     url.searchParams.set('OpenHouseStartTime.lte', weekFromNow);
     url.searchParams.set('StandardStatus', 'Active');
@@ -407,7 +406,10 @@ export async function getOpenHouses(zipCodes?: string[]): Promise<Listing[]> {
     url.searchParams.set('limit', '200');
 
     const res = await fetch(url.toString(), {
-      headers: { Accept: 'application/json' },
+      headers: {
+        Authorization: `Bearer ${BRIDGE_TOKEN}`,
+        Accept: 'application/json',
+      },
       next: { revalidate: 900 },
     });
 
