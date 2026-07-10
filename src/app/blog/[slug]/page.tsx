@@ -23,10 +23,22 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return { title: "Not Found" };
+  const description = post.excerpt || `${post.title} — Barrett Henry, REALTOR® at REMAX Collective.`;
+  const ogTitle = `${post.title} | Barrett Henry, REALTOR®`;
   return {
     title: post.title,
-    description: post.excerpt || `${post.title} — Barrett Henry, REALTOR® at REMAX Collective.`,
-    alternates: { canonical: `/${slug}` },
+    description,
+    alternates: { canonical: `/blog/${slug}/` },
+    openGraph: {
+      title: ogTitle,
+      description,
+      url: `/blog/${slug}/`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: ogTitle,
+      description,
+    },
   };
 }
 
