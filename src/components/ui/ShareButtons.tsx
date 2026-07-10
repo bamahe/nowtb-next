@@ -79,22 +79,16 @@ export default function ShareButtons({
 
   return (
     <div className={`flex ${layout === "column" ? "flex-col" : "flex-row"} gap-2`}>
-      {/* Facebook — button opens share dialog in popup */}
-      <button
-        type="button"
+      {/* Facebook — opens share dialog via link (not button, to avoid popup blockers) */}
+      <a
+        href={`https://www.facebook.com/sharer/sharer.php?u=${typeof window !== "undefined" ? encodeURIComponent(window.location.href) : ""}`}
+        target="_blank"
+        rel="noopener noreferrer"
         className={buttonClass}
         aria-label="Share on Facebook"
-        onClick={() => {
-          const url = encodeURIComponent(window.location.href);
-          window.open(
-            `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${encodedTitle}`,
-            "facebook-share",
-            "width=600,height=500,scrollbars=yes"
-          );
-        }}
       >
         <FacebookIcon />
-      </button>
+      </a>
 
       {/* Twitter/X — button opens tweet compose in popup */}
       <button

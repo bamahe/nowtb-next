@@ -123,8 +123,11 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
   const slugB = toSlug(sideB);
 
   // Look up city data for ZIP-based filtering
-  const cityA = cities.find(c => toSlug(c.name) === slugA || c.slug === slugA);
-  const cityB = cities.find(c => toSlug(c.name) === slugB || c.slug === slugB);
+  // Try exact match, then partial match (e.g. "fishhawk-ranch" → "fishhawk")
+  const cityA = cities.find(c => toSlug(c.name) === slugA || c.slug === slugA)
+    || cities.find(c => slugA.startsWith(c.slug) || c.slug.startsWith(slugA));
+  const cityB = cities.find(c => toSlug(c.name) === slugB || c.slug === slugB)
+    || cities.find(c => slugB.startsWith(c.slug) || c.slug.startsWith(slugB));
 
   // Fetch live MLS data for both sides (city comparisons only)
   let statsA = null;
