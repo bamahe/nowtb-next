@@ -1230,10 +1230,33 @@ async function SpokePage({
   // the OpenHouseStartTime date range filter correctly
   const isOpenHouse = topic.slug === "open-houses";
 
+  // Housing market pages get extra sold listings for computing real stats
+  const isHousingMarket = topic.slug === "housing-market";
+  let soldListings: import("@/lib/types").Listing[] = [];
+
   try {
     if (isOpenHouse) {
       listings = await getOpenHouses(city.zip_codes);
       totalFiltered = listings.length;
+    } else if (isHousingMarket) {
+      // Fetch active + sold in parallel for housing market pages
+      // Sold listings: last 90 days, sorted by close date
+      const ninetyDaysAgo = new Date(Date.now() - 90 * 24 * 60 * 60 * 1000).toISOString();
+      const [activeRes, soldRes] = await Promise.all([
+        getListings({ zip_codes: city.zip_codes, limit: "48", exclude_rental: true }),
+        getListings({
+          zip_codes: city.zip_codes,
+          status: "Closed",
+          limit: "100",
+          sort: "CloseDate desc",
+        }),
+      ]);
+      listings = activeRes.value || [];
+      totalFiltered = activeRes.total || listings.length;
+      // Filter sold to last 90 days client-side (Bridge OData doesn't support date range on CloseDate easily)
+      soldListings = (soldRes.value || []).filter(l =>
+        l.ModificationTimestamp && l.ModificationTimestamp >= ninetyDaysAgo
+      );
     } else {
       // Build filter params: use ZIP codes (reliable) instead of city name
       // Many communities aren't MLS "cities" — Carrollwood = Tampa, Brandon = unincorporated, etc.
@@ -1248,7 +1271,70 @@ async function SpokePage({
     }
   } catch {
     listings = [];
+    soldListings = [];
   }
+
+  // ---- Housing market stats (only computed when isHousingMarket === true) ----
+
+  // Helper: compute median from a sorted array of numbers
+  function median(sorted: number[]): number {
+    if (sorted.length === 0) return 0;
+    const mid = Math.floor(sorted.length / 2);
+    return sorted.length % 2 !== 0
+      ? sorted[mid]
+      : Math.round((sorted[mid - 1] + sorted[mid]) / 2);
+  }
+
+  // Median list price from active listings
+  const listPrices = listings.map(l => l.ListPrice).filter(p => p > 0).sort((a, b) => a - b);
+  const medianListPrice = median(listPrices);
+
+  // Median sale price from recently closed listings
+  const closePrices = soldListings.map(l => l.ClosePrice || 0).filter(p => p > 0).sort((a, b) => a - b);
+  const medianSalePrice = median(closePrices);
+
+  // Average days on market from active listings
+  const domValues = listings.filter(l => l.DaysOnMarket != null).map(l => l.DaysOnMarket as number);
+  const avgDom = domValues.length > 0
+    ? Math.round(domValues.reduce((s, v) => s + v, 0) / domValues.length)
+    : 0;
+
+  // Average price per sq ft from active listings (exclude listings with no sqft)
+  const pricePerSqFtValues = listings
+    .filter(l => l.LivingArea && l.LivingArea > 0 && l.ListPrice > 0)
+    .map(l => Math.round(l.ListPrice / (l.LivingArea as number)));
+  const avgPricePerSqFt = pricePerSqFtValues.length > 0
+    ? Math.round(pricePerSqFtValues.reduce((s, v) => s + v, 0) / pricePerSqFtValues.length)
+    : 0;
+
+  // New listings this month — OriginalEntryTimestamp within last 30 days
+  const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString();
+  const newListingsThisMonth = listings.filter(
+    l => l.OriginalEntryTimestamp && l.OriginalEntryTimestamp >= thirtyDaysAgo
+  ).length;
+
+  // Price range buckets for active listings
+  const priceBuckets = [
+    { label: "Under $200K", min: 0, max: 200000 },
+    { label: "$200K–$300K", min: 200000, max: 300000 },
+    { label: "$300K–$400K", min: 300000, max: 400000 },
+    { label: "$400K–$500K", min: 400000, max: 500000 },
+    { label: "$500K–$750K", min: 500000, max: 750000 },
+    { label: "$750K–$1M", min: 750000, max: 1000000 },
+    { label: "$1M+", min: 1000000, max: Infinity },
+  ].map(bucket => ({
+    label: bucket.label,
+    count: listings.filter(l => l.ListPrice >= bucket.min && l.ListPrice < bucket.max).length,
+  }));
+
+  // Find a market update post for this city if one exists
+  // Market update slugs follow pattern: "{city-slug}-housing-market-update"
+  const { getAllMarketUpdates } = await import("@/lib/market-updates");
+  const allUpdates = getAllMarketUpdates();
+  const marketUpdateSlug = allUpdates.find(u =>
+    u.slug.startsWith(city.slug + "-housing-market") ||
+    u.slug.startsWith(city.slug + "-real-estate-market")
+  )?.slug;
 
   return (
     <>
@@ -1320,6 +1406,132 @@ async function SpokePage({
           </div>
         </div>
       </section>
+
+      {/* === Housing Market Stats — only shown on housing-market spoke pages === */}
+      {isHousingMarket && (
+        <>
+          {/* Market Snapshot — 6 stat cards computed from live Bridge API data */}
+          <section className="bg-white border-b border-border">
+            <div className="container-wide py-10">
+              <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
+                <div>
+                  <h2 className="font-heading font-bold text-2xl text-primary">
+                    {city.name} Market Snapshot
+                  </h2>
+                  <p className="font-body text-muted text-sm mt-1">
+                    Computed from live MLS data — updated daily
+                  </p>
+                </div>
+                {/* Link to full market report if one exists for this city */}
+                {marketUpdateSlug && (
+                  <Link
+                    href={`/market-updates/${marketUpdateSlug}/`}
+                    className="inline-flex items-center gap-2 border border-accent text-accent font-semibold px-5 py-2.5 rounded text-sm hover:bg-accent hover:text-primary transition-colors"
+                  >
+                    View Latest Market Report →
+                  </Link>
+                )}
+              </div>
+
+              {/* 6-card stat grid */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                {/* Median Sale Price — from closed listings last 90 days */}
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center">
+                  <p className="font-heading font-bold text-xl text-primary leading-tight">
+                    {medianSalePrice > 0 ? formatPrice(medianSalePrice) : "—"}
+                  </p>
+                  <p className="font-body text-xs tracking-wide uppercase text-muted mt-1">
+                    Median Sale Price
+                  </p>
+                  <p className="font-body text-xs text-muted/60 mt-0.5">90-day window</p>
+                </div>
+
+                {/* Median List Price — from active listings */}
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center">
+                  <p className="font-heading font-bold text-xl text-primary leading-tight">
+                    {medianListPrice > 0 ? formatPrice(medianListPrice) : "—"}
+                  </p>
+                  <p className="font-body text-xs tracking-wide uppercase text-muted mt-1">
+                    Median List Price
+                  </p>
+                  <p className="font-body text-xs text-muted/60 mt-0.5">active listings</p>
+                </div>
+
+                {/* Average Days on Market */}
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center">
+                  <p className="font-heading font-bold text-xl text-primary leading-tight">
+                    {avgDom > 0 ? `${avgDom}` : "—"}
+                  </p>
+                  <p className="font-body text-xs tracking-wide uppercase text-muted mt-1">
+                    Avg. Days on Market
+                  </p>
+                  <p className="font-body text-xs text-muted/60 mt-0.5">active listings</p>
+                </div>
+
+                {/* Active Listings count */}
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center">
+                  <p className="font-heading font-bold text-xl text-primary leading-tight">
+                    {totalFiltered.toLocaleString()}
+                  </p>
+                  <p className="font-body text-xs tracking-wide uppercase text-muted mt-1">
+                    Active Listings
+                  </p>
+                  <p className="font-body text-xs text-muted/60 mt-0.5">for sale now</p>
+                </div>
+
+                {/* Average Price Per Sq Ft */}
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center">
+                  <p className="font-heading font-bold text-xl text-primary leading-tight">
+                    {avgPricePerSqFt > 0 ? `$${avgPricePerSqFt}` : "—"}
+                  </p>
+                  <p className="font-body text-xs tracking-wide uppercase text-muted mt-1">
+                    Avg. Price / Sq Ft
+                  </p>
+                  <p className="font-body text-xs text-muted/60 mt-0.5">active listings</p>
+                </div>
+
+                {/* New Listings This Month */}
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center">
+                  <p className="font-heading font-bold text-xl text-primary leading-tight">
+                    {newListingsThisMonth}
+                  </p>
+                  <p className="font-body text-xs tracking-wide uppercase text-muted mt-1">
+                    New This Month
+                  </p>
+                  <p className="font-body text-xs text-muted/60 mt-0.5">last 30 days</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Price Range Breakdown — bucket counts for active listings */}
+          {listings.length > 0 && (
+            <section className="container-wide py-10">
+              <h2 className="font-heading font-bold text-xl text-primary mb-1">
+                Price Range Breakdown
+              </h2>
+              <p className="font-body text-muted text-sm mb-6">
+                Active listings in {city.name} by price tier
+              </p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3">
+                {priceBuckets.map(bucket => (
+                  <div
+                    key={bucket.label}
+                    className="border border-gray-200 rounded-lg p-4 text-center bg-white"
+                  >
+                    <p className="font-heading font-bold text-2xl text-primary">
+                      {bucket.count}
+                    </p>
+                    <p className="font-body text-xs text-muted mt-1 leading-tight">
+                      {bucket.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+        </>
+      )}
 
       {/* === Listings grid — front and center === */}
       {listings.length > 0 ? (
