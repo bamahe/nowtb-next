@@ -395,17 +395,16 @@ export async function getOpenHouses(zipCodes?: string[]): Promise<Listing[]> {
       Date.now() + 7 * 24 * 60 * 60 * 1000
     ).toISOString();
 
-    // Use Bridge REST API for open houses — the OData Property endpoint
-    // does NOT support OpenHouseStartTime filtering (returns 400).
-    // The REST endpoint format: /api/v2/{dataset}/openhouses
+    // Step 1: Fetch open house records from the Bridge REST API
+    // The OData Property endpoint does NOT support OpenHouseStartTime filtering.
     const url = new URL(`${BRIDGE_BASE}/${DATASET}/openhouses`);
     url.searchParams.set('OpenHouseStartTime.gte', now);
     url.searchParams.set('OpenHouseStartTime.lte', weekFromNow);
-    url.searchParams.set('StandardStatus', 'Active');
     url.searchParams.set('sortBy', 'OpenHouseStartTime');
     url.searchParams.set('limit', '200');
+    url.searchParams.set('fields', 'ListingKey,ListingId,OpenHouseStartTime,OpenHouseEndTime,OpenHouseDate');
 
-    const res = await fetch(url.toString(), {
+    const ohRes = await fetch(url.toString(), {
       headers: {
         Authorization: `Bearer ${BRIDGE_TOKEN}`,
         Accept: 'application/json',
@@ -413,27 +412,46 @@ export async function getOpenHouses(zipCodes?: string[]): Promise<Listing[]> {
       next: { revalidate: 900 },
     });
 
-    if (res.status === 429) {
-      markRateLimited();
-      return [];
-    }
-    if (!res.ok) {
-      // Fallback: if openhouses endpoint doesn't exist, try listing with
-      // a broader filter (no OpenHouseStartTime, just recent listings)
-      console.error(`Open houses endpoint error: ${res.status}`);
+    if (ohRes.status === 429) { markRateLimited(); return []; }
+    if (!ohRes.ok) {
+      console.error(`Open houses endpoint error: ${ohRes.status}`);
       return [];
     }
 
-    const data = await res.json();
-    let listings: Listing[] = data.bundle || data.value || [];
+    const ohData = await ohRes.json();
+    const openHouseRecords = ohData.bundle || [];
+    if (openHouseRecords.length === 0) return [];
 
-    // Filter by ZIP codes for city-specific open house pages
+    // Step 2: Get unique listing keys from open house records
+    const listingKeys: string[] = [...new Set(
+      openHouseRecords.map((oh: { ListingKey: string }) => oh.ListingKey).filter(Boolean)
+    )] as string[];
+
+    if (listingKeys.length === 0) return [];
+
+    // Step 3: Fetch full listing details for those keys via OData
+    // Use $filter with ListingKey in ('key1','key2',...) — batch in groups of 20
+    const batchSize = 20;
+    const keysToFetch = listingKeys.slice(0, 50); // Cap at 50 to avoid huge queries
+    const allListings: Listing[] = [];
+
+    for (let i = 0; i < keysToFetch.length; i += batchSize) {
+      const batch = keysToFetch.slice(i, i + batchSize);
+      const keyFilter = batch.map(k => `ListingKey eq '${k}'`).join(' or ');
+      const res = await bridgeFetch<Listing>('/listings', {
+        '$filter': `(${keyFilter}) and StandardStatus eq 'Active'`,
+        '$top': String(batchSize),
+      });
+      if (res.value) allListings.push(...res.value);
+    }
+
+    // Step 4: Filter by ZIP codes for city-specific open house pages
     if (zipCodes && zipCodes.length > 0) {
       const zipSet = new Set(zipCodes);
-      listings = listings.filter(l => l.PostalCode && zipSet.has(l.PostalCode));
+      return allListings.filter(l => l.PostalCode && zipSet.has(l.PostalCode));
     }
 
-    return listings;
+    return allListings;
   } catch (error) {
     console.error('Failed to fetch open houses:', error);
     return [];
