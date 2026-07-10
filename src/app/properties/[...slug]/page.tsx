@@ -260,14 +260,14 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
       <nav aria-label="Breadcrumb" className="container-wide pt-24 pb-2">
         <ol className="flex items-center gap-1.5 text-sm font-body text-muted">
           <li>
-            <Link href="/" className="hover:text-accent transition-colors" aria-label="Home">
+            <Link href={isCommercial ? "/commercial/" : "/"} className="hover:text-accent transition-colors" aria-label="Home">
               <Home className="w-4 h-4" />
             </Link>
           </li>
           <ChevronRight className="w-3.5 h-3.5 text-gray-300" />
           <li>
-            <Link href="/properties/" className="hover:text-accent transition-colors">
-              Properties
+            <Link href={isCommercial ? "/commercial/" : "/properties/"} className="hover:text-accent transition-colors">
+              {isCommercial ? "Commercial" : "Properties"}
             </Link>
           </li>
           {cityHref && (
