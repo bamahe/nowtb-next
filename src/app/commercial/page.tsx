@@ -238,7 +238,7 @@ export default async function CommercialPage() {
             {AREA_SEARCHES.map((area) => (
               <Link
                 key={area.name}
-                href={`/properties/search/?property_type=Commercial+Sale&q=${encodeURIComponent(area.name)}`}
+                href={`/properties/search/?property_type=Commercial+Sale&zip_codes=${area.zips.join(",")}&q=${encodeURIComponent(area.name)}`}
                 className="block rounded-lg border border-gray-200 bg-white px-4 py-4 text-center hover:shadow-md hover:border-accent/30 transition-all no-underline"
               >
                 <p className="font-heading font-bold text-primary text-sm">{area.name}</p>

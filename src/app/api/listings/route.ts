@@ -35,6 +35,8 @@ export async function GET(request: NextRequest) {
     const result = await getListings({
       city: cityQuery,
       zip: zipQuery,
+      // Support comma-separated ZIP codes for area searches
+      zip_codes: searchParams.get("zip_codes")?.split(",").filter(Boolean) || undefined,
       min_price: searchParams.get("min_price") || undefined,
       max_price: searchParams.get("max_price") || undefined,
       beds: searchParams.get("beds") || undefined,

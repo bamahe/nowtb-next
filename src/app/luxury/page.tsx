@@ -136,7 +136,7 @@ export default async function LuxuryPage() {
   // Fetch luxury listings ($750K+)
   let listings: import("@/lib/types").Listing[] = [];
   try {
-    const res = await getListings({ min_price: "750000", limit: "24" });
+    const res = await getListings({ min_price: "750000", limit: "24", exclude_rental: true, sort: "ListPrice desc" });
     listings = res.value || [];
   } catch {
     listings = [];
