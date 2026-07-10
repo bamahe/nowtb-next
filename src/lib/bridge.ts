@@ -134,12 +134,8 @@ function buildFilter(params: ListingSearchParams): string {
   if (params.single_story) filters.push(`Stories eq 1`);
   if (params.rental) filters.push(`PropertyType eq 'Residential Lease'`);
   if (params.exclude_rental) filters.push(`PropertyType ne 'Residential Lease'`);
-  if (params.open_house) {
-    // Only show listings with an open house in the next 7 days
-    const now = new Date().toISOString();
-    const week = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString();
-    filters.push(`OpenHouseStartTime ge ${now} and OpenHouseStartTime le ${week}`);
-  }
+  // open_house filter is handled separately by getOpenHouses() — skip here
+  // The OData Property endpoint does not support OpenHouseStartTime filtering
 
   // Subdivision name filter (for neighborhood-specific searches)
   // Uses 'contains' instead of 'eq' because MLS subdivision names have variations
@@ -392,31 +388,50 @@ export async function getFeaturedListings(): Promise<Listing[]> {
 export async function getOpenHouses(zipCodes?: string[]): Promise<Listing[]> {
   if (IS_BUILD_TIME) return [];
   try {
+    if (isRateLimited()) return [];
+
     const now = new Date().toISOString();
     const weekFromNow = new Date(
       Date.now() + 7 * 24 * 60 * 60 * 1000
     ).toISOString();
 
-    const filters = [
-      `OpenHouseStartTime ge ${now}`,
-      `OpenHouseStartTime le ${weekFromNow}`,
-      `StandardStatus eq 'Active'`,
-    ];
+    // Use Bridge REST API for open houses — the OData Property endpoint
+    // does NOT support OpenHouseStartTime filtering (returns 400).
+    // The REST endpoint format: /api/v2/{dataset}/openhouses
+    const url = new URL(`${BRIDGE_BASE}/${DATASET}/openhouses`);
+    url.searchParams.set('access_token', BRIDGE_TOKEN);
+    url.searchParams.set('OpenHouseStartTime.gte', now);
+    url.searchParams.set('OpenHouseStartTime.lte', weekFromNow);
+    url.searchParams.set('StandardStatus', 'Active');
+    url.searchParams.set('sortBy', 'OpenHouseStartTime');
+    url.searchParams.set('limit', '200');
+
+    const res = await fetch(url.toString(), {
+      headers: { Accept: 'application/json' },
+      next: { revalidate: 900 },
+    });
+
+    if (res.status === 429) {
+      markRateLimited();
+      return [];
+    }
+    if (!res.ok) {
+      // Fallback: if openhouses endpoint doesn't exist, try listing with
+      // a broader filter (no OpenHouseStartTime, just recent listings)
+      console.error(`Open houses endpoint error: ${res.status}`);
+      return [];
+    }
+
+    const data = await res.json();
+    let listings: Listing[] = data.bundle || data.value || [];
 
     // Filter by ZIP codes for city-specific open house pages
     if (zipCodes && zipCodes.length > 0) {
-      const zipFilter = zipCodes.map(z => `PostalCode eq '${z}'`).join(' or ');
-      filters.push(`(${zipFilter})`);
+      const zipSet = new Set(zipCodes);
+      listings = listings.filter(l => l.PostalCode && zipSet.has(l.PostalCode));
     }
 
-    const queryParams: Record<string, string> = {
-      '$filter': filters.join(' and '),
-      '$orderby': 'OpenHouseStartTime asc',
-      '$top': '50',
-    };
-
-    const res = await bridgeFetch<Listing>('/listings', queryParams);
-    return res.value || [];
+    return listings;
   } catch (error) {
     console.error('Failed to fetch open houses:', error);
     return [];
