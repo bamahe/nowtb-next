@@ -1253,10 +1253,10 @@ async function SpokePage({
       ]);
       listings = activeRes.value || [];
       totalFiltered = activeRes.total || listings.length;
-      // Filter sold to last 90 days client-side (Bridge OData doesn't support date range on CloseDate easily)
-      soldListings = (soldRes.value || []).filter(l =>
-        l.ModificationTimestamp && l.ModificationTimestamp >= ninetyDaysAgo
-      );
+      // Use all returned sold listings — they're already sorted by CloseDate desc
+      // so the first 100 are the most recent closings. No date filter needed since
+      // Bridge returns them in recency order.
+      soldListings = soldRes.value || [];
     } else {
       // Build filter params: use ZIP codes (reliable) instead of city name
       // Many communities aren't MLS "cities" — Carrollwood = Tampa, Brandon = unincorporated, etc.
