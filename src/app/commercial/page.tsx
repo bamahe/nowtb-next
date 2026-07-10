@@ -8,6 +8,9 @@ import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
 import SearchBar from "@/components/ui/SearchBar";
 import ContactForm from "@/components/ui/ContactForm";
+import ListingGrid from "@/components/ui/ListingGrid";
+import { getListings } from "@/lib/bridge";
+import type { Listing } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Commercial Real Estate Tampa Bay | Barrett Henry, REALTOR®",
@@ -42,7 +45,46 @@ const faqs = [
   },
 ];
 
-export default function CommercialPage() {
+// Major area ZIPs for commercial listings
+const AREA_SEARCHES = [
+  { name: "Tampa", zips: ["33602","33604","33606","33609","33611","33614","33619","33647"] },
+  { name: "St. Petersburg", zips: ["33701","33702","33704","33710","33712"] },
+  { name: "Brandon / Riverview", zips: ["33510","33511","33578","33579"] },
+  { name: "Lakeland", zips: ["33801","33803","33805","33809","33810","33811","33813"] },
+  { name: "Clearwater / Largo", zips: ["33755","33756","33763","33770","33771","33778"] },
+  { name: "Bradenton / Sarasota", zips: ["34201","34202","34205","34207","34231","34236"] },
+  { name: "Wesley Chapel / Pasco", zips: ["33543","33544","33558","33559","34638","34639","34652","34653"] },
+];
+
+export default async function CommercialPage() {
+  // Fetch commercial listings from Bridge API
+  let commercialListings: Listing[] = [];
+  let totalCommercial = 0;
+  try {
+    const res = await getListings({
+      property_type: "Commercial",
+      limit: "24",
+      sort: "ModificationTimestamp desc",
+    });
+    commercialListings = res.value || [];
+    totalCommercial = res.total || commercialListings.length;
+  } catch {
+    commercialListings = [];
+  }
+
+  // Also fetch land listings
+  let landListings: Listing[] = [];
+  try {
+    const res = await getListings({
+      property_type: "Land",
+      limit: "12",
+      sort: "ModificationTimestamp desc",
+    });
+    landListings = res.value || [];
+  } catch {
+    landListings = [];
+  }
+
   return (
     <>
       {/* BreadcrumbList schema */}
@@ -150,6 +192,62 @@ export default function CommercialPage() {
                 <p className="font-body text-muted text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* === Commercial Listings === */}
+      {commercialListings.length > 0 && (
+        <>
+          <ListingGrid
+            listings={commercialListings}
+            title="Commercial Properties for Sale"
+            subtitle={`${totalCommercial.toLocaleString()} commercial properties available across Tampa Bay. Updated daily from Stellar MLS.`}
+          />
+          <section className="container-wide py-4 text-center">
+            <Link
+              href="/properties/search/?property_type=Commercial"
+              className="btn-primary inline-block px-10 py-4"
+            >
+              View All {totalCommercial.toLocaleString()} Commercial Listings
+            </Link>
+          </section>
+        </>
+      )}
+
+      {/* === Land Listings === */}
+      {landListings.length > 0 && (
+        <ListingGrid
+          listings={landListings}
+          title="Land for Sale"
+          subtitle="Development-ready parcels, agricultural land, and infill lots across Tampa Bay."
+        />
+      )}
+
+      {/* === Search by Area === */}
+      <section className="section-light">
+        <div className="container-wide">
+          <h2 className="heading-section text-xl text-primary mb-6 text-center">
+            Commercial Real Estate by Area
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {AREA_SEARCHES.map((area) => (
+              <Link
+                key={area.name}
+                href={`/properties/search/?property_type=Commercial&q=${encodeURIComponent(area.name)}`}
+                className="block rounded-lg border border-gray-200 bg-white px-4 py-4 text-center hover:shadow-md hover:border-accent/30 transition-all no-underline"
+              >
+                <p className="font-heading font-bold text-primary text-sm">{area.name}</p>
+                <p className="font-body text-xs text-muted mt-1">Commercial Properties</p>
+              </Link>
+            ))}
+            <Link
+              href="/properties/search/?property_type=Land"
+              className="block rounded-lg border border-gray-200 bg-white px-4 py-4 text-center hover:shadow-md hover:border-accent/30 transition-all no-underline"
+            >
+              <p className="font-heading font-bold text-primary text-sm">All Areas</p>
+              <p className="font-body text-xs text-muted mt-1">Land &amp; Lots</p>
+            </Link>
           </div>
         </div>
       </section>
