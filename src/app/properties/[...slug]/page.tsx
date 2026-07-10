@@ -570,8 +570,8 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
         city={listing.City}
       />
 
-      {/* === BUYING POWER === */}
-      {listing.PropertyType !== 'Residential Lease' && (
+      {/* === BUYING POWER — residential only === */}
+      {!isCommercial && !isLand && listing.PropertyType !== 'Residential Lease' && (
         <BuyingPower listingPrice={listing.ListPrice} city={listing.City} county={listing.CountyOrParish} listingTerms={listing.ListingTerms} />
       )}
 
@@ -583,23 +583,47 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
         city={listing.City}
       />
 
-      {/* === JUST LISTED CAROUSEL === */}
-      <Suspense fallback={null}>
-        <JustListedSection zipCodes={zipCodes} city={listing.City} excludeKey={listing.ListingKey} />
-      </Suspense>
+      {/* === CAROUSELS — residential only (commercial doesn't need Just Listed/Price Reduced/Sold residential) === */}
+      {!isCommercial && !isLand && (
+        <>
+          <Suspense fallback={null}>
+            <JustListedSection zipCodes={zipCodes} city={listing.City} excludeKey={listing.ListingKey} />
+          </Suspense>
+          <Suspense fallback={null}>
+            <PriceReducedSection zipCodes={zipCodes} city={listing.City} excludeKey={listing.ListingKey} />
+          </Suspense>
+          <Suspense fallback={null}>
+            <RecentSalesSection zipCodes={zipCodes} city={listing.City} excludeKey={listing.ListingKey} />
+          </Suspense>
+        </>
+      )}
 
-      {/* === PRICE REDUCED CAROUSEL === */}
-      <Suspense fallback={null}>
-        <PriceReducedSection zipCodes={zipCodes} city={listing.City} excludeKey={listing.ListingKey} />
-      </Suspense>
-
-      {/* === RECENTLY SOLD CAROUSEL === */}
-      <Suspense fallback={null}>
-        <RecentSalesSection zipCodes={zipCodes} city={listing.City} excludeKey={listing.ListingKey} />
-      </Suspense>
-
-      {/* === MORE HOMES IN {CITY} — backlink section === */}
-      {cityData && (
+      {/* === BOTTOM LINKS — different for commercial vs residential === */}
+      {isCommercial ? (
+        <section className="container-wide py-12">
+          <h2 className="heading-section text-2xl text-primary mb-6">
+            More Commercial Properties {listing.City ? `in ${listing.City}` : 'in Tampa Bay'}
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <Link href="/commercial/" className="rounded-lg bg-white shadow-sm border border-gray-100 p-4 hover:shadow-md hover:border-accent/30 transition-all text-center no-underline">
+              <p className="font-heading font-bold text-primary text-sm">All Commercial</p>
+              <p className="font-body text-xs text-muted mt-1">Tampa Bay</p>
+            </Link>
+            <Link href={`/properties/search/?property_type=Commercial+Sale&q=${encodeURIComponent(listing.City || 'Tampa')}`} className="rounded-lg bg-white shadow-sm border border-gray-100 p-4 hover:shadow-md hover:border-accent/30 transition-all text-center no-underline">
+              <p className="font-heading font-bold text-primary text-sm">{listing.City || 'Tampa'} Commercial</p>
+              <p className="font-body text-xs text-muted mt-1">Search listings</p>
+            </Link>
+            <Link href="/properties/search/?property_type=Land" className="rounded-lg bg-white shadow-sm border border-gray-100 p-4 hover:shadow-md hover:border-accent/30 transition-all text-center no-underline">
+              <p className="font-heading font-bold text-primary text-sm">Land &amp; Lots</p>
+              <p className="font-body text-xs text-muted mt-1">Tampa Bay</p>
+            </Link>
+            <Link href="/investing/" className="rounded-lg bg-white shadow-sm border border-gray-100 p-4 hover:shadow-md hover:border-accent/30 transition-all text-center no-underline">
+              <p className="font-heading font-bold text-primary text-sm">Investment Guide</p>
+              <p className="font-body text-xs text-muted mt-1">Strategies &amp; tips</p>
+            </Link>
+          </div>
+        </section>
+      ) : cityData && (
         <section className="container-wide py-12">
           <h2 className="heading-section text-2xl text-primary mb-6">
             More Homes in {cityData.name}
