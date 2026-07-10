@@ -277,7 +277,11 @@ export async function getJustListed(zipCodes: string[], excludeKey?: string): Pr
   if (IS_BUILD_TIME) return [];
   try {
     const zipFilter = zipCodes.map(z => `PostalCode eq '${z}'`).join(' or ');
-    const filters = [`(${zipFilter})`, `StandardStatus eq 'Active'`];
+    const filters = [
+      `(${zipFilter})`,
+      `StandardStatus eq 'Active'`,
+      `PropertyType ne 'Residential Lease'`,
+    ];
     if (excludeKey) filters.push(`ListingKey ne '${excludeKey}'`);
     const res = await bridgeFetch<Listing>('/listings', {
       '$filter': filters.join(' and '),
@@ -301,6 +305,7 @@ export async function getPriceReduced(zipCodes: string[], excludeKey?: string): 
     const filters = [
       `(${zipFilter})`,
       `StandardStatus eq 'Active'`,
+      `PropertyType ne 'Residential Lease'`,
       `OriginalListPrice gt ListPrice`,
     ];
     if (excludeKey) filters.push(`ListingKey ne '${excludeKey}'`);
@@ -317,13 +322,20 @@ export async function getPriceReduced(zipCodes: string[], excludeKey?: string): 
 
 /**
  * Get recently sold properties in a city (by ZIP codes).
- * Returns the 8 most recently closed sales.
+ * Returns the 8 most recently closed SALES (not rentals) within 180 days.
  */
 export async function getRecentSales(zipCodes: string[], excludeKey?: string): Promise<Listing[]> {
   if (IS_BUILD_TIME) return [];
   try {
+    const sixMonthsAgo = new Date(Date.now() - 180 * 24 * 60 * 60 * 1000).toISOString();
     const zipFilter = zipCodes.map(z => `PostalCode eq '${z}'`).join(' or ');
-    const filters = [`(${zipFilter})`, `StandardStatus eq 'Closed'`];
+    const filters = [
+      `(${zipFilter})`,
+      `StandardStatus eq 'Closed'`,
+      `PropertyType ne 'Residential Lease'`,
+      `ClosePrice ge 50000`,
+      `ModificationTimestamp ge ${sixMonthsAgo}`,
+    ];
     if (excludeKey) filters.push(`ListingKey ne '${excludeKey}'`);
     const res = await bridgeFetch<Listing>('/listings', {
       '$filter': filters.join(' and '),
