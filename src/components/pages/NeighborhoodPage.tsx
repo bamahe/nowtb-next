@@ -11,6 +11,8 @@ import ListingGrid from "@/components/ui/ListingGrid";
 import SpokeNav from "@/components/city/SpokeNav";
 import { getListings } from "@/lib/bridge";
 import { getCityBySlug } from "@/data/cities";
+import { getPageContent } from "@/lib/page-content";
+import { cleanWpContent } from "@/lib/utils";
 
 interface NeighborhoodPageProps {
   /** Display name of the neighborhood (e.g. "Bloomingdale") */
@@ -35,6 +37,17 @@ export default async function NeighborhoodPage({
   // Look up parent city data for zip codes and county info
   const parentCity = getCityBySlug(citySlug);
   const county = parentCity?.county ?? "Hillsborough";
+
+  // Try to load real WordPress content for this neighborhood page.
+  // The neighborhood slug (e.g. "valrico-bloomingdale") is what WP exports use.
+  const rawWpContent = getPageContent(slug);
+  // Clean WP artifacts: strip shortcodes, fix image URLs, demote H2→H3 so
+  // the existing "About {name}" H2 above doesn't compete with WP headings.
+  const neighborhoodContent = rawWpContent
+    ? cleanWpContent(rawWpContent)
+        .replace(/<h2([^>]*)>/gi, '<h3$1>')
+        .replace(/<\/h2>/gi, '</h3>')
+    : null;
 
   // First try to fetch listings by subdivision name (neighborhood-specific)
   // If no results, fall back to parent city ZIP codes
@@ -195,21 +208,29 @@ export default async function NeighborhoodPage({
           <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6">
             About {name}
           </h2>
-          <div className="prose font-body text-dark max-w-none space-y-4">
-            <p>
-              {name} is a popular neighborhood in {city}, Florida, known for its
-              welcoming community, convenient location, and quality housing
-              options. Residents enjoy easy access to local schools, parks,
-              shopping, and dining.
-            </p>
-            <p>
-              Whether you&apos;re looking for a single-family home with a pool,
-              a low-maintenance townhome, or a property with acreage, {name} has
-              options to fit a range of budgets and lifestyles. Barrett Henry,
-              Broker Associate at REMAX Collective, can help you find the right
-              fit in {name}.
-            </p>
-          </div>
+          {neighborhoodContent ? (
+            // Real WordPress content found — render it with proper styling
+            <div
+              className="blog-content prose prose-lg max-w-none text-muted font-body"
+              dangerouslySetInnerHTML={{ __html: neighborhoodContent }}
+            />
+          ) : (
+            // No WP content yet — show a fallback that mentions the specific county
+            <div className="prose font-body text-dark max-w-none space-y-4">
+              <p>
+                {name} is a residential neighborhood in {city}, {county} County,
+                Florida. Like most established communities in the area, it offers
+                a mix of single-family homes, convenient access to major roads,
+                and proximity to schools, parks, and local shopping.
+              </p>
+              <p>
+                Barrett Henry, Broker Associate at REMAX Collective, knows the
+                {" "}{city} market well and can walk you through everything currently
+                available in {name} — active listings, recent sales, and what
+                comparable homes are fetching right now.
+              </p>
+            </div>
+          )}
         </div>
       </section>
 

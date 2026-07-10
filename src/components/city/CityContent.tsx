@@ -18,6 +18,43 @@ interface CityContentProps {
   topic?: (typeof SPOKE_TOPICS)[number];
 }
 
+// Maps each county to its school district name and website URL.
+// Used to show the correct school district link in the outbound resources box.
+const SCHOOL_DISTRICT_LINKS: Record<string, { name: string; url: string }> = {
+  Hillsborough: {
+    name: "Hillsborough County Public Schools",
+    url: "https://www.hillsboroughschools.org",
+  },
+  Pinellas: {
+    name: "Pinellas County Schools",
+    url: "https://www.pcsb.org",
+  },
+  Pasco: {
+    name: "Pasco County Schools",
+    url: "https://www.pasco.k12.fl.us",
+  },
+  Manatee: {
+    name: "Manatee County School District",
+    url: "https://www.manateeschools.net",
+  },
+  Polk: {
+    name: "Polk County Public Schools",
+    url: "https://www.polk-fl.net",
+  },
+  Sarasota: {
+    name: "Sarasota County Schools",
+    url: "https://www.sarasotacountyschools.net",
+  },
+  Hernando: {
+    name: "Hernando County School District",
+    url: "https://www.hernandoschools.org",
+  },
+  Citrus: {
+    name: "Citrus County School District",
+    url: "https://www.citrusschools.org",
+  },
+};
+
 export default function CityContent({ city, topic }: CityContentProps) {
   // Build the slug to look up: hub = "valrico", spoke = "valrico-homes-for-sale"
   const pageSlug = topic ? `${city.slug}-${topic.slug}` : city.slug;
@@ -164,12 +201,12 @@ export default function CityContent({ city, topic }: CityContentProps) {
         <ul className="space-y-2 font-body text-sm text-muted">
           <li>
             <a
-              href="https://www.hillsboroughschools.org"
+              href={SCHOOL_DISTRICT_LINKS[city.county]?.url ?? "https://www.hillsboroughschools.org"}
               target="_blank"
               rel="noopener noreferrer"
               className="text-accent hover:underline"
             >
-              Hillsborough County Public Schools
+              {SCHOOL_DISTRICT_LINKS[city.county]?.name ?? "Hillsborough County Public Schools"}
             </a>{" "}
             — School zones, ratings, and enrollment info
           </li>

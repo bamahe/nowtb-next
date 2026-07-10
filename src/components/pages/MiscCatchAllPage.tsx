@@ -9,12 +9,20 @@ import HeroSection from "@/components/ui/HeroSection";
 import SearchBar from "@/components/ui/SearchBar";
 import ContactForm from "@/components/ui/ContactForm";
 import type { MiscPageData } from "@/data/misc-pages";
+import { getPageContent } from "@/lib/page-content";
+import { cleanWpContent } from "@/lib/utils";
 
 interface MiscCatchAllPageProps {
   page: MiscPageData;
 }
 
-export default function MiscCatchAllPage({ page }: MiscCatchAllPageProps) {
+export default async function MiscCatchAllPage({ page }: MiscCatchAllPageProps) {
+  // Try to load real WordPress content for this page slug.
+  // getPageContent reads pages-content.json at build/request time (server only).
+  const rawWpContent = getPageContent(page.slug);
+  // Clean WP artifacts: strip shortcodes, fix image URLs
+  const pageContent = rawWpContent ? cleanWpContent(rawWpContent) : null;
+
   return (
     <>
       {/* === Hero === */}
@@ -24,19 +32,28 @@ export default function MiscCatchAllPage({ page }: MiscCatchAllPageProps) {
 
       {/* === Content === */}
       <section className="container-wide py-12">
-        <div className="prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-accent">
-          <p>
-            {page.excerpt} Barrett Henry, Broker Associate at REMAX Collective,
-            brings 23+ years of real estate experience to help you with every
-            step of your real estate journey.
-          </p>
-          <p>
-            Contact Barrett directly at{" "}
-            <a href="tel:+18137337907">(813) 733-7907</a> or{" "}
-            <a href="mailto:barrett@nowtb.com">barrett@nowtb.com</a> for
-            personalized assistance.
-          </p>
-        </div>
+        {pageContent ? (
+          // Real WordPress content found — render it with blog styling
+          <div
+            className="blog-content prose prose-lg max-w-none font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-accent"
+            dangerouslySetInnerHTML={{ __html: pageContent }}
+          />
+        ) : (
+          // No WP content yet — show a minimal fallback with contact info
+          <div className="prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-accent">
+            <p>
+              {page.excerpt} Barrett Henry, Broker Associate at REMAX Collective,
+              brings 23+ years of real estate experience to help you with every
+              step of your real estate journey.
+            </p>
+            <p>
+              Contact Barrett directly at{" "}
+              <a href="tel:+18137337907">(813) 733-7907</a> or{" "}
+              <a href="mailto:barrett@nowtb.com">barrett@nowtb.com</a> for
+              personalized assistance.
+            </p>
+          </div>
+        )}
       </section>
 
       {/* === Quick links === */}
