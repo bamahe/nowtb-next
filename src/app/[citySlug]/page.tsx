@@ -670,7 +670,7 @@ export default async function CityPage({
     case "realtor":
       return <RealtorPage city={page.city} />;
     case "sell-city":
-      return <SellYourHomeCityPage cityName={page.city.name} citySlug={page.city.slug} />;
+      return <SellYourHomeCityPage cityName={page.city.name} citySlug={page.city.slug} zipCodes={page.city.zip_codes} />;
     case "loan":
       return <LoanGuidePage loanType={page.loanType} slug={page.slug} />;
     case "neighborhood": {

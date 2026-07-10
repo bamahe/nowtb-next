@@ -8,19 +8,94 @@ import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
 import ValuationForm from "@/components/ui/ValuationForm";
 import { getPrimaryAgent } from "@/data/agents";
+import { getListings } from "@/lib/bridge";
+import { formatPrice } from "@/lib/utils";
 
 interface SellYourHomeCityPageProps {
   /** Display name of the city (e.g. "Valrico") */
   cityName: string;
   /** URL slug for the city (e.g. "valrico") */
   citySlug: string;
+  /** ZIP codes for the city — used to query Bridge API for live stats */
+  zipCodes: string[];
 }
 
-export default function SellYourHomeCityPage({
+// This component is async so it can fetch live MLS data from Bridge API
+export default async function SellYourHomeCityPage({
   cityName,
   citySlug,
+  zipCodes,
 }: SellYourHomeCityPageProps) {
   const agent = getPrimaryAgent();
+
+  // ------------------------------------------------------------------
+  // Fetch live market stats from Bridge API using the city's ZIP codes.
+  // We pull active listings (exclude rentals) to compute the snapshot.
+  // Falls back to "--" gracefully if the API is unavailable.
+  // ------------------------------------------------------------------
+  let medianPrice = "--";
+  let avgDom = "--";
+  let activeCount = "--";
+  let avgPricePerSqft = "--";
+
+  try {
+    const res = await getListings({
+      zip_codes: zipCodes,
+      exclude_rental: true,
+      limit: "200", // grab enough for meaningful stats
+    });
+    const listings = res.value || [];
+    const total = res.total || listings.length;
+
+    if (listings.length > 0) {
+      // Active listing count (use API's total count if available, else sample size)
+      activeCount = String(total);
+
+      // Median list price — sort prices, pick the middle value
+      const prices = listings
+        .map((l) => l.ListPrice)
+        .filter((p): p is number => typeof p === "number" && p > 0)
+        .sort((a, b) => a - b);
+      if (prices.length > 0) {
+        const mid = Math.floor(prices.length / 2);
+        const median =
+          prices.length % 2 === 0
+            ? Math.round((prices[mid - 1] + prices[mid]) / 2)
+            : prices[mid];
+        medianPrice = formatPrice(median);
+      }
+
+      // Average days on market (only for listings that have DOM data)
+      const domValues = listings
+        .map((l) => l.DaysOnMarket)
+        .filter((d): d is number => typeof d === "number" && d >= 0);
+      if (domValues.length > 0) {
+        const avg = Math.round(
+          domValues.reduce((sum, d) => sum + d, 0) / domValues.length
+        );
+        avgDom = String(avg);
+      }
+
+      // Average price per sq ft (only for listings with both price and living area)
+      const ppsf = listings
+        .filter(
+          (l) =>
+            typeof l.ListPrice === "number" &&
+            l.ListPrice > 0 &&
+            typeof l.LivingArea === "number" &&
+            l.LivingArea > 0
+        )
+        .map((l) => l.ListPrice / l.LivingArea!);
+      if (ppsf.length > 0) {
+        const avgPpsf = Math.round(
+          ppsf.reduce((sum, v) => sum + v, 0) / ppsf.length
+        );
+        avgPricePerSqft = `$${avgPpsf}`;
+      }
+    }
+  } catch {
+    // API error — stats stay at "--", page still renders fine
+  }
 
   return (
     <>
@@ -182,19 +257,19 @@ export default function SellYourHomeCityPage({
             Current market conditions in {cityName}, FL.
           </p>
 
-          {/* Placeholder stats — will be replaced with live MLS data */}
+          {/* Live MLS stats fetched from Bridge API at request time */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="card p-5 text-center">
               <div className="font-heading font-bold text-2xl text-accent mb-1">
-                --
+                {medianPrice}
               </div>
               <div className="font-body text-xs text-muted">
-                Median Sale Price
+                Median List Price
               </div>
             </div>
             <div className="card p-5 text-center">
               <div className="font-heading font-bold text-2xl text-accent mb-1">
-                --
+                {avgDom}
               </div>
               <div className="font-body text-xs text-muted">
                 Avg. Days on Market
@@ -202,7 +277,7 @@ export default function SellYourHomeCityPage({
             </div>
             <div className="card p-5 text-center">
               <div className="font-heading font-bold text-2xl text-accent mb-1">
-                --
+                {activeCount}
               </div>
               <div className="font-body text-xs text-muted">
                 Active Listings
@@ -210,10 +285,10 @@ export default function SellYourHomeCityPage({
             </div>
             <div className="card p-5 text-center">
               <div className="font-heading font-bold text-2xl text-accent mb-1">
-                --
+                {avgPricePerSqft}
               </div>
               <div className="font-body text-xs text-muted">
-                Price per Sq Ft
+                Avg. Price per Sq Ft
               </div>
             </div>
           </div>

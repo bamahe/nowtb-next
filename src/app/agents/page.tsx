@@ -5,6 +5,7 @@
 
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import HeroSection from "@/components/ui/HeroSection";
 import { agents } from "@/data/agents";
 
@@ -38,12 +39,31 @@ export default function AgentsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {agents.map((agent) => (
             <div key={agent.id} className="card overflow-hidden">
-              {/* Photo placeholder */}
-              <div className="aspect-[4/3] bg-gray-200 flex items-center justify-center">
-                {/* Replace with next/image once photo files are added */}
-                <p className="font-body text-muted text-sm">
-                  Photo: {agent.name}
-                </p>
+              {/* Agent photo — real image for Barrett, initials avatar for others */}
+              <div className="aspect-[4/3] bg-gray-100 relative overflow-hidden flex items-center justify-center">
+                {agent.id === "barrett-henry" ? (
+                  // Barrett's actual headshot
+                  <Image
+                    src="/images/barrett-agent-photo.png"
+                    alt="Barrett Henry, REALTOR® — Broker Associate at REMAX Collective"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    priority
+                  />
+                ) : (
+                  // Initials avatar for agents without a photo on file yet
+                  <div className="w-24 h-24 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                    <span className="font-heading font-bold text-white text-3xl select-none">
+                      {agent.name
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")
+                        .slice(0, 2)
+                        .toUpperCase()}
+                    </span>
+                  </div>
+                )}
               </div>
 
               {/* Agent info */}
