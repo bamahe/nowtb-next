@@ -118,6 +118,8 @@ select {
 .blog-content ul, .blog-content ol { @apply mb-4 pl-6; }
 .blog-content li { @apply mb-2; }
 .blog-content a { @apply text-accent underline hover:text-primary; }
+/* Preserve white text on CTA buttons with background colors in blog/guide content */
+.blog-content a[style*="background"] { color: #fff !important; text-decoration: none !important; }
 .blog-content table { @apply w-full border-collapse mb-6; }
 .blog-content th { @apply bg-primary text-white p-3 text-left; }
 .blog-content td { @apply border border-border p-3; }
