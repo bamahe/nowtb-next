@@ -38,6 +38,7 @@ export const SPOKE_TOPICS = [
   { slug: "gated-community-homes", label: "Gated Communities", filter: { property_type: "Residential" } },
   { slug: "neighborhood-guide", label: "Neighborhood Guide", filter: {} },
   { slug: "housing-market", label: "Housing Market", filter: {} },
+  { slug: "horse-properties", label: "Horse & Equestrian Properties", filter: { min_acreage: "2" } },
 ] as const;
 
 /** Additional city page types — not property-type spokes */

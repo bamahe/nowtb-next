@@ -143,6 +143,7 @@ function buildFilter(params: ListingSearchParams): string {
   if (params.min_year) filters.push(`YearBuilt ge ${params.min_year}`);
   if (params.price_reduced) filters.push(`OriginalListPrice gt ListPrice`);
   if (params.garage) filters.push(`GarageYN eq true`);
+  if (params.min_acreage) filters.push(`LotSizeAcres ge ${params.min_acreage}`);
   // Note: keyword search (PublicRemarks) is not supported by Bridge OData $filter.
   // It is applied as a client-side filter in the /api/listings route instead.
 

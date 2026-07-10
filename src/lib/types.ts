@@ -194,6 +194,7 @@ export interface ListingSearchParams {
   price_reduced?: boolean;           // OriginalListPrice gt ListPrice
   garage?: boolean;                  // GarageYN eq true
   keyword?: string;                  // Client-side text search in remarks
+  min_acreage?: string;              // LotSizeAcres ge value (horse/equestrian properties)
 }
 
 /**
