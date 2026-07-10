@@ -1290,7 +1290,8 @@ async function SpokePage({
   const medianListPrice = median(listPrices);
 
   // Median sale price from recently closed listings
-  const closePrices = soldListings.map(l => l.ClosePrice || 0).filter(p => p > 0).sort((a, b) => a - b);
+  // Use ClosePrice if available, fall back to ListPrice (which reflects final price on closed listings)
+  const closePrices = soldListings.map(l => l.ClosePrice || l.ListPrice || 0).filter(p => p > 0).sort((a, b) => a - b);
   const medianSalePrice = median(closePrices);
 
   // Average days on market from active listings
