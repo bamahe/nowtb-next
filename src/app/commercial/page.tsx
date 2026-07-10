@@ -49,11 +49,15 @@ const faqs = [
 const AREA_SEARCHES = [
   { name: "Tampa", zips: ["33602","33604","33606","33609","33611","33614","33619","33647"] },
   { name: "St. Petersburg", zips: ["33701","33702","33704","33710","33712"] },
-  { name: "Brandon / Riverview", zips: ["33510","33511","33578","33579"] },
+  { name: "Brandon", zips: ["33510","33511"] },
+  { name: "Riverview", zips: ["33578","33579"] },
   { name: "Lakeland", zips: ["33801","33803","33805","33809","33810","33811","33813"] },
-  { name: "Clearwater / Largo", zips: ["33755","33756","33763","33770","33771","33778"] },
-  { name: "Bradenton / Sarasota", zips: ["34201","34202","34205","34207","34231","34236"] },
-  { name: "Wesley Chapel / Pasco", zips: ["33543","33544","33558","33559","34638","34639","34652","34653"] },
+  { name: "Clearwater", zips: ["33755","33756","33763","33765"] },
+  { name: "Largo", zips: ["33770","33771","33778"] },
+  { name: "Bradenton", zips: ["34201","34202","34205","34207","34208"] },
+  { name: "Sarasota", zips: ["34231","34232","34236","34237"] },
+  { name: "Wesley Chapel", zips: ["33543","33544","33558","33559"] },
+  { name: "Pasco County", zips: ["34638","34639","34652","34653","34655"] },
 ];
 
 export default async function CommercialPage() {
