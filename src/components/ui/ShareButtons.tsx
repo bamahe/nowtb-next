@@ -79,43 +79,39 @@ export default function ShareButtons({
 
   return (
     <div className={`flex ${layout === "column" ? "flex-col" : "flex-row"} gap-2`}>
-      {/* Facebook */}
-      <a
-        href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(getUrl())}`}
-        target="_blank"
-        rel="noopener noreferrer"
+      {/* Facebook — button opens share dialog in popup */}
+      <button
+        type="button"
         className={buttonClass}
         aria-label="Share on Facebook"
-        onClick={(e) => {
-          e.preventDefault();
+        onClick={() => {
+          const url = encodeURIComponent(window.location.href);
           window.open(
-            `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(getUrl())}`,
+            `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${encodedTitle}`,
             "facebook-share",
-            "width=580,height=400"
+            "width=600,height=500,scrollbars=yes"
           );
         }}
       >
         <FacebookIcon />
-      </a>
+      </button>
 
-      {/* Twitter/X */}
-      <a
-        href={`https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodeURIComponent(getUrl())}`}
-        target="_blank"
-        rel="noopener noreferrer"
+      {/* Twitter/X — button opens tweet compose in popup */}
+      <button
+        type="button"
         className={buttonClass}
         aria-label="Share on X"
-        onClick={(e) => {
-          e.preventDefault();
+        onClick={() => {
+          const url = encodeURIComponent(window.location.href);
           window.open(
-            `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodeURIComponent(getUrl())}`,
+            `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${url}`,
             "twitter-share",
-            "width=580,height=400"
+            "width=600,height=500,scrollbars=yes"
           );
         }}
       >
         <XIcon />
-      </a>
+      </button>
 
       {/* Email */}
       <a
