@@ -44,17 +44,24 @@ export async function generateMetadata({
   const guide = getGuideBySlug(slug);
   if (!guide) return {};
 
+  const ogTitle = `${guide.title} | Barrett Henry, REALTOR®`;
   return {
-    title: `${guide.title} | Barrett Henry, REALTOR®`,
+    title: ogTitle,
     description: guide.excerpt,
     alternates: {
-      canonical: `/guides/${slug}`,
+      canonical: `/guides/${slug}/`,
     },
     openGraph: {
-      title: guide.title,
+      title: ogTitle,
       description: guide.excerpt,
+      url: `/guides/${slug}/`,
       type: "article",
       publishedTime: guide.date,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: ogTitle,
+      description: guide.excerpt,
     },
   };
 }
