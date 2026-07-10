@@ -39,7 +39,7 @@ function isRateLimited(): boolean {
  * All calls during cooldown will return empty results instead of hammering Bridge.
  */
 function markRateLimited(): void {
-  rateLimitedUntil = Date.now() + 30 * 60 * 1000; // 30-minute cooldown to preserve API quota
+  rateLimitedUntil = Date.now() + 5 * 60 * 1000; // 5-minute cooldown
   console.warn('[Bridge] Rate limited — returning empty results for 5 minutes');
 }
 
