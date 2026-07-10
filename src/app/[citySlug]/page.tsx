@@ -1324,7 +1324,10 @@ async function SpokePage({
     { label: "$1M+", min: 1000000, max: Infinity },
   ].map(bucket => ({
     label: bucket.label,
+    min: bucket.min,
+    max: bucket.max,
     count: listings.filter(l => l.ListPrice >= bucket.min && l.ListPrice < bucket.max).length,
+    href: `/properties/search/?q=${encodeURIComponent(city.name)}&min_price=${bucket.min}${bucket.max < Infinity ? `&max_price=${bucket.max}` : ''}`,
   }));
 
   // Find a market update post for this city if one exists
@@ -1515,9 +1518,10 @@ async function SpokePage({
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3">
                 {priceBuckets.map(bucket => (
-                  <div
+                  <Link
                     key={bucket.label}
-                    className="border border-gray-200 rounded-lg p-4 text-center bg-white"
+                    href={bucket.href}
+                    className="border border-gray-200 rounded-lg p-4 text-center bg-white hover:shadow-md hover:border-accent/30 transition-all no-underline"
                   >
                     <p className="font-heading font-bold text-2xl text-primary">
                       {bucket.count}
@@ -1525,7 +1529,7 @@ async function SpokePage({
                     <p className="font-body text-xs text-muted mt-1 leading-tight">
                       {bucket.label}
                     </p>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </section>
