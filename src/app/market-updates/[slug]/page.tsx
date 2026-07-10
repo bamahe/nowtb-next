@@ -36,7 +36,7 @@ export async function generateMetadata({
   return {
     title: update.title,
     description: update.excerpt || `${update.title} — latest housing market data from Barrett Henry, REALTOR® at REMAX Collective.`,
-    alternates: { canonical: `/market-updates/${slug}` },
+    alternates: { canonical: `/market-updates/${slug}/` },
     openGraph: {
       title: update.title,
       description: update.excerpt,

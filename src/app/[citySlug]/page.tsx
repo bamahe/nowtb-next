@@ -296,7 +296,7 @@ export async function generateMetadata({
       return {
         title: post.title,
         description: post.excerpt || `${post.title} — Barrett Henry, REALTOR® at REMAX Collective.`,
-        alternates: { canonical: `/${citySlug}` },
+        alternates: { canonical: `/${citySlug}/` },
       };
     }
     return {};
@@ -314,7 +314,7 @@ export async function generateMetadata({
       return {
         title: update.title,
         description: update.excerpt || `${update.title} — housing market data from Barrett Henry, REALTOR® at REMAX Collective.`,
-        alternates: { canonical: `/market-updates/${citySlug}` },
+        alternates: { canonical: `/market-updates/${citySlug}/` },
         openGraph: {
           title: update.title,
           description: update.excerpt,
@@ -331,7 +331,8 @@ export async function generateMetadata({
   }
 
   // All dynamic pages get a canonical URL to prevent duplicate content
-  const canonical = `/${citySlug}`;
+  // trailingSlash: true is set in next.config.mjs so all canonicals must end with /
+  const canonical = `/${citySlug}/`;
 
   switch (parsed.kind) {
     case "remax-office": {
@@ -353,24 +354,52 @@ export async function generateMetadata({
         title: `${parsed.countyName} County Homes for Sale | Barrett Henry`,
         description: `Search homes for sale in ${parsed.countyName} County, FL. Browse cities, listings, and market data. Barrett Henry, REALTOR at REMAX Collective. Call (813) 733-7907.`,
         alternates: { canonical },
+        openGraph: {
+          title: `${parsed.countyName} County Homes for Sale | Barrett Henry, REALTOR®`,
+          description: `Search ${parsed.countyName} County real estate. Updated daily from Stellar MLS.`,
+          url: canonical,
+          type: "website",
+          images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+        },
       };
     case "loan":
       return {
         title: `${parsed.label} | Barrett Henry, REALTOR®`,
         description: `Learn about ${parsed.loanType.toLowerCase()}s in Florida. Eligibility, benefits, and how to apply. Barrett Henry, REALTOR at REMAX Collective. Call (813) 733-7907.`,
         alternates: { canonical },
+        openGraph: {
+          title: `${parsed.label} | Barrett Henry, REALTOR®`,
+          description: `${parsed.loanType} eligibility, benefits, and how to apply in Florida.`,
+          url: canonical,
+          type: "website",
+          images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+        },
       };
     case "realtor":
       return {
         title: `${parsed.city.name} REALTOR® — Barrett Henry | REMAX Collective`,
         description: `Looking for a trusted REALTOR in ${parsed.city.name}, FL? Barrett Henry has 23+ years of real estate experience. REMAX Collective. Call (813) 733-7907.`,
         alternates: { canonical },
+        openGraph: {
+          title: `${parsed.city.name} REALTOR® — Barrett Henry | REMAX Collective`,
+          description: `Your trusted REALTOR in ${parsed.city.name}, FL. 23+ years of real estate experience.`,
+          url: canonical,
+          type: "website",
+          images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+        },
       };
     case "sell-city":
       return {
         title: `Sell Your ${parsed.city.name} Home | Free Valuation`,
         description: `Sell your ${parsed.city.name} home for top dollar. Free home valuation from Barrett Henry, Broker Associate at REMAX Collective. Call (813) 733-7907.`,
         alternates: { canonical },
+        openGraph: {
+          title: `Sell Your ${parsed.city.name} Home | Free Valuation`,
+          description: `Get a free home valuation for your ${parsed.city.name} property. Barrett Henry, REMAX Collective.`,
+          url: canonical,
+          type: "website",
+          images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+        },
       };
     case "neighborhood": {
       // Look up the parent city name for the metadata
@@ -380,6 +409,13 @@ export async function generateMetadata({
         title: `${parsed.name} Homes for Sale | ${cityName}, FL`,
         description: `Explore homes for sale in ${parsed.name}, ${cityName}, FL. Updated daily from Stellar MLS. Barrett Henry, REMAX Collective. Call (813) 733-7907.`,
         alternates: { canonical },
+        openGraph: {
+          title: `${parsed.name} Homes for Sale | ${cityName}, FL`,
+          description: `Browse homes in ${parsed.name}, ${cityName}. Updated daily from Stellar MLS.`,
+          url: canonical,
+          type: "website",
+          images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+        },
       };
     }
     case "neighborhood-spoke": {
@@ -390,6 +426,13 @@ export async function generateMetadata({
         title: `${parsed.name} Homes for Sale — ${nsCityName}, FL`,
         description: `Browse homes for sale in ${parsed.name}, ${nsCityName}, FL. Updated daily from Stellar MLS. Barrett Henry, REMAX Collective. Call (813) 733-7907.`,
         alternates: { canonical },
+        openGraph: {
+          title: `${parsed.name} Homes for Sale — ${nsCityName}, FL`,
+          description: `Current listings in ${parsed.name}, ${nsCityName}. Updated daily from Stellar MLS.`,
+          url: canonical,
+          type: "website",
+          images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+        },
       };
     }
     case "neighborhood-realtor": {
@@ -400,6 +443,13 @@ export async function generateMetadata({
         title: `${parsed.name} REALTOR® — Barrett Henry | ${nrCityName}, FL`,
         description: `Looking for a trusted REALTOR in ${parsed.name}, ${nrCityName}? Barrett Henry has 23+ years of real estate experience. REMAX Collective. Call (813) 733-7907.`,
         alternates: { canonical },
+        openGraph: {
+          title: `${parsed.name} REALTOR® — Barrett Henry | ${nrCityName}, FL`,
+          description: `Your local REALTOR in ${parsed.name}, ${nrCityName}. 23+ years of experience.`,
+          url: canonical,
+          type: "website",
+          images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+        },
       };
     }
     case "comparison":
@@ -407,24 +457,52 @@ export async function generateMetadata({
         title: `${parsed.comparison.title} | Barrett Henry, REALTOR®`,
         description: parsed.comparison.excerpt,
         alternates: { canonical },
+        openGraph: {
+          title: `${parsed.comparison.title} | Barrett Henry, REALTOR®`,
+          description: parsed.comparison.excerpt,
+          url: canonical,
+          type: "website",
+          images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+        },
       };
     case "regional":
       return {
         title: `${parsed.page.title} | Barrett Henry, REALTOR®`,
         description: parsed.page.excerpt,
         alternates: { canonical },
+        openGraph: {
+          title: `${parsed.page.title} | Barrett Henry, REALTOR®`,
+          description: parsed.page.excerpt,
+          url: canonical,
+          type: "website",
+          images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+        },
       };
     case "misc":
       return {
         title: `${parsed.page.title} | Barrett Henry, REALTOR®`,
         description: parsed.page.excerpt,
         alternates: { canonical },
+        openGraph: {
+          title: `${parsed.page.title} | Barrett Henry, REALTOR®`,
+          description: parsed.page.excerpt,
+          url: canonical,
+          type: "website",
+          images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+        },
       };
     case "guide":
       return {
         title: `${parsed.guide.title} | Barrett Henry, REALTOR®`,
         description: parsed.guide.excerpt,
         alternates: { canonical },
+        openGraph: {
+          title: `${parsed.guide.title} | Barrett Henry, REALTOR®`,
+          description: parsed.guide.excerpt,
+          url: canonical,
+          type: "article",
+          images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+        },
       };
     default:
       break;
@@ -443,7 +521,7 @@ export async function generateMetadata({
       openGraph: {
         title: `${topic.label} in ${city.name} | Barrett Henry, REALTOR®`,
         description: `Search ${topic.label.toLowerCase()} in ${city.name}, FL. Expert guidance from Barrett Henry at REMAX Collective.`,
-        url: `/${citySlug}`,
+        url: canonical,
         type: "website",
         images: [{ url: "/og-default.png", width: 1200, height: 630 }],
       },
@@ -458,7 +536,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${city.name} Homes for Sale | Barrett Henry, REALTOR®`,
       description: `Explore ${city.name} real estate with Barrett Henry at REMAX Collective. Browse listings, market data, and neighborhood info.`,
-      url: `/${citySlug}`,
+      url: canonical,
       type: "website",
       images: [{ url: "/og-default.png", width: 1200, height: 630 }],
     },
