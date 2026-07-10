@@ -30,29 +30,54 @@ export default function SpokeNav({ city, currentTopic }: SpokeNavProps) {
       {/* Grid of topic links — styled as pill/card buttons */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         {topics.map((topic) => {
-          // Is this topic the one currently being viewed?
           const isActive = currentTopic === topic.slug;
-          // Build the URL: /{city-slug}-{topic-slug}
           const href = `/${city.slug}-${topic.slug}`;
-
           return (
             <Link
               key={topic.slug}
               href={href}
               className={cn(
-                // Base styles — rounded card with border
                 "block rounded-lg border px-4 py-3 text-center text-sm font-semibold transition-colors",
-                // Active state — filled accent background
                 isActive
                   ? "bg-accent text-primary border-accent"
                   : "bg-white text-primary border-gray-200 hover:border-accent hover:bg-accent/10"
               )}
             >
-              {/* e.g. "Pool Homes in Valrico" */}
               {topic.label} in {city.name}
             </Link>
           );
         })}
+      </div>
+
+      {/* Seller + resource links */}
+      <h3 className="font-heading font-bold text-lg text-primary mt-10 mb-4">
+        Selling in {city.name}?
+      </h3>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <Link
+          href={`/blog/sell-home-fast-${city.slug}/`}
+          className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary hover:border-accent hover:bg-accent/10 transition-colors"
+        >
+          Sell My {city.name} House Fast
+        </Link>
+        <Link
+          href={`/${city.slug}-realtor/`}
+          className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary hover:border-accent hover:bg-accent/10 transition-colors"
+        >
+          Best {city.name} Realtor
+        </Link>
+        <Link
+          href={`/${city.slug}-housing-market/`}
+          className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary hover:border-accent hover:bg-accent/10 transition-colors"
+        >
+          {city.name} Housing Market
+        </Link>
+        <Link
+          href="/sell-your-home/"
+          className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary hover:border-accent hover:bg-accent/10 transition-colors"
+        >
+          Free Home Valuation
+        </Link>
       </div>
     </section>
   );
