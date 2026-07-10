@@ -432,19 +432,20 @@ export async function getOpenHouses(zipCodes?: string[]): Promise<Listing[]> {
     if (listingKeys.length === 0) return [];
 
     // Step 3: Fetch full listing details for those keys via OData
-    // Use $filter with ListingKey in ('key1','key2',...) — batch in groups of 20
-    const batchSize = 20;
-    const keysToFetch = listingKeys.slice(0, 50); // Cap at 50 to avoid huge queries
+    // Single batch query to minimize API calls (rate limiting is a real problem)
+    const keysToFetch = listingKeys.slice(0, 20); // Cap at 20 to keep it to 1 API call
+    const keyFilter = keysToFetch.map(k => `ListingKey eq '${k}'`).join(' or ');
     const allListings: Listing[] = [];
 
-    for (let i = 0; i < keysToFetch.length; i += batchSize) {
-      const batch = keysToFetch.slice(i, i + batchSize);
-      const keyFilter = batch.map(k => `ListingKey eq '${k}'`).join(' or ');
+    try {
       const res = await bridgeFetch<Listing>('/listings', {
         '$filter': `(${keyFilter}) and StandardStatus eq 'Active'`,
-        '$top': String(batchSize),
+        '$top': '20',
       });
       if (res.value) allListings.push(...res.value);
+    } catch {
+      // If rate limited, return empty rather than crashing
+      return [];
     }
 
     // Step 4: Attach open house date/time to each listing

@@ -41,9 +41,13 @@ async function resolveListing(segments: string[]): Promise<Listing | 'not-found'
   // New format: ["StellarMLS", "TB8526478", "tampa", "5120-n-matanzas-avenue"]
   const mlsId = extractMlsId(segments);
   if (mlsId) {
+    // Try MLS ID lookup first, fall back to treating it as a ListingKey prefix
     const listing = await getListingByMlsId(mlsId);
-    if (!listing) return 'not-found';
-    return listing;
+    if (listing) return listing;
+    // MLS ID lookup failed — might be rate limited. Try direct key lookup as fallback.
+    const byKey = await getListing(mlsId);
+    if (byKey) return byKey;
+    return 'not-found';
   }
 
   // Old format: single segment with address-slug-{listingKey}
