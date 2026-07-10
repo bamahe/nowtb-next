@@ -152,7 +152,17 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
 
   // Match the listing's city to our city data for backlinks
   const cityData = getCityByName(listing.City);
-  const cityHref = cityData ? `/${cityData.slug}-homes-for-sale/` : null;
+  // Determine if this is a commercial/land listing for breadcrumb text
+  const isCommercial = listing.PropertyType === 'Commercial Sale' || listing.PropertyType === 'Business Opportunity';
+  const isLand = listing.PropertyType === 'Land';
+  const isRental = listing.PropertyType === 'Residential Lease';
+  const breadcrumbLabel = isCommercial ? 'Commercial Properties'
+    : isLand ? 'Land for Sale'
+    : isRental ? 'Rentals'
+    : 'Homes for Sale';
+  const cityHref = isCommercial
+    ? `/properties/search/?property_type=Commercial+Sale&q=${encodeURIComponent(cityData?.name || listing.City || '')}`
+    : cityData ? `/${cityData.slug}-homes-for-sale/` : null;
   const zipCodes = cityData?.zip_codes || [listing.PostalCode];
 
   // Sort photos by Order
@@ -231,8 +241,8 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
                 ...(cityData ? [{
                   "@type": "ListItem",
                   position: 2,
-                  name: `${cityData.name} Homes for Sale`,
-                  item: `https://nowtb.com/${cityData.slug}-homes-for-sale/`,
+                  name: `${cityData.name} ${breadcrumbLabel}`,
+                  item: cityHref ? `https://nowtb.com${cityHref}` : `https://nowtb.com/${cityData.slug}-homes-for-sale/`,
                 }] : []),
                 {
                   "@type": "ListItem",
@@ -265,7 +275,7 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
               <ChevronRight className="w-3.5 h-3.5 text-gray-300" />
               <li>
                 <Link href={cityHref} className="hover:text-accent transition-colors">
-                  {cityData!.name} Homes for Sale
+                  {cityData!.name} {breadcrumbLabel}
                 </Link>
               </li>
             </>

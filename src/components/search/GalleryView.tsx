@@ -14,13 +14,43 @@ interface GalleryViewProps {
   currentPage: number;
   pageSize: number;
   onPageChange: (page: number) => void;
+  /** Dynamic SEO heading based on current search filters */
+  heading?: string;
+  /** Subheading / description text */
+  subheading?: string;
 }
 
 export default function GalleryView({
-  listings, loading, total, currentPage, pageSize, onPageChange,
+  listings, loading, total, currentPage, pageSize, onPageChange, heading, subheading,
 }: GalleryViewProps) {
   return (
     <div className="min-h-screen bg-light">
+      {/* ── Dynamic SEO heading + lead capture CTA ── */}
+      {heading && (
+        <div className="bg-white border-b border-border">
+          <div className="max-w-7xl mx-auto px-4 py-8">
+            <h1 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2">{heading}</h1>
+            {subheading && (
+              <p className="font-body text-muted text-sm max-w-3xl mb-4">{subheading}</p>
+            )}
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="tel:+18137337907"
+                className="inline-flex items-center gap-2 bg-accent text-primary font-body text-sm font-semibold px-5 py-2.5 rounded hover:bg-accent/90 transition-colors"
+              >
+                (813) 733-7907
+              </a>
+              <a
+                href="/contact/"
+                className="inline-flex items-center gap-2 border border-primary text-primary font-body text-sm font-semibold px-5 py-2.5 rounded hover:bg-primary hover:text-white transition-colors"
+              >
+                Schedule a Consultation
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* ── Top bar: result count + pagination ── */}
       <div className="px-4 py-3 border-b border-border bg-white flex items-center justify-between">
         <p className="font-body text-xs text-muted">

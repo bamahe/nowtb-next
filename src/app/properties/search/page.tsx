@@ -188,6 +188,22 @@ export default function PropertySearchPage() {
   const currentFilters: Record<string, string> = {};
   searchParams.forEach((val, key) => { currentFilters[key] = val; });
 
+  // ── Generate dynamic SEO heading based on active filters ──
+  const q = getParam("q");
+  const propType = getParam("property_type");
+  const typeLabel = propType === "Commercial Sale" ? "Commercial Properties"
+    : propType === "Condominium" ? "Condos & Townhomes"
+    : propType === "Land" ? "Land & Lots"
+    : propType ? `${propType} Properties`
+    : "Homes";
+  const locationLabel = q || "Tampa Bay";
+  const searchHeading = `${typeLabel} for Sale in ${locationLabel}`;
+  const searchSubheading = propType === "Commercial Sale"
+    ? `Browse ${total.toLocaleString()} active commercial properties in ${locationLabel}. Office, retail, industrial, multifamily, and land. Barrett Henry, Broker Associate at REMAX Collective, has 23+ years of real estate experience. Call (813) 733-7907 for a consultation.`
+    : propType === "Land"
+    ? `Search ${total.toLocaleString()} available lots and land parcels in ${locationLabel}. Barrett Henry at REMAX Collective helps investors, builders, and buyers find the right parcel. Call (813) 733-7907.`
+    : `Search ${total.toLocaleString()} active listings in ${locationLabel}. Updated daily from Stellar MLS. Barrett Henry, REALTOR® at REMAX Collective. Call (813) 733-7907 for expert guidance.`;
+
   return (
     <>
       {/* ================================================================
@@ -376,6 +392,8 @@ export default function PropertySearchPage() {
           currentPage={currentPage}
           pageSize={PAGE_SIZE}
           onPageChange={handlePageChange}
+          heading={searchHeading}
+          subheading={loading ? undefined : searchSubheading}
         />
       ) : (
         <MapView
