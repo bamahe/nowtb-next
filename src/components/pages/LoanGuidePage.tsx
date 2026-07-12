@@ -7,18 +7,23 @@
 import HeroSection from "@/components/ui/HeroSection";
 import ContactForm from "@/components/ui/ContactForm";
 import { getPrimaryAgent } from "@/data/agents";
+import type { LoanFAQ } from "@/data/loan-content";
 
 interface LoanGuidePageProps {
   /** Display name of the loan type (e.g. "FHA Loan") */
   loanType: string;
   /** URL slug for the page (e.g. "fha-loan-florida") */
   slug: string;
-  /** Short description of the loan program */
+  /** Short description of the loan program (supports multiple paragraphs separated by \n\n) */
   description?: string;
   /** Eligibility requirements as bullet points */
   requirements?: string[];
   /** Key benefits as bullet points */
   benefits?: string[];
+  /** Frequently asked questions with answers */
+  faq?: LoanFAQ[];
+  /** Insider tips from a broker's perspective */
+  proTips?: string[];
 }
 
 export default function LoanGuidePage({
@@ -27,6 +32,8 @@ export default function LoanGuidePage({
   description,
   requirements = [],
   benefits = [],
+  faq = [],
+  proTips = [],
 }: LoanGuidePageProps) {
   const agent = getPrimaryAgent();
 
@@ -93,13 +100,19 @@ export default function LoanGuidePage({
             How a {loanType} Works
           </h2>
           <div className="prose font-body text-dark max-w-none space-y-4">
-            <p>{description || defaultDescription}</p>
-            <p>
-              With 23+ years of real estate experience, Barrett has guided
-              hundreds of buyers through the financing process. He works with a
-              network of lenders who can get you the best rate and terms for
-              your {loanType}.
-            </p>
+            {/* Render multi-paragraph descriptions (split on double newlines) */}
+            {(description || defaultDescription).split("\n\n").map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+            {/* Only show generic filler paragraph when no specific description is provided */}
+            {!description && (
+              <p>
+                With 23+ years of real estate experience, Barrett has guided
+                hundreds of buyers through the financing process. He works with a
+                network of lenders who can get you the best rate and terms for
+                your {loanType}.
+              </p>
+            )}
           </div>
         </div>
       </section>
@@ -155,6 +168,70 @@ export default function LoanGuidePage({
           </div>
         </div>
       </section>
+
+      {/* === FAQ section (only rendered when FAQ data is provided) === */}
+      {faq.length > 0 && (
+        <>
+          <section className="bg-gray-50 py-12">
+            <div className="container-wide">
+              <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6">
+                Frequently Asked Questions About {loanType}s in Florida
+              </h2>
+              <div className="space-y-6">
+                {faq.map((item, index) => (
+                  <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0">
+                    <h3 className="font-heading font-semibold text-lg text-dark mb-2">
+                      {item.question}
+                    </h3>
+                    <p className="font-body text-muted leading-relaxed">
+                      {item.answer}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* --- FAQPage JSON-LD schema for SEO/AEO --- */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: faq.map((item) => ({
+                  "@type": "Question",
+                  name: item.question,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: item.answer,
+                  },
+                })),
+              }),
+            }}
+          />
+        </>
+      )}
+
+      {/* === Pro Tips from Barrett (only rendered when tips are provided) === */}
+      {proTips.length > 0 && (
+        <section className="container-wide py-12">
+          <div>
+            <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6">
+              Insider Tips from Barrett Henry
+            </h2>
+            <div className="space-y-4">
+              {proTips.map((tip, index) => (
+                <div key={index} className="card p-5 border-l-4 border-accent">
+                  <p className="font-body text-dark text-sm leading-relaxed">
+                    {tip}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* === CTA — Contact Barrett === */}
       <section className="bg-gray-50 py-16">

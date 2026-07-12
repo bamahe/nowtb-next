@@ -10,6 +10,7 @@ import { getListings } from "@/lib/bridge";
 import { formatPrice } from "@/lib/utils";
 import { cities, getCityBySlug } from "@/data/cities";
 import type { ComparisonData } from "@/data/comparisons";
+import { getConceptContent } from "@/data/concept-comparisons";
 import type { Listing } from "@/lib/types";
 
 interface ComparisonPageProps {
@@ -144,6 +145,210 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
 
   const infoA = COMMUNITY_INFO[slugA];
   const infoB = COMMUNITY_INFO[slugB];
+
+  // Load concept comparison content for non-city comparisons
+  const conceptData = category === "concept" ? getConceptContent(comparison.slug) : undefined;
+
+  // ── Concept comparison layout (FSBO vs REALTOR, renting vs buying, etc.) ──
+  if (category === "concept" && conceptData) {
+    return (
+      <>
+        {/* === Hero === */}
+        <HeroSection title={title} subtitle={excerpt} />
+
+        {/* === Intro Content === */}
+        <section className="container-wide py-12">
+          <div className="max-w-3xl mx-auto font-body text-dark leading-relaxed space-y-4">
+            {conceptData.introContent.split("\n\n").map((paragraph, i) => (
+              <p key={i} className="text-muted">{paragraph}</p>
+            ))}
+          </div>
+        </section>
+
+        {/* === Side-by-Side Comparison Table === */}
+        <section className="container-wide pb-12">
+          <h2 className="font-heading font-bold text-2xl text-primary mb-8 text-center">
+            {sideA} vs {sideB}: Side-by-Side Comparison
+          </h2>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="border-b-2 border-primary/20">
+                  <th className="font-heading font-bold text-primary py-3 px-4 w-1/5">Category</th>
+                  <th className="font-heading font-bold text-primary py-3 px-4 w-2/5">{sideA}</th>
+                  <th className="font-heading font-bold text-primary py-3 px-4 w-2/5">{sideB}</th>
+                </tr>
+              </thead>
+              <tbody className="font-body text-sm">
+                {conceptData.comparisonRows.map((row, i) => (
+                  <tr key={i} className={`border-b border-gray-100 ${i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}`}>
+                    <td className="py-3 px-4 text-primary font-semibold align-top">{row.category}</td>
+                    <td className="py-3 px-4 text-muted align-top">{row.sideA}</td>
+                    <td className="py-3 px-4 text-muted align-top">{row.sideB}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* === Pros & Cons === */}
+        <section className="bg-gray-50 py-12">
+          <div className="container-wide">
+            <h2 className="font-heading font-bold text-2xl text-primary mb-8 text-center">
+              Pros and Cons
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Side A pros/cons */}
+              <div className="card p-8">
+                <h3 className="font-heading font-bold text-xl text-primary mb-6">{sideA}</h3>
+                <div className="mb-6">
+                  <h4 className="font-heading font-semibold text-green-700 mb-3">Pros</h4>
+                  <ul className="space-y-2">
+                    {conceptData.prosConsA.pros.map((pro, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-muted font-body">
+                        <span className="text-green-600 mt-0.5 shrink-0">+</span> {pro}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-heading font-semibold text-red-700 mb-3">Cons</h4>
+                  <ul className="space-y-2">
+                    {conceptData.prosConsA.cons.map((con, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-muted font-body">
+                        <span className="text-red-600 mt-0.5 shrink-0">-</span> {con}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Side B pros/cons */}
+              <div className="card p-8">
+                <h3 className="font-heading font-bold text-xl text-primary mb-6">{sideB}</h3>
+                <div className="mb-6">
+                  <h4 className="font-heading font-semibold text-green-700 mb-3">Pros</h4>
+                  <ul className="space-y-2">
+                    {conceptData.prosConsB.pros.map((pro, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-muted font-body">
+                        <span className="text-green-600 mt-0.5 shrink-0">+</span> {pro}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-heading font-semibold text-red-700 mb-3">Cons</h4>
+                  <ul className="space-y-2">
+                    {conceptData.prosConsB.cons.map((con, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-muted font-body">
+                        <span className="text-red-600 mt-0.5 shrink-0">-</span> {con}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* === Bottom Line / Verdict === */}
+        <section className="container-wide py-12">
+          <div className="bg-primary/5 rounded-xl p-8 max-w-3xl mx-auto">
+            <h2 className="font-heading font-bold text-xl text-primary mb-3">
+              The Bottom Line: {sideA} or {sideB}?
+            </h2>
+            <p className="font-body text-muted leading-relaxed">{conceptData.bottomLine}</p>
+          </div>
+        </section>
+
+        {/* === CTA bar === */}
+        <section className="bg-primary py-8">
+          <div className="container-wide flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <p className="font-heading font-bold text-white text-lg">
+                Need help deciding between {sideA.toLowerCase()} and {sideB.toLowerCase()}?
+              </p>
+              <p className="font-body text-white/70 text-sm">
+                Barrett Henry, Broker Associate at REMAX Collective — 23+ years of real estate experience
+              </p>
+            </div>
+            <div className="flex gap-3">
+              <a
+                href="tel:+18137337907"
+                className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 rounded text-sm hover:bg-accent/90 transition-colors"
+              >
+                Call (813) 733-7907
+              </a>
+              <Link
+                href="/contact/"
+                className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
+              >
+                Send a Message
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* === FAQ Section === */}
+        <section className="container-wide py-12">
+          <h2 className="font-heading font-bold text-2xl text-primary mb-8 text-center">
+            Frequently Asked Questions
+          </h2>
+          <div className="max-w-3xl mx-auto space-y-6">
+            {conceptData.faq.map((item, i) => (
+              <details key={i} className="group border border-gray-200 rounded-lg">
+                <summary className="flex items-center justify-between cursor-pointer p-5 font-heading font-semibold text-primary hover:bg-gray-50 transition-colors">
+                  {item.question}
+                  <span className="ml-4 shrink-0 text-muted group-open:rotate-180 transition-transform">&#9662;</span>
+                </summary>
+                <div className="px-5 pb-5 pt-0">
+                  <p className="font-body text-muted text-sm leading-relaxed">{item.answer}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        {/* === FAQPage JSON-LD Schema === */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: conceptData.faq.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: item.answer,
+                },
+              })),
+            }),
+          }}
+        />
+
+        {/* === Contact form === */}
+        <section className="py-16">
+          <div className="container-wide max-w-2xl">
+            <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2 text-center">
+              Get a Personalized Analysis
+            </h2>
+            <p className="font-body text-muted text-center mb-8">
+              Barrett Henry will walk you through the numbers based on your specific situation, budget, and goals.
+            </p>
+            <ContactForm
+              webhookUrl="/api/contact"
+              source={`comparison-${comparison.slug}`}
+            />
+          </div>
+        </section>
+      </>
+    );
+  }
+
+  // ── City comparison layout (original) ─────────────────────────────────────
 
   return (
     <>
