@@ -4,8 +4,10 @@
 // Minimal heading treatment, generous gaps, let the cards breathe
 // =============================================================================
 
+import { Fragment } from "react";
 import type { Listing } from "@/lib/types";
 import ListingCard from "@/components/ui/ListingCard";
+import Link from "next/link";
 
 interface ListingGridProps {
   /** Array of listing objects to display */
@@ -77,8 +79,34 @@ export default function ListingGrid({
       {/* --- Responsive Grid — generous gaps for breathing room ---
            1 col on mobile, 2 on sm, 3 on lg, 4 on xl */}
       <div className="grid grid-cols-1 gap-8 md:gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {listings.map((listing) => (
-          <ListingCard key={listing.ListingKey} listing={listing} />
+        {listings.map((listing, index) => (
+          <Fragment key={listing.ListingKey}>
+            <ListingCard listing={listing} />
+
+            {/* --- Inline CTA card — injected after the 8th listing --- */}
+            {index === 7 && listings.length >= 8 && (
+              <div
+                key="cta-card"
+                className="flex flex-col items-center justify-center gap-4 rounded-2xl border-2 border-accent bg-accent/10 p-6 text-center"
+              >
+                <p className="font-heading text-lg font-bold text-primary leading-snug">
+                  Looking for the right home? Barrett Henry can help.
+                </p>
+                <a
+                  href="tel:+18137337907"
+                  className="font-body text-accent text-base font-semibold hover:underline"
+                >
+                  (813) 733-7907
+                </a>
+                <Link
+                  href="/contact/"
+                  className="inline-block rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-accent/90"
+                >
+                  Send a Message
+                </Link>
+              </div>
+            )}
+          </Fragment>
         ))}
       </div>
     </section>
