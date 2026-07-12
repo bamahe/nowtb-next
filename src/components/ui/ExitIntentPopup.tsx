@@ -18,7 +18,46 @@ type FormStatus = "idle" | "loading" | "success" | "error";
 // sessionStorage key — prevents showing popup more than once per session
 const STORAGE_KEY = "exit-intent-shown";
 
-export default function ExitIntentPopup() {
+export type ExitIntentVariant = "buyer" | "seller" | "general";
+
+interface ExitIntentPopupProps {
+  /** Controls headline and CTA copy. Defaults to "general" (home valuation). */
+  variant?: ExitIntentVariant;
+}
+
+// Copy for each variant
+const VARIANT_COPY: Record<ExitIntentVariant, { headline: string; subtitle: string; submitLabel: string; successMessage: string; source: string; type: string; formMessage: string }> = {
+  buyer: {
+    headline: "Looking for Homes in Tampa Bay?",
+    subtitle: "Tell Barrett what you're looking for — he'll send you a curated list of matching properties within 24 hours.",
+    submitLabel: "Send My Criteria",
+    successMessage: "Barrett will send your personalized home matches within 24 hours.",
+    source: "exit-intent-buyer",
+    type: "buyer",
+    formMessage: "Exit-intent buyer inquiry",
+  },
+  seller: {
+    headline: "Thinking About Selling?",
+    subtitle: "Get a free Comparative Market Analysis (CMA) for your home — Barrett will prepare it within 24 hours.",
+    submitLabel: "Get My Free CMA",
+    successMessage: "Barrett will prepare your personalized CMA and reach out within 24 hours.",
+    source: "exit-intent-seller",
+    type: "valuation",
+    formMessage: "Exit-intent seller CMA request",
+  },
+  general: {
+    headline: "Before You Go — Get Your Free Home Value Report",
+    subtitle: "Barrett Henry will prepare a personalized CMA for your property within 24 hours.",
+    submitLabel: "Get My Free Report",
+    successMessage: "Barrett will prepare your personalized CMA and reach out within 24 hours.",
+    source: "exit-intent",
+    type: "valuation",
+    formMessage: "Exit-intent CMA request",
+  },
+};
+
+export default function ExitIntentPopup({ variant = "general" }: ExitIntentPopupProps) {
+  const copy = VARIANT_COPY[variant];
   // --- Visibility state ---
   const [visible, setVisible] = useState(false);
 
@@ -106,9 +145,9 @@ export default function ExitIntentPopup() {
           name,
           email,
           phone,
-          message: "Exit-intent CMA request",
-          source: "exit-intent",
-          type: "valuation",
+          message: copy.formMessage,
+          source: copy.source,
+          type: copy.type,
           turnstileToken,
         }),
       });
@@ -188,8 +227,7 @@ export default function ExitIntentPopup() {
             </div>
             <h3 className="font-heading text-xl mb-2">Request Received!</h3>
             <p className="font-body text-white/80 text-sm mb-4">
-              Barrett will prepare your personalized CMA and reach out within 24
-              hours.
+              {copy.successMessage}
             </p>
             <button
               type="button"
@@ -203,11 +241,10 @@ export default function ExitIntentPopup() {
           <>
             {/* --- Headline + subtitle --- */}
             <h2 className="font-heading text-2xl sm:text-3xl font-light tracking-wide mb-2">
-              Before You Go — Get Your Free Home Value Report
+              {copy.headline}
             </h2>
             <p className="font-body text-white/80 text-sm mb-6">
-              Barrett Henry will prepare a personalized CMA for your property
-              within 24 hours.
+              {copy.subtitle}
             </p>
 
             {/* --- Error message --- */}
@@ -293,7 +330,7 @@ export default function ExitIntentPopup() {
               >
                 {status === "loading"
                   ? "Submitting..."
-                  : "Get My Free Home Value"}
+                  : copy.submitLabel}
               </button>
             </form>
 
