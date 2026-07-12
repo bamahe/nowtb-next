@@ -192,7 +192,7 @@ export default async function HomePage() {
           SECTION 1: Hero — full viewport, content at bottom, luxury feel
           ================================================================= */}
       <HeroSection
-        title="Find Your Home"
+        title="Tampa Bay Homes for Sale"
         label="BARRETT HENRY | THE NOW TEAM"
         subtitle="Broker Associate with 23+ years in the business. I help buyers, sellers, and investors across Tampa Bay get the deal done."
         bgImage="/images/hero-desktop.jpg"

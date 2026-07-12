@@ -53,42 +53,42 @@ const NAV_ITEMS: NavItem[] = [
     columns: [
       // Column 1
       [
-        { href: "/communities/tampa/", label: "Tampa" },
-        { href: "/communities/brandon/", label: "Brandon" },
-        { href: "/communities/riverview/", label: "Riverview" },
-        { href: "/communities/valrico/", label: "Valrico" },
-        { href: "/communities/apollo-beach/", label: "Apollo Beach" },
-        { href: "/communities/clearwater/", label: "Clearwater" },
-        { href: "/communities/st-petersburg/", label: "St. Petersburg" },
-        { href: "/communities/largo/", label: "Largo" },
-        { href: "/communities/wesley-chapel/", label: "Wesley Chapel" },
-        { href: "/communities/trinity/", label: "Trinity" },
+        { href: "/tampa/", label: "Tampa" },
+        { href: "/brandon/", label: "Brandon" },
+        { href: "/riverview/", label: "Riverview" },
+        { href: "/valrico/", label: "Valrico" },
+        { href: "/apollo-beach/", label: "Apollo Beach" },
+        { href: "/clearwater/", label: "Clearwater" },
+        { href: "/st-petersburg/", label: "St. Petersburg" },
+        { href: "/largo/", label: "Largo" },
+        { href: "/wesley-chapel/", label: "Wesley Chapel" },
+        { href: "/trinity/", label: "Trinity" },
       ],
       // Column 2
       [
-        { href: "/communities/lakeland/", label: "Lakeland" },
-        { href: "/communities/sarasota/", label: "Sarasota" },
-        { href: "/communities/bradenton/", label: "Bradenton" },
-        { href: "/communities/new-port-richey/", label: "New Port Richey" },
-        { href: "/communities/plant-city/", label: "Plant City" },
-        { href: "/communities/lutz/", label: "Lutz" },
-        { href: "/communities/westchase/", label: "Westchase" },
-        { href: "/communities/carrollwood/", label: "Carrollwood" },
-        { href: "/communities/palm-harbor/", label: "Palm Harbor" },
-        { href: "/communities/dunedin/", label: "Dunedin" },
+        { href: "/lakeland/", label: "Lakeland" },
+        { href: "/sarasota/", label: "Sarasota" },
+        { href: "/bradenton/", label: "Bradenton" },
+        { href: "/new-port-richey/", label: "New Port Richey" },
+        { href: "/plant-city/", label: "Plant City" },
+        { href: "/lutz/", label: "Lutz" },
+        { href: "/westchase/", label: "Westchase" },
+        { href: "/carrollwood/", label: "Carrollwood" },
+        { href: "/palm-harbor/", label: "Palm Harbor" },
+        { href: "/dunedin/", label: "Dunedin" },
       ],
       // Column 3
       [
-        { href: "/communities/winter-haven/", label: "Winter Haven" },
-        { href: "/communities/safety-harbor/", label: "Safety Harbor" },
-        { href: "/communities/seminole/", label: "Seminole" },
-        { href: "/communities/land-o-lakes/", label: "Land O' Lakes" },
-        { href: "/communities/temple-terrace/", label: "Temple Terrace" },
-        { href: "/communities/sun-city-center/", label: "Sun City Center" },
-        { href: "/communities/brooksville/", label: "Brooksville" },
-        { href: "/communities/spring-hill/", label: "Spring Hill" },
-        { href: "/communities/crystal-river/", label: "Crystal River" },
-        { href: "/communities/north-port/", label: "North Port" },
+        { href: "/winter-haven/", label: "Winter Haven" },
+        { href: "/safety-harbor/", label: "Safety Harbor" },
+        { href: "/seminole/", label: "Seminole" },
+        { href: "/land-o-lakes/", label: "Land O' Lakes" },
+        { href: "/temple-terrace/", label: "Temple Terrace" },
+        { href: "/sun-city-center/", label: "Sun City Center" },
+        { href: "/spring-hill/", label: "Spring Hill" },
+        { href: "/brooksville/", label: "Brooksville" },
+        { href: "/crystal-river/", label: "Crystal River" },
+        { href: "/north-port/", label: "North Port" },
       ],
     ],
   },
@@ -327,7 +327,7 @@ export default function Header() {
               className={`
                 font-body text-xs tracking-[0.15em] uppercase
                 transition-colors duration-500
-                text-white/50 hover:text-white
+                text-white hover:text-accent
               `}
             >
               (813) 733-7907

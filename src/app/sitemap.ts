@@ -12,6 +12,7 @@ import { getAllRegionalSlugs } from "@/data/regional-pages";
 import { getCatchAllMiscSlugs } from "@/data/misc-pages";
 import { getAllPosts } from "@/lib/posts";
 import { getAllGuideSlugs } from "@/data/guides";
+import { getAllMarketUpdates } from "@/lib/market-updates";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://nowtb.com";
@@ -45,13 +46,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/inspectors`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
   ];
 
-  // ── Blog posts (624 posts) ──
+  // ── Blog posts (624 posts) — canonical URL is /blog/{slug} ──
   const blogPosts: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
-    url: `${siteUrl}/${post.slug}`,
+    url: `${siteUrl}/blog/${post.slug}`,
     lastModified: post.date ? new Date(post.date) : now,
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
+
+  // ── Market updates ──
+  const marketUpdatePages: MetadataRoute.Sitemap = [
+    // Market updates index page
+    { url: `${siteUrl}/market-updates`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.7 },
+    // Individual market update posts
+    ...getAllMarketUpdates().map((update) => ({
+      url: `${siteUrl}/market-updates/${update.slug}`,
+      lastModified: update.date ? new Date(update.date) : now,
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    })),
+  ];
 
   // ── Guides (51 guides) ──
   const guidesPages: MetadataRoute.Sitemap = getAllGuideSlugs().map((slug) => ({
@@ -167,6 +181,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticPages,
     ...blogPosts,
+    ...marketUpdatePages,
     ...guidesPages,
     ...cityHubs,
     ...citySpokes,

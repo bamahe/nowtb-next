@@ -55,8 +55,41 @@ export default async function BlogPostPage({
   const thumbnail = getPostThumbnail(post);
   const related = getRelatedPosts(slug, 3);
 
+  // Strip HTML tags from excerpt for schema description
+  const plainExcerpt = (post.excerpt || "").replace(/<[^>]*>/g, "").trim();
+  const canonicalUrl = `https://nowtb.com/blog/${slug}/`;
+
   return (
     <>
+      {/* === JSON-LD: BlogPosting structured data === */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: post.title,
+            datePublished: post.date,
+            description: plainExcerpt || `${post.title} — Barrett Henry, REALTOR® at REMAX Collective.`,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": canonicalUrl,
+            },
+            author: {
+              "@type": "Person",
+              name: "Barrett Henry",
+              jobTitle: "Broker Associate",
+              url: "https://nowtb.com/about/",
+            },
+            publisher: {
+              "@type": "RealEstateAgent",
+              name: "Barrett Henry, REALTOR®",
+            },
+            ...(thumbnail ? { image: thumbnail } : {}),
+          }),
+        }}
+      />
+
       <section className="bg-primary pt-32 pb-16">
         <div className="container-wide max-w-3xl text-center">
           <h1 className="heading-display text-display md:text-display-lg text-white mb-4">
@@ -131,13 +164,15 @@ export default async function BlogPostPage({
           {/* Main content */}
           <article className="lg:col-span-3 order-1 lg:order-2">
             {thumbnail && (
-              <div className="mb-8 rounded-lg overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+              <div className="mb-8 rounded-lg overflow-hidden relative">
+                <Image
                   src={thumbnail}
                   alt={post.title}
+                  width={900}
+                  height={500}
                   className="w-full h-auto"
-                  loading="eager"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 75vw"
                 />
               </div>
             )}

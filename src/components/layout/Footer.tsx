@@ -15,7 +15,7 @@ const NAV_LINKS = [
   { href: "/sell-your-home", label: "Home Valuation" },
   { href: "/investing", label: "Invest" },
   { href: "/luxury", label: "Luxury" },
-  { href: "/property-management", label: "PM" },
+  { href: "/property-management", label: "Property Management" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
   { href: "/blog", label: "Blog" },

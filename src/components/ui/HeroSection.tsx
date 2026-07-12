@@ -65,7 +65,7 @@ export default function HeroSection({
           muted
           loop
           playsInline
-          preload="auto"
+          preload="none"
           poster={bgImage}
           aria-hidden="true"
         >
