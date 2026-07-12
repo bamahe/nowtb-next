@@ -797,7 +797,12 @@ async function HubPage({ city }: { city: CityData }) {
     soldListings = soldRes.value || [];
     totalActive = activeRes.total || listings.length;
     totalRentals = rentalRes.total || rentalListings.length;
-  } catch {
+  } catch (err) {
+    // If rate limited, re-throw so ISR serves the previous cached version
+    // instead of caching a page with 0 listings for an hour
+    const { isRateLimited } = await import("@/lib/bridge");
+    if (isRateLimited()) throw err;
+    // For other errors (network blip, etc.), show empty gracefully
     listings = [];
     rentalListings = [];
     soldListings = [];
@@ -1276,7 +1281,9 @@ async function SpokePage({
       listings = res.value || [];
       totalFiltered = res.total || listings.length;
     }
-  } catch {
+  } catch (err) {
+    const { isRateLimited } = await import("@/lib/bridge");
+    if (isRateLimited()) throw err;
     listings = [];
     soldListings = [];
   }

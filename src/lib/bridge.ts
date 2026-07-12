@@ -59,7 +59,9 @@ async function bridgeFetch<T>(
   endpoint: string,
   params?: Record<string, string>
 ): Promise<BridgeResponse<T>> {
-  // If we're in cooldown from a recent 429, don't even try — throw immediately
+  // If we're in cooldown from a recent 429, throw immediately.
+  // IMPORTANT: throwing prevents Next.js ISR from caching empty results.
+  // When ISR revalidation fails, it serves the PREVIOUS cached version instead.
   if (isRateLimited()) {
     throw new Error('Bridge API rate limited — in cooldown period');
   }
@@ -191,6 +193,8 @@ export async function getListings(
     if (typeof odataCount === 'number') raw.total = odataCount;
     return raw;
   } catch (error) {
+    // If rate limited, re-throw so ISR doesn't cache empty results
+    if (isRateLimited()) throw error;
     console.error('Failed to fetch listings:', error);
     return { bundle: '', total: 0, value: [] };
   }
@@ -399,6 +403,7 @@ export async function getFeaturedListings(): Promise<Listing[]> {
     });
     return res.value || [];
   } catch (error) {
+    if (isRateLimited()) throw error;
     console.error('Failed to fetch featured listings:', error);
     return [];
   }
