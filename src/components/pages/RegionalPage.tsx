@@ -42,13 +42,13 @@ export default function RegionalPage({ page }: RegionalPageProps) {
             <div
               className="blog-content prose prose-lg font-body text-dark max-w-none
                 prose-headings:font-heading prose-headings:text-primary
-                prose-a:text-accent prose-a:no-underline hover:prose-a:underline
+                prose-a:text-link prose-a:no-underline hover:prose-a:underline
                 prose-p:leading-relaxed"
               dangerouslySetInnerHTML={{ __html: cleanWpContent(wpContent) }}
             />
           ) : (
             /* --- Placeholder content (fallback) --- */
-            <div className="prose prose-lg font-body text-dark max-w-none prose-headings:font-heading prose-headings:text-primary prose-a:text-accent">
+            <div className="prose prose-lg font-body text-dark max-w-none prose-headings:font-heading prose-headings:text-primary prose-a:text-link">
               <p>
                 {excerpt} Barrett Henry, Broker Associate at REMAX Collective,
                 brings 23+ years of real estate experience to help you navigate

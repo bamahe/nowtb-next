@@ -157,7 +157,7 @@ export default function FreeHomeValuationPage() {
             <div className="section-divider" />
           </div>
 
-          <div className="max-w-3xl mx-auto prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-accent">
+          <div className="max-w-3xl mx-auto prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-link">
             <p>
               Online home value tools like Zillow&apos;s Zestimate and Redfin&apos;s
               estimate use algorithms built on public tax records and limited data
@@ -253,7 +253,7 @@ export default function FreeHomeValuationPage() {
             <div className="section-divider" />
           </div>
 
-          <div className="max-w-3xl mx-auto prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-accent">
+          <div className="max-w-3xl mx-auto prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-link">
             <p>
               Barrett Henry is a Broker Associate at REMAX Collective with 23+ years
               of real estate experience. He holds the MRP (Military Relocation

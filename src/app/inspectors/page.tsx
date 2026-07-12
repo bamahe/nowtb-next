@@ -77,7 +77,7 @@ export default function InspectorsPage() {
 
       {/* === Main content — prose styling for readability === */}
       <section className="container-wide py-12">
-        <div className="max-w-3xl mx-auto prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-accent">
+        <div className="max-w-3xl mx-auto prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-link">
 
           {/* --- Why inspections matter in Florida --- */}
           <h2>Why Do Home Inspections Matter in Florida?</h2>

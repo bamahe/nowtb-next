@@ -224,7 +224,7 @@ export default function BuildersPage() {
           </div>
 
           <div className="max-w-3xl mx-auto">
-            <div className="prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-accent">
+            <div className="prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-link">
               <p>
                 Every new construction sales office has a friendly agent ready to help you.
                 What most buyers do not realize is that agent works for the builder. Their

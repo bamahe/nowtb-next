@@ -12,6 +12,7 @@ const config: Config = {
         // Core palette — NO gold, NO yellow
         primary: "#0c1829",
         accent: "#93b4d4",
+        link: "#2563eb",
         dark: "#1a2332",
         light: "#f8f9fb",
         muted: "#6b7a8d",

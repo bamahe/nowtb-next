@@ -178,7 +178,7 @@ export default async function MarketUpdatePage({
             <div
               className="blog-content prose prose-lg font-body text-dark max-w-none
                 prose-headings:font-heading prose-headings:text-primary
-                prose-a:text-accent prose-a:no-underline hover:prose-a:underline
+                prose-a:text-link prose-a:no-underline hover:prose-a:underline
                 prose-p:leading-relaxed"
               dangerouslySetInnerHTML={{ __html: cleanWpContent(update.content) }}
             />

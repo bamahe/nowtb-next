@@ -158,7 +158,7 @@ export default function RelocationPage() {
             <div className="section-divider" />
           </div>
 
-          <div className="max-w-3xl mx-auto prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-accent">
+          <div className="max-w-3xl mx-auto prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-link">
             <p>
               Tampa Bay consistently ranks among the top relocation destinations in the
               United States, and for good reason. Florida has no state income tax, which
@@ -296,7 +296,7 @@ export default function RelocationPage() {
             <div className="section-divider" />
           </div>
 
-          <div className="max-w-3xl mx-auto prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-accent">
+          <div className="max-w-3xl mx-auto prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-link">
             <p>
               Tampa Bay is home to some of Florida's highest-rated public and private
               school districts. Hillsborough County Public Schools is one of the largest

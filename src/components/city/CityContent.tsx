@@ -95,7 +95,7 @@ export default function CityContent({ city, topic }: CityContentProps) {
                 expert who knows the <strong>{city.county} County</strong> market inside and out.
                 My name is <strong>Barrett Henry</strong>, and I&apos;m a licensed Broker Associate
                 with <strong>REMAX Collective</strong>. Call me at{" "}
-                <strong><a href="tel:+18137337907" className="text-accent hover:underline">(813) 733-7907</a></strong>{" "}
+                <strong><a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a></strong>{" "}
                 and I&apos;ll walk you through every option.
               </>
             ) : (
@@ -106,7 +106,7 @@ export default function CityContent({ city, topic }: CityContentProps) {
                 inside and out. My name is <strong>Barrett Henry</strong>, and I&apos;m a licensed
                 Broker Associate with <strong>REMAX Collective</strong> with 23+ years of real
                 estate experience. Call me at{" "}
-                <strong><a href="tel:+18137337907" className="text-accent hover:underline">(813) 733-7907</a></strong>{" "}
+                <strong><a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a></strong>{" "}
                 — I&apos;d love to help you find your next home.
               </>
             )}
@@ -154,7 +154,7 @@ export default function CityContent({ city, topic }: CityContentProps) {
                 Ready to explore homes in {city.name}? Call{" "}
                 <a
                   href="tel:+18137337907"
-                  className="text-accent font-semibold hover:underline"
+                  className="text-link font-semibold hover:underline"
                 >
                   <strong>(813) 733-7907</strong>
                 </a>{" "}
@@ -178,7 +178,7 @@ export default function CityContent({ city, topic }: CityContentProps) {
               href={SCHOOL_DISTRICT_LINKS[city.county]?.url ?? "https://www.hillsboroughschools.org"}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent hover:underline"
+              className="text-link hover:underline"
             >
               {SCHOOL_DISTRICT_LINKS[city.county]?.name ?? "Hillsborough County Public Schools"}
             </a>{" "}
@@ -189,7 +189,7 @@ export default function CityContent({ city, topic }: CityContentProps) {
               href="https://www.myfloridalicense.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent hover:underline"
+              className="text-link hover:underline"
             >
               Florida DBPR License Verification
             </a>{" "}
@@ -200,7 +200,7 @@ export default function CityContent({ city, topic }: CityContentProps) {
               href="https://msc.fema.gov/portal/home"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent hover:underline"
+              className="text-link hover:underline"
             >
               FEMA Flood Map Service Center
             </a>{" "}
@@ -234,7 +234,7 @@ function formatZipList(zips: string[]): string {
 
 /** Reusable phone link JSX */
 const PhoneLink = () => (
-  <a href="tel:+18137337907" className="text-accent font-semibold hover:underline">
+  <a href="tel:+18137337907" className="text-link font-semibold hover:underline">
     <strong>(813) 733-7907</strong>
   </a>
 );
@@ -252,7 +252,7 @@ function SpokeTopicContent({
   const ctaParagraph = (
     <p>
       Ready to take the next step? Call <PhoneLink /> or{" "}
-      <a href="/contact/" className="text-accent font-semibold hover:underline">fill out my contact form</a>{" "}
+      <a href="/contact/" className="text-link font-semibold hover:underline">fill out my contact form</a>{" "}
       to get a personalized list of {topic.label.toLowerCase()} in {city.name} sent straight
       to your inbox. I bring 23+ years of real estate experience to every transaction and
       will guide you from first showing to closing day.
@@ -268,7 +268,7 @@ function SpokeTopicContent({
             The <strong>{city.name}</strong> real estate market in{" "}
             <strong>{city.county} County</strong> offers a wide range of properties across
             ZIP codes {zipList}. {city.tagline}. Whether you are a first-time buyer
-            exploring <a href="/fha-loan-florida/" className="text-accent hover:underline">FHA loan options</a>,
+            exploring <a href="/fha-loan-florida/" className="text-link hover:underline">FHA loan options</a>,
             a move-up buyer looking for more space, or an investor analyzing cap rates,
             {city.name} has inventory worth exploring.
           </p>
@@ -276,10 +276,10 @@ function SpokeTopicContent({
             When you work with me, you get direct MLS access with real-time alerts — not
             the delayed data from third-party portals. I analyze comparable sales, review
             price history, and negotiate aggressively so you buy at the right number. Use
-            my <a href="/mortgage-calculator/" className="text-accent hover:underline">mortgage calculator</a>{" "}
+            my <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a>{" "}
             to estimate monthly payments, then browse all available listings right here
             on this page. For a broader look at the area, visit
-            the <a href={`/${city.slug}/`} className="text-accent hover:underline">{city.name} city guide</a>.
+            the <a href={`/${city.slug}/`} className="text-link hover:underline">{city.name} city guide</a>.
           </p>
           {ctaParagraph}
         </>
@@ -306,9 +306,9 @@ function SpokeTopicContent({
             checks the pump, heater, surface condition, and deck drainage. I will connect
             you with trusted local inspectors in {city.name} who specialize in pool systems.
             Explore all property types in the{" "}
-            <a href={`/${city.slug}/`} className="text-accent hover:underline">{city.name} city guide</a>{" "}
+            <a href={`/${city.slug}/`} className="text-link hover:underline">{city.name} city guide</a>{" "}
             or estimate your monthly costs with
-            the <a href="/mortgage-calculator/" className="text-accent hover:underline">mortgage calculator</a>.
+            the <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a>.
           </p>
           {ctaParagraph}
         </>
@@ -338,11 +338,11 @@ function SpokeTopicContent({
             contracts, upgrades, and inspection timelines on your behalf.
           </p>
           <p>
-            Use the <a href="/mortgage-calculator/" className="text-accent hover:underline">mortgage calculator</a>{" "}
+            Use the <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a>{" "}
             to estimate payments on new builds, or check
-            out <a href="/fha-loan-florida/" className="text-accent hover:underline">FHA loan</a> and
+            out <a href="/fha-loan-florida/" className="text-link hover:underline">FHA loan</a> and
             conventional financing options. Visit the{" "}
-            <a href={`/${city.slug}/`} className="text-accent hover:underline">{city.name} city guide</a>{" "}
+            <a href={`/${city.slug}/`} className="text-link hover:underline">{city.name} city guide</a>{" "}
             for a full overview of the area. Call <PhoneLink /> and I will walk you through
             every active new-construction community in {city.name}.
           </p>
@@ -364,21 +364,21 @@ function SpokeTopicContent({
           </p>
           <p>
             Financing a luxury home often means a{" "}
-            <a href="/jumbo-loan-florida/" className="text-accent hover:underline">jumbo loan</a>,
+            <a href="/jumbo-loan-florida/" className="text-link hover:underline">jumbo loan</a>,
             which exceeds the conforming loan limit (currently $766,550 in most Florida
             counties). Jumbo loans typically require a larger down payment (10 to 20
             percent), higher credit scores, and more extensive income documentation. I
             work with lenders who specialize in jumbo and portfolio products to get you
             competitive rates. For an estimate, try
-            the <a href="/mortgage-calculator/" className="text-accent hover:underline">mortgage calculator</a>.
+            the <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a>.
           </p>
           <p>
             Luxury transactions also require extra discretion and targeted marketing
             when selling. Whether you are buying or selling a high-end property
             in {city.name}, call <PhoneLink /> or visit
-            my <a href="/contact/" className="text-accent hover:underline">contact page</a> to
+            my <a href="/contact/" className="text-link hover:underline">contact page</a> to
             discuss your goals. Start with the{" "}
-            <a href={`/${city.slug}/`} className="text-accent hover:underline">{city.name} city guide</a>{" "}
+            <a href={`/${city.slug}/`} className="text-link hover:underline">{city.name} city guide</a>{" "}
             for neighborhood-level detail.
           </p>
         </>
@@ -405,13 +405,13 @@ function SpokeTopicContent({
             inspections are critical — replacing a deteriorated seawall can cost $300 to
             $800 per linear foot. I coordinate these specialized inspections so you know
             exactly what you are buying. Check your flood zone on the{" "}
-            <a href="https://msc.fema.gov/portal/home" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">FEMA Flood Map Service Center</a>{" "}
+            <a href="https://msc.fema.gov/portal/home" target="_blank" rel="noopener noreferrer" className="text-link hover:underline">FEMA Flood Map Service Center</a>{" "}
             before you start your search.
           </p>
           <p>
-            Use the <a href="/mortgage-calculator/" className="text-accent hover:underline">mortgage calculator</a>{" "}
+            Use the <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a>{" "}
             to estimate payments, and visit the{" "}
-            <a href={`/${city.slug}/`} className="text-accent hover:underline">{city.name} city guide</a>{" "}
+            <a href={`/${city.slug}/`} className="text-link hover:underline">{city.name} city guide</a>{" "}
             for more about the area. Call <PhoneLink /> to tour waterfront properties
             in {city.name} this week.
           </p>
@@ -440,12 +440,12 @@ function SpokeTopicContent({
             communities also carry CDD assessments. I will break down the total monthly
             cost — mortgage, taxes, insurance, HOA, and CDD — so you can compare
             communities accurately. Try the{" "}
-            <a href="/mortgage-calculator/" className="text-accent hover:underline">mortgage calculator</a>{" "}
+            <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a>{" "}
             for a quick estimate.
           </p>
           <p>
             Explore the full{" "}
-            <a href={`/${city.slug}/`} className="text-accent hover:underline">{city.name} city guide</a>{" "}
+            <a href={`/${city.slug}/`} className="text-link hover:underline">{city.name} city guide</a>{" "}
             for neighborhood details, or call <PhoneLink /> to schedule tours of 55+
             communities in {city.name}. I will match you with communities that fit your
             lifestyle and budget.
@@ -468,7 +468,7 @@ function SpokeTopicContent({
           <p>
             Here is how to get the most out of open houses: bring a pre-approval letter
             (or at least know your budget — use
-            the <a href="/mortgage-calculator/" className="text-accent hover:underline">mortgage calculator</a> to
+            the <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a> to
             estimate), take photos and notes at each home, and pay attention to things
             photos do not show — street noise, natural light, and the condition of
             neighboring properties. If you find a home you love, having a Broker Associate
@@ -477,9 +477,9 @@ function SpokeTopicContent({
           <p>
             I host open houses regularly and also track every upcoming open house
             in {city.name} through the MLS. Call <PhoneLink /> or{" "}
-            <a href="/contact/" className="text-accent hover:underline">contact me</a> to
+            <a href="/contact/" className="text-link hover:underline">contact me</a> to
             get my weekend open house schedule, or browse
-            the <a href={`/${city.slug}/`} className="text-accent hover:underline">{city.name} city guide</a>{" "}
+            the <a href={`/${city.slug}/`} className="text-link hover:underline">{city.name} city guide</a>{" "}
             to explore all property types.
           </p>
         </>
@@ -504,13 +504,13 @@ function SpokeTopicContent({
             rather than your personal income), and portfolio loans for buyers building a
             larger portfolio. I work with lenders who specialize in investor products
             and can close quickly. Use the{" "}
-            <a href="/mortgage-calculator/" className="text-accent hover:underline">mortgage calculator</a>{" "}
+            <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a>{" "}
             to run payment scenarios at different down payment levels.
           </p>
           <p>
             Need help managing your rental after closing? I can connect you with trusted
             local property management services in {city.county} County. Visit
-            the <a href={`/${city.slug}/`} className="text-accent hover:underline">{city.name} city guide</a>{" "}
+            the <a href={`/${city.slug}/`} className="text-link hover:underline">{city.name} city guide</a>{" "}
             for area details, or call <PhoneLink /> to review current investment
             opportunities in {city.name}.
           </p>
@@ -533,18 +533,18 @@ function SpokeTopicContent({
             Speed matters, but so does preparation. Before you start touring new listings,
             get pre-approved with a lender so you can make strong offers immediately. Not
             sure where to start? Check out{" "}
-            <a href="/fha-loan-florida/" className="text-accent hover:underline">FHA loans</a> for
+            <a href="/fha-loan-florida/" className="text-link hover:underline">FHA loans</a> for
             low down payment options, or use
-            the <a href="/mortgage-calculator/" className="text-accent hover:underline">mortgage calculator</a>{" "}
+            the <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a>{" "}
             to see what fits your budget. I set up custom MLS alerts for my clients so
             you get notified the moment a matching property hits the market — before it
             shows up on Zillow or Realtor.com.
           </p>
           <p>
             Call <PhoneLink /> or{" "}
-            <a href="/contact/" className="text-accent hover:underline">contact me</a> to
+            <a href="/contact/" className="text-link hover:underline">contact me</a> to
             set up your personalized listing alerts. You can also explore the{" "}
-            <a href={`/${city.slug}/`} className="text-accent hover:underline">{city.name} city guide</a>{" "}
+            <a href={`/${city.slug}/`} className="text-link hover:underline">{city.name} city guide</a>{" "}
             for a full overview of neighborhoods, schools, and lifestyle.
           </p>
         </>
@@ -570,13 +570,13 @@ function SpokeTopicContent({
             adaptable as your needs change. First-time buyers also appreciate single-story
             homes for their lower insurance costs (no second-floor wind exposure) and
             simpler roof maintenance. Explore financing options like{" "}
-            <a href="/fha-loan-florida/" className="text-accent hover:underline">FHA loans</a> or
-            use the <a href="/mortgage-calculator/" className="text-accent hover:underline">mortgage calculator</a>{" "}
+            <a href="/fha-loan-florida/" className="text-link hover:underline">FHA loans</a> or
+            use the <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a>{" "}
             to estimate your monthly payment.
           </p>
           <p>
             Browse the {city.name} single-story listings above, or visit
-            the <a href={`/${city.slug}/`} className="text-accent hover:underline">{city.name} city guide</a>{" "}
+            the <a href={`/${city.slug}/`} className="text-link hover:underline">{city.name} city guide</a>{" "}
             for a complete neighborhood breakdown. Call <PhoneLink /> to tour single-story
             homes in {city.name} this week.
           </p>
@@ -609,9 +609,9 @@ function SpokeTopicContent({
             carry higher interest rates than traditional mortgages.
           </p>
           <p>
-            Visit the <a href={`/${city.slug}/`} className="text-accent hover:underline">{city.name} city guide</a>{" "}
+            Visit the <a href={`/${city.slug}/`} className="text-link hover:underline">{city.name} city guide</a>{" "}
             for area info, or use
-            the <a href="/mortgage-calculator/" className="text-accent hover:underline">mortgage calculator</a>{" "}
+            the <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a>{" "}
             to plan your construction financing. Call <PhoneLink /> and I will help you
             find the right lot in {city.name} and connect you with reputable local builders.
           </p>
@@ -645,9 +645,9 @@ function SpokeTopicContent({
           </p>
           <p>
             Estimate your monthly costs with
-            the <a href="/mortgage-calculator/" className="text-accent hover:underline">mortgage calculator</a>,
+            the <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a>,
             and explore the full{" "}
-            <a href={`/${city.slug}/`} className="text-accent hover:underline">{city.name} city guide</a>.
+            <a href={`/${city.slug}/`} className="text-link hover:underline">{city.name} city guide</a>.
             Call <PhoneLink /> to tour condos and townhomes in {city.name}.
           </p>
         </>
@@ -676,13 +676,13 @@ function SpokeTopicContent({
             house: FHA and VA loans require the project to be on an approved list, and
             some lenders have restrictions on investor-owned unit ratios. I will navigate
             these details so the deal does not fall apart at underwriting. Check out{" "}
-            <a href="/fha-loan-florida/" className="text-accent hover:underline">FHA loan requirements</a>{" "}
+            <a href="/fha-loan-florida/" className="text-link hover:underline">FHA loan requirements</a>{" "}
             to see if you qualify.
           </p>
           <p>
-            Use the <a href="/mortgage-calculator/" className="text-accent hover:underline">mortgage calculator</a>{" "}
+            Use the <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a>{" "}
             to estimate total monthly costs including HOA, and browse
-            the <a href={`/${city.slug}/`} className="text-accent hover:underline">{city.name} city guide</a>{" "}
+            the <a href={`/${city.slug}/`} className="text-link hover:underline">{city.name} city guide</a>{" "}
             for neighborhood details. Call <PhoneLink /> to tour available condos in {city.name}.
           </p>
         </>
@@ -707,13 +707,13 @@ function SpokeTopicContent({
             amenities. First-time buyers often find townhomes more affordable than
             detached homes in the same neighborhood, making them a smart entry point into
             homeownership. Explore{" "}
-            <a href="/fha-loan-florida/" className="text-accent hover:underline">FHA loan options</a>{" "}
+            <a href="/fha-loan-florida/" className="text-link hover:underline">FHA loan options</a>{" "}
             for low down payment financing, or use
-            the <a href="/mortgage-calculator/" className="text-accent hover:underline">mortgage calculator</a>{" "}
+            the <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a>{" "}
             to compare townhome payments to rent.
           </p>
           <p>
-            Visit the <a href={`/${city.slug}/`} className="text-accent hover:underline">{city.name} city guide</a>{" "}
+            Visit the <a href={`/${city.slug}/`} className="text-link hover:underline">{city.name} city guide</a>{" "}
             for more about the area, or call <PhoneLink /> to schedule townhome tours
             in {city.name}. I will help you compare communities and HOA costs side by side.
           </p>
@@ -740,11 +740,11 @@ function SpokeTopicContent({
             fees typically range from $200 to $800 depending on the level of amenities.
             I break down every recurring cost — HOA, CDD, property taxes, insurance —
             so you know the true monthly expense before you make an offer. Use
-            the <a href="/mortgage-calculator/" className="text-accent hover:underline">mortgage calculator</a>{" "}
+            the <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a>{" "}
             to estimate total costs.
           </p>
           <p>
-            Check out the <a href={`/${city.slug}/`} className="text-accent hover:underline">{city.name} city guide</a>{" "}
+            Check out the <a href={`/${city.slug}/`} className="text-link hover:underline">{city.name} city guide</a>{" "}
             for a full list of neighborhoods, or call <PhoneLink /> to tour gated
             communities in {city.name}. I will get you past the gate and into the homes
             that match your wish list.
@@ -771,14 +771,14 @@ function SpokeTopicContent({
             downtown Tampa or MacDill AFB? I know which neighborhoods offer the
             easiest routes. Looking for a quiet, established street? I will steer you
             away from the high-traffic corridors. Visit the{" "}
-            <a href={`/${city.slug}/`} className="text-accent hover:underline">{city.name} city guide</a>{" "}
+            <a href={`/${city.slug}/`} className="text-link hover:underline">{city.name} city guide</a>{" "}
             for an overview, and use
-            the <a href="/mortgage-calculator/" className="text-accent hover:underline">mortgage calculator</a>{" "}
+            the <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a>{" "}
             to see what neighborhoods fit your budget.
           </p>
           <p>
             Call <PhoneLink /> or{" "}
-            <a href="/contact/" className="text-accent hover:underline">contact me</a> for
+            <a href="/contact/" className="text-link hover:underline">contact me</a> for
             a personalized neighborhood tour in {city.name}. I will build a custom route
             based on what matters most to you.
           </p>
@@ -801,15 +801,15 @@ function SpokeTopicContent({
           <p>
             I track these numbers weekly and share market updates with my clients so you
             are never guessing. Whether you are buying your first home with
-            an <a href="/fha-loan-florida/" className="text-accent hover:underline">FHA loan</a>,
+            an <a href="/fha-loan-florida/" className="text-link hover:underline">FHA loan</a>,
             upgrading to a larger property, or selling your current home in {city.name},
             data-driven decisions lead to better outcomes. Use
-            the <a href="/mortgage-calculator/" className="text-accent hover:underline">mortgage calculator</a>{" "}
+            the <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a>{" "}
             to see how current interest rates affect your buying power.
           </p>
           <p>
             For a neighborhood-by-neighborhood breakdown, visit
-            the <a href={`/${city.slug}/`} className="text-accent hover:underline">{city.name} city guide</a>.
+            the <a href={`/${city.slug}/`} className="text-link hover:underline">{city.name} city guide</a>.
             Call <PhoneLink /> for a free, no-obligation market analysis — whether you are
             buying, selling, or just curious about your home&apos;s current value.
           </p>
@@ -841,9 +841,9 @@ function SpokeTopicContent({
             improvements.
           </p>
           <p>
-            Visit the <a href={`/${city.slug}/`} className="text-accent hover:underline">{city.name} city guide</a>{" "}
+            Visit the <a href={`/${city.slug}/`} className="text-link hover:underline">{city.name} city guide</a>{" "}
             for area details, or use
-            the <a href="/mortgage-calculator/" className="text-accent hover:underline">mortgage calculator</a>{" "}
+            the <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a>{" "}
             to estimate payments. Call <PhoneLink /> and I will help you find properties
             in {city.name} with the acreage and zoning you need for your horses.
           </p>
@@ -868,14 +868,14 @@ function SpokeTopicContent({
             options in {city.name}, I provide expert guidance from
             first showing to closing day. We will review comparable sales,
             negotiate the best terms, and make sure your interests are protected.
-            Visit the <a href={`/${city.slug}/`} className="text-accent hover:underline">{city.name} city guide</a>{" "}
+            Visit the <a href={`/${city.slug}/`} className="text-link hover:underline">{city.name} city guide</a>{" "}
             for a full area overview, or use
-            the <a href="/mortgage-calculator/" className="text-accent hover:underline">mortgage calculator</a>{" "}
+            the <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a>{" "}
             to estimate your monthly payment.
           </p>
           <p>
             Call <PhoneLink /> or{" "}
-            <a href="/contact/" className="text-accent hover:underline">contact me</a> to
+            <a href="/contact/" className="text-link hover:underline">contact me</a> to
             schedule a showing or get a personalized list of{" "}
             {fallbackTopic.label.toLowerCase()} in {city.name} delivered straight to
             your inbox.

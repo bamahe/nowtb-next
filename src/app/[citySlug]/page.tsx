@@ -596,7 +596,7 @@ export default async function CityPage({
                   <img src={thumbnail} alt={post.title} className="w-full h-auto" loading="eager" />
                 </div>
               )}
-              <div className="blog-content prose prose-lg font-body text-dark max-w-none prose-headings:font-heading prose-headings:text-primary prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-p:leading-relaxed"
+              <div className="blog-content prose prose-lg font-body text-dark max-w-none prose-headings:font-heading prose-headings:text-primary prose-a:text-link prose-a:no-underline hover:prose-a:underline prose-p:leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: cleanWpContent(post.content) }}
               />
             </article>
@@ -631,7 +631,7 @@ export default async function CityPage({
           </div>
         </section>
         <section className="container-wide py-12">
-          <div className="blog-content prose prose-lg font-body text-dark max-w-none prose-headings:font-heading prose-headings:text-primary prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-p:leading-relaxed"
+          <div className="blog-content prose prose-lg font-body text-dark max-w-none prose-headings:font-heading prose-headings:text-primary prose-a:text-link prose-a:no-underline hover:prose-a:underline prose-p:leading-relaxed"
             dangerouslySetInnerHTML={{ __html: cleanWpContent(update.content) }}
           />
         </section>
@@ -741,7 +741,7 @@ export default async function CityPage({
                 <div
                   className="blog-content prose prose-lg font-body text-dark max-w-none
                     prose-headings:font-heading prose-headings:text-primary
-                    prose-a:text-accent prose-a:no-underline hover:prose-a:underline
+                    prose-a:text-link prose-a:no-underline hover:prose-a:underline
                     prose-p:leading-relaxed"
                   dangerouslySetInnerHTML={{ __html: cleanWpContent(wpContent) }}
                 />
