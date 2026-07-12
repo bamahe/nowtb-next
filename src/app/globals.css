@@ -118,22 +118,26 @@ select {
 .blog-content ul, .blog-content ol { @apply mb-4 pl-6; }
 .blog-content li { @apply mb-2; }
 .blog-content a { @apply text-accent underline hover:text-primary; }
-/* Preserve white text on CTA buttons with DARK background colors in blog/guide content.
-   Only target dark backgrounds (#0f172a, #1e293b, #e8a020 accent) — NOT light ones (#f8fafc, #fff).
-   Light-background resource grids need dark text, not white. */
+/* CTA buttons with background colors in blog/guide content.
+   Any link with an inline background gets its inline color preserved.
+   Light-background resource grids (#f8fafc, #f1f5f9) get dark text forced. */
+.blog-content a[style*="background"] { text-decoration: none !important; }
+/* Dark/colored backgrounds — force white text */
 .blog-content a[style*="background:#0f172a"],
 .blog-content a[style*="background:#1e293b"],
 .blog-content a[style*="background:#e8a020"],
+.blog-content a[style*="background:#c8a84b"],
+.blog-content a[style*="background:#2563eb"],
 .blog-content a[style*="background: #0f172a"],
 .blog-content a[style*="background: #1e293b"],
 .blog-content a[style*="background: #e8a020"],
-.blog-content a[style*="background:#2563eb"],
-.blog-content a[style*="background: #2563eb"] { color: #fff !important; text-decoration: none !important; }
+.blog-content a[style*="background: #c8a84b"],
+.blog-content a[style*="background: #2563eb"] { color: #fff !important; }
 /* Light-background resource grid links — keep dark readable text */
 .blog-content a[style*="background:#f8fafc"],
 .blog-content a[style*="background:#f1f5f9"],
 .blog-content a[style*="background: #f8fafc"],
-.blog-content a[style*="background: #f1f5f9"] { color: #0f172a !important; text-decoration: none !important; }
+.blog-content a[style*="background: #f1f5f9"] { color: #0f172a !important; }
 .blog-content table { @apply w-full border-collapse mb-6; }
 .blog-content th { @apply bg-primary text-white p-3 text-left; }
 .blog-content td { @apply border border-border p-3; }
