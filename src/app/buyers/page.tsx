@@ -410,6 +410,58 @@ export default function BuyersPage() {
         </div>
       </section>
 
+      {/* ---- Loan Types — explore financing options ---- */}
+      <section className="section-light">
+        <div className="container-wide">
+          <div className="text-center mb-12">
+            <p className="heading-label mb-4">Financing Options</p>
+            <h2 className="font-heading font-extralight text-3xl md:text-4xl tracking-[0.1em] uppercase text-primary">
+              Florida Loan Programs
+            </h2>
+            <div className="section-divider mx-auto" />
+            <p className="font-body text-muted font-light text-base max-w-2xl mx-auto">
+              Every buyer&apos;s financial situation is different. Here are the major
+              loan programs available to Florida home buyers — Barrett can connect
+              you with lenders who specialize in each.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Link href="/fha-loan-florida" className="card p-5 text-center hover:shadow-lg transition-shadow">
+              <p className="font-heading font-bold text-primary text-sm mb-1">FHA Loan</p>
+              <p className="font-body text-xs text-muted">3.5% down, 580 credit</p>
+            </Link>
+            <Link href="/va-loan-florida" className="card p-5 text-center hover:shadow-lg transition-shadow">
+              <p className="font-heading font-bold text-primary text-sm mb-1">VA Loan</p>
+              <p className="font-body text-xs text-muted">Zero down for veterans</p>
+            </Link>
+            <Link href="/usda-loan-florida" className="card p-5 text-center hover:shadow-lg transition-shadow">
+              <p className="font-heading font-bold text-primary text-sm mb-1">USDA Loan</p>
+              <p className="font-body text-xs text-muted">Zero down, rural areas</p>
+            </Link>
+            <Link href="/conventional-loan-florida" className="card p-5 text-center hover:shadow-lg transition-shadow">
+              <p className="font-heading font-bold text-primary text-sm mb-1">Conventional</p>
+              <p className="font-body text-xs text-muted">3-20% down, flexible</p>
+            </Link>
+            <Link href="/jumbo-loan-florida" className="card p-5 text-center hover:shadow-lg transition-shadow">
+              <p className="font-heading font-bold text-primary text-sm mb-1">Jumbo Loan</p>
+              <p className="font-body text-xs text-muted">Over $806,500</p>
+            </Link>
+            <Link href="/renovation-loan-florida" className="card p-5 text-center hover:shadow-lg transition-shadow">
+              <p className="font-heading font-bold text-primary text-sm mb-1">Renovation Loan</p>
+              <p className="font-body text-xs text-muted">Buy + renovate in one</p>
+            </Link>
+            <Link href="/construction-loan-florida" className="card p-5 text-center hover:shadow-lg transition-shadow">
+              <p className="font-heading font-bold text-primary text-sm mb-1">Construction</p>
+              <p className="font-body text-xs text-muted">Build your dream home</p>
+            </Link>
+            <Link href="/reverse-mortgage-florida" className="card p-5 text-center hover:shadow-lg transition-shadow">
+              <p className="font-heading font-bold text-primary text-sm mb-1">Reverse Mortgage</p>
+              <p className="font-body text-xs text-muted">Age 62+, no payments</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ---- Search CTA — dark navy ---- */}
       <section className="section-dark">
         <div className="container-wide text-center">

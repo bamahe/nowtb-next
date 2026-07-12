@@ -204,77 +204,57 @@ function parseSlug(slug: string): PageType | "market-update" | "blog-post" | nul
 // After deploy, the first visitor to each page triggers a fresh API call (build
 // returns empty via IS_BUILD_TIME), then the result is cached for subsequent visitors.
 export const revalidate = 900; // 15 minutes, matches bridgeFetch cache
+// Allow pages not in generateStaticParams to render on-demand (ISR)
+export const dynamicParams = true;
 
 // generateStaticParams — pre-render all hub + spoke URLs at build time
 // Returns all city slugs AND all city-topic combos for Tier 1 cities
 // -----------------------------------------------------------------------------
 
 export async function generateStaticParams() {
-  const allCities = cities;
   const params: { citySlug: string }[] = [];
 
-  // City hubs + spokes + realtor + sell-your-home per city
-  for (const city of allCities) {
-    params.push({ citySlug: city.slug });
-    params.push({ citySlug: `${city.slug}-realtor` });
-    params.push({ citySlug: `sell-your-home-${city.slug}` });
+  // ⚠️ ONLY pre-render pages that DON'T call Bridge API at build time.
+  // Pages with listings (hubs, spokes, neighborhoods, counties) render on-demand
+  // via ISR — first visitor triggers the API call, result is cached 15 min.
+  // This prevents every deploy from flooding Bridge with 3,000+ API calls.
 
-    const topics = getCityTopics(city);
-    for (const topic of topics) {
-      params.push({ citySlug: `${city.slug}-${topic.slug}` });
-    }
-  }
-
-  // County pages
-  for (const county of COUNTIES) {
-    params.push({ citySlug: county.slug });
-  }
-
-  // Loan guide pages
+  // Loan guide pages — no API calls, just static content
   for (const loan of LOAN_TYPES) {
     params.push({ citySlug: loan.slug });
   }
 
-  // Neighborhood pages (461 neighborhoods from data export)
-  const { neighborhoods: allNeighborhoods } = await import("@/data/neighborhoods");
-  for (const neighborhood of allNeighborhoods) {
-    // Base neighborhood page: /bloomingdale
-    params.push({ citySlug: neighborhood.slug });
-    // Neighborhood homes-for-sale spoke: /bloomingdale-homes-for-sale
-    params.push({ citySlug: `${neighborhood.slug}-homes-for-sale` });
-    // Neighborhood realtor page: /bloomingdale-realtor
-    params.push({ citySlug: `${neighborhood.slug}-realtor` });
-  }
-
-  // Comparison pages (24 city-vs-city and concept comparisons)
+  // Comparison pages — concept comparisons don't call API
   for (const comp of comparisons) {
-    params.push({ citySlug: comp.slug });
+    if (comp.category === "concept") {
+      params.push({ citySlug: comp.slug });
+    }
   }
 
-  // Tampa Bay regional pages (34 pages)
+  // Tampa Bay regional pages — mostly static content
   for (const rp of regionalPages) {
     params.push({ citySlug: rp.slug });
   }
 
-  // Guide pages at root level (e.g., /first-time-home-buyer-guide)
+  // Guide pages — static content, no API
   for (const guide of guides) {
     params.push({ citySlug: guide.slug });
   }
 
-  // Misc catch-all pages (40+ uncategorized pages)
+  // Misc catch-all pages — static content
   for (const mp of miscPages) {
     if (mp.handling === "catch-all") {
       params.push({ citySlug: mp.slug });
     }
   }
 
-  // Blog posts at root level (525 slugs)
+  // Blog posts — no API calls
   const { getAllPosts } = await import("@/lib/posts");
   for (const post of getAllPosts()) {
     params.push({ citySlug: post.slug });
   }
 
-  // Market update pages
+  // Market update pages — static content
   const { getAllMarketUpdateSlugs } = await import("@/lib/market-updates");
   for (const muSlug of getAllMarketUpdateSlugs()) {
     params.push({ citySlug: muSlug });
