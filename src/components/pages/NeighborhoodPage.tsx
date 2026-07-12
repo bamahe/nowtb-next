@@ -15,7 +15,8 @@ import SpokeNav from "@/components/city/SpokeNav";
 import { getListings } from "@/lib/bridge";
 import { getCityBySlug } from "@/data/cities";
 import { getPageContent } from "@/lib/page-content";
-import { cleanWpContent } from "@/lib/utils";
+import { cleanWpContent, formatPrice } from "@/lib/utils";
+import type { Listing } from "@/lib/types";
 
 interface NeighborhoodPageProps {
   /** Display name of the neighborhood (e.g. "Bloomingdale") */
@@ -110,6 +111,90 @@ export default async function NeighborhoodPage({
     listings = [];
   }
 
+  // -------------------------------------------------------------------------
+  // Compute market stats from the active listings array
+  // -------------------------------------------------------------------------
+  const today = new Date().toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+
+  // Count of active listings
+  const activeCount = totalListings || listings.length;
+
+  // Average days on market — skip listings without DaysOnMarket
+  const domValues = listings
+    .map((l) => l.DaysOnMarket)
+    .filter((d): d is number => typeof d === "number");
+  const avgDom =
+    domValues.length > 0
+      ? Math.round(domValues.reduce((sum, d) => sum + d, 0) / domValues.length)
+      : null;
+
+  // Average price per square foot — only listings with both price and sqft
+  const ppsqftValues = listings
+    .filter((l) => l.ListPrice > 0 && l.LivingArea && l.LivingArea > 0)
+    .map((l) => l.ListPrice / (l.LivingArea as number));
+  const avgPricePerSqft =
+    ppsqftValues.length > 0
+      ? Math.round(
+          ppsqftValues.reduce((sum, v) => sum + v, 0) / ppsqftValues.length
+        )
+      : null;
+
+  // Median list price
+  const sortedPrices = listings
+    .map((l) => l.ListPrice)
+    .filter((p) => p > 0)
+    .sort((a, b) => a - b);
+  const medianPrice =
+    sortedPrices.length > 0
+      ? sortedPrices.length % 2 === 1
+        ? sortedPrices[Math.floor(sortedPrices.length / 2)]
+        : Math.round(
+            (sortedPrices[sortedPrices.length / 2 - 1] +
+              sortedPrices[sortedPrices.length / 2]) /
+              2
+          )
+      : null;
+
+  // -------------------------------------------------------------------------
+  // Fetch recently sold listings (same subdivision/zip filter, status Closed)
+  // -------------------------------------------------------------------------
+  let soldListings: Listing[] = [];
+  try {
+    if (isSubdivisionMatch) {
+      // Same subdivision search that matched active listings
+      const parentCityName = parentCity?.name || "";
+      const searchName = name
+        .replace(new RegExp(`\\s+${parentCityName}$`, "i"), "")
+        .replace(/,?\s*(FL|Florida)$/i, "")
+        .trim();
+      const soldRes = await getListings({
+        subdivision: searchName,
+        zip_codes: parentCity?.zip_codes,
+        status: "Closed",
+        exclude_rental: true,
+        limit: "8",
+        sort: "CloseDate desc",
+      });
+      soldListings = soldRes.value || [];
+    } else if (parentCity?.zip_codes?.length) {
+      // Fall back to ZIP-based sold listings
+      const soldRes = await getListings({
+        zip_codes: parentCity.zip_codes,
+        status: "Closed",
+        exclude_rental: true,
+        limit: "8",
+        sort: "CloseDate desc",
+      });
+      soldListings = soldRes.value || [];
+    }
+  } catch {
+    soldListings = [];
+  }
+
   return (
     <>
       {/* --- JSON-LD BreadcrumbList for SEO --- */}
@@ -181,6 +266,73 @@ export default async function NeighborhoodPage({
         </div>
       </section>
 
+      {/* === Market Stats Bar — key metrics at a glance === */}
+      <section className="bg-gray-100 border-b border-gray-200">
+        <div className="container-wide py-6">
+          {/* Header with neighborhood name and date */}
+          <p className="font-body text-xs text-muted uppercase tracking-widest mb-4">
+            Active Listings in {name} — {today}
+          </p>
+          {/* 4-column stats grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div>
+              <p className="font-heading text-2xl md:text-3xl font-bold text-primary">
+                {activeCount > 0 ? activeCount : "—"}
+              </p>
+              <p className="font-body text-sm text-muted">Listed</p>
+            </div>
+            <div>
+              <p className="font-heading text-2xl md:text-3xl font-bold text-primary">
+                {avgDom !== null ? avgDom : "—"}
+              </p>
+              <p className="font-body text-sm text-muted">Avg. DOM</p>
+            </div>
+            <div>
+              <p className="font-heading text-2xl md:text-3xl font-bold text-primary">
+                {avgPricePerSqft !== null ? `$${avgPricePerSqft}` : "—"}
+              </p>
+              <p className="font-body text-sm text-muted">Avg. $/Sq.Ft.</p>
+            </div>
+            <div>
+              <p className="font-heading text-2xl md:text-3xl font-bold text-primary">
+                {medianPrice !== null ? formatPrice(medianPrice) : "—"}
+              </p>
+              <p className="font-body text-sm text-muted">Med. List Price</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* === Search/Filter Links — quick property type filters === */}
+      <section className="container-wide py-4">
+        <div className="flex flex-wrap gap-2">
+          <Link
+            href={`/${citySlug}-homes-with-pool/`}
+            className="inline-block border border-gray-300 rounded-full px-4 py-1.5 text-xs font-semibold text-primary hover:border-accent hover:text-accent transition-colors"
+          >
+            Pool Homes in {city}
+          </Link>
+          <Link
+            href={`/${citySlug}-new-construction/`}
+            className="inline-block border border-gray-300 rounded-full px-4 py-1.5 text-xs font-semibold text-primary hover:border-accent hover:text-accent transition-colors"
+          >
+            New Construction in {city}
+          </Link>
+          <Link
+            href={`/${citySlug}-luxury-homes/`}
+            className="inline-block border border-gray-300 rounded-full px-4 py-1.5 text-xs font-semibold text-primary hover:border-accent hover:text-accent transition-colors"
+          >
+            Luxury Homes in {city}
+          </Link>
+          <Link
+            href={`/${citySlug}-open-houses/`}
+            className="inline-block border border-gray-300 rounded-full px-4 py-1.5 text-xs font-semibold text-primary hover:border-accent hover:text-accent transition-colors"
+          >
+            Open Houses in {city}
+          </Link>
+        </div>
+      </section>
+
       {/* === Listings grid — front and center === */}
       {listings.length > 0 ? (
         <ListingGrid
@@ -221,6 +373,16 @@ export default async function NeighborhoodPage({
             Listing information provided by Stellar MLS. IDX information is for personal, non-commercial use only. Data is deemed reliable but not guaranteed. All properties are subject to prior sale, change, or withdrawal.
           </p>
         </section>
+      )}
+
+      {/* === Recently Sold — shows recent closed sales in this neighborhood === */}
+      {soldListings.length > 0 && (
+        <ListingGrid
+          listings={soldListings}
+          title={`Recently Sold in ${name}`}
+          subtitle={`Recent sales in ${isSubdivisionMatch ? name : `the ${city} area`}.`}
+          className="container-wide py-12 border-t border-gray-100"
+        />
       )}
 
       {/* === About the neighborhood — SEO content === */}
@@ -279,6 +441,66 @@ export default async function NeighborhoodPage({
           </div>
         </section>
       )}
+
+      {/* === Navigation Links — resources and parent pages === */}
+      <section className="container-wide py-12 border-t border-gray-100">
+        <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2">
+          {city} Resources & Quick Links
+        </h2>
+        <p className="font-body text-muted font-light mb-6">
+          Explore more about {city}, {county} County real estate.
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+          <Link
+            href={`/${county.toLowerCase()}-county/`}
+            className="block border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10 hover:text-accent"
+          >
+            {county} County
+          </Link>
+          <Link
+            href={`/${citySlug}/`}
+            className="block border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10 hover:text-accent"
+          >
+            {city} Overview
+          </Link>
+          <Link
+            href={`/${citySlug}-homes-for-sale/`}
+            className="block border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10 hover:text-accent"
+          >
+            {city} Homes for Sale
+          </Link>
+          <Link
+            href={`/${citySlug}-housing-market/`}
+            className="block border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10 hover:text-accent"
+          >
+            {city} Housing Market
+          </Link>
+          <Link
+            href={`/${citySlug}-neighborhood-guide/`}
+            className="block border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10 hover:text-accent"
+          >
+            {city} Neighborhood Guide
+          </Link>
+          <Link
+            href="/mortgage-calculator/"
+            className="block border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10 hover:text-accent"
+          >
+            Mortgage Calculator
+          </Link>
+          <Link
+            href="/buyers/"
+            className="block border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10 hover:text-accent"
+          >
+            Buyer Resources
+          </Link>
+          <Link
+            href="/free-home-valuation/"
+            className="block border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10 hover:text-accent"
+          >
+            Free Home Valuation
+          </Link>
+        </div>
+      </section>
 
       {/* === Spoke nav — explore more in the parent city === */}
       {parentCity && <SpokeNav city={parentCity} />}
