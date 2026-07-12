@@ -136,6 +136,44 @@ export default async function BlogPostPage({
         </div>
       </section>
 
+      {/* Seller lead capture — shows on sell-home-fast posts */}
+      {slug.startsWith("sell-home-fast") && (
+        <section className="container-wide py-8">
+          <div className="rounded-xl border-2 border-primary/20 bg-primary/5 p-6 md:p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+              <div>
+                <h2 className="font-heading font-bold text-xl md:text-2xl text-primary mb-2">
+                  What&apos;s Your Home Worth?
+                </h2>
+                <p className="font-body text-muted text-sm mb-4">
+                  Get two valuations — see what your home could sell for on the open market
+                  AND what cash buyers would offer. No obligation, no pressure.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Link
+                    href="/free-home-valuation/"
+                    className="inline-flex items-center justify-center gap-2 bg-primary text-white font-semibold px-6 py-3 rounded-lg text-sm hover:bg-primary/90 transition-colors"
+                  >
+                    Get Market Value
+                  </Link>
+                  <a
+                    href="tel:+18137337907"
+                    className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary font-semibold px-6 py-3 rounded-lg text-sm hover:bg-primary hover:text-white transition-colors"
+                  >
+                    Get Cash Offer — (813) 733-7907
+                  </a>
+                </div>
+              </div>
+              <div className="text-center md:text-right">
+                <p className="font-heading font-bold text-3xl text-primary mb-1">2 Offers</p>
+                <p className="font-body text-muted text-sm">Market value vs. cash offer</p>
+                <p className="font-body text-muted text-xs mt-2">Barrett Henry — 23+ years experience</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="container-wide py-12">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           {/* Sidebar */}
