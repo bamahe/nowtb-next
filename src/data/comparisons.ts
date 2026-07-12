@@ -20,7 +20,7 @@ export interface ComparisonData {
   category: "city" | "concept";
 }
 
-/** All 24 comparison pages from nowtb.com */
+/** All 29 comparison pages from nowtb.com */
 export const comparisons: ComparisonData[] = [
   // --- City vs City comparisons ---
   {
@@ -181,6 +181,48 @@ export const comparisons: ComparisonData[] = [
     excerpt: "Compare Westchase and Carrollwood — HOA communities, home prices, schools, and Tampa commute.",
     sideA: "Westchase",
     sideB: "Carrollwood",
+    category: "city",
+  },
+
+  // --- New city comparisons (July 2026) ---
+  {
+    slug: "valrico-vs-fishhawk",
+    title: "Valrico vs FishHawk Ranch: Which Community Is Right for You?",
+    excerpt: "Compare Valrico and FishHawk Ranch — home prices, schools, amenities, HOA fees, and lifestyle.",
+    sideA: "Valrico",
+    sideB: "FishHawk Ranch",
+    category: "city",
+  },
+  {
+    slug: "plant-city-vs-dover",
+    title: "Plant City vs Dover: Rural Hillsborough Living Compared",
+    excerpt: "Compare Plant City and Dover FL — acreage, prices, schools, and small-town lifestyle.",
+    sideA: "Plant City",
+    sideB: "Dover",
+    category: "city",
+  },
+  {
+    slug: "seffner-vs-brandon",
+    title: "Seffner vs Brandon: Which Is the Better Buy?",
+    excerpt: "Compare Seffner and Brandon FL — home prices, value, commute times, and neighborhood options.",
+    sideA: "Seffner",
+    sideB: "Brandon",
+    category: "city",
+  },
+  {
+    slug: "apollo-beach-vs-riverview",
+    title: "Apollo Beach vs Riverview: Waterfront vs Suburban Value",
+    excerpt: "Compare Apollo Beach and Riverview FL — waterfront access, prices, schools, and lifestyle.",
+    sideA: "Apollo Beach",
+    sideB: "Riverview",
+    category: "city",
+  },
+  {
+    slug: "thonotosassa-vs-dover",
+    title: "Thonotosassa vs Dover: Country Living Compared",
+    excerpt: "Compare Thonotosassa and Dover FL — lot sizes, prices, zoning, and rural lifestyle.",
+    sideA: "Thonotosassa",
+    sideB: "Dover",
     category: "city",
   },
 

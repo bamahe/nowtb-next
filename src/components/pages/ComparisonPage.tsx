@@ -116,6 +116,42 @@ const COMMUNITY_INFO: Record<string, { description: string; highlights: string[]
     highlights: ["Newer construction throughout", "USF and Moffitt Cancer Center nearby", "Premium Outlets and retail", "I-75 and I-275 access", "Wharton and Steinbrenner school zones"],
     schools: "Wharton High, Liberty Middle, multiple A-rated elementaries",
   },
+  // --- Added July 2026 for new comparison pages ---
+  "seffner": {
+    description: "Seffner is an affordable alternative to Brandon tucked between I-4 and SR-574. With quick access to both downtown Tampa and Lakeland, it draws buyers looking for value in eastern Hillsborough County without the Brandon price tag.",
+    highlights: ["Lower median prices than Brandon", "Direct I-4 access to Tampa and Lakeland", "Mix of older homes and newer builds", "Quieter suburban feel", "ZIP 33584 covers the core area"],
+    schools: "Armwood High, Seffner Christian Academy (private), multiple elementary zones",
+  },
+  "dover": {
+    description: "Dover is a rural agricultural community in eastern Hillsborough County known for strawberry farms, large lots, and a country lifestyle just minutes from Brandon. ZIP 33527 covers this unincorporated area where zoning allows livestock and farming.",
+    highlights: ["Large lots and acreage available", "Agricultural zoning for horses and livestock", "Strawberry farms and rural character", "Lower prices than neighboring communities", "Close to Brandon shopping and dining"],
+    schools: "Durant High, Turkey Creek Middle, Dover Elementary",
+  },
+  "plant-city": {
+    description: "Plant City is the Strawberry Capital of the World with a charming historic downtown, annual Strawberry Festival, and a growing housing market. ZIPs 33563-33567 cover everything from downtown bungalows to newer subdivisions on the outskirts.",
+    highlights: ["Historic downtown with local shops and dining", "Annual Florida Strawberry Festival", "Growing new construction inventory", "More affordable than western Hillsborough", "Rail trail and parks system"],
+    schools: "Plant City High, Strawberry Crest High, Durant High zone edges",
+  },
+  "thonotosassa": {
+    description: "Thonotosassa offers large lots, horse properties, and a rural lifestyle along the Hillsborough River in eastern Hillsborough County. ZIP 33592 attracts buyers who want acreage and privacy without leaving the Tampa metro.",
+    highlights: ["Large lots and horse-friendly properties", "Hillsborough River access and parks", "Rural feel within 20 minutes of Tampa", "No HOA on most older properties", "Lower property taxes on ag-exempt land"],
+    schools: "Armwood High, Thonotosassa Elementary, multiple middle school zones",
+  },
+  "apollo-beach": {
+    description: "Apollo Beach is a waterfront community on Tampa Bay's eastern shore offering canal-front homes, the Waterset master-planned community, and direct bay access. ZIP 33572 covers everything from older waterfront cottages to brand-new construction.",
+    highlights: ["Waterfront and canal-front homes", "Tampa Bay boat access and marinas", "Waterset master-planned community", "Manatee viewing center", "Growing retail along US-41"],
+    schools: "East Bay High, Apollo Beach Elementary, Eisenhower Middle",
+  },
+  "ruskin": {
+    description: "Ruskin sits in the SouthShore area of Hillsborough County adjacent to Sun City Center. ZIP 33570 offers affordable waterfront options, newer subdivisions, and a quieter pace of life with easy access to I-75 and US-41.",
+    highlights: ["Affordable waterfront opportunities", "Sun City Center adjacent (55+ options nearby)", "Newer subdivisions with competitive pricing", "E.G. Simmons Park and nature preserves", "Growing commercial corridor along US-41"],
+    schools: "Lennard High, East Bay High zone edges, multiple elementary options",
+  },
+  "lithia": {
+    description: "Lithia is home to FishHawk Ranch and several other upscale communities in southeastern Hillsborough County. ZIP 33547 offers a mix of master-planned luxury living and older rural properties with acreage along Lithia Pinecrest Road.",
+    highlights: ["FishHawk Ranch master-planned community", "A-rated Newsome High School zone", "Mix of luxury and rural properties", "Alafia River State Park nearby", "Large lots available outside planned communities"],
+    schools: "Newsome High, Randall Middle, multiple A-rated elementaries",
+  },
 };
 
 export default async function ComparisonPage({ comparison }: ComparisonPageProps) {
