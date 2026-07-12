@@ -336,6 +336,10 @@ select {
   margin: 6px;
 }
 
+/* Step boxes — hide redundant step numbers (already in heading text) */
+.nowtb-step-box { position: relative; }
+.step-number { display: none; }
+
 /* Quick answer callout */
 .bbs-quick-answer {
   background: #f8fafc;
