@@ -506,7 +506,7 @@ export async function generateMetadata({
   if (topic) {
     // Spoke page metadata
     return {
-      title: `${topic.label} in ${city.name}`,
+      title: `${topic.label} in ${city.name}, FL | Barrett Henry, REALTOR®`,
       description: `Browse ${topic.label.toLowerCase()} in ${city.name}, FL. Updated daily from Stellar MLS. Barrett Henry, REMAX Collective. Call (813) 733-7907.`,
       alternates: { canonical },
       openGraph: {

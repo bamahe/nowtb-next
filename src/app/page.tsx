@@ -24,7 +24,7 @@ export const revalidate = 900;
 // -----------------------------------------------------------------------------
 
 export const metadata: Metadata = {
-  title: "Tampa Bay Homes for Sale | Barrett Henry, REALTOR® | REMAX Collective",
+  title: "Tampa Bay Homes for Sale | Barrett Henry, REALTOR®",
   description:
     "Search Tampa Bay homes for sale with Barrett Henry, Broker Associate at REMAX Collective. 23+ years of real estate experience. Browse listings in Valrico, Brandon, Riverview, Tampa, and more. Call (813) 733-7907.",
   alternates: {

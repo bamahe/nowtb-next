@@ -30,7 +30,7 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Barrett Henry, REALTOR® | Tampa Bay Homes for Sale | REMAX Collective",
+    default: "Barrett Henry, REALTOR® | Tampa Bay Homes for Sale",
     template: "%s | Barrett Henry, REALTOR®",
   },
   icons: {
