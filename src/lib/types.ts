@@ -173,6 +173,7 @@ export interface ListingSearchParams {
   beds?: string;
   baths?: string;
   property_type?: string;
+  property_sub_type?: string;        // PropertySubType (Townhouse, Single Family, etc.)
   status?: string;                   // StandardStatus value (Active, Pending, etc.)
   limit?: string;
   offset?: string;

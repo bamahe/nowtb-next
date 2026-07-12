@@ -126,6 +126,7 @@ function buildFilter(params: ListingSearchParams): string {
   if (params.beds) filters.push(`BedroomsTotal ge ${params.beds}`);
   if (params.baths) filters.push(`BathroomsTotalInteger ge ${params.baths}`);
   if (params.property_type) filters.push(`PropertyType eq '${params.property_type}'`);
+  if (params.property_sub_type) filters.push(`PropertySubType eq '${params.property_sub_type}'`);
 
   // Topic-specific MLS boolean/numeric filters
   if (params.senior) filters.push(`SeniorCommunityYN eq true`);
