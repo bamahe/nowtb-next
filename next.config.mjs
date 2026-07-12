@@ -75,6 +75,18 @@ const nextConfig = {
       { source: "/brandon-remax", destination: "/remax-brandon/", permanent: true },
       { source: "/brandon-remax/", destination: "/remax-brandon/", permanent: true },
 
+      // ── Common broken URLs — redirect to correct pages ──
+      { source: "/neighborhoods", destination: "/communities/", permanent: true },
+      { source: "/neighborhoods/", destination: "/communities/", permanent: true },
+      { source: "/new-construction", destination: "/new-construction-homes-tampa-bay/", permanent: true },
+      { source: "/new-construction/", destination: "/new-construction-homes-tampa-bay/", permanent: true },
+      { source: "/market-reports", destination: "/market-updates/", permanent: true },
+      { source: "/market-reports/", destination: "/market-updates/", permanent: true },
+      { source: "/buyer-resources", destination: "/buyers/", permanent: true },
+      { source: "/buyer-resources/", destination: "/buyers/", permanent: true },
+      { source: "/seller-resources", destination: "/sellers/", permanent: true },
+      { source: "/seller-resources/", destination: "/sellers/", permanent: true },
+
       // ── GSC indexed URLs with no exact match ──
       { source: "/luxury/belleair", destination: "/belleair-luxury-homes/", permanent: true },
       { source: "/luxury/belleair/", destination: "/belleair-luxury-homes/", permanent: true },
