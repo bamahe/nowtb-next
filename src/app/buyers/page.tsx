@@ -227,7 +227,7 @@ export default function BuyersPage() {
               Whether you&apos;re a first-time buyer figuring out FHA loans or a seasoned
               investor adding to your portfolio, The NOW Team handles every detail from
               pre-approval referrals through the final walkthrough. Call me at{" "}
-              <a href="tel:+18137337907" className="text-accent hover:underline font-normal">(813) 733-7907</a>{" "}
+              <a href="tel:+18137337907" className="text-link hover:underline font-normal">(813) 733-7907</a>{" "}
               and let&apos;s get started.
             </p>
           </div>
@@ -357,7 +357,7 @@ export default function BuyersPage() {
                 </p>
                 <Link
                   href={prog.href}
-                  className="font-body text-sm text-accent hover:underline font-normal tracking-wide"
+                  className="font-body text-sm text-link hover:underline font-normal tracking-wide"
                 >
                   {prog.cta}
                 </Link>
@@ -396,14 +396,14 @@ export default function BuyersPage() {
             </p>
             <p className="font-body text-muted font-light leading-relaxed">
               Whether you&apos;re looking in{" "}
-              <Link href="/valrico" className="text-accent hover:underline">Valrico</Link>,{" "}
-              <Link href="/brandon" className="text-accent hover:underline">Brandon</Link>,{" "}
-              <Link href="/riverview" className="text-accent hover:underline">Riverview</Link>,{" "}
+              <Link href="/valrico" className="text-link hover:underline">Valrico</Link>,{" "}
+              <Link href="/brandon" className="text-link hover:underline">Brandon</Link>,{" "}
+              <Link href="/riverview" className="text-link hover:underline">Riverview</Link>,{" "}
               or anywhere else across the region, I&apos;ll give you the straight story on
               pricing, neighborhoods, schools, and commute times. Use the{" "}
-              <Link href="/mortgage-calculator" className="text-accent hover:underline">mortgage calculator</Link>{" "}
+              <Link href="/mortgage-calculator" className="text-link hover:underline">mortgage calculator</Link>{" "}
               to estimate your monthly payment, then{" "}
-              <Link href="/contact" className="text-accent hover:underline">reach out</Link>{" "}
+              <Link href="/contact" className="text-link hover:underline">reach out</Link>{" "}
               so we can put a plan together.
             </p>
           </div>
@@ -473,7 +473,7 @@ export default function BuyersPage() {
           <p className="font-body text-white/70 font-light text-base md:text-lg max-w-2xl mx-auto mb-10">
             Browse active listings across Tampa Bay — updated every 5 minutes from
             Stellar MLS. See something you like? Call me directly at{" "}
-            <a href="tel:+18137337907" className="text-accent hover:underline">(813) 733-7907</a>.
+            <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a>.
           </p>
           <Link href="/properties" className="btn-secondary">
             View All Properties

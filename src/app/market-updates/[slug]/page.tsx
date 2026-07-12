@@ -149,7 +149,7 @@ export default async function MarketUpdatePage({
                         <li key={r.slug}>
                           <Link
                             href={`/market-updates/${r.slug}`}
-                            className="font-body text-xs text-accent hover:underline"
+                            className="font-body text-xs text-link hover:underline"
                           >
                             {rCity}
                           </Link>

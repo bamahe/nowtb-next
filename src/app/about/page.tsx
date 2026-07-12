@@ -322,7 +322,7 @@ export default function AboutPage() {
                 href="https://vivipm.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent hover:underline"
+                className="text-link hover:underline"
               >
                 ViVi Property Management
               </a>{" "}
@@ -335,7 +335,7 @@ export default function AboutPage() {
                 href="https://hencre.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent hover:underline"
+                className="text-link hover:underline"
               >
                 hencre.com
               </a>
@@ -349,7 +349,7 @@ export default function AboutPage() {
                 href="https://valricopropertymgmt.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent hover:underline"
+                className="text-link hover:underline"
               >
                 Valrico Property Management
               </a>{" "}

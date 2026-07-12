@@ -111,16 +111,16 @@ export default function InvestingPage() {
           <p className="font-body text-muted mb-8">
             Barrett doesn&apos;t just help you buy investment properties &mdash; he provides
             the full ecosystem. Need professional property management?{" "}
-            <a href="https://vivipm.com" target="_blank" rel="noopener noreferrer" className="text-accent underline hover:text-primary">
+            <a href="https://vivipm.com" target="_blank" rel="noopener noreferrer" className="text-link underline hover:text-primary">
               ViVi PM
             </a>{" "}
             handles tenant screening, rent collection, and accounting. Need maintenance
             and repairs?{" "}
-            <a href="https://bestbayservices.com" target="_blank" rel="noopener noreferrer" className="text-accent underline hover:text-primary">
+            <a href="https://bestbayservices.com" target="_blank" rel="noopener noreferrer" className="text-link underline hover:text-primary">
               Best Bay Services
             </a>{" "}
             keeps your properties in top shape at competitive rates. Facing a{" "}
-            <a href="https://flforeclosurehelp.com" target="_blank" rel="noopener noreferrer" className="text-accent underline hover:text-primary">
+            <a href="https://flforeclosurehelp.com" target="_blank" rel="noopener noreferrer" className="text-link underline hover:text-primary">
               foreclosure situation
             </a>
             ? Barrett can help with that too.

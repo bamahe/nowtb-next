@@ -197,7 +197,7 @@ export default function TourScheduler({
             Need a faster response? Call{" "}
             <a
               href="tel:+18137337907"
-              className="text-accent hover:underline font-medium"
+              className="text-link hover:underline font-medium"
             >
               (813) 733-7907
             </a>

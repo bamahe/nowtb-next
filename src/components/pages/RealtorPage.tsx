@@ -578,11 +578,11 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
           <div className="space-y-6">
             <div className="border-b border-gray-100 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">Who is the best realtor in {city.name}, Florida?</h3>
-              <p className="font-body text-muted font-light">Barrett Henry is a top-producing REALTOR&reg; and Broker Associate with REMAX Collective serving {city.name} and the Tampa Bay area. With 23+ years of real estate experience, FL Broker License #BK3313308, and designations including e-PRO, MRP, and SRS, Barrett has the credentials and track record that matter. He is a REMAX Hall of Fame member. Call <a href="tel:+18137337907" className="text-accent hover:underline">(813) 733-7907</a>.</p>
+              <p className="font-body text-muted font-light">Barrett Henry is a top-producing REALTOR&reg; and Broker Associate with REMAX Collective serving {city.name} and the Tampa Bay area. With 23+ years of real estate experience, FL Broker License #BK3313308, and designations including e-PRO, MRP, and SRS, Barrett has the credentials and track record that matter. He is a REMAX Hall of Fame member. Call <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a>.</p>
             </div>
             <div className="border-b border-gray-100 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">How do I find a REALTOR&reg; in {city.name}?</h3>
-              <p className="font-body text-muted font-light">Contact Barrett Henry directly at <a href="tel:+18137337907" className="text-accent hover:underline">(813) 733-7907</a> or email <a href="mailto:barrett@nowtb.com" className="text-accent hover:underline">barrett@nowtb.com</a>. Barrett is a licensed Florida Broker Associate with REMAX Collective and serves all of {city.name}, {city.county} County, and the greater Tampa Bay metro.</p>
+              <p className="font-body text-muted font-light">Contact Barrett Henry directly at <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a> or email <a href="mailto:barrett@nowtb.com" className="text-link hover:underline">barrett@nowtb.com</a>. Barrett is a licensed Florida Broker Associate with REMAX Collective and serves all of {city.name}, {city.county} County, and the greater Tampa Bay metro.</p>
             </div>
             <div className="border-b border-gray-100 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">What neighborhoods does Barrett serve in {city.name}?</h3>
@@ -598,7 +598,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
             </div>
             <div className="pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">What is the {city.name} real estate market like right now?</h3>
-              <p className="font-body text-muted font-light">{totalListings > 0 ? `There are currently ${totalListings}+ active listings in ${city.name}.` : `The ${city.name} market is active.`} Market conditions change daily — Barrett monitors MLS data in real time and can provide a current market analysis for {city.name} in minutes. Call <a href="tel:+18137337907" className="text-accent hover:underline">(813) 733-7907</a> for the latest numbers.</p>
+              <p className="font-body text-muted font-light">{totalListings > 0 ? `There are currently ${totalListings}+ active listings in ${city.name}.` : `The ${city.name} market is active.`} Market conditions change daily — Barrett monitors MLS data in real time and can provide a current market analysis for {city.name} in minutes. Call <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a> for the latest numbers.</p>
             </div>
           </div>
         </div>
@@ -619,7 +619,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
           </h2>
           <p className="font-body text-muted text-center mb-8">
             Reach Barrett Henry directly. Call{" "}
-            <a href="tel:+18137337907" className="text-accent hover:underline">(813) 733-7907</a>{" "}
+            <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a>{" "}
             or send a message below.
           </p>
           <ContactForm webhookUrl="/api/contact" source={`${city.slug}-realtor`} />

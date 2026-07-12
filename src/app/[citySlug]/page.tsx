@@ -582,7 +582,7 @@ export default async function CityPage({
                     <h3 className="font-heading font-bold text-sm text-primary mb-3">Related Posts</h3>
                     <ul className="space-y-2">
                       {related.map((r) => (
-                        <li key={r.slug}><Link href={`/${r.slug}`} className="font-body text-xs text-accent hover:underline">{r.title}</Link></li>
+                        <li key={r.slug}><Link href={`/${r.slug}`} className="font-body text-xs text-link hover:underline">{r.title}</Link></li>
                       ))}
                     </ul>
                   </div>
@@ -1092,7 +1092,7 @@ async function HubPage({ city }: { city: CityData }) {
               Home prices in <strong>{city.name}</strong> vary by neighborhood, property type, and condition.
               Browse current active listings above for the most up-to-date pricing.
               Contact <strong>Barrett Henry</strong> at{" "}
-              <a href="tel:+18137337907" className="text-accent hover:underline"><strong>(813) 733-7907</strong></a>{" "}
+              <a href="tel:+18137337907" className="text-link hover:underline"><strong>(813) 733-7907</strong></a>{" "}
               for a personalized market analysis.
             </p>
           </div>
@@ -1114,7 +1114,7 @@ async function HubPage({ city }: { city: CityData }) {
               Start by getting pre-approved for a mortgage, then work with a local <strong>REALTOR®</strong>{" "}
               who knows the {city.name} market. <strong>Barrett Henry</strong> and The NOW Team have 23+ years
               of experience helping buyers in <strong>{city.county} County</strong>. Call{" "}
-              <a href="tel:+18137337907" className="text-accent hover:underline"><strong>(813) 733-7907</strong></a>{" "}
+              <a href="tel:+18137337907" className="text-link hover:underline"><strong>(813) 733-7907</strong></a>{" "}
               to get started.
             </p>
           </div>

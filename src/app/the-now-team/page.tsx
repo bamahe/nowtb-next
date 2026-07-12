@@ -256,7 +256,7 @@ export default function TheNowTeamPage() {
                 href="https://vivipm.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent hover:underline"
+                className="text-link hover:underline"
               >
                 ViVi PM
               </a>
@@ -423,7 +423,7 @@ export default function TheNowTeamPage() {
                 href="https://vivipm.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent hover:underline"
+                className="text-link hover:underline"
               >
                 ViVi PM
               </a>{" "}
@@ -436,7 +436,7 @@ export default function TheNowTeamPage() {
                 href="https://hencre.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent hover:underline"
+                className="text-link hover:underline"
               >
                 hencre.com
               </a>
@@ -507,18 +507,18 @@ export default function TheNowTeamPage() {
               </h3>
               <p className="font-body text-muted font-light text-base leading-relaxed">
                 Call{" "}
-                <a href="tel:8137337907" className="text-accent hover:underline">
+                <a href="tel:8137337907" className="text-link hover:underline">
                   (813) 733-7907
                 </a>
                 , email{" "}
                 <a
                   href="mailto:barrett@nowtb.com"
-                  className="text-accent hover:underline"
+                  className="text-link hover:underline"
                 >
                   barrett@nowtb.com
                 </a>
                 , or use the{" "}
-                <Link href="/contact" className="text-accent hover:underline">
+                <Link href="/contact" className="text-link hover:underline">
                   contact form
                 </Link>
                 . Barrett responds within 2 hours during business hours.

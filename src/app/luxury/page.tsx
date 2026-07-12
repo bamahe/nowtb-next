@@ -244,11 +244,11 @@ export default async function LuxuryPage() {
             <p className="font-body text-base text-muted font-light leading-relaxed mb-6">
               Unlike single-market luxury cities, Tampa Bay offers diverse luxury experiences within
               a short drive. A buyer can choose between the urban sophistication of{" "}
-              <Link href="/south-tampa" className="text-accent hover:underline">South Tampa</Link>,
+              <Link href="/south-tampa" className="text-link hover:underline">South Tampa</Link>,
               the island exclusivity of{" "}
-              <Link href="/davis-islands" className="text-accent hover:underline">Davis Islands</Link>,
+              <Link href="/davis-islands" className="text-link hover:underline">Davis Islands</Link>,
               the Gulf-front lifestyle of{" "}
-              <Link href="/clearwater" className="text-accent hover:underline">Clearwater Beach</Link>,
+              <Link href="/clearwater" className="text-link hover:underline">Clearwater Beach</Link>,
               or the quiet elegance of barrier island communities like Longboat Key and Siesta Key —
               all within the same metropolitan area.
             </p>
@@ -391,9 +391,9 @@ export default async function LuxuryPage() {
             </p>
             <p className="font-body text-white/70 font-light text-base leading-relaxed">
               Call{" "}
-              <a href="tel:+18137337907" className="text-accent hover:underline">(813) 733-7907</a>{" "}
+              <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a>{" "}
               to schedule a private consultation or{" "}
-              <Link href="/home-valuation" className="text-accent hover:underline">
+              <Link href="/home-valuation" className="text-link hover:underline">
                 request a complimentary home valuation
               </Link>{" "}
               for your luxury property.
@@ -439,11 +439,11 @@ export default async function LuxuryPage() {
               </h3>
               <p className="font-body text-sm text-muted font-light leading-relaxed">
                 The top luxury neighborhoods include{" "}
-                <Link href="/south-tampa" className="text-accent hover:underline">South Tampa</Link>{" "}
+                <Link href="/south-tampa" className="text-link hover:underline">South Tampa</Link>{" "}
                 (Hyde Park, Beach Park, Palma Ceia),{" "}
-                <Link href="/davis-islands" className="text-accent hover:underline">Davis Islands</Link>,
+                <Link href="/davis-islands" className="text-link hover:underline">Davis Islands</Link>,
                 Harbour Island,{" "}
-                <Link href="/clearwater" className="text-accent hover:underline">Clearwater Beach</Link>,
+                <Link href="/clearwater" className="text-link hover:underline">Clearwater Beach</Link>,
                 Belleair, Siesta Key, Longboat Key, and Anna Maria Island. Each offers a distinct
                 lifestyle, from urban walkability to Gulf-front seclusion.
               </p>
@@ -469,7 +469,7 @@ export default async function LuxuryPage() {
                 regulations, seawall inspections, dock permits, and premium property valuations.
                 An experienced luxury agent like Barrett Henry protects your investment and your privacy.
                 Call{" "}
-                <a href="tel:+18137337907" className="text-accent hover:underline">(813) 733-7907</a>{" "}
+                <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a>{" "}
                 to discuss your situation.
               </p>
             </div>

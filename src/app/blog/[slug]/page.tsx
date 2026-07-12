@@ -95,7 +95,7 @@ export default async function BlogPostPage({
           <h1 className="heading-display text-display md:text-display-lg text-white mb-4">
             {post.title}
           </h1>
-          <div className="flex items-center justify-center gap-3 text-sm font-body text-accent">
+          <div className="flex items-center justify-center gap-3 text-sm font-body text-link">
             <time dateTime={post.date}>
               {new Date(post.date).toLocaleDateString("en-US", {
                 year: "numeric",
@@ -149,7 +149,7 @@ export default async function BlogPostPage({
                       <li key={r.slug}>
                         <Link
                           href={`/${r.slug}`}
-                          className="font-body text-xs text-accent hover:underline"
+                          className="font-body text-xs text-link hover:underline"
                         >
                           {r.title}
                         </Link>
@@ -178,7 +178,7 @@ export default async function BlogPostPage({
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="font-body text-xs text-accent hover:underline"
+                        className="font-body text-xs text-link hover:underline"
                       >
                         {link.label}
                       </Link>

@@ -458,11 +458,11 @@ export default function BuildersPage() {
           <p className="font-body text-white/70 font-light text-base md:text-lg max-w-2xl mx-auto mb-10">
             Barrett Henry tours new construction communities across Tampa Bay every week.
             Call{" "}
-            <a href="tel:+18137337907" className="text-accent hover:underline">
+            <a href="tel:+18137337907" className="text-link hover:underline">
               (813) 733-7907
             </a>{" "}
             to schedule a builder tour or browse{" "}
-            <Link href="/new-construction-homes-tampa-bay" className="text-accent hover:underline">
+            <Link href="/new-construction-homes-tampa-bay" className="text-link hover:underline">
               active new construction listings
             </Link>{" "}
             right now.

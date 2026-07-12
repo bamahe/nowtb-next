@@ -397,7 +397,7 @@ export default function ChatWidget() {
             </div>
             <p className="text-[10px] text-muted text-center mt-1.5 font-body">
               AI assistant — for personalized advice, call{" "}
-              <a href="tel:+18137337907" className="text-accent hover:underline">
+              <a href="tel:+18137337907" className="text-link hover:underline">
                 (813) 733-7907
               </a>
             </p>

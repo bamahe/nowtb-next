@@ -416,7 +416,7 @@ export default function RelocationPage() {
               Barrett Henry is a Broker Associate at REMAX Collective with 23+ years of
               real estate experience, MRP certification for military relocations, and a
               deep knowledge of every Tampa Bay community. Call{" "}
-              <a href="tel:+18137337907" className="text-accent hover:underline">
+              <a href="tel:+18137337907" className="text-link hover:underline">
                 (813) 733-7907
               </a>{" "}
               to start planning your move.

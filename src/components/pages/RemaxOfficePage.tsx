@@ -230,8 +230,8 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
               </div>
               <div className="mt-6 space-y-2 font-body text-sm text-muted">
                 <p><strong>Office:</strong> {office.address}</p>
-                <p><strong>Direct:</strong> <a href="tel:+18137337907" className="text-accent hover:underline">(813) 733-7907</a></p>
-                <p><strong>Email:</strong> <a href="mailto:barrett@nowtb.com" className="text-accent hover:underline">barrett@nowtb.com</a></p>
+                <p><strong>Direct:</strong> <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a></p>
+                <p><strong>Email:</strong> <a href="mailto:barrett@nowtb.com" className="text-link hover:underline">barrett@nowtb.com</a></p>
                 <p><strong>License:</strong> FL Broker #BK3313308</p>
                 <p><strong>Designations:</strong> e-PRO, MRP, SRS</p>
                 <p><strong>Career Award:</strong> REMAX Hall of Fame</p>
@@ -742,7 +742,7 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
           <div className="space-y-6">
             <div className="border-b border-gray-200 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">Where is the REMAX office in {office.city}?</h3>
-              <p className="font-body text-muted font-light">The REMAX Collective {office.city} office is at <strong>{office.address}</strong>. Barrett Henry is a Broker Associate at this location. Call <a href="tel:+18137337907" className="text-accent hover:underline">(813) 733-7907</a> to schedule an appointment or just walk in.</p>
+              <p className="font-body text-muted font-light">The REMAX Collective {office.city} office is at <strong>{office.address}</strong>. Barrett Henry is a Broker Associate at this location. Call <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a> to schedule an appointment or just walk in.</p>
             </div>
             <div className="border-b border-gray-200 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">Why should I choose REMAX over other brokerages in {office.city}?</h3>
@@ -766,11 +766,11 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
             </div>
             <div className="border-b border-gray-200 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">How do I contact REMAX in {office.city}?</h3>
-              <p className="font-body text-muted font-light">Call Barrett Henry directly at <a href="tel:+18137337907" className="text-accent hover:underline">(813) 733-7907</a> or email <a href="mailto:barrett@nowtb.com" className="text-accent hover:underline">barrett@nowtb.com</a>. The {office.city} office is at {office.address}.</p>
+              <p className="font-body text-muted font-light">Call Barrett Henry directly at <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a> or email <a href="mailto:barrett@nowtb.com" className="text-link hover:underline">barrett@nowtb.com</a>. The {office.city} office is at {office.address}.</p>
             </div>
             <div className="pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">Does REMAX {office.city} help with rentals and property management?</h3>
-              <p className="font-body text-muted font-light">Yes. Barrett and The NOW Team assist with both sales and rentals across {office.city} and the Tampa Bay area. For full-service property management, visit <a href="https://vivipm.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">vivipm.com</a> (ViVi PM).</p>
+              <p className="font-body text-muted font-light">Yes. Barrett and The NOW Team assist with both sales and rentals across {office.city} and the Tampa Bay area. For full-service property management, visit <a href="https://vivipm.com" target="_blank" rel="noopener noreferrer" className="text-link hover:underline">vivipm.com</a> (ViVi PM).</p>
             </div>
           </div>
         </div>
@@ -783,7 +783,7 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
         <div className="container-wide max-w-2xl">
           <h2 className="font-heading font-bold text-2xl text-primary mb-2 text-center">Contact REMAX {office.city}</h2>
           <p className="font-body text-muted text-center mb-8">
-            Reach Barrett Henry at the {office.city} office. Call <a href="tel:+18137337907" className="text-accent hover:underline">(813) 733-7907</a> or send a message below.
+            Reach Barrett Henry at the {office.city} office. Call <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a> or send a message below.
           </p>
           <ContactForm webhookUrl="/api/contact" source={`remax-${officeKey}`} />
         </div>

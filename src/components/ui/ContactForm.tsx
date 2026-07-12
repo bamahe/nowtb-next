@@ -126,7 +126,7 @@ export default function ContactForm({
           </p>
           <p className="font-body text-muted text-xs mb-6">
             Need a faster response? Call{" "}
-            <a href="tel:+18137337907" className="text-accent hover:underline font-medium">
+            <a href="tel:+18137337907" className="text-link hover:underline font-medium">
               (813) 733-7907
             </a>
           </p>

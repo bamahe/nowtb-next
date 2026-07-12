@@ -142,7 +142,7 @@ export default function PortabilityCalc() {
       <p className="font-body text-xs text-muted mt-4">
         Estimate based on ~1.1% effective tax rate (Hillsborough County average).
         Actual savings depend on your county, millage rate, and additional exemptions.
-        Contact Barrett at <a href="tel:+18137337907" className="text-accent hover:underline">(813) 733-7907</a> for
+        Contact Barrett at <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a> for
         a personalized tax impact analysis before you list or buy.
       </p>
     </div>

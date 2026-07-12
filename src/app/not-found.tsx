@@ -47,7 +47,7 @@ export default function NotFound() {
           Need help? Call{" "}
           <a
             href="tel:+18137337907"
-            className="text-accent hover:underline"
+            className="text-link hover:underline"
           >
             (813) 733-7907
           </a>

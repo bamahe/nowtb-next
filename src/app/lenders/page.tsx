@@ -264,7 +264,7 @@ export default function LendersPage() {
                 <tr key={loan.name} className="border-b border-border">
                   <td className="font-body text-primary font-medium py-4 pr-4 text-sm">
                     {loan.link ? (
-                      <Link href={loan.link} className="text-accent hover:underline">
+                      <Link href={loan.link} className="text-link hover:underline">
                         {loan.name}
                       </Link>
                     ) : (

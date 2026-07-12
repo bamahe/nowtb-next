@@ -409,7 +409,7 @@ export default async function CommercialPage() {
                 href="https://vivipm.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent underline hover:text-primary"
+                className="text-link underline hover:text-primary"
               >
                 ViVi PM
               </a>
@@ -418,7 +418,7 @@ export default async function CommercialPage() {
                 href="https://bestbayservices.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent underline hover:text-primary"
+                className="text-link underline hover:text-primary"
               >
                 Best Bay Services
               </a>
@@ -427,7 +427,7 @@ export default async function CommercialPage() {
                 href="https://hencre.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent underline hover:text-primary"
+                className="text-link underline hover:text-primary"
               >
                 hencre.com
               </a>
@@ -495,7 +495,7 @@ export default async function CommercialPage() {
           <p className="font-body text-muted text-center mb-8">
             Barrett Henry helps buyers, sellers, tenants, and investors navigate
             Tampa Bay&apos;s commercial market. Call{" "}
-            <a href="tel:+18137337907" className="text-accent hover:underline font-semibold">
+            <a href="tel:+18137337907" className="text-link hover:underline font-semibold">
               (813) 733-7907
             </a>{" "}
             or fill out the form below.
