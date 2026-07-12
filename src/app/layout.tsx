@@ -126,10 +126,9 @@ export default function RootLayout({
         <BackToTop />
         {/* AI chat assistant — lazy-loaded, client-only (no SSR) */}
         <ClientChatWidget />
-        {/* Exit-intent popup — offers free CMA when user is about to leave.
-            Desktop: mouse leaves viewport. Mobile: after 45 seconds.
-            Once per session via sessionStorage. */}
+        {/* Exit-intent popup — DISABLED per Barrett's request
         <ClientExitIntent />
+        */}
         {/* FUB tracking pixel — tracks page views across the site
             so you can see which listings leads browsed in Follow Up Boss */}
         <FubPixel />

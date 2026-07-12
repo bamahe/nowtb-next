@@ -506,7 +506,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {featured.map((t) => (
               <div key={t.name} className="border border-gray-100 p-8">
-                <p className="text-accent text-lg mb-4">&starf;&starf;&starf;&starf;&starf;</p>
+                <p className="text-accent text-lg mb-4">★★★★★</p>
                 <p className="font-body text-muted font-light text-sm leading-relaxed mb-6">&ldquo;{t.quote}&rdquo;</p>
                 <p className="font-body text-primary font-medium text-sm">{t.name}</p>
                 <p className="font-body text-muted/60 text-xs">{t.location}</p>
