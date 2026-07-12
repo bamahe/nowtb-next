@@ -10,6 +10,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Phone, Calculator, Search } from "lucide-react";
 import ContactForm from "@/components/ui/ContactForm";
+import PortabilityCalc from "@/components/ui/PortabilityCalc";
 import { getPrimaryAgent } from "@/data/agents";
 import { cleanWpContent } from "@/lib/utils";
 import {
@@ -220,6 +221,11 @@ export default async function GuidePage({
                   prose-p:leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: cleanWpContent(wpContent) }}
               />
+
+              {/* Portability calculator — only on the homestead guide */}
+              {guide.slug === "florida-homestead-exemption-save-our-homes" && (
+                <PortabilityCalc />
+              )}
 
               {/* Back to guides link */}
               <div className="mt-8 pt-8 border-t border-gray-200">
