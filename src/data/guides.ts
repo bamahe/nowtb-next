@@ -645,6 +645,22 @@ export const guides: GuideData[] = [
     ]),
   },
   {
+    slug: "florida-homestead-exemption-save-our-homes",
+    title: "Florida Homestead Exemption & Save Our Homes Guide",
+    excerpt: "How Florida's Homestead Exemption and Save Our Homes portability work, what transfers when you sell, and how to file.",
+    date: "2026-07-12",
+    category: "Buying",
+    readingTime: "8 min read",
+    sections: makeSections("Florida Homestead Exemption & Save Our Homes Guide", [
+      "What Is the Homestead Exemption?",
+      "What Is Save Our Homes?",
+      "What Happens When You Sell",
+      "Portability: How It Works",
+      "Deadlines to Know",
+      "How to File",
+    ]),
+  },
+  {
     slug: "florida-property-tax-guide",
     title: "Florida Property Tax Guide",
     excerpt: "How property taxes work in Florida — millage rates, exemptions, and how to appeal your assessment.",
