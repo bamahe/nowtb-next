@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import MobileBottomBar from "@/components/ui/MobileBottomBar";
 import BackToTop from "@/components/ui/BackToTop";
 import ClientChatWidget from "@/components/ui/ClientChatWidget";
+import ClientExitIntent from "@/components/ui/ClientExitIntent";
 import CookieConsent from "@/components/ui/CookieConsent";
 import FubPixel from "@/components/tracking/FubPixel";
 import { Analytics } from "@vercel/analytics/react";
@@ -91,6 +92,10 @@ export default function RootLayout({
         <BackToTop />
         {/* AI chat assistant — lazy-loaded, client-only (no SSR) */}
         <ClientChatWidget />
+        {/* Exit-intent popup — offers free CMA when user is about to leave.
+            Desktop: mouse leaves viewport. Mobile: after 45 seconds.
+            Once per session via sessionStorage. */}
+        <ClientExitIntent />
         {/* FUB tracking pixel — tracks page views across the site
             so you can see which listings leads browsed in Follow Up Boss */}
         <FubPixel />
