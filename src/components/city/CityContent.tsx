@@ -365,7 +365,7 @@ function SpokeTopicContent({
           <p>
             Financing a luxury home often means a{" "}
             <a href="/jumbo-loan-florida/" className="text-link hover:underline">jumbo loan</a>,
-            which exceeds the conforming loan limit (currently $766,550 in most Florida
+            which exceeds the conforming loan limit (currently $806,500 in most Florida
             counties). Jumbo loans typically require a larger down payment (10 to 20
             percent), higher credit scores, and more extensive income documentation. I
             work with lenders who specialize in jumbo and portfolio products to get you
