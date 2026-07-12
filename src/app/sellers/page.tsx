@@ -119,6 +119,67 @@ export default function SellersPage() {
         }}
       />
 
+      {/* FAQPage schema — matches the question-format H2s on this page */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What does it take to sell a home in Tampa Bay?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Selling a home successfully comes down to three things: accurate pricing, aggressive marketing, and a listing agent who actually negotiates. Barrett Henry brings 23+ years of real estate experience and a full-service approach — professional photography, MLS syndication, digital advertising, and hands-on guidance from first meeting through closing day.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How should you price your home?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Pricing is the single most important decision you will make as a seller. Barrett runs a detailed comparative market analysis (CMA) that looks at recent closed sales, active competition, pending contracts, and expired listings in your neighborhood, factoring in condition, upgrades, lot size, and location to arrive at a data-backed price.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How do I market your home?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Every listing gets professional HDR photography, drone aerials, 3D virtual tours, Stellar MLS syndication to Zillow, Realtor.com, Redfin, and Homes.com, targeted Facebook and Instagram ads, social channel promotion, and strategic open houses designed to drive multiple offers.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How should you prepare your home for showings?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Key steps include decluttering every room, deep cleaning kitchens and bathrooms, neutralizing bold paint colors, boosting curb appeal with fresh mulch and trimmed hedges, replacing burned-out bulbs, removing personal photos, staging the owners suite with clean neutral bedding, and addressing small repairs like leaky faucets and cracked switch plates.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What do Florida sellers need to disclose?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Under Florida Statute 689.25, sellers must disclose any known material defects that affect property value and are not readily observable. Common items include roof/foundation/plumbing defects, water intrusion history, sinkhole activity, HOA/CDD fees, previous insurance claims, lead-based paint (pre-1978 homes), environmental hazards, and any ongoing litigation or code enforcement violations.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How long does it take to sell a home?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Most Tampa Bay homes sell within 8 to 10 weeks from listing to closing. The timeline includes 1-2 weeks of pre-listing prep, going live in weeks 2-3, offers and negotiation in weeks 3-5, the under-contract phase in weeks 5-8, and closing day around weeks 8-10.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* ---- Hero Section — full viewport ---- */}
       <HeroSection
         title="Sell Your Home"

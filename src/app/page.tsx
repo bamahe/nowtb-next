@@ -11,6 +11,7 @@ import HeroSection from "@/components/ui/HeroSection";
 import SearchBar from "@/components/ui/SearchBar";
 import ListingGrid from "@/components/ui/ListingGrid";
 import CityGrid from "@/components/ui/CityGrid";
+import ContactForm from "@/components/ui/ContactForm";
 import { getFeaturedListings } from "@/lib/bridge";
 import { getPrimaryAgent } from "@/data/agents";
 import { testimonials } from "@/data/testimonials";
@@ -79,7 +80,7 @@ export default async function HomePage() {
 
   return (
     <>
-      {/* === JSON-LD: RealEstateAgent structured data === */}
+      {/* === JSON-LD: RealEstateAgent structured data (merged with aggregateRating) === */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -121,42 +122,6 @@ export default async function HomePage() {
               "Investment Properties",
               "New Construction",
             ],
-          }),
-        }}
-      />
-
-      {/* === JSON-LD: WebSite schema with SearchAction (sitelinks search box) === */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            name: "Barrett Henry, REALTOR® — The NOW Team",
-            url: "https://nowtb.com",
-            potentialAction: {
-              "@type": "SearchAction",
-              target: {
-                "@type": "EntryPoint",
-                urlTemplate: "https://nowtb.com/properties?q={search_term_string}",
-              },
-              "query-input": "required name=search_term_string",
-            },
-          }),
-        }}
-      />
-
-      {/* === JSON-LD: AggregateRating from Google Reviews === */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "RealEstateAgent",
-            name: "Barrett Henry, REALTOR® — REMAX Collective",
-            url: "https://nowtb.com",
-            image: "https://nowtb.com/images/barrett-henry.jpg",
-            telephone: "(813) 733-7907",
             aggregateRating: {
               "@type": "AggregateRating",
               ratingValue: "5.0",
@@ -184,6 +149,27 @@ export default async function HomePage() {
                 reviewBody: "Barrett is without question the most professional real estate agent I have ever done business with.",
               },
             ],
+          }),
+        }}
+      />
+
+      {/* === JSON-LD: WebSite schema with SearchAction (sitelinks search box) === */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Barrett Henry, REALTOR® — The NOW Team",
+            url: "https://nowtb.com",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: {
+                "@type": "EntryPoint",
+                urlTemplate: "https://nowtb.com/properties?q={search_term_string}",
+              },
+              "query-input": "required name=search_term_string",
+            },
           }),
         }}
       />
@@ -392,6 +378,26 @@ export default async function HomePage() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* =================================================================
+          SECTION 5b: Lead Capture Form — navy bg, compact 3-field form
+          ================================================================= */}
+      <section className="bg-primary py-20">
+        <div className="container-wide max-w-xl mx-auto text-center">
+          <p className="heading-label text-white/50 mb-6">Talk to Barrett</p>
+          <h2 className="font-heading font-extralight text-2xl md:text-3xl tracking-[0.1em] uppercase text-white mb-2">
+            Get Expert Advice on Tampa Bay Real Estate
+          </h2>
+          <div className="section-divider" />
+          <p className="font-body text-white/60 font-light text-sm mb-10">
+            Barrett Henry responds within 2 hours.
+          </p>
+          <ContactForm
+            webhookUrl="/api/contact"
+            source="homepage-form"
+          />
         </div>
       </section>
 
