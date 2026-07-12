@@ -407,21 +407,21 @@ export default function ChatWidget() {
 
       {/* ── Proactive Chat Tooltip ── */}
       {showTooltip && !isOpen && (
-        <div className="fixed z-50 right-20 bottom-[4.5rem] sm:bottom-20 md:bottom-8">
-          <div className="relative bg-white text-dark rounded-lg shadow-xl px-4 py-3 max-w-[220px] border border-border">
-            <p className="font-body text-sm leading-snug">
+        <div className="fixed z-50 right-4 bottom-28 sm:bottom-32 md:bottom-20">
+          <div className="relative bg-white text-dark rounded-xl shadow-2xl px-4 py-3 w-[240px] border border-border">
+            <p className="font-body text-sm leading-snug pr-4">
               Looking for homes in Tampa Bay? I can help!
             </p>
             {/* Dismiss button */}
             <button
               onClick={() => setShowTooltip(false)}
-              className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-muted/20 text-muted hover:bg-muted/40 flex items-center justify-center text-xs transition-colors"
+              className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-gray-200 text-gray-600 hover:bg-gray-300 flex items-center justify-center text-xs transition-colors"
               aria-label="Dismiss"
             >
               &times;
             </button>
-            {/* Arrow pointing right toward the chat bubble */}
-            <div className="absolute top-1/2 -right-2 -translate-y-1/2 w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-l-[8px] border-l-white" />
+            {/* Arrow pointing down toward the chat bubble */}
+            <div className="absolute -bottom-2 right-6 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-white" />
           </div>
         </div>
       )}

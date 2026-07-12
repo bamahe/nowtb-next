@@ -204,7 +204,7 @@ function parseSlug(slug: string): PageType | "market-update" | "blog-post" | nul
 // request triggered a fresh API call — ~3,000 unique pages × crawlers = rate limit.
 // After deploy, the first visitor to each page triggers a fresh API call (build
 // returns empty via IS_BUILD_TIME), then the result is cached for subsequent visitors.
-export const revalidate = 900; // 15 minutes, matches bridgeFetch cache
+export const revalidate = 3600; // 15 minutes, matches bridgeFetch cache
 // Allow pages not in generateStaticParams to render on-demand (ISR)
 export const dynamicParams = true;
 

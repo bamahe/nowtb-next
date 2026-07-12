@@ -12,7 +12,7 @@ import { Bed, Bath, Ruler, Calendar, LandPlot, Car, Home, ChevronRight } from "l
 
 // ISR: cache property pages for 15 min so cached listings survive rate limit windows.
 // Without this, every visitor triggers fresh API calls (6 per page!), exhausting the quota.
-export const revalidate = 900;
+export const revalidate = 3600;
 
 import BuyingPower from "@/components/ui/BuyingPower";
 import FavoriteButton from "@/components/ui/FavoriteButton";

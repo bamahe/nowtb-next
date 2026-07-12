@@ -6,6 +6,7 @@
 "use client";
 
 import { useState, useCallback, type FormEvent } from "react";
+import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import TurnstileWidget from "@/components/ui/TurnstileWidget";
 
@@ -49,6 +50,9 @@ export default function ContactForm({
   title,
   submitLabel = "Send Message",
 }: ContactFormProps) {
+  // --- Next.js router for post-submission redirect ---
+  const router = useRouter();
+
   // --- Form field state ---
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -89,6 +93,9 @@ export default function ContactForm({
       setPhone("");
       setMessage("");
       setStatus("success");
+
+      // Redirect to thank-you page (success state above is fallback if redirect doesn't fire)
+      router.push("/thank-you/");
     } catch (err) {
       console.error("Contact form submission failed:", err);
       setErrorMessage(

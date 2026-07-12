@@ -13,7 +13,7 @@ import { getListings } from "@/lib/bridge";
 import type { Listing } from "@/lib/types";
 
 // ISR: cache for 15 min to reduce Bridge API calls
-export const revalidate = 900;
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Commercial Real Estate Tampa Bay | Barrett Henry, REALTOR®",

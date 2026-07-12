@@ -307,6 +307,9 @@ select {
   text-align: center;
   color: #fff !important;
 }
+.nowtb-cta-box h2,
+.nowtb-cta-box h3,
+.nowtb-cta-box h4,
 .nowtb-cta-box p { color: #fff !important; }
 .nowtb-cta-box a { color: #fff !important; text-decoration: underline; }
 .nowtb-cta-box .nowtb-cta-btn-primary {

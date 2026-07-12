@@ -83,7 +83,7 @@ async function bridgeFetch<T>(
     },
     // Cache Bridge API responses for 15 minutes to reduce API calls
     // With 4,000+ pages, shorter cache = thousands of requests/hour
-    next: { revalidate: 900 },
+    next: { revalidate: 3600 },
   });
 
   // If rate limited, activate cooldown immediately — don't waste another request
@@ -215,7 +215,7 @@ export async function getListing(id: string): Promise<Listing | null> {
         Authorization: `Bearer ${BRIDGE_TOKEN}`,
         Accept: 'application/json',
       },
-      next: { revalidate: 900 },
+      next: { revalidate: 3600 },
     });
 
     if (res.status === 429) {
@@ -231,7 +231,7 @@ export async function getListing(id: string): Promise<Listing | null> {
           Authorization: `Bearer ${BRIDGE_TOKEN}`,
           Accept: 'application/json',
         },
-        next: { revalidate: 900 },
+        next: { revalidate: 3600 },
       });
       if (res.ok) {
         const searchData = await res.json();
@@ -433,7 +433,7 @@ export async function getOpenHouses(zipCodes?: string[]): Promise<Listing[]> {
         Authorization: `Bearer ${BRIDGE_TOKEN}`,
         Accept: 'application/json',
       },
-      next: { revalidate: 900 },
+      next: { revalidate: 3600 },
     });
 
     if (ohRes.status === 429) { markRateLimited(); return []; }
