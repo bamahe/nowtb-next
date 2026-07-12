@@ -25,6 +25,7 @@ import RealtorPage from "@/components/pages/RealtorPage";
 import NeighborhoodPage from "@/components/pages/NeighborhoodPage";
 import SellYourHomeCityPage from "@/components/pages/SellYourHomeCityPage";
 import LoanGuidePage from "@/components/pages/LoanGuidePage";
+import { getLoanContent } from "@/data/loan-content";
 import ComparisonPage from "@/components/pages/ComparisonPage";
 import RegionalPage from "@/components/pages/RegionalPage";
 import MiscCatchAllPage from "@/components/pages/MiscCatchAllPage";
@@ -680,8 +681,21 @@ export default async function CityPage({
       return <RealtorPage city={page.city} />;
     case "sell-city":
       return <SellYourHomeCityPage cityName={page.city.name} citySlug={page.city.slug} zipCodes={page.city.zip_codes} />;
-    case "loan":
-      return <LoanGuidePage loanType={page.loanType} slug={page.slug} />;
+    case "loan": {
+      // Look up authoritative loan content from data file (falls back to defaults if not found)
+      const content = getLoanContent(page.slug);
+      return (
+        <LoanGuidePage
+          loanType={page.loanType}
+          slug={page.slug}
+          description={content?.description}
+          requirements={content?.requirements}
+          benefits={content?.benefits}
+          faq={content?.faq}
+          proTips={content?.proTips}
+        />
+      );
+    }
     case "neighborhood": {
       // Look up the parent city for back-links and nearby neighborhoods
       const neighborhoodCity = getCityBySlug(page.city) || cities[0]; // fallback to first city
@@ -1337,7 +1351,7 @@ async function SpokePage({
     min: bucket.min,
     max: bucket.max,
     count: listings.filter(l => l.ListPrice >= bucket.min && l.ListPrice < bucket.max).length,
-    href: `/properties/search/?q=${encodeURIComponent(city.name)}&min_price=${bucket.min}${bucket.max < Infinity ? `&max_price=${bucket.max}` : ''}`,
+    href: `/properties/search/?q=${encodeURIComponent(city.name)}&min_price=${bucket.min}${bucket.max < Infinity ? `&max_price=${bucket.max}` : ''}&exclude_rental=true`,
   }));
 
   // Find a market update post for this city if one exists
