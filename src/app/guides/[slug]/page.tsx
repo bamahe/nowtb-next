@@ -5,6 +5,7 @@
 // =============================================================================
 
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Phone, Calculator, Search } from "lucide-react";
@@ -186,10 +187,17 @@ export default async function GuidePage({
             <aside className="lg:col-span-1 order-2 lg:order-1">
               <div className="lg:sticky lg:top-24 space-y-6">
                 <div className="card p-5 bg-primary/5">
-                  <h3 className="font-heading font-bold text-sm text-primary mb-2">
+                  <Image
+                    src="/images/barrett-headshot.png"
+                    alt="Barrett Henry, REALTOR® and Broker Associate at REMAX Collective"
+                    width={80}
+                    height={80}
+                    className="rounded-full mx-auto mb-3"
+                  />
+                  <h3 className="font-heading font-bold text-sm text-primary mb-2 text-center">
                     Need Personal Guidance?
                   </h3>
-                  <p className="font-body text-muted text-xs mb-3">
+                  <p className="font-body text-muted text-xs mb-3 text-center">
                     Barrett Henry has 23+ years of real estate experience. Call or
                     text anytime.
                   </p>
@@ -265,10 +273,17 @@ export default async function GuidePage({
                 </nav>
 
                 <div className="card p-5 bg-primary/5">
-                  <h3 className="font-heading font-bold text-sm text-primary mb-2">
+                  <Image
+                    src="/images/barrett-headshot.png"
+                    alt="Barrett Henry, REALTOR® and Broker Associate at REMAX Collective"
+                    width={80}
+                    height={80}
+                    className="rounded-full mx-auto mb-3"
+                  />
+                  <h3 className="font-heading font-bold text-sm text-primary mb-2 text-center">
                     Need Personal Guidance?
                   </h3>
-                  <p className="font-body text-muted text-xs mb-3">
+                  <p className="font-body text-muted text-xs mb-3 text-center">
                     Barrett Henry has 23+ years of real estate experience. Call or
                     text anytime.
                   </p>
