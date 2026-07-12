@@ -351,6 +351,7 @@ export default async function NeighborhoodPage({
             ? `Active listings in the ${name} subdivision.`
             : `Showing homes in the ${city} area. No active listings in ${name} right now.`
           }
+          areaName={name}
           className="container-wide py-12"
         />
       ) : (

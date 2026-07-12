@@ -20,6 +20,8 @@ interface ListingGridProps {
   className?: string;
   /** Heading level for the section title — h2 (default) or h3 for secondary sections */
   headingLevel?: "h2" | "h3";
+  /** Optional area name for contextual CTA ("Want to see what your {areaName} property is worth?") */
+  areaName?: string;
 }
 
 export default function ListingGrid({
@@ -28,6 +30,7 @@ export default function ListingGrid({
   subtitle,
   className,
   headingLevel = "h2",
+  areaName,
 }: ListingGridProps) {
   // Show a helpful message when no listings are available
   if (!listings || listings.length === 0) {
@@ -84,25 +87,39 @@ export default function ListingGrid({
             <ListingCard listing={listing} />
 
             {/* --- Inline CTA card — injected after the 8th listing --- */}
+            {/* Buyer CTA after 8th listing */}
             {index === 7 && listings.length >= 8 && (
               <div
-                key="cta-card"
-                className="flex flex-col items-center justify-center gap-4 rounded-2xl border-2 border-accent bg-accent/10 p-6 text-center"
+                key="cta-buyer"
+                className="flex flex-col items-center justify-center gap-3 rounded-2xl border-2 border-accent bg-accent/10 p-6 text-center"
               >
                 <p className="font-heading text-lg font-bold text-primary leading-snug">
-                  Looking for the right home? Barrett Henry can help.
+                  {areaName ? `Looking for homes in ${areaName}?` : "Looking for the right home?"}
                 </p>
+                <p className="font-body text-muted text-sm">Barrett Henry can help. 23+ years of experience.</p>
                 <a
                   href="tel:+18137337907"
-                  className="font-body text-accent text-base font-semibold hover:underline"
+                  className="inline-block rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary/90"
                 >
-                  (813) 733-7907
+                  Call (813) 733-7907
                 </a>
+              </div>
+            )}
+            {/* Seller CTA after 16th listing */}
+            {index === 15 && listings.length >= 16 && (
+              <div
+                key="cta-seller"
+                className="flex flex-col items-center justify-center gap-3 rounded-2xl border-2 border-primary bg-primary/5 p-6 text-center"
+              >
+                <p className="font-heading text-lg font-bold text-primary leading-snug">
+                  {areaName ? `What's your ${areaName} property worth?` : "What's your home worth?"}
+                </p>
+                <p className="font-body text-muted text-sm">Get a free, no-obligation market analysis.</p>
                 <Link
-                  href="/contact/"
-                  className="inline-block rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-accent/90"
+                  href="/free-home-valuation/"
+                  className="inline-block rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary/90"
                 >
-                  Send a Message
+                  Get Your Free CMA
                 </Link>
               </div>
             )}
