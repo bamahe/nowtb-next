@@ -53,6 +53,7 @@ const FOOTER_COLUMNS = [
       { href: "/dover", label: "Dover" },
       { href: "/thonotosassa", label: "Thonotosassa" },
       { href: "/ruskin", label: "Ruskin" },
+      { href: "/tampa", label: "Tampa" },
     ],
   },
   {
