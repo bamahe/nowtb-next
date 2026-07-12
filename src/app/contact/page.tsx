@@ -59,7 +59,7 @@ export default function ContactPage() {
       />
       {/* ---- Hero Section — full viewport ---- */}
       <HeroSection
-        title="Let&apos;s Talk"
+        title="Let's Talk"
         label="BARRETT HENRY | THE NOW TEAM"
         subtitle="Have a question about buying, selling, or investing? I'd rather talk than text. Call me directly or drop a message below."
       />

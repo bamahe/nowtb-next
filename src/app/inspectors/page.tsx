@@ -16,6 +16,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/inspectors/",
   },
+  openGraph: {
+    title: "Home Inspectors Tampa Bay | Trusted Referrals | Barrett Henry",
+    description:
+      "Find a trusted home inspector in Tampa Bay. Barrett Henry connects buyers and sellers with experienced inspectors for general, 4-point, wind mitigation, and WDO inspections.",
+    url: "/inspectors/",
+    type: "website",
+  },
 };
 
 // --- FAQ data used in both the rendered section and JSON-LD schema ---

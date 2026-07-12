@@ -16,6 +16,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/investing/",
   },
+  openGraph: {
+    title: "Investment Properties Tampa Bay | Real Estate Investing",
+    description:
+      "Tampa Bay investment property opportunities — rental analysis, ROI projections, and expert investor guidance from Barrett Henry, REMAX Collective.",
+    url: "/investing/",
+    type: "website",
+  },
 };
 
 export default function InvestingPage() {

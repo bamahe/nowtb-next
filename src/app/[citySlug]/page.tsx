@@ -199,12 +199,12 @@ function parseSlug(slug: string): PageType | "market-update" | "blog-post" | nul
 }
 
 // -----------------------------------------------------------------------------
-// ISR: revalidate every 15 minutes. This caches rendered pages so only 1 request
-// per page per 15 minutes hits the Bridge API. With force-dynamic, EVERY visitor
+// ISR: revalidate every 1 hour. This caches rendered pages so only 1 request
+// per page per hour hits the Bridge API. With force-dynamic, EVERY visitor
 // request triggered a fresh API call — ~3,000 unique pages × crawlers = rate limit.
 // After deploy, the first visitor to each page triggers a fresh API call (build
 // returns empty via IS_BUILD_TIME), then the result is cached for subsequent visitors.
-export const revalidate = 3600; // 15 minutes, matches bridgeFetch cache
+export const revalidate = 3600; // 1 hour, matches bridgeFetch cache
 // Allow pages not in generateStaticParams to render on-demand (ISR)
 export const dynamicParams = true;
 

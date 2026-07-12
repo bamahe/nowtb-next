@@ -40,8 +40,10 @@ const jsonLd = {
   image: "https://nowtb.com/images/barrett-henry.jpg",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "14310 N. Dale Mabry Hwy, Ste 100",
     addressLocality: "Tampa",
     addressRegion: "FL",
+    postalCode: "33618",
     addressCountry: "US",
   },
   parentOrganization: {
@@ -58,7 +60,7 @@ const jsonLd = {
     "Hernando County",
     "Citrus County",
   ],
-  openingHours: "Mo-Fr 09:00-18:00",
+  openingHours: ["Mo-Fr 09:00-18:00", "Sa 10:00-16:00"],
   priceRange: "$$",
 };
 

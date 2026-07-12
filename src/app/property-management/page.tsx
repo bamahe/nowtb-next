@@ -14,6 +14,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/property-management/",
   },
+  openGraph: {
+    title: "Property Management Tampa Bay | ViVi PM | Barrett Henry",
+    description:
+      "Professional property management for Tampa Bay rental owners. Tenant screening, maintenance coordination, and accounting by ViVi PM.",
+    url: "/property-management/",
+    type: "website",
+  },
 };
 
 // --- Services list ---

@@ -10,7 +10,7 @@ import { notFound, redirect } from "next/navigation";
 import { Suspense } from "react";
 import { Bed, Bath, Ruler, Calendar, LandPlot, Car, Home, ChevronRight } from "lucide-react";
 
-// ISR: cache property pages for 15 min so cached listings survive rate limit windows.
+// ISR: cache property pages for 1 hour so cached listings survive rate limit windows.
 // Without this, every visitor triggers fresh API calls (6 per page!), exhausting the quota.
 export const revalidate = 3600;
 

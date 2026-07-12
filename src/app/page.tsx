@@ -16,7 +16,7 @@ import { getFeaturedListings } from "@/lib/bridge";
 import { getPrimaryAgent } from "@/data/agents";
 import { testimonials } from "@/data/testimonials";
 
-// ISR: cache the homepage for 15 min to avoid burning Bridge API quota on every visit
+// ISR: cache the homepage for 1 hour to avoid burning Bridge API quota on every visit
 export const revalidate = 3600;
 
 // -----------------------------------------------------------------------------

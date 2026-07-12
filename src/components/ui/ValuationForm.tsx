@@ -6,6 +6,7 @@
 "use client";
 
 import { useState, useCallback, type FormEvent } from "react";
+import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import TurnstileWidget from "@/components/ui/TurnstileWidget";
 
@@ -13,6 +14,8 @@ import TurnstileWidget from "@/components/ui/TurnstileWidget";
 type FormStatus = "idle" | "loading" | "success" | "error";
 
 export default function ValuationForm() {
+  const router = useRouter();
+
   // --- Form field state ---
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -65,6 +68,9 @@ export default function ValuationForm() {
       setZip("");
       setMessage("");
       setStatus("success");
+
+      // Redirect to thank-you page (same pattern as ContactForm)
+      router.push("/thank-you/");
     } catch (err) {
       console.error("Valuation form submission failed:", err);
       setErrorMessage(

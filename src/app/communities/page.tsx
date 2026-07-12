@@ -26,6 +26,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/communities/",
   },
+  openGraph: {
+    title: "Tampa Bay Communities | 78+ Cities | Barrett Henry, REALTOR®",
+    description:
+      "Explore all Tampa Bay communities by county — Hillsborough, Pinellas, Pasco, Manatee, Polk, Sarasota, Hernando, and Citrus. Browse homes for sale with Barrett Henry.",
+    url: "/communities/",
+    type: "website",
+  },
 };
 
 // BreadcrumbList JSON-LD for communities index

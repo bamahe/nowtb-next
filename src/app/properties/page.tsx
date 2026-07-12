@@ -17,7 +17,7 @@ import { getListings } from "@/lib/bridge";
 import type { ListingSearchParams } from "@/lib/types";
 import { formatPrice } from "@/lib/utils";
 
-// ISR: cache for 15 min to reduce Bridge API calls
+// ISR: cache for 1 hour to reduce Bridge API calls
 export const revalidate = 3600;
 
 // -----------------------------------------------------------------------------

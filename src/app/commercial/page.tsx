@@ -12,7 +12,7 @@ import ListingGrid from "@/components/ui/ListingGrid";
 import { getListings } from "@/lib/bridge";
 import type { Listing } from "@/lib/types";
 
-// ISR: cache for 15 min to reduce Bridge API calls
+// ISR: cache for 1 hour to reduce Bridge API calls
 export const revalidate = 3600;
 
 export const metadata: Metadata = {

@@ -12,7 +12,7 @@ import ListingGrid from "@/components/ui/ListingGrid";
 import ContactForm from "@/components/ui/ContactForm";
 import { getOpenHouses } from "@/lib/bridge";
 
-// ISR: cache for 15 min — open houses don't change minute-to-minute
+// ISR: cache for 1 hour — open houses don't change minute-to-minute
 export const revalidate = 3600;
 
 // --- SEO metadata + Open Graph tags ---

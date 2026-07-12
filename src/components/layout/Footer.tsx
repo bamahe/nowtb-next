@@ -127,7 +127,7 @@ export default function Footer() {
         <div className="container-wide py-8 text-center space-y-4">
           {/* Copyright + license */}
           <p className="text-[10px] tracking-[0.1em] uppercase text-white/40">
-            &copy; 2026 Barrett Henry, REALTOR&reg; &nbsp;|&nbsp; Broker Associate, REMAX Collective
+            &copy; {new Date().getFullYear()} Barrett Henry, REALTOR&reg; &nbsp;|&nbsp; Broker Associate, REMAX Collective
           </p>
           <p className="text-[10px] tracking-[0.1em] text-white/35">
             Florida Real Estate Broker License #BK3313308 &nbsp;|&nbsp; Designations: e-PRO, MRP, SRS

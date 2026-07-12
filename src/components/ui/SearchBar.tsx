@@ -37,6 +37,7 @@ export default function SearchBar() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search by city, zip, or address..."
+        aria-label="Search homes by city, ZIP code, or address"
         className="flex-1 border-0 bg-transparent px-0 py-2 text-white placeholder:text-white/40
                    focus:outline-none focus:ring-0 font-body text-base font-light tracking-wide"
       />

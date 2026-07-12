@@ -145,7 +145,7 @@ export default function SellersPage() {
               },
               {
                 "@type": "Question",
-                name: "How do I market your home?",
+                name: "How does Barrett market my home?",
                 acceptedAnswer: {
                   "@type": "Answer",
                   text: "Every listing gets professional HDR photography, drone aerials, 3D virtual tours, Stellar MLS syndication to Zillow, Realtor.com, Redfin, and Homes.com, targeted Facebook and Instagram ads, social channel promotion, and strategic open houses designed to drive multiple offers.",

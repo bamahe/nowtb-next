@@ -8,8 +8,29 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getPrimaryAgent } from "@/data/agents";
+import { cities } from "@/data/cities";
 import { getAllPosts, getPostBySlug, getPostThumbnail, getRelatedPosts } from "@/lib/posts";
 import { cleanWpContent } from "@/lib/utils";
+
+/**
+ * Find the city that matches a blog post slug.
+ * Checks if any city slug appears as a segment in the post slug.
+ * Returns the matched CityData or null.
+ */
+function getCityFromSlug(postSlug: string) {
+  // Sort cities by slug length descending so longer slugs match first
+  // (e.g., "apollo-beach" matches before "beach")
+  const sorted = [...cities].sort((a, b) => b.slug.length - a.slug.length);
+  for (const city of sorted) {
+    // Check the city slug appears in the post slug as a whole segment
+    // e.g., "sell-home-fast-valrico" contains "valrico",
+    // "best-neighborhoods-brandon-fl" contains "brandon"
+    if (postSlug.includes(city.slug)) {
+      return city;
+    }
+  }
+  return null;
+}
 
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
@@ -54,6 +75,14 @@ export default async function BlogPostPage({
   const agent = getPrimaryAgent();
   const thumbnail = getPostThumbnail(post);
   const related = getRelatedPosts(slug, 3);
+
+  // Find city-related posts for the "More About {City}" section
+  const matchedCity = getCityFromSlug(slug);
+  const cityRelatedPosts = matchedCity
+    ? getAllPosts()
+        .filter((p) => p.slug !== slug && p.slug.includes(matchedCity.slug))
+        .slice(0, 6)
+    : [];
 
   // Strip HTML tags from excerpt for schema description
   const plainExcerpt = (post.excerpt || "").replace(/<[^>]*>/g, "").trim();
@@ -148,7 +177,7 @@ export default async function BlogPostPage({
                     {related.map((r) => (
                       <li key={r.slug}>
                         <Link
-                          href={`/${r.slug}`}
+                          href={`/blog/${r.slug}`}
                           className="font-body text-xs text-link hover:underline"
                         >
                           {r.title}
@@ -236,6 +265,51 @@ export default async function BlogPostPage({
           </article>
         </div>
       </section>
+
+      {/* === Related Articles from same city === */}
+      {cityRelatedPosts.length > 0 && matchedCity && (
+        <section className="bg-gray-50 py-12">
+          <div className="container-wide">
+            <h2 className="heading-display text-2xl text-primary mb-8">
+              More About {matchedCity.name}
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {cityRelatedPosts.map((rp) => (
+                <Link
+                  key={rp.slug}
+                  href={`/blog/${rp.slug}/`}
+                  className="group block border border-gray-200 rounded-lg overflow-hidden bg-white hover:border-accent hover:shadow-lg transition-all"
+                >
+                  <div className="p-5">
+                    {/* Post title */}
+                    <h3 className="font-heading font-bold text-sm text-primary mb-2 group-hover:text-accent transition-colors line-clamp-2">
+                      {rp.title}
+                    </h3>
+                    {/* Excerpt truncated to ~100 chars */}
+                    {rp.excerpt && (
+                      <p className="font-body text-muted text-xs mb-3 line-clamp-3">
+                        {rp.excerpt.replace(/<[^>]*>/g, "").slice(0, 100)}
+                        {rp.excerpt.replace(/<[^>]*>/g, "").length > 100 ? "…" : ""}
+                      </p>
+                    )}
+                    {/* Date */}
+                    <time
+                      dateTime={rp.date}
+                      className="font-body text-muted text-[11px]"
+                    >
+                      {new Date(rp.date).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      })}
+                    </time>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </>
   );
 }
