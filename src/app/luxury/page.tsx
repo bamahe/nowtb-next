@@ -202,6 +202,17 @@ export default async function LuxuryPage() {
         }}
       />
 
+      {/* === Visible breadcrumb nav === */}
+      <div className="bg-white border-b border-border">
+        <div className="container-wide pt-24 pb-2">
+          <nav className="flex items-center gap-2 text-xs font-body text-muted tracking-wide uppercase" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-accent transition-colors">Home</Link>
+            <span>/</span>
+            <span className="text-primary font-medium" aria-current="page">Luxury Homes</span>
+          </nav>
+        </div>
+      </div>
+
       {/* === Hero === */}
       <HeroSection
         title="Tampa Bay Luxury Real Estate"

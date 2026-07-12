@@ -158,6 +158,56 @@ export default async function BlogPostPage({
                   </ul>
                 </div>
               )}
+
+              {/* Loan & financing guides — helps readers explore mortgage options */}
+              <div className="card p-5">
+                <h3 className="font-heading font-bold text-sm text-primary mb-3">
+                  Financing Guides
+                </h3>
+                <ul className="space-y-2">
+                  {[
+                    { href: "/guides/mortgage-pre-approval-guide-florida", label: "Mortgage Pre-Approval" },
+                    { href: "/guides/fha-loan-guide", label: "FHA Loans" },
+                    { href: "/guides/va-home-loan-guide", label: "VA Home Loans" },
+                    { href: "/guides/usda-loan-guide", label: "USDA Loans" },
+                    { href: "/guides/conventional-loan-guide", label: "Conventional Loans" },
+                    { href: "/guides/jumbo-loan-guide", label: "Jumbo Loans" },
+                    { href: "/guides/dscr-loan-guide", label: "DSCR Loans" },
+                    { href: "/guides/mortgage-rate-lock-guide", label: "Mortgage Rate Locks" },
+                  ].map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="font-body text-xs text-accent hover:underline"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/guides/"
+                  className="inline-block mt-3 font-body text-xs font-semibold text-primary hover:text-accent transition-colors"
+                >
+                  Browse All Guides &rarr;
+                </Link>
+              </div>
+
+              {/* Home valuation CTA — drives leads from blog readers */}
+              <div className="card p-5 bg-accent/10 border-accent/20">
+                <h3 className="font-heading font-bold text-sm text-primary mb-2">
+                  What&apos;s Your Home Worth?
+                </h3>
+                <p className="font-body text-muted text-xs mb-3">
+                  Get a free, no-obligation market analysis from Barrett Henry.
+                </p>
+                <Link
+                  href="/free-home-valuation/"
+                  className="btn-primary inline-block px-4 py-2 text-xs text-center w-full"
+                >
+                  Get Your Free Home Valuation
+                </Link>
+              </div>
             </div>
           </aside>
 

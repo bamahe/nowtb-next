@@ -67,6 +67,42 @@ export function getPostsByCategory(category: string): BlogPost[] {
 }
 
 /**
+ * Blog filter categories — maps a human-readable label to slug patterns.
+ * Used by the blog index page for category filtering.
+ */
+const BLOG_CATEGORIES: { label: string; pattern: RegExp }[] = [
+  { label: "Buying", pattern: /buy|first-time|home-inspection|appraisal|pre-approval|loan|fha|va-home|usda|jumbo|conventional|dscr|mortgage|condo|hoa|new-construction|relocation|military|macdill|snowbird|house-hacking/ },
+  { label: "Selling", pattern: /sell|staging|pricing|listing-agreement|open-house|disclosure|home-valuation/ },
+  { label: "Investing", pattern: /invest|1031|rental|flip|dscr|vacation-rental|short-term-rental/ },
+  { label: "Market Updates", pattern: /housing-market|market-q[0-9]|market-update|market-report|market-forecast|market-trend/ },
+  { label: "Neighborhoods", pattern: /best-neighborhoods|neighborhood|community|guide-to-living|things-to-do|moving-to|living-in/ },
+];
+
+/**
+ * Categorize a single post by matching its slug against known patterns.
+ * Returns the first matching category label, or "General" if none match.
+ */
+export function categorizePost(slug: string): string {
+  for (const cat of BLOG_CATEGORIES) {
+    if (cat.pattern.test(slug)) return cat.label;
+  }
+  return "General";
+}
+
+/**
+ * Get unique category labels present in the blog, sorted alphabetically.
+ * Includes only categories that actually have posts.
+ */
+export function getBlogCategories(): string[] {
+  const all = loadPosts();
+  const cats = new Set<string>();
+  for (const p of all) {
+    cats.add(categorizePost(p.slug));
+  }
+  return Array.from(cats).sort();
+}
+
+/**
  * Find related posts by looking for shared city names in slugs.
  * Uses the last word of the current slug as a city guess.
  */

@@ -7,7 +7,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
-import { getAllPosts, getPostThumbnail } from "@/lib/posts";
+import { getAllPosts, getPostThumbnail, categorizePost, getBlogCategories } from "@/lib/posts";
 
 // Revalidate every hour (3600 seconds) via ISR
 export const revalidate = 3600;
@@ -65,10 +65,19 @@ function readingTime(html: string): string {
 export default async function BlogIndexPage({
   searchParams,
 }: {
-  searchParams: Promise<{ page?: string }>;
+  searchParams: Promise<{ page?: string; category?: string }>;
 }) {
-  const { page: pageParam } = await searchParams;
-  const allPosts = getAllPosts();
+  const { page: pageParam, category: categoryParam } = await searchParams;
+
+  // Get all posts and available categories for filter buttons
+  const everyPost = getAllPosts();
+  const availableCategories = getBlogCategories();
+
+  // Filter by category if one is selected (URL param like ?category=Buying)
+  const activeCategory = categoryParam || "All";
+  const allPosts = activeCategory === "All"
+    ? everyPost
+    : everyPost.filter((p) => categorizePost(p.slug) === activeCategory);
 
   // Parse current page from searchParams (default to 1)
   const currentPage = Math.max(1, parseInt(pageParam || "1", 10) || 1);
@@ -104,11 +113,44 @@ export default async function BlogIndexPage({
         subtitle="Market updates, buying and selling tips, neighborhood guides, and expert insights from Barrett Henry."
       />
 
-      {/* === Post count + page info === */}
+      {/* === Category filter buttons === */}
       <section className="container-wide pt-8 pb-2">
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+          {/* "All" button — resets category filter */}
+          <Link
+            href="/blog"
+            className={`px-4 py-2 rounded-full text-xs font-body font-semibold tracking-wide uppercase transition-colors ${
+              activeCategory === "All"
+                ? "bg-primary text-white"
+                : "bg-gray-100 text-muted hover:bg-accent/10 hover:text-primary"
+            }`}
+          >
+            All ({everyPost.length})
+          </Link>
+
+          {/* One button per category — links to /blog?category=CategoryName */}
+          {availableCategories.map((cat) => {
+            const count = everyPost.filter((p) => categorizePost(p.slug) === cat).length;
+            return (
+              <Link
+                key={cat}
+                href={`/blog?category=${encodeURIComponent(cat)}`}
+                className={`px-4 py-2 rounded-full text-xs font-body font-semibold tracking-wide uppercase transition-colors ${
+                  activeCategory === cat
+                    ? "bg-primary text-white"
+                    : "bg-gray-100 text-muted hover:bg-accent/10 hover:text-primary"
+                }`}
+              >
+                {cat} ({count})
+              </Link>
+            );
+          })}
+        </div>
+
+        {/* Post count + page info */}
         <p className="font-body text-muted text-sm text-center">
           Showing {startIdx + 1}–{Math.min(startIdx + POSTS_PER_PAGE, allPosts.length)} of{" "}
-          {allPosts.length} posts
+          {allPosts.length} {activeCategory !== "All" ? `${activeCategory} ` : ""}posts
         </p>
       </section>
 
@@ -167,12 +209,16 @@ export default async function BlogIndexPage({
       </section>
 
       {/* === Pagination === */}
+      {(() => {
+        // Build query string suffix to preserve category filter across pages
+        const catQuery = activeCategory !== "All" ? `&category=${encodeURIComponent(activeCategory)}` : "";
+        return (
       <section className="container-wide pb-12">
         <div className="flex items-center justify-center gap-2 flex-wrap">
           {/* Previous button */}
           {safePage > 1 ? (
             <Link
-              href={`/blog?page=${safePage - 1}`}
+              href={`/blog?page=${safePage - 1}${catQuery}`}
               className="px-4 py-2 rounded-lg text-sm font-body font-medium bg-gray-100 text-muted hover:bg-accent/10 hover:text-primary transition-colors"
             >
               Previous
@@ -210,7 +256,7 @@ export default async function BlogIndexPage({
               ) : (
                 <Link
                   key={item}
-                  href={`/blog?page=${item}`}
+                  href={`/blog?page=${item}${catQuery}`}
                   className={`px-4 py-2 rounded-lg text-sm font-body font-medium transition-colors ${
                     item === safePage
                       ? "bg-primary text-white"
@@ -225,7 +271,7 @@ export default async function BlogIndexPage({
           {/* Next button */}
           {safePage < totalPages ? (
             <Link
-              href={`/blog?page=${safePage + 1}`}
+              href={`/blog?page=${safePage + 1}${catQuery}`}
               className="px-4 py-2 rounded-lg text-sm font-body font-medium bg-gray-100 text-muted hover:bg-accent/10 hover:text-primary transition-colors"
             >
               Next
@@ -237,6 +283,8 @@ export default async function BlogIndexPage({
           )}
         </div>
       </section>
+        );
+      })()}
     </>
   );
 }

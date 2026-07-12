@@ -23,5 +23,77 @@ export const metadata: Metadata = {
 };
 
 export default function MortgageCalculatorPage() {
-  return <MortgageCalc />;
+  return (
+    <>
+      {/* FAQPage schema — common mortgage questions for SEO/AEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "How much house can I afford?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "A common guideline is the 28% front-end debt-to-income (DTI) rule: your monthly housing payment — including principal, interest, taxes, and insurance — should not exceed 28% of your gross monthly income. For example, if your household earns $7,000 per month, aim for a total housing payment of $1,960 or less. Lenders also look at your total DTI (all debts), which should generally stay below 36-43%.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What is PMI and when can I remove it?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Private Mortgage Insurance (PMI) is required on conventional loans when you put down less than 20%. It protects the lender — not you — if you default. PMI typically costs 0.5% to 1% of the loan amount per year. You can request PMI removal once you reach 20% equity in your home, and your lender is required to automatically cancel it when you reach 22% equity based on the original purchase price.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What's the difference between fixed and adjustable rate mortgages?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "A fixed-rate mortgage locks your interest rate for the entire loan term (typically 15 or 30 years), so your principal and interest payment never changes. An adjustable-rate mortgage (ARM) starts with a lower introductory rate for a set period (commonly 5 or 7 years), then adjusts periodically based on market indexes. Fixed rates offer predictability; ARMs offer lower initial payments but carry the risk of higher payments after the introductory period ends.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How much should I put down on a house in Florida?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Down payment requirements in Florida depend on the loan type. FHA loans require as little as 3.5% down. VA loans (for eligible veterans and active military) require 0% down. Conventional loans start at 3% down for first-time buyers. Putting 20% or more down eliminates the need for private mortgage insurance (PMI) and gives you instant equity. Your ideal down payment depends on your savings, monthly budget, and loan program.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What closing costs should I expect in Florida?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Closing costs in Florida typically range from 2% to 5% of the purchase price. For buyers, this includes lender fees, appraisal, title insurance, title search, recording fees, prepaid property taxes, and homeowners insurance. On a $400,000 home, expect $8,000 to $20,000 in closing costs. Florida does not have a state transfer tax for buyers, but sellers pay documentary stamp taxes. Your lender will provide a Loan Estimate within three days of your application with itemized closing cost projections.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* BreadcrumbList schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://nowtb.com" },
+              { "@type": "ListItem", position: 2, name: "Mortgage Calculator", item: "https://nowtb.com/mortgage-calculator" },
+            ],
+          }),
+        }}
+      />
+
+      <MortgageCalc />
+    </>
+  );
 }

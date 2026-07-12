@@ -410,6 +410,25 @@ export default async function HomePage() {
             <p className="heading-label mb-6">Resources</p>
             <div className="section-divider" />
           </div>
+
+          {/* Introductory paragraph with contextual internal links */}
+          <p className="font-body text-muted text-sm font-light leading-relaxed max-w-3xl mx-auto text-center mb-12">
+            Whether you&apos;re searching for{" "}
+            <Link href="/valrico/" className="text-accent hover:underline">Valrico homes for sale</Link>,
+            exploring{" "}
+            <Link href="/brandon/" className="text-accent hover:underline">Brandon real estate</Link>,
+            or browsing{" "}
+            <Link href="/riverview/" className="text-accent hover:underline">Riverview homes</Link>,
+            Barrett Henry has the local expertise to help you find the right fit.
+            Start with a{" "}
+            <Link href="/free-home-valuation/" className="text-accent hover:underline">free home valuation</Link>{" "}
+            to see what your property is worth, check the latest{" "}
+            <Link href="/market-updates/" className="text-accent hover:underline">Tampa Bay market updates</Link>,
+            or dive into our{" "}
+            <Link href="/guides/" className="text-accent hover:underline">buyer and seller guides</Link>{" "}
+            for step-by-step advice on your next move.
+          </p>
+
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {[
               { href: "/buyers", label: "Buyer Guide" },

@@ -83,6 +83,58 @@ export default function SellYourHomePage() {
         }}
       />
 
+      {/* HowTo schema — step-by-step selling process for SEO/AEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            name: "How to Sell Your Home in Tampa Bay",
+            description:
+              "A step-by-step guide to selling your Tampa Bay home — from free home valuation to closing day, with expert guidance from Barrett Henry, Broker Associate at REMAX Collective.",
+            step: [
+              {
+                "@type": "HowToStep",
+                position: 1,
+                name: "Free Home Valuation",
+                text: "We analyze comparable sales, market trends, and your home's unique features to determine its current market value.",
+              },
+              {
+                "@type": "HowToStep",
+                position: 2,
+                name: "Prep and Staging",
+                text: "Get recommendations on repairs, decluttering, and staging to maximize your home's appeal and selling price.",
+              },
+              {
+                "@type": "HowToStep",
+                position: 3,
+                name: "Professional Marketing",
+                text: "HDR photography, 3D virtual tours, social media ads, MLS syndication, and targeted buyer outreach.",
+              },
+              {
+                "@type": "HowToStep",
+                position: 4,
+                name: "Showings and Open Houses",
+                text: "We coordinate showings, host open houses, and collect buyer feedback to keep momentum going.",
+              },
+              {
+                "@type": "HowToStep",
+                position: 5,
+                name: "Negotiate and Accept Offer",
+                text: "Review offers, negotiate the best price and terms, and get your home under contract.",
+              },
+              {
+                "@type": "HowToStep",
+                position: 6,
+                name: "Close and Celebrate",
+                text: "Inspections, appraisal, title work, and final walkthrough — all coordinated so you can close with confidence.",
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* ---- Hero Section ---- */}
       <HeroSection
         title="What Is Your Tampa Bay Home Worth?"
