@@ -15,8 +15,8 @@ import { getFeaturedListings } from "@/lib/bridge";
 import { getPrimaryAgent } from "@/data/agents";
 import { testimonials } from "@/data/testimonials";
 
-// Force dynamic rendering so mock/live data uses runtime env vars
-export const dynamic = "force-dynamic";
+// ISR: cache the homepage for 15 min to avoid burning Bridge API quota on every visit
+export const revalidate = 900;
 
 // -----------------------------------------------------------------------------
 // Metadata — SEO title, description, and Open Graph tags

@@ -10,6 +10,10 @@ import { notFound, redirect } from "next/navigation";
 import { Suspense } from "react";
 import { Bed, Bath, Ruler, Calendar, LandPlot, Car, Home, ChevronRight } from "lucide-react";
 
+// ISR: cache property pages for 15 min so cached listings survive rate limit windows.
+// Without this, every visitor triggers fresh API calls (6 per page!), exhausting the quota.
+export const revalidate = 900;
+
 import BuyingPower from "@/components/ui/BuyingPower";
 import FavoriteButton from "@/components/ui/FavoriteButton";
 import MiniCalc from "@/components/ui/MiniCalc";
@@ -19,7 +23,7 @@ import SchoolsNearby from "@/components/ui/SchoolsNearby";
 import ShareButtons from "@/components/ui/ShareButtons";
 import SimilarListings from "@/components/ui/SimilarListings";
 import TourScheduler from "@/components/ui/TourScheduler";
-import { getListing, getListingByMlsId, getJustListed, getPriceReduced, getRecentSales } from "@/lib/bridge";
+import { getListing, getListingByMlsId, getJustListed, getPriceReduced, getRecentSales, isRateLimited } from "@/lib/bridge";
 import { formatPrice, formatSqFt, extractMlsId, extractListingKey, getListingUrl } from "@/lib/utils";
 import { getCityByName } from "@/data/cities";
 import type { Listing } from "@/lib/types";
@@ -37,7 +41,7 @@ interface ListingPageProps {
 // Resolve listing from URL segments — new format or old format with redirect
 // -----------------------------------------------------------------------------
 
-async function resolveListing(segments: string[]): Promise<Listing | 'not-found' | { redirect: string }> {
+async function resolveListing(segments: string[]): Promise<Listing | 'not-found' | 'rate-limited' | { redirect: string }> {
   // New format: ["StellarMLS", "TB8526478", "tampa", "5120-n-matanzas-avenue"]
   const mlsId = extractMlsId(segments);
   if (mlsId) {
@@ -47,6 +51,8 @@ async function resolveListing(segments: string[]): Promise<Listing | 'not-found'
     // MLS ID lookup failed — might be rate limited. Try direct key lookup as fallback.
     const byKey = await getListing(mlsId);
     if (byKey) return byKey;
+    // If the API is rate limited, don't 404 — show a soft "try again" message
+    if (isRateLimited()) return 'rate-limited';
     return 'not-found';
   }
 
@@ -70,8 +76,8 @@ export async function generateMetadata({ params }: ListingPageProps): Promise<Me
   const { slug } = await params;
   const result = await resolveListing(slug);
 
-  if (result === 'not-found' || 'redirect' in result) {
-    return { title: "Listing Not Found" };
+  if (result === 'not-found' || result === 'rate-limited' || 'redirect' in result) {
+    return { title: result === 'rate-limited' ? "Listing Temporarily Unavailable" : "Listing Not Found" };
   }
 
   const listing = result;
@@ -142,8 +148,37 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
   const { slug } = await params;
   const result = await resolveListing(slug);
 
-  // 404 if not found
+  // 404 if listing genuinely doesn't exist
   if (result === 'not-found') notFound();
+
+  // Soft error if the Bridge API is rate limited — don't 404, show a retry page
+  if (result === 'rate-limited') {
+    return (
+      <section className="container-wide py-32 text-center">
+        <h1 className="font-heading font-bold text-3xl text-primary mb-4">
+          Listing Temporarily Unavailable
+        </h1>
+        <p className="font-body text-muted text-lg mb-6 max-w-xl mx-auto">
+          Our listing data provider is temporarily throttled. This page will load
+          normally in a few minutes — please refresh or check back shortly.
+        </p>
+        <div className="flex justify-center gap-4">
+          <a
+            href="tel:+18137337907"
+            className="btn-primary inline-block px-6 py-3"
+          >
+            Call (813) 733-7907
+          </a>
+          <Link
+            href="/properties/"
+            className="inline-flex items-center gap-2 border border-gray-300 text-primary font-semibold px-6 py-3 rounded hover:bg-gray-50 transition-colors"
+          >
+            Browse Properties
+          </Link>
+        </div>
+      </section>
+    );
+  }
 
   // 301 redirect for old URL format
   if ('redirect' in result) redirect(result.redirect);

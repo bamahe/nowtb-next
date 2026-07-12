@@ -197,9 +197,12 @@ function parseSlug(slug: string): PageType | "market-update" | "blog-post" | nul
 }
 
 // -----------------------------------------------------------------------------
-// Force dynamic rendering — every request fetches live MLS listings.
-// Without this, ISR serves stale empty cache on first visit after deploy.
-export const dynamic = 'force-dynamic';
+// ISR: revalidate every 15 minutes. This caches rendered pages so only 1 request
+// per page per 15 minutes hits the Bridge API. With force-dynamic, EVERY visitor
+// request triggered a fresh API call — ~3,000 unique pages × crawlers = rate limit.
+// After deploy, the first visitor to each page triggers a fresh API call (build
+// returns empty via IS_BUILD_TIME), then the result is cached for subsequent visitors.
+export const revalidate = 900; // 15 minutes, matches bridgeFetch cache
 
 // generateStaticParams — pre-render all hub + spoke URLs at build time
 // Returns all city slugs AND all city-topic combos for Tier 1 cities

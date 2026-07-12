@@ -29,8 +29,9 @@ let rateLimitedUntil = 0; // timestamp (ms) when we can try the API again
 /**
  * Check if we're currently rate-limited.
  * Returns true if Bridge returned a 429 recently and cooldown hasn't expired.
+ * Exported so pages can show "temporarily unavailable" instead of hard 404.
  */
-function isRateLimited(): boolean {
+export function isRateLimited(): boolean {
   return Date.now() < rateLimitedUntil;
 }
 

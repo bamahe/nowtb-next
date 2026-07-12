@@ -38,6 +38,7 @@ export const neighborhoods: NeighborhoodData[] = [
   { slug: "alafia-estates", name: "Alafia Estates", city: "brandon" },
   { slug: "arbor-oaks", name: "Arbor Oaks", city: "brandon" },
   { slug: "bloomingdale", name: "Bloomingdale", city: "brandon" },
+  { slug: "broadway-centre-townhomes", name: "Broadway Centre Townhomes", city: "brandon" },
   { slug: "brandon-pointe", name: "Brandon Pointe", city: "brandon" },
   { slug: "brandon-traces", name: "Brandon Traces", city: "brandon" },
   { slug: "brooker-ridge", name: "Brooker Ridge", city: "brandon" },

@@ -6,7 +6,10 @@
 // Design pattern: matches the SpokePage compact hero + listings-first layout
 // =============================================================================
 
+import fs from "fs";
+import path from "path";
 import Link from "next/link";
+import Image from "next/image";
 import ListingGrid from "@/components/ui/ListingGrid";
 import SpokeNav from "@/components/city/SpokeNav";
 import { getListings } from "@/lib/bridge";
@@ -37,6 +40,24 @@ export default async function NeighborhoodPage({
   // Look up parent city data for zip codes and county info
   const parentCity = getCityBySlug(citySlug);
   const county = parentCity?.county ?? "Hillsborough";
+
+  // Check for neighborhood photos in /public/images/neighborhoods/{slug}/
+  const photosDir = path.join(process.cwd(), "public", "images", "neighborhoods", slug);
+  let neighborhoodPhotos: { src: string; alt: string }[] = [];
+  try {
+    if (fs.existsSync(photosDir)) {
+      neighborhoodPhotos = fs
+        .readdirSync(photosDir)
+        .filter((f) => /\.(jpg|jpeg|png|webp)$/i.test(f))
+        .map((f) => ({
+          src: `/images/neighborhoods/${slug}/${f}`,
+          // Convert filename to readable alt text: "aerial-view.jpg" → "Aerial view of Broadway Centre Townhomes"
+          alt: `${f.replace(/\.[^.]+$/, "").replace(/-/g, " ").replace(/^\w/, (c) => c.toUpperCase())} — ${name}, ${city} FL`,
+        }));
+    }
+  } catch {
+    // No photos directory — that's fine, most neighborhoods won't have one
+  }
 
   // Try to load real WordPress content for this neighborhood page.
   // The neighborhood slug (e.g. "valrico-bloomingdale") is what WP exports use.
@@ -233,6 +254,31 @@ export default async function NeighborhoodPage({
           )}
         </div>
       </section>
+
+      {/* === Photo gallery — only shown when neighborhood has photos === */}
+      {neighborhoodPhotos.length > 0 && (
+        <section className="bg-gray-50 py-12">
+          <div className="container-wide">
+            <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6">
+              Photos of {name}
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {neighborhoodPhotos.map((photo) => (
+                <div key={photo.src} className="relative aspect-[4/3] rounded-lg overflow-hidden">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* === Spoke nav — explore more in the parent city === */}
       {parentCity && <SpokeNav city={parentCity} />}
