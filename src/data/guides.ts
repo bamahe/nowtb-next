@@ -52,51 +52,6 @@ export const guides: GuideData[] = [
     ]),
   },
   {
-    slug: "first-time-homebuyer-guide",
-    title: "First-Time Homebuyer Guide",
-    excerpt: "Everything first-time buyers need to know about purchasing a home in Florida.",
-    date: "2026-04-10",
-    category: "Buying",
-    readingTime: "12 min read",
-    sections: makeSections("First-Time Homebuyer Guide", [
-      "Assessing Your Financial Readiness",
-      "Understanding Mortgage Options",
-      "The Home Search Process",
-      "Making a Competitive Offer",
-      "Closing on Your First Home",
-    ]),
-  },
-  {
-    slug: "first-time-homebuyer-guide-tampa-bay",
-    title: "First-Time Homebuyer Guide: Tampa Bay",
-    excerpt: "Tampa Bay-specific guide for first-time buyers covering neighborhoods, prices, and local programs.",
-    date: "2026-04-10",
-    category: "Buying",
-    readingTime: "14 min read",
-    sections: makeSections("First-Time Homebuyer Guide Tampa Bay", [
-      "Why Buy in Tampa Bay?",
-      "Best Neighborhoods for First-Time Buyers",
-      "Tampa Bay Down Payment Assistance Programs",
-      "Working with a Local REALTOR",
-      "Navigating the Tampa Bay Market",
-    ]),
-  },
-  {
-    slug: "home-inspection-guide",
-    title: "Home Inspection Guide",
-    excerpt: "What to expect during a home inspection, common issues found in Florida homes, and how to negotiate repairs.",
-    date: "2026-03-15",
-    category: "Buying",
-    readingTime: "8 min read",
-    sections: makeSections("Home Inspection Guide", [
-      "What Is a Home Inspection?",
-      "What Inspectors Look For",
-      "Common Issues in Florida Homes",
-      "How to Negotiate Repairs After Inspection",
-      "When to Walk Away from a Deal",
-    ]),
-  },
-  {
     slug: "home-inspection-guide-florida",
     title: "Home Inspection Guide for Florida",
     excerpt: "Florida-specific home inspection guide covering humidity damage, roofing, sinkholes, and insurance requirements.",
@@ -288,20 +243,6 @@ export const guides: GuideData[] = [
   // =========================================================================
   // MORTGAGE & LOAN GUIDES
   // =========================================================================
-  {
-    slug: "mortgage-pre-approval-guide",
-    title: "Mortgage Pre-Approval Guide",
-    excerpt: "How to get pre-approved for a mortgage — documents needed, credit requirements, and how long it takes.",
-    date: "2026-03-18",
-    category: "Financing",
-    readingTime: "7 min read",
-    sections: makeSections("Mortgage Pre-Approval Guide", [
-      "Pre-Qualification vs. Pre-Approval",
-      "Documents You Will Need",
-      "Credit Score Requirements",
-      "How Long Pre-Approval Takes",
-    ]),
-  },
   {
     slug: "mortgage-pre-approval-guide-florida",
     title: "Mortgage Pre-Approval Guide: Florida",
@@ -630,21 +571,6 @@ export const guides: GuideData[] = [
     ]),
   },
   {
-    slug: "florida-homestead-exemption-guide",
-    title: "Florida Homestead Exemption Guide",
-    excerpt: "How to file for homestead exemption in Florida — eligibility, savings, portability, and deadlines.",
-    date: "2026-01-15",
-    category: "Taxes",
-    readingTime: "7 min read",
-    sections: makeSections("Florida Homestead Exemption Guide", [
-      "What Is the Homestead Exemption?",
-      "Eligibility Requirements",
-      "How Much You Will Save",
-      "Portability: Taking It with You",
-      "Filing Deadlines and Process",
-    ]),
-  },
-  {
     slug: "florida-homestead-exemption-save-our-homes",
     title: "Florida Homestead Exemption & Save Our Homes Guide",
     excerpt: "How Florida's Homestead Exemption and Save Our Homes portability work, what transfers when you sell, and how to file.",
@@ -791,20 +717,6 @@ export const guides: GuideData[] = [
       "Best Properties for House Hacking",
       "Financing a House Hack",
       "House Hacking in Tampa Bay",
-    ]),
-  },
-  {
-    slug: "short-term-rental-guide",
-    title: "Short-Term Rental Guide",
-    excerpt: "Short-term rental investing — Airbnb regulations, ROI analysis, and best areas in Tampa Bay.",
-    date: "2026-02-05",
-    category: "Investing",
-    readingTime: "8 min read",
-    sections: makeSections("Short-Term Rental Guide", [
-      "Short-Term Rental Regulations in Florida",
-      "ROI Analysis for Airbnb Properties",
-      "Best Areas for Short-Term Rentals",
-      "Managing Your Rental Property",
     ]),
   },
   {

@@ -75,6 +75,20 @@ const nextConfig = {
       { source: "/brandon-remax", destination: "/remax-brandon/", permanent: true },
       { source: "/brandon-remax/", destination: "/remax-brandon/", permanent: true },
 
+      // ── Duplicate guide consolidation — redirect to canonical version ──
+      { source: "/guides/first-time-homebuyer-guide", destination: "/guides/first-time-home-buyer-guide/", permanent: true },
+      { source: "/guides/first-time-homebuyer-guide/", destination: "/guides/first-time-home-buyer-guide/", permanent: true },
+      { source: "/guides/first-time-homebuyer-guide-tampa-bay", destination: "/guides/first-time-home-buyer-guide/", permanent: true },
+      { source: "/guides/first-time-homebuyer-guide-tampa-bay/", destination: "/guides/first-time-home-buyer-guide/", permanent: true },
+      { source: "/guides/home-inspection-guide", destination: "/guides/home-inspection-guide-florida/", permanent: true },
+      { source: "/guides/home-inspection-guide/", destination: "/guides/home-inspection-guide-florida/", permanent: true },
+      { source: "/guides/mortgage-pre-approval-guide", destination: "/guides/mortgage-pre-approval-guide-florida/", permanent: true },
+      { source: "/guides/mortgage-pre-approval-guide/", destination: "/guides/mortgage-pre-approval-guide-florida/", permanent: true },
+      { source: "/guides/florida-homestead-exemption-guide", destination: "/guides/florida-homestead-exemption-save-our-homes/", permanent: true },
+      { source: "/guides/florida-homestead-exemption-guide/", destination: "/guides/florida-homestead-exemption-save-our-homes/", permanent: true },
+      { source: "/guides/short-term-rental-guide", destination: "/guides/short-term-rental-guide-tampa-bay/", permanent: true },
+      { source: "/guides/short-term-rental-guide/", destination: "/guides/short-term-rental-guide-tampa-bay/", permanent: true },
+
       // ── Common broken URLs — redirect to correct pages ──
       { source: "/neighborhoods", destination: "/communities/", permanent: true },
       { source: "/neighborhoods/", destination: "/communities/", permanent: true },
