@@ -8,7 +8,7 @@
 
 "use client";
 
-import { useState, useEffect, useCallback, type FormEvent } from "react";
+import { useState, useEffect, useCallback, useRef, type FormEvent } from "react";
 import { cn } from "@/lib/utils";
 import TurnstileWidget from "@/components/ui/TurnstileWidget";
 
@@ -117,6 +117,9 @@ export default function ExitIntentPopup({ variant = "general" }: ExitIntentPopup
     return () => clearTimeout(timer);
   }, [showPopup]);
 
+  // --- Ref for the popup container (used for focus trapping) ---
+  const popupRef = useRef<HTMLDivElement>(null);
+
   // --- Close on Escape key ---
   useEffect(() => {
     if (!visible) return;
@@ -129,6 +132,44 @@ export default function ExitIntentPopup({ variant = "general" }: ExitIntentPopup
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [visible]);
+
+  // --- Focus trap: keep Tab/Shift+Tab within the popup while visible ---
+  useEffect(() => {
+    if (!visible || !popupRef.current) return;
+
+    // Move focus into the popup when it opens
+    const firstFocusable = popupRef.current.querySelector<HTMLElement>(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    firstFocusable?.focus();
+
+    function handleTrapKeyDown(e: KeyboardEvent) {
+      if (e.key !== "Tab" || !popupRef.current) return;
+
+      // Find all focusable elements inside the popup
+      const focusableEls = popupRef.current.querySelectorAll<HTMLElement>(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      if (focusableEls.length === 0) return;
+
+      const firstEl = focusableEls[0];
+      const lastEl = focusableEls[focusableEls.length - 1];
+
+      // Shift+Tab on first element → wrap to last
+      if (e.shiftKey && document.activeElement === firstEl) {
+        e.preventDefault();
+        lastEl.focus();
+      }
+      // Tab on last element → wrap to first
+      else if (!e.shiftKey && document.activeElement === lastEl) {
+        e.preventDefault();
+        firstEl.focus();
+      }
+    }
+
+    document.addEventListener("keydown", handleTrapKeyDown);
+    return () => document.removeEventListener("keydown", handleTrapKeyDown);
   }, [visible]);
 
   /** Handle form submission — POST to /api/contact */
@@ -182,6 +223,7 @@ export default function ExitIntentPopup({ variant = "general" }: ExitIntentPopup
     >
       {/* --- Popup card — stop clicks inside from closing the overlay --- */}
       <div
+        ref={popupRef}
         className="relative bg-primary text-white rounded-xl shadow-2xl max-w-md w-full p-8 sm:p-10"
         onClick={(e) => e.stopPropagation()}
       >

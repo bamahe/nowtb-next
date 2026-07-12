@@ -252,6 +252,7 @@ export default function TourScheduler({
                   <button
                     key={formatDateForApi(day)}
                     type="button"
+                    aria-pressed={isSelected}
                     onClick={() => setSelectedDate(day)}
                     className={cn(
                       "flex flex-col items-center py-2.5 rounded-lg text-center transition-all duration-200 border",
@@ -278,6 +279,7 @@ export default function TourScheduler({
                 <button
                   key={slot.key}
                   type="button"
+                  aria-pressed={selectedTime === slot.key}
                   onClick={() => setSelectedTime(slot.key)}
                   className={cn(
                     "py-3 rounded-lg text-center transition-all duration-200 border",

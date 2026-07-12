@@ -66,7 +66,11 @@ export default function ListingCard({ listing }: ListingCardProps) {
     statusColors[listing.StandardStatus] ?? "bg-muted/80 text-white";
 
   return (
-    <Link href={url} className="group block overflow-hidden relative">
+    <Link
+      href={url}
+      className="group block overflow-hidden relative"
+      aria-label={`View details for ${displayAddress} — ${formatPrice(listing.ListPrice)}`}
+    >
       {/* --- Photo with tall aspect ratio and hover scale --- */}
       <div className="relative aspect-[3/4] w-full overflow-hidden bg-primary/10">
         <Image

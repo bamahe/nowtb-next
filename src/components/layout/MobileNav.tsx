@@ -85,6 +85,7 @@ export default function MobileNav({ scrolled = false }: MobileNavProps) {
 
       {/* ── Full-screen mobile overlay ── */}
       <div
+        aria-hidden={!isOpen}
         className={`
           fixed inset-0 z-40 md:hidden
           transition-opacity duration-500

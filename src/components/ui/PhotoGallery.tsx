@@ -7,6 +7,7 @@
 "use client";
 
 import { useState, useCallback, useEffect, useRef } from "react";
+import Image from "next/image";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 interface Photo {
@@ -82,10 +83,13 @@ export default function PhotoGallery({ photos, address, autoScroll = false }: Ph
           className="w-full cursor-pointer group"
           aria-label={`View photo ${heroIndex + 1} fullscreen`}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={photos[heroIndex].MediaURL}
             alt={photos[heroIndex].ShortDescription || `${address} — photo ${heroIndex + 1}`}
+            width={1200}
+            height={600}
+            sizes="100vw"
+            priority
             className="w-full aspect-[2/1] object-cover group-hover:scale-[1.01] transition-transform duration-500"
           />
         </button>
