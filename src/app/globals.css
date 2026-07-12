@@ -130,14 +130,13 @@ select {
 /* Dark/colored backgrounds — force white text */
 .blog-content a[style*="background:#0f172a"],
 .blog-content a[style*="background:#1e293b"],
-.blog-content a[style*="background:#e8a020"],
-.blog-content a[style*="background:#c8a84b"],
 .blog-content a[style*="background:#2563eb"],
 .blog-content a[style*="background: #0f172a"],
 .blog-content a[style*="background: #1e293b"],
-.blog-content a[style*="background: #e8a020"],
-.blog-content a[style*="background: #c8a84b"],
 .blog-content a[style*="background: #2563eb"] { color: #fff !important; }
+/* White buttons on dark backgrounds — dark text */
+.blog-content a[style*="background:#fff"],
+.blog-content a[style*="background: #fff"] { color: #0f172a !important; }
 /* Light-background resource grid links — keep dark readable text */
 .blog-content a[style*="background:#f8fafc"],
 .blog-content a[style*="background:#f1f5f9"],
@@ -320,11 +319,11 @@ select {
 .nowtb-cta-box .nowtb-cta-btn-primary {
   display: inline-block;
   padding: 12px 28px;
-  background: #fff;
+  background: #fff !important;
   color: var(--color-primary) !important;
   border-radius: 8px;
   font-weight: 700;
-  text-decoration: none;
+  text-decoration: none !important;
   margin: 6px;
 }
 .nowtb-cta-box .nowtb-cta-btn-secondary {

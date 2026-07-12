@@ -102,12 +102,13 @@ export function cleanWpContent(html: string): string {
     .replace(/\s*max-width:\s*\d+px;?/gi, '')
     .replace(/\s*margin:\s*\d+px\s+auto[^;]*;?/gi, '')
     .replace(/\s*margin:\s*0\s+auto[^;]*;?/gi, '')
-    // 6b. Fix white-on-white CTA buttons from WP content:
-    //     WP templates used white buttons (background:#fff) inside dark hero sections,
-    //     but those same buttons now render on a white page background and disappear.
-    //     Replace white backgrounds on link-style elements with the site accent color.
-    .replace(/(<a[^>]*style="[^"]*?)background:\s*#fff\b/gi, '$1background:#e8a020')
-    .replace(/(<a[^>]*style="[^"]*?)background:\s*white\b/gi, '$1background:#e8a020')
+    // 6b. Fix CTA button colors from WP content:
+    //     - Gold buttons (#c8a84b, #e8a020) → white with dark text (on dark bg sections)
+    //     - White buttons (#fff) on light backgrounds → blue (#2563eb) with white text
+    .replace(/(<a[^>]*style="[^"]*?)background:\s*#c8a84b\b/gi, '$1background:#fff')
+    .replace(/(<a[^>]*style="[^"]*?)background:\s*#e8a020\b/gi, '$1background:#fff')
+    .replace(/(<a[^>]*style="[^"]*?background:\s*#fff[^"]*?)color:\s*#fff\b/gi, '$1color:#0f172a')
+    .replace(/(<a[^>]*style="[^"]*?)background:\s*white\b/gi, '$1background:#2563eb')
     // 7. Strip useless WP inline styles: font-family overrides, empty styles
     .replace(/style="\s*font-family:[^"]*"/gi, '')
     .replace(/style="\s*"/gi, '')
