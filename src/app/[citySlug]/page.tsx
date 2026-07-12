@@ -19,6 +19,7 @@ import HeroSection from "@/components/ui/HeroSection";
 import ListingGrid from "@/components/ui/ListingGrid";
 import SpokeNav from "@/components/city/SpokeNav";
 import CityContent from "@/components/city/CityContent";
+import CityResources from "@/components/city/CityResources";
 import { cleanWpContent, formatPrice } from "@/lib/utils";
 import CountyPage from "@/components/pages/CountyPage";
 import RealtorPage from "@/components/pages/RealtorPage";
@@ -996,6 +997,9 @@ async function HubPage({ city }: { city: CityData }) {
       {/* === About section — city overview content === */}
       <div id="about" />
       <CityContent city={city} />
+
+      {/* === Resources & internal links — neighborhoods, loans, guides, blog posts === */}
+      <CityResources city={city} />
 
       {/* === Recently Sold Homes — real closed listings from MLS === */}
       <div id="sold" />
