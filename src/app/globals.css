@@ -264,17 +264,19 @@ select {
   line-height: 1.3;
 }
 
-/* CTA box — dark gradient with white text */
+/* CTA box — dark gradient with white text
+   !important needed because .prose a styles from Tailwind Typography
+   override these with higher specificity, making links invisible on dark bg */
 .nowtb-cta-box {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
   border-radius: 12px;
   padding: 32px;
   margin: 40px 0;
   text-align: center;
-  color: #fff;
+  color: #fff !important;
 }
-.nowtb-cta-box p { color: #fff; }
-.nowtb-cta-box a { color: #fff; }
+.nowtb-cta-box p { color: #fff !important; }
+.nowtb-cta-box a { color: #fff !important; text-decoration: underline; }
 .nowtb-cta-box .nowtb-cta-btn-primary {
   display: inline-block;
   padding: 12px 28px;
