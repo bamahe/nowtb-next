@@ -93,6 +93,8 @@ export default function ChatWidget() {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [hasLoaded, setHasLoaded] = useState(false);
+  // Whether to show the proactive tooltip bubble near the chat icon
+  const [showTooltip, setShowTooltip] = useState(false);
 
   // -- Refs --
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -118,6 +120,30 @@ export default function ChatWidget() {
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isLoading]);
+
+  // Proactive chat tooltip — show after 30s if not already shown this session
+  useEffect(() => {
+    // Skip if already shown this session or chat is already open
+    if (typeof window === "undefined") return;
+    const alreadyShown = sessionStorage.getItem("nowtb-chat-tooltip-shown");
+    if (alreadyShown) return;
+
+    const timer = setTimeout(() => {
+      // Only show if chat panel is still closed
+      if (!isOpen) {
+        setShowTooltip(true);
+        sessionStorage.setItem("nowtb-chat-tooltip-shown", "1");
+      }
+    }, 30000);
+
+    return () => clearTimeout(timer);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Run once on mount
+
+  // Dismiss tooltip when chat opens
+  useEffect(() => {
+    if (isOpen) setShowTooltip(false);
+  }, [isOpen]);
 
   // Focus the input when the panel opens
   useEffect(() => {
@@ -379,9 +405,33 @@ export default function ChatWidget() {
         </div>
       )}
 
+      {/* ── Proactive Chat Tooltip ── */}
+      {showTooltip && !isOpen && (
+        <div className="fixed z-50 right-20 bottom-[4.5rem] sm:bottom-20 md:bottom-8">
+          <div className="relative bg-white text-dark rounded-lg shadow-xl px-4 py-3 max-w-[220px] border border-border">
+            <p className="font-body text-sm leading-snug">
+              Looking for homes in Tampa Bay? I can help!
+            </p>
+            {/* Dismiss button */}
+            <button
+              onClick={() => setShowTooltip(false)}
+              className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-muted/20 text-muted hover:bg-muted/40 flex items-center justify-center text-xs transition-colors"
+              aria-label="Dismiss"
+            >
+              &times;
+            </button>
+            {/* Arrow pointing right toward the chat bubble */}
+            <div className="absolute top-1/2 -right-2 -translate-y-1/2 w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-l-[8px] border-l-white" />
+          </div>
+        </div>
+      )}
+
       {/* ── Floating Chat Bubble ── */}
       <button
-        onClick={() => setIsOpen((prev) => !prev)}
+        onClick={() => {
+          setIsOpen((prev) => !prev);
+          setShowTooltip(false); // Dismiss tooltip when clicking chat bubble
+        }}
         aria-label={isOpen ? "Close chat" : "Ask a question"}
         className={`
           fixed z-50 right-4

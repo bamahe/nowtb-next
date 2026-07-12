@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
 import ContactForm from "@/components/ui/ContactForm";
+import { testimonials } from "@/data/testimonials";
 
 
 // --- SEO metadata + Open Graph tags ---
@@ -158,6 +159,58 @@ export default function ContactPage() {
                 submitLabel="Send Message"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ---- Testimonials — first 3 Google reviews for social proof ---- */}
+      <section className="section-dark">
+        <div className="container-wide">
+          <div className="text-center mb-12">
+            <p className="heading-label text-white/50 mb-6">Client Reviews</p>
+            <h2 className="font-heading font-extralight text-3xl md:text-4xl tracking-[0.1em] uppercase text-white">
+              What Clients Say
+            </h2>
+            <div className="section-divider" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {testimonials.slice(0, 3).map((t) => {
+              // First name + last initial (e.g. "Regina C.")
+              const parts = t.name.split(" ");
+              const displayName = parts.length > 1
+                ? `${parts[0]} ${parts[parts.length - 1].charAt(0)}.`
+                : parts[0];
+              return (
+                <div key={t.name} className="p-6 bg-white/5 border border-white/10 rounded-lg transition-all duration-300 hover:-translate-y-1">
+                  {/* Stars */}
+                  <div className="text-amber-400 text-sm mb-3">★★★★★</div>
+                  {/* Quote */}
+                  <p className="font-body text-white/80 font-light text-sm leading-relaxed mb-4">
+                    &ldquo;{t.quote}&rdquo;
+                  </p>
+                  {/* Attribution */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent text-xs font-bold">
+                      {t.name.charAt(0)}
+                    </div>
+                    <div>
+                      <p className="font-body text-white text-xs font-semibold">{displayName}</p>
+                      <p className="font-body text-white/50 text-xs">{t.source === "google" ? "Google Review" : "Client Review"}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <div className="text-center mt-10">
+            <a
+              href="https://www.google.com/search?kgmid=/g/11xvn_2943&hl=en-US&q=Barrett+Henry,+REALTOR%C2%AE+-+REMAX+Collective"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary inline-block"
+            >
+              See All Google Reviews
+            </a>
           </div>
         </div>
       </section>

@@ -234,6 +234,17 @@ export default function ContactForm({
         >
           {status === "loading" ? "Sending..." : submitLabel}
         </button>
+
+        {/* Trust signals — credentials displayed below submit for credibility */}
+        <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 mt-4 text-xs text-muted/60 font-body">
+          <span>FL License #BK3313308</span>
+          <span>&bull;</span>
+          <span>23+ Years Experience</span>
+          <span>&bull;</span>
+          <span>REMAX Collective</span>
+          <span>&bull;</span>
+          <span>e-PRO | MRP | SRS</span>
+        </div>
       </form>
       </>
       )}
