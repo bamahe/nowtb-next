@@ -29,7 +29,7 @@ export default async function CountyPage({
   // Fetch the first 12 listings across all county ZIP codes
   let listings: import("@/lib/types").Listing[] = [];
   try {
-    const res = await getListings({ zip_codes: allZipCodes, limit: "12" });
+    const res = await getListings({ zip_codes: allZipCodes, limit: "24" });
     listings = res.value || [];
   } catch {
     // If the API call fails, render the page with an empty listing grid

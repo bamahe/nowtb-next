@@ -27,8 +27,33 @@ export default function ListingGrid({
   className,
   headingLevel = "h2",
 }: ListingGridProps) {
-  // Don't render anything if there are no listings
-  if (!listings || listings.length === 0) return null;
+  // Show a helpful message when no listings are available
+  if (!listings || listings.length === 0) {
+    return (
+      <section className={className ?? "container-wide py-24 md:py-32"}>
+        {title && (
+          <div className="text-center mb-16">
+            {headingLevel === "h3" ? (
+              <h3 className="heading-section text-2xl md:text-3xl text-primary">{title}</h3>
+            ) : (
+              <h2 className="heading-section text-3xl md:text-4xl text-primary">{title}</h2>
+            )}
+            <div className="section-divider" />
+          </div>
+        )}
+        <div className="text-center max-w-lg mx-auto">
+          <p className="font-body text-muted text-base leading-relaxed">
+            No listings currently available. New listings hit the MLS daily — call
+            Barrett at{" "}
+            <a href="tel:+18137337907" className="text-accent font-semibold hover:underline">
+              (813) 733-7907
+            </a>{" "}
+            for the latest.
+          </p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className={className ?? "container-wide py-24 md:py-32"}>

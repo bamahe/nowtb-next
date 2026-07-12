@@ -105,12 +105,20 @@ export default function GuidesIndexPage() {
             different. Barrett Henry can give you expert guidance tailored to
             your goals.
           </p>
-          <Link
-            href="/contact"
-            className="btn-primary inline-block px-8 py-3"
-          >
-            Contact Barrett
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="btn-primary inline-block px-8 py-3"
+            >
+              Contact Barrett
+            </Link>
+            <a
+              href="tel:+18137337907"
+              className="inline-flex items-center gap-2 border border-primary/30 text-primary font-semibold px-8 py-3 text-sm hover:bg-primary/5 transition-colors"
+            >
+              (813) 733-7907
+            </a>
+          </div>
         </div>
       </section>
     </>

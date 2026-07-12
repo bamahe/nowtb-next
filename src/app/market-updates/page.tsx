@@ -142,6 +142,35 @@ export default function MarketUpdatesPage() {
           </div>
         </section>
       )}
+
+      {/* === CTA — lead capture for market updates === */}
+      <section className="bg-primary py-16">
+        <div className="container-wide text-center max-w-2xl">
+          <h2 className="font-heading font-extralight text-3xl tracking-[0.1em] uppercase text-white mb-4">
+            Get Market Updates Delivered
+          </h2>
+          <div className="w-12 h-px bg-accent mx-auto mb-6" />
+          <p className="font-body text-white/70 font-light text-lg leading-relaxed mb-8">
+            Stay ahead of the Tampa Bay housing market. Barrett Henry sends quarterly
+            market reports with pricing trends, inventory data, and forecasts — straight
+            to your inbox.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-8 py-3 text-sm hover:bg-accent/90 transition-colors"
+            >
+              Sign Up for Updates
+            </Link>
+            <a
+              href="tel:+18137337907"
+              className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-8 py-3 text-sm hover:bg-white/10 transition-colors"
+            >
+              (813) 733-7907
+            </a>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

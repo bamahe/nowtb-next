@@ -1005,6 +1005,17 @@ export const cities: CityData[] = [
     lat: 28.8417,
     lng: -82.4876,
   },
+  {
+    name: "Floral City",
+    slug: "floral-city",
+    county: "Citrus",
+    zip_codes: ["34436"],
+    tier: 3,
+    topics: ["homes-for-sale", "homes-with-pool", "new-construction", "55-plus-homes", "open-houses", "investment-property", "new-listings", "single-story-homes", "land-for-sale", "condos-townhomes", "condos-for-sale", "townhomes-for-sale", "gated-community-homes", "neighborhood-guide", "housing-market"],
+    tagline: "Historic Citrus County village with Tsala Apopka Chain of Lakes, equestrian properties, and Old Florida charm",
+    lat: 28.7483,
+    lng: -82.2968,
+  },
 ];
 
 /** Get all Tier 1 cities (launch set) */

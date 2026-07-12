@@ -42,16 +42,31 @@ export default function NotFound() {
           </Link>
         </div>
 
-        {/* Phone CTA — always clickable */}
-        <p className="font-body text-white/40 text-sm mt-8">
-          Need help? Call{" "}
+        {/* Phone CTA — prominent with headshot */}
+        <div className="mt-10 flex flex-col items-center gap-4">
+          <img
+            src="/images/barrett-henry-headshot.webp"
+            alt="Barrett Henry, REALTOR® and Broker Associate at REMAX Collective"
+            width={80}
+            height={80}
+            className="rounded-full border-2 border-accent/40"
+          />
+          <p className="font-body text-white/60 text-sm">
+            Barrett Henry, REALTOR® &amp; Broker Associate
+          </p>
           <a
             href="tel:+18137337907"
-            className="text-link hover:underline"
+            className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-8 py-3 text-sm hover:bg-accent/90 transition-colors"
           >
-            (813) 733-7907
+            Call (813) 733-7907
           </a>
-        </p>
+          <Link
+            href="/contact"
+            className="font-body text-white/40 text-sm hover:text-accent transition-colors"
+          >
+            Or send a message →
+          </Link>
+        </div>
       </div>
     </section>
   );

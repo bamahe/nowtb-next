@@ -69,8 +69,21 @@ export default function CommunitiesPage() {
         <SearchBar />
       </HeroSection>
 
+      {/* === Intro text — unique content about Tampa Bay communities === */}
+      <section className="container-wide pt-12 pb-2">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="font-body text-muted font-light text-lg leading-relaxed">
+            Barrett Henry serves buyers and sellers across 8 counties and 85+ cities
+            in the Tampa Bay metro area. Whether you&apos;re looking for waterfront
+            living in Apollo Beach, family-friendly neighborhoods in Valrico, or
+            affordable homes in Plant City, explore our community guides below to
+            find your perfect match.
+          </p>
+        </div>
+      </section>
+
       {/* === Interactive Tampa Bay Area Map — click cities to explore === */}
-      <section className="container-wide pt-12 pb-6">
+      <section className="container-wide pt-8 pb-6">
         <p className="heading-label text-center mb-6">Tampa Bay Service Area</p>
         <TampaBayMap
           markers={cities.map((c) => ({
