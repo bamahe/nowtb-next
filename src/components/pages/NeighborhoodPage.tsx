@@ -160,39 +160,45 @@ export default async function NeighborhoodPage({
       : null;
 
   // -------------------------------------------------------------------------
-  // Fetch recently sold listings (same subdivision/zip filter, status Closed)
+  // Fetch recently sold listings — ONLY for priority cities to conserve API quota.
+  // Each neighborhood page costs 1 API call for active listings. Adding sold
+  // doubles it to 2. With 461 neighborhoods, that's 922 calls after every deploy.
+  // Limit sold data to the 10 priority cities where it matters most for SEO.
   // -------------------------------------------------------------------------
+  const PRIORITY_CITIES = new Set(["valrico","brandon","riverview","lithia","apollo-beach","ruskin","dover","seffner","plant-city","thonotosassa","tampa"]);
+  const isPriorityCity = PRIORITY_CITIES.has(citySlug);
+
   let soldListings: Listing[] = [];
-  try {
-    if (isSubdivisionMatch) {
-      // Same subdivision search that matched active listings
-      const parentCityName = parentCity?.name || "";
-      const searchName = name
-        .replace(new RegExp(`\\s+${parentCityName}$`, "i"), "")
-        .replace(/,?\s*(FL|Florida)$/i, "")
-        .trim();
-      const soldRes = await getListings({
-        subdivision: searchName,
-        zip_codes: parentCity?.zip_codes,
-        status: "Closed",
-        exclude_rental: true,
-        limit: "8",
-        sort: "CloseDate desc",
-      });
-      soldListings = soldRes.value || [];
-    } else if (parentCity?.zip_codes?.length) {
-      // Fall back to ZIP-based sold listings
-      const soldRes = await getListings({
-        zip_codes: parentCity.zip_codes,
-        status: "Closed",
-        exclude_rental: true,
-        limit: "8",
-        sort: "CloseDate desc",
-      });
-      soldListings = soldRes.value || [];
+  if (isPriorityCity) {
+    try {
+      if (isSubdivisionMatch) {
+        const parentCityName = parentCity?.name || "";
+        const searchName = name
+          .replace(new RegExp(`\\s+${parentCityName}$`, "i"), "")
+          .replace(/,?\s*(FL|Florida)$/i, "")
+          .trim();
+        const soldRes = await getListings({
+          subdivision: searchName,
+          zip_codes: parentCity?.zip_codes,
+          status: "Closed",
+          exclude_rental: true,
+          limit: "8",
+          sort: "CloseDate desc",
+        });
+        soldListings = soldRes.value || [];
+      } else if (parentCity?.zip_codes?.length) {
+        const soldRes = await getListings({
+          zip_codes: parentCity.zip_codes,
+          status: "Closed",
+          exclude_rental: true,
+          limit: "8",
+          sort: "CloseDate desc",
+        });
+        soldListings = soldRes.value || [];
+      }
+    } catch {
+      soldListings = [];
     }
-  } catch {
-    soldListings = [];
   }
 
   return (
