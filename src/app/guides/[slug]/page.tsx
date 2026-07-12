@@ -212,8 +212,13 @@ export default async function GuidePage({
               </div>
             </aside>
 
-            {/* Main content — real WP HTML */}
+            {/* Main content */}
             <article className="lg:col-span-3 order-1 lg:order-2">
+              {/* Portability calculator — top of homestead guide */}
+              {guide.slug === "florida-homestead-exemption-save-our-homes" && (
+                <PortabilityCalc />
+              )}
+
               <div
                 className="blog-content prose prose-lg font-body text-dark max-w-none
                   prose-headings:font-heading prose-headings:text-primary
@@ -221,11 +226,6 @@ export default async function GuidePage({
                   prose-p:leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: cleanWpContent(wpContent) }}
               />
-
-              {/* Portability calculator — only on the homestead guide */}
-              {guide.slug === "florida-homestead-exemption-save-our-homes" && (
-                <PortabilityCalc />
-              )}
 
               {/* Back to guides link */}
               <div className="mt-8 pt-8 border-t border-gray-200">
