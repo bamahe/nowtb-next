@@ -269,17 +269,31 @@ select {
 }
 .nowtb-stat-number {
   display: block;
-  font-size: 1.8em;
-  font-weight: 800;
-  color: var(--color-primary);
-  line-height: 1.2;
+  font-size: 1.8em !important;
+  font-weight: 800 !important;
+  font-family: var(--font-heading) !important;
+  color: var(--color-primary) !important;
+  line-height: 1.2 !important;
 }
 .nowtb-stat-label {
   display: block;
-  font-size: 0.8em;
-  color: #64748b;
+  font-size: 0.8em !important;
+  font-family: var(--font-body) !important;
+  color: #64748b !important;
   margin-top: 4px;
   line-height: 1.3;
+}
+/* Override inline font-size on stat grid divs from WP content */
+.nowtb-stat-grid div[style*="font-size"] {
+  font-family: var(--font-heading) !important;
+}
+.blog-content .nowtb-stat-grid div {
+  font-family: var(--font-heading) !important;
+}
+.blog-content .nowtb-stat-grid div[style*="font-size:2em"],
+.blog-content .nowtb-stat-grid div[style*="font-size: 2em"] {
+  font-family: var(--font-heading) !important;
+  font-size: 1.8em !important;
 }
 
 /* CTA box — dark gradient with white text
