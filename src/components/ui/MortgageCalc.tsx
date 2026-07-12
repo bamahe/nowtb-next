@@ -548,10 +548,25 @@ export default function MortgageCalc() {
             Mortgage Calculator
           </h1>
           <div className="section-divider" />
-          <p className="font-body text-accent/80 text-lg max-w-2xl mx-auto">
+          <p className="font-body text-accent/80 text-lg max-w-2xl mx-auto mb-8">
             Estimate your monthly payment or find out how much home you can afford.
             All calculations update instantly as you adjust the inputs.
           </p>
+          {/* CTA buttons */}
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/properties/"
+              className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-8 py-3 rounded text-sm hover:bg-accent/90 transition-colors"
+            >
+              Search Homes
+            </Link>
+            <Link
+              href="/contact/"
+              className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-8 py-3 rounded text-sm hover:bg-white/10 transition-colors"
+            >
+              Get Pre-Approved
+            </Link>
+          </div>
         </div>
       </section>
 
