@@ -9,6 +9,7 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import MobileNav from "@/components/layout/MobileNav";
@@ -237,15 +238,14 @@ export default function Header() {
         `}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          {/* ── Logo — REMAX branded logo, swaps between dark and light ── */}
-          {/* Using <img> instead of next/image to avoid optimization proxy issues */}
+          {/* ── Logo — REMAX branded logo, above the fold so priority loading ── */}
           <Link href="/" className="group flex items-center gap-3">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/images/remax-logo-color.png"
               alt="Barrett Henry — REMAX Collective"
               width={200}
               height={55}
+              priority
               className="h-11 w-auto"
             />
           </Link>

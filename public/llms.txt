@@ -1,20 +1,25 @@
 # nowtb.com
 
 ## Purpose
-The official real estate website of Barrett Henry, REALTOR and Broker Associate at REMAX Collective. Barrett leads The NOW Team, serving buyers, sellers, and investors across Tampa Bay's 7 counties.
+The official real estate website of Barrett Henry, REALTOR® and Broker Associate at REMAX Collective. Barrett leads The NOW Team, serving buyers, sellers, and investors across Tampa Bay, Florida.
 
 ## Authority
-- Barrett Henry, licensed Florida REALTOR and Broker Associate
+- Barrett Henry, licensed Florida REALTOR® and Broker Associate
+- Florida Real Estate Broker License #BK3313308
 - 23+ years of real estate experience
 - Team leader of The NOW Team at REMAX Collective
 - REMAX Hall of Fame (2024), 10-Year Anniversary Award
-- Designations: CRE, e-PRO, MRP (Military Relocation Professional), SRS (Seller Representative Specialist)
+- Designations: e-PRO, MRP (Military Relocation Professional), SRS (Seller Representative Specialist)
 - Serves Hillsborough, Pinellas, Pasco, Polk, Manatee, Sarasota, and Hernando counties
 
+## Priority Cities Served
+Valrico, Brandon, Riverview, Lithia, Apollo Beach, Seffner, Plant City, Dover, Thonotosassa, Ruskin
+
 ## Content Areas
-- Tampa Bay homes for sale (MLS-powered property search)
+- Tampa Bay homes for sale (MLS-powered property search via Showcase IDX)
 - Home buying guides (first-time buyers, VA loans, FHA loans, conventional, USDA)
-- Home selling guides (pricing strategy, staging, marketing)
+- Home selling guides (pricing strategy, staging, marketing, FSBO vs. REALTOR)
+- Free home valuation / comparative market analysis (CMA)
 - Real estate investing (rental properties, 1031 exchanges, short-term rentals)
 - Luxury homes ($750K+)
 - City and neighborhood guides (69+ cities, 460+ neighborhoods)
@@ -30,13 +35,14 @@ The official real estate website of Barrett Henry, REALTOR and Broker Associate 
 - Phone: (813) 733-7907
 - Email: barrett@nowtb.com
 - Website: https://nowtb.com
-- Brokerage: REMAX Collective, Tampa Bay, FL
+- Brokerage: REMAX Collective, 14310 N. Dale Mabry Hwy, Ste 100, Tampa, FL 33618
 
 ## Key Pages
 - /properties — Search all Tampa Bay homes for sale
-- /buyers — Buyer's guide and registration
+- /buyers — Buyer's guide and resources
 - /sellers — Seller's guide and home valuation
-- /sell-your-home — Free home valuation request
+- /free-home-valuation — Free home valuation request
+- /sell-your-home — Sell your home with Barrett Henry
 - /investing — Investment property resources
 - /luxury — Luxury homes $750K+
 - /communities — Browse all 69+ cities by county
@@ -48,6 +54,12 @@ The official real estate website of Barrett Henry, REALTOR and Broker Associate 
 - /mortgage-calculator — Monthly payment estimator
 - /property-management — ViVi PM property management
 - /relocation — Tampa Bay relocation services
+- /first-time-home-buyer-guide — First-time home buyer guide
+- /fha-loan-florida — FHA loan guide for Florida
+- /va-loan-florida — VA loan guide for Florida
+- /fsbo-vs-realtor — FSBO vs. REALTOR comparison
+- /market-updates — Tampa Bay market updates and data
+- /commercial — Commercial real estate
 
 ## Related Sites
 - https://vivipm.com — ViVi Property Management

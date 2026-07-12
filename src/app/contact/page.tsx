@@ -226,10 +226,11 @@ export default function ContactPage() {
             {/* Tampa Office — links to /remax-tampa/ */}
             <div className="bg-white overflow-hidden shadow-sm">
               <Link href="/remax-tampa/" className="block overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src="/images/office-tampa.jpg"
                   alt="REMAX Collective Tampa Office — 14310 N. Dale Mabry Hwy"
+                  width={400}
+                  height={192}
                   className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
                 />
               </Link>
@@ -259,10 +260,11 @@ export default function ContactPage() {
             {/* Largo Office — links to /remax-largo/ */}
             <div className="bg-white overflow-hidden shadow-sm">
               <Link href="/remax-largo/" className="block overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src="/images/office-largo.jpg"
                   alt="REMAX Collective Largo Office — 11200 Seminole Blvd"
+                  width={400}
+                  height={192}
                   className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
                 />
               </Link>
@@ -292,10 +294,11 @@ export default function ContactPage() {
             {/* Brandon Office — links to /remax-brandon/ */}
             <div className="bg-white overflow-hidden shadow-sm">
               <Link href="/remax-brandon/" className="block overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src="/images/office-brandon.jpg"
                   alt="REMAX Collective Brandon Office — 417 Lithia Pinecrest Rd"
+                  width={400}
+                  height={192}
                   className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
                 />
               </Link>

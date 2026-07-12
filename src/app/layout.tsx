@@ -74,6 +74,40 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
+      <head>
+        {/* SiteNavigationElement schema — helps search engines and AI understand main nav */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SiteNavigationElement",
+              name: [
+                "Home",
+                "Communities",
+                "Buyers",
+                "Sellers",
+                "Guides",
+                "About",
+                "Contact",
+                "Properties",
+                "Blog",
+              ],
+              url: [
+                "https://nowtb.com/",
+                "https://nowtb.com/communities/",
+                "https://nowtb.com/buyers/",
+                "https://nowtb.com/sellers/",
+                "https://nowtb.com/guides/",
+                "https://nowtb.com/about/",
+                "https://nowtb.com/contact/",
+                "https://nowtb.com/properties/",
+                "https://nowtb.com/blog/",
+              ],
+            }),
+          }}
+        />
+      </head>
       <body className="font-body antialiased bg-light text-dark">
         {/* Skip link for keyboard/screen reader users */}
         <a

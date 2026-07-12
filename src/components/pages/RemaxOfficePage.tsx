@@ -6,6 +6,7 @@
 // =============================================================================
 
 import Link from "next/link";
+import Image from "next/image";
 import ContactForm from "@/components/ui/ContactForm";
 import ListingGrid from "@/components/ui/ListingGrid";
 import { getListings } from "@/lib/bridge";
@@ -204,8 +205,7 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Office building photo */}
             <div>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={office.image} alt={`REMAX Collective ${office.city} Office — ${office.address}`} className="w-full h-auto" />
+              <Image src={office.image} alt={`REMAX Collective ${office.city} Office — ${office.address}`} width={800} height={500} className="w-full h-auto" />
               <p className="font-body text-muted text-xs mt-3">REMAX Collective {office.city} &mdash; {office.address}</p>
             </div>
             {/* Barrett info + contact */}

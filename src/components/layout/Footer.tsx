@@ -6,19 +6,67 @@
 
 import Link from "next/link";
 
-// Quick links for the single nav row
-const NAV_LINKS = [
-  { href: "/buyers", label: "Buy" },
-  { href: "/sellers", label: "Sell" },
-  { href: "/properties", label: "Properties" },
-  { href: "/communities", label: "Communities" },
-  { href: "/sell-your-home", label: "Home Valuation" },
-  { href: "/investing", label: "Invest" },
-  { href: "/luxury", label: "Luxury" },
-  { href: "/property-management", label: "Property Management" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-  { href: "/blog", label: "Blog" },
+// Footer navigation organized into themed columns
+const FOOTER_COLUMNS = [
+  {
+    title: "Buy",
+    links: [
+      { href: "/buyers", label: "Buyer's Guide" },
+      { href: "/properties", label: "Search Properties" },
+      { href: "/mortgage-calculator", label: "Mortgage Calculator" },
+      { href: "/open-houses", label: "Open Houses" },
+      { href: "/first-time-home-buyer-guide", label: "First-Time Buyers" },
+      { href: "/fha-loan-florida", label: "FHA Loans" },
+      { href: "/va-loan-florida", label: "VA Loans" },
+    ],
+  },
+  {
+    title: "Sell",
+    links: [
+      { href: "/sellers", label: "Seller's Guide" },
+      { href: "/free-home-valuation", label: "Free Home Valuation" },
+      { href: "/sell-your-home", label: "Sell Your Home" },
+      { href: "/fsbo-vs-realtor", label: "FSBO vs. REALTOR" },
+    ],
+  },
+  {
+    title: "Explore",
+    links: [
+      { href: "/communities", label: "Communities" },
+      { href: "/market-updates", label: "Market Updates" },
+      { href: "/guides", label: "Guides" },
+      { href: "/investing", label: "Investing" },
+      { href: "/luxury", label: "Luxury Homes" },
+      { href: "/commercial", label: "Commercial" },
+    ],
+  },
+  {
+    title: "Cities",
+    links: [
+      { href: "/valrico", label: "Valrico" },
+      { href: "/brandon", label: "Brandon" },
+      { href: "/riverview", label: "Riverview" },
+      { href: "/lithia", label: "Lithia" },
+      { href: "/apollo-beach", label: "Apollo Beach" },
+      { href: "/seffner", label: "Seffner" },
+      { href: "/plant-city", label: "Plant City" },
+      { href: "/dover", label: "Dover" },
+      { href: "/thonotosassa", label: "Thonotosassa" },
+      { href: "/ruskin", label: "Ruskin" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { href: "/about", label: "About" },
+      { href: "/contact", label: "Contact" },
+      { href: "/blog", label: "Blog" },
+      { href: "/privacy-policy", label: "Privacy Policy" },
+      { href: "/terms-of-use", label: "Terms of Use" },
+      { href: "/fair-housing", label: "Fair Housing" },
+      { href: "/accessibility", label: "Accessibility" },
+    ],
+  },
 ];
 
 export default function Footer() {
@@ -47,21 +95,28 @@ export default function Footer() {
           barrett@nowtb.com
         </a>
 
-        {/* Nav links — single row separated by pipes */}
-        <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-2 mb-16">
-          {NAV_LINKS.map((link, i) => (
-            <span key={link.href} className="flex items-center gap-2">
-              {i > 0 && (
-                <span className="text-white/30 text-xs" aria-hidden="true">|</span>
-              )}
-              <Link
-                href={link.href}
-                className="link-underline text-xs tracking-[0.15em] uppercase text-white/60
-                           transition-colors duration-300 hover:text-white"
-              >
-                {link.label}
-              </Link>
-            </span>
+        {/* Nav links — organized into themed columns */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-left mb-16">
+          {FOOTER_COLUMNS.map((column) => (
+            <div key={column.title}>
+              {/* p tag for column header — NOT h2/h3, footer headings waste SEO hierarchy */}
+              <p className="text-xs tracking-[0.2em] uppercase text-white/80 font-semibold mb-4">
+                {column.title}
+              </p>
+              <ul className="space-y-2">
+                {column.links.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-xs tracking-[0.1em] text-white/50
+                                 transition-colors duration-300 hover:text-white"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
         </div>
       </div>
