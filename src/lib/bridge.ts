@@ -426,7 +426,8 @@ export async function getOpenHouses(zipCodes?: string[]): Promise<Listing[]> {
     }
 
     const ohData = await ohRes.json();
-    const openHouseRecords = ohData.bundle || [];
+    const openHouseRecords = ohData.bundle || ohData.value || [];
+    console.log(`[Bridge] Open houses found: ${openHouseRecords.length} records`);
     if (openHouseRecords.length === 0) return [];
 
     // Step 2: Get unique listing keys from open house records
