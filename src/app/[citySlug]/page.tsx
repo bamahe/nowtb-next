@@ -783,25 +783,23 @@ async function HubPage({ city }: { city: CityData }) {
   let soldListings: import("@/lib/types").Listing[] = [];
   let totalActive = 0;
   let totalRentals = 0;
-  try {
-    const [activeRes, rentalRes, soldRes] = await Promise.all([
-      // For-sale listings only (exclude rentals)
-      getListings({ zip_codes: city.zip_codes, limit: "48", exclude_rental: true }),
-      // Rentals separately
-      getListings({ zip_codes: city.zip_codes, limit: "12", rental: true }),
-      // Recently sold
-      getListings({ zip_codes: city.zip_codes, limit: "8", status: "Closed", sort: "ClosePrice desc" }),
-    ]);
-    listings = activeRes.value || [];
-    rentalListings = rentalRes.value || [];
-    soldListings = soldRes.value || [];
-    totalActive = activeRes.total || listings.length;
-    totalRentals = rentalRes.total || rentalListings.length;
-  } catch {
-    // Show empty gracefully — better than a 500 error page
-    listings = [];
-    rentalListings = [];
-    soldListings = [];
+  // Use allSettled so one failed call doesn't kill the others.
+  // Promise.all was causing ALL listings to disappear if rentals or sold threw.
+  const [activeResult, rentalResult, soldResult] = await Promise.allSettled([
+    getListings({ zip_codes: city.zip_codes, limit: "48", exclude_rental: true }),
+    getListings({ zip_codes: city.zip_codes, limit: "12", rental: true }),
+    getListings({ zip_codes: city.zip_codes, limit: "8", status: "Closed", sort: "ClosePrice desc" }),
+  ]);
+  if (activeResult.status === "fulfilled") {
+    listings = activeResult.value.value || [];
+    totalActive = activeResult.value.total || listings.length;
+  }
+  if (rentalResult.status === "fulfilled") {
+    rentalListings = rentalResult.value.value || [];
+    totalRentals = rentalResult.value.total || rentalListings.length;
+  }
+  if (soldResult.status === "fulfilled") {
+    soldListings = soldResult.value.value || [];
   }
 
   // Compute market stats from the listings we have
