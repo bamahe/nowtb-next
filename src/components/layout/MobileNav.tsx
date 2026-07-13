@@ -72,12 +72,7 @@ export default function MobileNav({ scrolled = false }: MobileNavProps) {
         className={`
           md:hidden relative z-[10000] p-2 -mr-2
           focus:outline-none transition-colors duration-300
-          ${isOpen
-            ? "text-white"
-            : scrolled
-              ? "text-primary hover:text-accent"
-              : "text-white hover:text-accent"
-          }
+          text-white hover:text-accent
         `}
       >
         {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
