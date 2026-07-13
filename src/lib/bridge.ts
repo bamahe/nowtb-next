@@ -40,8 +40,8 @@ export function isRateLimited(): boolean {
  * All calls during cooldown will return empty results instead of hammering Bridge.
  */
 function markRateLimited(): void {
-  rateLimitedUntil = Date.now() + 5 * 60 * 1000; // 5-minute cooldown
-  console.warn('[Bridge] Rate limited — returning empty results for 5 minutes');
+  rateLimitedUntil = Date.now() + 60 * 1000; // 1-minute cooldown (was 5 min — too aggressive)
+  console.warn('[Bridge] Rate limited — pausing API calls for 1 minute');
 }
 
 // -----------------------------------------------------------------------------
@@ -397,8 +397,6 @@ export async function getFeaturedListings(): Promise<Listing[]> {
 export async function getOpenHouses(zipCodes?: string[]): Promise<Listing[]> {
   if (IS_BUILD_TIME) return [];
   try {
-    if (isRateLimited()) return [];
-
     const now = new Date().toISOString();
     const weekFromNow = new Date(
       Date.now() + 7 * 24 * 60 * 60 * 1000
