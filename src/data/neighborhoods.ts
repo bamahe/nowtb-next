@@ -236,6 +236,7 @@ export const neighborhoods: NeighborhoodData[] = [
   { slug: "harbour-island", name: "Harbour Island", city: "tampa" },
   { slug: "hunters-green", name: "Hunters Green New Tampa", city: "tampa" },
   { slug: "hyde-park", name: "Hyde Park", city: "tampa" },
+  { slug: "parkland-estates", name: "Parkland Estates", city: "tampa" },
   { slug: "interbay", name: "Interbay", city: "tampa" },
   { slug: "k-bar-ranch", name: "K-Bar Ranch New Tampa", city: "tampa" },
   { slug: "making-an-offer-on-a-home", name: "Making an Offer on a Home in Florida 2026", city: "tampa" },
