@@ -13,7 +13,7 @@ import ContactForm from "@/components/ui/ContactForm";
 import { getOpenHouses } from "@/lib/bridge";
 
 // ISR: cache for 1 hour — open houses don't change minute-to-minute
-export const revalidate = 3600;
+export const revalidate = 300;
 
 // --- SEO metadata + Open Graph tags ---
 export const metadata: Metadata = {
