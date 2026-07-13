@@ -100,6 +100,7 @@ export function cleanWpContent(html: string): string {
     .replace(/>nn/g, '>\n')
     // 6. Strip width-constraining inline styles from WP content
     .replace(/\s*max-width:\s*\d+px;?/gi, '')
+    .replace(/\s*width:\s*\d{4,}px;?/gi, '') // Strip fixed widths over 999px (e.g., width:1200px)
     .replace(/\s*margin:\s*\d+px\s+auto[^;]*;?/gi, '')
     .replace(/\s*margin:\s*0\s+auto[^;]*;?/gi, '')
     // 6b. Fix CTA button colors from WP content:

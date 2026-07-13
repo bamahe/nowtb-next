@@ -28,6 +28,11 @@ body {
   background: #F8F6F3;
 }
 
+/* Prevent horizontal overflow on mobile from WP content with fixed widths */
+html, body {
+  overflow-x: hidden;
+}
+
 /* Smooth scrolling for anchor links */
 html {
   scroll-behavior: smooth;
@@ -118,6 +123,9 @@ select {
 .blog-content p { @apply font-body text-dark leading-relaxed mb-4; }
 .blog-content ul, .blog-content ol { @apply mb-4 pl-6; }
 .blog-content li { @apply mb-2; }
+/* Prevent WP content from overflowing on mobile */
+.blog-content { overflow-x: hidden; word-wrap: break-word; overflow-wrap: break-word; }
+.blog-content table { display: block; overflow-x: auto; max-width: 100%; }
 .blog-content a { color: var(--color-link) !important; text-decoration: underline !important; }
 .blog-content a:hover { color: var(--color-primary) !important; }
 /* Also fix prose a color globally for content areas */
@@ -224,10 +232,13 @@ select {
 
 /* Outer content wrapper — let the parent template control width */
 .nowtb-post-content {
-  max-width: none !important;
+  max-width: 100% !important;
   margin: 0 !important;
   line-height: 1.8;
   color: #1e293b;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Highlight/intro box — force light background regardless of WP inline styles */
