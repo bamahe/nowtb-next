@@ -59,11 +59,11 @@ async function bridgeFetch<T>(
   endpoint: string,
   params?: Record<string, string>
 ): Promise<BridgeResponse<T>> {
-  // If we're in cooldown from a recent 429, throw immediately.
-  // IMPORTANT: throwing prevents Next.js ISR from caching empty results.
-  // When ISR revalidation fails, it serves the PREVIOUS cached version instead.
+  // If in cooldown from a recent 429, log but still try — the ISR cache
+  // means we only call once per 5 min, so we should always attempt the call.
+  // The old approach of throwing here caused cascading failures across all pages.
   if (isRateLimited()) {
-    throw new Error('Bridge API rate limited — in cooldown period');
+    console.warn('[Bridge] In cooldown but attempting call anyway (ISR cached)');
   }
 
   // Build the full URL using OData format: base/OData/dataset/resource
