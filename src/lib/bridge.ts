@@ -421,13 +421,23 @@ export async function getOpenHouses(zipCodes?: string[]): Promise<Listing[]> {
 
     if (ohRes.status === 429) { markRateLimited(); return []; }
     if (!ohRes.ok) {
-      console.error(`Open houses endpoint error: ${ohRes.status}`);
+      console.error(`[Bridge] Open houses endpoint error: ${ohRes.status}`);
+      return [];
+    }
+    const ohData = await ohRes.json();
+
+    // Bridge REST API returns 200 with rate limit error IN the body:
+    // { success: false, status: 429, bundle: { name: "RateLimitError" } }
+    if (ohData.success === false || ohData.status === 429) {
+      console.warn('[Bridge] Open houses rate limited (in-body 429)');
+      markRateLimited();
       return [];
     }
 
-    const ohData = await ohRes.json();
-    const openHouseRecords = ohData.bundle || ohData.value || [];
-    console.log(`[Bridge] Open houses found: ${openHouseRecords.length} records`);
+    // bundle is an array on success, an error object on failure
+    const rawBundle = ohData.bundle;
+    const openHouseRecords = Array.isArray(rawBundle) ? rawBundle : (Array.isArray(ohData.value) ? ohData.value : []);
+    console.log(`[Bridge] Open houses: ${openHouseRecords.length} records`);
     if (openHouseRecords.length === 0) return [];
 
     // Step 2: Get unique listing keys from open house records
