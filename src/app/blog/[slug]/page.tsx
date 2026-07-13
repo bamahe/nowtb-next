@@ -11,6 +11,7 @@ import { getPrimaryAgent } from "@/data/agents";
 import { cities } from "@/data/cities";
 import { getAllPosts, getPostBySlug, getPostThumbnail, getRelatedPosts } from "@/lib/posts";
 import { cleanWpContent } from "@/lib/utils";
+import PhotoCredit from "@/components/ui/PhotoCredit";
 
 /**
  * Find the city that matches a blog post slug.
@@ -281,16 +282,20 @@ export default async function BlogPostPage({
           {/* Main content */}
           <article className="lg:col-span-3 order-1 lg:order-2">
             {thumbnail && (
-              <div className="mb-8 rounded-lg overflow-hidden relative">
-                <Image
-                  src={thumbnail}
-                  alt={post.title}
-                  width={900}
-                  height={500}
-                  className="w-full h-auto"
-                  priority
-                  sizes="(max-width: 768px) 100vw, 75vw"
-                />
+              <div className="mb-8">
+                <div className="rounded-lg overflow-hidden">
+                  <Image
+                    src={thumbnail}
+                    alt={post.title}
+                    width={900}
+                    height={500}
+                    className="w-full h-auto"
+                    priority
+                    sizes="(max-width: 768px) 100vw, 75vw"
+                  />
+                </div>
+                {/* Photo credit — shows for Wikimedia Commons and attributed images */}
+                <PhotoCredit src={thumbnail} />
               </div>
             )}
             <div
