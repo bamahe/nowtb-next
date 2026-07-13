@@ -137,17 +137,29 @@ export default function Footer() {
           </p>
 
           {/* MLS/IDX disclaimer — required by MFRMLS/Stellar MLS */}
-          <p className="text-[10px] text-white/30 leading-relaxed max-w-3xl mx-auto">
-            Copyright © MFRMLS.com. All information deemed reliable but not guaranteed.
-            All properties are subject to prior sale, change or withdrawal. Neither
-            listing broker(s) or information provider(s) shall be responsible for any
-            typographical errors, misinformation, misprints and shall be held totally
-            harmless. Listing(s) information is provided for consumers&apos; personal,
-            non-commercial use and may not be used for any purpose other than to
-            identify prospective properties consumers may be interested in purchasing.
-            The data relating to real estate for sale on this website comes in part
-            from the Internet Data Exchange program of MFR MLS.
-          </p>
+          <div className="text-[10px] text-white/30 leading-relaxed max-w-3xl mx-auto space-y-3">
+            <p>
+              Copyright © MFRMLS.com. All information deemed reliable but not guaranteed.
+              All properties are subject to prior sale, change or withdrawal. Neither
+              listing broker(s) or information provider(s) shall be responsible for any
+              typographical errors, misinformation, misprints and shall be held totally
+              harmless. Listing(s) information is provided for consumers&apos; personal,
+              non-commercial use and may not be used for any purpose other than to
+              identify prospective properties consumers may be interested in purchasing.
+              The data relating to real estate for sale on this website comes in part
+              from the Internet Data Exchange program of MFR MLS.
+            </p>
+            <p>
+              All information deemed reliable but not guaranteed. All properties are
+              subject to prior sale, change or withdrawal. Neither listing broker(s) or
+              information provider(s) shall be responsible for any typographical errors,
+              misinformation, misprints and shall be held totally harmless. Listing(s)
+              information is provided for consumers&apos; personal, non-commercial use and
+              may not be used for any purpose other than to identify prospective properties
+              consumers may be interested in purchasing.
+              Updated on {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}.
+            </p>
+          </div>
 
           {/* Equal Housing + site credit */}
           <p className="text-[10px] tracking-[0.1em] uppercase text-white/30">
