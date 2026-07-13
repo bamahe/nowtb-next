@@ -172,6 +172,10 @@ const nextConfig = {
       { source: "/lecanto-fl-real-estate-market", destination: "/lecanto-housing-market/", permanent: true },
       { source: "/lecanto-fl-real-estate-market/", destination: "/lecanto-housing-market/", permanent: true },
 
+      // ── Duplicate blog post redirects ──
+      { source: "/blog/best-neighborhoods-lithia-fl", destination: "/blog/best-neighborhoods-lithia/", permanent: true },
+      { source: "/blog/best-neighborhoods-lithia-fl/", destination: "/blog/best-neighborhoods-lithia/", permanent: true },
+
       // ── Common broken URLs — redirect to correct pages ──
       { source: "/neighborhoods", destination: "/communities/", permanent: true },
       { source: "/neighborhoods/", destination: "/communities/", permanent: true },
