@@ -465,11 +465,8 @@ export default function CardPage() {
         {/* FOOTER — brand + accent bar                                    */}
         {/* ============================================================= */}
         <div className="text-center py-5 pb-10">
-          <p className="text-[10px] font-bold text-white/20 uppercase tracking-[2px]">
-            Site by Vyrabyte
-          </p>
           {/* Small red accent line */}
-          <div className="w-6 h-0.5 bg-[#DC1C2E] rounded-sm mx-auto mt-2 opacity-50" />
+          <div className="w-6 h-0.5 bg-[#DC1C2E] rounded-sm mx-auto opacity-50" />
         </div>
       </div>
 
