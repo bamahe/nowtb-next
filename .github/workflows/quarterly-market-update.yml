@@ -1,0 +1,38 @@
+# Quarterly Market Update — runs on the 1st of each quarter
+# Updates all market update pages with current quarter data,
+# commits the change, and pushes to trigger a Vercel deploy.
+name: Quarterly Market Update
+
+on:
+  schedule:
+    # 6 AM ET on Jan 1, Apr 1, Jul 1, Oct 1
+    - cron: '0 10 1 1,4,7,10 *'
+  workflow_dispatch: # Allow manual trigger from GitHub UI
+
+jobs:
+  update-market-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run market update script
+        run: python3 scripts/update-market-quarters.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add src/data/market-updates-export.json
+          # Only commit if there are changes
+          if git diff --staged --quiet; then
+            echo "No market update changes to commit"
+          else
+            git commit -m "Auto-update market reports to $(python3 -c 'from datetime import datetime; q=(datetime.now().month-1)//3+1; print(f"Q{q} {datetime.now().year}")')
+
+            Co-Authored-By: GitHub Actions <actions@github.com>"
+            git push
+          fi
