@@ -70,7 +70,7 @@ export default function MobileNav({ scrolled = false }: MobileNavProps) {
         onClick={() => setIsOpen(!isOpen)}
         aria-label={isOpen ? "Close menu" : "Open menu"}
         className={`
-          md:hidden relative z-50 p-2 -mr-2
+          md:hidden relative z-[10000] p-2 -mr-2
           focus:outline-none transition-colors duration-300
           ${isOpen
             ? "text-white"
@@ -87,15 +87,15 @@ export default function MobileNav({ scrolled = false }: MobileNavProps) {
       <div
         aria-hidden={!isOpen}
         className={`
-          fixed inset-0 z-40 md:hidden
+          fixed inset-0 z-[9999] md:hidden
           transition-opacity duration-500
           ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
         `}
       >
-        {/* Full-screen dark overlay with heavy blur */}
+        {/* Full-screen dark overlay — fully opaque, no bleed-through */}
         <div
           className={`
-            absolute inset-0 bg-primary/[0.98] backdrop-blur-xl
+            absolute inset-0 bg-primary
             flex flex-col items-center justify-center
             transition-all duration-500
             ${isOpen ? "scale-100" : "scale-95"}
