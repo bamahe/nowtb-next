@@ -240,6 +240,12 @@ const nextConfig = {
       ...blogRedirects,
     ];
   },
+  async rewrites() {
+    return [
+      // Private seller hub — static HTML, no trailing slash
+      { source: '/3813-polumbo', destination: '/3813-polumbo.html' },
+    ];
+  },
   // Allow Bridge API listing photos and Showcase IDX images
   images: {
     // Prefer modern image formats — avif first, then webp
