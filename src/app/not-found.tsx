@@ -45,7 +45,7 @@ export default function NotFound() {
         {/* Phone CTA — prominent with headshot */}
         <div className="mt-10 flex flex-col items-center gap-4">
           <img
-            src="/images/barrett-henry-headshot.webp"
+            src="/images/barrett-headshot.png"
             alt="Barrett Henry, REALTOR® and Broker Associate at REMAX Collective"
             width={80}
             height={80}
