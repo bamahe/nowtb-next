@@ -242,8 +242,9 @@ const nextConfig = {
   },
   async rewrites() {
     return [
-      // Private seller hub — static HTML, no trailing slash
+      // Private seller hub — static HTML (both with and without trailing slash)
       { source: '/3813-polumbo', destination: '/3813-polumbo.html' },
+      { source: '/3813-polumbo/', destination: '/3813-polumbo.html' },
     ];
   },
   // Allow Bridge API listing photos and Showcase IDX images
