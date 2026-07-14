@@ -1059,7 +1059,7 @@ export const cities: CityData[] = [
     tagline: "Small waterfront city between St. Pete Beach and Gulfport with affordable Gulf access",
     lat: 27.7553,
     lng: -82.7381,
-  },,
+  },
   {
     name: "East Lake",
     slug: "east-lake",

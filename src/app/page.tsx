@@ -10,6 +10,7 @@ import { Shield, TrendingUp, Users, Search, Key, DollarSign, BarChart3 } from "l
 import HeroSection from "@/components/ui/HeroSection";
 import SearchBar from "@/components/ui/SearchBar";
 import ListingGrid from "@/components/ui/ListingGrid";
+import ClientListings from "@/components/ui/ClientListings";
 import CityGrid from "@/components/ui/CityGrid";
 import ContactForm from "@/components/ui/ContactForm";
 import { getFeaturedListings } from "@/lib/bridge";
@@ -69,8 +70,9 @@ const VALUE_PROPS = [
 // -----------------------------------------------------------------------------
 
 export default async function HomePage() {
-  // Fetch featured listings server-side (cached via ISR in bridge.ts)
-  const featuredListings = await getFeaturedListings();
+  // Featured listings now load client-side to avoid burning Bridge API quota
+  // Server-side fetching was causing rate limit issues with 40+ deploys/day
+  const featuredListings: never[] = [];
 
   // Pull primary agent info for JSON-LD structured data
   const agent = getPrimaryAgent();
@@ -249,8 +251,12 @@ export default async function HomePage() {
             <div className="section-divider" />
           </div>
 
-          {/* Listing grid — className override removes default wrapper padding */}
-          <ListingGrid listings={featuredListings} className="" />
+          {/* Listings load client-side to avoid burning API quota on server renders */}
+          <ClientListings
+            zipCodes={['33510','33511','33578','33579','33594','33596','33572','33527','33584','33547','33570','33592','33602','33606','33609','33619']}
+            limit={12}
+            areaName="Tampa Bay"
+          />
 
           {/* "View All" link — minimal uppercase style */}
           {featuredListings.length > 0 && (

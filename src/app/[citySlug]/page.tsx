@@ -17,6 +17,7 @@ import { notFound } from "next/navigation";
 
 import HeroSection from "@/components/ui/HeroSection";
 import ListingGrid from "@/components/ui/ListingGrid";
+import ClientListings from "@/components/ui/ClientListings";
 import SpokeNav from "@/components/city/SpokeNav";
 import CityContent from "@/components/city/CityContent";
 import CityResources from "@/components/city/CityResources";
@@ -777,41 +778,21 @@ export default async function CityPage({
 // =============================================================================
 
 async function HubPage({ city }: { city: CityData }) {
-  // Fetch active + recently sold listings by ZIP codes
-  let listings: import("@/lib/types").Listing[] = [];
-  let rentalListings: import("@/lib/types").Listing[] = [];
-  let soldListings: import("@/lib/types").Listing[] = [];
-  let totalActive = 0;
-  let totalRentals = 0;
-  // Use allSettled so one failed call doesn't kill the others.
-  // Promise.all was causing ALL listings to disappear if rentals or sold threw.
-  const [activeResult, rentalResult, soldResult] = await Promise.allSettled([
-    getListings({ zip_codes: city.zip_codes, limit: "48", exclude_rental: true }),
-    getListings({ zip_codes: city.zip_codes, limit: "12", rental: true }),
-    getListings({ zip_codes: city.zip_codes, limit: "8", status: "Closed", sort: "ClosePrice desc" }),
-  ]);
-  if (activeResult.status === "fulfilled") {
-    listings = activeResult.value.value || [];
-    totalActive = activeResult.value.total || listings.length;
-  }
-  if (rentalResult.status === "fulfilled") {
-    rentalListings = rentalResult.value.value || [];
-    totalRentals = rentalResult.value.total || rentalListings.length;
-  }
-  if (soldResult.status === "fulfilled") {
-    soldListings = soldResult.value.value || [];
-  }
+  // LISTINGS NOW LOAD CLIENT-SIDE to prevent server-side API calls from
+  // burning through the Bridge rate limit. Pages render static SEO content
+  // server-side, listings appear after page load via /api/listings.
+  // This means: deploys = 0 API calls, crawlers = 0 API calls,
+  // only real user visits trigger listing fetches.
 
-  // Compute market stats from the listings we have
-  const avgPrice = listings.length > 0
-    ? Math.round(listings.reduce((sum, l) => sum + (l.ListPrice || 0), 0) / listings.length)
-    : 0;
-  const avgDom = listings.length > 0
-    ? Math.round(listings.filter(l => l.DaysOnMarket != null).reduce((sum, l) => sum + (l.DaysOnMarket || 0), 0) / Math.max(listings.filter(l => l.DaysOnMarket != null).length, 1))
-    : 0;
-  const priceRange = listings.length > 0
-    ? { low: Math.min(...listings.map(l => l.ListPrice)), high: Math.max(...listings.map(l => l.ListPrice)) }
-    : { low: 0, high: 0 };
+  // No server-side market stats — listings load client-side now
+  const listings: never[] = [];
+  const rentalListings: never[] = [];
+  const soldListings: never[] = [];
+  const totalActive = 0;
+  const totalRentals = 0;
+  const avgPrice = 0;
+  const avgDom = 0;
+  const priceRange = { low: 0, high: 0 };
 
   // Get neighboring cities (same county, excluding current)
   const neighbors = cities.filter(
@@ -961,25 +942,15 @@ async function HubPage({ city }: { city: CityData }) {
         </section>
       )}
 
-      {/* === Latest listings grid === */}
+      {/* === Latest listings — loads CLIENT-SIDE to avoid server API calls === */}
       <div id="for-sale" />
-      <ListingGrid
-        listings={listings}
-        title={`Latest Listings in ${city.name}`}
-        subtitle={`Showing ${listings.length} of ${totalActive.toLocaleString()} active homes for sale in ${city.name}, ${city.county} County.`}
+      <ClientListings
+        zipCodes={city.zip_codes}
+        title={`Homes for Sale in ${city.name}`}
+        subtitle={`Active listings in ${city.name}, ${city.county} County — updated from Stellar MLS.`}
+        limit={24}
+        areaName={city.name}
       />
-
-      {/* === View All button — when more listings exist than shown === */}
-      {totalActive > listings.length && (
-        <section className="container-wide py-8 text-center">
-          <Link
-            href={`/properties/?q=${encodeURIComponent(city.name)}`}
-            className="btn-primary inline-block px-10 py-4"
-          >
-            View All {totalActive.toLocaleString()} Listings in {city.name}
-          </Link>
-        </section>
-      )}
 
       {/* === MLS disclaimer — only shown when listings are displayed === */}
       {listings.length > 0 && (
@@ -1000,39 +971,26 @@ async function HubPage({ city }: { city: CityData }) {
       {/* === Resources & internal links — neighborhoods, loans, guides, blog posts === */}
       <CityResources city={city} />
 
-      {/* === Recently Sold Homes — real closed listings from MLS === */}
+      {/* === Recently Sold — client-side === */}
       <div id="sold" />
-      {soldListings.length > 0 && (
-        <ListingGrid
-          listings={soldListings}
-          title={`Recently Sold Homes in ${city.name}`}
-          subtitle={`See what homes recently sold for in ${city.name} to understand current market values.`}
-          headingLevel="h3"
-        />
-      )}
+      <ClientListings
+        zipCodes={city.zip_codes}
+        title={`Recently Sold in ${city.name}`}
+        subtitle={`Recent sales in ${city.name} — see what homes are selling for.`}
+        limit={8}
+        filters={{ status: "Closed", sort: "ClosePrice desc" }}
+      />
 
-      {/* === Homes for Rent — separate rental listings section === */}
+      {/* === Rentals link === */}
       <div id="rentals" />
-      {rentalListings.length > 0 && (
-        <>
-          <ListingGrid
-            listings={rentalListings}
-            title={`Homes for Rent in ${city.name}`}
-            headingLevel="h3"
-            subtitle={`${totalRentals > rentalListings.length ? `Showing ${rentalListings.length} of ${totalRentals.toLocaleString()}` : rentalListings.length} rental listings in ${city.name}, ${city.county} County.`}
-          />
-          {totalRentals > rentalListings.length && (
-            <section className="container-wide pb-8 text-center">
-              <Link
-                href={`/properties/?q=${encodeURIComponent(city.name)}&rental=true`}
-                className="btn-secondary inline-block px-8 py-3"
-              >
-                View All {totalRentals.toLocaleString()} Rentals in {city.name}
-              </Link>
-            </section>
-          )}
-        </>
-      )}
+      <section className="container-wide py-8 text-center">
+        <Link
+          href={`/properties/search/?q=${encodeURIComponent(city.name)}&rental=true`}
+          className="btn-secondary inline-block px-8 py-3"
+        >
+          Browse Rentals in {city.name}
+        </Link>
+      </section>
 
       {/* === FAQ Section — city-specific with FAQPage schema === */}
       <section className="container-wide py-12">
