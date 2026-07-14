@@ -450,15 +450,19 @@ export async function getOpenHouses(zipCodes?: string[]): Promise<Listing[]> {
     if (listingKeys.length === 0) return [];
 
     // Step 3: Fetch full listing details for those keys via OData
-    // Single batch query to minimize API calls (rate limiting is a real problem)
-    const keysToFetch = listingKeys.slice(0, 20); // Cap at 20 to keep it to 1 API call
+    // If ZIP filter provided, add it to the OData query so we only get local listings
+    // This prevents non-Tampa listings from taking up our 20-key cap
+    const keysToFetch = listingKeys.slice(0, 40); // Increased cap to 40 for better coverage
     const keyFilter = keysToFetch.map(k => `ListingKey eq '${k}'`).join(' or ');
+    const zipFilter = zipCodes && zipCodes.length > 0
+      ? ' and (' + zipCodes.slice(0, 30).map(z => `PostalCode eq '${z}'`).join(' or ') + ')'
+      : '';
     const allListings: Listing[] = [];
 
     try {
       const res = await bridgeFetch<Listing>('/listings', {
-        '$filter': `(${keyFilter}) and StandardStatus eq 'Active'`,
-        '$top': '20',
+        '$filter': `(${keyFilter}) and StandardStatus eq 'Active'${zipFilter}`,
+        '$top': '40',
       });
       if (res.value) allListings.push(...res.value);
     } catch {
@@ -488,7 +492,15 @@ export async function getOpenHouses(zipCodes?: string[]): Promise<Listing[]> {
       }
     }
 
-    // Step 5: Filter by ZIP codes for city-specific open house pages
+    // Step 5: Sort by soonest open house first
+    allListings.sort((a, b) => {
+      const aTime = a.OpenHouseStartTime ? new Date(a.OpenHouseStartTime).getTime() : Infinity;
+      const bTime = b.OpenHouseStartTime ? new Date(b.OpenHouseStartTime).getTime() : Infinity;
+      return aTime - bTime;
+    });
+
+    // Step 6: Filter by ZIP codes for city-specific open house pages
+    // (also applied in the OData query above, but belt-and-suspenders)
     if (zipCodes && zipCodes.length > 0) {
       const zipSet = new Set(zipCodes);
       return allListings.filter(l => l.PostalCode && zipSet.has(l.PostalCode));
