@@ -1198,45 +1198,8 @@ async function SpokePage({
   const isHousingMarket = topic.slug === "housing-market";
   let soldListings: import("@/lib/types").Listing[] = [];
 
-  try {
-    if (isOpenHouse) {
-      listings = await getOpenHouses(city.zip_codes);
-      totalFiltered = listings.length;
-    } else if (isHousingMarket) {
-      // Fetch active + sold in parallel for housing market pages
-      // Sold listings: last 90 days, sorted by close date
-      const ninetyDaysAgo = new Date(Date.now() - 90 * 24 * 60 * 60 * 1000).toISOString();
-      const [activeRes, soldRes] = await Promise.all([
-        getListings({ zip_codes: city.zip_codes, limit: "48", exclude_rental: true }),
-        getListings({
-          zip_codes: city.zip_codes,
-          status: "Closed",
-          limit: "100",
-          sort: "CloseDate desc",
-        }),
-      ]);
-      listings = activeRes.value || [];
-      totalFiltered = activeRes.total || listings.length;
-      // Use all returned sold listings — they're already sorted by CloseDate desc
-      // so the first 100 are the most recent closings. No date filter needed since
-      // Bridge returns them in recency order.
-      soldListings = soldRes.value || [];
-    } else {
-      // Build filter params: use ZIP codes (reliable) instead of city name
-      // Many communities aren't MLS "cities" — Carrollwood = Tampa, Brandon = unincorporated, etc.
-      const filterParams: import("@/lib/types").ListingSearchParams = {
-        zip_codes: city.zip_codes,
-        ...topic.filter,
-        limit: "48",
-      };
-      const res = await getListings(filterParams);
-      listings = res.value || [];
-      totalFiltered = res.total || listings.length;
-    }
-  } catch {
-    listings = [];
-    soldListings = [];
-  }
+  // LISTINGS NOW LOAD CLIENT-SIDE — no server-side API calls on spoke pages.
+  // This prevents Bridge API rate limiting from deploys and crawlers.
 
   // ---- Housing market stats (only computed when isHousingMarket === true) ----
 
@@ -1502,33 +1465,25 @@ async function SpokePage({
         </>
       )}
 
-      {/* === Listings grid — front and center === */}
-      {listings.length > 0 ? (
-        <>
-          <ListingGrid
-            listings={listings}
-            title={`${totalFiltered > listings.length ? `Showing ${listings.length} of ${totalFiltered.toLocaleString()}` : listings.length} ${topic.slug === "neighborhood-guide" || topic.slug === "housing-market" ? "Homes for Sale" : topic.label} in ${city.name}`}
-            className="container-wide py-12"
-          />
-          {totalFiltered > listings.length && (
-            <section className="container-wide pb-8 text-center">
-              <Link
-                href={`/properties/?q=${encodeURIComponent(city.name)}${Object.entries(topic.filter).map(([k,v]) => `&${k}=${v}`).join('')}`}
-                className="btn-primary inline-block px-10 py-4"
-              >
-                View All {totalFiltered.toLocaleString()} {topic.slug === "neighborhood-guide" || topic.slug === "housing-market" ? "Homes for Sale" : topic.label} in {city.name}
-              </Link>
-            </section>
-          )}
-        </>
-      ) : (
+      {/* === Listings — loads CLIENT-SIDE to avoid API rate limits === */}
+      <ClientListings
+        zipCodes={city.zip_codes}
+        title={`${topic.label} in ${city.name}`}
+        subtitle={`Active ${topic.label.toLowerCase()} in ${city.name}, ${city.county} County.`}
+        limit={48}
+        filters={topic.filter as Record<string, string>}
+        areaName={city.name}
+      />
+
+      {/* keeping this hidden to avoid breaking the JSX below */}
+      {false && (
         <section className="container-wide py-12">
           <div className="rounded-xl border border-gray-200 bg-gray-50 p-8 text-center max-w-2xl mx-auto">
             <p className="font-heading text-lg font-bold text-primary mb-2">
-              No {topic.label.toLowerCase()} currently listed in {city.name}
+              placeholder
             </p>
             <p className="font-body text-muted text-sm mb-4">
-              New listings hit the MLS daily. Barrett can set up alerts so you are first to know.
+              placeholder
             </p>
             <a
               href="tel:+18137337907"

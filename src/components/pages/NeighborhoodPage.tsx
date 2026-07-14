@@ -11,6 +11,7 @@ import path from "path";
 import Link from "next/link";
 import Image from "next/image";
 import ListingGrid from "@/components/ui/ListingGrid";
+import ClientListings from "@/components/ui/ClientListings";
 import SpokeNav from "@/components/city/SpokeNav";
 import { getListings } from "@/lib/bridge";
 import { getCityBySlug } from "@/data/cities";
@@ -71,135 +72,23 @@ export default async function NeighborhoodPage({
         .replace(/<\/h2>/gi, '</h3>')
     : null;
 
-  // First try to fetch listings by subdivision name (neighborhood-specific)
-  // If no results, fall back to parent city ZIP codes
-  let listings: import("@/lib/types").Listing[] = [];
-  let isSubdivisionMatch = false;
-  let totalListings = 0;
-  try {
-    // Try subdivision name first — this gives neighborhood-specific results
-    // Strip city name suffixes (e.g. "Diamond Hill Valrico" → "Diamond Hill")
-    // because MLS SubdivisionName doesn't include the city
-    const parentCityName = parentCity?.name || "";
-    const searchName = name
-      .replace(new RegExp(`\\s+${parentCityName}$`, 'i'), '')
-      .replace(/,?\s*(FL|Florida)$/i, '')
-      .trim();
-    // Include parent city ZIP codes to constrain results to the right county
-    // (e.g. "La Collina" exists in multiple counties — we only want Hillsborough)
-    const subdivRes = await getListings({
-      subdivision: searchName,
-      zip_codes: parentCity?.zip_codes,
-      exclude_rental: true,
-      limit: "48",
-    });
-    if (subdivRes.value && subdivRes.value.length > 0) {
-      listings = subdivRes.value;
-      totalListings = subdivRes.total || listings.length;
-      isSubdivisionMatch = true;
-    } else if (parentCity?.zip_codes?.length) {
-      // Fall back to parent city ZIP codes
-      const zipRes = await getListings({
-        zip_codes: parentCity.zip_codes,
-        exclude_rental: true,
-        limit: "48",
-      });
-      listings = zipRes.value || [];
-      totalListings = zipRes.total || listings.length;
-    }
-  } catch {
-    listings = [];
-  }
+  // LISTINGS LOAD CLIENT-SIDE — no server-side API calls.
+  // This prevents Bridge API rate limiting from deploys and crawlers.
+  // Compute the subdivision search name for the client-side component
+  const parentCityName = parentCity?.name || "";
+  const searchName = name
+    .replace(new RegExp(`\\s+${parentCityName}$`, 'i'), '')
+    .replace(/,?\s*(FL|Florida)$/i, '')
+    .trim();
 
-  // -------------------------------------------------------------------------
-  // Compute market stats from the active listings array
-  // -------------------------------------------------------------------------
-  const today = new Date().toLocaleDateString("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  });
-
-  // Count of active listings
-  const activeCount = totalListings || listings.length;
-
-  // Average days on market — skip listings without DaysOnMarket
-  const domValues = listings
-    .map((l) => l.DaysOnMarket)
-    .filter((d): d is number => typeof d === "number");
-  const avgDom =
-    domValues.length > 0
-      ? Math.round(domValues.reduce((sum, d) => sum + d, 0) / domValues.length)
-      : null;
-
-  // Average price per square foot — only listings with both price and sqft
-  const ppsqftValues = listings
-    .filter((l) => l.ListPrice > 0 && l.LivingArea && l.LivingArea > 0)
-    .map((l) => l.ListPrice / (l.LivingArea as number));
-  const avgPricePerSqft =
-    ppsqftValues.length > 0
-      ? Math.round(
-          ppsqftValues.reduce((sum, v) => sum + v, 0) / ppsqftValues.length
-        )
-      : null;
-
-  // Median list price
-  const sortedPrices = listings
-    .map((l) => l.ListPrice)
-    .filter((p) => p > 0)
-    .sort((a, b) => a - b);
-  const medianPrice =
-    sortedPrices.length > 0
-      ? sortedPrices.length % 2 === 1
-        ? sortedPrices[Math.floor(sortedPrices.length / 2)]
-        : Math.round(
-            (sortedPrices[sortedPrices.length / 2 - 1] +
-              sortedPrices[sortedPrices.length / 2]) /
-              2
-          )
-      : null;
-
-  // -------------------------------------------------------------------------
-  // Fetch recently sold listings — ONLY for priority cities to conserve API quota.
-  // Each neighborhood page costs 1 API call for active listings. Adding sold
-  // doubles it to 2. With 461 neighborhoods, that's 922 calls after every deploy.
-  // Limit sold data to the 10 priority cities where it matters most for SEO.
-  // -------------------------------------------------------------------------
-  const PRIORITY_CITIES = new Set(["valrico","brandon","riverview","lithia","apollo-beach","ruskin","dover","seffner","plant-city","thonotosassa","tampa"]);
-  const isPriorityCity = PRIORITY_CITIES.has(citySlug);
-
-  let soldListings: Listing[] = [];
-  if (isPriorityCity) {
-    try {
-      if (isSubdivisionMatch) {
-        const parentCityName = parentCity?.name || "";
-        const searchName = name
-          .replace(new RegExp(`\\s+${parentCityName}$`, "i"), "")
-          .replace(/,?\s*(FL|Florida)$/i, "")
-          .trim();
-        const soldRes = await getListings({
-          subdivision: searchName,
-          zip_codes: parentCity?.zip_codes,
-          status: "Closed",
-          exclude_rental: true,
-          limit: "8",
-          sort: "CloseDate desc",
-        });
-        soldListings = soldRes.value || [];
-      } else if (parentCity?.zip_codes?.length) {
-        const soldRes = await getListings({
-          zip_codes: parentCity.zip_codes,
-          status: "Closed",
-          exclude_rental: true,
-          limit: "8",
-          sort: "CloseDate desc",
-        });
-        soldListings = soldRes.value || [];
-      }
-    } catch {
-      soldListings = [];
-    }
-  }
+  // Empty arrays for stats sections (stats will be hidden without data)
+  const listings: never[] = [];
+  const soldListings: never[] = [];
+  const activeCount = 0;
+  const avgDom = null;
+  const avgPricePerSqft = null;
+  const medianPrice = null;
+  const today = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 
   return (
     <>
@@ -339,39 +228,16 @@ export default async function NeighborhoodPage({
         </div>
       </section>
 
-      {/* === Listings grid — front and center === */}
-      {listings.length > 0 ? (
-        <ListingGrid
-          listings={listings}
-          title={isSubdivisionMatch
-            ? `${totalListings > listings.length ? `Showing ${listings.length} of ${totalListings}` : listings.length} Homes for Sale in ${name}`
-            : `${totalListings > listings.length ? `Showing ${listings.length} of ${totalListings}` : listings.length} Homes for Sale Near ${name}`
-          }
-          subtitle={isSubdivisionMatch
-            ? `Active listings in the ${name} subdivision.`
-            : `Showing homes in the ${city} area. No active listings in ${name} right now.`
-          }
-          areaName={name}
-          className="container-wide py-12"
-        />
-      ) : (
-        <section className="container-wide py-12">
-          <div className="rounded-xl border border-gray-200 bg-gray-50 p-8 text-center max-w-2xl mx-auto">
-            <p className="font-heading text-lg font-bold text-primary mb-2">
-              No homes currently listed near {name}
-            </p>
-            <p className="font-body text-muted text-sm mb-4">
-              New listings hit the MLS daily. Barrett can set up alerts so you are first to know.
-            </p>
-            <a
-              href="tel:+18137337907"
-              className="btn-primary inline-block px-6 py-2 text-sm"
-            >
-              Call (813) 733-7907
-            </a>
-          </div>
-        </section>
-      )}
+      {/* === Listings — loads CLIENT-SIDE to avoid API rate limits === */}
+      <ClientListings
+        zipCodes={parentCity?.zip_codes || []}
+        title={`Homes for Sale in ${name}`}
+        subtitle={`Active listings in the ${name} area, ${city} FL.`}
+        limit={24}
+        filters={{ subdivision: searchName }}
+        areaName={name}
+      />
+      {/* Empty state is handled by ClientListings component */}
 
       {/* === MLS disclaimer — only shown when listings are displayed === */}
       {listings.length > 0 && (
@@ -387,7 +253,7 @@ export default async function NeighborhoodPage({
         <ListingGrid
           listings={soldListings}
           title={`Recently Sold in ${name}`}
-          subtitle={`Recent sales in ${isSubdivisionMatch ? name : `the ${city} area`}.`}
+          subtitle={`Recent sales in the ${city} area.`}
           className="container-wide py-12 border-t border-gray-100"
         />
       )}
