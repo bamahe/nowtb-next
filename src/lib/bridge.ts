@@ -127,7 +127,14 @@ function buildFilter(params: ListingSearchParams): string {
   if (params.max_price) filters.push(`ListPrice le ${params.max_price}`);
   if (params.beds) filters.push(`BedroomsTotal ge ${params.beds}`);
   if (params.baths) filters.push(`BathroomsTotalInteger ge ${params.baths}`);
-  if (params.property_type) filters.push(`PropertyType eq '${params.property_type}'`);
+  // Stellar MLS uses PropertySubType for Condominium/Townhouse (PropertyType is just "Residential")
+  if (params.property_type) {
+    if (params.property_type === 'Condominium' || params.property_type === 'Townhouse') {
+      filters.push(`PropertySubType eq '${params.property_type}'`);
+    } else {
+      filters.push(`PropertyType eq '${params.property_type}'`);
+    }
+  }
   if (params.property_sub_type) filters.push(`PropertySubType eq '${params.property_sub_type}'`);
 
   // Topic-specific MLS boolean/numeric filters
