@@ -13,7 +13,7 @@
 
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 
 import HeroSection from "@/components/ui/HeroSection";
 import ListingGrid from "@/components/ui/ListingGrid";
@@ -280,18 +280,12 @@ export async function generateMetadata({
   // If the slug doesn't resolve, Next.js will render notFound() in the page
   if (!parsed) return {};
 
-  // Blog posts at root level
+  // Blog posts — redirect metadata points to canonical /blog/ URL
   if (parsed === "blog-post") {
-    const { getPostBySlug } = await import("@/lib/posts");
-    const post = getPostBySlug(citySlug);
-    if (post) {
-      return {
-        title: post.title,
-        description: post.excerpt || `${post.title} — Barrett Henry, REALTOR® at REMAX Collective.`,
-        alternates: { canonical: `/${citySlug}/` },
-      };
-    }
-    return {};
+    return {
+      alternates: { canonical: `/blog/${citySlug}/` },
+      robots: { index: false, follow: true },
+    };
   }
 
   // Market updates — serve with proper metadata
@@ -549,62 +543,11 @@ export default async function CityPage({
 
   if (!parsed) notFound();
 
-  // Blog posts — render at root level (same layout as /blog/[slug])
+  // Blog posts — redirect to canonical /blog/{slug}/ URL
+  // Was rendering full content at both /{slug} and /blog/{slug}, causing
+  // duplicate content in Google Search Console (both URLs indexed separately)
   if (parsed === "blog-post") {
-    const { getPostBySlug, getPostThumbnail, getRelatedPosts } = await import("@/lib/posts");
-    const { cleanWpContent } = await import("@/lib/utils");
-    const { getPrimaryAgent } = await import("@/data/agents");
-    const post = getPostBySlug(citySlug);
-    if (!post) notFound();
-    const agent = getPrimaryAgent();
-    const thumbnail = getPostThumbnail(post);
-    const related = getRelatedPosts(citySlug, 3);
-    return (
-      <>
-        <section className="bg-primary pt-32 pb-16">
-          <div className="container-wide max-w-3xl text-center">
-            <h1 className="heading-display text-display md:text-display-lg text-white mb-4">{post.title}</h1>
-            <div className="flex items-center justify-center gap-3 text-sm font-body text-accent">
-              <time dateTime={post.date}>{new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</time>
-            </div>
-          </div>
-        </section>
-        <section className="container-wide py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-            <aside className="lg:col-span-1 order-2 lg:order-1">
-              <div className="lg:sticky lg:top-24 space-y-6">
-                <div className="card p-5 bg-primary/5">
-                  <h3 className="font-heading font-bold text-sm text-primary mb-2">Need Help?</h3>
-                  <p className="font-body text-muted text-xs mb-3">Barrett Henry has 23+ years of real estate experience. Call or text anytime.</p>
-                  <a href={`tel:${agent.phone.replace(/[^\d]/g, "")}`} className="btn-primary inline-block px-4 py-2 text-xs text-center w-full">{agent.phone}</a>
-                </div>
-                {related.length > 0 && (
-                  <div className="card p-5">
-                    <h3 className="font-heading font-bold text-sm text-primary mb-3">Related Posts</h3>
-                    <ul className="space-y-2">
-                      {related.map((r) => (
-                        <li key={r.slug}><Link href={`/${r.slug}`} className="font-body text-xs text-link hover:underline">{r.title}</Link></li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-            </aside>
-            <article className="lg:col-span-3 order-1 lg:order-2">
-              {thumbnail && (
-                <div className="mb-8 rounded-lg overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={thumbnail} alt={post.title} className="w-full h-auto" loading="eager" />
-                </div>
-              )}
-              <div className="blog-content prose prose-lg font-body text-dark max-w-none prose-headings:font-heading prose-headings:text-primary prose-a:text-link prose-a:no-underline hover:prose-a:underline prose-p:leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: cleanWpContent(post.content) }}
-              />
-            </article>
-          </div>
-        </section>
-      </>
-    );
+    redirect(`/blog/${citySlug}/`);
   }
 
   // Market updates — render the same page as /market-updates/[slug]
