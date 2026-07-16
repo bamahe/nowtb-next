@@ -64,7 +64,7 @@ export default async function CountyPage({
       />
 
       {/* === Hero — compact with breadcrumb + CTA (matches spoke page pattern) === */}
-      <section className="bg-primary pt-28 pb-16">
+      <section className="bg-primary pt-36 pb-16">
         <div className="container-wide">
           {/* Breadcrumb trail */}
           <nav className="flex items-center gap-2 text-xs font-body text-white/80 mb-6 tracking-wide uppercase">
