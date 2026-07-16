@@ -1,41 +1,41 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getListings } from "@/lib/bridge";
+import { getCached, setCached, makeCacheKey } from "@/lib/api-cache";
+import type { BridgeResponse } from "@/lib/types";
+import type { Listing } from "@/lib/types";
 
 /**
  * GET /api/listings — Search listings with filters
- * Query params: city, zip, min_price, max_price, beds, baths, property_type, limit, offset, sort
+ * CACHED: Same query within 5 min returns cached response — zero Bridge API calls.
+ * This is the #1 fix for Bridge API throttling.
  */
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = request.nextUrl;
 
-    // Parse the free-text "q" param — could be a city name, ZIP code, or multi-city like "Brandon / Riverview"
+    // Parse the free-text "q" param
     let q = searchParams.get("q")?.trim() || "";
     const qIsZip = /^\d{5}$/.test(q);
 
-    // Handle multi-city queries: "Brandon / Riverview" → use first city name
-    // The slash separator from the area search links needs to be parsed
     let cityQuery = searchParams.get("city") || undefined;
     let zipQuery = searchParams.get("zip") || undefined;
     if (!cityQuery && !zipQuery && q) {
       if (qIsZip) {
         zipQuery = q;
       } else if (q.includes("/")) {
-        // Multi-city: take the first city name for the OData filter
         cityQuery = q.split("/")[0].trim();
       } else {
         cityQuery = q;
       }
     }
 
-    // Don't exclude rentals when searching commercial or land
     const propType = searchParams.get("property_type") || "";
     const isCommercialSearch = propType.includes("Commercial") || propType === "Land" || propType === "Business Opportunity";
 
-    const result = await getListings({
+    // Build the params object
+    const params = {
       city: cityQuery,
       zip: zipQuery,
-      // Support comma-separated ZIP codes for area searches
       zip_codes: searchParams.get("zip_codes")?.split(",").filter(Boolean) || undefined,
       min_price: searchParams.get("min_price") || undefined,
       max_price: searchParams.get("max_price") || undefined,
@@ -48,7 +48,6 @@ export async function GET(request: NextRequest) {
       limit: searchParams.get("limit") || "24",
       offset: searchParams.get("offset") || undefined,
       sort: searchParams.get("sort") || undefined,
-      // Boolean feature filters
       pool: searchParams.get("pool") === "true" || undefined,
       waterfront: searchParams.get("waterfront") === "true" || undefined,
       new_construction: searchParams.get("new_construction") === "true" || undefined,
@@ -56,21 +55,39 @@ export async function GET(request: NextRequest) {
       single_story: searchParams.get("single_story") === "true" || undefined,
       open_house: searchParams.get("open_house") === "true" || undefined,
       rental: searchParams.get("rental") === "true" || undefined,
-      // Exclude rentals by default unless requesting rentals or commercial/land
       exclude_rental: (searchParams.get("rental") === "true" || isCommercialSearch) ? undefined : true,
-      // Advanced FilterPanel filters
       min_sqft: searchParams.get("min_sqft") || undefined,
       max_sqft: searchParams.get("max_sqft") || undefined,
       min_year: searchParams.get("min_year") || undefined,
       price_reduced: searchParams.get("price_reduced") === "true" || undefined,
       garage: searchParams.get("garage") === "true" || undefined,
-      // keyword is not forwarded to Bridge (OData doesn't support PublicRemarks text search)
-      // It could be applied as a client-side filter here if needed in the future
-    });
+    };
+
+    // CHECK CACHE FIRST — same query within 5 min returns cached data
+    const cacheKey = makeCacheKey("listings", params as Record<string, string | undefined>);
+    const cached = getCached<BridgeResponse<Listing>>(cacheKey);
+    if (cached) {
+      return NextResponse.json(cached, {
+        headers: {
+          "Cache-Control": "s-maxage=300, stale-while-revalidate=600",
+          "X-Cache": "HIT",
+        },
+      });
+    }
+
+    // CACHE MISS — call Bridge API
+    const result = await getListings(params);
+
+    // Only cache successful non-empty responses
+    // Don't cache empty results from rate limiting
+    if (result.value && result.value.length > 0) {
+      setCached(cacheKey, result);
+    }
 
     return NextResponse.json(result, {
       headers: {
         "Cache-Control": "s-maxage=300, stale-while-revalidate=600",
+        "X-Cache": "MISS",
       },
     });
   } catch (error) {

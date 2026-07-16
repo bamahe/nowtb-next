@@ -4,6 +4,7 @@
 // =============================================================================
 
 import { Listing, ListingSearchParams, BridgeResponse } from './types';
+import { getCached, setCached, makeCacheKey } from './api-cache';
 
 // Pull config from environment (set in .env.local, never committed)
 const BRIDGE_BASE = process.env.BRIDGE_API_BASE || '';
@@ -181,10 +182,14 @@ function buildFilter(params: ListingSearchParams): string {
 export async function getListings(
   params: ListingSearchParams = {}
 ): Promise<BridgeResponse<Listing>> {
-  // At build time, return empty — listings load on first request via ISR
   if (IS_BUILD_TIME) {
     return { bundle: 'build-skip', total: 0, value: [] };
   }
+
+  // CHECK CACHE — same query within 5 min returns cached response
+  const cacheKey = makeCacheKey('listings', params as Record<string, string | undefined>);
+  const cached = getCached<BridgeResponse<Listing>>(cacheKey);
+  if (cached) return cached;
 
   try {
     const queryParams: Record<string, string> = {};
@@ -198,6 +203,10 @@ export async function getListings(
     // OData returns count as @odata.count, map it to our 'total' field
     const odataCount = (raw as unknown as Record<string, unknown>)['@odata.count'];
     if (typeof odataCount === 'number') raw.total = odataCount;
+    // Cache successful non-empty responses
+    if (raw.value && raw.value.length > 0) {
+      setCached(cacheKey, raw);
+    }
     return raw;
   } catch (error) {
     console.error('Failed to fetch listings:', error);
@@ -211,6 +220,10 @@ export async function getListings(
  */
 export async function getListing(id: string): Promise<Listing | null> {
   if (IS_BUILD_TIME) return null;
+  // Check cache
+  const cacheKey = `listing:${id}`;
+  const cached = getCached<Listing>(cacheKey);
+  if (cached) return cached;
   try {
     if (isRateLimited()) return null;
 
@@ -255,7 +268,9 @@ export async function getListing(id: string): Promise<Listing | null> {
 
     // OData single entity returns the object directly (not wrapped in .value)
     const data = await res.json();
-    return data as Listing;
+    const listing = data as Listing;
+    if (listing?.ListingKey) setCached(cacheKey, listing);
+    return listing;
   } catch {
     return null;
   }
