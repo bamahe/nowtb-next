@@ -7,6 +7,22 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
 export async function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  // Force trailing slash — prevents Google from indexing both /path and /path/
+  // Next.js trailingSlash:true handles this for pages but not always for
+  // dynamic routes like /properties/[...slug]. This catches everything.
+  if (
+    !pathname.endsWith("/") &&
+    !pathname.includes(".") &&
+    !pathname.startsWith("/_next") &&
+    !pathname.startsWith("/api")
+  ) {
+    const url = request.nextUrl.clone();
+    url.pathname = pathname + "/";
+    return NextResponse.redirect(url, 308);
+  }
+
   // Create a response that we can modify (add/update cookies)
   let supabaseResponse = NextResponse.next({ request });
 
