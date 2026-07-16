@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { pushLeadToFub } from "@/lib/fub";
+import { sendBarrettAlert, sendLeadAutoResponder } from "@/lib/resend";
 
 const N8N_BASE = process.env.N8N_WEBHOOK_BASE || "";
 
@@ -96,6 +97,26 @@ export async function POST(request: NextRequest) {
         // Log but don't fail — n8n will still get the lead
         console.warn("FUB push failed (continuing):", fubError);
       }
+    }
+
+    // --- Send Resend alert email to Barrett + auto-responder to lead ---
+    // Both are no-ops if RESEND_API_KEY is not configured — won't block the form
+    if (formData.email) {
+      // Fire both in parallel — neither blocks the response if they fail
+      Promise.all([
+        sendBarrettAlert({
+          name: formData.name || "Unknown",
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          type,
+          propertyAddress: formData.property?.address,
+        }),
+        sendLeadAutoResponder({
+          name: formData.name || "Unknown",
+          email: formData.email,
+        }),
+      ]).catch((err) => console.warn("[Resend] Email batch failed:", err));
     }
 
     // --- Forward to n8n for additional automations ---
