@@ -850,6 +850,32 @@ function SpokeTopicContent({
         </>
       );
 
+    case "rentals":
+      return (
+        <>
+          <p>
+            Looking for <strong>homes for rent in {city.name}</strong>? The rental market
+            in <strong>{city.county} County</strong> offers options from single-family homes
+            and townhomes to apartments and condos. Rental prices in {city.name} typically
+            range from $1,500 to $3,000+ per month depending on size, location, and amenities.
+          </p>
+          <p>
+            Barrett Henry assists both tenants searching for quality rentals and property
+            owners looking for reliable tenants. For property management services including
+            tenant screening, maintenance coordination, and rent collection,
+            visit <a href="https://vivipm.com" target="_blank" rel="noopener noreferrer" className="text-link hover:underline">ViVi PM</a>,
+            Barrett&apos;s dedicated property management brand.
+          </p>
+          <p>
+            Browse available rentals in{" "}
+            <a href={`/${city.slug}/`} className="text-link hover:underline">{city.name}</a> or
+            call <PhoneLink /> to discuss your rental needs. Whether you are relocating
+            to Tampa Bay, downsizing, or between homes, Barrett can help you find the right
+            rental quickly.
+          </p>
+        </>
+      );
+
     // ---- DEFAULT FALLBACK (catches any future topics not yet templated) ----
     default: {
       // Cast to any to handle future topic slugs that aren't in the switch yet
