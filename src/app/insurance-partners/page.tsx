@@ -160,12 +160,22 @@ export default function InsurancePartnersPage() {
                   </div>
                 </div>
                 <p className="font-body text-dark text-sm leading-relaxed mb-4">{partner.description}</p>
-                <a
-                  href={`tel:${partner.phone.replace(/[^0-9]/g, "")}`}
-                  className="inline-flex items-center gap-2 bg-primary text-white font-semibold px-4 py-2 rounded-lg text-sm hover:bg-primary/90 transition-colors"
-                >
-                  📞 {partner.phone}
-                </a>
+                <div className="flex flex-wrap gap-2">
+                  <a
+                    href={`tel:${partner.phone.replace(/[^0-9]/g, "")}`}
+                    className="inline-flex items-center gap-2 bg-primary text-white font-semibold px-4 py-2 rounded-lg text-sm hover:bg-primary/90 transition-colors"
+                  >
+                    📞 {partner.phone}
+                  </a>
+                  <a
+                    href={`https://www.google.com/maps/search/${encodeURIComponent(partner.name + " " + partner.location)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 border border-gray-300 text-primary font-semibold px-4 py-2 rounded-lg text-sm hover:bg-gray-50 transition-colors"
+                  >
+                    ★ Google Reviews
+                  </a>
+                </div>
               </div>
             ))}
           </div>
