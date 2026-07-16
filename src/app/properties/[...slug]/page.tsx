@@ -152,32 +152,10 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
   if (result === 'not-found') notFound();
 
   // Soft error if the Bridge API is rate limited — don't 404, show a retry page
+  // If rate limited, redirect to search instead of showing ugly error page
   if (result === 'rate-limited') {
-    return (
-      <section className="container-wide py-32 text-center">
-        <h1 className="font-heading font-bold text-3xl text-primary mb-4">
-          Listing Temporarily Unavailable
-        </h1>
-        <p className="font-body text-muted text-lg mb-6 max-w-xl mx-auto">
-          Our listing data provider is temporarily throttled. This page will load
-          normally in a few minutes — please refresh or check back shortly.
-        </p>
-        <div className="flex justify-center gap-4">
-          <a
-            href="tel:+18137337907"
-            className="btn-primary inline-block px-6 py-3"
-          >
-            Call (813) 733-7907
-          </a>
-          <Link
-            href="/properties/"
-            className="inline-flex items-center gap-2 border border-gray-300 text-primary font-semibold px-6 py-3 rounded hover:bg-gray-50 transition-colors"
-          >
-            Browse Properties
-          </Link>
-        </div>
-      </section>
-    );
+    const city = slug[2] || 'tampa-bay';
+    redirect(`/properties/search/?q=${encodeURIComponent(city.replace(/-/g, ' '))}`);
   }
 
   // 301 redirect for old URL format
@@ -609,27 +587,34 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
         <BuyingPower listingPrice={listing.ListPrice} city={listing.City} county={listing.CountyOrParish} listingTerms={listing.ListingTerms} />
       )}
 
-      {/* === SIMILAR LISTINGS === */}
-      <SimilarListings
-        currentListingKey={listing.ListingKey}
-        zipCode={listing.PostalCode}
-        price={listing.ListPrice}
-        city={listing.City}
-      />
-
-      {/* === CAROUSELS — residential only (commercial doesn't need Just Listed/Price Reduced/Sold residential) === */}
-      {!isCommercial && !isLand && (
-        <>
-          <Suspense fallback={null}>
-            <JustListedSection zipCodes={zipCodes} city={listing.City} excludeKey={listing.ListingKey} />
-          </Suspense>
-          <Suspense fallback={null}>
-            <PriceReducedSection zipCodes={zipCodes} city={listing.City} excludeKey={listing.ListingKey} />
-          </Suspense>
-          <Suspense fallback={null}>
-            <RecentSalesSection zipCodes={zipCodes} city={listing.City} excludeKey={listing.ListingKey} />
-          </Suspense>
-        </>
+      {/* === SIMILAR LISTINGS — removed server-side carousels to save API calls
+           SimilarListings, JustListed, PriceReduced, RecentSales were making
+           4 additional API calls per property page. Replaced with a simple
+           link to the city's listings page. === */}
+      {cityData && (
+        <section className="container-wide py-12">
+          <h2 className="heading-section text-2xl text-primary mb-6">
+            More Homes in {cityData.name}
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <Link href={`/${cityData.slug}-homes-for-sale/`} className="rounded-lg bg-white shadow-sm border border-gray-100 p-4 hover:shadow-md hover:border-accent/30 transition-all text-center no-underline">
+              <p className="font-heading font-bold text-primary text-sm">All Homes</p>
+              <p className="font-body text-xs text-muted mt-1">Browse listings</p>
+            </Link>
+            <Link href={`/${cityData.slug}-new-construction/`} className="rounded-lg bg-white shadow-sm border border-gray-100 p-4 hover:shadow-md hover:border-accent/30 transition-all text-center no-underline">
+              <p className="font-heading font-bold text-primary text-sm">New Construction</p>
+              <p className="font-body text-xs text-muted mt-1">{cityData.name}</p>
+            </Link>
+            <Link href={`/${cityData.slug}-homes-with-pool/`} className="rounded-lg bg-white shadow-sm border border-gray-100 p-4 hover:shadow-md hover:border-accent/30 transition-all text-center no-underline">
+              <p className="font-heading font-bold text-primary text-sm">Pool Homes</p>
+              <p className="font-body text-xs text-muted mt-1">{cityData.name}</p>
+            </Link>
+            <Link href={`/${cityData.slug}-open-houses/`} className="rounded-lg bg-white shadow-sm border border-gray-100 p-4 hover:shadow-md hover:border-accent/30 transition-all text-center no-underline">
+              <p className="font-heading font-bold text-primary text-sm">Open Houses</p>
+              <p className="font-body text-xs text-muted mt-1">{cityData.name}</p>
+            </Link>
+          </div>
+        </section>
       )}
 
       {/* === BOTTOM LINKS — different for commercial vs residential === */}
