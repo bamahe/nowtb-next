@@ -92,10 +92,24 @@ export default function InspectorsPage() {
         }}
       />
 
-      {/* === Inspector directory — all 19 inspectors from JSON, grouped by county === */}
+      {/* === Hero === */}
+      <section className="bg-primary pt-32 pb-16">
+        <div className="container-wide text-center">
+          <p className="heading-label text-accent mb-4">Resource Directory</p>
+          <h1 className="heading-display text-display md:text-display-lg text-white mb-4">
+            Tampa Bay Home Inspectors
+          </h1>
+          <div className="section-divider" />
+          <p className="font-body text-white/70 text-lg max-w-2xl mx-auto">
+            Protect your investment with a thorough home inspection from a trusted Tampa Bay professional.
+          </p>
+        </div>
+      </section>
+
+      {/* === Inspector directory === */}
       <section className="container-wide py-12">
         <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2 text-center">
-          Tampa Bay Home Inspectors Directory
+          Find an Inspector by County
         </h2>
         <p className="font-body text-muted text-center mb-10 max-w-2xl mx-auto">
           {vendorData.meta.count} inspectors across {inspectorsByCounty.length} counties.
@@ -112,12 +126,6 @@ export default function InspectorsPage() {
         </p>
       </section>
 
-
-      {/* === Hero === */}
-      <HeroSection
-        title="Home Inspectors"
-        subtitle="Protect your investment with a thorough home inspection from a trusted Tampa Bay professional."
-      />
 
       {/* === Main content — prose styling for readability === */}
       <section className="container-wide py-12">
