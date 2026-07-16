@@ -189,8 +189,20 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
   if (category === "concept" && conceptData) {
     return (
       <>
-        {/* === Hero === */}
-        <HeroSection title={title} subtitle={excerpt} />
+        {/* === Breadcrumb + Hero === */}
+        <section className="bg-primary pt-36 pb-16">
+          <div className="container-wide">
+            <nav className="flex items-center gap-2 text-xs font-body text-white/80 mb-6 tracking-wide uppercase">
+              <Link href="/" className="hover:text-white transition-colors">Home</Link>
+              <span>/</span>
+              <Link href="/guides/" className="hover:text-white transition-colors">Guides</Link>
+              <span>/</span>
+              <span className="text-accent">{title}</span>
+            </nav>
+            <h1 className="heading-display text-display md:text-display-lg text-white mb-3">{title}</h1>
+            <p className="font-body text-white/70 text-lg max-w-2xl">{excerpt}</p>
+          </div>
+        </section>
 
         {/* === Intro Content === */}
         <section className="container-wide py-12">
@@ -388,8 +400,20 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
 
   return (
     <>
-      {/* === Hero === */}
-      <HeroSection title={title} subtitle={excerpt} />
+      {/* === Breadcrumb + Hero === */}
+      <section className="bg-primary pt-36 pb-16">
+        <div className="container-wide">
+          <nav className="flex items-center gap-2 text-xs font-body text-white/80 mb-6 tracking-wide uppercase">
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <span>/</span>
+            <Link href="/communities/" className="hover:text-white transition-colors">Communities</Link>
+            <span>/</span>
+            <span className="text-accent">{title}</span>
+          </nav>
+          <h1 className="heading-display text-display md:text-display-lg text-white mb-3">{title}</h1>
+          <p className="font-body text-white/70 text-lg max-w-2xl">{excerpt}</p>
+        </div>
+      </section>
 
       {/* === Live Market Stats Comparison Table === */}
       {statsA && statsB && (
