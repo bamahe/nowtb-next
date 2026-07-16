@@ -116,23 +116,39 @@ export default function ClientListings({
         </div>
       )}
       <div className="grid grid-cols-1 gap-8 md:gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {listings.map((listing, index) => (
-          <div key={listing.ListingKey}>
-            <ListingCard listing={listing} />
-            {/* Buyer CTA after 8th listing */}
-            {index === 7 && listings.length >= 8 && (
-              <div className="mt-8 flex flex-col items-center justify-center gap-3 rounded-2xl border-2 border-accent bg-accent/10 p-6 text-center">
-                <p className="font-heading text-lg font-bold text-primary leading-snug">
-                  {areaName ? `Looking for homes in ${areaName}?` : "Looking for the right home?"}
-                </p>
-                <a href="tel:+18137337907" className="inline-block rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white">
-                  Call (813) 733-7907
-                </a>
-              </div>
-            )}
-          </div>
+        {listings.slice(0, 8).map((listing) => (
+          <ListingCard key={listing.ListingKey} listing={listing} />
         ))}
       </div>
+
+      {/* Buyer CTA between listing rows */}
+      {listings.length >= 8 && (
+        <div className="my-10 flex flex-col md:flex-row items-center justify-between gap-4 rounded-2xl bg-primary p-8">
+          <div>
+            <p className="font-heading text-xl font-bold text-white leading-snug">
+              {areaName ? `Looking for homes in ${areaName}?` : "Looking for the right home?"}
+            </p>
+            <p className="font-body text-white/70 text-sm mt-1">Barrett Henry — 23+ years of experience across Tampa Bay.</p>
+          </div>
+          <div className="flex gap-3 flex-shrink-0">
+            <a href="tel:+18137337907" className="inline-block rounded-lg bg-white text-primary px-6 py-3 text-sm font-semibold">
+              Call (813) 733-7907
+            </a>
+            <Link href="/contact/" className="inline-block rounded-lg border-2 border-white/40 text-white px-6 py-3 text-sm font-semibold hover:bg-white/10 transition-colors">
+              Send a Message
+            </Link>
+          </div>
+        </div>
+      )}
+
+      {/* Remaining listings */}
+      {listings.length > 8 && (
+        <div className="grid grid-cols-1 gap-8 md:gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {listings.slice(8).map((listing) => (
+            <ListingCard key={listing.ListingKey} listing={listing} />
+          ))}
+        </div>
+      )}
       {total > listings.length && (
         <div className="text-center mt-8">
           <Link
