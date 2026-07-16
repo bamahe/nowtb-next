@@ -38,6 +38,7 @@ const FOOTER_COLUMNS = [
       { href: "/investing", label: "Investing" },
       { href: "/luxury", label: "Luxury Homes" },
       { href: "/commercial", label: "Commercial" },
+      { href: "/preferred-vendors", label: "Preferred Vendors" },
     ],
   },
   {
