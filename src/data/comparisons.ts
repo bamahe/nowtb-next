@@ -96,14 +96,6 @@ export const comparisons: ComparisonData[] = [
     category: "city",
   },
   {
-    slug: "lutz-vs-land-o-lakes",
-    title: "Lutz vs Land O' Lakes: A Side-by-Side Comparison",
-    excerpt: "Compare Lutz and Land O' Lakes — real estate, schools, commutes, and neighborhood options.",
-    sideA: "Lutz",
-    sideB: "Land O' Lakes",
-    category: "city",
-  },
-  {
     slug: "new-port-richey-vs-trinity",
     title: "New Port Richey vs Trinity: Pasco County Comparison",
     excerpt: "Compare New Port Richey and Trinity — home values, lifestyle, schools, and future development.",
@@ -141,14 +133,6 @@ export const comparisons: ComparisonData[] = [
     excerpt: "Compare Palm Harbor and Tarpon Springs — waterfront living, schools, dining, and community character.",
     sideA: "Palm Harbor",
     sideB: "Tarpon Springs",
-    category: "city",
-  },
-  {
-    slug: "riverview-vs-brandon",
-    title: "Riverview vs Brandon: Complete Comparison",
-    excerpt: "Compare Riverview and Brandon — new construction, commute times, school districts, and value.",
-    sideA: "Riverview",
-    sideB: "Brandon",
     category: "city",
   },
   {

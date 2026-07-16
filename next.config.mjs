@@ -176,6 +176,12 @@ const nextConfig = {
       { source: "/blog/best-neighborhoods-lithia-fl", destination: "/blog/best-neighborhoods-lithia/", permanent: true },
       { source: "/blog/best-neighborhoods-lithia-fl/", destination: "/blog/best-neighborhoods-lithia/", permanent: true },
 
+      // ── Bidirectional comparison redirects ──
+      { source: "/riverview-vs-brandon", destination: "/brandon-vs-riverview/", permanent: true },
+      { source: "/riverview-vs-brandon/", destination: "/brandon-vs-riverview/", permanent: true },
+      { source: "/lutz-vs-land-o-lakes", destination: "/land-o-lakes-vs-lutz/", permanent: true },
+      { source: "/lutz-vs-land-o-lakes/", destination: "/land-o-lakes-vs-lutz/", permanent: true },
+
       // ── Common broken URLs — redirect to correct pages ──
       { source: "/neighborhoods", destination: "/communities/", permanent: true },
       { source: "/neighborhoods/", destination: "/communities/", permanent: true },
