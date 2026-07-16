@@ -92,6 +92,27 @@ export default function InspectorsPage() {
         }}
       />
 
+      {/* === Inspector directory — all 19 inspectors from JSON, grouped by county === */}
+      <section className="container-wide py-12">
+        <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2 text-center">
+          Tampa Bay Home Inspectors Directory
+        </h2>
+        <p className="font-body text-muted text-center mb-10 max-w-2xl mx-auto">
+          {vendorData.meta.count} inspectors across {inspectorsByCounty.length} counties.
+          Google ratings shown are current and subject to change.
+        </p>
+
+        {inspectorsByCounty.map(({ county, vendors }) => (
+          <CountyGroup key={county} county={county} vendors={vendors} />
+        ))}
+
+        {/* Disclaimer from JSON metadata */}
+        <p className="font-body text-muted text-xs text-center mt-8 max-w-2xl mx-auto">
+          {vendorData.meta.disclaimer}
+        </p>
+      </section>
+
+
       {/* === Hero === */}
       <HeroSection
         title="Home Inspectors"
@@ -305,25 +326,7 @@ export default function InspectorsPage() {
         </div>
       </section>
 
-      {/* === Inspector directory — all 19 inspectors from JSON, grouped by county === */}
-      <section className="container-wide py-12">
-        <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2 text-center">
-          Tampa Bay Home Inspectors Directory
-        </h2>
-        <p className="font-body text-muted text-center mb-10 max-w-2xl mx-auto">
-          {vendorData.meta.count} inspectors across {inspectorsByCounty.length} counties.
-          Google ratings shown are current and subject to change.
-        </p>
-
-        {inspectorsByCounty.map(({ county, vendors }) => (
-          <CountyGroup key={county} county={county} vendors={vendors} />
-        ))}
-
-        {/* Disclaimer from JSON metadata */}
-        <p className="font-body text-muted text-xs text-center mt-8 max-w-2xl mx-auto">
-          {vendorData.meta.disclaimer}
-        </p>
-      </section>
+      
 
       {/* === FAQ section === */}
       <section className="section-light py-12">
