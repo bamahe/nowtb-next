@@ -248,7 +248,7 @@ export default async function LuxuryPage() {
               the island exclusivity of{" "}
               <Link href="/davis-islands" className="text-link hover:underline">Davis Islands</Link>,
               the Gulf-front lifestyle of{" "}
-              <Link href="/clearwater" className="text-link hover:underline">Clearwater Beach</Link>,
+              <Link href="/clearwater-beach" className="text-link hover:underline">Clearwater Beach</Link>,
               or the quiet elegance of barrier island communities like Longboat Key and Siesta Key —
               all within the same metropolitan area.
             </p>
@@ -443,7 +443,7 @@ export default async function LuxuryPage() {
                 (Hyde Park, Beach Park, Palma Ceia),{" "}
                 <Link href="/davis-islands" className="text-link hover:underline">Davis Islands</Link>,
                 Harbour Island,{" "}
-                <Link href="/clearwater" className="text-link hover:underline">Clearwater Beach</Link>,
+                <Link href="/clearwater-beach" className="text-link hover:underline">Clearwater Beach</Link>,
                 Belleair, Siesta Key, Longboat Key, and Anna Maria Island. Each offers a distinct
                 lifestyle, from urban walkability to Gulf-front seclusion.
               </p>
