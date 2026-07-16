@@ -360,7 +360,7 @@
       "county": "Hillsborough",
       "city": "Tampa",
       "address": "Tampa, FL",
-      "phone": null,
+      "phone": "813-352-0634",
       "lat": null,
       "lng": null,
       "place_id": null,
@@ -369,7 +369,7 @@
       "google_maps_url": null,
       "website": null,
       "preferred": true,
-      "note": "Direct Tampa contact pending. Simplified Mortgage's Google listing is the Sanford, FL corporate office (5.0, 149 reviews, 321-399-2449). Replace with Paul George's direct Tampa phone and NMLS.",
+      "note": null,
       "bio": "A Tampa-area loan officer with Simplified Mortgage, personally recommended by Barrett for buyers who want straightforward, hands-on guidance through financing."
     }
   ]
