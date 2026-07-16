@@ -8,6 +8,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
 import ContactForm from "@/components/ui/ContactForm";
+import CountyGroup from "@/components/vendors/CountyGroup";
+import VendorCard, { type Vendor } from "@/components/vendors/VendorCard";
+import vendorData from "@/data/vendors/lenders.json";
 
 // --- SEO metadata + Open Graph tags ---
 export const metadata: Metadata = {
@@ -137,6 +140,21 @@ const faqs = [
       "Absolutely. Pre-approval tells you exactly how much you can afford, strengthens your offer in a competitive market, and shows sellers you are a serious buyer. In Tampa Bay's market, many listing agents will not schedule a showing without a pre-approval letter on file.",
   },
 ];
+
+// Fixed county display order for consistent rendering across vendor pages
+const COUNTY_ORDER = [
+  "Hillsborough", "Pinellas", "Pasco", "Polk",
+  "Manatee", "Sarasota", "Hernando", "Citrus",
+];
+
+// Split lenders into preferred (Barrett Recommends) and regular, then group by county
+const allLenders = vendorData.lenders as Vendor[];
+const preferredLenders = allLenders.filter((l) => l.preferred);
+const regularLenders = allLenders.filter((l) => !l.preferred);
+const lendersByCounty = COUNTY_ORDER.map((county) => ({
+  county,
+  vendors: regularLenders.filter((l) => l.county === county),
+})).filter((group) => group.vendors.length > 0);
 
 export default function LendersPage() {
   return (
@@ -414,6 +432,41 @@ export default function LendersPage() {
             </p>
           </div>
         </div>
+      </section>
+
+      {/* === Lender directory — preferred first, then all by county === */}
+      <section className="container-wide py-16">
+        <h2 className="heading-section text-display-sm text-primary text-center mb-2">
+          Tampa Bay Mortgage Lender Directory
+        </h2>
+        <p className="font-body text-muted text-center mb-10 max-w-2xl mx-auto">
+          {vendorData.meta.count} lenders across our 8-county service area.
+          Google ratings shown are current and subject to change.
+        </p>
+
+        {/* Preferred lenders — shown first with "Barrett Recommends" badge */}
+        {preferredLenders.length > 0 && (
+          <div className="mb-10">
+            <h3 className="font-body text-xs font-medium tracking-[0.2em] uppercase text-accent mb-4">
+              Barrett Recommends
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {preferredLenders.map((lender) => (
+                <VendorCard key={lender.name} vendor={lender} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Regular lenders grouped by county */}
+        {lendersByCounty.map(({ county, vendors }) => (
+          <CountyGroup key={county} county={county} vendors={vendors} />
+        ))}
+
+        {/* Disclaimer from JSON metadata */}
+        <p className="font-body text-muted text-xs text-center mt-8 max-w-2xl mx-auto">
+          {vendorData.meta.disclaimer}
+        </p>
       </section>
 
       {/* === FAQ Section === */}

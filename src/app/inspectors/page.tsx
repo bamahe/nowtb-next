@@ -7,6 +7,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
 import ContactForm from "@/components/ui/ContactForm";
+import CountyGroup from "@/components/vendors/CountyGroup";
+import type { Vendor } from "@/components/vendors/VendorCard";
+import vendorData from "@/data/vendors/inspectors.json";
 
 // --- SEO metadata — keyword-first title, CTA in description ---
 export const metadata: Metadata = {
@@ -53,6 +56,19 @@ const faqs = [
       "Absolutely. Walking through the inspection with your inspector is one of the most valuable parts of the home-buying process. You will learn how the major systems work, see any concerns firsthand, and have the chance to ask questions in real time. Barrett encourages every buyer to attend.",
   },
 ];
+
+// Fixed county display order for consistent rendering across vendor pages
+const COUNTY_ORDER = [
+  "Hillsborough", "Pinellas", "Pasco", "Polk",
+  "Manatee", "Sarasota", "Hernando", "Citrus",
+];
+
+// Group inspectors from JSON by county, maintaining the fixed display order
+const inspectors = vendorData.inspectors as Vendor[];
+const inspectorsByCounty = COUNTY_ORDER.map((county) => ({
+  county,
+  vendors: inspectors.filter((i) => i.county === county),
+})).filter((group) => group.vendors.length > 0);
 
 export default function InspectorsPage() {
   return (
@@ -287,6 +303,26 @@ export default function InspectorsPage() {
             <Link href="/contact">reach out online</Link> for a referral.
           </p>
         </div>
+      </section>
+
+      {/* === Inspector directory — all 19 inspectors from JSON, grouped by county === */}
+      <section className="container-wide py-12">
+        <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2 text-center">
+          Tampa Bay Home Inspectors Directory
+        </h2>
+        <p className="font-body text-muted text-center mb-10 max-w-2xl mx-auto">
+          {vendorData.meta.count} inspectors across {inspectorsByCounty.length} counties.
+          Google ratings shown are current and subject to change.
+        </p>
+
+        {inspectorsByCounty.map(({ county, vendors }) => (
+          <CountyGroup key={county} county={county} vendors={vendors} />
+        ))}
+
+        {/* Disclaimer from JSON metadata */}
+        <p className="font-body text-muted text-xs text-center mt-8 max-w-2xl mx-auto">
+          {vendorData.meta.disclaimer}
+        </p>
       </section>
 
       {/* === FAQ section === */}

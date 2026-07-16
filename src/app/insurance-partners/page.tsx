@@ -5,6 +5,9 @@
 
 import type { Metadata } from "next";
 import Link from "next/link";
+import CountyGroup from "@/components/vendors/CountyGroup";
+import type { Vendor } from "@/components/vendors/VendorCard";
+import vendorData from "@/data/vendors/insurance.json";
 
 export const metadata: Metadata = {
   title: "Tampa Bay Insurance Partners | Homeowners, Flood & Auto | Barrett Henry",
@@ -19,75 +22,18 @@ export const metadata: Metadata = {
   },
 };
 
-// Insurance partner data organized by county
-const COUNTIES = [
-  {
-    name: "Hillsborough County",
-    partners: [
-      { name: "Southshore Insurance Professionals", location: "Riverview, FL", phone: "813-448-7580", rating: "5.0", reviews: "476", description: "A Riverview independent agency known for treating clients like neighbors, not policy numbers. They shop multiple carriers for the best rate, do proactive renewal check-ins to keep premiums in line, and handle homeowners and business coverage with fast, personal service." },
-      { name: "Runnels Insurance", location: "Brandon, FL", phone: "813-653-0681", rating: "4.9", reviews: "368", description: "A longtime Brandon independent agency that consistently saves clients money by comparing home, auto, flood, and umbrella options side by side. Clients praise their patience with first-time buyers and their willingness to fight on claims." },
-      { name: "L&M Insurance Group", location: "Riverview, FL", phone: "813-672-4100", rating: "4.8", reviews: "235", description: "A Riverview team that makes Florida homeowners insurance simple, especially for buyers new to the process. They respond fast, walk you through every option, and are used to hitting tight closing timelines." },
-      { name: "Brandon Insurance", location: "Brandon, FL", phone: "813-681-1832", rating: "4.9", reviews: "72", description: "A local Brandon broker that shops home and auto to find the strongest coverage for the price. Clients highlight clear communication, honest guidance, and a broker who answers questions instead of just quoting." },
-      { name: "Seibert Insurance Agency", location: "Tampa, FL", phone: "813-960-4672", rating: "5.0", reviews: "588", description: "A top-rated Tampa independent agency where you keep the same agent instead of a call-center lottery. They compare carriers on home and auto, and real estate pros regularly send buyers their way for smooth, deadline-friendly service." },
-      { name: "Cornerstone Insurance", location: "Odessa / North Tampa, FL", phone: "813-920-8181", rating: "4.9", reviews: "615", description: "A North Tampa independent agency that shines when it counts, including placing coverage fast after a non-renewal. Clients get quick responses, clear help with four-point inspections, and competitive home, flood, and auto rates." },
-    ],
-  },
-  {
-    name: "Pinellas County",
-    partners: [
-      { name: "HH Insurance Group", location: "St. Petersburg, FL", phone: "727-498-5551", rating: "5.0", reviews: "2,371", description: "One of the highest-reviewed agencies in the entire bay area, with a deep bench for homeowners and flood. Buyers praise clear coverage explanations, strong follow-up, and an easy, low-stress process from quote to bind." },
-      { name: "Insurance Resources", location: "St. Petersburg, FL", phone: "727-345-0242", rating: "4.9", reviews: "255", description: "A St. Pete independent agency families have trusted for decades on home and auto. Known for patient, responsive agents who take time to explain coverage and consistently find real savings." },
-      { name: "Island Insurance Specialists", location: "Clearwater, FL", phone: "727-754-5036", rating: "5.0", reviews: "202", description: "A Clearwater agency that shops multiple carriers to secure the best homeowners coverage and rate, then explains every step. A strong option for North Pinellas and coastal buyers navigating a tough market." },
-      { name: "Coleman Insurance Agency", location: "Palm Harbor, FL", phone: "727-441-9911", rating: "4.9", reviews: "422", description: "A Palm Harbor independent agency that turns quotes around fast, even when buyers have several properties under contract. Responsive, thorough service on auto, home, and renters, tuned to relocation and closing timelines." },
-    ],
-  },
-  {
-    name: "Pasco County",
-    partners: [
-      { name: "Paradise Insurance Services (Kness & Associates)", location: "New Port Richey, FL", phone: "727-233-2012", rating: "4.9", reviews: "267", description: "A New Port Richey agency that shines at placing hard-to-insure homes, including properties with prior claims. Clients value how they educate you through every step so you can make the best decision." },
-      { name: "Family First Insurance Services", location: "Wesley Chapel, FL", phone: "813-994-3900", rating: "4.9", reviews: "83", description: "A Wesley Chapel independent agency praised for lowering premiums while keeping the coverage clients actually need. Quick to respond, detail-oriented, and easy to work with on home and auto." },
-      { name: "Brightway Insurance, The Torres-Grubbs Agency", location: "New Port Richey, FL", phone: "727-315-0707", rating: "4.9", reviews: "62", description: "A New Port Richey team that shops homeowners and flood side by side to find real savings. Clients get several quotes in minutes and a staff that takes time to sit down and explain them." },
-    ],
-  },
-  {
-    name: "Polk County",
-    partners: [
-      { name: "Garland Insurance, Inc.", location: "Lakeland, FL", phone: "863-683-9334", rating: "4.8", reviews: "545", description: "One of Lakeland's most-reviewed independent agencies, strong on both home and commercial coverage. Fast quotes, clear communication, and a professional, personable process buyers consistently recommend." },
-      { name: "Headley Insurance Agency", location: "Lakeland, FL", phone: "863-701-7411", rating: "4.9", reviews: "221", description: "A Lakeland agency that finds the best policy for the best cost and deals with the carriers directly on your behalf. Clients love the quick turnaround and reliable service on home and auto." },
-      { name: "Lock Insurance (A Division of World)", location: "Lakeland, FL", phone: "863-646-4300", rating: "4.7", reviews: "442", description: "A Lakeland team that walks new Florida homeowners through every insurance type and pulls quotes from multiple carriers. Patient, responsive, and good at explaining the pros and cons of each option." },
-    ],
-  },
-  {
-    name: "Manatee County",
-    partners: [
-      { name: "Trout & Leigh Insurance, Inc.", location: "Bradenton, FL", phone: "941-748-1641", rating: "5.0", reviews: "274", description: "A Bradenton mainstay families have trusted for decades on home and auto. Knowledgeable agents who explain coverage clearly and look out for your best interest instead of just selling a policy." },
-      { name: "Insurance Time of Bradenton, Inc.", location: "Bradenton, FL", phone: "941-746-5151", rating: "4.9", reviews: "328", description: "A Bradenton one-stop shop for home, flood, and auto that responds within minutes, even by email. They compare policies for you and explain each one in detail before you decide." },
-      { name: "Florida Homeowners Insurance Center", location: "Bradenton / Lakewood Ranch, FL", phone: "941-756-5100", rating: "5.0", reviews: "126", description: "A homeowners-focused agency that makes finding coverage simple and pain-free. Clients highlight better coverage at great rates and a team that handles everything in a timely, professional way." },
-    ],
-  },
-  {
-    name: "Sarasota County",
-    partners: [
-      { name: "Dees Insurance Group", location: "Sarasota, FL", phone: "941-306-4524", rating: "4.9", reviews: "934", description: "One of the highest-reviewed agencies on the Gulf coast, frequently recommended by Realtors for new home purchases. Diligent agents who find the best rate and the right coverage, often saving clients over a thousand dollars a year." },
-      { name: "Insurance Service of Sarasota, Inc.", location: "Osprey, FL", phone: "941-966-5606", rating: "5.0", reviews: "114", description: "A Sarasota-area agency that makes first-time and out-of-state home purchases easy and streamlined. They shop multiple carriers and consistently come back with lower rates than the competition." },
-      { name: "The Peeples Insurance Agency", location: "Sarasota, FL", phone: "941-377-7654", rating: "4.8", reviews: "287", description: "A Sarasota independent agency that thrives under tight closing windows and big renewal increases. Prompt, friendly, and used to working with Realtors and their clients to secure affordable homeowners coverage." },
-    ],
-  },
-  {
-    name: "Hernando County",
-    partners: [
-      { name: "Advantage Insurance", location: "Spring Hill, FL", phone: "352-688-1518", rating: "4.9", reviews: "407", description: "A highly-reviewed Spring Hill agency strong on home, flood, and auto. Responsive agents who make sure clients understand their coverage and never give up on tough flood or hurricane-season placements." },
-      { name: "ISU Bauknight Insurance", location: "Spring Hill, FL", phone: "352-686-0612", rating: "4.8", reviews: "240", description: "A Spring Hill agency that does the legwork for you, comparing carriers to find the best rate and acting as your liaison for renewals and changes. New residents get insured quickly at reasonable rates." },
-    ],
-  },
-  {
-    name: "Citrus County",
-    partners: [
-      { name: "The Hagar Group", location: "Inverness, FL", phone: "352-726-1691", rating: "4.3", reviews: "99", description: "Widely regarded as one of the best agencies in Citrus County for comparing homeowners rates so you don't have to. A go-to for first-time buyers, with same-day coverage and clear, patient answers." },
-      { name: "Nature Coast Insurance Agency", location: "Inverness, FL", phone: "352-341-0040", rating: "4.6", reviews: "38", description: "A friendly Nature Coast independent agency that responds fast and goes to bat for clients at claim time. Fair quotes and knowledgeable agents who make homeowners coverage easy to understand." },
-    ],
-  },
+// Fixed county display order for consistent rendering across vendor pages
+const COUNTY_ORDER = [
+  "Hillsborough", "Pinellas", "Pasco", "Polk",
+  "Manatee", "Sarasota", "Hernando", "Citrus",
 ];
+
+// Group agencies from JSON by county, maintaining the fixed display order
+const agencies = vendorData.agencies as Vendor[];
+const agenciesByCounty = COUNTY_ORDER.map((county) => ({
+  county,
+  vendors: agencies.filter((a) => a.county === county),
+})).filter((group) => group.vendors.length > 0);
 
 export default function InsurancePartnersPage() {
   return (
@@ -140,47 +86,17 @@ export default function InsurancePartnersPage() {
         </div>
       </section>
 
-      {/* County sections */}
-      {COUNTIES.map((county) => (
-        <section key={county.name} className="container-wide py-8">
-          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6 border-b border-gray-200 pb-3">
-            {county.name}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {county.partners.map((partner) => (
-              <div key={partner.name} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
-                <div className="flex items-start justify-between mb-3">
-                  <div>
-                    <h3 className="font-heading font-bold text-lg text-primary">{partner.name}</h3>
-                    <p className="font-body text-muted text-sm">{partner.location}</p>
-                  </div>
-                  <div className="text-right flex-shrink-0">
-                    <p className="font-heading font-bold text-accent text-lg">★ {partner.rating}</p>
-                    <p className="font-body text-muted text-xs">({partner.reviews} reviews)</p>
-                  </div>
-                </div>
-                <p className="font-body text-dark text-sm leading-relaxed mb-4">{partner.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  <a
-                    href={`tel:${partner.phone.replace(/[^0-9]/g, "")}`}
-                    className="inline-flex items-center gap-2 bg-primary text-white font-semibold px-4 py-2 rounded-lg text-sm hover:bg-primary/90 transition-colors"
-                  >
-                    📞 {partner.phone}
-                  </a>
-                  <a
-                    href={`https://www.google.com/maps/search/${encodeURIComponent(partner.name + " " + partner.location)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 border border-gray-300 text-primary font-semibold px-4 py-2 rounded-lg text-sm hover:bg-gray-50 transition-colors"
-                  >
-                    ★ Google Reviews
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-      ))}
+      {/* County sections — rendered from JSON via CountyGroup + VendorCard */}
+      <section className="container-wide py-8">
+        {agenciesByCounty.map(({ county, vendors }) => (
+          <CountyGroup key={county} county={county} vendors={vendors} />
+        ))}
+
+        {/* Disclaimer from JSON metadata */}
+        <p className="font-body text-muted text-xs text-center mt-8 max-w-2xl mx-auto">
+          {vendorData.meta.disclaimer}
+        </p>
+      </section>
 
       {/* CTA */}
       <section className="bg-primary py-16">
