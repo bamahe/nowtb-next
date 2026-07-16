@@ -810,18 +810,14 @@ async function HubPage({ city }: { city: CityData }) {
         <div className="container-wide">
           <nav className="flex items-center gap-0" aria-label="Listing sections">
             <a href="#for-sale" className="font-body text-xs tracking-[0.12em] uppercase px-5 py-4 border-b-2 border-primary text-primary font-medium">
-              For Sale ({totalActive.toLocaleString()})
+              For Sale
             </a>
-            {totalRentals > 0 && (
-              <a href="#rentals" className="font-body text-xs tracking-[0.12em] uppercase px-5 py-4 border-b-2 border-transparent text-muted hover:text-primary transition-colors">
-                Rentals ({totalRentals.toLocaleString()})
-              </a>
-            )}
-            {soldListings.length > 0 && (
-              <a href="#sold" className="font-body text-xs tracking-[0.12em] uppercase px-5 py-4 border-b-2 border-transparent text-muted hover:text-primary transition-colors">
-                Recently Sold
-              </a>
-            )}
+            <a href="#sold" className="font-body text-xs tracking-[0.12em] uppercase px-5 py-4 border-b-2 border-transparent text-muted hover:text-primary transition-colors">
+              Recently Sold
+            </a>
+            <a href="#rentals" className="font-body text-xs tracking-[0.12em] uppercase px-5 py-4 border-b-2 border-transparent text-muted hover:text-primary transition-colors">
+              Rentals
+            </a>
             <a href="#neighborhoods" className="font-body text-xs tracking-[0.12em] uppercase px-5 py-4 border-b-2 border-transparent text-muted hover:text-primary transition-colors">
               Neighborhoods
             </a>

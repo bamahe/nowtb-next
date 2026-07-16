@@ -326,12 +326,21 @@ select {
 .nowtb-cta-box h3,
 .nowtb-cta-box h4,
 .nowtb-cta-box p { color: #fff !important; }
-.nowtb-cta-box a { color: #fff !important; text-decoration: underline; }
+.nowtb-cta-box a { color: #fff !important; text-decoration: none !important; }
+/* Override inline white background on CTA box buttons — all text should be white on dark bg */
+.nowtb-cta-box a[style*="background:#fff"],
+.nowtb-cta-box a[style*="background: #fff"],
+.nowtb-cta-box a[style*="background:white"] {
+  background: transparent !important;
+  color: #fff !important;
+  border: 2px solid rgba(255,255,255,0.5) !important;
+}
 .nowtb-cta-box .nowtb-cta-btn-primary {
   display: inline-block;
   padding: 12px 28px;
-  background: #fff !important;
-  color: var(--color-primary) !important;
+  background: transparent !important;
+  color: #fff !important;
+  border: 2px solid rgba(255,255,255,0.5);
   border-radius: 8px;
   font-weight: 700;
   text-decoration: none !important;
