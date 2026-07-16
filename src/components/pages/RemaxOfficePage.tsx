@@ -431,7 +431,7 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
                 </tr>
               </tbody>
             </table>
-            <p className="font-body text-muted/60 text-xs mt-4">Source: 2025 REMAX industry productivity data, independently verified.</p>
+            <p className="font-body text-muted/60 text-xs mt-4">Source: 2026 REMAX industry productivity data, independently verified.</p>
           </div>
 
           <div className="font-body text-muted font-light space-y-4 leading-relaxed max-w-3xl mx-auto">

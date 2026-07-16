@@ -249,6 +249,11 @@ export default function ValuationForm() {
         >
           {status === "loading" ? "Submitting..." : "Get My Home Value"}
         </button>
+
+        {/* Legal consent text */}
+        <p className="text-[10px] text-muted/50 font-body text-center mt-3 leading-relaxed">
+          By submitting this form, you consent to receive calls, texts, and emails from Barrett Henry, The NOW Team, REMAX Collective, and affiliated partners at the number and email provided. Message and data rates may apply. You may opt out at any time. This is not a condition of purchase.
+        </p>
       </form>
     </div>
   );

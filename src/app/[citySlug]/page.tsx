@@ -773,7 +773,7 @@ async function HubPage({ city }: { city: CityData }) {
       <section className="bg-primary pt-28 pb-16">
         <div className="container-wide">
           {/* Breadcrumb trail */}
-          <nav className="flex items-center gap-2 text-xs font-body text-white/50 mb-6 tracking-wide uppercase">
+          <nav className="flex items-center gap-2 text-xs font-body text-white/80 mb-6 tracking-wide uppercase">
             <Link href="/" className="hover:text-white/80 transition-colors">Home</Link>
             <span>/</span>
             <span className="text-accent">{city.name}</span>
@@ -1243,7 +1243,7 @@ async function SpokePage({
       <section className="bg-primary pt-28 pb-16">
         <div className="container-wide">
           {/* Breadcrumb trail */}
-          <nav className="flex items-center gap-2 text-xs font-body text-white/50 mb-6 tracking-wide uppercase">
+          <nav className="flex items-center gap-2 text-xs font-body text-white/80 mb-6 tracking-wide uppercase">
             <Link href="/" className="hover:text-white/80 transition-colors">Home</Link>
             <span>/</span>
             <Link href={`/${city.slug}`} className="hover:text-white/80 transition-colors">{city.name}</Link>

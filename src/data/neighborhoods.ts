@@ -41,7 +41,6 @@ export const neighborhoods: NeighborhoodData[] = [
   { slug: "broadway-centre-townhomes", name: "Broadway Centre Townhomes", city: "brandon" },
   { slug: "brandon-pointe", name: "Brandon Pointe", city: "brandon" },
   { slug: "brandon-traces", name: "Brandon Traces", city: "brandon" },
-  { slug: "brooker-ridge", name: "Brooker Ridge", city: "brandon" },
   { slug: "dominion", name: "Dominion", city: "brandon" },
   { slug: "four-winds-estates", name: "Four Winds Estates", city: "brandon" },
   { slug: "heather-lakes", name: "Heather Lakes", city: "brandon" },
@@ -487,13 +486,6 @@ export const neighborhoods: NeighborhoodData[] = [
   { slug: "river-hills-country-club", name: "River Hills Country Club", city: "valrico" },
   { slug: "twin-lakes", name: "Twin Lakes", city: "brandon" },
   { slug: "village-green", name: "Village Green", city: "brandon" },
-  { slug: "north-clearwater", name: "North Clearwater", city: "clearwater" },
-  { slug: "north-lakeland", name: "North Lakeland", city: "lakeland" },
-  { slug: "south-lakeland", name: "South Lakeland", city: "lakeland" },
-  { slug: "south-tampa", name: "South Tampa", city: "tampa" },
-  { slug: "north-river-ranch-parrish", name: "North River Ranch Parrish", city: "parrish" },
-  { slug: "seffner-mango", name: "Seffner-Mango", city: "seffner" },
-  { slug: "clearwater-beach", name: "Clearwater Beach", city: "clearwater" },
   { slug: "st-pete-beach", name: "St. Pete Beach", city: "st-petersburg" },
 ];
 

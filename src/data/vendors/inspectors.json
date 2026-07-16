@@ -292,6 +292,40 @@
       "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJz-cB5qtr6IgR-KcFGHnVlNc",
       "website": null,
       "bio": "A Lecanto-based inspector serving Citrus County with thorough, early-arriving service and clear explanations. Experienced with wind mitigation and multi-property owners across the Nature Coast."
+    },
+    {
+      "name": "West Florida Inspections (Don Shaw)",
+      "county": "Manatee",
+      "city": "Palmetto",
+      "address": null,
+      "phone": "941-981-9720",
+      "lat": null,
+      "lng": null,
+      "place_id": null,
+      "google_rating": null,
+      "google_review_count": null,
+      "google_maps_url": null,
+      "website": null,
+      "bio": "30+ years experience. Licensed home inspector and certified building contractor. Catches construction-level issues most inspectors miss. BBB accredited. Affordable pricing, same-day reports. Also serves Hillsborough County.",
+      "preferred": false,
+      "note": null
+    },
+    {
+      "name": "West Florida Inspections (Don Shaw)",
+      "county": "Hillsborough",
+      "city": "Palmetto",
+      "address": null,
+      "phone": "941-981-9720",
+      "lat": null,
+      "lng": null,
+      "place_id": null,
+      "google_rating": null,
+      "google_review_count": null,
+      "google_maps_url": null,
+      "website": null,
+      "bio": "30+ years experience. Licensed home inspector and certified building contractor. Catches construction-level issues most inspectors miss. BBB accredited. Affordable pricing, same-day reports. Serves both Manatee and Hillsborough counties.",
+      "preferred": false,
+      "note": null
     }
   ]
 }

@@ -242,8 +242,13 @@ export default function ContactForm({
           {status === "loading" ? "Sending..." : submitLabel}
         </button>
 
-        {/* Trust signals — credentials displayed below submit for credibility */}
-        <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 mt-4 text-xs text-muted/60 font-body">
+        {/* Legal consent text */}
+        <p className="text-[10px] text-muted/50 font-body text-center mt-3 leading-relaxed max-w-md mx-auto">
+          By submitting this form, you consent to receive calls, texts, and emails from Barrett Henry, The NOW Team, REMAX Collective, and affiliated partners at the number and email provided. Message and data rates may apply. You may opt out at any time. This is not a condition of purchase.
+        </p>
+
+        {/* Trust signals */}
+        <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 mt-3 text-xs text-muted/60 font-body">
           <span>FL License #BK3313308</span>
           <span>&bull;</span>
           <span>23+ Years Experience</span>
