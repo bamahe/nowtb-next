@@ -12,6 +12,7 @@ import { cities } from "@/data/cities";
 import { getAllPosts, getPostBySlug, getPostThumbnail, getRelatedPosts } from "@/lib/posts";
 import { cleanWpContent } from "@/lib/utils";
 import PhotoCredit from "@/components/ui/PhotoCredit";
+import SearchCategoryListings from "@/components/ui/SearchCategoryListings";
 
 /**
  * Find the city that matches a blog post slug.
@@ -308,6 +309,9 @@ export default async function BlogPostPage({
           </article>
         </div>
       </section>
+
+      {/* === Live listings for search category blog posts === */}
+      <SearchCategoryListings slug={slug} />
 
       {/* === Related Articles from same city === */}
       {cityRelatedPosts.length > 0 && matchedCity && (
