@@ -212,6 +212,38 @@ export const comparisons: ComparisonData[] = [
 
   // --- Concept comparisons ---
   {
+    slug: "valrico-vs-riverview",
+    title: "Valrico vs Riverview: Schools, Prices, and Lifestyle Compared",
+    excerpt: "Compare Valrico and Riverview FL — home prices, school zones, commute times, neighborhoods, and which is the better fit for your family.",
+    sideA: "Valrico",
+    sideB: "Riverview",
+    category: "city",
+  },
+  {
+    slug: "valrico-vs-lithia",
+    title: "Valrico vs Lithia: Suburban Living vs Rural Luxury",
+    excerpt: "Compare Valrico and Lithia FL — lot sizes, prices, FishHawk Ranch vs Bloomingdale, school zones, and lifestyle differences.",
+    sideA: "Valrico",
+    sideB: "Lithia",
+    category: "city",
+  },
+  {
+    slug: "valrico-vs-seffner",
+    title: "Valrico vs Seffner: Which Hillsborough Suburb Offers Better Value?",
+    excerpt: "Compare Valrico and Seffner FL — prices, neighborhoods, I-4 access, school zones, and which is the better buy in 2026.",
+    sideA: "Valrico",
+    sideB: "Seffner",
+    category: "city",
+  },
+  {
+    slug: "valrico-vs-plant-city",
+    title: "Valrico vs Plant City: Suburban vs Small-Town Living",
+    excerpt: "Compare Valrico and Plant City FL — home values, acreage, schools, commute to Tampa, and lifestyle.",
+    sideA: "Valrico",
+    sideB: "Plant City",
+    category: "city",
+  },
+  {
     slug: "buying-vs-renting-tampa-bay",
     title: "Buying vs Renting in Tampa Bay: Which Makes More Sense?",
     excerpt: "Should you buy or rent in Tampa Bay? Cost analysis, market trends, and long-term wealth building compared.",

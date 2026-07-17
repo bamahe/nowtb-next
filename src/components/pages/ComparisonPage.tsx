@@ -152,6 +152,12 @@ const COMMUNITY_INFO: Record<string, { description: string; highlights: string[]
     highlights: ["FishHawk Ranch master-planned community", "A-rated Newsome High School zone", "Mix of luxury and rural properties", "Alafia River State Park nearby", "Large lots available outside planned communities"],
     schools: "Newsome High, Randall Middle, multiple A-rated elementaries",
   },
+  "fishhawk": {
+    description: "FishHawk Ranch is a 3,200-acre master-planned community in Lithia with A-rated Newsome High School, 40+ miles of trails, resort-style pools, sports courts, and an active community calendar. One of Tampa Bay's most desirable family neighborhoods.",
+    highlights: ["A-rated Newsome High School", "40+ miles of trails and parks", "Multiple pools and clubhouses", "Active community events", "CDD-maintained amenities"],
+    schools: "Newsome High School, Barrington Middle, FishHawk Creek Elementary",
+  },
+
 };
 
 export default async function ComparisonPage({ comparison }: ComparisonPageProps) {
