@@ -256,6 +256,7 @@ export default async function HomePage() {
             zipCodes={['33510','33511','33578','33579','33594','33596','33572','33527','33584','33547','33570','33592','33602','33606','33609','33619']}
             limit={12}
             areaName="Tampa Bay"
+            showFilters={false}
           />
 
           {/* "View All" link — minimal uppercase style */}
