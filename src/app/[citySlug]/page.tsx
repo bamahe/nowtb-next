@@ -924,7 +924,7 @@ async function HubPage({ city }: { city: CityData }) {
       <div id="rentals" />
       <section className="container-wide py-8 text-center">
         <Link
-          href={`/properties/search/?q=${encodeURIComponent(city.name)}&rental=true`}
+          href={`/${city.slug}-rentals/`}
           className="btn-secondary inline-block px-8 py-3"
         >
           Browse Rentals in {city.name}
