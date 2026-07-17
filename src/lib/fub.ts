@@ -91,16 +91,21 @@ export async function pushLeadToFub(data: FubLeadData): Promise<boolean> {
 
     // Build a property summary block for the note
     if (data.property) {
-      const p = data.property;
+      const p = data.property as Record<string, unknown>;
       const propLines: string[] = ["--- Property of Interest ---"];
       if (p.address) propLines.push(`Address: ${p.address}`);
       if (p.city && p.state) propLines.push(`Location: ${p.city}, ${p.state}`);
-      if (p.price) propLines.push(`List Price: $${p.price.toLocaleString()}`);
+      if (p.price) propLines.push(`List Price: $${Number(p.price).toLocaleString()}`);
       if (p.beds) propLines.push(`Beds: ${p.beds}`);
       if (p.baths) propLines.push(`Baths: ${p.baths}`);
-      if (p.sqft) propLines.push(`Sq Ft: ${p.sqft.toLocaleString()}`);
+      if (p.sqft) propLines.push(`Sq Ft: ${Number(p.sqft).toLocaleString()}`);
       if (p.mlsNumber) propLines.push(`MLS #: ${p.mlsNumber}`);
       if (p.url) propLines.push(`View Listing: ${p.url}`);
+      // Tour scheduling details
+      if (p.preferredDate) propLines.push(`\n--- Tour Details ---`);
+      if (p.preferredDate) propLines.push(`Requested Date: ${p.preferredDate}`);
+      if (p.preferredTime) propLines.push(`Requested Time: ${p.preferredTime}`);
+      if (p.tourType) propLines.push(`Tour Type: ${p.tourType === "video" ? "Video Chat" : "In-Person"}`);
       noteParts.push(propLines.join("\n"));
     }
 

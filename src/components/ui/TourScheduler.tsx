@@ -131,11 +131,12 @@ export default function TourScheduler({
           source: `tour-scheduler:${listingId}`,
           type: "showing",
           turnstileToken,
-          message: `${tourType === "video" ? "Video Chat" : "In-Person"} Tour Request\nDate: ${formatDateForApi(selectedDate)}\nTime: ${selectedTime}\nProperty: ${listingAddress}`,
+          message: `${tourType === "video" ? "VIDEO CHAT" : "IN-PERSON"} TOUR REQUEST\n\nProperty: ${listingAddress}\nMLS#: ${listingId}\nPrice: $${listingPrice?.toLocaleString() || "N/A"}\n\nRequested Date: ${formatDateForApi(selectedDate)}\nRequested Time: ${selectedTime}\nTour Type: ${tourType === "video" ? "Video Chat" : "In-Person"}\n\nPage: ${typeof window !== "undefined" ? window.location.href : ""}`,
           property: {
             address: listingAddress,
             price: listingPrice,
             mlsNumber: listingId,
+            url: typeof window !== "undefined" ? window.location.href : "",
             tourType,
             preferredDate: formatDateForApi(selectedDate),
             preferredTime: selectedTime,
