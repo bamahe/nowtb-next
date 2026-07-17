@@ -19,6 +19,7 @@ import FavoriteButton from "@/components/ui/FavoriteButton";
 import MiniCalc from "@/components/ui/MiniCalc";
 import PhotoGallery from "@/components/ui/PhotoGallery";
 import RecentlyViewedTracker from "@/components/ui/RecentlyViewedTracker";
+import FubListingView from "@/components/tracking/FubListingView";
 import SchoolsNearby from "@/components/ui/SchoolsNearby";
 import ShareButtons from "@/components/ui/ShareButtons";
 import SimilarListings from "@/components/ui/SimilarListings";
@@ -206,6 +207,17 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
         baths={listing.BathroomsTotalInteger}
         sqft={listing.LivingArea}
         photo={listing.Media?.[0]?.MediaURL}
+      />
+
+      {/* === FUB Listing View Tracker (logged-in users only) === */}
+      {/* Pushes "PropertyViewed" to FUB so Barrett sees which listings leads browse */}
+      <FubListingView
+        listingKey={listing.ListingKey}
+        address={listing.UnparsedAddress}
+        city={listing.City}
+        price={listing.ListPrice}
+        mlsNumber={listing.ListingId || listing.ListingKey}
+        state={listing.StateOrProvince || "FL"}
       />
 
       {/* === JSON-LD: RealEstateListing + BreadcrumbList === */}

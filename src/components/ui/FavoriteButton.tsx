@@ -114,6 +114,26 @@ export default function FavoriteButton({
             listing_key: listingKey,
             listing_data: listingData,
           });
+
+          // Push "PropertyFavorited" event to FUB (fire-and-forget)
+          // This shows up in the lead's FUB timeline so Barrett sees what they like
+          if (user.email) {
+            fetch("/api/fub-event", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                email: user.email,
+                event: "PropertyFavorited",
+                property: {
+                  address: listingData.address,
+                  city: listingData.city,
+                  price: listingData.price,
+                },
+              }),
+            }).catch(() => {
+              // FUB push failed — no big deal, the favorite is already saved
+            });
+          }
         } else {
           await supabase
             .from("favorites")

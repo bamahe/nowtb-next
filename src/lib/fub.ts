@@ -6,6 +6,11 @@
 const FUB_API_KEY = process.env.FUB_API_KEY || "";
 const FUB_BASE = "https://api.followupboss.com/v1";
 
+// Shared auth header builder — keeps it DRY
+function fubAuthHeader(): string {
+  return `Basic ${Buffer.from(FUB_API_KEY + ":").toString("base64")}`;
+}
+
 /**
  * Data shape for creating/updating a person (lead) in FUB.
  * The "source" tells FUB where the lead came from.
@@ -162,6 +167,132 @@ export async function pushLeadToFub(data: FubLeadData): Promise<boolean> {
     return true;
   } catch (error) {
     console.error("[FUB] Error pushing lead:", error);
+    return false;
+  }
+}
+
+// =============================================================================
+// pushEventToFub — Logs an event to a contact's FUB timeline
+// Used for property views, favorites, saved searches, etc.
+// FUB matches the person by email — creates them if they don't exist.
+// =============================================================================
+
+interface FubEventData {
+  email: string;
+  /** Event type: "PropertyViewed", "PropertyFavorited", "SearchSaved", etc. */
+  type: string;
+  /** Human-readable message shown in the FUB timeline */
+  message: string;
+  /** Optional property details to attach to the event */
+  property?: {
+    street?: string;
+    city?: string;
+    state?: string;
+    mlsNumber?: string;
+    price?: number;
+    url?: string;
+  };
+}
+
+export async function pushEventToFub(data: FubEventData): Promise<boolean> {
+  if (!FUB_API_KEY) {
+    console.warn("[FUB] No API key — skipping event push");
+    return false;
+  }
+
+  try {
+    const res = await fetch(`${FUB_BASE}/events`, {
+      method: "POST",
+      headers: {
+        Authorization: fubAuthHeader(),
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        source: "nowtb.com",
+        type: data.type,
+        message: data.message,
+        person: { emails: [{ value: data.email }] },
+        property: data.property || undefined,
+      }),
+    });
+
+    if (!res.ok) {
+      const errText = await res.text();
+      console.error(`[FUB] Event push failed (${res.status}):`, errText);
+      return false;
+    }
+
+    console.log(`[FUB] Event pushed: ${data.type} for ${data.email}`);
+    return true;
+  } catch (error) {
+    console.error("[FUB] Event push error:", error);
+    return false;
+  }
+}
+
+// =============================================================================
+// pushNoteToFub — Adds a note to a contact in FUB (matched by email)
+// Used for saved search criteria, detailed property notes, etc.
+// Creates the person first if they don't exist, then attaches the note.
+// =============================================================================
+
+interface FubNoteData {
+  email: string;
+  subject: string;
+  body: string;
+}
+
+export async function pushNoteToFub(data: FubNoteData): Promise<boolean> {
+  if (!FUB_API_KEY) {
+    console.warn("[FUB] No API key — skipping note push");
+    return false;
+  }
+
+  try {
+    // Step 1: Ensure the person exists (FUB dedupes by email)
+    const personRes = await fetch(`${FUB_BASE}/people`, {
+      method: "POST",
+      headers: {
+        Authorization: fubAuthHeader(),
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        source: "nowtb.com",
+        emails: [{ value: data.email }],
+      }),
+    });
+
+    if (!personRes.ok) {
+      console.error("[FUB] Failed to find/create person for note");
+      return false;
+    }
+
+    const personData = await personRes.json();
+    const personId = personData.id;
+
+    // Step 2: Attach the note to the person
+    const noteRes = await fetch(`${FUB_BASE}/notes`, {
+      method: "POST",
+      headers: {
+        Authorization: fubAuthHeader(),
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        personId,
+        subject: data.subject,
+        body: data.body,
+      }),
+    });
+
+    if (!noteRes.ok) {
+      console.error("[FUB] Failed to create note");
+      return false;
+    }
+
+    console.log(`[FUB] Note added for ${data.email}: ${data.subject}`);
+    return true;
+  } catch (error) {
+    console.error("[FUB] Note push error:", error);
     return false;
   }
 }

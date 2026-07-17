@@ -71,6 +71,22 @@ export default function SaveSearchButton() {
           setStatus("saved");
           setShowNameInput(false);
           setTimeout(() => setStatus("idle"), 3000);
+
+          // Push saved search criteria to FUB (fire-and-forget)
+          // Creates a note on the contact with their search filters
+          if (user.email) {
+            fetch("/api/fub-event", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                email: user.email,
+                event: "SearchSaved",
+                search: { name, filters },
+              }),
+            }).catch(() => {
+              // FUB push failed — search is already saved, no worries
+            });
+          }
           return;
         }
       }
