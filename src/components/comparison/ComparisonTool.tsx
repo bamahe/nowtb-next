@@ -772,7 +772,7 @@ export default function ComparisonTool({
         {/* ── Footer ─────────────────────────────────────────────────── */}
         <footer className="mt-12 border-t border-slate-200 pt-6 text-center text-sm text-slate-500">
           <p className="font-semibold text-[#0B2545]">
-            Barrett Henry, Broker Associate, REMAX Collective. REALTOR(R).
+            Barrett Henry, Broker Associate, REMAX Collective. REALTOR&reg;.
           </p>
           <p className="mt-1">
             MOVE WITH CONFIDENCE. Straight talk. Smart Strategy.
