@@ -472,3 +472,11 @@ select {
 .animate-slide-in-right {
   animation: slide-in-right 0.25s ease-out;
 }
+
+/* ── Compare pages: hide site header, footer, mobile bar, widgets ── */
+body:has(.compare-page) > *:not(#main-content):not(script):not(noscript) {
+  display: none !important;
+}
+body:has(.compare-page) > #main-content {
+  padding-bottom: 0 !important;
+}
