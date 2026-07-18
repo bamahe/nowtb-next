@@ -127,9 +127,10 @@ const assistancePrograms = [
   {
     title: "First-Time Buyer Resources",
     description:
-      "Not sure where to begin? My first-time buyer guide covers everything from credit score requirements and loan types to what happens at the closing table. It's the playbook I give every new buyer I work with.",
-    href: "/guides/first-time-home-buyer-guide/",
-    cta: "Read the Buyer Guide",
+      "Not sure where to begin? My dedicated first-time buyer site covers 12+ down payment assistance programs, eligibility tools, and step-by-step guides for every Tampa Bay county.",
+    href: "https://firsttimehomebuyertb.com/",
+    cta: "Explore All Programs",
+    external: true,
   },
 ];
 
@@ -355,12 +356,24 @@ export default function BuyersPage() {
                 <p className="font-body text-sm text-muted font-light leading-relaxed mb-6">
                   {prog.description}
                 </p>
-                <Link
-                  href={prog.href}
-                  className="font-body text-sm text-link hover:underline font-normal tracking-wide"
-                >
-                  {prog.cta}
-                </Link>
+                {/* External links use <a> with target="_blank"; internal use <Link> */}
+                {"external" in prog && prog.external ? (
+                  <a
+                    href={prog.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-body text-sm text-link hover:underline font-normal tracking-wide"
+                  >
+                    {prog.cta}
+                  </a>
+                ) : (
+                  <Link
+                    href={prog.href}
+                    className="font-body text-sm text-link hover:underline font-normal tracking-wide"
+                  >
+                    {prog.cta}
+                  </Link>
+                )}
               </div>
             ))}
           </div>

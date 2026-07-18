@@ -18,6 +18,7 @@ const FOOTER_COLUMNS = [
       { href: "/first-time-home-buyer-guide", label: "First-Time Buyers" },
       { href: "/fha-loan-florida", label: "FHA Loans" },
       { href: "/va-loan-florida", label: "VA Loans" },
+      { href: "https://firsttimehomebuyertb.com", label: "Down Payment Programs", external: true },
     ],
   },
   {
@@ -108,13 +109,26 @@ export default function Footer() {
               <ul className="space-y-2">
                 {column.links.map((link) => (
                   <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-xs tracking-[0.1em] text-white/50
-                                 transition-colors duration-300 hover:text-white"
-                    >
-                      {link.label}
-                    </Link>
+                    {/* External links use <a> with target="_blank"; internal links use Next.js <Link> */}
+                    {"external" in link && link.external ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs tracking-[0.1em] text-white/50
+                                   transition-colors duration-300 hover:text-white"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className="text-xs tracking-[0.1em] text-white/50
+                                   transition-colors duration-300 hover:text-white"
+                      >
+                        {link.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

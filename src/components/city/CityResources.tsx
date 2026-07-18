@@ -58,6 +58,7 @@ const BUYER_SELLER_RESOURCES = [
   { href: "/sell-your-home/", label: "Sell Your Home" },
   { href: "/free-home-valuation/", label: "Free Home Valuation" },
   { href: "/mortgage-calculator/", label: "Mortgage Calculator" },
+  { href: "https://firsttimehomebuyertb.com/", label: "Down Payment Assistance", external: true },
 ];
 
 // --- Related guide pages (static, useful for all city pages) ---
@@ -159,13 +160,26 @@ export default function CityResources({ city }: CityResourcesProps) {
         </h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
           {BUYER_SELLER_RESOURCES.map((resource) => (
-            <Link
-              key={resource.href}
-              href={resource.href}
-              className="block border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10 hover:text-accent"
-            >
-              {resource.label}
-            </Link>
+            /* External links open in new tab; internal links use Next.js routing */
+            "external" in resource && resource.external ? (
+              <a
+                key={resource.href}
+                href={resource.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10 hover:text-accent"
+              >
+                {resource.label}
+              </a>
+            ) : (
+              <Link
+                key={resource.href}
+                href={resource.href}
+                className="block border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10 hover:text-accent"
+              >
+                {resource.label}
+              </Link>
+            )
           ))}
         </div>
         {/* City-specific sell/realtor links */}
