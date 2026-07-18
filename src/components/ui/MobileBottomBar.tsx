@@ -44,7 +44,7 @@ export default function MobileBottomBar() {
 
         {/* Contact button — takes 1/4 of the width */}
         <Link
-          href="/contact"
+          href="/contact/"
           className="flex-[1] flex items-center justify-center gap-1.5
                      bg-primary text-white font-body text-sm font-semibold
                      py-3.5 active:bg-primary/90 transition-colors

@@ -18,6 +18,7 @@ import { getCityBySlug } from "@/data/cities";
 import { getPageContent } from "@/lib/page-content";
 import { cleanWpContent, formatPrice } from "@/lib/utils";
 import type { Listing } from "@/lib/types";
+import { NEIGHBORHOOD_DESCRIPTIONS } from "@/data/neighborhood-descriptions";
 
 interface NeighborhoodPageProps {
   /** Display name of the neighborhood (e.g. "Bloomingdale") */
@@ -130,7 +131,7 @@ export default async function NeighborhoodPage({
           <nav className="flex items-center gap-2 text-xs font-body text-white/80 mb-6 tracking-wide uppercase">
             <Link href="/" className="hover:text-white/80 transition-colors">Home</Link>
             <span>/</span>
-            <Link href={`/${citySlug}`} className="hover:text-white/80 transition-colors">{city}</Link>
+            <Link href={`/${citySlug}/`} className="hover:text-white/80 transition-colors">{city}</Link>
             <span>/</span>
             <span className="text-accent">{name}</span>
           </nav>
@@ -152,7 +153,7 @@ export default async function NeighborhoodPage({
               (813) 733-7907
             </a>
             <Link
-              href="/contact"
+              href="/contact/"
               className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
             >
               Schedule a Tour
@@ -270,8 +271,14 @@ export default async function NeighborhoodPage({
               className="blog-content prose prose-lg max-w-none text-muted font-body"
               dangerouslySetInnerHTML={{ __html: neighborhoodContent }}
             />
+          ) : NEIGHBORHOOD_DESCRIPTIONS[slug] ? (
+            // Curated neighborhood description — real, useful info
+            <div
+              className="blog-content prose prose-lg max-w-none text-muted font-body"
+              dangerouslySetInnerHTML={{ __html: NEIGHBORHOOD_DESCRIPTIONS[slug].contentHtml }}
+            />
           ) : (
-            // No WP content yet — show a fallback that mentions the specific county
+            // No content at all — show a brief, honest fallback
             <div className="prose font-body text-dark max-w-none space-y-4">
               <p>
                 {name} is a residential neighborhood in {city}, {county} County,
@@ -389,7 +396,7 @@ export default async function NeighborhoodPage({
               {nearbyNeighborhoods.map((neighborhood) => (
                 <Link
                   key={neighborhood.slug}
-                  href={`/${neighborhood.slug}`}
+                  href={`/${neighborhood.slug}/`}
                   className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10"
                 >
                   {neighborhood.name}
@@ -419,7 +426,7 @@ export default async function NeighborhoodPage({
               Call Now
             </a>
             <Link
-              href="/contact"
+              href="/contact/"
               className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
             >
               Send a Message

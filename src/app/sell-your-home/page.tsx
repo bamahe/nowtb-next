@@ -251,7 +251,7 @@ export default function SellYourHomePage() {
         <p className="font-body text-muted text-lg mb-4">
           Not ready to sell? Browse what&apos;s on the market instead.
         </p>
-        <Link href="/properties" className="btn-primary inline-block">
+        <Link href="/properties/" className="btn-primary inline-block">
           Search Homes
         </Link>
       </section>

@@ -203,10 +203,10 @@ export default function BuildersPage() {
         subtitle="Browse communities from the area's top builders — and get a Broker with 23+ years of experience representing you at no cost."
       >
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
-          <Link href="/new-construction-homes-tampa-bay" className="btn-primary">
+          <Link href="/new-construction-homes-tampa-bay/" className="btn-primary">
             Search New Construction
           </Link>
-          <Link href="/contact" className="btn-secondary">
+          <Link href="/contact/" className="btn-secondary">
             Talk to Barrett
           </Link>
         </div>
@@ -291,7 +291,7 @@ export default function BuildersPage() {
             {builders.map((builder) => (
               <Link
                 key={builder.slug}
-                href={`/${builder.slug}`}
+                href={`/${builder.slug}/`}
                 className="group card p-8 hover:shadow-lg transition-shadow"
               >
                 <div className="flex items-baseline gap-3 mb-3">
@@ -328,37 +328,37 @@ export default function BuildersPage() {
                 area: "South Hillsborough",
                 cities: ["Riverview", "Brandon", "Valrico", "Lithia", "Wimauma", "Balm"],
                 note: "The highest concentration of new construction in Tampa Bay. Dozens of active communities from every major builder.",
-                link: "/riverview",
+                link: "/riverview/",
               },
               {
                 area: "Pasco County",
                 cities: ["Wesley Chapel", "Land O'Lakes", "Zephyrhills", "San Antonio", "Dade City"],
                 note: "Rapid growth corridor with large master-planned communities. Strong school ratings and lower price points than Hillsborough.",
-                link: "/wesley-chapel",
+                link: "/wesley-chapel/",
               },
               {
                 area: "East Hillsborough",
                 cities: ["Plant City", "Dover", "Thonotosassa", "Seffner"],
                 note: "Rural feel with larger lots and acreage options. Fewer HOA-governed communities and more custom build opportunities.",
-                link: "/plant-city",
+                link: "/plant-city/",
               },
               {
                 area: "Polk County",
                 cities: ["Lakeland", "Winter Haven", "Davenport", "Haines City", "Auburndale"],
                 note: "The most affordable new construction near Tampa Bay. Popular with first-time buyers and investors. Easy I-4 commute.",
-                link: "/lakeland",
+                link: "/lakeland/",
               },
               {
                 area: "Manatee & Sarasota",
                 cities: ["Bradenton", "Parrish", "Sarasota", "Lakewood Ranch", "North Port"],
                 note: "Premium communities with resort-style amenities. Lakewood Ranch is one of the top-selling master-planned communities in the nation.",
-                link: "/bradenton",
+                link: "/bradenton/",
               },
               {
                 area: "North Tampa & Pinellas",
                 cities: ["Tampa", "Lutz", "Odessa", "St. Petersburg", "Clearwater"],
                 note: "Limited new construction due to established development. Infill and boutique communities command premium pricing.",
-                link: "/tampa",
+                link: "/tampa/",
               },
             ].map((area) => (
               <Link
@@ -462,16 +462,16 @@ export default function BuildersPage() {
               (813) 733-7907
             </a>{" "}
             to schedule a builder tour or browse{" "}
-            <Link href="/new-construction-homes-tampa-bay" className="text-link hover:underline">
+            <Link href="/new-construction-homes-tampa-bay/" className="text-link hover:underline">
               active new construction listings
             </Link>{" "}
             right now.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/new-construction-homes-tampa-bay" className="btn-primary">
+            <Link href="/new-construction-homes-tampa-bay/" className="btn-primary">
               Search New Construction
             </Link>
-            <Link href="/contact" className="btn-secondary">
+            <Link href="/contact/" className="btn-secondary">
               Schedule a Builder Tour
             </Link>
           </div>

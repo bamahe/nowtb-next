@@ -63,22 +63,22 @@ export default async function MiscCatchAllPage({ page }: MiscCatchAllPageProps) 
             Helpful Resources
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
-            <Link href="/buyers" className="card p-4 text-center hover:shadow-lg transition-shadow">
+            <Link href="/buyers/" className="card p-4 text-center hover:shadow-lg transition-shadow">
               <span className="font-heading font-bold text-primary">Buyer Resources</span>
             </Link>
-            <Link href="/sellers" className="card p-4 text-center hover:shadow-lg transition-shadow">
+            <Link href="/sellers/" className="card p-4 text-center hover:shadow-lg transition-shadow">
               <span className="font-heading font-bold text-primary">Seller Resources</span>
             </Link>
-            <Link href="/guides" className="card p-4 text-center hover:shadow-lg transition-shadow">
+            <Link href="/guides/" className="card p-4 text-center hover:shadow-lg transition-shadow">
               <span className="font-heading font-bold text-primary">All Guides</span>
             </Link>
-            <Link href="/properties" className="card p-4 text-center hover:shadow-lg transition-shadow">
+            <Link href="/properties/" className="card p-4 text-center hover:shadow-lg transition-shadow">
               <span className="font-heading font-bold text-primary">Search Listings</span>
             </Link>
-            <Link href="/contact" className="card p-4 text-center hover:shadow-lg transition-shadow">
+            <Link href="/contact/" className="card p-4 text-center hover:shadow-lg transition-shadow">
               <span className="font-heading font-bold text-primary">Contact Barrett</span>
             </Link>
-            <Link href="/about" className="card p-4 text-center hover:shadow-lg transition-shadow">
+            <Link href="/about/" className="card p-4 text-center hover:shadow-lg transition-shadow">
               <span className="font-heading font-bold text-primary">About Barrett</span>
             </Link>
           </div>

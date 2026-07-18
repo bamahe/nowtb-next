@@ -90,7 +90,7 @@ export default async function CountyPage({
               (813) 733-7907
             </a>
             <Link
-              href="/contact"
+              href="/contact/"
               className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
             >
               Schedule a Tour
@@ -211,7 +211,7 @@ export default async function CountyPage({
           </div>
           <div className="flex gap-3 flex-shrink-0">
             <a href="tel:+18137337907" className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 rounded text-sm hover:bg-accent/90 transition-colors">Call Now</a>
-            <Link href="/contact" className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors">Send a Message</Link>
+            <Link href="/contact/" className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors">Send a Message</Link>
           </div>
         </div>
       </section>

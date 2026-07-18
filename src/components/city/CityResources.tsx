@@ -87,12 +87,11 @@ export default function CityResources({ city }: CityResourcesProps) {
   // --- Recent blog posts mentioning this city ---
   // Filter by city slug appearing in the post slug (e.g. "valrico" in "best-neighborhoods-valrico")
   const allPosts = getAllPosts();
-  const cityPosts = allPosts
-    .filter((p) => p.slug.includes(city.slug))
-    .slice(0, 6);
+  const allCityPosts = allPosts.filter((p) => p.slug.includes(city.slug));
+  const cityPosts = allCityPosts.slice(0, 12);
 
   // If no nearby cities and no neighborhoods, this isn't a priority city — skip rendering
-  if (nearbySlugs.length === 0 && cityNeighborhoods.length === 0 && cityPosts.length === 0) {
+  if (nearbySlugs.length === 0 && cityNeighborhoods.length === 0 && allCityPosts.length === 0) {
     return null;
   }
 
@@ -276,6 +275,17 @@ export default function CityResources({ city }: CityResourcesProps) {
               </Link>
             ))}
           </div>
+          {/* "View all" link when there are more posts than shown */}
+          {allCityPosts.length > cityPosts.length && (
+            <div className="text-center mt-6">
+              <Link
+                href={`/blog/?q=${encodeURIComponent(city.name)}`}
+                className="font-body text-sm font-semibold text-accent hover:text-primary transition-colors"
+              >
+                View All {allCityPosts.length} {city.name} Articles &rarr;
+              </Link>
+            </div>
+          )}
         </div>
       )}
     </section>

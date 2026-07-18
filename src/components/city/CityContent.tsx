@@ -206,6 +206,33 @@ export default function CityContent({ city, topic }: CityContentProps) {
             </a>{" "}
             — Check flood zones before you buy
           </li>
+          <li>
+            <a
+              href="https://flforeclosurehelp.com/"
+              className="text-link hover:underline"
+            >
+              Florida Foreclosure Help
+            </a>{" "}
+            — Free foreclosure prevention resources for Florida homeowners
+          </li>
+          <li>
+            <a
+              href="https://firsttimehomebuyertb.com/"
+              className="text-link hover:underline"
+            >
+              First-Time Home Buyer Tampa Bay
+            </a>{" "}
+            — Down payment assistance, FHA guides, and first-time buyer programs
+          </li>
+          <li>
+            <a
+              href="https://valricopropertymgmt.com/"
+              className="text-link hover:underline"
+            >
+              ViVi Property Management
+            </a>{" "}
+            — Professional property management for {city.county} County landlords
+          </li>
         </ul>
       </div>
 

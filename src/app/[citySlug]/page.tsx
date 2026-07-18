@@ -31,6 +31,7 @@ import { getLoanContent } from "@/data/loan-content";
 import ComparisonPage from "@/components/pages/ComparisonPage";
 import RegionalPage from "@/components/pages/RegionalPage";
 import MiscCatchAllPage from "@/components/pages/MiscCatchAllPage";
+import NeighborhoodGuidePage from "@/components/pages/NeighborhoodGuidePage";
 import RemaxOfficePage, { getRemaxOffice } from "@/components/pages/RemaxOfficePage";
 import {
   cities,
@@ -47,6 +48,8 @@ import { miscPages, getMiscPageBySlug, type MiscPageData } from "@/data/misc-pag
 import { guides, type GuideData } from "@/data/guides";
 import { getGuideContent } from "@/lib/guides-loader";
 import { getListings, getListingsByCity, getOpenHouses } from "@/lib/bridge";
+import { CITY_FAQS } from "@/data/valrico-faqs";
+import { NEIGHBORHOOD_DESCRIPTIONS } from "@/data/neighborhood-descriptions";
 
 // --- County data for county pages ---
 const COUNTIES = [
@@ -391,13 +394,18 @@ export async function generateMetadata({
       // Look up the parent city name for the metadata
       const nCity = getCityBySlug(parsed.city);
       const cityName = nCity ? nCity.name : "Tampa Bay";
+      // Use curated summary if available, otherwise generic
+      const nDesc = NEIGHBORHOOD_DESCRIPTIONS[parsed.slug];
+      const metaDesc = nDesc
+        ? `${parsed.name} in ${cityName}, FL — ${nDesc.summary} Browse homes for sale. Barrett Henry, REMAX Collective.`
+        : `Explore homes for sale in ${parsed.name}, ${cityName}, FL. Updated daily from Stellar MLS. Barrett Henry, REMAX Collective. Call (813) 733-7907.`;
       return {
         title: `${parsed.name} Homes for Sale | ${cityName}, FL`,
-        description: `Explore homes for sale in ${parsed.name}, ${cityName}, FL. Updated daily from Stellar MLS. Barrett Henry, REMAX Collective. Call (813) 733-7907.`,
+        description: metaDesc,
         alternates: { canonical },
         openGraph: {
           title: `${parsed.name} Homes for Sale | ${cityName}, FL`,
-          description: `Browse homes in ${parsed.name}, ${cityName}. Updated daily from Stellar MLS.`,
+          description: nDesc ? nDesc.summary : `Browse homes in ${parsed.name}, ${cityName}. Updated daily from Stellar MLS.`,
           url: canonical,
           type: "website",
           images: [{ url: "/og-default.png", width: 1200, height: 630 }],
@@ -570,7 +578,7 @@ export default async function CityPage({
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <a href={`tel:${agent.phone.replace(/[^\d]/g, "")}`} className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary font-bold text-sm rounded-lg">Call {agent.phone}</a>
-              <Link href="/home-valuation" className="inline-block px-6 py-3 border-2 border-white/40 text-white font-bold text-sm rounded-lg">Free Home Valuation</Link>
+              <Link href="/home-valuation/" className="inline-block px-6 py-3 border-2 border-white/40 text-white font-bold text-sm rounded-lg">Free Home Valuation</Link>
             </div>
           </div>
         </section>
@@ -589,6 +597,10 @@ export default async function CityPage({
     case "hub":
       return <HubPage city={page.city} />;
     case "spoke":
+      // Neighborhood guide gets its own dedicated scrollable page component
+      if (page.topic.slug === "neighborhood-guide") {
+        return <NeighborhoodGuidePage city={page.city} />;
+      }
       return <SpokePage city={page.city} topic={page.topic} slug={citySlug} />;
     case "remax-office":
       return <RemaxOfficePage officeKey={page.officeKey} />;
@@ -704,7 +716,7 @@ export default async function CityPage({
               <div className="mt-12 p-6 bg-primary rounded-xl text-center">
                 <h3 className="font-heading text-xl font-bold text-white mb-2">Have Questions?</h3>
                 <p className="text-accent mb-4">Barrett Henry has 23+ years of real estate experience.</p>
-                <a href="/contact" className="btn-accent">Contact Barrett</a>
+                <a href="/contact/" className="btn-accent">Contact Barrett</a>
               </div>
             </div>
           </div>
@@ -796,7 +808,7 @@ async function HubPage({ city }: { city: CityData }) {
               (813) 733-7907
             </a>
             <Link
-              href="/contact"
+              href="/contact/"
               className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
             >
               Schedule a Tour
@@ -815,9 +827,9 @@ async function HubPage({ city }: { city: CityData }) {
             <a href="#sold" className="font-body text-xs tracking-[0.12em] uppercase px-5 py-4 border-b-2 border-transparent text-muted hover:text-primary transition-colors">
               Recently Sold
             </a>
-            <a href="#rentals" className="font-body text-xs tracking-[0.12em] uppercase px-5 py-4 border-b-2 border-transparent text-muted hover:text-primary transition-colors">
+            <Link href={`/${city.slug}-rentals/`} className="font-body text-xs tracking-[0.12em] uppercase px-5 py-4 border-b-2 border-transparent text-muted hover:text-primary transition-colors">
               Rentals
-            </a>
+            </Link>
             <a href="#neighborhoods" className="font-body text-xs tracking-[0.12em] uppercase px-5 py-4 border-b-2 border-transparent text-muted hover:text-primary transition-colors">
               Neighborhoods
             </a>
@@ -918,10 +930,10 @@ async function HubPage({ city }: { city: CityData }) {
         subtitle={`Recent sales in ${city.name} — see what homes are selling for.`}
         limit={8}
         filters={{ status: "Closed", sort: "ClosePrice desc" }}
+        showFilters={false}
       />
 
       {/* === Rentals link === */}
-      <div id="rentals" />
       <section className="container-wide py-8 text-center">
         <Link
           href={`/${city.slug}-rentals/`}
@@ -931,100 +943,77 @@ async function HubPage({ city }: { city: CityData }) {
         </Link>
       </section>
 
-      {/* === FAQ Section — city-specific with FAQPage schema === */}
-      <section className="container-wide py-12">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: [
-                {
-                  "@type": "Question",
-                  name: `What is the average home price in ${city.name}, FL?`,
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: `Home prices in ${city.name} vary by neighborhood, property type, and condition. Browse current active listings above for the most up-to-date pricing. Contact Barrett Henry at (813) 733-7907 for a personalized market analysis.`,
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: `Is ${city.name} a good place to live?`,
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: `${city.name} is located in ${city.county} County, Florida. ${city.tagline}. With access to Tampa Bay's job market, beaches, and amenities, ${city.name} is a popular choice for families, retirees, and investors.`,
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: `How do I buy a home in ${city.name}?`,
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: `Start by getting pre-approved for a mortgage, then work with a local REALTOR who knows the ${city.name} market. Barrett Henry and The NOW Team have 23+ years of experience helping buyers in ${city.county} County. Call (813) 733-7907 to get started.`,
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: `What ZIP codes are in ${city.name}?`,
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: `${city.name} covers ZIP codes ${city.zip_codes.join(", ")}. Each ZIP code may include different neighborhoods and school zones.`,
-                  },
-                },
-              ],
-            }),
-          }}
-        />
-        <h2 id="faq" className="font-heading font-bold text-2xl md:text-3xl text-primary mb-8">
-          Frequently Asked Questions About {city.name}
-        </h2>
-        <div className="space-y-6">
-          <div className="border-b border-gray-100 pb-6">
-            <h3 className="font-heading font-bold text-lg text-primary mb-2">
-              What is the average home price in {city.name}, FL?
-            </h3>
-            <p className="font-body text-muted font-light leading-relaxed">
-              Home prices in <strong>{city.name}</strong> vary by neighborhood, property type, and condition.
-              Browse current active listings above for the most up-to-date pricing.
-              Contact <strong>Barrett Henry</strong> at{" "}
-              <a href="tel:+18137337907" className="text-link hover:underline"><strong>(813) 733-7907</strong></a>{" "}
-              for a personalized market analysis.
-            </p>
-          </div>
-          <div className="border-b border-gray-100 pb-6">
-            <h3 className="font-heading font-bold text-lg text-primary mb-2">
-              Is {city.name} a good place to live?
-            </h3>
-            <p className="font-body text-muted font-light leading-relaxed">
-              {city.name} is located in {city.county} County, Florida. {city.tagline}.
-              With access to Tampa Bay&apos;s job market, beaches, and amenities,{" "}
-              {city.name} is a popular choice for families, retirees, and investors.
-            </p>
-          </div>
-          <div className="border-b border-gray-100 pb-6">
-            <h3 className="font-heading font-bold text-lg text-primary mb-2">
-              How do I buy a home in {city.name}?
-            </h3>
-            <p className="font-body text-muted font-light leading-relaxed">
-              Start by getting pre-approved for a mortgage, then work with a local <strong>REALTOR®</strong>{" "}
-              who knows the {city.name} market. <strong>Barrett Henry</strong> and The NOW Team have 23+ years
-              of experience helping buyers in <strong>{city.county} County</strong>. Call{" "}
-              <a href="tel:+18137337907" className="text-link hover:underline"><strong>(813) 733-7907</strong></a>{" "}
-              to get started.
-            </p>
-          </div>
-          <div className="pb-6">
-            <h3 className="font-heading font-bold text-lg text-primary mb-2">
-              What ZIP codes are in {city.name}?
-            </h3>
-            <p className="font-body text-muted font-light leading-relaxed">
-              {city.name} covers ZIP codes {city.zip_codes.join(", ")}.
-              Each ZIP code may include different neighborhoods and school zones.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* === FAQ Section — uses city-specific FAQs when available, generic fallback otherwise === */}
+      {(() => {
+        // Check for city-specific FAQs (e.g. Valrico has detailed, useful answers)
+        const specificFaqs = CITY_FAQS[city.slug];
+        const faqs = specificFaqs
+          ? specificFaqs.map((f) => ({
+              question: f.question,
+              answerText: f.answer,
+              answerHtml: f.answerHtml,
+            }))
+          : [
+              {
+                question: `What is the average home price in ${city.name}, FL?`,
+                answerText: `Home prices in ${city.name} vary by neighborhood, property type, and condition. Browse current active listings above for the most up-to-date pricing. Contact Barrett Henry at (813) 733-7907 for a personalized market analysis.`,
+                answerHtml: `Home prices in <strong>${city.name}</strong> vary by neighborhood, property type, and condition. Browse current active listings above for the most up-to-date pricing. Contact <strong>Barrett Henry</strong> at <a href="tel:+18137337907" class="text-link hover:underline"><strong>(813) 733-7907</strong></a> for a personalized market analysis.`,
+              },
+              {
+                question: `Is ${city.name} a good place to live?`,
+                answerText: `${city.name} is located in ${city.county} County, Florida. ${city.tagline}. With access to Tampa Bay's job market, beaches, and amenities, ${city.name} is a popular choice for families, retirees, and investors.`,
+                answerHtml: `${city.name} is located in ${city.county} County, Florida. ${city.tagline}. With access to Tampa Bay's job market, beaches, and amenities, ${city.name} is a popular choice for families, retirees, and investors.`,
+              },
+              {
+                question: `How do I buy a home in ${city.name}?`,
+                answerText: `Start by getting pre-approved for a mortgage, then work with a local REALTOR who knows the ${city.name} market. Barrett Henry and The NOW Team have 23+ years of experience helping buyers in ${city.county} County. Call (813) 733-7907 to get started.`,
+                answerHtml: `Start by getting pre-approved for a mortgage, then work with a local <strong>REALTOR®</strong> who knows the ${city.name} market. <strong>Barrett Henry</strong> and The NOW Team have 23+ years of experience helping buyers in <strong>${city.county} County</strong>. Call <a href="tel:+18137337907" class="text-link hover:underline"><strong>(813) 733-7907</strong></a> to get started.`,
+              },
+              {
+                question: `What ZIP codes are in ${city.name}?`,
+                answerText: `${city.name} covers ZIP codes ${city.zip_codes.join(", ")}. Each ZIP code may include different neighborhoods and school zones.`,
+                answerHtml: `${city.name} covers ZIP codes ${city.zip_codes.join(", ")}. Each ZIP code may include different neighborhoods and school zones.`,
+              },
+            ];
+
+        return (
+          <section className="container-wide py-12">
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  mainEntity: faqs.map((f) => ({
+                    "@type": "Question",
+                    name: f.question,
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: f.answerText,
+                    },
+                  })),
+                }),
+              }}
+            />
+            <h2 id="faq" className="font-heading font-bold text-2xl md:text-3xl text-primary mb-8">
+              Frequently Asked Questions About {city.name}
+            </h2>
+            <div className="space-y-6">
+              {faqs.map((faq, i) => (
+                <div key={i} className={i < faqs.length - 1 ? "border-b border-gray-100 pb-6" : "pb-6"}>
+                  <h3 className="font-heading font-bold text-lg text-primary mb-2">
+                    {faq.question}
+                  </h3>
+                  <p
+                    className="font-body text-muted font-light leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: faq.answerHtml }}
+                  />
+                </div>
+              ))}
+            </div>
+          </section>
+        );
+      })()}
 
       {/* === Neighborhoods in this city === */}
       {(() => {
@@ -1039,7 +1028,7 @@ async function HubPage({ city }: { city: CityData }) {
               Explore {cityNeighborhoods.length} neighborhoods and communities in {city.name}, {city.county} County.
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-              {cityNeighborhoods.slice(0, 20).map((n) => (
+              {cityNeighborhoods.map((n) => (
                 <Link
                   key={n.slug}
                   href={`/${n.slug}/`}
@@ -1049,14 +1038,6 @@ async function HubPage({ city }: { city: CityData }) {
                 </Link>
               ))}
             </div>
-            {cityNeighborhoods.length > 20 && (
-              <p className="font-body text-xs text-muted mt-4 text-center">
-                + {cityNeighborhoods.length - 20} more neighborhoods.{" "}
-                <Link href={`/${city.slug}-neighborhood-guide/`} className="text-accent hover:text-primary">
-                  View all →
-                </Link>
-              </p>
-            )}
           </section>
         );
       })()}
@@ -1100,7 +1081,7 @@ async function HubPage({ city }: { city: CityData }) {
               Call Now
             </a>
             <Link
-              href="/contact"
+              href="/contact/"
               className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
             >
               Send a Message
@@ -1268,7 +1249,7 @@ async function SpokePage({
               (813) 733-7907
             </a>
             <Link
-              href="/contact"
+              href="/contact/"
               className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
             >
               Schedule a Tour
@@ -1468,7 +1449,7 @@ async function SpokePage({
               Call Now
             </a>
             <Link
-              href="/contact"
+              href="/contact/"
               className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
             >
               Send a Message

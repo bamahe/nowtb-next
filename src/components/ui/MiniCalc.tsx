@@ -174,7 +174,7 @@ export default function MiniCalc({ listingPrice }: MiniCalcProps) {
 
           {/* Full calculator link */}
           <Link
-            href="/mortgage-calculator"
+            href="/mortgage-calculator/"
             className="block text-center font-body text-[10px] tracking-[0.15em] uppercase text-accent hover:text-primary transition-colors"
           >
             Full Calculator →

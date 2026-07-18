@@ -35,55 +35,55 @@ export const revalidate = 300;
 const luxuryAreas = [
   {
     name: "South Tampa",
-    href: "/south-tampa",
+    href: "/south-tampa/",
     description:
       "Historic Bayshore Boulevard, walkable neighborhoods like Hyde Park and Palma Ceia, and waterfront estates with unobstructed bay views. South Tampa remains the most sought-after luxury market on the west coast of Florida.",
   },
   {
     name: "Davis Islands",
-    href: "/davis-islands",
+    href: "/davis-islands/",
     description:
       "A private island community minutes from downtown Tampa with deep-water boat slips, mid-century modern estates, and a tight-knit neighborhood feel that draws executives and physicians.",
   },
   {
     name: "Harbour Island",
-    href: "/properties",
+    href: "/properties/",
     description:
       "Luxury condominiums and townhomes steps from the Tampa Riverwalk and Amalie Arena. Harbour Island offers a true urban luxury lifestyle with skyline views and walkable dining.",
   },
   {
     name: "Beach Park",
-    href: "/properties",
+    href: "/properties/",
     description:
       "One of South Tampa's most exclusive enclaves bordering Bayshore Boulevard. Mature oak canopies, custom-built estates, and some of the highest price-per-square-foot sales in Hillsborough County.",
   },
   {
     name: "Clearwater Beach",
-    href: "/clearwater",
+    href: "/clearwater/",
     description:
       "Gulf-front condominiums, beachside estates, and some of the most valuable waterfront property in Florida. Clearwater Beach consistently ranks among the top beaches in the country.",
   },
   {
     name: "Belleair",
-    href: "/properties",
+    href: "/properties/",
     description:
       "Old Florida charm meets modern luxury. The Belleair Country Club anchors this community with estate homes on oversized lots, mature landscaping, and a quiet, established atmosphere.",
   },
   {
     name: "Siesta Key",
-    href: "/properties",
+    href: "/properties/",
     description:
       "World-famous quartz-crystal sand beaches and luxury waterfront living on the Gulf of Mexico. Siesta Key attracts buyers from across the country seeking vacation homes and permanent Gulf-front residences.",
   },
   {
     name: "Longboat Key",
-    href: "/properties",
+    href: "/properties/",
     description:
       "A barrier island between Sarasota Bay and the Gulf offering exclusive gated communities, private beach clubs, and some of the most expensive real estate in the Tampa Bay region.",
   },
   {
     name: "Anna Maria Island",
-    href: "/properties",
+    href: "/properties/",
     description:
       "Old Florida beach town character with a growing luxury market. Waterfront cottages and new construction estates attract buyers looking for laid-back island living without sacrificing quality.",
   },
@@ -244,11 +244,11 @@ export default async function LuxuryPage() {
             <p className="font-body text-base text-muted font-light leading-relaxed mb-6">
               Unlike single-market luxury cities, Tampa Bay offers diverse luxury experiences within
               a short drive. A buyer can choose between the urban sophistication of{" "}
-              <Link href="/south-tampa" className="text-link hover:underline">South Tampa</Link>,
+              <Link href="/south-tampa/" className="text-link hover:underline">South Tampa</Link>,
               the island exclusivity of{" "}
-              <Link href="/davis-islands" className="text-link hover:underline">Davis Islands</Link>,
+              <Link href="/davis-islands/" className="text-link hover:underline">Davis Islands</Link>,
               the Gulf-front lifestyle of{" "}
-              <Link href="/clearwater-beach" className="text-link hover:underline">Clearwater Beach</Link>,
+              <Link href="/clearwater-beach/" className="text-link hover:underline">Clearwater Beach</Link>,
               or the quiet elegance of barrier island communities like Longboat Key and Siesta Key —
               all within the same metropolitan area.
             </p>
@@ -393,17 +393,17 @@ export default async function LuxuryPage() {
               Call{" "}
               <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a>{" "}
               to schedule a private consultation or{" "}
-              <Link href="/home-valuation" className="text-link hover:underline">
+              <Link href="/home-valuation/" className="text-link hover:underline">
                 request a complimentary home valuation
               </Link>{" "}
               for your luxury property.
             </p>
           </div>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-secondary">
+            <Link href="/contact/" className="btn-secondary">
               Schedule a Consultation
             </Link>
-            <Link href="/home-valuation" className="btn-primary">
+            <Link href="/home-valuation/" className="btn-primary">
               Get Your Home Value
             </Link>
           </div>
@@ -439,11 +439,11 @@ export default async function LuxuryPage() {
               </h3>
               <p className="font-body text-sm text-muted font-light leading-relaxed">
                 The top luxury neighborhoods include{" "}
-                <Link href="/south-tampa" className="text-link hover:underline">South Tampa</Link>{" "}
+                <Link href="/south-tampa/" className="text-link hover:underline">South Tampa</Link>{" "}
                 (Hyde Park, Beach Park, Palma Ceia),{" "}
-                <Link href="/davis-islands" className="text-link hover:underline">Davis Islands</Link>,
+                <Link href="/davis-islands/" className="text-link hover:underline">Davis Islands</Link>,
                 Harbour Island,{" "}
-                <Link href="/clearwater-beach" className="text-link hover:underline">Clearwater Beach</Link>,
+                <Link href="/clearwater-beach/" className="text-link hover:underline">Clearwater Beach</Link>,
                 Belleair, Siesta Key, Longboat Key, and Anna Maria Island. Each offers a distinct
                 lifestyle, from urban walkability to Gulf-front seclusion.
               </p>

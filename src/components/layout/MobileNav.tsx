@@ -14,14 +14,14 @@ import { createClient } from "@/lib/supabase/client";
 
 // Navigation links (same as desktop Header)
 const NAV_LINKS = [
-  { href: "/properties", label: "Search" },
-  { href: "/buyers", label: "Buy" },
-  { href: "/sellers", label: "Sell" },
-  { href: "/communities", label: "Communities" },
-  { href: "/guides", label: "Guides" },
-  { href: "/open-houses", label: "Open Houses" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/properties/", label: "Search" },
+  { href: "/buyers/", label: "Buy" },
+  { href: "/sellers/", label: "Sell" },
+  { href: "/communities/", label: "Communities" },
+  { href: "/guides/", label: "Guides" },
+  { href: "/open-houses/", label: "Open Houses" },
+  { href: "/about/", label: "About" },
+  { href: "/contact/", label: "Contact" },
 ];
 
 interface MobileNavProps {

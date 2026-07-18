@@ -41,7 +41,7 @@ function MarketCard({ update, quarter }: { update: MarketUpdate; quarter: string
   return (
     <Link
       key={update.slug}
-      href={`/market-updates/${update.slug}`}
+      href={`/market-updates/${update.slug}/`}
       className="group block border border-gray-200 rounded-lg overflow-hidden hover:border-accent hover:shadow-lg transition-all"
     >
       {/* Stats header — dark navy like the site's design */}
@@ -157,7 +157,7 @@ export default function MarketUpdatesPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="/contact"
+              href="/contact/"
               className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-8 py-3 text-sm hover:bg-accent/90 transition-colors"
             >
               Sign Up for Updates

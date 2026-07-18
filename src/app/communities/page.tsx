@@ -90,7 +90,7 @@ export default function CommunitiesPage() {
             name: c.name,
             lat: c.lat,
             lng: c.lng,
-            href: `/${c.slug}`,
+            href: `/${c.slug}/`,
             label: `${c.name} — ${c.county} County`,
             type: "city" as const,
           }))}
@@ -107,7 +107,7 @@ export default function CommunitiesPage() {
             {/* County heading with link */}
             <h2 className="heading-section text-xl text-primary mb-2">
               <Link
-                href={`/${county.toLowerCase()}-county`}
+                href={`/${county.toLowerCase()}-county/`}
                 className="hover:text-accent transition-colors"
               >
                 {county} County
@@ -122,7 +122,7 @@ export default function CommunitiesPage() {
               {countyCities.map((city) => (
                 <Link
                   key={city.slug}
-                  href={`/${city.slug}`}
+                  href={`/${city.slug}/`}
                   className="group card p-4 text-center hover:shadow-lg transition-shadow"
                 >
                   <span className="font-heading font-bold text-sm text-primary group-hover:text-accent transition-colors">
@@ -149,7 +149,7 @@ export default function CommunitiesPage() {
             real estate experience. Tell him your priorities and he will match
             you with the perfect community.
           </p>
-          <Link href="/contact" className="btn-primary inline-block px-8 py-3">
+          <Link href="/contact/" className="btn-primary inline-block px-8 py-3">
             Get Barrett&apos;s Recommendation
           </Link>
         </div>

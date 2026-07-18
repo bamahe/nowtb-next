@@ -214,7 +214,7 @@ export default function SellersPage() {
             </p>
             <p>
               Whether you are{" "}
-              <Link href="/sell-your-home" className="text-link underline underline-offset-4 hover:text-accent/80">
+              <Link href="/sell-your-home/" className="text-link underline underline-offset-4 hover:text-accent/80">
                 curious what your home is worth
               </Link>{" "}
               or ready to list this week, I am here to help you net the most money possible
@@ -324,7 +324,7 @@ export default function SellersPage() {
             <p>
               I will always tell you the truth about your home&apos;s value — even when the
               number is not what you want to hear. That honesty is what gets homes sold.{" "}
-              <Link href="/home-valuation" className="text-link underline underline-offset-4 hover:text-accent/80">
+              <Link href="/home-valuation/" className="text-link underline underline-offset-4 hover:text-accent/80">
                 Request a free home valuation
               </Link>{" "}
               and see where you stand.
@@ -397,7 +397,7 @@ export default function SellersPage() {
               missed. Honest disclosure protects you legally and builds trust with buyers — both
               of which lead to smoother closings. If you have questions about what you need to
               disclose,{" "}
-              <Link href="/contact" className="text-link underline underline-offset-4 hover:text-accent/80">
+              <Link href="/contact/" className="text-link underline underline-offset-4 hover:text-accent/80">
                 reach out
               </Link>{" "}
               and I will walk you through it.
@@ -444,7 +444,7 @@ export default function SellersPage() {
           </div>
 
           <p className="text-center mt-12">
-            <Link href="/guides/home-selling-guide" className="text-link underline underline-offset-4 hover:text-accent/80 font-body text-sm font-light">
+            <Link href="/guides/home-selling-guide/" className="text-link underline underline-offset-4 hover:text-accent/80 font-body text-sm font-light">
               Read the full Home Selling Guide
             </Link>
           </p>
@@ -463,7 +463,7 @@ export default function SellersPage() {
             I&apos;ll run the numbers on your home — no obligation, no pressure.
             Find out what buyers are actually paying in your neighborhood right now.
           </p>
-          <Link href="/sell-your-home" className="btn-primary">
+          <Link href="/sell-your-home/" className="btn-primary">
             Get Your Home Value
           </Link>
         </div>
@@ -502,7 +502,7 @@ export default function SellersPage() {
           </p>
 
           <p className="text-center mt-6">
-            <Link href="/market-updates" className="text-link underline underline-offset-4 hover:text-accent/80 font-body text-sm font-light">
+            <Link href="/market-updates/" className="text-link underline underline-offset-4 hover:text-accent/80 font-body text-sm font-light">
               View Latest Market Updates
             </Link>
           </p>

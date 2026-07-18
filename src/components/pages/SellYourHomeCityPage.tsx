@@ -137,7 +137,7 @@ export default async function SellYourHomeCityPage({
       >
         {/* Back link to main sell page */}
         <Link
-          href="/sell-your-home"
+          href="/sell-your-home/"
           className="inline-flex items-center gap-2 text-accent hover:text-white transition-colors mt-4 text-sm font-semibold"
         >
           <svg

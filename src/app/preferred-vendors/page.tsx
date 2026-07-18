@@ -418,7 +418,7 @@ export default function PreferredVendorsPage() {
               <Phone className="w-4 h-4" />
               {PHONE}
             </a>
-            <Link href="/contact" className="btn-secondary">
+            <Link href="/contact/" className="btn-secondary">
               Send a Message
             </Link>
           </div>

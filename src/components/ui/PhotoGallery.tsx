@@ -149,7 +149,7 @@ export default function PhotoGallery({ photos, address, autoScroll = false }: Ph
       {/* ===== Fullscreen Lightbox ===== */}
       {lightboxOpen && (
         <div
-          className="fixed inset-0 z-[9999] bg-black flex items-center justify-center"
+          className="fixed inset-0 z-[9990] bg-black flex items-center justify-center"
           onClick={() => setLightboxIndex(-1)}
           onKeyDown={handleKeyDown}
           tabIndex={0}

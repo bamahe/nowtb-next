@@ -34,7 +34,7 @@ export default function NotFound() {
             Go Home
           </Link>
           <Link
-            href="/properties"
+            href="/properties/"
             className="inline-flex items-center gap-2 border border-white/30 text-white font-body text-sm font-semibold
                        px-6 py-3 hover:bg-white/10 transition-colors"
           >
@@ -61,7 +61,7 @@ export default function NotFound() {
             Call (813) 733-7907
           </a>
           <Link
-            href="/contact"
+            href="/contact/"
             className="font-body text-white/40 text-sm hover:text-accent transition-colors"
           >
             Or send a message →

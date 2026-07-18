@@ -118,7 +118,7 @@ export default async function BlogIndexPage({
         <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
           {/* "All" button — resets category filter */}
           <Link
-            href="/blog"
+            href="/blog/"
             className={`px-4 py-2 rounded-full text-xs font-body font-semibold tracking-wide uppercase transition-colors ${
               activeCategory === "All"
                 ? "bg-primary text-white"
@@ -134,7 +134,7 @@ export default async function BlogIndexPage({
             return (
               <Link
                 key={cat}
-                href={`/blog?category=${encodeURIComponent(cat)}`}
+                href={`/blog/?category=${encodeURIComponent(cat)}`}
                 className={`px-4 py-2 rounded-full text-xs font-body font-semibold tracking-wide uppercase transition-colors ${
                   activeCategory === cat
                     ? "bg-primary text-white"
@@ -162,7 +162,7 @@ export default async function BlogIndexPage({
             return (
             <Link
               key={post.slug}
-              href={`/blog/${post.slug}`}
+              href={`/blog/${post.slug}/`}
               className="group card overflow-hidden hover:shadow-lg transition-shadow"
             >
               {/* Post thumbnail — extracted from content, or gradient fallback */}
@@ -218,7 +218,7 @@ export default async function BlogIndexPage({
           {/* Previous button */}
           {safePage > 1 ? (
             <Link
-              href={`/blog?page=${safePage - 1}${catQuery}`}
+              href={`/blog/?page=${safePage - 1}${catQuery}`}
               className="px-4 py-2 rounded-lg text-sm font-body font-medium bg-gray-100 text-muted hover:bg-accent/10 hover:text-primary transition-colors"
             >
               Previous
@@ -256,7 +256,7 @@ export default async function BlogIndexPage({
               ) : (
                 <Link
                   key={item}
-                  href={`/blog?page=${item}${catQuery}`}
+                  href={`/blog/?page=${item}${catQuery}`}
                   className={`px-4 py-2 rounded-lg text-sm font-body font-medium transition-colors ${
                     item === safePage
                       ? "bg-primary text-white"
@@ -271,7 +271,7 @@ export default async function BlogIndexPage({
           {/* Next button */}
           {safePage < totalPages ? (
             <Link
-              href={`/blog?page=${safePage + 1}${catQuery}`}
+              href={`/blog/?page=${safePage + 1}${catQuery}`}
               className="px-4 py-2 rounded-lg text-sm font-body font-medium bg-gray-100 text-muted hover:bg-accent/10 hover:text-primary transition-colors"
             >
               Next

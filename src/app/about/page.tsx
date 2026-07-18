@@ -94,6 +94,10 @@ const personLd = {
     "https://bestbayservices.com",
     "https://flforeclosurehelp.com",
     "https://valricopropertymgmt.com",
+    "https://valricoagent.com",
+    "https://firsttimehomebuyertb.com",
+    "https://valoantb.com",
+    "https://tampabaydownpayment.com",
   ],
   knowsAbout: [
     "Residential Real Estate",

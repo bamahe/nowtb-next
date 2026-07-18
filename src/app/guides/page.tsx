@@ -65,7 +65,7 @@ export default function GuidesIndexPage() {
               {catGuides.map((guide) => (
                 <Link
                   key={guide.slug}
-                  href={`/guides/${guide.slug}`}
+                  href={`/guides/${guide.slug}/`}
                   className="group card p-6 hover:shadow-lg transition-shadow"
                 >
                   {/* Category badge */}
@@ -107,7 +107,7 @@ export default function GuidesIndexPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="/contact"
+              href="/contact/"
               className="btn-primary inline-block px-8 py-3"
             >
               Contact Barrett

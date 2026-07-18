@@ -438,7 +438,7 @@ export default async function CommercialPage() {
           {/* Quick links */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
             <Link
-              href="/investing"
+              href="/investing/"
               className="card p-4 text-center hover:shadow-lg transition-shadow"
             >
               <span className="font-heading font-bold text-sm text-primary">
@@ -446,7 +446,7 @@ export default async function CommercialPage() {
               </span>
             </Link>
             <Link
-              href="/contact"
+              href="/contact/"
               className="card p-4 text-center hover:shadow-lg transition-shadow"
             >
               <span className="font-heading font-bold text-sm text-primary">

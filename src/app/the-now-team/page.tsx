@@ -152,7 +152,7 @@ export default function TheNowTeamPage() {
           >
             Call (813) 733-7907
           </a>
-          <Link href="/contact" className="btn-secondary inline-block">
+          <Link href="/contact/" className="btn-secondary inline-block">
             Contact Us
           </Link>
         </div>
@@ -345,7 +345,7 @@ export default function TheNowTeamPage() {
 
           {/* Link to full about page */}
           <div className="mt-10">
-            <Link href="/about" className="btn-secondary inline-block">
+            <Link href="/about/" className="btn-secondary inline-block">
               Read Barrett&apos;s Full Bio
             </Link>
           </div>
@@ -518,7 +518,7 @@ export default function TheNowTeamPage() {
                   barrett@nowtb.com
                 </a>
                 , or use the{" "}
-                <Link href="/contact" className="text-link hover:underline">
+                <Link href="/contact/" className="text-link hover:underline">
                   contact form
                 </Link>
                 . Barrett responds within 2 hours during business hours.

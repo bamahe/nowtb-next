@@ -668,7 +668,7 @@ export default function MortgageCalc() {
             >
               Call (813) 733-7907
             </a>
-            <Link href="/contact" className="btn-secondary">
+            <Link href="/contact/" className="btn-secondary">
               Send a Message
             </Link>
           </div>

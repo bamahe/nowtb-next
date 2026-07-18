@@ -64,11 +64,36 @@ export default function ClientListings({
       if (value) params.set(key, value);
     }
 
-    fetch(`/api/listings?${params.toString()}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setListings(data.value || []);
-        setTotal(data.total || data.value?.length || 0);
+    // Fetch listings and open houses in parallel, then merge open house
+    // times onto matching listings so ListingCard can show the banner
+    Promise.all([
+      fetch(`/api/listings?${params.toString()}`).then((res) => res.json()),
+      fetch("/api/open-houses").then((res) => res.json()).catch(() => ({ value: [] })),
+    ])
+      .then(([data, ohData]) => {
+        const fetchedListings: Listing[] = data.value || [];
+        // Build a lookup of open house times by ListingKey
+        const ohMap = new Map<string, { start: string; end?: string }>();
+        for (const oh of (ohData.value || []) as Listing[]) {
+          if (oh.ListingKey && oh.OpenHouseStartTime) {
+            ohMap.set(oh.ListingKey, {
+              start: oh.OpenHouseStartTime,
+              end: oh.OpenHouseEndTime,
+            });
+          }
+        }
+        // Inject open house times onto matching listings
+        if (ohMap.size > 0) {
+          for (const listing of fetchedListings) {
+            const oh = ohMap.get(listing.ListingKey);
+            if (oh) {
+              listing.OpenHouseStartTime = oh.start;
+              listing.OpenHouseEndTime = oh.end;
+            }
+          }
+        }
+        setListings(fetchedListings);
+        setTotal(data.total || fetchedListings.length);
         setLoading(false);
       })
       .catch(() => {
@@ -134,7 +159,7 @@ export default function ClientListings({
             {subtitle && <p className="font-body text-muted mt-2">{subtitle}</p>}
           </div>
         )}
-        {showFilters && <ListingFilters onFilterChange={handleFilterChange} initialFilters={activeFilters} />}
+        {showFilters && <ListingFilters onFilterChange={handleFilterChange} initialFilters={activeFilters} isRental={!!filters.rental} />}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {Array.from({ length: 8 }).map((_, i) => (
             <div key={i} className="animate-pulse rounded-2xl bg-gray-100 h-72" />
@@ -152,7 +177,7 @@ export default function ClientListings({
             <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary">{title}</h2>
           </div>
         )}
-        {showFilters && <ListingFilters onFilterChange={handleFilterChange} initialFilters={activeFilters} />}
+        {showFilters && <ListingFilters onFilterChange={handleFilterChange} initialFilters={activeFilters} isRental={!!filters.rental} />}
         <div className="text-center max-w-lg mx-auto">
           <p className="font-body text-muted text-base leading-relaxed">
             {error
@@ -182,7 +207,7 @@ export default function ClientListings({
       {/* Filter bar + save search */}
       {showFilters && (
         <>
-          <ListingFilters onFilterChange={handleFilterChange} initialFilters={activeFilters} />
+          <ListingFilters onFilterChange={handleFilterChange} initialFilters={activeFilters} isRental={!!filters.rental} />
           <div className="flex items-center justify-between mb-6">
             <p className="font-body text-sm text-primary font-semibold">
               <span className="text-link">{total.toLocaleString()}</span> homes found

@@ -59,21 +59,21 @@ const loanTypes = [
     minDown: "3%",
     creditFloor: "620+",
     highlight: "No upfront mortgage insurance with 20% down. Flexible terms from 10 to 30 years.",
-    link: "/guides/fha-loan-guide",
+    link: "/guides/fha-loan-guide/",
   },
   {
     name: "FHA",
     minDown: "3.5%",
     creditFloor: "580+",
     highlight: "Government-backed with lower credit requirements. Popular with first-time buyers.",
-    link: "/guides/fha-loan-guide",
+    link: "/guides/fha-loan-guide/",
   },
   {
     name: "VA",
     minDown: "0%",
     creditFloor: "No minimum (most lenders want 620+)",
     highlight: "Zero down payment for eligible veterans and active-duty service members. No PMI.",
-    link: "/guides/va-home-loan-guide",
+    link: "/guides/va-home-loan-guide/",
   },
   {
     name: "USDA",
@@ -304,10 +304,10 @@ export default function LendersPage() {
           </table>
         </div>
         <div className="text-center mt-8 space-x-4">
-          <Link href="/mortgage-calculator" className="btn-primary inline-block">
+          <Link href="/mortgage-calculator/" className="btn-primary inline-block">
             Mortgage Calculator
           </Link>
-          <Link href="/guides/florida-hometown-heroes-program" className="btn-outline inline-block">
+          <Link href="/guides/florida-hometown-heroes-program/" className="btn-outline inline-block">
             Hometown Heroes Program
           </Link>
         </div>
@@ -394,7 +394,7 @@ export default function LendersPage() {
             <a href="tel:+18137337907" className="btn-primary bg-accent hover:bg-accent/90 inline-block">
               Call (813) 733-7907
             </a>
-            <Link href="/contact" className="btn-outline border-white text-white hover:bg-white/10 inline-block">
+            <Link href="/contact/" className="btn-outline border-white text-white hover:bg-white/10 inline-block">
               Send a Message
             </Link>
           </div>
@@ -497,12 +497,12 @@ export default function LendersPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
           {[
-            { href: "/mortgage-calculator", label: "Mortgage Calculator" },
-            { href: "/guides/fha-loan-guide", label: "FHA Loan Guide" },
-            { href: "/guides/va-home-loan-guide", label: "VA Home Loan Guide" },
-            { href: "/guides/florida-hometown-heroes-program", label: "Hometown Heroes Program" },
-            { href: "/contact", label: "Contact Barrett" },
-            { href: "/sell-your-home", label: "Free Home Valuation" },
+            { href: "/mortgage-calculator/", label: "Mortgage Calculator" },
+            { href: "/guides/fha-loan-guide/", label: "FHA Loan Guide" },
+            { href: "/guides/va-home-loan-guide/", label: "VA Home Loan Guide" },
+            { href: "/guides/florida-hometown-heroes-program/", label: "Hometown Heroes Program" },
+            { href: "/contact/", label: "Contact Barrett" },
+            { href: "/sell-your-home/", label: "Free Home Valuation" },
           ].map((item) => (
             <Link
               key={item.href}

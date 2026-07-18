@@ -100,13 +100,13 @@ export default async function MarketUpdatePage({
               Call {agent.phone}
             </a>
             <Link
-              href="/home-valuation"
+              href="/home-valuation/"
               className="inline-block px-6 py-3 border-2 border-white/40 text-white font-bold text-sm rounded-lg hover:border-white/70 transition-colors"
             >
               Free Home Valuation
             </Link>
             <Link
-              href={`/${city.toLowerCase().replace(/['\s]+/g, "-").replace(/\./g, "")}`}
+              href={`/${city.toLowerCase().replace(/['\s]+/g, "-").replace(/\./g, "")}/`}
               className="inline-block px-6 py-3 border-2 border-white/40 text-white font-bold text-sm rounded-lg hover:border-white/70 transition-colors"
             >
               {city} Homes for Sale
@@ -148,7 +148,7 @@ export default async function MarketUpdatePage({
                       return (
                         <li key={r.slug}>
                           <Link
-                            href={`/market-updates/${r.slug}`}
+                            href={`/market-updates/${r.slug}/`}
                             className="font-body text-xs text-link hover:underline"
                           >
                             {rCity}
@@ -189,7 +189,7 @@ export default async function MarketUpdatePage({
       {/* === Back to all updates === */}
       <section className="container-wide pb-12 text-center">
         <Link
-          href="/market-updates"
+          href="/market-updates/"
           className="btn-secondary inline-block px-8 py-3"
         >
           View All Market Updates

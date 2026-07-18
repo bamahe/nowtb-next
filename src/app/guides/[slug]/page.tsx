@@ -164,13 +164,13 @@ export default async function GuidePage({
               <Phone className="w-4 h-4" /> Schedule a Strategy Call
             </a>
             <a
-              href="/mortgage-calculator"
+              href="/mortgage-calculator/"
               className="inline-block px-6 py-3 border-2 border-white/40 text-white font-bold text-sm rounded-lg hover:border-white/70 transition-colors"
             >
               Calculate Your Payment
             </a>
             <a
-              href="/properties"
+              href="/properties/"
               className="inline-block px-6 py-3 border-2 border-white/40 text-white font-bold text-sm rounded-lg hover:border-white/70 transition-colors"
             >
               Search Homes
@@ -230,7 +230,7 @@ export default async function GuidePage({
               {/* Back to guides link */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <Link
-                  href="/guides"
+                  href="/guides/"
                   className="inline-flex items-center gap-2 text-accent hover:text-primary transition-colors text-sm font-semibold"
                 >
                   <svg
@@ -346,7 +346,7 @@ export default async function GuidePage({
 
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <Link
-                  href="/guides"
+                  href="/guides/"
                   className="inline-flex items-center gap-2 text-accent hover:text-primary transition-colors text-sm font-semibold"
                 >
                   <svg
@@ -382,7 +382,7 @@ export default async function GuidePage({
               {relatedGuides.map((related) => (
                 <Link
                   key={related.slug}
-                  href={`/guides/${related.slug}`}
+                  href={`/guides/${related.slug}/`}
                   className="group card p-6 hover:shadow-lg transition-shadow"
                 >
                   <span className="inline-block px-3 py-1 rounded-full text-xs font-body font-semibold bg-accent/20 text-primary mb-3">

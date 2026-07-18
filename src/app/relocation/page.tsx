@@ -183,9 +183,9 @@ export default function RelocationPage() {
             </p>
             <p>
               Whether you are{" "}
-              <Link href="/guides/relocation-guide">relocating for work</Link>,{" "}
-              <Link href="/guides/first-time-home-buyer-guide">buying your first home</Link>, or{" "}
-              <Link href="/retiring-to-tampa-bay">retiring to Florida</Link>, Barrett
+              <Link href="/guides/relocation-guide/">relocating for work</Link>,{" "}
+              <Link href="/guides/first-time-home-buyer-guide/">buying your first home</Link>, or{" "}
+              <Link href="/retiring-to-tampa-bay/">retiring to Florida</Link>, Barrett
               Henry provides the local expertise you need to make a confident move.
             </p>
           </div>
@@ -278,7 +278,7 @@ export default function RelocationPage() {
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/communities" className="btn-secondary">
+            <Link href="/communities/" className="btn-secondary">
               Explore All Communities
             </Link>
           </div>
@@ -318,7 +318,7 @@ export default function RelocationPage() {
               you are evaluating.
             </p>
             <p>
-              <Link href="/tampa-bay-schools-guide">
+              <Link href="/tampa-bay-schools-guide/">
                 Read the full Tampa Bay Schools Guide
               </Link>{" "}
               for detailed rankings, enrollment tips, and district comparisons.
@@ -360,7 +360,7 @@ export default function RelocationPage() {
               </tbody>
             </table>
             <p className="font-body text-xs text-muted mt-4 font-light">
-              Figures are approximate averages based on 2025-2026 market data and may vary by specific location.
+              Figures are approximate averages based on 2026 market data and may vary by specific location.
             </p>
           </div>
         </div>
@@ -421,7 +421,7 @@ export default function RelocationPage() {
               </a>{" "}
               to start planning your move.
             </p>
-            <Link href="/contact" className="btn-secondary">
+            <Link href="/contact/" className="btn-secondary">
               Schedule a Consultation
             </Link>
           </div>
@@ -441,7 +441,7 @@ export default function RelocationPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
             <Link
-              href="/moving-to-tampa-bay"
+              href="/moving-to-tampa-bay/"
               className="card p-5 text-center hover:shadow-lg transition-shadow"
             >
               <span className="font-heading font-bold text-sm text-primary">
@@ -449,7 +449,7 @@ export default function RelocationPage() {
               </span>
             </Link>
             <Link
-              href="/retiring-to-tampa-bay"
+              href="/retiring-to-tampa-bay/"
               className="card p-5 text-center hover:shadow-lg transition-shadow"
             >
               <span className="font-heading font-bold text-sm text-primary">
@@ -457,7 +457,7 @@ export default function RelocationPage() {
               </span>
             </Link>
             <Link
-              href="/guides/first-time-home-buyer-guide"
+              href="/guides/first-time-home-buyer-guide/"
               className="card p-5 text-center hover:shadow-lg transition-shadow"
             >
               <span className="font-heading font-bold text-sm text-primary">
@@ -465,7 +465,7 @@ export default function RelocationPage() {
               </span>
             </Link>
             <Link
-              href="/guides/military-home-buying-guide"
+              href="/guides/military-home-buying-guide/"
               className="card p-5 text-center hover:shadow-lg transition-shadow"
             >
               <span className="font-heading font-bold text-sm text-primary">

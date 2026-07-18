@@ -140,7 +140,7 @@ export default function InspectorsPage() {
             subtropical climate. Hurricane-force winds test every roof, window, and
             structural connection. And large portions of the Tampa Bay area sit in
             designated{" "}
-            <Link href="/guides/florida-flood-insurance-guide">flood zones</Link>{" "}
+            <Link href="/guides/florida-flood-insurance-guide/">flood zones</Link>{" "}
             or on terrain where sinkholes have been documented.
           </p>
           <p>
@@ -310,7 +310,7 @@ export default function InspectorsPage() {
             for, which are cosmetic, and how to position your repair request so
             sellers take it seriously. For a deeper look at the full inspection
             process, read the{" "}
-            <Link href="/guides/home-inspection-guide">
+            <Link href="/guides/home-inspection-guide/">
               Complete Home Inspection Guide
             </Link>.
           </p>
@@ -329,7 +329,7 @@ export default function InspectorsPage() {
             selling and want a pre-listing inspection to avoid surprises, Barrett has
             an inspector who fits. Call{" "}
             <a href="tel:+18137337907">(813) 733-7907</a> or{" "}
-            <Link href="/contact">reach out online</Link> for a referral.
+            <Link href="/contact/">reach out online</Link> for a referral.
           </p>
         </div>
       </section>
@@ -373,27 +373,27 @@ export default function InspectorsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
             {[
               {
-                href: "/guides/home-inspection-guide",
+                href: "/guides/home-inspection-guide/",
                 label: "Home Inspection Guide",
               },
               {
-                href: "/guides/florida-flood-insurance-guide",
+                href: "/guides/florida-flood-insurance-guide/",
                 label: "Florida Flood Insurance Guide",
               },
               {
-                href: "/guides/home-inspection-guide-florida",
+                href: "/guides/home-inspection-guide-florida/",
                 label: "Florida Home Inspection Guide",
               },
               {
-                href: "/guides/condo-milestone-inspection-guide",
+                href: "/guides/condo-milestone-inspection-guide/",
                 label: "Condo Milestone Inspection Guide",
               },
               {
-                href: "/buyers",
+                href: "/buyers/",
                 label: "Buyer Resources",
               },
               {
-                href: "/contact",
+                href: "/contact/",
                 label: "Contact Barrett",
               },
             ].map((item) => (

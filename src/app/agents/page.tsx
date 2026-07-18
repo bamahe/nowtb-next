@@ -133,13 +133,13 @@ export default function AgentsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/contact/"
               className="btn-primary inline-block bg-accent hover:bg-accent/90"
             >
               Contact Us
             </Link>
             <Link
-              href="/properties"
+              href="/properties/"
               className="inline-block px-6 py-3 rounded-lg border-2 border-white text-white font-body font-medium hover:bg-white hover:text-primary transition-colors"
             >
               Search Properties

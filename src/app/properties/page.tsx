@@ -174,7 +174,7 @@ export default async function PropertiesPage({
     if (filters.exclude_rental) params.set("exclude_rental", "true");
     if (page > 1) params.set("page", String(page));
     const qs = params.toString();
-    return qs ? `/properties?${qs}` : "/properties";
+    return qs ? `/properties/?${qs}` : "/properties/";
   }
 
   return (
@@ -218,7 +218,7 @@ export default async function PropertiesPage({
           <p className="font-body text-muted text-xs font-light tracking-wide">{filterSummary}</p>
           <div className="flex items-center gap-4">
             <Link
-              href="/properties/search"
+              href="/properties/search/"
               className="font-body text-[10px] font-medium tracking-[0.15em] uppercase
                          text-accent hover:text-primary transition-colors"
             >
@@ -257,7 +257,7 @@ export default async function PropertiesPage({
             <li>Turn off feature filters like pool or waterfront</li>
           </ul>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/properties" className="btn-primary">
+            <Link href="/properties/" className="btn-primary">
               View All Listings
             </Link>
             <a

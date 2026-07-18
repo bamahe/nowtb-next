@@ -259,7 +259,7 @@ export default function FreeHomeValuationPage() {
               of real estate experience. He holds the MRP (Military Relocation
               Professional), e-PRO, and SRS (Seller Representative Specialist)
               designations. Barrett and{" "}
-              <Link href="/the-now-team">The NOW Team</Link> serve buyers and
+              <Link href="/the-now-team/">The NOW Team</Link> serve buyers and
               sellers across Hillsborough, Pinellas, Pasco, Polk, and Manatee
               counties.
             </p>

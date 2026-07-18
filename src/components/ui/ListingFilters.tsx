@@ -10,9 +10,11 @@ import { useState } from "react";
 interface ListingFiltersProps {
   onFilterChange: (filters: Record<string, string>) => void;
   initialFilters?: Record<string, string>;
+  /** Show rental price ranges instead of purchase prices */
+  isRental?: boolean;
 }
 
-const PRICE_OPTIONS = [
+const PURCHASE_PRICE_OPTIONS = [
   { label: "Any", value: "" },
   { label: "$100K", value: "100000" },
   { label: "$200K", value: "200000" },
@@ -24,6 +26,20 @@ const PRICE_OPTIONS = [
   { label: "$1M", value: "1000000" },
   { label: "$1.5M", value: "1500000" },
   { label: "$2M", value: "2000000" },
+];
+
+const RENTAL_PRICE_OPTIONS = [
+  { label: "Any", value: "" },
+  { label: "$1,000/mo", value: "1000" },
+  { label: "$1,250/mo", value: "1250" },
+  { label: "$1,500/mo", value: "1500" },
+  { label: "$1,750/mo", value: "1750" },
+  { label: "$2,000/mo", value: "2000" },
+  { label: "$2,500/mo", value: "2500" },
+  { label: "$3,000/mo", value: "3000" },
+  { label: "$3,500/mo", value: "3500" },
+  { label: "$4,000/mo", value: "4000" },
+  { label: "$5,000/mo", value: "5000" },
 ];
 
 const BED_OPTIONS = [
@@ -50,7 +66,9 @@ const SORT_OPTIONS = [
   { label: "Largest", value: "LivingArea desc" },
 ];
 
-export default function ListingFilters({ onFilterChange, initialFilters = {} }: ListingFiltersProps) {
+export default function ListingFilters({ onFilterChange, initialFilters = {}, isRental = false }: ListingFiltersProps) {
+  // Use rental price ranges on rental pages, purchase prices everywhere else
+  const PRICE_OPTIONS = isRental ? RENTAL_PRICE_OPTIONS : PURCHASE_PRICE_OPTIONS;
   const [minPrice, setMinPrice] = useState(initialFilters.min_price || "");
   const [maxPrice, setMaxPrice] = useState(initialFilters.max_price || "");
   const [beds, setBeds] = useState(initialFilters.beds || "");

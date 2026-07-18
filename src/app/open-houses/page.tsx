@@ -229,7 +229,7 @@ export default async function OpenHousesPage() {
               New open houses are added throughout the week — check back soon, or
               browse all available listings.
             </p>
-            <Link href="/properties" className="btn-primary inline-block">
+            <Link href="/properties/" className="btn-primary inline-block">
               Browse All Properties
             </Link>
           </div>
@@ -295,7 +295,7 @@ export default async function OpenHousesPage() {
             while I walk through the property in real time. It is the next best
             thing to being there.
           </p>
-          <Link href="/properties" className="btn-secondary">
+          <Link href="/properties/" className="btn-secondary">
             Browse Listings With Virtual Tours
           </Link>
         </div>
@@ -319,7 +319,7 @@ export default async function OpenHousesPage() {
             <a href="tel:+18137337907" className="btn-primary inline-block">
               Call (813) 733-7907
             </a>
-            <Link href="/contact" className="btn-secondary inline-block">
+            <Link href="/contact/" className="btn-secondary inline-block">
               Request a Showing
             </Link>
           </div>

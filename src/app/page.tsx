@@ -114,6 +114,10 @@ export default async function HomePage() {
               "https://flforeclosurehelp.com",
               "https://flpermithelp.com",
               "https://parrishagent.com",
+              "https://valricoagent.com",
+              "https://firsttimehomebuyertb.com",
+              "https://valoantb.com",
+              "https://tampabaydownpayment.com",
               "https://www.facebook.com/BarrettHenryREALTOR",
               "https://www.instagram.com/thenowteam",
               "https://www.linkedin.com/in/barretthenry",
@@ -188,10 +192,10 @@ export default async function HomePage() {
       >
         {/* Dual CTA buttons — transparent with white border for luxury feel */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link href="/properties" className="btn-secondary">
+          <Link href="/properties/" className="btn-secondary">
             Search Properties
           </Link>
-          <Link href="/sell-your-home" className="btn-secondary">
+          <Link href="/sell-your-home/" className="btn-secondary">
             Home Valuation
           </Link>
         </div>
@@ -209,28 +213,28 @@ export default async function HomePage() {
         <div className="container-wide py-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-4xl mx-auto">
             <Link
-              href="/properties"
+              href="/properties/"
               className="flex flex-col items-center gap-2 py-5 px-4 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-center"
             >
               <Search className="w-6 h-6 text-accent" />
               <span className="font-body text-white text-sm font-semibold">Search Homes</span>
             </Link>
             <Link
-              href="/guides/first-time-home-buyer-guide"
+              href="/guides/first-time-home-buyer-guide/"
               className="flex flex-col items-center gap-2 py-5 px-4 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-center"
             >
               <Key className="w-6 h-6 text-accent" />
               <span className="font-body text-white text-sm font-semibold">First-Time Buyers</span>
             </Link>
             <Link
-              href="/sell-your-home"
+              href="/sell-your-home/"
               className="flex flex-col items-center gap-2 py-5 px-4 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-center"
             >
               <DollarSign className="w-6 h-6 text-accent" />
               <span className="font-body text-white text-sm font-semibold">Sell Your Home</span>
             </Link>
             <Link
-              href="/home-valuation"
+              href="/home-valuation/"
               className="flex flex-col items-center gap-2 py-5 px-4 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-center"
             >
               <BarChart3 className="w-6 h-6 text-accent" />
@@ -263,7 +267,7 @@ export default async function HomePage() {
           {featuredListings.length > 0 && (
             <div className="text-center mt-16">
               <Link
-                href="/properties"
+                href="/properties/"
                 className="text-xs font-body font-medium tracking-[0.2em] uppercase text-accent hover:text-white transition-colors duration-300"
               >
                 View All &rarr;
@@ -486,7 +490,7 @@ export default async function HomePage() {
 
           {/* Single CTA button */}
           <Link
-            href="/contact"
+            href="/contact/"
             className="btn-secondary"
           >
             Contact

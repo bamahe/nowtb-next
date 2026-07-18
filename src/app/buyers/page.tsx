@@ -114,21 +114,21 @@ const assistancePrograms = [
     title: "Florida Hometown Heroes Program",
     description:
       "Designed for first-time buyers who work in over 50 eligible professions — teachers, nurses, law enforcement, firefighters, and more. Offers up to $35,000 in down payment and closing cost assistance as a 0% interest, non-amortizing, 30-year deferred second mortgage.",
-    href: "/guides/florida-hometown-heroes-program",
+    href: "/guides/florida-hometown-heroes-program/",
     cta: "Read the Full Guide",
   },
   {
     title: "FL Assist (Second Mortgage Program)",
     description:
       "Available to all qualified borrowers through Florida Housing, FL Assist provides up to $10,000 as a 0% interest, non-amortizing, deferred second mortgage. It can be paired with any first mortgage loan offered through Florida Housing's program.",
-    href: "/guides/fl-assist-down-payment-program",
+    href: "/guides/fl-assist-down-payment-program/",
     cta: "Learn About FL Assist",
   },
   {
     title: "First-Time Buyer Resources",
     description:
       "Not sure where to begin? My first-time buyer guide covers everything from credit score requirements and loan types to what happens at the closing table. It's the playbook I give every new buyer I work with.",
-    href: "/guides/first-time-home-buyer-guide",
+    href: "/guides/first-time-home-buyer-guide/",
     cta: "Read the Buyer Guide",
   },
 ];
@@ -396,14 +396,14 @@ export default function BuyersPage() {
             </p>
             <p className="font-body text-muted font-light leading-relaxed">
               Whether you&apos;re looking in{" "}
-              <Link href="/valrico" className="text-link hover:underline">Valrico</Link>,{" "}
-              <Link href="/brandon" className="text-link hover:underline">Brandon</Link>,{" "}
-              <Link href="/riverview" className="text-link hover:underline">Riverview</Link>,{" "}
+              <Link href="/valrico/" className="text-link hover:underline">Valrico</Link>,{" "}
+              <Link href="/brandon/" className="text-link hover:underline">Brandon</Link>,{" "}
+              <Link href="/riverview/" className="text-link hover:underline">Riverview</Link>,{" "}
               or anywhere else across the region, I&apos;ll give you the straight story on
               pricing, neighborhoods, schools, and commute times. Use the{" "}
-              <Link href="/mortgage-calculator" className="text-link hover:underline">mortgage calculator</Link>{" "}
+              <Link href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</Link>{" "}
               to estimate your monthly payment, then{" "}
-              <Link href="/contact" className="text-link hover:underline">reach out</Link>{" "}
+              <Link href="/contact/" className="text-link hover:underline">reach out</Link>{" "}
               so we can put a plan together.
             </p>
           </div>
@@ -426,35 +426,35 @@ export default function BuyersPage() {
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Link href="/fha-loan-florida" className="card p-5 text-center hover:shadow-lg transition-shadow">
+            <Link href="/fha-loan-florida/" className="card p-5 text-center hover:shadow-lg transition-shadow">
               <p className="font-heading font-bold text-primary text-sm mb-1">FHA Loan</p>
               <p className="font-body text-xs text-muted">3.5% down, 580 credit</p>
             </Link>
-            <Link href="/va-loan-florida" className="card p-5 text-center hover:shadow-lg transition-shadow">
+            <Link href="/va-loan-florida/" className="card p-5 text-center hover:shadow-lg transition-shadow">
               <p className="font-heading font-bold text-primary text-sm mb-1">VA Loan</p>
               <p className="font-body text-xs text-muted">Zero down for veterans</p>
             </Link>
-            <Link href="/usda-loan-florida" className="card p-5 text-center hover:shadow-lg transition-shadow">
+            <Link href="/usda-loan-florida/" className="card p-5 text-center hover:shadow-lg transition-shadow">
               <p className="font-heading font-bold text-primary text-sm mb-1">USDA Loan</p>
               <p className="font-body text-xs text-muted">Zero down, rural areas</p>
             </Link>
-            <Link href="/conventional-loan-florida" className="card p-5 text-center hover:shadow-lg transition-shadow">
+            <Link href="/conventional-loan-florida/" className="card p-5 text-center hover:shadow-lg transition-shadow">
               <p className="font-heading font-bold text-primary text-sm mb-1">Conventional</p>
               <p className="font-body text-xs text-muted">3-20% down, flexible</p>
             </Link>
-            <Link href="/jumbo-loan-florida" className="card p-5 text-center hover:shadow-lg transition-shadow">
+            <Link href="/jumbo-loan-florida/" className="card p-5 text-center hover:shadow-lg transition-shadow">
               <p className="font-heading font-bold text-primary text-sm mb-1">Jumbo Loan</p>
               <p className="font-body text-xs text-muted">Over $806,500</p>
             </Link>
-            <Link href="/renovation-loan-florida" className="card p-5 text-center hover:shadow-lg transition-shadow">
+            <Link href="/renovation-loan-florida/" className="card p-5 text-center hover:shadow-lg transition-shadow">
               <p className="font-heading font-bold text-primary text-sm mb-1">Renovation Loan</p>
               <p className="font-body text-xs text-muted">Buy + renovate in one</p>
             </Link>
-            <Link href="/construction-loan-florida" className="card p-5 text-center hover:shadow-lg transition-shadow">
+            <Link href="/construction-loan-florida/" className="card p-5 text-center hover:shadow-lg transition-shadow">
               <p className="font-heading font-bold text-primary text-sm mb-1">Construction</p>
               <p className="font-body text-xs text-muted">Build your dream home</p>
             </Link>
-            <Link href="/reverse-mortgage-florida" className="card p-5 text-center hover:shadow-lg transition-shadow">
+            <Link href="/reverse-mortgage-florida/" className="card p-5 text-center hover:shadow-lg transition-shadow">
               <p className="font-heading font-bold text-primary text-sm mb-1">Reverse Mortgage</p>
               <p className="font-body text-xs text-muted">Age 62+, no payments</p>
             </Link>
@@ -475,7 +475,7 @@ export default function BuyersPage() {
             Stellar MLS. See something you like? Call me directly at{" "}
             <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a>.
           </p>
-          <Link href="/properties" className="btn-secondary">
+          <Link href="/properties/" className="btn-secondary">
             View All Properties
           </Link>
         </div>
