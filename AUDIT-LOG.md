@@ -4,6 +4,39 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-07-19 (Batch 3 — Tampa home styles and East Hillsborough content)
+
+**Pages improved: 10**
+
+### Blog Posts (6)
+
+1. **tampa-modern-homes** — Added "What Modern Means in Tampa Real Estate" section (contemporary vs. mid-century modern), price ranges by area (Hyde Park new construction $1.2M-$4M+, Beach Park/Palma Ceia West $800K-$2M, Seminole Heights $450K-$750K, New Tampa/Westshore $500K-$900K), New Construction vs. Teardown Replacement section, Quality Varies section, Smart Home Systems section; 5-Q&A FAQ with JSON-LD schema. Content grew from 3,288 to 12,033 chars.
+
+2. **tampa-historic-homes** — Added full neighborhood writeups for Hyde Park ($700K-$3M+), Seminole Heights ($450K-$900K), Ybor City ($280K-$550K), Palma Ceia ($650K-$2M+), Beach Park ($650K-$1.5M), Old Seminole Heights ($380K-$700K); added "What to Expect When Buying" section (electrical, plumbing, roofing, foundation, windows); added "Historic Designation" explainer (National Register vs. local designation vs. H overlay); 5-Q&A FAQ with JSON-LD schema. Content grew from 3,340 to 15,343 chars.
+
+3. **tampa-colonial-homes** — Added "What Makes Colonial Style" section (Georgian, Federal, Dutch, Southern Colonial variants); neighborhood writeups for Hyde Park ($750K-$2.5M), Palma Ceia ($650K-$2M), Beach Park ($600K-$1.5M), Bayshore Beautiful ($700K-$2M), Parkland Estates ($800K-$3M), New Tampa/FishHawk ($500K-$900K); "Original vs. New Construction Colonial" comparison; fixed 23+years/Tampa Bay co-occurrence in body text; 5-Q&A FAQ with JSON-LD schema. Content grew from 3,557 to 13,001 chars.
+
+4. **tampa-key-west-homes** — Added "What Defines Key West Style" section (7 architectural features with detail); neighborhood writeups for Davis Islands ($800K-$3M+), South Tampa custom builds ($700K-$2.5M), Apollo Beach ($450K-$1.5M), Harbour Island ($700K-$1.5M), Channelside ($500K-$1.2M); "Metal Roofs and Insurance in Florida" section; "Original vs. New Construction" comparison; fixed CTA box; 5-Q&A FAQ with JSON-LD schema. Content grew from 3,557 to 14,857 chars.
+
+5. **seffner-fl-shopping-dining** — Fixed CTA box (removed Tampa Bay tie from 23+ years); expanded Local Favorites with specific restaurant names (La Isla Cafe, Sam's Seafood, Don Jose's Mexican Grill, Sims Smoked BBQ, Kim's Cuban Sandwich Shop, Bob Evans); added Parsons Village section (US-92 Seffner anchor: Winn-Dixie, Family Dollar); added Regency Square section (47 stores, AMC, TJ Maxx, Barnes & Noble); added Parks section (Lake Weeks, Eureka Springs Park, Seffner-Mango Park); KB Home new construction mention; 5-Q&A FAQ with JSON-LD schema. Content grew from 5,083 to 12,169 chars.
+
+6. **plant-city-fl-vs-valrico** — Fixed CTA box (removed Tampa Bay tie from 23+ years); updated Plant City median to ~$330K and Valrico to $413K-$430K per 2026 data; added "New Construction Options" section (D.R. Horton, LGI Homes in $290K-$420K range in Plant City; Valrico largely built out); added "Investment Perspective" section; 5-Q&A FAQ with JSON-LD schema. Content grew from 5,111 to 12,038 chars.
+
+### Neighborhood Descriptions (4)
+
+7. **brandon-traces** (Brandon) — New description covering late 1980s-1990s construction, 1,400-2,400 sq ft homes, price range $320K-$480K, SR-60 proximity, school zone context.
+
+8. **dominion** (Brandon) — New description covering 3-5BR homes, $380K-$560K range, HOA community, Selmon Expressway access, Brandon school zone.
+
+9. **four-winds-estates** (Brandon) — New description covering larger lots (quarter-acre to half-acre), spacious home sites as primary differentiator, $370K-$580K range.
+
+10. **alafia-river-estates** (Riverview) — New description covering Alafia River proximity, flood zone awareness (Hurricane Milton 23 ft record), no-HOA sections, waterfront lots with 100-300'+ river frontage, price range $350K-$900K+ (waterfront premium), school zone (Alafia Elementary, Giunta Middle, Riverview High), 2-Q&A FAQ.
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `src/data/neighborhood-descriptions.ts`, `AUDIT-LOG.md`
+
+---
+
 ## 2026-07-19 (Batch 2 — Blog posts and Brandon neighborhoods)
 
 **Pages improved: 10**

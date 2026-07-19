@@ -795,4 +795,88 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Brandon townhomes at lower price points can generate solid rental yields because tenant demand in Brandon is strong and entry prices are more affordable than single-family homes in the same area. Confirm with the HOA whether investor-owned units and rental tenants are permitted, as some townhome communities limit rental percentages. Contact Barrett Henry at (813) 733-7907 for a current rental market assessment and available inventory.</p>
     `,
   },
+
+  // ===== BRANDON (Batch 3 additions) =====
+
+  "brandon-traces": {
+    summary:
+      "Established Brandon subdivision with mature landscaping, single-family homes in the $320K-$480K range, and convenient access to SR-60 shopping and the Selmon Expressway.",
+    contentHtml: `
+      <p>Brandon Traces is an established residential community in Brandon, built primarily in the late 1980s and 1990s when the SR-60 corridor was expanding rapidly. The neighborhood features single-family homes on lots with mature trees and established landscaping, which give it a settled, lived-in character that newer communities in outlying suburbs lack.</p>
+      <p>Home sizes typically range from 1,400 to 2,400 square feet, with 3 and 4 bedroom floor plans being the most common. Prices generally run from the low $320,000s for smaller, original-condition homes to the mid-to-upper $400,000s for updated or larger properties. The neighborhood's established lot sizes and mature canopy make it consistently appealing to buyers who prefer character over the newer but smaller lots found in more recent developments.</p>
+      <p>Brandon Traces is positioned for easy access to Brandon's commercial corridor along SR-60, including Westfield Brandon Mall, Publix, Target, and the Regency Square retail area. The Selmon Expressway provides one of the faster routes into Tampa, with downtown Tampa accessible in 25-40 minutes depending on traffic.</p>
+      <p>Brandon High School is the traditional high school assignment for much of Brandon, and the neighborhood falls within Hillsborough County Public Schools. Verify current elementary and middle school assignments by specific address at the Hillsborough County Schools website, as boundaries in the area can shift.</p>
+
+      <h3>Frequently Asked Questions About Brandon Traces</h3>
+      <h4>What are home prices in Brandon Traces FL?</h4>
+      <p>Brandon Traces home prices typically range from the low $320,000s to the upper $400,000s, depending on the home's size, condition, and updates. Smaller original-condition homes start at the lower end of that range; larger or fully renovated properties reach the upper end. Contact Barrett Henry at (813) 733-7907 for current active listings and a free comparative market analysis.</p>
+      <h4>Is Brandon Traces a quiet neighborhood?</h4>
+      <p>Brandon Traces has a suburban, family-oriented character typical of established Brandon communities. The mature tree canopy and established landscaping contribute to a quieter feel than newer, recently cleared developments. Internal streets are primarily residential with limited through-traffic. As with any community near the SR-60 corridor, noise proximity depends on the specific street and lot within the neighborhood.</p>
+    `,
+  },
+
+  "dominion": {
+    summary:
+      "Brandon community featuring larger homes in the $380K-$560K range with a neighborhood association, mature landscaping, and quick access to Brandon's SR-60 commercial corridor.",
+    contentHtml: `
+      <p>Dominion is a Brandon residential community offering single-family homes with a range of floor plans and lot sizes. The community is representative of Brandon's mid-range suburban development, with homes that balance space, features, and accessibility to Brandon's retail and service corridor along SR-60.</p>
+      <p>Homes in Dominion generally offer 3 to 5 bedrooms and 1,600 to 3,000 square feet of living space. Price ranges typically fall between $380,000 and $560,000 for standard homes, with larger or heavily updated properties at the top of that range. The community's established character gives it more mature landscaping than newer communities further east in Hillsborough County.</p>
+      <p>Brandon's full commercial and medical infrastructure is close at hand. Westfield Brandon Mall, multiple Publix locations, Home Depot, Lowe's, and Brandon Regional Hospital are all accessible within 10-15 minutes. The Selmon Expressway connects residents to downtown Tampa and Channelside in approximately 25-40 minutes under normal traffic conditions.</p>
+      <p>The community is served by Hillsborough County Public Schools. Brandon High School serves most of the surrounding area for high school, with specific elementary and middle school assignments varying by address. Confirm current school zoning at the Hillsborough County Schools website before purchasing if school assignment is a factor in your decision.</p>
+
+      <h3>Frequently Asked Questions About Dominion Brandon FL</h3>
+      <h4>Does Dominion Brandon FL have a homeowners association?</h4>
+      <p>Dominion has a community association. HOA fees and rules vary and should be verified with the current listing or HOA management company before making an offer. Typical HOA documents (declaration of covenants, current financials, meeting minutes) are required disclosures in Florida real estate transactions and should be reviewed during any inspection period.</p>
+      <h4>How are home values trending in Dominion Brandon?</h4>
+      <p>Brandon has seen strong appreciation over the past several years, driven by population growth, limited inventory, and demand from Tampa-area buyers seeking more space at lower price points than South Tampa or the urban core. Dominion benefits from these broader Brandon trends. For a current comparative market analysis specific to Dominion, contact Barrett Henry at (813) 733-7907.</p>
+    `,
+  },
+
+  "four-winds-estates": {
+    summary:
+      "Brandon neighborhood known for larger lots, spacious home sites, and a quieter character compared to higher-density Brandon subdivisions, with homes typically in the $370K-$580K range.",
+    contentHtml: `
+      <p>Four Winds Estates is a Brandon community where lot sizes and home footprints tend to run larger than typical newer subdivisions in the area. The neighborhood attracts buyers who want more land and space without leaving the Brandon market's proximity to Tampa and the SR-60 corridor.</p>
+      <p>Homes in Four Winds Estates generally feature 3 to 5 bedrooms on quarter-acre to half-acre lots, with living areas ranging from approximately 1,600 to 3,200 square feet. The "estates" character of the community translates into more space between homes, more yard depth, and a quieter overall feel than tightly-packed newer developments. Prices typically range from the upper $300,000s to the upper $500,000s, with premium lots or significantly updated homes at the higher end.</p>
+      <p>Brandon's established commercial infrastructure is within easy reach. The SR-60 corridor provides access to Westfield Brandon Mall, multiple grocery options, big-box retailers, restaurants, and Brandon Regional Hospital. The Selmon Expressway connects to downtown Tampa in approximately 25-40 minutes depending on traffic and point of origin within the neighborhood.</p>
+      <p>As with other Brandon communities, Four Winds Estates is served by Hillsborough County Public Schools. Confirm current school assignments for specific addresses through the district's school finder tool, as boundaries in eastern Hillsborough County can change.</p>
+
+      <h3>Frequently Asked Questions About Four Winds Estates Brandon FL</h3>
+      <h4>What makes Four Winds Estates different from other Brandon neighborhoods?</h4>
+      <p>The primary differentiator is lot size. Four Winds Estates offers larger home sites than typical Brandon subdivisions, which means more yard space, more separation from neighbors, and more room for pools, outbuildings, or outdoor living areas. Buyers who find newer Brandon communities too dense often look to established communities like Four Winds Estates when larger lots are a priority.</p>
+      <h4>What are home prices in Four Winds Estates?</h4>
+      <p>Home prices in Four Winds Estates generally range from the upper $300,000s to the upper $500,000s, with larger, updated, or premium-lot properties reaching higher. Call Barrett Henry at (813) 733-7907 for a current market analysis and active listings within the community.</p>
+    `,
+  },
+
+  // ===== RIVERVIEW (Batch 3 additions) =====
+
+  "alafia-river-estates": {
+    summary:
+      "Riverview community situated near the Alafia River, offering larger lots, some waterfront access, and a mix of no-HOA sections with homes in the $350K-$900K+ range depending on lot and water access.",
+    contentHtml: `
+      <p>Alafia River Estates is a Riverview community positioned near the Alafia River in southern Hillsborough County. The community is distinct from similarly named neighborhoods (Alafia Estates in Brandon and the master-planned Alafia community off U.S. 301 in northern Riverview). Alafia River Estates draws buyers who specifically want proximity to or access to the river, larger lots than standard Riverview subdivisions offer, and in many cases, freedom from HOA oversight.</p>
+
+      <h2>Lots, Layout, and Water Access</h2>
+      <p>Lot sizes in Alafia River Estates tend to be larger than in the high-density suburban developments that dominate much of Riverview. Many parcels run a quarter-acre to over an acre, with some riverfront lots offering 100-300+ feet of Alafia River frontage. Homes with direct river access typically feature private docks or the space to add one, making this community attractive to boaters, anglers, and kayakers who want to launch from their own property.</p>
+      <p>Not all sections have river frontage. Interior lots without direct water access still benefit from the community's larger lot culture and the aesthetic appeal of living near the river corridor. Some sections of the community have no formal HOA, which is a meaningful selling point for buyers who want to avoid monthly fees and covenant restrictions.</p>
+
+      <h2>Flood Zone Awareness</h2>
+      <p>Buyers considering any property near the Alafia River should review flood zone designations carefully. The Alafia River is subject to significant flooding during major weather events. Hurricane Milton in October 2024 raised the river to approximately 23 feet, the highest level recorded in nearly a century. Properties in FEMA flood zone AE require mandatory flood insurance for federally-backed mortgages, and those costs must be factored into ownership budgets. Verify the specific flood zone designation for any parcel at FEMA's Flood Map Service Center (msc.fema.gov) and request flood insurance quotes before going under contract.</p>
+      <p>Some properties sit on higher ground or in flood zone X (minimal flood hazard), where flood insurance is not mandatory but still advisable. A survey and elevation certificate for the specific property will clarify the actual flood risk more precisely than the general community name.</p>
+
+      <h2>Home Prices and Property Types</h2>
+      <p>Prices in Alafia River Estates vary significantly based on lot size, riverfront status, and home condition. Interior lots without water access typically range from $350,000 to $550,000 for standard single-family homes. Riverfront properties with direct Alafia access command significant premiums and can range from $600,000 to $900,000 or more depending on frontage, home size, and dock access. Custom-built homes on premium waterfront lots have sold above $1,000,000.</p>
+
+      <h2>Schools and Community</h2>
+      <p>Alafia River Estates is served by Hillsborough County Public Schools. The school zone for this area includes Alafia Elementary School, Giunta Middle School, and Riverview High School, though assignments should always be verified by specific address at the Hillsborough County Schools website, as boundaries can change and some parcels may have different zoning.</p>
+      <p>Riverview's overall retail and service infrastructure has expanded significantly in recent years. U.S. 301, the Gibsonton corridor, and the broader Riverview commercial strip along Boyette Road and Big Bend Road give residents access to grocery stores, restaurants, medical offices, and big-box retailers without driving into Brandon or Tampa. The commute to downtown Tampa via I-75 and the Selmon Expressway typically runs 30-45 minutes depending on time of day.</p>
+
+      <h3>Frequently Asked Questions About Alafia River Estates Riverview FL</h3>
+      <h4>Is Alafia River Estates in a flood zone?</h4>
+      <p>Parts of Alafia River Estates are in FEMA flood zone AE, which requires mandatory flood insurance for federally-backed mortgages. Other parcels may be in flood zone X with lower flood risk. The Alafia River flooded significantly during Hurricane Milton (October 2024), reaching approximately 23 feet. Buyers should verify the specific flood zone for any parcel they are considering by checking FEMA's Flood Map Service Center and requesting an elevation certificate from the seller or a licensed surveyor.</p>
+      <h4>Does Alafia River Estates have an HOA?</h4>
+      <p>HOA status varies by section within Alafia River Estates. Some sections have no HOA and no deed restrictions, which is a primary draw for buyers who want to park a boat, RV, or trailer on the property without approval. Other sections may have minimal deed restrictions or a voluntary community association. Confirm the HOA or deed restriction status for any specific address before going under contract. Barrett Henry can help you verify this and evaluate the implications during due diligence.</p>
+    `,
+  },
 };
