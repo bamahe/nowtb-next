@@ -484,4 +484,239 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Tarpon Springs' waterfront has held its appeal through multiple market cycles because the supply is genuinely limited. The combination of the natural bayou system, Gulf access, and the historic character of the surrounding city creates a setting that doesn't replicate easily. If water access is non-negotiable on your list, <a href="/tarpon-springs/">Tarpon Springs</a> waterfront deserves a serious look before you settle elsewhere in Pinellas County.</p>
     `,
   },
+
+  // ===== WESLEY CHAPEL =====
+
+  "epperson": {
+    summary:
+      "Wesley Chapel's most distinctive community, built around the first residential Crystal Lagoon in the US. Homes from $345K to $1.4M+ with a true resort lifestyle.",
+    contentHtml: `
+      <p>Epperson is unlike any other community in <a href="/wesley-chapel/">Wesley Chapel</a>, and honestly unlike most in Florida. The centerpiece is a 7.5-acre Crystal Lagoon, the first residential lagoon of its kind installed in the United States. It is not a marketing gimmick. The lagoon has a sandy beach, a swim-up bar, a floating obstacle course, a kayak and paddleboard dock, a climbing wall with slides, and a covered event stage. If you have kids or just want to feel like you're on vacation without leaving home, this is the lifestyle that community delivers.</p>
+      <p>Homes range from the low $300Ks for townhomes to $1.4M and above for the larger single-family homes. Most single-family homes are 3 to 5 bedrooms, ranging from about 1,500 to over 3,000 square feet. Construction is modern Florida standard, with open floor plans, tile roofs, and impact windows common throughout. Multiple builders have participated in the community, so there is genuine variety in floor plan options and finishes.</p>
+      <p>Beyond the lagoon, Epperson has a 5-acre dog park, playgrounds, a Zen garden, and community Wi-Fi hotspots throughout the common areas. The HOA and CDD fees here are higher than a standard Wesley Chapel subdivision, reflecting the lagoon maintenance costs. Get the full fee picture from your agent before making an offer, as the combined monthly carrying costs can add meaningfully to your budget beyond the mortgage payment.</p>
+      <p>The community is located in the northern section of Wesley Chapel with access to the area's growing network of shops, restaurants, and medical facilities along SR-54 and the SR-56 corridor. School zoning is within the Pasco County school district. For buyers who have decided they want the lagoon lifestyle, Epperson is the address in this part of Tampa Bay. For a broader look at the area, see our guide to <a href="/wesley-chapel/">Wesley Chapel real estate</a>.</p>
+      <div class="faq-section">
+        <h3>Epperson Frequently Asked Questions</h3>
+        <div class="faq-item">
+          <h4>How much are HOA and CDD fees in Epperson?</h4>
+          <p>Fees vary by section and home type. The CDD fee covers the Crystal Lagoon maintenance and is a significant part of the cost, typically added to your property tax bill. Get the exact amounts for any specific home from your agent before going under contract.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Is the Crystal Lagoon included for all Epperson residents?</h4>
+          <p>Lagoon access is included for Epperson homeowners as part of the community amenities, covered through the community fees. Guest policies and capacity rules apply, so check the current HOA documentation.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What schools serve Epperson?</h4>
+          <p>Epperson is in the Pasco County school district. Confirm your specific address with the district, as school zone assignments in growing Wesley Chapel communities can update as new schools open.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Are there townhomes in Epperson?</h4>
+          <p>Yes. Epperson has both single-family homes and townhomes. Townhomes typically start in the low to mid $300Ks, giving buyers a more accessible entry point to the lagoon community lifestyle.</p>
+        </div>
+      </div>
+    `,
+  },
+
+  "epperson-ranch": {
+    summary:
+      "The original Epperson Ranch section of Wesley Chapel's Crystal Lagoon community, with single-family homes from the mid $300Ks to $700K+ and direct lagoon access.",
+    contentHtml: `
+      <p>Epperson Ranch is the single-family home section of <a href="/epperson/">Epperson</a>, the community built around the first residential Crystal Lagoon in the United States. If you want a single-family home in this community rather than a townhome, Epperson Ranch is where to look. Prices run from the mid $300Ks for entry-level layouts to $700K and above for larger homes on premium lots.</p>
+      <p>Homes are 3 to 5 bedrooms with modern open floor plans, typically 1,800 to 3,200 square feet. Construction is solid, consistent Florida block with tile or shingle roofs and the energy-efficient systems expected from homes built in the 2010s and beyond. Most homes have two-car garages and screened lanais or patios.</p>
+      <p>All Epperson Ranch residents have access to the 7.5-acre Crystal Lagoon, including the beach, swim-up bar, obstacle course, and paddleboard launch. The lagoon is the reason most buyers are here, so factor the combined HOA and CDD fees into your budget from the start. Those fees are higher than a standard Wesley Chapel neighborhood, but for buyers who will genuinely use the amenity, the value math can make sense.</p>
+      <p>Location puts you in northern Wesley Chapel with growing retail and dining options nearby. For context on the broader area, see our <a href="/wesley-chapel/">Wesley Chapel neighborhood guide</a>.</p>
+    `,
+  },
+
+  "bexley": {
+    summary:
+      "Master-planned community in Land O Lakes adjacent to a 1,200-acre wildlife preserve. New construction is sold out, but the resale market offers homes from $300K to $600K+ with top trail access and community amenities.",
+    contentHtml: `
+      <p>Bexley is a thoughtfully built master-planned community in <a href="/land-o-lakes/">Land O Lakes</a>, positioned right along State Road 54 at the Suncoast Parkway interchange. The community is adjacent to a 1,200-acre wildlife preserve, and the trail system connecting Bexley to that preserve is a genuine draw for outdoor enthusiasts. Homes range from townhomes starting in the low $300Ks to larger single-family homes priced at $600K and above on the resale market.</p>
+      <p>The community was developed over several phases by Newland Communities, with builders including David Weekley, Homes by WestBay, ICI Homes, and others. New construction in Bexley is sold out as of 2026, so buyers should plan on purchasing resale. That means pricing is now driven by the market rather than builder incentives, which can work in your favor depending on timing. The variety of builders means there is real floor plan diversity within the community.</p>
+      <p>The Hub at Bexley is the community's centerpiece amenity building, with a resort-style pool, fitness center, café, trails, and a bike park. Bexley's trail network is extensive and connects to the surrounding preserve land, which is a genuine differentiator compared to communities where the only green space is a retention pond. Dog owners and cyclists in particular tend to love this community.</p>
+      <p>HOA and CDD fees apply. Get the full breakdown for any specific home before making an offer. The Suncoast Parkway (SR-589) access means commutes to downtown Tampa or the airport are more direct than many Pasco County communities. School zoning falls within Pasco County public schools. For buyers who want the trail lifestyle and mature community feel without new construction markup, Bexley is worth a serious look. See also our broader <a href="/land-o-lakes/">Land O Lakes neighborhood guide</a>.</p>
+      <div class="faq-section">
+        <h3>Bexley Frequently Asked Questions</h3>
+        <div class="faq-item">
+          <h4>Is there new construction available in Bexley?</h4>
+          <p>No, as of 2026, Bexley's new construction phases are sold out. All available homes are resale. If you want a new build near Bexley, look at nearby communities along the SR-54 corridor or in Wesley Chapel.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What is the wildlife preserve adjacent to Bexley?</h4>
+          <p>Bexley is bordered by approximately 1,200 acres of preserved land with trails connecting to the community. The preserve provides hiking, bird watching, and natural Florida scenery that gives the community a different feel from standard suburban subdivisions.</p>
+        </div>
+        <div class="faq-item">
+          <h4>How are the schools in Bexley?</h4>
+          <p>Bexley is in the Pasco County school district. Schools include Bexley Elementary School (located within the community), Charles S. Rushe Middle School, and Sunlake High School. Confirm your specific address with the district since zone assignments can change.</p>
+        </div>
+      </div>
+    `,
+  },
+
+  "seven-oaks": {
+    summary:
+      "Established gated community in Wesley Chapel with a resort-style amenity center, homes from $350K to $750K+, and a well-known local identity among area families.",
+    contentHtml: `
+      <p>Seven Oaks is one of the most recognized community names in <a href="/wesley-chapel/">Wesley Chapel</a>, and it earned that reputation through consistent livability rather than novelty. This is a gated community built primarily in the mid-2000s along SR-54, developed by Newland Communities across multiple villages. Prices run from about $350K for smaller single-family homes to $750K and above for the larger estate-style homes in the premium sections.</p>
+      <p>The amenity center here is one of the better ones in Wesley Chapel. It includes a resort-style pool with waterslide, tennis and basketball courts, a fitness center, a café building, and playgrounds scattered throughout the community. The size of the amenity package helped establish Seven Oaks as a go-to address for families who wanted more than a pool and a sign when the community was first built, and it continues to deliver on that expectation.</p>
+      <p>Homes are mostly concrete block construction with barrel tile or shingle roofs, ranging from about 1,600 to over 3,500 square feet. Floor plans vary across villages, from single-story ranch styles to two-story family homes with four and five bedrooms. The community is fully built out, so all activity is resale. That maturity means established trees, settled landscaping, and neighbors who have been around long enough to know each other.</p>
+      <p>Location is a strength. SR-54 access puts you close to the Shops at Wiregrass, Tampa Premium Outlets, and the growing Wesley Chapel medical and commercial corridor. HOA fees and CDD fees both apply. School zoning is in the Pasco County system. Wesley Chapel High School, Wiregrass Ranch High School, and various middle and elementary schools serve different sections, so confirm your specific assignment before buying. For a full picture of the area, see our <a href="/wesley-chapel/">Wesley Chapel real estate guide</a>.</p>
+      <div class="faq-section">
+        <h3>Seven Oaks Frequently Asked Questions</h3>
+        <div class="faq-item">
+          <h4>Is Seven Oaks gated?</h4>
+          <p>Seven Oaks has gated entry points, though access policies can vary by gate and time of day. Confirm the current gate operation with the HOA or your agent during your search.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Are there still new homes available in Seven Oaks?</h4>
+          <p>No. Seven Oaks is a fully built-out community. All homes are resale. The community is mature, which is often preferred by buyers who want established landscaping and a settled neighborhood feel.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What high school zone is Seven Oaks in?</h4>
+          <p>Different sections of Seven Oaks fall in different school zones. Wiregrass Ranch High School and Wesley Chapel High School both serve parts of the community. Always confirm the specific zoning for a home's address with the Pasco County school district.</p>
+        </div>
+      </div>
+    `,
+  },
+
+  "wiregrass-ranch": {
+    summary:
+      "One of Wesley Chapel's largest newer communities, with homes from $380K to $650K+, multiple builders, and a location walking distance from Tampa Premium Outlets and the Shops at Wiregrass.",
+    contentHtml: `
+      <p>Wiregrass Ranch is a large master-planned community in <a href="/wesley-chapel/">Wesley Chapel</a> that takes its name from the broader Wiregrass area of eastern Pasco County. The community is situated near Tampa Premium Outlets and the Shops at Wiregrass, which means genuine walkable retail access, which is rare in Florida suburban development. Homes run from about $380K to $650K and above depending on size, lot, and build year.</p>
+      <p>Multiple builders have contributed to the community over its development timeline, including DR Horton, CalAtlantic (now Lennar), Ryland Homes, and others. That means floor plan variety is real, but it also means construction quality and finishes vary by builder and phase. Homes range from about 1,600 to 3,800 square feet, mostly 3 to 5 bedrooms with two-car garages.</p>
+      <p>Community amenities include a resort-style pool and recreation center. HOA and CDD fees apply. The CDD fees in particular can be meaningful, so get the exact annual assessments for any home you are seriously considering. Some buyers are surprised when the effective monthly cost is higher than they budgeted.</p>
+      <p>School zoning puts most of Wiregrass Ranch in the Wiregrass Ranch High School zone, which was built to serve the growing student population in this part of Wesley Chapel. Confirm your specific address with the Pasco County school district. For commuters, the proximity to I-75 via SR-56 is a legitimate convenience. For a full comparison of Wesley Chapel communities, see our <a href="/wesley-chapel/">Wesley Chapel real estate guide</a>.</p>
+    `,
+  },
+
+  // ===== RIVERVIEW =====
+
+  "triple-creek": {
+    summary:
+      "990-acre master-planned Riverview community with homes from $350K to $600K+, resort-style amenities, and new construction still available in some sections.",
+    contentHtml: `
+      <p>Triple Creek is one of the larger and more complete master-planned communities in <a href="/riverview/">Riverview</a>, covering roughly 990 acres in the southeast portion of the city near US-301. The community has been built out by multiple builders over several phases, with home sizes ranging from about 1,420 to nearly 4,850 square feet. Prices currently run from around $350K to $600K and above, with the median closer to $400K-$410K.</p>
+      <p>The amenity package is strong for the price point. Triple Creek includes a clubhouse with resort-style pool, a separate fitness center, sports courts, a dog park, and walking trails that wind through the community's natural areas. The community was designed with Florida's outdoor lifestyle in mind, and it delivers on that promise with genuine green space and trail connectivity.</p>
+      <p>Builders who have been active in Triple Creek include Homes by WestBay, Taylor Morrison, DR Horton, and others. Floor plan quality and construction standards vary between builders and phases. Homes from the WestBay phases in particular are known for their quality and tend to hold value well. If you are comparing specific homes, asking your agent about which builder constructed a particular section is worth the time.</p>
+      <p>Both HOA and CDD fees apply. Get the full carrying cost picture before you finalize your budget. Location on US-301 gives you direct access to the SouthShore commercial corridor and quick I-75 access for commutes north toward Tampa or south toward Bradenton. School zoning covers Hillsborough County public schools in the Sumner High School zone, which is a newer school serving this part of Riverview. For a full comparison of Riverview communities, see our <a href="/riverview/">Riverview real estate guide</a>.</p>
+      <div class="faq-section">
+        <h3>Triple Creek Frequently Asked Questions</h3>
+        <div class="faq-item">
+          <h4>Is there still new construction available in Triple Creek?</h4>
+          <p>Some sections of Triple Creek have had ongoing construction. Check with your agent for the current availability of new builds versus resale, as inventory changes frequently in large multi-phase communities.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What schools serve Triple Creek?</h4>
+          <p>Triple Creek is generally zoned for Sumner High School, which is a newer Hillsborough County school built to serve this growing area. Elementary and middle school assignments vary by section, so confirm the specific zoning for any address with Hillsborough County Schools.</p>
+        </div>
+        <div class="faq-item">
+          <h4>How far is Triple Creek from downtown Tampa?</h4>
+          <p>Triple Creek is roughly 25 to 30 miles from downtown Tampa via I-75 north. Commute times vary significantly by time of day, but most residents heading into Tampa should budget 35 to 50 minutes during peak hours.</p>
+        </div>
+      </div>
+    `,
+  },
+
+  "panther-trace": {
+    summary:
+      "Established Riverview community with a resort-style amenity center, homes from $330K to $520K, and convenient access to US-301 and I-75.",
+    contentHtml: `
+      <p>Panther Trace is one of Riverview's more established planned communities, developed primarily in the mid-2000s along the US-301 corridor. Homes here range from about $330K to $520K, with most falling in the $360K to $460K range depending on size, condition, and lot. The community is fully built out, so all activity is resale, and the established landscaping gives it a mature feel you don't get in the newest construction zones.</p>
+      <p>The community amenity center includes a resort-style pool, tennis courts, a fitness center, and playground areas. The design of Panther Trace was intended to encourage outdoor use, with sidewalks throughout and common areas connecting the residential sections. It is a functional, well-organized neighborhood without the complications of a community that tried to do too much.</p>
+      <p>Homes are mostly 3 to 4 bedrooms, ranging from about 1,400 to 2,800 square feet, built to the concrete block standard typical of Florida construction in that era. Two-car garages and screened lanais are common. HOA fees are moderate and cover the community amenities. CDD fees apply in some sections, so confirm which applies to a specific home before finalizing your budget.</p>
+      <p>US-301 access gives you a direct path north to the Selmon Expressway and into Tampa or south toward the Ruskin and Sun City Center area. I-75 is accessible nearby. The surrounding Riverview area has built out significantly since Panther Trace was developed, so shopping, dining, and medical services are all close. School zoning falls within Hillsborough County, generally in the Riverview High School or East Bay High School zone depending on the specific section. For a side-by-side look at Riverview communities, see our <a href="/riverview/">Riverview real estate guide</a>.</p>
+    `,
+  },
+
+  "south-fork": {
+    summary:
+      "Large multi-phase Riverview community along US-301 with homes from $320K to $520K, multiple amenity centers, and a mix of newer and slightly older construction.",
+    contentHtml: `
+      <p>South Fork is a large planned community in <a href="/riverview/">Riverview</a> that spans multiple phases and sections along the US-301 corridor in the southeastern part of the city. Because it has been developed over a long period and by multiple builders, South Fork covers a wide range of homes and price points, from about $320K for the older, smaller sections to $520K and above for the newer phases with larger floor plans. The median is typically in the $370K to $420K range.</p>
+      <p>Each phase of South Fork has its own HOA section and amenities. Earlier phases typically have a community pool and common areas; newer phases added more elaborate amenity packages. This structure means that two homes in South Fork might have different fees and access to different amenities depending on which phase they are in. Ask your agent to clarify the specific phase and associated fees for any home you are seriously considering.</p>
+      <p>Homes range from single-story 3-bedroom layouts around 1,500 square feet to larger 5-bedroom two-story homes approaching 3,000 square feet. Construction is standard Florida block, and quality is consistent across phases. The newer sections built in the 2010s and later have the open-concept floor plans and energy-efficient systems buyers expect from more recent construction.</p>
+      <p>Location along US-301 is practical. The commercial corridor nearby provides shopping, dining, and services without a long drive. I-75 access for Tampa commuters is reasonable. Hillsborough County school zoning serves the community, with school assignments varying by section. For context on the broader area, see our <a href="/riverview/">Riverview neighborhood overview</a>.</p>
+    `,
+  },
+
+  "summerfield": {
+    summary:
+      "One of Riverview's oldest established subdivisions with homes from $280K to $450K, mature landscaping, and community amenities including a golf course.",
+    contentHtml: `
+      <p>Summerfield is one of the earlier developed residential communities in <a href="/riverview/">Riverview</a>, with homes built primarily from the mid-1990s through the early 2000s. Because of this timeline, it has something newer communities cannot offer: truly mature landscaping, established oak trees, and the settled feel of a neighborhood that has been lived in for decades. Prices run from about $280K to $450K, making it one of the more affordable options for a well-located Riverview community with amenities.</p>
+      <p>The community is anchored by the Summerfield Crossings Golf Club, a public course that winds through sections of the neighborhood. Non-golfers still benefit from the green space the course creates. Summerfield also has a community pool, tennis courts, and a clubhouse. The HOA fees cover the common area maintenance and amenities, and they are generally reasonable by Riverview standards.</p>
+      <p>Homes are mostly 3 to 4 bedrooms in the 1,400 to 2,400 square foot range. The construction is typical 1990s to early 2000s Florida block, and buyers should pay attention to roof age, HVAC condition, and kitchen and bathroom updates when evaluating specific properties. Many homes in Summerfield have been updated over the years; others are still in largely original condition, which creates a spread in both price and value.</p>
+      <p>Summerfield Crossing Boulevard provides the main access point, connecting to US-301 and the broader Riverview grid. Commuters heading into Tampa via I-75 or US-41 have a reasonable drive from here. Hillsborough County school assignments vary by section. This is a good neighborhood for buyers who want established character and lower prices rather than brand-new construction. See our <a href="/riverview/">Riverview real estate guide</a> for a full neighborhood comparison.</p>
+    `,
+  },
+
+  // ===== LITHIA / FISHHAWK =====
+
+  "fishhawk-ranch": {
+    summary:
+      "Lithia's flagship master-planned community with 3,800+ acres, A-rated schools, 25+ miles of trails, multiple resort-style amenity centers, and homes from $380K to over $1M.",
+    contentHtml: `
+      <p>FishHawk Ranch is the premier address in <a href="/lithia/">Lithia</a> and one of the most complete master-planned communities in Hillsborough County. Spanning over 3,800 acres developed by Newland Communities starting in the late 1990s, it functions less like a neighborhood and more like a small city. Over 24,000 residents, multiple distinct villages, three full amenity centers, a network of parks, and more than 25 miles of paved trails give the community a depth that newer developments are still working toward. Homes range from about $380K for smaller cottages and townhomes to well over $1M for larger custom builds in the premium sections.</p>
+      <p>Schools are the primary reason many families choose FishHawk Ranch over competing communities. Bevis Elementary School, Barrington Middle School, and Newsome High School all serve the community and all carry strong academic ratings. Newsome High in particular is consistently regarded as one of the better public high schools in the county. Parents who are prioritizing the school-to-high-school pipeline in Hillsborough County frequently put FishHawk Ranch at the top of their list for exactly this reason.</p>
+      <p>The amenities are structured around three community gathering places. The Osprey Club, the Hawk Park amenity center, and the Club at FishHawk Ranch each include resort-style pools, fitness facilities, courts for tennis and other sports, and gathering spaces. The trail system connects the amenity centers and winds throughout the community's natural areas, which include preserved wetlands, ponds, and the wooded corridors that give the community its name and character.</p>
+      <p>FishHawk Ranch West is an adjacent newer development that expanded the community westward with additional homes and its own amenity center. Buyers comparing sections of FishHawk should understand that the original FishHawk Ranch phases have more mature landscaping and established community feeling, while FishHawk Ranch West offers newer construction with modern floor plans. HOA and CDD fees apply throughout the community, and the specific amounts vary by section and home type. Get the full fee disclosure before you finalize your budget. The location is about 25 miles southeast of downtown Tampa, which is a legitimate commute, and most residents heading into Tampa daily should budget 35 to 50 minutes during peak hours. For a broader look at the area, see our <a href="/lithia/">Lithia real estate guide</a>.</p>
+      <div class="faq-section">
+        <h3>FishHawk Ranch Frequently Asked Questions</h3>
+        <div class="faq-item">
+          <h4>What schools serve FishHawk Ranch?</h4>
+          <p>FishHawk Ranch is served by Bevis Elementary, Barrington Middle, and Newsome High School, all within Hillsborough County public schools. All three carry strong academic reputations. Newer sections in FishHawk Ranch West may have different school assignments, so confirm with Hillsborough County Schools for any specific address.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What is the difference between FishHawk Ranch and FishHawk Ranch West?</h4>
+          <p>FishHawk Ranch is the original development with mature landscaping, established villages, and a longer community track record. FishHawk Ranch West is a newer expansion to the west with newer construction, a separate amenity center, and in some cases different school zones. Both are high-quality communities but with different feels based on age and density.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Are there still new homes for sale in FishHawk Ranch?</h4>
+          <p>The original FishHawk Ranch phases are largely built out. FishHawk Ranch West has had ongoing new construction. Check with a local agent for current availability in both the resale and new construction markets, as inventory changes frequently.</p>
+        </div>
+        <div class="faq-item">
+          <h4>How are the HOA and CDD fees structured?</h4>
+          <p>FishHawk Ranch has both HOA and CDD fees, and the amounts vary by village and section. The CDD fee is typically reflected in your annual property tax bill. Get a full disclosure of all applicable fees for any specific home before making an offer, as the combined monthly cost can be $400 to $700+ in some sections.</p>
+        </div>
+        <div class="faq-item">
+          <h4>How far is FishHawk Ranch from downtown Tampa?</h4>
+          <p>FishHawk Ranch is roughly 25 miles southeast of downtown Tampa via I-75 or US-301. Expect 35 to 50 minutes during peak commute hours. The tradeoff is that you get significantly more home and land for the money compared to neighborhoods closer to the city.</p>
+        </div>
+      </div>
+    `,
+  },
+
+  // ===== SUN CITY CENTER =====
+
+  "kings-point": {
+    summary:
+      "Sun City Center's most comprehensive 55+ community with 5,250+ homes, 27 holes of golf, six pools, and maintenance-free living that includes cable, lawn, and water in the monthly fee.",
+    contentHtml: `
+      <p>Kings Point is the flagship 55+ community within <a href="/sun-city-center/">Sun City Center</a>, and it is one of the most self-contained active adult communities in Florida. The community spans 5,250 homes developed between 1973 and 2015 across a mix of single-family homes, attached villas, and condominiums. New construction is not available here since Kings Point is fully built out, but the resale market is active and offers a wide range of price points, from condos in the $100Ks to larger single-family homes in the $300Ks and above.</p>
+      <p>The lifestyle here is genuinely different from a standard HOA community. The monthly maintenance fee at Kings Point typically covers cable and internet, lawn care, exterior maintenance, water, sewer, and trash, plus full access to both the Kings Point Clubhouse and South Clubhouse. Those two facilities together represent roughly 126,000 square feet of indoor and outdoor recreational space, including indoor and outdoor pools (six total), tennis and pickleball courts, fitness facilities, meeting rooms, and a full calendar of clubs and activities. For buyers who want to simplify their lives and reduce the to-do list that comes with homeownership, the all-in fee structure is a genuine draw.</p>
+      <p>Golf is central to the community. Twenty-seven holes of golf are available to residents, and the course network weaves through the community such that many homes have golf course views or frontage. Cart paths connect most areas of the community, and golf cart ownership is common since many residents use them as their primary mode of transport within Kings Point.</p>
+      <p>The community is gated and age-restricted to residents 55 and older. Location in Sun City Center puts you about 25 miles south of Tampa via I-75, which is close enough for medical appointments and airport access without putting you in the middle of Tampa's traffic. Bradenton and Sarasota are also accessible to the south. For buyers evaluating the full Sun City Center landscape, see our <a href="/sun-city-center/">Sun City Center guide</a>.</p>
+      <div class="faq-section">
+        <h3>Kings Point Frequently Asked Questions</h3>
+        <div class="faq-item">
+          <h4>What does the Kings Point monthly fee cover?</h4>
+          <p>Kings Point's monthly maintenance fee typically covers cable and internet, lawn care and exterior maintenance, water, sewer, trash pickup, and full access to both clubhouses and all community amenities. The exact amount and inclusions vary by home type and section, so confirm the specific fee structure for any home you are considering.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Is Kings Point gated?</h4>
+          <p>Yes. Kings Point is a gated community with staffed or automated entry. The community is age-restricted to residents 55 and older.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Are there condos available in Kings Point?</h4>
+          <p>Yes. Kings Point has a significant inventory of condominium units, typically priced from around $100K to $200K. Condos offer the most maintenance-free ownership in the community and are popular with buyers who travel frequently or want minimal upkeep.</p>
+        </div>
+        <div class="faq-item">
+          <h4>How does Kings Point compare to other Sun City Center communities?</h4>
+          <p>Kings Point is the most comprehensive 55+ option within Sun City Center in terms of amenities and included services. Valencia Lakes and Del Webb Sun City Center are the other major options, each with a different feel and fee structure. Working with a local agent who knows all three is the best way to compare them accurately.</p>
+        </div>
+      </div>
+    `,
+  },
 };
