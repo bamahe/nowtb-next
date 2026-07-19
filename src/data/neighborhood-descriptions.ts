@@ -719,4 +719,80 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </div>
     `,
   },
+
+  // ===== BRANDON NEIGHBORHOODS =====
+
+  "bloomingdale": {
+    summary:
+      "One of eastern Hillsborough County's largest and most established planned communities, built primarily in the 1980s with more than 32 subdivisions, strong school options, and a mix of home styles from entry-level to executive.",
+    contentHtml: `
+      <p>Bloomingdale is one of the largest planned residential communities in the <a href="/brandon-fl-homes-for-sale/">Brandon</a> area, with development that began in 1979 and expanded rapidly through the 1980s. The community encompasses more than 32 individual subdivisions and approximately 5,200 homes, making it one of the most populous neighborhoods in all of Hillsborough County. If you've spent any time house-hunting in the Brandon area, you've almost certainly looked at homes here.</p>
+      <p>Home styles range from smaller ranch homes and split-levels to larger two-story colonials and custom homes near the Bloomingdale Golfers Club. Most homes were built between 1980 and 1999, so you'll see mature landscaping, established trees, and lot sizes that are larger than what newer construction in the area offers. Prices run from the low $400,000s for entry-level homes to $1M+ for larger homes in premium sections. The neighborhood median is in the $550,000-$600,000 range.</p>
+      <p>Schools are one of Bloomingdale's strongest selling points. Bloomingdale High School is right inside the community and is considered one of the better high schools in Hillsborough County. Alafia Elementary has earned an A rating for multiple consecutive years, and Cimino Elementary also holds an A rating. Burns Middle School serves the area. For families where school quality drives the search, Bloomingdale consistently delivers.</p>
+      <p>HOA fees vary by subdivision and range from as low as $8 per month to $250 per month depending on which of the 32+ sections you're in. Some sections have more extensive common areas and amenities, which drives the higher end. A few sections have no HOA at all. Always confirm which HOA applies to a specific address before you go under contract.</p>
+      <p>The Bloomingdale Golfers Club is a semi-private course that adds a lifestyle amenity for residents who golf, and the surrounding homes carry a modest premium for the fairway views and course proximity. The club is open to the public for daily fee rounds, so membership is not required to play.</p>
+      <p>For commuters, Bloomingdale Avenue provides direct access to the Selmon Expressway, cutting the drive to downtown Tampa to 25-35 minutes on most days. Shopping and dining are concentrated along Bloomingdale Avenue and Bell Shoals Road within a few minutes of most homes in the community.</p>
+
+      <h3>Frequently Asked Questions About Bloomingdale</h3>
+      <h4>How much do homes cost in Bloomingdale Brandon FL?</h4>
+      <p>Homes in Bloomingdale range from the low $400,000s for smaller or original-condition homes to over $1M in premium sections near the golf club. The neighborhood median is approximately $550,000-$600,000 based on recent sales. Larger homes with updated kitchens and baths on bigger lots push toward $700,000-$900,000.</p>
+      <h4>What schools serve Bloomingdale?</h4>
+      <p>Bloomingdale is served by Bloomingdale High School, Burns Middle School, and either Alafia Elementary or Cimino Elementary depending on exact address. Both elementary schools carry A ratings from the Florida Department of Education. School zoning can vary within the community, so confirm the assignment for any specific address at the Hillsborough County Schools website.</p>
+      <h4>Is Bloomingdale a good neighborhood to buy in 2026?</h4>
+      <p>Bloomingdale offers a combination of established community character, strong schools, and a range of home options that is difficult to match at comparable prices in the Brandon area. The community's size means inventory is generally available, which gives buyers negotiating room that smaller neighborhoods don't offer. It is one of the consistently strong performers in the eastern Hillsborough resale market.</p>
+    `,
+  },
+
+  "arbor-oaks": {
+    summary:
+      "Established Brandon subdivision with mature trees, sidewalks, and a family-friendly layout along the SR-60 corridor, offering good value for buyers looking for a settled neighborhood close to Brandon's main services.",
+    contentHtml: `
+      <p>Arbor Oaks is a well-established Brandon subdivision that lives up to its name with mature tree cover and landscaped common areas throughout. Most homes were built in the 1980s and early 1990s, giving the neighborhood an established look that newer planned communities lack. Streets are lined with sidewalks and trees, and the overall layout is walkable by Brandon standards.</p>
+      <p>Homes here are predominantly 3 and 4 bedroom single-family homes ranging from about 1,500 to 2,500 square feet. Prices typically run in the $350,000-$500,000 range, making Arbor Oaks one of the more accessible Brandon neighborhoods for first-time buyers and families looking for move-up space without a luxury price tag. Original-condition homes at the lower end of the range offer renovation opportunity.</p>
+      <p>The location along the SR-60 corridor is convenient for getting around Brandon. Shopping at Brandon Town Center, medical facilities, and restaurants are all within a short drive. The Selmon Expressway is accessible without a significant detour, making the commute to Tampa manageable from this part of Brandon.</p>
+      <p>School zoning for Arbor Oaks typically falls within the Brandon High School district, with middle and elementary school assignments depending on exact address. Confirm current zoning at the Hillsborough County Schools website for any specific home you're considering.</p>
+      <p>HOA fees in Arbor Oaks are modest, covering common area maintenance. This keeps ongoing ownership costs reasonable compared to communities with pools and more extensive amenities. If you want a solid, established Brandon neighborhood without high HOA fees, Arbor Oaks is worth including in your search.</p>
+
+      <h3>Frequently Asked Questions About Arbor Oaks Brandon FL</h3>
+      <h4>What are home prices in Arbor Oaks Brandon FL?</h4>
+      <p>Homes in Arbor Oaks typically sell in the $350,000-$500,000 range. Smaller homes needing updates sell toward the lower end. Larger, renovated homes with updated kitchens and updated roofs sell toward the higher end. The price range makes Arbor Oaks accessible for first-time buyers and mid-market move-up buyers alike.</p>
+      <h4>Does Arbor Oaks Brandon have an HOA?</h4>
+      <p>Yes, Arbor Oaks has an HOA with fees that cover common area maintenance. Fees are modest compared to communities with pools or extensive amenities. Confirm the current fee and any rules with the listing agent or HOA management company before going under contract.</p>
+    `,
+  },
+
+  "alafia-estates": {
+    summary:
+      "Larger-lot Brandon neighborhood near the Alafia River with a mix of newer and established homes, no HOA in most sections, and convenient access to both Brandon's amenities and the quieter eastern Hillsborough County communities.",
+    contentHtml: `
+      <p>Alafia Estates is a Brandon-area neighborhood positioned near the Alafia River corridor, offering a mix of home sizes and lot configurations that appeals to buyers who want more space than a standard subdivision without giving up proximity to Brandon's services. The area has grown over several decades, so you'll find original homes from the 1970s and 1980s alongside newer construction and renovated properties.</p>
+      <p>One of the main draws for many buyers is the absence of an HOA in most sections of Alafia Estates. No HOA means no monthly fees, no committee approvals for renovation projects, and no restrictions on parking a boat or RV. For buyers who value that kind of freedom, this is a meaningful advantage over the typical Brandon subdivision experience.</p>
+      <p>Lot sizes tend to be larger than in standard Brandon subdivisions, with many parcels running a quarter acre or more. This gives homes breathing room and yard space that is increasingly rare in newer developments. Some sections have direct or near-direct access to the Alafia River, which is popular with anglers and kayakers.</p>
+      <p>Prices in Alafia Estates vary based on home size, condition, and lot characteristics. Expect a range from roughly $320,000 for smaller, original-condition homes to $550,000+ for larger, updated properties on desirable lots. Riverfront or river-access properties command the highest prices.</p>
+      <p>Brandon's SR-60 corridor, shopping, and medical facilities are within easy reach. The commute to Tampa via the Selmon Expressway is comparable to other Brandon-area neighborhoods, typically 25-40 minutes depending on traffic and exact starting point.</p>
+
+      <h3>Frequently Asked Questions About Alafia Estates Brandon FL</h3>
+      <h4>Is there an HOA in Alafia Estates Brandon FL?</h4>
+      <p>Most sections of Alafia Estates do not have an HOA, which is one of the neighborhood's primary selling points. No HOA means no monthly fees and no approval process for exterior changes, boat parking, or other property use decisions. Confirm the HOA status for any specific address before going under contract, as some sections may have deed restrictions even without a formal HOA.</p>
+      <h4>How much do homes cost in Alafia Estates?</h4>
+      <p>Prices range from approximately $320,000 for smaller, original-condition homes to $550,000+ for larger, updated properties on premium lots. River-access or river-view properties command the highest prices. The range makes Alafia Estates accessible across a broad buyer spectrum from first-time buyers to families looking for more space.</p>
+    `,
+  },
+
+  "broadway-centre-townhomes": {
+    summary:
+      "Brandon townhome community offering low-maintenance living near SR-60 with community amenities and more affordable price points than most single-family Brandon neighborhoods.",
+    contentHtml: `
+      <p>Broadway Centre Townhomes is a Brandon townhome community that offers a lower-maintenance alternative to single-family home ownership in the Brandon market. Townhomes here are typically 2-3 bedrooms with attached garages, HOA-maintained exteriors, and community amenities. The community is positioned near SR-60, giving residents quick access to Brandon's restaurants, shopping, and medical facilities.</p>
+      <p>Prices for Broadway Centre units are generally in the $250,000-$380,000 range, making this one of the more accessible entry points into the Brandon ownership market. For buyers who want to own rather than rent but aren't ready for a single-family home's maintenance responsibilities, this type of community is a natural fit.</p>
+      <p>HOA fees cover exterior maintenance, landscaping, and community amenities. The total monthly ownership cost (mortgage plus HOA) is competitive with renting a comparable unit in Brandon, which has historically made communities like Broadway Centre appealing to first-time buyers and investors alike.</p>
+      <p>For school assignments, confirm current zoning at the Hillsborough County Schools website, as townhome communities near SR-60 in Brandon may fall in different school zones depending on exact address. Brandon High School is the typical high school for much of this area.</p>
+
+      <h3>Frequently Asked Questions About Broadway Centre Townhomes</h3>
+      <h4>What are HOA fees at Broadway Centre Townhomes Brandon FL?</h4>
+      <p>HOA fees at Broadway Centre Townhomes cover exterior maintenance and community amenities. Confirm the current fee amount and what it covers with the listing agent or HOA management company. Fees are typically in the range common for Brandon townhome communities but can change, so verify current amounts before making an offer.</p>
+      <h4>Are Broadway Centre Townhomes a good investment for rental income?</h4>
+      <p>Brandon townhomes at lower price points can generate solid rental yields because tenant demand in Brandon is strong and entry prices are more affordable than single-family homes in the same area. Confirm with the HOA whether investor-owned units and rental tenants are permitted, as some townhome communities limit rental percentages. Contact Barrett Henry at (813) 733-7907 for a current rental market assessment and available inventory.</p>
+    `,
+  },
 };
