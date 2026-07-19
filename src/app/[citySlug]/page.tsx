@@ -323,7 +323,7 @@ export async function generateMetadata({
       const ofc = getRemaxOffice(citySlug);
       const cityName = ofc?.city || parsed.officeKey;
       return {
-        title: `REMAX ${cityName} | Barrett Henry, Broker Associate | REMAX Collective`,
+        title: `REMAX ${cityName} | REMAX Collective`,
         description: `Barrett Henry, Broker Associate at REMAX Collective ${cityName}. 23+ years experience. Search homes, get market data. Call (813) 733-7907.`,
         alternates: { canonical },
         openGraph: {
@@ -335,7 +335,7 @@ export async function generateMetadata({
     }
     case "county":
       return {
-        title: `${parsed.countyName} County Homes for Sale | Barrett Henry`,
+        title: `${parsed.countyName} County Homes for Sale`,
         description: `Search homes for sale in ${parsed.countyName} County, FL. Browse cities, listings, and market data. Barrett Henry, REALTOR at REMAX Collective. Call (813) 733-7907.`,
         alternates: { canonical },
         openGraph: {
@@ -348,7 +348,7 @@ export async function generateMetadata({
       };
     case "loan":
       return {
-        title: `${parsed.label} | Barrett Henry, REALTOR®`,
+        title: `${parsed.label}`,
         description: `Learn about ${parsed.loanType.toLowerCase()}s in Florida. Eligibility, benefits, and how to apply. Barrett Henry, REALTOR at REMAX Collective. Call (813) 733-7907.`,
         alternates: { canonical },
         openGraph: {
@@ -361,7 +361,7 @@ export async function generateMetadata({
       };
     case "realtor":
       return {
-        title: `${parsed.city.name} REALTOR® — Barrett Henry | REMAX Collective`,
+        title: `${parsed.city.name} REALTOR® | REMAX Collective`,
         description: `Looking for a trusted REALTOR in ${parsed.city.name}, FL? Barrett Henry has 23+ years of real estate experience. REMAX Collective. Call (813) 733-7907.`,
         alternates: { canonical },
         openGraph: {
@@ -429,7 +429,7 @@ export async function generateMetadata({
       const nrCity = getCityBySlug(parsed.city);
       const nrCityName = nrCity ? nrCity.name : "Tampa Bay";
       return {
-        title: `${parsed.name} REALTOR® — Barrett Henry | ${nrCityName}, FL`,
+        title: `${parsed.name} REALTOR® | ${nrCityName}, FL`,
         description: `Looking for a trusted REALTOR in ${parsed.name}, ${nrCityName}? Barrett Henry has 23+ years of real estate experience. REMAX Collective. Call (813) 733-7907.`,
         alternates: { canonical },
         openGraph: {
@@ -443,7 +443,7 @@ export async function generateMetadata({
     }
     case "comparison":
       return {
-        title: `${parsed.comparison.title} | Barrett Henry, REALTOR®`,
+        title: `${parsed.comparison.title}`,
         description: parsed.comparison.excerpt,
         alternates: { canonical },
         openGraph: {
@@ -456,7 +456,7 @@ export async function generateMetadata({
       };
     case "regional":
       return {
-        title: `${parsed.page.title} | Barrett Henry, REALTOR®`,
+        title: `${parsed.page.title}`,
         description: parsed.page.excerpt,
         alternates: { canonical },
         openGraph: {
@@ -469,7 +469,7 @@ export async function generateMetadata({
       };
     case "misc":
       return {
-        title: `${parsed.page.title} | Barrett Henry, REALTOR®`,
+        title: `${parsed.page.title}`,
         description: parsed.page.excerpt,
         alternates: { canonical },
         openGraph: {
@@ -482,7 +482,7 @@ export async function generateMetadata({
       };
     case "guide":
       return {
-        title: `${parsed.guide.title} | Barrett Henry, REALTOR®`,
+        title: `${parsed.guide.title}`,
         description: parsed.guide.excerpt,
         alternates: { canonical },
         openGraph: {
@@ -505,7 +505,7 @@ export async function generateMetadata({
     // Home valuation spoke pages get custom metadata
     if (topic.slug === "home-valuation") {
       return {
-        title: `Free Home Valuation in ${city.name} FL | Barrett Henry`,
+        title: `Free Home Valuation in ${city.name}, FL`,
         description: `Find out what your ${city.name} home is worth. Get a free Comparative Market Analysis from Barrett Henry, Broker Associate at REMAX Collective. Call (813) 733-7907.`,
         alternates: { canonical },
         robots: { index: true, follow: true },
@@ -521,7 +521,7 @@ export async function generateMetadata({
 
     // Spoke page metadata
     return {
-      title: `${topic.label} in ${city.name}, FL | Barrett Henry, REALTOR®`,
+      title: `${topic.label} in ${city.name}, FL`,
       description: `Browse ${topic.label.toLowerCase()} in ${city.name}, FL. Updated daily from Stellar MLS. Barrett Henry, REMAX Collective. Call (813) 733-7907.`,
       alternates: { canonical },
       openGraph: {
@@ -1075,6 +1075,26 @@ async function HubPage({ city }: { city: CityData }) {
           </div>
         </section>
       )}
+
+      {/* === ViVi PM callout — rental property management === */}
+      <section className="container-wide py-8">
+        <div className="rounded-xl border border-gray-200 bg-gray-50 p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div>
+            <p className="font-heading font-bold text-lg md:text-xl text-primary mb-1">
+              Own rental property in {city.name}?
+            </p>
+            <p className="font-body text-muted text-sm">
+              Let ViVi PM handle the management. Tenant screening, maintenance, rent collection, and more.
+            </p>
+          </div>
+          <Link
+            href="/property-management/"
+            className="inline-flex items-center gap-2 bg-primary text-white font-semibold px-6 py-3 rounded text-sm hover:bg-primary/90 transition-colors flex-shrink-0"
+          >
+            Learn About ViVi PM
+          </Link>
+        </div>
+      </section>
 
       {/* === CTA bar (matches spoke pattern) === */}
       <section className="bg-primary py-12">

@@ -49,22 +49,28 @@ export default function SpokeNav({ city, currentTopic }: SpokeNavProps) {
         })}
       </div>
 
-      {/* Seller + resource links */}
+      {/* Seller, valuation, and resource links */}
       <h3 className="font-heading font-bold text-lg text-primary mt-10 mb-4">
-        Selling in {city.name}?
+        More {city.name} Resources
       </h3>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         <Link
-          href={`/blog/sell-home-fast-${city.slug}/`}
+          href={`/sell-your-home-${city.slug}/`}
           className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary hover:border-accent hover:bg-accent/10 transition-colors"
         >
-          Sell My {city.name} House Fast
+          Sell Your {city.name} Home
+        </Link>
+        <Link
+          href={`/${city.slug}-home-valuation/`}
+          className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary hover:border-accent hover:bg-accent/10 transition-colors"
+        >
+          Free {city.name} Home Valuation
         </Link>
         <Link
           href={`/${city.slug}-realtor/`}
           className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary hover:border-accent hover:bg-accent/10 transition-colors"
         >
-          Best {city.name} Realtor
+          {city.name} REALTOR
         </Link>
         <Link
           href={`/${city.slug}-housing-market/`}
@@ -73,10 +79,28 @@ export default function SpokeNav({ city, currentTopic }: SpokeNavProps) {
           {city.name} Housing Market
         </Link>
         <Link
-          href="/sell-your-home/"
+          href={`/${city.slug}-neighborhood-guide/`}
           className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary hover:border-accent hover:bg-accent/10 transition-colors"
         >
-          Free Home Valuation
+          {city.name} Neighborhood Guide
+        </Link>
+        <Link
+          href={`/${city.slug}-rentals/`}
+          className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary hover:border-accent hover:bg-accent/10 transition-colors"
+        >
+          {city.name} Rentals
+        </Link>
+        <Link
+          href="/property-management/"
+          className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary hover:border-accent hover:bg-accent/10 transition-colors"
+        >
+          Property Management
+        </Link>
+        <Link
+          href={`/blog/sell-home-fast-${city.slug}/`}
+          className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary hover:border-accent hover:bg-accent/10 transition-colors"
+        >
+          Sell My {city.name} House Fast
         </Link>
       </div>
     </section>
