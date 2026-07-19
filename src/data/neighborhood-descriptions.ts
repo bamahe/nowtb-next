@@ -879,4 +879,117 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>HOA status varies by section within Alafia River Estates. Some sections have no HOA and no deed restrictions, which is a primary draw for buyers who want to park a boat, RV, or trailer on the property without approval. Other sections may have minimal deed restrictions or a voluntary community association. Confirm the HOA or deed restriction status for any specific address before going under contract. Barrett Henry can help you verify this and evaluate the implications during due diligence.</p>
     `,
   },
+
+  // ===== RIVERVIEW (Batch 4 additions) =====
+
+  "rivercrest": {
+    summary:
+      "Established Riverview community off US-301 with resort-style amenities, single-family homes in the $320K-$520K range, and access to Riverview's expanding retail corridor.",
+    contentHtml: `
+      <p>Rivercrest is an established Riverview community developed primarily in the mid-2000s, positioned along the US-301 corridor that forms the commercial and residential spine of eastern Riverview. The community features single-family homes on maintained lots with a resort-style amenity center that includes a pool, playground, and walking paths, making it a consistent choice for families and commuters who want established infrastructure without the price premiums of newer master-planned developments.</p>
+
+      <h2>Homes and Prices</h2>
+      <p>Rivercrest homes offer a range of floor plans built primarily in the 2004-2010 era. Typical homes run 3 to 5 bedrooms with 1,600 to 3,200 square feet of living area. Single-story and two-story configurations are both common. Prices in Rivercrest generally range from the low $320,000s for smaller or original-condition homes to the low-to-mid $500,000s for larger, updated properties. The mid-2000s construction era means buyers should plan on standard updates over time for roofs, HVAC, and water heaters as they age through their useful life.</p>
+
+      <h2>Location and Commute</h2>
+      <p>Rivercrest's US-301 positioning makes it one of the easier Riverview communities for commuters. I-75 is accessible to the north via Big Bend Road or Gibsonton Drive, connecting residents to downtown Tampa (30-40 minutes) or the Selmon Expressway. US-301 itself provides a direct route north through Gibsonton and Riverview to Brandon's commercial infrastructure. Grocery stores, restaurants, urgent care, and retail have expanded significantly in Riverview over the past decade, reducing the need to travel to Brandon for daily errands.</p>
+
+      <h2>Community Amenities and HOA</h2>
+      <p>Rivercrest is an HOA community. The amenity center includes a resort-style pool, which is a significant value-add for Florida families. HOA fees should be confirmed through the current listing or HOA management company. Florida law requires sellers to provide HOA documents (declaration, bylaws, current financials) during the inspection period. Review these carefully, particularly the reserve fund status, which indicates whether the community is financially prepared for future infrastructure maintenance.</p>
+
+      <h2>Schools</h2>
+      <p>Rivercrest is served by Hillsborough County Public Schools. School assignments for this area typically include schools in the Riverview and Gibsonton zones, but assignments vary by specific address. Verify current school zoning at the Hillsborough County Schools website before purchasing if school assignment is a deciding factor.</p>
+
+      <h3>Frequently Asked Questions About Rivercrest Riverview FL</h3>
+      <h3>What are home prices in Rivercrest Riverview?</h3>
+      <p>Rivercrest home prices generally range from the low $320,000s to the low $500,000s. Smaller or original-condition homes from the mid-2000s sit at the lower end; larger floor plans or recently updated homes reach the upper end of that range. Contact Barrett Henry at (813) 733-7907 for current active listings and a free comparative market analysis specific to Rivercrest.</p>
+      <h3>Does Rivercrest Riverview have a pool?</h3>
+      <p>Yes. Rivercrest has a community amenity center with a resort-style pool available to residents. HOA fees fund maintenance of the pool and common areas. Fee amounts and amenity details should be confirmed with the current listing or the HOA management company, as they can change from year to year.</p>
+    `,
+  },
+
+  "boyette-springs": {
+    summary:
+      "Established Riverview subdivision along Boyette Road with mature landscaping, single-family homes in the $300K-$480K range, and access to Newsome High School's A-rated zone.",
+    contentHtml: `
+      <p>Boyette Springs is an established Riverview subdivision developed primarily in the late 1990s through the mid-2000s along the Boyette Road corridor. The neighborhood occupies a transitional zone between Brandon to the north and Riverview to the south, giving it access to both areas' commercial and school infrastructure. Mature landscaping and established lot character distinguish it from the newer, denser subdivisions that have been built further south and east in Riverview over the past decade.</p>
+
+      <h2>Homes and Prices</h2>
+      <p>Boyette Springs features single-family homes built across several phases with a mix of 3 and 4 bedroom floor plans. Home sizes typically range from about 1,400 to 2,600 square feet. The mix of construction eras means buyers will find homes at various stages of original finishes versus renovation. Prices generally run from the upper $290,000s to the upper $400,000s for standard homes, with larger or recently updated properties occasionally reaching the low $500,000s. Lot sizes vary but are typical of established suburban Hillsborough County development, generally larger than what more recent high-density projects offer.</p>
+
+      <h2>Location and Commute</h2>
+      <p>Boyette Road connects Boyette Springs to Bell Shoals Road and US-301, which are the primary north-south arteries serving this part of Hillsborough County. Commuters to Tampa typically use I-75 via Big Bend Road or head north on Bell Shoals to access the Selmon Expressway at Brandon. Downtown Tampa is generally a 30-45 minute drive under typical morning traffic conditions. Brandon's full commercial corridor, including Westfield Brandon Mall, Publix, Target, and Brandon Regional Hospital, is approximately 10-15 minutes north.</p>
+
+      <h2>Schools</h2>
+      <p>Boyette Springs falls within the Hillsborough County school zone that often feeds into Newsome High School, which holds A-rated status and is one of the more sought-after high school assignments in eastern Hillsborough County. Elementary and middle school assignments vary by specific address within the neighborhood and can change when the district redraws boundaries. Always verify current assignments at the Hillsborough County Schools website for any specific address before purchasing.</p>
+
+      <h2>HOA and Community Character</h2>
+      <p>HOA status and fees vary by section within Boyette Springs. Some sections have no HOA; others have voluntary or mandatory associations with modest fees. The neighborhood's established character means deed restrictions (if any) are generally less strict than newer planned communities. Verify HOA status for any specific address before making an offer.</p>
+
+      <h3>Frequently Asked Questions About Boyette Springs Riverview FL</h3>
+      <h3>What school district is Boyette Springs in?</h3>
+      <p>Boyette Springs is in Hillsborough County Public Schools. The area is associated with the Newsome High School zone, which is A-rated, though elementary and middle school assignments vary by specific address. Verify current zoning at the Hillsborough County Schools website before purchasing if school assignment matters to your decision.</p>
+      <h3>How much are homes in Boyette Springs Riverview?</h3>
+      <p>Home prices in Boyette Springs typically range from the upper $290,000s to the upper $400,000s, with larger or updated homes occasionally reaching the low $500,000s. The specific price depends heavily on the home's size, age of updates, and lot position. Call Barrett Henry at (813) 733-7907 for a current market analysis.</p>
+    `,
+  },
+
+  "lake-st-charles": {
+    summary:
+      "Riverview community built around Lake St. Charles, featuring resort amenities, single-family homes in the $320K-$550K range, and a lakeside setting that sets it apart from standard suburban Riverview subdivisions.",
+    contentHtml: `
+      <p>Lake St. Charles is a Riverview community centered on an eponymous lake in the US-301 corridor. The community developed through the 2000s and features a resort-style amenity center alongside the lake setting, which provides a visual identity that distinguishes it from the larger mass of undifferentiated suburban subdivisions that characterize much of modern Riverview. For buyers who want a water-adjacent neighborhood feel without paying waterfront home premiums, Lake St. Charles offers a middle ground.</p>
+
+      <h2>The Lake and Amenities</h2>
+      <p>Lake St. Charles anchors the community's identity. The amenity center near the lake includes a pool, tennis courts, a playground, and picnic areas accessible to residents through their HOA membership. The lake itself is visible from some home sites and from community common areas. Buyers specifically seeking lakefront lots should confirm with the listing agent which homes have direct water frontage versus community lake access only, as that distinction has a meaningful effect on price.</p>
+
+      <h2>Homes and Prices</h2>
+      <p>Homes in Lake St. Charles were built predominantly between 2000 and 2012, with a mix of 3, 4, and 5 bedroom configurations ranging from approximately 1,600 to 3,500 square feet. Standard non-lakefront homes typically sell in the $320,000 to $480,000 range. Lakefront homes or larger floor plans with premium lot positions can reach $500,000 to $550,000 or beyond depending on condition, water frontage, and recent updates. Roofs, HVAC, and plumbing in this era of construction should be evaluated carefully during any inspection period.</p>
+
+      <h2>Location and Commute</h2>
+      <p>Lake St. Charles sits near the US-301 corridor in Riverview. I-75 is accessible via Big Bend Road or Gibsonton Drive, connecting residents to downtown Tampa in approximately 30-40 minutes under normal traffic. The Selmon Expressway can be reached by heading north through Brandon. Riverview's US-301 corridor has expanded with grocery stores, restaurants, medical offices, and retail, reducing the need to drive to Brandon for most daily needs.</p>
+
+      <h2>HOA and Community</h2>
+      <p>Lake St. Charles is an HOA community. Monthly or quarterly fees fund the amenity center, pool, and common area maintenance. Confirm current fee amounts and community rules with the listing agent or HOA management company. Florida law requires sellers to provide full HOA documents during the inspection period, including the declaration, bylaws, and current financials. The reserve fund status in those financials tells you whether the community has adequately planned for future infrastructure costs.</p>
+
+      <h2>Schools</h2>
+      <p>Lake St. Charles is served by Hillsborough County Public Schools. Specific school assignments depend on the address within the community. Verify current school zoning at the Hillsborough County Schools website for any property you are considering, as boundaries in this part of Riverview have changed as new schools have been added to accommodate growth.</p>
+
+      <h3>Frequently Asked Questions About Lake St. Charles Riverview FL</h3>
+      <h3>Are there lakefront homes in Lake St. Charles Riverview FL?</h3>
+      <p>Yes, some homes in Lake St. Charles have direct frontage on the lake, while others have community access to lake views and amenities without private lakefront. Lakefront lots command a premium. Confirm whether a specific home has direct water frontage or community-only lake access before making an offer. Barrett Henry at (813) 733-7907 can help identify current lakefront listings and compare pricing between lakefront and non-lakefront options in the community.</p>
+      <h3>What amenities does Lake St. Charles have?</h3>
+      <p>Lake St. Charles has a community amenity center with a pool, tennis courts, playground, and picnic areas alongside the lake. Amenities are available to residents through HOA membership. Specific facilities and fee amounts should be confirmed with the current HOA management company, as these can change over time.</p>
+    `,
+  },
+
+  // ===== LITHIA (Batch 4 additions) =====
+
+  "fishhawk-ranch-west": {
+    summary:
+      "Newer Lithia community adjacent to FishHawk Ranch, offering access to shared amenities, A-rated schools, and homes generally in the $380K-$700K range built from the 2010s onward.",
+    contentHtml: `
+      <p>FishHawk Ranch West is the western expansion of the FishHawk development in Lithia, built primarily from the early 2010s through the present. It shares some amenity access with the original FishHawk Ranch to the east while offering newer construction and somewhat different home styles and price points. For buyers drawn to the FishHawk area's A-rated schools and master-planned community character but priced out of the older, more established original sections, FishHawk Ranch West provides an entry point into the broader FishHawk ecosystem.</p>
+
+      <h2>Development and Home Styles</h2>
+      <p>Homes in FishHawk Ranch West were built by a range of national and regional builders. The community includes a variety of floor plans, from entry-level 3-bedroom homes in the high $300,000s to larger 4 and 5 bedroom homes exceeding 3,000 square feet. Construction quality varies by builder and phase. Buyers who are comparing FishHawk Ranch West to the original FishHawk Ranch should expect newer construction on the west side, though the original community's mature tree canopy and established landscaping are part of what gives the older sections their distinctive feel.</p>
+      <p>Prices in FishHawk Ranch West generally range from the upper $380,000s for smaller entry-level homes to the upper $600,000s or low $700,000s for larger or higher-spec properties. Custom or fully upgraded homes can exceed this range. New construction opportunities exist in some phases, though many sections are now largely built out.</p>
+
+      <h2>Amenities and the FishHawk Connection</h2>
+      <p>FishHawk Ranch West residents typically have access to some combination of the community's own amenity centers and portions of the FishHawk Ranch amenity network. FishHawk's amenity system is one of the most comprehensive in eastern Hillsborough County, including multiple resort pools, fitness centers, outdoor basketball and tennis courts, miles of trails, and a community park system with nearly 25 miles of connected paths. The exact amenity access for FishHawk Ranch West residents versus FishHawk Ranch residents depends on HOA structure and should be confirmed at the time of purchase.</p>
+
+      <h2>Schools</h2>
+      <p>The school system is a primary driver of demand throughout the FishHawk area. FishHawk Ranch West is served by Hillsborough County Public Schools. The area is associated with FishHawk Creek Elementary (A-rated), which feeds into Randall Middle School and Newsome High School, one of the top-rated high schools in Hillsborough County. School assignments should always be verified by specific address at the Hillsborough County Schools website, as boundaries can shift as new schools are built.</p>
+
+      <h2>Location and Commute</h2>
+      <p>FishHawk Ranch West is accessible via FishHawk Boulevard and Fishhawk Crossing Boulevard in Lithia, southeast of Brandon. I-75 access via Gibsonton Drive or Big Bend Road connects residents to downtown Tampa (approximately 35-50 minutes) and the broader Tampa metro. Brandon's commercial corridor is generally 15-25 minutes north, providing access to Westfield Brandon Mall, multiple grocery chains, Brandon Regional Hospital, and the full range of retail services the area offers.</p>
+
+      <h3>Frequently Asked Questions About FishHawk Ranch West Lithia FL</h3>
+      <h3>How does FishHawk Ranch West compare to FishHawk Ranch?</h3>
+      <p>FishHawk Ranch West is the newer western expansion of the FishHawk development, built primarily from the early 2010s onward. Homes are generally newer construction, which some buyers prefer. The original FishHawk Ranch has more mature landscaping and an established neighborhood feel built up over 20+ years. Prices overlap, though the original sections with the most established character and larger lots can command premiums. Both areas share access to the A-rated school cluster (FishHawk Creek Elementary, Randall Middle, Newsome High). Barrett Henry at (813) 733-7907 can help you compare active listings in both communities.</p>
+      <h3>What schools serve FishHawk Ranch West?</h3>
+      <p>FishHawk Ranch West is generally served by FishHawk Creek Elementary (A-rated), Randall Middle School, and Newsome High School (A-rated), though school assignments vary by specific address. Always verify current zoning at the Hillsborough County Schools website before purchasing, as boundaries can change as the district adjusts for growth in eastern Hillsborough County.</p>
+    `,
+  },
+
 };

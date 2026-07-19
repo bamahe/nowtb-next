@@ -4,6 +4,39 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-07-19 (Batch 4 — Valrico topic pages, Tampa condos/villas/ADUs, Riverview and Lithia neighborhoods)
+
+**Pages improved: 10**
+
+### Blog Posts (6)
+
+1. **valrico-fl-daycare-preschools** — Full content replacement. Added VPK free pre-K explainer (Florida state program, 4-year-olds), licensed center types (KinderCare, Learning Experience, Primrose, Bright Horizons), home daycares (Family Child Care Homes licensed by DCF), Head Start, School Readiness subsidies, evaluation checklist (DCF license number, staff ratios, curriculum, outdoor play, inspection history), how to search myflfamilies.com, elchc.org for subsidized care; fixed em dashes and 23+years CTA; 5-Q&A FAQ with JSON-LD schema. Content grew from 4,157 to 11,617 chars.
+
+2. **valrico-fl-churches-worship** — Full content replacement. Added faith tradition breakdown (Baptist, non-denominational/evangelical, Catholic via St. Joseph's in Brandon under Diocese of St. Petersburg, Methodist/Presbyterian/mainline, Hispanic/multicultural Pentecostal along SR-60/US-301, other faiths noting Jewish/Muslim/Hindu options 20-40 min in Tampa metro); fixed em dashes and 23+years CTA; 5-Q&A FAQ with JSON-LD schema. Content grew from 4,161 to 10,654 chars.
+
+3. **valrico-fl-pet-friendly** — Full content replacement. Added dog parks (Bloomingdale Dog Park, Brandon Dog Park, Lithia Springs Conservation Park), vet options (Bloomingdale Animal Hospital, Brandon area practices, emergency vet note), pet stores (PetSmart Brandon, Pet Supermarket, independent groomers), outdoor activities (Alafia River State Park leashed hiking, Balm Boyette Scrub, neighborhood sidewalks), HOA pet policy considerations (number limits, breed/weight restrictions, fenced yards), Florida basics (county licensing, heartworm year-round); fixed em dashes and 23+years CTA; 5-Q&A FAQ with JSON-LD schema. Content grew from 4,168 to 11,701 chars.
+
+4. **tampa-condos-ev-charging** — Added EV charging level explainer (Level 1 inadequate, Level 2 minimum for residential EV, DC Fast Charging not in condos); what to ask before buying section (shared vs. dedicated circuits, who pays electricity, Florida Statute 718.113(9) protecting owners' right to install EVSE, NACS vs. J1772 connectors, building electrical capacity); where to find (Water Street Tampa best post-2020, Channelside/Harbour Island varies by age, Downtown towers correlate with age, Westshore Marina District); Florida EV landscape context; fixed CTA box; 5-Q&A FAQ with JSON-LD schema. Content grew from 3,619 to 12,963 chars.
+
+5. **tampa-villa-homes** — Added villa type breakdown (attached villas, detached villas, courtyard villas); where to find with price ranges (Sun City Center 55+ $200K-$380K with $400-$700+/mo fees; Bloomingdale/Valrico $280K-$420K HOA $200-$450/mo; Wesley Chapel $340K-$520K; Riverview/Apollo Beach $300K-$480K; New Tampa/Carrollwood $280K-$450K); what to know (HOA coverage review, reserve study, condo vs. HOA legal structure for insurance, age restrictions 80% rule); fixed CTA box; 5-Q&A FAQ with JSON-LD schema. Content grew from 3,642 to 13,560 chars.
+
+6. **tampa-homes-with-guest-house** — Added ADU/guest house type breakdown (detached ADU, attached in-law suite, garage apartment, pool house conversion); Florida HB 1339 (2023) statewide ADU preemption explainer (no owner-occupancy requirement, limited impact fees for under 750 sqft); where to find (South Tampa largest concentration $80K-$200K+ premium, $1,400-$2,200/mo rental; Valrico/Lithia acreage $550K-$1.2M+; Plant City/Dover rural $350K-$700K; Thonotosassa); rental income context ($1,200-$2,000/month 1BR ADU, short-term rental considerations); financing section (FHA 203k, HomeStyle renovation loans, ADU income for loan qualification); fixed CTA box and em dash; 5-Q&A FAQ with JSON-LD schema. Content grew from 3,705 to 14,549 chars.
+
+### Neighborhood Descriptions (4)
+
+7. **rivercrest** (Riverview) — New description covering mid-2000s construction, resort-style pool and amenity center, US-301 corridor location, $320K-$520K price range, HOA community, I-75/Selmon Expressway commute context.
+
+8. **boyette-springs** (Riverview) — New description covering late 1990s through mid-2000s development along Boyette Road, mature landscaping, $300K-$480K range, Newsome High School A-rated zone, HOA varies by section.
+
+9. **lake-st-charles** (Riverview) — New description covering lake-centered community, resort amenity center (pool, tennis), $320K-$550K range with lakefront premium, HOA community, 2000-2012 construction era.
+
+10. **fishhawk-ranch-west** (Lithia) — New description covering newer FishHawk western expansion (2010s onward), $380K-$700K range, access to FishHawk amenity network (pools, 25 miles of trails), A-rated school cluster (FishHawk Creek Elementary, Randall Middle, Newsome High), 2-Q&A FAQ.
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `src/data/neighborhood-descriptions.ts`, `AUDIT-LOG.md`
+
+---
+
 ## 2026-07-19 (Batch 3 — Tampa home styles and East Hillsborough content)
 
 **Pages improved: 10**
