@@ -58,7 +58,10 @@ const nextConfig = {
   trailingSlash: true,
 
   async redirects() {
-    const blogRedirects = getBlogRedirects();
+    // Blog redirects removed — the [citySlug] catch-all route handles
+    // blog post slugs at runtime and returns 308 redirects to /blog/{slug}/.
+    // This keeps us under Vercel's 2048 route limit.
+    const guideRedirects = getGuideRedirects();
 
     return [
       // ── Manual redirects (all destinations end with / for trailingSlash: true) ──
