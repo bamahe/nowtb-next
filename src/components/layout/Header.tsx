@@ -152,6 +152,7 @@ const LIGHT_BG_PATTERNS = ["/properties/"];
 export default function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // Which dropdown is currently open (by index), or null if none
@@ -231,7 +232,7 @@ export default function Header() {
       <nav
         className={`
           transition-all duration-500 ease-in-out
-          ${scrolled || hasLightBg
+          ${scrolled || hasLightBg || mobileMenuOpen
             ? "bg-primary shadow-[0_1px_0_rgba(0,0,0,0.2)]"
             : "bg-primary/80 backdrop-blur-sm"
           }
@@ -349,7 +350,7 @@ export default function Header() {
           </div>
 
           {/* ── Mobile hamburger toggle ── */}
-          <MobileNav scrolled={useDarkText} />
+          <MobileNav scrolled={useDarkText} onOpenChange={setMobileMenuOpen} />
         </div>
       </nav>
 

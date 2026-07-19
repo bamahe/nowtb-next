@@ -27,9 +27,11 @@ const NAV_LINKS = [
 interface MobileNavProps {
   /** Whether the header is in scrolled (solid bg) state — controls icon color */
   scrolled?: boolean;
+  /** Notify parent when mobile menu opens/closes */
+  onOpenChange?: (open: boolean) => void;
 }
 
-export default function MobileNav({ scrolled = false }: MobileNavProps) {
+export default function MobileNav({ scrolled = false, onOpenChange }: MobileNavProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const pathname = usePathname();
@@ -47,6 +49,11 @@ export default function MobileNav({ scrolled = false }: MobileNavProps) {
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
+
+  // Notify parent when menu opens/closes
+  useEffect(() => {
+    onOpenChange?.(isOpen);
+  }, [isOpen, onOpenChange]);
 
   // Lock body scroll when menu is open to prevent background scrolling
   useEffect(() => {
