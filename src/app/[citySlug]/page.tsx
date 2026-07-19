@@ -19,6 +19,7 @@ import HeroSection from "@/components/ui/HeroSection";
 import ListingGrid from "@/components/ui/ListingGrid";
 import ClientListings from "@/components/ui/ClientListings";
 import ClientMarketSnapshot from "@/components/ui/ClientMarketSnapshot";
+import ValuationForm from "@/components/ui/ValuationForm";
 import SpokeNav from "@/components/city/SpokeNav";
 import CityContent from "@/components/city/CityContent";
 import CityResources from "@/components/city/CityResources";
@@ -254,17 +255,10 @@ export async function generateStaticParams() {
     }
   }
 
-  // Blog posts — no API calls
-  const { getAllPosts } = await import("@/lib/posts");
-  for (const post of getAllPosts()) {
-    params.push({ citySlug: post.slug });
-  }
-
-  // Market update pages — static content
-  const { getAllMarketUpdateSlugs } = await import("@/lib/market-updates");
-  for (const muSlug of getAllMarketUpdateSlugs()) {
-    params.push({ citySlug: muSlug });
-  }
+  // Blog posts render on-demand via ISR — they have their own /blog/[slug]/ route.
+  // Pre-rendering 870+ blog slugs here hits the Vercel route limit (2048).
+  // Market updates also render on-demand.
+  // Both are still handled by this route's runtime logic (redirect to /blog/ or render).
 
   return params;
 }
@@ -508,6 +502,23 @@ export async function generateMetadata({
   const topic = parsed.kind === "spoke" ? parsed.topic : null;
 
   if (topic) {
+    // Home valuation spoke pages get custom metadata
+    if (topic.slug === "home-valuation") {
+      return {
+        title: `Free Home Valuation in ${city.name} FL | Barrett Henry`,
+        description: `Find out what your ${city.name} home is worth. Get a free Comparative Market Analysis from Barrett Henry, Broker Associate at REMAX Collective. Call (813) 733-7907.`,
+        alternates: { canonical },
+        robots: { index: true, follow: true },
+        openGraph: {
+          title: `Free Home Valuation in ${city.name}, FL | Barrett Henry`,
+          description: `Get a professional CMA for your ${city.name} property. Barrett Henry, REMAX Collective.`,
+          url: canonical,
+          type: "website",
+          images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+        },
+      };
+    }
+
     // Spoke page metadata
     return {
       title: `${topic.label} in ${city.name}, FL | Barrett Henry, REALTOR®`,
@@ -602,6 +613,8 @@ export default async function CityPage({
       if (page.topic.slug === "neighborhood-guide") {
         return <NeighborhoodGuidePage city={page.city} />;
       }
+      // Home valuation spoke pages — HomeValuationSpokePage not yet built, falls through to SpokePage
+      // TODO: replace SpokePage with HomeValuationSpokePage once component is created
       return <SpokePage city={page.city} topic={page.topic} slug={citySlug} />;
     case "remax-office":
       return <RemaxOfficePage officeKey={page.officeKey} />;
@@ -1268,6 +1281,268 @@ async function SpokePage({
           <div>
             <h2 className="font-heading font-bold text-xl md:text-2xl text-white mb-1">
               Looking for {topic.label.toLowerCase()} in {city.name}?
+            </h2>
+            <p className="font-body text-white/70 text-sm">
+              Barrett Henry, REALTOR® — 23+ years of real estate experience
+            </p>
+          </div>
+          <div className="flex gap-3 flex-shrink-0">
+            <a
+              href="tel:+18137337907"
+              className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 rounded text-sm hover:bg-accent/90 transition-colors"
+            >
+              Call Now
+            </a>
+            <Link
+              href="/contact/"
+              className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
+            >
+              Send a Message
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+// =============================================================================
+// HOME VALUATION SPOKE PAGE — city-specific valuation form + CMA content
+// Renders at /{city}-home-valuation/ for every city in the system
+// =============================================================================
+
+function HomeValuationSpokePage({ city }: { city: CityData }) {
+  return (
+    <>
+      {/* === BreadcrumbList JSON-LD === */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://nowtb.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: `${city.name} Homes for Sale`,
+                item: `https://nowtb.com/${city.slug}`,
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: `Free Home Valuation in ${city.name}`,
+                item: `https://nowtb.com/${city.slug}-home-valuation`,
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* === Compact navy hero === */}
+      <section className="bg-primary pt-36 pb-16">
+        <div className="container-wide">
+          {/* Breadcrumb trail */}
+          <nav className="flex items-center gap-2 text-xs font-body text-white/80 mb-6 tracking-wide uppercase">
+            <Link href="/" className="hover:text-white/80 transition-colors">Home</Link>
+            <span>/</span>
+            <Link href={`/${city.slug}`} className="hover:text-white/80 transition-colors">{city.name}</Link>
+            <span>/</span>
+            <span className="text-accent">Free Home Valuation</span>
+          </nav>
+
+          {/* Title */}
+          <h1 className="heading-display text-display md:text-display-lg text-white mb-3">
+            Free Home Valuation in {city.name}, FL
+          </h1>
+          <p className="font-body text-white/70 text-lg max-w-2xl mb-6">
+            Find out what your {city.name} home is worth with a professional Comparative Market Analysis from Barrett Henry, Broker Associate at REMAX Collective.
+          </p>
+
+          {/* CTA row */}
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="tel:+18137337907"
+              className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 rounded text-sm hover:bg-accent/90 transition-colors"
+            >
+              (813) 733-7907
+            </a>
+            <Link
+              href="/free-home-valuation/"
+              className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
+            >
+              Learn About Our CMA Process
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* === Valuation form section === */}
+      <section className="container-wide py-12">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="font-heading font-bold text-2xl text-primary mb-2 text-center">
+            Request Your Free {city.name} Home Valuation
+          </h2>
+          <p className="font-body text-muted text-sm text-center mb-8">
+            Fill out the details below and Barrett will prepare a personalized CMA for your {city.name} property within 24 hours.
+          </p>
+          <ValuationForm initialCity={city.name} />
+        </div>
+      </section>
+
+      {/* === Why get a professional valuation === */}
+      <section className="bg-gray-50 py-12">
+        <div className="container-wide max-w-3xl">
+          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6">
+            Why Get a Professional Home Valuation in {city.name}?
+          </h2>
+          <div className="space-y-4 font-body text-muted leading-relaxed">
+            <p>
+              Online home value estimates can be off by tens of thousands of dollars because they rely on algorithms that
+              don&apos;t account for your home&apos;s unique features, condition, or the {city.name} micro-market. A professional
+              Comparative Market Analysis (CMA) from a local REALTOR gives you an accurate picture of what buyers in
+              {" "}{city.name} are actually paying right now.
+            </p>
+            <p>
+              Barrett Henry has 23+ years of real estate experience and deep knowledge of {city.county} County
+              neighborhoods. His CMA compares your home to recently sold properties in {city.name} that match your home&apos;s
+              size, condition, and features. This gives you a reliable price range backed by real transaction data from
+              Stellar MLS.
+            </p>
+            <p>
+              Whether you are planning to sell soon or just want to know where you stand, a free home valuation is the
+              smart first step. There is no obligation and no pressure. Just honest numbers from someone who knows the
+              {" "}{city.name} market.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* === What affects home values === */}
+      <section className="container-wide py-12 max-w-3xl">
+        <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6">
+          What Affects Home Values in {city.name}?
+        </h2>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 font-body text-muted">
+          <li className="flex items-start gap-2">
+            <span className="text-accent font-bold mt-0.5">&#8226;</span>
+            <span>Location within {city.name} and proximity to schools, shopping, and major roads</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-accent font-bold mt-0.5">&#8226;</span>
+            <span>School zones and district ratings</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-accent font-bold mt-0.5">&#8226;</span>
+            <span>Lot size and usable outdoor space</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-accent font-bold mt-0.5">&#8226;</span>
+            <span>Kitchen, bathroom, and flooring upgrades</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-accent font-bold mt-0.5">&#8226;</span>
+            <span>Pool, screened lanai, or outdoor kitchen</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-accent font-bold mt-0.5">&#8226;</span>
+            <span>Waterfront or water-view access</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-accent font-bold mt-0.5">&#8226;</span>
+            <span>HOA fees, CDD assessments, and deed restrictions</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-accent font-bold mt-0.5">&#8226;</span>
+            <span>Roof age, HVAC condition, and major systems</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-accent font-bold mt-0.5">&#8226;</span>
+            <span>Current {city.name} market conditions (supply, demand, days on market)</span>
+          </li>
+        </ul>
+      </section>
+
+      {/* === How Barrett's CMA works === */}
+      <section className="bg-gray-50 py-12">
+        <div className="container-wide max-w-3xl">
+          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-8">
+            How Barrett&apos;s CMA Works
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Step 1 */}
+            <div className="text-center">
+              <div className="w-12 h-12 rounded-full bg-primary text-white font-heading font-bold text-xl flex items-center justify-center mx-auto mb-4">
+                1
+              </div>
+              <h3 className="font-heading font-bold text-lg text-primary mb-2">Submit Your Details</h3>
+              <p className="font-body text-muted text-sm">
+                Fill out the form above with your property address, features, and condition. The more details you provide, the more accurate your valuation.
+              </p>
+            </div>
+            {/* Step 2 */}
+            <div className="text-center">
+              <div className="w-12 h-12 rounded-full bg-primary text-white font-heading font-bold text-xl flex items-center justify-center mx-auto mb-4">
+                2
+              </div>
+              <h3 className="font-heading font-bold text-lg text-primary mb-2">Barrett Runs the Numbers</h3>
+              <p className="font-body text-muted text-sm">
+                Barrett analyzes recent sales, active listings, and pending contracts in {city.name} to build a detailed comparison of homes similar to yours.
+              </p>
+            </div>
+            {/* Step 3 */}
+            <div className="text-center">
+              <div className="w-12 h-12 rounded-full bg-primary text-white font-heading font-bold text-xl flex items-center justify-center mx-auto mb-4">
+                3
+              </div>
+              <h3 className="font-heading font-bold text-lg text-primary mb-2">Get Your Report</h3>
+              <p className="font-body text-muted text-sm">
+                Within 24 hours you will receive a professional CMA report with your estimated home value, comparable sales data, and pricing recommendations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* === Internal links === */}
+      <section className="container-wide py-12 max-w-3xl">
+        <div className="flex flex-wrap justify-center gap-4">
+          <Link
+            href={`/${city.slug}/`}
+            className="inline-flex items-center gap-2 border border-gray-200 text-primary font-semibold px-6 py-3 rounded text-sm hover:border-accent hover:bg-accent/10 transition-colors"
+          >
+            {city.name} Homes for Sale
+          </Link>
+          <Link
+            href="/free-home-valuation/"
+            className="inline-flex items-center gap-2 border border-gray-200 text-primary font-semibold px-6 py-3 rounded text-sm hover:border-accent hover:bg-accent/10 transition-colors"
+          >
+            Free Home Valuation
+          </Link>
+          <Link
+            href={`/sell-your-home-${city.slug}/`}
+            className="inline-flex items-center gap-2 border border-gray-200 text-primary font-semibold px-6 py-3 rounded text-sm hover:border-accent hover:bg-accent/10 transition-colors"
+          >
+            Sell Your {city.name} Home
+          </Link>
+        </div>
+      </section>
+
+      {/* === Spoke nav === */}
+      <SpokeNav city={city} currentTopic="home-valuation" />
+
+      {/* === Bottom CTA bar === */}
+      <section className="bg-primary py-12">
+        <div className="container-wide flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h2 className="font-heading font-bold text-xl md:text-2xl text-white mb-1">
+              Thinking about selling in {city.name}?
             </h2>
             <p className="font-body text-white/70 text-sm">
               Barrett Henry, REALTOR® — 23+ years of real estate experience

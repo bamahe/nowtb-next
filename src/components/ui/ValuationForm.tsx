@@ -25,12 +25,17 @@ const labelClasses =
 const sectionHeadingClasses =
   "font-heading text-lg text-primary font-semibold mb-4 pb-2 border-b border-gray-200";
 
-export default function ValuationForm() {
+/** Optional props — initialCity pre-fills the city field on city spoke pages */
+interface ValuationFormProps {
+  initialCity?: string;
+}
+
+export default function ValuationForm({ initialCity }: ValuationFormProps) {
   const router = useRouter();
 
   // --- Property Details ---
   const [address, setAddress] = useState("");
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState(initialCity || "");
   const [zip, setZip] = useState("");
   const [beds, setBeds] = useState("");
   const [baths, setBaths] = useState("");
