@@ -579,7 +579,7 @@ export const hollandVsTonyaAnne: Comparison = {
       defaultWeight: 7,
     },
     {
-      label: 'Lake view and no rear neighbors',
+      label: 'Lake view (both have no rear neighbors)',
       winner: 'b',
       winnerLabel: 'Tonya Anne',
       defaultWeight: 4,
