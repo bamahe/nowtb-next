@@ -17,9 +17,19 @@ export interface CityFAQ {
  * before buying a home here.
  */
 import { BRANDON_FAQS } from "./brandon-content";
+import { BATCH1_FAQS } from "./batch1-faqs";
+import { BATCH2_FAQS } from "./batch2-faqs";
+import { BATCH3_FAQS } from "./batch3-faqs";
+import { BATCH4_FAQS } from "./batch4-faqs";
+import { BATCH5_FAQS } from "./batch5-faqs";
 
 export const CITY_FAQS: Record<string, CityFAQ[]> = {
   ...BRANDON_FAQS,
+  ...BATCH1_FAQS,
+  ...BATCH2_FAQS,
+  ...BATCH3_FAQS,
+  ...BATCH4_FAQS,
+  ...BATCH5_FAQS,
   valrico: [
     {
       question: "What's the difference between ZIP codes 33594 and 33596 in Valrico?",
