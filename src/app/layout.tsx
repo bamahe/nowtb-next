@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     images: ["/og-default.png"],
   },
   alternates: {
-    canonical: "./",
+    canonical: "https://nowtb.com/",
   },
   // robots: index,follow is the default — omitting to avoid redundant meta tag
 };

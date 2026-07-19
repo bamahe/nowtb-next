@@ -233,6 +233,36 @@ export default function CityContent({ city, topic }: CityContentProps) {
             </a>{" "}
             — Professional property management for {city.county} County landlords
           </li>
+          <li>
+            <a href="https://valoantb.com/" className="text-link hover:underline">
+              VA Loan Tampa Bay
+            </a>{" "}
+            — VA home loan guides and eligibility info for veterans
+          </li>
+          <li>
+            <a href="https://tampabaydownpayment.com/" className="text-link hover:underline">
+              Tampa Bay Down Payment Assistance
+            </a>{" "}
+            — Down payment programs and grants for Tampa Bay home buyers
+          </li>
+
+          {/* Valrico-specific cross-links */}
+          {city.slug === "valrico" && (
+            <>
+              <li>
+                <a href="https://valricoagent.com/" className="text-link hover:underline">
+                  Valrico Real Estate Agent
+                </a>{" "}
+                — Barrett Henry, your local Valrico REALTOR&reg;
+              </li>
+              <li>
+                <a href="https://valrico.blog/" className="text-link hover:underline">
+                  Valrico Blog
+                </a>{" "}
+                — Local news, restaurants, events, and neighborhood guides for Valrico
+              </li>
+            </>
+          )}
         </ul>
       </div>
 

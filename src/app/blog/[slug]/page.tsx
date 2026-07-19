@@ -92,6 +92,37 @@ export default async function BlogPostPage({
 
   return (
     <>
+      {/* === JSON-LD: BreadcrumbList structured data === */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://nowtb.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Blog",
+                item: "https://nowtb.com/blog",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: post.title,
+                item: canonicalUrl,
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* === JSON-LD: BlogPosting structured data === */}
       <script
         type="application/ld+json"
@@ -123,6 +154,18 @@ export default async function BlogPostPage({
 
       <section className="bg-primary pt-32 pb-16">
         <div className="container-wide max-w-3xl text-center">
+          {/* Breadcrumb trail — Home > Blog > Post Title */}
+          <nav
+            aria-label="Breadcrumb"
+            className="flex items-center justify-center gap-2 text-xs font-body text-white/80 mb-6 tracking-wide uppercase"
+          >
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/blog/" className="hover:text-white transition-colors">Blog</Link>
+            <span aria-hidden="true">/</span>
+            <span className="text-accent" aria-current="page">{post.title}</span>
+          </nav>
+
           <h1 className="heading-display text-display md:text-display-lg text-white mb-4">
             {post.title}
           </h1>

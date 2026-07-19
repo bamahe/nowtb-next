@@ -12,6 +12,14 @@ import ListingFilters from "@/components/ui/ListingFilters";
 import Link from "next/link";
 import type { Listing } from "@/lib/types";
 
+/** Aggregated market stats computed from listing data */
+export interface MarketStats {
+  activeCount: number;
+  avgDom: number | null;
+  avgPricePerSqft: number | null;
+  medianPrice: number | null;
+}
+
 interface ClientListingsProps {
   /** ZIP codes to search */
   zipCodes: string[];
@@ -27,6 +35,8 @@ interface ClientListingsProps {
   areaName?: string;
   /** Show filter bar (default true for hub/spoke, false for homepage) */
   showFilters?: boolean;
+  /** Callback fired when listings load — passes computed market stats */
+  onStatsReady?: (stats: MarketStats) => void;
 }
 
 export default function ClientListings({
@@ -37,6 +47,7 @@ export default function ClientListings({
   filters = {},
   areaName,
   showFilters = true,
+  onStatsReady,
 }: ClientListingsProps) {
   const [listings, setListings] = useState<Listing[]>([]);
   const [total, setTotal] = useState(0);
@@ -95,6 +106,20 @@ export default function ClientListings({
         setListings(fetchedListings);
         setTotal(data.total || fetchedListings.length);
         setLoading(false);
+
+        // Compute market stats and notify parent if callback provided
+        if (onStatsReady && fetchedListings.length > 0) {
+          const prices = fetchedListings.map((l: Listing) => l.ListPrice).filter((p: number) => p > 0).sort((a: number, b: number) => a - b);
+          const domVals = fetchedListings.filter((l: Listing) => l.DaysOnMarket != null).map((l: Listing) => l.DaysOnMarket as number);
+          const psfVals = fetchedListings.filter((l: Listing) => l.ListPrice > 0 && l.LivingArea && l.LivingArea > 0).map((l: Listing) => Math.round(l.ListPrice / l.LivingArea!));
+          const mid = Math.floor(prices.length / 2);
+          onStatsReady({
+            activeCount: data.total || fetchedListings.length,
+            avgDom: domVals.length > 0 ? Math.round(domVals.reduce((s: number, v: number) => s + v, 0) / domVals.length) : null,
+            avgPricePerSqft: psfVals.length > 0 ? Math.round(psfVals.reduce((s: number, v: number) => s + v, 0) / psfVals.length) : null,
+            medianPrice: prices.length > 0 ? (prices.length % 2 ? prices[mid] : Math.round((prices[mid - 1] + prices[mid]) / 2)) : null,
+          });
+        }
       })
       .catch(() => {
         setError(true);

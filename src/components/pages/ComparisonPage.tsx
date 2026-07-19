@@ -646,7 +646,17 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
             <h2 className="font-heading font-bold text-2xl text-primary mb-6 text-center">
               Explore Both Areas
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {/* Hub page links — direct links to the city hub pages */}
+              <Link href={`/${slugA}/`} className="block rounded-lg bg-white border border-gray-200 p-4 text-center hover:shadow-md hover:border-accent/30 transition-all no-underline">
+                <p className="font-heading font-bold text-primary text-sm">All {sideA} Homes</p>
+                <p className="font-body text-xs text-muted mt-1">City hub</p>
+              </Link>
+              <Link href={`/${slugB}/`} className="block rounded-lg bg-white border border-gray-200 p-4 text-center hover:shadow-md hover:border-accent/30 transition-all no-underline">
+                <p className="font-heading font-bold text-primary text-sm">All {sideB} Homes</p>
+                <p className="font-body text-xs text-muted mt-1">City hub</p>
+              </Link>
+              {/* Spoke links — homes-for-sale and housing-market pages */}
               <Link href={`/${slugA}-homes-for-sale/`} className="block rounded-lg bg-white border border-gray-200 p-4 text-center hover:shadow-md hover:border-accent/30 transition-all no-underline">
                 <p className="font-heading font-bold text-primary text-sm">{sideA} Homes</p>
                 <p className="font-body text-xs text-muted mt-1">Browse listings</p>

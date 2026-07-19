@@ -113,6 +113,18 @@ export default async function BlogIndexPage({
         subtitle="Market updates, buying and selling tips, neighborhood guides, and expert insights from Barrett Henry."
       />
 
+      {/* === Breadcrumb trail — Home > Blog === */}
+      <div className="w-full border-b border-gray-200 bg-white">
+        <nav
+          aria-label="Breadcrumb"
+          className="container-wide flex items-center gap-2 text-xs font-body text-muted py-3 tracking-wide uppercase"
+        >
+          <Link href="/" className="hover:text-primary transition-colors">Home</Link>
+          <span aria-hidden="true">/</span>
+          <span className="font-semibold text-primary" aria-current="page">Blog</span>
+        </nav>
+      </div>
+
       {/* === Category filter buttons === */}
       <section className="container-wide pt-8 pb-2">
         <div className="flex flex-wrap items-center justify-center gap-2 mb-4">

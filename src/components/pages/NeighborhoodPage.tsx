@@ -11,13 +11,12 @@ import path from "path";
 import Link from "next/link";
 import Image from "next/image";
 import ListingGrid from "@/components/ui/ListingGrid";
-import ClientListings from "@/components/ui/ClientListings";
+import ClientNeighborhoodSection from "@/components/ui/ClientNeighborhoodSection";
 import SpokeNav from "@/components/city/SpokeNav";
-import { getListings } from "@/lib/bridge";
 import { getCityBySlug } from "@/data/cities";
 import { getPageContent } from "@/lib/page-content";
-import { cleanWpContent, formatPrice } from "@/lib/utils";
-import type { Listing } from "@/lib/types";
+import { cleanWpContent } from "@/lib/utils";
+
 import { NEIGHBORHOOD_DESCRIPTIONS } from "@/data/neighborhood-descriptions";
 
 interface NeighborhoodPageProps {
@@ -82,14 +81,8 @@ export default async function NeighborhoodPage({
     .replace(/,?\s*(FL|Florida)$/i, '')
     .trim();
 
-  // Empty arrays for stats sections (stats will be hidden without data)
-  const listings: never[] = [];
+  // Empty arrays — server-side listing fetch disabled to protect Bridge API rate limits
   const soldListings: never[] = [];
-  const activeCount = 0;
-  const avgDom = null;
-  const avgPricePerSqft = null;
-  const medianPrice = null;
-  const today = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 
   return (
     <>
@@ -162,43 +155,6 @@ export default async function NeighborhoodPage({
         </div>
       </section>
 
-      {/* === Market Stats Bar — key metrics at a glance === */}
-      <section className="bg-gray-100 border-b border-gray-200">
-        <div className="container-wide py-6">
-          {/* Header with neighborhood name and date */}
-          <p className="font-body text-xs text-muted uppercase tracking-widest mb-4">
-            Active Listings in {name} — {today}
-          </p>
-          {/* 4-column stats grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div>
-              <p className="font-heading text-2xl md:text-3xl font-bold text-primary">
-                {activeCount > 0 ? activeCount : "—"}
-              </p>
-              <p className="font-body text-sm text-muted">Listed</p>
-            </div>
-            <div>
-              <p className="font-heading text-2xl md:text-3xl font-bold text-primary">
-                {avgDom !== null ? avgDom : "—"}
-              </p>
-              <p className="font-body text-sm text-muted">Avg. DOM</p>
-            </div>
-            <div>
-              <p className="font-heading text-2xl md:text-3xl font-bold text-primary">
-                {avgPricePerSqft !== null ? `$${avgPricePerSqft}` : "—"}
-              </p>
-              <p className="font-body text-sm text-muted">Avg. $/Sq.Ft.</p>
-            </div>
-            <div>
-              <p className="font-heading text-2xl md:text-3xl font-bold text-primary">
-                {medianPrice !== null ? formatPrice(medianPrice) : "—"}
-              </p>
-              <p className="font-body text-sm text-muted">Med. List Price</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* === Search/Filter Links — quick property type filters === */}
       <section className="container-wide py-4">
         <div className="flex flex-wrap gap-2">
@@ -229,25 +185,14 @@ export default async function NeighborhoodPage({
         </div>
       </section>
 
-      {/* === Listings — loads CLIENT-SIDE to avoid API rate limits === */}
-      <ClientListings
+      {/* === Market Stats + Listings — both load client-side from same fetch === */}
+      <ClientNeighborhoodSection
+        name={name}
+        city={city}
         zipCodes={parentCity?.zip_codes || []}
-        title={`Homes for Sale in ${name}`}
-        subtitle={`Active listings in the ${name} area, ${city} FL.`}
+        searchName={searchName}
         limit={24}
-        filters={{ subdivision: searchName }}
-        areaName={name}
       />
-      {/* Empty state is handled by ClientListings component */}
-
-      {/* === MLS disclaimer — only shown when listings are displayed === */}
-      {listings.length > 0 && (
-        <section className="container-wide pb-4">
-          <p className="font-body text-xs text-muted/60 leading-relaxed max-w-4xl">
-            Listing information provided by Stellar MLS. IDX information is for personal, non-commercial use only. Data is deemed reliable but not guaranteed. All properties are subject to prior sale, change, or withdrawal.
-          </p>
-        </section>
-      )}
 
       {/* === Recently Sold — shows recent closed sales in this neighborhood === */}
       {soldListings.length > 0 && (

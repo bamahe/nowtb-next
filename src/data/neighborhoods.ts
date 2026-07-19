@@ -455,6 +455,19 @@ export const neighborhoods: NeighborhoodData[] = [
   { slug: "valrico-lake", name: "Valrico Lake", city: "valrico" },
   { slug: "valrico-oaks", name: "Valrico Oaks", city: "valrico" },
   { slug: "valrico-village", name: "Valrico Village", city: "valrico" },
+
+  // --- Verified Valrico neighborhoods added 2026-07-17 ---
+  { slug: "buckhorn", name: "Buckhorn", city: "valrico" },
+  { slug: "bloomingdale-east", name: "Bloomingdale East", city: "valrico" },
+  { slug: "lake-valrico", name: "Lake Valrico", city: "valrico" },
+  { slug: "lakemont", name: "Lakemont", city: "valrico" },
+  { slug: "legends-pass", name: "Legends Pass", city: "valrico" },
+  { slug: "northwood-estates", name: "Northwood Estates", city: "valrico" },
+  { slug: "river-crossing-valrico", name: "River Crossing", city: "valrico" },
+  { slug: "savannah-landings", name: "Savannah Landings", city: "valrico" },
+  { slug: "shetland-ridge", name: "Shetland Ridge", city: "valrico" },
+  { slug: "wellington", name: "Wellington", city: "valrico" },
+
   { slug: "asturia", name: "Asturia", city: "wesley-chapel" },
   { slug: "bexley", name: "Bexley", city: "wesley-chapel" },
   { slug: "chapel-pines", name: "Chapel Pines", city: "wesley-chapel" },

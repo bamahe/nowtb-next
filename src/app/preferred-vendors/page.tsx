@@ -208,7 +208,7 @@ export default function PreferredVendorsPage() {
         aria-label="Breadcrumb"
         className="w-full bg-white border-b border-border"
       >
-        <div className="container-wide py-3 flex items-center gap-2 text-xs text-muted">
+        <div className="container-wide pt-24 pb-3 flex items-center gap-2 text-xs text-muted">
           <Link href="/" className="hover:text-primary transition-colors" aria-label="Home">
             <Home className="w-4 h-4" />
           </Link>

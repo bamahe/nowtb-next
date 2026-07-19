@@ -107,12 +107,27 @@ export function getBlogCategories(): string[] {
  * Uses the last word of the current slug as a city guess.
  */
 export function getRelatedPosts(currentSlug: string, limit = 3): BlogPost[] {
-  // Grab the last word from the slug as a rough city name guess
-  const parts = currentSlug.split('-');
-  const cityGuess = parts[parts.length - 1];
-  return loadPosts()
-    .filter(p => p.slug !== currentSlug && p.slug.includes(cityGuess))
-    .slice(0, limit);
+  // Match city by checking all known city slugs against the post slug.
+  // Sorted longest-first so "plant-city" matches before "city".
+  const { cities } = require('@/data/cities');
+  const sortedCities = (cities as { slug: string }[])
+    .map(c => c.slug)
+    .sort((a, b) => b.length - a.length);
+  const matchedCity = sortedCities.find(slug => currentSlug.includes(slug));
+
+  if (matchedCity) {
+    const related = loadPosts()
+      .filter(p => p.slug !== currentSlug && p.slug.includes(matchedCity))
+      .slice(0, limit);
+    if (related.length >= limit) return related;
+    // Pad with recent posts if not enough city matches
+    const used = new Set([currentSlug, ...related.map(p => p.slug)]);
+    const filler = loadPosts().filter(p => !used.has(p.slug)).slice(0, limit - related.length);
+    return [...related, ...filler];
+  }
+
+  // Fallback: most recent posts
+  return loadPosts().filter(p => p.slug !== currentSlug).slice(0, limit);
 }
 
 /**

@@ -12,8 +12,10 @@ import ListingGrid from "@/components/ui/ListingGrid";
 import ContactForm from "@/components/ui/ContactForm";
 import { getOpenHouses } from "@/lib/bridge";
 
-// ISR: cache for 1 hour — open houses don't change minute-to-minute
-export const revalidate = 300;
+// Force dynamic rendering — open houses must fetch live data, not build-time cache.
+// Build-time renders return [] because IS_BUILD_TIME skips API calls.
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 // --- SEO metadata + Open Graph tags ---
 export const metadata: Metadata = {

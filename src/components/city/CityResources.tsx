@@ -9,6 +9,7 @@ import Link from "next/link";
 import type { CityData } from "@/data/cities";
 import { getNeighborhoodsByCity } from "@/data/neighborhoods";
 import { getAllPosts } from "@/lib/posts";
+import { comparisons } from "@/data/comparisons";
 
 // --- Nearby cities map for the 10 priority cities ---
 // Each priority city links to its geographic neighbors
@@ -84,6 +85,13 @@ export default function CityResources({ city }: CityResourcesProps) {
 
   // --- Nearby cities from the priority map ---
   const nearbySlugs = NEARBY_CITIES[city.slug] || [];
+
+  // --- Comparison pages that mention this city (check slugA and slugB fields) ---
+  // The sideA/sideB display names are title-case; we do a case-insensitive match against city.name
+  const cityComparisons = comparisons.filter((c) => {
+    const cityName = city.name.toLowerCase();
+    return c.sideA.toLowerCase() === cityName || c.sideB.toLowerCase() === cityName;
+  });
 
   // --- Recent blog posts mentioning this city ---
   // Filter by city slug appearing in the post slug (e.g. "valrico" in "best-neighborhoods-valrico")
@@ -230,6 +238,31 @@ export default function CityResources({ city }: CityResourcesProps) {
                 className="block border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10 hover:text-accent"
               >
                 {CITY_DISPLAY_NAMES[slug] || slug} Homes for Sale
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* ================================================================= */}
+      {/* COMPARE CITIES — links to comparison pages featuring this city      */}
+      {/* ================================================================= */}
+      {cityComparisons.length > 0 && (
+        <div className="mb-10">
+          <h3 className="font-heading font-bold text-lg text-primary mb-4">
+            Compare {city.name}
+          </h3>
+          <p className="font-body text-muted text-sm mb-4">
+            See how {city.name} stacks up against nearby communities.
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+            {cityComparisons.map((c) => (
+              <Link
+                key={c.slug}
+                href={`/${c.slug}/`}
+                className="block border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10 hover:text-accent"
+              >
+                {c.sideA} vs {c.sideB}
               </Link>
             ))}
           </div>
