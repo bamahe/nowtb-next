@@ -271,4 +271,217 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Lithia-Pinecrest Road is the main access, connecting you south toward Lithia and FishHawk or north to the Bloomingdale area and beyond. It's not the most direct route into Tampa, but for people who work in Brandon, Riverview, or along the I-75 corridor, the commute is manageable.</p>
     `,
   },
+
+  // ===== TARPON SPRINGS =====
+
+  "cypress-run": {
+    summary:
+      "Luxury gated golf community in Tarpon Springs with custom homes from $500K to $1.2M+, 24-hour manned entry, and a private golf course.",
+    contentHtml: `
+      <p>Cypress Run is one of Tarpon Springs' most prestigious addresses — a gated, 24-hour manned community built around a private golf course. Homes here range from $500K into the $1.2M+ tier, with custom builds and luxury villas on generous lots. The community caters to buyers who want a true country club lifestyle without leaving <a href="/tarpon-springs/">Tarpon Springs</a>.</p>
+      <p>The golf course is the centerpiece, but the appeal goes beyond the fairways. Privacy, security, and the caliber of neighbors matter here as much as the home itself. You'll find architectural variety — Mediterranean, traditional Florida, and contemporary custom designs — but the common thread is quality construction and attention to detail.</p>
+      <p>The buyer profile leans toward luxury buyers, retirees, and snowbirds who want a low-maintenance, high-amenity lifestyle. Many homes have private pools, three-car garages, and custom outdoor living spaces. Lot sizes give real breathing room compared to the typical Florida subdivision.</p>
+      <p>If you're considering Cypress Run, budget beyond the list price — HOA fees reflecting the 24-hour gate staff and course maintenance are significant. Club membership options vary, so confirm what's included versus optional. For buyers in this price range, that's expected; what Cypress Run delivers in return is a hard combination to replicate elsewhere in Pinellas County.</p>
+    `,
+  },
+
+  "crescent-oaks": {
+    summary:
+      "Executive gated golf community in Tarpon Springs with homes from $350K to $850K, 24-hour manned entry, and a strong appeal among golf lovers and snowbirds.",
+    contentHtml: `
+      <p>Crescent Oaks is a gated, 24-hour manned community in <a href="/tarpon-springs/">Tarpon Springs</a> built around an 18-hole golf course. Price points run from about $350K for villas to $850K for the larger executive homes, making it more accessible than some of the area's ultra-luxury gated communities without sacrificing the private, resort-style feel.</p>
+      <p>The community draws a diverse mix — golf enthusiasts who want the course practically in their backyard, families attracted by the security and quiet streets, and snowbirds looking for a Florida base that feels like a real neighborhood rather than a condo complex. The combination of manned gates and an active social scene around the golf club creates a genuine sense of community.</p>
+      <p>Homes are a mix of single-family executive homes and attached villas. The villas in particular attract low-maintenance buyers — landscaping and exterior upkeep handled by the association, so you can lock up and leave without the weekend project list. Single-family homes offer more space and privacy while still accessing the community amenities.</p>
+      <p>Worth knowing: CDD fees can apply in sections of Crescent Oaks, so confirm the full carrying cost with your agent before making an offer. Golf club membership may be separate from community HOA fees. That said, for buyers who want gated security, a golf course, and a genuine <a href="/tarpon-springs/">Tarpon Springs</a> address at a price point below the ultra-luxury tier, Crescent Oaks checks most of the boxes.</p>
+    `,
+  },
+
+  "greektown-spring-bayou": {
+    summary:
+      "Historic heart of Tarpon Springs — walkable, culturally rich neighborhood with cottages, bungalows, and some of the most character-filled streets in Pinellas County.",
+    contentHtml: `
+      <p>Greektown and Spring Bayou are the soul of <a href="/tarpon-springs/">Tarpon Springs</a>. This is the historic neighborhood where the Greek sponge diving community built its roots in the early 1900s, and the area has retained that character in a way that's increasingly rare in Florida. Prices run from about $275K for smaller cottages to $700K for larger, fully renovated historic homes.</p>
+      <p>The architecture here is genuinely different from the rest of Tampa Bay. You'll find bungalows, craftsman cottages, and Victorian-era homes with wide front porches, mature trees, and the kind of streetscape that actually invites walking. Spring Bayou itself — the natural spring-fed bayou that gives the neighborhood half its name — is stunning and just blocks from the historic district's main streets.</p>
+      <p>Walkability is the thing buyers who land here can't stop talking about. The Sponge Docks, Greek restaurants, bakeries, and coffee shops are within easy walking distance. The Epiphany Celebration held every January around the bayou is one of the most unique community events in Florida — a cultural tradition that's been running for over a century.</p>
+      <p>This is not a gated community, not a planned subdivision, and not a neighborhood with cookie-cutter construction. Buyers here tend to be people who specifically want character and don't need a community pool to feel at home. It attracts artists, retirees, remote workers, and buyers relocating from the Northeast who recognize walkable historic neighborhoods when they see them.</p>
+    `,
+  },
+
+  "downtown-tarpon-springs": {
+    summary:
+      "Victorian homes, condos, and townhomes in Tarpon Springs' historic core — walkable, affordable entry point, and a strong pick for first-time buyers and investors.",
+    contentHtml: `
+      <p>Downtown Tarpon Springs' Historic District gives buyers something genuinely different: Victorian-era homes, period cottages, and more recent condo and townhome developments all layered into a compact, walkable historic core. Price points start around $250K and reach $600K for the larger renovated historic homes, making it one of the more accessible entry points into <a href="/tarpon-springs/">Tarpon Springs</a> real estate.</p>
+      <p>The district is listed on the National Register of Historic Places, which has real implications for buyers. Renovations on historic properties come with design review requirements, which can slow projects and limit certain exterior changes. On the flip side, the historic designation has helped preserve the character that drives the neighborhood's long-term appeal — there's no risk of the bungalow next door getting torn down for a three-story stucco box.</p>
+      <p>First-time buyers and investors both find opportunity here. The condo and townhome inventory gives first-timers a way into homeownership without taking on a full historic renovation. Investors see the tourism draw, the short-term rental potential near the Sponge Docks area, and a price basis that still makes sense compared to Clearwater or Dunedin.</p>
+      <p>Downtown Tarpon Springs has a genuine small-town Florida feel that draws buyers tired of the suburbs. The main street has independent restaurants, boutiques, and arts venues. The Pinellas Trail runs through the area. And the bayou is minutes away on foot. For buyers who want a neighborhood with real texture and history, this is one of the better options left in the county.</p>
+    `,
+  },
+
+  "keystone-woodfield": {
+    summary:
+      "Family-friendly Tarpon Springs neighborhoods with newer homes from the 2000s, deed restrictions, and East Lake school zone — popular with growing families.",
+    contentHtml: `
+      <p>Keystone and Woodfield are neighboring deed-restricted communities in eastern <a href="/tarpon-springs/">Tarpon Springs</a> that attract buyers looking for newer construction, good school zoning, and a family-friendly environment without the premium price of a gated community. Homes here are primarily 3 and 4 bedrooms built in the 2000s, with prices ranging from about $375K to $650K.</p>
+      <p>Construction in both neighborhoods is typical Florida suburban — concrete block, tile roofs, two-car garages, and open floor plans. Lot sizes are modest but functional, with room for a pool in most cases. The deed restrictions keep the community looking consistent, which matters for long-term property values and is exactly what buyers with young families tend to prioritize.</p>
+      <p>The East Lake school zone is a significant draw. East Lake High School and the middle and elementary schools in the zone have strong reputations and draw families specifically looking for this part of Pinellas County. If school zoning is on your checklist, confirm your specific address before committing — zone boundaries can shift.</p>
+      <p>Location puts you close to the Keystone Road corridor with easy access to East Lake Road and the communities stretching toward Palm Harbor and Oldsmar. You're not walking-distance to the Sponge Docks or historic downtown, but the drive is short. For families where school zone and newer construction matter more than walkability and historic character, Keystone and Woodfield consistently land on the shortlist.</p>
+    `,
+  },
+
+  "tarpon-springs-south": {
+    summary:
+      "Budget-friendly Tarpon Springs neighborhood with older ranch homes, no HOA in many sections, and strong value for first-time buyers and investors.",
+    contentHtml: `
+      <p>Tarpon Springs South is where the value lives in <a href="/tarpon-springs/">Tarpon Springs</a> real estate. Prices run from about $225K to $425K — the most affordable range you'll find in the city — and the inventory is mostly older ranch-style and block homes from the 1960s through 1980s. No HOA in many sections means fewer restrictions and no monthly association fees.</p>
+      <p>This is the neighborhood that attracts first-time buyers who've been priced out of tighter markets and investors looking for properties with renovation potential. The bones are solid — Florida block construction holds up well — and the lots are often larger than what you get in newer developments. The work is cosmetic in the best cases, though older homes always warrant a thorough inspection of roof, electrical, plumbing, and HVAC age.</p>
+      <p>The trade-off is that you're getting an older neighborhood without the amenities of a newer community. No community pool, no gated entry, no landscaped common areas. What you get is ownership in a city with genuine character and a diverse, established population — not a master-planned suburb built from scratch in 2005.</p>
+      <p>The location still connects you to everything that makes <a href="/tarpon-springs/">Tarpon Springs</a> worth considering: the Sponge Docks, Gulf access, the historic district, and the overall waterfront lifestyle are all within a short drive. For buyers who are willing to accept an older home in exchange for a lower price point and no HOA overhead, Tarpon Springs South delivers consistent value.</p>
+    `,
+  },
+
+  "north-lake-estates": {
+    summary:
+      "New construction community in Tarpon Springs from 2024 and newer, with modern home designs, select gated sections, and prices from $500K to $800K+.",
+    contentHtml: `
+      <p>North Lake Estates is one of the newer construction opportunities in <a href="/tarpon-springs/">Tarpon Springs</a>, with homes coming online from 2024 forward. Price points range from roughly $500K to $800K and above, putting it in the upper-middle tier for the area. If you want contemporary construction with modern finishes rather than a renovation project, this is one of the few places in Tarpon Springs to find it.</p>
+      <p>New construction in this part of Pinellas County means impact-resistant windows, open-concept floor plans, energy-efficient systems, and the kind of kitchen and bath finishes that don't require a gut renovation before you move in. Builder warranties provide additional peace of mind for buyers who've been burned by older home surprises. Select sections include gated access, which adds a layer of security and privacy.</p>
+      <p>The buyer profile trends toward people making a deliberate move — relocation buyers who want a specific home package, buyers downsizing from larger markets who want the Florida lifestyle without a fixer-upper, and buyers who've been watching the Tarpon Springs market and want in before the next cycle of appreciation.</p>
+      <p>One thing to verify: CDD fees are common on new construction communities in Florida and can add meaningfully to your monthly cost. Ask your agent to get the full fee disclosure from the builder before you're deep in the process. With new construction, the sticker price and the true carrying cost are two different conversations, and North Lake Estates is no exception.</p>
+    `,
+  },
+
+  // ===== APOLLO BEACH FAMILY =====
+
+  "mirabay": {
+    summary:
+      "Apollo Beach's premier gated waterfront community with resort-style amenities, bay and canal access, and homes from $450K to $1.2M+. Built for boaters, families, and luxury buyers.",
+    contentHtml: `
+      <p>MiraBay is the flagship community in <a href="/apollo-beach/">Apollo Beach</a>, a gated, master-planned neighborhood on Tampa Bay with direct water access, a private beach club, and resort-caliber amenities. Homes range from about $450K for interior lots to well over $1.2M for waterfront estates with private docks. If you want the full waterfront lifestyle in Apollo Beach, this is where most buyers start looking.</p>
+      <p>The community was developed by Newland Communities starting in the early 2000s and built out over roughly 15 years. Construction quality is solid across the board, with concrete block, barrel tile roofs, and hurricane-rated windows standard on most homes. Floor plans range from 1,800 to 4,500+ square feet, with 3 to 6 bedrooms depending on the section and lot type.</p>
+      <p>Amenities are the draw beyond the homes themselves. The MiraBay Club includes a fitness center, resort pool, tennis and pickleball courts, playgrounds, walking trails, and a private bay beach with kayak and paddleboard access. The community also has a boat ramp for residents. HOA and CDD fees reflect the amenity package and run higher than non-gated Apollo Beach neighborhoods, so factor those into your monthly budget.</p>
+      <p>Schools are zoned for Apollo Beach Elementary, Eisenhower Middle, and Lennard High School. The location puts you about 25 minutes from downtown Tampa via US-41 or I-75, and MacDill Air Force Base is accessible without the worst of Tampa traffic. For a deeper look at all the neighborhoods in the area, check out our guide to the <a href="/blog/best-neighborhoods-apollo-beach-fl/">best neighborhoods in Apollo Beach</a>.</p>
+    `,
+  },
+
+  "waterset": {
+    summary:
+      "Large master-planned community straddling the Apollo Beach and Riverview border, with newer homes from $380K to $650K, extensive trails, and a family-focused amenity package.",
+    contentHtml: `
+      <p>Waterset is a newer master-planned community that technically sits in Riverview's zip code but is closely associated with the broader <a href="/apollo-beach/">Apollo Beach</a> area. Homes here were built from the mid-2010s onward by builders including Homes by WestBay, David Weekley, and Taylor Morrison. Prices currently range from about $380K to $650K depending on lot size and floor plan.</p>
+      <p>The community is built around an active outdoor lifestyle. Waterset has miles of paved trails, a resort-style pool and splash pad, fitness center, sports courts, dog park, and community garden. The trail system connects different sections of the neighborhood and links to surrounding natural areas along the Alafia River corridor.</p>
+      <p>Homes are modern Florida construction with open floor plans, impact windows, and energy-efficient systems. Most are 3 to 5 bedrooms in the 1,800 to 3,200 square foot range. Both HOA and CDD fees apply, which is standard for newer master-planned communities in Hillsborough County. The total monthly carrying cost beyond your mortgage can be meaningful, so get the exact numbers before writing an offer.</p>
+      <p>School zoning includes Waterset Charter School (K-5), which is on-site, plus Eisenhower Middle and Lennard High School. The location provides reasonable commuter access via US-41 and I-75. For a full comparison of neighborhoods in the area, see our guide to the <a href="/blog/best-neighborhoods-apollo-beach-fl/">best neighborhoods in Apollo Beach</a>.</p>
+    `,
+  },
+
+  "symphony-isles": {
+    summary:
+      "Waterfront canal community in Apollo Beach with sailboat-depth water access, homes from $500K to $900K+, and a laid-back boating lifestyle without gated community restrictions.",
+    contentHtml: `
+      <p>Symphony Isles is one of <a href="/apollo-beach/">Apollo Beach's</a> true waterfront neighborhoods, with homes on sailboat-depth canals that provide direct access to Tampa Bay. Prices range from about $500K for non-waterfront lots to $900K and above for canal-front homes with private docks. If boating access is the priority, not just a nice-to-have, Symphony Isles delivers.</p>
+      <p>The neighborhood was built primarily in the 1990s and 2000s. Homes are mostly concrete block construction with 3 to 5 bedrooms and 1,800 to 3,500 square feet. Many waterfront lots include boat docks, lifts, and seawalls, though condition varies by age and maintenance history. Bring your marine surveyor along with your home inspector if you're buying a canal-front property.</p>
+      <p>Unlike MiraBay, Symphony Isles is not gated and the HOA is relatively modest. There's no resort-style amenity center, but for buyers who prioritize water access over clubhouse amenities, that's a feature rather than a trade-off. The neighborhood has a quieter, more residential feel than the larger master-planned communities.</p>
+      <p>Flood insurance is a real cost factor on waterfront lots here. Zone designations vary by specific address, so get a flood determination early in your search process. For a comparison of all the waterfront and non-waterfront options, check out our guide to the <a href="/blog/best-neighborhoods-apollo-beach-fl/">best neighborhoods in Apollo Beach</a>.</p>
+    `,
+  },
+
+  "andalucia": {
+    summary:
+      "Gated Mediterranean-style community in Apollo Beach with homes from $380K to $550K, community pool, and a solid option for families who want gated living without the luxury price tag.",
+    contentHtml: `
+      <p>Andalucia is a gated community in <a href="/apollo-beach/">Apollo Beach</a> with Mediterranean-inspired architecture, a community pool, and homes priced from about $380K to $550K. It fills the gap between the entry-level neighborhoods and the luxury tier at MiraBay, making it a popular choice for move-up buyers and families who want the security of a gated community at a more accessible price point.</p>
+      <p>Homes were built in the 2000s and early 2010s, mostly 3 to 4 bedrooms with 1,600 to 2,800 square feet. The Mediterranean styling shows in the barrel tile roofs, stucco exteriors, and arched entryways. Construction is standard Florida concrete block. Most homes have two-car garages and screened lanais or covered patios.</p>
+      <p>Both HOA and CDD fees apply here. The HOA covers the gated entry, community pool, and common area maintenance. Combined monthly fees are moderate for a gated community but worth confirming before you make an offer, as they add to your effective housing cost beyond the mortgage payment.</p>
+      <p>School zoning covers Apollo Beach Elementary, Eisenhower Middle, and Lennard High. The community sits along US-41 with straightforward access to I-75 for commuters heading north into Tampa or south to Bradenton. For a side-by-side look at how Andalucia compares to other options, see our guide to the <a href="/blog/best-neighborhoods-apollo-beach-fl/">best neighborhoods in Apollo Beach</a>.</p>
+    `,
+  },
+
+  "mirabella": {
+    summary:
+      "Smaller gated community in Apollo Beach with Mediterranean styling and homes from $300K to $430K. One of the most affordable gated options in the area.",
+    contentHtml: `
+      <p>Mirabella is a compact gated community in <a href="/apollo-beach/">Apollo Beach</a> that offers one of the lowest entry points for gated living in the area. Homes price from about $300K to $430K, making it accessible for first-time buyers, young professionals, and downsizers who want the security of a gate without stretching into a higher price bracket.</p>
+      <p>The community was built in the 2000s with Mediterranean-influenced architecture similar to neighboring Andalucia but on a smaller scale. Homes are typically 3 bedrooms, 1,400 to 2,000 square feet, with two-car garages. The smaller footprint keeps both purchase prices and HOA fees lower than the larger gated communities.</p>
+      <p>There's no elaborate amenity center here. Mirabella is a straightforward gated residential neighborhood. The HOA covers the gate, common areas, and basic landscaping maintenance. For buyers who don't need a resort pool and fitness center but value gated entry and a well-kept streetscape, it hits the right balance.</p>
+      <p>Location-wise, Mirabella is positioned along US-41 with the same commuter access as the rest of Apollo Beach. Schools follow the standard Apollo Beach zoning. For a full breakdown of how Mirabella stacks up against the other communities, visit our guide to the <a href="/blog/best-neighborhoods-apollo-beach-fl/">best neighborhoods in Apollo Beach</a>.</p>
+    `,
+  },
+
+  "harbor-isles": {
+    summary:
+      "Established canal community in Apollo Beach with homes from $350K to $650K+, direct water access on many lots, and a mix of original and renovated properties.",
+    contentHtml: `
+      <p>Harbor Isles is one of <a href="/apollo-beach/">Apollo Beach's</a> more established waterfront neighborhoods, with homes on canal lots that provide access to Tampa Bay. Prices range from about $350K for interior lots to $650K and above for canal-front properties with docks. The community has been around long enough that you'll see a mix of original homes and fully renovated properties, which creates opportunities at multiple price points.</p>
+      <p>Many homes were built in the 1980s and 1990s, so expect concrete block construction with a range of conditions. Updated homes with modern kitchens, new roofs, and rebuilt seawalls command premium prices. Original-condition homes price lower but may need investment in those same areas. If you're buying canal-front, seawall condition and dock permits should be high on your inspection checklist.</p>
+      <p>Some sections of Harbor Isles have no HOA or very minimal deed restrictions, which appeals to buyers who want flexibility with their property. Other sections have a modest association. Confirm which applies to the specific lot you're considering. The absence of CDD fees in older sections is a meaningful cost advantage over the newer communities.</p>
+      <p>The neighborhood offers genuine boating access without the premium of a gated community like MiraBay. For value-minded buyers who prioritize water access over resort amenities, Harbor Isles is worth serious consideration. Compare all the options in our guide to the <a href="/blog/best-neighborhoods-apollo-beach-fl/">best neighborhoods in Apollo Beach</a>.</p>
+    `,
+  },
+
+  "apollo-beach-condos": {
+    summary:
+      "Condo and villa communities in Apollo Beach with prices from $170K to $280K. The most affordable entry point for buyers and investors looking at the Apollo Beach market.",
+    contentHtml: `
+      <p>Apollo Beach has several condo and villa communities scattered along US-41 and the surrounding residential areas, offering the lowest price point in the <a href="/apollo-beach/">Apollo Beach</a> market. Prices range from about $170K to $280K, which puts homeownership within reach for first-time buyers, retirees on a fixed income, and investors looking for rental properties in a growing area.</p>
+      <p>The inventory includes attached villas with small yards and traditional condominium units in multi-story buildings. Most were built in the 1980s through 2000s. Sizes range from 1-bedroom units around 700 square feet to 3-bedroom villas pushing 1,500 square feet. Construction and condition vary, so inspection matters here more than in newer communities.</p>
+      <p>HOA or condo association fees apply to all of these communities and typically cover exterior maintenance, landscaping, and shared amenities like pools where they exist. Monthly fees can range from $200 to $500+ depending on the community and what's included. Factor this into your affordability calculation alongside the mortgage payment.</p>
+      <p>For investors, the rental math can work well at this price point given Apollo Beach's proximity to Tampa and MacDill AFB. For owner-occupants, it's a way to live in Apollo Beach and access the waterfront lifestyle without the $400K+ entry point of the single-family neighborhoods. See how condos compare to the other options in our <a href="/blog/best-neighborhoods-apollo-beach-fl/">best neighborhoods in Apollo Beach</a> guide.</p>
+    `,
+  },
+
+  "covington-park": {
+    summary:
+      "Newer non-waterfront subdivision in Apollo Beach with homes from $330K to $430K, community amenities, and a family-friendly layout. Solid value for buyers who don't need water access.",
+    contentHtml: `
+      <p>Covington Park is a newer subdivision in <a href="/apollo-beach/">Apollo Beach</a> that provides a solid alternative for buyers who want to live in the area but don't need waterfront access. Homes price from about $330K to $430K, which lands squarely in the middle of the Apollo Beach market without the premium that canal or bay-front lots command.</p>
+      <p>The community was built in the 2000s and 2010s with typical Florida construction: concrete block, tile roofs, two-car garages, and open floor plans. Homes are mostly 3 to 4 bedrooms in the 1,600 to 2,400 square foot range. The subdivision has a community pool, playground, and sidewalk-lined streets that make it family-friendly.</p>
+      <p>HOA fees apply and cover the common areas and community amenities. There's no CDD in most sections, which gives Covington Park a cost advantage over some of the newer master-planned communities where both HOA and CDD stack up. Confirm the fee structure for the specific lot you're considering.</p>
+      <p>School zoning follows the standard Apollo Beach assignments, and the location along US-41 provides the same commuter access as the rest of the area. For families and commuters who want a well-maintained neighborhood at a fair price, Covington Park consistently delivers. See how it compares in our <a href="/blog/best-neighborhoods-apollo-beach-fl/">best neighborhoods in Apollo Beach</a> guide.</p>
+    `,
+  },
+
+  "copperleaf": {
+    summary:
+      "Gated community in Apollo Beach with homes built in the 2000s, a community pool, and prices in the mid-$300Ks to low $500Ks. A solid mid-range pick for families.",
+    contentHtml: `
+      <p>Copperleaf is a gated community in <a href="/apollo-beach/">Apollo Beach</a> with homes built primarily in the 2000s. Prices generally fall in the mid-$300Ks to low $500Ks, putting it in the middle tier of Apollo Beach real estate. The gated entry, community pool, and well-maintained common areas give it the feel of a newer planned community without the top-tier pricing of MiraBay.</p>
+      <p>Homes are mostly 3 to 4 bedrooms with 1,600 to 2,600 square feet. Construction is concrete block with tile roofs, and most properties include two-car garages and screened lanais. The floor plans lean toward the open-concept layouts that were becoming standard when the community was built.</p>
+      <p>HOA fees cover the gated entry, pool, and landscaping of common areas. The community is not waterfront, so buyers here are prioritizing the gated lifestyle, newer construction, and the Apollo Beach location rather than direct water access. That said, public boat ramps and bay access points are a short drive away.</p>
+      <p>The neighborhood is well-positioned along US-41 with easy access to both Tampa-bound commuter routes and the shopping and dining along the corridor. Schools follow the standard Apollo Beach zoning. For a full breakdown of all the communities, see our <a href="/blog/best-neighborhoods-apollo-beach-fl/">best neighborhoods in Apollo Beach</a> guide.</p>
+    `,
+  },
+
+  "seabreeze": {
+    summary:
+      "Established Apollo Beach neighborhood with a mix of waterfront and interior lots, homes from the 1970s through 2000s, and prices ranging from $300K to $600K+.",
+    contentHtml: `
+      <p>Seabreeze is one of the older residential areas in <a href="/apollo-beach/">Apollo Beach</a>, with homes spanning from the 1970s through the 2000s. The neighborhood includes both canal-front lots with water access and interior lots without, which creates a wide price range from about $300K to $600K and above depending on water access, renovation status, and lot size.</p>
+      <p>The older construction means you'll see more variety in home styles than in the newer planned communities. Some properties have been completely renovated with modern kitchens, updated electrical, and new roofs. Others are in original condition and priced accordingly. For buyers willing to take on a renovation project, the older waterfront lots in Seabreeze can offer significant value compared to buying move-in-ready in MiraBay or Symphony Isles.</p>
+      <p>HOA presence varies by section. Some areas have minimal or no HOA, which gives homeowners more flexibility but also means less control over neighbor property maintenance. If HOA restrictions matter to you one way or the other, confirm the specific section's rules before making an offer.</p>
+      <p>The neighborhood has an Old Florida feel that newer communities can't replicate. For buyers who value character and established landscaping over brand-new construction and resort amenities, Seabreeze is worth exploring. Compare all the Apollo Beach options in our <a href="/blog/best-neighborhoods-apollo-beach-fl/">best neighborhoods in Apollo Beach</a> guide.</p>
+    `,
+  },
+
+  "southshore-falls": {
+    summary:
+      "Master-planned community on the southern edge of Apollo Beach with homes from the 2000s, a community pool and splash park, and prices in the $350K to $550K range.",
+    contentHtml: `
+      <p>SouthShore Falls is a master-planned community on the southern end of the <a href="/apollo-beach/">Apollo Beach</a> area, with homes built primarily in the 2000s and 2010s. Prices range from about $350K to $550K, positioning it as a mid-range option with more amenities than the basic subdivisions but less cost than the premium gated communities.</p>
+      <p>The community includes a resort-style pool, splash park, fitness center, sports courts, and playground. Walking trails wind through the neighborhood and connect to common areas. The amenity package is strong for the price point and gives SouthShore Falls an edge over comparably priced communities that offer just a pool and a sign at the entrance.</p>
+      <p>Homes are 3 to 5 bedrooms, mostly 1,700 to 3,000 square feet, with the open floor plans and concrete block construction standard for the era. Both HOA and CDD fees apply, which is typical for communities of this size and vintage in southern Hillsborough County. Get the exact annual amounts before you budget, as they can add $300 to $500+ per month on top of your mortgage.</p>
+      <p>School zoning includes the standard Apollo Beach elementary and middle school assignments, with Lennard High School serving the area. The location along US-41 provides access to Tampa and I-75, with the growing SouthShore commercial corridor nearby for daily shopping and dining. For a side-by-side comparison, see our <a href="/blog/best-neighborhoods-apollo-beach-fl/">best neighborhoods in Apollo Beach</a> guide.</p>
+    `,
+  },
+
+  "tarpon-springs-waterfront": {
+    summary:
+      "Waterfront homes and condos on the bayous and Gulf coast of Tarpon Springs, ranging from $350K condos to $2M+ estate homes — built for buyers who want water access.",
+    contentHtml: `
+      <p>Waterfront & Bayou covers the water-access properties scattered along <a href="/tarpon-springs/">Tarpon Springs'</a> coastline, bayous, and inlets — everything from Gulf-front condos starting around $350K to estate-sized single-family homes pushing $2M and above. It's less a single neighborhood than a category: if water access is the primary feature, you're shopping in this space.</p>
+      <p>The variety is real. Bayou-front properties offer calm-water boat access and the scenery of Tarpon Springs' natural waterways without the exposure of open Gulf frontage. Gulf-access homes with seawall and dock give you direct boating range without hauling a trailer. Condos in waterfront complexes deliver the water views and lifestyle at a fraction of the single-family cost, with the trade-off of association rules and shared amenities.</p>
+      <p>Buyers here are almost always coming with a specific water-use case in mind — boating, fishing, kayaking, or simply the view and proximity. Flood zone designations and flood insurance costs vary significantly by specific location along the waterfront, and this is one area where doing that homework before going under contract can save you thousands annually on insurance alone. Ask your agent to pull the flood zone map for any property you're seriously considering.</p>
+      <p>Tarpon Springs' waterfront has held its appeal through multiple market cycles because the supply is genuinely limited. The combination of the natural bayou system, Gulf access, and the historic character of the surrounding city creates a setting that doesn't replicate easily. If water access is non-negotiable on your list, <a href="/tarpon-springs/">Tarpon Springs</a> waterfront deserves a serious look before you settle elsewhere in Pinellas County.</p>
+    `,
+  },
 };
