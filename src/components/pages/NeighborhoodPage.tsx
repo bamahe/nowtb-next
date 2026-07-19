@@ -265,17 +265,17 @@ export default async function NeighborhoodPage({
           <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6">
             About {name}
           </h2>
-          {neighborhoodContent ? (
-            // Real WordPress content found — render it with proper styling
-            <div
-              className="blog-content prose prose-lg max-w-none text-muted font-body"
-              dangerouslySetInnerHTML={{ __html: neighborhoodContent }}
-            />
-          ) : NEIGHBORHOOD_DESCRIPTIONS[slug] ? (
-            // Curated neighborhood description — real, useful info
+          {NEIGHBORHOOD_DESCRIPTIONS[slug] ? (
+            // Curated neighborhood description takes priority — real, useful info
             <div
               className="blog-content prose prose-lg max-w-none text-muted font-body"
               dangerouslySetInnerHTML={{ __html: NEIGHBORHOOD_DESCRIPTIONS[slug].contentHtml }}
+            />
+          ) : neighborhoodContent ? (
+            // WordPress content as fallback when no curated description exists
+            <div
+              className="blog-content prose prose-lg max-w-none text-muted font-body"
+              dangerouslySetInnerHTML={{ __html: neighborhoodContent }}
             />
           ) : (
             // No content at all — show a brief, honest fallback
