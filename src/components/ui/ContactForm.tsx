@@ -106,7 +106,7 @@ export default function ContactForm({
   }
 
   return (
-    <div className="card p-6 sm:p-8">
+    <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm sm:p-8 max-w-lg mx-auto">
       {/* --- Title (optional) --- */}
       {title && (
         <h3 className="heading-section text-xl text-primary mb-6">{title}</h3>
@@ -155,7 +155,7 @@ export default function ContactForm({
         <div>
           <label
             htmlFor="contact-name"
-            className="block text-sm font-body font-medium text-dark mb-1"
+            className="block text-xs font-body font-semibold text-gray-600 uppercase tracking-wide mb-1.5"
           >
             Name <span className="text-red-500">*</span>
           </label>
@@ -166,7 +166,7 @@ export default function ContactForm({
             placeholder="Your full name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full"
+            className="w-full rounded-md border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
           />
         </div>
 
@@ -174,7 +174,7 @@ export default function ContactForm({
         <div>
           <label
             htmlFor="contact-email"
-            className="block text-sm font-body font-medium text-dark mb-1"
+            className="block text-xs font-body font-semibold text-gray-600 uppercase tracking-wide mb-1.5"
           >
             Email <span className="text-red-500">*</span>
           </label>
@@ -185,7 +185,7 @@ export default function ContactForm({
             placeholder="you@example.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full"
+            className="w-full rounded-md border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
           />
         </div>
 
@@ -193,7 +193,7 @@ export default function ContactForm({
         <div>
           <label
             htmlFor="contact-phone"
-            className="block text-sm font-body font-medium text-dark mb-1"
+            className="block text-xs font-body font-semibold text-gray-600 uppercase tracking-wide mb-1.5"
           >
             Phone
           </label>
@@ -203,7 +203,7 @@ export default function ContactForm({
             placeholder="(555) 123-4567"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-            className="w-full"
+            className="w-full rounded-md border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
           />
         </div>
 
@@ -211,7 +211,7 @@ export default function ContactForm({
         <div>
           <label
             htmlFor="contact-message"
-            className="block text-sm font-body font-medium text-dark mb-1"
+            className="block text-xs font-body font-semibold text-gray-600 uppercase tracking-wide mb-1.5"
           >
             Message <span className="text-red-500">*</span>
           </label>
@@ -222,7 +222,7 @@ export default function ContactForm({
             placeholder="How can we help you?"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="w-full resize-none"
+            className="w-full resize-none rounded-md border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
           />
         </div>
 
