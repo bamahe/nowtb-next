@@ -132,6 +132,14 @@ const assistancePrograms = [
     cta: "Explore All Programs",
     external: true,
   },
+  {
+    title: "VA Loans for Veterans",
+    description:
+      "Veterans, active-duty military, and eligible surviving spouses can buy with $0 down and no PMI. My VA loan resource covers eligibility, the funding fee, and how to stack benefits with Hometown Heroes.",
+    href: "https://valoantb.com/",
+    cta: "VA Loan Guide",
+    external: true,
+  },
 ];
 
 export default function BuyersPage() {
