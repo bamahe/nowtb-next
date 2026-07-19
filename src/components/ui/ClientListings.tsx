@@ -103,18 +103,28 @@ export default function ClientListings({
             }
           }
         }
-        setListings(fetchedListings);
-        setTotal(data.total || fetchedListings.length);
+
+        // If the open_house filter is active, only show listings that have
+        // upcoming open houses. The Bridge OData endpoint doesn't support
+        // OpenHouseStartTime filtering, so we filter client-side after merging.
+        const isOpenHouseFilter =
+          currentFilters.open_house === "true" || filters.open_house === "true";
+        const finalListings = isOpenHouseFilter
+          ? fetchedListings.filter((l) => !!l.OpenHouseStartTime)
+          : fetchedListings;
+
+        setListings(finalListings);
+        setTotal(isOpenHouseFilter ? finalListings.length : (data.total || fetchedListings.length));
         setLoading(false);
 
         // Compute market stats and notify parent if callback provided
-        if (onStatsReady && fetchedListings.length > 0) {
-          const prices = fetchedListings.map((l: Listing) => l.ListPrice).filter((p: number) => p > 0).sort((a: number, b: number) => a - b);
-          const domVals = fetchedListings.filter((l: Listing) => l.DaysOnMarket != null).map((l: Listing) => l.DaysOnMarket as number);
-          const psfVals = fetchedListings.filter((l: Listing) => l.ListPrice > 0 && l.LivingArea && l.LivingArea > 0).map((l: Listing) => Math.round(l.ListPrice / l.LivingArea!));
+        if (onStatsReady && finalListings.length > 0) {
+          const prices = finalListings.map((l: Listing) => l.ListPrice).filter((p: number) => p > 0).sort((a: number, b: number) => a - b);
+          const domVals = finalListings.filter((l: Listing) => l.DaysOnMarket != null).map((l: Listing) => l.DaysOnMarket as number);
+          const psfVals = finalListings.filter((l: Listing) => l.ListPrice > 0 && l.LivingArea && l.LivingArea > 0).map((l: Listing) => Math.round(l.ListPrice / l.LivingArea!));
           const mid = Math.floor(prices.length / 2);
           onStatsReady({
-            activeCount: data.total || fetchedListings.length,
+            activeCount: isOpenHouseFilter ? finalListings.length : (data.total || fetchedListings.length),
             avgDom: domVals.length > 0 ? Math.round(domVals.reduce((s: number, v: number) => s + v, 0) / domVals.length) : null,
             avgPricePerSqft: psfVals.length > 0 ? Math.round(psfVals.reduce((s: number, v: number) => s + v, 0) / psfVals.length) : null,
             medianPrice: prices.length > 0 ? (prices.length % 2 ? prices[mid] : Math.round((prices[mid - 1] + prices[mid]) / 2)) : null,

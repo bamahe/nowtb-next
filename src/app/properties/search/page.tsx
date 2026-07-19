@@ -147,12 +147,39 @@ export default function PropertySearchPage() {
         }
         apiParams.delete("page"); // API doesn't accept "page" — uses "offset"
 
-        const res = await fetch(`/api/listings?${apiParams.toString()}`);
+        // Fetch listings and open houses in parallel so we can show
+        // open house date/time badges on search result cards
+        const [res, ohRes] = await Promise.all([
+          fetch(`/api/listings?${apiParams.toString()}`),
+          fetch("/api/open-houses").catch(() => null),
+        ]);
         if (!res.ok) throw new Error("API error");
         const data = await res.json();
+        const ohData = ohRes ? await ohRes.json().catch(() => ({ value: [] })) : { value: [] };
+
+        // Build a lookup of open house times by ListingKey (plain object
+        // because this file's TS config does not allow generic Map constructors)
+        const ohLookup: Record<string, { start: string; end?: string }> = {};
+        for (const oh of (ohData.value || []) as Listing[]) {
+          if (oh.ListingKey && oh.OpenHouseStartTime) {
+            ohLookup[oh.ListingKey] = {
+              start: oh.OpenHouseStartTime,
+              end: oh.OpenHouseEndTime,
+            };
+          }
+        }
 
         if (!cancelled) {
-          setListings(data.value || []);
+          const fetchedListings: Listing[] = data.value || [];
+          // Inject open house times onto matching listings
+          for (const listing of fetchedListings) {
+            const oh = ohLookup[listing.ListingKey];
+            if (oh) {
+              listing.OpenHouseStartTime = oh.start;
+              listing.OpenHouseEndTime = oh.end;
+            }
+          }
+          setListings(fetchedListings);
           // API may return total as either "total" or OData "@odata.count"
           setTotal(data.total || data["@odata.count"] || 0);
         }

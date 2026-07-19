@@ -1,6 +1,7 @@
 // src/components/search/ListingCard.tsx
 // Large listing card for Gallery view — photo, price overlay, beds/baths/sqft/acres/year,
 // full address, subdivision, MLS #, and listing office.
+// Includes open house date/time badge when listing has upcoming open house data.
 "use client";
 
 import Image from "next/image";
@@ -17,11 +18,51 @@ const statusColors: Record<string, string> = {
   Closed: "bg-gray-600 text-white",
 };
 
+/**
+ * Format open house date/time for the badge overlay.
+ * Shows "TODAY 1-3 PM" if it's today, otherwise "SAT JUL 19 1-3 PM".
+ */
+function formatOpenHouseBadge(start?: string, end?: string): string {
+  if (!start) return "";
+  const s = new Date(start);
+  const now = new Date();
+  // Check if the open house is today
+  const isToday =
+    s.getFullYear() === now.getFullYear() &&
+    s.getMonth() === now.getMonth() &&
+    s.getDate() === now.getDate();
+
+  // Format times as "1PM" or "1:30PM" (drop :00 minutes for cleanliness)
+  const fmtTime = (d: Date) => {
+    const h = d.getHours() % 12 || 12;
+    const m = d.getMinutes();
+    const ampm = d.getHours() >= 12 ? "PM" : "AM";
+    return m === 0 ? `${h}${ampm}` : `${h}:${String(m).padStart(2, "0")}${ampm}`;
+  };
+
+  const startTime = fmtTime(s);
+  const timeRange = end ? `${startTime}-${fmtTime(new Date(end))}` : startTime;
+
+  if (isToday) return `TODAY ${timeRange}`;
+
+  // "SAT JUL 19" format
+  const dayStr = s
+    .toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" })
+    .toUpperCase();
+  return `${dayStr} ${timeRange}`;
+}
+
 export default function SearchListingCard({ listing }: { listing: Listing }) {
   const photoUrl = getListingPhotoUrl(listing);
   const url = getListingUrl(listing);
   // Fall back to gray badge if status isn't in our map
   const badgeClass = statusColors[listing.StandardStatus] ?? "bg-gray-600 text-white";
+
+  // Build the open house badge text (empty string if no open house)
+  const openHouseText = formatOpenHouseBadge(
+    listing.OpenHouseStartTime,
+    listing.OpenHouseEndTime
+  );
 
   return (
     <Link
@@ -29,7 +70,7 @@ export default function SearchListingCard({ listing }: { listing: Listing }) {
       className="block bg-white border border-border rounded-lg overflow-hidden
                  hover:shadow-lg transition-shadow group no-underline"
     >
-      {/* ── Photo with price overlay and status badge ── */}
+      {/* ── Photo with price overlay, status badge, and open house badge ── */}
       <div className="relative aspect-[4/3] bg-gray-100">
         <Image
           src={photoUrl}
@@ -39,10 +80,28 @@ export default function SearchListingCard({ listing }: { listing: Listing }) {
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        {/* Status badge — top-left corner */}
-        <span className={`absolute top-2 left-2 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded ${badgeClass}`}>
+
+        {/* Open house banner — full width across the top of the photo */}
+        {openHouseText && (
+          <div className="absolute top-0 left-0 right-0 bg-blue-600 text-white px-3 py-1.5 text-center z-10">
+            <p className="text-[10px] font-bold uppercase tracking-wider">
+              Open House
+            </p>
+            <p className="text-xs font-semibold">
+              {openHouseText}
+            </p>
+          </div>
+        )}
+
+        {/* Status badge — pushed down if open house banner is visible */}
+        <span
+          className={`absolute left-2 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded ${badgeClass} ${
+            openHouseText ? "top-12" : "top-2"
+          }`}
+        >
           {listing.StandardStatus === "Active" ? "New" : listing.StandardStatus}
         </span>
+
         {/* Price overlay — bottom gradient */}
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent pt-8 pb-3 px-3">
           <p className="font-heading font-bold text-white text-xl">
