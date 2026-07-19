@@ -519,6 +519,23 @@ export async function generateMetadata({
       };
     }
 
+    // Property management spoke pages get custom metadata for ViVi PM
+    if (topic.slug === "property-management") {
+      return {
+        title: `${city.name} Property Management | ViVi PM`,
+        description: `Professional property management in ${city.name}, FL. Tenant screening, rent collection, maintenance, and inspections by ViVi PM. Call (813) 733-7907.`,
+        alternates: { canonical },
+        robots: { index: true, follow: true },
+        openGraph: {
+          title: `${city.name} Property Management | ViVi PM`,
+          description: `Full-service property management in ${city.name}, FL by ViVi PM. Barrett Henry, Broker Associate at REMAX Collective.`,
+          url: canonical,
+          type: "website",
+          images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+        },
+      };
+    }
+
     // Spoke page metadata
     return {
       title: `${topic.label} in ${city.name}, FL`,
@@ -612,6 +629,10 @@ export default async function CityPage({
       // Neighborhood guide gets its own dedicated scrollable page component
       if (page.topic.slug === "neighborhood-guide") {
         return <NeighborhoodGuidePage city={page.city} />;
+      }
+      // Property management spoke pages get a dedicated ViVi PM page
+      if (page.topic.slug === "property-management") {
+        return <PropertyManagementSpokePage city={page.city} />;
       }
       // Home valuation spoke pages — HomeValuationSpokePage not yet built, falls through to SpokePage
       // TODO: replace SpokePage with HomeValuationSpokePage once component is created
@@ -1566,6 +1587,361 @@ function HomeValuationSpokePage({ city }: { city: CityData }) {
             </h2>
             <p className="font-body text-white/70 text-sm">
               Barrett Henry, REALTOR® — 23+ years of real estate experience
+            </p>
+          </div>
+          <div className="flex gap-3 flex-shrink-0">
+            <a
+              href="tel:+18137337907"
+              className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 rounded text-sm hover:bg-accent/90 transition-colors"
+            >
+              Call Now
+            </a>
+            <Link
+              href="/contact/"
+              className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
+            >
+              Send a Message
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+// =============================================================================
+// PROPERTY MANAGEMENT SPOKE PAGE — city-specific ViVi PM page
+// Renders at /{city}-property-management/ for every city in the system.
+// Highlights ViVi PM services, links to the main /property-management/ page,
+// and mentions Best Bay Services (run by James Evans) for maintenance.
+// =============================================================================
+
+function PropertyManagementSpokePage({ city }: { city: CityData }) {
+  // Get neighboring cities for the hub-to-spoke nav at the bottom
+  const neighbors = cities.filter(
+    (c) => c.county === city.county && c.slug !== city.slug
+  );
+
+  // FAQs for this city's property management page
+  const faqs = [
+    {
+      question: `How much does property management cost in ${city.name}?`,
+      answerText: `ViVi PM offers competitive management fees for ${city.name} rental properties. Pricing depends on property type, number of units, and services needed. Contact Barrett Henry at (813) 733-7907 for a free rental analysis and custom quote.`,
+      answerHtml: `ViVi PM offers competitive management fees for <strong>${city.name}</strong> rental properties. Pricing depends on property type, number of units, and services needed. Contact <strong>Barrett Henry</strong> at <a href="tel:+18137337907" class="text-link hover:underline"><strong>(813) 733-7907</strong></a> for a free rental analysis and custom quote.`,
+    },
+    {
+      question: `What does a property manager do in ${city.name}?`,
+      answerText: `A property manager handles the day-to-day operations of your rental property so you do not have to. ViVi PM covers tenant screening, lease preparation, rent collection, maintenance coordination, property inspections, and financial reporting for ${city.name} rental owners.`,
+      answerHtml: `A property manager handles the day-to-day operations of your rental property so you do not have to. <strong>ViVi PM</strong> covers tenant screening, lease preparation, rent collection, maintenance coordination, property inspections, and financial reporting for <strong>${city.name}</strong> rental owners.`,
+    },
+    {
+      question: `How does ViVi PM screen tenants in ${city.name}?`,
+      answerText: `ViVi PM runs full background checks including credit reports, criminal history, eviction records, income verification, and rental history review. Every applicant goes through the same thorough process before any lease is signed.`,
+      answerHtml: `ViVi PM runs full background checks including credit reports, criminal history, eviction records, income verification, and rental history review. Every applicant goes through the same thorough process before any lease is signed.`,
+    },
+    {
+      question: `Who handles maintenance for ViVi PM properties in ${city.name}?`,
+      answerText: `Maintenance is coordinated through Best Bay Services, a trusted local handyman and home services company run by James Evans. They handle repairs, turnovers, and routine maintenance for ViVi PM properties across Tampa Bay, including ${city.name}.`,
+      answerHtml: `Maintenance is coordinated through <strong>Best Bay Services</strong>, a trusted local handyman and home services company run by <strong>James Evans</strong>. They handle repairs, turnovers, and routine maintenance for ViVi PM properties across Tampa Bay, including <strong>${city.name}</strong>.`,
+    },
+    {
+      question: `Can I still sell my ${city.name} rental property while it is managed by ViVi PM?`,
+      answerText: `Yes. Barrett Henry is both a Broker Associate at REMAX Collective and the owner of ViVi PM. If you decide to sell your ${city.name} investment property, Barrett can handle the sale while managing the tenant relationship through closing.`,
+      answerHtml: `Yes. <strong>Barrett Henry</strong> is both a Broker Associate at REMAX Collective and the owner of ViVi PM. If you decide to sell your <strong>${city.name}</strong> investment property, Barrett can handle the sale while managing the tenant relationship through closing.`,
+    },
+  ];
+
+  return (
+    <>
+      {/* === BreadcrumbList JSON-LD === */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://nowtb.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: `${city.name} Homes for Sale`,
+                item: `https://nowtb.com/${city.slug}`,
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: `Property Management in ${city.name}`,
+                item: `https://nowtb.com/${city.slug}-property-management`,
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* === FAQPage JSON-LD structured data === */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((f) => ({
+              "@type": "Question",
+              name: f.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: f.answerText,
+              },
+            })),
+          }),
+        }}
+      />
+
+      {/* === Navy hero === */}
+      <section className="bg-primary pt-36 pb-16">
+        <div className="container-wide">
+          {/* Breadcrumb trail */}
+          <nav className="flex items-center gap-2 text-xs font-body text-white/80 mb-6 tracking-wide uppercase">
+            <Link href="/" className="hover:text-white/80 transition-colors">Home</Link>
+            <span>/</span>
+            <Link href={`/${city.slug}`} className="hover:text-white/80 transition-colors">{city.name}</Link>
+            <span>/</span>
+            <span className="text-accent">Property Management</span>
+          </nav>
+
+          {/* Title */}
+          <h1 className="heading-display text-display md:text-display-lg text-white mb-3">
+            Property Management in {city.name}, FL
+          </h1>
+          <p className="font-body text-white/70 text-lg max-w-2xl mb-6">
+            Full-service rental property management by ViVi PM. Tenant screening, rent collection, maintenance, inspections, and financial reporting for {city.name} property owners.
+          </p>
+
+          {/* CTA row */}
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="tel:+18137337907"
+              className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 rounded text-sm hover:bg-accent/90 transition-colors"
+            >
+              (813) 733-7907
+            </a>
+            <Link
+              href="/property-management/"
+              className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
+            >
+              Learn About ViVi PM
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* === Why hire a property manager === */}
+      <section className="container-wide py-12">
+        <div className="max-w-3xl">
+          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6">
+            Why Hire a Property Manager in {city.name}?
+          </h2>
+          <div className="space-y-4 font-body text-muted leading-relaxed">
+            <p>
+              Owning a rental property in {city.name} can generate strong monthly income, but managing it yourself takes real
+              time and effort. Between finding qualified tenants, handling maintenance calls, tracking rent payments, and staying
+              compliant with Florida landlord-tenant law, most owners spend 10 to 20 hours per month on management tasks alone.
+            </p>
+            <p>
+              A professional property manager takes all of that off your plate. ViVi PM handles every aspect of your {city.name}{" "}
+              rental property so you can collect passive income without the headaches. Whether you own a single-family home, a
+              condo, or a small multifamily building in {city.county} County, ViVi PM has the systems and local knowledge to
+              protect your investment and maximize your returns.
+            </p>
+            <p>
+              Barrett Henry, Broker Associate at REMAX Collective, founded ViVi PM to give Tampa Bay rental owners a management
+              option backed by 23+ years of real estate experience. That means your property manager is also a licensed broker
+              who understands {city.name} property values, rental comps, and the local market inside and out.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* === What ViVi PM handles === */}
+      <section className="bg-gray-50 py-12">
+        <div className="container-wide">
+          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-8">
+            What Does ViVi PM Handle for {city.name} Owners?
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Tenant screening */}
+            <div className="bg-white rounded-lg border border-gray-200 p-6">
+              <h3 className="font-heading font-bold text-lg text-primary mb-2">Tenant Screening</h3>
+              <p className="font-body text-muted text-sm leading-relaxed">
+                Full background checks, credit reports, income verification, eviction history, and rental references. Every
+                applicant goes through the same rigorous process before a lease is signed.
+              </p>
+            </div>
+            {/* Maintenance */}
+            <div className="bg-white rounded-lg border border-gray-200 p-6">
+              <h3 className="font-heading font-bold text-lg text-primary mb-2">Maintenance Coordination</h3>
+              <p className="font-body text-muted text-sm leading-relaxed">
+                24/7 maintenance requests handled through{" "}
+                <a href="https://bestbayservices.com" target="_blank" rel="noopener noreferrer" className="text-link hover:underline">Best Bay Services</a>,
+                a trusted local handyman and home services company run by James Evans. Fast response, fair pricing, quality work.
+              </p>
+            </div>
+            {/* Rent collection */}
+            <div className="bg-white rounded-lg border border-gray-200 p-6">
+              <h3 className="font-heading font-bold text-lg text-primary mb-2">Rent Collection</h3>
+              <p className="font-body text-muted text-sm leading-relaxed">
+                On-time rent collection with online payment portals for tenants and direct deposit to your account. Late fees
+                enforced per the lease terms.
+              </p>
+            </div>
+            {/* Inspections */}
+            <div className="bg-white rounded-lg border border-gray-200 p-6">
+              <h3 className="font-heading font-bold text-lg text-primary mb-2">Property Inspections</h3>
+              <p className="font-body text-muted text-sm leading-relaxed">
+                Regular move-in, move-out, and periodic inspections with photo documentation. Catch problems early before
+                they become expensive repairs.
+              </p>
+            </div>
+            {/* Financial reporting */}
+            <div className="bg-white rounded-lg border border-gray-200 p-6">
+              <h3 className="font-heading font-bold text-lg text-primary mb-2">Financial Reporting</h3>
+              <p className="font-body text-muted text-sm leading-relaxed">
+                Monthly owner statements, year-end tax documents, and full transparency on every dollar. You always know
+                exactly where your money is going.
+              </p>
+            </div>
+            {/* Lease + legal */}
+            <div className="bg-white rounded-lg border border-gray-200 p-6">
+              <h3 className="font-heading font-bold text-lg text-primary mb-2">Lease Preparation and Compliance</h3>
+              <p className="font-body text-muted text-sm leading-relaxed">
+                Legally compliant lease agreements tailored to Florida landlord-tenant law. If eviction is necessary, ViVi PM
+                handles the process from notice to court filing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* === Rental market overview === */}
+      <section className="container-wide py-12">
+        <div className="max-w-3xl">
+          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6">
+            {city.name} Rental Market Overview
+          </h2>
+          <div className="space-y-4 font-body text-muted leading-relaxed">
+            <p>
+              {city.name} sits in {city.county} County, one of the fastest-growing regions in Florida. {city.tagline}. Strong
+              population growth, a healthy job market, and proximity to Tampa Bay&apos;s employment centers make {city.name} a
+              solid market for rental property owners.
+            </p>
+            <p>
+              Whether you own a long-term rental or are considering converting your property to a rental, having a local property
+              manager who understands {city.name}&apos;s rental comps, tenant expectations, and neighborhood dynamics makes a
+              real difference. ViVi PM prices your rental competitively, markets it to qualified tenants, and keeps your vacancy
+              rate low.
+            </p>
+            <p>
+              Looking to invest in {city.name} rental property? Barrett Henry can help you find the right investment property
+              and transition it into professional management with ViVi PM from day one.
+            </p>
+          </div>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link
+              href={`/${city.slug}-investment-property/`}
+              className="inline-flex items-center gap-2 border border-gray-200 text-primary font-semibold px-6 py-3 rounded text-sm hover:border-accent hover:bg-accent/10 transition-colors"
+            >
+              {city.name} Investment Properties
+            </Link>
+            <Link
+              href={`/${city.slug}-rentals/`}
+              className="inline-flex items-center gap-2 border border-gray-200 text-primary font-semibold px-6 py-3 rounded text-sm hover:border-accent hover:bg-accent/10 transition-colors"
+            >
+              {city.name} Rentals
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* === FAQ section === */}
+      <section className="bg-gray-50 py-12">
+        <div className="container-wide max-w-3xl">
+          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-8">
+            Frequently Asked Questions About Property Management in {city.name}
+          </h2>
+          <div className="space-y-6">
+            {faqs.map((faq, i) => (
+              <div key={i} className={i < faqs.length - 1 ? "border-b border-gray-200 pb-6" : "pb-6"}>
+                <h3 className="font-heading font-bold text-lg text-primary mb-2">
+                  {faq.question}
+                </h3>
+                <p
+                  className="font-body text-muted font-light leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: faq.answerHtml }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* === Link to main property management page === */}
+      <section className="container-wide py-12">
+        <div className="rounded-xl border border-gray-200 bg-white p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div>
+            <p className="font-heading font-bold text-lg md:text-xl text-primary mb-1">
+              Learn more about ViVi PM
+            </p>
+            <p className="font-body text-muted text-sm">
+              Full details on services, pricing, and how to get started with professional property management.
+            </p>
+          </div>
+          <Link
+            href="/property-management/"
+            className="inline-flex items-center gap-2 bg-primary text-white font-semibold px-6 py-3 rounded text-sm hover:bg-primary/90 transition-colors flex-shrink-0"
+          >
+            ViVi PM Details
+          </Link>
+        </div>
+      </section>
+
+      {/* === Hub-to-spoke nav: sibling property management pages in the same county === */}
+      {neighbors.length > 0 && (
+        <section className="container-wide py-12">
+          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6">
+            Property Management in {city.county} County
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {neighbors.map((neighbor) => (
+              <Link
+                key={neighbor.slug}
+                href={`/${neighbor.slug}-property-management/`}
+                className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10"
+              >
+                {neighbor.name} PM
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* === Spoke nav — all topic pages for this city === */}
+      <SpokeNav city={city} currentTopic="property-management" />
+
+      {/* === Bottom CTA bar === */}
+      <section className="bg-primary py-12">
+        <div className="container-wide flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h2 className="font-heading font-bold text-xl md:text-2xl text-white mb-1">
+              Own rental property in {city.name}?
+            </h2>
+            <p className="font-body text-white/70 text-sm">
+              Barrett Henry, REALTOR® and ViVi PM owner. Call for a free rental analysis.
             </p>
           </div>
           <div className="flex gap-3 flex-shrink-0">

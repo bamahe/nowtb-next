@@ -91,10 +91,10 @@ export default function SpokeNav({ city, currentTopic }: SpokeNavProps) {
           {city.name} Rentals
         </Link>
         <Link
-          href="/property-management/"
+          href={`/${city.slug}-property-management/`}
           className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary hover:border-accent hover:bg-accent/10 transition-colors"
         >
-          Property Management
+          {city.name} Property Management
         </Link>
         <Link
           href={`/blog/sell-home-fast-${city.slug}/`}
