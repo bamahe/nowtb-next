@@ -34,8 +34,13 @@ function getCityFromSlug(postSlug: string) {
   return null;
 }
 
+export const dynamicParams = true;
+
+// Pre-render the 200 most recent posts at build time.
+// Older posts render on-demand via ISR (dynamicParams = true above).
+// This keeps us under Vercel's 2048 route limit.
 export function generateStaticParams() {
-  return getAllPosts().map((post) => ({ slug: post.slug }));
+  return getAllPosts().slice(0, 100).map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({
@@ -152,8 +157,20 @@ export default async function BlogPostPage({
         }}
       />
 
-      <section className="bg-primary pt-32 pb-16">
-        <div className="container-wide max-w-3xl text-center">
+      <section className="relative pt-32 pb-16 overflow-hidden">
+        {/* Background image with dark overlay (solid navy fallback if no thumbnail) */}
+        {thumbnail && (
+          <Image
+            src={thumbnail}
+            alt=""
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+          />
+        )}
+        <div className={`absolute inset-0 ${thumbnail ? 'bg-primary/85' : 'bg-primary'}`} />
+        <div className="container-wide max-w-3xl text-center relative z-10">
           {/* Breadcrumb trail — Home > Blog > Post Title */}
           <nav
             aria-label="Breadcrumb"
@@ -325,23 +342,8 @@ export default async function BlogPostPage({
 
           {/* Main content */}
           <article className="lg:col-span-3 order-1 lg:order-2">
-            {thumbnail && (
-              <div className="mb-8">
-                <div className="rounded-lg overflow-hidden">
-                  <Image
-                    src={thumbnail}
-                    alt={post.title}
-                    width={900}
-                    height={500}
-                    className="w-full h-auto"
-                    priority
-                    sizes="(max-width: 768px) 100vw, 75vw"
-                  />
-                </div>
-                {/* Photo credit — shows for Wikimedia Commons and attributed images */}
-                <PhotoCredit src={thumbnail} />
-              </div>
-            )}
+            {/* Photo credit — shows for Wikimedia Commons and attributed images */}
+            {thumbnail && <PhotoCredit src={thumbnail} />}
             <div
               className="blog-content prose prose-lg font-body text-dark max-w-none
                 prose-headings:font-heading prose-headings:text-primary
@@ -356,50 +358,73 @@ export default async function BlogPostPage({
       {/* === Live listings for search category blog posts === */}
       <SearchCategoryListings slug={slug} />
 
-      {/* === Related Articles from same city === */}
-      {cityRelatedPosts.length > 0 && matchedCity && (
-        <section className="bg-gray-50 py-12">
-          <div className="container-wide">
-            <h2 className="heading-display text-2xl text-primary mb-8">
-              More About {matchedCity.name}
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {cityRelatedPosts.map((rp) => (
-                <Link
-                  key={rp.slug}
-                  href={`/blog/${rp.slug}/`}
-                  className="group block border border-gray-200 rounded-lg overflow-hidden bg-white hover:border-accent hover:shadow-lg transition-all"
-                >
-                  <div className="p-5">
-                    {/* Post title */}
-                    <h3 className="font-heading font-bold text-sm text-primary mb-2 group-hover:text-accent transition-colors line-clamp-2">
-                      {rp.title}
-                    </h3>
-                    {/* Excerpt truncated to ~100 chars */}
-                    {rp.excerpt && (
-                      <p className="font-body text-muted text-xs mb-3 line-clamp-3">
-                        {rp.excerpt.replace(/<[^>]*>/g, "").slice(0, 100)}
-                        {rp.excerpt.replace(/<[^>]*>/g, "").length > 100 ? "…" : ""}
-                      </p>
-                    )}
-                    {/* Date */}
-                    <time
-                      dateTime={rp.date}
-                      className="font-body text-muted text-[11px]"
+      {/* === Related Articles — city-specific if available, general fallback otherwise === */}
+      {(() => {
+        // Use city-specific posts if we matched a city, otherwise use the general related posts
+        const bottomPosts = (cityRelatedPosts.length > 0 && matchedCity)
+          ? cityRelatedPosts
+          : related;
+        const sectionTitle = (cityRelatedPosts.length > 0 && matchedCity)
+          ? `More About ${matchedCity.name}`
+          : "Related Articles";
+
+        if (bottomPosts.length === 0) return null;
+
+        return (
+          <section className="bg-gray-50 py-12">
+            <div className="container-wide">
+              <h2 className="heading-display text-2xl text-primary mb-8">
+                {sectionTitle}
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {bottomPosts.map((rp) => {
+                  const rpThumb = getPostThumbnail(rp);
+                  return (
+                    <Link
+                      key={rp.slug}
+                      href={`/blog/${rp.slug}/`}
+                      className="group block border border-gray-200 rounded-lg overflow-hidden bg-white hover:border-accent hover:shadow-lg transition-all"
                     >
-                      {new Date(rp.date).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "short",
-                        day: "numeric",
-                      })}
-                    </time>
-                  </div>
-                </Link>
-              ))}
+                      {rpThumb && (
+                        <div className="h-40 overflow-hidden">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={rpThumb}
+                            alt={rp.title}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            loading="lazy"
+                          />
+                        </div>
+                      )}
+                      <div className="p-5">
+                        <h3 className="font-heading font-bold text-sm text-primary mb-2 group-hover:text-accent transition-colors line-clamp-2">
+                          {rp.title}
+                        </h3>
+                        {rp.excerpt && (
+                          <p className="font-body text-muted text-xs mb-3 line-clamp-3">
+                            {rp.excerpt.replace(/<[^>]*>/g, "").slice(0, 100)}
+                            {rp.excerpt.replace(/<[^>]*>/g, "").length > 100 ? "…" : ""}
+                          </p>
+                        )}
+                        <time
+                          dateTime={rp.date}
+                          className="font-body text-muted text-[11px]"
+                        >
+                          {new Date(rp.date).toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "short",
+                            day: "numeric",
+                          })}
+                        </time>
+                      </div>
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
-          </div>
-        </section>
-      )}
+          </section>
+        );
+      })()}
     </>
   );
 }

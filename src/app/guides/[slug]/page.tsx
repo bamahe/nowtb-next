@@ -371,6 +371,22 @@ export default async function GuidePage({
         </section>
       )}
 
+      {/* === Contact form CTA — placed before related guides and FAQ === */}
+      <section className="py-16">
+        <div className="container-wide max-w-2xl">
+          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2 text-center">
+            Have Questions About This Guide?
+          </h2>
+          <p className="font-body text-muted text-center mb-8">
+            Barrett Henry is here to help you put this information into action.
+          </p>
+          <ContactForm
+            webhookUrl="/api/contact"
+            source={`guide-${guide.slug}`}
+          />
+        </div>
+      </section>
+
       {/* === Related guides === */}
       {relatedGuides.length > 0 && (
         <section className="bg-gray-50 py-12">
@@ -401,21 +417,6 @@ export default async function GuidePage({
         </section>
       )}
 
-      {/* === Contact form CTA === */}
-      <section className="py-16">
-        <div className="container-wide max-w-2xl">
-          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2 text-center">
-            Have Questions About This Guide?
-          </h2>
-          <p className="font-body text-muted text-center mb-8">
-            Barrett Henry is here to help you put this information into action.
-          </p>
-          <ContactForm
-            webhookUrl="/api/contact"
-            source={`guide-${guide.slug}`}
-          />
-        </div>
-      </section>
     </>
   );
 }
