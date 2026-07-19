@@ -47,7 +47,7 @@ function NumInput({
       onChange={(e) => onChange(Number(e.target.value) || 0)}
       step={step}
       aria-label={label}
-      className="w-full rounded border border-slate-300 bg-white px-3 py-2 text-right font-semibold text-slate-800 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 print:border-none print:bg-transparent print:p-0"
+      className="w-full min-w-[80px] rounded border border-slate-300 bg-white px-2 py-1.5 text-right text-sm font-semibold text-slate-800 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 md:px-3 md:py-2 print:border-none print:bg-transparent print:p-0"
     />
   );
 }
@@ -280,18 +280,18 @@ export default function ComparisonTool({
 
   // ── Render ────────────────────────────────────────────────────────────────
   return (
-    <div className="min-h-screen bg-[#F8F7F4] font-[var(--font-inter)] text-slate-800">
+    <div className="min-h-screen overflow-x-hidden bg-[#F8F7F4] font-[var(--font-inter)] text-slate-800">
       {/* Header */}
-      <header className="bg-[#0B2545] py-10 text-white print:py-4">
-        <div className="mx-auto max-w-6xl px-4">
-          <h1 className="text-3xl font-bold md:text-4xl">{comparison.title}</h1>
-          <p className="mt-3 max-w-3xl text-base text-slate-300">
+      <header className="bg-[#0B2545] px-4 py-8 text-white md:py-10 print:py-4">
+        <div className="mx-auto max-w-5xl">
+          <h1 className="text-2xl font-bold md:text-4xl">{comparison.title}</h1>
+          <p className="mt-2 max-w-3xl text-sm text-slate-300 md:mt-3 md:text-base">
             {comparison.subtitle}
           </p>
         </div>
       </header>
 
-      <main className="mx-auto max-w-6xl px-4 py-8">
+      <main className="mx-auto max-w-5xl px-3 py-6 md:px-4 md:py-8">
         {/* ── Property Cards ─────────────────────────────────────────── */}
         <div className="grid gap-6 md:grid-cols-2">
           {[propA, propB].map((prop, idx) => (
@@ -415,11 +415,11 @@ export default function ComparisonTool({
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-slate-200 bg-slate-50">
-                <th className="px-4 py-3 text-left font-bold text-[#0B2545]">Item</th>
-                <th className="px-4 py-3 text-right font-bold text-[#0B2545]">
+                <th className="px-2 py-2 text-left font-bold text-[#0B2545] md:px-4 md:py-3">Item</th>
+                <th className="px-2 py-2 text-right text-xs font-bold text-[#0B2545] md:px-4 md:py-3 md:text-sm">
                   {propA.address}
                 </th>
-                <th className="px-4 py-3 text-right font-bold text-[#0B2545]">
+                <th className="px-2 py-2 text-right text-xs font-bold text-[#0B2545] md:px-4 md:py-3 md:text-sm">
                   {propB.address}
                 </th>
               </tr>
@@ -427,11 +427,11 @@ export default function ComparisonTool({
             <tbody>
               {comparison.upfrontRows.map((row) => (
                 <tr key={row.id} className="border-b border-slate-100">
-                  <td className="px-4 py-3">
-                    <div className="font-semibold text-slate-700">{row.label}</div>
-                    <div className="text-xs text-slate-400">{row.sublabel}</div>
+                  <td className="px-2 py-2 md:px-4 md:py-3">
+                    <div className="text-xs font-semibold text-slate-700 md:text-sm">{row.label}</div>
+                    <div className="hidden text-xs text-slate-400 md:block">{row.sublabel}</div>
                   </td>
-                  <td className="px-4 py-2 text-right">
+                  <td className="px-1 py-1.5 text-right md:px-4 md:py-2">
                     <NumInput
                       value={upfront[row.id]?.[0] ?? row.defaultA}
                       onChange={(v) => setUpfrontVal(row.id, 0, v)}
@@ -439,7 +439,7 @@ export default function ComparisonTool({
                       label={`${row.label} for ${propA.address}`}
                     />
                   </td>
-                  <td className="px-4 py-2 text-right">
+                  <td className="px-1 py-1.5 text-right md:px-4 md:py-2">
                     <NumInput
                       value={upfront[row.id]?.[1] ?? row.defaultB}
                       onChange={(v) => setUpfrontVal(row.id, 1, v)}
@@ -452,20 +452,20 @@ export default function ComparisonTool({
             </tbody>
             <tfoot>
               <tr className="border-t-2 border-slate-300 bg-slate-50 font-bold">
-                <td className="px-4 py-3 text-[#0B2545]">Total out the door</td>
-                <td className="px-4 py-3 text-right text-[#0B2545]">
+                <td className="px-2 py-2 text-xs font-bold text-[#0B2545] md:px-4 md:py-3 md:text-sm">Total out the door</td>
+                <td className="px-2 py-2 text-right text-sm text-[#0B2545] md:px-4 md:py-3">
                   {fmt(upfrontCalc.totalA)}
                 </td>
-                <td className="px-4 py-3 text-right text-[#0B2545]">
+                <td className="px-2 py-2 text-right text-sm text-[#0B2545] md:px-4 md:py-3">
                   {fmt(upfrontCalc.totalB)}
                 </td>
               </tr>
               <tr className="bg-slate-50 text-xs text-slate-500">
-                <td className="px-4 pb-3">Cost per sq ft</td>
-                <td className="px-4 pb-3 text-right">
+                <td className="px-2 pb-2 md:px-4 md:pb-3">Cost per sq ft</td>
+                <td className="px-2 pb-2 md:px-4 md:pb-3 text-right">
                   ${upfrontCalc.perSqftA.toFixed(2)}/sq ft
                 </td>
-                <td className="px-4 pb-3 text-right">
+                <td className="px-2 pb-2 md:px-4 md:pb-3 text-right">
                   ${upfrontCalc.perSqftB.toFixed(2)}/sq ft
                 </td>
               </tr>
@@ -494,11 +494,11 @@ export default function ComparisonTool({
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-slate-200 bg-slate-50">
-                <th className="px-4 py-3 text-left font-bold text-[#0B2545]">Item</th>
-                <th className="px-4 py-3 text-right font-bold text-[#0B2545]">
+                <th className="px-2 py-2 text-left font-bold text-[#0B2545] md:px-4 md:py-3">Item</th>
+                <th className="px-2 py-2 text-right text-xs font-bold text-[#0B2545] md:px-4 md:py-3 md:text-sm">
                   {propA.address}
                 </th>
-                <th className="px-4 py-3 text-right font-bold text-[#0B2545]">
+                <th className="px-2 py-2 text-right text-xs font-bold text-[#0B2545] md:px-4 md:py-3 md:text-sm">
                   {propB.address}
                 </th>
               </tr>
@@ -506,11 +506,11 @@ export default function ComparisonTool({
             <tbody>
               {comparison.monthlyRows.map((row) => (
                 <tr key={row.id} className="border-b border-slate-100">
-                  <td className="px-4 py-3">
-                    <div className="font-semibold text-slate-700">{row.label}</div>
-                    <div className="text-xs text-slate-400">{row.sublabel}</div>
+                  <td className="px-2 py-2 md:px-4 md:py-3">
+                    <div className="text-xs font-semibold text-slate-700 md:text-sm">{row.label}</div>
+                    <div className="hidden text-xs text-slate-400 md:block">{row.sublabel}</div>
                   </td>
-                  <td className="px-4 py-2 text-right">
+                  <td className="px-1 py-1.5 text-right md:px-4 md:py-2">
                     <NumInput
                       value={monthly[row.id]?.[0] ?? row.defaultA}
                       onChange={(v) => setMonthlyVal(row.id, 0, v)}
@@ -518,7 +518,7 @@ export default function ComparisonTool({
                       label={`${row.label} for ${propA.address}`}
                     />
                   </td>
-                  <td className="px-4 py-2 text-right">
+                  <td className="px-1 py-1.5 text-right md:px-4 md:py-2">
                     <NumInput
                       value={monthly[row.id]?.[1] ?? row.defaultB}
                       onChange={(v) => setMonthlyVal(row.id, 1, v)}
@@ -531,11 +531,11 @@ export default function ComparisonTool({
             </tbody>
             <tfoot>
               <tr className="border-t-2 border-slate-300 bg-slate-50 font-bold">
-                <td className="px-4 py-3 text-[#0B2545]">Total per month</td>
-                <td className="px-4 py-3 text-right text-[#0B2545]">
+                <td className="px-2 py-2 text-xs font-bold text-[#0B2545] md:px-4 md:py-3 md:text-sm">Total per month</td>
+                <td className="px-2 py-2 text-right text-sm text-[#0B2545] md:px-4 md:py-3">
                   {fmt(Math.round(monthlyCalc.totalA))}
                 </td>
-                <td className="px-4 py-3 text-right text-[#0B2545]">
+                <td className="px-2 py-2 text-right text-sm text-[#0B2545] md:px-4 md:py-3">
                   {fmt(Math.round(monthlyCalc.totalB))}
                 </td>
               </tr>
@@ -593,11 +593,11 @@ export default function ComparisonTool({
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-slate-200 bg-slate-50">
-                  <th className="px-4 py-3 text-left font-bold text-[#0B2545]">Input</th>
-                  <th className="px-4 py-3 text-right font-bold text-[#0B2545]">
+                  <th className="px-2 py-2 text-left text-xs font-bold text-[#0B2545] md:px-4 md:py-3 md:text-sm">Input</th>
+                  <th className="px-2 py-2 text-right text-xs font-bold text-[#0B2545] md:px-4 md:py-3 md:text-sm">
                     {propA.address}
                   </th>
-                  <th className="px-4 py-3 text-right font-bold text-[#0B2545]">
+                  <th className="px-2 py-2 text-right text-xs font-bold text-[#0B2545] md:px-4 md:py-3 md:text-sm">
                     {propB.address}
                   </th>
                 </tr>
@@ -605,28 +605,28 @@ export default function ComparisonTool({
               <tbody>
                 <tr className="border-b border-slate-100">
                   <td className="px-4 py-3 font-semibold text-slate-700">Minutes one way</td>
-                  <td className="px-4 py-2 text-right">
+                  <td className="px-1 py-1.5 text-right md:px-4 md:py-2">
                     <NumInput value={commuteMinA} onChange={setCommuteMinA} step={1} label="Minutes one way A" />
                   </td>
-                  <td className="px-4 py-2 text-right">
+                  <td className="px-1 py-1.5 text-right md:px-4 md:py-2">
                     <NumInput value={commuteMinB} onChange={setCommuteMinB} step={1} label="Minutes one way B" />
                   </td>
                 </tr>
                 <tr className="border-b border-slate-100">
                   <td className="px-4 py-3 font-semibold text-slate-700">Miles one way</td>
-                  <td className="px-4 py-2 text-right">
+                  <td className="px-1 py-1.5 text-right md:px-4 md:py-2">
                     <NumInput value={commuteMilesA} onChange={setCommuteMilesA} step={0.5} label="Miles one way A" />
                   </td>
-                  <td className="px-4 py-2 text-right">
+                  <td className="px-1 py-1.5 text-right md:px-4 md:py-2">
                     <NumInput value={commuteMilesB} onChange={setCommuteMilesB} step={0.5} label="Miles one way B" />
                   </td>
                 </tr>
                 <tr className="border-b border-slate-100">
                   <td className="px-4 py-3 font-semibold text-slate-700">Days per week</td>
-                  <td className="px-4 py-2 text-right">
+                  <td className="px-1 py-1.5 text-right md:px-4 md:py-2">
                     <NumInput value={commuteDaysA} onChange={setCommuteDaysA} step={1} label="Days per week A" />
                   </td>
-                  <td className="px-4 py-2 text-right">
+                  <td className="px-1 py-1.5 text-right md:px-4 md:py-2">
                     <NumInput value={commuteDaysB} onChange={setCommuteDaysB} step={1} label="Days per week B" />
                   </td>
                 </tr>
@@ -645,20 +645,20 @@ export default function ComparisonTool({
               </tbody>
               <tfoot>
                 <tr className="border-t-2 border-slate-300 bg-slate-50 font-bold">
-                  <td className="px-4 py-3 text-[#0B2545]">Hours per year</td>
-                  <td className="px-4 py-3 text-right text-[#0B2545]">
+                  <td className="px-2 py-2 text-xs font-bold text-[#0B2545] md:px-4 md:py-3 md:text-sm">Hours per year</td>
+                  <td className="px-2 py-2 text-right text-sm text-[#0B2545] md:px-4 md:py-3">
                     {Math.round(commuteCalc.hoursA)}
                   </td>
-                  <td className="px-4 py-3 text-right text-[#0B2545]">
+                  <td className="px-2 py-2 text-right text-sm text-[#0B2545] md:px-4 md:py-3">
                     {Math.round(commuteCalc.hoursB)}
                   </td>
                 </tr>
                 <tr className="bg-slate-50 font-bold">
-                  <td className="px-4 pb-3 text-[#0B2545]">Fuel per year</td>
-                  <td className="px-4 pb-3 text-right text-[#0B2545]">
+                  <td className="px-2 pb-2 md:px-4 md:pb-3 text-[#0B2545]">Fuel per year</td>
+                  <td className="px-2 pb-2 md:px-4 md:pb-3 text-right text-[#0B2545]">
                     {fmt(Math.round(commuteCalc.fuelA))}
                   </td>
-                  <td className="px-4 pb-3 text-right text-[#0B2545]">
+                  <td className="px-2 pb-2 md:px-4 md:pb-3 text-right text-[#0B2545]">
                     {fmt(Math.round(commuteCalc.fuelB))}
                   </td>
                 </tr>
@@ -680,11 +680,11 @@ export default function ComparisonTool({
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-slate-200 bg-slate-50">
-                <th className="px-4 py-3 text-left font-bold text-[#0B2545]">Component</th>
-                <th className="px-4 py-3 text-left font-bold text-[#0B2545]">
+                <th className="px-2 py-2 text-left text-xs font-bold text-[#0B2545] md:px-4 md:py-3 md:text-sm">Component</th>
+                <th className="px-2 py-2 text-left text-xs font-bold text-[#0B2545] md:px-4 md:py-3 md:text-sm">
                   {propA.address} (2013)
                 </th>
-                <th className="px-4 py-3 text-left font-bold text-[#0B2545]">
+                <th className="px-2 py-2 text-left text-xs font-bold text-[#0B2545] md:px-4 md:py-3 md:text-sm">
                   {propB.address} (2020)
                 </th>
               </tr>
@@ -692,9 +692,9 @@ export default function ComparisonTool({
             <tbody>
               {comparison.buildYearRows.map((row, i) => (
                 <tr key={i} className="border-b border-slate-100">
-                  <td className="px-4 py-3 font-semibold text-slate-700">{row.component}</td>
-                  <td className="px-4 py-3 text-slate-600">{row.propertyA}</td>
-                  <td className="px-4 py-3 text-slate-600">{row.propertyB}</td>
+                  <td className="px-2 py-2 text-xs font-semibold text-slate-700 md:px-4 md:py-3 md:text-sm">{row.component}</td>
+                  <td className="px-2 py-2 text-xs text-slate-600 md:px-4 md:py-3 md:text-sm">{row.propertyA}</td>
+                  <td className="px-2 py-2 text-xs text-slate-600 md:px-4 md:py-3 md:text-sm">{row.propertyB}</td>
                 </tr>
               ))}
             </tbody>
@@ -712,12 +712,12 @@ export default function ComparisonTool({
           <SectionHeading>Priority scoring</SectionHeading>
           <SectionNote>{comparison.prioritySectionNote}</SectionNote>
 
-          <div className="space-y-4 rounded-lg border border-slate-200 bg-white p-5">
+          <div className="space-y-4 rounded-lg border border-slate-200 bg-white p-3 md:p-5">
             {comparison.priorityRows.map((row, i) => (
-              <div key={i} className="border-b border-slate-100 pb-4 last:border-0 last:pb-0">
-                <div className="mb-1 flex items-center justify-between">
-                  <span className="text-sm font-semibold text-slate-700">{row.label}</span>
-                  <span className="text-xs text-slate-400">
+              <div key={i} className="border-b border-slate-100 pb-3 last:border-0 last:pb-0 md:pb-4">
+                <div className="mb-1 flex flex-col gap-0.5 md:flex-row md:items-center md:justify-between">
+                  <span className="text-xs font-semibold text-slate-700 md:text-sm">{row.label}</span>
+                  <span className="text-[10px] text-slate-400 md:text-xs">
                     {row.winner === 'calc' ? row.winnerLabel : `Favors ${row.winnerLabel}`}
                   </span>
                 </div>

@@ -290,7 +290,7 @@ export const hollandVsTonyaAnne: Comparison = {
       id: 'wh',
       label: 'Water heater',
       sublabel:
-        'Already replaced with an electric unit, so no cost expected',
+        'Gas unit replaced since 2023, so no cost expected',
       defaultA: 0,
       defaultB: 0,
       step: 100,
@@ -468,7 +468,7 @@ export const hollandVsTonyaAnne: Comparison = {
     },
     {
       component: 'Water heater life remaining',
-      propertyA: 'Past typical replacement age if original',
+      propertyA: 'Gas unit replaced since 2023. About 8 to 10 years of life left',
       propertyB: 'About 5 to 7 years',
     },
     {
@@ -511,7 +511,7 @@ export const hollandVsTonyaAnne: Comparison = {
 
   buildYearCallout: {
     title: 'The straight version',
-    body: 'On paper the two homes are built to similar standards, and Holland Rd is well built. The honest difference is money you will spend in the next five years. Holland Rd carries a roof, likely an air conditioner, and likely a water heater in that window. Tonya Anne carries close to nothing. Whether that gap is worth the higher price and the longer drive is exactly the tradeoff you are deciding.',
+    body: 'On paper the two homes are built to similar standards, and Holland Rd is well built. The honest difference is money you will spend in the next five years. Holland Rd carries a roof and likely an air conditioner in that window. The water heater was already replaced. Tonya Anne carries close to nothing. Whether that gap is worth the higher price and the longer drive is exactly the tradeoff you are deciding.',
   },
 
   prioritySectionNote:
