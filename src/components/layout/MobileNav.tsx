@@ -83,6 +83,7 @@ export default function MobileNav({ scrolled = false }: MobileNavProps) {
         aria-hidden={!isOpen}
         className={`
           fixed inset-0 z-[9999] md:hidden
+          bg-[#0c1829]
           transition-opacity duration-500
           ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
         `}
@@ -90,7 +91,7 @@ export default function MobileNav({ scrolled = false }: MobileNavProps) {
         {/* Full-screen dark overlay — fully opaque, no bleed-through */}
         <div
           className={`
-            absolute inset-0 bg-primary
+            absolute inset-0 bg-[#0c1829]
             flex flex-col items-center justify-center
             transition-all duration-500
             ${isOpen ? "scale-100" : "scale-95"}

@@ -174,8 +174,11 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
     : isLand ? 'Land for Sale'
     : isRental ? 'Rentals'
     : 'Homes for Sale';
+  // Build the correct city breadcrumb link based on property type
   const cityHref = isCommercial
     ? `/properties/search/?property_type=Commercial+Sale&q=${encodeURIComponent(cityData?.name || listing.City || '')}`
+    : isRental && cityData ? `/${cityData.slug}-rentals/`
+    : isLand && cityData ? `/${cityData.slug}-land-for-sale/`
     : cityData ? `/${cityData.slug}-homes-for-sale/` : null;
   const zipCodes = cityData?.zip_codes || [listing.PostalCode];
 
