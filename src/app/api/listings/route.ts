@@ -64,7 +64,7 @@ export async function GET(request: NextRequest) {
       single_story: searchParams.get("single_story") === "true" || undefined,
       open_house: searchParams.get("open_house") === "true" || undefined,
       rental: searchParams.get("rental") === "true" || undefined,
-      exclude_rental: (searchParams.get("rental") === "true" || isCommercialSearch) ? undefined : true,
+      exclude_rental: (searchParams.get("rental") === "true" || isCommercialSearch || addressQuery) ? undefined : true,
       min_sqft: searchParams.get("min_sqft") || undefined,
       max_sqft: searchParams.get("max_sqft") || undefined,
       min_year: searchParams.get("min_year") || undefined,

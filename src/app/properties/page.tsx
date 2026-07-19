@@ -46,6 +46,7 @@ export const metadata: Metadata = {
 function buildFilterSummary(params: ListingSearchParams): string {
   const parts: string[] = [];
 
+  if (params.address) parts.push(`Address: ${params.address}`);
   if (params.city) parts.push(`in ${params.city}`);
   if (params.zip) parts.push(`ZIP ${params.zip}`);
   if (params.min_price && params.max_price) {
@@ -67,7 +68,7 @@ function buildFilterSummary(params: ListingSearchParams): string {
   if (params.single_story) parts.push("Single Story");
   if (params.open_house) parts.push("Open Houses");
   if (params.rental) parts.push("Rentals");
-  if (params.exclude_rental) parts.push("No Rentals");
+  if (params.exclude_rental && !params.address) parts.push("No Rentals");
 
   // If no filters applied, show a generic message
   if (parts.length === 0) return "Showing all active listings";
@@ -96,6 +97,7 @@ export default async function PropertiesPage({
   // Parse the free-text "q" param from SearchBar — could be a city name or ZIP code
   const qRaw = typeof rawParams.q === "string" ? rawParams.q.trim() : "";
   const qIsZip = /^\d{5}$/.test(qRaw); // 5-digit number = ZIP code
+  const qIsAddress = /^\d+\s+\w/.test(qRaw); // Starts with number + word = address
 
   // Build the typed search params object from URL query strings
   // Explicit city/zip params override the free-text q param
@@ -103,7 +105,7 @@ export default async function PropertiesPage({
     city:
       typeof rawParams.city === "string"
         ? rawParams.city
-        : !qIsZip && qRaw
+        : !qIsZip && !qIsAddress && qRaw
           ? qRaw
           : undefined,
     zip:
@@ -112,6 +114,7 @@ export default async function PropertiesPage({
         : qIsZip
           ? qRaw
           : undefined,
+    address: qIsAddress ? qRaw : undefined,
     min_price:
       typeof rawParams.min_price === "string" ? rawParams.min_price : undefined,
     max_price:
