@@ -164,9 +164,13 @@ function buildFilter(params: ListingSearchParams): string {
   // e.g. "BLOOMINGDALE SEC U V PH", "VILLAGES OF BLOOMINGDALE", etc.
   if (params.subdivision) filters.push(`contains(SubdivisionName,'${params.subdivision.toUpperCase()}')`);
 
+  // Address search: matches street number + name in UnparsedAddress
+  if (params.address) filters.push(`contains(UnparsedAddress,'${params.address.toUpperCase()}')`);
+
   // Default to active listings unless caller explicitly sets a status
+  // Address searches skip the status filter to find properties in any state
   if (params.status) filters.push(`StandardStatus eq '${params.status}'`);
-  else filters.push(`StandardStatus eq 'Active'`);
+  else if (!params.address) filters.push(`StandardStatus eq 'Active'`);
 
   return filters.join(' and ');
 }

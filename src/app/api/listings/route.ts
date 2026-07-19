@@ -4,6 +4,8 @@ import { getCached, setCached, makeCacheKey } from "@/lib/api-cache";
 import type { BridgeResponse } from "@/lib/types";
 import type { Listing } from "@/lib/types";
 
+export const dynamic = "force-dynamic";
+
 /**
  * GET /api/listings — Search listings with filters
  * CACHED: Same query within 5 min returns cached response — zero Bridge API calls.
@@ -16,12 +18,18 @@ export async function GET(request: NextRequest) {
     // Parse the free-text "q" param
     let q = searchParams.get("q")?.trim() || "";
     const qIsZip = /^\d{5}$/.test(q);
+    // Detect address searches: starts with a number (e.g. "11214 sailbrooke dr")
+    const qIsAddress = /^\d+\s+\w/.test(q);
 
     let cityQuery = searchParams.get("city") || undefined;
     let zipQuery = searchParams.get("zip") || undefined;
+    let addressQuery: string | undefined = undefined;
     if (!cityQuery && !zipQuery && q) {
       if (qIsZip) {
         zipQuery = q;
+      } else if (qIsAddress) {
+        // Address search: use UnparsedAddress contains filter
+        addressQuery = q;
       } else if (q.includes("/")) {
         cityQuery = q.split("/")[0].trim();
       } else {
@@ -36,6 +44,7 @@ export async function GET(request: NextRequest) {
     const params = {
       city: cityQuery,
       zip: zipQuery,
+      address: addressQuery,
       zip_codes: searchParams.get("zip_codes")?.split(",").filter(Boolean) || undefined,
       min_price: searchParams.get("min_price") || undefined,
       max_price: searchParams.get("max_price") || undefined,
