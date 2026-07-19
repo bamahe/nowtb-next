@@ -143,7 +143,8 @@ function buildFilter(params: ListingSearchParams): string {
   if (params.waterfront) filters.push(`WaterfrontYN eq true`);
   if (params.pool) filters.push(`PoolPrivateYN eq true`);
   if (params.new_construction) filters.push(`NewConstructionYN eq true`);
-  if (params.single_story) filters.push(`Stories eq 1`);
+  // Stellar MLS uses Levels array ('One','Two','Three') instead of Stories integer
+  if (params.single_story) filters.push(`Levels/any(l: l eq 'One')`);
   if (params.rental) filters.push(`PropertyType eq 'Residential Lease'`);
   if (params.exclude_rental) filters.push(`PropertyType ne 'Residential Lease'`);
   // open_house filter is handled separately by getOpenHouses() — skip here
