@@ -97,6 +97,11 @@ Track completed pages here to avoid repeating work each day.
 **Git commit:** `e27d5e2` — pushed to `origin/main`
 **Vercel:** Auto-deployed, production deployment `dpl_DT6pCAFQPbCRmLdfo1Eoo1ESA32M` — READY
 
+**Bug fix commit:** `3d0d8de` — `NeighborhoodPage.tsx` priority fix
+- Root cause: all 11 neighborhoods above had thin WP boilerplate in `pages-content.json` (1,500-1,750 chars each) taking priority over curated descriptions
+- Fix: swapped render order so `NEIGHBORHOOD_DESCRIPTIONS` always wins over WP content; WP content is now the fallback for un-improved pages
+- Live pages for all 11 neighborhoods now render the full curated content
+
 ---
 
 ## Template for future runs
