@@ -763,12 +763,6 @@ export default function ComparisonTool({
           </div>
         </div>
 
-        {/* ── Final Callout ──────────────────────────────────────────── */}
-        <div className="mt-10 rounded-lg border-2 border-[#0B2545] bg-[#0B2545] p-6 text-white">
-          <h3 className="mb-3 text-xl font-bold">{comparison.finalCallout.title}</h3>
-          <p className="leading-relaxed text-slate-200">{comparison.finalCallout.body}</p>
-        </div>
-
         {/* ── Footer ─────────────────────────────────────────────────── */}
         <footer className="mt-12 border-t border-slate-200 pt-6 text-center text-sm text-slate-500">
           <p className="font-semibold text-[#0B2545]">
