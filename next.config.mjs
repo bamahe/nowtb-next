@@ -244,9 +244,8 @@ const nextConfig = {
       // WordPress served guides at root, new site nests under /guides/
       ...getGuideRedirects(),
 
-      // ── Blog posts: /slug → /blog/slug (624 individual redirects) ──
-      // WordPress served posts at root, new site nests under /blog/
-      ...blogRedirects,
+      // Blog post redirects (/slug → /blog/slug) now handled at runtime
+      // by the [citySlug] catch-all route to stay under Vercel's 2048 route limit.
     ];
   },
   async rewrites() {
