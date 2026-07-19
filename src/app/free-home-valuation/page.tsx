@@ -1,13 +1,13 @@
 // =============================================================================
 // /free-home-valuation — Free CMA / home valuation landing page
-// Full content page: hero, CMA vs online estimates, what's included,
-// process steps, trust signals, and lead form
+// Compact hero banner, detailed valuation form up top, then supporting content
+// sections: why online estimates fail, what's included, how it works, why
+// Barrett, and FAQ
 // =============================================================================
 
 import type { Metadata } from "next";
 import Link from "next/link";
-import HeroSection from "@/components/ui/HeroSection";
-import ContactForm from "@/components/ui/ContactForm";
+import ValuationForm from "@/components/ui/ValuationForm";
 
 // --- SEO metadata + Open Graph ---
 export const metadata: Metadata = {
@@ -58,9 +58,9 @@ const cmaIncludes = [
 const steps = [
   {
     step: 1,
-    title: "Submit Your Address",
+    title: "Fill Out the Form",
     description:
-      "Fill out the short form below with your property address and any details about upgrades or recent improvements.",
+      "Tell Barrett about your property — address, beds, baths, upgrades, condition. The more detail, the more accurate your valuation.",
   },
   {
     step: 2,
@@ -139,15 +139,30 @@ export default function FreeHomeValuationPage() {
         }}
       />
 
-      {/* ---- Hero ---- */}
-      <HeroSection
-        title="Free Home Valuation"
-        label="NO COST | NO OBLIGATION"
-        subtitle="Find out what your Tampa Bay home is actually worth — with a professional analysis from a Broker Associate with 23+ years of real estate experience."
-      />
+      {/* ---- Compact Navy Hero Banner ---- */}
+      <section className="bg-primary py-12 sm:py-16">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <p className="text-xs font-body font-semibold uppercase tracking-widest text-white/50 mb-4">
+            No Cost | No Obligation
+          </p>
+          <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+            Free Home Valuation
+          </h1>
+          <p className="font-body text-base sm:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+            Find out what your Tampa Bay home is actually worth with a professional Comparative Market Analysis from a Broker Associate with 23+ years of real estate experience. Barrett responds within 24 hours.
+          </p>
+        </div>
+      </section>
+
+      {/* ---- Valuation Form (primary CTA, immediately after hero) ---- */}
+      <section className="section-white">
+        <div className="container-wide">
+          <ValuationForm />
+        </div>
+      </section>
 
       {/* ---- Why Online Estimates Fall Short ---- */}
-      <section className="section-white">
+      <section className="section-light">
         <div className="container-wide">
           <div className="text-center mb-16">
             <p className="heading-label mb-6">The Problem</p>
@@ -170,7 +185,7 @@ export default function FreeHomeValuationPage() {
               national median error rate of roughly 6-7% for off-market homes. On a
               $400,000 property, that could mean a swing of $24,000 to $28,000 in
               either direction. That is a significant amount of money to leave on the
-              table — or to overprice and sit on the market for weeks.
+              table or to overprice and sit on the market for weeks.
             </p>
             <p>
               A Comparative Market Analysis from a local REALTOR eliminates the
@@ -183,7 +198,7 @@ export default function FreeHomeValuationPage() {
       </section>
 
       {/* ---- What Barrett's CMA Includes ---- */}
-      <section className="section-light">
+      <section className="section-white">
         <div className="container-wide">
           <div className="text-center mb-16">
             <p className="heading-label mb-6">What You Get</p>
@@ -243,7 +258,7 @@ export default function FreeHomeValuationPage() {
       </section>
 
       {/* ---- Why Barrett ---- */}
-      <section className="section-white">
+      <section className="section-light">
         <div className="container-wide">
           <div className="text-center mb-16">
             <p className="heading-label mb-6">Why Barrett</p>
@@ -266,10 +281,9 @@ export default function FreeHomeValuationPage() {
             <p>
               When Barrett prepares your CMA, he personally reviews every comparable
               sale, adjusts for differences between properties, and delivers a report
-              you can actually understand — not a spreadsheet full of jargon. Whether
-              you are thinking about selling soon or just want to know where you
-              stand, this report gives you a clear picture of your home&apos;s value
-              in today&apos;s market.
+              you can actually understand. Whether you are thinking about selling soon
+              or just want to know where you stand, this report gives you a clear
+              picture of your home&apos;s value in today&apos;s market.
             </p>
           </div>
 
@@ -282,7 +296,7 @@ export default function FreeHomeValuationPage() {
       </section>
 
       {/* ---- FAQ Section ---- */}
-      <section className="section-light">
+      <section className="section-white">
         <div className="container-wide max-w-3xl mx-auto">
           <div className="text-center mb-16">
             <p className="heading-label mb-6">Common Questions</p>
@@ -301,7 +315,7 @@ export default function FreeHomeValuationPage() {
                 A CMA is a professional home valuation prepared by a licensed REALTOR
                 using recent comparable sales, active listings, and market data from
                 the MLS. It gives you an accurate price range based on what buyers
-                are actually paying in your area — not what an algorithm guesses.
+                are actually paying in your area.
               </p>
             </div>
 
@@ -350,21 +364,6 @@ export default function FreeHomeValuationPage() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* ---- Lead Form ---- */}
-      <section className="section-white">
-        <div className="container-wide max-w-xl mx-auto">
-          <ContactForm
-            webhookUrl="/api/contact"
-            source="free-home-valuation"
-            title="Request Your Free Valuation"
-            submitLabel="Get My Home Value"
-          />
-          <p className="font-body text-muted text-center text-sm mt-4">
-            Barrett will prepare your CMA within 24 hours. No obligation, no cost.
-          </p>
         </div>
       </section>
     </>
