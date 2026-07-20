@@ -26,6 +26,8 @@ function formatOpenHouseBadge(start?: string, end?: string): string {
   if (!start) return "";
   const s = new Date(start);
   const now = new Date();
+  // Only show future open houses (cached data may include past ones)
+  if (s <= now) return "";
   // Check if the open house is today
   const isToday =
     s.getFullYear() === now.getFullYear() &&

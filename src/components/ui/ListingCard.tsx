@@ -87,8 +87,8 @@ export default function ListingCard({ listing }: ListingCardProps) {
           aria-hidden="true"
         />
 
-        {/* --- Open House Banner — across the top of the photo --- */}
-        {listing.OpenHouseStartTime && (
+        {/* --- Open House Banner — only show future open houses --- */}
+        {listing.OpenHouseStartTime && new Date(listing.OpenHouseStartTime) > new Date() && (
           <div className="absolute top-0 left-0 right-0 bg-accent/95 text-primary px-4 py-2 text-center z-10">
             <p className="font-body text-[10px] font-bold uppercase tracking-[0.12em]">
               Open House
@@ -103,7 +103,7 @@ export default function ListingCard({ listing }: ListingCardProps) {
         <span
           className={cn(
             "absolute left-4 px-3 py-1.5 text-[10px] font-medium font-body uppercase tracking-[0.15em] backdrop-blur-sm",
-            listing.OpenHouseStartTime ? "top-14" : "top-4",
+            listing.OpenHouseStartTime && new Date(listing.OpenHouseStartTime) > new Date() ? "top-14" : "top-4",
             badgeClass
           )}
         >
