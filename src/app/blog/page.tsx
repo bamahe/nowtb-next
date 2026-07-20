@@ -7,7 +7,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
-import { getAllPosts, getPostThumbnail, categorizePost, getBlogCategories } from "@/lib/posts";
+import { getAllPosts, getAllPostsAsync, getPostThumbnail, categorizePost, getBlogCategories } from "@/lib/posts";
 
 // Revalidate every hour (3600 seconds) via ISR
 export const revalidate = 3600;
@@ -69,8 +69,8 @@ export default async function BlogIndexPage({
 }) {
   const { page: pageParam, category: categoryParam } = await searchParams;
 
-  // Get all posts and available categories for filter buttons
-  const everyPost = getAllPosts();
+  // Get all posts from JSON + Supabase, and available categories for filter buttons
+  const everyPost = await getAllPostsAsync();
   const availableCategories = getBlogCategories();
 
   // Filter by category if one is selected (URL param like ?category=Buying)

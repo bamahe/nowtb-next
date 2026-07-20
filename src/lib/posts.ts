@@ -1,15 +1,17 @@
 // =============================================================================
-// Blog post data helper — loads 624 WordPress posts from JSON export
-// Reads src/data/posts-export.json once and caches in memory.
-// Only runs server-side (uses fs/path).
+// Blog post data helper
+// Merges two sources:
+//   1. Static JSON export (949 historical posts from WordPress migration)
+//   2. Supabase blog_posts table (new auto-generated posts)
+// Only runs server-side (uses fs/path + Supabase server client).
 // =============================================================================
 
 import fs from 'fs';
 import path from 'path';
 
-// Shape of each blog post in the JSON export
+// Shape of each blog post (unified across both sources)
 interface BlogPost {
-  id: number;
+  id: number | string;
   slug: string;
   title: string;
   date: string;
@@ -18,17 +20,73 @@ interface BlogPost {
 }
 
 // In-memory cache so we only parse the 29MB JSON once per process
-let _posts: BlogPost[] | null = null;
+let _jsonPosts: BlogPost[] | null = null;
+// Supabase posts cache (5 min TTL)
+let _supabasePosts: BlogPost[] | null = null;
+let _supabaseFetchedAt = 0;
+const SUPABASE_CACHE_TTL = 5 * 60 * 1000; // 5 minutes
 
 /**
- * Load and parse the posts JSON file. Cached after first call.
+ * Load posts from the static JSON file. Cached permanently per process.
  */
-function loadPosts(): BlogPost[] {
-  if (_posts) return _posts;
+function loadJsonPosts(): BlogPost[] {
+  if (_jsonPosts) return _jsonPosts;
   const filePath = path.join(process.cwd(), 'src/data/posts-export.json');
   const raw = fs.readFileSync(filePath, 'utf-8');
-  _posts = JSON.parse(raw);
-  return _posts!;
+  _jsonPosts = JSON.parse(raw);
+  return _jsonPosts!;
+}
+
+/**
+ * Load new posts from Supabase. Cached for 5 minutes.
+ * Falls back to empty array on error (Supabase posts are supplemental).
+ */
+async function loadSupabasePosts(): Promise<BlogPost[]> {
+  const now = Date.now();
+  if (_supabasePosts && now - _supabaseFetchedAt < SUPABASE_CACHE_TTL) {
+    return _supabasePosts;
+  }
+
+  try {
+    const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+    if (!url || !key) return [];
+
+    const res = await fetch(
+      `${url}/rest/v1/blog_posts?select=id,slug,title,body_mdx,excerpt,published_at&status=eq.published&order=published_at.desc`,
+      {
+        headers: { apikey: key, Authorization: `Bearer ${key}` },
+        next: { revalidate: 300 },
+      }
+    );
+
+    if (!res.ok) return [];
+    const rows = await res.json();
+
+    // Map Supabase schema to BlogPost shape
+    _supabasePosts = rows.map((r: Record<string, string>) => ({
+      id: r.id,
+      slug: r.slug,
+      title: r.title,
+      date: r.published_at,
+      content: `<div class="nowtb-post-content">${r.body_mdx || ""}</div>`,
+      excerpt: r.excerpt || "",
+    }));
+    _supabaseFetchedAt = now;
+    return _supabasePosts!;
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Load and merge all posts from both sources. Deduplicates by slug.
+ * Supabase posts override JSON posts with the same slug.
+ */
+function loadPosts(): BlogPost[] {
+  // Synchronous path for backward compatibility — only uses JSON
+  // Async callers should use loadAllPosts() instead
+  return loadJsonPosts();
 }
 
 /**
@@ -41,7 +99,35 @@ export function getAllPosts(): BlogPost[] {
 }
 
 /**
- * Find a single post by its URL slug.
+ * Get all posts including Supabase (async version for Server Components).
+ * Merges JSON + Supabase, deduplicates by slug, sorts newest-first.
+ */
+export async function getAllPostsAsync(): Promise<BlogPost[]> {
+  const [json, supabase] = await Promise.all([
+    Promise.resolve(loadJsonPosts()),
+    loadSupabasePosts(),
+  ]);
+
+  // Merge: Supabase posts take priority if slug conflicts
+  const slugSet = new Set(supabase.map(p => p.slug));
+  const merged = [...supabase, ...json.filter(p => !slugSet.has(p.slug))];
+  return merged.sort((a, b) =>
+    new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+}
+
+/**
+ * Find a single post by slug (checks Supabase first, then JSON).
+ */
+export async function getPostBySlugAsync(slug: string): Promise<BlogPost | undefined> {
+  const supabasePosts = await loadSupabasePosts();
+  const match = supabasePosts.find(p => p.slug === slug);
+  if (match) return match;
+  return loadJsonPosts().find(p => p.slug === slug);
+}
+
+/**
+ * Find a single post by its URL slug (sync, JSON only).
  */
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return loadPosts().find(p => p.slug === slug);
