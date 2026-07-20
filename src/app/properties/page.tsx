@@ -318,6 +318,18 @@ export default async function PropertiesPage({
           )}
         </nav>
       )}
+
+      {/* CTA */}
+      <section className="bg-[#003da5] py-16 px-4 text-center text-white">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-2xl font-heading font-bold mb-4">Not Finding What You&apos;re Looking For?</h2>
+          <p className="text-blue-100 mb-6 font-body">Barrett Henry has access to off-market listings, pocket listings, and coming-soon properties not on the public portals. 23+ years of real estate experience.</p>
+          <div className="flex gap-3 justify-center flex-wrap">
+            <a href="tel:8137500926" className="inline-block bg-white text-[#003da5] font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors">(813) 750-0926</a>
+            <Link href="/contact/" className="inline-block border-2 border-white/40 text-white font-bold py-3 px-8 rounded-lg hover:border-white transition-colors">Contact Barrett</Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
