@@ -4,6 +4,46 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-07-20 (Batch 6 — 4 blog posts expanded, 6 Tampa neighborhood descriptions, pre-existing build fixes)
+
+**Pages improved: 10**
+
+### Blog Posts (4)
+
+1. **closing-costs-florida-what-buyers-sellers-actually-pay** — Major expansion from 2,352 to ~12,000 chars. Added: full itemized buyer cost breakdown with comparison table ($450K example), seller cost table (commissions, doc stamps, title insurance, proration, HOA estoppel), cash buyer comparison, new construction closing cost differences (builder lender incentives, CDD), negotiation strategy section, Hometown Heroes and HFA program guide, Who Pays What table, closing cost estimates by price range ($300K-$900K). Six-Q&A FAQ with JSON-LD FAQPage schema (doc stamps, title insurance, seller concessions, cash buyers, Hometown Heroes). Date updated to 2026-07-20.
+
+2. **connerton-land-o-lakes-four-builders-affordable-new-homes** — Major expansion from 2,020 to ~12,000 chars. Added: builder comparison table (Lennar/M/I Homes/WestBay/Taylor Morrison with price ranges and strengths), HOA vs. CDD explainer (HOA $130-$180/mo, CDD $150-$300/mo equivalent on tax bill, CDD prepayment option), school zone detail (Connerton Elementary A-rated inside community, Pine View Middle, Land O Lakes High with IB), amenity center breakdown (20+ miles trails, heated pool, pickleball), commute matrix (Tampa 35-50 min, Wesley Chapel 15-25 min, USF 25-35 min), Connerton vs. Riverview/Wesley Chapel comparison, flood zone caveat. Five-Q&A FAQ schema. Date updated to 2026-07-20.
+
+3. **southshore-bay-lagoon-opens-wimauma-real-estate-heats-up** — Updated from 2023 opening post to 2026 comprehensive guide. Expanded from 2,138 to ~11,000 chars. Added: 2026 price update ($320K-$350K base), Southshore Bay vs Berry Bay side-by-side comparison table, how community has changed since 2023, crystal lagoon explainer (7+ acres, private amenity, beach entry), schools section (Cypress Creek Elementary, Shields Middle, Sumner High opened 2021), Wimauma vs Riverview/Brandon tradeoff analysis, flood zone warning by lot/phase, investment section (Epperson 10-15% lagoon premium), hidden costs (CDD, long commute), Five-Q&A FAQ schema. Date updated to 2026-07-20.
+
+4. **tampa-bay-waterfront-homes-types-prices-where-to-look** — Major expansion from 2,572 to ~13,000 chars. Added: Gulf-front section (insurance costs $8K-$25K+), Tampa Bay waterfront breakdown (Apollo Beach canals, Safety Harbor, Davis Islands, Bayshore Blvd), canal/river section (Apollo Beach due diligence: bridge clearance, seawall condition, dock permits; Alafia River flood risk from Hurricane Milton 23.4 ft record), lake/pond pricing ($5K-$200K premium by type), best deals section (Apollo Beach $450K-$700K, Ruskin, Hudson, Safety Harbor), dock permit requirements (ACOE, FDEP), seawall inspection guide ($15K-$60K replacement), bridge clearance guide, insurance table by property type, short-term rental section. Six-Q&A FAQ schema. Date updated to 2026-07-20.
+
+### Neighborhood Descriptions (6)
+
+5. **bayshore-beautiful** (Tampa) — New description. Bayshore Blvd promenade context (4.5-mile waterfront walkway), 1940s-1970s homes on larger lots, prices $700K-$3M+, Plant High/Roosevelt Elementary/Coleman Middle school zone, no formal neighborhood HOA, flood zone caveat, South Tampa prestige location.
+
+6. **beach-park** (Tampa) — New description. South Tampa near International Plaza and Westshore Business District, 1950s-1980s homes, no HOA, prices $600K-$2M+, Dale Mabry Elementary/Coleman Middle/Plant High school zone, airport proximity (10-15 min), value relative to Hyde Park and Palma Ceia.
+
+7. **ballast-point** (Tampa) — New description. South Tampa near MacDill AFB, Ballast Point Park (fishing pier, boat ramp, bay access), 1940s-1970s homes, no HOA, prices $550K-$2M+, Ballast Point Elementary/Monroe Middle/Robinson High school zone, military family appeal, flood zone caveat.
+
+8. **arbor-greene** (Tampa) — New description. New Tampa guard-gated community (24-hr), built 1990s-2010s, resort amenity center (pool, tennis, fitness), prices $400K-$900K, Freedom High/Liberty Middle/Turner Elementary school zone, no new construction (resale only), HOA covers amenities.
+
+9. **avila** (Tampa) — New description. Ultra-luxury 24-hr guard-gated community near Lutz/Ehrlich Rd, Tom Fazio 18-hole private golf course, built 1970s-2010s, prices $900K-$5M+, HOA $500-$1,200/mo, Steinbrenner High/Martinez Middle/Schwarzkopf Elementary school zone, golf club membership separate from HOA, very limited inventory.
+
+10. **channelside** (Tampa) — New description. Downtown Tampa adjacent to Water Street Tampa and Amalie Arena, primarily condos $350K-$1.5M+, HOA/condo fees $700-$1,500+/mo, urban walkability, short-term rental rules vary by building, Florida condo law SB 4D requirements (reserve inspections), skews young professionals and investors.
+
+### Bug Fixes (Pre-Existing Build Failures)
+
+- **batch1-faqs.ts, batch2-faqs.ts, batch3-faqs.ts, batch4-faqs.ts** — Created stub files. `valrico-faqs.ts` was importing these four files which did not exist, causing build failures. All export empty `Record<string, CityFAQ[]>` objects.
+- **ClientMarketSnapshot.tsx** — Created missing client-side component. `[citySlug]/page.tsx` referenced `@/components/ui/ClientMarketSnapshot` for housing-market spoke pages. Component fetches live listings client-side and computes/displays market stats (active count, median price, avg DOM, avg price/sqft) with optional market update post link.
+- **ClientNeighborhoodSection.tsx** — Created missing client-side component. `NeighborhoodPage.tsx` referenced `@/components/ui/ClientNeighborhoodSection`. Component fetches listings by ZIP code and renders a listings grid with city hub CTA link.
+
+**Build:** Passed (Next.js 14.2.35, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `src/data/neighborhood-descriptions.ts`, `src/components/ui/ClientMarketSnapshot.tsx`, `src/components/ui/ClientNeighborhoodSection.tsx`, `src/data/batch1-faqs.ts`, `src/data/batch2-faqs.ts`, `src/data/batch3-faqs.ts`, `src/data/batch4-faqs.ts`
+**Git commit:** `df6daa4` — pushed to `origin/main`
+
+---
+
 ## 2026-07-19 (Batch 4 — Valrico topic pages, Tampa condos/villas/ADUs, Riverview and Lithia neighborhoods)
 
 **Pages improved: 10**
