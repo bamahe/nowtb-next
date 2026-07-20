@@ -124,6 +124,17 @@ export default function RelocationPage() {
         ])}
       />
 
+      {/* --- JSON-LD: Service schema --- */}
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Tampa Bay Relocation Services",
+        serviceType: "Relocation Services",
+        provider: { "@type": "RealEstateAgent", name: "Barrett Henry", telephone: "(813) 750-0926", email: "barrett@nowtb.com" },
+        areaServed: { "@type": "Place", name: "Tampa Bay, FL" },
+        url: "https://nowtb.com/relocation/",
+      }} />
+
       {/* --- JSON-LD: FAQPage schema --- */}
       <JsonLd
         data={{

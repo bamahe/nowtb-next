@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
 import ContactForm from "@/components/ui/ContactForm";
+import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Property Management Tampa Bay | ViVi PM | Barrett Henry",
@@ -37,6 +38,20 @@ const services = [
 export default function PropertyManagementPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", url: "https://nowtb.com/" },
+        { name: "Property Management", url: "https://nowtb.com/property-management/" },
+      ])} />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "ViVi PM Property Management",
+        serviceType: "Property Management",
+        provider: { "@type": "RealEstateAgent", name: "Barrett Henry", telephone: "(813) 750-0926" },
+        areaServed: { "@type": "Place", name: "Tampa Bay, FL" },
+        url: "https://nowtb.com/property-management/",
+      }} />
+
       {/* === Hero === */}
       <HeroSection
         title="Property Management"

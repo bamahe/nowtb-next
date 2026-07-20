@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllMarketUpdates, type MarketUpdate } from "@/lib/market-updates";
 import HeroSection from "@/components/ui/HeroSection";
+import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Tampa Bay Housing Market Updates | Barrett Henry, REALTOR®",
@@ -93,6 +94,19 @@ export default function MarketUpdatesPage() {
 
   return (
     <>
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", url: "https://nowtb.com/" },
+        { name: "Market Updates", url: "https://nowtb.com/market-updates/" },
+      ])} />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: "Tampa Bay Housing Market Updates",
+        description: "Quarterly housing market data for every city in Tampa Bay.",
+        url: "https://nowtb.com/market-updates/",
+        author: { "@type": "RealEstateAgent", name: "Barrett Henry", telephone: "(813) 750-0926" },
+      }} />
+
       <HeroSection
         title="Market Updates"
         label="TAMPA BAY HOUSING DATA"

@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import HeroSection from "@/components/ui/HeroSection";
+import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 import { agents } from "@/data/agents";
 
 // --- SEO metadata + Open Graph tags ---
@@ -28,6 +29,22 @@ export const metadata: Metadata = {
 export default function AgentsPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", url: "https://nowtb.com/" },
+        { name: "Our Team", url: "https://nowtb.com/agents/" },
+      ])} />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "RealEstateAgent",
+        name: "Barrett Henry",
+        jobTitle: "Broker Associate",
+        worksFor: { "@type": "RealEstateAgent", name: "REMAX Collective" },
+        telephone: "(813) 750-0926",
+        email: "barrett@nowtb.com",
+        address: { "@type": "PostalAddress", streetAddress: "417 Lithia Pinecrest Rd", addressLocality: "Brandon", addressRegion: "FL", postalCode: "33511" },
+        url: "https://nowtb.com/agents/",
+      }} />
+
       {/* ---- Hero Section ---- */}
       <HeroSection
         title="Meet Your Tampa Bay Real Estate Team"
