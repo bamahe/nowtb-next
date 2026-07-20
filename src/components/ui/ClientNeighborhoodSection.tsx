@@ -81,7 +81,7 @@ export default function ClientNeighborhoodSection({
           href={`/${city}-homes-for-sale/`}
           className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
         >
-          View all {searchName} &rarr;
+          View all {name} homes &rarr;
         </Link>
       </div>
     </section>
