@@ -66,6 +66,8 @@ const nextConfig = {
     return [
       // ── Manual redirects (all destinations end with / for trailingSlash: true) ──
       { source: "/home", destination: "/", permanent: true },
+      { source: "/first-time-buyers", destination: "https://firsttimehomebuyertb.com/", permanent: true },
+      { source: "/first-time-buyers/", destination: "https://firsttimehomebuyertb.com/", permanent: true },
       { source: "/st-pete-homes-for-sale", destination: "/st-petersburg-homes-for-sale/", permanent: true },
       { source: "/terms", destination: "/terms-of-use/", permanent: true },
       { source: "/privacy", destination: "/privacy-policy/", permanent: true },
