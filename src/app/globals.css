@@ -131,9 +131,12 @@ select {
 /* Also fix prose a color globally for content areas */
 .prose a { color: var(--color-link); }
 .prose a:hover { color: var(--color-primary); }
-/* Fix blue-on-blue: links inside dark backgrounds must be white or light */
-.bg-primary a:not(.btn-primary):not(.btn-secondary), .section-dark a:not(.btn-primary):not(.btn-secondary) { color: #93b4d4; }
-.bg-primary a:not(.btn-primary):not(.btn-secondary):hover, .section-dark a:not(.btn-primary):not(.btn-secondary):hover { color: #ffffff; }
+/* Fix blue-on-blue: prose/content links inside dark backgrounds must be visible.
+   Exclude buttons and links that already have explicit styling (inline-flex = styled button). */
+.bg-primary a:not(.btn-primary):not(.btn-secondary):not(.inline-flex):not([class*="text-white"]):not([class*="text-primary"]):not([class*="text-accent"]),
+.section-dark a:not(.btn-primary):not(.btn-secondary):not(.inline-flex):not([class*="text-white"]):not([class*="text-primary"]):not([class*="text-accent"]) { color: #93b4d4; }
+.bg-primary a:not(.btn-primary):not(.btn-secondary):not(.inline-flex):hover,
+.section-dark a:not(.btn-primary):not(.btn-secondary):not(.inline-flex):hover { color: #ffffff; }
 /* CTA buttons with background colors in blog/guide content.
    Any link with an inline background gets its inline color preserved.
    Light-background resource grids (#f8fafc, #f1f5f9) get dark text forced. */
