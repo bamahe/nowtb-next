@@ -992,4 +992,205 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     `,
   },
 
+  // ===== SOUTH TAMPA NEIGHBORHOODS =====
+
+  "bayshore-beautiful": {
+    summary:
+      "One of South Tampa's most prestigious addresses, running along the famous 4.5-mile Bayshore Boulevard with older homes on larger lots, an A-rated school cluster, and prices from $700K to $3M+.",
+    contentHtml: `
+      <p>Bayshore Beautiful is a South Tampa neighborhood that takes its name from Bayshore Boulevard, the 4.5-mile waterfront promenade that runs along Hillsborough Bay. The boulevard is one of the most photographed streets in Tampa, and living within a few blocks of it carries genuine cachet. This is not a new development or a master-planned community. It is an established, tree-lined neighborhood where most homes were built between the 1940s and 1970s, and where lot sizes, home quality, and prices vary more than the zip code might suggest.</p>
+
+      <p>Home styles in Bayshore Beautiful range from original Florida ranch homes to Mediterranean Revival, Colonial, craftsman bungalows, and fully rebuilt modern custom homes. Many of the older homes have been substantially renovated. Lot sizes tend to be larger than what you find in newer suburban construction, often 8,000 to 12,000 square feet, with some corner lots and double lots commanding significant premiums. The neighborhood does not have a formal HOA for the area as a whole, though some smaller platted sections have deed restrictions.</p>
+
+      <h2>What Does It Cost to Buy in Bayshore Beautiful?</h2>
+      <p>Prices in Bayshore Beautiful span a wide range. An older, unrenovated 1950s ranch in need of updating might be priced at $700K-$900K depending on lot size and condition. A fully renovated mid-century home or a 1960s colonial in good condition typically runs $900K-$1.5M. New construction custom homes or fully rebuilt properties on larger lots range from $1.5M to $3M+. Homes directly on Bayshore Boulevard, while fewer in this particular neighborhood (most of the boulevard-fronting homes are in adjacent Palma Ceia and Hyde Park), carry their own significant premium for the bay views and promenade access.</p>
+
+      <h2>Schools</h2>
+      <p>The school zone is one of Bayshore Beautiful's strongest selling points. Most of the neighborhood feeds into Roosevelt Elementary School, which is consistently rated among the top elementary schools in Hillsborough County. Middle school is Coleman Middle School. High school is Plant High School, one of the most academically regarded public high schools in Hillsborough County with strong AP, IB, and dual enrollment programs. The Plant High zone is a meaningful driver of demand throughout South Tampa.</p>
+
+      <h2>Location and Daily Life</h2>
+      <p>Bayshore Beautiful is in the heart of South Tampa. Bayshore Boulevard is walkable from most of the neighborhood and is one of the most popular running and cycling routes in the city. Hyde Park Village (boutique shops, restaurants, wine bars) is 10 minutes north. MacDill Air Force Base is 10-15 minutes south. Westshore Business District is 10-15 minutes via surface streets. The airport is 15-20 minutes.</p>
+      <p>The neighborhood feels quieter than the Hyde Park or Palma Ceia core despite its prestigious location. The housing stock is older, the streets are tree-lined, and it attracts a mix of families who value the schools, professionals who want South Tampa walkability without Hyde Park prices, and buyers who specifically want a larger lot for outdoor space.</p>
+
+      <h2>What to Know Before You Buy</h2>
+      <p>The age of the homes in Bayshore Beautiful means buyers should expect older mechanical systems, potential aluminum wiring in 1960s-1970s homes, original plumbing that may need updating, and roof ages that vary widely. A thorough inspection is essential. Some buyers purchase here specifically to renovate or rebuild, which is legal and common in the neighborhood. If you are planning a full renovation or rebuild, verify current City of Tampa permitting requirements and setback rules for the specific lot before purchasing.</p>
+      <p>Flood zone status varies by block. Some sections sit in Zone X (minimal risk), others are in Zone AE. Pull the specific FEMA flood map for any property you are considering. South Tampa flooding, while less severe than beachfront properties, is a real consideration in heavy rain events.</p>
+
+      <h3>Frequently Asked Questions About Bayshore Beautiful Tampa</h3>
+      <h3>What are the home prices in Bayshore Beautiful?</h3>
+      <p>Prices range from approximately $700K for an older unrenovated home to $3M+ for a new custom build or fully renovated premium property. The typical move-in-ready home in the $900K-$1.5M range represents the most active segment of the market. Lot size, school proximity, and renovation quality drive significant price variation within the neighborhood.</p>
+      <h3>Is Bayshore Beautiful in the Plant High School zone?</h3>
+      <p>Yes, most of Bayshore Beautiful is zoned for Plant High School, Roosevelt Elementary, and Coleman Middle School. Always verify your specific address with Hillsborough County Schools before purchasing since zone boundaries occasionally shift.</p>
+    `,
+  },
+
+  "beach-park": {
+    summary:
+      "South Tampa neighborhood near International Plaza and Westshore with 1950s-1980s homes on larger lots, no HOA, and access to the Plant High School zone. Prices run $600K-$2M+.",
+    contentHtml: `
+      <p>Beach Park is a South Tampa neighborhood bordered roughly by Kennedy Boulevard to the north, the Gandy area to the south, Dale Mabry Highway to the east, and Westshore Boulevard to the west. It is one of those South Tampa addresses that offers genuine value relative to Hyde Park and Palma Ceia prices while sitting within easy reach of International Plaza, the Westshore Business District, and Tampa International Airport.</p>
+
+      <p>Most of the homes in Beach Park were built between the 1950s and 1980s, with a mix of Florida ranchers, block construction homes, and some larger two-story colonials. Many have been renovated or rebuilt, and the neighborhood is gradually seeing older homes replaced by new custom construction. Lot sizes are generally larger than newer suburban construction, commonly running 8,000-12,000 square feet with some premium lots exceeding this. There is no neighborhood-wide HOA, which is a draw for buyers who want freedom from association oversight.</p>
+
+      <h2>Prices in Beach Park</h2>
+      <p>Prices in Beach Park vary based on home condition, size, and whether the property has been updated. An older unrenovated home on a standard lot might be priced at $600K-$800K. A well-renovated 2,000-3,500 square foot home typically runs $900K-$1.5M. New construction custom homes on larger lots range from $1.5M to $2.5M+. The price spread reflects the wide variation in home condition across the neighborhood.</p>
+
+      <h2>Schools</h2>
+      <p>Beach Park is served by Dale Mabry Elementary School, Coleman Middle School, and Plant High School. Plant High is one of the top-rated public high schools in Hillsborough County, which drives significant demand across the South Tampa area. The school zone is one of Beach Park's primary selling points and a consistent topic in buyer conversations about the neighborhood.</p>
+
+      <h2>Location Advantages</h2>
+      <p>International Plaza and Bay Street, one of the Tampa Bay area's premier shopping and dining destinations, is within blocks of much of the neighborhood. The Westshore Business District, a major employment center, is walkable from the eastern part of Beach Park. Tampa International Airport is 10-15 minutes away, a meaningful advantage for frequent travelers. The Veterans Expressway access point is close, which shortens the commute north toward Pasco County or south toward Pinellas.</p>
+      <p>The neighborhood lacks the bayfront walkability of Bayshore Beautiful or Hyde Park, but it compensates with direct access to the airport, Westshore employment, and premium retail, all at prices that are typically $100K-$300K below comparable properties closer to Bayshore Boulevard.</p>
+
+      <h2>What to Know Before You Buy</h2>
+      <p>As in all of South Tampa's older neighborhoods, inspections here need to go beyond the typical checklist. The 1960s and 1970s homes in Beach Park may have aluminum wiring, original plumbing, and roofs of varying ages. Some of the block construction homes have been fully updated behind facades that look original from the street. Bring a good inspector and budget for deferred maintenance if you are buying an unrenovated property.</p>
+      <p>Flood zone status varies by block and specific elevation. The lower-lying sections near the water table can be in Zone AE, while others are Zone X. Pull the FEMA flood map for any specific property before making an offer and get insurance quotes before going under contract.</p>
+
+      <h3>Frequently Asked Questions About Beach Park Tampa</h3>
+      <h3>What are the home prices in Beach Park South Tampa?</h3>
+      <p>Beach Park prices typically run $600K-$2.5M+ depending on home size, condition, and improvements. The most active segment is $900K-$1.5M for updated and renovated properties. New custom construction on larger lots runs $1.5M-$2.5M.</p>
+      <h3>Is Beach Park in the Plant High School zone?</h3>
+      <p>Yes. Beach Park is generally zoned for Dale Mabry Elementary, Coleman Middle, and Plant High School. Verify the specific school assignment for any address at the Hillsborough County Schools website, as zone boundaries can change.</p>
+    `,
+  },
+
+  "ballast-point": {
+    summary:
+      "South Tampa neighborhood near Ballast Point Park and Tampa Bay, with 1940s-1970s homes, no HOA, and proximity to MacDill AFB. Robinson High School zone. Prices from $550K to $2M+.",
+    contentHtml: `
+      <p>Ballast Point is a South Tampa neighborhood at the southern end of the peninsula, bordered by Gandy Boulevard to the north, the Interbay area to the east, MacDill Air Force Base to the south, and Tampa Bay to the west. It is one of the quieter, less-discussed South Tampa neighborhoods compared to Hyde Park and Palma Ceia, but it has its own loyal following among buyers who want South Tampa's older housing stock, larger lots, and bay proximity without paying Hyde Park prices.</p>
+
+      <p>The neighborhood takes its name from Ballast Point Park, a beloved bayfront park at the south end of Bayshore Boulevard with a fishing pier, picnic areas, boat ramp, and direct access to Hillsborough Bay. The park is a defining feature of the neighborhood's character and a primary reason families choose Ballast Point over more interior South Tampa addresses.</p>
+
+      <h2>Homes and Prices</h2>
+      <p>Most homes in Ballast Point were built between the 1940s and 1970s, with a mix of Florida ranchers, bungalows, and some larger two-story homes. Many have been renovated; some are fully rebuilt. Lot sizes are generally in the 7,500-11,000 square foot range, with some larger corner lots and properties along bay-view streets. There is no neighborhood-wide HOA.</p>
+      <p>Prices typically run $550K for an older unrenovated home on a standard lot, up to $900K-$1.4M for a well-renovated property. New custom builds on Ballast Point's more desirable streets can reach $2M+. Homes with any bay view or park proximity carry noticeable premiums.</p>
+
+      <h2>Schools</h2>
+      <p>Ballast Point feeds into Ballast Point Elementary School, Monroe Middle School, and Robinson High School. Robinson is a well-regarded Hillsborough County high school with IB and honors programs. For buyers specifically seeking Plant High School zoning, Ballast Point's location is just south of the Plant zone boundary in most sections. Always verify school assignments for a specific address at the Hillsborough County Schools website.</p>
+
+      <h2>MacDill AFB Proximity</h2>
+      <p>MacDill Air Force Base sits at the southern tip of the South Tampa peninsula, immediately adjacent to Ballast Point. This makes the neighborhood one of the most popular for military families assigned to MacDill. The base houses the headquarters of US Central Command and US Special Operations Command, meaning a significant and consistent military population. Base access, commissary shopping, and military community amenities are close for active duty and retired military buyers. For non-military buyers, the base proximity is neutral to positive: it limits development in that direction, contributing to the neighborhood's quiet character.</p>
+
+      <h2>Bayshore Boulevard and Ballast Point Park</h2>
+      <p>The southern extension of Bayshore Boulevard runs through the Ballast Point area and terminates near Ballast Point Park. The park itself has one of the few remaining public fishing piers in Tampa Bay with direct bay access, making it popular for casual fishing, sunset watching, and waterfront recreation. The park also has a boat ramp, though parking can be limited on weekends. The Bayshore Boulevard promenade connects Ballast Point northward to Hyde Park and Palma Ceia.</p>
+
+      <h2>What to Know Before You Buy</h2>
+      <p>Ballast Point's older housing stock means inspection due diligence is important. Check roof age, plumbing type, electrical panel age, and HVAC condition carefully. The neighborhood's proximity to the bay means some sections have flood zone exposure. Verify the specific FEMA flood zone for any property you are considering and get insurance quotes before going under contract. Properties closest to the water may have flood requirements that add $1,500-$4,000+ per year to your insurance cost.</p>
+
+      <h3>Frequently Asked Questions About Ballast Point Tampa</h3>
+      <h3>What are home prices in Ballast Point South Tampa?</h3>
+      <p>Prices range from approximately $550K for an older unrenovated home to $2M+ for a new custom build or renovated premium property. Well-maintained updated homes typically sell in the $800K-$1.3M range.</p>
+      <h3>Is Ballast Point close to MacDill Air Force Base?</h3>
+      <p>Yes. Ballast Point is one of the closest residential neighborhoods to MacDill AFB, making it highly popular with military families. The base boundary is at the southern end of the Ballast Point area. Military housing allowances for MacDill assignments align well with the neighborhood's price range.</p>
+    `,
+  },
+
+  // ===== NEW TAMPA / NORTH TAMPA NEIGHBORHOODS =====
+
+  "arbor-greene": {
+    summary:
+      "Gated, guard-gated community in New Tampa with a resort-style amenity center, homes built from the late 1990s through 2010s, and A-rated schools. Prices $400K-$900K+.",
+    contentHtml: `
+      <p>Arbor Greene is a gated residential community in New Tampa, located off County Line Road and Bruce B. Downs Boulevard in north Hillsborough County. It is one of the larger gated communities in the New Tampa area and one of the most consistently in-demand, largely because of its combination of 24-hour guard gate, resort-style amenities, and access to the A-rated New Tampa school cluster.</p>
+
+      <p>The community was developed from the late 1990s through the 2010s, so the housing stock is mostly 15-25 years old with the landscaping maturity and established character that newer communities lack. Homes range from approximately 1,500 to 5,000 square feet across multiple sections with different price points. The variety within the gates means Arbor Greene attracts first-time buyers, move-up buyers, and downsizers who want the security and amenities without the ultraluxury price tag of communities like Avila or gated sections of Carrollwood.</p>
+
+      <h2>Home Prices in Arbor Greene</h2>
+      <p>Prices in Arbor Greene typically run $400K on the lower end for a smaller, 3-bedroom home in an entry-level section, up to $900K+ for larger, fully updated homes on better lots within the community. The most common transaction range is $475K-$750K. New construction is no longer available within Arbor Greene, so all purchases are resale properties. The age and condition of any specific home matters significantly, given the 15-25 year age of most construction.</p>
+
+      <h2>Amenities</h2>
+      <p>Arbor Greene's amenity center is one of the features that sets it apart from non-gated alternatives in New Tampa at similar price points. The amenity package includes a resort-style swimming pool, a fitness center, lighted tennis courts, and a community clubhouse with rental space for events. The community also has walking trails, lakes with catch-and-release fishing, and well-maintained common areas throughout. Monthly HOA fees cover the amenity center operations and common area maintenance.</p>
+
+      <h2>Schools</h2>
+      <p>Arbor Greene is zoned for the New Tampa school cluster: Turner Elementary School, Liberty Middle School, and Freedom High School. All three have consistently strong ratings in Hillsborough County. Freedom High School offers AP, dual enrollment, and JROTC programs. The New Tampa school zone is a primary reason buyers choose this area over other parts of Tampa, and it is a consistent conversation point when I work with families evaluating New Tampa communities.</p>
+
+      <h2>Location and Commute</h2>
+      <p>Arbor Greene is positioned at the north end of Hillsborough County near the Pasco County line. This means it is well-positioned for commuters heading to Wesley Chapel employment centers (15-20 minutes to the I-75/SR-56 area) or to USF, Moffitt Cancer Center, and the New Tampa medical corridor (15-20 minutes). Downtown Tampa is 30-45 minutes depending on traffic via I-75 south or Bruce B. Downs. Tampa Premium Outlets and Wiregrass Mall in Wesley Chapel are 15-20 minutes away.</p>
+      <p>The proximity to the Pasco County line gives Arbor Greene access to Pasco retail and dining without the Pasco commute, which is one of the things buyers in this area appreciate. Publix, restaurants, and services along Bruce B. Downs and in the Wesley Chapel commercial corridors are easily accessible.</p>
+
+      <h2>What to Know Before You Buy</h2>
+      <p>Arbor Greene is a resale-only community, so inspections are important. Homes in the 1998-2008 construction range may have original tile roofs approaching the end of their rated lifespan, original HVAC systems, and original appliances. Get a thorough inspection and be specific about roof age and HVAC service history. Some sections within Arbor Greene also have CDD fees in addition to HOA dues, so confirm the full monthly community cost for any specific home before committing.</p>
+      <p>The guard gate and community security are maintained 24 hours a day. The gate process means visitor access requires registration with the gatehouse, which is a normal adjustment for buyers coming from non-gated neighborhoods.</p>
+
+      <h3>Frequently Asked Questions About Arbor Greene New Tampa</h3>
+      <h3>What are home prices in Arbor Greene New Tampa?</h3>
+      <p>Arbor Greene prices typically run $400K-$900K+ depending on home size, section, and condition. The most active price range is $475K-$750K. The community is fully built out with no new construction, so all purchases are resale. Condition and updates drive significant price variation between homes in the same section.</p>
+      <h3>Is Arbor Greene in the Freedom High School zone?</h3>
+      <p>Yes, Arbor Greene is generally zoned for Freedom High School, Liberty Middle School, and Turner Elementary School. These are well-regarded New Tampa schools. Always verify the specific school assignment for any address at the Hillsborough County Schools website before purchasing.</p>
+    `,
+  },
+
+  // ===== LUXURY / GATED COMMUNITIES =====
+
+  "avila": {
+    summary:
+      "Ultra-luxury 24-hour guard-gated golf community in Tampa near Lutz with a private 18-hole Tom Fazio-designed course. Homes run $900K to $5M+ on estate-sized lots. Very limited inventory.",
+    contentHtml: `
+      <p>Avila is one of the most exclusive residential communities in the Tampa Bay area. Situated off Ehrlich Road in unincorporated Hillsborough County near Lutz, it is a 24-hour guard-gated golf community built around an 18-hole private golf course designed by Tom Fazio. The name carries significant prestige in the local market, and buyers who aspire to Avila are typically not asking about HOA fees first: they are asking about lot availability and the waitlist for golf membership.</p>
+
+      <p>Development at Avila began in the late 1970s and continued through the 2010s, with some newer custom construction on the remaining estate lots. The result is a community with mature trees, landscaped fairways, and a variety of home sizes: from 3,000 square foot homes in the community's more accessible price tiers to 10,000+ square foot estate homes that rank among the largest private residences in Hillsborough County.</p>
+
+      <h2>Prices at Avila</h2>
+      <p>Avila is one of the highest-priced residential communities in the Tampa area. Entry-level homes within the gates start at approximately $900K-$1.2M for older, smaller properties on non-golf lots. Well-positioned homes on fairway or lake lots in the mid-community range run $1.5M-$3M. The largest, most updated estate properties can exceed $5M. Because inventory is inherently limited in a gated community of finite size, available homes at any given time are few and sell more slowly than in open communities.</p>
+
+      <h2>The Avila Golf and Country Club</h2>
+      <p>The Avila Golf and Country Club is a private members-only club. Living in Avila does not automatically grant golf membership, and the club has its own membership process and initiation fees. Buyers interested in purchasing at Avila specifically for golf access should confirm membership availability and initiation fees directly with the club before making an offer on a home. The club also offers tennis, swimming, and dining in addition to golf, and non-golf social memberships are typically available at a lower tier.</p>
+
+      <h2>HOA Fees and Community Costs</h2>
+      <p>HOA fees at Avila run approximately $500-$1,200 per month depending on the specific section and any sub-association within the community. The HOA covers the 24-hour guard gate operation, landscaping of common areas, and community maintenance. Club membership fees are separate from the HOA. Buyers should budget for both when evaluating the total cost of Avila ownership.</p>
+
+      <h2>Schools</h2>
+      <p>Avila falls within the Hillsborough County Public Schools district. The area is served by Schwarzkopf Elementary School, Martinez Middle School, and Steinbrenner High School. Steinbrenner High is one of the top-ranked public high schools in Hillsborough County with strong AP and dual enrollment programs. The school zone is one of the factors that draws professional families to this part of north Hillsborough County.</p>
+
+      <h2>Location</h2>
+      <p>Avila is off Ehrlich Road between I-75 and Dale Mabry Highway in north Hillsborough County. Tampa International Airport is approximately 25-30 minutes south via Dale Mabry or I-75 to Veterans Expressway. Downtown Tampa is 30-40 minutes via I-275 or I-75. Wiregrass Mall and the Wesley Chapel commercial corridor are 15-20 minutes east on SR-56. The New Tampa Lifestyle Center along Bruce B. Downs is 15-20 minutes away. Whole Foods, specialty grocery, and high-end dining along north Dale Mabry provide convenient access to the services that match the community's demographic.</p>
+
+      <h2>What to Know Before You Buy</h2>
+      <p>Avila transactions are relatively rare given the limited inventory and price tier. When a property does come to market, due diligence needs to account for the age range of homes (late 1970s to 2010s), the variation in construction quality across different eras, and the specific sub-association rules and fees for any parcel. Some sections within Avila have their own additional covenants on top of the master HOA. Review all governing documents carefully before contracting.</p>
+      <p>Buyers interested in golf membership should contact the club directly early in the process, before making an offer, to understand current membership availability, fees, and waitlist status. Membership availability is separate from and not guaranteed by home purchase.</p>
+
+      <h3>Frequently Asked Questions About Avila Tampa</h3>
+      <h3>What are home prices in Avila Tampa?</h3>
+      <p>Avila homes typically start around $900K-$1.2M for entry-level properties and range to $5M+ for the largest estate homes on premium fairway or lake lots. Inventory is limited, and homes sell less frequently than in open communities. Work with a REALTOR who actively monitors the Avila market to know what is available before it hits the general public MLS.</p>
+      <h3>Does buying a home in Avila include golf membership?</h3>
+      <p>No. Avila Golf and Country Club membership is separate from home ownership. The club has its own membership process, initiation fees, and dues. Contact the club directly to confirm current membership availability and fees before purchasing a home with the intent of joining.</p>
+    `,
+  },
+
+  // ===== DOWNTOWN TAMPA =====
+
+  "channelside": {
+    summary:
+      "Downtown Tampa's most walkable neighborhood, adjacent to Amalie Arena, Water Street Tampa, and the Port of Tampa. Primarily condos from $350K to $1.5M+ with high condo fees and an urban lifestyle.",
+    contentHtml: `
+      <p>Channelside is Tampa's most urban neighborhood, occupying the area east of the Tampa Convention Center between downtown and the Port of Tampa. It is immediately adjacent to Water Street Tampa, the $3B mixed-use development anchored by the JW Marriott and several office towers that has transformed the eastern edge of downtown over the past decade. For buyers who want a walkable, urban lifestyle and do not need a yard, Channelside and Water Street condos represent the densest concentration of that product in the Tampa Bay area.</p>
+
+      <p>The neighborhood is anchored by Amalie Arena, home of the Tampa Bay Lightning, which generates significant foot traffic and creates a lively entertainment atmosphere on game nights. The Channel District (an older name for parts of the same area) has a history as an industrial and warehouse zone that began converting to residential in the early 2000s. Today it is a mix of purpose-built condo towers, converted loft buildings, and newer luxury high-rises built in the Water Street era.</p>
+
+      <h2>What Does It Cost to Buy in Channelside?</h2>
+      <p>Condo prices in Channelside and the adjacent Water Street area cover a wide range. Older, smaller units in buildings from the early 2000s start around $350K-$500K for 1-bedroom condos. Larger 2-bedroom units in mid-tier buildings typically run $550K-$900K. The newest Water Street-era luxury buildings (1000 Water Street, Riverwalk Place, and similar projects) price from $700K to $2M+ for 2-3 bedroom units with premium finishes and views. Parking, which is often a separate purchase in high-rise buildings, can add $30,000-$75,000 to the total cost.</p>
+
+      <h2>Condo Fees in Channelside</h2>
+      <p>Condo fees (HOA fees) in Channelside buildings are among the highest in the Tampa Bay market. Monthly fees typically run $700-$1,500+ depending on the building, unit size, and amenity level. These fees cover building maintenance, amenities (pools, fitness centers, concierge services in newer buildings), insurance on the building structure, and management. Buyers need to factor condo fees into the monthly cost equation: a $700K condo with $1,200/month in fees has a meaningfully different total monthly cost than a comparable suburban home.</p>
+      <p>Before purchasing in any Channelside building, review the current reserve fund status, recent special assessment history, and upcoming planned capital expenditures. The 2022 Surfside condo collapse in South Florida led to significant changes in Florida condo law (SB 4D, effective December 2024), including mandatory structural milestone inspections and reserve funding requirements. Buildings that have not completed required inspections or that have underfunded reserves may have large special assessments or restrictions coming.</p>
+
+      <h2>Short-Term Rental Rules</h2>
+      <p>Channelside and Water Street are popular with buyers who want Airbnb or VRBO income from their unit when not in use. Short-term rental policies vary significantly by building. Some buildings in the area explicitly allow short-term rentals, some prohibit them, and some are silent on the issue (which can be interpreted either way and is risky for buyers with rental intent). Review the specific building's condo declaration and rules before purchasing with any rental expectation. Downtown Tampa does not have city-wide short-term rental registration requirements like some other cities, but individual buildings control access.</p>
+
+      <h2>The Walkability Advantage</h2>
+      <p>Channelside has among the highest Walk Scores in the Tampa Bay area. Residents can walk to Amalie Arena events, the Tampa Riverwalk, the Glazer Children's Museum, the Florida Aquarium, Sparkman Wharf food truck park, multiple restaurants and bars, and the growing Water Street retail corridor. The streetcar line (TECO Line Streetcar) connects Channelside to Ybor City. The neighborhood is bikeable to most of downtown Tampa's employer base.</p>
+      <p>This walkability is the defining feature of Channelside living. Buyers who prioritize not needing to drive for daily activities will find the neighborhood delivers on that promise in a way few Tampa Bay addresses can.</p>
+
+      <h2>Who Lives in Channelside?</h2>
+      <p>The demographic skews toward young professionals, remote workers, and empty nesters who want an urban lifestyle. It is not primarily a family neighborhood in the school-age children sense: the school zone (Jefferson High School for public schools) is less of a driver than the lifestyle factors. Some buyers purchase units as investment properties for rental income rather than primary residences.</p>
+
+      <h3>Frequently Asked Questions About Channelside Tampa</h3>
+      <h3>What are condo prices in Channelside Tampa?</h3>
+      <p>Channelside and Water Street condos range from approximately $350K for a 1-bedroom in an older building to $2M+ for large units in newer luxury towers. The most active segment is $550K-$900K for 2-bedroom units. Monthly condo fees add $700-$1,500+ to the cost of ownership.</p>
+      <h3>Can I do short-term rentals in a Channelside condo?</h3>
+      <p>It depends entirely on the specific building's governing documents. Some buildings in Channelside permit short-term rentals, others prohibit them. Always review the condo declaration for the specific building before purchasing with rental intent. Do not rely on verbal assurances from sellers or listing agents.</p>
+    `,
+  },
+
 };
