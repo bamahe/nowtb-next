@@ -546,6 +546,14 @@ export const neighborhoods: NeighborhoodData[] = [
   { slug: "temple-terrace-estates", name: "Temple Terrace Estates", city: "temple-terrace" },
   { slug: "hunters-green-tt", name: "Hunters Green", city: "temple-terrace" },
   { slug: "temple-terrace-golf", name: "Temple Terrace Golf & CC", city: "temple-terrace" },
+
+  // --- Spring Hill neighborhoods added 2026-07-18 ---
+  { slug: "timber-pines", name: "Timber Pines", city: "spring-hill" },
+  { slug: "sterling-hill", name: "Sterling Hill", city: "spring-hill" },
+  { slug: "silverthorn", name: "Silverthorn", city: "spring-hill" },
+  { slug: "villages-of-avalon", name: "Villages of Avalon", city: "spring-hill" },
+  { slug: "southern-hills-spring-hill", name: "Southern Hills", city: "spring-hill" },
+  { slug: "seven-hills", name: "Seven Hills", city: "spring-hill" },
 ];
 
 /** Get all neighborhoods for a given city */
