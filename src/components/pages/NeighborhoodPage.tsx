@@ -18,6 +18,7 @@ import { getPageContent } from "@/lib/page-content";
 import { cleanWpContent } from "@/lib/utils";
 
 import { NEIGHBORHOOD_DESCRIPTIONS } from "@/data/neighborhood-descriptions";
+import { NEIGHBORHOOD_STATS, type NeighborhoodStat } from "@/data/neighborhood-stats";
 
 interface NeighborhoodPageProps {
   /** Display name of the neighborhood (e.g. "Bloomingdale") */
@@ -204,6 +205,11 @@ export default async function NeighborhoodPage({
         />
       )}
 
+      {/* === Structured Neighborhood Data — stats, schools, commute, HOA, comparison, FAQ === */}
+      {NEIGHBORHOOD_STATS[slug] && (
+        <NeighborhoodStatsSection stats={NEIGHBORHOOD_STATS[slug]} name={name} city={city} county={county} />
+      )}
+
       {/* === About the neighborhood — SEO content === */}
       <section className="container-wide py-12">
         <div>
@@ -380,5 +386,247 @@ export default async function NeighborhoodPage({
         </div>
       </section>
     </>
+  );
+}
+
+// =============================================================================
+// NeighborhoodStatsSection — Rich structured data blocks
+// Only renders when NEIGHBORHOOD_STATS has data for this neighborhood.
+// Combines the best of valricoagent's structured data with nowtb's luxury aesthetic.
+// =============================================================================
+
+function NeighborhoodStatsSection({
+  stats,
+  name,
+  city,
+  county,
+}: {
+  stats: NeighborhoodStat;
+  name: string;
+  city: string;
+  county: string;
+}) {
+  return (
+    <>
+      {/* ── Key Stats Strip ── */}
+      <section className="bg-light border-y border-border">
+        <div className="container-wide py-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            <StatBox label="Price Range" value={stats.priceRange} />
+            <StatBox label="ZIP Code" value={stats.zip} />
+            {stats.totalHomes && <StatBox label="Total Homes" value={stats.totalHomes} />}
+            <StatBox label="High School" value={stats.highSchool} />
+            {stats.hoaRequired === "yes" && <StatBox label="HOA" value={stats.hoaRange || "Required"} />}
+            {stats.hoaRequired === "no" && <StatBox label="HOA" value="None" />}
+            {stats.hoaRequired === "varies" && <StatBox label="HOA" value="Varies" />}
+            {stats.gated && <StatBox label="Gated" value="Yes" />}
+            {stats.golf && <StatBox label="Golf" value="Yes" />}
+            {stats.communityPool && <StatBox label="Pool" value="Community" />}
+            {stats.yearBuilt && <StatBox label="Built" value={stats.yearBuilt} />}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Schools ── */}
+      <section className="container-wide py-10">
+        <h2 className="font-heading font-bold text-2xl text-primary mb-5">
+          Schools Serving {name}
+        </h2>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="bg-light rounded-xl p-5 border border-border">
+            <p className="font-body text-xs text-muted uppercase tracking-wider mb-1">High School</p>
+            <p className="font-heading font-bold text-lg text-primary">{stats.highSchool}</p>
+            {stats.highSchoolRating && (
+              <p className="font-body text-sm text-muted mt-1">{stats.highSchoolRating}</p>
+            )}
+          </div>
+          {stats.middleSchool && (
+            <div className="bg-light rounded-xl p-5 border border-border">
+              <p className="font-body text-xs text-muted uppercase tracking-wider mb-1">Middle School</p>
+              <p className="font-heading font-bold text-lg text-primary">{stats.middleSchool}</p>
+            </div>
+          )}
+          {stats.elementarySchools && stats.elementarySchools.length > 0 && (
+            <div className="bg-light rounded-xl p-5 border border-border">
+              <p className="font-body text-xs text-muted uppercase tracking-wider mb-1">Elementary</p>
+              <p className="font-heading font-bold text-lg text-primary">
+                {stats.elementarySchools.join(", ")}
+              </p>
+            </div>
+          )}
+        </div>
+        {stats.schoolNote && (
+          <p className="font-body text-sm text-muted mt-3 italic">{stats.schoolNote}</p>
+        )}
+      </section>
+
+      {/* ── Commute Times ── */}
+      {stats.commutes.length > 0 && (
+        <section className="bg-light border-y border-border">
+          <div className="container-wide py-10">
+            <h2 className="font-heading font-bold text-2xl text-primary mb-5">
+              Commute Times from {name}
+            </h2>
+            <div className="overflow-x-auto">
+              <table className="w-full font-body text-sm">
+                <thead>
+                  <tr className="border-b-2 border-primary/20">
+                    <th className="text-left py-3 pr-4 font-semibold text-primary">Destination</th>
+                    <th className="text-left py-3 pr-4 font-semibold text-primary">Distance</th>
+                    <th className="text-left py-3 font-semibold text-primary">Drive Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {stats.commutes.map((c) => (
+                    <tr key={c.destination} className="border-b border-border">
+                      <td className="py-3 pr-4 text-dark">{c.destination}</td>
+                      <td className="py-3 pr-4 text-muted">{c.distance}</td>
+                      <td className="py-3 text-muted">{c.time}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── HOA & Community Fees ── */}
+      {stats.hoaNote && (
+        <section className="container-wide py-10">
+          <h2 className="font-heading font-bold text-2xl text-primary mb-4">
+            HOA &amp; Community Fees
+          </h2>
+          <div className="bg-light rounded-xl p-6 border border-border">
+            <p className="font-body text-dark leading-relaxed">{stats.hoaNote}</p>
+            {stats.cdd && (
+              <p className="font-body text-sm text-muted mt-3">
+                <strong>Note:</strong> A Community Development District (CDD) assessment may apply. CDD fees appear on your property tax bill and typically range from $1,500 to $4,000+ per year.
+              </p>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* ── Neighborhood Comparison ── */}
+      {stats.comparisons.length > 0 && (
+        <section className="bg-light border-y border-border">
+          <div className="container-wide py-10">
+            <h2 className="font-heading font-bold text-2xl text-primary mb-5">
+              How {name} Compares
+            </h2>
+            <div className="overflow-x-auto">
+              <table className="w-full font-body text-sm">
+                <thead>
+                  <tr className="border-b-2 border-primary/20">
+                    <th className="text-left py-3 pr-4 font-semibold text-primary">Neighborhood</th>
+                    <th className="text-left py-3 pr-4 font-semibold text-primary">Price Range</th>
+                    <th className="text-left py-3 font-semibold text-primary">Key Difference</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* Current neighborhood row — highlighted */}
+                  <tr className="border-b border-border bg-primary/5">
+                    <td className="py-3 pr-4 font-semibold text-primary">{name}</td>
+                    <td className="py-3 pr-4 text-dark">{stats.priceRange}</td>
+                    <td className="py-3 text-muted italic">This neighborhood</td>
+                  </tr>
+                  {stats.comparisons.map((c) => (
+                    <tr key={c.slug} className="border-b border-border">
+                      <td className="py-3 pr-4">
+                        <Link href={`/${c.slug}/`} className="text-link font-semibold hover:underline">
+                          {c.name}
+                        </Link>
+                      </td>
+                      <td className="py-3 pr-4 text-dark">{c.price}</td>
+                      <td className="py-3 text-muted">{c.distinction}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── Ideal For ── */}
+      {stats.idealFor.length > 0 && (
+        <section className="container-wide py-10">
+          <h2 className="font-heading font-bold text-2xl text-primary mb-5">
+            Who {name} Is Best For
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {stats.idealFor.map((profile) => (
+              <div key={profile} className="flex items-start gap-3 bg-light rounded-xl p-4 border border-border">
+                <span className="text-accent text-lg mt-0.5">✓</span>
+                <p className="font-body text-dark text-sm">{profile}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* ── Amenities ── */}
+      {stats.amenities && stats.amenities.length > 0 && (
+        <section className="bg-light border-y border-border">
+          <div className="container-wide py-10">
+            <h2 className="font-heading font-bold text-2xl text-primary mb-5">
+              Amenities &amp; Nearby
+            </h2>
+            <div className="flex flex-wrap gap-3">
+              {stats.amenities.map((a) => (
+                <span key={a} className="bg-white border border-border rounded-full px-4 py-2 font-body text-sm text-dark">
+                  {a}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── FAQ ── */}
+      {stats.faqs.length > 0 && (
+        <section className="container-wide py-10">
+          <h2 className="font-heading font-bold text-2xl text-primary mb-6">
+            {name} FAQ
+          </h2>
+          {/* FAQ Schema */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: stats.faqs.map((f) => ({
+                  "@type": "Question",
+                  name: f.question,
+                  acceptedAnswer: { "@type": "Answer", text: f.answer },
+                })),
+              }),
+            }}
+          />
+          <div className="space-y-4">
+            {stats.faqs.map((faq) => (
+              <div key={faq.question} className="border border-border rounded-xl p-5">
+                <h3 className="font-heading font-bold text-base text-primary mb-2">
+                  {faq.question}
+                </h3>
+                <p className="font-body text-sm text-muted leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+    </>
+  );
+}
+
+// Small reusable stat box for the key stats strip
+function StatBox({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="bg-white rounded-xl p-4 border border-border text-center">
+      <p className="font-body text-xs text-muted uppercase tracking-wider mb-1">{label}</p>
+      <p className="font-heading font-bold text-base text-primary">{value}</p>
+    </div>
   );
 }
