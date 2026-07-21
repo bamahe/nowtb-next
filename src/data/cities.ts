@@ -41,7 +41,7 @@ export const SPOKE_TOPICS = [
   { slug: "neighborhood-guide", label: "Neighborhood Guide", filter: {} },
   { slug: "housing-market", label: "Housing Market", filter: {} },
   { slug: "horse-properties", label: "Horse & Equestrian Properties", filter: { min_acreage: "2", exclude_rental: true } },
-  { slug: "recently-sold", label: "Recently Sold Homes", filter: { status: "Closed", sort: "ClosePrice desc" } },
+  { slug: "recently-sold", label: "Recently Sold Homes", filter: { status: "Closed", sort: "CloseDate desc", property_type: "Residential" } },
   { slug: "rentals", label: "Homes for Rent", filter: { rental: true } },
   { slug: "home-valuation", label: "Free Home Valuation", filter: {} },
   { slug: "property-management", label: "Property Management", filter: {} },
