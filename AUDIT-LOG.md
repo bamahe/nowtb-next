@@ -4,6 +4,38 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-07-21 (Batch 7 — 10 blog posts expanded with comparison tables, FAQ schemas, and detailed content)
+
+**Pages improved: 10**
+
+### Blog Posts (10)
+
+1. **selling-tampa-bay-home-complete-2025-guide** — Major expansion 2,714 to 18,787 chars. Added: pricing strategy table (4 tiers with DOM and sale-price outcomes), must-fix vs. worth-doing vs. skip repair guide, staging checklist for Florida homes, seller costs breakdown table ($450K example), offer evaluation criteria (financing type, contingencies, earnest money, lease-back), step-by-step closing timeline, inspection negotiation strategy, 6-Q&A FAQ with JSON-LD schema. Updated date to 2026-07-20.
+
+2. **venice-fl-real-estate-guide-beaches-homes-prices** — Major expansion 2,632 to 16,555 chars. Added: pricing table by property type (Venice Island, South Venice, Plantation, Wellen Park, 55+, waterfront, condos), neighborhood profiles for Venice Island, South Venice, Plantation, Wellen Park (Downtown Wellen Park, CoolToday Park), Nokomis; school breakdown (Venice HS IB, Taylor Ranch Elementary, district ranking); rental/investment section with STR caveats; insurance/flood zone breakdown (Zone X vs AE); commute matrix; 5-Q&A FAQ with JSON-LD schema.
+
+3. **lakewood-ranch-vs-wesley-chapel-two-master-planned-communities** — Major expansion 2,639 to 13,337 chars. Added: side-by-side price comparison table (median, entry, luxury, HOA, CDD); lifestyle profiles (Main Street vs. crystal lagoons); schools comparison table (high school, district ranking, elementary, advanced programs); commute matrix to Tampa/airport/USF/Sarasota/beach; community spotlights for LWR (Lake Club, Country Club East, Waterside, Del Webb) and Wesley Chapel (Epperson, Starkey Ranch, Seven Oaks, Wiregrass Ranch, Esplanade 55+); 4-Q&A FAQ with JSON-LD schema.
+
+4. **north-port-fl-new-construction-communities-prices** — Major expansion 2,594 to 14,325 chars. Added: builder price table (7 builders from D.R. Horton $300K to Toll Brothers $900K+); detailed CDD explainer (how CDDs work, how to pay off, non-Wellen-Park lots without CDD); Outside Wellen Park section (infill construction on platted lots); commute matrix; school section (North Port HS A-rated, Sarasota County district ranking); flood zone context (Hurricane Ian lesson, Zone X vs AE by lot); investment analysis; 4-Q&A FAQ with JSON-LD schema.
+
+5. **best-neighborhoods-riverview-fl-2026** — Major expansion 5,290 to 16,110 chars. Added: detailed profiles for 7 communities (Waterset, Triple Creek, Panther Trace, Summerfield, South Fork, Lake St. Charles, Rivercrest, Boyette Springs) with construction era, price range, amenities, commute, and school zone for each; comparison table (all 7 communities); school zone guide (Riverview HS vs Sumner HS, Boyette Springs Elementary, Waterset Charter); flood zone context (Hurricane Milton Alafia River flooding); 5-Q&A FAQ with JSON-LD schema.
+
+6. **best-neighborhoods-brandon-fl-2026** — Major expansion 5,264 to 16,123 chars. Added: detailed profiles for 8 communities (La Collina, Bloomingdale, Arbor Oaks, Sterling Ranch, Providence Lakes, Heather Lakes, Diamond Hill, Buckhorn Preserve) with HOA level, school zone, price range, and key selling points; comparison table (8 communities with HOA level column); school zone guide (Bloomingdale HS zone as top driver, Providence Elementary A-rated); commute section (Selmon Expressway timing, 20-25 min to downtown Tampa); new construction reality check; investment section; 5-Q&A FAQ with JSON-LD schema.
+
+7. **land-o-lakes-fl-homes-for-sale-guide** — Major expansion 5,448 to 13,442 chars. Added: dual-market overview (established lake communities vs. new master-planned); community profiles for Connerton (A-rated elementary inside community, HOA/CDD details), Bexley (Newland developer, 1,200-acre preserve, Sunlake HS), Lakeshore Ranch (gated, cable/internet in HOA, movie theater); Lake Communities no-HOA section with due diligence notes; pricing table by property type; school breakdown (Connerton Elementary, Bexley Elementary, Sunlake HS, LOL HS); commute matrix; honest trade-offs section; 4-Q&A FAQ with JSON-LD schema.
+
+8. **wesley-chapel-fl-homes-for-sale-guide** — Major expansion 5,472 to 14,515 chars. Added: three-differentiator overview (crystal lagoons, new construction scale, retail infrastructure); community profiles for Epperson Ranch (lagoon details, $100-125/mo lagoon fee in HOA), Starkey Ranch (18,000-acre preserve adjacency, trail access), Seven Oaks (gated, established, no new construction), Wiregrass Ranch, Mirada (15-acre lagoon, San Antonio), Esplanade 55+; pricing table (6 tiers with HOA/CDD notes); school breakdown (Wiregrass Ranch HS A-rated, Wesley Chapel HS, Sunlake HS, Kirkland K-8); commute matrix; 4-Q&A FAQ with JSON-LD schema.
+
+9. **va-home-loans-tampa-bay-guide-2026** — Significant expansion 6,689 to 12,928 chars. Added: VA loan entitlement explainer (full entitlement, remaining entitlement, bonus entitlement); VA vs. FHA vs. conventional comparison table (down payment, PMI/MIP, rate, funding fee, credit score, property condition requirements); VA appraisal process (Minimum Property Requirements checklist, seller resistance mitigation); BAH rate reference table (E-5 through O-5, MacDill AFB 2026 approximate); surviving spouse eligibility section.
+
+10. **tampa-bay-school-zones-how-they-affect-home-prices** — Major expansion 2,700 to 15,111 chars. Added: county-by-county A-rated zone breakdown (Hillsborough: Newsome, Bloomingdale, Plant, Steinbrenner, Durant; Pinellas: East Lake, PHUHS; Pasco: Wiregrass Ranch, Sunlake; Sarasota: Pine View, Venice HS); premium data table (5 Hillsborough zones with % premium and dollar impact on 2,000 sq ft home); investment-perspective section for non-parent buyers; school zone verification guide (correct district lookup URLs for all 4 counties); street-level boundary effect section (Valrico example); 4-Q&A FAQ with JSON-LD schema.
+
+**Build:** Passed (Next.js 14.2.35, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `b669724` — pushed to `origin/main`
+
+---
+
 ## 2026-07-20 (Batch 6 — 4 blog posts expanded, 6 Tampa neighborhood descriptions, pre-existing build fixes)
 
 **Pages improved: 10**
