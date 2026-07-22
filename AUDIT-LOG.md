@@ -4,6 +4,40 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-07-22 (Batch 8 — 5 city "homes for sale" guides expanded, 5 comparison posts expanded)
+
+**Pages improved: 10**
+
+### City Guide Blog Posts (5)
+
+1. **lutz-fl-homes-for-sale-guide** — Major expansion 8,427 to 21,259 chars. Added price range table (4 tiers from $320K to $1.5M+), neighborhood profiles for Cheval (gated golf, $550K-$1.5M+), Heritage Harbor (18-hole golf, $380K-$700K), Suncoast Pointe, Northdale/Lake Chateau, no-HOA rural Lutz; school zone table (Steinbrenner A-rated, Hillsborough vs Pasco county line caveat); commute matrix (Veteran's Expressway advantage); comparison table vs Land O Lakes/Wesley Chapel/Carrollwood; investment section; 5-Q&A FAQ with JSON-LD FAQPage schema. Date updated to 2026-07-21.
+
+2. **temple-terrace-fl-homes-for-sale-guide** — Major expansion 8,679 to 17,886 chars. Added price table ($275K-$650K+ by condition), neighborhood profiles (original 1920s-platted sections with golf course, Hillsborough River frontage, east/south newer sections, USF proximity); school zone table (King HS, Wharton HS, Greco Middle); commute matrix (USF 2-8 min, downtown 15-22 min); comparison vs Seffner/Brandon; buyer tips (age of systems, no HOA, flood zone near river, rental investment angle); 5-Q&A FAQ with JSON-LD schema. Date updated to 2026-07-21.
+
+3. **sun-city-center-fl-homes-for-sale-guide** — Major expansion 8,687 to 16,949 chars. Added 55+ community overview (Del Webb history, 16,000+ residents, golf cart legal); SCC vs Kings Point breakdown; property type pricing table (condo $175K-$350K with $600-$900+/mo fees, villa $220K-$380K, SFH $280K-$480K, golf course $380K-$600K); golf course guide (Scepter, Caloosa, Kings Point 27 holes); buyer warnings (age qualification, condo vs HOA insurance, Fannie/Freddie approval for Kings Point, rental restrictions, total monthly cost); commute matrix; 5-Q&A FAQ with JSON-LD schema. Date updated to 2026-07-21.
+
+4. **town-n-country-fl-homes-for-sale-guide** — Major expansion 8,709 to 17,007 chars. Added price table ($280K-$600K+), neighborhood profiles (Countryway with golf, Town 'n' Country Park affordable section, canal front/Old Tampa Bay access, Westchase adjacent); school zone table (Alonso HS IB World School, Sickles HS); commute matrix (airport 4-7 miles, 8-12 min non-peak — primary competitive advantage); comparison table vs Westchase/Carrollwood; 5-Q&A FAQ with JSON-LD schema. Date updated to 2026-07-21.
+
+5. **wimauma-fl-homes-for-sale-guide** — Major expansion 8,407 to 17,329 chars. Added Southshore Bay guide (7-acre MetroLagoons crystal lagoon, multiple builders, $310K-$500K+, CDD $2K-$3.5K/yr), Berry Bay (no lagoon, $290K-$420K), Sunshine Village, rural Wimauma; community comparison table (lagoon, CDD, price range); school zone guide (Sumner HS opened 2021, Shields Middle, Cypress Creek Elementary); commute matrix (55-70 min peak to downtown Tampa — key trade-off); Wimauma vs Riverview comparison table; hidden cost breakdown (CDD + HOA = $500-$700/mo above mortgage); 5-Q&A FAQ with JSON-LD schema. Date updated to 2026-07-21.
+
+### Comparison/Deep-Dive Blog Posts (5)
+
+6. **valrico-vs-riverview-2026** — Major expansion 9,496 to 20,863 chars. Added full 9-factor comparison table at top; price section with neighborhood breakdown; school zone comparison table (Newsome A vs Riverview HS / Sumner HS); neighborhood spotlights for both (Diamond Hill, Copper Ridge, Bloomingdale vs Waterset, Triple Creek, Panther Trace, Summerfield); commute matrix; new construction reality (Riverview abundant vs Valrico very limited); investment section (rental rates $1,900-$2,500 Valrico vs $1,750-$2,300 Riverview); 5-Q&A FAQ with JSON-LD FAQPage schema. Date updated to 2026-07-21.
+
+7. **valrico-vs-brandon-2026** — Major expansion 9,102 to 16,706 chars. Added 8-factor comparison table; price analysis ($380K-$420K vs $340K-$380K); school zone table (Newsome A vs Brandon HS/Spoto HS B); neighborhood character sections (Valrico residential/rural, Brandon urban-suburban); commute matrix; investment section; 4-Q&A FAQ with JSON-LD schema. Date updated to 2026-07-21.
+
+8. **brandon-fl-vs-tampa** — Major expansion 10,952 to 21,760 chars. Added insurance cost comparison table (Brandon $2.5K-$4K/yr vs Tampa $3K-$6K vs South Tampa $4.5K-$12K+); school zone table (Bloomingdale HS vs Plant HS vs central Tampa); commute matrix from Brandon; who-should-choose-Brandon vs who-should-choose-Tampa bullet sections; 4-Q&A FAQ with JSON-LD FAQPage schema. Date updated to 2026-07-21.
+
+9. **thonotosassa-fl-vs-dover** — Expansion 9,677 to 15,334 chars. Added Thonotosassa neighborhood profiles (Thonotosassa Lake frontage $600K-$1.5M+, McLane Rd acreage $350K-$600K, McIntosh Rd); Dover neighborhood profiles (SR-574, 2-10 acre parcels, horse properties $450K-$900K+); school zone table (Strawberry Crest HS for Dover, Wharton HS for Thonotosassa); well/septic utility guide (water test $75-$400, pump-out $300-$600); internet/connectivity section (fiber vs Starlink caveat). Date updated to 2026-07-21.
+
+10. **valrico-new-construction-communities-2026** — Expansion 10,242 to 19,607 chars. Added builder comparison table (Lennar $370K-$550K, D.R. Horton $350K-$520K, M/I Homes $400K-$650K, Taylor Morrison $450K-$750K with strengths/notes); supply constraint analysis (why Valrico holds value); Valrico vs Riverview new construction comparison table (6 factors: price, CDD, school zone, lot size, supply pipeline); buyer warnings (builder contract, independent inspection, school zone verification); 4-Q&A FAQ with JSON-LD schema. Date updated to 2026-07-21.
+
+**Build:** Passed (Next.js 14.2.35, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `b480006` — pushed to `origin/main`
+
+---
+
 ## 2026-07-21 (Batch 7 — 10 blog posts expanded with comparison tables, FAQ schemas, and detailed content)
 
 **Pages improved: 10**
