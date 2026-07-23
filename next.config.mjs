@@ -255,6 +255,8 @@ const nextConfig = {
       // Private seller hub — static HTML (both with and without trailing slash)
       { source: '/3813-polumbo', destination: '/3813-polumbo.html' },
       { source: '/3813-polumbo/', destination: '/3813-polumbo.html' },
+      { source: '/1609-lakeview-ave', destination: '/1609-lakeview-ave.html' },
+      { source: '/1609-lakeview-ave/', destination: '/1609-lakeview-ave.html' },
     ];
   },
   // Allow Bridge API listing photos and Showcase IDX images
