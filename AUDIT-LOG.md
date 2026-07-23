@@ -4,6 +4,29 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-07-23 (Batch 9 — 10 thin Valrico spoke pages expanded)
+
+**Pages improved: 10**
+
+All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-specific content (11,500-14,000 chars each). All dated 2026-07-22. Each post has H2/H3 structure, comparison table, 5-question FAQ with JSON-LD FAQPage schema, CTA box, and navGrid internal links.
+
+### Valrico spoke pages
+- `valrico-fl-commute-times-tampa` — Routes SR-60/Selmon, SR-60/I-75/I-4; destination table; neighborhood comparison; commute tips; 13,979 chars
+- `valrico-fl-shopping-dining-guide` — 3 Publix locations, Sweetwater Square, Brandon Town Center, SR-60 fast food, casual dining, services; 11,548 chars
+- `valrico-fl-medical-facilities` — Brandon Regional (Level II Trauma, 8-12 min), AdventHealth Brandon, St. Joseph's South, Tampa General (Level I), Moffitt; urgent care; VA clinic; 12,666 chars
+- `valrico-fl-sr60-corridor` — 4-lane arterial geography, key intersections (Kingsway/Valrico/Lithia Pinecrest), traffic patterns, noise trade-offs, Bloomingdale Ave alternative; 12,056 chars
+- `valrico-fl-luxury-estates` — River Hills CC (Steve Smyers, guard-gate, $550K-$1.5M+), Lithia Pinecrest estate lots, Bloomingdale estates, Diamond Hill upper tier; price table; regional comparison; 12,831 chars
+- `valrico-fl-starter-homes` — Under-$350K segment analysis; 33594 older sections; Valrico Forest; Bent Tree; loan programs (FHA, Hometown Heroes, VA, USDA); competition strategy; 12,210 chars
+- `valrico-fl-hoa-communities` — River Hills (24-hr guard), Diamond Hill (card-access, resort), Copper Ridge, Northwood Estates, Arista, Bloomingdale (32+ sub-communities); HOA due diligence; 13,684 chars
+- `valrico-fl-golf-courses` — River Hills (private, Smyers design), Bloomingdale Golfers Club (semi-private, 5-10 min), Buckhorn Springs, TPC Tampa Bay, Saddlebrook Resort; membership math; 12,424 chars
+- `valrico-fl-best-streets` — 4 desirability factors; per-community analysis; price impact table (golf +10-15%, water +$15-40K, cul-de-sac +3-7%, SR-60 -5-10%); school zone verification; 12,377 chars
+- `valrico-fl-no-hoa-homes` — 33594 older sections, Lithia Pinecrest rural corridor, Four Winds Estates, Alafia Estates (flood zone warning); county rules; no-HOA vs HOA comparison; 12,859 chars
+
+**Build:** Passed (Next.js 14.2.35, no TypeScript errors)
+**Git commit:** `3508396` — pushed to `origin/main`
+
+---
+
 ## 2026-07-22 (Batch 8 — 5 city "homes for sale" guides expanded, 5 comparison posts expanded)
 
 **Pages improved: 10**
