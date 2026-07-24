@@ -4,6 +4,31 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-07-24 (Batch 10 — 10 thin blog posts expanded: city guides, condo/townhome guides, mortgage/inspection, 55+ communities)
+
+**Pages improved: 10**
+
+All 10 posts expanded from 2,700-3,200 chars to 13,000-17,000 chars each. All dated 2026-07-23. Each post has proper H2/H3 hierarchy, comparison table(s), 5-question FAQ with JSON-LD FAQPage schema, internal links, and CTA box with Barrett contact info.
+
+### Blog Posts
+
+- `brooksville-fl-homes-for-sale-affordable-living-north-tampa` — Neighborhood breakdown (Waterford D.R. Horton, Benton Hills Meritage, Oak Hills, Cheval West, Brookridge 55+, Downtown historic), Brooksville vs Riverview/Spring Hill/Dover comparison table, Hernando County property taxes, school guide (Nature Coast Technical, Springstead, Central, Weeki Wachee), commute table (Suncoast Pkwy), downsides (well/septic, cell service, flood zones), investment rental market; 13,114 chars
+- `venice-fl-neighborhoods-where-to-live-near-gulf` — Venice Island deep-dive, 55+ communities (Plantation Golf, Venetian Golf & River Club, Venice Golf & Country Club), South Venice and Nokomis value section, Wellen Park vs Venice Island comparison table (6 factors), Sarasota County schools (Venice High IB, Taylor Ranch A-rated), property taxes, STR income potential ($2,500-$5,000/mo), beach distance guide; 13,942 chars
+- `tampa-bay-condo-buying-guide-first-time-buyers` — HOA document 5-point checklist, HOA fee table by building type, Florida SB 4-D milestone inspection explainer, reserve funding mandate (waiver no longer allowed), special assessment risk ($5K-$100K+), affordable condo areas by county, FHA/VA/conventional financing rules, best investment condo communities; 14,688 chars
+- `spring-hill-fl-real-estate-guide-best-neighborhoods-prices` — Timber Pines profile ($200K-$400K, 2 golf courses), Southern Hills Lennar, Verano Lennar, Spring Hill proper/older sections, Spring Lake communities, Pristine Place golf, Spring Hill vs Brooksville/Land O'Lakes/Riverview comparison table, Hernando County schools with specifics, commute table with toll costs, new construction builder list (Lennar/D.R. Horton/Maronda/LGI), Weeki Wachee/Homosassa/Chassahowitzka nature guide; 15,483 chars
+- `north-port-fl-homes-affordable-new-construction-near-sarasota` — North Port vs Sarasota vs Venice 7-factor comparison table, Wellen Park full deep-dive (scale, Downtown Wellen lake district, CoolToday Park, CDD fees, builders), builder price table (7 builders from Century Complete $280K to Toll Brothers $900K+), CDD fee explainer (how they work, payoff options, CDD vs HOA), Sarasota County schools, beach distance guide, US-41 traffic and infrastructure downsides; 14,652 chars
+- `understanding-mortgage-rates-tampa-bay-fixed-vs-arm` — Fixed vs ARM explainer (5/1, 7/1, 10/1 with caps), purchasing power table (6 rate scenarios x 3 payment tiers), ARM use-case analysis, 2-1 temporary buydown explainer, permanent discount points math, builder preferred lender caution, rate-shopping research (Freddie Mac data), credit score tier breaks, loan type comparison table (FHA/VA/Conventional/USDA); 14,476 chars
+- `home-inspection-checklist-tampa-bay-buyers` — Roof/HVAC/water intrusion/electrical panels (FPE/Zinsco), Chinese drywall (2004-2009 era, $80K-$150K remediation), polybutylene and cast iron pipes, sinkhole risk zones and karst geology, termites/WDO, stucco, seawall (waterfront), wind mitigation inspection (features and savings table), 4-point inspection (4 systems), inspection cost table (9 inspection types with costs), negotiation strategy (safety hazards vs normal wear vs walk-away); 17,152 chars
+- `retiring-tampa-bay-best-55-plus-communities` — Full profiles: Sun City Center, Kings Point ($150K-$350K condos, financing caution), Valencia Lakes (GL Homes), Del Webb South Fork (Riverview), Southshore Falls (Apollo Beach), Del Webb Wesley Chapel, Esplanade at Wiregrass Ranch (lagoon-style pool), Mirada Esplanade (15-acre crystal lagoon), Del Webb Lakewood Ranch, Esplanade Lakewood Ranch, Plantation Golf Venice; 8-community comparison table (price/HOA/golf/age restriction/Tampa distance), full monthly cost breakdown; 15,421 chars
+- `best-townhome-communities-tampa-bay-fl` — Riverview new construction (Townes at Southshore Pointe, Enclave at Summerfield), Wesley Chapel (Woodcreek, Saddlewood), Brandon resale (Villages at Bloomingdale), Apollo Beach canal-front, Tampa urban (Westshore, Hyde Park, Seminole Heights), Pinellas County, SFH vs townhome vs condo 9-factor comparison table (pricing/HOA/financing/parking/shared walls), HOA coverage guide, fee-simple vs condo title distinction (FHA/VA advantage), investor analysis; 14,167 chars
+- `sarasota-fl-condo-guide-prices-hoa-fees` — Downtown Sarasota (The Mark, Vue), Siesta Key (beachfront $500K-$1.5M+, STR $4K-$10K/mo peak), Longboat Key ($600K-$3M+, many pre-1990 buildings), Lido Key (St. Armands walkability), North Sarasota/SRQ area (best value $200K-$400K), 5-area comparison table, Florida SB 4-D milestone inspection requirements, reserve funding mandate, HOA fee trajectory (10-25% annually), financing restrictions at older buildings, STR income ranges by area; 15,752 chars
+
+**Build:** Passed (Next.js 14.2.35, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `c652d36` — pushed to `origin/main-batch10`
+
+---
+
 ## 2026-07-23 (Batch 9 — 10 thin Valrico spoke pages expanded)
 
 **Pages improved: 10**
