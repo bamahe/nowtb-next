@@ -75,6 +75,19 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
       <head>
+        {/* WebSite schema — tells Google the site name to display in search results */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Barrett Henry, REALTOR\u00ae",
+              "alternateName": "The NOW Team Tampa Bay",
+              "url": "https://nowtb.com",
+            }),
+          }}
+        />
         {/* SiteNavigationElement schema — helps search engines and AI understand main nav */}
         <script
           type="application/ld+json"

@@ -240,6 +240,27 @@ export const guides: GuideData[] = [
     ]),
   },
 
+  {
+    slug: "hillsborough-county-home-buying-timeline",
+    title: "Hillsborough County Home Buying Timeline: Search to Closing, Step by Step",
+    excerpt: "Step by step timeline for buying a house in Hillsborough County, FL. Search, offer, escrow, inspection, appraisal, close. Real day counts and local costs.",
+    date: "2026-07-23",
+    category: "Buying",
+    readingTime: "15 min read",
+    sections: makeSections("Hillsborough County Home Buying Timeline", [
+      "How Long Does It Actually Take to Buy a House in Hillsborough County?",
+      "Phase 1: Before You Look (3 to 7 Days)",
+      "Phase 2: Search and Offer (1 to 8 Weeks)",
+      "Phase 3: Under Contract, Day by Day",
+      "Hillsborough County Specifics That Change the Timeline",
+      "What It Costs and When You Pay It",
+      "The Five Deal Killers in Hillsborough",
+      "How to Close Faster",
+      "Frequently Asked Questions",
+      "Work With Barrett",
+    ]),
+  },
+
   // =========================================================================
   // MORTGAGE & LOAN GUIDES
   // =========================================================================
