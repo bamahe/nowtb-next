@@ -13,7 +13,7 @@
 
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound, redirect } from "next/navigation";
+import { notFound, permanentRedirect, redirect } from "next/navigation";
 
 import HeroSection from "@/components/ui/HeroSection";
 import ListingGrid from "@/components/ui/ListingGrid";
@@ -580,11 +580,12 @@ export default async function CityPage({
 
   if (!parsed) notFound();
 
-  // Blog posts — redirect to canonical /blog/{slug}/ URL
-  // Was rendering full content at both /{slug} and /blog/{slug}, causing
-  // duplicate content in Google Search Console (both URLs indexed separately)
+  // Blog posts — 308 permanent redirect to canonical /blog/{slug}/ URL
+  // Must be permanentRedirect (308) not redirect (307) so Google consolidates
+  // both URLs. Using temporary 307 caused GSC to keep indexing /{slug}/ AND
+  // /blog/{slug}/ separately (URL cannibalization).
   if (parsed === "blog-post") {
-    redirect(`/blog/${citySlug}/`);
+    permanentRedirect(`/blog/${citySlug}/`);
   }
 
   // Market updates — render the same page as /market-updates/[slug]

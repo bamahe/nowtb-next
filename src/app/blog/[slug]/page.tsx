@@ -1,6 +1,6 @@
 // =============================================================================
-// /blog/[slug] — Blog post page (renders same content as /[slug])
-// Both URLs serve the same post. Canonical points to root /[slug].
+// /blog/[slug] — Blog post page (canonical URL for all blog posts)
+// The root /{slug} route 308-redirects here via [citySlug] catch-all.
 // =============================================================================
 
 import type { Metadata } from "next";
