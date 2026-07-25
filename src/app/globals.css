@@ -331,7 +331,9 @@ select {
 .nowtb-cta-box h2,
 .nowtb-cta-box h3,
 .nowtb-cta-box h4,
-.nowtb-cta-box p { color: #fff !important; }
+.nowtb-cta-box p,
+.nowtb-cta-box strong,
+.nowtb-cta-box b { color: #fff !important; }
 .nowtb-cta-box a { color: #fff !important; text-decoration: none !important; }
 /* Override inline white background on CTA box buttons — all text should be white on dark bg */
 .nowtb-cta-box a[style*="background:#fff"],
