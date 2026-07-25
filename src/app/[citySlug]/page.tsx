@@ -13,7 +13,7 @@
 
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound, permanentRedirect, redirect } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 
 import HeroSection from "@/components/ui/HeroSection";
 import ListingGrid from "@/components/ui/ListingGrid";
@@ -48,7 +48,6 @@ import { comparisons, getComparisonBySlug, type ComparisonData } from "@/data/co
 import { regionalPages, getRegionalPageBySlug, type RegionalPageData } from "@/data/regional-pages";
 import { miscPages, getMiscPageBySlug, type MiscPageData } from "@/data/misc-pages";
 import { guides, type GuideData } from "@/data/guides";
-import { getGuideContent } from "@/lib/guides-loader";
 import { getListings, getListingsByCity, getOpenHouses } from "@/lib/bridge";
 import { CITY_FAQS } from "@/data/valrico-faqs";
 import { NEIGHBORHOOD_DESCRIPTIONS } from "@/data/neighborhood-descriptions";
@@ -243,10 +242,9 @@ export async function generateStaticParams() {
     params.push({ citySlug: rp.slug });
   }
 
-  // Guide pages — static content, no API
-  for (const guide of guides) {
-    params.push({ citySlug: guide.slug });
-  }
+  // Guide pages — skipped. Config redirects in next.config.mjs redirect
+  // /{slug}/ → /guides/{slug}/ before this route is reached. No need to
+  // pre-render pages that will never be served.
 
   // Misc catch-all pages — static content
   for (const mp of miscPages) {
@@ -286,32 +284,14 @@ export async function generateMetadata({
     };
   }
 
-  // Market updates — serve with proper metadata
+  // Market updates — redirect metadata points to canonical /market-updates/ URL
+  // Matches the blog-post pattern: noindex + canonical to prevent Google from
+  // indexing this duplicate URL alongside /market-updates/{slug}/
   if (parsed === "market-update") {
-    const { getMarketUpdateBySlug } = await import("@/lib/market-updates");
-    const update = getMarketUpdateBySlug(citySlug);
-    if (update) {
-      // Custom OG image for florida-housing-market-2026
-      const ogImage = citySlug === "florida-housing-market-2026"
-        ? "/images/florida-housing-market-2026-og.png"
-        : "/og-default.png";
-      return {
-        title: update.title,
-        description: update.excerpt || `${update.title} — housing market data from Barrett Henry, REALTOR® at REMAX Collective.`,
-        alternates: { canonical: `/market-updates/${citySlug}/` },
-        openGraph: {
-          title: update.title,
-          description: update.excerpt,
-          images: [{ url: ogImage, width: 1200, height: 630 }],
-        },
-        twitter: {
-          card: "summary_large_image",
-          title: update.title,
-          images: [ogImage],
-        },
-      };
-    }
-    return {};
+    return {
+      alternates: { canonical: `/market-updates/${citySlug}/` },
+      robots: { index: false, follow: true },
+    };
   }
 
   // All dynamic pages get a canonical URL to prevent duplicate content
@@ -481,17 +461,11 @@ export async function generateMetadata({
         },
       };
     case "guide":
+      // Redirect metadata — noindex + canonical to prevent Google from
+      // indexing /{slug}/ alongside /guides/{slug}/ (URL cannibalization)
       return {
-        title: `${parsed.guide.title}`,
-        description: parsed.guide.excerpt,
-        alternates: { canonical },
-        openGraph: {
-          title: `${parsed.guide.title} | Barrett Henry, REALTOR®`,
-          description: parsed.guide.excerpt,
-          url: canonical,
-          type: "article",
-          images: [{ url: "/og-default.png", width: 1200, height: 630 }],
-        },
+        alternates: { canonical: `/guides/${parsed.guide.slug}/` },
+        robots: { index: false, follow: true },
       };
     default:
       break;
@@ -588,37 +562,12 @@ export default async function CityPage({
     permanentRedirect(`/blog/${citySlug}/`);
   }
 
-  // Market updates — render the same page as /market-updates/[slug]
+  // Market updates — 308 permanent redirect to canonical /market-updates/{slug}/ URL
+  // Must be permanentRedirect (308) not redirect (307) so Google consolidates
+  // both URLs. Previously this rendered the full page here, creating duplicate
+  // content with /market-updates/{slug}/ (URL cannibalization).
   if (parsed === "market-update") {
-    const { getMarketUpdateBySlug } = await import("@/lib/market-updates");
-    const { cleanWpContent } = await import("@/lib/utils");
-    const { getPrimaryAgent } = await import("@/data/agents");
-    const update = getMarketUpdateBySlug(citySlug);
-    if (!update) notFound();
-    const agent = getPrimaryAgent();
-    const city = update.title.split(" Housing Market")[0].split(" Real Estate")[0];
-    return (
-      <>
-        <section className="bg-primary pt-32 pb-16">
-          <div className="container-wide max-w-3xl text-center">
-            <span className="inline-block px-4 py-1 rounded-full text-xs font-body font-semibold bg-accent/20 text-accent mb-4">Market Update</span>
-            <h1 className="heading-display text-display md:text-display-lg text-white mb-4">{update.title}</h1>
-            <div className="flex items-center justify-center gap-3 text-sm font-body text-accent mb-8">
-              <time dateTime={update.date}>{new Date(update.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</time>
-            </div>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <a href={`tel:${agent.phone.replace(/[^\d]/g, "")}`} className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary font-bold text-sm rounded-lg">Call {agent.phone}</a>
-              <Link href="/home-valuation/" className="inline-block px-6 py-3 border-2 border-white/40 text-white font-bold text-sm rounded-lg">Free Home Valuation</Link>
-            </div>
-          </div>
-        </section>
-        <section className="container-wide py-12">
-          <div className="blog-content prose prose-lg font-body text-dark max-w-none prose-headings:font-heading prose-headings:text-primary prose-a:text-link prose-a:no-underline hover:prose-a:underline prose-p:leading-relaxed"
-            dangerouslySetInnerHTML={{ __html: cleanWpContent(update.content) }}
-          />
-        </section>
-      </>
-    );
+    permanentRedirect(`/market-updates/${citySlug}/`);
   }
 
   // Dispatch to the correct page component based on type
@@ -717,48 +666,13 @@ export default async function CityPage({
       return <RegionalPage page={page.page} />;
     case "misc":
       return <MiscCatchAllPage page={page.page} />;
-    case "guide": {
-      // Render guide inline — use real WP content when available, fall back to sections
-      const g = page.guide;
-      const wpContent = getGuideContent(g.slug);
-      return (
-        <>
-          <HeroSection title={g.title} subtitle={g.excerpt} />
-          <div className="container-wide py-12">
-            <div className="max-w-3xl mx-auto">
-              <p className="text-sm text-muted mb-8">{g.category} · {g.readingTime}</p>
-
-              {wpContent ? (
-                /* Real WordPress content */
-                <div
-                  className="blog-content prose prose-lg font-body text-dark max-w-none
-                    prose-headings:font-heading prose-headings:text-primary
-                    prose-a:text-link prose-a:no-underline hover:prose-a:underline
-                    prose-p:leading-relaxed"
-                  dangerouslySetInnerHTML={{ __html: cleanWpContent(wpContent) }}
-                />
-              ) : (
-                /* Fallback: placeholder sections */
-                <>
-                  {g.sections.map((s) => (
-                    <div key={s.id} className="mb-8">
-                      <h2 className="font-heading text-2xl font-bold text-primary mb-4">{s.heading}</h2>
-                      <div className="blog-content" dangerouslySetInnerHTML={{ __html: cleanWpContent(s.content) }} />
-                    </div>
-                  ))}
-                </>
-              )}
-
-              <div className="mt-12 p-6 bg-primary rounded-xl text-center">
-                <h3 className="font-heading text-xl font-bold text-white mb-2">Have Questions?</h3>
-                <p className="text-accent mb-4">Barrett Henry has 23+ years of real estate experience.</p>
-                <a href="/contact/" className="btn-accent">Contact Barrett</a>
-              </div>
-            </div>
-          </div>
-        </>
-      );
-    }
+    case "guide":
+      // 308 permanent redirect to canonical /guides/{slug}/ URL
+      // Prevents duplicate content — the dedicated /guides/[slug] route
+      // has the full layout with sidebar, schema, related guides, etc.
+      // Config redirects in next.config.mjs also handle this, but this
+      // serves as a belt-and-suspenders fallback for runtime requests.
+      permanentRedirect(`/guides/${page.guide.slug}/`);
     default:
       notFound();
   }
