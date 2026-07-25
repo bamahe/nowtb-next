@@ -4,6 +4,31 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-07-25 (Batch 11 — 10 thin blog posts expanded: insurance guides, community guides, 2026 market update)
+
+**Pages improved: 10**
+
+All 10 posts expanded from 2,100-2,700 chars to 14,800-18,800 chars each. All dated 2026-07-24. Each post has H2/H3 hierarchy, at least one comparison table, 5-question FAQ with JSON-LD FAQPage schema, internal links, and CTA box.
+
+### Blog Posts (10)
+
+- `florida-insurance-reform-what-sb-2a-means-for-homeowners` — Full SB 2-A results guide (litigation down 60%+, Citizens shed 400K+ policies), county premium table (6 counties), wind mitigation ROI, Citizens vs private carriers comparison, flood vs homeowners coverage explainer; 16,127 chars
+- `tampa-bay-insurance-premiums-finally-stabilizing` — Hillsborough/Pinellas/Pasco/Manatee/Sarasota average cost breakdown ($2,800-$8,500/yr by county), what drives premiums (roof age, wind mitigation, flood zone, construction type), active carriers in FL market 2026, shopping guide, condo buyer SB 4-D warning, insurance as mortgage qualifier; 16,710 chars
+- `hurricane-ian-missed-tampa-but-insurance-crisis-did-not` — Ian context ($50-65B insured losses), Tampa Bay storm surge risk (funnel geography), evacuation zone vs flood zone explainer (Milton 2024 context), hurricane prep checklist (pre-season and 48-hr), post-storm claim steps (AOB warning), wind vs flood coverage comparison table; 18,829 chars
+- `wellen-park-downtown-opens-north-port-transformation` — 9-builder price table (Century Complete $310K to Toll Brothers $1.1M+), CDD explainer ($1,500-$4,000/yr), Downtown Wellen Park detail (restaurants, lake promenade, CoolToday Park), Wellen vs Venice Island vs North Port comparison table, Sarasota County schools (Venice HS IB), commute matrix; 17,654 chars
+- `parrish-florida-fastest-growing-zip-code-tampa-bay` — North River Ranch, Rye Ranch, Legacy Preserve, Firethorn full profiles; Parrish vs Riverview 9-factor comparison table; Manatee County schools (Barbara Harvey Elementary, Parrish Community High); commute matrix (55-75 min to Tampa); 15,428 chars
+- `mirada-lagoon-now-open-what-it-means-for-pasco-home-values` — 15-acre lagoon full explainer, Lennar pricing detail, CDD breakdown ($2,000-$3,800/yr bundled vs Epperson separate $100-$125/mo), Mirada vs Epperson vs Southshore Bay comparison table (8 factors), Pasco County schools, commute; 15,651 chars
+- `starkey-ranch-adds-new-phase-esplanade-55-plus-opens` — Price table by product type (5 tiers, $320K-$900K+), K-8 magnet school detail, no-CDD advantage vs Bexley/Wiregrass Ranch, Esplanade 55+ Taylor Morrison detail, Starkey Ranch vs Bexley vs Wiregrass Ranch comparison table, Suncoast Pkwy commute; 16,057 chars
+- `berry-bay-wimauma-d-r-horton-affordable-new-construction` — Berry Bay vs Southshore Bay full cost comparison (same base price, $200-$300/mo higher total at Southshore), Wimauma commute table (6 destinations), Sumner HS school context, investor rental analysis ($1,800-$2,200/mo), FHA/VA financing guide; 14,830 chars
+- `arista-valrico-grand-opening-new-gated-community` — River Hills CC (Steve Smyers, private golf, guard gate, $550K-$1.5M+), Diamond Hill (resort amenity center, $420K-$700K), Arista (newer construction 2022+, $450K-$700K), Copper Ridge (value, $380K-$530K); 4-community comparison table; Newsome HS zone premium analysis (8-15% premium); Selmon Expressway commute; 14,829 chars
+- `tampa-bay-real-estate-market-update-november-2024` — Retitled as 2026 mid-year market update; county-by-county price breakdown (Hillsborough ~$410K, Pinellas ~$440K, Pasco ~$385K, Manatee ~$407K, Sarasota ~$490K); months of supply table (7 markets); rate environment (6.7-7.2%); purchasing power calculator; builder 2-1 buydown guide; best opportunities (Pinellas condos, Sarasota resale, east Hillsborough new construction); 17,014 chars
+
+**Build:** Passed (Next.js 14.2.35, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `1b92f19` — pushed to `origin/main`
+
+---
+
 ## 2026-07-24 (Batch 10 — 10 thin blog posts expanded: city guides, condo/townhome guides, mortgage/inspection, 55+ communities)
 
 **Pages improved: 10**
