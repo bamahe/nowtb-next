@@ -28,6 +28,13 @@ export const metadata: Metadata = {
   title: "Tampa Bay Homes for Sale | Search Properties | MLS Listings",
   description:
     "Browse homes for sale across Tampa Bay. Filter by city, price, bedrooms, and more. Updated daily from Stellar MLS. Barrett Henry, REMAX Collective. Call (813) 733-7907.",
+  // Prevent Google from indexing the search/filter page — individual listings
+  // have their own canonical pages at /properties/StellarMLS/{id}/{city}/{address}.
+  // Without noindex, Google indexes filtered search results as duplicate listings.
+  robots: {
+    index: false,
+    follow: true, // still follow links to individual listing pages
+  },
   alternates: {
     canonical: "/properties/",
   },

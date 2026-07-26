@@ -21,6 +21,7 @@ import { BATCH1_FAQS } from "./batch1-faqs";
 import { BATCH2_FAQS } from "./batch2-faqs";
 import { BATCH3_FAQS } from "./batch3-faqs";
 import { BATCH4_FAQS } from "./batch4-faqs";
+import { REMAINING_COUNTY_FAQS } from "./remaining-county-faqs";
 import { BATCH5_FAQS } from "./batch5-faqs";
 
 export const CITY_FAQS: Record<string, CityFAQ[]> = {
@@ -29,6 +30,7 @@ export const CITY_FAQS: Record<string, CityFAQ[]> = {
   ...BATCH2_FAQS,
   ...BATCH3_FAQS,
   ...BATCH4_FAQS,
+  ...REMAINING_COUNTY_FAQS,
   ...BATCH5_FAQS,
   valrico: [
     {
