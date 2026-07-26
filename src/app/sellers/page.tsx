@@ -187,6 +187,18 @@ export default function SellersPage() {
         subtitle="I don't guess on price and I don't cut corners on marketing. 23+ years of getting sellers top dollar."
       />
 
+      {/* ---- Seller Lead Form — right after hero ---- */}
+      <section className="section-light">
+        <div className="container-wide max-w-xl mx-auto">
+          <ContactForm
+            webhookUrl="/api/contact"
+            source="sellers-page"
+            title="Ready to Find Out What Your Home Is Worth?"
+            submitLabel="Let's Talk"
+          />
+        </div>
+      </section>
+
       {/* ---- Selling Process Overview — white bg ---- */}
       <section className="section-white">
         <div className="container-wide max-w-3xl mx-auto">
@@ -509,17 +521,6 @@ export default function SellersPage() {
         </div>
       </section>
 
-      {/* ---- Seller Lead Form — light bg ---- */}
-      <section className="section-light">
-        <div className="container-wide max-w-xl mx-auto">
-          <ContactForm
-            webhookUrl="/api/contact"
-            source="sellers-page"
-            title="Ready to Find Out What Your Home Is Worth?"
-            submitLabel="Let's Talk"
-          />
-        </div>
-      </section>
     </>
   );
 }
