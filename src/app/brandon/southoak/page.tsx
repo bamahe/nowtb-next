@@ -91,6 +91,7 @@ export default function SouthoakPage() {
         citySlug="brandon"
         nearbyNeighborhoods={nearbyNeighborhoods}
         h1Override="Southoak Homes for Sale - Bloomingdale, Brandon, FL"
+        subdivisionOverride="BLOOMINGDALE SEC F"
       />
     </>
   );

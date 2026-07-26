@@ -33,6 +33,8 @@ interface NeighborhoodPageProps {
   nearbyNeighborhoods?: { name: string; slug: string }[];
   /** Optional H1 override (defaults to "{name} Homes for Sale") */
   h1Override?: string;
+  /** Override MLS subdivision search when MLS uses a different name than the neighborhood */
+  subdivisionOverride?: string;
 }
 
 export default async function NeighborhoodPage({
@@ -42,6 +44,7 @@ export default async function NeighborhoodPage({
   citySlug,
   nearbyNeighborhoods = [],
   h1Override,
+  subdivisionOverride,
 }: NeighborhoodPageProps) {
   // Look up parent city data for zip codes and county info
   const parentCity = getCityBySlug(citySlug);
@@ -195,6 +198,7 @@ export default async function NeighborhoodPage({
         city={city}
         zipCodes={parentCity?.zip_codes || []}
         searchName={searchName}
+        subdivisionOverride={subdivisionOverride}
         limit={24}
       />
 

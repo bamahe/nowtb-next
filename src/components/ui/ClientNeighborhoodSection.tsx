@@ -18,6 +18,8 @@ interface ClientNeighborhoodSectionProps {
   zipCodes: string[];
   /** Short search name used for display (e.g. "Bloomingdale homes") */
   searchName: string;
+  /** Override the MLS subdivision search term when MLS uses a different name */
+  subdivisionOverride?: string;
   /** Max listings to display */
   limit?: number;
 }
@@ -27,6 +29,7 @@ export default function ClientNeighborhoodSection({
   city,
   zipCodes,
   searchName,
+  subdivisionOverride,
   limit = 24,
 }: ClientNeighborhoodSectionProps) {
   const [listings, setListings] = useState<Listing[]>([]);
@@ -39,6 +42,7 @@ export default function ClientNeighborhoodSection({
     }
     const params = new URLSearchParams({
       zip_codes: zipCodes.join(","),
+      subdivision: subdivisionOverride || searchName,
       limit: String(limit),
       exclude_rental: "true",
     });
