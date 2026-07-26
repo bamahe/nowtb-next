@@ -324,6 +324,46 @@ export const BRANDON_NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescr
     `,
   },
 
+  // ===== SOUTHOAK =====
+
+  "southoak": {
+    summary:
+      "Hidden acreage community in Bloomingdale near Brandon, FL. Custom homes on up to 5 acres, built 1983-1990. Mandatory HOA, no CDD. Zoned for Cimino Elementary, Burns Middle, Bloomingdale High.",
+    contentHtml: `
+      <h3>Southoak Real Estate Overview</h3>
+      <p>Southoak dates back to 1983, with most of the neighborhood built out between 1986 and 1990 under the legal designation Bloomingdale Section F. That history shows in the best way: mature trees, established landscaping, and a settled feel that new construction cannot replicate.</p>
+      <p>What sets Southoak apart from the rest of Bloomingdale is lot size. Homesites here run anywhere from under an acre up to five acres and more, with several properties backing to conservation land. Homes range from roughly 3,000 to over 6,000 square feet, most with 4 to 6 bedrooms and 3 or more bathrooms. Expect custom built ranch and two story homes, split floor plans, and pool homes on nearly every street.</p>
+      <p>Recent Southoak sales back this up. In the last six months, two confirmed Southoak homes sold, a 3,002 square foot home for $666,444 and a 3,706 square foot home for $804,000, both landing in the $217 to $222 per square foot range and both under contract within three weeks. Active listings as of July 2026 span a 2,431 square foot pool home at $575,000 up to a 4,580 square foot estate on Centerbrook Drive at $1,000,000. That is a small sample of recent activity, so treat it as a range rather than a fixed number, and always run a current comp before pricing a specific home. Southoak is deed restricted with a mandatory HOA, the South Oak Community Association, with annual dues confirmed at $500 to $550 depending on section. No CDD. Golf carts are allowed in the community, a nice lifestyle perk on these bigger lots.</p>
+      <p>One more thing that matters here and does not show up on a typical listing photo: homes in Southoak are on septic tanks, not county sewer, and while public water reaches the house in most sections, a lot of lots also have a private well just for lawn irrigation. Both of those are normal for this part of unincorporated Hillsborough, but they change the inspection checklist and the ongoing cost of ownership, so factor them into any offer or listing conversation.</p>
+
+      <h3>What It's Like Living in Southoak</h3>
+      <p>Southoak has a quiet, spread out feel that is rare this close to <a href="/brandon/">Brandon</a> and <a href="/valrico/">Valrico</a>. Wide lots and mature oaks give you real privacy and room to spread out, whether that means a boat, a workshop, or just space between you and the neighbors. It is the kind of neighborhood where custom home buyers and hobby farm buyers end up looking, without giving up a short drive to everyday conveniences.</p>
+      <p>Southoak is zoned for Cimino Elementary, Burns Middle School, and Bloomingdale High School, a strong set of assignments for this part of Hillsborough County. School boundaries can still shift over time, so it is worth a quick confirmation on any specific address before writing an offer.</p>
+      <p>Residents get full access to the broader Bloomingdale infrastructure: the Bloomingdale Golfers Club, the Campo Family YMCA, Bloomingdale East and West Parks, and the Bloomingdale Regional Library, all a short drive away.</p>
+
+      <h3>Southoak Location and Nearby Conveniences</h3>
+      <p>Southoak is accessed off Bell Shoals Road via Flatwood Court, positioned between the core <a href="/bloomingdale/">Bloomingdale</a> community and <a href="/fishhawk-ranch/">FishHawk Ranch</a>. That location puts you close to the Alafia River and its state park and canoe launches, a genuine outdoor perk for an established neighborhood this close to town.</p>
+      <p>Commuters have easy access to SR-60, I-75, and the Selmon Expressway toward downtown Tampa. Everyday shopping, restaurants, and medical care run along the Bloomingdale Avenue and Lithia Pinecrest Road corridors, with HCA Florida Brandon Hospital as the closest major medical facility.</p>
+
+      <h3>Why Work with Barrett Henry in Southoak</h3>
+      <p>I have spent 23+ years working every corner of the Bloomingdale area, and Southoak is exactly the kind of neighborhood where local knowledge matters. Acreage homes do not comp like tract homes. Lot size, conservation setbacks, septic tank age and drainfield condition, whether a lot has its own irrigation well, and any outbuildings all move the number, and pricing it wrong in either direction costs you money.</p>
+      <p>As a REALTOR with REMAX Collective, I also bring <a href="https://bestbayservices.com" target="_blank" rel="noopener">Best Bay Services</a> to the table, a handyman and home services company run by my husband James Evans, for pre-listing repairs, inspection items, and ongoing maintenance. That is a real advantage whether you are prepping a Southoak home to sell or settling into one you just bought.</p>
+      <p><strong>MOVE WITH CONFIDENCE. Straight talk. Smart Strategy.</strong></p>
+      <p>Phone: <a href="tel:+18137337907">(813) 733-7907</a> | Email: <a href="mailto:barrett@nowtb.com">barrett@nowtb.com</a></p>
+
+      <h3>See Southoak in Action</h3>
+      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%">
+        <iframe src="https://www.youtube.com/embed/Dy3SdClI2DM"
+          style="position:absolute;top:0;left:0;width:100%;height:100%"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <!-- Photo gallery placeholder - add neighborhood photos to /public/images/neighborhoods/southoak/ -->
+    `,
+  },
+
   // ===== STERLING RANCH =====
 
   "sterling-ranch": {

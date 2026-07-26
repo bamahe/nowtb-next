@@ -570,6 +570,12 @@ export default async function CityPage({
     permanentRedirect(`/market-updates/${citySlug}/`);
   }
 
+  // Southoak — redirect to nested /brandon/southoak/ canonical URL
+  // The standalone page at /brandon/southoak/ has custom content and schema.
+  if (citySlug === "southoak") {
+    permanentRedirect("/brandon/southoak/");
+  }
+
   // Dispatch to the correct page component based on type
   const page = parsed as PageType;
   switch (page.kind) {

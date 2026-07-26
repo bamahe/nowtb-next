@@ -640,4 +640,85 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
       },
     ],
   },
+
+  // ─── Southoak ──────────────────────────────────────────────────────────────
+  "southoak": {
+    priceRange: "$575K–$1M+",
+    zip: "33511",
+    yearBuilt: "1983–1990",
+    gated: false,
+    communityPool: false,
+    golf: false,
+
+    highSchool: "Bloomingdale HS",
+    middleSchool: "Burns Middle",
+    elementarySchools: ["Cimino Elementary"],
+    schoolNote: "School boundaries can shift over time. Confirm by address before writing an offer.",
+
+    commutes: [
+      { destination: "I-75 on-ramp",       distance: "~6 mi",  time: "12–15 min" },
+      { destination: "Downtown Tampa",      distance: "~22 mi", time: "30–40 min" },
+      { destination: "Brandon Town Center", distance: "~6 mi",  time: "12–15 min" },
+      { destination: "Tampa Airport",       distance: "~28 mi", time: "35–45 min" },
+      { destination: "HCA FL Brandon Hosp", distance: "~5 mi",  time: "10–12 min" },
+    ],
+
+    hoaRequired: "yes",
+    hoaRange: "$500–$550/yr",
+    hoaNote: "Southoak is deed restricted with a mandatory HOA, the South Oak Community Association, with annual dues confirmed at $500 to $550 depending on section. No CDD. Golf carts are allowed in the community.",
+    cdd: false,
+
+    comparisons: [
+      { name: "Bloomingdale",    slug: "bloomingdale",    price: "$300K–$500K",   distinction: "Larger community, smaller lots" },
+      { name: "River Hills",     slug: "river-hills",     price: "$500K–$1M+",    distinction: "Gated golf community" },
+      { name: "FishHawk Ranch",  slug: "fishhawk-ranch",  price: "$400K–$800K+",  distinction: "Master-planned, newer construction" },
+    ],
+
+    idealFor: [
+      "Custom home buyers who want acreage without leaving the Bloomingdale area",
+      "Hobby farm and equestrian buyers looking for 1 to 5+ acre lots",
+      "Privacy seekers who want mature oaks and space between neighbors",
+      "Families zoned for Cimino Elementary, Burns Middle, and Bloomingdale High",
+    ],
+
+    amenities: [
+      "Bloomingdale Golfers Club",
+      "Campo Family YMCA",
+      "Bloomingdale East & West Parks",
+      "Bloomingdale Regional Library",
+      "Alafia River State Park",
+      "Golf cart friendly streets",
+    ],
+
+    faqs: [
+      {
+        question: "Is Southoak in Valrico or Brandon?",
+        answer: "Southoak carries a Brandon, FL 33511 mailing address, but it sits within the broader Bloomingdale community. It is located off Bell Shoals Road, between Bloomingdale and FishHawk.",
+      },
+      {
+        question: "How big are the lots in Southoak?",
+        answer: "Lot sizes range from under an acre to 5 or more acres, with some homes backing to conservation land, significantly larger than most Bloomingdale subdivisions.",
+      },
+      {
+        question: "What schools serve Southoak?",
+        answer: "Cimino Elementary, Burns Middle School, and Bloomingdale High School. Boundaries can shift over time, so confirm by address before writing an offer.",
+      },
+      {
+        question: "What are homes selling for in Southoak?",
+        answer: "Recent sales landed at $666,444 for 3,002 square feet and $804,000 for 3,706 square feet, roughly $217 to $222 per square foot. Active listings as of July 2026 range from $575,000 to $1,000,000. This is a small, low inventory neighborhood, so treat these as a starting range and run a current comp for any specific home.",
+      },
+      {
+        question: "Does Southoak have an HOA?",
+        answer: "Yes. Southoak is deed restricted with a mandatory HOA, the South Oak Community Association, with annual dues confirmed at $500 to $550 depending on section. No CDD.",
+      },
+      {
+        question: "Are Southoak homes on well and septic or county utilities?",
+        answer: "A mix. Homes are on septic tanks rather than county sewer, and while public water reaches most houses, many lots also have a private well used just for irrigation. Confirm the exact setup for any specific property before writing an offer.",
+      },
+      {
+        question: "When was Southoak built?",
+        answer: "Dates back to 1983, with most homes built between 1986 and 1990.",
+      },
+    ],
+  },
 };

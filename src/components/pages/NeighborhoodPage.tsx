@@ -31,6 +31,8 @@ interface NeighborhoodPageProps {
   citySlug: string;
   /** Optional list of nearby neighborhood names for cross-linking */
   nearbyNeighborhoods?: { name: string; slug: string }[];
+  /** Optional H1 override (defaults to "{name} Homes for Sale") */
+  h1Override?: string;
 }
 
 export default async function NeighborhoodPage({
@@ -39,6 +41,7 @@ export default async function NeighborhoodPage({
   city,
   citySlug,
   nearbyNeighborhoods = [],
+  h1Override,
 }: NeighborhoodPageProps) {
   // Look up parent city data for zip codes and county info
   const parentCity = getCityBySlug(citySlug);
@@ -132,7 +135,7 @@ export default async function NeighborhoodPage({
 
           {/* Title */}
           <h1 className="heading-display text-display md:text-display-lg text-white mb-3">
-            {name} Homes for Sale
+            {h1Override || `${name} Homes for Sale`}
           </h1>
           <p className="font-body text-white/70 text-lg max-w-2xl mb-6">
             {county} County, Florida — Updated daily from Stellar MLS
