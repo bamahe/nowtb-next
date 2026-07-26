@@ -347,7 +347,7 @@ export const BRANDON_NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescr
 
       <h3>Why Work with Barrett Henry in Southoak</h3>
       <p>I have spent 23+ years working every corner of the Bloomingdale area, and Southoak is exactly the kind of neighborhood where local knowledge matters. Acreage homes do not comp like tract homes. Lot size, conservation setbacks, septic tank age and drainfield condition, whether a lot has its own irrigation well, and any outbuildings all move the number, and pricing it wrong in either direction costs you money.</p>
-      <p>As a REALTOR with REMAX Collective, I also bring <a href="https://bestbayservices.com" target="_blank" rel="noopener">Best Bay Services</a> to the table, a handyman and home services company run by my husband James Evans, for pre-listing repairs, inspection items, and ongoing maintenance. That is a real advantage whether you are prepping a Southoak home to sell or settling into one you just bought.</p>
+      <p>As a Broker Associate with REMAX Collective, I bring a full-service approach to every Southoak transaction. Whether you are prepping a home to sell or settling into one you just bought, I coordinate every detail from pricing through closing.</p>
       <p><strong>MOVE WITH CONFIDENCE. Straight talk. Smart Strategy.</strong></p>
       <p>Phone: <a href="tel:+18137337907">(813) 733-7907</a> | Email: <a href="mailto:barrett@nowtb.com">barrett@nowtb.com</a></p>
 
