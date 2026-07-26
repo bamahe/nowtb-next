@@ -213,7 +213,8 @@ const nextConfig = {
       { source: "/:city((?!blog|api|auth|properties|guides|images|wp-content|_next|compare).[^/]+)/:city-:topic", destination: "/:city-:topic/", permanent: true },
 
       // ── WordPress nested neighborhood pages → flat structure ──
-      { source: "/:city((?!blog|api|auth|properties|guides|images|wp-content|_next|compare).[^/]+)/:neighborhood", destination: "/:neighborhood/", permanent: true },
+      // The :neighborhood param excludes "southoak" because /brandon/southoak/ has a dedicated page
+      { source: "/:city((?!blog|api|auth|properties|guides|images|wp-content|_next|compare).[^/]+)/:neighborhood((?!southoak).[^/]+)", destination: "/:neighborhood/", permanent: true },
 
       // ── WordPress Showcase IDX property pages ──
       // Old IDX used /properties/slug-name format. Bridge uses /properties/ListingKey.
