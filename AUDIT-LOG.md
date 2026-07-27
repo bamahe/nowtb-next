@@ -4,6 +4,31 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-07-27 (Batch 13 — 10 thin blog posts expanded to 13k-16k chars each)
+
+**Pages improved: 10**
+
+All 10 posts were genuinely thin (2,800-3,400 chars). Each expanded with: AEO direct answer in first 2-3 sentences, 4+ H2 tags, 6+ H3 tags, at least one comparison table, 5-question FAQ with JSON-LD FAQPage schema, 10+ internal links, and CTA box with Barrett contact info (tel:8137500926, /contact/). Content dated 2026-07-26.
+
+### Blog Posts (10)
+
+- `best-neighborhoods-spring-hill-fl-affordable-living` — Neighborhood price comparison table (10 areas), school zone breakdown (Weeki Wachee HS vs Central HS), new construction vs resale, flood zone reality, CDD-free neighborhoods, HOA rundown; 16,385 chars
+- `brooksville-fl-why-buyers-moving-hernando-county` — Why buyers leave Tampa/Hillsborough for Brooksville, Hernando County property tax comparison, Spring Hill vs Brooksville vs Hernando Beach comparison table, commute realities (US-19/SR-50/SR-44), new construction builders (Maronda, Adams, LGI), 5-Q&A FAQ; 14,556 chars
+- `lutz-fl-property-taxes` — Lutz cross-county tax complexity (Hillsborough vs Pasco), Save Our Homes cap explained with numeric example, homestead exemption layers, CDD fee map (Strawberry Ridge, Long Lake Ranch, Heritage Oaks), school zone impact on value, 5-Q&A FAQ; 15,963 chars
+- `first-time-homebuyer-guide-tampa-bay-fl-2024` — Full buyer roadmap (pre-approval to close), Florida Hometown Heroes/HFA assistance programs, Tampa Bay 8-area starter-home comparison table, FHA vs conventional vs VA/USDA comparison, inspection checklist, closing cost breakdown, 5-Q&A FAQ; 16,420 chars
+- `tampa-bay-townhome-vs-condo-vs-single-family-which-is-right` — Full 6-factor comparison table (price/HOA/appreciation/maintenance/flexibility/insurance), condo insurance crisis (Citizens/HB 913 impact), townhome builder options (NovaStar, Pulte), who should buy each type, 5-Q&A FAQ; 14,787 chars
+- `home-staging-tips-sell-tampa-bay-homes-faster` — Room-by-room Florida staging guide (curb appeal in heat, hurricane shutters, lanai/pool staging), cost vs ROI table (10 improvements), photography day checklist, occupied vs vacant staging strategy, 5-Q&A FAQ; 16,697 chars
+- `tampa-bay-property-taxes-explained-rates-exemptions-appeals` — 7-county millage rate comparison table (Hillsborough/Pinellas/Pasco/Hernando/Manatee/Sarasota/Polk), homestead exemption layers, Save Our Homes cap example, CDD fees by area, senior/veteran exemptions, VAB appeal process step-by-step, 5-Q&A FAQ; 15,487 chars
+- `how-to-get-best-mortgage-rate-tampa-bay` — Credit score impact table (580-760+), lender comparison strategy, discount points break-even calculation, builder preferred lender evaluation (incentives vs rate traps), rate lock timing guide, 5-Q&A FAQ; 13,754 chars
+- `tampa-bay-home-values-what-your-home-is-worth-2024` — Zillow Zestimate accuracy analysis (+/-10-20% in Tampa Bay), 9-neighborhood price table, value drivers (school zone, flood zone, pool, kitchen, lot type, roof age), CMA vs appraisal vs AVM explanation, 5-Q&A FAQ; 15,235 chars
+- `sarasota-vs-tampa-which-city-is-better-for-homebuyers` — Full 6-factor comparison table (price/commute/schools/beaches/jobs/lifestyle), Tampa vs Sarasota jobs/cultural amenities, "who should choose which" decision framework, Manatee County middle-ground option (Bradenton/Parrish/Ellenton), investment comparison, 5-Q&A FAQ; 15,581 chars
+
+**Build:** Passed (Next.js build clean, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `86269a2` — pushed to `origin/main`
+
+---
+
 ## 2026-07-26 (Batch 12 — 10 Ozona FL spoke pages expanded from 414-word boilerplate)
 
 **Pages improved: 10**
