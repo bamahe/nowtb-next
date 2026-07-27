@@ -72,6 +72,12 @@ const nextConfig = {
       { source: "/terms", destination: "/terms-of-use/", permanent: true },
       { source: "/privacy", destination: "/privacy-policy/", permanent: true },
 
+      // ── Fix URL cannibalization: root slugs → /blog/ canonical ──
+      { source: "/garage-conversion-florida-guide", destination: "/blog/garage-conversion-florida-guide/", permanent: true },
+      { source: "/garage-conversion-florida-guide/", destination: "/blog/garage-conversion-florida-guide/", permanent: true },
+      { source: "/tampa-bay-traffic-guide", destination: "/blog/tampa-bay-traffic-guide/", permanent: true },
+      { source: "/tampa-bay-traffic-guide/", destination: "/blog/tampa-bay-traffic-guide/", permanent: true },
+
       // ── Reverse word order REMAX pages → canonical ──
       { source: "/largo-remax", destination: "/remax-largo/", permanent: true },
       { source: "/largo-remax/", destination: "/remax-largo/", permanent: true },
