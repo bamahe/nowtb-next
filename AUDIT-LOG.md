@@ -4,6 +4,44 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-07-28 (Batch 14 — 10 thin blog posts expanded to 12k-17k chars each)
+
+**Pages improved: 10**
+
+All 10 posts were thin (2,000-4,200 chars). Each expanded with: AEO direct answer in first 2-3 sentences, 4+ H2 tags with question format, 6+ H3 tags, at least one comparison table, 5-question FAQ with JSON-LD FAQPage schema, 10+ internal links, and CTA box with Barrett contact info (tel:8137500926, /contact/).
+
+### Mortgage Market Education Posts (5)
+
+1. **rates-just-hit-5-percent-what-this-means-for-tampa-bay-buyers** (2022-05-05) — Payment comparison table at 3.2%-6.0%, purchasing power analysis, 2022 market impact by neighborhood, rate buydown explainer, refinance strategy, historical rate context; 13,102 chars
+
+2. **fed-just-cut-rates-what-tampa-bay-buyers-should-know** (2024-09-20) — Fed vs 10-year Treasury relationship explained, purchasing power table by rate, impact by buyer type (first-time, move-up, cash/investors), Tampa Bay price floor analysis, buyer strategy window; 12,664 chars
+
+3. **tampa-bay-builder-incentives-are-disappearing-act-now** (2024-11-22) — Types of incentives (rate buydowns, closing costs, design center, spec discounts), builder comparison table (Lennar, DR Horton, Taylor Morrison, Pulte, Meritage, WestBay), geographic communities (Wimauma, Wesley Chapel, Parrish), negotiation strategies; 13,147 chars
+
+4. **tampa-bay-bidding-wars-what-buyers-are-up-against-right-now** (2022-01-18) — 2022 bidding war context with data (14 offers, $40K over asking), escalation clause mechanics, appraisal gap coverage, pre-inspection strategy, flexible close, what did not work, post-2022 market shift, VA buyer strategies; 12,629 chars
+
+5. **rates-hit-7-percent-tampa-bay-market-reality-check** (2022-11-02) — Payment table at 3.2%/5%/7% across loan amounts, purchasing power collapse analysis, inventory/DOM/price reduction data, crash vs correction analysis, 2022 buyer strategy, rate buydowns as bridge, new construction incentives at 7%; 14,060 chars
+
+### Property Tax and Cost of Living Guides (4)
+
+6. **wimauma-fl-property-taxes** — Hillsborough County millage breakdown, homestead exemption examples with Wimauma home prices, CDD community comparison table (Berry Bay, Sereno, Lake Toscana, Harvest Cay, Vista Palms), CDD vs non-CDD comparison table, exemption types (senior, disabled vet, widow), TRIM notice process, early payment discounts; 16,851 chars
+
+7. **gibsonton-fl-property-taxes** — Tax estimates by home value, homestead exemption and Save Our Homes cap, no-CDD advantage over newer communities, Gibsonton vs Riverview/Wimauma/Apollo Beach comparison table, flood zone impact, TRIM appeal process, older home assessment factors; 13,438 chars
+
+8. **westchase-fl-cost-of-living** — Home price tier table ($380K-$1.5M+), WCA master HOA ($280-$400/quarter) plus sub-association fees, property tax estimates at $500K-$1M, $650K monthly cost breakdown table (~$4,857-$5,057/mo), insurance overview, Sickles/Farnell/Bryant school zones, toll commute costs; 14,553 chars
+
+9. **gibsonton-fl-cost-of-living** — Monthly cost breakdown for $340K home (2,700-$2,750/mo), comparison table vs Riverview/Wimauma/Apollo Beach showing CDD savings, homestead exemption, insurance factors (roof age), flood zone note for Alafia River proximity, commute routes (US-41, I-75, Selmon), school zone info (Corr/Eisenhower/East Bay); 13,712 chars
+
+### Family Services Guide (1)
+
+10. **valrico-fl-daycare-preschools** — VPK enrollment process (Early Learning Coalition of Hillsborough County, elchc.org), childcare cost table by age ($900-$1,800/mo full-time), 4 provider types (licensed centers, family daycare homes, church-based, Montessori), DCF licensing search instructions (dcf.state.fl.us), School Readiness subsidy program, teacher-to-child ratios, kindergarten readiness (FLKRS), school zones (Cimino, Alafia, Lamb, Buckhorn); 14,207 chars
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `5699181`
+
+---
+
 ## 2026-07-27 (Batch 13 — 10 thin blog posts expanded to 13k-16k chars each)
 
 **Pages improved: 10**
