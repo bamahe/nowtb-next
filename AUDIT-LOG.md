@@ -42,7 +42,7 @@ All 10 posts were thin (3,200-4,200 chars). Each expanded with: AEO direct answe
 
 **Build:** Passed (Next.js build green)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
-**Git commit:** TBD
+**Git commit:** `21fe76b`
 
 ---
 
