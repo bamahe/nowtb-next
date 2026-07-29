@@ -4,6 +4,48 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-07-29 (Batch 15 — 10 thin blog posts expanded to 17k-20k chars each)
+
+**Pages improved: 10**
+
+All 10 posts were thin (3,200-4,200 chars). Each expanded with: AEO direct answer in first 2-3 sentences, 4+ H2 tags with question format, 6+ H3 tags, at least one comparison table, 5-question FAQ with JSON-LD FAQPage schema, 10+ internal links, and CTA box with Barrett contact info (tel:8137500926, /contact/). Content dated 2026-07-28.
+
+### Tampa Home Style Posts (3)
+
+1. **tampa-modern-homes** — Neighborhood breakdown (South Tampa $700K-$4M, Hyde Park, Westshore, Seminole Heights, Channelside), modern home features, modern vs historic comparison table, insurance benchmarks, builder types (D.R. Horton, Lennar, Taylor Morrison), financing guide; 19,803 chars
+
+2. **tampa-historic-homes** — Historic districts (Hyde Park, Seminole Heights, Ybor City, Palma Ceia, Beach Park, Old Seminole Heights), inspection priorities (plumbing/electrical/roof/foundation/lead-asbestos), historic vs modern comparison table, renovation rules (overlay vs non-overlay districts), FHA 203(k) guide; 20,498 chars
+
+3. **tampa-villa-homes** — Fee-simple vs condo-form distinction, communities (Sun City Center 55+ $175K-$380K, Bloomingdale $280K-$450K, Waterset $320K-$480K, Lakewood Ranch $350K-$650K, Wesley Chapel $300K-$550K), Villa vs Condo vs SFH comparison table, HOA fee breakdown; 17,664 chars
+
+### Specialized Home Feature Posts (1)
+
+4. **tampa-homes-with-guest-house** — ADU types (detached guest house, in-law suite, over-garage apartment, converted garage, new construction ADU), areas with inventory (South Tampa, Plant City, Dover, Thonotosassa, Lithia, Valrico), rental income table by ADU type, zoning/permitting rules; 18,433 chars
+
+### Sun City Center Lifestyle Post (1)
+
+5. **sun-city-center-fl-activities** — COMPLETE REWRITE (existing content was wrong property-tax template). Now covers: 200+ clubs, golf (Scepter, Caloosa 27 holes, Kings Point courses), sports (pickleball, tennis, aquatics, lawn sports, softball, fitness), arts (performing arts center), SCC vs Kings Point comparison table, daily life/golf cart community, medical facilities; 18,581 chars
+
+### Property Tax Guides (3)
+
+6. **town-n-country-fl-property-taxes** — Key point: TNC is unincorporated (NO city millage, saves $1,000-$2,000/yr vs Tampa). Millage breakdown table (~19-21 mills), tax estimates by home value, TNC vs Tampa vs Westchase vs Temple Terrace vs Brandon comparison, no CDD fees advantage, homestead exemption/SOH cap; 17,934 chars
+
+7. **temple-terrace-fl-property-taxes** — Key distinction: Temple Terrace IS incorporated (city millage ~5.87 mills adds $1,500-$2,000/yr). Full millage stack table (~25-27 mills), tax estimates by home value, comparison vs TNC/Tampa/Brandon/Seffner, no CDDs, city services explanation; 18,550 chars
+
+### Valrico Deep-Dive Posts (3)
+
+8. **valrico-fl-market-trends-history** — Price history 2016-2026 (from ~$235K to ~$420K, ~79% appreciation), year-by-year table, 2020-2022 pandemic surge analysis, 2023 correction, 2024-2026 rate lock-in effect, Valrico vs Brandon/Riverview/Wesley Chapel/Land O Lakes appreciation comparison table; 17,555 chars
+
+9. **valrico-fl-home-insurance-costs** — Typical premiums $2,800-$5,500/year, roof age impact table, flood zones (mostly X, some AE near Alafia), wind mitigation inspection value, 4-point inspection, electrical panel issues, Valrico vs Brandon/Riverview/Apollo Beach/South Tampa comparison table, Citizens Insurance explanation; 18,066 chars
+
+10. **valrico-fl-why-buyers-choose** — 10 specific reasons (school zones, price/quality ratio, lot sizes, no CDD fees, mature landscaping, location, X flood zone, housing diversity, value stability, community feel), Valrico vs Riverview/Wesley Chapel/Brandon comparison table (7 factors); 19,906 chars
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** TBD
+
+---
+
 ## 2026-07-28 (Batch 14 — 10 thin blog posts expanded to 12k-17k chars each)
 
 **Pages improved: 10**
