@@ -154,7 +154,9 @@ function parseSlug(slug: string): PageType | "market-update" | "blog-post" | nul
       return { kind: "realtor", city };
     }
     // Spoke pages: valrico-homes-for-sale, brandon-luxury-homes
-    for (const topic of SPOKE_TOPICS) {
+    // Use getCityTopics() to filter out irrelevant topics per city
+    // (e.g., no horse-properties for beach communities)
+    for (const topic of getCityTopics(city)) {
       if (slug === `${city.slug}-${topic.slug}`) {
         return { kind: "spoke", city, topic };
       }

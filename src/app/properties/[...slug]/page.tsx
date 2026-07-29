@@ -24,7 +24,7 @@ import SchoolsNearby from "@/components/ui/SchoolsNearby";
 import ShareButtons from "@/components/ui/ShareButtons";
 import SimilarListings from "@/components/ui/SimilarListings";
 import TourScheduler from "@/components/ui/TourScheduler";
-import { getListing, getListingByMlsId, getJustListed, getPriceReduced, getRecentSales, isRateLimited } from "@/lib/bridge";
+import { getListing, getListingByMlsId, getJustListed, getPriceReduced, getRecentSales, getOpenHouseForListing, isRateLimited } from "@/lib/bridge";
 import { formatPrice, formatSqFt, extractMlsId, extractListingKey, getListingUrl } from "@/lib/utils";
 import { getCityByName } from "@/data/cities";
 import type { Listing } from "@/lib/types";
@@ -163,6 +163,16 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
   if ('redirect' in result) redirect(result.redirect);
 
   const listing = result;
+
+  // Check if this listing has an upcoming open house
+  // (Bridge Property endpoint doesn't include open house data — separate endpoint)
+  if (!listing.OpenHouseStartTime) {
+    const oh = await getOpenHouseForListing(listing.ListingKey);
+    if (oh) {
+      listing.OpenHouseStartTime = oh.start;
+      listing.OpenHouseEndTime = oh.end;
+    }
+  }
 
   // Match the listing's city to our city data for backlinks
   const cityData = getCityByName(listing.City);

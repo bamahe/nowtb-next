@@ -72,6 +72,24 @@ const nextConfig = {
       { source: "/terms", destination: "/terms-of-use/", permanent: true },
       { source: "/privacy", destination: "/privacy-policy/", permanent: true },
 
+      // ── Duplicate neighborhood slugs → canonical versions ──
+      { source: "/brentwood-hills-community", destination: "/brentwood-hills/", permanent: true },
+      { source: "/brentwood-hills-community/", destination: "/brentwood-hills/", permanent: true },
+      { source: "/copper-ridge-community", destination: "/copper-ridge/", permanent: true },
+      { source: "/copper-ridge-community/", destination: "/copper-ridge/", permanent: true },
+      { source: "/copper-ridge-community-realtor", destination: "/copper-ridge/", permanent: true },
+      { source: "/copper-ridge-community-realtor/", destination: "/copper-ridge/", permanent: true },
+      { source: "/bloomingdale-oaks-community", destination: "/bloomingdale-oaks/", permanent: true },
+      { source: "/bloomingdale-oaks-community/", destination: "/bloomingdale-oaks/", permanent: true },
+      { source: "/canterbury-oaks-community", destination: "/canterbury-oaks/", permanent: true },
+      { source: "/canterbury-oaks-community/", destination: "/canterbury-oaks/", permanent: true },
+      { source: "/kings-point-sun-city-center", destination: "/kings-point/", permanent: true },
+      { source: "/kings-point-sun-city-center/", destination: "/kings-point/", permanent: true },
+      { source: "/lake-magdalene-carrollwood", destination: "/lake-magdalene/", permanent: true },
+      { source: "/lake-magdalene-carrollwood/", destination: "/lake-magdalene/", permanent: true },
+      { source: "/northdale-carrollwood", destination: "/northdale/", permanent: true },
+      { source: "/northdale-carrollwood/", destination: "/northdale/", permanent: true },
+
       // ── Fix URL cannibalization: root slugs → /blog/ canonical ──
       { source: "/garage-conversion-florida-guide", destination: "/blog/garage-conversion-florida-guide/", permanent: true },
       { source: "/garage-conversion-florida-guide/", destination: "/blog/garage-conversion-florida-guide/", permanent: true },

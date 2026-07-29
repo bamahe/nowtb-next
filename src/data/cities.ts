@@ -1142,9 +1142,25 @@ export function getCityByName(mlsCity: string | null | undefined): CityData | un
 /** All topic slugs as a flat array — used to populate every city's topics */
 export const ALL_TOPIC_SLUGS = SPOKE_TOPICS.map((t) => t.slug);
 
+/** Cities where horse/equestrian properties (2+ acre lots) actually exist.
+ *  Rural and semi-rural areas only — no beaches, islands, or urban cores. */
+const HORSE_PROPERTY_CITIES = new Set([
+  "dover", "lithia", "plant-city", "thonotosassa", "parrish", "dade-city",
+  "san-antonio-fl", "odessa", "lutz", "land-o-lakes", "brooksville", "spring-hill",
+  "weeki-wachee", "ridge-manor", "crystal-river", "inverness", "homosassa",
+  "lecanto", "floral-city", "wimauma", "ruskin", "gibsonton", "lakeland",
+  "lake-wales", "bartow", "auburndale", "fort-meade", "mulberry", "polk-city",
+  "dundee", "haines-city", "davenport", "winter-haven", "hudson", "zephyrhills",
+  "north-port", "englewood", "palmetto", "ellenton", "venice",
+]);
+
 /** Get all spoke topics for a given city.
- *  Returns ALL 15 spoke topics — every city gets every spoke page,
- *  matching the WordPress URL structure. */
-export function getCityTopics(_city: CityData) {
-  return [...SPOKE_TOPICS];
+ *  Filters out horse-properties for cities where they don't make sense
+ *  (beaches, islands, urban cores). */
+export function getCityTopics(city: CityData) {
+  if (HORSE_PROPERTY_CITIES.has(city.slug)) {
+    return [...SPOKE_TOPICS];
+  }
+  // Exclude horse-properties for non-rural cities
+  return SPOKE_TOPICS.filter(t => t.slug !== "horse-properties");
 }

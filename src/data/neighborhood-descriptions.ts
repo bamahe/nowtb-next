@@ -227,19 +227,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
   // ===== BRENTWOOD HILLS =====
 
-  "brentwood-hills-community": {
-    summary:
-      "Well-established Valrico community near Bloomingdale Avenue with mature trees, larger lots, and homes from the 1980s and 90s.",
-    contentHtml: `
-      <p>Brentwood Hills is one of those <a href="/valrico/">Valrico</a> neighborhoods that has aged well. Homes were built mostly in the late 1980s and 1990s, and the mature oak trees and established landscaping give the community a settled, shaded feel that newer subdivisions can't match.</p>
-      <p>Lot sizes here are generally larger than what you'd find in developments built after 2000. Most homes are 3-4 bedrooms in the 1,500 to 2,500 square foot range, with a mix of one and two-story floor plans.</p>
-      <p>The community has an HOA, but dues are typically modest. There's no gated entry or elaborate amenities — it's a straightforward residential neighborhood where the appeal is the homes themselves and the location.</p>
-      <p><a href="/bloomingdale-community/">Bloomingdale</a> Avenue access is a few minutes away, putting you close to shopping, restaurants, and the commuter routes into Tampa. Schools in the area include Cimino Elementary and Bloomingdale High School, depending on the specific section.</p>
-      <p>For buyers, the value proposition is clear: you get more house and more yard for the money compared to newer construction, in a location that's hard to beat. Just budget for potential updates — kitchens and bathrooms in some of the original homes are showing their age.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/valrico-oaks/">Valrico Oaks</a>.</p>
-      <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
-    `,
-  },
+  // brentwood-hills-community removed — canonical is "brentwood-hills" below
 
   // ===== DURANT AREA =====
 
@@ -319,7 +307,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p><a href="/valrico/">Valrico</a> Oaks is a residential neighborhood with — you guessed it — a lot of oak trees. The canopy coverage gives the streets a shaded, comfortable feel, especially during Tampa Bay's summer months.</p>
       <p>Homes are mostly from the 1990s and early 2000s, with a typical layout of 3-4 bedrooms, two-car garages, and screened lanais or patios. The neighborhood has a community feel without being oversized — it's large enough to have amenities but small enough that neighbors actually recognize each other.</p>
       <p>HOA fees are moderate, covering common areas and basic maintenance. School zoning is solid for the area, and the location provides easy access to both SR-60 and <a href="/bloomingdale-community/">Bloomingdale</a> Avenue for shopping and commuting.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/valrico-village/">Valrico Village</a> and <a href="/brentwood-hills-community/">Brentwood Hills</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/valrico-village/">Valrico Village</a> and <a href="/brentwood-hills/">Brentwood Hills</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -354,20 +342,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     `,
   },
 
-  // ===== BLOOMINGDALE OAKS =====
-
-  "bloomingdale-oaks-community": {
-    summary:
-      "Established Valrico community in the heart of the Bloomingdale area with mature landscaping, a community pool, and Bloomingdale High School zoning.",
-    contentHtml: `
-      <p><a href="/bloomingdale-community/">Bloomingdale</a> Oaks sits in the heart of the broader Bloomingdale community in <a href="/valrico/">Valrico</a>, sharing the same general area and school zones as its neighbors. Most homes date from the late 1980s to mid-1990s — a sweet spot that means the neighborhood is fully established without the deferred maintenance issues you sometimes see in older communities.</p>
-      <p>The community has a pool and common areas maintained by the HOA. Dues are reasonable. Homes are primarily 3-4 bedrooms in the 1,400 to 2,200 square foot range, with a mix of single and two-story layouts.</p>
-      <p>Bloomingdale High School zoning is a consistent draw for families. Elementary and middle school assignments are also strong, and the proximity to Bloomingdale Avenue makes the daily school run easy.</p>
-      <p>For buyers on a budget, Bloomingdale Oaks often prices below the newer construction in the area while offering comparable square footage and better lot sizes. The trade-off is cosmetic — expect to update kitchens and bathrooms in some of the original homes.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/brentwood-hills-community/">Brentwood Hills</a>.</p>
-      <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
-    `,
-  },
+  // bloomingdale-oaks-community removed — canonical is "bloomingdale-oaks" below
 
   // ===== CAMPOS =====
 
@@ -1534,8 +1509,8 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>How Does Avalon Terrace Compare to Nearby Neighborhoods?</h3>
       <ul>
         <li><strong><a href="/bloomingdale-community/">Bloomingdale</a></strong> (1 mile): Much larger community with more amenities, trails, and community events. Similar price range per square foot.</li>
-        <li><strong><a href="/brentwood-hills-community/">Brentwood Hills</a></strong> (1.5 miles): Same era construction, slightly larger. Similar feel but bigger community footprint.</li>
-        <li><strong><a href="/bloomingdale-oaks-community/">Bloomingdale Oaks</a></strong> (1 mile): Same vintage, more homes, active HOA. Similar pricing but busier streets.</li>
+        <li><strong><a href="/brentwood-hills/">Brentwood Hills</a></strong> (1.5 miles): Same era construction, slightly larger. Similar feel but bigger community footprint.</li>
+        <li><strong><a href="/bloomingdale-oaks/">Bloomingdale Oaks</a></strong> (1 mile): Same vintage, more homes, active HOA. Similar pricing but busier streets.</li>
         <li><strong><a href="/valrico-hills/">Valrico Hills</a></strong> (2 miles): Similar era, more variation in home sizes. No HOA in some sections.</li>
       </ul>
 
@@ -1584,7 +1559,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <ul>
         <li><strong><a href="/bloomingdale-community/">Bloomingdale</a></strong> (adjacent): Much larger master-planned community. More amenities but also more traffic and more HOA rules.</li>
         <li><strong><a href="/bristol-green/">Bristol Green</a></strong> (1 mile): Similar era, similar size. Near the former Bloomingdale Golf Course area.</li>
-        <li><strong><a href="/brentwood-hills-community/">Brentwood Hills</a></strong> (1 mile): Same vintage, larger lots, similar pricing.</li>
+        <li><strong><a href="/brentwood-hills/">Brentwood Hills</a></strong> (1 mile): Same vintage, larger lots, similar pricing.</li>
         <li><strong><a href="/arbor-reserve/">Arbor Reserve</a></strong> (2 miles): Newer construction, smaller lots, higher prices.</li>
       </ul>
 
@@ -1732,8 +1707,8 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <ul>
         <li><strong><a href="/bloomingdale-community/">Bloomingdale</a></strong> (adjacent): The big community next door. More amenities, trails, and common areas but also more traffic and more HOA bureaucracy.</li>
         <li><strong><a href="/belle-timbre/">Belle Timbre</a></strong> (1 mile): Similar size and era. Both are small, quiet neighborhoods near Bloomingdale. Pick based on specific lot and home condition.</li>
-        <li><strong><a href="/bloomingdale-oaks-community/">Bloomingdale Oaks</a></strong> (0.5 miles): Same era, larger community footprint. More homes available at any given time.</li>
-        <li><strong><a href="/brentwood-hills-community/">Brentwood Hills</a></strong> (1 mile): Same vintage, bigger lots, similar pricing.</li>
+        <li><strong><a href="/bloomingdale-oaks/">Bloomingdale Oaks</a></strong> (0.5 miles): Same era, larger community footprint. More homes available at any given time.</li>
+        <li><strong><a href="/brentwood-hills/">Brentwood Hills</a></strong> (1 mile): Same vintage, bigger lots, similar pricing.</li>
       </ul>
 
       <h3>What Should Buyers Know?</h3>
@@ -2949,7 +2924,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Homes here range from about 2,500 to 3,500+ square feet with 4-5 bedrooms, 3-4 bathrooms, and 2 to 3-car garages. Floor plans are open concept with high ceilings, formal living and dining spaces, and oversized owners suites. Most homes sit on quarter-acre lots — large enough for a pool, summer kitchen, and still have yard left over. Concrete block construction with tile roofs is standard throughout.</p>
 
       <h3>How Much Is the HOA and Are There CDD Fees?</h3>
-      <p>Arista has an HOA that covers gated entry maintenance, common area landscaping, and community standards enforcement. Fees run in the range of <strong>$150-$200 per month</strong> depending on the section. The good news: there is <strong>no CDD fee</strong>. That matters because nearby newer communities like <a href="/copper-ridge-community/">Copper Ridge</a> carry CDD assessments that add $2,000+ per year to your tax bill on top of the HOA.</p>
+      <p>Arista has an HOA that covers gated entry maintenance, common area landscaping, and community standards enforcement. Fees run in the range of <strong>$150-$200 per month</strong> depending on the section. The good news: there is <strong>no CDD fee</strong>. That matters because nearby newer communities like <a href="/copper-ridge/">Copper Ridge</a> carry CDD assessments that add $2,000+ per year to your tax bill on top of the HOA.</p>
       <p>The gate provides controlled access without the expense of a manned guard station. It is a code-entry system that keeps through traffic out while keeping costs down. For the size and quality of homes in Arista, the total carrying cost is competitive with anything in the Valrico market.</p>
 
       <h3>How Close Is Everything?</h3>
@@ -3034,7 +3009,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>How Does Bent Tree Estates Compare to Nearby Neighborhoods?</h3>
       <ul>
         <li><strong><a href="/heritage-crest/">Heritage Crest</a></strong> (1 mile): Newer homes (mid-2000s to 2010s), slightly higher price point, community pool. Similar family appeal but more contemporary construction.</li>
-        <li><strong><a href="/copper-ridge-community/">Copper Ridge</a></strong> (1.5 miles): Newer gated community, Newsome zone, but carries CDD fees that add to the monthly cost. Newer construction with modern finishes.</li>
+        <li><strong><a href="/copper-ridge/">Copper Ridge</a></strong> (1.5 miles): Newer gated community, Newsome zone, but carries CDD fees that add to the monthly cost. Newer construction with modern finishes.</li>
         <li><strong><a href="/buckhorn-preserve/">Buckhorn Preserve</a></strong> (2 miles): Similar vintage, near Buckhorn Elementary. Comparable amenities but different school path at the high school level.</li>
         <li><strong><a href="/valrico-forest/">Valrico Forest</a></strong> (1 mile): Bigger lots, more trees, fewer amenities, lower HOA. Good for buyers who want space over a community pool.</li>
       </ul>
@@ -3307,7 +3282,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <ul>
         <li><strong><a href="/buckhorn-preserve/">Buckhorn Preserve</a></strong>: Newer construction (2000s-2010s) with community pool. Adjacent to Buckhorn Elementary. Higher price point but more modern homes.</li>
         <li><strong><a href="/buckhorn-springs-manor/">Buckhorn Springs Manor</a></strong>: Smaller pocket within the Buckhorn corridor. Similar character and price range.</li>
-        <li><strong><a href="/copper-ridge-community/">Copper Ridge</a></strong> (2 miles): Newer, gated, modern. Higher price point with CDD. Different buyer profile.</li>
+        <li><strong><a href="/copper-ridge/">Copper Ridge</a></strong> (2 miles): Newer, gated, modern. Higher price point with CDD. Different buyer profile.</li>
         <li><strong><a href="/abbey-grove/">Abbey Grove</a></strong> (1.5 miles): Smaller, newer (2003-2004), $40/mo HOA. More affordable but less neighborhood infrastructure.</li>
       </ul>
 
@@ -3462,7 +3437,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>How Does Canterbury Oaks Compare?</h3>
       <ul>
         <li><strong><a href="/bent-tree-estates/">Bent Tree Estates</a></strong> (1 mile): Similar school zoning, community amenities, and vintage. Not gated, slightly lower price point in some sections.</li>
-        <li><strong><a href="/copper-ridge-community/">Copper Ridge</a></strong> (1.5 miles): Newer, gated, modern finishes. Higher price point with CDD fees. Newer construction but higher total monthly cost.</li>
+        <li><strong><a href="/copper-ridge/">Copper Ridge</a></strong> (1.5 miles): Newer, gated, modern finishes. Higher price point with CDD fees. Newer construction but higher total monthly cost.</li>
         <li><strong><a href="/heritage-crest/">Heritage Crest</a></strong> (1 mile): Newer homes, community pool. Similar family appeal but not gated.</li>
         <li><strong><a href="/river-hills/">River Hills</a></strong> (3 miles): Gated golf course community, higher price tier, country club lifestyle. Different buyer profile entirely.</li>
       </ul>
@@ -3481,58 +3456,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     `,
   },
 
-  // ===== COPPER RIDGE COMMUNITY =====
-
-  "copper-ridge-community": {
-    summary:
-      "Newer gated community in Valrico with homes built 2010s, community pool, and Newsome High School zoning. Homes 1,800-3,200 sqft. HOA plus CDD. Modern finishes and clean streetscape.",
-    contentHtml: `
-      <h3>What Is Copper Ridge Like?</h3>
-      <p>Copper Ridge is one of <a href="/valrico/">Valrico</a>'s newer gated communities, with homes built primarily in the 2010s. If you are looking for move-in-ready construction with modern finishes, consistent architectural standards, and community amenities in a gated setting, Copper Ridge checks most of the boxes. The streetscape is clean, the common areas are well-maintained, and the homes have the open-concept layouts and updated finishes that today's buyers expect.</p>
-      <p>Homes are mostly 3-5 bedrooms, ranging from about 1,800 to 3,200 square feet. Floor plans feature granite or quartz countertops, tile throughout the main living areas, covered lanais, and 2 to 3-car garages. Construction is concrete block with tile roofs — the combination that keeps Florida insurance costs as low as possible.</p>
-
-      <h3>What Are the HOA and CDD Fees?</h3>
-      <p>Here is where you need to pay attention. Copper Ridge has <strong>both an HOA and a CDD fee</strong>. The HOA covers the gated entry, community pool, common area landscaping, and deed restriction enforcement. The CDD is a separate tax assessment that funded the community's infrastructure (roads, utilities, stormwater). Together, these can add <strong>$400-$500+ per month</strong> to your carrying cost on top of your mortgage, taxes, and insurance.</p>
-      <p>This is not unusual for newer Florida communities, but it is a significant difference from established neighborhoods like <a href="/abbey-grove/">Abbey Grove</a> ($40/mo HOA, no CDD) or <a href="/bent-tree-estates/">Bent Tree Estates</a> (no CDD). Make sure you factor in the full monthly cost before making an offer.</p>
-
-      <h3>How Close Is Everything?</h3>
-      <ul>
-        <li><strong>Publix:</strong> 2 miles on Lithia Pinecrest</li>
-        <li><strong>Sprouts Farmers Market:</strong> 2.5 miles</li>
-        <li><strong>Bloomingdale Avenue shopping:</strong> 1.5 miles</li>
-        <li><strong>I-75:</strong> 4 miles west (8 minutes)</li>
-        <li><strong>Selmon Expressway:</strong> 3.5 miles</li>
-        <li><strong>Downtown Tampa:</strong> 21 miles (28-35 minutes via Crosstown)</li>
-        <li><strong>Lithia Springs Park:</strong> 6 miles south</li>
-      </ul>
-
-      <h3>Which Schools Serve Copper Ridge?</h3>
-      <p>Copper Ridge falls in the <strong>Newsome High School</strong> zone — one of the top-performing high schools in Hillsborough County. The elementary and middle school assignments are also strong. Newsome zoning is the single biggest price driver in southern Valrico, and Copper Ridge delivers it with newer construction and modern amenities.</p>
-
-      <h3>What Is the Flood Risk?</h3>
-      <p>Copper Ridge sits in <strong>FEMA Flood Zone X</strong> (minimal risk). As newer construction, the stormwater management system was engineered to current standards. No flood insurance required by lenders.</p>
-
-      <h3>How Does Copper Ridge Compare?</h3>
-      <ul>
-        <li><strong><a href="/canterbury-oaks/">Canterbury Oaks</a></strong> (1 mile): Also gated, Newsome zone, but older construction (1997-2000s). No CDD, so lower monthly cost. Less modern finishes.</li>
-        <li><strong><a href="/bent-tree-estates/">Bent Tree Estates</a></strong> (1.5 miles): Newsome zone, community amenities, no CDD. Older homes but significantly lower monthly carrying costs.</li>
-        <li><strong><a href="/crestwood-estates/">Crestwood Estates</a></strong> (2 miles): Also new WestBay construction, no CDD but higher purchase price ($675K-$970K). Larger homes, 3-car garages.</li>
-        <li><strong><a href="/buckhorn-preserve/">Buckhorn Preserve</a></strong> (1 mile): Similar vintage, community pool. Different school zone (Durant vs Newsome). Lower price point.</li>
-      </ul>
-
-      <h3>What Should Buyers Know?</h3>
-      <ul>
-        <li><strong>CDD is permanent:</strong> Unlike an HOA fee that the community can vote to change, CDD assessments are long-term bond obligations. They do decrease slightly over time as the bonds are paid down, but they do not go away. Factor this into your budget from day one.</li>
-        <li><strong>Insurance advantage:</strong> Newer construction with concrete block, tile roof, and likely impact-rated windows qualifies for significantly lower insurance rates than older homes. This partially offsets the CDD cost.</li>
-        <li><strong>Resale strength:</strong> Gated + Newsome zone + newer construction is a strong combination. These homes sell well and hold value.</li>
-        <li><strong>Warranty check:</strong> If the home is under 10 years old, check what builder warranty remains. Some structural warranties transfer to new owners.</li>
-        <li><strong>Rentals:</strong> Premium rental rates for gated Newsome-zoned homes. Expect $2,800-$3,500/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
-      </ul>
-
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
-      <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
-    `,
-  },
+  // copper-ridge-community removed — canonical is "copper-ridge" above
 
   // ===== CRESTWOOD ESTATES =====
 
@@ -3567,7 +3491,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>How Does Crestwood Estates Compare?</h3>
       <ul>
         <li><strong><a href="/northwood-estates/">Northwood Estates</a></strong> (nearby): Also WestBay Artisan Collection, also 35 lots, similar price point. Sold out — Crestwood Estates is the current alternative for buyers who missed Northwood.</li>
-        <li><strong><a href="/copper-ridge-community/">Copper Ridge</a></strong> (2 miles): Also newer, gated, Newsome zone. Lower price point but smaller homes and CDD fees that add to the monthly cost.</li>
+        <li><strong><a href="/copper-ridge/">Copper Ridge</a></strong> (2 miles): Also newer, gated, Newsome zone. Lower price point but smaller homes and CDD fees that add to the monthly cost.</li>
         <li><strong><a href="/arista/">Arista</a></strong> (2 miles): Taylor Morrison build, gated, no CDD. Lower price point but 2006-2008 construction vs brand new. Smaller homes.</li>
         <li><strong><a href="/river-hills/">River Hills</a></strong> (3 miles): Gated golf community, larger lots, country club lifestyle. Comparable price range but 1988-2003 construction.</li>
       </ul>
@@ -3927,7 +3851,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>How Does Northwood Estates Compare?</h3>
       <ul>
         <li><strong><a href="/crestwood-estates/">Crestwood Estates</a></strong> (nearby): Same builder, same Artisan Collection, 25 lots. Current inventory may still be available from WestBay. Similar price point and product.</li>
-        <li><strong><a href="/copper-ridge-community/">Copper Ridge</a></strong> (2 miles): Newer gated community, lower price point, but CDD fees add significantly to monthly costs. Smaller homes.</li>
+        <li><strong><a href="/copper-ridge/">Copper Ridge</a></strong> (2 miles): Newer gated community, lower price point, but CDD fees add significantly to monthly costs. Smaller homes.</li>
         <li><strong><a href="/river-hills/">River Hills</a></strong> (3 miles): Gated golf community, larger lots, country club. Older construction but comparable price range and more land.</li>
         <li><strong><a href="/arista/">Arista</a></strong> (2 miles): Gated Taylor Morrison, no CDD. Lower price point but 2006-2008 construction vs 2022-2023.</li>
       </ul>
@@ -4138,7 +4062,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>How Does Shetland Ridge Compare?</h3>
       <ul>
-        <li><strong><a href="/copper-ridge-community/">Copper Ridge</a></strong> (2 miles): Also newer, gated. Higher price point and CDD fees add significantly to monthly costs. More amenities but higher carrying cost.</li>
+        <li><strong><a href="/copper-ridge/">Copper Ridge</a></strong> (2 miles): Also newer, gated. Higher price point and CDD fees add significantly to monthly costs. More amenities but higher carrying cost.</li>
         <li><strong><a href="/heritage-crest/">Heritage Crest</a></strong> (1.5 miles): Similar vintage, community pool. Comparable product and price range.</li>
         <li><strong><a href="/eagles-landing/">Eagles Landing</a></strong> (1 mile): Mid-2000s construction, community pool. Slightly older but similar family appeal.</li>
         <li><strong><a href="/crosby-crossings/">Crosby Crossings</a></strong> (1.5 miles): Standard Pacific build, 2007-2013. Slightly older, $140/quarter HOA. Comparable price range.</li>
@@ -6741,8 +6665,8 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Downtown Tampa:</strong> 22 miles (30-35 minutes via Crosstown)</li>
       </ul>
       <h3>Which Schools Serve Bent Tree South?</h3>
-      <p>Bent Tree South is zoned for <strong>Mulrennan Middle School</strong> and <strong>Durant High School</strong>. Elementary school zoning depends on the specific section — check with Hillsborough County Public Schools for the current assignment. Durant High has solid academics and athletics, and the Durant zone offers a lower entry price than the <a href="/canterbury-oaks-community/">Newsome High</a> zone further south.</p>
-      <p>If you are specifically targeting the Newsome zone, look at <a href="/buckhorn-preserve/">Buckhorn Preserve</a> or <a href="/canterbury-oaks-community/">Canterbury Oaks</a>. But many families find the Durant zone delivers excellent schools at a more accessible price point.</p>
+      <p>Bent Tree South is zoned for <strong>Mulrennan Middle School</strong> and <strong>Durant High School</strong>. Elementary school zoning depends on the specific section — check with Hillsborough County Public Schools for the current assignment. Durant High has solid academics and athletics, and the Durant zone offers a lower entry price than the <a href="/canterbury-oaks/">Newsome High</a> zone further south.</p>
+      <p>If you are specifically targeting the Newsome zone, look at <a href="/buckhorn-preserve/">Buckhorn Preserve</a> or <a href="/canterbury-oaks/">Canterbury Oaks</a>. But many families find the Durant zone delivers excellent schools at a more accessible price point.</p>
       <h3>What Is the Flood Risk?</h3>
       <p>Bent Tree South sits in <strong>FEMA Flood Zone X</strong> (minimal risk). No flood insurance required by lenders. The community is on higher ground with no creek or river exposure.</p>
       <h3>How Does Bent Tree South Compare to Nearby Neighborhoods?</h3>
@@ -6792,7 +6716,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <ul>
         <li><strong><a href="/bloomingdale-village/">Bloomingdale Village</a></strong> (adjacent): Smaller section (57 homes), similar vintage. Both share Bloomingdale community amenities.</li>
         <li><strong><a href="/bloomingdale-woods/">Bloomingdale Woods</a></strong> (adjacent): Apartment/condo community built 1986. Different product type but same location.</li>
-        <li><strong><a href="/brentwood-hills-community/">Brentwood Hills</a></strong> (1 mile): Similar era homes with larger lots but fewer community trails.</li>
+        <li><strong><a href="/brentwood-hills/">Brentwood Hills</a></strong> (1 mile): Similar era homes with larger lots but fewer community trails.</li>
         <li><strong><a href="/buckhorn-preserve/">Buckhorn Preserve</a></strong> (3 miles): Newer construction (2000s-2010s), Newsome HS zone. Higher price point.</li>
       </ul>
       <h3>What Should Buyers Know?</h3>
@@ -6835,7 +6759,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <ul>
         <li><strong><a href="/bloomingdale-trace/">Bloomingdale Trace</a></strong> (adjacent): Similar vintage, larger section with more homes.</li>
         <li><strong><a href="/cambridge-cove/">Cambridge Cove</a></strong> (1 mile): Gated, 68 homes, adjacent to golf course. Higher price tier.</li>
-        <li><strong><a href="/brentwood-hills-community/">Brentwood Hills</a></strong> (1 mile): Similar era, larger lots. No trail access.</li>
+        <li><strong><a href="/brentwood-hills/">Brentwood Hills</a></strong> (1 mile): Similar era, larger lots. No trail access.</li>
         <li><strong><a href="/buckhorn-springs/">Buckhorn Springs</a></strong> (3 miles): Newer construction (2000s), Buckhorn Elementary zone.</li>
       </ul>
       <h3>What Should Buyers Know?</h3>
@@ -6906,7 +6830,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Boca Gardene is a small, established neighborhood tucked into the North <a href="/valrico/">Valrico</a> corridor with roughly 40 single-family homes. The trees are grown, the yards are kept, and the community carries the kind of settled energy that only comes with time. No gate, no resort clubhouse — just a quiet residential pocket where neighbors know each other.</p>
       <p>Homes are concrete block construction with 3 to 4 bedrooms, 2-car garages, screened lanais, and open-concept living areas. Lot sizes are generous for the price point. Owners suites typically include walk-in closets and split bedroom layouts.</p>
       <h3>What Are the Costs?</h3>
-      <p>Home prices generally fall between <strong>$280,000 and $380,000</strong>. HOA structures vary by home — confirm fees for any property. There is typically <strong>no CDD fee</strong>. For comparison, gated communities like <a href="/copper-ridge/">Copper Ridge</a> or <a href="/canterbury-oaks-community/">Canterbury Oaks</a> command higher prices with CDD or elevated HOA fees.</p>
+      <p>Home prices generally fall between <strong>$280,000 and $380,000</strong>. HOA structures vary by home — confirm fees for any property. There is typically <strong>no CDD fee</strong>. For comparison, gated communities like <a href="/copper-ridge/">Copper Ridge</a> or <a href="/canterbury-oaks/">Canterbury Oaks</a> command higher prices with CDD or elevated HOA fees.</p>
       <h3>How Close Is Everything?</h3>
       <ul>
         <li><strong>Publix:</strong> 1.5 miles on SR 60</li>
@@ -7091,7 +7015,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <ul>
         <li><strong><a href="/brandon-ridgeland/">Brandon Ridgeland</a></strong> (adjacent): Same era, similar sizes, comparable pricing.</li>
         <li><strong><a href="/brandon-east/">Brandon East</a></strong> (1 mile): Older (dating to 1971), even more affordable.</li>
-        <li><strong><a href="/brentwood-hills-community/">Brentwood Hills</a></strong> (1 mile): Similar era, slightly larger lots.</li>
+        <li><strong><a href="/brentwood-hills/">Brentwood Hills</a></strong> (1 mile): Similar era, slightly larger lots.</li>
         <li><strong><a href="/bloomingdale-community/">Bloomingdale</a></strong> (1 mile): Adjacent master-planned community with trails and amenities.</li>
       </ul>
       <h3>What Should Buyers Know?</h3>
@@ -7131,7 +7055,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>How Does Brooker Trace Compare?</h3>
       <ul>
         <li><strong><a href="/diamond-hill/">Diamond Hill</a></strong> (2 miles): Similar era, larger lots, sections with no HOA.</li>
-        <li><strong><a href="/brentwood-hills-community/">Brentwood Hills</a></strong> (1 mile): Similar vintage, comparable sizes.</li>
+        <li><strong><a href="/brentwood-hills/">Brentwood Hills</a></strong> (1 mile): Similar vintage, comparable sizes.</li>
         <li><strong><a href="/bloomingdale-community/">Bloomingdale</a></strong> (1 mile): Much larger community with trails and amenities.</li>
         <li><strong><a href="/buckhorn-preserve/">Buckhorn Preserve</a></strong> (3 miles): Newer construction, community pool. Higher cost.</li>
       </ul>
@@ -7215,7 +7139,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong><a href="/buckhorn-preserve/">Buckhorn Preserve</a></strong> (1 mile): Newer (2000s-2010s), community pool. Higher HOA but more amenities.</li>
         <li><strong><a href="/buckhorn-springs/">Buckhorn Springs</a></strong> (0.5 miles): Family-friendly with pool and playground. Similar school zoning.</li>
         <li><strong><a href="/river-hills-country-club/">River Hills</a></strong> (3 miles): Another golf course community, gated. Higher price tier.</li>
-        <li><strong><a href="/canterbury-oaks-community/">Canterbury Oaks</a></strong> (2 miles): Gated, Newsome HS zone. Different school zone and higher HOA.</li>
+        <li><strong><a href="/canterbury-oaks/">Canterbury Oaks</a></strong> (2 miles): Gated, Newsome HS zone. Different school zone and higher HOA.</li>
       </ul>
       <h3>What Should Buyers Know?</h3>
       <ul>
@@ -7295,7 +7219,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>How Does Cambridge Cove Compare?</h3>
       <ul>
         <li><strong><a href="/bloomingdale-village/">Bloomingdale Village</a></strong> (0.5 miles): 57 homes, not gated. Same school zoning.</li>
-        <li><strong><a href="/canterbury-oaks-community/">Canterbury Oaks</a></strong> (3 miles): Also gated, Newsome HS zone. Different school zone.</li>
+        <li><strong><a href="/canterbury-oaks/">Canterbury Oaks</a></strong> (3 miles): Also gated, Newsome HS zone. Different school zone.</li>
         <li><strong><a href="/river-hills-country-club/">River Hills</a></strong> (4 miles): Gated golf course community. Higher price tier.</li>
         <li><strong><a href="/copper-ridge/">Copper Ridge</a></strong> (3 miles): Newer gated community. CDD fees add to monthly cost.</li>
       </ul>
@@ -7311,48 +7235,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     `,
   },
 
-  // ===== CANTERBURY OAKS COMMUNITY =====
-  "canterbury-oaks-community": {
-    summary: "Gated community in south Valrico with pool, tennis courts, and homes from 1997-present. Zoned for Newsome High School. HOA $150-$250/quarter, no CDD in original sections.",
-    contentHtml: `
-      <h3>What Is Canterbury Oaks Like?</h3>
-      <p>Canterbury Oaks is a gated community in southern <a href="/valrico/">Valrico</a> attracting families since 1997. Controlled-access gate, community pool, tennis courts, and playground — amenities families actually use. Homes built 1997 through the 2000s, 3-5 bedrooms, 1,800 to 3,200+ sqft, concrete block with tile roofs. Lot sizes allow pools and outdoor living. The gated entry and HOA-maintained grounds keep Canterbury Oaks looking sharp year after year.</p>
-      <h3>What Does the HOA Cover?</h3>
-      <p>Gate, pool, tennis courts, playground, common area landscaping, and deed restrictions. <strong>$150-$250 per quarter</strong> depending on section. <strong>No CDD fee</strong> in original sections — verify for specific lots.</p>
-      <h3>Why Do Families Choose Canterbury Oaks?</h3>
-      <p>The school zone. Zoned for <strong>Newsome High School</strong> — consistently top-performing in Hillsborough County. That Newsome premium holds on resale.</p>
-      <h3>How Close Is Everything?</h3>
-      <ul>
-        <li><strong>Publix:</strong> 2 miles on Lithia Pinecrest</li>
-        <li><strong>Sprouts:</strong> 2.5 miles</li>
-        <li><strong>Bloomingdale Avenue shopping:</strong> 2 miles</li>
-        <li><strong>Newsome High School:</strong> 2 miles</li>
-        <li><strong>I-75:</strong> 5 miles (10 minutes)</li>
-        <li><strong>Downtown Tampa:</strong> 22 miles (30-35 minutes)</li>
-        <li><strong>FishHawk Ranch:</strong> 4 miles south</li>
-        <li><strong>Lithia Springs Park:</strong> 5 miles south</li>
-      </ul>
-      <h3>What Is the Flood Risk?</h3>
-      <p><strong>FEMA Flood Zone X</strong> (minimal risk). Southern Valrico plateau has excellent drainage.</p>
-      <h3>How Does Canterbury Oaks Compare?</h3>
-      <ul>
-        <li><strong><a href="/copper-ridge/">Copper Ridge</a></strong> (1.5 miles): Newer, gated, CDD fees. Higher monthly cost.</li>
-        <li><strong><a href="/heritage-crest/">Heritage Crest</a></strong> (1 mile): Newer, community pool. Not gated.</li>
-        <li><strong><a href="/river-hills-country-club/">River Hills</a></strong> (3 miles): Gated golf course community. Higher price tier.</li>
-        <li><strong><a href="/buckhorn-preserve/">Buckhorn Preserve</a></strong> (2 miles): Newer single-family, conservation views. Same Newsome premium.</li>
-      </ul>
-      <h3>What Should Buyers Know?</h3>
-      <ul>
-        <li><strong>Gate access:</strong> Understand guest access and overnight parking rules.</li>
-        <li><strong>Construction age:</strong> 1997-2000s — some homes approaching 30 years. Check roof, HVAC, water heater.</li>
-        <li><strong>Insurance:</strong> Concrete block with tile roof is ideal for Florida insurance. Gated communities sometimes qualify for discounts.</li>
-        <li><strong>Newsome premium:</strong> Higher per-sqft cost than Durant/Bloomingdale zones, but holds on resale.</li>
-        <li><strong>Rentals:</strong> Excellent demand in Newsome zone. Expect $2,400-$3,200/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
-      </ul>
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
-      <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
-    `,
-  },
+  // canterbury-oaks-community removed — canonical is "canterbury-oaks" above
 
   // ===== CHICKASAW MEADOWS =====
   "chickasaw-meadows": {
@@ -7584,7 +7467,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong><a href="/dovewood-estates/">Dovewood Estates</a></strong> (2 miles): Also exclusive (11 homes), gated. Newer (2004-2007).</li>
         <li><strong><a href="/river-hills-country-club/">River Hills</a></strong> (3 miles): Gated golf course, much larger. Country club lifestyle.</li>
         <li><strong><a href="/diamond-hill/">Diamond Hill</a></strong> (2 miles): Larger lots, no HOA. Similar privacy, less exclusivity.</li>
-        <li><strong><a href="/canterbury-oaks-community/">Canterbury Oaks</a></strong> (2 miles): Gated, pool and tennis, 100+ homes. More amenities, less exclusivity.</li>
+        <li><strong><a href="/canterbury-oaks/">Canterbury Oaks</a></strong> (2 miles): Gated, pool and tennis, 100+ homes. More amenities, less exclusivity.</li>
       </ul>
       <h3>What Should Buyers Know?</h3>
       <ul>

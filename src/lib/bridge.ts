@@ -541,6 +541,49 @@ export async function getOpenHouses(zipCodes?: string[]): Promise<Listing[]> {
 }
 
 /**
+ * Check if a specific listing has an upcoming open house.
+ * Queries the Bridge openhouses endpoint filtered by ListingKey.
+ * Returns { start, end } if found, null otherwise.
+ */
+export async function getOpenHouseForListing(listingKey: string): Promise<{ start: string; end: string } | null> {
+  if (IS_BUILD_TIME) return null;
+  try {
+    if (isRateLimited()) return null;
+    const now = new Date().toISOString();
+    const url = new URL(`${BRIDGE_BASE}/${DATASET}/openhouses`);
+    url.searchParams.set('ListingKey', listingKey);
+    url.searchParams.set('OpenHouseStartTime.gte', now);
+    url.searchParams.set('sortBy', 'OpenHouseStartTime');
+    url.searchParams.set('limit', '1');
+    url.searchParams.set('fields', 'ListingKey,OpenHouseStartTime,OpenHouseEndTime');
+
+    const res = await fetch(url.toString(), {
+      headers: {
+        Authorization: `Bearer ${BRIDGE_TOKEN}`,
+        Accept: 'application/json',
+      },
+      next: { revalidate: 1800 },
+    });
+
+    if (res.status === 429) { markRateLimited(); return null; }
+    if (!res.ok) return null;
+
+    const data = await res.json();
+    if (data.success === false || data.status === 429) return null;
+
+    const records = Array.isArray(data.bundle) ? data.bundle : (Array.isArray(data.value) ? data.value : []);
+    if (records.length === 0) return null;
+
+    return {
+      start: records[0].OpenHouseStartTime,
+      end: records[0].OpenHouseEndTime || '',
+    };
+  } catch {
+    return null;
+  }
+}
+
+/**
  * Get active listings for a specific city (e.g. "Tampa", "Brandon").
  * Used on city hub pages like /tampa-homes-for-sale.
  */

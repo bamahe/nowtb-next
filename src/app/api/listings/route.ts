@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getListings } from "@/lib/bridge";
+import { getListings, getOpenHouses } from "@/lib/bridge";
 import { getCached, setCached, makeCacheKey } from "@/lib/api-cache";
 import type { BridgeResponse } from "@/lib/types";
 import type { Listing } from "@/lib/types";
@@ -85,6 +85,24 @@ export async function GET(request: NextRequest) {
     }
 
     // CACHE MISS — call Bridge API
+    // When open_house=true, use the dedicated getOpenHouses() function
+    // which queries the Bridge openhouses endpoint (OData Property endpoint
+    // does NOT support OpenHouseStartTime filtering)
+    if (params.open_house) {
+      const zipCodes = params.zip_codes || (params.zip ? [params.zip] : undefined);
+      const openHouseListings = await getOpenHouses(zipCodes);
+      const ohResult = { value: openHouseListings, total: openHouseListings.length };
+      if (openHouseListings.length > 0) {
+        setCached(cacheKey, ohResult);
+      }
+      return NextResponse.json(ohResult, {
+        headers: {
+          "Cache-Control": "s-maxage=300, stale-while-revalidate=600",
+          "X-Cache": "MISS",
+        },
+      });
+    }
+
     const result = await getListings(params);
 
     // Only cache successful non-empty responses
