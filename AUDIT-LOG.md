@@ -4,6 +4,42 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-07-30 (Batch 16 — 6 Valrico spoke pages rewritten + 4 Brandon/Apollo Beach expansions)
+
+**Pages improved: 10**
+
+All 6 Valrico posts were thin boilerplate (4,000-8,500 chars) with generic "What Should You Know?" templates unrelated to their actual topics. All were rewritten from scratch with topic-specific content. 4 Brandon/Apollo Beach posts were medium-length and expanded with comparison tables, updated JSON-LD FAQ schemas, and additional H2/H3 hierarchy. Content dated 2026-07-29.
+
+### Valrico Spoke Pages — Complete Rewrites (6)
+
+1. **valrico-fl-churches-worship** — Denominations in Valrico (Baptist, Methodist, Catholic, non-denominational, evangelical, Anglican), specific congregation highlights, drive times to Brandon/Riverview/FishHawk churches, church-community connection for buyers, Valrico vs FishHawk/Brandon community comparison table, FAQ JSON-LD schema; 13,745 chars
+
+2. **valrico-fl-pet-friendly** — Dog parks (Lithia Springs, FishHawk, Bloomingdale), veterinary access (Brandon, Valrico area clinics), HOA pet policies, large-lot homes for pets, fenced-yard prevalence, Valrico vs Riverview/Wesley Chapel/Brandon pet-friendliness comparison table, FAQ JSON-LD schema; 13,128 chars
+
+3. **valrico-fl-fha-homes** — FHA loan basics (3.5% down, 580+ credit score, DTI limits), Valrico price tiers that qualify ($300K-$450K range), FHA vs conventional vs VA comparison table, FHA-friendly communities and builders (DR Horton, LGI), loan limit for Hillsborough County, MIP explanation, FAQ JSON-LD schema; 14,535 chars
+
+4. **valrico-fl-move-up-homes** — Move-up buyer profile ($450K-$700K range), key Valrico move-up communities (Bloomingdale Estates, Buckhorn, Copper Ridge, Valrico Reserve), floor plan features (owners suites, home offices, 3-car garages, pools), contingency strategies, move-up vs new construction comparison table, FAQ JSON-LD schema; 14,317 chars
+
+5. **valrico-fl-parks-recreation** — Specific parks (Valrico Community Park, Lithia Springs County Park, Alafia River State Park, FishHawk Ranch Regional Park, Bloomingdale Golfers Club area trails), recreation amenities (athletic fields, tennis, trails, splash pad), Valrico vs Brandon/Riverview/FishHawk outdoor access comparison table, FAQ JSON-LD schema; 14,697 chars
+
+6. **valrico-fl-va-loan-homes** — VA loan eligibility, zero-down advantage in Valrico market, Hillsborough County loan limits, VA-preferred price tiers ($300K-$500K), VA vs FHA vs conventional comparison table, appraisal requirements, MPR (Minimum Property Requirements) tips for Valrico older homes, FAQ JSON-LD schema; 14,974 chars
+
+### Brandon/Apollo Beach Expansions (4)
+
+7. **brandon-fl-shopping-dining** — Brandon Town Center, Westfield Brandon Mall, Winthrop Town Centre, restaurant corridors (Bloomingdale Ave, SR-60, Providence Rd), cuisine diversity, drive times from Brandon subdivisions, Brandon vs Riverview/Wesley Chapel/South Tampa retail comparison table, FAQ JSON-LD schema; 16,651 chars
+
+8. **apollo-beach-fl-schools-guide** — Hillsborough County school zones serving Apollo Beach (Doby Elementary, Eisenhower Middle, East Bay High), school ratings context, private school options (Greer Montessori, North Riverview Academy area), magnet programs, new construction school capacity issues, Apollo Beach vs Riverview/FishHawk/Valrico school comparison table, FAQ JSON-LD schema; 15,302 chars
+
+9. **brandon-fl-parks-recreation** — Brandon park inventory (Hale Boggs Park, Bell Creek Nature Preserve, Brandon Town Center Green, Riverview Regional Park proximity), recreation leagues, sports facilities, trails, proximity to State Parks (Alafia, Lithia Springs), Brandon vs Valrico/Riverview/Wesley Chapel outdoor access comparison table, FAQ JSON-LD schema; 17,827 chars
+
+10. **apollo-beach-fl-commute-guide** — SR-674, US-41, I-75 routes to Tampa, average drive times to downtown Tampa/Brandon/MacDill AFB/Westshore, Express Lanes usage, Selmon Expressway connection, WFH buyer demand impact, Apollo Beach vs Riverview/Ruskin/South Shore commute comparison table, FAQ JSON-LD schema; 16,124 chars
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** pending
+
+---
+
 ## 2026-07-29 (Batch 15 — 10 thin blog posts expanded to 17k-20k chars each)
 
 **Pages improved: 10**
