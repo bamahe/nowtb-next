@@ -36,7 +36,7 @@ All 6 Valrico posts were thin boilerplate (4,000-8,500 chars) with generic "What
 
 **Build:** Passed (Next.js build green)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
-**Git commit:** pending
+**Git commit:** `cd6452e`
 
 ---
 
