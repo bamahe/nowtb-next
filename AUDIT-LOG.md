@@ -4,6 +4,41 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-07-31 (Batch 17 — 5 remaining Ozona spoke pages + 5 Mulberry spoke pages)
+
+**Pages improved: 10**
+
+All 10 posts were generic 5,100-char boilerplate templates. Each expanded to 17,700-23,900 chars with AEO direct answers, 4+ H2 question-format headings, 6+ H3 sub-sections, at least one comparison table, 10+ internal links, CTA box, 5-question FAQ with JSON-LD FAQPage schema. Content dated 2026-07-30.
+
+### Remaining Ozona FL Spoke Pages (5)
+
+1. **moving-to-ozona-fl** — Complete rewrite: What kind of place is Ozona, home types (inland $400K-$650K, canal $600K-$1.1M, bayou-front $900K-$2M+), no HOA/CDD advantage, flood zone breakdown, school cluster (Ozona Elementary, Palm Harbor Middle, PHUHS IB), day-to-day life (Dunedin, Tarpon Springs, J.O. Douglas Park), Ozona vs Dunedin/Palm Harbor/Tarpon Springs/Safety Harbor comparison table, 5-Q&A FAQ; 19,380 chars
+
+2. **ozona-fl-cost-of-living** — Complete rewrite: Monthly cost breakdown table by home price (4 scenarios: $450K to $1.1M), property tax section (unincorporated Pinellas advantage, no city millage), homeowners insurance ($2,500-$4,500/yr inland, higher waterfront), flood insurance breakdown (Zone X: $300-$800/yr vs AE zone: $3,000-$8,000+/yr), HOA/CDD: none, Ozona vs Dunedin/Palm Harbor/Safety Harbor comparison table, utilities, day-to-day costs, 5-Q&A FAQ; 21,452 chars
+
+3. **ozona-fl-property-taxes** — Complete rewrite: Millage rate explanation (19-21 mills unincorporated Pinellas, no city millage), tax estimate table at 5 price points ($400K-$1.2M), Florida homestead exemption (first $25K and second $25K), Save Our Homes cap explanation, how to apply (pcpao.gov, March 1 deadline), assessment reset warning for buyers, Ozona vs Dunedin/Tarpon Springs/Palm Harbor/Clearwater comparison table, VAB appeal process, senior exemption note, 5-Q&A FAQ; 20,804 chars
+
+4. **ozona-fl-investment-property** — Complete rewrite: Why Ozona is hard to invest in (low inventory, no new supply, owner-occupant competition), what works (long-term hold, waterfront appreciation play, future rental), what does not work (STR, flips), Ozona vs Dunedin/Tarpon Springs/Pinellas Park/Safety Harbor investment comparison table, key due diligence (flood zone, seawall, permit history), 5-Q&A FAQ; 20,088 chars
+
+5. **ozona-fl-new-construction** — Complete rewrite: Why there is no new construction (built-out, no vacant lots, environmental constraints), teardown-rebuild explained (cost ranges, timeline 18-30 months, custom builder process, AE zone elevation requirements), new construction near Ozona comparison table (Dunedin, Tarpon Springs, Wesley Chapel, Land O Lakes, Odessa), what buyers buy instead (renovated resale), 5-Q&A FAQ; 17,706 chars
+
+### Mulberry FL Spoke Pages (5)
+
+6. **mulberry-fl-homes-for-sale-guide** — Complete rewrite: Home type breakdown (1950s-1970s CBS $185K-$260K, updated CBS $250K-$320K, 1980s-1990s ranch $260K-$360K, newer builds $300K-$400K), price table by type, city center/east/north Mulberry area breakdown, Polk County vs Hillsborough distinction, phosphate mining proximity, older stock inspection priorities, Mulberry vs Bartow/Auburndale/Winter Haven/Plant City comparison table, buying process (pre-approval, inspection, insurance), 5-Q&A FAQ; 23,927 chars
+
+7. **mulberry-fl-schools-guide** — Complete rewrite: Polk County Public Schools structure, Florida school grading system (fldoe.org), Sandhill Elementary overview, Mulberry Middle School, Mulberry Senior High (CTE programs), honest assessment (below Polk County average, significantly below Hillsborough), private school options via Lakeland (15-20 min), Florida scholarship programs (Step Up For Students), magnet/choice programs via polk-fl.net, Mulberry vs Bartow/Lakeland/Plant City/Valrico/FishHawk school comparison table, 5-Q&A FAQ; 19,306 chars
+
+8. **mulberry-fl-commute-guide** — Complete rewrite: Drive time matrix to 8 destinations (Lakeland 15-20 min, Bartow 10-15 min, Plant City 25-35 min, Brandon 40-50 min, downtown Tampa 55-65 min, Westshore 55-70 min, MacDill 60-75 min, Orlando 65-75 min), primary routes (US-37 North, US-92 + I-4, SR-60 West, I-4 East), remote work angle, no public transit to Tampa caveat, gas/toll costs, Mulberry vs Plant City/Seffner/Dover/Valrico commute and cost comparison table, 5-Q&A FAQ; 21,455 chars
+
+9. **is-mulberry-fl-good-place-to-live** — Complete rewrite: Pros (genuine affordability $185K-$360K, small town feel, central Florida location, Polk County taxes lower than Hillsborough, no coastal flood risk), cons (phosphate mining proximity, below-average school zones, 55-70 min Tampa commute, limited local amenities, older housing stock), who is Mulberry right for (buyer profile vs fit comparison table), day-to-day life in Mulberry (Lakeland and Bartow as amenity hubs), 5-Q&A FAQ; 18,708 chars
+
+10. **mulberry-fl-real-estate-guide** — Complete rewrite: Market structure (resale-only, no new construction pipeline), price range context ($185K-$360K vs $400K Hillsborough median), demand drivers, what moves price up/down (roof age, HVAC, deferred maintenance, industrial proximity), rental income analysis ($1,400-$1,900/mo, 8.7% gross yield on $220K), appreciation history (tracked Polk County general trend), Mulberry vs Wimauma/Gibsonton/Plant City/Bartow comparison table, buying strategy (pre-approval, negotiate repairs not price, insurance quote before offer), 5-Q&A FAQ; 19,621 chars
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+---
+
 ## 2026-07-30 (Batch 16 — 6 Valrico spoke pages rewritten + 4 Brandon/Apollo Beach expansions)
 
 **Pages improved: 10**
