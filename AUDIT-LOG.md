@@ -4,6 +4,40 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-01 (Batch 18 — 10 Bartow FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 Bartow FL posts expanded from 5,138-char generic boilerplate to 17,000-22,900 chars each. Each post has: AEO direct answer in first paragraph, 4+ question-format H2s, 6+ H3 subsections, at least one comparison table, 10+ internal links, CTA box, and 5-question FAQ with JSON-LD FAQPage schema. Content dated 2026-07-31.
+
+### Bartow FL Spoke Pages (10)
+
+1. **bartow-fl-homes-for-sale-guide** — Home type breakdown by price tier ($185K-$500K+: older CBS, updated mid-range, new construction), inspection priorities (plumbing, electrical, septic, flood zones), how to search and work with a local agent, buyer comparison table vs Lakeland/Winter Haven/Plant City/Mulberry; 17,207 chars
+
+2. **bartow-fl-schools-guide** — Polk County Public Schools overview (below FL avg: 42-45% math/reading vs 52% state), school-by-school breakdown (Bartow Elementary Academy, Union Academy, Bartow Middle, Bartow Senior High, Jean O'Dell), private school options, Florida school choice/scholarship programs, Polk State College dual enrollment; 17,172 chars
+
+3. **bartow-fl-commute-guide** — Drive time table to 8 destinations (Tampa 49-55 min off-peak / 70-85 min rush hour, Lakeland 10-15 min, Brandon 35-45 min, MacDill 55-65 min, Orlando 65-75 min), US-98/I-4 route analysis, SR-60 alternative, WFH vs daily commuter assessment, no public transit to Tampa; 18,694 chars
+
+4. **is-bartow-fl-good-place-to-live** — 5 pros (affordability ~$306K median, historic character, Lakeland proximity, inland no coastal flood risk, small-town community), 4 cons (schools below FL avg, Tampa commute, limited urban amenities, older housing stock), 6-factor comparison table vs Lakeland/Winter Haven/Plant City/Mulberry, who fits vs who should look elsewhere; 21,068 chars
+
+5. **bartow-fl-real-estate-guide** — 2026 market overview (median ~$306K, ~-1% YoY, 26-30 days to contract, mildly buyer-favorable), 5-factor comparison table vs Polk County/Hillsborough/FL statewide, property types (resale CBS, new construction, investment, historic district), 4-step buying process (pre-approval, neighborhoods, inspection priorities, insurance quote); 18,333 chars
+
+6. **bartow-fl-cost-of-living** — Monthly cost breakdown table at 4 home prices ($240K-$480K), property taxes section, homeowners insurance $1,800-$3,500/yr (inland, lower than coastal), HOA/CDD breakdown (older areas no HOA; newer $100-$250/mo), utilities, day-to-day costs, comparison table vs Lakeland/Plant City/Brandon/Mulberry; 21,272 chars
+
+7. **bartow-fl-property-taxes** — Total Polk County millage ~16.19 mills; tax estimate table at 5 price points ($200K-$550K), homestead exemption explanation (first+second $25K), Save Our Homes cap and buyer reset warning, how to apply (polkflpa.gov, March 1 deadline), senior/disabled vet/widow exemptions, VAB appeal process, comparison table vs Lakeland/Plant City/Brandon/Tampa; 22,903 chars
+
+8. **bartow-fl-new-construction** — Builder comparison table (D.R. Horton $216,990+, Lennar, KB Home, Meritage, Southern Homes), CDD fee explanation ($800-$2,000/yr added to tax bill), builder incentives (rate buydowns, closing cost credits, design center), independent inspection recommendation, new vs resale comparison table (8 factors), where new construction is located; 21,587 chars
+
+9. **bartow-fl-investment-property** — Rental market data (avg house rent $1,895/mo; 3BR/2BA CBS yield table at 4 property types), demand drivers (Polk County government, Polk State College, Bartow Regional Medical Center), long-term vs short-term rental comparison (LTR best fit; STR not recommended), Bartow vs Mulberry/Lakeland/Winter Haven/Plant City investment comparison table, deferred maintenance and insurance cautions; 22,327 chars
+
+10. **bartow-fl-waterfront-homes** — Freshwater lakefront only (no coastal), 4-tier price table ($280K-$700K+), Polk County lake inventory context, flood zone verification (Zone AE flood insurance required), elevation certificate ($400-$800), dock/seawall inspection guidance, water quality note, Bartow lakefront vs Tampa Bay coastal 8-factor comparison table; 21,888 chars
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `f26a291`
+
+---
+
 ## 2026-07-31 (Batch 17 — 5 remaining Ozona spoke pages + 5 Mulberry spoke pages)
 
 **Pages improved: 10**
