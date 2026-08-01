@@ -9,7 +9,7 @@ import { MetadataRoute } from "next";
  * Spam/scraper bots are blocked to protect content from unauthorized use.
  */
 export default function robots(): MetadataRoute.Robots {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://nowtb.com";
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://nowtb.com").trim();
 
   return {
     rules: [

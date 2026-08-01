@@ -313,7 +313,7 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
               <ChevronRight className="w-3.5 h-3.5 text-gray-300" />
               <li>
                 <Link href={cityHref} className="hover:text-accent transition-colors">
-                  {cityData!.name} {breadcrumbLabel}
+                  {cityData?.name || listing.City} {breadcrumbLabel}
                 </Link>
               </li>
             </>
