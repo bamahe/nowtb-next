@@ -4,6 +4,40 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-02 (Batch 19 — 10 Auburndale FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 Auburndale FL posts expanded from 5,220-char generic boilerplate to 18,000-24,000 chars each. Each post has: AEO direct answer in first paragraph, 4+ question-format H2s, 6+ H3 subsections, at least one comparison table, 10+ internal links, CTA box, and 5-question FAQ with JSON-LD FAQPage schema. Content dated 2026-08-01.
+
+### Auburndale FL Spoke Pages (10)
+
+1. **auburndale-fl-homes-for-sale-guide** — Home type breakdown by price tier ($230K-$550K+: older CBS, updated mid-range, new construction and lakefront), flood zone and CDD fee warnings, 4-step buying process, comparison table vs Lakeland/Winter Haven/Bartow/Plant City; 18,558 chars
+
+2. **auburndale-fl-schools-guide** — Polk County Public Schools overview (below FL avg), school-by-school breakdown (Berkley Elementary, Lena Vista Elementary PK-5 963 students, Jere L. Stambaugh Middle 1,090 students 6-8, Auburndale Senior High AP 24% participation ranked 534-654 in FL), private school options in Lakeland (Lakeland Christian, Santa Fe Catholic), Florida scholarship programs, Polk County magnet/choice programs, comparison table vs FishHawk/Valrico/Wesley Chapel/Lakeland/Bartow; 20,457 chars
+
+3. **auburndale-fl-commute-guide** — Drive time matrix to 8 destinations (Tampa 50-60 min off-peak/75-90 min rush hour, Lakeland 10-15 min, Winter Haven 10-15 min, Brandon 35-45 min, MacDill 55-68 min, Plant City 18-25 min, Orlando 55-70 min), I-4 westbound/eastbound congestion windows, US-92 alternative, Polk County Transit (no Tampa service), Auburndale vs Bartow/Winter Haven/Mulberry/Haines City location comparison table; 20,951 chars
+
+4. **is-auburndale-fl-good-place-to-live** — 5 pros (I-4 affordability ~$320K, City of Lakes 30+ lakes, central I-4 location, small city feel with real infrastructure, inland no storm surge risk), 4 cons (below-average schools, demanding Tampa commute, limited local jobs, older housing stock inspection needs), 7-factor comparison table vs Lakeland/Winter Haven/Plant City/Bartow, who fits vs who should look elsewhere (remote workers, Lakeland area workers, lake lifestyle buyers); 22,364 chars
+
+5. **auburndale-fl-real-estate-guide** — 2026 market overview (median ~$320K, 100-110 days on market, mildly buyer-favorable), price trends (Zillow typical value ~$304,641, 4.9% 5yr growth), inventory analysis (bifurcated: updated homes move in 30-60 days, overpriced/deferred maintenance sitting 120+ days), property types (resale CBS, new construction with builder incentives, lakefront holding value best), comparison table vs Lakeland/Winter Haven/Bartow/Plant City; 18,262 chars
+
+6. **auburndale-fl-cost-of-living** — Monthly cost breakdown table at 4 home prices ($260K-$500K), property tax section (Polk County ~16.37 mills, lower than Hillsborough), homeowners insurance ($2,500-$4,500/yr non-flood zone; Zone AE adds flood insurance $1,800-$4,500/yr), HOA/CDD breakdown (older areas no HOA; newer $100-$250/mo HOA plus $800-$2,500/yr CDD), utilities (Duke Energy, City of Auburndale water), commute cost analysis ($140-$200/mo for Tampa commuters), comparison table vs Brandon/Valrico/Lakeland/Winter Haven; 23,553 chars
+
+7. **auburndale-fl-property-taxes** — Total Polk County millage ~16.37 mills (code 90330) to ~16.68 mills (code 92330); tax estimate table at 5 price points ($220K-$500K), homestead exemption explanation (first+second $25K), Save Our Homes cap and buyer reset warning, how to apply (polkflpa.gov, March 1 deadline), senior/disabled vet/widow exemptions, VAB appeal process, comparison table vs Lakeland/Brandon/Valrico/Plant City/Bartow; 23,767 chars
+
+8. **auburndale-fl-new-construction** — Active communities (Highland Homes at Summerlake Estates gated from $370s, Ryan Homes, Beazer Homes, M/I Homes, Reserve at Van Oaks near Lake Van), builder incentive breakdown (rate buydowns 2-1 and permanent, closing cost credits $5K-$15K, design center credits), new vs resale comparison table (8 factors), independent buyer representation and inspector recommendation, CDD fee impact analysis; 21,201 chars
+
+9. **auburndale-fl-investment-property** — Rental rate table by property type ($1,200-$2,800/mo), gross yield analysis at 4 price points ($240K-$360K: 6.5-8.25% gross), demand drivers (Lakeland employment: Publix HQ, Watson Clinic, Lakeland Regional Health; Polk State College; I-4 corridor logistics workers: Amazon, Dollar Tree), insurance cost compression warning on non-homestead properties, STR not recommended, Auburndale vs Lakeland/Bartow/Mulberry/Winter Haven investment comparison table, ViVi Property Management mention; 23,075 chars
+
+10. **auburndale-fl-waterfront-homes** — Freshwater lake only (no coastal), 5-tier price table ($320K-$1M+), Lake Ariana/Lake Van/Lake Arrowhead/Lake Juliana overview, flood zone verification (Zone AE: flood insurance $1,800-$4,500/yr, elevation certificate $400-$800), seawall inspection ($200-$500/ft replacement), dock inspection and permit verification, water quality awareness (Central FL lake conditions), boating viability verification, Auburndale lake vs Tampa Bay/Sarasota/Pinellas Gulf/Chain of Lakes comparison table; 23,729 chars
+
+**Build:** Passed (Next.js 14 build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `3c1c6ef`
+
+---
+
 ## 2026-08-01 (Batch 18 — 10 Bartow FL spoke pages)
 
 **Pages improved: 10**
