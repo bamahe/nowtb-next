@@ -30,6 +30,10 @@ import { getCityByName } from "@/data/cities";
 import type { Listing } from "@/lib/types";
 import ListingCarousel from "@/components/ui/ListingCarousel";
 
+/** All MLS open house times are Florida local. Pin the zone so server rendering
+ *  (UTC on Vercel) and any client rendering agree with the listing cards. */
+const OPEN_HOUSE_TZ = "America/New_York";
+
 // -----------------------------------------------------------------------------
 // Types
 // -----------------------------------------------------------------------------
@@ -166,11 +170,15 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
 
   // Check if this listing has an upcoming open house
   // (Bridge Property endpoint doesn't include open house data — separate endpoint)
-  if (!listing.OpenHouseStartTime) {
+  // Always refetch: a listing arriving from a cached list may carry a stale or
+  // non-soonest slot. getOpenHouseForListing sorts ascending, so oh.start is the
+  // next upcoming open house — the same one the listing card shows.
+  {
     const oh = await getOpenHouseForListing(listing.ListingKey);
     if (oh) {
       listing.OpenHouseStartTime = oh.start;
       listing.OpenHouseEndTime = oh.end;
+      listing.OpenHouses = oh.all;
     }
   }
 
@@ -334,11 +342,16 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
               <div>
                 <p className="font-heading font-bold text-sm">Open House</p>
                 <p className="font-body text-sm">
-                  {new Date(listing.OpenHouseStartTime).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}
+                  {/* MLS open house times are UTC. Without an explicit timeZone
+                      these render in the server's zone (UTC on Vercel), printing
+                      raw UTC digits — a 12:00PM ET open house showed as 4:00PM.
+                      The listing cards already pin America/New_York; this banner
+                      did not, which is why the two disagreed. */}
+                  {new Date(listing.OpenHouseStartTime).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: OPEN_HOUSE_TZ })}
                   {' · '}
-                  {new Date(listing.OpenHouseStartTime).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })}
+                  {new Date(listing.OpenHouseStartTime).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: OPEN_HOUSE_TZ })}
                   {listing.OpenHouseEndTime && (
-                    <>–{new Date(listing.OpenHouseEndTime).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })}</>
+                    <>–{new Date(listing.OpenHouseEndTime).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: OPEN_HOUSE_TZ })}</>
                   )}
                 </p>
               </div>

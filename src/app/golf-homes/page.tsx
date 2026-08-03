@@ -10,7 +10,7 @@ import type { Listing } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Tampa Bay Golf Course Homes for Sale | Barrett Henry, REALTOR®",
-  description: "Golf course homes in Tampa Bay — fairway views, golf community living. Barrett Henry, REALTOR® at REMAX Collective. (813) 750-0926.",
+  description: "Golf course homes in Tampa Bay — fairway views, golf community living. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
   alternates: { canonical: "/golf-homes/" },
 };
 export const revalidate = 300;
@@ -40,7 +40,7 @@ export default async function GolfPage() {
         <div className="mx-auto max-w-2xl">
           <h2 className="text-2xl font-heading font-bold mb-4">Find Your Golf Community</h2>
           <p className="text-blue-100 mb-6 font-body">Barrett Henry can help you compare golf communities, understand membership costs, and find homes with fairway views. 23+ years of real estate experience.</p>
-          <a href="tel:8137500926" className="inline-block bg-white text-[#003da5] font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors">(813) 750-0926</a>
+          <a href="tel:8137337907" className="inline-block bg-white text-[#003da5] font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors">(813) 733-7907</a>
         </div>
       </section>
     </>

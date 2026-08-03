@@ -11,7 +11,7 @@ import type { Listing } from "@/lib/types";
 export const metadata: Metadata = {
   title: "Tampa Bay Condos for Sale | Barrett Henry, REALTOR®",
   description:
-    "Condos for sale in Tampa Bay — downtown Tampa, Clearwater Beach, St. Pete, and more. Barrett Henry, REALTOR® at REMAX Collective. (813) 750-0926.",
+    "Condos for sale in Tampa Bay — downtown Tampa, Clearwater Beach, St. Pete, and more. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
   alternates: { canonical: "/condos/" },
 };
 
@@ -51,7 +51,7 @@ export default async function CondosPage() {
         <div className="mx-auto max-w-2xl">
           <h2 className="text-2xl font-heading font-bold mb-4">Need Help Evaluating a Condo?</h2>
           <p className="text-blue-100 mb-6 font-body">Barrett Henry reviews HOA financials, reserve studies, and special assessments before you commit. 23+ years of real estate experience.</p>
-          <a href="tel:8137500926" className="inline-block bg-white text-[#003da5] font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors">(813) 750-0926</a>
+          <a href="tel:8137337907" className="inline-block bg-white text-[#003da5] font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors">(813) 733-7907</a>
         </div>
       </section>
     </>

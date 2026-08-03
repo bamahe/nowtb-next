@@ -79,7 +79,7 @@ Write a blog post following these rules:
 - Use "REMAX" never "RE/MAX"
 - Question-format H2 headings
 - First paragraph: answer the page's main question directly
-- Include Barrett's phone: (813) 750-0926
+- Include Barrett's phone: (813) 733-7907
 - Include Barrett's email: barrett@nowtb.com
 - End with a CTA to contact Barrett
 - No fluff phrases, no AI-sounding transitions

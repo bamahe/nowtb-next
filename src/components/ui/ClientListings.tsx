@@ -84,22 +84,35 @@ export default function ClientListings({
       .then(([data, ohData]) => {
         const fetchedListings: Listing[] = data.value || [];
         // Build a lookup of open house times by ListingKey
-        const ohMap = new Map<string, { start: string; end?: string }>();
+        // Collect ALL open houses per listing, then sort ascending. The Bridge
+        // openhouses endpoint returns results in DESCENDING start-time order, so
+        // taking whichever record happens to arrive last would surface an
+        // arbitrary slot — including obvious MLS typos (years like 3021, 6202).
+        const ohMap = new Map<string, { start: string; end: string }[]>();
         for (const oh of (ohData.value || []) as Listing[]) {
           if (oh.ListingKey && oh.OpenHouseStartTime) {
-            ohMap.set(oh.ListingKey, {
+            if (!ohMap.has(oh.ListingKey)) ohMap.set(oh.ListingKey, []);
+            ohMap.get(oh.ListingKey)!.push({
               start: oh.OpenHouseStartTime,
-              end: oh.OpenHouseEndTime,
+              end: oh.OpenHouseEndTime || "",
             });
           }
         }
+        ohMap.forEach((houses) => {
+          houses.sort(
+            (a, b) => new Date(a.start).getTime() - new Date(b.start).getTime()
+          );
+        });
         // Inject open house times onto matching listings
         if (ohMap.size > 0) {
           for (const listing of fetchedListings) {
-            const oh = ohMap.get(listing.ListingKey);
-            if (oh) {
-              listing.OpenHouseStartTime = oh.start;
-              listing.OpenHouseEndTime = oh.end;
+            const houses = ohMap.get(listing.ListingKey);
+            if (houses && houses.length > 0) {
+              // Soonest first for the legacy single-slot fields, plus the full
+              // list so cards can render every upcoming open house.
+              listing.OpenHouseStartTime = houses[0].start;
+              listing.OpenHouseEndTime = houses[0].end;
+              listing.OpenHouses = houses;
             }
           }
         }

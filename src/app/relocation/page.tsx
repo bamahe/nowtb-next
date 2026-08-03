@@ -130,7 +130,7 @@ export default function RelocationPage() {
         "@type": "Service",
         name: "Tampa Bay Relocation Services",
         serviceType: "Relocation Services",
-        provider: { "@type": "RealEstateAgent", name: "Barrett Henry", telephone: "(813) 750-0926", email: "barrett@nowtb.com" },
+        provider: { "@type": "RealEstateAgent", name: "Barrett Henry", telephone: "(813) 733-7907", email: "barrett@nowtb.com" },
         areaServed: { "@type": "Place", name: "Tampa Bay, FL" },
         url: "https://nowtb.com/relocation/",
       }} />

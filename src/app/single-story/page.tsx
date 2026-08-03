@@ -9,7 +9,7 @@ import type { Listing } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Tampa Bay Single-Story Homes for Sale | Barrett Henry, REALTOR®",
-  description: "Single-story homes for sale in Tampa Bay. One-level living, no stairs. Barrett Henry, REALTOR® at REMAX Collective. (813) 750-0926.",
+  description: "Single-story homes for sale in Tampa Bay. One-level living, no stairs. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
   alternates: { canonical: "/single-story/" },
 };
 export const revalidate = 300;
@@ -37,7 +37,7 @@ export default async function SingleStoryPage() {
         <div className="mx-auto max-w-2xl">
           <h2 className="text-2xl font-heading font-bold mb-4">Find a Single-Story Home</h2>
           <p className="text-blue-100 mb-6 font-body">Barrett Henry can filter for single-story homes in any Tampa Bay neighborhood. 23+ years of real estate experience.</p>
-          <a href="tel:8137500926" className="inline-block bg-white text-[#003da5] font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors">(813) 750-0926</a>
+          <a href="tel:8137337907" className="inline-block bg-white text-[#003da5] font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors">(813) 733-7907</a>
         </div>
       </section>
     </>

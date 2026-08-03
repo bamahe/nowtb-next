@@ -215,7 +215,7 @@ All 6 Valrico posts were thin boilerplate (4,000-8,500 chars) with generic "What
 
 **Pages improved: 10**
 
-All 10 posts were thin (3,200-4,200 chars). Each expanded with: AEO direct answer in first 2-3 sentences, 4+ H2 tags with question format, 6+ H3 tags, at least one comparison table, 5-question FAQ with JSON-LD FAQPage schema, 10+ internal links, and CTA box with Barrett contact info (tel:8137500926, /contact/). Content dated 2026-07-28.
+All 10 posts were thin (3,200-4,200 chars). Each expanded with: AEO direct answer in first 2-3 sentences, 4+ H2 tags with question format, 6+ H3 tags, at least one comparison table, 5-question FAQ with JSON-LD FAQPage schema, 10+ internal links, and CTA box with Barrett contact info (tel:8137337907, /contact/). Content dated 2026-07-28.
 
 ### Tampa Home Style Posts (3)
 
@@ -257,7 +257,7 @@ All 10 posts were thin (3,200-4,200 chars). Each expanded with: AEO direct answe
 
 **Pages improved: 10**
 
-All 10 posts were thin (2,000-4,200 chars). Each expanded with: AEO direct answer in first 2-3 sentences, 4+ H2 tags with question format, 6+ H3 tags, at least one comparison table, 5-question FAQ with JSON-LD FAQPage schema, 10+ internal links, and CTA box with Barrett contact info (tel:8137500926, /contact/).
+All 10 posts were thin (2,000-4,200 chars). Each expanded with: AEO direct answer in first 2-3 sentences, 4+ H2 tags with question format, 6+ H3 tags, at least one comparison table, 5-question FAQ with JSON-LD FAQPage schema, 10+ internal links, and CTA box with Barrett contact info (tel:8137337907, /contact/).
 
 ### Mortgage Market Education Posts (5)
 
@@ -295,7 +295,7 @@ All 10 posts were thin (2,000-4,200 chars). Each expanded with: AEO direct answe
 
 **Pages improved: 10**
 
-All 10 posts were genuinely thin (2,800-3,400 chars). Each expanded with: AEO direct answer in first 2-3 sentences, 4+ H2 tags, 6+ H3 tags, at least one comparison table, 5-question FAQ with JSON-LD FAQPage schema, 10+ internal links, and CTA box with Barrett contact info (tel:8137500926, /contact/). Content dated 2026-07-26.
+All 10 posts were genuinely thin (2,800-3,400 chars). Each expanded with: AEO direct answer in first 2-3 sentences, 4+ H2 tags, 6+ H3 tags, at least one comparison table, 5-question FAQ with JSON-LD FAQPage schema, 10+ internal links, and CTA box with Barrett contact info (tel:8137337907, /contact/). Content dated 2026-07-26.
 
 ### Blog Posts (10)
 

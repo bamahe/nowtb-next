@@ -12,7 +12,7 @@ import type { Listing } from "@/lib/types";
 export const metadata: Metadata = {
   title: "Tampa Bay Waterfront Homes for Sale | Barrett Henry, REALTOR®",
   description:
-    "Waterfront homes for sale in Tampa Bay — lakefront, bayfront, canal-access, and Gulf-front properties. Barrett Henry, REALTOR® at REMAX Collective. (813) 750-0926.",
+    "Waterfront homes for sale in Tampa Bay — lakefront, bayfront, canal-access, and Gulf-front properties. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
   alternates: { canonical: "/waterfront/" },
 };
 
@@ -57,7 +57,7 @@ export default async function WaterfrontPage() {
         <div className="mx-auto max-w-2xl">
           <h2 className="text-2xl font-heading font-bold mb-4">Find Your Waterfront Home</h2>
           <p className="text-blue-100 mb-6 font-body">Barrett Henry knows every lake, canal, and water-view lot in Tampa Bay. 23+ years of real estate experience. Free buyer representation.</p>
-          <a href="tel:8137500926" className="inline-block bg-white text-[#003da5] font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors">(813) 750-0926</a>
+          <a href="tel:8137337907" className="inline-block bg-white text-[#003da5] font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors">(813) 733-7907</a>
         </div>
       </section>
     </>

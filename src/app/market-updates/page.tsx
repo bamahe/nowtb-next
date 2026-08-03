@@ -104,7 +104,7 @@ export default function MarketUpdatesPage() {
         name: "Tampa Bay Housing Market Updates",
         description: "Quarterly housing market data for every city in Tampa Bay.",
         url: "https://nowtb.com/market-updates/",
-        author: { "@type": "RealEstateAgent", name: "Barrett Henry", telephone: "(813) 750-0926" },
+        author: { "@type": "RealEstateAgent", name: "Barrett Henry", telephone: "(813) 733-7907" },
       }} />
 
       <HeroSection

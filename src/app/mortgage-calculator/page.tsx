@@ -101,7 +101,7 @@ export default function MortgageCalculatorPage() {
           <h2 className="text-2xl font-heading font-bold mb-4">Ready to Get Pre-Approved?</h2>
           <p className="text-blue-100 mb-6 font-body">Barrett Henry works with trusted local lenders who can get you pre-approved quickly. Know exactly what you can afford before you start looking.</p>
           <div className="flex gap-3 justify-center flex-wrap">
-            <a href="tel:8137500926" className="inline-block bg-white text-[#003da5] font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors">(813) 750-0926</a>
+            <a href="tel:8137337907" className="inline-block bg-white text-[#003da5] font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors">(813) 733-7907</a>
             <a href="/lenders/" className="inline-block border-2 border-white/40 text-white font-bold py-3 px-8 rounded-lg hover:border-white transition-colors">See Preferred Lenders</a>
           </div>
         </div>

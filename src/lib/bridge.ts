@@ -550,7 +550,9 @@ export async function getOpenHouses(zipCodes?: string[]): Promise<Listing[]> {
  * Queries the Bridge openhouses endpoint filtered by ListingKey.
  * Returns { start, end } if found, null otherwise.
  */
-export async function getOpenHouseForListing(listingKey: string): Promise<{ start: string; end: string } | null> {
+export async function getOpenHouseForListing(
+  listingKey: string
+): Promise<{ start: string; end: string; all: { start: string; end: string }[] } | null> {
   if (IS_BUILD_TIME) return null;
   try {
     if (isRateLimited()) return null;
@@ -559,7 +561,11 @@ export async function getOpenHouseForListing(listingKey: string): Promise<{ star
     url.searchParams.set('ListingKey', listingKey);
     url.searchParams.set('OpenHouseStartTime.gte', now);
     url.searchParams.set('sortBy', 'OpenHouseStartTime');
-    url.searchParams.set('limit', '1');
+    // Fetch ALL upcoming open houses, not just one. The API's sort order is not
+    // guaranteed ascending, so limit=1 could return the furthest-out slot — which
+    // made the detail-page banner disagree with the listing card. We sort locally
+    // instead, exactly like getOpenHouses() does for the cards.
+    url.searchParams.set('limit', '50');
     url.searchParams.set('fields', 'ListingKey,OpenHouseStartTime,OpenHouseEndTime');
 
     const res = await fetch(url.toString(), {
@@ -579,10 +585,21 @@ export async function getOpenHouseForListing(listingKey: string): Promise<{ star
     const records = Array.isArray(data.bundle) ? data.bundle : (Array.isArray(data.value) ? data.value : []);
     if (records.length === 0) return null;
 
-    return {
-      start: records[0].OpenHouseStartTime,
-      end: records[0].OpenHouseEndTime || '',
-    };
+    const houses = records
+      .filter((r: { OpenHouseStartTime?: string }) => r.OpenHouseStartTime)
+      .map((r: { OpenHouseStartTime: string; OpenHouseEndTime?: string }) => ({
+        start: r.OpenHouseStartTime,
+        end: r.OpenHouseEndTime || '',
+      }))
+      .sort(
+        (a: { start: string }, b: { start: string }) =>
+          new Date(a.start).getTime() - new Date(b.start).getTime()
+      );
+
+    if (houses.length === 0) return null;
+
+    // Soonest first, plus the full list so callers can show every slot.
+    return { ...houses[0], all: houses };
   } catch {
     return null;
   }

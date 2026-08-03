@@ -39,7 +39,7 @@ export default function AgentsPage() {
         name: "Barrett Henry",
         jobTitle: "Broker Associate",
         worksFor: { "@type": "RealEstateAgent", name: "REMAX Collective" },
-        telephone: "(813) 750-0926",
+        telephone: "(813) 733-7907",
         email: "barrett@nowtb.com",
         address: { "@type": "PostalAddress", streetAddress: "417 Lithia Pinecrest Rd", addressLocality: "Brandon", addressRegion: "FL", postalCode: "33511" },
         url: "https://nowtb.com/agents/",

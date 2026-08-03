@@ -9,7 +9,7 @@ import type { Listing } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Tampa Bay Price-Reduced Homes | Barrett Henry, REALTOR®",
-  description: "Price-reduced homes in Tampa Bay — motivated sellers, recent price drops. Updated daily. Barrett Henry, REALTOR® at REMAX Collective. (813) 750-0926.",
+  description: "Price-reduced homes in Tampa Bay — motivated sellers, recent price drops. Updated daily. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
   alternates: { canonical: "/price-reduced/" },
 };
 export const revalidate = 300;
@@ -37,7 +37,7 @@ export default async function PriceReducedPage() {
         <div className="mx-auto max-w-2xl">
           <h2 className="text-2xl font-heading font-bold mb-4">Get Price Drop Alerts</h2>
           <p className="text-blue-100 mb-6 font-body">Barrett can set up automatic notifications when homes drop in price in your target area. 23+ years of real estate experience.</p>
-          <a href="tel:8137500926" className="inline-block bg-white text-[#003da5] font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors">(813) 750-0926</a>
+          <a href="tel:8137337907" className="inline-block bg-white text-[#003da5] font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors">(813) 733-7907</a>
         </div>
       </section>
     </>

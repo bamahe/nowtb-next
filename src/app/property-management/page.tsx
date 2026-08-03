@@ -47,7 +47,7 @@ export default function PropertyManagementPage() {
         "@type": "Service",
         name: "ViVi PM Property Management",
         serviceType: "Property Management",
-        provider: { "@type": "RealEstateAgent", name: "Barrett Henry", telephone: "(813) 750-0926" },
+        provider: { "@type": "RealEstateAgent", name: "Barrett Henry", telephone: "(813) 733-7907" },
         areaServed: { "@type": "Place", name: "Tampa Bay, FL" },
         url: "https://nowtb.com/property-management/",
       }} />

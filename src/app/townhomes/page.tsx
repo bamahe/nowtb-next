@@ -51,7 +51,7 @@ export default async function TownhomesPage() {
         <div className="mx-auto max-w-2xl">
           <h2 className="text-2xl font-heading font-bold mb-4">Find Your Townhome</h2>
           <p className="text-blue-100 mb-6 font-body">Barrett Henry helps buyers compare townhomes, condos, and single-family to find the right fit. 23+ years of real estate experience.</p>
-          <a href="tel:8137500926" className="inline-block bg-white text-[#003da5] font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors">(813) 750-0926</a>
+          <a href="tel:8137337907" className="inline-block bg-white text-[#003da5] font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors">(813) 733-7907</a>
         </div>
       </section>
     </>
