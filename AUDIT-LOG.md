@@ -4,6 +4,40 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-03 (Batch 20 — 10 Plant City FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 Plant City FL posts expanded from 5,220-6,300-char thin content to 14,600-18,800 chars each. Each post has: AEO direct answer in first paragraph, 4+ question-format H2s, 6+ H3 subsections, at least one comparison table, 10+ internal links, CTA box, and 5-question FAQ with JSON-LD FAQPage schema. Content dated 2026-08-02.
+
+### Plant City FL Spoke Pages (10)
+
+1. **plant-city-fl-commute-guide** — Drive time matrix to 8 destinations (Tampa 35-45 min off-peak/55-70 min rush hour, Brandon 20-28 min, Lakeland 25-35 min, MacDill 45-60 min, Ybor 38-50 min, Wesley Chapel 30-40 min, Riverview 30-40 min, Orlando 75-90 min), I-4 westbound/eastbound congestion windows, SR-39 and US-92 alternatives, Polk County transit gap, SunRail note, comparison table vs Valrico/Brandon/Auburndale/Lakeland; 18,684 chars
+
+2. **plant-city-fl-market-trends** — 2026 market data (median ~$330K, 60-90+ days on market, buyer-favorable conditions), price tier breakdown (entry $220K-$290K, mid-range $290K-$400K, upper $400K-$600K+), inventory and days-on-market analysis, seller vs buyer conditions breakdown, comparison table vs Hillsborough County cities, 5-question FAQ with JSON-LD schema; 15,829 chars
+
+3. **plant-city-fl-rental-market** — Rental rate table by property type (2/1 $1,300-$1,600/mo, 3/2 $1,500-$1,900/mo, 4/2 $1,800-$2,300/mo), gross yield analysis at 4 price points ($270K-$380K: 5.6-7.1% gross), demand drivers (I-4 workers, Saddle Creek Logistics, annual strawberry workers, distribution center employees), STR assessment (Florida Strawberry Festival 10 days/yr not enough to sustain STR), landlord-tenant law basics, ViVi Property Management mention with /property-management/ link; 14,604 chars
+
+4. **plant-city-fl-new-construction-2026** — Active communities (Varrea by DR Horton/Taylor Morrison from $360s, Walden Lake resales, Magnolia Green, other builder presence), builder incentive breakdown (rate buydowns, closing cost credits $5K-$15K), new vs resale comparison table (8 factors), CDD fee impact, buyer representation importance, comparison table vs Auburndale/Lakeland/Wesley Chapel/Riverview; 15,773 chars
+
+5. **plant-city-fl-starter-homes** — Price tiers ($200K-$290K range, 3/2 CBS 1,000-1,400 sq ft typical), neighborhood breakdown (in-town older stock, suburban Walden Lake, I-4 corridor), inspection priority list (roof, plumbing, electrical panels, HVAC, foundation), FHA/VA/USDA eligibility discussion, comparison table vs Brandon/Valrico/Auburndale/Riverview, 4-step buying process for first-timers; 15,997 chars
+
+6. **plant-city-fl-fha-va-homes** — FHA/VA/USDA program breakdown with limits and requirements, down payment comparison table (0% VA, 0% USDA, 3.5% FHA, 3-5% conventional), inspection considerations (FHA appraisal standards, structural/safety requirements), USDA Rural Development eligibility check for Plant City rural areas, income limit guidance, lender recommendation to compare 3+ quotes, 5-question FAQ with JSON-LD schema; 15,102 chars
+
+7. **plant-city-fl-no-hoa-homes** — No-HOA vs HOA comparison table (5 factors: cost, freedom, resale, upkeep, rules), in-town/suburban/rural no-HOA area breakdown, what rules still apply (Hillsborough County zoning, city code enforcement, deed restrictions vs HOA), finding no-HOA properties in MLS search, comparison table vs Valrico/Brandon/Riverview/FishHawk (HOA prevalence by area); 15,296 chars
+
+8. **plant-city-fl-parks-recreation** — Jerry D. Moran Park, Lester Olson Park, Plant City Sports Complex, Florida Strawberry Festival (annual Feb/Mar), Dinosaur World (attraction), Hillsborough River State Park (20 min), Lithia Springs County Park (30 min), parks comparison table vs Valrico/Brandon/FishHawk/Wesley Chapel, outdoor activities matrix (hiking, kayaking, sports leagues, festivals); 14,772 chars
+
+9. **plant-city-fl-downtown-living** — Amtrak station/historic depot as anchor, Reynolds Street corridor, historic homes price range ($220K-$380K), downtown walkability vs suburban car-dependence, 6-column comparison table vs Brandon/Lakeland/Tampa Heights (downtown living characteristics), who downtown is right for (commuters without cars, history buffs, fix-and-hold investors), who should look elsewhere (families needing top-rated schools, suburban amenity seekers); 14,936 chars
+
+10. **plant-city-fl-vs-valrico** — 10-factor comparison table (price, schools, commute, grocery/retail, parks, new construction, HOA prevalence, flood risk, walkability, community feel), school zone comparison (Plant City HS vs Newsome HS A-rated), 5-destination commute comparison table, price per sq ft analysis, who should choose each city decision framework; 18,772 chars
+
+**Build:** Passed (Next.js 14 build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `ecd9052`
+
+---
+
 ## 2026-08-02 (Batch 19 — 10 Auburndale FL spoke pages)
 
 **Pages improved: 10**
