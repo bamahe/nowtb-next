@@ -498,24 +498,29 @@ export async function getOpenHouses(zipCodes?: string[]): Promise<Listing[]> {
     }
 
     // Step 4: Attach open house date/time to each listing
-    // Build a map of ListingKey -> earliest open house schedule
-    const ohMap = new Map<string, { start: string; end: string }>();
+    // Build a map of ListingKey -> ALL open house schedules (sorted by start time)
+    const ohMap = new Map<string, { start: string; end: string }[]>();
     for (const oh of openHouseRecords) {
       if (oh.ListingKey && oh.OpenHouseStartTime) {
-        // Keep the earliest upcoming open house for each listing
-        if (!ohMap.has(oh.ListingKey)) {
-          ohMap.set(oh.ListingKey, {
-            start: oh.OpenHouseStartTime,
-            end: oh.OpenHouseEndTime || '',
-          });
-        }
+        if (!ohMap.has(oh.ListingKey)) ohMap.set(oh.ListingKey, []);
+        ohMap.get(oh.ListingKey)!.push({
+          start: oh.OpenHouseStartTime,
+          end: oh.OpenHouseEndTime || '',
+        });
       }
     }
+    // Sort each listing's open houses by start time
+    ohMap.forEach((houses) => {
+      houses.sort((a, b) => new Date(a.start).getTime() - new Date(b.start).getTime());
+    });
     for (const listing of allListings) {
-      const oh = ohMap.get(listing.ListingKey);
-      if (oh) {
-        listing.OpenHouseStartTime = oh.start;
-        listing.OpenHouseEndTime = oh.end;
+      const houses = ohMap.get(listing.ListingKey);
+      if (houses && houses.length > 0) {
+        // Keep earliest for backwards compat with OpenHouseStartTime/EndTime
+        listing.OpenHouseStartTime = houses[0].start;
+        listing.OpenHouseEndTime = houses[0].end;
+        // Store ALL open houses
+        listing.OpenHouses = houses;
       }
     }
 

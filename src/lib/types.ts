@@ -144,8 +144,9 @@ export interface Listing {
   PhotosCount?: number;
 
   // --- Open house ---
-  OpenHouseStartTime?: string;       // ISO 8601 datetime
-  OpenHouseEndTime?: string;         // ISO 8601 datetime
+  OpenHouseStartTime?: string;       // ISO 8601 datetime (earliest)
+  OpenHouseEndTime?: string;         // ISO 8601 datetime (earliest)
+  OpenHouses?: { start: string; end: string }[];  // ALL upcoming open houses
 
   // --- Building ---
   BuildingAreaTotal?: number;        // Total area including non-living

@@ -20,18 +20,26 @@ interface ListingCardProps {
   listing: Listing;
 }
 
-/** Format open house date/time for display: "Sat, Jul 12 · 1:00–4:00 PM" */
+/** Format open house date/time for display: "Sat, Jul 12 · 2:00–4:00 PM" */
+// Forces America/New_York timezone so server-rendered times match Florida local time
+const TZ = 'America/New_York';
 function formatOpenHouse(start?: string, end?: string): string {
   if (!start) return '';
   const s = new Date(start);
-  const dayStr = s.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
-  const startTime = s.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }).replace(' ', '');
+  const dayStr = s.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', timeZone: TZ });
+  const startTime = s.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: TZ }).replace(' ', '');
   if (end) {
     const e = new Date(end);
-    const endTime = e.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }).replace(' ', '');
+    const endTime = e.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: TZ }).replace(' ', '');
     return `${dayStr} · ${startTime}–${endTime}`;
   }
   return `${dayStr} · ${startTime}`;
+}
+
+/** Format ALL open houses for a listing: "Sat, Aug 1 · 2:00–4:00 PM | Sun, Aug 2 · 2:00–4:00 PM" */
+function formatAllOpenHouses(houses?: { start: string; end: string }[]): string[] {
+  if (!houses || houses.length === 0) return [];
+  return houses.map(h => formatOpenHouse(h.start, h.end)).filter(Boolean);
 }
 
 /** Color map for listing status badges */
@@ -87,23 +95,32 @@ export default function ListingCard({ listing }: ListingCardProps) {
           aria-hidden="true"
         />
 
-        {/* --- Open House Banner — only show future open houses --- */}
-        {listing.OpenHouseStartTime && new Date(listing.OpenHouseStartTime) > new Date() && (
-          <div className="absolute top-0 left-0 right-0 bg-accent/95 text-primary px-4 py-2 text-center z-10">
-            <p className="font-body text-[10px] font-bold uppercase tracking-[0.12em]">
-              Open House
-            </p>
-            <p className="font-body text-xs font-semibold">
-              {formatOpenHouse(listing.OpenHouseStartTime, listing.OpenHouseEndTime)}
-            </p>
-          </div>
-        )}
+        {/* --- Open House Banner — show ALL upcoming open houses --- */}
+        {listing.OpenHouseStartTime && new Date(listing.OpenHouseStartTime) > new Date() && (() => {
+          const allOH = formatAllOpenHouses(listing.OpenHouses);
+          // Fall back to single open house if OpenHouses array not populated
+          const lines = allOH.length > 0 ? allOH : [formatOpenHouse(listing.OpenHouseStartTime, listing.OpenHouseEndTime)].filter(Boolean);
+          return lines.length > 0 ? (
+            <div className="absolute top-0 left-0 right-0 bg-accent/95 text-primary px-4 py-2 text-center z-10">
+              <p className="font-body text-[10px] font-bold uppercase tracking-[0.12em]">
+                Open House{lines.length > 1 ? 's' : ''}
+              </p>
+              {lines.map((line, i) => (
+                <p key={i} className="font-body text-xs font-semibold">
+                  {line}
+                </p>
+              ))}
+            </div>
+          ) : null;
+        })()}
 
         {/* --- Status Badge — glass-morphism effect over photo --- */}
         <span
           className={cn(
             "absolute left-4 px-3 py-1.5 text-[10px] font-medium font-body uppercase tracking-[0.15em] backdrop-blur-sm",
-            listing.OpenHouseStartTime && new Date(listing.OpenHouseStartTime) > new Date() ? "top-14" : "top-4",
+            listing.OpenHouseStartTime && new Date(listing.OpenHouseStartTime) > new Date()
+              ? ((listing.OpenHouses?.length ?? 0) > 1 ? "top-[4.5rem]" : "top-14")
+              : "top-4",
             badgeClass
           )}
         >

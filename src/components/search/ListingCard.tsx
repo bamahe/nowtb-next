@@ -22,24 +22,30 @@ const statusColors: Record<string, string> = {
  * Format open house date/time for the badge overlay.
  * Shows "TODAY 1-3 PM" if it's today, otherwise "SAT JUL 19 1-3 PM".
  */
+// Force Eastern time so server-rendered times match Florida local time
+const TZ = 'America/New_York';
+
 function formatOpenHouseBadge(start?: string, end?: string): string {
   if (!start) return "";
   const s = new Date(start);
   const now = new Date();
   // Only show future open houses (cached data may include past ones)
   if (s <= now) return "";
-  // Check if the open house is today
-  const isToday =
-    s.getFullYear() === now.getFullYear() &&
-    s.getMonth() === now.getMonth() &&
-    s.getDate() === now.getDate();
 
-  // Format times as "1PM" or "1:30PM" (drop :00 minutes for cleanliness)
+  // Compare dates in Eastern time for "today" check
+  const sDateET = s.toLocaleDateString("en-US", { timeZone: TZ });
+  const nowDateET = now.toLocaleDateString("en-US", { timeZone: TZ });
+  const isToday = sDateET === nowDateET;
+
+  // Format times as "1PM" or "1:30PM" in Eastern time
   const fmtTime = (d: Date) => {
-    const h = d.getHours() % 12 || 12;
-    const m = d.getMinutes();
-    const ampm = d.getHours() >= 12 ? "PM" : "AM";
-    return m === 0 ? `${h}${ampm}` : `${h}:${String(m).padStart(2, "0")}${ampm}`;
+    const parts = new Intl.DateTimeFormat("en-US", {
+      hour: "numeric", minute: "2-digit", hour12: true, timeZone: TZ,
+    }).formatToParts(d);
+    const h = parts.find(p => p.type === "hour")?.value ?? "";
+    const m = parts.find(p => p.type === "minute")?.value ?? "00";
+    const ampm = parts.find(p => p.type === "dayPeriod")?.value?.toUpperCase() ?? "";
+    return m === "00" ? `${h}${ampm}` : `${h}:${m}${ampm}`;
   };
 
   const startTime = fmtTime(s);
@@ -47,9 +53,9 @@ function formatOpenHouseBadge(start?: string, end?: string): string {
 
   if (isToday) return `TODAY ${timeRange}`;
 
-  // "SAT JUL 19" format
+  // "SAT JUL 19" format in Eastern time
   const dayStr = s
-    .toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" })
+    .toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: TZ })
     .toUpperCase();
   return `${dayStr} ${timeRange}`;
 }
@@ -60,11 +66,11 @@ export default function SearchListingCard({ listing }: { listing: Listing }) {
   // Fall back to gray badge if status isn't in our map
   const badgeClass = statusColors[listing.StandardStatus] ?? "bg-gray-600 text-white";
 
-  // Build the open house badge text (empty string if no open house)
-  const openHouseText = formatOpenHouseBadge(
-    listing.OpenHouseStartTime,
-    listing.OpenHouseEndTime
-  );
+  // Build open house badge text(s) — show ALL upcoming open houses
+  const openHouseLines: string[] = listing.OpenHouses?.length
+    ? listing.OpenHouses.map(oh => formatOpenHouseBadge(oh.start, oh.end)).filter(Boolean)
+    : [formatOpenHouseBadge(listing.OpenHouseStartTime, listing.OpenHouseEndTime)].filter(Boolean);
+  const hasOpenHouse = openHouseLines.length > 0;
 
   return (
     <Link
@@ -84,21 +90,23 @@ export default function SearchListingCard({ listing }: { listing: Listing }) {
         />
 
         {/* Open house banner — full width across the top of the photo */}
-        {openHouseText && (
+        {hasOpenHouse && (
           <div className="absolute top-0 left-0 right-0 bg-blue-600 text-white px-3 py-1.5 text-center z-10">
             <p className="text-[10px] font-bold uppercase tracking-wider">
-              Open House
+              Open House{openHouseLines.length > 1 ? 's' : ''}
             </p>
-            <p className="text-xs font-semibold">
-              {openHouseText}
-            </p>
+            {openHouseLines.map((line, i) => (
+              <p key={i} className="text-xs font-semibold">
+                {line}
+              </p>
+            ))}
           </div>
         )}
 
         {/* Status badge — pushed down if open house banner is visible */}
         <span
           className={`absolute left-2 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded ${badgeClass} ${
-            openHouseText ? "top-12" : "top-2"
+            hasOpenHouse ? (openHouseLines.length > 1 ? "top-16" : "top-12") : "top-2"
           }`}
         >
           {listing.StandardStatus === "Active" ? "New" : listing.StandardStatus}
