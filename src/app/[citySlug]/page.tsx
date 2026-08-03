@@ -592,8 +592,10 @@ export default async function CityPage({
       if (page.topic.slug === "property-management") {
         return <PropertyManagementSpokePage city={page.city} />;
       }
-      // Home valuation spoke pages — HomeValuationSpokePage not yet built, falls through to SpokePage
-      // TODO: replace SpokePage with HomeValuationSpokePage once component is created
+      // Home valuation spoke pages — dedicated valuation form + CMA content
+      if (page.topic.slug === "home-valuation") {
+        return <HomeValuationSpokePage city={page.city} />;
+      }
       return <SpokePage city={page.city} topic={page.topic} slug={citySlug} />;
     case "remax-office":
       return <RemaxOfficePage officeKey={page.officeKey} />;
