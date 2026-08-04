@@ -12,6 +12,56 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export const maxDuration = 120; // 2 minutes — AI generation can take time
 
+// Barrett's real phone number. Defined once so a typo can't spread across posts.
+const CONTACT_PHONE = "(813) 733-7907";
+const CONTACT_PHONE_TEL = "8137337907";
+
+// Top-level URL paths that are real pages on the site. Anything else the AI
+// writes as a bare path is assumed to be a blog article and gets /blog/ added.
+// City pages (/valrico/, /brandon/, ...) are handled by the single-segment check
+// in sanitizeInternalLinks — they are the only bare slugs that legitimately exist.
+const REAL_TOP_LEVEL_PATHS = new Set([
+  "blog", "properties", "contact", "about", "agents", "guides", "compare",
+  "builders", "market-updates", "relocation", "property-management",
+  "mortgage-calculator", "free-home-valuation", "new-construction",
+  "waterfront", "pool-homes", "golf-homes", "condos", "townhomes", "no-hoa",
+  "land-acreage", "single-story", "price-reduced", "55-plus-communities",
+  "luxury", "neighborhoods",
+]);
+
+/**
+ * Rewrite internal links that point at pages which don't exist.
+ *
+ * The AI reliably writes blog cross-links as bare slugs — href="/moving-to-brandon-fl/"
+ * — but blog articles are served from /blog/<slug>/. Left as-is, every one of those
+ * links is a dead end. This adds the missing /blog/ prefix.
+ *
+ * A path is left alone when it is a known real section (/properties/, /contact/, ...)
+ * or a single-segment city page that the site's [citySlug] route handles.
+ * If it breaks, check: a new top-level page was added but not listed in
+ * REAL_TOP_LEVEL_PATHS, so its links are being wrongly sent to /blog/.
+ */
+function sanitizeInternalLinks(html: string): string {
+  return html.replace(/href=(["'])(\/[^"'\s>]*)\1/g, (whole, quote, url) => {
+    // Split off any #fragment or ?query so we only inspect the path itself,
+    // then re-attach it to whatever we rewrite the path to.
+    const [path] = url.split(/[#?]/);
+    const rest = url.slice(path.length);
+    const segments = path.split("/").filter(Boolean);
+
+    if (segments.length === 0) return whole;                  // "/" — homepage
+    if (REAL_TOP_LEVEL_PATHS.has(segments[0])) return whole;  // real section, leave alone
+
+    // Invented sub-page like /valrico/luxury-homes/ — only the city page exists
+    if (segments.length > 1) return `href=${quote}/${segments[0]}/${rest}${quote}`;
+
+    // Single bare slug. City slugs are short (valrico, wesley-chapel, sun-city-center);
+    // blog slugs are long and descriptive (moving-to-brandon-fl-relocation-guide).
+    if (segments[0].split("-").length <= 3) return whole;      // looks like a city page
+    return `href=${quote}/blog/${segments[0]}/${rest}${quote}`; // treat as blog article
+  });
+}
+
 // Topic categories with specific prompts for variety
 const TOPIC_POOL = [
   {
@@ -84,7 +134,9 @@ Write a blog post following these rules:
 - End with a CTA to contact Barrett
 - No fluff phrases, no AI-sounding transitions
 - Write like a knowledgeable local agent, direct and practical
-- Include internal links using relative paths like /valrico/, /brandon/, /riverview/, /wesley-chapel/, /lithia/, /tampa/
+- Internal links: city pages are /valrico/, /brandon/, /riverview/, /wesley-chapel/, /lithia/, /tampa/
+- CRITICAL: links to other blog articles MUST start with /blog/ (e.g. /blog/moving-to-brandon-fl/). A bare /moving-to-brandon-fl/ is a dead 404 page.
+- Only link to city pages listed above or /blog/ articles. Never invent paths like /brandon-fl-homes-for-sale/ or /city/luxury-homes/ — those do not exist.
 - Content should sound like it was written today (${new Date().toLocaleDateString("en-US", { month: "long", year: "numeric" })})
 
 ${topic.prompt}
@@ -115,6 +167,16 @@ Respond with ONLY valid JSON in this exact format (no markdown, no code blocks):
     if (!post.title || !post.slug || !post.content) {
       return NextResponse.json({ error: "Missing required fields in AI response" }, { status: 500 });
     }
+
+    // Safety net: the AI writes blog links as bare slugs (/moving-to-brandon-fl/),
+    // but blog articles actually live under /blog/. Left alone those are 404s.
+    // Anything that isn't a known real route gets rewritten to /blog/<slug>/.
+    post.content = sanitizeInternalLinks(post.content);
+
+    // Safety net: never let a wrong phone number reach a published post.
+    post.content = post.content
+      .replace(/\(813\)\s*750-0926/g, CONTACT_PHONE)
+      .replace(/8137500926/g, CONTACT_PHONE_TEL);
 
     // Check for duplicate slug
     const checkRes = await fetch(
