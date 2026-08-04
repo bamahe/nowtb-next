@@ -4,6 +4,40 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-04 (Batch 21 — 10 Dover FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 Dover FL posts expanded from 5,400-7,900-char thin content to 13,700-18,300 chars each. Each post has: AEO direct answer in first paragraph, 4+ question-format H2s, 6+ H3 subsections, at least one comparison table, 10+ internal links, CTA box, and 5-question FAQ with JSON-LD FAQPage schema. Content dated 2026-08-03.
+
+### Dover FL Spoke Pages (10)
+
+1. **dover-fl-commute-guide** — Drive time matrix to 8 destinations (Tampa 25-35 min off-peak/40-55 min rush hour via SR-60, Brandon 12-18 min, Plant City 12-18 min, Lakeland 30-40 min, MacDill 38-45 min, Ybor 30-38 min, Wesley Chapel 40-50 min, Riverview 20-28 min), SR-60 vs I-4 vs US-92 route analysis, Dover vs Brandon/Valrico/Seffner/Plant City commute comparison table, WFH buyer analysis, rush hour tips; 15,948 chars
+
+2. **dover-fl-fha-va-homes** — FHA/VA/USDA Rural Development financing guide for rural acreage, well water testing requirements (coliform, nitrates, pH), septic certification process, down payment comparison table (VA 0%, USDA 0%, FHA 3.5%, Conventional 5-20%), acreage appraisal challenges, horse property FHA/VA considerations, lender selection advice; 15,308 chars
+
+3. **dover-fl-horse-properties** — Minimum acreage table by number of horses (1 horse 1.5-3 ac, 2 horses 2.5-5 ac, 3-4 horses 4-8 ac), price tiers (entry $280K-$400K, mid-range $400K-$650K, premium $650K-$1.2M+), zoning allowances, fencing type and cost breakdown, well pump rate requirements, pre-purchase inspection checklist, Dover vs Thonotosassa/Lithia/Lutz/Odessa equestrian comparison table; 15,416 chars
+
+4. **dover-fl-new-construction** — Build cost table (land $80K-$280K+, construction $165-$250+/sq ft, well $5K-$15K, septic $8K-$18K, permits $3K-$10K, site prep $5K-$35K), 5-step permitting process (perc test, septic design, building permits, well drilling, construction), builder types (custom vs owner-builder vs production), new vs existing comparison table (7 factors), construction-to-permanent loan guidance; 15,185 chars
+
+5. **dover-fl-market-trends** — 2026 price tier table (entry $220K-$320K, mid-range $320K-$460K, acreage $460K-$700K, estate $650K-$1.2M+, vacant land $80K-$250K), days on market (60-100 days typically), buyer vs seller analysis, Dover vs Brandon/Valrico/Seffner/Plant City market comparison table, insurance cost headwind, remote work demand driver; 13,754 chars
+
+6. **dover-fl-rental-investment** — Rental rate table by property type (2BR/1BA $1,400-$1,700/mo, 3BR/2BA CBS $1,700-$2,100/mo, 3BR/2BA with acreage $2,000-$2,600/mo, 4BR with barn $2,400-$3,200/mo), gross yield analysis at 4 price points ($280K-$520K: 6.5-7.3% gross), tenant profiles (horse owners, homesteaders, WFH professionals, agricultural businesses), Dover vs Brandon/Plant City investment comparison table, ViVi Property Management mention; 15,022 chars
+
+7. **dover-fl-farm-life** — Agricultural activities permitted under AR-1/AR-2/ASC zoning (livestock, poultry, row crops, nursery, beekeeping), agricultural tax exemption savings table (5-acre farm market $200K vs ag value $10K saves ~$3,600/yr in taxes), ag exemption qualification and rollback tax warning, farm infrastructure costs (fencing $4-$25/ft, barns $20K-$150K, irrigation wells $10K-$25K), Dover vs Thonotosassa/Lithia/Plant City farming comparison; 17,340 chars
+
+8. **dover-fl-well-septic-guide** — How wells work (Floridan Aquifer 80-250 ft depth, pump lifespan 8-15 yr, pump rate test), water quality tests checklist (coliform, nitrates, pH, iron, hardness, H2S, $150-$350), septic system fundamentals (tank sizing by bedroom count, 3-5 yr pumping schedule), repair/replacement cost table (drain field repair $2K-$10K, full replacement $10K-$25K, well pump $1,200-$3,500), financing implications (FHA/VA testing requirements), shared well warning; 15,425 chars
+
+9. **dover-fl-zoning-guide** — AR-1/AR-2/ASC/RSC classification comparison table (permitted uses for each), livestock density guidelines, setback requirements, ADU restrictions, home occupation limits, how to verify zoning (HillsboroughCounty GIS, Development Services call), Future Land Use vs zoning distinction, zoning vs deed restriction explanation, financing implications; 18,281 chars
+
+10. **dover-fl-schools-guide** — Elementary schools (Cork, Trapnell, Nelson, Bailey depending on address), middle schools (Burnett, McLane, Giunta by zone), Strawberry Crest High School profile (opened 2009, AP/dual enrollment/JROTC), Durant High School profile, Dover vs Brandon/Valrico/FishHawk/Plant City school comparison table, private school and homeschool options, Florida school choice scholarship programs, school zone effect on home values; 15,764 chars
+
+**Build:** Passed (Next.js 14 build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `430dd3e`
+
+---
+
 ## 2026-08-03 (Batch 20 — 10 Plant City FL spoke pages)
 
 **Pages improved: 10**
