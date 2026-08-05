@@ -4,6 +4,39 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-05 (Batch 22 — 10 Dundee FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 Dundee FL posts expanded from 5,122-char generic boilerplate to 11,700-15,200 chars each. Each post has: AEO direct answer in first paragraph, 4+ question-format H2s, 6+ H3 subsections, at least one comparison table, 10+ internal links, CTA box, and 5-question FAQ with JSON-LD FAQPage schema. Content dated 2026-08-04.
+
+### Dundee FL Spoke Pages (10)
+
+1. **dundee-fl-homes-for-sale-guide** — Home type breakdown by price tier ($180K-$240K entry CBS, $240K-$320K mid-range, $320K-$420K updated/new build, $420K-$700K+ lakefront), 6-column comparison table vs Haines City/Winter Haven/Auburndale, 4-step buying process (pre-approval, taxes/CDD check, inspection, insurance quote), flood zone and unpermitted work warnings; 15,244 chars
+
+2. **dundee-fl-schools-guide** — Polk Dundee Elementary Magnet (PK-5, 657 students, ranked 853rd/2,258 FL elementary), Polk Dundee Middle Magnet (6-8, 725 students, ranked 577th/1,205 FL middle), Haines City High School as assigned HS, honest assessment that Polk County is below FL average, magnet program eligibility explanation, private school options (Lakeland Christian, Santa Fe Catholic ~30-35 min away), Florida scholarship programs (Step Up For Students), 5-Q&A FAQ; 12,841 chars
+
+3. **dundee-fl-commute-guide** — Drive time matrix to 9 destinations (Tampa 65-78 min off-peak / 80-100 min rush hour via US-27 N to I-4 W, Lakeland 28-35 min, Haines City 10-15 min, Winter Haven 15-22 min, MacDill 80-95 min, Orlando 60-75 min), US-27 North as primary corridor, I-4 access via Haines City/Davenport interchange, remote work buyer analysis, Dundee vs Plant City/Auburndale/Haines City/Valrico commute and cost comparison table; 13,412 chars
+
+4. **is-dundee-fl-good-place-to-live** — 5 pros (affordability ~$288K, small-town character with ~4,717 residents, 8 lakes/lake lifestyle, no storm surge risk, central FL location equidistant Tampa/Orlando), 4 cons (80-100 min Tampa commute, below-average schools, limited local jobs, older housing inspection needs), 7-factor comparison table vs Haines City/Auburndale/Plant City/Valrico, who-fits vs who-should-look-elsewhere framework; 14,084 chars
+
+5. **dundee-fl-real-estate-guide** — 2026 market overview (median ~$288K, 149 days on market, buyer-favorable), market drivers analysis (higher rates reducing demand + new construction competition), property type breakdown (resale CBS, new construction from mid-$200Ks, waterfront $350K-$700K+, vacant land), 5-factor comparison table vs Haines City/Auburndale/Plant City/Bartow, 3-step buying strategy; 12,582 chars
+
+6. **dundee-fl-cost-of-living** — Monthly cost breakdown table at 4 home prices ($220K-$450K), property taxes (~1.26% effective rate), homeowners insurance ($1,800-$3,500/yr non-waterfront), flood insurance ($1,800-$4,500/yr for Zone AE), HOA/CDD breakdown, groceries (Walmart/Aldi in Haines City 7 miles, Publix in Winter Haven 15-20 min), Duke Energy utilities ($130-$180/mo), gas cost for commuters, comparison table vs Haines City/Auburndale/Brandon; 12,480 chars
+
+7. **dundee-fl-property-taxes** — Tax estimate table at 5 home prices ($200K-$450K with and without homestead exemption), Polk County base millage 6.6348 mills (FY2025-26), total ~16-17 mills, all taxing authority breakdown (county/school board/Town of Dundee/SFWMD/CDD), Florida homestead exemption explanation (first+second $25K), Save Our Homes cap and buyer reset warning, how to apply (polkpa.org, March 1 deadline), senior/disabled vet exemptions, VAB appeal process, comparison table vs Brandon/Valrico/Tampa; 12,789 chars
+
+8. **dundee-fl-new-construction** — Builder comparison table (Holiday Builders Woodland Ranch Estates mid $200Ks, Richmond American most active, DR Horton low $200Ks, Maronda Homes, Lennar), 65 new homes across 6 communities per Livabl, builder incentive breakdown (rate buydowns, closing cost credits $5K-$15K, design center credits, appliance packages), new vs resale comparison table (8 factors), independent representation and pre-drywall inspection guidance; 11,707 chars
+
+9. **dundee-fl-investment-property** — Rental rate table by property type (2BR/1BA $1,300-$1,600/mo, 3BR/2BA $1,600-$1,900/mo, updated 3BR $1,800-$2,100/mo, 4BR $2,000-$2,400/mo, lakefront $2,200-$3,000+/mo), gross yield analysis at 4 price points ($200K-$320K: 7.5-8.7% gross), tenant profile analysis (Haines City/US-27 workers, Lakeland workers, hospitality workers, retirees), STR not recommended assessment, Dundee vs Haines City/Auburndale/Plant City/Brandon comparison table, ViVi Property Management mention; 12,200 chars
+
+10. **dundee-fl-waterfront-homes** — Lake inventory table (Lake Marie most desirable, Crystal Lake, Lake Hamilton, others), price tier table ($350K-$450K entry, $450K-$600K mid, $600K-$800K premium, $800K+ custom), full due diligence section (flood zone verification via msc.fema.gov, elevation certificate $400-$800, dock and seawall inspection $5K-$25K replacement), lake water quality note, boating rules (verify with FWC by lake), Dundee lakefront vs Tampa Bay coastal vs Gulf 7-factor comparison table; 12,748 chars
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+---
+
 ## 2026-08-04 (Batch 21 — 10 Dover FL spoke pages)
 
 **Pages improved: 10**
