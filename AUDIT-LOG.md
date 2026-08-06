@@ -4,6 +4,42 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-06 (Batch 23 — 7 Gibsonton FL + 3 Lutz FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 posts expanded from ~8,900-char boilerplate to 13,100-16,500 chars each. Each page has: AEO direct answer in first paragraph, 6-7 H2 question-format headings, 8-16 H3 subsections, at least one comparison table, 13-15 internal links, CTA box, and 5-question FAQ with JSON-LD FAQPage schema. Content dated 2026-08-05.
+
+### Gibsonton FL Spoke Pages (7)
+
+1. **gibsonton-fl-homes-for-sale-guide** — Home type breakdown by 4 price tiers ($220K-$290K, $290K-$390K, $390K-$500K, $500K+), neighborhood breakdown (Carriage Pointe, Kings Lake, SilverStone, older core), 7-column comparison table vs Riverview/Apollo Beach/Ruskin, 4-step buying process (pre-approval, flood zone check, inspection, insurance quote); 15,707 chars
+
+2. **gibsonton-fl-schools-guide** — Gibsonton Elementary/Corr Elementary overview, Giunta Middle School profile, East Bay High School breakdown (CTE, JROTC, dual enrollment, honest below-avg academic assessment), comparison table vs Riverview/Apollo Beach/Brandon, magnet/school choice guidance, Florida Step Up scholarship programs, how school zone affects home values; 13,134 chars
+
+3. **gibsonton-fl-commute-guide** — 9-destination drive time matrix (Tampa 25-35 min off-peak, MacDill 28-38 min, Brandon 15-22 min, Ruskin 10-18 min, Apollo Beach 12-20 min), US-41 corridor and I-75 access analysis, Selmon Expressway option with toll cost breakdown, comparison table vs Riverview/Apollo Beach/Ruskin/Brandon, gas and toll monthly cost estimates ($240-$300/mo 5-day commuter); 14,846 chars
+
+4. **is-gibsonton-fl-good-place-to-live** — 5 pros (no HOA/CDD, Alafia River access, reasonable Tampa commute, south Hillsborough position, no city taxes), 4 cons (East Bay HS zone, limited retail, flood risk in river areas, older housing stock), 7-factor comparison table vs Riverview/Apollo Beach/Ruskin, who-fits vs who-should-look-elsewhere framework; 15,640 chars
+
+5. **gibsonton-fl-new-construction** — Explains why Gibsonton is largely built-out with limited infill new builds, 5-community comparison table of new construction alternatives (Riverview, Wimauma, Ruskin area, Apollo Beach, Sun City Center) with builders/prices/CDD fees, new vs resale comparison table (8 factors), builder incentive breakdown (rate buydowns, closing cost credits, design center credits), custom build cost estimate ($175-$280/sq ft); 14,633 chars
+
+6. **gibsonton-fl-investment-property** — Rental rate table by 5 property types ($1,400-$3,200+/mo), gross yield table at 4 price points ($270K-$420K: 6.6-7.6% gross), why investors choose Gibsonton (no HOA rental restrictions, no CDD fees, strong tenant demand), Gibsonton vs Riverview/Ruskin/Apollo Beach/Wimauma 5-factor investment comparison table, key risks (flood zone, older stock maintenance, no STR market), ViVi Property Management mention; 16,212 chars
+
+7. **gibsonton-fl-real-estate-guide** — 2026 market conditions (buyer-favorable, 45-90 days on market), 4-row price tier/DOM/condition table, market drivers analysis (insurance cost headwind, rate sensitivity, no-HOA advantage), Gibsonton vs Riverview/Apollo Beach/Ruskin/Hillsborough County comparison table, best-selling category (updated 3BR/2BA CBS), challenging segment (pre-1990 homes), waterfront guidance, seller pre-listing improvement list; 14,614 chars
+
+### Lutz FL Spoke Pages (3)
+
+8. **lutz-fl-schools-guide** — Steinbrenner High School breakdown (AP participation, dual enrollment, CTE, ranks top 10-15 in Hillsborough), Martinez Middle profile, 4 elementary options by address zone (Schwarzkopf/Chiles/Lutz Elem/Martinez Elem), comparison table vs Wesley Chapel/Land O Lakes/Carrollwood, private school options near Lutz (Berkeley Prep, Tampa Catholic, Academy of Holy Names, Carrollwood Day), magnet/school choice guidance, how Steinbrenner zone drives home values 5-12% premium; 14,307 chars
+
+9. **lutz-fl-commute-guide** — 10-destination drive time matrix (Tampa 25-38 min off-peak/45-60 min rush, Westshore 28-40 min, MacDill 38-48 min, Wesley Chapel 18-28 min), Dale Mabry vs Veterans Expressway route analysis (toll cost $60-$120/mo), SR-54 to I-275 option, Lutz vs Wesley Chapel/Land O Lakes/Carrollwood/New Tampa comparison table, hybrid work analysis, monthly commute cost estimates ($160-$300/mo depending on route); 14,974 chars
+
+10. **is-lutz-fl-good-place-to-live** — 5 pros (Steinbrenner HS zone, established neighborhoods with character, lake access, north Tampa employment access, low flood risk), 4 cons (high home prices $550K-$750K+, HOA fees in heritage communities, car dependency, rush hour on Dale Mabry), 7-factor comparison table vs Wesley Chapel/Land O Lakes/Carrollwood/New Tampa, who fits vs who should look elsewhere framework; 16,537 chars
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `6bb8085`
+
+---
+
 ## 2026-08-05 (Batch 22 — 10 Dundee FL spoke pages)
 
 **Pages improved: 10**
