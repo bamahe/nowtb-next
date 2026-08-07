@@ -4,6 +4,41 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-07 (Batch 25 — 6 Town n Country FL + 4 Westchase FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 posts expanded from ~8,400-char boilerplate to 17,478-21,088 chars each. Each page has: AEO direct answer box (Quick Answer), question-format H2s, H3 subsections, drive time matrices, comparison tables, CTA box, and 5-question FAQ with JSON-LD FAQPage schema.
+
+### Town n Country FL Spoke Pages (6)
+
+1. **town-n-country-fl-schools-guide** (21,088 chars) — Alonso HS (IB World School, performing arts magnet), Sickles HS (JROTC, northern sections), Sgt. Smith Middle, TnC Elementary, Lowry Elementary; private school drive time table (Carrollwood Day, Berkeley Prep, Tampa Catholic, Academy at Lakes); 5-factor comparison table vs Westchase/Carrollwood/South Tampa/Lutz; FAQ+JSON-LD.
+
+2. **town-n-country-fl-commute-guide** (17,795 chars) — 9-destination drive time matrix (TPA 4-7mi/8-22min, Westshore 4-6mi/8-25min, Downtown 10-14mi/15-45min, MacDill 14-18mi/20-48min, Clearwater Beach 18-22mi/25-55min), Veterans Expressway and Hillsborough Ave corridor analysis, HART bus note, comparison table vs Westchase/Carrollwood/Lutz/Brandon.
+
+3. **is-town-n-country-fl-good-place-to-live** (19,007 chars) — 5 pros (TPA/Westshore proximity, affordability vs location, unincorporated tax savings, Clearwater Beach access, canal homes with Old Tampa Bay access), 4 cons (older housing stock, average schools, no walkable town center, flood zone risk in western sections), 7-factor comparison table vs Westchase/Carrollwood/South Tampa; who-fits framework.
+
+4. **town-n-country-fl-real-estate-guide** (17,668 chars) — 2026 market ($330K-$420K median), 4-tier price table with DOM by price band, neighborhood breakdown (Countryway/TnC Park/Rocky Point/Bay Crest Park), buyer tips (roof age critical, flood zone, school zone verify), seller tips (pricing accuracy, roof disclosure), comparison table vs Westchase/Carrollwood/Brandon.
+
+5. **town-n-country-fl-investment-property** (18,032 chars) — Rental rate table (2BR $1,500-$1,800, 3BR $1,800-$2,400, canal front $2,500-$3,500), gross yield table by price point ($295K-$420K: 6.6-6.9% gross), investor advantages (no HOA rental restrictions, no CDD fees, airport corridor demand), risks (older housing CapEx, no STR market, insurance costs), comparison table vs Westchase/Gibsonton/Riverview/Apollo Beach.
+
+6. **town-n-country-fl-new-construction** (17,478 chars) — Explains TnC is fully built out with no new construction subdivisions; rare infill teardown-rebuilds ($175-$280/sqft build cost); nearby alternatives table (Odessa/Lutz/Wesley Chapel/Land O Lakes/Riverview with builders, prices, drive times); TnC resale vs new construction 8-factor comparison table; builder incentive guidance.
+
+### Westchase FL Spoke Pages (4)
+
+7. **westchase-fl-schools-guide** (18,053 chars) — Steinbrenner HS (A-rated, opened 2009, AP and dual enrollment), Sickles HS (southern 33626 sections), Farnell Middle (A), Westchase Elementary (walkable within community), Bryant Elementary (southern sections); private school table (Carrollwood Day, Berkeley Prep, Tampa Catholic, Academy at Lakes); comparison table vs Lutz/Carrollwood/Town n Country/New Tampa; FAQ+JSON-LD.
+
+8. **westchase-fl-commute-guide** (18,269 chars) — 10-destination drive time matrix (TPA 8mi/12-28min, Westshore 8mi/15-35min, Downtown 12mi/20-50min, Clearwater Beach 18mi/25-55min, MacDill 18-22mi/25-55min, St Pete 24-28mi/30-65min, Brandon 28-35mi/35-70min, Citrus Park 4mi/6-18min), Veterans Expressway toll analysis ($60-100/mo), Sheldon Rd/Hillsborough Ave/Linebaugh Ave route breakdown; comparison vs Lutz/TnC/New Tampa/FishHawk.
+
+9. **is-westchase-fl-good-place-to-live** (19,556 chars) — WCA community established early 1990s, ~2,000 acres, 12+ villages, built out 2016; 5 pros (A-rated schools K-12, walkable WPV town center, TPA/Westshore proximity, golf/swim/tennis/trails amenities, strong property values), 4 cons (high entry price $450K+, two-tier HOA $1,500-$3,600+/yr, limited entry-level inventory, Sheldon Rd rush hour); 7-factor comparison table vs Lutz/Town n Country/New Tampa; who-fits framework.
+
+10. **westchase-fl-real-estate-guide** (19,993 chars) — Built out 2016, fixed supply market; price/DOM table by segment (townhomes $380K-$550K, SF small $500K-$750K, SF large $700K-$1.2M, luxury $1.2M+); village breakdown (WPV $500K-$800K, Bridges $550K-$900K+, Glencliff $450K-$700K, Harbor Links golf frontage $600K-$1M+, Baybridge $450K-$700K); two-tier HOA table (WCA $1,120-$1,600/yr + sub-assoc $600-$4,200/yr); buyer/seller tips; FAQ+JSON-LD.
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+---
+
 ## 2026-08-07 (Batch 24 — 2 Lutz FL + 5 Sun City Center FL + 3 Temple Terrace FL spoke pages)
 
 **Pages improved: 10**
