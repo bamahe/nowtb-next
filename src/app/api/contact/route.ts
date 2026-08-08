@@ -80,8 +80,10 @@ export async function POST(request: NextRequest) {
 
     // --- Push lead to Follow Up Boss ---
     // FUB dedupes by email, so repeat submissions update the existing contact
-    // Property details are attached as a note so Barrett sees what they want
-    if (formData.email) {
+    // Property details are attached as a note so Barrett sees what they want.
+    // Push whenever we have any way to reach them — open-house walk-ins often
+    // give a name + phone but no email, and those must still land in FUB.
+    if (formData.email || formData.phone) {
       try {
         await pushLeadToFub({
           name: formData.name || "Unknown",
@@ -101,22 +103,29 @@ export async function POST(request: NextRequest) {
 
     // --- Send Resend alert email to Barrett + auto-responder to lead ---
     // Both are no-ops if RESEND_API_KEY is not configured — won't block the form
-    if (formData.email) {
-      // Fire both in parallel — neither blocks the response if they fail
-      Promise.all([
+    if (formData.email || formData.phone) {
+      // Always alert Barrett so he sees the walk-in; only auto-respond when we
+      // actually have an email address to reply to.
+      const emailTasks: Promise<void>[] = [
         sendBarrettAlert({
           name: formData.name || "Unknown",
-          email: formData.email,
+          email: formData.email || "",
           phone: formData.phone,
           message: formData.message,
           type,
           propertyAddress: formData.property?.address,
         }),
-        sendLeadAutoResponder({
-          name: formData.name || "Unknown",
-          email: formData.email,
-        }),
-      ]).catch((err) => console.warn("[Resend] Email batch failed:", err));
+      ];
+      if (formData.email) {
+        emailTasks.push(
+          sendLeadAutoResponder({
+            name: formData.name || "Unknown",
+            email: formData.email,
+          })
+        );
+      }
+      // Fire in parallel — neither blocks the response if they fail
+      Promise.all(emailTasks).catch((err) => console.warn("[Resend] Email batch failed:", err));
     }
 
     // --- Forward to n8n for additional automations ---

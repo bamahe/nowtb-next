@@ -18,7 +18,8 @@ function fubAuthHeader(): string {
  */
 interface FubLeadData {
   name: string;
-  email: string;
+  /** Optional — open-house walk-ins often give a phone but no email */
+  email?: string;
   phone?: string;
   message?: string;
   source: string;       // e.g. "nowtb.com — Showing Request"
@@ -59,11 +60,14 @@ export async function pushLeadToFub(data: FubLeadData): Promise<boolean> {
       firstName,
       lastName,
       source: data.source,
-      emails: [{ value: data.email }],
       tags: data.tags || [],
     };
 
-    // Add phone if provided
+    // Include whatever contact info we have. FUB needs at least one of
+    // email/phone to create a person — so phone-only walk-ins still land.
+    if (data.email) {
+      personPayload.emails = [{ value: data.email }];
+    }
     if (data.phone) {
       personPayload.phones = [{ value: data.phone }];
     }
@@ -139,7 +143,10 @@ export async function pushLeadToFub(data: FubLeadData): Promise<boolean> {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        person: { emails: [{ value: data.email }] },
+        person: {
+          ...(data.email ? { emails: [{ value: data.email }] } : {}),
+          ...(data.phone ? { phones: [{ value: data.phone }] } : {}),
+        },
         source: data.source,
         type: "Registration",
         message: data.property
@@ -163,7 +170,7 @@ export async function pushLeadToFub(data: FubLeadData): Promise<boolean> {
       }),
     });
 
-    console.log(`[FUB] Lead pushed successfully: ${data.email} (personId: ${personId})`);
+    console.log(`[FUB] Lead pushed successfully: ${data.email || data.phone} (personId: ${personId})`);
     return true;
   } catch (error) {
     console.error("[FUB] Error pushing lead:", error);
