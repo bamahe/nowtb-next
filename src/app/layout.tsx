@@ -122,10 +122,14 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased bg-light text-dark">
-        {/* Skip link for keyboard/screen reader users */}
+        {/* Skip link for keyboard/screen reader users.
+            Uses focus-visible, not focus: a plain :focus fires when a phone
+            browser or the address bar hands focus to the first link on load,
+            which painted a stray light box behind the REMAX logo on mobile.
+            focus-visible only triggers for real keyboard navigation. */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:z-[9999] focus:top-4 focus:left-4 focus:bg-accent focus:text-primary focus:px-4 focus:py-2 focus:rounded focus:font-semibold"
+          className="sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:z-[9999] focus-visible:top-4 focus-visible:left-4 focus-visible:bg-accent focus-visible:text-primary focus-visible:px-4 focus-visible:py-2 focus-visible:rounded focus-visible:font-semibold"
         >
           Skip to main content
         </a>

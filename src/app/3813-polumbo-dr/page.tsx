@@ -8,7 +8,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, MapPin, Bed, Bath, Ruler, Car, Waves, TreePine } from "lucide-react";
+import { Phone, Mail, MapPin, Bed, Bath, Ruler, Car, Waves, TreePine, CalendarDays, Navigation } from "lucide-react";
 import ContactForm from "@/components/ui/ContactForm";
 import PhotoGallery from "@/components/ui/PhotoGallery";
 import { JsonLd, breadcrumbSchema } from "@/lib/schema";
@@ -27,7 +27,9 @@ const L = {
   yearBuilt: 1991,
   garage: 3,
   mls: "TB8534534",
-  status: "Coming Soon",
+  status: "Active",
+  lat: 27.883567,
+  lng: -82.260154,
   taxes: 7466,
   subdivision: "Bloomingdale",
 };
@@ -39,6 +41,15 @@ const EMAIL = "barrett@nowtb.com";
 
 const PRICE_FMT = `$${L.price.toLocaleString()}`;
 const FULL_ADDRESS = `${L.address}, ${L.city}, ${L.state} ${L.zip}`;
+
+// Open house details. Deliberately no calendar dates — this QR code goes on the
+// open house signs and gets reused every weekend, so dates would go stale.
+const OPEN_HOUSE = "Saturday & Sunday · 2:00 – 4:00 PM";
+
+// Turn-by-turn navigation straight to the driveway. Uses lat/lng rather than the
+// address string so the phone never geocodes it to the wrong end of the street.
+// This universal Google Maps URL opens the native app on both iOS and Android.
+const DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${L.lat}%2C${L.lng}`;
 
 // --- Photos ------------------------------------------------------------------
 // 119 images downloaded from the listing tour, in the photographer's order:
@@ -56,12 +67,25 @@ export const metadata: Metadata = {
     `Renovated 4 bed, 3 bath, 3 car garage pool home on .64 acres in Bloomingdale. 2,271 sqft, single story, no CDD. MLS ${L.mls}. Call Barrett Henry at ${PHONE}.`,
   alternates: { canonical: "/3813-polumbo-dr/" },
   openGraph: {
-    title: "3813 Polumbo Dr, Valrico FL — Renovated Bloomingdale Pool Home",
+    title: "Open House Sat & Sun 2p–4p — 3813 Polumbo Dr, Valrico FL",
     description:
-      "4 bed, 3 bath, 3 car garage on .64 acres with a screened pool. Fully renovated, single story, optional HOA and no CDD.",
+      "4 bed, 3 bath, 3 car garage on .64 acres with a screened pool. Fully renovated, single story, optional HOA and no CDD. Open house Saturday and Sunday, 2:00 to 4:00.",
     url: "/3813-polumbo-dr/",
     type: "website",
-    images: [{ url: "/images/listings/3813-polumbo-dr/photo-001.jpg" }],
+    images: [
+      {
+        url: "/images/listings/3813-polumbo-dr/og-open-house.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Open House Saturday and Sunday 2p to 4p — 3813 Polumbo Dr, Valrico FL, $550,000",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Open House Sat & Sun 2p–4p — 3813 Polumbo Dr, Valrico FL",
+    description: "4 bed, 3 bath, 3 car garage pool home on .64 acres in Bloomingdale. $550,000.",
+    images: ["/images/listings/3813-polumbo-dr/og-open-house.jpg"],
   },
 };
 
@@ -154,6 +178,12 @@ export default function PolumboListingPage() {
             priceCurrency: "USD",
             availability: "https://schema.org/InStock",
           },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: L.lat,
+            longitude: L.lng,
+          },
+          hasMap: DIRECTIONS_URL,
         }}
       />
       <JsonLd
@@ -163,6 +193,30 @@ export default function PolumboListingPage() {
           { name: FULL_ADDRESS, url: "/3813-polumbo-dr/" },
         ])}
       />
+
+      {/* ---------- Open house banner — first thing a QR scanner sees ---------- */}
+      <section className="bg-accent text-primary">
+        <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div className="flex items-start gap-3">
+            <CalendarDays className="h-6 w-6 shrink-0 mt-0.5" aria-hidden="true" />
+            <div>
+              <p className="font-heading text-lg md:text-xl font-bold uppercase tracking-wide leading-tight">
+                Open House
+              </p>
+              <p className="font-body text-sm md:text-base font-semibold">{OPEN_HOUSE}</p>
+            </div>
+          </div>
+          <a
+            href={DIRECTIONS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 bg-primary text-white font-bold px-6 py-3 rounded hover:opacity-90 transition shrink-0"
+          >
+            <Navigation className="h-5 w-5" aria-hidden="true" />
+            Tap for Directions
+          </a>
+        </div>
+      </section>
 
       {/* ---------- Hero ---------- */}
       <section className="bg-primary text-white">
@@ -186,6 +240,15 @@ export default function PolumboListingPage() {
             >
               <Phone className="h-5 w-5" />
               Call {PHONE}
+            </a>
+            <a
+              href={DIRECTIONS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-white/40 px-6 py-3 rounded hover:bg-white/10 transition"
+            >
+              <Navigation className="h-5 w-5" aria-hidden="true" />
+              Directions
             </a>
             <a
               href="#schedule"
