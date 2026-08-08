@@ -8,7 +8,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, MapPin, Bed, Bath, Ruler, Car, Waves, TreePine, CalendarDays, Navigation } from "lucide-react";
+import { Phone, Mail, MapPin, Bed, Bath, Ruler, Car, Waves, TreePine, CalendarDays, Navigation, ClipboardCheck } from "lucide-react";
 import ContactForm from "@/components/ui/ContactForm";
 import PhotoGallery from "@/components/ui/PhotoGallery";
 import { JsonLd, breadcrumbSchema } from "@/lib/schema";
@@ -194,9 +194,11 @@ export default function PolumboListingPage() {
         ])}
       />
 
-      {/* ---------- Open house banner — first thing a QR scanner sees ---------- */}
-      <section className="bg-accent text-primary">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+      {/* ---------- Open house banner — first thing a QR scanner sees ----------
+           pt-24 clears the fixed 80px site header, which otherwise sits on top
+           of this band and hides the directions button. */}
+      <section className="bg-accent text-primary pt-24">
+        <div className="max-w-6xl mx-auto px-4 pb-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <div className="flex items-start gap-3">
             <CalendarDays className="h-6 w-6 shrink-0 mt-0.5" aria-hidden="true" />
             <div>
@@ -206,15 +208,24 @@ export default function PolumboListingPage() {
               <p className="font-body text-sm md:text-base font-semibold">{OPEN_HOUSE}</p>
             </div>
           </div>
-          <a
-            href={DIRECTIONS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-primary text-white font-bold px-6 py-3 rounded hover:opacity-90 transition shrink-0"
-          >
-            <Navigation className="h-5 w-5" aria-hidden="true" />
-            Tap for Directions
-          </a>
+          <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+            <a
+              href={DIRECTIONS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-primary text-white font-bold px-6 py-3 rounded hover:opacity-90 transition"
+            >
+              <Navigation className="h-5 w-5" aria-hidden="true" />
+              Tap for Directions
+            </a>
+            <Link
+              href="/3813-polumbo-dr/sign-in/"
+              className="inline-flex items-center justify-center gap-2 bg-white text-primary font-bold px-6 py-3 rounded border-2 border-primary hover:bg-primary hover:text-white transition"
+            >
+              <ClipboardCheck className="h-5 w-5" aria-hidden="true" />
+              Sign Into Open House
+            </Link>
+          </div>
         </div>
       </section>
 
