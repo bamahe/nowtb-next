@@ -4,6 +4,45 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-08 (Batch 26 — 5 Wimauma FL + 2 Ruskin FL + 1 Lithia FL + 2 Apollo Beach FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 posts expanded from ~7,773-8,682-char boilerplate to 18,271-41,397 chars each. Each page has: AEO Quick Answer box, question-format H2s, H3 subsections, data/comparison tables, CTA box, and 5-question FAQ with JSON-LD FAQPage schema. Meta descriptions updated on all 10.
+
+### Wimauma FL Spoke Pages (5)
+
+1. **is-wimauma-fl-good-place-to-live** (21,913 chars) — 5 pros (affordability, new construction communities, Hillsborough County services, Sun City Center proximity, growing retail), 5 trade-offs (Tampa commute 40-55min, CDD fees $1,500-$3,500/yr, below-avg schools, no established neighborhood feel, flood zone sections); comparison table vs Ruskin/Riverview/Apollo Beach; who-fits framework; FAQ+JSON-LD.
+
+2. **wimauma-fl-commute-guide** (19,722 chars) — Drive time matrix to 10 destinations (Tampa 40-50/55-70min, Westshore 38-48min, MacDill 40-52min, Brandon 25-35min, Riverview 18-28min, Sun City Center 10-18min, Apollo Beach 15-22min, Ruskin 12-20min, Sarasota 45-55min, Plant City 28-38min). Three routes explained (US-301 N to I-75 N, CR-672 W to US-41 N, US-301 S to I-75 S). No public transit note. Comparison table vs Ruskin/Riverview/Brandon/Apollo Beach; FAQ+JSON-LD.
+
+3. **wimauma-fl-schools-guide** (20,142 chars) — Elementary table (Wimauma Community School PK-8, Reddick, Summerfield, Corr), middle (Shields, Eisenhower), high (Lennard, East Bay). Honest below-county-average assessment for both high schools. Charter options table (Waterset Charter, Pinecrest Academy South, South Shore Charter). Florida scholarship programs. School zone value impact. Comparison table vs Apollo Beach/Riverview/Lithia/Wesley Chapel; FAQ+JSON-LD.
+
+4. **wimauma-fl-real-estate-guide** (18,271 chars) — 2026 market table ($289K-$320K entry, $340K-$420K mid, $430K-$520K+ large, $300K-$430K resale, CDD $1,500-$3,500/yr, HOA $200-$600/yr). Active communities: Berry Bay (Lennar), Ayersworth Glen (DR Horton), Sundance (Lennar), Cedarbrook (Ryan Homes), LGI. CDD explainer. Buyer/seller tips. Comparison table vs Ruskin/Riverview/Sun City Center; FAQ+JSON-LD.
+
+5. **wimauma-fl-new-construction** (18,317 chars) — Builder comparison table (Berry Bay/Lennar $330K-$470K, Sundance/Lennar $310K-$450K, Ayersworth Glen/DR Horton $295K-$400K, Cedarbrook/Ryan Homes $320K-$460K, LGI $290K-$350K). Per-builder profiles. Builder incentives (rate buydowns, closing cost credits, design center credits, appliances). New construction vs resale 7-factor comparison table; FAQ+JSON-LD.
+
+### Ruskin FL Spoke Pages (2)
+
+6. **ruskin-fl-schools-guide** (21,008 chars) — Elementary table (Cypress Creek, Belmont, Ruskin Elementary, Waterset Charter K-8), middle (Shields, Eisenhower), high (East Bay, Lennard, Sumner). Waterset Charter detail (K-8, lottery-based). Charter/private table with drive times. Florida school choice programs. School zone value impact. Comparison table vs Wimauma/Apollo Beach/Riverview; FAQ+JSON-LD.
+
+7. **ruskin-fl-55-plus-communities** (21,164 chars) — Community comparison table (Sun City Center $200K-$550K, Kings Point $250K-$480K, Valencia Lakes $280K-$450K, Cinnamon Cove, La Paloma, Lake Halliwell). Sun City Center detail (Del Webb 1961, 5,000+ homes, 27 holes golf, 200+ clubs, SCCA fee $300-$360/person/yr). Valencia Lakes detail (GL Homes, HOA $450-$650/mo, fully built). HOPA rules. HOA fee comparison table. Senior property tax exemptions. South Hillsborough vs FL 55+ comparison; FAQ+JSON-LD.
+
+### Lithia FL Spoke Pages (1)
+
+8. **lithia-fl-market-trends** (20,691 chars) — 2026 market table (median ~$520K, FishHawk $480K-$900K, $220-$260/sqft, 25-45 DOM, 97-99% list-to-sale). Four differentiators: Newsome HS premium (8-15%), FishHawk fixed supply (3,800 acres approaching buildout), 25+ mile trail system, A-rated feeder schools (Bevis A, Barrington A, Newsome HS). Price ranges by type (townhome $380K-$480K through acreage $550K-$2M+). Market comparison table vs Valrico/Wesley Chapel/Cheval/Riverview. 2026 forecast; FAQ+JSON-LD.
+
+### Apollo Beach FL Spoke Pages (2)
+
+9. **apollo-beach-fl-market-trends** (20,548 chars) — 2026 market table (non-WF $380K-$550K, canal $580K-$1.1M, open bay $1M-$3M+). Four drivers: waterfront scarcity, MacDill proximity, insurance costs as headwind ($4K-$8K homeowners + $2.5K-$6K flood), Waterset growth. Neighborhood breakdown (canal-front core, MiraBay, Waterset). Market comparison table. 2026 outlook (2-4% waterfront, 3-5% non-WF); FAQ+JSON-LD.
+
+10. **apollo-beach-fl-investment-guide** (41,397 chars) — Four investment strategies (long-term WF hold, non-WF cash flow, value-add renovation, buy-and-hold Waterset). Rental return table by property type with gross/net yields. MacDill AFB BAH rate table by rank. Insurance cost table by property type with monthly impact. Waterfront vs non-waterfront 8-factor comparison table. Investment neighborhood breakdown (canal core, MiraBay, Waterset, BonaVista). Market comparison table vs Ruskin/Wimauma/Riverview/Gibsonton. Property management note (ViVi, /property-management/ link). Investor buyer checklist (waterfront 5 items, non-WF 5 items); FAQ+JSON-LD.
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+---
+
 ## 2026-08-07 (Batch 25 — 6 Town n Country FL + 4 Westchase FL spoke pages)
 
 **Pages improved: 10**
