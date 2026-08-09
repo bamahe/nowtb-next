@@ -4,6 +4,39 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-09 (Batch 27 — 10 Spring Hill FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 posts expanded from 5,439-char boilerplate to 18,141-21,364 chars each. Each page has: AEO Quick Answer box, question-format H2s, H3 subsections, data/comparison tables, CTA box, and 5-question FAQ with JSON-LD FAQPage schema. Meta descriptions updated on all 10. Verified facts: ~$338K median (July 2026), 52 DOM, 613+ active listings, 8.0-8.1 mills combined millage, Springstead HS B+ (Niche, 1,893 students), Hernando County 4/10 Niche average, Suncoast Pkwy 45-55 min to Tampa. ViVi Property Management linked from investment page.
+
+### Spring Hill FL Spoke Pages (10)
+
+1. **spring-hill-fl-homes-for-sale-guide** (19,449 chars) — Price table by property type (resale CBS $285K-$420K, new construction $310K-$580K+, 55+ $200K-$400K, waterfront $380K-$950K+). ZIP code breakdown (34606/34607 west, 34608/34609 central, 34610 east). Home types section (resale CBS, new construction communities, Seven Hills, Hernando Beach). Well/septic due diligence, flood zone, insurance notes. Comparison table vs Brooksville/Wesley Chapel/New Port Richey/Hudson. FAQ+JSON-LD.
+
+2. **spring-hill-fl-schools-guide** (20,105 chars) — Hernando County 4/10 Niche average. Schools table (Springstead HS B+/1,893 students, Central HS, Nature Coast Tech). Middle schools (Powell, Fox Chapel, Challenger K-8). Private options (Pace K-12). Florida scholarship programs (Step Up, FES-UA). Comparison table vs Wesley Chapel/Land O Lakes/Brooksville/New Port Richey. FAQ+JSON-LD.
+
+3. **spring-hill-fl-commute-guide** (18,141 chars) — 9-destination drive time matrix (Tampa 45-55 min Suncoast/65-90 US-19, Wesley Chapel 30-40, Land O Lakes 20-30, Brooksville 20-28, New Port Richey 25-35, Weeki Wachee 10-15, Hernando Beach 20-28, Clearwater Beach 60-80, Sarasota 85-100). Suncoast Pkwy toll table ($35-$120/month by SunPass). No HART/public transit to Tampa note. Comparison table vs Wesley Chapel/Land O Lakes/New Port Richey/Zephyrhills/Brooksville. FAQ+JSON-LD.
+
+4. **is-spring-hill-fl-good-place-to-live** (19,285 chars) — 5 pros (affordable space, no HOA, natural springs/Weeki Wachee, no city income tax, Gulf Coast access). 5 cons (45-60 min Tampa commute, below-avg schools, well/septic, no walkable retail, flood risk western sections). 7-factor comparison table vs Wesley Chapel/Land O Lakes/New Port Richey/Hudson/Brooksville. Who-fits/who-should-look-elsewhere framework. FAQ+JSON-LD.
+
+5. **spring-hill-fl-real-estate-guide** (19,050 chars) — 2026 snapshot table (median ~$338K, 52 DOM, 600+ active, $185-$225/sqft, buyer-favorable). Price by area (west/central/east ZIPs). Buyer tips (pre-approval, well/septic inspection, flood zone, insurance quote). Seller tips (accurate pricing, roof age, pre-listing well/septic). Comparison table vs Brooksville/New Port Richey/Land O Lakes/Wesley Chapel. FAQ+JSON-LD.
+
+6. **spring-hill-fl-cost-of-living** (20,396 chars) — Monthly cost breakdown table at $280K/$338K/$425K (P+I, taxes, insurance, HOA/CDD=$0, well/septic amortized, electric, water, internet). Property tax note. Insurance ranges ($2,100-$3,500 Zone X, + flood for AE/VE). Duke Energy electric ($150-$220/month). Well/septic amortized $25-$50/month. Gas/tolls ($200-$400/month for Tampa commuters). AdventHealth Spring Hill. Comparison table vs Wesley Chapel/Land O Lakes/New Port Richey/Brandon. FAQ+JSON-LD.
+
+7. **spring-hill-fl-property-taxes** (19,910 chars) — Hernando County combined ~8.0-8.1 mills total. Tax estimate table at 5 price points ($250K-$500K with/without homestead). Florida $50K homestead exemption (two $25K layers). Save Our Homes 3% cap. Portability up to $500K. Apply at hernandopa.org by March 1. Senior/disabled vet/widow exemptions. No CDD in most Spring Hill. Comparison table vs Brandon/Wesley Chapel/Land O Lakes/New Port Richey/Brooksville. FAQ+JSON-LD.
+
+8. **spring-hill-fl-new-construction** (21,351 chars) — Builder comparison table (DR Horton $310K-$480K+, M/I Homes/Avalon West $380K-$580K+, Holiday Builders $310K-$450K, Adams Homes $295K-$420K, Maronda Homes $305K-$440K, WestBay $450K-$700K+). No CDD advantage over Wesley Chapel. Builder incentives (rate buydowns, $5K-$15K closing cost credits). Use own buyer's agent tip. Pre-drywall inspection. New vs resale 8-factor comparison table vs Brooksville/Wesley Chapel/Land O Lakes/Zephyrhills. FAQ+JSON-LD.
+
+9. **spring-hill-fl-investment-property** (21,292 chars) — Rental table by type (2BR $1,350-$1,600, 3BR standard $1,600-$2,000, 3BR updated $1,900-$2,300, 4BR $2,000-$2,500, new construction $2,100-$2,600, waterfront $2,200-$3,500+). Gross yield table at 4 price points ($250K-$400K: 6.6-7.7%). Advantages (no HOA rental restrictions, no CDD on most resale, healthcare worker demand from AdventHealth, lower entry). Risks (well/septic CapEx, no STR market, limited appreciation). ViVi Property Management mention with /property-management/ link. Comparison table vs Brooksville/Zephyrhills/New Port Richey/Wimauma/Gibsonton. FAQ+JSON-LD.
+
+10. **spring-hill-fl-waterfront-homes** (21,364 chars) — Waterfront type table (Hernando Beach Gulf canal $380K-$950K+ AE/VE, Weeki Wachee River $420K-$900K+ AE, interior pond $320K-$550K). Hernando Beach canal market detail. Dock/lift inspection warning. VE flood insurance $4K-$8K+/year. Elevation certificate $400-$800. Weeki Wachee River detail (12-mile spring-fed, 74 degrees, Aquatic Preserve, mermaid shows since 1947). DEP permit requirements. Due diligence checklist (FEMA flood map, elevation cert, dock/seawall, canal depth, water quality). Comparison table vs Hudson/Apollo Beach/New Port Richey/Tierra Verde. FAQ+JSON-LD.
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `scripts/update_spring_hill.py`, `AUDIT-LOG.md`
+
+---
+
 ## 2026-08-08 (Batch 26 — 5 Wimauma FL + 2 Ruskin FL + 1 Lithia FL + 2 Apollo Beach FL spoke pages)
 
 **Pages improved: 10**
