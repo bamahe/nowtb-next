@@ -8,6 +8,7 @@ const N8N_BASE = process.env.N8N_WEBHOOK_BASE || "";
 const fubSourceMap: Record<string, string> = {
   contact: "nowtb.com — Contact Form",
   showing: "nowtb.com — Showing Request",
+  "open-house": "nowtb.com — Open House Sign In",
   valuation: "nowtb.com — Home Valuation",
   newsletter: "nowtb.com — Newsletter",
   "buyer-reg": "nowtb.com — Buyer Registration",
@@ -17,6 +18,7 @@ const fubSourceMap: Record<string, string> = {
 const fubTagMap: Record<string, string[]> = {
   contact: ["Website Lead", "Contact Form"],
   showing: ["Website Lead", "Showing Request", "Buyer"],
+  "open-house": ["Website Lead", "Open House", "Buyer"],
   valuation: ["Website Lead", "Home Valuation", "Seller"],
   newsletter: ["Website Lead", "Newsletter"],
   "buyer-reg": ["Website Lead", "Buyer Registration", "Buyer"],
@@ -65,6 +67,7 @@ export async function POST(request: NextRequest) {
     const webhookMap: Record<string, string> = {
       contact: `${N8N_BASE}/nowtb-contact`,
       showing: `${N8N_BASE}/nowtb-showing`,
+      "open-house": `${N8N_BASE}/nowtb-open-house`,
       valuation: `${N8N_BASE}/nowtb-valuation`,
       newsletter: `${N8N_BASE}/nowtb-newsletter`,
       "buyer-reg": `${N8N_BASE}/nowtb-buyer-reg`,

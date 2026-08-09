@@ -70,7 +70,7 @@ export default function SignInKiosk() {
         body: JSON.stringify({
           name, email, phone, message,
           source: "/3813-polumbo-dr/sign-in/",
-          type: "showing",
+          type: "open-house",
           property: {
             address: ADDRESS, city: "Valrico", state: "FL",
             price: 550000, mlsNumber: "TB8534534",
