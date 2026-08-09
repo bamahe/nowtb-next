@@ -89,7 +89,7 @@ export default function SignInKiosk() {
   // ---- Thank-you screen ----
   if (status === "done") {
     return (
-      <main className="min-h-screen bg-primary text-white flex items-center justify-center p-8">
+      <main className="min-h-screen bg-primary text-white flex items-center justify-center p-8 pt-28">
         <div className="text-center">
           <div className="mx-auto mb-8 h-28 w-28 rounded-full bg-accent flex items-center justify-center">
             <Check className="h-16 w-16 text-primary" strokeWidth={3} />
@@ -110,7 +110,7 @@ export default function SignInKiosk() {
   return (
     <main className="min-h-screen bg-surface">
       {/* Header */}
-      <div className="bg-primary text-white px-8 py-7 text-center">
+      <div className="bg-primary text-white px-8 pt-28 pb-7 text-center">
         <h1 className="font-heading text-4xl md:text-5xl font-light uppercase tracking-wide">
           Welcome — Please Sign In
         </h1>
