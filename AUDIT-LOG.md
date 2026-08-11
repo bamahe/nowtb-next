@@ -4,6 +4,39 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-10 (Batch 28 — 10 Seffner FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 posts expanded from ~5,000-5,700-char boilerplate to 14,860-20,908 chars each. All dated 2026-08-10. Each page has: AEO Quick Answer box, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, 23+ years, (813) 733-7907), and 5-question FAQ with JSON-LD FAQPage schema. Meta descriptions updated on all 10. Area: Seffner FL (ZIP 33584), I-4/I-275 corridor, Hillsborough County.
+
+### Seffner FL Spoke Pages (10)
+
+1. **seffner-fl-commute-guide** (20,908 chars) — 9-destination drive time matrix (Tampa CBD 18-28 min via I-4 W, Westshore/Airport 20-30, MacDill 30-40, Brandon 10-18, Plant City 20-30, Lakeland 35-50, Riverview 25-35, Ybor City/Channelside 15-22, Wesley Chapel 25-40). Toll analysis (Selmon/Crosstown), SR-60/US-92/I-4 route comparison. HART bus Line 39 (US-92 to UATC). Comparison table vs Brandon/Temple Terrace/Plant City/Riverview. FAQ+JSON-LD.
+
+2. **seffner-fl-rental-market** (18,762 chars) — 2026 rental table by type (2BR $1,400-$1,650, 3BR standard $1,650-$2,050, 3BR updated $1,900-$2,300, 4BR $2,100-$2,600, 4BR pool $2,500-$3,200+). Gross yield table at 4 price points ($280K-$420K: 5.9-6.9%). No HOA rental restrictions advantage. Risks (older construction CapEx, limited STR demand, inspector notes on 1970s-80s homes). ViVi Property Management mention with /property-management/ link. Comparison table vs Brandon/Temple Terrace/Plant City/Valrico. FAQ+JSON-LD.
+
+3. **seffner-fl-market-trends** (16,097 chars) — 2026 snapshot table (median ~$330K-$380K, 35-55 DOM, buyer-favorable inventory, $185-$220/sqft). Price by segment (entry CBS $265K-$320K, mid $330K-$430K, large/updated $440K-$600K+). 2022-2026 price history narrative. Buyer tips (pre-approval, well/septic inspection, older roof negotiation). Seller tips (accurate pricing, paint/curb appeal, pre-listing inspection). Comparison table vs Brandon/Temple Terrace/Plant City/Valrico. FAQ+JSON-LD.
+
+4. **seffner-fl-parks-recreation** (16,194 chars) — Seffner Community Park (15 acres, multi-use fields, playgrounds), Hillsborough River State Park (3,400 acres, 8 miles canoe trail, 7 hiking trails), Edward Medard Reservoir Park (700 acres, 700-acre lake, bass fishing, camping), Seffner-Mango Greenway (connector trail, 2+ miles). Brandon regional parks within 15 min. I-75/Brandon-area commercial recreation. Comparison table vs Brandon/Plant City/Temple Terrace parks access. FAQ+JSON-LD.
+
+5. **seffner-fl-no-hoa-homes** (15,982 chars) — No-HOA advantages (no monthly fees, no rental restrictions, no approval committees, flexible parking). HOA prevalence table (most Seffner neighborhoods pre-HOA era, large lots 0.25-1+ acre). Due diligence checklist for no-HOA homes (deed restrictions, county setbacks, well/septic). Comparison table (Seffner no-HOA vs Brandon HOA vs Valrico). Price table by lot size. FAQ+JSON-LD.
+
+6. **seffner-fl-best-streets** (15,497 chars) — Geographic breakdown: North Seffner (SR-60 side, larger lots 0.5-1+ acre, Mango area), Central Seffner (US-92 corridor, established CBS, 1/4-acre lots), South Seffner (I-4 access, smaller lots, higher activity), East Seffner (rural feel, 1-5 acre tracts). Price table by area ($280K-$330K entry to $440K-$600K+ for larger acreage). Well vs. public utilities map notes. Sinkhole coverage reminder. School zone verification tip. Comparison table by area characteristics. FAQ+JSON-LD.
+
+7. **seffner-fl-starter-homes-guide** (18,397 chars) — Starter home price range $250K-$350K. FHA loan primer (3.5% down, 580+ FICO, MIP). FL Housing programs (FL Homebuyer Loan Program, FL Assist, FL HLP). Inspection checklist for 1970s-80s Seffner homes (roof, plumbing, electrical panels, A/C). Comparison table (Seffner vs Brandon/Temple Terrace/Plant City/Wimauma for first-time buyers). 12-step buyer timeline. FAQ+JSON-LD.
+
+8. **seffner-fl-fha-va-homes** (14,860 chars) — FHA 2026 Hillsborough County limit ($524,225 for 1-unit). VA loan benefits table ($0 down, no PMI, competitive rates, reusable). FHA down payment grid at 4 price points ($280K-$420K: 3.5% vs 20%). FHA property standards for older Seffner homes (roof, plumbing, well/septic, lead paint). VA vs FHA monthly payment comparison table. Comparison table vs conventional. FAQ+JSON-LD.
+
+9. **seffner-fl-vs-brandon** (15,229 chars) — 10-factor comparison table (price, lot size, HOA, commute, schools, new construction, walkability, restaurants/retail, flood risk, appreciation). Price by segment (Seffner $330K-$380K vs Brandon $380K-$450K). Schools: Armwood HS (Seffner) vs Bloomingdale/Jefferson/Newsome HS (Brandon). Drive time matrix (Brandon, Seffner both to Tampa CBD). Who should choose Seffner vs Brandon framework. FAQ+JSON-LD.
+
+10. **seffner-fl-shopping-dining** (16,096 chars) — Parsons Village (US-92: Winn-Dixie, Family Dollar, Dollar Tree, Ace Hardware, nail/hair salons). Regency Square (47 stores, AMC Regency 20, TJ Maxx, Burlington, Barnes & Noble, Jo-Ann). Brandon Town Center (10 min: 170+ stores, Macy's, Dillard's, Target, Apple, 20+ restaurants). Local restaurants: Sam's Seafood (US-92), Don Jose's Mexican (casual), La Isla Cafe (Cuban), Sims Smoked BBQ, Kim's Cuban Sandwich Shop (Parsons Village), Bob Evans. Healthcare: HCA Florida Brandon Hospital (7 min, Level II trauma, 399 beds). FAQ+JSON-LD.
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+---
+
 ## 2026-08-09 (Batch 27 — 10 Spring Hill FL spoke pages)
 
 **Pages improved: 10**
