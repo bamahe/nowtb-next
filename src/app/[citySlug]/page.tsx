@@ -13,7 +13,8 @@
 
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound, permanentRedirect } from "next/navigation";
+import { notFound, permanentRedirect, redirect } from "next/navigation";
+import { getMarketUpdateBySlug } from "@/lib/market-updates";
 
 import HeroSection from "@/components/ui/HeroSection";
 import ListingGrid from "@/components/ui/ListingGrid";
@@ -286,10 +287,24 @@ export async function generateMetadata({
     };
   }
 
-  // Market updates — redirect metadata points to canonical /market-updates/ URL
-  // Matches the blog-post pattern: noindex + canonical to prevent Google from
-  // indexing this duplicate URL alongside /market-updates/{slug}/
+  // Market updates — serve full metadata here since /market-updates/ URLs
+  // have a stale CDN-cached 308 redirect. This URL is the working canonical
+  // until the cache expires, then we can switch back to noindex + redirect.
   if (parsed === "market-update") {
+    const mu = getMarketUpdateBySlug(citySlug);
+    if (mu) {
+      return {
+        title: mu.title,
+        description: mu.excerpt || `${mu.title} — latest housing market data from Barrett Henry, REALTOR® at REMAX Collective.`,
+        alternates: { canonical: `/${citySlug}/` },
+        robots: { index: true, follow: true },
+        openGraph: {
+          title: mu.title,
+          description: mu.excerpt,
+          type: "article",
+        },
+      };
+    }
     return {
       alternates: { canonical: `/market-updates/${citySlug}/` },
       robots: { index: false, follow: true },
@@ -564,12 +579,12 @@ export default async function CityPage({
     permanentRedirect(`/blog/${citySlug}/`);
   }
 
-  // Market updates — 308 permanent redirect to canonical /market-updates/{slug}/ URL
-  // Must be permanentRedirect (308) not redirect (307) so Google consolidates
-  // both URLs. Previously this rendered the full page here, creating duplicate
-  // content with /market-updates/{slug}/ (URL cannibalization).
+  // Market updates — use 307 (temporary) redirect instead of 308 (permanent)
+  // to avoid CDN caching the redirect. A previous 308 from /market-updates/
+  // back to /{slug}/ got stuck in Vercel's edge cache, creating a redirect loop.
+  // 307 still tells the browser to go to /market-updates/ but won't get cached.
   if (parsed === "market-update") {
-    permanentRedirect(`/market-updates/${citySlug}/`);
+    redirect(`/market-updates/${citySlug}/`);
   }
 
   // Southoak — redirect to nested /brandon/southoak/ canonical URL
