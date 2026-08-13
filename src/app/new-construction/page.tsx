@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   description:
     "New construction homes in Tampa Bay from Lennar, D.R. Horton, Taylor Morrison, and more. Builder incentives available. Barrett Henry, REALTOR® at REMAX Collective.",
   alternates: { canonical: "/new-construction/" },
+  openGraph: {
+    title: "Tampa Bay New Construction Homes | Barrett Henry, REALTOR®",
+    description: "New construction homes in Tampa Bay from Lennar, D.R. Horton, Taylor Morrison, and more. Builder incentives available. Barrett Henry, REALTOR® at REMAX Collective.",
+    type: "website",
+  },
 };
 
 export const revalidate = 300;

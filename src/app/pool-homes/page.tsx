@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   description:
     "Pool homes for sale in Tampa Bay. Private pools, heated pools, screened enclosures. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
   alternates: { canonical: "/pool-homes/" },
+  openGraph: {
+    title: "Tampa Bay Pool Homes for Sale | Barrett Henry, REALTOR®",
+    description: "Pool homes for sale in Tampa Bay. Private pools, heated pools, screened enclosures. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
+    type: "website",
+  },
 };
 
 export const revalidate = 300;

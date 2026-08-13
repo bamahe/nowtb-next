@@ -245,6 +245,44 @@ const nextConfig = {
       // Don't redirect — let the [id] route handle it. Old Showcase URLs will 404
       // naturally since they won't match a Bridge ListingKey.
 
+      // ── Audit fix Phase 1 (2026-08-13): broken internal links ──
+      // /get-help/ returns 404 — point to /contact/
+      { source: "/get-help", destination: "/contact/", permanent: true },
+      { source: "/get-help/", destination: "/contact/", permanent: true },
+      // 825 broken links to /tampa-bay-real-estate-agent
+      { source: "/tampa-bay-real-estate-agent", destination: "/about/", permanent: true },
+      { source: "/tampa-bay-real-estate-agent/", destination: "/about/", permanent: true },
+      // 531 broken links — market update page, not a blog post
+      { source: "/blog/florida-housing-market-2026", destination: "/florida-housing-market-2026/", permanent: true },
+      { source: "/blog/florida-housing-market-2026/", destination: "/florida-housing-market-2026/", permanent: true },
+      // 451 broken links — investing page lives at /investing/
+      { source: "/blog/investment-property", destination: "/investing/", permanent: true },
+      { source: "/blog/investment-property/", destination: "/investing/", permanent: true },
+      // 303 broken links — valuation page lives at /free-home-valuation/
+      { source: "/blog/home-valuation", destination: "/free-home-valuation/", permanent: true },
+      { source: "/blog/home-valuation/", destination: "/free-home-valuation/", permanent: true },
+      // 5 broken links — guide lives under /guides/
+      { source: "/closing-costs-florida-guide", destination: "/guides/closing-costs-guide-florida/", permanent: true },
+      { source: "/closing-costs-florida-guide/", destination: "/guides/closing-costs-guide-florida/", permanent: true },
+      // Blog prefix URLs → standalone section pages
+      { source: "/blog/waterfront-homes", destination: "/waterfront/", permanent: true },
+      { source: "/blog/waterfront-homes/", destination: "/waterfront/", permanent: true },
+      { source: "/blog/luxury-homes", destination: "/luxury/", permanent: true },
+      { source: "/blog/luxury-homes/", destination: "/luxury/", permanent: true },
+      { source: "/blog/realtor", destination: "/about/", permanent: true },
+      { source: "/blog/realtor/", destination: "/about/", permanent: true },
+      // Blog prefix city URLs → city hub pages
+      { source: "/blog/brandon-fl-homes-for-sale", destination: "/brandon/", permanent: true },
+      { source: "/blog/brandon-fl-homes-for-sale/", destination: "/brandon/", permanent: true },
+      { source: "/blog/valrico-fl-homes-for-sale", destination: "/valrico/", permanent: true },
+      { source: "/blog/valrico-fl-homes-for-sale/", destination: "/valrico/", permanent: true },
+      { source: "/blog/plant-city-fl-homes-for-sale", destination: "/plant-city/", permanent: true },
+      { source: "/blog/plant-city-fl-homes-for-sale/", destination: "/plant-city/", permanent: true },
+      { source: "/blog/seffner-fl-homes-for-sale", destination: "/seffner/", permanent: true },
+      { source: "/blog/seffner-fl-homes-for-sale/", destination: "/seffner/", permanent: true },
+      { source: "/blog/riverview-fl-homes-for-sale", destination: "/riverview/", permanent: true },
+      { source: "/blog/riverview-fl-homes-for-sale/", destination: "/riverview/", permanent: true },
+
       // ── WordPress sitemap URLs — redirect to new sitemap ──
       { source: "/sitemap_index.xml", destination: "/sitemap.xml", permanent: true },
       { source: "/sitemap-home.xml", destination: "/sitemap.xml", permanent: true },

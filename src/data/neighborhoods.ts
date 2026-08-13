@@ -243,7 +243,6 @@ export const neighborhoods: NeighborhoodData[] = [
   { slug: "parkland-estates", name: "Parkland Estates", city: "tampa" },
   { slug: "interbay", name: "Interbay", city: "tampa" },
   { slug: "k-bar-ranch", name: "K-Bar Ranch New Tampa", city: "tampa" },
-  { slug: "making-an-offer-on-a-home", name: "Making an Offer on a Home in Florida 2026", city: "tampa" },
   { slug: "new-tampa", name: "New Tampa", city: "tampa" },
   { slug: "palma-ceia", name: "Palma Ceia", city: "tampa" },
   { slug: "palma-ceia-west", name: "Palma Ceia West Tampa", city: "tampa" },
@@ -492,7 +491,7 @@ export const neighborhoods: NeighborhoodData[] = [
   { slug: "west-park-village", name: "West Park Village", city: "westchase" },
   { slug: "ayersworth-glen", name: "Ayersworth Glen", city: "wimauma" },
   { slug: "sereno", name: "Sereno", city: "wimauma" },
-  { slug: "southshore-bay", name: "Southshore Bay Wimauma", city: "wimauma" },
+  // Removed: southshore-bay "Southshore Bay Wimauma" (dup — canonical is "SouthShore Bay" below)
   { slug: "downtown-winter-haven", name: "Downtown Winter Haven", city: "winter-haven" },
   { slug: "eagle-lake", name: "Eagle Lake", city: "winter-haven" },
   { slug: "lake-ashton", name: "Lake Ashton", city: "winter-haven" },

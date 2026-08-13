@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   description:
     "Latest housing market data for Tampa Bay cities. Quarterly price trends, inventory levels, and forecasts from Barrett Henry at REMAX Collective.",
   alternates: { canonical: "/market-updates/" },
+  openGraph: {
+    title: "Tampa Bay Housing Market Updates | Barrett Henry, REALTOR®",
+    description: "Latest housing market data for Tampa Bay cities. Quarterly price trends, inventory levels, and forecasts from Barrett Henry at REMAX Collective.",
+    type: "website",
+  },
 };
 
 // Extract key stats from post content for the card display

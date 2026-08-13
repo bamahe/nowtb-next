@@ -77,8 +77,65 @@ export default async function MarketUpdatePage({
   // Extract city name from title
   const city = update.title.split(" Housing Market")[0].split(" Real Estate")[0];
 
+  // Build JSON-LD structured data for this market update
+  const canonicalUrl = `https://nowtb.com/market-updates/${slug}/`;
+
   return (
     <>
+      {/* === JSON-LD: BreadcrumbList === */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://nowtb.com" },
+              { "@type": "ListItem", position: 2, name: "Market Updates", item: "https://nowtb.com/market-updates/" },
+              { "@type": "ListItem", position: 3, name: update.title, item: canonicalUrl },
+            ],
+          }),
+        }}
+      />
+
+      {/* === JSON-LD: Article schema === */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: update.title,
+            datePublished: update.date,
+            dateModified: update.date,
+            description: update.excerpt || `${update.title} — latest housing market data from Barrett Henry, REALTOR® at REMAX Collective.`,
+            mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
+            author: {
+              "@type": "Person",
+              name: "Barrett Henry",
+              jobTitle: "Broker Associate",
+              url: "https://nowtb.com/about/",
+              image: "https://nowtb.com/images/barrett-henry-headshot.jpg",
+              sameAs: [
+                "https://nowtb.com",
+                "https://www.instagram.com/nowtampa/",
+                "https://www.facebook.com/NOWTampaBay",
+              ],
+            },
+            publisher: {
+              "@type": "RealEstateAgent",
+              name: "Barrett Henry, REALTOR\u00ae",
+              url: "https://nowtb.com",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://nowtb.com/images/remax-logo-white.png",
+              },
+            },
+            ...(thumbnail ? { image: thumbnail } : {}),
+          }),
+        }}
+      />
+
       {/* === Header === */}
       <section className="bg-primary pt-32 pb-16">
         <div className="container-wide max-w-3xl text-center">

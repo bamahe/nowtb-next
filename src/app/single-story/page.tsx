@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   title: "Tampa Bay Single-Story Homes for Sale | Barrett Henry, REALTOR®",
   description: "Single-story homes for sale in Tampa Bay. One-level living, no stairs. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
   alternates: { canonical: "/single-story/" },
+  openGraph: {
+    title: "Tampa Bay Single-Story Homes for Sale | Barrett Henry, REALTOR®",
+    description: "Single-story homes for sale in Tampa Bay. One-level living, no stairs. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
+    type: "website",
+  },
 };
 export const revalidate = 300;
 

@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   title: "Tampa Bay Land & Acreage for Sale | Barrett Henry, REALTOR®",
   description: "Land and acreage for sale in Tampa Bay. Farm properties, build-your-own lots, and rural estates. Barrett Henry, REALTOR® at REMAX Collective.",
   alternates: { canonical: "/land-acreage/" },
+  openGraph: {
+    title: "Tampa Bay Land & Acreage for Sale | Barrett Henry, REALTOR®",
+    description: "Land and acreage for sale in Tampa Bay. Farm properties, build-your-own lots, and rural estates. Barrett Henry, REALTOR® at REMAX Collective.",
+    type: "website",
+  },
 };
 export const revalidate = 300;
 

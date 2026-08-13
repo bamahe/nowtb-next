@@ -137,6 +137,7 @@ export default async function BlogPostPage({
             "@type": "BlogPosting",
             headline: post.title,
             datePublished: post.date,
+            dateModified: post.date,
             description: plainExcerpt || `${post.title} — Barrett Henry, REALTOR® at REMAX Collective.`,
             mainEntityOfPage: {
               "@type": "WebPage",
@@ -147,10 +148,26 @@ export default async function BlogPostPage({
               name: "Barrett Henry",
               jobTitle: "Broker Associate",
               url: "https://nowtb.com/about/",
+              image: "https://nowtb.com/images/barrett-henry-headshot.jpg",
+              sameAs: [
+                "https://nowtb.com",
+                "https://www.instagram.com/nowtampa/",
+                "https://www.facebook.com/NOWTampaBay",
+              ],
+              hasCredential: [
+                { "@type": "EducationalOccupationalCredential", credentialCategory: "Designation", name: "e-PRO" },
+                { "@type": "EducationalOccupationalCredential", credentialCategory: "Designation", name: "MRP (Military Relocation Professional)" },
+                { "@type": "EducationalOccupationalCredential", credentialCategory: "Designation", name: "SRS (Seller Representative Specialist)" },
+              ],
             },
             publisher: {
               "@type": "RealEstateAgent",
-              name: "Barrett Henry, REALTOR®",
+              name: "Barrett Henry, REALTOR\u00ae",
+              url: "https://nowtb.com",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://nowtb.com/images/remax-logo-white.png",
+              },
             },
             ...(thumbnail ? { image: thumbnail } : {}),
           }),

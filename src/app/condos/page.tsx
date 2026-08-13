@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   description:
     "Condos for sale in Tampa Bay — downtown Tampa, Clearwater Beach, St. Pete, and more. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
   alternates: { canonical: "/condos/" },
+  openGraph: {
+    title: "Tampa Bay Condos for Sale | Barrett Henry, REALTOR®",
+    description: "Condos for sale in Tampa Bay — downtown Tampa, Clearwater Beach, St. Pete, and more. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
+    type: "website",
+  },
 };
 
 export const revalidate = 300;

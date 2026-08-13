@@ -3,6 +3,7 @@
 // =============================================================================
 
 import type { Metadata } from "next";
+import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Barrett Henry, REALTOR®",
@@ -14,6 +15,11 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
+    <>
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", url: "https://nowtb.com/" },
+        { name: "Privacy Policy", url: "https://nowtb.com/privacy-policy/" },
+      ])} />
     <section className="container-wide py-16">
       <div className="max-w-3xl mx-auto prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary">
         <h1>Privacy Policy</h1>
@@ -63,5 +69,6 @@ export default function PrivacyPolicyPage() {
         </p>
       </div>
     </section>
+    </>
   );
 }

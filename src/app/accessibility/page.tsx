@@ -3,6 +3,7 @@
 // =============================================================================
 
 import type { Metadata } from "next";
+import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Accessibility Statement | Barrett Henry, REALTOR®",
@@ -14,6 +15,11 @@ export const metadata: Metadata = {
 
 export default function AccessibilityPage() {
   return (
+    <>
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", url: "https://nowtb.com/" },
+        { name: "Accessibility", url: "https://nowtb.com/accessibility/" },
+      ])} />
     <section className="container-wide py-16">
       <div className="max-w-3xl mx-auto prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary">
         <h1>Accessibility Statement</h1>
@@ -60,5 +66,6 @@ export default function AccessibilityPage() {
         </p>
       </div>
     </section>
+    </>
   );
 }

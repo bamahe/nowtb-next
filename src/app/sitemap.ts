@@ -5,8 +5,9 @@
 // =============================================================================
 
 import { MetadataRoute } from "next";
-import { cities, SPOKE_TOPICS } from "@/data/cities";
+import { cities, SPOKE_TOPICS, getCityTopics } from "@/data/cities";
 import { neighborhoods } from "@/data/neighborhoods";
+import { builders } from "@/data/builders";
 import { getAllComparisonSlugs } from "@/data/comparisons";
 import { getAllRegionalSlugs } from "@/data/regional-pages";
 import { getCatchAllMiscSlugs } from "@/data/misc-pages";
@@ -46,6 +47,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/inspectors/`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
   ];
 
+  // ── Property type landing pages (11 pages) ──
+  const propertyTypeLandingPages: MetadataRoute.Sitemap = [
+    "55-plus-communities", "condos", "golf-homes", "land-acreage",
+    "new-construction", "no-hoa", "pool-homes", "price-reduced",
+    "single-story", "townhomes", "waterfront",
+  ].map((slug) => ({
+    url: `${siteUrl}/${slug}/`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
+
   // ── Blog posts (624 posts) — canonical URL is /blog/{slug} ──
   const blogPosts: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
     url: `${siteUrl}/blog/${post.slug}/`,
@@ -83,9 +96,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: city.tier === 1 ? 0.9 : city.tier === 2 ? 0.7 : 0.6,
   }));
 
-  // ── City spoke pages (city + topic combos, ~1,050 pages) ──
+  // ── City spoke pages (city + topic combos, ~1,050+ pages) ──
+  // Uses getCityTopics() to include horse-properties for rural/semi-rural cities
   const citySpokes: MetadataRoute.Sitemap = cities.flatMap((city) =>
-    SPOKE_TOPICS.filter((t) => city.topics.includes(t.slug)).map((topic) => ({
+    getCityTopics(city).filter((t) => city.topics.includes(t.slug) || t.slug === "horse-properties").map((topic) => ({
       url: `${siteUrl}/${city.slug}-${topic.slug}/`,
       lastModified: now,
       changeFrequency: "daily" as const,
@@ -109,8 +123,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  // ── Neighborhood pages (461 base + 461 homes-for-sale + 461 realtor = 1,383) ──
-  const neighborhoodPages: MetadataRoute.Sitemap = neighborhoods.flatMap((n) => [
+  // ── Builder detail pages ──
+  const builderPages: MetadataRoute.Sitemap = builders.map((b) => ({
+    url: `${siteUrl}/builders/${b.slug}/`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  // ── Neighborhood pages — filter out neighborhoods whose slug matches a city slug ──
+  // City routes take priority, so these neighborhood base pages are unreachable
+  const citySlugs = new Set(cities.map((c) => c.slug));
+  const filteredNeighborhoods = neighborhoods.filter((n) => !citySlugs.has(n.slug));
+  const neighborhoodPages: MetadataRoute.Sitemap = filteredNeighborhoods.flatMap((n) => [
     {
       url: `${siteUrl}/${n.slug}/`,
       lastModified: now,
@@ -180,6 +205,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticPages,
+    ...propertyTypeLandingPages,
     ...blogPosts,
     ...marketUpdatePages,
     ...guidesPages,
@@ -187,6 +213,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...citySpokes,
     ...cityRealtorPages,
     ...sellCityPages,
+    ...builderPages,
     ...neighborhoodPages,
     ...countyPages,
     ...loanPages,
