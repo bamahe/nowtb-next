@@ -316,13 +316,23 @@ const nextConfig = {
     ];
   },
   async rewrites() {
-    return [
-      // Private seller hub — static HTML (both with and without trailing slash)
-      { source: '/3813-polumbo', destination: '/3813-polumbo.html' },
-      { source: '/3813-polumbo/', destination: '/3813-polumbo.html' },
-      { source: '/1609-lakeview-ave', destination: '/1609-lakeview-ave.html' },
-      { source: '/1609-lakeview-ave/', destination: '/1609-lakeview-ave.html' },
-    ];
+    return {
+      // beforeFiles rewrites run before Next.js checks any file or route —
+      // this overrides any stale CDN-cached 308s from previous deployments
+      beforeFiles: [
+        // Force /market-updates/[slug]/ to serve from the market-updates route
+        // (fixes cached 308 loop from prior cannibalization fix deployment)
+        { source: '/market-updates/:slug/', destination: '/market-updates/:slug/' },
+        { source: '/market-updates/:slug', destination: '/market-updates/:slug/' },
+      ],
+      afterFiles: [
+        // Private seller hub — static HTML (both with and without trailing slash)
+        { source: '/3813-polumbo', destination: '/3813-polumbo.html' },
+        { source: '/3813-polumbo/', destination: '/3813-polumbo.html' },
+        { source: '/1609-lakeview-ave', destination: '/1609-lakeview-ave.html' },
+        { source: '/1609-lakeview-ave/', destination: '/1609-lakeview-ave.html' },
+      ],
+    };
   },
   // Allow Bridge API listing photos and Showcase IDX images
   images: {
