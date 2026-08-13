@@ -253,11 +253,10 @@ const nextConfig = {
       { source: "/tampa-bay-real-estate-agent", destination: "/about/", permanent: true },
       { source: "/tampa-bay-real-estate-agent/", destination: "/about/", permanent: true },
       // 531 broken links — market update page, not a blog post
+      // /blog/ version goes to market-updates; the bare /florida-housing-market-2026/
+      // is handled by [citySlug] which already permanentRedirects to /market-updates/
       { source: "/blog/florida-housing-market-2026", destination: "/market-updates/florida-housing-market-2026/", permanent: true },
       { source: "/blog/florida-housing-market-2026/", destination: "/market-updates/florida-housing-market-2026/", permanent: true },
-      // Skip the meta-refresh hop — go straight to market-updates
-      { source: "/florida-housing-market-2026", destination: "/market-updates/florida-housing-market-2026/", permanent: true },
-      { source: "/florida-housing-market-2026/", destination: "/market-updates/florida-housing-market-2026/", permanent: true },
       // 451 broken links — investing page lives at /investing/
       { source: "/blog/investment-property", destination: "/investing/", permanent: true },
       { source: "/blog/investment-property/", destination: "/investing/", permanent: true },
