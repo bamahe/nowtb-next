@@ -132,6 +132,11 @@ export default async function MarketUpdatePage({
               },
             },
             ...(thumbnail ? { image: thumbnail } : {}),
+            // Speakable schema — tells AI assistants & voice search which parts to read aloud
+            speakable: {
+              "@type": "SpeakableSpecification",
+              cssSelector: [".quick-answer", "article h1", "article h2 + p"],
+            },
           }),
         }}
       />

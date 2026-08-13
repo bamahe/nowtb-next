@@ -8,31 +8,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getPrimaryAgent } from "@/data/agents";
-import { cities } from "@/data/cities";
 import { getAllPosts, getPostBySlug, getPostBySlugAsync, getPostThumbnail, getRelatedPosts } from "@/lib/posts";
+import { findRelatedPosts, getRelatedPostsTitle } from "@/lib/related-posts";
 import { cleanWpContent } from "@/lib/utils";
 import PhotoCredit from "@/components/ui/PhotoCredit";
 import SearchCategoryListings from "@/components/ui/SearchCategoryListings";
-
-/**
- * Find the city that matches a blog post slug.
- * Checks if any city slug appears as a segment in the post slug.
- * Returns the matched CityData or null.
- */
-function getCityFromSlug(postSlug: string) {
-  // Sort cities by slug length descending so longer slugs match first
-  // (e.g., "apollo-beach" matches before "beach")
-  const sorted = [...cities].sort((a, b) => b.slug.length - a.slug.length);
-  for (const city of sorted) {
-    // Check the city slug appears in the post slug as a whole segment
-    // e.g., "sell-home-fast-valrico" contains "valrico",
-    // "best-neighborhoods-brandon-fl" contains "brandon"
-    if (postSlug.includes(city.slug)) {
-      return city;
-    }
-  }
-  return null;
-}
 
 export const dynamicParams = true;
 
@@ -83,13 +63,10 @@ export default async function BlogPostPage({
   const thumbnail = getPostThumbnail(post);
   const related = getRelatedPosts(slug, 3);
 
-  // Find city-related posts for the "More About {City}" section
-  const matchedCity = getCityFromSlug(slug);
-  const cityRelatedPosts = matchedCity
-    ? getAllPosts()
-        .filter((p) => p.slug !== slug && p.slug.includes(matchedCity.slug))
-        .slice(0, 6)
-    : [];
+  // Intelligent related posts — uses city + topic + county scoring (6-8 posts)
+  const allPosts = getAllPosts();
+  const smartRelated = findRelatedPosts(slug, allPosts, 8);
+  const smartRelatedTitle = getRelatedPostsTitle(slug, smartRelated);
 
   // Strip HTML tags from excerpt for schema description
   const plainExcerpt = (post.excerpt || "").replace(/<[^>]*>/g, "").trim();
@@ -170,6 +147,11 @@ export default async function BlogPostPage({
               },
             },
             ...(thumbnail ? { image: thumbnail } : {}),
+            // Speakable schema — tells AI assistants & voice search which parts to read aloud
+            speakable: {
+              "@type": "SpeakableSpecification",
+              cssSelector: [".quick-answer", "article h1", "article h2 + p"],
+            },
           }),
         }}
       />
@@ -368,6 +350,40 @@ export default async function BlogPostPage({
                 prose-p:leading-relaxed"
               dangerouslySetInnerHTML={{ __html: cleanWpContent(post.content) }}
             />
+
+            {/* === Bottom CTA — appears on every blog post for lead capture === */}
+            <div className="mt-10 rounded-xl border-2 border-primary/20 bg-primary/5 p-6 md:p-8">
+              <h2 className="font-heading font-bold text-xl md:text-2xl text-primary mb-2">
+                Thinking About Selling?
+              </h2>
+              <p className="font-body text-muted text-sm mb-5">
+                Find out what your home is worth in today&apos;s market — no obligation, no pressure.
+                Barrett Henry has 23+ years of real estate experience and can help you make a
+                confident decision.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link
+                  href="/free-home-valuation/"
+                  className="inline-flex items-center justify-center gap-2 bg-primary text-white font-semibold px-6 py-3 rounded-lg text-sm hover:bg-primary/90 transition-colors"
+                >
+                  Get Your Free Home Valuation
+                </Link>
+                <a
+                  href="tel:+18137337907"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary font-semibold px-6 py-3 rounded-lg text-sm hover:bg-primary hover:text-white transition-colors"
+                >
+                  Call (813) 733-7907
+                </a>
+              </div>
+              <div className="flex flex-wrap gap-x-6 gap-y-2 mt-4 text-xs font-body text-muted">
+                <Link href="/guides/" className="text-link hover:underline">
+                  Browse All Guides &rarr;
+                </Link>
+                <Link href="/about/" className="text-link hover:underline">
+                  Meet Barrett Henry &rarr;
+                </Link>
+              </div>
+            </div>
           </article>
         </div>
       </section>
@@ -375,73 +391,61 @@ export default async function BlogPostPage({
       {/* === Live listings for search category blog posts === */}
       <SearchCategoryListings slug={slug} />
 
-      {/* === Related Articles — city-specific if available, general fallback otherwise === */}
-      {(() => {
-        // Use city-specific posts if we matched a city, otherwise use the general related posts
-        const bottomPosts = (cityRelatedPosts.length > 0 && matchedCity)
-          ? cityRelatedPosts
-          : related;
-        const sectionTitle = (cityRelatedPosts.length > 0 && matchedCity)
-          ? `More About ${matchedCity.name}`
-          : "Related Articles";
-
-        if (bottomPosts.length === 0) return null;
-
-        return (
-          <section className="bg-gray-50 py-12">
-            <div className="container-wide">
-              <h2 className="heading-display text-2xl text-primary mb-8">
-                {sectionTitle}
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {bottomPosts.map((rp) => {
-                  const rpThumb = getPostThumbnail(rp);
-                  return (
-                    <Link
-                      key={rp.slug}
-                      href={`/blog/${rp.slug}/`}
-                      className="group block border border-gray-200 rounded-lg overflow-hidden bg-white hover:border-accent hover:shadow-lg transition-all"
-                    >
-                      {rpThumb && (
-                        <div className="h-40 overflow-hidden">
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img
-                            src={rpThumb}
-                            alt={rp.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                            loading="lazy"
-                          />
-                        </div>
-                      )}
-                      <div className="p-5">
-                        <h3 className="font-heading font-bold text-sm text-primary mb-2 group-hover:text-accent transition-colors line-clamp-2">
-                          {rp.title}
-                        </h3>
-                        {rp.excerpt && (
-                          <p className="font-body text-muted text-xs mb-3 line-clamp-3">
-                            {rp.excerpt.replace(/<[^>]*>/g, "").slice(0, 100)}
-                            {rp.excerpt.replace(/<[^>]*>/g, "").length > 100 ? "…" : ""}
-                          </p>
-                        )}
-                        <time
-                          dateTime={rp.date}
-                          className="font-body text-muted text-[11px]"
-                        >
-                          {new Date(rp.date).toLocaleDateString("en-US", {
-                            year: "numeric",
-                            month: "short",
-                            day: "numeric",
-                          })}
-                        </time>
+      {/* === Intelligent Related Posts — scored by city + topic + county matching === */}
+      {smartRelated.length > 0 && (
+        <section className="bg-gray-50 py-12">
+          <div className="container-wide">
+            <h2 className="heading-display text-2xl text-primary mb-8">
+              {smartRelatedTitle}
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {smartRelated.map((rp) => {
+                const rpThumb = getPostThumbnail(rp);
+                return (
+                  <Link
+                    key={rp.slug}
+                    href={`/blog/${rp.slug}/`}
+                    className="group block border border-gray-200 rounded-lg overflow-hidden bg-white hover:border-accent hover:shadow-lg transition-all"
+                  >
+                    {rpThumb && (
+                      <div className="h-40 overflow-hidden">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={rpThumb}
+                          alt={rp.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
+                        />
                       </div>
-                    </Link>
-                  );
-                })}
-              </div>
+                    )}
+                    <div className="p-5">
+                      <h3 className="font-heading font-bold text-sm text-primary mb-2 group-hover:text-accent transition-colors line-clamp-2">
+                        {rp.title}
+                      </h3>
+                      {rp.excerpt && (
+                        <p className="font-body text-muted text-xs mb-3 line-clamp-3">
+                          {rp.excerpt.replace(/<[^>]*>/g, "").slice(0, 100)}
+                          {rp.excerpt.replace(/<[^>]*>/g, "").length > 100 ? "…" : ""}
+                        </p>
+                      )}
+                      <time
+                        dateTime={rp.date}
+                        className="font-body text-muted text-[11px]"
+                      >
+                        {new Date(rp.date).toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "short",
+                          day: "numeric",
+                        })}
+                      </time>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
-          </section>
-        );
-      })()}
+          </div>
+        </section>
+      )}
     </>
   );
 }
