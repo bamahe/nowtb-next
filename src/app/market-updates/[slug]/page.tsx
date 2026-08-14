@@ -141,9 +141,24 @@ export default async function MarketUpdatePage({
         }}
       />
 
-      {/* === Header === */}
-      <section className="bg-primary pt-32 pb-16">
-        <div className="container-wide max-w-3xl text-center">
+      {/* === Header — the market update photo is the hero background ===
+           The image sits behind the title with a navy scrim over it so the
+           white headline stays readable on light photos. */}
+      <section className="relative bg-primary pt-32 pb-16 overflow-hidden">
+        {thumbnail && (
+          <>
+            <img
+              src={thumbnail}
+              alt={`${city} housing market`}
+              className="absolute inset-0 w-full h-full object-cover"
+              loading="eager"
+              // eslint-disable-next-line @next/next/no-img-element
+            />
+            {/* Scrim — dark enough that the headline passes contrast on any photo */}
+            <div className="absolute inset-0 bg-primary/80" aria-hidden="true" />
+          </>
+        )}
+        <div className="relative container-wide max-w-3xl text-center">
           <span className="inline-block px-4 py-1 rounded-full text-xs font-body font-semibold bg-accent/20 text-accent mb-4">
             Market Update
           </span>
@@ -226,17 +241,8 @@ export default async function MarketUpdatePage({
 
           {/* Main content */}
           <article className="lg:col-span-3 order-1 lg:order-2">
-            {thumbnail && (
-              <div className="mb-8 rounded-lg overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={thumbnail}
-                  alt={`${city} housing market update`}
-                  className="w-full h-auto"
-                  loading="eager"
-                />
-              </div>
-            )}
+            {/* The photo now lives in the page header above — it was here in the
+                body, which pushed it below the fold on the article. */}
             <div
               className="blog-content prose prose-lg font-body text-dark max-w-none
                 prose-headings:font-heading prose-headings:text-primary
