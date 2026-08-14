@@ -4,6 +4,40 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-14 (Batch 31 — 10 Osprey FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 posts expanded from 5,143-char boilerplate to 14,501-18,948 chars each. All dated 2026-08-13. Each page has: AEO Quick Answer box, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, REMAX Collective, 23+ years, (813) 733-7907), and 5-question FAQ with JSON-LD FAQPage schema. Meta descriptions updated on all 10. Facts verified via web search: median listing ~$792K (April 2026), ~$335/sqft, ~85 DOM, prices down 6-14% from 2022 peak; Pine View School #12 nationally A+ Niche 10/10 GS grades 2-12 gifted-only; Sarasota County School District top 10% FL, 62% math/reading vs 52% FL avg; The Oaks Bayside $1.5M-$7M+ on Little Sarasota Bay; Casey Key Gulf-front $2.5M-$10M+; Edgewater at Hidden Bay gated 12-acre resort on bay; Sarasota avg rent $2,535/mo; Sarasota County ~14-15 mills combined millage; Oscar Scherer State Park 1,400 acres in-community; Osprey-Sarasota 13 miles (~15 min), Osprey-Venice 8 miles (~12 min), Osprey-Tampa 69 miles (~70-85 min).
+
+### Osprey FL Spoke Pages (10)
+
+1. **osprey-fl-homes-for-sale-guide** (18,442 chars) — Price table by property type (inland SFH $450K-$750K, The Oaks Preserve $500K-$1.2M, Oaks Clubside $850K-$2.5M, Oaks Bayside $1.5M-$7M+, Casey Key $2.5M-$10M+, Edgewater at Hidden Bay $900K-$2.5M). Comparison table vs Sarasota/Venice/Nokomis/Casey Key. The Oaks 3-section breakdown (Bayside, Clubside, Preserve). Buyer checklist (flood zone, HOA+club fees, 4-point inspection, seawall). FAQ+JSON-LD.
+
+2. **osprey-fl-schools-guide** (17,616 chars) — Pine View School deep-dive (#12 nationally US News, A+ Niche, 10/10 GS, grades 2-12, 1,674 students, 16:1 ratio, 100% graduation, SAT avg 1420, ACT avg 32 — gifted designation required, not auto neighborhood school). Laurel Nokomis School (PK-8 combo). Venice High School (primary HS for 34229). School stats comparison table (Sarasota Co. vs Hillsborough, Manatee, Pasco). District top 10% FL. FAQ+JSON-LD.
+
+3. **osprey-fl-commute-guide** (16,174 chars) — 12-destination drive time matrix (Sarasota 12-18 min, Venice 10-15 min, Tampa CBD 70-85 min, MacDill 75-90 min, Sarasota-Bradenton Airport 22-30 min, Fort Myers 65-80 min, Orlando 145-170 min, Siesta Key Beach 22-30 min, etc.). US-41 vs I-75 route analysis. Laurel Road (Exit 195) as I-75 on-ramp. No practical public transit to Tampa (SCAT local only). Comparison table vs Venice/Sarasota/Nokomis/Bradenton. FAQ+JSON-LD.
+
+4. **is-osprey-fl-good-place-to-live** (15,716 chars) — 5 pros (Sarasota County top-10% FL schools; Oscar Scherer State Park 1,400 acres in-community; between Sarasota and Venice; Little Sarasota Bay and Gulf access via Casey Key; quieter coastal lifestyle). 4 cons (high home prices; no city services/downtown; Tampa commute 70-90 min; hurricane/flood exposure). 6-factor comparison table vs Venice/Sarasota/Nokomis. FAQ+JSON-LD.
+
+5. **osprey-fl-real-estate-guide** (14,501 chars) — 2026 market snapshot table (median listing ~$792K, median sale ~$650K, $335/sqft, 85 DOM, buyer-favorable). Price guide by segment (entry $450K-$700K inland; mid $700K-$1.2M; upper $1.2M-$3M; luxury $3M-$10M+). Seller guidance (pricing accuracy, best season Feb-May). Insurance cost explainer. The Oaks Club membership disclosure. Comparison not included (kept focused on Osprey). FAQ+JSON-LD.
+
+6. **osprey-fl-cost-of-living** (16,524 chars) — Monthly homeownership cost table at 3 price points ($550K/$792K/$1.5M: mortgage P+I, property tax, HO+wind insurance, flood insurance, HOA, club fees, utilities). Comparison table vs Venice/Sarasota/Nokomis. Groceries/dining (drive to Publix Laurel Road, The Point restaurant, Casey Key Fish House). Utilities (FPL summer $180-$280/mo). No state income tax advantage for high earners. Hidden costs checklist (windstorm, CDD, club membership, pool service, pest control). FAQ+JSON-LD.
+
+7. **osprey-fl-property-taxes** (16,662 chars) — Tax estimate table at 7 price points ($500K-$1.5M, with/without homestead). Sarasota County combined millage ~14-15 mills. Homestead exemption ($50K, apply by March 1 at sc-pa.com). Save Our Homes cap (3% annual increase limit). Portability (up to $500K transferable). Senior/veteran/disability exemptions. Upcoming FL homestead expansion ($150K in 2027, $250K in 2028 for those who file by Dec 31 2026). Comparison table vs Hillsborough/Pinellas/Polk/Pasco (Sarasota Co. lower millage). FAQ+JSON-LD.
+
+8. **osprey-fl-new-construction** (15,310 chars) — Limited supply explainer (largely built-out community). Edgewater at Hidden Bay (12-acre gated resort, Little Sarasota Bay, $900K-$2.5M). Casey Key custom infill ($2M-$4M+ lots, builds $3M-$10M+). The Oaks infill lots (Oaks Bayside, architectural review). Taylor Morrison active in area. Comparison table vs Venice/Nokomis/North Sarasota Co./Manatee Co./Wellen Park. Custom builder due diligence (DBPR license check, independent inspector, flood zone). Impact windows/roofing requirement benefit for insurance. FAQ+JSON-LD.
+
+9. **osprey-fl-investment-property** (15,646 chars) — Appreciation vs cash-flow market framing. Annual rental table (3BR SFH $2,400-$3,500/mo, The Oaks $3,000-$5,000/mo, seasonal winter $4,000-$6,000+/mo). Gross yield table at 5 scenarios ($550K-$1.2M, 2.75-5.2%). STR restrictions in HOA communities. Insurance cost risk (8-15K/yr). HOA rental restrictions. Luxury market volatility risk. ViVi Property Management link (/property-management/). Comparison vs Sorrento East no-HOA. FAQ+JSON-LD.
+
+10. **osprey-fl-waterfront-homes** (18,948 chars) — Three waterfront markets: Little Sarasota Bay (The Oaks Bayside), Gulf (Casey Key), resort bay (Edgewater at Hidden Bay). The Oaks Bayside detailed feature table (133-197 home sites, 0.33-1.5+ acres, $1.5M-$7M+, private docking). Casey Key price guide by type (bay-front $1.5M-$4M, Gulf-view $1.2M-$2.5M, Gulf-front $3M-$8M+, Gulf-to-Bay $4M-$10M+, vacant Gulf-front lot $2M-$4M+). Flood zone and insurance (Zone AE/VE, $3K-$15K+/yr). Seawall/dock/riparian rights inspection checklist. Storm surge awareness. Comparison table vs Venice canal/Apollo Beach/Siesta Key. FAQ+JSON-LD.
+
+**Build:** Passed (Next.js 14.2.35 build green, NODE_EXTRA_CA_CERTS set for Google Fonts)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Commit:** 556cd3d
+
+---
+
 ## 2026-08-13 (Batch 30 — 10 Lakeland FL spoke pages)
 
 **Pages improved: 10**
