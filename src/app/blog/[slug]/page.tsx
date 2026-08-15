@@ -10,7 +10,7 @@ import { notFound } from "next/navigation";
 import { getPrimaryAgent } from "@/data/agents";
 import { getAllPosts, getPostBySlug, getPostBySlugAsync, getPostThumbnail, getRelatedPosts } from "@/lib/posts";
 import { findRelatedPosts, getRelatedPostsTitle } from "@/lib/related-posts";
-import { cleanWpContent } from "@/lib/utils";
+import { cleanWpContent, metaDescription } from "@/lib/utils";
 import PhotoCredit from "@/components/ui/PhotoCredit";
 import SearchCategoryListings from "@/components/ui/SearchCategoryListings";
 
@@ -31,7 +31,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = await getPostBySlugAsync(slug);
   if (!post) return { title: "Not Found" };
-  const description = post.excerpt || `${post.title} — Barrett Henry, REALTOR® at REMAX Collective.`;
+  const description = metaDescription(post.excerpt, post.title);
   const ogTitle = `${post.title} | Barrett Henry, REALTOR®`;
   return {
     title: post.title,
