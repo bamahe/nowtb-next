@@ -1161,6 +1161,11 @@ async function SpokePage({
   const isHousingMarket = topic.slug === "housing-market";
   let soldListings: import("@/lib/types").Listing[] = [];
 
+  // Crawler-visible inventory, read from the Supabase cache rather than Bridge —
+  // costs no API quota. Spoke pages are the ones that rank for "<city> homes for
+  // sale", so they need real homes in the HTML more than anything else on the site.
+  const seoListings = await getCachedListings(city.zip_codes || [], 12);
+
   // LISTINGS NOW LOAD CLIENT-SIDE — no server-side API calls on spoke pages.
   // This prevents Bridge API rate limiting from deploys and crawlers.
 
@@ -1213,10 +1218,35 @@ async function SpokePage({
       {/* === The listings server-rendered on this page, as an ItemList.
               Only emitted when there are real listings, so the markup never
               claims inventory the page isn't actually showing. === */}
-      {listings.length > 0 && (
+      {seoListings.length > 0 && (
         <JsonLd
-          data={listingItemListSchema(listings, `${topic.label} in ${city.name}, FL`)!}
+          data={listingItemListSchema(seoListings, `${topic.label} in ${city.name}, FL`)!}
         />
+      )}
+
+      {/* === Crawler-visible inventory ===
+           Same homes the interactive grid below shows, rendered into the HTML
+           so engines that don't run JavaScript can read real addresses. */}
+      {seoListings.length > 0 && (
+        <section className="sr-only" aria-label={`${topic.label} in ${city.name}, Florida`}>
+          <h2>{topic.label} in {city.name}, FL</h2>
+          <ul>
+            {seoListings.map((l) => (
+              <li key={String(l.ListingKey)}>
+                <a href={`/properties/${l.ListingKey}/`}>
+                  {[l.StreetNumber, l.StreetName, l.StreetSuffix].filter(Boolean).join(" ")},{" "}
+                  {l.City}, {l.StateOrProvince} {l.PostalCode}
+                </a>
+                {" — "}
+                {typeof l.ListPrice === "number" ? `$${l.ListPrice.toLocaleString()}` : "Price on request"}
+                {l.BedroomsTotal ? `, ${l.BedroomsTotal} bed` : ""}
+                {l.BathroomsTotalInteger ? `, ${l.BathroomsTotalInteger} bath` : ""}
+                {l.LivingArea ? `, ${l.LivingArea.toLocaleString()} sq ft` : ""}
+                {l.SubdivisionName ? `, ${l.SubdivisionName}` : ""}
+              </li>
+            ))}
+          </ul>
+        </section>
       )}
 
       {/* === Hero — compact with breadcrumb + CTA === */}
