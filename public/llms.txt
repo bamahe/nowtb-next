@@ -16,7 +16,7 @@ The official real estate website of Barrett Henry, REALTOR® and Broker Associat
 Valrico, Brandon, Riverview, Lithia, Apollo Beach, Seffner, Plant City, Dover, Thonotosassa, Ruskin
 
 ## Content Areas
-- Tampa Bay homes for sale (MLS-powered property search via Showcase IDX)
+- Tampa Bay homes for sale (live Stellar MLS listings via the Bridge Data Output API, refreshed hourly)
 - Home buying guides (first-time buyers, VA loans, FHA loans, conventional, USDA)
 - Home selling guides (pricing strategy, staging, marketing, FSBO vs. REALTOR)
 - Free home valuation / comparative market analysis (CMA)

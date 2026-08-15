@@ -4,7 +4,7 @@
 // Route: /properties/search/
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { Suspense, useCallback, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Search, SlidersHorizontal, X, Map, LayoutGrid } from "lucide-react";
 import type { Listing } from "@/lib/types";
@@ -81,7 +81,33 @@ const MORE_FILTER_KEYS = [
 
 // ── Main page component ──────────────────────────────────────────────────────
 
+/**
+ * useSearchParams() must sit inside a Suspense boundary. This page owns its own
+ * rather than leaning on a root app/loading.tsx — a root-level loading.tsx puts
+ * the whole app behind a streaming boundary, which flushes a 200 status before
+ * notFound() can run and turns every 404 on the site into a soft 404.
+ * If it breaks, check: this Suspense wrapper is still around SearchPageInner.
+ */
 export default function PropertySearchPage() {
+  return (
+    <Suspense fallback={<SearchLoadingFallback />}>
+      <SearchPageInner />
+    </Suspense>
+  );
+}
+
+function SearchLoadingFallback() {
+  return (
+    <div className="flex min-h-[60vh] items-center justify-center">
+      <div className="flex flex-col items-center gap-4">
+        <div className="h-10 w-10 animate-spin rounded-full border-4 border-border border-t-accent" />
+        <p className="font-body text-muted text-sm">Loading search...</p>
+      </div>
+    </div>
+  );
+}
+
+function SearchPageInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
