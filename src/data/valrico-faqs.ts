@@ -23,6 +23,7 @@ import { BATCH3_FAQS } from "./batch3-faqs";
 import { BATCH4_FAQS } from "./batch4-faqs";
 import { REMAINING_COUNTY_FAQS } from "./remaining-county-faqs";
 import { BATCH5_FAQS } from "./batch5-faqs";
+import { DOVER_FAQS } from "./dover-faqs";
 
 export const CITY_FAQS: Record<string, CityFAQ[]> = {
   ...BRANDON_FAQS,
@@ -32,6 +33,7 @@ export const CITY_FAQS: Record<string, CityFAQ[]> = {
   ...BATCH4_FAQS,
   ...REMAINING_COUNTY_FAQS,
   ...BATCH5_FAQS,
+  ...DOVER_FAQS,
   valrico: [
     {
       question: "What's the difference between ZIP codes 33594 and 33596 in Valrico?",
