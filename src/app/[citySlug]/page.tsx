@@ -52,6 +52,7 @@ import { guides, type GuideData } from "@/data/guides";
 import { getListings, getListingsByCity, getOpenHouses } from "@/lib/bridge";
 import { CITY_FAQS } from "@/data/valrico-faqs";
 import { JsonLd, cityPlaceSchema, listingItemListSchema } from "@/lib/schema";
+import { getCachedListings } from "@/lib/listing-cache";
 import { NEIGHBORHOOD_DESCRIPTIONS } from "@/data/neighborhood-descriptions";
 
 // --- County data for county pages ---
@@ -709,11 +710,17 @@ export default async function CityPage({
 // =============================================================================
 
 async function HubPage({ city }: { city: CityData }) {
-  // LISTINGS NOW LOAD CLIENT-SIDE to prevent server-side API calls from
-  // burning through the Bridge rate limit. Pages render static SEO content
-  // server-side, listings appear after page load via /api/listings.
-  // This means: deploys = 0 API calls, crawlers = 0 API calls,
-  // only real user visits trigger listing fetches.
+  // The interactive listing grid still loads client-side, so browsing and
+  // filtering never touch the Bridge rate limit.
+  //
+  // But crawlers don't run JavaScript, so that left AI engines seeing city
+  // pages with zero homes on them. We now also render a small set of real
+  // listings into the HTML, read from the Supabase cache that the hourly
+  // /api/cron/refresh-listings job keeps warm. Reading the cache costs no
+  // Bridge quota, so this adds crawler-visible inventory without changing
+  // the API budget. Empty cache just means no static block — the client
+  // grid below still renders exactly as it does today.
+  const seoListings = await getCachedListings(city.zip_codes || [], 12);
 
   // No server-side market stats — listings load client-side now
   const listings: never[] = [];
@@ -760,9 +767,14 @@ async function HubPage({ city }: { city: CityData }) {
       {/* === City entity — real coordinates, county, and ZIP for this place === */}
       <JsonLd data={cityPlaceSchema(city)} />
 
-      {/* Hub listings load client-side from /api/listings, so there is nothing
-          server-rendered here to describe in an ItemList. The spoke pages fetch
-          server-side and carry that markup instead. */}
+      {/* === ItemList of the listings actually rendered into the HTML below.
+              This is what lets an AI engine cite real inventory for this city
+              instead of only the prose. === */}
+      {seoListings.length > 0 && (
+        <JsonLd
+          data={listingItemListSchema(seoListings, `Homes for Sale in ${city.name}, FL`)!}
+        />
+      )}
 
       {/* === Compact hero with breadcrumb + CTA (matches spoke pattern) === */}
       <section className="bg-primary pt-36 pb-16">
@@ -873,6 +885,34 @@ async function HubPage({ city }: { city: CityData }) {
               </Link>
             </div>
           </div>
+        </section>
+      )}
+
+      {/* === Crawler-visible inventory ===
+           Rendered server-side from the cache so search engines and AI models
+           read real addresses and prices in the HTML. Hidden from sighted users
+           because the interactive grid directly below shows the same homes with
+           filtering — but it stays in the accessibility tree and in the DOM, so
+           it is readable markup rather than a cloaked block. */}
+      {seoListings.length > 0 && (
+        <section className="sr-only" aria-label={`Homes for sale in ${city.name}, Florida`}>
+          <h2>Homes for Sale in {city.name}, FL</h2>
+          <ul>
+            {seoListings.map((l) => (
+              <li key={String(l.ListingKey)}>
+                <a href={`/properties/${l.ListingKey}/`}>
+                  {[l.StreetNumber, l.StreetName, l.StreetSuffix].filter(Boolean).join(" ")},{" "}
+                  {l.City}, {l.StateOrProvince} {l.PostalCode}
+                </a>
+                {" — "}
+                {typeof l.ListPrice === "number" ? `$${l.ListPrice.toLocaleString()}` : "Price on request"}
+                {l.BedroomsTotal ? `, ${l.BedroomsTotal} bed` : ""}
+                {l.BathroomsTotalInteger ? `, ${l.BathroomsTotalInteger} bath` : ""}
+                {l.LivingArea ? `, ${l.LivingArea.toLocaleString()} sq ft` : ""}
+                {l.SubdivisionName ? `, ${l.SubdivisionName}` : ""}
+              </li>
+            ))}
+          </ul>
         </section>
       )}
 
