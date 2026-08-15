@@ -71,6 +71,29 @@ function getMarketUpdateRedirects() {
   }
 }
 
+// Blog posts that Google is actively surfacing at their OLD WordPress root URL
+// (/slug/ instead of /blog/slug/). The [citySlug] catch-all is supposed to
+// redirect these at runtime, but it is statically rendered, so the 404 page got
+// baked into the ISR cache and these URLs return a blank page with a 200 status.
+// Search Console showed 20,993 AI impressions landing on those blank pages.
+// Explicit config redirects run before any route, so they always win.
+// The list is deliberately narrow — only slugs with real impressions — because
+// redirecting all 1,735 posts would blow Vercel's route limit.
+// If it breaks, check: every slug here must exist in posts-export.json.
+function getBlogRootRedirects() {
+  try {
+    const filePath = path.join(process.cwd(), 'src/data/blog-root-redirects.txt');
+    const slugs = fs.readFileSync(filePath, 'utf-8').split('\n').map((s) => s.trim()).filter(Boolean);
+    return slugs.flatMap((slug) => [
+      { source: `/${slug}`, destination: `/blog/${slug}/`, permanent: true },
+      { source: `/${slug}/`, destination: `/blog/${slug}/`, permanent: true },
+    ]);
+  } catch {
+    console.warn('Could not load blog root redirects');
+    return [];
+  }
+}
+
 const nextConfig = {
   // Don't expose "X-Powered-By: Next.js" header
   poweredByHeader: false,
@@ -332,6 +355,10 @@ const nextConfig = {
       // ── Guide pages: /slug → /guides/slug (51 individual redirects) ──
       // WordPress served guides at root, new site nests under /guides/
       ...getGuideRedirects(),
+
+      // ── Blog posts Google surfaces at their old root URL → /blog/slug/ ──
+      // Recovers the AI/search impressions currently landing on blank pages
+      ...getBlogRootRedirects(),
 
       // ── Market updates: /slug → /market-updates/slug (232 posts) ──
       // Server-side 308s so these never fall back to a meta-refresh bounce
