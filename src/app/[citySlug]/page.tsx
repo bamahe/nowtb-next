@@ -51,6 +51,7 @@ import { miscPages, getMiscPageBySlug, type MiscPageData } from "@/data/misc-pag
 import { guides, type GuideData } from "@/data/guides";
 import { getListings, getListingsByCity, getOpenHouses } from "@/lib/bridge";
 import { CITY_FAQS } from "@/data/valrico-faqs";
+import { JsonLd, cityPlaceSchema, listingItemListSchema } from "@/lib/schema";
 import { NEIGHBORHOOD_DESCRIPTIONS } from "@/data/neighborhood-descriptions";
 
 // --- County data for county pages ---
@@ -756,6 +757,13 @@ async function HubPage({ city }: { city: CityData }) {
         }}
       />
 
+      {/* === City entity — real coordinates, county, and ZIP for this place === */}
+      <JsonLd data={cityPlaceSchema(city)} />
+
+      {/* Hub listings load client-side from /api/listings, so there is nothing
+          server-rendered here to describe in an ItemList. The spoke pages fetch
+          server-side and carry that markup instead. */}
+
       {/* === Compact hero with breadcrumb + CTA (matches spoke pattern) === */}
       <section className="bg-primary pt-36 pb-16">
         <div className="container-wide">
@@ -1158,6 +1166,18 @@ async function SpokePage({
           }),
         }}
       />
+
+      {/* === City entity — coordinates, county, ZIP for this place === */}
+      <JsonLd data={cityPlaceSchema(city)} />
+
+      {/* === The listings server-rendered on this page, as an ItemList.
+              Only emitted when there are real listings, so the markup never
+              claims inventory the page isn't actually showing. === */}
+      {listings.length > 0 && (
+        <JsonLd
+          data={listingItemListSchema(listings, `${topic.label} in ${city.name}, FL`)!}
+        />
+      )}
 
       {/* === Hero — compact with breadcrumb + CTA === */}
       <section className="bg-primary pt-36 pb-16">
