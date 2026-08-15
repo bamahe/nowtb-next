@@ -4,6 +4,40 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-15 (Batch 32 — 10 Venice FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 posts expanded from 5,351-char boilerplate to 16,301-22,376 chars each. All dated 2026-08-14. Each page has: AEO Quick Answer box, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, REMAX Collective, 23+ years, (813) 733-7907), and 5-question FAQ with JSON-LD FAQPage schema. Meta descriptions added to all 10. Facts verified via web search: median sale price $400K-$409K (down ~2.8% YoY, July 2026), 66 DOM (down from 74), 304 homes sold June 2026; Sarasota County School District top 10% FL; Venice Senior HS A grade (3.82/5, #5 Sarasota County, #135 FL, 2,562 students, 47% AP participation); Wellen Park 10+ builders from high $300Ks to $2M+; Esplanade at Wellen Park (Taylor Morrison, ~877 homes, 55+, opened 2026); Sarasota County combined millage ~13.5 mills; effective tax rate Venice ~1.29% avg; homestead exemption $50K (apply sc-pa.com by March 1); Save Our Homes 3% annual cap; CDD fees appear on tax bill not HOA; waterfront ~235 active listings, median listing ~$415K; Venice-Tampa commute ~70 miles, 65-80 min off-peak via I-75.
+
+### Venice FL Spoke Pages (10)
+
+1. **venice-fl-homes-for-sale-guide** (16,305 chars) — Price table by segment (entry condo/villa $250K-$350K, 3BR SFH $370K-$500K, updated 4BR $480K-$650K, waterfront $600K-$1.5M+, luxury $1.5M+). Neighborhood price guide (Venetian Golf, Grand Palm, IslandWalk at Wellen Park, Venice Island historic, Manasota Key). Buyer-favorable market context (66 DOM down from 74, prices down ~2.8%). Buyer checklist (flood zone FEMA map, 4-point inspection, CDD vs HOA fee distinction, impact windows for insurance). Comparison table vs Sarasota/Nokomis/North Port/Osprey. FAQ+JSON-LD.
+
+2. **venice-fl-schools-guide** (18,984 chars) — Venice Senior HS deep-dive (A grade Niche 3.82/5, #5 Sarasota County, #135 FL US News, 2,562 students, 16:1 ratio, 47% AP participation, 89% graduation). Venice Middle and 8 elementary schools breakdown. Garden Elementary and Taylor Ranch A-rated highlights. Sarasota County District top 10% FL (62% math/reading vs 52% FL avg). School zone map guidance for Venice ZIP codes 34292/34293/34285. Comparison table vs Hillsborough/Manatee/Charlotte/Lee county. FAQ+JSON-LD.
+
+3. **venice-fl-commute-guide** (19,263 chars) — 11-destination drive time matrix (Sarasota CBD 28-40 min, SRQ Airport 30-42 min, Osprey 10-15 min, North Port 20-28 min, Fort Myers 65-80 min, Tampa CBD 65-80 min, MacDill 70-85 min, TPA Airport 70-85 min, Orlando 145-170 min, Naples 80-100 min, Englewood 20-28 min). I-75 (Exit 193 Laurel Rd, Exit 191 Venice Ave) vs US-41 (historic, slower, more signals) route analysis. SCAT routes limited, no practical public transit to Tampa. Peak vs off-peak variance. Comparison table vs Sarasota/North Port/Osprey/Nokomis. FAQ+JSON-LD.
+
+4. **is-venice-fl-good-place-to-live** (16,429 chars) — 5 pros (Sarasota County top-10% FL schools; uncrowded Gulf beaches/fishing; no state income tax + homestead exemption; growing community with Wellen Park amenities; between Sarasota and Fort Myers for services). 5 cons (prices down from peak/market soft; Tampa commute 65-80 min; hurricane/flood exposure Zone AE/VE in coastal areas; summer heat/humidity; limited nightlife). 6-factor comparison table vs Sarasota/North Port/Osprey. FAQ+JSON-LD.
+
+5. **venice-fl-real-estate-guide** (16,301 chars) — 2026 market snapshot table ($400K-$409K median sale, $250/sqft, 66 DOM, 96% list-to-sale ratio, 304 homes sold June). Buyer guide by price profile (first-time $300K-$380K condos/villas, move-up $380K-$550K SFH, luxury $600K+). Seller section (pricing accuracy critical, 66 DOM market, Jan-Mar peak season). HOA/CDD disclosure best practices. Comparison table vs Sarasota/Osprey/North Port/Englewood. FAQ+JSON-LD.
+
+6. **venice-fl-cost-of-living** (19,938 chars) — Monthly homeowner cost table at 3 price points ($350K/$409K/$600K: mortgage P+I, property tax, HO+wind insurance, flood insurance, HOA/CDD, utilities). Rental market (1BR condo $1,400-$1,800, 2BR villa $1,700-$2,200, 3BR SFH $2,200-$3,000, seasonal winter $3,500-$5,000+/mo). Everyday expenses (Publix on US-41, Costco/Walmart Sarasota 30 min). FPL electric summer $160-$260/mo. No state income tax advantage. Hidden costs checklist (windstorm rider, flood insurance Zone AE, CDD bond + maintenance, pest control, pool service). Comparison table vs Sarasota/North Port/Fort Myers. FAQ+JSON-LD.
+
+7. **venice-fl-property-taxes** (22,376 chars) — Sarasota County combined millage ~13.5 mills breakdown (county ~3.7, school ~5.0, city ~1.0, special districts/CDD). Tax estimate table at 7 price points ($300K-$800K with/without homestead). Effective rate Venice ~1.29% avg (ZIP 34292 lowest ~1.21%, ZIP 34293 highest ~1.33%). Homestead exemption $50K taxable value reduction, saves ~$675/yr at 13.5 mills (apply sc-pa.com by March 1). Save Our Homes 3% annual cap. Portability up to $500K transferable. CDD fees explained (appear on tax bill not HOA, cover bond + O&M, not homesteadable). Comparison table vs Hillsborough/Pinellas/Pasco/Manatee. FAQ+JSON-LD.
+
+8. **venice-fl-new-construction** (19,511 chars) — Wellen Park as primary hub (10+ builders, Sarasota County, technically North Port address, from high $300Ks to $2M+). Builder comparison table (Mattamy Homes volume leader, DR Horton $380K-$520K, Lennar $400K-$560K, Taylor Morrison $470K-$750K, Neal Communities $450K-$700K, Toll Brothers luxury $700K-$1.5M+, David Weekley, Kolter Homes). Esplanade at Wellen Park spotlight (Taylor Morrison, ~877 homes, 55+ active adult, amenity-rich, opened 2026, from $500Ks). CDD caveat (most Wellen Park communities have CDDs). Custom infill on Venice Island (historic district). Comparison table vs North Port/Sarasota Co./Manatee Co. FAQ+JSON-LD.
+
+9. **venice-fl-investment-property** (19,659 chars) — Appreciation vs yield framing (prices down ~2.8% YoY — negotiate harder on buy side). Annual rental rate table (1BR condo $1,400-$1,800, 2BR villa $1,700-$2,200, 3BR SFH $2,200-$3,000, pool $2,600-$3,400, seasonal winter $3,500-$5,000+/mo). Gross yield table at 5 scenarios ($300K-$600K: 5.6-7.2%). STR restrictions in most HOA/CDD communities. Insurance risk ($4K-$12K/yr wind+flood). HOA rental restrictions checklist. ViVi Property Management link (/property-management/). Comparison table vs Sarasota/North Port/Englewood/Apollo Beach. FAQ+JSON-LD.
+
+10. **venice-fl-waterfront-homes** (19,721 chars) — Three waterfront markets: Gulf beach/intracoastal (Venice Island, Manasota Key $600K-$5M+), canal (Venetian Waterway park, sailboat/motorboat $500K-$1.5M), freshwater lake (Venetian Golf, Grand Palm lakes $400K-$750K). Active listings context (~235 active, median listing ~$415K). Flood zone breakdown (Zone AE vs VE: VE = higher insurance + wave action). Seawall inspection checklist (concrete preferred, estimate $25K-$60K replacement). Dock permitting (FDEP, SWFWMD). Storm surge risk zones. Comparison table vs Osprey Little Sarasota Bay/Apollo Beach Gulf/Englewood. FAQ+JSON-LD.
+
+**Build:** Passed (Next.js 14.2.35 build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Commit:** 5cd616b
+
+---
+
 ## 2026-08-14 (Batch 31 — 10 Osprey FL spoke pages)
 
 **Pages improved: 10**
