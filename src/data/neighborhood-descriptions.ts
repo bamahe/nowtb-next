@@ -7523,4 +7523,285 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     `,
   },
 
+  // ===== ODESSA NEIGHBORHOODS =====
+
+  "keystone": {
+    summary:
+      "Rural large-lot community in western Hillsborough County near the Pasco County line. Lots typically run 1 to 10+ acres with no HOA, no CDD, and horse-friendly zoning in many sections. Quiet, tree-lined roads with a distinctly country feel just 25 miles from downtown Tampa.",
+    contentHtml: `
+      <h3>What Is Keystone Like?</h3>
+      <p>Keystone is the pocket of western Hillsborough County where the suburban grid gives way to something that still feels genuinely rural. Located along and around Keystone Road northwest of <a href="/odessa/">Odessa</a>, the community is defined by its large lots, mature oaks, and the absence of the HOA-driven sameness that shapes newer Tampa suburbs. Horses are a common sight. So are long private driveways, detached garages, and custom-built homes on land people have owned for decades.</p>
+      <p>There is no single builder or development era here. Keystone grew lot by lot from the 1960s through the 2000s, so you will find a 1978 ranch home on five acres sitting next to a 2005 custom build on a one-acre parcel. Square footage ranges from modest 1,400-square-foot cottages to 5,000-square-foot estate homes. The common thread is space, both indoors and out.</p>
+
+      <h3>Who Lives in Keystone?</h3>
+      <p>Keystone attracts buyers who specifically do not want a master-planned community. Privacy, acreage, and the ability to have chickens or horses without getting a letter from an HOA board are the main draws. You will find longtime Hillsborough County families, professionals who want land near the city, and buyers priced out of comparable acreage in Lutz or Lithia. Remote workers have moved in steadily over the past several years, drawn by the lot sizes and the relative quiet.</p>
+      <p>It is not a neighborhood in the traditional grid-and-cul-de-sac sense. There are no community pools, no clubhouses, no playgrounds maintained by a resident association. The trade-off is complete freedom over your property and a lower ongoing cost of ownership than gated communities of comparable size.</p>
+
+      <h3>How Far Is Keystone From Everything?</h3>
+      <ul>
+        <li><strong>Veterans Expressway (SR-589) Gunn Hwy entrance:</strong> 2-4 miles depending on your lot (connects to I-275 and downtown Tampa in 30-35 minutes)</li>
+        <li><strong>Publix on Gunn Highway:</strong> 3-5 miles</li>
+        <li><strong>Citrus Park Town Center:</strong> 8 miles south</li>
+        <li><strong>Tampa International Airport:</strong> 18 miles (25-30 minutes via Veterans Expressway)</li>
+        <li><strong>Downtown Tampa:</strong> 22-25 miles (30-40 minutes via Veterans)</li>
+        <li><strong>Suncoast Parkway (SR-589) north:</strong> 4 miles (connects to Pasco County and beyond)</li>
+        <li><strong>Lake Tarpon:</strong> 8 miles west (boating, fishing)</li>
+      </ul>
+      <p>Despite the rural feel, Keystone is practical for Tampa commuters who make that trade-off consciously. The Veterans Expressway is the critical link. Without it, surface roads to Tampa take significantly longer.</p>
+
+      <h3>Which Schools Serve Keystone?</h3>
+      <p>Keystone sits in Hillsborough County, so students attend Hillsborough County public schools. Most of the Keystone area is zoned for <strong>Hammond Elementary</strong>, <strong>Martinez Middle School</strong> (formerly known as Sergeant Paul R. Smith Middle), and <strong>Steinbrenner High School</strong>. Steinbrenner consistently earns high ratings and is a significant driver of property values in this part of the county.</p>
+      <p>Some portions of Keystone near the Pasco County line may be in Pasco school zones. Always verify the exact school assignment for a specific parcel at the Hillsborough County Schools website before making a school-based decision.</p>
+
+      <h3>What About Flood Risk and Septic?</h3>
+      <p>Most of Keystone is in <strong>FEMA Flood Zone X</strong> (minimal risk), though some lower-lying areas near retention ponds or creek systems may carry Zone AE designations. Check the specific parcel on FEMA's Flood Map Service Center before purchasing.</p>
+      <p>Many properties in Keystone are on <strong>well and septic</strong> rather than city utilities. This is typical for rural western Hillsborough and not inherently a problem, but buyers should budget for well inspection, water quality testing, and a septic inspection as part of due diligence. Septic systems in Florida typically need pumping every 3-5 years.</p>
+
+      <h3>How Does Keystone Compare to Nearby Options?</h3>
+      <ul>
+        <li><strong><a href="/the-eagles/">The Eagles</a></strong> (2 miles east): Gated golf community, HOA, higher density, more maintained. Easier resale, less privacy.</li>
+        <li><strong><a href="/starkey-ranch/">Starkey Ranch</a></strong> (3 miles north): Master-planned, new construction, CDD fees, community amenities. Opposite end of the lifestyle spectrum.</li>
+        <li><strong><a href="/lutz/">Lutz</a></strong> (10 miles east): Similar rural pockets, but land is pricier and supply is tighter.</li>
+        <li><strong>Odessa proper (33556):</strong> Smaller lots, more suburban feel, closer to Veterans Expressway on-ramps.</li>
+      </ul>
+
+      <h3>What Should Buyers Know?</h3>
+      <ul>
+        <li><strong>No HOA, no CDD:</strong> Lower monthly carrying cost but no community standards enforcement. Check neighboring parcels before you buy.</li>
+        <li><strong>Well and septic:</strong> Get both inspected. Well water testing for nitrates, arsenic, and bacteria is standard practice here.</li>
+        <li><strong>Older homes:</strong> Many homes were built before current hurricane and energy codes. Budget for roof, electrical panel, and HVAC updates if buying a 1970s-1980s home.</li>
+        <li><strong>Zoning:</strong> Many parcels in Keystone are zoned ASC-1 (agricultural single-family). Confirm with Hillsborough County what is and is not permitted on a specific lot if you plan livestock.</li>
+        <li><strong>Appraisals:</strong> Large-lot rural properties require appraisers who understand rural comparables. Not every lender works with this property type.</li>
+      </ul>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience, including rural and large-lot properties in western Hillsborough County. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p>Also explore: <a href="/odessa-homes-for-sale/">Odessa homes for sale</a> | <a href="/odessa-neighborhood-guide/">Odessa neighborhood guide</a> | <a href="/odessa-real-estate-guide/">Odessa real estate guide</a></p>
+    `,
+  },
+
+  "the-eagles": {
+    summary:
+      "Gated golf community on Gunn Highway in Odessa with two 18-hole courses (the Lakes Course and the Forest Course). Single-family homes ranging from about 2,000 to 5,000 sqft, built primarily in the 1990s and early 2000s. HOA fees cover common area maintenance and gated entry.",
+    contentHtml: `
+      <h3>What Is The Eagles Like?</h3>
+      <p>The Eagles is one of the more established gated communities in Odessa, built around 36 holes of golf on Gunn Highway near the intersection with Ehrlich Road. The community is divided into several villages, each with its own character, but all sharing the same tree-lined streets, the two golf courses winding through the neighborhood, and the lake views that make western Hillsborough County genuinely pretty country.</p>
+      <p>Homes were built primarily from the mid-1990s through the early 2000s by multiple builders, which means you get variation in floor plans and architectural styles rather than a cookie-cutter look. Square footage ranges from roughly 2,000 square feet in the smaller village sections to over 5,000 square feet in the larger custom homes along the fairways. Most homes have tile roofs, screened lanais, and two to three-car garages. Lot sizes are generous compared to newer Odessa developments, typically a quarter acre or larger.</p>
+
+      <h3>What Are the Golf Courses?</h3>
+      <p>The Eagles Golf Club features two 18-hole courses: the <strong>Lakes Course</strong> and the <strong>Forest Course</strong>. Both are par-72 layouts with water features, mature trees, and the kind of topography that is relatively dramatic for Florida. The courses are open to the public, which means non-residents can play without being members. This is worth knowing for buyers who golf but want the option without a mandatory membership fee built into their HOA costs.</p>
+      <p>The golf club has a full-service clubhouse, pro shop, restaurant, and practice facility. Tee times can be booked online through the club's website. The golf courses are the central amenity that defines the community's identity and supports long-term property values in a way that amenity centers alone do not.</p>
+
+      <h3>What Are the HOA Fees?</h3>
+      <p>The Eagles has a homeowners association with fees that vary by village within the community. Most homes pay in the range of <strong>$150 to $250 per month</strong>, which covers gated entry, common area maintenance, and community management. There is no CDD on most of the community. Golf club membership is separate from HOA dues and is optional for residents.</p>
+      <p>Compared to newer master-planned communities like <a href="/starkey-ranch/">Starkey Ranch</a> where HOA plus CDD can combine to $3,000-$5,000+ per year, The Eagles offers a gated golf community experience at a more moderate ongoing cost.</p>
+
+      <h3>How Far Is The Eagles From Tampa?</h3>
+      <ul>
+        <li><strong>Veterans Expressway (SR-589) Gunn Hwy entrance:</strong> About 1.5 miles from the community entrance</li>
+        <li><strong>Tampa International Airport:</strong> 17 miles (22-28 minutes via Veterans Expressway)</li>
+        <li><strong>Downtown Tampa:</strong> 20 miles (28-35 minutes via Veterans to I-275)</li>
+        <li><strong>Citrus Park Town Center:</strong> 7 miles south on Gunn Highway</li>
+        <li><strong>Publix at Gunn Highway:</strong> 1-2 miles from the front gate</li>
+        <li><strong>Westchase area restaurants and shops:</strong> 6-7 miles south</li>
+        <li><strong>Hyde Park and South Tampa:</strong> 25 miles (35-40 minutes)</li>
+      </ul>
+      <p>The Veterans Expressway is the reason The Eagles' location works for Tampa commuters. Without it, the distance would be painful. With it, you are at TIA in under 30 minutes on most mornings.</p>
+
+      <h3>Which Schools Serve The Eagles?</h3>
+      <p>The Eagles is in Hillsborough County, zoned for <strong>Hammond Elementary</strong>, <strong>Martinez Middle School</strong>, and <strong>Steinbrenner High School</strong>. Steinbrenner is one of the higher-rated comprehensive high schools in Hillsborough County, which helps maintain demand for homes in this school zone. Verify your specific address at the Hillsborough County Schools school locator, as zone lines can shift and some properties near the community's edges may be in different zones.</p>
+
+      <h3>What Is the Flood Risk?</h3>
+      <p>Most of The Eagles is in <strong>FEMA Flood Zone X</strong> (minimal flood risk). Some lots adjacent to the golf course ponds and retention areas may carry different designations. The golf course itself manages water through designed retention systems. Review the specific parcel on FEMA's Flood Map Service Center. Flood insurance is not typically required here for conventional financing, though some buyers with lakefront lots choose to carry it anyway.</p>
+
+      <h3>How Does The Eagles Compare to Other Odessa Communities?</h3>
+      <ul>
+        <li><strong><a href="/keystone/">Keystone</a></strong> (2 miles west): Large lots, no HOA, rural, less maintained infrastructure. Lower price per square foot but more work on the buyer.</li>
+        <li><strong><a href="/starkey-ranch/">Starkey Ranch</a></strong> (4 miles north): Brand-new construction, master-planned, high CDD fees, extensive trail systems and amenity centers. A completely different product for a different buyer.</li>
+        <li><strong><a href="/lake-bernadette/">Lake Bernadette</a></strong> (5 miles east): Smaller established community, lakefront lots, different price point, no golf.</li>
+        <li><strong>Westchase</strong> (8 miles south): Larger master-planned community with golf, tennis, and multiple pools. Higher density, more activity, different commute patterns.</li>
+      </ul>
+
+      <h3>What Should Buyers Know?</h3>
+      <ul>
+        <li><strong>Roof age matters:</strong> 1990s-era tile roofs are 25-30 years old. Many will need the underlayment replaced even if the tiles look fine. Get a roof inspection from a tile specialist, not a general home inspector.</li>
+        <li><strong>Golf course lots:</strong> Homes on the fairway have great views but get the occasional errant ball. Homes behind the fourth fairway tree line get the views without the noise from the driving range.</li>
+        <li><strong>Community gates:</strong> The Eagles has staffed and unstaffed gate entry points. Understand which gate your address uses before you fall in love with a home.</li>
+        <li><strong>Rentals:</strong> The Eagles has historically attracted long-term renters and retirees. Annual rental demand is steady. <a href="https://vivicollective.com" target="_blank" rel="noopener">ViVi Property Management</a> operates in the Odessa area.</li>
+        <li><strong>Golf membership:</strong> Not mandatory but many residents find it worth the cost given the courses are literally out their back door.</li>
+      </ul>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience in Odessa and western Hillsborough County. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p>Also explore: <a href="/odessa-homes-for-sale/">Odessa homes for sale</a> | <a href="/odessa-neighborhood-guide/">Odessa neighborhood guide</a> | <a href="/odessa-new-construction/">Odessa new construction</a></p>
+    `,
+  },
+
+  "starkey-ranch": {
+    summary:
+      "Master-planned community in Pasco County near Odessa, built around 25+ miles of multi-use trails, multiple community pools, parks, and a K-8 charter school. New construction is ongoing. CDD fees apply and vary by phase. The nearest Veterans Expressway entrance is about 4 miles away.",
+    contentHtml: `
+      <h3>What Is Starkey Ranch?</h3>
+      <p>Starkey Ranch is a large master-planned community located in Pasco County near the border of Hillsborough County and the Odessa area. It sits along Gunn Highway and Starkey Road, roughly 4 miles north of the Veterans Expressway's Gunn Highway entrance. The community was developed on former ranch land that gives the development its name, and it preserves a meaningful portion of that land as trails, parks, and natural open space integrated throughout the neighborhoods.</p>
+      <p>New construction is ongoing across several phases and villages. Builders active in Starkey Ranch have included David Weekley, CalAtlantic, Homes by WestBay, and others, producing a range of home sizes from townhomes under 1,500 square feet to single-family homes over 4,000 square feet. The community is large enough that different villages have noticeably different characters, from higher-density townhome blocks near the commercial center to quiet cul-de-sacs in the estate sections.</p>
+
+      <h3>What Amenities Does Starkey Ranch Have?</h3>
+      <p>The trail system is the standout amenity. Starkey Ranch has over <strong>25 miles of paved multi-use trails</strong> connecting the villages to each other, to parks, and to the commercial areas. It is genuinely possible to get from one end of the community to another without driving. The trails run alongside retention ponds, through tree canopy corridors, and past the community's multiple parks.</p>
+      <p>Additional amenities include:</p>
+      <ul>
+        <li>Multiple resort-style community pools (the primary pool and additional splash areas in individual villages)</li>
+        <li>Playgrounds and dog parks throughout</li>
+        <li>A Pasco County library branch within the community</li>
+        <li>A Publix-anchored shopping center at the Gunn Highway entrance</li>
+        <li><strong>Starkey Ranch K-8 School</strong>, a top-rated Pasco County charter school located inside the community</li>
+        <li>Sports fields, tennis courts, and a canoe and kayak launch</li>
+      </ul>
+      <p>The amenity density is one of the highest of any master-planned community in the Tampa Bay area.</p>
+
+      <h3>What Are the HOA and CDD Fees?</h3>
+      <p>This is the most important financial consideration in Starkey Ranch. The community has a <strong>Community Development District (CDD)</strong> that finances the infrastructure and amenities. CDD assessments are charged annually on the property tax bill, not collected monthly by the HOA. Rates vary significantly by village and phase within Starkey Ranch.</p>
+      <p>As a general range, expect CDD annual assessments of <strong>$2,000 to $5,000+</strong> depending on your specific parcel and phase. Some of the newer phases with more infrastructure carry higher CDD debt and therefore higher annual assessments. Ask the builder or seller for the specific parcel's CDD assessment before making an offer. The CDD debt decreases over time as bonds are paid down, and homeowners can optionally prepay their portion to eliminate the ongoing charge.</p>
+      <p>HOA fees are separate from the CDD and cover community management and shared maintenance. These typically run an additional $100-$200 per month depending on the village.</p>
+
+      <h3>How Far Is Starkey Ranch From Tampa?</h3>
+      <ul>
+        <li><strong>Veterans Expressway (SR-589) at Gunn Hwy:</strong> About 4 miles south (8-10 minutes)</li>
+        <li><strong>Tampa International Airport:</strong> 22 miles (30-40 minutes via Veterans Expressway)</li>
+        <li><strong>Downtown Tampa:</strong> 26 miles (35-45 minutes via Veterans to I-275)</li>
+        <li><strong>Suncoast Parkway (SR-589) at SR-54:</strong> 6 miles north (connects to I-75 and north Pasco County)</li>
+        <li><strong>Westchase shops and restaurants:</strong> 10 miles south</li>
+        <li><strong>Citrus Park Town Center:</strong> 11 miles south</li>
+        <li><strong>Publix at Starkey Ranch Town Center:</strong> Within the community</li>
+      </ul>
+      <p>The commute to Tampa is manageable but longer than Odessa proper. Veterans Expressway is the key link. Rush hour on Gunn Highway south toward the Veterans entrance can add time, particularly in the afternoon.</p>
+
+      <h3>Which Schools Serve Starkey Ranch?</h3>
+      <p>Starkey Ranch is in Pasco County, so students are served by Pasco County schools. The standout school is <strong>Starkey Ranch K-8</strong>, a Pasco County charter school located inside the community with consistently high ratings. The K-8 model means families stay at the same campus through middle school, which many families find highly convenient.</p>
+      <p>High school zoning is typically <strong>River Ridge High School</strong> or <strong>Sunlake High School</strong> (Sunlake opened in 2018 and is closer to the newer Starkey Ranch phases). Verify your specific parcel's school assignments with Pasco County Schools, as zones are reviewed and can change.</p>
+
+      <h3>What Is the Flood Risk?</h3>
+      <p>Starkey Ranch was engineered with water management central to its design. The extensive retention pond system and the trail corridors along those ponds handle stormwater. Most of the community is in <strong>FEMA Flood Zone X</strong>. Check your specific parcel on the FEMA Flood Map Service Center, particularly for lots adjacent to any natural water features in the older sections of the community.</p>
+
+      <h3>How Does Starkey Ranch Compare?</h3>
+      <ul>
+        <li><strong><a href="/the-eagles/">The Eagles</a></strong> (4 miles south): Established 1990s-2000s homes, gated, golf community, lower ongoing fees, no new construction. Very different product.</li>
+        <li><strong><a href="/keystone/">Keystone</a></strong> (4 miles southwest): Rural, large lots, no HOA or CDD, no amenities. Opposite end of the spectrum.</li>
+        <li><strong>Bexley (Land O' Lakes):</strong> Comparable master-planned community in Pasco County, similar amenity level and CDD structure, different location and school zones.</li>
+        <li><strong>Westchase (Tampa/Hillsborough):</strong> Larger, more urban feel, more restaurant and retail access, lower CDD fees, Hillsborough County schools. 10 miles south.</li>
+      </ul>
+
+      <h3>What Should Buyers Know?</h3>
+      <ul>
+        <li><strong>Get the CDD number in writing:</strong> Ask for the specific annual CDD assessment for the parcel, not a range from a builder rep. It varies meaningfully by phase.</li>
+        <li><strong>New construction timelines:</strong> Builder timelines in active phases can shift. Get your completion estimate in the purchase contract, not verbally.</li>
+        <li><strong>Resale vs. new construction:</strong> You can sometimes find a like-new resale in Starkey Ranch that avoids a builder's spec markup and comes with window treatments, appliances, and landscaping already done. Compare both options.</li>
+        <li><strong>Pasco County property taxes:</strong> Pasco County's millage rates differ from Hillsborough. Run a tax estimate at the Pasco County Property Appraiser website before assuming your payment from a Hillsborough County comparison.</li>
+        <li><strong>Trail-adjacent lots:</strong> Lots backing the trail system offer great access but less backyard privacy. Lots on the interior of cul-de-sacs have more enclosed yards.</li>
+      </ul>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p>Also explore: <a href="/odessa-homes-for-sale/">Odessa homes for sale</a> | <a href="/odessa-new-construction/">Odessa new construction</a> | <a href="/odessa-real-estate-guide/">Odessa real estate guide</a></p>
+    `,
+  },
+
+  "lake-bernadette": {
+    summary:
+      "Established lakefront community in Pasco County near Odessa, centered on Lake Bernadette along Gunn Highway. Single-family homes from the 1990s and 2000s, many with lake views or lakefront lots. Lower HOA fees and no CDD. Schools through Pasco County including Starkey Ranch K-8 proximity.",
+    contentHtml: `
+      <h3>What Is Lake Bernadette Like?</h3>
+      <p>Lake Bernadette is a residential community in Pasco County situated along Gunn Highway near Odessa, built around and adjacent to Lake Bernadette. The neighborhood has an established, settled character that contrasts with the newer master-planned developments nearby. Most homes were built from the mid-1990s through the mid-2000s, with a mix of single-family floor plans ranging from about 1,800 to 3,500 square feet. The lakefront and lake-view lots are the community's most desirable addresses, and they tend to hold their value well through market cycles.</p>
+      <p>The community is quiet in a way that newer developments are not yet. The landscaping has matured, the streets have established trees, and the turnover rate is lower than in newer subdivisions where buyers frequently move within five years. Neighbors tend to know each other, and the community has a stable, family-oriented character.</p>
+
+      <h3>What Is the Lake Like?</h3>
+      <p>Lake Bernadette is a freshwater lake typical of the Pasco County chain of lakes in this corridor. Fishing, kayaking, and small motorized boats are common uses. Lakefront homes have private docks or dock rights in many cases. The lake provides both a recreational amenity and a visual backdrop that defines the most desirable lots in the neighborhood. Florida freshwater lakes are home to largemouth bass, bluegill, and crappie, making the lake a genuine asset for fishing-oriented buyers.</p>
+      <p>As with all Florida lakes, it is worth noting that natural Florida lakes support alligator populations. This is normal and not unique to Lake Bernadette. Residents should follow standard Florida Fish and Wildlife guidance for lake access, particularly regarding small children and pets near the water's edge.</p>
+
+      <h3>What Are the HOA Fees?</h3>
+      <p>Lake Bernadette has an HOA with relatively modest fees compared to newer master-planned communities nearby. Most homeowners pay in the range of <strong>$100 to $200 per year</strong> (annual, not monthly) for basic common area maintenance and community standards. There is <strong>no CDD</strong> in Lake Bernadette, which represents a significant annual savings compared to Starkey Ranch and other newer Pasco County developments where CDDs can add $2,000-$5,000 to the annual tax bill.</p>
+      <p>The low carrying cost is one of the community's primary financial advantages for long-term owners.</p>
+
+      <h3>How Far Is Lake Bernadette From Tampa?</h3>
+      <ul>
+        <li><strong>Veterans Expressway (SR-589) Gunn Hwy entrance:</strong> About 3-4 miles south</li>
+        <li><strong>Tampa International Airport:</strong> 20-22 miles (25-35 minutes via Veterans Expressway)</li>
+        <li><strong>Downtown Tampa:</strong> 24-26 miles (30-40 minutes via Veterans to I-275)</li>
+        <li><strong>Starkey Ranch Town Center (Publix):</strong> 2-3 miles north on Gunn Highway</li>
+        <li><strong>Citrus Park Town Center:</strong> 9 miles south</li>
+        <li><strong>Westchase and New Tampa dining and shops:</strong> 10-12 miles south and east</li>
+        <li><strong>Suncoast Parkway at SR-54:</strong> 8 miles north (north Pasco connections)</li>
+      </ul>
+      <p>Like other communities along the Gunn Highway corridor, the Veterans Expressway is the critical link to Tampa. Surface roads add considerable time during rush hour.</p>
+
+      <h3>Which Schools Serve Lake Bernadette?</h3>
+      <p>Lake Bernadette is in Pasco County, so students attend Pasco County public schools. The neighborhood is in proximity to the highly regarded <strong>Starkey Ranch K-8 School</strong>, though eligibility for the K-8 charter depends on the specific district boundaries and enrollment availability. Zoned high school is typically <strong>Sunlake High School</strong> or <strong>River Ridge High School</strong>. Confirm school assignments for a specific parcel with Pasco County Schools, as charter school enrollment is separate from zoned school assignments.</p>
+
+      <h3>What Is the Flood Risk?</h3>
+      <p>Lakefront and lake-adjacent properties inherently require more careful flood zone review. Most of Lake Bernadette is in <strong>FEMA Flood Zone X</strong> on upland lots, but lakefront lots and properties near the shoreline may carry different flood zone designations. Review the specific parcel on FEMA's Flood Map Service Center. Lakefront properties that carry a flood zone designation will require flood insurance for mortgage financing, which adds to the annual cost of ownership. Get a flood insurance quote early in the process if you are looking at waterfront lots.</p>
+
+      <h3>How Does Lake Bernadette Compare to Nearby Communities?</h3>
+      <ul>
+        <li><strong><a href="/starkey-ranch/">Starkey Ranch</a></strong> (2-3 miles north): New construction, master-planned, high CDD fees, more amenities. Very different financial profile and lifestyle.</li>
+        <li><strong><a href="/the-eagles/">The Eagles</a></strong> (5 miles south): Gated golf community in Hillsborough County, 1990s-2000s homes, Steinbrenner High zone. No lake but golf course views.</li>
+        <li><strong><a href="/keystone/">Keystone</a></strong> (4 miles west): Large lots, rural, no HOA. Some Keystone properties have private lake or pond access.</li>
+        <li><strong>Lexington Oaks (Wesley Chapel):</strong> Comparable Pasco County community with golf, established homes, moderate HOA fees.</li>
+      </ul>
+
+      <h3>What Should Buyers Know?</h3>
+      <ul>
+        <li><strong>Lakefront premium:</strong> Homes with direct lake frontage or water views command a meaningful price premium over interior lots. The premium is usually justified by demand, but confirm with comparable sales.</li>
+        <li><strong>Dock permits and setbacks:</strong> If a lakefront lot does not have an existing dock, confirm that a dock can be permitted before purchasing with that expectation. Pasco County has setback requirements for shoreline structures.</li>
+        <li><strong>Home age:</strong> 1990s-era homes should have roof inspections focused on tile underlayment, HVAC inspection, and pool screen condition if applicable.</li>
+        <li><strong>No CDD advantage:</strong> Compared to Starkey Ranch buyers, Lake Bernadette owners save $2,000-$5,000+ per year in CDD assessments. Over 10 years, that is a significant difference in total cost of ownership.</li>
+        <li><strong>Pasco vs. Hillsborough taxes:</strong> Pasco County property tax millage rates differ from Hillsborough. Use the Pasco County Property Appraiser's online estimator for accuracy.</li>
+      </ul>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience in the Odessa corridor and Pasco County communities. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p>Also explore: <a href="/odessa-homes-for-sale/">Odessa homes for sale</a> | <a href="/odessa-neighborhood-guide/">Odessa neighborhood guide</a> | <a href="/odessa-investment-property/">Odessa investment property</a></p>
+    `,
+  },
+
+  "keystone-ranch": {
+    summary:
+      "Residential subdivision in the Keystone area of Odessa, offering single-family homes with larger lots than newer planned communities, no CDD, and a lower HOA cost. A practical alternative for buyers who want the Keystone school zone and a more established neighborhood feel.",
+    contentHtml: `
+      <h3>What Is Keystone Ranch Like?</h3>
+      <p>Keystone Ranch is a subdivision in the Keystone section of western Hillsborough County, in the broader <a href="/odessa/">Odessa</a> area. It offers single-family homes on lots that are typically more generous than what newer planned communities deliver, in a neighborhood that has matured past the construction-and-move-in phase that defines so much of the Tampa suburbs. This is an established community with minimal through traffic and the kind of settled quality that buyers who have toured newer developments appreciate.</p>
+      <p>Homes in Keystone Ranch generally range from about 1,800 to 3,200 square feet, concrete block construction, built primarily in the late 1990s and early 2000s. Floor plans tend toward the practical: open living areas, split bedrooms, screened lanais, and two-car garages. The neighborhood is consistent without being monotonous, as different builders contributed different elevations and layouts over the years of development.</p>
+
+      <h3>What Are the HOA Fees?</h3>
+      <p>Keystone Ranch has a homeowners association with fees that are modest compared to master-planned alternatives. There is <strong>no CDD</strong> in Keystone Ranch. The HOA covers common area maintenance and community standards. This combination of a low-cost HOA and no CDD makes the annual carrying cost notably lower than comparable square footage in communities like <a href="/starkey-ranch/">Starkey Ranch</a>, where CDD assessments alone can reach several thousand dollars per year.</p>
+
+      <h3>How Far Is Keystone Ranch From Tampa?</h3>
+      <ul>
+        <li><strong>Veterans Expressway (SR-589) at Gunn Highway:</strong> About 3-4 miles (7-10 minutes)</li>
+        <li><strong>Tampa International Airport:</strong> 18-20 miles (25-30 minutes via Veterans Expressway)</li>
+        <li><strong>Downtown Tampa:</strong> 22-24 miles (30-38 minutes via Veterans to I-275)</li>
+        <li><strong>Citrus Park Town Center:</strong> 7-8 miles south on Gunn Highway</li>
+        <li><strong>Publix and daily retail on Gunn Highway:</strong> 2-3 miles</li>
+        <li><strong>Westchase area dining:</strong> 8-9 miles south</li>
+      </ul>
+      <p>The Veterans Expressway is essential for Tampa-bound commuters from Keystone Ranch. Gunn Highway provides the main surface route to the Veterans entrance and to retail and services to the south.</p>
+
+      <h3>Which Schools Serve Keystone Ranch?</h3>
+      <p>Keystone Ranch is in Hillsborough County, so students attend Hillsborough County public schools. The community is typically zoned for <strong>Hammond Elementary</strong>, <strong>Martinez Middle School</strong>, and <strong>Steinbrenner High School</strong>. Steinbrenner consistently ranks among the higher-performing high schools in Hillsborough County, and its school zone is a genuine driver of demand and pricing in this corridor. Verify the specific school assignment for your address at the Hillsborough County Schools school locator before finalizing a purchase based on school considerations.</p>
+
+      <h3>What Is the Flood Risk?</h3>
+      <p>Most of Keystone Ranch is in <strong>FEMA Flood Zone X</strong> (minimal flood risk). Hillsborough County's western communities generally sit on higher ground than coastal areas. Check your specific parcel on FEMA's Flood Map Service Center, particularly if the lot is adjacent to any retention pond or low-lying area within or near the subdivision. Flood insurance is typically not required for conventional financing on Zone X properties, though some buyers choose to carry it.</p>
+
+      <h3>How Does Keystone Ranch Compare to Other Odessa Communities?</h3>
+      <ul>
+        <li><strong><a href="/keystone/">Keystone</a></strong> (adjacent area): The broader Keystone rural area has larger lots (1-10+ acres), no HOA, well and septic on many properties. Keystone Ranch is more of a conventional subdivision within that geographic area, with city utilities (in most cases), smaller lots, and HOA governance.</li>
+        <li><strong><a href="/the-eagles/">The Eagles</a></strong> (2-3 miles): Gated, golf community, larger homes, higher HOA, same school zone (Steinbrenner). Different price point and amenity set.</li>
+        <li><strong><a href="/starkey-ranch/">Starkey Ranch</a></strong> (4 miles north): New construction, Pasco County schools, significant CDD fees, master-planned amenities. Different county, different financial structure.</li>
+        <li><strong><a href="/lake-bernadette/">Lake Bernadette</a></strong> (3-4 miles east): Similar era, Pasco County, lakefront appeal, no CDD. Different school zone.</li>
+      </ul>
+
+      <h3>What Should Buyers Know?</h3>
+      <ul>
+        <li><strong>Home age:</strong> Late 1990s to early 2000s construction means 20-25 years of age. Budget for roof inspection (tile underlayment replacement is common at this age), HVAC assessment, and water heater replacement if original.</li>
+        <li><strong>Steinbrenner zone value:</strong> The Steinbrenner High School zone consistently supports pricing premiums in western Hillsborough. If a comparable home were in a different high school zone, it would likely be priced lower. This zone designation protects resale value.</li>
+        <li><strong>No CDD advantage:</strong> Over a 10-year ownership period, no CDD saves $20,000-$50,000 compared to CDD communities like Starkey Ranch at current assessment levels. Factor this into your comparison when looking at list prices across communities.</li>
+        <li><strong>Lot sizes:</strong> Keystone Ranch lots tend to be quarter-acre or larger, which provides room for pool additions, outdoor kitchens, and play areas without the tight clearances common in newer developments where lots have shrunk to maximize density.</li>
+        <li><strong>Rentals:</strong> Steinbrenner zone homes are in consistent demand from families who need temporary housing or prefer renting in this school district. <a href="https://vivicollective.com" target="_blank" rel="noopener">ViVi Property Management</a> manages rentals in the Odessa area.</li>
+      </ul>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p>Also explore: <a href="/odessa-homes-for-sale/">Odessa homes for sale</a> | <a href="/odessa-schools-guide/">Odessa schools guide</a> | <a href="/odessa-neighborhood-guide/">Odessa neighborhood guide</a></p>
+    `,
+  },
+
+
 };
