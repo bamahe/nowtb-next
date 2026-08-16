@@ -163,27 +163,8 @@ export default async function HomePage() {
           }),
         }}
       />
-
-      {/* === JSON-LD: WebSite schema with SearchAction (sitelinks search box) === */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            name: "Barrett Henry, REALTOR® — The NOW Team",
-            url: "https://nowtb.com",
-            potentialAction: {
-              "@type": "SearchAction",
-              target: {
-                "@type": "EntryPoint",
-                urlTemplate: "https://nowtb.com/properties?q={search_term_string}",
-              },
-              "query-input": "required name=search_term_string",
-            },
-          }),
-        }}
-      />
+      {/* WebSite + SearchAction schema now lives once in app/layout.tsx
+          so the site has a single canonical WebSite entity. */}
 
       {/* =================================================================
           SECTION 1: Hero — full viewport, content at bottom, luxury feel

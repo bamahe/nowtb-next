@@ -82,9 +82,22 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
+              // Single canonical WebSite entity for the whole site. The homepage
+              // used to emit a second one under a different name, which gave
+              // Google two competing definitions of what this site is called.
+              "@id": "https://nowtb.com/#website",
               "name": "Barrett Henry, REALTOR\u00ae",
               "alternateName": "The NOW Team Tampa Bay",
               "url": "https://nowtb.com",
+              // Sitelinks search box \u2014 moved here from the homepage during the merge
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://nowtb.com/properties?q={search_term_string}",
+                },
+                "query-input": "required name=search_term_string",
+              },
             }),
           }}
         />
