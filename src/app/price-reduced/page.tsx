@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   title: "Tampa Bay Price-Reduced Homes | Barrett Henry, REALTOR®",
   description: "Price-reduced homes in Tampa Bay — motivated sellers, recent price drops. Updated daily. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
   alternates: { canonical: "/price-reduced/" },
+  openGraph: {
+    title: "Tampa Bay Price-Reduced Homes | Barrett Henry, REALTOR®",
+    description: "Price-reduced homes in Tampa Bay — motivated sellers, recent price drops. Updated daily. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
+    type: "website",
+  },
 };
 export const revalidate = 300;
 

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { pushLeadToFub } from "@/lib/fub";
-import { sendBarrettAlert, sendLeadAutoResponder } from "@/lib/resend";
+import { sendBarrettAlert, sendLeadAutoResponder, sendLeadFailureAlert } from "@/lib/resend";
 
 const N8N_BASE = process.env.N8N_WEBHOOK_BASE || "";
 
@@ -88,7 +88,7 @@ export async function POST(request: NextRequest) {
     // give a name + phone but no email, and those must still land in FUB.
     if (formData.email || formData.phone) {
       try {
-        await pushLeadToFub({
+        const fubOk = await pushLeadToFub({
           name: formData.name || "Unknown",
           email: formData.email,
           phone: formData.phone,
@@ -98,9 +98,37 @@ export async function POST(request: NextRequest) {
           tags: fubTagMap[type] || ["Website Lead"],
           property: formData.property || undefined,
         });
+        // pushLeadToFub RETURNS false on an API rejection rather than throwing,
+        // so the catch below never fires for the most common failure — a bad or
+        // expired API key. That is exactly how an invalid FUB_API_KEY silently
+        // dropped every website lead for months. Check the return value.
+        if (!fubOk) {
+          console.error("[LEAD AT RISK] FUB push returned false —", formData.email || formData.phone);
+          await sendLeadFailureAlert(
+            {
+              name: formData.name || "Unknown",
+              email: formData.email || "",
+              phone: formData.phone,
+              message: formData.message,
+              type,
+              propertyAddress: formData.property?.address,
+            },
+            "Follow Up Boss rejected the request (most often an invalid or expired FUB_API_KEY)."
+          );
+        }
       } catch (fubError) {
-        // Log but don't fail — n8n will still get the lead
-        console.warn("FUB push failed (continuing):", fubError);
+        console.error("[LEAD AT RISK] FUB push threw —", fubError);
+        await sendLeadFailureAlert(
+          {
+            name: formData.name || "Unknown",
+            email: formData.email || "",
+            phone: formData.phone,
+            message: formData.message,
+            type,
+            propertyAddress: formData.property?.address,
+          },
+          `Follow Up Boss request threw: ${fubError instanceof Error ? fubError.message : String(fubError)}`
+        );
       }
     }
 

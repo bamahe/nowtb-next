@@ -77,11 +77,88 @@ export default async function MarketUpdatePage({
   // Extract city name from title
   const city = update.title.split(" Housing Market")[0].split(" Real Estate")[0];
 
+  // Build JSON-LD structured data for this market update
+  const canonicalUrl = `https://nowtb.com/market-updates/${slug}/`;
+
   return (
     <>
-      {/* === Header === */}
-      <section className="bg-primary pt-32 pb-16">
-        <div className="container-wide max-w-3xl text-center">
+      {/* === JSON-LD: BreadcrumbList === */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://nowtb.com" },
+              { "@type": "ListItem", position: 2, name: "Market Updates", item: "https://nowtb.com/market-updates/" },
+              { "@type": "ListItem", position: 3, name: update.title, item: canonicalUrl },
+            ],
+          }),
+        }}
+      />
+
+      {/* === JSON-LD: Article schema === */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: update.title,
+            datePublished: update.date,
+            dateModified: update.date,
+            description: update.excerpt || `${update.title} — latest housing market data from Barrett Henry, REALTOR® at REMAX Collective.`,
+            mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
+            author: {
+              "@type": "Person",
+              name: "Barrett Henry",
+              jobTitle: "Broker Associate",
+              url: "https://nowtb.com/about/",
+              image: "https://nowtb.com/images/barrett-henry-headshot.jpg",
+              sameAs: [
+                "https://nowtb.com",
+                "https://www.instagram.com/nowtampa/",
+                "https://www.facebook.com/NOWTampaBay",
+              ],
+            },
+            publisher: {
+              "@type": "RealEstateAgent",
+              name: "Barrett Henry, REALTOR\u00ae",
+              url: "https://nowtb.com",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://nowtb.com/images/remax-logo-white.png",
+              },
+            },
+            ...(thumbnail ? { image: thumbnail } : {}),
+            // Speakable schema — tells AI assistants & voice search which parts to read aloud
+            speakable: {
+              "@type": "SpeakableSpecification",
+              cssSelector: [".quick-answer", "article h1", "article h2 + p"],
+            },
+          }),
+        }}
+      />
+
+      {/* === Header — the market update photo is the hero background ===
+           The image sits behind the title with a navy scrim over it so the
+           white headline stays readable on light photos. */}
+      <section className="relative bg-primary pt-32 pb-16 overflow-hidden">
+        {thumbnail && (
+          <>
+            <img
+              src={thumbnail}
+              alt={`${city} housing market`}
+              className="absolute inset-0 w-full h-full object-cover"
+              loading="eager"
+              // eslint-disable-next-line @next/next/no-img-element
+            />
+            {/* Scrim — dark enough that the headline passes contrast on any photo */}
+            <div className="absolute inset-0 bg-primary/80" aria-hidden="true" />
+          </>
+        )}
+        <div className="relative container-wide max-w-3xl text-center">
           <span className="inline-block px-4 py-1 rounded-full text-xs font-body font-semibold bg-accent/20 text-accent mb-4">
             Market Update
           </span>
@@ -164,17 +241,8 @@ export default async function MarketUpdatePage({
 
           {/* Main content */}
           <article className="lg:col-span-3 order-1 lg:order-2">
-            {thumbnail && (
-              <div className="mb-8 rounded-lg overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={thumbnail}
-                  alt={`${city} housing market update`}
-                  className="w-full h-auto"
-                  loading="eager"
-                />
-              </div>
-            )}
+            {/* The photo now lives in the page header above — it was here in the
+                body, which pushed it below the fold on the article. */}
             <div
               className="blog-content prose prose-lg font-body text-dark max-w-none
                 prose-headings:font-heading prose-headings:text-primary

@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   description:
     "Townhomes for sale in Tampa Bay. Low-maintenance living, private entrances, community amenities. Barrett Henry, REALTOR® at REMAX Collective.",
   alternates: { canonical: "/townhomes/" },
+  openGraph: {
+    title: "Tampa Bay Townhomes for Sale | Barrett Henry, REALTOR®",
+    description: "Townhomes for sale in Tampa Bay. Low-maintenance living, private entrances, community amenities. Barrett Henry, REALTOR® at REMAX Collective.",
+    type: "website",
+  },
 };
 
 export const revalidate = 300;

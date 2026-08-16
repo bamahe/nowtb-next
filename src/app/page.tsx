@@ -90,12 +90,15 @@ export default async function HomePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "RealEstateAgent",
+            "@id": "https://nowtb.com/#remax-collective",
             name: agent.name,
             description: agent.bio,
             url: "https://nowtb.com",
             telephone: agent.phone,
             email: agent.email,
             image: "https://nowtb.com/images/barrett-henry.jpg",
+            // Link to the Person schema defined in layout.tsx
+            agent: { "@id": "https://nowtb.com/#barrett-henry" },
             address: {
               "@type": "PostalAddress",
               addressLocality: "Tampa Bay",
@@ -108,26 +111,27 @@ export default async function HomePage() {
             },
             sameAs: [
               "https://barretthenry.remax.com",
+              "https://www.instagram.com/nowtampa/",
+              "https://www.facebook.com/NOWTampaBay",
+              "https://www.linkedin.com/in/barretthenry/",
               "https://vivipm.com",
               "https://hencre.com",
-              "https://valricopropertymgmt.com",
               "https://bestbayservices.com",
+              "https://vyrabyte.com",
               "https://flforeclosurehelp.com",
               "https://flpermithelp.com",
-              "https://parrishagent.com",
-              "https://valricoagent.com",
-              "https://firsttimehomebuyertb.com",
-              "https://valoantb.com",
-              "https://tampabaydownpayment.com",
-              "https://www.facebook.com/BarrettHenryREALTOR",
-              "https://www.instagram.com/thenowteam",
-              "https://www.linkedin.com/in/barretthenry",
+              "https://fastselleasy.com",
+              "https://valrico.blog",
+              "https://buildtb.com",
             ],
             knowsAbout: [
               "Residential Real Estate",
               "Tampa Bay Homes for Sale",
               "Investment Properties",
               "New Construction",
+              "Property Management",
+              "First-Time Home Buyers",
+              "Florida Housing Market",
             ],
             aggregateRating: {
               "@type": "AggregateRating",
@@ -159,27 +163,8 @@ export default async function HomePage() {
           }),
         }}
       />
-
-      {/* === JSON-LD: WebSite schema with SearchAction (sitelinks search box) === */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            name: "Barrett Henry, REALTOR® — The NOW Team",
-            url: "https://nowtb.com",
-            potentialAction: {
-              "@type": "SearchAction",
-              target: {
-                "@type": "EntryPoint",
-                urlTemplate: "https://nowtb.com/properties?q={search_term_string}",
-              },
-              "query-input": "required name=search_term_string",
-            },
-          }),
-        }}
-      />
+      {/* WebSite + SearchAction schema now lives once in app/layout.tsx
+          so the site has a single canonical WebSite entity. */}
 
       {/* =================================================================
           SECTION 1: Hero — full viewport, content at bottom, luxury feel

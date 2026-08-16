@@ -254,3 +254,45 @@ export function getListingPhotoUrl(listing: Listing): string {
   // No photos — return placeholder
   return PLACEHOLDER_IMAGE;
 }
+
+/**
+ * Build a search-friendly meta description from a post excerpt.
+ *
+ * Excerpts were written for on-page display, so they run in both directions:
+ * 314 posts ran past Google's ~160 char cutoff and got truncated mid-sentence,
+ * 561 came in under 120 and left result space unused. This normalises both
+ * without touching the excerpt itself, which the blog cards still render.
+ *
+ * Long excerpts are cut at a sentence end where possible, then a word boundary.
+ * Short ones get the agent CTA appended, but only when it actually fits.
+ * If it breaks, check: the result should always land at or under 160 chars.
+ */
+export function metaDescription(excerpt: string | undefined, title: string): string {
+  const CTA = "Call Barrett Henry, REALTOR® at (813) 733-7907.";
+  const MAX = 160;
+  const MIN = 120;
+
+  // Excerpts can carry HTML from the WordPress export — strip it for meta use
+  let text = (excerpt || "")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/&nbsp;/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  if (!text) text = `${title} — Barrett Henry, REALTOR® at REMAX Collective.`;
+
+  if (text.length > MAX) {
+    const cut = text.slice(0, MAX);
+    // Prefer ending on a complete sentence, otherwise the last whole word
+    const sentence = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf("! "), cut.lastIndexOf("? "));
+    if (sentence > MIN) return cut.slice(0, sentence + 1).trim();
+    const word = cut.lastIndexOf(" ");
+    return (word > MIN ? cut.slice(0, word) : cut).trim();
+  }
+
+  if (text.length < MIN && text.length + CTA.length + 1 <= MAX) {
+    return `${text} ${CTA}`;
+  }
+
+  return text;
+}

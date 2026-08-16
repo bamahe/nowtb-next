@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   description:
     "55+ communities and active adult homes in Tampa Bay. Sun City Center, Del Webb, Esplanade, Valencia Lakes. Barrett Henry, REALTOR® at REMAX Collective.",
   alternates: { canonical: "/55-plus-communities/" },
+  openGraph: {
+    title: "Tampa Bay 55+ Communities & Active Adult Homes | Barrett Henry",
+    description: "55+ communities and active adult homes in Tampa Bay. Sun City Center, Del Webb, Esplanade, Valencia Lakes. Barrett Henry, REALTOR® at REMAX Collective.",
+    type: "website",
+  },
 };
 
 export const revalidate = 300;

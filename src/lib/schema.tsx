@@ -142,6 +142,68 @@ export function realEstateListingSchema(listing: Listing) {
   };
 }
 
+/**
+ * Place schema for a city — the factual entity behind every city hub and spoke
+ * page. Gives Google and the AI crawlers real coordinates, the county it sits
+ * in, and the ZIPs it covers, so "homes for sale in X" resolves to a real
+ * location rather than just a page title.
+ */
+export function cityPlaceSchema(city: {
+  name: string;
+  slug: string;
+  county: string;
+  lat: number;
+  lng: number;
+  zip_codes?: string[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "City",
+    name: `${city.name}, Florida`,
+    url: `${SITE_URL}/${city.slug}/`,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: city.name,
+      addressRegion: "FL",
+      addressCountry: "US",
+      ...(city.zip_codes?.length ? { postalCode: city.zip_codes[0] } : {}),
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: city.lat,
+      longitude: city.lng,
+    },
+    containedInPlace: {
+      "@type": "AdministrativeArea",
+      name: `${city.county} County, Florida`,
+    },
+  };
+}
+
+/**
+ * ItemList of property listings shown on a page. Search engines and LLMs read
+ * this to understand that the page is a real inventory of homes, not just prose
+ * — which is what makes it eligible to be cited for "homes for sale in X".
+ * Pass only the listings actually rendered, so the markup matches the page.
+ */
+export function listingItemListSchema(
+  listings: Listing[],
+  listName: string
+) {
+  if (!listings.length) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: listName,
+    numberOfItems: listings.length,
+    itemListElement: listings.map((l, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: realEstateListingSchema(l),
+    })),
+  };
+}
+
 /** BreadcrumbList schema — for spoke pages */
 export function breadcrumbSchema(
   items: { name: string; url: string }[]

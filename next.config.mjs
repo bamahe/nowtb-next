@@ -49,6 +49,51 @@ function getGuideRedirects() {
   }
 }
 
+// Market update slugs — these live at /market-updates/slug/ but WordPress served
+// them at /slug/. The [citySlug] catch-all already redirects them, but it does so
+// during a static render, which Next.js can only express as a <meta http-equiv=
+// "refresh"> — a visible one-second bounce that search engines don't treat as a
+// 301, and that can serve a stale self-referencing redirect out of the ISR cache
+// (which is what made /florida-housing-market-2026/ ping-pong). Emitting real 308s
+// here fixes all of that. If it breaks, check: a slug listed here must actually
+// exist in market-updates-export.json, or the redirect lands on a 404.
+function getMarketUpdateRedirects() {
+  try {
+    const filePath = path.join(process.cwd(), 'src/data/market-updates-export.json');
+    const updates = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    return updates.flatMap((u) => [
+      { source: `/${u.slug}`, destination: `/market-updates/${u.slug}/`, permanent: true },
+      { source: `/${u.slug}/`, destination: `/market-updates/${u.slug}/`, permanent: true },
+    ]);
+  } catch {
+    console.warn('Could not load market updates for redirects');
+    return [];
+  }
+}
+
+// Blog posts that Google is actively surfacing at their OLD WordPress root URL
+// (/slug/ instead of /blog/slug/). The [citySlug] catch-all is supposed to
+// redirect these at runtime, but it is statically rendered, so the 404 page got
+// baked into the ISR cache and these URLs return a blank page with a 200 status.
+// Search Console showed 20,993 AI impressions landing on those blank pages.
+// Explicit config redirects run before any route, so they always win.
+// The list is deliberately narrow — only slugs with real impressions — because
+// redirecting all 1,735 posts would blow Vercel's route limit.
+// If it breaks, check: every slug here must exist in posts-export.json.
+function getBlogRootRedirects() {
+  try {
+    const filePath = path.join(process.cwd(), 'src/data/blog-root-redirects.txt');
+    const slugs = fs.readFileSync(filePath, 'utf-8').split('\n').map((s) => s.trim()).filter(Boolean);
+    return slugs.flatMap((slug) => [
+      { source: `/${slug}`, destination: `/blog/${slug}/`, permanent: true },
+      { source: `/${slug}/`, destination: `/blog/${slug}/`, permanent: true },
+    ]);
+  } catch {
+    console.warn('Could not load blog root redirects');
+    return [];
+  }
+}
+
 const nextConfig = {
   // Don't expose "X-Powered-By: Next.js" header
   poweredByHeader: false,
@@ -234,16 +279,56 @@ const nextConfig = {
       { source: "/properties/listing", destination: "/properties/", permanent: true },
 
       // ── WordPress nested city spoke pages → flat structure ──
-      { source: "/:city((?!blog|api|auth|properties|guides|images|wp-content|_next|compare|3813-polumbo-dr).[^/]+)/:city-:topic", destination: "/:city-:topic/", permanent: true },
+      { source: "/:city((?!blog|api|auth|properties|guides|images|wp-content|_next|compare|market-updates|builders|communities|account|3813-polumbo-dr).[^/]+)/:city-:topic", destination: "/:city-:topic/", permanent: true },
 
       // ── WordPress nested neighborhood pages → flat structure ──
       // The :neighborhood param excludes "southoak" because /brandon/southoak/ has a dedicated page
-      { source: "/:city((?!blog|api|auth|properties|guides|images|wp-content|_next|compare|3813-polumbo-dr).[^/]+)/:neighborhood((?!southoak).[^/]+)", destination: "/:neighborhood/", permanent: true },
+      { source: "/:city((?!blog|api|auth|properties|guides|images|wp-content|_next|compare|market-updates|builders|communities|account|3813-polumbo-dr).[^/]+)/:neighborhood((?!southoak).[^/]+)", destination: "/:neighborhood/", permanent: true },
 
       // ── WordPress Showcase IDX property pages ──
       // Old IDX used /properties/slug-name format. Bridge uses /properties/ListingKey.
       // Don't redirect — let the [id] route handle it. Old Showcase URLs will 404
       // naturally since they won't match a Bridge ListingKey.
+
+      // ── Audit fix Phase 1 (2026-08-13): broken internal links ──
+      // /get-help/ returns 404 — point to /contact/
+      { source: "/get-help", destination: "/contact/", permanent: true },
+      { source: "/get-help/", destination: "/contact/", permanent: true },
+      // 825 broken links to /tampa-bay-real-estate-agent
+      { source: "/tampa-bay-real-estate-agent", destination: "/about/", permanent: true },
+      { source: "/tampa-bay-real-estate-agent/", destination: "/about/", permanent: true },
+      // 531 broken links — market update page, not a blog post
+      // /blog/ version goes to market-updates; the bare /florida-housing-market-2026/
+      // is handled by [citySlug] which already permanentRedirects to /market-updates/
+      { source: "/blog/florida-housing-market-2026", destination: "/market-updates/florida-housing-market-2026/", permanent: true },
+      { source: "/blog/florida-housing-market-2026/", destination: "/market-updates/florida-housing-market-2026/", permanent: true },
+      // 451 broken links — investing page lives at /investing/
+      { source: "/blog/investment-property", destination: "/investing/", permanent: true },
+      { source: "/blog/investment-property/", destination: "/investing/", permanent: true },
+      // 303 broken links — valuation page lives at /free-home-valuation/
+      { source: "/blog/home-valuation", destination: "/free-home-valuation/", permanent: true },
+      { source: "/blog/home-valuation/", destination: "/free-home-valuation/", permanent: true },
+      // 5 broken links — guide lives under /guides/
+      { source: "/closing-costs-florida-guide", destination: "/guides/closing-costs-guide-florida/", permanent: true },
+      { source: "/closing-costs-florida-guide/", destination: "/guides/closing-costs-guide-florida/", permanent: true },
+      // Blog prefix URLs → standalone section pages
+      { source: "/blog/waterfront-homes", destination: "/waterfront/", permanent: true },
+      { source: "/blog/waterfront-homes/", destination: "/waterfront/", permanent: true },
+      { source: "/blog/luxury-homes", destination: "/luxury/", permanent: true },
+      { source: "/blog/luxury-homes/", destination: "/luxury/", permanent: true },
+      { source: "/blog/realtor", destination: "/about/", permanent: true },
+      { source: "/blog/realtor/", destination: "/about/", permanent: true },
+      // Blog prefix city URLs → city hub pages
+      { source: "/blog/brandon-fl-homes-for-sale", destination: "/brandon/", permanent: true },
+      { source: "/blog/brandon-fl-homes-for-sale/", destination: "/brandon/", permanent: true },
+      { source: "/blog/valrico-fl-homes-for-sale", destination: "/valrico/", permanent: true },
+      { source: "/blog/valrico-fl-homes-for-sale/", destination: "/valrico/", permanent: true },
+      { source: "/blog/plant-city-fl-homes-for-sale", destination: "/plant-city/", permanent: true },
+      { source: "/blog/plant-city-fl-homes-for-sale/", destination: "/plant-city/", permanent: true },
+      { source: "/blog/seffner-fl-homes-for-sale", destination: "/seffner/", permanent: true },
+      { source: "/blog/seffner-fl-homes-for-sale/", destination: "/seffner/", permanent: true },
+      { source: "/blog/riverview-fl-homes-for-sale", destination: "/riverview/", permanent: true },
+      { source: "/blog/riverview-fl-homes-for-sale/", destination: "/riverview/", permanent: true },
 
       // ── WordPress sitemap URLs — redirect to new sitemap ──
       { source: "/sitemap_index.xml", destination: "/sitemap.xml", permanent: true },
@@ -271,18 +356,36 @@ const nextConfig = {
       // WordPress served guides at root, new site nests under /guides/
       ...getGuideRedirects(),
 
+      // ── Blog posts Google surfaces at their old root URL → /blog/slug/ ──
+      // Recovers the AI/search impressions currently landing on blank pages
+      ...getBlogRootRedirects(),
+
+      // ── Market updates: /slug → /market-updates/slug (232 posts) ──
+      // Server-side 308s so these never fall back to a meta-refresh bounce
+      ...getMarketUpdateRedirects(),
+
       // Blog post redirects (/slug → /blog/slug) now handled at runtime
       // by the [citySlug] catch-all route to stay under Vercel's 2048 route limit.
     ];
   },
   async rewrites() {
-    return [
-      // Private seller hub — static HTML (both with and without trailing slash)
-      { source: '/3813-polumbo', destination: '/3813-polumbo.html' },
-      { source: '/3813-polumbo/', destination: '/3813-polumbo.html' },
-      { source: '/1609-lakeview-ave', destination: '/1609-lakeview-ave.html' },
-      { source: '/1609-lakeview-ave/', destination: '/1609-lakeview-ave.html' },
-    ];
+    return {
+      // beforeFiles rewrites run before Next.js checks any file or route —
+      // this overrides any stale CDN-cached 308s from previous deployments
+      beforeFiles: [
+        // Force /market-updates/[slug]/ to serve from the market-updates route
+        // (fixes cached 308 loop from prior cannibalization fix deployment)
+        { source: '/market-updates/:slug/', destination: '/market-updates/:slug/' },
+        { source: '/market-updates/:slug', destination: '/market-updates/:slug/' },
+      ],
+      afterFiles: [
+        // Private seller hub — static HTML (both with and without trailing slash)
+        { source: '/3813-polumbo', destination: '/3813-polumbo.html' },
+        { source: '/3813-polumbo/', destination: '/3813-polumbo.html' },
+        { source: '/1609-lakeview-ave', destination: '/1609-lakeview-ave.html' },
+        { source: '/1609-lakeview-ave/', destination: '/1609-lakeview-ave.html' },
+      ],
+    };
   },
   // Allow Bridge API listing photos and Showcase IDX images
   images: {

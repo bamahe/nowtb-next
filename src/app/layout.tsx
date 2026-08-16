@@ -82,9 +82,101 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
+              // Single canonical WebSite entity for the whole site. The homepage
+              // used to emit a second one under a different name, which gave
+              // Google two competing definitions of what this site is called.
+              "@id": "https://nowtb.com/#website",
               "name": "Barrett Henry, REALTOR\u00ae",
               "alternateName": "The NOW Team Tampa Bay",
               "url": "https://nowtb.com",
+              // Sitelinks search box \u2014 moved here from the homepage during the merge
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://nowtb.com/properties?q={search_term_string}",
+                },
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
+        {/* Person schema — Barrett Henry identity anchor for Google Knowledge Graph.
+            This ties all digital properties together via sameAs and gives Google
+            the structured signals it needs to build a Knowledge Panel. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "@id": "https://nowtb.com/#barrett-henry",
+              "name": "Barrett Henry",
+              "jobTitle": "Broker Associate",
+              "description":
+                "Licensed REALTOR\u00ae and Broker Associate with REMAX Collective, serving Tampa Bay with 23+ years of real estate experience.",
+              "image": "https://nowtb.com/images/barrett-henry-headshot.jpg",
+              "url": "https://nowtb.com/about/",
+              "telephone": "+1-813-733-7907",
+              "email": "barrett@nowtb.com",
+              "hasCredential": [
+                {
+                  "@type": "EducationalOccupationalCredential",
+                  "credentialCategory": "Real Estate License",
+                  "name": "Florida Broker Associate",
+                  "recognizedBy": {
+                    "@type": "Organization",
+                    "name": "Florida DBPR",
+                  },
+                },
+                {
+                  "@type": "EducationalOccupationalCredential",
+                  "credentialCategory": "Designation",
+                  "name": "e-PRO",
+                },
+                {
+                  "@type": "EducationalOccupationalCredential",
+                  "credentialCategory": "Designation",
+                  "name": "MRP (Military Relocation Professional)",
+                },
+                {
+                  "@type": "EducationalOccupationalCredential",
+                  "credentialCategory": "Designation",
+                  "name": "SRS (Seller Representative Specialist)",
+                },
+              ],
+              "award": [
+                "REMAX Hall of Fame 2024",
+                "REMAX 10-Year Anniversary Award",
+              ],
+              "worksFor": {
+                "@type": "RealEstateAgent",
+                "name": "REMAX Collective",
+                "url": "https://nowtb.com",
+              },
+              "knowsAbout": [
+                "Tampa Bay Real Estate",
+                "Florida Housing Market",
+                "Property Management",
+                "First-Time Home Buyers",
+                "Investment Properties",
+              ],
+              "sameAs": [
+                "https://nowtb.com",
+                "https://barretthenry.remax.com",
+                "https://www.instagram.com/nowtampa/",
+                "https://www.facebook.com/NOWTampaBay",
+                "https://www.linkedin.com/in/barretthenry/",
+                "https://bestbayservices.com",
+                "https://vyrabyte.com",
+                "https://vivipm.com",
+                "https://fastselleasy.com",
+                "https://flforeclosurehelp.com",
+                "https://hencre.com",
+                "https://valrico.blog",
+                "https://buildtb.com",
+                "https://flpermithelp.com",
+              ],
             }),
           }}
         />

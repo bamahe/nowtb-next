@@ -16,7 +16,7 @@ The official real estate website of Barrett Henry, REALTOR® and Broker Associat
 Valrico, Brandon, Riverview, Lithia, Apollo Beach, Seffner, Plant City, Dover, Thonotosassa, Ruskin
 
 ## Content Areas
-- Tampa Bay homes for sale (MLS-powered property search via Showcase IDX)
+- Tampa Bay homes for sale (live Stellar MLS listings via the Bridge Data Output API, refreshed hourly)
 - Home buying guides (first-time buyers, VA loans, FHA loans, conventional, USDA)
 - Home selling guides (pricing strategy, staging, marketing, FSBO vs. REALTOR)
 - Free home valuation / comparative market analysis (CMA)
@@ -62,9 +62,19 @@ Valrico, Brandon, Riverview, Lithia, Apollo Beach, Seffner, Plant City, Dover, T
 - /commercial — Commercial real estate
 
 ## Related Sites
+- https://barretthenry.remax.com — REMAX team site
 - https://vivipm.com — ViVi Property Management
 - https://bestbayservices.com — Best Bay Services (handyman/maintenance)
+- https://vyrabyte.com — Vyrabyte (Barrett Henry's tech company)
 - https://hencre.com — Barrett Henry CRE authority site
 - https://flforeclosurehelp.com — Florida foreclosure help
-- https://barretthenry.remax.com — REMAX team site
+- https://flpermithelp.com — Florida building permit help
+- https://fastselleasy.com — Fast home selling resources for Florida homeowners
+- https://valrico.blog — Valrico community blog
+- https://buildtb.com — Tampa Bay new construction and builder communities
 - https://firsttimehomebuyertb.com — Tampa Bay first-time home buyer programs, down payment assistance, and eligibility guides
+
+## Social Profiles
+- https://www.instagram.com/nowtampa/
+- https://www.facebook.com/NOWTampaBay
+- https://www.linkedin.com/in/barretthenry/

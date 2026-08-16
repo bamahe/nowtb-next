@@ -103,3 +103,53 @@ export async function sendLeadAutoResponder(lead: LeadEmailData): Promise<void> 
     console.warn("[Resend] Auto-responder email failed:", err);
   }
 }
+
+/**
+ * Emergency alert: a lead came in but did NOT make it into Follow Up Boss.
+ *
+ * This exists because of a real incident. The Follow Up Boss API key in
+ * production was invalid, pushLeadToFub failed on every submission, the route
+ * caught the error and returned {"success":true} anyway — so visitors saw a
+ * thank-you page and the leads went nowhere. Nobody noticed for months.
+ *
+ * Now a failed push emails the full lead immediately. Even with every
+ * downstream system broken, the lead itself still reaches Barrett's inbox and
+ * can be re-entered by hand. Failure becomes loud instead of silent.
+ */
+export async function sendLeadFailureAlert(
+  lead: LeadEmailData,
+  reason: string
+): Promise<void> {
+  const resend = getResend();
+  if (!resend) return; // Nothing more we can do — already logged by the caller
+
+  try {
+    await resend.emails.send({
+      from: "nowtb.com Alerts <leads@nowtb.com>",
+      to: ["barretthenry@gmail.com"],
+      subject: `⚠️ LEAD NOT SAVED TO FUB — ${lead.name} — action needed`,
+      html: `
+        <h2 style="color:#b91c1c;">A lead did not reach Follow Up Boss</h2>
+        <p>The website captured this lead, but writing it to Follow Up Boss failed.
+           <strong>Add it manually so it isn't lost.</strong></p>
+        <table cellpadding="6" style="border-collapse:collapse;">
+          <tr><td><strong>Name</strong></td><td>${lead.name}</td></tr>
+          <tr><td><strong>Email</strong></td><td>${lead.email || "Not provided"}</td></tr>
+          <tr><td><strong>Phone</strong></td><td>${lead.phone || "Not provided"}</td></tr>
+          <tr><td><strong>Form</strong></td><td>${lead.type || "contact"}</td></tr>
+          ${lead.propertyAddress ? `<tr><td><strong>Property</strong></td><td>${lead.propertyAddress}</td></tr>` : ""}
+        </table>
+        ${lead.message ? `<p><strong>Message:</strong><br>${lead.message}</p>` : ""}
+        <hr>
+        <p style="color:#b91c1c;"><strong>Failure reason:</strong> ${reason}</p>
+        <p style="color:#666;font-size:12px;">
+          Usually a bad or expired FUB_API_KEY in Vercel. Check the key, then send a
+          test lead to confirm the pipe is working again.
+        </p>
+      `,
+    });
+  } catch (err) {
+    // Last resort — if even the alert can't send, make sure it's in the logs
+    console.error("[Resend] FAILED TO SEND LEAD-FAILURE ALERT:", err, lead);
+  }
+}

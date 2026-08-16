@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   description:
     "Waterfront homes for sale in Tampa Bay — lakefront, bayfront, canal-access, and Gulf-front properties. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
   alternates: { canonical: "/waterfront/" },
+  openGraph: {
+    title: "Tampa Bay Waterfront Homes for Sale | Barrett Henry, REALTOR®",
+    description: "Waterfront homes for sale in Tampa Bay — lakefront, bayfront, canal-access, and Gulf-front properties. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
+    type: "website",
+  },
 };
 
 export const revalidate = 300;

@@ -116,6 +116,11 @@ export default async function GuidePage({
               name: "Barrett Henry, REALTOR\u00AE",
               url: "https://nowtb.com",
             },
+            // Speakable schema — tells AI assistants & voice search which parts to read aloud
+            speakable: {
+              "@type": "SpeakableSpecification",
+              cssSelector: [".quick-answer", "article h1", "article h2 + p"],
+            },
           }),
         }}
       />

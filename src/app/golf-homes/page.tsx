@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   title: "Tampa Bay Golf Course Homes for Sale | Barrett Henry, REALTOR®",
   description: "Golf course homes in Tampa Bay — fairway views, golf community living. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
   alternates: { canonical: "/golf-homes/" },
+  openGraph: {
+    title: "Tampa Bay Golf Course Homes for Sale | Barrett Henry, REALTOR®",
+    description: "Golf course homes in Tampa Bay — fairway views, golf community living. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
+    type: "website",
+  },
 };
 export const revalidate = 300;
 

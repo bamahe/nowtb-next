@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   title: "Tampa Bay Homes with No HOA | Barrett Henry, REALTOR®",
   description: "Homes with no HOA in Tampa Bay. No monthly fees, no deed restrictions. Barrett Henry, REALTOR® at REMAX Collective.",
   alternates: { canonical: "/no-hoa/" },
+  openGraph: {
+    title: "Tampa Bay Homes with No HOA | Barrett Henry, REALTOR®",
+    description: "Homes with no HOA in Tampa Bay. No monthly fees, no deed restrictions. Barrett Henry, REALTOR® at REMAX Collective.",
+    type: "website",
+  },
 };
 export const revalidate = 300;
 
