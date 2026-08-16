@@ -4,6 +4,50 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-16 (Batch 33 — 9 Odessa FL blog posts + 5 Odessa neighborhood descriptions)
+
+**Pages improved: 14 total (9 blog posts + 5 neighborhood description entries)**
+
+All 9 Odessa blog posts expanded from identical 5,284-char generic templates to 12,029-15,111 chars each. All dated 2026-08-15. Each post has: AEO Quick Answer intro, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, REMAX Collective, 23+ years, (813) 733-7907), and 5-question FAQ with JSON-LD FAQPage schema. County corrected throughout: Odessa 33556 is western Hillsborough County (at the Pasco County line), not Pasco County as the old templates incorrectly stated. Key facts verified: Veterans Expressway (SR-589) Gunn Hwy entrance as primary Tampa corridor; Hammond Elementary and Steinbrenner High as Hillsborough school zone; The Eagles Golf Club (Lakes Course and Forest Course on Gunn Hwy); Starkey Ranch CDD $2,000-$5,000+/yr; ViVi Property Management for Odessa rentals. Five Odessa neighborhood descriptions added for keystone, the-eagles, starkey-ranch, lake-bernadette, and keystone-ranch.
+
+### Odessa FL Blog Posts (9)
+
+1. **odessa-fl-homes-for-sale-guide** (12,835 chars, from 5,284) — Price table by segment (entry $380K-$450K Keystone area, mid $450K-$600K Westchase corridor, move-up $600K-$850K The Eagles/gated, luxury $850K+). Neighborhood guide table (The Eagles, Starkey Ranch, Keystone, Lake Bernadette, Keystone Ranch). Buyer checklist (well/septic in Keystone, CDD disclosure for Starkey Ranch, flood zone verification). Comparison table vs Lutz/Land O' Lakes/Westchase/Trinity. FAQ+JSON-LD.
+
+2. **odessa-fl-schools-guide** (12,387 chars, from 5,284) — Hammond Elementary, Martinez Middle, Steinbrenner High deep-dive (Hillsborough County, Steinbrenner consistently high-rated). Pasco County split: Starkey Ranch K-8 for Starkey Ranch residents, Sunlake High. School zone verification guidance (address-specific lookup required). Comparison table vs Lutz/Land O' Lakes/Westchase. FAQ+JSON-LD.
+
+3. **odessa-fl-commute-guide** (13,961 chars, from 5,284) — Veterans Expressway (SR-589) as primary Tampa corridor. Drive time matrix (TPA 18-22 min, downtown Tampa 25-35 min, Westchase 10-15 min, Citrus Park 8-12 min, South Tampa 35-45 min, MacDill 30-40 min). Gunn Hwy vs Ehrlich Rd routes. Starkey Rd north (Suncoast Parkway connection). Comparison table vs Lutz/Land O' Lakes/Trinity/Wesley Chapel. FAQ+JSON-LD.
+
+4. **is-odessa-fl-good-place-to-live** (13,140 chars, from 5,284) — 5 pros (Veterans Expressway access; Steinbrenner High zone; The Eagles Golf Club two 18-hole courses; Keystone rural large-lot options; lower density than New Tampa). 4 cons (limited walkable retail; some areas well/septic; Starkey Ranch CDD fees; no Odessa downtown). Comparison table vs Lutz/Land O' Lakes/Westchase. FAQ+JSON-LD.
+
+5. **odessa-fl-cost-of-living** (12,029 chars, from 5,284) — Monthly cost table at 3 price points ($450K/$575K/$800K: mortgage P+I, property tax at Hillsborough millage, HO+wind insurance, utilities). CDD fee note for Starkey Ranch. Rental market ($2,200-$3,500/mo SFH). Everyday expenses (Publix on Gunn Hwy). Comparison table vs Lutz/Land O' Lakes/Westchase. FAQ+JSON-LD.
+
+6. **odessa-fl-property-taxes** (13,728 chars, from 5,284) — Hillsborough County combined millage context (~20 mills). Tax estimate table at 5 price points ($400K-$900K with/without homestead). Pasco County millage (different rate for Starkey Ranch buyers). Homestead exemption, Save Our Homes, portability. CDD fees explained (Starkey Ranch, not homesteadable, on tax bill). Comparison table vs Hillsborough/Pasco/Pinellas. FAQ+JSON-LD.
+
+7. **odessa-fl-new-construction** (13,164 chars, from 5,284) — Starkey Ranch as primary new construction hub (25+ miles of trails, Starkey Ranch K-8, Publix-anchored center, multiple pools, multiple builders). Builder table (David Weekley, Homes by WestBay, CalAtlantic/Lennar). CDD caveat for Starkey Ranch buyers. Resale vs new construction cost-of-ownership comparison. Custom infill in Keystone area. Comparison table vs Land O' Lakes/Lutz/Wesley Chapel. FAQ+JSON-LD.
+
+8. **odessa-fl-real-estate-guide** (12,228 chars, from 5,284) — Market framing for western Hillsborough County corridor. Price guide by buyer profile (first-time, move-up, rural/acreage, golf community). Seller strategy (Steinbrenner zone as value driver, Starkey Ranch resale competition from new construction). HOA/CDD disclosure checklist. Comparison table vs Lutz/Land O' Lakes/Westchase. FAQ+JSON-LD.
+
+9. **odessa-fl-investment-property** (15,111 chars, from 5,284) — Rental market analysis ($2,200-$3,500/mo SFH; $3,500-$5,000/mo The Eagles golf-view; Keystone large-lot acreage niche). Gross yield table at 4 scenarios ($450K-$800K, 3.3-5.9%). Steinbrenner zone rental demand driver. STR restrictions in HOA communities. HOA rental restriction checklist. ViVi Property Management (vivicollective.com) Odessa area link. Comparison table vs Lutz/Land O' Lakes/Westchase/Apollo Beach. FAQ+JSON-LD.
+
+### Odessa Neighborhood Descriptions Added (5)
+
+10. **keystone** — Rural large-lot/equestrian community in western Hillsborough County at the Pasco County line. No HOA, no CDD, 1-10+ acre lots, well/septic common. Steinbrenner High zone. Veterans Expressway access 2-4 miles. Buyer guide: zoning, well/septic inspection, rural appraisal complexity.
+
+11. **the-eagles** — Gated golf community on Gunn Hwy with two 18-hole courses (Lakes and Forest). 1990s-early 2000s homes, 2,000-5,000+ sqft. HOA $150-$250/mo, no CDD. Steinbrenner High zone. Roof age and golf course lot advice for buyers.
+
+12. **starkey-ranch** — Master-planned Pasco County community near Odessa. 25+ miles of trails, multiple pools, Starkey Ranch K-8 (top-rated charter), Publix-anchored center. CDD $2,000-$5,000+/yr (phase-dependent). Veterans Expressway ~4 miles. Sunlake/River Ridge High zone.
+
+13. **lake-bernadette** — Established Pasco County lakefront community on Lake Bernadette along Gunn Hwy. 1990s-2000s homes, HOA ~$100-$200/yr (annual, not monthly), no CDD. Lakefront lots with dock rights. Flood zone review required for waterfront parcels. Pasco County schools.
+
+14. **keystone-ranch** — Residential subdivision in the Keystone area of Odessa, Hillsborough County. Late 1990s-early 2000s homes, quarter-acre+ lots, modest HOA, no CDD. Steinbrenner High zone. No-CDD savings vs Starkey Ranch buyers quantified ($20K-$50K over 10 years).
+
+**Build:** Passed (Next.js build green after npm install)
+**Files changed:** `src/data/posts-export.json`, `src/data/neighborhood-descriptions.ts`, `AUDIT-LOG.md`
+**Commit:** bab0f87 (+ merge commit 6bf8464)
+
+---
+
 ## 2026-08-15 (Batch 32 — 10 Venice FL spoke pages)
 
 **Pages improved: 10**
