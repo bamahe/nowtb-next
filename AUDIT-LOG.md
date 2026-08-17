@@ -4,6 +4,39 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-17 (Batch 34 — 10 Holiday FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 Holiday FL blog posts expanded from identical 5,296-char generic templates to 15,535-21,202 chars each. All dated 2026-08-16. Each post has: AEO Quick Answer intro, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, REMAX Collective, 23+ years, (813) 733-7907), and 5-question FAQ with JSON-LD FAQPage schema. Key facts verified via web search: Holiday FL is unincorporated Pasco County (ZIP 34690/34691), median home price ~$220K-$250K (most affordable in west Pasco County, June 2026); Anclote area median ~$375K; Baileys Bluff/Vista Lakes median ~$445K, ~75 homes built 2014-2018, ~67 DOM; Anclote High School #513 FL (US News), Pasco County 50% math/reading (below FL avg 52%); Paul R. Smith Middle School B-; Key Vista gated community with clubhouse, pool, fitness, tennis, trails; commute Tampa ~30-33 mi / 42-45 min via US-19; Clearwater ~17 mi / 28-35 min; Pasco County combined millage ~16 mills; $50K homestead exemption saves ~$651/yr (apply by March 1 to Pasco County Property Appraiser); single-family rentals $1,500-$2,200/mo; gross yields 7-10%+ at entry prices; no active large builder communities in Holiday proper (new construction concentrated in Trinity/Wesley Chapel); Anclote River provides Gulf of Mexico boat access; FEMA Zone AE (low-elevation waterfront/river) vs Zone X (Baileys Bluff elevated); ViVi Property Management serves the area.
+
+### Holiday FL Spoke Pages (10)
+
+1. **holiday-fl-homes-for-sale-guide** (18,989 chars, from 5,296) — Price table by property type (inland 34690 $180K-$280K, Key Vista villa $260K-$350K, Key Vista SFH $310K-$450K, Baileys Bluff $400K-$550K, Gulf access $500K-$750K+). Neighborhood guide (Key Vista, Baileys Bluff, Anclote, Lake Holiday). Comparison table vs New Port Richey/Tarpon Springs/Port Richey/Dunedin. Buyer checklist (flood zone, home age/inspection, HOA vs non-HOA, insurance). FAQ+JSON-LD.
+
+2. **holiday-fl-schools-guide** (17,049 chars, from 5,296) — Anclote High School deep-dive (#513 FL, C+ Niche, 49% minority, 66% economically disadvantaged). Paul R. Smith Middle School (B-, 308 students, 15:1 ratio). Elementary schools B- to C+ range. Pasco County District 50% math/reading vs 52% FL avg. Plato Academy of Trinity charter (B grade). School zone verification guidance. Comparison table vs Tarpon Springs/Dunedin/Trinity. FAQ+JSON-LD.
+
+3. **holiday-fl-commute-guide** (19,719 chars, from 5,296) — 12-destination drive time matrix (Tampa CBD 42-45 min, Clearwater 28-35 min, Clearwater Beach 35-42 min, TPA Airport 50-55 min, Tarpon Springs 13-18 min, Dunedin 20-25 min, St. Pete 50-60 min, New Port Richey 10-15 min, Westchase 38-45 min, Wesley Chapel 40-50 min, Orlando 95-110 min, Sarasota 70-80 min). US-19 primary route analysis (signal density problem). Suncoast Parkway (SR-589) via SR-54 toll alternative. SR-54 east-west connector. No practical public transit. Comparison table vs Tarpon Springs/New Port Richey/Port Richey/Trinity/Land O' Lakes. FAQ+JSON-LD.
+
+4. **is-holiday-fl-good-place-to-live** (18,470 chars, from 5,296) — 5 pros (most affordable west Pasco, Gulf/Anclote River access, Tarpon Springs proximity, no state income tax, quiet lower-density lifestyle). 5 cons (schools below FL avg, Tampa commute 42-45 min, older housing stock, hurricane/flood risk in coastal sections, limited walkable retail). 6-factor comparison table vs Tarpon Springs/New Port Richey/Dunedin. Who Holiday fits best and who it doesn't. FAQ+JSON-LD.
+
+5. **holiday-fl-real-estate-guide** (15,535 chars, from 5,296) — 2026 market snapshot by neighborhood. Buyer guide: understanding two ZIP codes (34690 inland vs 34691 coastal), flood zone due diligence, inspection priorities for older homes, HOA due diligence in Key Vista/Baileys Bluff. Seller guide: pricing accuracy critical in balanced market, condition impact on older homes, separate marketing strategy for waterfront vs inland. FAQ+JSON-LD.
+
+6. **holiday-fl-cost-of-living** (16,492 chars, from 5,296) — Monthly homeowner cost table at 5 price points ($200K-$550K: mortgage P+I, property tax at 16 mills with homestead, HO insurance). Inland vs coastal insurance cost breakdown. Flood insurance (Zone X $500-$900, Zone AE $1,500-$4,000+/yr). Duke Energy Florida electric ($120-$350/mo seasonal). Pasco County utilities water/sewer $70-$120/mo. Grocery context (US-19 Publix, Clearwater Costco 17 mi). No state income tax benefit. FAQ+JSON-LD.
+
+7. **holiday-fl-property-taxes** (18,242 chars, from 5,296) — Pasco County combined millage ~16 mills breakdown. Tax estimate table at 7 price points ($175K-$600K with homestead). Effective rate 1.4-1.8% for homesteaded properties. Homestead exemption $50K (apply to Pasco County Property Appraiser by March 1). Save Our Homes 3% annual cap explanation. SOH portability. New purchase assessment gap warning. Comparison table vs Pinellas/Hillsborough/Hernando counties. FAQ+JSON-LD.
+
+8. **holiday-fl-new-construction** (17,067 chars, from 5,296) — Holiday largely built out, no active large builder communities within Holiday proper. Eastern Pasco new construction concentrated in Wesley Chapel/Zephyrhills (D.R. Horton, Lennar, Ryan Homes). Trinity area (Connerton, Fox Wood) closest new construction to Holiday at 15-25 mi. Baileys Bluff Estates (2014-2018 construction) as newest stock within Holiday. Key Vista (late 1990s-early 2000s). Builder incentive vs resale negotiation comparison. CDD fee warning for new construction. Resale vs new construction comparison table. FAQ+JSON-LD.
+
+9. **holiday-fl-investment-property** (17,039 chars, from 5,296) — Rental rate table by property type ($1,400-$5,000 seasonal). Gross yield table at 6 scenarios (inland SFH 9-10%, coastal SFH 7-8%, waterfront seasonal 6-8%). Three investment scenario analyses (inland at $225K negative cash flow at 25% down; $180K near break-even; coastal $350K requires 40-50% down for positive; seasonal waterfront hybrid). Maintenance reserve ($200-$400/mo). Rising Florida insurance impact on yields. Non-HOA flexibility advantage for investors. ViVi Property Management link. FAQ+JSON-LD.
+
+10. **holiday-fl-waterfront-homes** (21,202 chars, from 5,296) — Four waterfront types: Anclote River homes (Gulf access, median ~$375K), Baileys Bluff Estates (elevated bluff, Zone X common, 2014-2018, median ~$445K), Key Vista coastal gated community, canal/lakefront properties. Price table by waterfront type ($250K-$800K+). FEMA Zone AE vs Zone X explanation. Elevation certificate guidance. 10-point buyer due diligence checklist (flood determination, elevation cert, dock/seawall inspection, navigability check, roof age, etc.). Comparison table vs Tarpon Springs/Port Richey/Hernando Beach/New Port Richey waterfront. FAQ+JSON-LD.
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+---
+
 ## 2026-08-16 (Batch 33 — 9 Odessa FL blog posts + 5 Odessa neighborhood descriptions)
 
 **Pages improved: 14 total (9 blog posts + 5 neighborhood description entries)**
