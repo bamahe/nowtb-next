@@ -4,6 +4,40 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-18 (Batch 35 — 10 Sarasota FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 Sarasota FL blog posts expanded from identical 5,352-char generic templates to 16,060-24,238 chars each. All dated 2026-08-17. Each post has: AEO Quick Answer intro, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, REMAX Collective, 23+ years, (813) 733-7907), and 5-question FAQ with JSON-LD FAQPage schema. Key facts verified via web search: median sale price ~$499K (July 2026, down from peak), sale-to-list ratio 94.41% (buyer-favoring market); Sarasota County combined millage ~13.0-14.0 mills unincorporated, ~16-17 mills City of Sarasota; Riverview High School Niche 3.93/5 (#2 Sarasota County public, #78 FL US News, 89% grad rate, 54% math/65% reading proficiency); Pine View School for the Gifted #1 FL (free public county-wide, grades 2-12, gifted eligibility required); Sarasota County district avg 62% math/reading vs 52% FL avg; Tampa commute 53-58 miles, 60-75 min off-peak, 90-150+ min peak via I-75/I-275; Lakewood Ranch 16+ active builders (DR Horton, Lennar, Taylor Morrison, Pulte, M/I Homes, Neal Communities, David Weekley, Kolter, Del Webb, Toll Brothers, Meritage, others), SE LWR expansion 7 new neighborhoods arriving late 2026 (Taylor Morrison, Toll Brothers, Pulte, Neal Communities); Siesta Key waterfront median list $4.3M (May 2026), 77 listings, 141 DOM; Gulf-front homes $4M-$15M+; average Sarasota rent $2,500/mo (Aug 2026, 29% above national avg); 3BR SFH $3,000-$4,500/mo; ViVi Property Management linked from investment post.
+
+### Sarasota FL Spoke Pages (10)
+
+1. **sarasota-fl-homes-for-sale-guide** (20,675 chars, from 5,352) — Price table by segment ($280K-$380K condos, $480K-$650K mid-market SFH, $1.5M+ waterfront). Neighborhood guide (Palmer Ranch, Gulf Gate Estates, Siesta Key, Downtown/Rosemary District, Lakewood Ranch edge, South Sarasota/Sarasota Springs). Comparison table vs Venice/Bradenton/North Port/Osprey. Buyer checklist (flood zone, HOA/CDD, inspection priorities, insurance). FAQ+JSON-LD.
+
+2. **sarasota-fl-schools-guide** (17,555 chars, from 5,352) — Pine View School for the Gifted (#1 FL, county-wide, requires gifted eligibility). Riverview High (#78 FL US News, 3.93/5 Niche, 89% grad rate, 54% math/65% reading). Sarasota High (#390 FL). District 62% math/reading vs 52% FL avg. Private school options (Cardinal Mooney, Out-of-Door Academy, Sarasota Military Academy). School zone impact on property values. Comparison table vs Hillsborough/Manatee/Charlotte/Pinellas. FAQ+JSON-LD.
+
+3. **sarasota-fl-commute-guide** (18,885 chars, from 5,352) — 12-destination drive time matrix (Tampa 60-75 min off-peak/90-150+ peak, Bradenton 20-28 min, Venice 20-28 min, SRQ Airport 15-22 min, Fort Myers 75-90 min, Clearwater 75-90 min, North Port 30-40 min, Lakewood Ranch 22-35 min, Naples 100-115 min, Orlando 130-155 min, Osprey 15-22 min). I-75 primary artery analysis (78K-133K daily vehicles), US-41 Tamiami Trail, University Parkway, Clark Road. Tampa commute reality check. No practical public transit to Tampa. FAQ+JSON-LD.
+
+4. **is-sarasota-fl-good-place-to-live** (18,776 chars, from 5,352) — 5 pros (Siesta Beach #1 US ranked, Pine View #1 FL, regional arts/performing arts scene, no state income tax, lower than Naples/Miami for comparable lifestyle). 4 cons (Tampa commute 65-80+ min, hurricane/flood risk on barrier islands, summer heat/humidity, seasonal tourist congestion). 6-factor comparison table vs Bradenton/Venice/North Port/Naples. Who Sarasota fits best. FAQ+JSON-LD.
+
+5. **sarasota-fl-real-estate-guide** (16,060 chars, from 5,352) — 2026 market snapshot table (median $499K, 94% list-to-sale, 65-75 DOM, elevated inventory). Buyer segments (retirees/pre-retirees, remote workers, seasonal buyers). Buyer strategy (pre-approval, price-per-sqft analysis, full inspection contingency use). Seller strategy (94% ratio means pricing competitively from day one; condition matters in buyer market). Comparison table vs Venice/Bradenton/North Port/Osprey. FAQ+JSON-LD.
+
+6. **sarasota-fl-cost-of-living** (22,916 chars, from 5,352) — Monthly homeowner cost table at 3 price points ($400K/$499K/$700K: mortgage P+I, property tax, HO+wind insurance, flood insurance, HOA/CDD, utilities). Rental market (avg $2,500/mo, 1BR $1,600-$2,100, 2BR $2,200-$2,900, 3BR SFH $3,000-$4,500, Siesta Key seasonal $4,500-$12,000+). FPL electric $120-$360/mo seasonal. Water/sewer $60-$110/mo. Grocery/dining/transportation context. Comparison table vs Bradenton/Venice/North Port/Naples/Tampa. FAQ+JSON-LD.
+
+7. **sarasota-fl-property-taxes** (23,182 chars, from 5,352) — Sarasota County millage breakdown by authority (general ~3.3, school ~5.0, mosquito control, fire, special districts; total uninc. ~13.0-14.0 mills, city ~16.0-17.0 mills). Tax estimate table at 7 price points ($350K-$2M with homestead). Effective rate ~1.3-1.4% for homesteaded uninc. properties. Homestead exemption $50K, saves ~$600-$680/yr at 13.5 mills. Save Our Homes 3% cap explained. SOH portability. CDD fees explained (appear on tax bill, not homesteadable, Lakewood Ranch $2,000-$5,500+/yr). Comparison table vs Hillsborough/Pinellas/Manatee/Charlotte/Collier. FAQ+JSON-LD.
+
+8. **sarasota-fl-new-construction** (24,238 chars, from 5,352) — Lakewood Ranch as primary hub (16+ builders, $380K-$2M+): full builder comparison table (DR Horton, Lennar, Pulte, Taylor Morrison, M/I Homes, Neal, David Weekley, Kolter, Del Webb, Toll Brothers, Neal Signature, Meritage). SE Lakewood Ranch expansion (7 new Sarasota County neighborhoods, late 2026). Wellen Park (North Port/Sarasota County, 10+ builders, $350K-$2M+). Custom infill in Sarasota (teardown lots Siesta Key $800K-$3M+). CDD fee table (bond $1,200-$3,500/yr + O&M $800-$2,000/yr, total $2,000-$5,500+). New construction vs resale comparison table. FAQ+JSON-LD.
+
+9. **sarasota-fl-investment-property** (19,439 chars, from 5,352) — Gross yield table at 6 scenarios ($420K-$1.5M, 4.8-9.6%). Three investment scenarios modeled (Gulf Gate cash flow analysis at 25% down = negative; all-cash = 3.6% net; Siesta Key seasonal = 1.9% net cash yield). STR restrictions in HOA communities. Insurance as top risk factor ($4,500-$30,000+/yr for investment properties). HOA rental restriction checklist. ViVi Property Management link (/property-management/). Comparison table vs Venice/Bradenton/North Port/Apollo Beach. FAQ+JSON-LD.
+
+10. **sarasota-fl-waterfront-homes** (23,618 chars, from 5,352) — Five waterfront type table (Gulf-front $4M-$15M+ Zone VE, Intracoastal/bay $1.5M-$8M Zone AE, canal/Gulf-access $1.3M-$4M, freshwater lake $500K-$1.2M, coastal view $600K-$2M). Siesta Key deep-dive (median list $4.3M, 77 listings, 141 DOM). Longboat Key ($1.4M-$7M+), Lido Key ($1.5M-$4.5M), Bird Key ($1.8M-$5M, private gated no-HOA). Waterfront due diligence checklist (flood zone, elevation certificate, seawall inspection costs $25K-$60K replacement, dock navigability, wind mitigation inspection). Comparison table vs Venice/Osprey/Apollo Beach/Hernando Beach. FAQ+JSON-LD.
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Commit:** f782969
+
+---
+
 ## 2026-08-17 (Batch 34 — 10 Holiday FL spoke pages)
 
 **Pages improved: 10**
