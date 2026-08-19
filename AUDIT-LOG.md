@@ -4,6 +4,36 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-19 (Batch 36 — 10 North Port FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 North Port FL blog posts expanded from identical 5,404-char generic boilerplate to 18,331-27,851 chars each. All dated 2026-08-18. Each post has: AEO Quick Answer intro, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, REMAX Collective, 23+ years, (813) 733-7907), and 5-question FAQ with JSON-LD FAQPage schema + BreadcrumbList schema. Key facts verified via web search: North Port median sale price ~$315K-$350K (2026, down 7-11% YoY, ~77 DOM); North Port HS bottom 50% FL rankings; Sarasota County district avg 62% math/reading vs 52% FL avg; Venice commute 20-25 min, Sarasota 35-40 min, Tampa 70-80 min; SFH rentals $1,640-$3,000/mo; FEMA maps updated March 2024 (Zone X majority, Zone AE near waterways); property taxes ~14-16 mills total; Wellen Park (formerly West Villages) is within North Port city limits, 10+ active builders, $300K-$1.5M+, CDD fees $2,000-$4,500+/yr.
+
+### North Port FL Spoke Pages (10)
+
+1. **north-port-fl-homes-for-sale-guide** (20,277 chars, from 5,404) — Price table by segment ($200K-$275K entry, $280K-$400K mid-range, $400K-$600K move-up, $600K+ luxury/Wellen Park). Neighborhood comparison (Jockey Club, Price Blvd corridor, Heron Creek, Bobcat Trail, Wellen Park). Comparison table vs Venice/Port Charlotte/Sarasota/Englewood. Buyer checklist (deed restrictions, CDD fees, flood zone, canal access, inspection). FAQ+JSON-LD.
+
+2. **north-port-fl-schools-guide** (21,288 chars, from 5,404) — North Port High School performance data (bottom 50% FL rankings). Sarasota County district overview (62% math/reading vs 52% FL avg). Elementary/middle feeder schools in North Port boundaries. Private options (Imagine School at North Port, others). School zone lookup guidance. Comparison table vs Sarasota/Venice/Port Charlotte/Englewood districts. FAQ+JSON-LD.
+
+3. **north-port-fl-commute-guide** (26,492 chars, from 5,404) — 10-destination drive time matrix (Venice 20-25 min, Sarasota 35-40 min, Port Charlotte 25-30 min, Tampa 70-80 min, Fort Myers 60-70 min, Punta Gorda 30-35 min, Englewood 20-25 min, SRQ Airport 50-55 min, RSW Airport 65-75 min, Naples 90-100 min). I-75 primary artery (exits 179/182), US-41 Tamiami Trail, River Road analysis. Wellen Park internal vs North Port city center commute. No public transit to Tampa reality check. FAQ+JSON-LD.
+
+4. **is-north-port-fl-good-place-to-live** (19,958 chars, from 5,404) — 5 pros (affordable entry vs coastal peers, Wellen Park master-planned amenities, low crime relative to FL avg, no state income tax, natural springs/outdoor recreation). 4 cons (school rankings below county avg, Tampa commute 70-80+ min, limited walkable retail/dining, hurricane/flood exposure eastern canals). 6-factor comparison table vs Venice/Port Charlotte/Sarasota/Englewood/Punta Gorda. Who North Port fits best. FAQ+JSON-LD.
+
+5. **north-port-fl-real-estate-guide** (18,331 chars, from 5,404) — 2026 market snapshot table (median ~$330K, buyer's market, 7-11% YoY decline, 77 DOM, elevated inventory). Buyer segments (retirees, remote workers, investors, move-up from Port Charlotte). Buyer strategy (pre-approval, price-per-sqft vs Venice, full inspection, CDD fee review). Seller strategy (price aggressively vs 77-DOM reality; condition and staging matter). Comparison table vs Venice/Port Charlotte/Sarasota/Englewood. FAQ+JSON-LD.
+
+6. **north-port-fl-cost-of-living** (22,062 chars, from 5,404) — Monthly homeowner cost table at 3 price points ($250K/$330K/$450K: mortgage P+I, property tax, HO+wind insurance, flood insurance, HOA/CDD, utilities). Rental market ($1,640-$3,000/mo SFH, 1BR $1,200-$1,600, 2BR $1,500-$2,100). FPL electric $120-$320/mo seasonal. Grocery/dining/transportation context vs Sarasota. Comparison table vs Venice/Port Charlotte/Sarasota/Englewood/Fort Myers. FAQ+JSON-LD.
+
+7. **north-port-fl-property-taxes** (26,910 chars, from 5,404) — Sarasota County millage breakdown for North Port (city portion + county general + school + fire/mosquito/special districts; total ~14-16 mills). Tax estimate table at 7 price points ($200K-$600K with homestead). Homestead exemption $50K. Save Our Homes 3% cap explained. SOH portability. CDD fees in Wellen Park/Heron Creek/Bobcat Trail explained ($2,000-$4,500+/yr, appear on tax bill). TRIM notice timeline. Comparison table vs Venice/Port Charlotte/Sarasota/Charlotte County. FAQ+JSON-LD.
+
+8. **north-port-fl-new-construction** (26,358 chars, from 5,404) — Wellen Park as primary hub (10+ builders, $300K-$1.5M+, within North Port city limits): builder comparison table (DR Horton, Lennar, Pulte, Taylor Morrison, Neal Communities, Mattamy Homes, Toll Brothers, M/I Homes, David Weekley, others). CDD fee breakdown (bond + O&M, $2,000-$4,500+/yr). City of North Port outside Wellen Park options (scattered lots, smaller subdivisions). New construction vs resale comparison table. Wellen Park amenity district (CoolToday Park, Oasis restaurant row, Paw Park, downtown district). FAQ+JSON-LD.
+
+9. **north-port-fl-investment-property** (27,851 chars, from 5,404) — Gross rental yield estimates by price tier ($220K-$450K at $1,640-$2,800/mo). SFH vs condo vs new construction investment comparison. CDD fees as expense line item. 12-month vacancy reality check in a buyer's market. Property management cost (~8-10% gross). Cash flow scenario table (with/without CDD, with/without property management). Wellen Park short-term rental restrictions. Sarasota County regulations. Comparison table vs Venice/Port Charlotte/Sarasota/Fort Myers investment yield. FAQ+JSON-LD.
+
+10. **north-port-fl-waterfront-homes** (22,245 chars, from 5,404) — Canal system overview (freshwater canals throughout North Port, ~80 miles, most navigable with small craft; NOT Gulf-access). Price range by waterfront type ($280K-$500K freshwater canal SFH). FEMA flood zone reality (Zone X majority, Zone AE near canals/waterways per March 2024 update). Flood insurance cost estimate ($800-$2,500+/yr for Zone AE). Dock/seawall inspection checklist. True Gulf-access comparison (Venice/Englewood/Punta Gorda $600K-$2M+). Comparison table: North Port canal vs Venice Intracoastal vs Gulf-front. FAQ+JSON-LD.
+
+---
+
 ## 2026-08-18 (Batch 35 — 10 Sarasota FL spoke pages)
 
 **Pages improved: 10**
