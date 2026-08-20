@@ -4,6 +4,40 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-20 (Batch 37 — 10 Siesta Key FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 Siesta Key FL blog posts expanded from identical 5,225-char generic boilerplate to 19,194-25,341 chars each. All dated 2026-08-19. Each post has: AEO Quick Answer intro, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, REMAX Collective, 23+ years, (813) 733-7907), and 5-question FAQ with JSON-LD FAQPage schema + BreadcrumbList schema. Key facts: Siesta Key is a fully built-out barrier island in unincorporated Sarasota County; Gulf-front properties in Zone VE, bayfront/canal in Zone AE; combined Sarasota County millage ~13.0-14.0 mills; schools = Phillippi Shores Elementary (IB PYP), Brookside Middle (IB MYP), Sarasota High School; Pine View School for the Gifted (#1 FL, county-wide by qualification); two bridges (Siesta Drive north/US-41, Stickney Point south/Clark Road); Tampa commute 65-80 min off-peak; no true new construction (teardown-rebuild only, ~$500-$800+/sqft construction); STR market generates $60K-$350K+ gross/yr depending on property type; Sarasota County permits STRs in unincorporated areas but HOA rules govern condos; ViVi Property Management linked from investment post.
+
+### Siesta Key FL Spoke Pages (10)
+
+1. **siesta-key-fl-homes-for-sale-guide** (21,707 chars) — Property type price table (studio condo $390K-$580K up to Gulf-front SFH $4M-$15M+). Three area breakdowns (Village north, Crescent Beach middle, Turtle Beach south). Four buyer due diligence items (flood insurance, wind insurance, HOA rental restrictions, full inspection). Comparison table vs Longboat Key/Lido Key/Anna Maria/Tierra Verde. Buyer checklist (10-item). FAQ+JSON-LD.
+
+2. **siesta-key-fl-schools-guide** (23,770 chars) — Phillippi Shores Elementary (IB PYP) and Brookside Middle (IB MYP). Sarasota High. Pine View School for the Gifted (#1 FL, county-wide). Private options: Out-of-Door Academy, Cardinal Mooney, Sarasota Military Academy. District comparison table (Sarasota 62% vs FL 52% math/reading). School zone vs investment property context. FAQ+JSON-LD.
+
+3. **siesta-key-fl-commute-guide** (25,341 chars) — Two bridge analysis (Siesta Drive/US-41 north, Stickney Point/Clark Road south) with tourist season congestion context. 12-destination drive time matrix (Sarasota 10-20 min, SRQ airport 20-30 min, Tampa 65-80 min off-peak/90-150 min peak, Naples 100-115 min, Orlando 145-165 min). No public transit to island. Remote worker analysis. Comparison table vs mainland Sarasota neighborhoods. FAQ+JSON-LD.
+
+4. **siesta-key-fl-real-estate-guide** (19,194 chars) — 2026 market snapshot table (county median $499K, 94% list-to-sale, 65-75 DOM, buyer-leaning). Condo vs SFH vs villa comparison table. Buyer and seller strategies for 2026 market. Comparison table vs Sarasota county-wide trends. FAQ+JSON-LD.
+
+5. **siesta-key-fl-cost-of-living** (21,816 chars) — Monthly ownership cost table at 3 price points ($500K condo/$1M SFH/$2.5M Zone VE SFH) including mortgage P+I, taxes, wind insurance, flood insurance, HOA, utilities. Wind insurance deep-dive (factors affecting rates: roof type, age, impact glass, wind mitigation report). Flood insurance by zone (AE $2,500-$8,000/yr; VE $8,000-$20,000+/yr). HOA fee range table by building type. STR income offset analysis. FAQ+JSON-LD.
+
+6. **siesta-key-fl-property-taxes** (23,725 chars) — Sarasota County uninc. millage breakdown table (~13.0-14.0 mills). Tax estimate table at 7 price points ($500K-$5M, non-homesteaded). Homestead exemption applicability context (most Siesta Key = second home/investment, no homestead). Save Our Homes cap and portability explanation. Comparison table vs other FL barrier islands (Longboat, Anna Maria, St. Pete Beach, Clearwater Beach, Marco Island). FAQ+JSON-LD.
+
+7. **siesta-key-fl-new-construction** (21,703 chars) — No true new construction: island fully built out. Teardown-rebuild cost table (land + demo + foundation + construction + permits = $3M-$6M+ all-in for 3,000 sqft). CCCL (Coastal Construction Control Line) restrictions for Gulf-front. Post-Ian/Milton building code requirements. Freeboard and elevation certificate impact on insurance. New construction alternatives near Siesta Key: Wellen Park (~25-35 mi, 10+ builders), Lakewood Ranch (~25-30 mi, 16+ builders), downtown Sarasota condos. Comparison table: teardown-rebuild vs resale. FAQ+JSON-LD.
+
+8. **siesta-key-fl-investment-property** (24,671 chars) — STR revenue estimates by property type table (studio $35K-$60K/yr gross up to Gulf-front SFH $180K-$350K+/yr). Sarasota County STR regulations (county allows in uninc. areas; HOA rules govern condos). HOA rental restriction analysis (7-day/30-day minimums common in condo buildings). Operating expense table (insurance $15K-$40K+, property mgmt 25%, platform fees 3-5%, maintenance, HOA). Long-term vs STR comparison table. ViVi Property Management link. Net return example ($1M condo = ~1.3% net yield). FAQ+JSON-LD.
+
+9. **siesta-key-fl-waterfront-homes** (23,102 chars) — Four waterfront types: Gulf-front Zone VE ($4M-$15M+), bayfront/Big Pass Zone AE ($1.5M-$6M+), canal-front Zone AE ($1.2M-$2.5M), beach-access non-direct ($600K-$1.8M). Price table by type. Seawall inspection guidance (cost $15K-$200K+ for repair/replacement). Dock permit verification. Wind mitigation inspection. Elevation certificate requirement. Comparison table vs Longboat Key/Anna Maria/Lido Key/Hernando Beach/Apollo Beach. FAQ+JSON-LD.
+
+10. **siesta-key-fl-flood-zones** (23,053 chars) — Zone VE (Gulf-front, wave action hazard, highest risk) vs Zone AE (bayfront/canal, inundation risk) vs Zone X (interior, minimal). NFIP cost table by zone (VE $8K-$20K+/yr, AE $2.5K-$8K/yr, X optional $500-$1.2K). Elevation certificate explanation. BFE context for Siesta Key (VE may be 12-17+ ft above MSL). Sarasota County freeboard requirements (1-2 ft above BFE). Hurricane storm surge context (Milton 2024, Ian 2022). How to look up flood zone (msc.fema.gov). Risk factor comparison table. FAQ+JSON-LD.
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Commit:** 6dec0cf
+
+---
+
 ## 2026-08-19 (Batch 36 — 10 North Port FL spoke pages)
 
 **Pages improved: 10**
