@@ -4,6 +4,39 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-21 (Batch 38 — 10 Oldsmar FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 Oldsmar FL blog posts expanded from thin 6,523-9,821-char boilerplate to 14,721-20,697 chars each. All dated 2026-08-20. Each post has: AEO Quick Answer intro, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, REMAX Collective, 23+ years, (813) 733-7907), and 5-question FAQ with JSON-LD FAQPage schema + BreadcrumbList schema. Key facts verified via web search: Oldsmar ZIP 34677, Pinellas County; median home price $375K-$421K (SFH $535K median, townhomes $292K, condos $140K-$330K); 71 avg days on market; 97.5% sale-to-list; ~$234/sqft (down 6% YoY); Pinellas County Schools A-rated district (3rd consecutive, #15 FL); Oldsmar Elementary now K-8 campus (B+ rating, 68% math / 67% reading proficient); combined millage ~19.39 mills / ~1% effective rate; city millage 4.05 mills; Homestead Exemption $50K reduction; commute Tampa 20-28 min off-peak via SR-580 + Courtney Campbell; TPA 18-25 min; Clearwater 20-28 min; rental market: apt avg $1,426/mo, 3BR SFH $2,100-$2,800/mo; STR avg $24,413/yr gross, $218 avg nightly; neighborhoods: East Lake Woodlands ($420K-$750K+), Twin Branch Acres ($380K-$580K), Bridgeport/Briar Creek ($310K-$530K), Gull Aire Village 55+ ($120K-$280K); new construction very limited (infill, small townhome projects, teardown-rebuild); ViVi Property Management linked from investment post.
+
+### Oldsmar FL Spoke Pages (10)
+
+1. **oldsmar-fl-homes-for-sale-guide** (17,791 chars) — Property type price table (condo $140K-$330K up to waterfront SFH $700K-$2M+). Neighborhood breakdown table (East Lake Woodlands, Twin Branch Acres, Gull Aire Village, Bridgeport, Briar Creek, waterfront). Flood zone section (Zone AE vs Zone X; mandatory vs optional flood insurance). Buying process differences vs Hillsborough County. School zone context. FAQ+JSON-LD.
+
+2. **oldsmar-fl-cost-of-living** (20,697 chars) — Monthly cost table at two price points ($375K and $535K): P+I, property taxes, homeowner's insurance, flood insurance, HOA. City comparison table vs Safety Harbor/Clearwater/Dunedin/Riverview/Brandon. Insurance section (wind mitigation inspection 20-40% savings). Everyday living cost table (groceries, utilities, internet, transportation, dining). No-income-tax benefit analysis ($7,500/yr savings for $150K household vs 5% state income tax). FAQ+JSON-LD.
+
+3. **oldsmar-fl-real-estate-guide** (18,202 chars) — 2026 market metrics table (median, DOM, price cuts, price/sqft, sale-to-list). Neighborhood profiles (East Lake Woodlands, Twin Branch Acres, Gull Aire Village, Bridgeport, Briar Creek). Buy vs sell now analysis. 7-step buying process table. Seller preparation section (CMA, 4-point/wind mitigation inspections, flood zone disclosure). FAQ+JSON-LD.
+
+4. **is-oldsmar-fl-good-place-to-live** (15,744 chars) — Pros: coastal access, A-rated schools, commuter-friendly, established neighborhoods, lower crime. Cons: insurance costs, limited new construction, flood zone exposure, SR-580 rush hour congestion. Buyer type fit table (families, professionals, retirees, investors, new-construction buyers). FAQ+JSON-LD.
+
+5. **oldsmar-fl-investment-property** (14,721 chars) — Gross yield table by property type (2BR condo 6-8%, townhome 7-8%, 3BR SFH inland 6-8%, waterfront SFH 5-6%). STR market data ($24,413/yr avg, $218 nightly, $87 RevPAR). Mid-term rental strategy for corporate/traveling healthcare/relocating families. Risks: insurance cost compression, flood zone, elevated mortgage rates. ViVi Property Management link. FAQ+JSON-LD.
+
+6. **oldsmar-fl-new-construction** (17,216 chars) — Why new construction is limited (Pinellas County density). What exists: infill custom builds ($150-$250/sqft + lot), teardown-rebuild ($600K-$1.5M+ waterfront), small townhome projects (Odeon Square, $350K-$550K). Nearby new construction alternatives table (Zephyrhills, Wesley Chapel, Riverview, Land O Lakes, Parrish). New vs resale comparison table. Builder contract tips. FAQ+JSON-LD.
+
+7. **oldsmar-fl-property-taxes** (18,169 chars) — Millage breakdown table (county 5.93, city 4.05, schools 7.36, special districts 2.05, total ~19.39). Homestead Exemption breakdown table ($25K all authorities + $25K non-school). Save Our Homes cap explanation (3% annual cap). Non-homestead properties (no exemption, 10% annual cap via Amendment 1). City comparison table vs Safety Harbor/Clearwater/Dunedin/Hillsborough unincorporated. FAQ+JSON-LD.
+
+8. **oldsmar-fl-commute-guide** (16,356 chars) — 9-destination drive time matrix (Tampa 20-28/35-55 min, TPA 18-25/30-45 min, Clearwater 20-28/30-45 min, St. Pete 35-45/50-65 min, Safety Harbor 12-18/20-30 min, Clearwater Beach 25-35/40-55 min, Dunedin/Tarpon 25-40 min, USF 35-50 min). SR-580 traffic analysis (7-9 AM eastbound, 4:30-6:30 PM westbound bottlenecks). PSTA transit limitations (90+ min to Tampa). Best departure time windows. Weekend beach traffic tips. FAQ+JSON-LD.
+
+9. **oldsmar-fl-schools-guide** (17,643 chars) — Pinellas County Schools A-rated (3rd consecutive, #15 FL). Oldsmar Elementary K-8 campus (B+, top 30% FL, 68% math / 67% reading). Oldsmar Christian School private K-12 (4.4 stars). District comparison table vs Hillsborough/Pasco/Manatee/Sarasota. Charter schools section. Higher education options (St. Pete College Clearwater, USF, UT within 30-40 min). FAQ+JSON-LD.
+
+10. **sell-home-fast-oldsmar** (19,738 chars) — Expanded from 9,821 chars. 2026 market conditions (71 DOM, 97.5% sale-to-list, 29% price cuts). Neighborhood value table by DOM and buyer profile. Preparation checklist (4-point/wind mitigation inspections, flood zone disclosure, CMA pricing, professional photography). Seller cost table (commission 5-6%, doc stamps 0.70%, title, prorations). Best listing season (Jan-Apr snowbird window vs July-Sept slower). FAQ+JSON-LD.
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+---
+
 ## 2026-08-20 (Batch 37 — 10 Siesta Key FL spoke pages)
 
 **Pages improved: 10**
