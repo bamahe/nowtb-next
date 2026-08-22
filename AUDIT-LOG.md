@@ -4,6 +4,31 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-22 (Batch 39 — 10 Brooksville FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 brooksville-fl-* blog posts expanded from 5,412-char boilerplate to 16,269-18,194 chars each. All dated 2026-08-21. Each post has: AEO Quick Answer intro, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, REMAX Collective, 23+ years, (813) 733-7907), and 5-question FAQ with JSON-LD FAQPage schema + BreadcrumbList schema. Key facts verified via web search: Brooksville ZIP 34601/34602/34604; Hernando County seat; median SFH $310K-$340K; 94 avg days on market; Redfin market score 14/100 (buyer-favorable); Hernando County millage 8.1082, effective rate 0.86% (below FL avg 1.10%); 38+ builders / 159+ communities including LGI Sherman Hills (from $207K), Lennar Trillium ($280K-$450K), Avex Leyland Preserve ($300K-$480K), Southern Hills Plantation ($420K-$1.2M+), D.R. Horton Emerson Ranch; Hernando County School District B- rating, 24,015 students, 32 schools, magnet schools Gulf Coast Academy of Science and Technology (A) and Challenger K-8 (A-), Hernando High and Nature Coast Technical High; Suncoast Pkwy commute 35-50 min Tampa off-peak; Weeki Wachee River constant 74-degree springs, Zone AE/VE flood risk; Hurricane Helene (Sept 2024) caused historic surge in Hernando Beach and Weeki Wachee corridor; inland Brooksville mostly Zone X; investment rents 3BR SFH $1,600-$2,000/mo, cap rates 5-7%; ViVi Property Management linked from investment post.
+
+### Brooksville FL Spoke Pages (10)
+
+1. **brooksville-fl-homes-for-sale-guide** — Added neighborhoods (Southern Hills Plantation, Sherman Hills, Trillium, Pristine Place, Spring Ridge, historic downtown), price table by type ($207K-$3.4M+), buying process (septic/well/flood considerations), negotiating tips. 18,194 chars.
+2. **brooksville-fl-schools-guide** — Added school ratings table (Gulf Coast Academy A, Challenger K-8 A-, Nature Coast Technical B+, Hernando High B-), magnet/charter overview, private school list, school zone impact on home values. 17,533 chars.
+3. **brooksville-fl-commute-guide** — Route comparison table (Suncoast Pkwy vs SR-50/I-75 vs US-41), drive times to Tampa/Wesley Chapel/Clearwater/Spring Hill, SR-50 2026 construction update, remote work calculus. 16,269 chars.
+4. **brooksville-fl-real-estate-guide** — Market metrics table (Brooksville vs Hernando County vs Hillsborough County), 5-step buying process, seller strategy (pricing/presentation/incentives). 16,627 chars.
+5. **brooksville-fl-cost-of-living** — Full cost comparison table (housing, taxes, insurance, electric, water, groceries, tolls), homeowners insurance breakdown, full commute cost calculation. 17,727 chars.
+6. **brooksville-fl-property-taxes** — Millage 8.1082, effective rate 0.86%, tax estimate table by assessed value, Homestead Exemption mechanics, SOH cap, additional exemptions, TRIM/VAB appeal process, county comparison table. 18,191 chars.
+7. **brooksville-fl-new-construction** — 6 community profiles (Sherman Hills, Trillium, Leyland Preserve, Waterford, Southern Hills Plantation, Emerson Ranch), new vs resale comparison table, CDD explanation, builder incentive summary. 18,077 chars.
+8. **brooksville-fl-investment-property** — Cash flow analysis table (4 scenarios, cap rates 5-7%), sample $290K SFH analysis, no-HOA/large-lot/Suncoast-adjacent strategy, ViVi Property Management linked. 16,567 chars.
+9. **brooksville-fl-waterfront-homes** — Weeki Wachee River description (74-degree springs, Gulf access), waterfront price table, Hernando Beach canal homes, Hurricane Helene 2024 surge detail, flood insurance cost ranges ($1,500-$12,000+). 16,400 chars.
+10. **brooksville-fl-flood-zones** — FEMA zone table (X/AE/VE/AH), why inland Brooksville has low risk (200+ ft elevation), Helene surge mechanics (river channel), 4-step verification process, Zone X flood insurance optional at $400-$700/yr. 18,124 chars.
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `1334361` — pushed to `origin/main`
+
+---
+
 ## 2026-08-21 (Batch 38 — 10 Oldsmar FL spoke pages)
 
 **Pages improved: 10**
