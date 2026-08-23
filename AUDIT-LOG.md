@@ -4,6 +4,30 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-23 (Batch 40 — 10 Polk City FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 polk-city-fl-* blog posts expanded from 5,165-char boilerplate to 13,720-18,906 chars each. All dated 2026-08-22. Each post has: AEO Quick Answer intro, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, REMAX Collective, 23+ years, (813) 733-7907), 5-question FAQ with JSON-LD FAQPage schema + BreadcrumbList schema, and 10+ internal links per post. Key facts verified via web search: Polk City ZIP 33868; northern Polk County near LEGOLAND and Fantasy of Flight; median home ~$267K-$355K; 110-263 avg days on market; Momentum buyer score 77/100; Polk County millage ~16.19 mills, effective rate ~1.05% in 33868; on homesteaded $350K home (~$300K taxable) annual tax ~$3,150; Florida homestead exemption $50K; Save Our Homes 3% annual assessment cap; Polk City Elementary PK-5 2/10 GreatSchools / C Niche, 539 students; 119,055 students 170 Polk County schools; middle/high school address-dependent (azua.polk-fl.net); commute to Tampa ~45-50 mi / 55-65 min off-peak; to Lakeland ~15 mi / 20-25 min; to Orlando ~55 mi / 65-80 min; LGI Homes Peach Crossings Winter Haven from $333,900; D.R. Horton active in Polk County; Polk County cap rate 7.42%; 3BR rents ~$1,840/mo; average rent ~$2,050/mo; 4BR rents ~$2,640/mo; rent growth ~1.5% YoY; Green Swamp WMA 560,000 acres protects rural character; Fantasy of Flight aviation museum; 500+ named Polk County lakes; ViVi Property Management linked from investment post.
+
+### Polk City FL Spoke Pages (10)
+
+1. **polk-city-fl-homes-for-sale-guide** — Property type price table (Town Center $250K-$340K to lakefront $350K-$600K+); area comparison table vs Lakeland/Winter Haven/Plant City; step-by-step buying process (well/septic inspection, flood zone, Polk County title); 5-Q FAQ with JSON-LD. 18,906 chars.
+2. **polk-city-fl-schools-guide** — Polk City Elementary profile (2/10 GreatSchools, 539 students, math/reading 41% vs 52% FL avg); middle/high zone guidance with link to azua.polk-fl.net; private school options in Lakeland; magnet schools (Magnolia Montessori, Lincoln Ave Academy); school ratings vs home buying tradeoff discussion; 5-Q FAQ. 15,878 chars.
+3. **polk-city-fl-commute-guide** — Full distance/time table (Tampa 48mi/55-65min, Lakeland 15mi/20-25min, Orlando 58mi/65-80min, Plant City 20mi/25-30min); I-4 congestion analysis; US-98 route notes; public transit limitations (no commuter rail, limited PCT coverage); remote work + internet availability guidance; financial case for longer commute vs Tampa suburb price premium; 5-Q FAQ. 13,720 chars.
+4. **is-polk-city-fl-good-place-to-live** — Pros (space, Green Swamp buffer, Fantasy of Flight, no state income tax, low home prices); cons (limited local amenities, below-avg schools, 45-mi Tampa commute); buyer type fit table (rural lifestyle, remote workers, outdoor enthusiasts vs urban amenity seekers); community/healthcare/weather sections; 5-Q FAQ. 14,291 chars.
+5. **polk-city-fl-real-estate-guide** — 2026 market metrics (typical value $267K, DOM 110-263 days, price/sqft $205, buyer score 77/100, YoY -5-16%); market softness drivers; what is selling vs sitting; well/septic due diligence; flood zone; zoning/land use; seller pricing strategy (avoid 2022 peak comps); 5-Q FAQ. 14,347 chars.
+6. **polk-city-fl-cost-of-living** — Monthly housing cost table ($267K home: P+I $1,601, taxes $185-$210, insurance $150-$250, total ~$1,950-$2,060); rental market ($2,050 avg, 3BR SFH $1,840); no state income tax advantage; Polk County 7% sales tax; commuting cost calculation (Lakeland ~$90/mo, Tampa ~$270/mo gas); area price comparison table (Polk City vs Plant City vs Valrico vs Brandon); 5-Q FAQ. 15,603 chars.
+7. **polk-city-fl-property-taxes** — Millage breakdown table (school ~5.29 mills, county ~7 mills, WMD ~0.35 mills, total ~16.19 mills); homestead exemption calculation ($50K off assessed value); Save Our Homes 3% cap; tax estimate table by value ($250K-$400K); senior/veteran/first-responder exemption descriptions; VAB appeal process; 5-Q FAQ. 16,418 chars.
+8. **polk-city-fl-new-construction** — Why supply is limited (Green Swamp land constraints, small incorporated area); West Polk City newer subdivisions ($275K-$400K); LGI Homes Peach Crossings Winter Haven ($333,900+); D.R. Horton / Lennar in Lakeland; new vs resale comparison table (price, warranty, CDD, lot size, timeline); builder model home tips; CDD fee warning; 5-Q FAQ. 14,623 chars.
+9. **polk-city-fl-investment-property** — Rental data table (1BR $1,250, 2BR $1,200-$1,500, 3BR SFH $1,840, 4BR $2,640, avg $2,050); investment scenario ($267K purchase, $1,840 rent, gross yield 8.3%, NOI ~$13K-$15K, cap rate ~4.9-5.6%); thin rental pool risk; well/septic maintenance costs; flood zone risk; ViVi Property Management link; 5-Q FAQ. 15,483 chars.
+10. **polk-city-fl-waterfront-homes** — Polk County 500+ named lakes context; types table (natural lakefront $320K-$550K, acreage with pond $300K-$500K, Kissimmee Chain $400K-$1M+); flood zone verification (Zone AE vs X); water quality testing guidance; dock permitting (Polk County); flood insurance cost ranges ($1,000-$5,000+/yr); 5-Q FAQ. 17,014 chars.
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+---
+
 ## 2026-08-22 (Batch 39 — 10 Brooksville FL spoke pages)
 
 **Pages improved: 10**
