@@ -4,6 +4,128 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-22 (Batch 39 — 10 Brooksville FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 brooksville-fl-* blog posts expanded from 5,412-char boilerplate to 16,269-18,194 chars each. All dated 2026-08-21. Each post has: AEO Quick Answer intro, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, REMAX Collective, 23+ years, (813) 733-7907), and 5-question FAQ with JSON-LD FAQPage schema + BreadcrumbList schema. Key facts verified via web search: Brooksville ZIP 34601/34602/34604; Hernando County seat; median SFH $310K-$340K; 94 avg days on market; Redfin market score 14/100 (buyer-favorable); Hernando County millage 8.1082, effective rate 0.86% (below FL avg 1.10%); 38+ builders / 159+ communities including LGI Sherman Hills (from $207K), Lennar Trillium ($280K-$450K), Avex Leyland Preserve ($300K-$480K), Southern Hills Plantation ($420K-$1.2M+), D.R. Horton Emerson Ranch; Hernando County School District B- rating, 24,015 students, 32 schools, magnet schools Gulf Coast Academy of Science and Technology (A) and Challenger K-8 (A-), Hernando High and Nature Coast Technical High; Suncoast Pkwy commute 35-50 min Tampa off-peak; Weeki Wachee River constant 74-degree springs, Zone AE/VE flood risk; Hurricane Helene (Sept 2024) caused historic surge in Hernando Beach and Weeki Wachee corridor; inland Brooksville mostly Zone X; investment rents 3BR SFH $1,600-$2,000/mo, cap rates 5-7%; ViVi Property Management linked from investment post.
+
+### Brooksville FL Spoke Pages (10)
+
+1. **brooksville-fl-homes-for-sale-guide** — Added neighborhoods (Southern Hills Plantation, Sherman Hills, Trillium, Pristine Place, Spring Ridge, historic downtown), price table by type ($207K-$3.4M+), buying process (septic/well/flood considerations), negotiating tips. 18,194 chars.
+2. **brooksville-fl-schools-guide** — Added school ratings table (Gulf Coast Academy A, Challenger K-8 A-, Nature Coast Technical B+, Hernando High B-), magnet/charter overview, private school list, school zone impact on home values. 17,533 chars.
+3. **brooksville-fl-commute-guide** — Route comparison table (Suncoast Pkwy vs SR-50/I-75 vs US-41), drive times to Tampa/Wesley Chapel/Clearwater/Spring Hill, SR-50 2026 construction update, remote work calculus. 16,269 chars.
+4. **brooksville-fl-real-estate-guide** — Market metrics table (Brooksville vs Hernando County vs Hillsborough County), 5-step buying process, seller strategy (pricing/presentation/incentives). 16,627 chars.
+5. **brooksville-fl-cost-of-living** — Full cost comparison table (housing, taxes, insurance, electric, water, groceries, tolls), homeowners insurance breakdown, full commute cost calculation. 17,727 chars.
+6. **brooksville-fl-property-taxes** — Millage 8.1082, effective rate 0.86%, tax estimate table by assessed value, Homestead Exemption mechanics, SOH cap, additional exemptions, TRIM/VAB appeal process, county comparison table. 18,191 chars.
+7. **brooksville-fl-new-construction** — 6 community profiles (Sherman Hills, Trillium, Leyland Preserve, Waterford, Southern Hills Plantation, Emerson Ranch), new vs resale comparison table, CDD explanation, builder incentive summary. 18,077 chars.
+8. **brooksville-fl-investment-property** — Cash flow analysis table (4 scenarios, cap rates 5-7%), sample $290K SFH analysis, no-HOA/large-lot/Suncoast-adjacent strategy, ViVi Property Management linked. 16,567 chars.
+9. **brooksville-fl-waterfront-homes** — Weeki Wachee River description (74-degree springs, Gulf access), waterfront price table, Hernando Beach canal homes, Hurricane Helene 2024 surge detail, flood insurance cost ranges ($1,500-$12,000+). 16,400 chars.
+10. **brooksville-fl-flood-zones** — FEMA zone table (X/AE/VE/AH), why inland Brooksville has low risk (200+ ft elevation), Helene surge mechanics (river channel), 4-step verification process, Zone X flood insurance optional at $400-$700/yr. 18,124 chars.
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `1334361` — pushed to `origin/main`
+
+---
+
+## 2026-08-21 (Batch 38 — 10 Oldsmar FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 Oldsmar FL blog posts expanded from thin 6,523-9,821-char boilerplate to 14,721-20,697 chars each. All dated 2026-08-20. Each post has: AEO Quick Answer intro, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, REMAX Collective, 23+ years, (813) 733-7907), and 5-question FAQ with JSON-LD FAQPage schema + BreadcrumbList schema. Key facts verified via web search: Oldsmar ZIP 34677, Pinellas County; median home price $375K-$421K (SFH $535K median, townhomes $292K, condos $140K-$330K); 71 avg days on market; 97.5% sale-to-list; ~$234/sqft (down 6% YoY); Pinellas County Schools A-rated district (3rd consecutive, #15 FL); Oldsmar Elementary now K-8 campus (B+ rating, 68% math / 67% reading proficient); combined millage ~19.39 mills / ~1% effective rate; city millage 4.05 mills; Homestead Exemption $50K reduction; commute Tampa 20-28 min off-peak via SR-580 + Courtney Campbell; TPA 18-25 min; Clearwater 20-28 min; rental market: apt avg $1,426/mo, 3BR SFH $2,100-$2,800/mo; STR avg $24,413/yr gross, $218 avg nightly; neighborhoods: East Lake Woodlands ($420K-$750K+), Twin Branch Acres ($380K-$580K), Bridgeport/Briar Creek ($310K-$530K), Gull Aire Village 55+ ($120K-$280K); new construction very limited (infill, small townhome projects, teardown-rebuild); ViVi Property Management linked from investment post.
+
+### Oldsmar FL Spoke Pages (10)
+
+1. **oldsmar-fl-homes-for-sale-guide** (17,791 chars) — Property type price table (condo $140K-$330K up to waterfront SFH $700K-$2M+). Neighborhood breakdown table (East Lake Woodlands, Twin Branch Acres, Gull Aire Village, Bridgeport, Briar Creek, waterfront). Flood zone section (Zone AE vs Zone X; mandatory vs optional flood insurance). Buying process differences vs Hillsborough County. School zone context. FAQ+JSON-LD.
+
+2. **oldsmar-fl-cost-of-living** (20,697 chars) — Monthly cost table at two price points ($375K and $535K): P+I, property taxes, homeowner's insurance, flood insurance, HOA. City comparison table vs Safety Harbor/Clearwater/Dunedin/Riverview/Brandon. Insurance section (wind mitigation inspection 20-40% savings). Everyday living cost table (groceries, utilities, internet, transportation, dining). No-income-tax benefit analysis ($7,500/yr savings for $150K household vs 5% state income tax). FAQ+JSON-LD.
+
+3. **oldsmar-fl-real-estate-guide** (18,202 chars) — 2026 market metrics table (median, DOM, price cuts, price/sqft, sale-to-list). Neighborhood profiles (East Lake Woodlands, Twin Branch Acres, Gull Aire Village, Bridgeport, Briar Creek). Buy vs sell now analysis. 7-step buying process table. Seller preparation section (CMA, 4-point/wind mitigation inspections, flood zone disclosure). FAQ+JSON-LD.
+
+4. **is-oldsmar-fl-good-place-to-live** (15,744 chars) — Pros: coastal access, A-rated schools, commuter-friendly, established neighborhoods, lower crime. Cons: insurance costs, limited new construction, flood zone exposure, SR-580 rush hour congestion. Buyer type fit table (families, professionals, retirees, investors, new-construction buyers). FAQ+JSON-LD.
+
+5. **oldsmar-fl-investment-property** (14,721 chars) — Gross yield table by property type (2BR condo 6-8%, townhome 7-8%, 3BR SFH inland 6-8%, waterfront SFH 5-6%). STR market data ($24,413/yr avg, $218 nightly, $87 RevPAR). Mid-term rental strategy for corporate/traveling healthcare/relocating families. Risks: insurance cost compression, flood zone, elevated mortgage rates. ViVi Property Management link. FAQ+JSON-LD.
+
+6. **oldsmar-fl-new-construction** (17,216 chars) — Why new construction is limited (Pinellas County density). What exists: infill custom builds ($150-$250/sqft + lot), teardown-rebuild ($600K-$1.5M+ waterfront), small townhome projects (Odeon Square, $350K-$550K). Nearby new construction alternatives table (Zephyrhills, Wesley Chapel, Riverview, Land O Lakes, Parrish). New vs resale comparison table. Builder contract tips. FAQ+JSON-LD.
+
+7. **oldsmar-fl-property-taxes** (18,169 chars) — Millage breakdown table (county 5.93, city 4.05, schools 7.36, special districts 2.05, total ~19.39). Homestead Exemption breakdown table ($25K all authorities + $25K non-school). Save Our Homes cap explanation (3% annual cap). Non-homestead properties (no exemption, 10% annual cap via Amendment 1). City comparison table vs Safety Harbor/Clearwater/Dunedin/Hillsborough unincorporated. FAQ+JSON-LD.
+
+8. **oldsmar-fl-commute-guide** (16,356 chars) — 9-destination drive time matrix (Tampa 20-28/35-55 min, TPA 18-25/30-45 min, Clearwater 20-28/30-45 min, St. Pete 35-45/50-65 min, Safety Harbor 12-18/20-30 min, Clearwater Beach 25-35/40-55 min, Dunedin/Tarpon 25-40 min, USF 35-50 min). SR-580 traffic analysis (7-9 AM eastbound, 4:30-6:30 PM westbound bottlenecks). PSTA transit limitations (90+ min to Tampa). Best departure time windows. Weekend beach traffic tips. FAQ+JSON-LD.
+
+9. **oldsmar-fl-schools-guide** (17,643 chars) — Pinellas County Schools A-rated (3rd consecutive, #15 FL). Oldsmar Elementary K-8 campus (B+, top 30% FL, 68% math / 67% reading). Oldsmar Christian School private K-12 (4.4 stars). District comparison table vs Hillsborough/Pasco/Manatee/Sarasota. Charter schools section. Higher education options (St. Pete College Clearwater, USF, UT within 30-40 min). FAQ+JSON-LD.
+
+10. **sell-home-fast-oldsmar** (19,738 chars) — Expanded from 9,821 chars. 2026 market conditions (71 DOM, 97.5% sale-to-list, 29% price cuts). Neighborhood value table by DOM and buyer profile. Preparation checklist (4-point/wind mitigation inspections, flood zone disclosure, CMA pricing, professional photography). Seller cost table (commission 5-6%, doc stamps 0.70%, title, prorations). Best listing season (Jan-Apr snowbird window vs July-Sept slower). FAQ+JSON-LD.
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+---
+
+## 2026-08-20 (Batch 37 — 10 Siesta Key FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 Siesta Key FL blog posts expanded from identical 5,225-char generic boilerplate to 19,194-25,341 chars each. All dated 2026-08-19. Each post has: AEO Quick Answer intro, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, REMAX Collective, 23+ years, (813) 733-7907), and 5-question FAQ with JSON-LD FAQPage schema + BreadcrumbList schema. Key facts: Siesta Key is a fully built-out barrier island in unincorporated Sarasota County; Gulf-front properties in Zone VE, bayfront/canal in Zone AE; combined Sarasota County millage ~13.0-14.0 mills; schools = Phillippi Shores Elementary (IB PYP), Brookside Middle (IB MYP), Sarasota High School; Pine View School for the Gifted (#1 FL, county-wide by qualification); two bridges (Siesta Drive north/US-41, Stickney Point south/Clark Road); Tampa commute 65-80 min off-peak; no true new construction (teardown-rebuild only, ~$500-$800+/sqft construction); STR market generates $60K-$350K+ gross/yr depending on property type; Sarasota County permits STRs in unincorporated areas but HOA rules govern condos; ViVi Property Management linked from investment post.
+
+### Siesta Key FL Spoke Pages (10)
+
+1. **siesta-key-fl-homes-for-sale-guide** (21,707 chars) — Property type price table (studio condo $390K-$580K up to Gulf-front SFH $4M-$15M+). Three area breakdowns (Village north, Crescent Beach middle, Turtle Beach south). Four buyer due diligence items (flood insurance, wind insurance, HOA rental restrictions, full inspection). Comparison table vs Longboat Key/Lido Key/Anna Maria/Tierra Verde. Buyer checklist (10-item). FAQ+JSON-LD.
+
+2. **siesta-key-fl-schools-guide** (23,770 chars) — Phillippi Shores Elementary (IB PYP) and Brookside Middle (IB MYP). Sarasota High. Pine View School for the Gifted (#1 FL, county-wide). Private options: Out-of-Door Academy, Cardinal Mooney, Sarasota Military Academy. District comparison table (Sarasota 62% vs FL 52% math/reading). School zone vs investment property context. FAQ+JSON-LD.
+
+3. **siesta-key-fl-commute-guide** (25,341 chars) — Two bridge analysis (Siesta Drive/US-41 north, Stickney Point/Clark Road south) with tourist season congestion context. 12-destination drive time matrix (Sarasota 10-20 min, SRQ airport 20-30 min, Tampa 65-80 min off-peak/90-150 min peak, Naples 100-115 min, Orlando 145-165 min). No public transit to island. Remote worker analysis. Comparison table vs mainland Sarasota neighborhoods. FAQ+JSON-LD.
+
+4. **siesta-key-fl-real-estate-guide** (19,194 chars) — 2026 market snapshot table (county median $499K, 94% list-to-sale, 65-75 DOM, buyer-leaning). Condo vs SFH vs villa comparison table. Buyer and seller strategies for 2026 market. Comparison table vs Sarasota county-wide trends. FAQ+JSON-LD.
+
+5. **siesta-key-fl-cost-of-living** (21,816 chars) — Monthly ownership cost table at 3 price points ($500K condo/$1M SFH/$2.5M Zone VE SFH) including mortgage P+I, taxes, wind insurance, flood insurance, HOA, utilities. Wind insurance deep-dive (factors affecting rates: roof type, age, impact glass, wind mitigation report). Flood insurance by zone (AE $2,500-$8,000/yr; VE $8,000-$20,000+/yr). HOA fee range table by building type. STR income offset analysis. FAQ+JSON-LD.
+
+6. **siesta-key-fl-property-taxes** (23,725 chars) — Sarasota County uninc. millage breakdown table (~13.0-14.0 mills). Tax estimate table at 7 price points ($500K-$5M, non-homesteaded). Homestead exemption applicability context (most Siesta Key = second home/investment, no homestead). Save Our Homes cap and portability explanation. Comparison table vs other FL barrier islands (Longboat, Anna Maria, St. Pete Beach, Clearwater Beach, Marco Island). FAQ+JSON-LD.
+
+7. **siesta-key-fl-new-construction** (21,703 chars) — No true new construction: island fully built out. Teardown-rebuild cost table (land + demo + foundation + construction + permits = $3M-$6M+ all-in for 3,000 sqft). CCCL (Coastal Construction Control Line) restrictions for Gulf-front. Post-Ian/Milton building code requirements. Freeboard and elevation certificate impact on insurance. New construction alternatives near Siesta Key: Wellen Park (~25-35 mi, 10+ builders), Lakewood Ranch (~25-30 mi, 16+ builders), downtown Sarasota condos. Comparison table: teardown-rebuild vs resale. FAQ+JSON-LD.
+
+8. **siesta-key-fl-investment-property** (24,671 chars) — STR revenue estimates by property type table (studio $35K-$60K/yr gross up to Gulf-front SFH $180K-$350K+/yr). Sarasota County STR regulations (county allows in uninc. areas; HOA rules govern condos). HOA rental restriction analysis (7-day/30-day minimums common in condo buildings). Operating expense table (insurance $15K-$40K+, property mgmt 25%, platform fees 3-5%, maintenance, HOA). Long-term vs STR comparison table. ViVi Property Management link. Net return example ($1M condo = ~1.3% net yield). FAQ+JSON-LD.
+
+9. **siesta-key-fl-waterfront-homes** (23,102 chars) — Four waterfront types: Gulf-front Zone VE ($4M-$15M+), bayfront/Big Pass Zone AE ($1.5M-$6M+), canal-front Zone AE ($1.2M-$2.5M), beach-access non-direct ($600K-$1.8M). Price table by type. Seawall inspection guidance (cost $15K-$200K+ for repair/replacement). Dock permit verification. Wind mitigation inspection. Elevation certificate requirement. Comparison table vs Longboat Key/Anna Maria/Lido Key/Hernando Beach/Apollo Beach. FAQ+JSON-LD.
+
+10. **siesta-key-fl-flood-zones** (23,053 chars) — Zone VE (Gulf-front, wave action hazard, highest risk) vs Zone AE (bayfront/canal, inundation risk) vs Zone X (interior, minimal). NFIP cost table by zone (VE $8K-$20K+/yr, AE $2.5K-$8K/yr, X optional $500-$1.2K). Elevation certificate explanation. BFE context for Siesta Key (VE may be 12-17+ ft above MSL). Sarasota County freeboard requirements (1-2 ft above BFE). Hurricane storm surge context (Milton 2024, Ian 2022). How to look up flood zone (msc.fema.gov). Risk factor comparison table. FAQ+JSON-LD.
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Commit:** 6dec0cf
+
+---
+
+## 2026-08-19 (Batch 36 — 10 North Port FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 North Port FL blog posts expanded from identical 5,404-char generic boilerplate to 18,331-27,851 chars each. All dated 2026-08-18. Each post has: AEO Quick Answer intro, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, REMAX Collective, 23+ years, (813) 733-7907), and 5-question FAQ with JSON-LD FAQPage schema + BreadcrumbList schema. Key facts verified via web search: North Port median sale price ~$315K-$350K (2026, down 7-11% YoY, ~77 DOM); North Port HS bottom 50% FL rankings; Sarasota County district avg 62% math/reading vs 52% FL avg; Venice commute 20-25 min, Sarasota 35-40 min, Tampa 70-80 min; SFH rentals $1,640-$3,000/mo; FEMA maps updated March 2024 (Zone X majority, Zone AE near waterways); property taxes ~14-16 mills total; Wellen Park (formerly West Villages) is within North Port city limits, 10+ active builders, $300K-$1.5M+, CDD fees $2,000-$4,500+/yr.
+
+### North Port FL Spoke Pages (10)
+
+1. **north-port-fl-homes-for-sale-guide** (20,277 chars, from 5,404) — Price table by segment ($200K-$275K entry, $280K-$400K mid-range, $400K-$600K move-up, $600K+ luxury/Wellen Park). Neighborhood comparison (Jockey Club, Price Blvd corridor, Heron Creek, Bobcat Trail, Wellen Park). Comparison table vs Venice/Port Charlotte/Sarasota/Englewood. Buyer checklist (deed restrictions, CDD fees, flood zone, canal access, inspection). FAQ+JSON-LD.
+
+2. **north-port-fl-schools-guide** (21,288 chars, from 5,404) — North Port High School performance data (bottom 50% FL rankings). Sarasota County district overview (62% math/reading vs 52% FL avg). Elementary/middle feeder schools in North Port boundaries. Private options (Imagine School at North Port, others). School zone lookup guidance. Comparison table vs Sarasota/Venice/Port Charlotte/Englewood districts. FAQ+JSON-LD.
+
+3. **north-port-fl-commute-guide** (26,492 chars, from 5,404) — 10-destination drive time matrix (Venice 20-25 min, Sarasota 35-40 min, Port Charlotte 25-30 min, Tampa 70-80 min, Fort Myers 60-70 min, Punta Gorda 30-35 min, Englewood 20-25 min, SRQ Airport 50-55 min, RSW Airport 65-75 min, Naples 90-100 min). I-75 primary artery (exits 179/182), US-41 Tamiami Trail, River Road analysis. Wellen Park internal vs North Port city center commute. No public transit to Tampa reality check. FAQ+JSON-LD.
+
+4. **is-north-port-fl-good-place-to-live** (19,958 chars, from 5,404) — 5 pros (affordable entry vs coastal peers, Wellen Park master-planned amenities, low crime relative to FL avg, no state income tax, natural springs/outdoor recreation). 4 cons (school rankings below county avg, Tampa commute 70-80+ min, limited walkable retail/dining, hurricane/flood exposure eastern canals). 6-factor comparison table vs Venice/Port Charlotte/Sarasota/Englewood/Punta Gorda. Who North Port fits best. FAQ+JSON-LD.
+
+5. **north-port-fl-real-estate-guide** (18,331 chars, from 5,404) — 2026 market snapshot table (median ~$330K, buyer's market, 7-11% YoY decline, 77 DOM, elevated inventory). Buyer segments (retirees, remote workers, investors, move-up from Port Charlotte). Buyer strategy (pre-approval, price-per-sqft vs Venice, full inspection, CDD fee review). Seller strategy (price aggressively vs 77-DOM reality; condition and staging matter). Comparison table vs Venice/Port Charlotte/Sarasota/Englewood. FAQ+JSON-LD.
+
+6. **north-port-fl-cost-of-living** (22,062 chars, from 5,404) — Monthly homeowner cost table at 3 price points ($250K/$330K/$450K: mortgage P+I, property tax, HO+wind insurance, flood insurance, HOA/CDD, utilities). Rental market ($1,640-$3,000/mo SFH, 1BR $1,200-$1,600, 2BR $1,500-$2,100). FPL electric $120-$320/mo seasonal. Grocery/dining/transportation context vs Sarasota. Comparison table vs Venice/Port Charlotte/Sarasota/Englewood/Fort Myers. FAQ+JSON-LD.
+
+7. **north-port-fl-property-taxes** (26,910 chars, from 5,404) — Sarasota County millage breakdown for North Port (city portion + county general + school + fire/mosquito/special districts; total ~14-16 mills). Tax estimate table at 7 price points ($200K-$600K with homestead). Homestead exemption $50K. Save Our Homes 3% cap explained. SOH portability. CDD fees in Wellen Park/Heron Creek/Bobcat Trail explained ($2,000-$4,500+/yr, appear on tax bill). TRIM notice timeline. Comparison table vs Venice/Port Charlotte/Sarasota/Charlotte County. FAQ+JSON-LD.
+
+8. **north-port-fl-new-construction** (26,358 chars, from 5,404) — Wellen Park as primary hub (10+ builders, $300K-$1.5M+, within North Port city limits): builder comparison table (DR Horton, Lennar, Pulte, Taylor Morrison, Neal Communities, Mattamy Homes, Toll Brothers, M/I Homes, David Weekley, others). CDD fee breakdown (bond + O&M, $2,000-$4,500+/yr). City of North Port outside Wellen Park options (scattered lots, smaller subdivisions). New construction vs resale comparison table. Wellen Park amenity district (CoolToday Park, Oasis restaurant row, Paw Park, downtown district). FAQ+JSON-LD.
+
+9. **north-port-fl-investment-property** (27,851 chars, from 5,404) — Gross rental yield estimates by price tier ($220K-$450K at $1,640-$2,800/mo). SFH vs condo vs new construction investment comparison. CDD fees as expense line item. 12-month vacancy reality check in a buyer's market. Property management cost (~8-10% gross). Cash flow scenario table (with/without CDD, with/without property management). Wellen Park short-term rental restrictions. Sarasota County regulations. Comparison table vs Venice/Port Charlotte/Sarasota/Fort Myers investment yield. FAQ+JSON-LD.
+
+10. **north-port-fl-waterfront-homes** (22,245 chars, from 5,404) — Canal system overview (freshwater canals throughout North Port, ~80 miles, most navigable with small craft; NOT Gulf-access). Price range by waterfront type ($280K-$500K freshwater canal SFH). FEMA flood zone reality (Zone X majority, Zone AE near canals/waterways per March 2024 update). Flood insurance cost estimate ($800-$2,500+/yr for Zone AE). Dock/seawall inspection checklist. True Gulf-access comparison (Venice/Englewood/Punta Gorda $600K-$2M+). Comparison table: North Port canal vs Venice Intracoastal vs Gulf-front. FAQ+JSON-LD.
+
+---
+
 ## 2026-08-18 (Batch 35 — 10 Sarasota FL spoke pages)
 
 **Pages improved: 10**
