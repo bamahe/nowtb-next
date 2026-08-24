@@ -4,6 +4,40 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-24 (Batch 41 — 10 San Antonio FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 San Antonio FL posts expanded from 5,379-char boilerplate to 15,000-19,244 chars each. Each post has: AEO direct answer in first paragraph, 4+ question-format H2s, 6+ H3 subsections, at least one comparison table, 10+ internal links, CTA box, and 5-question FAQ with JSON-LD FAQPage schema. Content dated 2026-08-23.
+
+### San Antonio FL Spoke Pages (10)
+
+1. **san-antonio-fl-commute-guide** — Drive time matrix to 8 destinations (Tampa 50-60 min off-peak/70-90 min rush hour via SR-52 to I-75, Wesley Chapel 18-25 min, Dade City 12-15 min, Zephyrhills 15-20 min, Lakeland 40-50 min, Orlando 80-95 min), SR-52/I-75 vs US-301 vs Suncoast Parkway route analysis, San Antonio vs Dade City/Zephyrhills/Wesley Chapel/Land O Lakes commute comparison table, rush hour tips, park-and-ride note; 17,000 chars
+
+2. **san-antonio-fl-cost-of-living** — Home price table by property type (small home $280K-$420K, CBS on 1-2 acres $340K-$520K, horse property $550K-$950K+, vacant land $80K-$250K), monthly cost breakdown by category including well/septic savings, Pasco vs Hillsborough property tax comparison, Florida homestead/Save Our Homes/no-state-income-tax advantages; 19,244 chars
+
+3. **san-antonio-fl-flood-zones** — FEMA flood zone table (Zone X, AE, AH with risk levels and insurance requirements), Cypress Creek corridor and small lake flood risk sections, how to check flood zone at msc.fema.gov, elevation certificate guidance, flood insurance cost table by scenario, San Antonio vs Apollo Beach/Ruskin/Wesley Chapel/Zephyrhills flood cost comparison; 18,743 chars
+
+4. **san-antonio-fl-homes-for-sale-guide** — Property type guide (country homes 1-5 ac, horse properties, Saint Leo University area older homes, vacant land), price range table by property type, well and septic buyer checklist, zoning and agricultural use verification section, rural acreage financing guidance, why limited MLS inventory is common in rural markets; 15,057 chars
+
+5. **san-antonio-fl-investment-property** — Rental rate and gross yield table (3BR/2BA CBS $1,800-$2,300/mo at 6-7.5%, horse property $2,500-$4,000+), no-HOA tenant premium, long-term rural tenant stability analysis, land appreciation and Pasco County growth corridor thesis, agricultural tax exemption potential, investment risks (liquidity, well/septic costs, insurance), ViVi Property Management mention; 17,431 chars
+
+6. **san-antonio-fl-new-construction** — Nearest production builder comparison table (Zephyrhills $280K-$450K, Wesley Chapel $380K-$950K+), custom build 5-step process (perc test, septic design, well permit, Pasco County building permit, construction inspections), custom build cost breakdown table ($80K-$250K land + $165-$275/sq ft construction + infrastructure), existing vs. custom comparison; 17,962 chars
+
+7. **san-antonio-fl-property-taxes** — Pasco County millage rate component breakdown, homestead exemption filing instructions (March 1 deadline at pascopa.com), Save Our Homes cap explanation, property tax estimate table at 4 price points ($300K-$650K), Pasco vs Hillsborough comparison table, agricultural classification exemption for qualifying rural operations; 17,612 chars
+
+8. **san-antonio-fl-real-estate-guide** — Market statistics table (ZIP 33576, typical days 60-120+, well/septic standard, Saint Leo University landmark), buyer profile sections (rural lifestyle, equestrian, Saint Leo employees, remote workers), 4-step buying process specific to rural acreage, direct first-person perspective from Barrett; 15,659 chars
+
+9. **san-antonio-fl-schools-guide** — San Antonio Elementary profile, boundary verification guidance (call Pasco County Schools at 813-794-2000), Pasco High School and Zephyrhills High School as likely high school assignments, Saint Leo University and PHSC college access, San Antonio vs Wesley Chapel school comparison table, Florida school choice open enrollment note; 16,363 chars
+
+10. **san-antonio-fl-waterfront-homes** — Inland waterfront type guide (natural lakes, Cypress Creek, private ponds), price premium table by water feature type (5-30% over comparable non-water), what San Antonio waterfront cannot do (no Gulf/bay boat access), flood zone action table for water-adjacent buyers, comparison of boating markets (Apollo Beach, Riverview, Safety Harbor) for buyers who need coastal access; 17,381 chars
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `824b809`
+
+---
+
 ## 2026-08-23 (Batch 40 — 10 Polk City FL spoke pages)
 
 **Pages improved: 10**
