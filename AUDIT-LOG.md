@@ -4,6 +4,39 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-25 (Batch 42 — 10 Englewood FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 Englewood FL posts expanded from 5,221-char boilerplate to 18,492-30,320 chars each. Each post has: AEO quick-answer box, 4+ question-format H2s, 6+ H3 subsections, at least one comparison table, 10+ internal links, CTA box, 5-question FAQ with JSON-LD FAQPage schema, and BreadcrumbList schema. Dual-county complexity (Charlotte County vs Sarasota County) addressed throughout. Content dated 2026-08-24. Build verified green.
+
+### Englewood FL Spoke Pages (10)
+
+1. **englewood-fl-homes-for-sale-guide** — Five neighborhood zones (Manasota Key Gulf-front/bayfront, Old Englewood Village, mainland Lemon Bay, inland subdivisions, new construction corridors), price table by property type ($275K-$5M+), dual-county buyer checklist (ccpao.com vs sc-pa.com), Hurricane Ian context, seasonal snowbird demand patterns, 10+ internal links; 21,407 chars
+
+2. **englewood-fl-schools-guide** — Charlotte County vs Sarasota County school district split explained, school zone lookup instructions (charlottecountyfl.gov vs sarasotacountyschools.net), public school profiles (Englewood Elementary, L.A. Ainger Middle, Lemon Bay High, Sky Academy Charter), private options (St. David's Episcopal, Suncoast Preparatory), homeschool cooperatives, school-zone impact on property values; 18,986 chars
+
+3. **englewood-fl-commute-guide** — Drive time matrix to 9 destinations (Sarasota 30-40 min, Fort Myers 45-55 min, Tampa 90-110 min, Port Charlotte 15-20 min, Venice 20-28 min, Punta Gorda 25-35 min, North Port 20-28 min, Cape Coral 60-75 min, Naples 65-80 min), US-41 vs I-75 route analysis, park-and-ride and bus options, remote work context, Englewood vs Port Charlotte/Venice/North Port commute comparison; 19,528 chars
+
+4. **englewood-fl-real-estate-guide** — Dual-county market stats table (Charlotte County median ~$352K, Sarasota County median ~$425K, Charlotte DOM 60-90 days, Sarasota DOM 45-75 days), neighborhood price tier table, snowbird and retiree demand seasonality, cash buyer prevalence, Manasota Key vs mainland vs canal vs inland comparison, 4-step buyer process for dual-county market; 18,492 chars
+
+5. **englewood-fl-cost-of-living** — Monthly cost breakdown table (housing, utilities, property tax, homeowner's insurance, flood insurance, grocery, transportation by category), Englewood vs Sarasota/Venice/Fort Myers/Tampa/Port Charlotte cost comparison table, Florida no-state-income-tax advantage, Charlotte vs Sarasota County tax rate difference, HOA cost ranges by community type; 22,184 chars
+
+6. **englewood-fl-property-taxes** — Charlotte County millage breakdown (ccpao.com) vs Sarasota County breakdown (sc-pa.com), homestead exemption filing deadlines for both counties, Save Our Homes portability explanation, property tax estimate table at 5 price points ($300K-$1.5M), snowbird homestead eligibility rules, Manasota Key assessed value considerations; 20,408 chars
+
+7. **englewood-fl-new-construction** — Active builder comparison table (DR Horton, Neal Communities, Christopher Alan Homes, Maronda Homes approximate base prices), gulf access vs inland lot premium, deed restriction and HOA fee ranges, new construction vs resale pros/cons table, punch list inspection guidance, Charlotte County vs Sarasota County permit process; 22,388 chars
+
+8. **englewood-fl-investment-property** — Rental rate and gross yield table (2BR condo $1,600-$2,200/mo at 5-7%, 3BR canal home $2,200-$3,200/mo at 4.5-6.5%, Gulf-front or bayfront $4,000-$10,000+/wk seasonal), short-term vs long-term rental strategy comparison table, post-Ian insurance cost impact on ROI, Lemon Bay Aquatic Preserve dock considerations for vacation rental premium, ViVi Property Management link; 21,857 chars
+
+9. **englewood-fl-waterfront-homes** — Five waterfront category comparison table (Gulf-front Manasota Key $1.5M-$5M+ Zone VE, bayfront Manasota Key $750K-$2M+ Zone AE/VE, mainland Lemon Bay direct $800K-$2.5M+ Zone AE, canal homes $450K-$1.2M Zone AE, Lemon Bay view $350K-$650K Zone X/AE), Lemon Bay Aquatic Preserve dock permitting restrictions, Hurricane Ian waterfront damage section, dock value and construction cost table ($20K-$100K+ added value, $15K-$100K+ new build), 10+ internal links; 28,659 chars
+
+10. **englewood-fl-flood-zones** — Full FEMA flood zone table (Zone VE, Zone AE, Zone X shaded/unshaded with risk level, insurance requirements, typical premiums, common Englewood locations), Zone AE vs Zone X detailed comparison table, elevation certificate guidance ($400-$700 cost), Hurricane Ian flood impact section, msc.fema.gov 4-step lookup guide, Charlotte County vs Sarasota County FIRM panel clarification, Risk Rating 2.0 explanation; 30,320 chars
+
+**Build status:** Green (npm run build passed, no TypeScript or Next.js errors)
+**Git commit:** fd4d2ce — pushed to origin/main
+
+---
+
 ## 2026-08-24 (Batch 41 — 10 San Antonio FL spoke pages)
 
 **Pages improved: 10**
