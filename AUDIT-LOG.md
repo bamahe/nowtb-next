@@ -4,6 +4,39 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-26 (Batch 43 — 10 Nokomis FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 Nokomis FL posts expanded from 5,177-char boilerplate to 12,487-21,051 chars each. Each post has: AEO quick-answer box, question-format H2s, H3 subsections, at least one comparison table, internal links, CTA box, 5-6 question FAQ with JSON-LD FAQPage schema, and BreadcrumbList schema. Nokomis-specific content: Casey Key barrier island context, Roberts Bay/Blackburn Bay ICW waterfront details, FEMA Zone AE/VE/X flood zone breakdown, Sarasota County school zone info (Laurel Nokomis School K-8, Venice High, Pine View), Sarasota County property tax millage, commute matrix to 10 destinations. Content dated 2026-08-25. Build verified green.
+
+### Nokomis FL Spoke Pages (10)
+
+1. **nokomis-fl-homes-for-sale-guide** — Three property tiers (inland $320K-$580K, Roberts Bay/Blackburn Bay waterfront $600K-$2.5M, Casey Key Gulf-front $2.5M-$15M+), neighborhood comparison table (6 areas), flood zone and HOA due diligence guidance, water/sewer vs. well/septic context, 5-Q&A FAQ; 17,559 chars
+
+2. **nokomis-fl-schools-guide** — Sarasota County school district coverage, Laurel Nokomis School K-8 profile, Venice High School, Pine View School gifted magnet (on adjacent Laurel Road in Osprey), private options (Venice Christian School, St. Thomas More Catholic), open enrollment process, school zone impact on property values, school-zone comparison table; 17,735 chars
+
+3. **nokomis-fl-commute-guide** — Drive time matrix to 10 destinations (Venice 8-12 min, Sarasota 22-30 min, Bradenton 35-45 min, Tampa 65-80 min, Fort Myers 65-80 min, Naples 90-110 min), US-41 vs. I-75 route analysis, Venice Jacaranda and Sarasota Clark Road interchange access, SCAT transit Route 15, Nokomis vs. Venice/Sarasota/Port Charlotte commute comparison table, remote work infrastructure notes; 21,051 chars
+
+4. **nokomis-fl-real-estate-guide** — 2026 market overview (price trend post-2022 correction, inventory 25-50 active listings, days on market 45-70), property type breakdown (SFH, condos/villas, vacant land), market comparison table (6 nearby markets including North Port, Englewood, Venice, Sarasota), insurance cost reality ($3,500-$40,000+ depending on zone), buyer-vs-seller market assessment; 15,869 chars
+
+5. **nokomis-fl-cost-of-living** — Housing cost breakdown (purchase and rent), property taxes (17-20 mills, homestead exemption savings), insurance cost table by zone and property type, FPL electric ($150-$300/month), water/sewer vs. well/septic costs, internet options (Xfinity), grocery and dining proximity (Venice Ave, Osprey Village), Sarasota Memorial Hospital Venice campus; 14,390 chars
+
+6. **nokomis-fl-property-taxes** — Sarasota County millage breakdown table (county general, school board, library, SWFWMD, specials, total 17-20 mills), assessed vs. market value explanation, Save Our Homes cap reset for new buyers, homestead exemption ($50K, saves $850-$1,100/yr), additional senior/veteran exemptions, estimated annual tax table (5 price points), non-ad valorem assessments, CDD fee guidance; 18,662 chars
+
+7. **nokomis-fl-new-construction** — Why Nokomis has almost no new construction (fully built out), custom infill teardown-rebuild process ($280-$400+/sq ft build cost), Casey Key custom estate market, Venice FL (5 miles south) limited builder activity, North Port FL (20 miles south) active new construction market ($290K-$350K entry), Lakewood Ranch/North Sarasota options, Sarasota County permit and FEMA elevation requirements; 12,487 chars
+
+8. **nokomis-fl-investment-property** — Long-term vs. short-term rental comparison, sample long-term rental math ($420K purchase, negative cash flow, 3-4% cap rate), short-term vacation rental revenue ($40K-$65K/yr gross for 3BR near beach), Nokomis Beach seasonal demand, Sarasota County Ordinance 2020-056 vacation rental registration requirements, 8-factor comparison table (long-term vs. short-term), Casey Key deed restriction caveats; 15,365 chars
+
+9. **nokomis-fl-waterfront-homes** — Four waterfront zones (Roberts Bay $700K-$2.5M, Blackburn Bay ICW, Casey Key bay-front $2M-$6M, Casey Key Gulf-front $2.5M-$15M+), boating access via Venice Inlet (New Pass) and Stump Pass, dock permitting FDEP/Army Corps, aquatic preserve restrictions, NFIP vs. private flood insurance cost ranges, elevation certificate guidance, post-Hurricane Ian market context; 13,949 chars
+
+10. **nokomis-fl-flood-zones** — Zone VE (Casey Key Gulf, open-foundation required, $8K-$20K+/yr insurance), Zone AE (Roberts Bay/Blackburn Bay waterfront, $3,500-$12K/yr), Zone X (inland elevated, no mandatory flood insurance), Zone X500, FEMA MSC lookup instructions, elevation certificate explanation, flood zone vs. construction requirement table, Hurricane Ian (September 2022) Nokomis impact, Risk Rating 2.0 premium shock context, LOMA process overview; 19,226 chars
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+---
+
 ## 2026-08-25 (Batch 42 — 10 Englewood FL spoke pages)
 
 **Pages improved: 10**
