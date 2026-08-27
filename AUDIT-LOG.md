@@ -4,6 +4,38 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-27 (Batch 44 — 10 Weeki Wachee FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 Weeki Wachee FL posts expanded from 5,265-char boilerplate to 15,954-21,934 chars each. Each post has: AEO quick-answer box, 4+ question-format H2s, 6+ H3 subsections, at least one comparison table, internal links, CTA box, 5-question FAQ with JSON-LD FAQPage schema, and BreadcrumbList schema. Weeki Wachee-specific content: Hernando County market data, Weeki Wachee River freshwater frontage, Weeki Wachee Springs State Park context, Weeki Wachee High School (opened 2022), Hernando County millage breakdown, Suncoast Parkway commute analysis, Adams Homes / Maronda Homes builder context, Hernando Beach Gulf-access comparison. Content dated 2026-08-26. Build verified green.
+
+1. **weeki-wachee-fl-homes-for-sale-guide** — Property type table (established SFH $190K-$320K, move-up SFH $290K-$420K, river waterfront $350K-$800K+, rural acreage $280K-$550K+, new construction $250K-$400K+), neighborhood breakdown (Timber Pines 55+, Royal Highlands 55+, Forest Oaks, Pristine Place, Rogers Park river area), well/septic and flood zone buyer checklists, CDD fee explanation, 6-market comparison table; 19,404 chars
+
+2. **weeki-wachee-fl-schools-guide** — Hernando County School District overview, Weeki Wachee High School (opened 2022 on Osowaw Blvd), Weeki Wachee Middle and Elementary profiles, Hernando County B district rating, 6-district comparison table (Hernando vs Hillsborough/Pasco/Pinellas/Sarasota), private school options (Spring Hill Christian Academy), homeschooling/FLVS overview, school zone impact on home values; 15,954 chars
+
+3. **weeki-wachee-fl-commute-guide** — 10-destination drive time matrix (Tampa 55-65 min, TPA 50-60 min, New Port Richey 20-28 min, Wesley Chapel 38-48 min, Brooksville 22-30 min, Clearwater Beach 58-72 min, St. Pete 65-80 min, Ocala 70-80 min, Orlando 105-120 min), Suncoast Parkway vs US-19 vs SR-50/I-75 route analysis, remote work internet availability, 6-origin commute comparison table; 18,876 chars
+
+4. **is-weeki-wachee-fl-good-place-to-live** — Pros (affordability, springs/river access, space, lower density, no state income tax) and cons (45-65 min Tampa commute, limited local amenities, school ratings lag top districts, limited healthcare), 7-buyer-profile fit table (remote workers: Excellent, active retirees: Excellent, daily Tampa commuters: Fair, urban amenity seekers: Poor), local community character overview; 16,596 chars
+
+5. **weeki-wachee-fl-real-estate-guide** — 2026 market snapshot table (median $230K-$310K, DOM 55-90 days, months of supply 3-5, sale-to-list 96-98%, 40-55% listings with price reductions vs 5-10% at 2022 peak), what is selling vs sitting, buyer and seller strategy sections, 6-market comparison table vs New Port Richey/Brooksville/Zephyrhills/Land O Lakes/Wesley Chapel; 19,046 chars
+
+6. **weeki-wachee-fl-cost-of-living** — Monthly cost table at two price points ($240K and $300K purchase: PITI breakdown), 6-market comparison table vs NPR/Brooksville/Zephyrhills/Land O Lakes/Tampa, daily expenses table (electric $100-$280/mo Duke Energy FL, internet $60-$100, commute tolls $70-$130, commute gas $120-$210), Florida no state income tax advantage, homestead exemption savings; 20,122 chars
+
+7. **weeki-wachee-fl-property-taxes** — Hernando County millage breakdown table (county ~6-6.5, school ~4.5-5, fire district ~2.5-4, SWFWMD ~0.25-0.35, library ~0.25-0.50, total 13.5-16.4 mills), tax estimate table at 5 price points ($200K-$500K after homestead), county comparison table (Hernando vs Pasco/Hillsborough/Pinellas/Citrus), assessed value reset warning for new buyers, non-ad valorem assessments; 21,934 chars
+
+8. **weeki-wachee-fl-new-construction** — Why limited in Weeki Wachee proper (Springs/river land constraints), Spring Hill active builder table (Adams Homes $240K-$350K, Maronda $255K-$380K, DR Horton $270K-$400K+, LGI $230K-$330K), new vs resale comparison table (lot size, roof, warranty, HOA/CDD, negotiating room), custom build process (perc test, well permit, septic, county permit, construction $165-$250/sqft), CDD fee explanation; 18,910 chars
+
+9. **weeki-wachee-fl-investment-property** — Rental rate table (2BR $1,350-$1,700/mo, 3BR SFH $1,650-$2,100/mo, STR near springs $80-$180/night), long-term vs STR comparison table, sample $265K investment analysis (negative cash flow at 7% rates with detailed cost breakdown), cash buyer cap rate discussion (6-8%), Hernando County STR registration requirements, ViVi Property Management link; 20,098 chars
+
+10. **weeki-wachee-fl-waterfront-homes** — 5-waterfront-type comparison table (Weeki Wachee River AE $350K-$800K+, rural pond/lake X/AE $240K-$450K+, Hernando Beach canal Gulf-access AE $400K-$1.2M+, Rogers Park area AE $300K-$600K+, Hernando Beach Gulf-front VE $600K-$2M+), river boating limitations (shallow draft), Hernando Beach canal description, dock permitting (FDEP/Army Corps), 4-scenario flood insurance cost table; 20,188 chars
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `9e73051` — pushed to `origin/main`
+
+---
+
 ## 2026-08-26 (Batch 43 — 10 Nokomis FL spoke pages)
 
 **Pages improved: 10**
