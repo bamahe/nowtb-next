@@ -4,6 +4,38 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-28 (Batch 45 — 10 Hernando Beach FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 Hernando Beach FL posts expanded from 5,277-char boilerplate to 17,795-26,354 chars each. Each post has: AEO quick-answer box, 4+ question-format H2s, 6+ H3 subsections, at least one comparison table, internal links, CTA box, 5-question FAQ with JSON-LD FAQPage schema, and BreadcrumbList schema. Hernando Beach-specific content: ZIP 34607, unincorporated Hernando County; virtually every home on Gulf-access saltwater canal with no fixed bridges to open Gulf water; median sale prices $440K-$575K (80 DOM, 7.9 months inventory, buyer-favorable); Hurricane Helene September 2024 storm surge 8-12 ft with widespread damage; post-Helene teardown-rebuild cost table ($600K-$1.5M+); FEMA Zone AE (canal) and Zone VE (Gulf-front) flood insurance breakdown; Hernando County millage 13.5-16.4 mills total; Spring Hill new construction alternatives (Adams Homes, Maronda, DR Horton $240K-$400K+); STR gross revenue estimate $28K-$65K/yr; canal width/depth navigability analysis; ViVi Property Management linked from investment post. Content dated 2026-08-27. Build verified green.
+
+1. **hernando-beach-fl-homes-for-sale-guide** — Property type price table (dry lot $299K-$420K, standard canal-front $450K-$900K, wide-canal premium $800K-$1.5M, Gulf-front $1M-$2.875M+, post-Helene renovated $380K-$750K), Helene due diligence 4-step checklist (flood zone, elevation cert, canal depth, permit history), comparison table vs Tarpon Springs/New Port Richey/Apollo Beach/Crystal River; 19,180 chars
+
+2. **hernando-beach-fl-schools-guide** — Hernando County School District B- overview (24,000 students, 32 schools), 34607 typical zone assignments (Fox Chapel Elementary/Middle, Weeki Wachee High or Nature Coast Technical High), A-rated magnets (Gulf Coast Academy of Science and Technology, Challenger K-8), district comparison table vs Pasco/Pinellas/Citrus/Hillsborough; 21,486 chars
+
+3. **hernando-beach-fl-commute-guide** — 10-destination drive time matrix (Spring Hill 18-25 min, Brooksville 28-38 min, Tampa CBD 60-75 min, TPA 58-72 min, Clearwater 58-70 min, Orlando 100-120 min), Suncoast Parkway vs US-19 route analysis, toll cost breakdown ($80-$140/mo daily commuter), remote work context, comparison table vs Spring Hill/Brooksville/New Port Richey/Tarpon Springs/Holiday; 19,678 chars
+
+4. **is-hernando-beach-fl-good-place-to-live** — 4 pros (Gulf access from backyard, waterfront lifestyle relative discount, quiet community character, no state income tax) and 4 cons (flood insurance $1,500-$6,000+/yr, Helene storm surge risk, 60-75 min Tampa commute, below-average schools), 7-buyer-profile fit table (boating/retirees: Excellent, remote workers: Very Good, daily Tampa commuters: Poor, urban amenity seekers: Poor); 17,795 chars
+
+5. **hernando-beach-fl-real-estate-guide** — 2026 market snapshot table (median $440K-$472K, $280-$340/sqft, 80 DOM, 7.9 months inventory, buyer-favorable), what sells vs what sits analysis, buyer strategy (5 steps: elevation cert, inspection, flood insurance quote pre-contract, post-Helene disclosure), seller strategy (accurate pricing, pre-listing inspection, permit documentation), comparison table vs Tarpon Springs/New Port Richey/Holiday/Apollo Beach; 19,223 chars
+
+6. **hernando-beach-fl-cost-of-living** — Monthly ownership cost table at 3 price points ($350K/$475K/$650K: P+I, taxes, HO insurance, flood insurance), flood insurance by zone table (AE at BFE $1,500-$3,000, below BFE $3,000-$6,000+, VE $8,000-$20,000+), property tax table at 6 price points, everyday living cost table (groceries, Duke Energy $120-$280/mo, water/sewer, internet, tolls), comparison table vs New Port Richey/Tarpon Springs/Apollo Beach/Siesta Key; 26,354 chars
+
+7. **hernando-beach-fl-property-taxes** — Hernando County millage breakdown table (county general 6.1-6.4, school 4.5-5.0, fire/rescue 2.5-4.0, SWFWMD 0.25-0.35, library 0.25-0.50, total 13.5-16.4 mills), property tax estimate table at 6 price points ($300K homesteaded to $1.2M non-homesteaded), homestead exemption mechanics ($50K reduction, March 1 deadline), Save Our Homes 3% cap buyer warning, portability explanation, additional exemptions table, county comparison vs Pasco/Pinellas/Hillsborough/Citrus; 22,352 chars
+
+8. **hernando-beach-fl-new-construction** — Why no production new construction in Hernando Beach (fully built-out canal system, 1960s-1990s), post-Helene teardown-rebuild cost table ($8K-$25K demo, $30K-$80K foundation, $200K-$480K construction, total $600K-$1.5M+), Spring Hill new construction ($240K-$400K, Adams/Maronda/DR Horton), Brooksville new construction ($280K-$1.2M, Lennar Trillium/Avex/Southern Hills Plantation), new construction vs Hernando Beach canal resale comparison table; 20,136 chars
+
+9. **hernando-beach-fl-investment-property** — Rental income table (2BR $1,800-$2,300, 3BR $2,200-$3,200, 4BR+ $3,200-$4,500, STR 3BR gross $28K-$45K/yr, STR 4BR $40K-$65K/yr), sample $500K cash flow analysis (negative $1,665/mo at 25% down / 7%; gross cap 5.4%, net cap ~3.1%), STR vs long-term comparison table, Hernando County STR regulation status (no registration program as of mid-2026), ViVi Property Management link; 22,403 chars
+
+10. **hernando-beach-fl-waterfront-homes** — 5-waterfront-type comparison table (standard canal AE $450K-$900K, wide-canal premium AE $800K-$1.5M, Gulf-front VE $1M-$2.875M+, dry lot X/AE $299K-$420K, post-Helene renovated AE $380K-$750K), no-fixed-bridge explanation and canal width/depth analysis (4-7 ft depth, 40-150+ ft width), post-Helene due diligence 9-item checklist, comparison table vs Tarpon Springs/New Port Richey/Apollo Beach/Englewood/Nokomis; 25,845 chars
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `ae97762` — pushed to `origin/main`
+
+---
+
 ## 2026-08-27 (Batch 44 — 10 Weeki Wachee FL spoke pages)
 
 **Pages improved: 10**
