@@ -1470,3 +1470,35 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** {status}
 **Git commit:** `{sha}`
 **Vercel:** {deployment id} — {state}
+
+---
+
+## 2026-08-28 (Batch 46 — Osprey FL x4, Mulberry FL x3, Valrico new construction x3)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: 5-Q&A FAQ with JSON-LD FAQPage schema)
+
+1. **osprey-fl-flood-zones** — Major expansion 5,143 to 20,813 chars. Added: FEMA flood zone definitions table (X/AE/AH/VE with risk level, mandatory insurance, and what it means); which Osprey areas carry highest risk (Sorrento Shores/Intracoastal vs. inland/Rivendell); step-by-step flood zone lookup guide (FEMA MSC portal, elevation certificate, getting actual NFIP quote, prior claims check); flood insurance cost table by property type ($400-$900/yr Zone X to $5,000-$15,000+ Zone VE); Sarasota County CRS discount explanation; Hurricane Ian impact on Sarasota County; should flood risk stop you from buying section.
+
+2. **best-neighborhoods-osprey-fl** — Major expansion 5,143 to 20,834 chars. Added: Why buyers choose Osprey (Oscar Scherer State Park, Legacy Trail, between Sarasota and Venice); Sorrento Shores profile (waterfront/Intracoastal, no formal HOA, $500K-$2M+, flood zone note); The Oaks Club profile (private golf and racquet club, 2 courses, 12 tennis courts, $400K-$3M+, mandatory membership); Rivendell profile (borders Oscar Scherer State Park, $550K-$1.2M, typically lower flood risk); Bay Street Village; Willowbend; school zone table (Laurel Nokomis K-8, Venice Senior High); price comparison table vs. Nokomis/Venice/South Sarasota; commute matrix (6 destinations).
+
+3. **moving-to-osprey-fl** — Major expansion 5,143 to 20,048 chars. Added: What Osprey is and is not (unincorporated, 34229 ZIP, county services); housing price table by property type ($350K condo to $800K+ waterfront); schools (Laurel Nokomis K-8 model, Venice Senior High); utilities breakdown (FPL electric, county water/sewer vs. well/septic, Spectrum/Frontier internet); healthcare (Sarasota Memorial ~12-15 mi, Venice Regional ~8-10 mi); shopping/dining reality (no grocery in Osprey, Venice and Sarasota are primary destinations); commute matrix (7 destinations including Tampa 65-80 min); honest trade-offs list.
+
+4. **things-to-do-osprey-fl** — Major expansion 5,143 to 18,258 chars. Added: Oscar Scherer State Park (1,384 acres, scrub-jay habitat, South Creek kayaking, Lake Osprey swimming, camping, trail detail); Legacy Trail (18.4 miles paved, Osprey to Venice/Sarasota without US-41, commute timing); water activities (kayaking Intracoastal, boating via Venice Inlet, fishing species); Historic Spanish Point (30-acre site, Gulf Coast Heritage Association, 5,000 years of history, Webb family pioneer site); The Oaks Club golf and racquet; Venice day trips (walkable downtown, Venice Avenue, Caspersen Beach shark teeth); Sarasota day trips (Ringling Museum, performing arts, Siesta Key, St. Armands Circle).
+
+5. **mulberry-fl-cost-of-living** — Major expansion 5,147 to 20,650 chars. Added: Mulberry location context (Polk County, SR-37 corridor, phosphate mining history); housing price table by property type ($180K-$450K); comparison table vs. Bartow/Lakeland/Plant City/Brandon/Tampa (price, distance, key trade-off); property tax overview (14-18 mills); utilities breakdown (Duke Energy, City of Mulberry water, Spectrum, Peoples Gas); everyday expenses (no grocery in Mulberry, Lakeland 10-20 min); commute matrix (6 destinations including Tampa 50-70 min); who Mulberry makes sense for (remote workers, Lakeland commuters, budget-focused buyers).
+
+6. **mulberry-fl-property-taxes** — Major expansion 5,147 to 19,783 chars. Added: Florida millage system explainer (taxable value formula); Polk County millage rate components table (County General, School Board, City of Mulberry, Special Districts, SWFWMD); example tax calculation for $270K home (~$3,500-$4,200/yr at ~16 mills); Florida homestead exemption detail (first vs. second $25K, March 1 deadline, must apply); Save Our Homes 3% cap; portability (transferring SOH benefit); CDD fees in Mulberry area context; non-ad valorem assessments; step-by-step how to look up taxes (polkpa.org, polktaxes.com).
+
+7. **mulberry-fl-new-construction** — Major expansion 5,147 to 20,711 chars. Added: New construction reality (Mulberry proper has limited land; most options are Lakeland/Bartow corridor); builder profiles (D.R. Horton/Express entry-level, LGI Homes first-time buyer approach, Highland Homes Florida-based alternative, Adams Homes regional); price table by tier ($270K-$460K+); new construction vs. resale trade-offs (builder warranty, modern floor plan vs. larger lots, faster close, no HOA); CDD fee warning (how to ask, $1,000-$3,000+/yr range); buyer's agent guidance (builder pays commission, register before first visit); Mulberry vs. Lakeland new construction comparison table.
+
+8. **northwood-estates-valrico-westbay-opens-new-community** — Expansion 2,129 to 19,886 chars. Added: WestBay standard features detail (quartz, 42-inch cabinets, tile throughout, 10-ft ceilings, spray foam insulation); floor plan and pricing table (1,800-3,200 sq ft, mid $400Ks-$600Ks); no-CDD savings calculation (10-year and 30-year comparison); HOA and gated community context; school zone table (Bloomingdale HS vs. Newsome HS, how to verify at sdhc.k12.fl.us); 4-community comparison table (Northwood Estates vs. Heritage Crest vs. Arista vs. Bloomingdale resale); step-by-step buying process (agent registration, lot selection, contract review, inspections).
+
+9. **heritage-crest-valrico-new-phase-selling-fast** — Expansion 1,977 to 19,239 chars. Added: Floor plan table (1,800-2,800 sq ft, low $400Ks-low $500Ks); no-CDD savings table (10-year and 30-year); amenity center description (pool, cabana, playground — operational); Heritage Crest vs. Northwood Estates vs. Arista vs. Bloomingdale resale comparison table; new construction vs. resale trade-offs (both directions); school zone detail (33594, primarily Bloomingdale HS, verify at sdhc.k12.fl.us); step-by-step buying process.
+
+10. **valrico-forest-final-phase-last-chance-new-construction** — Expansion 2,152 to 19,535 chars. Added: Craftsman architecture differentiator (why distinctive style matters for resale); lot type table (standard, corner, conservation back with premium notes); floor plan table (1,800-2,600 sq ft, low $400Ks-mid $500Ks); no-CDD math (monthly equivalent — $2,000/yr CDD = $167/mo = ~$25K in effective purchase price); Valrico Forest vs. Bloomingdale/Buckhorn resale comparison table (10 factors); school zone detail (33594, primarily Bloomingdale HS); step-by-step buying process (agent registration, lot plat map, conservation lot urgency).
+
+**Build:** Passed (Next.js 14.2.35, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `d4d17f1` — pushed to `origin/main`
