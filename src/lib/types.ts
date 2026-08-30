@@ -40,6 +40,9 @@ export interface Listing {
   // --- Pricing ---
   ListPrice: number;
   ClosePrice?: number;               // Only populated on sold listings
+  CloseDate?: string;                // Only populated on sold listings
+  ConcessionsAmount?: number;        // Seller paid credits on a closed sale
+  BuyerFinancing?: string;           // How the buyer paid. Frequently null in Stellar feed.
 
   // --- Property details ---
   BedroomsTotal?: number;

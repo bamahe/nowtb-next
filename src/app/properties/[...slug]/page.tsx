@@ -214,6 +214,31 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
         ? "bg-yellow-100 text-yellow-800"
         : "bg-gray-100 text-gray-700";
 
+  // Closed listings are history, not inventory. A buyer cannot tour them and
+  // cannot finance them, so the tour scheduler and payment calculator are
+  // replaced with a route back to what is actually for sale.
+  const isClosed = listing.StandardStatus === "Closed";
+
+  const soldDate = listing.CloseDate
+    ? new Date(listing.CloseDate).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        timeZone: "UTC", // CloseDate is a date-only MLS field; UTC keeps it off by-one-day safe
+      })
+    : null;
+
+  // Seller credits are the single most useful "term" in the Stellar feed.
+  // BuyerFinancing and ListingTerms come back empty on most closed records,
+  // so they are shown only when the feed actually populates them.
+  const soldTerms = [
+    listing.ConcessionsAmount
+      ? `${formatPrice(listing.ConcessionsAmount)} seller credit`
+      : null,
+    listing.BuyerFinancing || null,
+    listing.ListingTerms?.length ? listing.ListingTerms.join(", ") : null,
+  ].filter(Boolean) as string[];
+
   const canonicalUrl = `https://nowtb.com${getListingUrl(listing)}`;
 
   return (
@@ -334,7 +359,7 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
       </nav>
 
       {/* === OPEN HOUSE BANNER === */}
-      {listing.OpenHouseStartTime && (
+      {listing.OpenHouseStartTime && !isClosed && (
         <section className="container-wide pb-2">
           <div className="bg-accent text-primary rounded-lg px-6 py-4 flex items-center justify-between flex-wrap gap-2">
             <div className="flex items-center gap-3">
@@ -371,12 +396,75 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
         <PhotoGallery photos={photos} address={listing.UnparsedAddress} autoScroll />
       </section>
 
+      {/* === SOLD SUMMARY — closed listings only ===
+           Sale price, sale date and terms sit above the fold so the page
+           reads as a completed sale record rather than something for sale. */}
+      {isClosed && (
+        <section className="container-wide pb-6">
+          <div className="rounded-xl border-2 border-primary bg-primary/5 px-6 py-5">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-4">
+              <span className="inline-block rounded-full bg-primary px-3 py-1 font-heading text-xs font-bold uppercase tracking-wider text-white">
+                Sold
+              </span>
+              {soldDate && (
+                <span className="font-body text-sm text-dark">
+                  Closed {soldDate}
+                </span>
+              )}
+            </div>
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
+              <div>
+                <p className="font-body text-xs uppercase tracking-wide text-muted">
+                  Sold price
+                </p>
+                <p className="font-heading text-3xl font-bold text-primary md:text-4xl">
+                  {listing.ClosePrice ? formatPrice(listing.ClosePrice) : "Not disclosed"}
+                </p>
+              </div>
+              <div>
+                <p className="font-body text-xs uppercase tracking-wide text-muted">
+                  Sold date
+                </p>
+                <p className="font-heading text-xl font-bold text-primary">
+                  {soldDate || "Not disclosed"}
+                </p>
+              </div>
+              <div>
+                <p className="font-body text-xs uppercase tracking-wide text-muted">
+                  Terms
+                </p>
+                <p className="font-heading text-xl font-bold text-primary">
+                  {soldTerms.length ? soldTerms.join(" · ") : "None reported"}
+                </p>
+              </div>
+            </div>
+            {listing.ClosePrice && listing.ListPrice ? (
+              <p className="mt-4 font-body text-sm text-muted">
+                Originally listed at {formatPrice(listing.ListPrice)}
+                {listing.ClosePrice !== listing.ListPrice && (
+                  <>
+                    {" · sold "}
+                    {listing.ClosePrice > listing.ListPrice ? "over" : "under"} asking by{" "}
+                    {formatPrice(Math.abs(listing.ClosePrice - listing.ListPrice))}
+                  </>
+                )}
+              </p>
+            ) : null}
+          </div>
+        </section>
+      )}
+
       {/* === LISTING HEADER — price, address, status === */}
       <section className="container-wide pb-8">
         <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
           <div>
             <p className="font-heading font-bold text-3xl md:text-4xl text-primary">
               {formatPrice(listing.ListPrice)}
+              {isClosed && (
+                <span className="ml-2 font-body text-sm font-normal text-muted">
+                  list price
+                </span>
+              )}
             </p>
             <h1 className="font-body text-lg text-dark mt-1">
               {listing.UnparsedAddress}, {listing.City},{" "}
@@ -600,13 +688,40 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
 
           {/* Right column */}
           <div>
-            <TourScheduler
-              listingAddress={`${listing.UnparsedAddress}, ${listing.City}, ${listing.StateOrProvince} ${listing.PostalCode}`}
-              listingId={listing.ListingId}
-              listingPrice={listing.ListPrice}
-            />
-            {listing.PropertyType !== 'Residential Lease' && (
-              <MiniCalc listingPrice={listing.ListPrice} />
+            {isClosed ? (
+              <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+                <h3 className="heading-section mb-2 text-lg text-primary">
+                  This home has already sold
+                </h3>
+                <p className="font-body mb-5 text-sm text-muted">
+                  It is no longer available to tour or purchase. Here is what is on
+                  the market right now
+                  {listing.City ? ` in ${listing.City}` : ""}.
+                </p>
+                <a
+                  href={cityHref || "/properties/"}
+                  className="inline-flex w-full items-center justify-center rounded bg-primary px-5 py-3 font-body text-sm font-semibold text-white transition-colors hover:bg-primary/90"
+                >
+                  See live active listings
+                </a>
+                <a
+                  href="tel:+18137337907"
+                  className="mt-3 inline-flex w-full items-center justify-center rounded border border-primary px-5 py-3 font-body text-sm font-semibold text-primary transition-colors hover:bg-primary/5"
+                >
+                  Ask what this means for your home
+                </a>
+              </div>
+            ) : (
+              <>
+                <TourScheduler
+                  listingAddress={`${listing.UnparsedAddress}, ${listing.City}, ${listing.StateOrProvince} ${listing.PostalCode}`}
+                  listingId={listing.ListingId}
+                  listingPrice={listing.ListPrice}
+                />
+                {listing.PropertyType !== 'Residential Lease' && (
+                  <MiniCalc listingPrice={listing.ListPrice} />
+                )}
+              </>
             )}
           </div>
         </div>
@@ -620,8 +735,11 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
         city={listing.City}
       />
 
-      {/* === BUYING POWER — residential only === */}
-      {!isCommercial && !isLand && listing.PropertyType !== 'Residential Lease' && (
+      {/* === BUYING POWER — residential only, and not on sold listings ===
+           This is the other payment estimator on the page. Leaving it up on a
+           closed listing invites a buyer to work out a mortgage on a home that
+           is already gone. */}
+      {!isCommercial && !isLand && !isClosed && listing.PropertyType !== 'Residential Lease' && (
         <BuyingPower listingPrice={listing.ListPrice} city={listing.City} county={listing.CountyOrParish} listingTerms={listing.ListingTerms} />
       )}
 
