@@ -37,6 +37,9 @@ interface FubLeadData {
   };
   /** Raw source identifier for internal tracking (e.g. "showing-request:MLS123") */
   sourceId?: string;
+  /** Extra question/answer pairs (seller intake). Appended to the FUB note —
+   *  without this the answers reach n8n only and never show up in the CRM. */
+  details?: { label: string; value: string }[];
   /** Tags to apply to the lead in FUB */
   tags?: string[];
 }
@@ -116,6 +119,15 @@ export async function pushLeadToFub(data: FubLeadData): Promise<boolean> {
       if (p.preferredTime) propLines.push(`Requested Time: ${p.preferredTime}`);
       if (p.tourType) propLines.push(`Tour Type: ${p.tourType === "video" ? "Video Chat" : "In-Person"}`);
       noteParts.push(propLines.join("\n"));
+    }
+
+    // Seller intake answers — utilities, HOA, roof age, updates, etc.
+    if (data.details?.length) {
+      const detailLines = ["--- Seller Intake ---"];
+      for (const d of data.details) {
+        if (d.value) detailLines.push(`${d.label}: ${d.value}`);
+      }
+      noteParts.push(detailLines.join("\n"));
     }
 
     if (noteParts.length > 0) {

@@ -10,6 +10,7 @@ const fubSourceMap: Record<string, string> = {
   showing: "nowtb.com — Showing Request",
   "open-house": "nowtb.com — Open House Sign In",
   valuation: "nowtb.com — Home Valuation",
+  "seller-intake": "nowtb.com — Seller Intake",
   newsletter: "nowtb.com — Newsletter",
   "buyer-reg": "nowtb.com — Buyer Registration",
 };
@@ -20,6 +21,7 @@ const fubTagMap: Record<string, string[]> = {
   showing: ["Website Lead", "Showing Request", "Buyer"],
   "open-house": ["Website Lead", "Open House", "Buyer"],
   valuation: ["Website Lead", "Home Valuation", "Seller"],
+  "seller-intake": ["Website Lead", "Seller Intake", "Seller"],
   newsletter: ["Website Lead", "Newsletter"],
   "buyer-reg": ["Website Lead", "Buyer Registration", "Buyer"],
 };
@@ -69,6 +71,7 @@ export async function POST(request: NextRequest) {
       showing: `${N8N_BASE}/nowtb-showing`,
       "open-house": `${N8N_BASE}/nowtb-open-house`,
       valuation: `${N8N_BASE}/nowtb-valuation`,
+      "seller-intake": `${N8N_BASE}/nowtb-seller-intake`,
       newsletter: `${N8N_BASE}/nowtb-newsletter`,
       "buyer-reg": `${N8N_BASE}/nowtb-buyer-reg`,
     };
@@ -97,6 +100,7 @@ export async function POST(request: NextRequest) {
           sourceId: formData.source,
           tags: fubTagMap[type] || ["Website Lead"],
           property: formData.property || undefined,
+          details: formData.details || undefined,
         });
         // pushLeadToFub RETURNS false on an API rejection rather than throwing,
         // so the catch below never fires for the most common failure — a bad or
@@ -145,6 +149,7 @@ export async function POST(request: NextRequest) {
           message: formData.message,
           type,
           propertyAddress: formData.property?.address,
+          details: formData.details || undefined,
         }),
       ];
       if (formData.email) {

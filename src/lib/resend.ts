@@ -24,6 +24,9 @@ interface LeadEmailData {
   type?: string;
   /** Property the lead was looking at (showing requests) */
   propertyAddress?: string;
+  /** Extra question/answer pairs (seller intake). Rendered as a table in the
+   *  alert — without this the answers only ever reach n8n. */
+  details?: { label: string; value: string }[];
 }
 
 /**
@@ -52,6 +55,20 @@ export async function sendBarrettAlert(lead: LeadEmailData): Promise<void> {
         <p><strong>Phone:</strong> ${lead.phone || "Not provided"}</p>
         ${lead.propertyAddress ? `<p><strong>Property:</strong> ${lead.propertyAddress}</p>` : ""}
         ${lead.message ? `<p><strong>Message:</strong><br>${lead.message}</p>` : ""}
+        ${
+          lead.details?.length
+            ? `<h3 style="margin-bottom:6px;">Seller Intake</h3>
+        <table cellpadding="6" cellspacing="0" border="0" style="border-collapse:collapse;font-size:14px;">
+          ${lead.details
+            .filter((d) => d.value)
+            .map(
+              (d) =>
+                `<tr><td style="border-bottom:1px solid #eee;color:#666;">${d.label}</td><td style="border-bottom:1px solid #eee;"><strong>${d.value}</strong></td></tr>`
+            )
+            .join("")}
+        </table>`
+            : ""
+        }
         <hr>
         <p><a href="https://app.followupboss.com">Open in Follow Up Boss →</a></p>
         <p style="color:#666;font-size:12px;">Submitted via nowtb.com</p>
