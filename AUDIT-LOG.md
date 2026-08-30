@@ -4,6 +4,39 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-08-30 (Batch 47 — Lecanto FL x10: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: 5-Q&A FAQ with JSON-LD FAQPage schema)
+
+All 10 posts were boilerplate 5,175-char stubs. Each received a full expansion with: Quick Answer box (AEO), 4+ H2s, 6+ H3s, comparison tables, 10+ internal links, first-person EEAT voice, FAQ with JSON-LD FAQPage schema, CTA block, footer bio.
+
+1. **lecanto-fl-homes-for-sale-guide** — 5,175 to 16,786 chars. Price table by type (starter to luxury), buyer process steps, well/septic guidance, neighborhood breakdown (Citrus Hills, US-19 corridor, rural acreage), USDA eligibility context, FAQ (5 Q&As).
+
+2. **best-neighborhoods-lecanto-fl** — 5,175 to 15,771 chars. Citrus Hills breakdown (Brentwood, Terra Vista, Black Diamond Ranch with prices and HOA), US-19 corridor subdivisions, rural areas, 6-community comparison table, FAQ (5 Q&As).
+
+3. **is-lecanto-fl-good-place-to-live** — 5,175 to 15,210 chars. Honest pros (affordability, nature access via Three Sisters Springs/Withlacoochee Trail/Homosassa Springs, low traffic) and cons (Tampa commute 1:15-2:00, limited jobs, basic dining). Buyer profile fit table. FAQ (5 Q&As).
+
+4. **lecanto-fl-schools-guide** — 5,175 to 15,338 chars. Citrus County School District overview, school profiles (Lecanto High, Lecanto Middle, Forest Ridge Elem, Rock Crusher Elem), zone verification guidance, dual enrollment at CF Lecanto campus, 4-column comparison table vs. Hillsborough/Pasco, FAQ (5 Q&As).
+
+5. **lecanto-fl-commute-guide** — 5,175 to 15,808 chars. 7-destination drive time table (Tampa, Ocala, Crystal River, Inverness, Gainesville, Orlando, Wesley Chapel), route options (US-19/Suncoast vs. SR-44/I-75), remote work internet options, honest commuter assessment, FAQ (5 Q&As).
+
+6. **lecanto-fl-cost-of-living** — 5,175 to 16,960 chars. Housing cost table vs. Tampa and Sarasota (5 property types), full payment example at $280K, utilities breakdown, everyday expenses, 3-city comparison table, FAQ (5 Q&As on affordability, utilities, no state income tax).
+
+7. **lecanto-fl-property-taxes** — 5,175 to 18,182 chars. Florida millage explainer, Citrus County component table (5 components), homestead exemption detail ($50K reduction, March 1 deadline, citruspa.org), SOH cap, portability, 5-scenario tax calculation table, non-homestead investor notes, how to verify taxes before offer, FAQ (5 Q&As).
+
+8. **lecanto-fl-new-construction** — 5,175 to 15,245 chars. Del Webb Citrus Hills profile (PulteGroup 55+, $310K-$550K+), Citrus Hills resale vs. new construction distinction, non-age-restricted options (LGI, custom builds), 8-factor new vs. resale table, builder lender guidance, FAQ (5 Q&As).
+
+9. **lecanto-fl-investment-property** — 5,175 to 16,184 chars. Rental market overview (tenant profile), 5-type rent table ($1,050-$2,300/mo), investment scenarios (A: leveraged — honest negative cash flow; B: cash purchase ~3.6% cap; C: seller-financed), risk list, 8-item due diligence checklist, FAQ (5 Q&As on cap rates, cash flow, STRs).
+
+10. **lecanto-fl-real-estate-guide** — 5,175 to 16,668 chars. Market overview (buyer pool 45% out-of-state retirees/30% Tampa area/25% local), property type profiles (4 types), market conditions 2025-2026 (45-75 DOM, $260K-$295K median), buying/selling process, 6-city comparison table, FAQ (5 Q&As).
+
+**Build:** Passed (Next.js build green, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+---
+
 ## 2026-08-28 (Batch 45 — 10 Hernando Beach FL spoke pages)
 
 **Pages improved: 10**
