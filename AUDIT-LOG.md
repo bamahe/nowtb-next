@@ -1506,6 +1506,38 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 
 ---
 
+## 2026-08-31 (Batch 47 — Tampa x4, Mulberry x2, Lecanto x4)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: 5-Q&A FAQ with JSON-LD FAQPage schema, 12-link internal grid, AEO direct-answer intro, GEO citations)
+
+1. **tampa-waterfront-condos** — Major expansion to 28,925 chars. Added: waterfront condo tiers by Tampa Bay sub-market (Harbour Island, Channelside, Westshore Marina, Bayshore Boulevard, South Tampa high-rise); HOA fee breakdown table by building; flood zone considerations for Hillsborough County waterfront (Zone AE vs. X, elevation certificates, NFIP vs. private insurance); EV charging rights under Florida Statute 718.113(8); SB 4D milestone inspection timeline for buildings 3+ stories; financing considerations (Fannie Mae warrantable condo requirements); 6-destination commute matrix.
+
+2. **tampa-key-west-homes** — Major expansion to 23,312 chars. Added: Key West architectural elements (Conch style, Bahama shutters, metal roofs, wrap-around porches, raised foundations, pastel palettes); where to find Key West-style homes in Tampa (Hyde Park, Seminole Heights, Ybor City, Palma Ceia, Old Seminole Heights); price comparison table by neighborhood ($400K-$1.2M+ range); hurricane resilience features (metal roofs, impact glass, elevated foundations); historic designation pros/cons; National Register implications on renovations.
+
+3. **tampa-colonial-homes** — Major expansion to 24,428 chars. Added: Colonial architectural style breakdown (Federal vs. Georgian vs. Dutch Colonial vs. Spanish Colonial); Tampa neighborhoods with historic Colonial-style inventory (Hyde Park, Palma Ceia, Golfview, Davis Islands, South Tampa); price table by sub-market ($450K-$2M+); renovation considerations for pre-1978 homes (lead paint, asbestos, knob-and-tube wiring); historic district designation (Barrio Latino, Hyde Park Historic, Seminole Heights); 5-FAQ covering Colonial vs. craftsman, investment value, renovation costs.
+
+4. **tampa-condos-ev-charging** — Major expansion to 22,320 chars. Added: Florida Statute 718.113(8) full explanation (HOA cannot deny EV charger installation rights, owner pays cost, must follow safety standards, licensed electrician required); Level 1 vs. Level 2 vs. DC Fast Charging comparison table; cost table (Level 2 installation $500-$2,000 typical, shared electrical infrastructure fees); EVSE types and connector standards (J1772, CCS, CHAdeMO, Tesla NACS); buildings with existing EV infrastructure (newer Channelside/Water Street developments); negotiating EV charging rights during purchase.
+
+5. **mulberry-fl-investment-property** — Major expansion to 25,484 chars. Added: Mulberry investment thesis (Lakeland metro growth spillover, I-4 corridor demand, phosphate economy stability); property type comparison table (SFR vs. duplex vs. small multifamily — cap rates, price ranges, management intensity); cap rate and cash-on-cash return calculations with worked example ($220K purchase, $1,600/mo rent = 7.9% GRM, 5.8% cap); Section 8/HCV voucher demand in Polk County; Polk County Property Appraiser exemption impact on investment properties; property management fees (8-10% of gross for full-service Lakeland area); exit strategy analysis (hold vs. 1031 exchange vs. BRRRR).
+
+6. **mulberry-fl-waterfront-homes** — Major expansion to 20,587 chars. Added: Honest market framing (Mulberry itself has limited true waterfront; phosphate ponds are NOT recreational waterfront; closest true waterfront is Lake Parker/Lake Hollingsworth in Lakeland 10-15 mi); price comparison table for nearby waterfront vs. non-waterfront Mulberry; Polk County lakes with recreational waterfront (Lake Parker, Lake Hollingsworth, Lake Ariana in Auburndale); flood zone reality (most Mulberry proper is Zone X; lakefront areas shift to AE/AH); alternatives for buyers wanting waterfront near Mulberry price points.
+
+7. **lecanto-fl-waterfront-homes** — Major expansion to 20,231 chars. Added: Honest framing (Lecanto unincorporated 34461 has no significant natural waterfront itself; Crystal River is 20-25 mi, Inverness lakes 10-12 mi, Lake Tsala Apopka/Floral City 12-15 mi, Homosassa River 20-25 mi); price comparison table for Citrus County waterfront tiers (Crystal River Gulf-front $600K-$1.5M+, Inverness lakefront $350K-$750K, Floral City lakefront $280K-$550K, Lecanto non-waterfront $180K-$380K); flood zone considerations for each waterfront zone; what buyers get by staying in Lecanto and driving to water vs. buying at waterfront premium.
+
+8. **lecanto-fl-flood-zones** — Major expansion to 20,865 chars. Added: FEMA flood zone definitions table (Zone X/AH/AE/VE — risk level, mandatory insurance, what it means for buyers); Citrus County geographic reality (Lecanto proper is mostly Zone X, lower risk; Crystal River/Homosassa Gulf-front shifts dramatically to AE/VE); sinkhole/karst risk as separate issue from flood (Lecanto/Citrus County karst geology; Citizens Insurance sinkhole coverage; how to request sinkhole inspection); NFIP vs. private flood insurance comparison; elevation certificate process and when to request; step-by-step FEMA MSC flood zone lookup guide; flood insurance cost table by zone ($400-$900/yr Zone X to $5,000-$15,000+ Zone VE coastal).
+
+9. **moving-to-lecanto-fl** — Major expansion to 24,132 chars. Added: What Lecanto is (unincorporated community, 34461 ZIP, Citrus County seat — county government campus is in Lecanto); housing price table by property type ($180K-$380K typical); school profile (Lecanto Elementary, Lecanto Middle, Lecanto High all on connected campus — B/C rated, notable for having K-12 on one campus); healthcare reality (Citrus Memorial Hospital 12-15 min, Seven Rivers Regional 20-25 min, Tampa specialty care 90 min); utilities breakdown (Duke Energy, well/septic very common, Spectrum internet primary provider); commute matrix to 6 destinations (Tampa 90-120 min via Suncoast Pkwy, Crystal River 25-30 min, Ocala 45-55 min, Gainesville 75-90 min); who Lecanto makes sense for (retirees, remote workers, outdoor recreation seekers, buyers priced out of coastal areas).
+
+10. **things-to-do-lecanto-fl** — Major expansion to 20,436 chars. Added: Crystal River manatee swimming (November-March season, Three Sisters Springs, permitted tour operators, USFWS regulations); Withlacoochee State Trail (46 miles paved rail-trail from Citrus Springs to Trilby, longest paved trail in Florida, trailheads in Inverness and Floral City); Homosassa Springs Wildlife State Park (Florida wildlife hospital, manatees, hippo Lu, $13 adult admission); scalloping season (Citrus County waters July 1 - September 24, required equipment, launch points); Withlacoochee State Forest (157,000 acres, 100+ miles of multi-use trails, equestrian, OHV areas); Rainbow Springs State Park (35-45 mi via US-41/US-19); freshwater fishing (Crystal/Homosassa/Rainbow Rivers — redfish, snook, tarpon, bass); local events (Floral City Strawberry Festival February, Crystal River Manatee Festival January, Inverness Bluegrass Festival March, Citrus County Fair October).
+
+**Build:** Passed (Next.js 14.2.35, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `18aca05` — pushed to `origin/main`
+
+---
+
 ## 2026-08-28 (Batch 46 — Osprey FL x4, Mulberry FL x3, Valrico new construction x3)
 
 **Pages improved: 10**
