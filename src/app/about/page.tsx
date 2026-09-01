@@ -15,7 +15,7 @@ import { testimonials } from "@/data/testimonials";
 export const metadata: Metadata = {
   title: "About Barrett Henry | Broker Associate | REMAX Collective",
   description:
-    "Barrett Henry is a licensed Broker Associate with REMAX Collective and team lead of The NOW Team. 23+ years of real estate experience serving Tampa Bay buyers, sellers, and investors. Call (813) 733-7907.",
+    "Barrett Henry — Broker Associate at REMAX Collective. 23+ years serving Tampa Bay buyers, sellers, and investors. Call (813) 733-7907.",
   alternates: {
     canonical: "/about/",
   },

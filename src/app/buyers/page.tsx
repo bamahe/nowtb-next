@@ -13,7 +13,7 @@ import ContactForm from "@/components/ui/ContactForm";
 export const metadata: Metadata = {
   title: "Buy a Home in Tampa Bay | Buyer Guide | Barrett Henry",
   description:
-    "Step-by-step guide to buying a home in Tampa Bay. Barrett Henry, Broker Associate with REMAX Collective, brings 23+ years of real estate experience. Call (813) 733-7907.",
+    "Step-by-step guide to buying a home in Tampa Bay. Barrett Henry, Broker Associate at REMAX Collective, 23+ years of experience. Call (813) 733-7907.",
   alternates: {
     canonical: "/buyers/",
   },
