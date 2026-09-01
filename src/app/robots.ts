@@ -17,19 +17,23 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/admin/", "/auth/", "/account/", "/login/", "/card/", "/thank-you/", "/compare/"],
+        // /c/ holds private per-client packets (CMAs, net sheets). Kept out of
+        // search entirely, and also served with X-Robots-Tag via vercel.json.
+        disallow: ["/api/", "/admin/", "/auth/", "/account/", "/login/", "/card/", "/thank-you/", "/compare/", "/c/"],
       },
-      // Explicitly allow AI crawlers for AEO/GEO visibility
-      { userAgent: "GPTBot", allow: "/" },
-      { userAgent: "ClaudeBot", allow: "/" },
-      { userAgent: "PerplexityBot", allow: "/" },
-      { userAgent: "Applebot-Extended", allow: "/" },
-      { userAgent: "GoogleOther", allow: "/" },
-      { userAgent: "Google-Extended", allow: "/" },
-      { userAgent: "Bytespider", allow: "/" },
-      { userAgent: "ChatGPT-User", allow: "/" },
-      { userAgent: "anthropic-ai", allow: "/" },
-      { userAgent: "cohere-ai", allow: "/" },
+      // Explicitly allow AI crawlers for AEO/GEO visibility.
+      // Each still gets /c/ disallowed — an unqualified allow:"/" would
+      // otherwise invite them straight into the private client packets.
+      { userAgent: "GPTBot", allow: "/", disallow: ["/c/"] },
+      { userAgent: "ClaudeBot", allow: "/", disallow: ["/c/"] },
+      { userAgent: "PerplexityBot", allow: "/", disallow: ["/c/"] },
+      { userAgent: "Applebot-Extended", allow: "/", disallow: ["/c/"] },
+      { userAgent: "GoogleOther", allow: "/", disallow: ["/c/"] },
+      { userAgent: "Google-Extended", allow: "/", disallow: ["/c/"] },
+      { userAgent: "Bytespider", allow: "/", disallow: ["/c/"] },
+      { userAgent: "ChatGPT-User", allow: "/", disallow: ["/c/"] },
+      { userAgent: "anthropic-ai", allow: "/", disallow: ["/c/"] },
+      { userAgent: "cohere-ai", allow: "/", disallow: ["/c/"] },
       // Block spam/scraper bots
       { userAgent: "SemrushBot", disallow: "/" },
       { userAgent: "AhrefsBot", disallow: "/" },

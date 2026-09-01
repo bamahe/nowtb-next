@@ -384,6 +384,11 @@ const nextConfig = {
         { source: '/3813-polumbo/', destination: '/3813-polumbo.html' },
         { source: '/1609-lakeview-ave', destination: '/1609-lakeview-ave.html' },
         { source: '/1609-lakeview-ave/', destination: '/1609-lakeview-ave.html' },
+        // Private client packets live as a folder of static files under
+        // public/c/<slug>/. Files in public/ are matched by exact path, so
+        // without these the bare folder URL 404s and only /index.html works.
+        { source: '/c/:slug', destination: '/c/:slug/index.html' },
+        { source: '/c/:slug/', destination: '/c/:slug/index.html' },
       ],
     };
   },

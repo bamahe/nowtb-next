@@ -4,6 +4,166 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-09-01 (Batch 48 — Tampa Architecture x3, Fort Meade FL x5, Nokomis FL x2: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: 5-Q&A FAQ with JSON-LD FAQPage schema)
+
+All 10 posts were boilerplate 3,270–5,183-char stubs. Each received a full expansion with: AEO direct-answer intro, price tables, commute matrix, comparison tables, 5-FAQ with JSON-LD FAQPage schema, 12-link internal grid, GEO citations, EEAT signals.
+
+1. **mediterranean-architecture-homes-tampa-fl** — 3,270 → ~22,000 chars. Style history (Spanish land grants through 1920s Boom), defining features (barrel tile, stucco, arched entries, courtyard), top neighborhoods (Hyde Park, Palma Ceia, Ybor City/Seminole Heights, South Tampa waterfront), price table (bungalow $480K to waterfront $3M+), renovation cost table, AEO FAQ (5 Q&As).
+
+2. **craftsman-bungalows-tampa-neighborhoods** — 4,102 → ~22,000 chars. Arts and Crafts movement in Tampa context, defining features (tapered columns, wide porch, natural materials), top neighborhoods (Seminole Heights, Riverside Heights, Old Seminole Heights, Tampa Heights, Hyde Park), price table ($380K–$850K+), renovation cost table, FAQ (5 Q&As).
+
+3. **spanish-colonial-revival-architecture-tampa** — 4,218 → ~22,000 chars. 1920s Florida Boom origin, Addison Mizner/Bertram Goodhue influence, defining elements (red barrel tile, white stucco, arched loggias, Saltillo tile floors), top neighborhoods (Davis Islands, Plant Park/UT area, Hyde Park, Palma Ceia, Ybor City Historic District), price table ($520K–$4M+), renovation cost table, FAQ (5 Q&As).
+
+4. **moving-to-fort-meade-fl** — 4,891 → ~24,000 chars. Polk County seat geography, housing price table (starter SFR $140K–$220K to acreage $350K+), Peace River honest framing (freshwater, upper section not motorboat-navigable), utilities (Duke Energy, City of Fort Meade water/sewer), grocery reality (Dollar General, no major grocery in city limits), commute matrix (7 destinations), Fort Meade vs. Bartow vs. Wauchula comparison table, flood zone AE warning with FEMA link, FAQ (5 Q&As).
+
+5. **things-to-do-fort-meade-fl** — 5,183 → ~23,000 chars. Peace River paddling (kayak/canoe, fossil hunting, Canoe Outpost), Fort Meade Historical Museum, Streamsong Resort (3 championship golf courses, 35 min south), Polk County Nature Discovery Center, downtown square antiques/local shops, Bartow day trips (Polk Theatre, antiques), Tampa day trips (90 min), FAQ (5 Q&As).
+
+6. **fort-meade-fl-real-estate-market** — 4,512 → ~23,000 chars. Polk County context, median price ~$195K vs. state $415K, inventory patterns, lot/acreage values, 4-property-type price table, buyer types (retirees, remote workers, investors), 15-factor Fort Meade vs. Bartow vs. Mulberry vs. Avon Park comparison table, FAQ (5 Q&As).
+
+7. **best-neighborhoods-fort-meade-fl** — 4,387 → ~23,000 chars. Historic downtown district (pre-1940 frame vernacular, brick streets), North Fort Meade (newer 1970s–2000s ranch homes), Peace River corridor (flood zone awareness, acreage parcels), SR-17 corridor (commercial mix), rural acreage outside city limits, 5-neighborhood comparison table, FAQ (5 Q&As).
+
+8. **fort-meade-fl-schools** — 4,102 → ~22,000 chars. Polk County School District overview, school profiles (Fort Meade Middle-Senior High combined 6-12, Lewis Anna Woodbury Elementary, Fort Meade Elementary), Polk State College access (Lakeland campus 45 min, Winter Haven 50 min), 4-column comparison table vs. Lakeland/Bartow, FAQ (5 Q&As).
+
+9. **moving-to-nokomis-fl** — 5,177 → 24,233 chars. Unincorporated Sarasota County 34275 ZIP, no walkable downtown of its own, housing price table (inland condo $280K–$420K to Casey Key Gulf-front $1.5M–$5M+), schools (Laurel Nokomis K-8 combined, Venice Senior High), utilities (FPL, Sarasota County water/sewer), grocery reality (Venice 5 mi, Osprey 3 mi — no major grocery in Nokomis proper), commute matrix (6 destinations), Nokomis vs. Venice vs. Osprey comparison table, flood zone warning with FEMA link, FAQ (5 Q&As).
+
+10. **things-to-do-nokomis-fl** — 5,177 → 20,259 chars. Nokomis Beach on Casey Key (sunset tradition, free access), Legacy Trail (18.4 miles paved, Nokomis access points), Oscar Scherer State Park in Osprey (1,384 acres, $5/vehicle, kayaking South Creek, scrub-jay viewing), paddling Dona Bay/Roberts Bay (spotted sea trout/redfish/snook/sheepshead), Venice Island day trips (Caspersen Beach shark tooth hunting, Venice Theatre, farmers market), Historic Spanish Point (30-acre site, $15, 5,000 years history), Sarasota day trips (Ringling Museum, Siesta Key, St. Armands Circle), FAQ (5 Q&As).
+
+---
+
+## 2026-08-30 (Batch 47 — Lecanto FL x10: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: 5-Q&A FAQ with JSON-LD FAQPage schema)
+
+All 10 posts were boilerplate 5,175-char stubs. Each received a full expansion with: Quick Answer box (AEO), 4+ H2s, 6+ H3s, comparison tables, 10+ internal links, first-person EEAT voice, FAQ with JSON-LD FAQPage schema, CTA block, footer bio.
+
+1. **lecanto-fl-homes-for-sale-guide** — 5,175 to 16,786 chars. Price table by type (starter to luxury), buyer process steps, well/septic guidance, neighborhood breakdown (Citrus Hills, US-19 corridor, rural acreage), USDA eligibility context, FAQ (5 Q&As).
+
+2. **best-neighborhoods-lecanto-fl** — 5,175 to 15,771 chars. Citrus Hills breakdown (Brentwood, Terra Vista, Black Diamond Ranch with prices and HOA), US-19 corridor subdivisions, rural areas, 6-community comparison table, FAQ (5 Q&As).
+
+3. **is-lecanto-fl-good-place-to-live** — 5,175 to 15,210 chars. Honest pros (affordability, nature access via Three Sisters Springs/Withlacoochee Trail/Homosassa Springs, low traffic) and cons (Tampa commute 1:15-2:00, limited jobs, basic dining). Buyer profile fit table. FAQ (5 Q&As).
+
+4. **lecanto-fl-schools-guide** — 5,175 to 15,338 chars. Citrus County School District overview, school profiles (Lecanto High, Lecanto Middle, Forest Ridge Elem, Rock Crusher Elem), zone verification guidance, dual enrollment at CF Lecanto campus, 4-column comparison table vs. Hillsborough/Pasco, FAQ (5 Q&As).
+
+5. **lecanto-fl-commute-guide** — 5,175 to 15,808 chars. 7-destination drive time table (Tampa, Ocala, Crystal River, Inverness, Gainesville, Orlando, Wesley Chapel), route options (US-19/Suncoast vs. SR-44/I-75), remote work internet options, honest commuter assessment, FAQ (5 Q&As).
+
+6. **lecanto-fl-cost-of-living** — 5,175 to 16,960 chars. Housing cost table vs. Tampa and Sarasota (5 property types), full payment example at $280K, utilities breakdown, everyday expenses, 3-city comparison table, FAQ (5 Q&As on affordability, utilities, no state income tax).
+
+7. **lecanto-fl-property-taxes** — 5,175 to 18,182 chars. Florida millage explainer, Citrus County component table (5 components), homestead exemption detail ($50K reduction, March 1 deadline, citruspa.org), SOH cap, portability, 5-scenario tax calculation table, non-homestead investor notes, how to verify taxes before offer, FAQ (5 Q&As).
+
+8. **lecanto-fl-new-construction** — 5,175 to 15,245 chars. Del Webb Citrus Hills profile (PulteGroup 55+, $310K-$550K+), Citrus Hills resale vs. new construction distinction, non-age-restricted options (LGI, custom builds), 8-factor new vs. resale table, builder lender guidance, FAQ (5 Q&As).
+
+9. **lecanto-fl-investment-property** — 5,175 to 16,184 chars. Rental market overview (tenant profile), 5-type rent table ($1,050-$2,300/mo), investment scenarios (A: leveraged — honest negative cash flow; B: cash purchase ~3.6% cap; C: seller-financed), risk list, 8-item due diligence checklist, FAQ (5 Q&As on cap rates, cash flow, STRs).
+
+10. **lecanto-fl-real-estate-guide** — 5,175 to 16,668 chars. Market overview (buyer pool 45% out-of-state retirees/30% Tampa area/25% local), property type profiles (4 types), market conditions 2025-2026 (45-75 DOM, $260K-$295K median), buying/selling process, 6-city comparison table, FAQ (5 Q&As).
+
+**Build:** Passed (Next.js build green, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+---
+
+## 2026-08-28 (Batch 45 — 10 Hernando Beach FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 Hernando Beach FL posts expanded from 5,277-char boilerplate to 17,795-26,354 chars each. Each post has: AEO quick-answer box, 4+ question-format H2s, 6+ H3 subsections, at least one comparison table, internal links, CTA box, 5-question FAQ with JSON-LD FAQPage schema, and BreadcrumbList schema. Hernando Beach-specific content: ZIP 34607, unincorporated Hernando County; virtually every home on Gulf-access saltwater canal with no fixed bridges to open Gulf water; median sale prices $440K-$575K (80 DOM, 7.9 months inventory, buyer-favorable); Hurricane Helene September 2024 storm surge 8-12 ft with widespread damage; post-Helene teardown-rebuild cost table ($600K-$1.5M+); FEMA Zone AE (canal) and Zone VE (Gulf-front) flood insurance breakdown; Hernando County millage 13.5-16.4 mills total; Spring Hill new construction alternatives (Adams Homes, Maronda, DR Horton $240K-$400K+); STR gross revenue estimate $28K-$65K/yr; canal width/depth navigability analysis; ViVi Property Management linked from investment post. Content dated 2026-08-27. Build verified green.
+
+1. **hernando-beach-fl-homes-for-sale-guide** — Property type price table (dry lot $299K-$420K, standard canal-front $450K-$900K, wide-canal premium $800K-$1.5M, Gulf-front $1M-$2.875M+, post-Helene renovated $380K-$750K), Helene due diligence 4-step checklist (flood zone, elevation cert, canal depth, permit history), comparison table vs Tarpon Springs/New Port Richey/Apollo Beach/Crystal River; 19,180 chars
+
+2. **hernando-beach-fl-schools-guide** — Hernando County School District B- overview (24,000 students, 32 schools), 34607 typical zone assignments (Fox Chapel Elementary/Middle, Weeki Wachee High or Nature Coast Technical High), A-rated magnets (Gulf Coast Academy of Science and Technology, Challenger K-8), district comparison table vs Pasco/Pinellas/Citrus/Hillsborough; 21,486 chars
+
+3. **hernando-beach-fl-commute-guide** — 10-destination drive time matrix (Spring Hill 18-25 min, Brooksville 28-38 min, Tampa CBD 60-75 min, TPA 58-72 min, Clearwater 58-70 min, Orlando 100-120 min), Suncoast Parkway vs US-19 route analysis, toll cost breakdown ($80-$140/mo daily commuter), remote work context, comparison table vs Spring Hill/Brooksville/New Port Richey/Tarpon Springs/Holiday; 19,678 chars
+
+4. **is-hernando-beach-fl-good-place-to-live** — 4 pros (Gulf access from backyard, waterfront lifestyle relative discount, quiet community character, no state income tax) and 4 cons (flood insurance $1,500-$6,000+/yr, Helene storm surge risk, 60-75 min Tampa commute, below-average schools), 7-buyer-profile fit table (boating/retirees: Excellent, remote workers: Very Good, daily Tampa commuters: Poor, urban amenity seekers: Poor); 17,795 chars
+
+5. **hernando-beach-fl-real-estate-guide** — 2026 market snapshot table (median $440K-$472K, $280-$340/sqft, 80 DOM, 7.9 months inventory, buyer-favorable), what sells vs what sits analysis, buyer strategy (5 steps: elevation cert, inspection, flood insurance quote pre-contract, post-Helene disclosure), seller strategy (accurate pricing, pre-listing inspection, permit documentation), comparison table vs Tarpon Springs/New Port Richey/Holiday/Apollo Beach; 19,223 chars
+
+6. **hernando-beach-fl-cost-of-living** — Monthly ownership cost table at 3 price points ($350K/$475K/$650K: P+I, taxes, HO insurance, flood insurance), flood insurance by zone table (AE at BFE $1,500-$3,000, below BFE $3,000-$6,000+, VE $8,000-$20,000+), property tax table at 6 price points, everyday living cost table (groceries, Duke Energy $120-$280/mo, water/sewer, internet, tolls), comparison table vs New Port Richey/Tarpon Springs/Apollo Beach/Siesta Key; 26,354 chars
+
+7. **hernando-beach-fl-property-taxes** — Hernando County millage breakdown table (county general 6.1-6.4, school 4.5-5.0, fire/rescue 2.5-4.0, SWFWMD 0.25-0.35, library 0.25-0.50, total 13.5-16.4 mills), property tax estimate table at 6 price points ($300K homesteaded to $1.2M non-homesteaded), homestead exemption mechanics ($50K reduction, March 1 deadline), Save Our Homes 3% cap buyer warning, portability explanation, additional exemptions table, county comparison vs Pasco/Pinellas/Hillsborough/Citrus; 22,352 chars
+
+8. **hernando-beach-fl-new-construction** — Why no production new construction in Hernando Beach (fully built-out canal system, 1960s-1990s), post-Helene teardown-rebuild cost table ($8K-$25K demo, $30K-$80K foundation, $200K-$480K construction, total $600K-$1.5M+), Spring Hill new construction ($240K-$400K, Adams/Maronda/DR Horton), Brooksville new construction ($280K-$1.2M, Lennar Trillium/Avex/Southern Hills Plantation), new construction vs Hernando Beach canal resale comparison table; 20,136 chars
+
+9. **hernando-beach-fl-investment-property** — Rental income table (2BR $1,800-$2,300, 3BR $2,200-$3,200, 4BR+ $3,200-$4,500, STR 3BR gross $28K-$45K/yr, STR 4BR $40K-$65K/yr), sample $500K cash flow analysis (negative $1,665/mo at 25% down / 7%; gross cap 5.4%, net cap ~3.1%), STR vs long-term comparison table, Hernando County STR regulation status (no registration program as of mid-2026), ViVi Property Management link; 22,403 chars
+
+10. **hernando-beach-fl-waterfront-homes** — 5-waterfront-type comparison table (standard canal AE $450K-$900K, wide-canal premium AE $800K-$1.5M, Gulf-front VE $1M-$2.875M+, dry lot X/AE $299K-$420K, post-Helene renovated AE $380K-$750K), no-fixed-bridge explanation and canal width/depth analysis (4-7 ft depth, 40-150+ ft width), post-Helene due diligence 9-item checklist, comparison table vs Tarpon Springs/New Port Richey/Apollo Beach/Englewood/Nokomis; 25,845 chars
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `ae97762` — pushed to `origin/main`
+
+---
+
+## 2026-08-27 (Batch 44 — 10 Weeki Wachee FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 Weeki Wachee FL posts expanded from 5,265-char boilerplate to 15,954-21,934 chars each. Each post has: AEO quick-answer box, 4+ question-format H2s, 6+ H3 subsections, at least one comparison table, internal links, CTA box, 5-question FAQ with JSON-LD FAQPage schema, and BreadcrumbList schema. Weeki Wachee-specific content: Hernando County market data, Weeki Wachee River freshwater frontage, Weeki Wachee Springs State Park context, Weeki Wachee High School (opened 2022), Hernando County millage breakdown, Suncoast Parkway commute analysis, Adams Homes / Maronda Homes builder context, Hernando Beach Gulf-access comparison. Content dated 2026-08-26. Build verified green.
+
+1. **weeki-wachee-fl-homes-for-sale-guide** — Property type table (established SFH $190K-$320K, move-up SFH $290K-$420K, river waterfront $350K-$800K+, rural acreage $280K-$550K+, new construction $250K-$400K+), neighborhood breakdown (Timber Pines 55+, Royal Highlands 55+, Forest Oaks, Pristine Place, Rogers Park river area), well/septic and flood zone buyer checklists, CDD fee explanation, 6-market comparison table; 19,404 chars
+
+2. **weeki-wachee-fl-schools-guide** — Hernando County School District overview, Weeki Wachee High School (opened 2022 on Osowaw Blvd), Weeki Wachee Middle and Elementary profiles, Hernando County B district rating, 6-district comparison table (Hernando vs Hillsborough/Pasco/Pinellas/Sarasota), private school options (Spring Hill Christian Academy), homeschooling/FLVS overview, school zone impact on home values; 15,954 chars
+
+3. **weeki-wachee-fl-commute-guide** — 10-destination drive time matrix (Tampa 55-65 min, TPA 50-60 min, New Port Richey 20-28 min, Wesley Chapel 38-48 min, Brooksville 22-30 min, Clearwater Beach 58-72 min, St. Pete 65-80 min, Ocala 70-80 min, Orlando 105-120 min), Suncoast Parkway vs US-19 vs SR-50/I-75 route analysis, remote work internet availability, 6-origin commute comparison table; 18,876 chars
+
+4. **is-weeki-wachee-fl-good-place-to-live** — Pros (affordability, springs/river access, space, lower density, no state income tax) and cons (45-65 min Tampa commute, limited local amenities, school ratings lag top districts, limited healthcare), 7-buyer-profile fit table (remote workers: Excellent, active retirees: Excellent, daily Tampa commuters: Fair, urban amenity seekers: Poor), local community character overview; 16,596 chars
+
+5. **weeki-wachee-fl-real-estate-guide** — 2026 market snapshot table (median $230K-$310K, DOM 55-90 days, months of supply 3-5, sale-to-list 96-98%, 40-55% listings with price reductions vs 5-10% at 2022 peak), what is selling vs sitting, buyer and seller strategy sections, 6-market comparison table vs New Port Richey/Brooksville/Zephyrhills/Land O Lakes/Wesley Chapel; 19,046 chars
+
+6. **weeki-wachee-fl-cost-of-living** — Monthly cost table at two price points ($240K and $300K purchase: PITI breakdown), 6-market comparison table vs NPR/Brooksville/Zephyrhills/Land O Lakes/Tampa, daily expenses table (electric $100-$280/mo Duke Energy FL, internet $60-$100, commute tolls $70-$130, commute gas $120-$210), Florida no state income tax advantage, homestead exemption savings; 20,122 chars
+
+7. **weeki-wachee-fl-property-taxes** — Hernando County millage breakdown table (county ~6-6.5, school ~4.5-5, fire district ~2.5-4, SWFWMD ~0.25-0.35, library ~0.25-0.50, total 13.5-16.4 mills), tax estimate table at 5 price points ($200K-$500K after homestead), county comparison table (Hernando vs Pasco/Hillsborough/Pinellas/Citrus), assessed value reset warning for new buyers, non-ad valorem assessments; 21,934 chars
+
+8. **weeki-wachee-fl-new-construction** — Why limited in Weeki Wachee proper (Springs/river land constraints), Spring Hill active builder table (Adams Homes $240K-$350K, Maronda $255K-$380K, DR Horton $270K-$400K+, LGI $230K-$330K), new vs resale comparison table (lot size, roof, warranty, HOA/CDD, negotiating room), custom build process (perc test, well permit, septic, county permit, construction $165-$250/sqft), CDD fee explanation; 18,910 chars
+
+9. **weeki-wachee-fl-investment-property** — Rental rate table (2BR $1,350-$1,700/mo, 3BR SFH $1,650-$2,100/mo, STR near springs $80-$180/night), long-term vs STR comparison table, sample $265K investment analysis (negative cash flow at 7% rates with detailed cost breakdown), cash buyer cap rate discussion (6-8%), Hernando County STR registration requirements, ViVi Property Management link; 20,098 chars
+
+10. **weeki-wachee-fl-waterfront-homes** — 5-waterfront-type comparison table (Weeki Wachee River AE $350K-$800K+, rural pond/lake X/AE $240K-$450K+, Hernando Beach canal Gulf-access AE $400K-$1.2M+, Rogers Park area AE $300K-$600K+, Hernando Beach Gulf-front VE $600K-$2M+), river boating limitations (shallow draft), Hernando Beach canal description, dock permitting (FDEP/Army Corps), 4-scenario flood insurance cost table; 20,188 chars
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `9e73051` — pushed to `origin/main`
+
+---
+
+## 2026-08-26 (Batch 43 — 10 Nokomis FL spoke pages)
+
+**Pages improved: 10**
+
+All 10 Nokomis FL posts expanded from 5,177-char boilerplate to 12,487-21,051 chars each. Each post has: AEO quick-answer box, question-format H2s, H3 subsections, at least one comparison table, internal links, CTA box, 5-6 question FAQ with JSON-LD FAQPage schema, and BreadcrumbList schema. Nokomis-specific content: Casey Key barrier island context, Roberts Bay/Blackburn Bay ICW waterfront details, FEMA Zone AE/VE/X flood zone breakdown, Sarasota County school zone info (Laurel Nokomis School K-8, Venice High, Pine View), Sarasota County property tax millage, commute matrix to 10 destinations. Content dated 2026-08-25. Build verified green.
+
+### Nokomis FL Spoke Pages (10)
+
+1. **nokomis-fl-homes-for-sale-guide** — Three property tiers (inland $320K-$580K, Roberts Bay/Blackburn Bay waterfront $600K-$2.5M, Casey Key Gulf-front $2.5M-$15M+), neighborhood comparison table (6 areas), flood zone and HOA due diligence guidance, water/sewer vs. well/septic context, 5-Q&A FAQ; 17,559 chars
+
+2. **nokomis-fl-schools-guide** — Sarasota County school district coverage, Laurel Nokomis School K-8 profile, Venice High School, Pine View School gifted magnet (on adjacent Laurel Road in Osprey), private options (Venice Christian School, St. Thomas More Catholic), open enrollment process, school zone impact on property values, school-zone comparison table; 17,735 chars
+
+3. **nokomis-fl-commute-guide** — Drive time matrix to 10 destinations (Venice 8-12 min, Sarasota 22-30 min, Bradenton 35-45 min, Tampa 65-80 min, Fort Myers 65-80 min, Naples 90-110 min), US-41 vs. I-75 route analysis, Venice Jacaranda and Sarasota Clark Road interchange access, SCAT transit Route 15, Nokomis vs. Venice/Sarasota/Port Charlotte commute comparison table, remote work infrastructure notes; 21,051 chars
+
+4. **nokomis-fl-real-estate-guide** — 2026 market overview (price trend post-2022 correction, inventory 25-50 active listings, days on market 45-70), property type breakdown (SFH, condos/villas, vacant land), market comparison table (6 nearby markets including North Port, Englewood, Venice, Sarasota), insurance cost reality ($3,500-$40,000+ depending on zone), buyer-vs-seller market assessment; 15,869 chars
+
+5. **nokomis-fl-cost-of-living** — Housing cost breakdown (purchase and rent), property taxes (17-20 mills, homestead exemption savings), insurance cost table by zone and property type, FPL electric ($150-$300/month), water/sewer vs. well/septic costs, internet options (Xfinity), grocery and dining proximity (Venice Ave, Osprey Village), Sarasota Memorial Hospital Venice campus; 14,390 chars
+
+6. **nokomis-fl-property-taxes** — Sarasota County millage breakdown table (county general, school board, library, SWFWMD, specials, total 17-20 mills), assessed vs. market value explanation, Save Our Homes cap reset for new buyers, homestead exemption ($50K, saves $850-$1,100/yr), additional senior/veteran exemptions, estimated annual tax table (5 price points), non-ad valorem assessments, CDD fee guidance; 18,662 chars
+
+7. **nokomis-fl-new-construction** — Why Nokomis has almost no new construction (fully built out), custom infill teardown-rebuild process ($280-$400+/sq ft build cost), Casey Key custom estate market, Venice FL (5 miles south) limited builder activity, North Port FL (20 miles south) active new construction market ($290K-$350K entry), Lakewood Ranch/North Sarasota options, Sarasota County permit and FEMA elevation requirements; 12,487 chars
+
+8. **nokomis-fl-investment-property** — Long-term vs. short-term rental comparison, sample long-term rental math ($420K purchase, negative cash flow, 3-4% cap rate), short-term vacation rental revenue ($40K-$65K/yr gross for 3BR near beach), Nokomis Beach seasonal demand, Sarasota County Ordinance 2020-056 vacation rental registration requirements, 8-factor comparison table (long-term vs. short-term), Casey Key deed restriction caveats; 15,365 chars
+
+9. **nokomis-fl-waterfront-homes** — Four waterfront zones (Roberts Bay $700K-$2.5M, Blackburn Bay ICW, Casey Key bay-front $2M-$6M, Casey Key Gulf-front $2.5M-$15M+), boating access via Venice Inlet (New Pass) and Stump Pass, dock permitting FDEP/Army Corps, aquatic preserve restrictions, NFIP vs. private flood insurance cost ranges, elevation certificate guidance, post-Hurricane Ian market context; 13,949 chars
+
+10. **nokomis-fl-flood-zones** — Zone VE (Casey Key Gulf, open-foundation required, $8K-$20K+/yr insurance), Zone AE (Roberts Bay/Blackburn Bay waterfront, $3,500-$12K/yr), Zone X (inland elevated, no mandatory flood insurance), Zone X500, FEMA MSC lookup instructions, elevation certificate explanation, flood zone vs. construction requirement table, Hurricane Ian (September 2022) Nokomis impact, Risk Rating 2.0 premium shock context, LOMA process overview; 19,226 chars
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+---
+
 ## 2026-08-25 (Batch 42 — 10 Englewood FL spoke pages)
 
 **Pages improved: 10**
@@ -1373,3 +1533,67 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** {status}
 **Git commit:** `{sha}`
 **Vercel:** {deployment id} — {state}
+
+---
+
+## 2026-08-31 (Batch 47 — Tampa x4, Mulberry x2, Lecanto x4)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: 5-Q&A FAQ with JSON-LD FAQPage schema, 12-link internal grid, AEO direct-answer intro, GEO citations)
+
+1. **tampa-waterfront-condos** — Major expansion to 28,925 chars. Added: waterfront condo tiers by Tampa Bay sub-market (Harbour Island, Channelside, Westshore Marina, Bayshore Boulevard, South Tampa high-rise); HOA fee breakdown table by building; flood zone considerations for Hillsborough County waterfront (Zone AE vs. X, elevation certificates, NFIP vs. private insurance); EV charging rights under Florida Statute 718.113(8); SB 4D milestone inspection timeline for buildings 3+ stories; financing considerations (Fannie Mae warrantable condo requirements); 6-destination commute matrix.
+
+2. **tampa-key-west-homes** — Major expansion to 23,312 chars. Added: Key West architectural elements (Conch style, Bahama shutters, metal roofs, wrap-around porches, raised foundations, pastel palettes); where to find Key West-style homes in Tampa (Hyde Park, Seminole Heights, Ybor City, Palma Ceia, Old Seminole Heights); price comparison table by neighborhood ($400K-$1.2M+ range); hurricane resilience features (metal roofs, impact glass, elevated foundations); historic designation pros/cons; National Register implications on renovations.
+
+3. **tampa-colonial-homes** — Major expansion to 24,428 chars. Added: Colonial architectural style breakdown (Federal vs. Georgian vs. Dutch Colonial vs. Spanish Colonial); Tampa neighborhoods with historic Colonial-style inventory (Hyde Park, Palma Ceia, Golfview, Davis Islands, South Tampa); price table by sub-market ($450K-$2M+); renovation considerations for pre-1978 homes (lead paint, asbestos, knob-and-tube wiring); historic district designation (Barrio Latino, Hyde Park Historic, Seminole Heights); 5-FAQ covering Colonial vs. craftsman, investment value, renovation costs.
+
+4. **tampa-condos-ev-charging** — Major expansion to 22,320 chars. Added: Florida Statute 718.113(8) full explanation (HOA cannot deny EV charger installation rights, owner pays cost, must follow safety standards, licensed electrician required); Level 1 vs. Level 2 vs. DC Fast Charging comparison table; cost table (Level 2 installation $500-$2,000 typical, shared electrical infrastructure fees); EVSE types and connector standards (J1772, CCS, CHAdeMO, Tesla NACS); buildings with existing EV infrastructure (newer Channelside/Water Street developments); negotiating EV charging rights during purchase.
+
+5. **mulberry-fl-investment-property** — Major expansion to 25,484 chars. Added: Mulberry investment thesis (Lakeland metro growth spillover, I-4 corridor demand, phosphate economy stability); property type comparison table (SFR vs. duplex vs. small multifamily — cap rates, price ranges, management intensity); cap rate and cash-on-cash return calculations with worked example ($220K purchase, $1,600/mo rent = 7.9% GRM, 5.8% cap); Section 8/HCV voucher demand in Polk County; Polk County Property Appraiser exemption impact on investment properties; property management fees (8-10% of gross for full-service Lakeland area); exit strategy analysis (hold vs. 1031 exchange vs. BRRRR).
+
+6. **mulberry-fl-waterfront-homes** — Major expansion to 20,587 chars. Added: Honest market framing (Mulberry itself has limited true waterfront; phosphate ponds are NOT recreational waterfront; closest true waterfront is Lake Parker/Lake Hollingsworth in Lakeland 10-15 mi); price comparison table for nearby waterfront vs. non-waterfront Mulberry; Polk County lakes with recreational waterfront (Lake Parker, Lake Hollingsworth, Lake Ariana in Auburndale); flood zone reality (most Mulberry proper is Zone X; lakefront areas shift to AE/AH); alternatives for buyers wanting waterfront near Mulberry price points.
+
+7. **lecanto-fl-waterfront-homes** — Major expansion to 20,231 chars. Added: Honest framing (Lecanto unincorporated 34461 has no significant natural waterfront itself; Crystal River is 20-25 mi, Inverness lakes 10-12 mi, Lake Tsala Apopka/Floral City 12-15 mi, Homosassa River 20-25 mi); price comparison table for Citrus County waterfront tiers (Crystal River Gulf-front $600K-$1.5M+, Inverness lakefront $350K-$750K, Floral City lakefront $280K-$550K, Lecanto non-waterfront $180K-$380K); flood zone considerations for each waterfront zone; what buyers get by staying in Lecanto and driving to water vs. buying at waterfront premium.
+
+8. **lecanto-fl-flood-zones** — Major expansion to 20,865 chars. Added: FEMA flood zone definitions table (Zone X/AH/AE/VE — risk level, mandatory insurance, what it means for buyers); Citrus County geographic reality (Lecanto proper is mostly Zone X, lower risk; Crystal River/Homosassa Gulf-front shifts dramatically to AE/VE); sinkhole/karst risk as separate issue from flood (Lecanto/Citrus County karst geology; Citizens Insurance sinkhole coverage; how to request sinkhole inspection); NFIP vs. private flood insurance comparison; elevation certificate process and when to request; step-by-step FEMA MSC flood zone lookup guide; flood insurance cost table by zone ($400-$900/yr Zone X to $5,000-$15,000+ Zone VE coastal).
+
+9. **moving-to-lecanto-fl** — Major expansion to 24,132 chars. Added: What Lecanto is (unincorporated community, 34461 ZIP, Citrus County seat — county government campus is in Lecanto); housing price table by property type ($180K-$380K typical); school profile (Lecanto Elementary, Lecanto Middle, Lecanto High all on connected campus — B/C rated, notable for having K-12 on one campus); healthcare reality (Citrus Memorial Hospital 12-15 min, Seven Rivers Regional 20-25 min, Tampa specialty care 90 min); utilities breakdown (Duke Energy, well/septic very common, Spectrum internet primary provider); commute matrix to 6 destinations (Tampa 90-120 min via Suncoast Pkwy, Crystal River 25-30 min, Ocala 45-55 min, Gainesville 75-90 min); who Lecanto makes sense for (retirees, remote workers, outdoor recreation seekers, buyers priced out of coastal areas).
+
+10. **things-to-do-lecanto-fl** — Major expansion to 20,436 chars. Added: Crystal River manatee swimming (November-March season, Three Sisters Springs, permitted tour operators, USFWS regulations); Withlacoochee State Trail (46 miles paved rail-trail from Citrus Springs to Trilby, longest paved trail in Florida, trailheads in Inverness and Floral City); Homosassa Springs Wildlife State Park (Florida wildlife hospital, manatees, hippo Lu, $13 adult admission); scalloping season (Citrus County waters July 1 - September 24, required equipment, launch points); Withlacoochee State Forest (157,000 acres, 100+ miles of multi-use trails, equestrian, OHV areas); Rainbow Springs State Park (35-45 mi via US-41/US-19); freshwater fishing (Crystal/Homosassa/Rainbow Rivers — redfish, snook, tarpon, bass); local events (Floral City Strawberry Festival February, Crystal River Manatee Festival January, Inverness Bluegrass Festival March, Citrus County Fair October).
+
+**Build:** Passed (Next.js 14.2.35, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `18aca05` — pushed to `origin/main`
+
+---
+
+## 2026-08-28 (Batch 46 — Osprey FL x4, Mulberry FL x3, Valrico new construction x3)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: 5-Q&A FAQ with JSON-LD FAQPage schema)
+
+1. **osprey-fl-flood-zones** — Major expansion 5,143 to 20,813 chars. Added: FEMA flood zone definitions table (X/AE/AH/VE with risk level, mandatory insurance, and what it means); which Osprey areas carry highest risk (Sorrento Shores/Intracoastal vs. inland/Rivendell); step-by-step flood zone lookup guide (FEMA MSC portal, elevation certificate, getting actual NFIP quote, prior claims check); flood insurance cost table by property type ($400-$900/yr Zone X to $5,000-$15,000+ Zone VE); Sarasota County CRS discount explanation; Hurricane Ian impact on Sarasota County; should flood risk stop you from buying section.
+
+2. **best-neighborhoods-osprey-fl** — Major expansion 5,143 to 20,834 chars. Added: Why buyers choose Osprey (Oscar Scherer State Park, Legacy Trail, between Sarasota and Venice); Sorrento Shores profile (waterfront/Intracoastal, no formal HOA, $500K-$2M+, flood zone note); The Oaks Club profile (private golf and racquet club, 2 courses, 12 tennis courts, $400K-$3M+, mandatory membership); Rivendell profile (borders Oscar Scherer State Park, $550K-$1.2M, typically lower flood risk); Bay Street Village; Willowbend; school zone table (Laurel Nokomis K-8, Venice Senior High); price comparison table vs. Nokomis/Venice/South Sarasota; commute matrix (6 destinations).
+
+3. **moving-to-osprey-fl** — Major expansion 5,143 to 20,048 chars. Added: What Osprey is and is not (unincorporated, 34229 ZIP, county services); housing price table by property type ($350K condo to $800K+ waterfront); schools (Laurel Nokomis K-8 model, Venice Senior High); utilities breakdown (FPL electric, county water/sewer vs. well/septic, Spectrum/Frontier internet); healthcare (Sarasota Memorial ~12-15 mi, Venice Regional ~8-10 mi); shopping/dining reality (no grocery in Osprey, Venice and Sarasota are primary destinations); commute matrix (7 destinations including Tampa 65-80 min); honest trade-offs list.
+
+4. **things-to-do-osprey-fl** — Major expansion 5,143 to 18,258 chars. Added: Oscar Scherer State Park (1,384 acres, scrub-jay habitat, South Creek kayaking, Lake Osprey swimming, camping, trail detail); Legacy Trail (18.4 miles paved, Osprey to Venice/Sarasota without US-41, commute timing); water activities (kayaking Intracoastal, boating via Venice Inlet, fishing species); Historic Spanish Point (30-acre site, Gulf Coast Heritage Association, 5,000 years of history, Webb family pioneer site); The Oaks Club golf and racquet; Venice day trips (walkable downtown, Venice Avenue, Caspersen Beach shark teeth); Sarasota day trips (Ringling Museum, performing arts, Siesta Key, St. Armands Circle).
+
+5. **mulberry-fl-cost-of-living** — Major expansion 5,147 to 20,650 chars. Added: Mulberry location context (Polk County, SR-37 corridor, phosphate mining history); housing price table by property type ($180K-$450K); comparison table vs. Bartow/Lakeland/Plant City/Brandon/Tampa (price, distance, key trade-off); property tax overview (14-18 mills); utilities breakdown (Duke Energy, City of Mulberry water, Spectrum, Peoples Gas); everyday expenses (no grocery in Mulberry, Lakeland 10-20 min); commute matrix (6 destinations including Tampa 50-70 min); who Mulberry makes sense for (remote workers, Lakeland commuters, budget-focused buyers).
+
+6. **mulberry-fl-property-taxes** — Major expansion 5,147 to 19,783 chars. Added: Florida millage system explainer (taxable value formula); Polk County millage rate components table (County General, School Board, City of Mulberry, Special Districts, SWFWMD); example tax calculation for $270K home (~$3,500-$4,200/yr at ~16 mills); Florida homestead exemption detail (first vs. second $25K, March 1 deadline, must apply); Save Our Homes 3% cap; portability (transferring SOH benefit); CDD fees in Mulberry area context; non-ad valorem assessments; step-by-step how to look up taxes (polkpa.org, polktaxes.com).
+
+7. **mulberry-fl-new-construction** — Major expansion 5,147 to 20,711 chars. Added: New construction reality (Mulberry proper has limited land; most options are Lakeland/Bartow corridor); builder profiles (D.R. Horton/Express entry-level, LGI Homes first-time buyer approach, Highland Homes Florida-based alternative, Adams Homes regional); price table by tier ($270K-$460K+); new construction vs. resale trade-offs (builder warranty, modern floor plan vs. larger lots, faster close, no HOA); CDD fee warning (how to ask, $1,000-$3,000+/yr range); buyer's agent guidance (builder pays commission, register before first visit); Mulberry vs. Lakeland new construction comparison table.
+
+8. **northwood-estates-valrico-westbay-opens-new-community** — Expansion 2,129 to 19,886 chars. Added: WestBay standard features detail (quartz, 42-inch cabinets, tile throughout, 10-ft ceilings, spray foam insulation); floor plan and pricing table (1,800-3,200 sq ft, mid $400Ks-$600Ks); no-CDD savings calculation (10-year and 30-year comparison); HOA and gated community context; school zone table (Bloomingdale HS vs. Newsome HS, how to verify at sdhc.k12.fl.us); 4-community comparison table (Northwood Estates vs. Heritage Crest vs. Arista vs. Bloomingdale resale); step-by-step buying process (agent registration, lot selection, contract review, inspections).
+
+9. **heritage-crest-valrico-new-phase-selling-fast** — Expansion 1,977 to 19,239 chars. Added: Floor plan table (1,800-2,800 sq ft, low $400Ks-low $500Ks); no-CDD savings table (10-year and 30-year); amenity center description (pool, cabana, playground — operational); Heritage Crest vs. Northwood Estates vs. Arista vs. Bloomingdale resale comparison table; new construction vs. resale trade-offs (both directions); school zone detail (33594, primarily Bloomingdale HS, verify at sdhc.k12.fl.us); step-by-step buying process.
+
+10. **valrico-forest-final-phase-last-chance-new-construction** — Expansion 2,152 to 19,535 chars. Added: Craftsman architecture differentiator (why distinctive style matters for resale); lot type table (standard, corner, conservation back with premium notes); floor plan table (1,800-2,600 sq ft, low $400Ks-mid $500Ks); no-CDD math (monthly equivalent — $2,000/yr CDD = $167/mo = ~$25K in effective purchase price); Valrico Forest vs. Bloomingdale/Buckhorn resale comparison table (10 factors); school zone detail (33594, primarily Bloomingdale HS); step-by-step buying process (agent registration, lot plat map, conservation lot urgency).
+
+**Build:** Passed (Next.js 14.2.35, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `d4d17f1` — pushed to `origin/main`

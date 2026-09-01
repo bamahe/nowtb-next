@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="referrer" content="no-referrer">
+<title>Your Net Sheet | 11428 117th Ave, Largo FL 33778</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1A2744; --blue:#003DA5; --red:#DC1C2E;
+    --slate:#64748B; --light:#F1F5F9; --line:#DDE3EC; --ink:#0F172A;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--light);
+    font-family:'DM Sans',system-ui,-apple-system,sans-serif;color:var(--ink);
+    -webkit-font-smoothing:antialiased;line-height:1.55;}
+  .sheet{max-width:820px;margin:0 auto;background:#fff;min-height:100vh;}
+
+  header{background:var(--navy);color:#fff;padding:24px 26px 20px;}
+  .brandrow{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+  .agent{font-family:'DM Serif Display',Georgia,serif;font-size:24px;line-height:1.1;}
+  .agent span{display:block;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;
+    letter-spacing:.09em;text-transform:uppercase;color:#9FB3D4;margin-top:6px;}
+  .contact{font-size:12px;line-height:1.7;color:#C6D4EA;text-align:right;}
+  .hd{margin-top:18px;padding-top:14px;border-top:1px solid rgba(255,255,255,.16);}
+  .hd .lbl{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#9FB3D4;}
+  .hd .addr{font-family:'DM Serif Display',Georgia,serif;font-size:21px;margin-top:4px;}
+
+  .slidewrap{background:#16213A;padding:22px 26px 20px;}
+  .slidewrap .cap{font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+    color:#9FB3D4;margin-bottom:4px;}
+  .bigprice{font-family:'DM Serif Display',Georgia,serif;font-size:44px;color:#fff;
+    line-height:1.05;font-variant-numeric:tabular-nums;}
+  .band{display:inline-block;margin-top:8px;padding:4px 11px;border-radius:20px;
+    font-size:11.5px;font-weight:700;background:rgba(255,255,255,.13);color:#fff;}
+  input[type=range]{
+    -webkit-appearance:none;appearance:none;width:100%;height:34px;margin:14px 0 0;
+    background:transparent;cursor:pointer;display:block;
+  }
+  input[type=range]::-webkit-slider-runnable-track{
+    height:8px;border-radius:4px;
+    background:linear-gradient(to right,var(--red) 0%,var(--red) var(--pct,47%),
+      #33445F var(--pct,47%),#33445F 100%);
+  }
+  input[type=range]::-moz-range-track{height:8px;border-radius:4px;background:#33445F;}
+  input[type=range]::-moz-range-progress{height:8px;border-radius:4px;background:var(--red);}
+  input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance:none;appearance:none;width:30px;height:30px;border-radius:50%;
+    background:#fff;border:4px solid var(--red);margin-top:-11px;
+    box-shadow:0 2px 7px rgba(0,0,0,.4);
+  }
+  input[type=range]::-moz-range-thumb{
+    width:30px;height:30px;border-radius:50%;background:#fff;border:4px solid var(--red);
+    box-shadow:0 2px 7px rgba(0,0,0,.4);
+  }
+  input[type=range]:focus-visible{outline:2px solid #fff;outline-offset:4px;border-radius:6px;}
+  .ends{display:flex;justify-content:space-between;font-size:11px;color:#7D91B3;margin-top:-2px;}
+
+  .opts{background:#101A2E;padding:16px 26px;display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .field label{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+    color:#9FB3D4;margin-bottom:5px;font-weight:500;}
+  .field input{width:100%;padding:9px 11px;border:1px solid #33445F;border-radius:5px;
+    background:#0A1120;color:#fff;font-family:inherit;font-size:15px;font-weight:700;}
+  .field input:focus{outline:2px solid var(--blue);outline-offset:1px;}
+  .field .hint{font-size:10px;color:#7D91B3;margin-top:4px;}
+
+  .tabs{display:flex;border-bottom:1px solid var(--line);}
+  .tab{flex:1;padding:14px 6px;border:0;background:transparent;cursor:pointer;
+    font-family:inherit;border-bottom:3px solid transparent;}
+  .tab strong{display:block;font-size:18px;color:var(--navy);font-weight:700;}
+  .tab em{display:block;font-style:normal;font-size:10.5px;color:var(--slate);margin-top:2px;}
+  .tab:hover{background:var(--light);}
+  .tab[aria-selected="true"]{border-bottom-color:var(--red);background:var(--light);}
+  .tab[aria-selected="true"] strong{color:var(--red);}
+  .tab:focus-visible{outline:2px solid var(--blue);outline-offset:-3px;}
+
+  main{padding:22px 26px 6px;}
+  h2{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);
+    margin:0 0 9px;font-weight:700;}
+  table{width:100%;border-collapse:collapse;font-size:14px;}
+  td{padding:8px 9px;border-bottom:1px solid var(--line);}
+  tr:nth-child(even) td{background:#FAFBFD;}
+  td.amt{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:500;}
+  .neg{color:var(--red);}
+  tr.total td{border-top:2px solid var(--navy);border-bottom:0;background:#fff!important;
+    font-weight:700;padding-top:11px;}
+  section{margin-bottom:22px;}
+
+  .net{background:var(--navy);color:#fff;padding:22px 26px;margin:0 -26px;}
+  .net .lbl{font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:#9FB3D4;}
+  .net .val{font-family:'DM Serif Display',Georgia,serif;font-size:44px;line-height:1.05;
+    margin-top:5px;font-variant-numeric:tabular-nums;}
+  .net .sub{font-size:12.5px;color:#C6D4EA;margin-top:7px;}
+
+  .disc{margin:22px 0 0;padding:13px 15px;background:var(--light);
+    border-left:3px solid var(--slate);font-size:11px;line-height:1.65;color:#40506B;
+    border-radius:0 4px 4px 0;}
+  footer{background:var(--navy);color:#fff;text-align:center;padding:15px;font-size:11.5px;
+    letter-spacing:.19em;font-weight:700;margin-top:22px;}
+  @media (max-width:560px){
+    .contact{text-align:left;}
+    .bigprice{font-size:36px;} .net .val{font-size:34px;}
+    .tab strong{font-size:15px;} .tab em{font-size:9.5px;}
+    header,.slidewrap,.opts,main{padding-left:18px;padding-right:18px;}
+    .net{margin:0 -18px;padding-left:18px;padding-right:18px;}
+  }
+
+  /* --- cross page navigation, added so no page is a dead end --- */
+  .pagenav{display:flex;flex-wrap:wrap;gap:2px;background:var(--navy);padding:0 30px 14px;}
+  .pagenav a{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;
+    color:#C6D4EA;text-decoration:none;padding:7px 13px;border-radius:4px;}
+  .pagenav a:hover{background:rgba(255,255,255,.10);color:#fff;}
+  .pagenav a.here{background:#fff;color:var(--navy);}
+  .docs{border-top:1px solid var(--line);padding-top:20px;}
+  .docgrid{display:grid;gap:10px;grid-template-columns:1fr 1fr;}
+  @media(max-width:640px){.docgrid{grid-template-columns:1fr;}.pagenav{padding:0 16px 12px;}}
+  .doc{display:block;border:1px solid var(--line);border-radius:7px;padding:13px 15px;
+    text-decoration:none;background:#fff;}
+  .doc:hover{border-color:var(--blue);background:#F7FAFF;}
+  .doc strong{display:block;color:var(--navy);font-size:13.5px;margin-bottom:3px;}
+  .doc span{display:block;color:var(--slate);font-size:11.5px;line-height:1.45;}
+  .doc em{display:block;color:var(--blue);font-size:11px;font-weight:700;font-style:normal;
+    letter-spacing:.05em;text-transform:uppercase;margin-top:7px;}
+  /* Navigation is screen only. These sheets are meant to print clean. */
+  @media print{.pagenav,.docs{display:none !important;}}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+<header>
+  <div class="brandrow">
+    <div class="agent">Barrett Henry<span>Broker Associate &middot; REMAX Collective</span></div>
+    <div class="contact">(813) 733-7907<br>barrett@nowtb.com</div>
+  </div>
+  <div class="hd">
+    <div class="lbl">Your Estimated Net Proceeds</div>
+    <div class="addr">11428 117th Ave, Largo FL 33778</div>
+  </div>
+</header>
+<nav class="pagenav"><a href="index.html">Overview</a><a href="cma.html">CMA</a><a href="net-sheet.html" class="here">Net sheet</a><a href="how-it-works.html">How it works</a></nav>
+
+
+<div class="slidewrap">
+  <div class="cap">Drag to change the sale price</div>
+  <div class="bigprice" id="bigprice">$309,000</div>
+  <div class="band" id="band">Light make-ready range</div>
+  <input type="range" id="slider" min="240000" max="365000" step="1000" value="309000"
+         aria-label="Sale price">
+  <div class="ends"><span>$240,000</span><span>$365,000</span></div>
+  <div style="font-size:11.5px;color:#9FB3D4;margin-top:10px;">
+    The label above shows which of the four paths in your CMA this price falls into.
+    It opens on my recommendation.</div>
+</div>
+
+<div class="opts">
+  <div class="field">
+    <label for="payoff">Mortgage payoff</label>
+    <input id="payoff" type="number" value="106162" min="0" step="1000" inputmode="numeric">
+    <div class="hint">Your FHA loan, per public records</div>
+  </div>
+  <div class="field">
+    <label for="closing">Closing date</label>
+    <input id="closing" type="date" value="2026-11-15">
+    <div class="hint">Sets the tax proration</div>
+  </div>
+  <div class="field">
+    <label for="price">Or type an exact price</label>
+    <input id="price" type="number" value="309000" min="0" step="1000" inputmode="numeric">
+    <div class="hint">Syncs with the slider</div>
+  </div>
+</div>
+
+<div class="tabs" role="tablist" aria-label="Commission scenario">
+  <button class="tab" role="tab" data-rate="1" aria-selected="false">
+    <strong>1%</strong><em>You bring the buyer</em></button>
+  <button class="tab" role="tab" data-rate="4" aria-selected="false">
+    <strong>4%</strong><em>My marketing finds them</em></button>
+  <button class="tab" role="tab" data-rate="6" aria-selected="true">
+    <strong>6%</strong><em>Two agents involved</em></button>
+</div>
+
+<main>
+  <section>
+    <h2>Closing costs</h2>
+    <table><tbody>
+      <tr><td>Documentary stamp tax on the deed</td><td class="amt neg" id="r-stamps"></td></tr>
+      <tr><td>Owner&rsquo;s title insurance policy</td><td class="amt neg" id="r-title"></td></tr>
+      <tr><td>Title search, exam &amp; settlement</td><td class="amt neg">-$750</td></tr>
+      <tr><td>Deed preparation</td><td class="amt neg">-$175</td></tr>
+      <tr><td>Municipal lien search</td><td class="amt neg">-$225</td></tr>
+      <tr><td>Recording fees</td><td class="amt neg">-$30</td></tr>
+      <tr><td>Wire transfer fee</td><td class="amt neg">-$50</td></tr>
+      <tr><td id="r-plbl">Property tax proration</td><td class="amt neg" id="r-prorate"></td></tr>
+      <tr><td id="r-clbl">Real estate commission</td><td class="amt neg" id="r-comm"></td></tr>
+      <tr><td>Transaction services fee</td><td class="amt neg">-$990</td></tr>
+      <tr class="total"><td>Total estimated costs</td><td class="amt neg" id="r-total"></td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="psec" hidden>
+    <h2>Loan payoff</h2>
+    <table><tbody>
+      <tr><td>Estimated mortgage payoff</td><td class="amt neg" id="r-payoff"></td></tr>
+    </tbody></table>
+  </section>
+
+  <div class="net">
+    <div class="lbl">Estimated net proceeds</div>
+    <div class="val" id="r-net"></div>
+    <div class="sub" id="r-note">Before mortgage payoff</div>
+  </div>
+
+  <p class="disc">
+    An estimate for discussion only. Actual closing costs are calculated by the title company and
+    will differ. Assumes a conventional Florida residential closing with no seller concessions,
+    repair credits, HOA or CDD estoppel, or outstanding liens. Documentary stamp tax at $0.70 per
+    $100. Owner&rsquo;s title insurance at the Florida promulgated rate. Payoff estimated from your U.S. Bank statement of August 4, 2026, and includes the $10,000 deferred second shown on it; your lender's payoff letter is the controlling figure. Tax proration from the 2025 Pinellas County assessment of $5,308; Florida taxes are paid in arrears, so the seller covers
+    January 1 through closing. Not tax or legal advice. Ask your tax preparer about capital gains
+    and depreciation recapture on a property used as a rental.
+  </p>
+<section class="docs">
+  <h2>Documents</h2>
+  <div class="docgrid">
+    <a class="doc" href="Sproul-Listing-Packet.pdf" download><strong>Full listing packet</strong><span>The CMA and net sheet in one file, formatted for letter paper.</span><em>Download &darr;</em></a>
+    <a class="doc" href="Remote-Seller-Process.pdf" download><strong>Remote seller process</strong><span>Signing from overseas, the clean-out, and the deposit deadline.</span><em>Download &darr;</em></a>
+    <a class="doc" href="CMA-11428-117th-Ave.pdf" download><strong>CMA (PDF)</strong><span>The comparable sales analysis on its own.</span><em>Download &darr;</em></a>
+    <a class="doc" href="Net-Sheet-11428-117th-Ave.pdf" download><strong>Net sheet (PDF)</strong><span>Your estimated proceeds on its own.</span><em>Download &darr;</em></a>
+  </div>
+</section>
+</main>
+
+<footer>MOVE WITH CONFIDENCE</footer>
+</div>
+
+<script>
+(function(){
+  var slider=document.getElementById('slider'), priceIn=document.getElementById('price'),
+      payoffIn=document.getElementById('payoff'), closeIn=document.getElementById('closing'),
+      tabs=[].slice.call(document.querySelectorAll('.tab')), rate=6, TAXES=5308;
+
+  function money(n){
+    return (n<0?'-$':'$')+Math.abs(Math.round(n)).toLocaleString('en-US');
+  }
+  function titleIns(p){
+    if(p<=0) return 0;
+    return p<=100000 ? p*0.00575 : 575+(p-100000)*0.005;
+  }
+  function days(s){
+    var d=new Date(s+'T00:00:00');
+    if(isNaN(d)) return 318;
+    return Math.max(0, Math.round((d-new Date(d.getFullYear(),0,1))/86400000));
+  }
+  function bandFor(p){
+    if(p<265000) return ['Investor / cash range','#8B5CF6'];
+    if(p<300000) return ['As-is retail range','#0EA5E9'];
+    if(p<=320000) return ['Light make-ready range','#22C55E'];
+    return ['Full renovation range','#F97316'];
+  }
+
+  function render(){
+    var price=Math.max(0,+priceIn.value||0),
+        payoff=Math.max(0,+payoffIn.value||0),
+        d=days(closeIn.value),
+        stamps=price*0.007, title=titleIns(price),
+        fixed=750+175+225+30+50,
+        prorate=TAXES/365*d, comm=price*rate/100,
+        total=stamps+title+fixed+prorate+comm+990,
+        net=price-total-payoff;
+
+    document.getElementById('bigprice').textContent=money(price);
+    var b=bandFor(price), bEl=document.getElementById('band');
+    bEl.textContent=b[0]; bEl.style.background=b[1];
+
+    var pct=((price-+slider.min)/(+slider.max-+slider.min))*100;
+    slider.style.setProperty('--pct', Math.max(0,Math.min(100,pct))+'%');
+
+    document.getElementById('r-stamps').textContent=money(-stamps);
+    document.getElementById('r-title').textContent=money(-title);
+    document.getElementById('r-prorate').textContent=money(-prorate);
+    document.getElementById('r-plbl').textContent='Property tax proration ('+d+' days)';
+    document.getElementById('r-comm').textContent=money(-comm);
+    document.getElementById('r-clbl').textContent='Real estate commission ('+rate+'%)';
+    document.getElementById('r-total').textContent=money(-total);
+    document.getElementById('r-net').textContent=money(net);
+
+    var sec=document.getElementById('psec');
+    if(payoff>0){
+      sec.hidden=false;
+      document.getElementById('r-payoff').textContent=money(-payoff);
+      document.getElementById('r-note').textContent='After estimated mortgage payoff';
+    } else {
+      sec.hidden=true;
+      document.getElementById('r-note').textContent='Before mortgage payoff';
+    }
+  }
+
+  slider.addEventListener('input', function(){ priceIn.value=slider.value; render(); });
+  priceIn.addEventListener('input', function(){
+    var v=+priceIn.value||0;
+    if(v>=+slider.min && v<=+slider.max) slider.value=v;
+    render();
+  });
+  payoffIn.addEventListener('input', render);
+  closeIn.addEventListener('input', render);
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      tabs.forEach(function(x){ x.setAttribute('aria-selected','false'); });
+      t.setAttribute('aria-selected','true');
+      rate=+t.dataset.rate;
+      render();
+    });
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
