@@ -4,6 +4,36 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-09-01 (Batch 48 — Tampa Architecture x3, Fort Meade FL x5, Nokomis FL x2: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: 5-Q&A FAQ with JSON-LD FAQPage schema)
+
+All 10 posts were boilerplate 3,270–5,183-char stubs. Each received a full expansion with: AEO direct-answer intro, price tables, commute matrix, comparison tables, 5-FAQ with JSON-LD FAQPage schema, 12-link internal grid, GEO citations, EEAT signals.
+
+1. **mediterranean-architecture-homes-tampa-fl** — 3,270 → ~22,000 chars. Style history (Spanish land grants through 1920s Boom), defining features (barrel tile, stucco, arched entries, courtyard), top neighborhoods (Hyde Park, Palma Ceia, Ybor City/Seminole Heights, South Tampa waterfront), price table (bungalow $480K to waterfront $3M+), renovation cost table, AEO FAQ (5 Q&As).
+
+2. **craftsman-bungalows-tampa-neighborhoods** — 4,102 → ~22,000 chars. Arts and Crafts movement in Tampa context, defining features (tapered columns, wide porch, natural materials), top neighborhoods (Seminole Heights, Riverside Heights, Old Seminole Heights, Tampa Heights, Hyde Park), price table ($380K–$850K+), renovation cost table, FAQ (5 Q&As).
+
+3. **spanish-colonial-revival-architecture-tampa** — 4,218 → ~22,000 chars. 1920s Florida Boom origin, Addison Mizner/Bertram Goodhue influence, defining elements (red barrel tile, white stucco, arched loggias, Saltillo tile floors), top neighborhoods (Davis Islands, Plant Park/UT area, Hyde Park, Palma Ceia, Ybor City Historic District), price table ($520K–$4M+), renovation cost table, FAQ (5 Q&As).
+
+4. **moving-to-fort-meade-fl** — 4,891 → ~24,000 chars. Polk County seat geography, housing price table (starter SFR $140K–$220K to acreage $350K+), Peace River honest framing (freshwater, upper section not motorboat-navigable), utilities (Duke Energy, City of Fort Meade water/sewer), grocery reality (Dollar General, no major grocery in city limits), commute matrix (7 destinations), Fort Meade vs. Bartow vs. Wauchula comparison table, flood zone AE warning with FEMA link, FAQ (5 Q&As).
+
+5. **things-to-do-fort-meade-fl** — 5,183 → ~23,000 chars. Peace River paddling (kayak/canoe, fossil hunting, Canoe Outpost), Fort Meade Historical Museum, Streamsong Resort (3 championship golf courses, 35 min south), Polk County Nature Discovery Center, downtown square antiques/local shops, Bartow day trips (Polk Theatre, antiques), Tampa day trips (90 min), FAQ (5 Q&As).
+
+6. **fort-meade-fl-real-estate-market** — 4,512 → ~23,000 chars. Polk County context, median price ~$195K vs. state $415K, inventory patterns, lot/acreage values, 4-property-type price table, buyer types (retirees, remote workers, investors), 15-factor Fort Meade vs. Bartow vs. Mulberry vs. Avon Park comparison table, FAQ (5 Q&As).
+
+7. **best-neighborhoods-fort-meade-fl** — 4,387 → ~23,000 chars. Historic downtown district (pre-1940 frame vernacular, brick streets), North Fort Meade (newer 1970s–2000s ranch homes), Peace River corridor (flood zone awareness, acreage parcels), SR-17 corridor (commercial mix), rural acreage outside city limits, 5-neighborhood comparison table, FAQ (5 Q&As).
+
+8. **fort-meade-fl-schools** — 4,102 → ~22,000 chars. Polk County School District overview, school profiles (Fort Meade Middle-Senior High combined 6-12, Lewis Anna Woodbury Elementary, Fort Meade Elementary), Polk State College access (Lakeland campus 45 min, Winter Haven 50 min), 4-column comparison table vs. Lakeland/Bartow, FAQ (5 Q&As).
+
+9. **moving-to-nokomis-fl** — 5,177 → 24,233 chars. Unincorporated Sarasota County 34275 ZIP, no walkable downtown of its own, housing price table (inland condo $280K–$420K to Casey Key Gulf-front $1.5M–$5M+), schools (Laurel Nokomis K-8 combined, Venice Senior High), utilities (FPL, Sarasota County water/sewer), grocery reality (Venice 5 mi, Osprey 3 mi — no major grocery in Nokomis proper), commute matrix (6 destinations), Nokomis vs. Venice vs. Osprey comparison table, flood zone warning with FEMA link, FAQ (5 Q&As).
+
+10. **things-to-do-nokomis-fl** — 5,177 → 20,259 chars. Nokomis Beach on Casey Key (sunset tradition, free access), Legacy Trail (18.4 miles paved, Nokomis access points), Oscar Scherer State Park in Osprey (1,384 acres, $5/vehicle, kayaking South Creek, scrub-jay viewing), paddling Dona Bay/Roberts Bay (spotted sea trout/redfish/snook/sheepshead), Venice Island day trips (Caspersen Beach shark tooth hunting, Venice Theatre, farmers market), Historic Spanish Point (30-acre site, $15, 5,000 years history), Sarasota day trips (Ringling Museum, Siesta Key, St. Armands Circle), FAQ (5 Q&As).
+
+---
+
 ## 2026-08-30 (Batch 47 — Lecanto FL x10: Major Expansions)
 
 **Pages improved: 10**
