@@ -1597,3 +1597,35 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js 14.2.35, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** `d4d17f1` — pushed to `origin/main`
+
+---
+
+## 2026-09-03 (Batch 48 — Crystal River FL x10)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: 5-Q&A FAQ with JSON-LD FAQPage schema, BreadcrumbList, Article schema, Quick Answer box, comparison tables, 18-link internal grid, Barrett Henry bio)
+
+1. **crystal-river-fl-homes-for-sale-guide** — Major expansion 5,269 to 17,764 chars. Title updated to "Crystal River Homes for Sale: Complete Buyer Guide". Added: Quick Answer box; Kings Bay/spring system overview; median price context ($285K-$302K, Redfin/Zillow mid-2026); market competitiveness score (11/100, slow market, ~130 DOM); waterfront vs. inland price table; step-by-step buyer process (pre-approval, agent, showings, offer, inspection, close); flood zone warning (Zone AE nearly everywhere in city); homestead exemption and Save Our Homes cap; 5-Q&A FAQ.
+
+2. **crystal-river-fl-flood-zones** — Major expansion 5,269 to 17,576 chars. Title updated to "Crystal River FL Flood Zones: Buyer Guide". Added: FEMA flood zone definitions table (Zone AE, Zone X, Zone AH); why Crystal River has high flood risk (Kings Bay, 30+ springs, Gulf connection); NFIP vs. private flood insurance; how to look up a property's flood zone (FEMA MSC portal step-by-step); elevation certificate explainer; flood insurance cost estimates by property type; CRS discount (Citrus County participation); 5-Q&A FAQ.
+
+3. **crystal-river-fl-new-construction** — Major expansion 5,269 to 17,788 chars. Title updated to "New Construction Homes Near Crystal River FL". Added: Why there is limited new construction in Crystal River proper (wetlands, FEMA zones, platted lots); 38+ new home communities in broader Citrus County area (NewHomeSource); price range $223,900-$3.4M+; builder profile table (D.R. Horton/Express, LGI, Highland Homes, Adams Homes); Citrus Springs vs. Beverly Hills vs. Lecanto new construction comparison; CDD fee warning; new construction vs. resale table; buyer's agent guidance; 5-Q&A FAQ.
+
+4. **crystal-river-fl-waterfront-homes** — Major expansion 5,269 to 18,535 chars. Title updated to "Waterfront Homes in Crystal River FL: Buyer Guide". Added: Kings Bay waterfront tiers (direct bay frontage $550K-$1.5M+, canal-front $350K-$750K, spring-fed lake); dock and boatlift considerations; flood insurance cost table by waterfront type; seawall inspection checklist; Zone AE flood requirements; manatee protection zone boating rules; USFWS Crystal River National Wildlife Refuge regulations; waterfront vs. inland comparison table; 5-Q&A FAQ.
+
+5. **best-neighborhoods-crystal-river-fl** — Major expansion 5,269 to 17,703 chars. Title updated to "Best Neighborhoods in Crystal River FL". Added: Crystal Manor (canal-front, dock access, $350K-$700K); Kings Bay Estates (direct Kings Bay, $500K-$1.5M+); Terra Vista (gated, newer construction); downtown/US-19 corridor (commercial proximity); Citrus Springs (unincorporated, inland, more affordable, $220K-$380K); comparison table (5 areas, price range, flood risk, HOA, water access); school zone table; 5-Q&A FAQ.
+
+6. **moving-to-crystal-river-fl** — Major expansion 5,269 to 19,766 chars. Title updated to "Moving to Crystal River FL: What to Know Before You Buy". Added: Housing price table by property type; commute matrix (7 destinations including Tampa 90-110 min); utilities breakdown (Duke Energy, Withlacoochee River Electric, Spectrum/Frontier, city water/sewer vs. well-septic); healthcare (Citrus Memorial Hospital/HCA Inverness 12-15 mi, Tampa Bay for specialty); grocery/shopping reality (Publix, Walmart local; Costco/Target requires 35-50 mi drive); internet options (Spectrum, Frontier, Starlink); who Crystal River suits; 5-Q&A FAQ.
+
+7. **things-to-do-crystal-river-fl** — Major expansion 5,269 to 19,114 chars. Title updated to "Things to Do in Crystal River FL: Complete Outdoor Guide". Added: Manatee swimming (Crystal River NWR, Three Sisters Springs, November-March window, USFWS regulations, tour operator guidance); Kings Bay kayaking and paddleboarding; scalloping season (FWC July 1 to late September, equipment checklist, best launch points); fishing (freshwater springs, Kings Bay, Gulf via Crystal River); Bird watching and nature photography; Crystal River Archaeological State Park; Homosassa Springs Wildlife State Park nearby; Hunter Springs Park; seasonal events calendar; 5-Q&A FAQ.
+
+8. **crystal-river-fl-property-taxes** — Major expansion 5,269 to 18,484 chars. Title updated to "Crystal River FL Property Taxes: 2026 Rate Guide". Added: Florida millage system explainer; Citrus County 2025-26 base millage (8.87 mills) plus school, fire, SWFWMD; City of Crystal River additional levy; example tax calculation ($302K assessed, $210K taxable with homestead, ~$3,150/yr at 15 mills); Florida homestead exemption ($25K first + $25K second); Save Our Homes 3% cap; portability; how to look up property taxes (ccpao.com); comparison table vs. Hillsborough/Sarasota/Pinellas counties; 5-Q&A FAQ.
+
+9. **crystal-river-fl-cost-of-living** — Major expansion 5,269 to 21,720 chars. Title updated to "Cost of Living in Crystal River FL". Added: Florida market comparison table (Crystal River $290K-$302K vs. Inverness/Spring Hill/Tampa/Sarasota/Naples); true monthly cost table for $290K inland vs. $500K canal-front (mortgage, taxes, homeowners insurance, flood insurance, HOA); insurance cost detail (homeowners $3K-$8K/yr, flood Zone AE $2K-$10K+/yr); everyday costs (groceries, dining, healthcare, transportation); why insurance is the most underestimated cost item; who Crystal River cost structure suits; 5-Q&A FAQ.
+
+10. **crystal-river-fl-investment-property** — Major expansion 5,269 to 21,496 chars. Title updated to "Investing in Crystal River FL Real Estate". Added: Rental market overview (manatee season Nov-Mar, scallop season Jul-Sep, snowbird demand, limited long-term rental market); investment property type table (canal-front vacation rental $400K-$750K, Kings Bay waterfront $550K-$1.5M+, inland SFR $220K-$350K, condo $150K-$350K with revenue estimates); operating cost reality table ($25K-$42K/yr on $500K waterfront before mortgage); short-term rental regulations (Florida DBPR license, Citrus County/City local requirements, SB 714); property management fees (20-30% STR, 8-10% LTR); ViVi Property Management reference; 5-Q&A FAQ.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `41e066c` — pushed to `origin/main`
