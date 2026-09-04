@@ -88,6 +88,26 @@
   td{padding:8px 8px 8px 0;border-bottom:1px solid var(--line);vertical-align:top;}
   td.n{white-space:nowrap;color:var(--slate);font-size:12px;}
 
+  /* --- fixture schedule --- */
+  .fxwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 12px;}
+  table.fx{width:100%;min-width:560px;border-collapse:collapse;font-size:13px;}
+  table.fx th{text-align:left;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--slate);border-bottom:1px solid var(--line);padding:0 10px 6px 0;font-weight:700;
+    white-space:nowrap;}
+  table.fx td{padding:9px 10px 9px 0;border-bottom:1px solid var(--line);vertical-align:top;}
+  table.fx tr.grp td{background:var(--light);font-weight:700;color:var(--navy);font-size:11px;
+    letter-spacing:.08em;text-transform:uppercase;padding:7px 10px 7px 8px;}
+  table.fx td.q{text-align:center;width:44px;color:var(--navy);font-weight:700;}
+  table.fx td.money{text-align:right;white-space:nowrap;width:88px;}
+  table.fx tfoot td{border-bottom:none;border-top:2px solid var(--navy);font-weight:700;
+    color:var(--navy);padding-top:11px;}
+  .pick a{color:var(--blue);font-weight:700;text-decoration:none;}
+  .pick a:hover{text-decoration:underline;}
+  .pick .none{color:var(--slate);font-style:italic;}
+  .vfy{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--amber);background:#FEF3C7;border-radius:3px;
+    padding:1px 5px;margin-left:5px;vertical-align:1px;}
+  .fxnote{font-size:12px;color:var(--slate);margin:0 0 4px;}
   @media print{@page{size:letter;margin:0.45in;} body{background:#fff;font-size:10.5px;}
     section,.item{page-break-inside:avoid;} .sheet{max-width:none;}
     .pagenav,.docs{display:none !important;}
@@ -185,7 +205,7 @@
       water stain at a ceiling corner and corrosion staining at the top of a door frame.</p>
       <div class="grid">
         <a href="photos/51.jpg" target="_blank"><img loading="lazy" src="photos/th/51.jpg" alt="Ceiling paint peeling with dark speckling around vent"><span>Worst area</span></a>
-        <a href="photos/40.jpg" target="_blank"><img loading="lazy" src="photos/th/40.jpg" alt="Ceiling peeling around supply vent"><span>At vent</span></a>
+        <a href="photos/39.jpg" target="_blank"><img loading="lazy" src="photos/th/39.jpg" alt="Ceiling paint peeling away around a supply vent"><span>At vent</span></a>
         <a href="photos/08.jpg" target="_blank"><img loading="lazy" src="photos/th/08.jpg" alt="Ceiling paint peeling with dark spotting"><span>Peeling</span></a>
         <a href="photos/22.jpg" target="_blank"><img loading="lazy" src="photos/th/22.jpg" alt="Ceiling peeling around light fixture"><span>At fixture</span></a>
         <a href="photos/16.jpg" target="_blank"><img loading="lazy" src="photos/th/16.jpg" alt="Ceiling paint blistering"><span>Blistering</span></a>
@@ -376,7 +396,7 @@
       <div class="grid">
         <a href="photos/12.jpg" target="_blank"><img loading="lazy" src="photos/th/12.jpg" alt="Dated ceiling fan"><span>Fan</span></a>
         <a href="photos/34.jpg" target="_blank"><img loading="lazy" src="photos/th/34.jpg" alt="Decorative oval glass front door"><span>Front door</span></a>
-        <a href="photos/39.jpg" target="_blank"><img loading="lazy" src="photos/th/39.jpg" alt="Older Frigidaire dishwasher"><span>Dishwasher</span></a>
+        <a href="photos/38.jpg" target="_blank"><img loading="lazy" src="photos/th/38.jpg" alt="Older Frigidaire dishwasher"><span>Dishwasher</span></a>
         <a href="photos/14.jpg" target="_blank"><img loading="lazy" src="photos/th/14.jpg" alt="Glass top range"><span>Range</span></a>
         <a href="photos/47.jpg" target="_blank"><img loading="lazy" src="photos/th/47.jpg" alt="Closet with wire shelving"><span>Closet</span></a>
         <a href="photos/49.jpg" target="_blank"><img loading="lazy" src="photos/th/49.jpg" alt="Textured ceiling with fan"><span>Ceiling</span></a>
@@ -403,6 +423,31 @@
   </section>
 
   <section>
+    <h2>Fixture schedule</h2>
+    <p>Counted off the walkthrough video, room by room. This is the list I would work from if you
+    decide to swap fixtures. Nothing here is bought, ordered, or committed.</p>
+    <p class="fxnote">Rows marked <span class="vfy">verify</span> are ones I could not pin down
+    exactly from the video and want to confirm with a physical count before anyone orders.</p>
+
+    <div class="fxwrap">
+      <table class="fx" id="fxtable">
+        <thead>
+          <tr><th>Room</th><th>Fixture</th><th class="q" style="text-align:center;">Qty</th><th>Selection</th><th class="money" style="text-align:right;">Each</th><th class="money" style="text-align:right;">Line</th></tr>
+        </thead>
+        <tbody id="fxbody"></tbody>
+        <tfoot id="fxfoot"></tfoot>
+      </table>
+    </div>
+
+    <div class="flag">
+      <div class="t">How to read this</div>
+      <p style="margin:0;">Where the Selection column is empty, nothing has been picked yet. Once
+      you tell me the direction you want, the chosen product goes in that column as a link you can
+      click, with its real price, and the total at the bottom updates itself. My standing
+      recommendation is still the one in Priority C: the dated fans are not costing you the sale,
+      and this money does more work on paint and the clean-out.</p>
+    </div>
+
     <h2>If you approve, here is the order</h2>
     <p>None of this is booked. Nothing starts until you tell me to start it.</p>
     <table>
@@ -539,5 +584,89 @@
 </main>
 <footer>MOVE WITH CONFIDENCE</footer>
 </div>
+<script>
+/* ============================================================================
+   FIXTURE SCHEDULE DATA
+
+   To add a Home Depot (or any) product: paste the product page URL into "url"
+   and the price into "each" as a plain number. Leave "" to show it as not yet
+   selected. Set verify:true to show the amber VERIFY badge on that row.
+
+   Example:
+     { room:"Bedroom 1", item:"Ceiling fan", qty:1,
+       url:"https://www.homedepot.com/p/....", label:"Hampton Bay 52 in.",
+       each:129.00 },
+   ========================================================================== */
+const FIXTURES = [
+  { group: "Ceiling fans" },
+  { room:"Living / dining",  item:"Ceiling fan, 5-blade with light kit, dark bronze", qty:1, url:"", label:"", each:null },
+  { room:"Chalkboard room",  item:"Ceiling fan, dark blade",                          qty:1, url:"", label:"", each:null },
+  { room:"Bedroom 1",        item:"Ceiling fan, teal blade with light kit",           qty:1, url:"", label:"", each:null },
+  { room:"Bedroom 2",        item:"Ceiling fan, teal blade",                          qty:1, url:"", label:"", each:null, verify:true },
+  { room:"Bedroom 3",        item:"Ceiling fan, dark bronze",                         qty:1, url:"", label:"", each:null },
+
+  { group: "Ceiling lights" },
+  { room:"Hall, kitchen, laundry, baths", item:"Flush dome ceiling light",             qty:7, url:"", label:"", each:null, verify:true },
+  { room:"Bathroom",         item:"Vanity light, 3-bulb (dated brass)",               qty:1, url:"", label:"", each:null },
+  { room:"See 5:38 in video",item:"Missing fixture \u2014 medallion with bare socket",  qty:1, url:"", label:"", each:null, verify:true },
+];
+
+(function () {
+  var money = function (n) {
+    return n === null || n === undefined || n === "" ? "" :
+      "$" + Number(n).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  };
+  var body = document.getElementById("fxbody");
+  var foot = document.getElementById("fxfoot");
+  if (!body) return;
+  var total = 0, priced = 0, units = 0;
+
+  FIXTURES.forEach(function (f) {
+    var tr = document.createElement("tr");
+    if (f.group) {
+      tr.className = "grp";
+      var td = document.createElement("td");
+      td.colSpan = 6; td.textContent = f.group;
+      tr.appendChild(td); body.appendChild(tr); return;
+    }
+    units += f.qty;
+    var line = (f.each === null || f.each === undefined || f.each === "") ? null : f.each * f.qty;
+    if (line !== null) { total += line; priced += f.qty; }
+
+    var cells = [];
+    cells.push({ html: f.room + (f.verify ? ' <span class="vfy">verify</span>' : "") });
+    cells.push({ text: f.item });
+    cells.push({ text: String(f.qty), cls: "q" });
+    if (f.url) {
+      cells.push({ html: '<a href="' + f.url + '" target="_blank" rel="noopener noreferrer">' +
+                          (f.label || "View product") + " &rarr;</a>", cls: "pick" });
+    } else {
+      cells.push({ html: '<span class="none">not selected</span>', cls: "pick" });
+    }
+    cells.push({ text: money(f.each), cls: "money" });
+    cells.push({ text: money(line), cls: "money" });
+
+    cells.forEach(function (c) {
+      var td = document.createElement("td");
+      if (c.cls) td.className = c.cls;
+      if (c.html !== undefined) td.innerHTML = c.html; else td.textContent = c.text;
+      tr.appendChild(td);
+    });
+    body.appendChild(tr);
+  });
+
+  var tr = document.createElement("tr");
+  var lbl = document.createElement("td");
+  lbl.colSpan = 4;
+  lbl.textContent = priced === 0
+    ? units + " fixtures counted \u2014 no products selected yet"
+    : units + " fixtures counted, " + priced + " priced";
+  var blank = document.createElement("td"); blank.className = "money";
+  var sum = document.createElement("td"); sum.className = "money";
+  sum.textContent = priced === 0 ? "\u2014" : money(total);
+  tr.appendChild(lbl); tr.appendChild(blank); tr.appendChild(sum);
+  foot.appendChild(tr);
+})();
+</script>
 </body>
 </html>
