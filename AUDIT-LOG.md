@@ -4,6 +4,42 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-09-04 (Batch 49 — Anna Maria FL x10: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: AEO quick answer, 5+ H2s, 6+ H3s, comparison tables, 15 internal links, 5-Q&A FAQ with JSON-LD FAQPage schema, BreadcrumbList schema)
+
+All 10 posts were boilerplate 5,392-char stubs. Each received a full expansion with: AEO direct-answer intro, price tables, commute matrix, comparison tables, 5-FAQ with JSON-LD FAQPage schema, 15-link internal grid, GEO citations, EEAT signals, author bio.
+
+Anna Maria Island-specific content throughout: ZIP 34216, Manatee County, 7-mile Gulf barrier island, 35-foot height limit, no high-rises, FEMA Zone AE/VE flood data, Manatee County + City of Anna Maria millage (~14-16 mills total), Anna Maria Elementary / Martha B. King Middle / Manatee High school zone chain, bridge commute times (Manatee Avenue SR-64 primary / Cortez Road SR-684 southern), Gulf-front vs bay-front vs canal-front pricing and insurance reality. Content dated 2026-09-03. Build verified green.
+
+1. **anna-maria-fl-homes-for-sale-guide** — 5,392 to 22,158 chars. Property type price table (non-waterfront SFH $700K-$1.5M, bay/canal front $900K-$3M+, Gulf-front $1.5M-$5M+, condos $600K-$1.5M), 6-market comparison table (Anna Maria vs Holmes Beach/Bradenton Beach/Longboat Key/Sarasota/Bradenton mainland), 4-step buyer process (pre-approval, flood zone research, inspection, STR rule verification), FAQ (5 Q&As).
+
+2. **anna-maria-fl-schools-guide** — 5,392 to 21,518 chars. Manatee County School District profile (B grade), Anna Maria Elementary K-5, Martha B. King Middle, Manatee High School, Saint Stephen's Episcopal in Bradenton private option, district comparison table vs Sarasota/Hillsborough/Pinellas, school zone verification guidance, island bridge commute reality for middle/high students, FAQ (5 Q&As).
+
+3. **anna-maria-fl-commute-guide** — 5,392 to 25,723 chars. 10-destination drive time matrix (Bradenton 15-25 min, Sarasota 35-50 min, Tampa CBD 65-80 min, TPA 60-75 min, St. Pete 55-70 min, Clearwater 60-75 min, Lakewood Ranch 25-40 min, Fort Myers 90-110 min, SRQ Airport 30-45 min, Naples 120-145 min), Manatee Avenue Bridge vs Cortez Road Bridge analysis, bridge peak season congestion guide, island internet (Xfinity cable) and remote work context, 6-island comparison table, FAQ (5 Q&As).
+
+4. **is-anna-maria-fl-good-place-to-live** — 5,392 to 23,928 chars. 3 genuine pros (Gulf beach access without high-rises, small community/low crime, boating access, no state income tax) and 5 real drawbacks (high cost of ownership, bridge traffic, Tampa distance, limited on-island amenities, hurricane/storm surge risk), 8-buyer-profile fit table (remote workers/retirees: Excellent, daily Tampa commuters/affordability seekers: Poor), FAQ (5 Q&As).
+
+5. **anna-maria-fl-real-estate-guide** — 5,392 to 25,207 chars. 2026 market snapshot table (30-70 active listings island-wide, 45-90+ DOM, 60-70%+ cash buyers, 93-97% sale-to-list), what sells vs sits analysis, buyer strategy (financed vs cash, vacation investors), seller strategy (correct pricing not 2022 peaks, disclosure guidance), 6-market comparison table, FAQ (5 Q&As).
+
+6. **anna-maria-fl-cost-of-living** — 5,392 to 26,878 chars. 3-scenario monthly cost tables ($800K non-waterfront/$1.3M bay-front/$2.5M Gulf-front: P+I, taxes, wind insurance, flood insurance, HOA, electric, water), 5-zone flood insurance cost table (VE $8K-$20K+, AE $3K-$8K, AE above BFE $1.5K-$4K, Zone X shaded $800-$2.5K, Zone X unshaded $500-$1.5K), everyday costs, 6-market comparison table, FAQ (5 Q&As).
+
+7. **anna-maria-fl-property-taxes** — 5,392 to 27,514 chars. Manatee County + City of Anna Maria millage breakdown table (6 components, 13.5-16.0 mills total), 5-scenario tax estimate table ($750K-$2.5M with/without homestead exemption), homestead exemption mechanics ($50K reduction, March 1 deadline, mcpafl.org), Save Our Homes 3% cap buyer reset warning, portability explanation, 6-market comparison table, FAQ (5 Q&As).
+
+8. **anna-maria-fl-new-construction** — 5,392 to 25,471 chars. Why no production new construction (fully built out, 35-foot height limit, FEMA elevation requirements), teardown-rebuild process, 8-item cost table ($600K-$1.5M+ land, $15K-$40K demo, $40K-$120K foundation, $720K-$1.8M+ construction, $30K-$100K architect, total $1.57M-$4M+), mainland alternatives (Bradenton $300K-$500K, Lakewood Ranch $400K-$1.5M, Parrish $330K-$600K), FAQ (5 Q&As).
+
+9. **anna-maria-fl-investment-property** — 5,392 to 28,782 chars. STR income estimate table by property type (5 types: non-waterfront cottage 2BR $55K-$80K gross to Gulf-front 4BR $150K-$250K+ gross), 10-line sample cash flow at $950K purchase (negative -$38,750/yr at 7% rate, ~1.4% net cap), STR vs long-term comparison, City of Anna Maria STR regulation warning, ViVi Property Management link, 5-market comparison table, FAQ (5 Q&As).
+
+10. **anna-maria-fl-waterfront-homes** — 5,392 to 27,556 chars. 5-type waterfront comparison table (Gulf-front Zone VE $1.5M-$5M+/$15K-$30K+/yr insurance, bay-front Zone AE $1.1M-$3M+, canal-front Zone AE $900K-$2M+, Gulf-view non-front, water-adjacent), seawall and dock due diligence checklist (4 steps), 4-step buying process, 6-market waterfront comparison table vs Holmes Beach/Bradenton Beach/Longboat Key/Siesta Key/Apollo Beach, FAQ (5 Q&As).
+
+**Build:** Passed (Next.js build green, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `6fe4330` — pushed to `origin/main`
+
+---
+
 ## 2026-09-01 (Batch 48 — Tampa Architecture x3, Fort Meade FL x5, Nokomis FL x2: Major Expansions)
 
 **Pages improved: 10**
