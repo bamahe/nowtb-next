@@ -146,15 +146,20 @@
     font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:.08em;
     text-transform:uppercase;cursor:pointer;}
   .printbtn:hover{background:#24365c;}
-  table.fx td a{color:var(--blue);font-weight:700;text-decoration:none;margin-right:3px;}
-  table.fx td a:hover{text-decoration:underline;}
+  td.ev{line-height:0;font-size:0;}
+  td.ev a{display:inline-block;position:relative;vertical-align:top;line-height:0;width:47px;
+    margin:0 3px 3px 0;border:1px solid var(--line);border-radius:3px;overflow:hidden;
+    text-decoration:none;}
+  td.ev a img{width:100%;height:36px;object-fit:cover;display:block;}
+  td.ev a span{position:absolute;left:0;bottom:0;background:rgba(26,39,68,.85);color:#fff;
+    font-size:8px;font-weight:700;padding:1px 3px;border-radius:0 3px 0 0;line-height:1.4;}
   .sig{margin-top:26px;border-top:1px solid var(--line);padding-top:16px;font-size:13px;
     color:var(--slate);}
   @media print{
     .printbar{display:none !important;}
     table.fx{min-width:0;font-size:9.5px;}
     table.fx td{padding:5px 7px 5px 0;}
-    table.fx td a{color:var(--ink);text-decoration:none;}
+    td.ev a{width:40px;} td.ev a img{height:30px;}
     .fxwrap{overflow:visible;}
     tr{page-break-inside:avoid;}
   }
@@ -197,16 +202,18 @@
 <main>
 
   <div class="printbar">
-    <b>Print this page or save it as a PDF</b>
+    <b>Save this as a PDF</b>
     <button class="printbtn" onclick="window.print()">Print / Save PDF</button>
-    <span style="color:var(--slate);">It is formatted for letter paper. Attach it to the deposit notice.</span>
+    <span style="color:var(--slate);">The photographs print with it, so the saved file stands on
+    its own as the condition record. Nothing here depends on being online.</span>
   </div>
 
   <section>
     <h2>What this is</h2>
     <p>Every line below is a condition photographed at 11428 117th Ave on September 2, 2026, before
-    anything was touched, moved, or thrown away. The numbers in the right column are the photograph
-    references and link to the images on the clean-out page.</p>
+    anything was touched, moved, or thrown away. Each line carries the photographs that
+    evidence it, and they print with the page, so a saved PDF is a complete record on its own
+    rather than a list of numbers pointing somewhere else.</p>
     <p>Florida only allows a claim for damage <strong>beyond normal wear and tear</strong>, so the
     list is split in two. Padding a claim with normal wear is the fastest way to lose the whole
     thing if the tenant disputes it, and the first table is strong enough standing on its own.</p>
@@ -216,30 +223,35 @@
     <h2>Beyond normal wear &mdash; defensible</h2>
     <div class="fxwrap">
       <table class="fx">
-        <thead><tr><th style="width:23%;">Condition</th><th>Why it is beyond normal wear</th><th style="width:110px;">Photos</th></tr></thead>
+        <thead><tr><th style="width:21%;">Condition</th><th>Why it is beyond normal wear</th><th style="width:112px;">Photos</th><th class="money" style="text-align:right;width:96px;">Claim value</th></tr></thead>
         <tbody>
-          <tr><td><strong>Smoke damage throughout</strong></td><td>Residue through the ceilings and walls, heaviest at the supply registers, with paint failing underneath it. Smoking indoors is a tenancy condition, not aging. This is the largest line and it drives the degreasing, the stain-blocking primer, and part of the repaint.</td><td><a href="photos/51.jpg" target="_blank">51</a> <a href="photos/39.jpg" target="_blank">39</a> <a href="photos/08.jpg" target="_blank">08</a> <a href="photos/22.jpg" target="_blank">22</a> <a href="photos/21.jpg" target="_blank">21</a> <a href="photos/16.jpg" target="_blank">16</a></td></tr>
-          <tr><td><strong>Walls requiring degreasing</strong></td><td>Soiling heavy enough that the walls must be scrubbed and degreased before paint will hold. A normal turnover needs washing, not degreasing.</td><td><a href="photos/05.jpg" target="_blank">05</a> <a href="photos/54.jpg" target="_blank">54</a> <a href="photos/36.jpg" target="_blank">36</a> <a href="photos/45.jpg" target="_blank">45</a></td></tr>
-          <tr><td><strong>Property abandoned on site</strong></td><td>Mattresses, box springs, bicycles, tarped items and loose debris left across the carport, patio, side yard and shed. Haul-off and dump fees are a direct, receiptable cost.</td><td><a href="photos/01.jpg" target="_blank">01</a> <a href="photos/19.jpg" target="_blank">19</a> <a href="photos/27.jpg" target="_blank">27</a> <a href="photos/58.jpg" target="_blank">58</a> <a href="photos/55.jpg" target="_blank">55</a></td></tr>
-          <tr><td><strong>Trash dumped in the back lawn</strong></td><td>A pile of household refuse left out on the grass, separate from the belongings stacked under the carport. Straight haul-off and dump cost.</td><td><a href="photos/57.jpg" target="_blank">57</a></td></tr>
-          <tr><td><strong>Chalkboard fixed to the wall</strong></td><td>An alteration screwed into plywood paneling. It has to come down and the wall behind it made good.</td><td><a href="photos/75.jpg" target="_blank">75</a> <a href="photos/31.jpg" target="_blank">31</a></td></tr>
-          <tr><td><strong>A/C fouled</strong></td><td>The filter and the space above the air handler are packed with black residue, consistent with running the system for years in a house being smoked in. A cost caused by use, not by age.</td><td><a href="photos/11.jpg" target="_blank">11</a> <a href="photos/06.jpg" target="_blank">06</a></td></tr>
-          <tr><td><strong>Cracked window pane</strong></td><td>A full-height crack in one pane. Claimable if the pane was intact at move-in, which the move-in condition report should show.</td><td><a href="photos/13.jpg" target="_blank">13</a></td></tr>
+          <tr><td><strong>Smoke damage throughout</strong></td><td>Residue through the ceilings and walls, heaviest at the supply registers, with paint failing underneath it. Smoking indoors is a tenancy condition, not aging. This is the largest line and it drives the degreasing, the stain-blocking primer, and part of the repaint.</td><td class="ev"><a href="photos/51.jpg" target="_blank"><img src="photos/th/51.jpg" alt="Photo 51"><span>51</span></a><a href="photos/39.jpg" target="_blank"><img src="photos/th/39.jpg" alt="Photo 39"><span>39</span></a><a href="photos/08.jpg" target="_blank"><img src="photos/th/08.jpg" alt="Photo 08"><span>08</span></a><a href="photos/22.jpg" target="_blank"><img src="photos/th/22.jpg" alt="Photo 22"><span>22</span></a><a href="photos/21.jpg" target="_blank"><img src="photos/th/21.jpg" alt="Photo 21"><span>21</span></a><a href="photos/16.jpg" target="_blank"><img src="photos/th/16.jpg" alt="Photo 16"><span>16</span></a></td><td class="money cv" data-k="smoke"></td></tr>
+          <tr><td><strong>Walls requiring degreasing</strong></td><td>Soiling heavy enough that the walls must be scrubbed and degreased before paint will hold. A normal turnover needs washing, not degreasing.</td><td class="ev"><a href="photos/05.jpg" target="_blank"><img src="photos/th/05.jpg" alt="Photo 05"><span>05</span></a><a href="photos/54.jpg" target="_blank"><img src="photos/th/54.jpg" alt="Photo 54"><span>54</span></a><a href="photos/36.jpg" target="_blank"><img src="photos/th/36.jpg" alt="Photo 36"><span>36</span></a><a href="photos/45.jpg" target="_blank"><img src="photos/th/45.jpg" alt="Photo 45"><span>45</span></a></td><td class="money cv" data-k="walls"></td></tr>
+          <tr><td><strong>Property abandoned on site</strong></td><td>Mattresses, box springs, bicycles, tarped items and loose debris left across the carport, patio, side yard and shed. Haul-off and dump fees are a direct, receiptable cost.</td><td class="ev"><a href="photos/01.jpg" target="_blank"><img src="photos/th/01.jpg" alt="Photo 01"><span>01</span></a><a href="photos/19.jpg" target="_blank"><img src="photos/th/19.jpg" alt="Photo 19"><span>19</span></a><a href="photos/27.jpg" target="_blank"><img src="photos/th/27.jpg" alt="Photo 27"><span>27</span></a><a href="photos/58.jpg" target="_blank"><img src="photos/th/58.jpg" alt="Photo 58"><span>58</span></a><a href="photos/55.jpg" target="_blank"><img src="photos/th/55.jpg" alt="Photo 55"><span>55</span></a></td><td class="money cv" data-k="abandoned"></td></tr>
+          <tr><td><strong>Trash dumped in the back lawn</strong></td><td>A pile of household refuse left out on the grass, separate from the belongings stacked under the carport. Straight haul-off and dump cost.</td><td class="ev"><a href="photos/57.jpg" target="_blank"><img src="photos/th/57.jpg" alt="Photo 57"><span>57</span></a></td><td class="money cv" data-k="trash"></td></tr>
+          <tr><td><strong>Chalkboard fixed to the wall</strong></td><td>An alteration screwed into plywood paneling. It has to come down and the wall behind it made good.</td><td class="ev"><a href="photos/75.jpg" target="_blank"><img src="photos/th/75.jpg" alt="Photo 75"><span>75</span></a><a href="photos/31.jpg" target="_blank"><img src="photos/th/31.jpg" alt="Photo 31"><span>31</span></a></td><td class="money cv" data-k="chalkboard"></td></tr>
+          <tr><td><strong>A/C fouled</strong></td><td>The filter and the space above the air handler are packed with black residue, consistent with running the system for years in a house being smoked in. A cost caused by use, not by age.</td><td class="ev"><a href="photos/11.jpg" target="_blank"><img src="photos/th/11.jpg" alt="Photo 11"><span>11</span></a><a href="photos/06.jpg" target="_blank"><img src="photos/th/06.jpg" alt="Photo 06"><span>06</span></a></td><td class="money cv" data-k="ac"></td></tr>
+          <tr><td><strong>Cracked window pane</strong></td><td>A full-height crack in one pane. Claimable if the pane was intact at move-in, which the move-in condition report should show.</td><td class="ev"><a href="photos/13.jpg" target="_blank"><img src="photos/th/13.jpg" alt="Photo 13"><span>13</span></a></td><td class="money cv" data-k="window"></td></tr>
         </tbody>
+        <tfoot>
+          <tr><td colspan="3" id="cvlabel">Claim total</td><td class="money" id="cvtotal">&mdash;</td></tr>
+        </tfoot>
       </table>
     </div>
+    <p class="fxnote" style="margin-top:9px;">Values come from the vendor quotes as they land. A
+    blank line is one nobody has priced yet, not one worth nothing.</p>
   </section>
 
   <section>
     <h2>Normal wear or age &mdash; leave out of the claim</h2>
     <div class="fxwrap">
       <table class="fx">
-        <thead><tr><th style="width:23%;">Condition</th><th>Why I would not claim it</th><th style="width:110px;">Photos</th></tr></thead>
+        <thead><tr><th style="width:23%;">Condition</th><th>Why I would not claim it</th><th style="width:112px;">Photos</th></tr></thead>
         <tbody>
-          <tr><td>Fence weathering and mildew</td><td>Outdoor timber greys and grows mildew in Florida on its own. Age, not tenancy.</td><td><a href="photos/60.jpg" target="_blank">60</a> <a href="photos/56.jpg" target="_blank">56</a></td></tr>
-          <tr><td>Flooring seam separation</td><td>Reads as an installation or product issue in floating plank, not something a tenant did.</td><td><a href="photos/25.jpg" target="_blank">25</a> <a href="photos/52.jpg" target="_blank">52</a></td></tr>
-          <tr><td>Dated fixtures and blinds</td><td>They are old. Replacing them is a marketing choice, not a repair the tenant owes.</td><td><a href="photos/12.jpg" target="_blank">12</a> <a href="photos/49.jpg" target="_blank">49</a></td></tr>
-          <tr><td>Gutter and fascia damage</td><td>Weather. The roof itself is 2015 and sound.</td><td><a href="photos/50.jpg" target="_blank">50</a></td></tr>
+          <tr><td>Fence weathering and mildew</td><td>Outdoor timber greys and grows mildew in Florida on its own. Age, not tenancy.</td><td class="ev"><a href="photos/60.jpg" target="_blank"><img src="photos/th/60.jpg" alt="Photo 60"><span>60</span></a><a href="photos/56.jpg" target="_blank"><img src="photos/th/56.jpg" alt="Photo 56"><span>56</span></a></td></tr>
+          <tr><td>Flooring seam separation</td><td>Reads as an installation or product issue in floating plank, not something a tenant did.</td><td class="ev"><a href="photos/25.jpg" target="_blank"><img src="photos/th/25.jpg" alt="Photo 25"><span>25</span></a><a href="photos/52.jpg" target="_blank"><img src="photos/th/52.jpg" alt="Photo 52"><span>52</span></a></td></tr>
+          <tr><td>Dated fixtures and blinds</td><td>They are old. Replacing them is a marketing choice, not a repair the tenant owes.</td><td class="ev"><a href="photos/12.jpg" target="_blank"><img src="photos/th/12.jpg" alt="Photo 12"><span>12</span></a><a href="photos/49.jpg" target="_blank"><img src="photos/th/49.jpg" alt="Photo 49"><span>49</span></a></td></tr>
+          <tr><td>Gutter and fascia damage</td><td>Weather. The roof itself is 2015 and sound.</td><td class="ev"><a href="photos/50.jpg" target="_blank"><img src="photos/th/50.jpg" alt="Photo 50"><span>50</span></a></td></tr>
         </tbody>
       </table>
     </div>
@@ -283,5 +295,45 @@
 </main>
 <footer>MOVE WITH CONFIDENCE</footer>
 </div>
+<script>
+/* ============================================================================
+   CLAIM VALUES
+
+   Put the dollar figure against each line as the quotes come in. Leave null
+   for anything not yet priced and it shows as "pending" rather than $0.
+   "basis" is where the number came from, shown under the table.
+   ========================================================================== */
+const CLAIM = {
+  smoke:      { amount: 325.00, basis: "Stain-blocking primer, 10g, from the D&S Painting interior quote. Needed because of the smoke residue; a repaint over sound walls would not carry it." },
+  walls:      { amount: null,   basis: "Degreasing labour in the pre-construction deep clean. Awaiting the cleaning quote." },
+  abandoned:  { amount: null,   basis: "Haul-off and dump fees. Cannot be priced until the tenant takes the last of it." },
+  trash:      { amount: null,   basis: "Included in the same haul-off." },
+  chalkboard: { amount: null,   basis: "Removal and wall make-good, part of the paint scope." },
+  ac:         { amount: null,   basis: "A/C service call. Not yet quoted." },
+  window:     { amount: null,   basis: "Single pane at a glass shop. Not yet quoted." },
+};
+
+(function () {
+  var money = function (n) {
+    return "$" + Number(n).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  };
+  var total = 0, priced = 0, open = 0;
+  document.querySelectorAll("td.cv").forEach(function (td) {
+    var row = CLAIM[td.dataset.k];
+    if (row && row.amount !== null && row.amount !== undefined) {
+      td.textContent = money(row.amount); total += row.amount; priced++;
+    } else {
+      td.innerHTML = '<span style="color:#64748B;font-style:italic;font-weight:400;">pending</span>';
+      open++;
+    }
+  });
+  var t = document.getElementById("cvtotal");
+  var l = document.getElementById("cvlabel");
+  if (t) t.textContent = priced ? money(total) : "\u2014";
+  if (l) l.textContent = priced
+    ? "Claim total so far, " + priced + " of " + (priced + open) + " lines priced"
+    : "Claim total, nothing priced yet";
+})();
+</script>
 </body>
 </html>
