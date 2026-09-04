@@ -225,7 +225,7 @@
       <table class="fx">
         <thead><tr><th style="width:21%;">Condition</th><th>Why it is beyond normal wear</th><th style="width:112px;">Photos</th><th class="money" style="text-align:right;width:96px;">Claim value</th></tr></thead>
         <tbody>
-          <tr><td><strong>Smoke damage throughout</strong></td><td>Residue through the ceilings and walls, heaviest at the supply registers, with paint failing underneath it. Smoking indoors is a tenancy condition, not aging. This is the largest line and it drives the degreasing, the stain-blocking primer, and part of the repaint.</td><td class="ev"><a href="photos/51.jpg" target="_blank"><img src="photos/th/51.jpg" alt="Photo 51"><span>51</span></a><a href="photos/39.jpg" target="_blank"><img src="photos/th/39.jpg" alt="Photo 39"><span>39</span></a><a href="photos/08.jpg" target="_blank"><img src="photos/th/08.jpg" alt="Photo 08"><span>08</span></a><a href="photos/22.jpg" target="_blank"><img src="photos/th/22.jpg" alt="Photo 22"><span>22</span></a><a href="photos/21.jpg" target="_blank"><img src="photos/th/21.jpg" alt="Photo 21"><span>21</span></a><a href="photos/16.jpg" target="_blank"><img src="photos/th/16.jpg" alt="Photo 16"><span>16</span></a></td><td class="money cv" data-k="smoke"></td></tr>
+          <tr><td><strong>Smoke damage throughout</strong></td><td>Residue through the ceilings and walls, heaviest at the supply registers, with the paint failing underneath it. Smoking indoors is a tenancy condition, not aging. The entire interior has to be degreased, the failed ceilings scraped, and everything sealed with a stain-blocking primer before a finish coat will hold. That is the whole interior paint scope, not a portion of it.</td><td class="ev"><a href="photos/51.jpg" target="_blank"><img src="photos/th/51.jpg" alt="Photo 51"><span>51</span></a><a href="photos/39.jpg" target="_blank"><img src="photos/th/39.jpg" alt="Photo 39"><span>39</span></a><a href="photos/08.jpg" target="_blank"><img src="photos/th/08.jpg" alt="Photo 08"><span>08</span></a><a href="photos/22.jpg" target="_blank"><img src="photos/th/22.jpg" alt="Photo 22"><span>22</span></a><a href="photos/21.jpg" target="_blank"><img src="photos/th/21.jpg" alt="Photo 21"><span>21</span></a><a href="photos/16.jpg" target="_blank"><img src="photos/th/16.jpg" alt="Photo 16"><span>16</span></a></td><td class="money cv" data-k="smoke"></td></tr>
           <tr><td><strong>Walls requiring degreasing</strong></td><td>Soiling heavy enough that the walls must be scrubbed and degreased before paint will hold. A normal turnover needs washing, not degreasing.</td><td class="ev"><a href="photos/05.jpg" target="_blank"><img src="photos/th/05.jpg" alt="Photo 05"><span>05</span></a><a href="photos/54.jpg" target="_blank"><img src="photos/th/54.jpg" alt="Photo 54"><span>54</span></a><a href="photos/36.jpg" target="_blank"><img src="photos/th/36.jpg" alt="Photo 36"><span>36</span></a><a href="photos/45.jpg" target="_blank"><img src="photos/th/45.jpg" alt="Photo 45"><span>45</span></a></td><td class="money cv" data-k="walls"></td></tr>
           <tr><td><strong>Property abandoned on site</strong></td><td>Mattresses, box springs, bicycles, tarped items and loose debris left across the carport, patio, side yard and shed. Haul-off and dump fees are a direct, receiptable cost.</td><td class="ev"><a href="photos/01.jpg" target="_blank"><img src="photos/th/01.jpg" alt="Photo 01"><span>01</span></a><a href="photos/19.jpg" target="_blank"><img src="photos/th/19.jpg" alt="Photo 19"><span>19</span></a><a href="photos/27.jpg" target="_blank"><img src="photos/th/27.jpg" alt="Photo 27"><span>27</span></a><a href="photos/58.jpg" target="_blank"><img src="photos/th/58.jpg" alt="Photo 58"><span>58</span></a><a href="photos/55.jpg" target="_blank"><img src="photos/th/55.jpg" alt="Photo 55"><span>55</span></a></td><td class="money cv" data-k="abandoned"></td></tr>
           <tr><td><strong>Trash dumped in the back lawn</strong></td><td>A pile of household refuse left out on the grass, separate from the belongings stacked under the carport. Straight haul-off and dump cost.</td><td class="ev"><a href="photos/57.jpg" target="_blank"><img src="photos/th/57.jpg" alt="Photo 57"><span>57</span></a></td><td class="money cv" data-k="trash"></td></tr>
@@ -240,6 +240,19 @@
     </div>
     <p class="fxnote" style="margin-top:9px;">Values come from the vendor quotes as they land. A
     blank line is one nobody has priced yet, not one worth nothing.</p>
+    <div class="flag" style="margin-top:12px;">
+      <div class="t">Why the paint is claimed in full</div>
+      <p style="margin:0 0 9px;">A repaint after a long tenancy is often treated as normal wear,
+      and a tenant will sometimes argue exactly that. The answer here is that this is not a
+      refresh. The scope only looks the way it does because of the smoke: degrease every wall,
+      scrape the ceilings where the paint let go, seal the whole interior with a stain-blocking
+      primer. Paint over it without that and the nicotine comes back through in weeks, which is
+      the test for damage rather than wear.</p>
+      <p style="margin:0;">If you would rather take the cautious position, the narrow version of
+      this claim is the $325 primer line on its own, on the argument that only the sealing step is
+      smoke-specific. That is the conservative floor. My read is that the full figure is the honest
+      one, but your attorney should be the one who sets it.</p>
+    </div>
   </section>
 
   <section>
@@ -304,12 +317,12 @@
    "basis" is where the number came from, shown under the table.
    ========================================================================== */
 const CLAIM = {
-  smoke:      { amount: 325.00, basis: "Stain-blocking primer, 10g, from the D&S Painting interior quote. Needed because of the smoke residue; a repaint over sound walls would not carry it." },
+  smoke:      { amount: 3144.00, basis: "The full D&S Painting interior quote. The repaint is driven by the smoke, not by fading: the walls have to be degreased, the ceilings scraped where the paint let go, and the whole job sealed with a stain-blocking primer or the nicotine bleeds back through. That is a smoke remediation that happens to end in paint, not a cosmetic refresh." },
   walls:      { amount: null,   basis: "Degreasing labour in the pre-construction deep clean. Awaiting the cleaning quote." },
   abandoned:  { amount: null,   basis: "Haul-off and dump fees. Cannot be priced until the tenant takes the last of it." },
   trash:      { amount: null,   basis: "Included in the same haul-off." },
   chalkboard: { amount: null,   basis: "Removal and wall make-good, part of the paint scope." },
-  ac:         { amount: null,   basis: "A/C service call. Not yet quoted." },
+  ac:         { amount: null,   basis: "A/C service call to clean the system out. The filter and the space above the air handler are packed with residue from years of smoking in the house. Awaiting the quote." },
   window:     { amount: null,   basis: "Single pane at a glass shop. Not yet quoted." },
 };
 
