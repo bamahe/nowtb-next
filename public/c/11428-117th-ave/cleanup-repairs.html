@@ -73,7 +73,20 @@
   .quote b{color:var(--navy);}
   .amt{font-family:'DM Serif Display',Georgia,serif;font-size:17px;color:var(--navy);
     letter-spacing:.01em;}
-  .item.a .amt,.item.b .amt{color:var(--navy);}
+  .priceline{display:flex;align-items:baseline;justify-content:space-between;gap:14px;
+    flex-wrap:wrap;margin:14px 0 0;padding:12px 16px;background:var(--light);
+    border-radius:5px;border-left:4px solid var(--navy);}
+  .priceline .lbl{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--slate);font-weight:700;}
+  .priceline .val{font-family:'DM Serif Display',Georgia,serif;font-size:29px;line-height:1;
+    color:var(--navy);}
+  .priceline .via{flex-basis:100%;font-size:12px;color:var(--slate);margin-top:2px;}
+  .priceline.est{border-left-color:var(--amber);}
+  .priceline.est .val{color:var(--amber);}
+  .qbox tr:last-child td{font-size:15px;}
+  .qbox tr:last-child td.r{font-family:'DM Serif Display',Georgia,serif;font-size:23px;
+    line-height:1.1;}
+  @media(max-width:420px){.priceline .val{font-size:24px;}}
   .qbox{border:1px solid var(--line);border-left:4px solid var(--green);border-radius:5px;
     padding:15px 18px;margin:0 0 20px;background:#fff;}
   .qbox .h{font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--green);
@@ -276,12 +289,13 @@
         <a href="photos/02.jpg" target="_blank"><img loading="lazy" src="photos/th/02.jpg" alt="Return air grilles and thermostat"><span>Returns</span></a>
         <a href="photos/64.jpg" target="_blank"><img loading="lazy" src="photos/th/64.jpg" alt="Exterior condenser unit"><span>Condenser</span></a>
       </div>
-      <p>A nineteen-year-old system is not a defect and I would not replace it on your dime. But it
-      has to be clean, cooling, and draining properly, because every buyer's inspector opens that
-      cabinet, and because it is very likely the source of the ceiling problem above.</p>
-      <div class="quote"><b>Proposed:</b> a service call to clean and check the system. Not booked
-      yet. If the technician finds the supply boots are causing the ceiling damage, that repair can
-      be quoted on the same visit.</div>
+      <p>A nineteen-year-old system is not a defect and I would not replace it on your dime. But
+      it has to be clean, cooling, and draining properly, because every buyer's inspector opens
+      that cabinet. A system that ran for years in a house where people smoked indoors is also
+      carrying that residue through the ductwork, which is part of why the smell needs the system
+      serviced and not just the walls washed.</p>
+      <div class="quote"><b>Proposed:</b> a service call to clean and check the system, including
+      the filter and the return.</div>
     </div>
 
     <div class="item a">
@@ -301,13 +315,14 @@
         <a href="photos/75.jpg" target="_blank"><img loading="lazy" src="photos/th/75.jpg" alt="Chalkboard mounted on plywood paneling"><span>Chalkboard</span></a>
         <a href="photos/31.jpg" target="_blank"><img loading="lazy" src="photos/th/31.jpg" alt="Room with chalkboard wall and litter box"><span>Paneling</span></a>
       </div>
-      <div class="quote"><b>Quoted: <span class="amt">$3,144.00</span></b> &middot; D&amp;S Painting LLC.
-      Ceiling flat 8g $340, wall paint 10g $429, primer 10g $325, doors, baseboard and crown
-      molding 4g $200, caulk, wood filler, tape and plastic $150. Material $1,444, labor $1,700.</div>
-      <div class="quote" style="border-top:none;padding-top:0;"><b>One note:</b> this quote
-      includes the ceilings. Worth having the A/C tech glance at the supply boots while he is out
-      servicing the system, since that is the likeliest reason the paint let go around the vents.
-      Cheap to check on a visit that is happening anyway.</div>
+      <div class="priceline"><span class="lbl">Quoted</span><span class="val">$3,144.00</span>
+        <span class="via">D&amp;S Painting LLC &middot; material $1,444, labor $1,700</span></div>
+      <div class="quote">Ceiling flat 8g $340, wall paint 10g $429, primer 10g $325, doors,
+      baseboard and crown molding 4g $200, caulk, wood filler, tape and plastic $150.</div>
+      <div class="quote" style="border-top:none;padding-top:0;"><b>One note:</b> confirm the
+      primer line is a shellac or oil based stain blocker rather than a standard latex. With smoke
+      residue on the ceilings and walls, latex lets the nicotine bleed back through and the job
+      gets done twice.</div>
     </div>
 
     <div class="item a">
@@ -360,6 +375,19 @@
     </div>
 
     <div class="item a">
+      <span class="tag a">A &middot; Do first</span>
+      <h3>Bathroom medicine cabinet</h3>
+      <p class="why">The mirror is badly desilvered, spotted across most of its face. It is the
+      first thing anyone sees in that bathroom and it reads as neglect even though the room is
+      otherwise sound. A replacement cabinet is inexpensive and the return is disproportionate.</p>
+      <div class="grid">
+        <a href="photos/28.jpg" target="_blank"><img loading="lazy" src="photos/th/28.jpg" alt="Medicine cabinet with heavily desilvered mirror"><span>Mirror</span></a>
+      </div>
+      <div class="quote"><b>Proposed:</b> replace the cabinet. My recommendation is yes, this one is
+      worth it.</div>
+    </div>
+
+    <div class="item a">
       <span class="tag a">A &middot; Quoted</span>
       <h3>Exterior paint and pressure wash</h3>
       <p class="why">The block exterior is chalking and weathered, the soffits are tired, and the
@@ -372,27 +400,15 @@
         <a href="photos/62.jpg" target="_blank"><img loading="lazy" src="photos/th/62.jpg" alt="Rear elevation"><span>Rear</span></a>
         <a href="photos/64.jpg" target="_blank"><img loading="lazy" src="photos/th/64.jpg" alt="Rear yard and elevation"><span>Rear</span></a>
       </div>
-      <div class="quote"><b>Quoted: <span class="amt">$2,755.00</span></b> &middot; D&amp;S Painting LLC.
-      Pressure wash $300, soffits 8g $368, body 12g $547, front and back door 1g $47, shutters and
-      window sills 2g $93, extra material $100. Material $1,455, labor $1,300.</div>
+      <div class="priceline"><span class="lbl">Quoted</span><span class="val">$2,755.00</span>
+        <span class="via">D&amp;S Painting LLC &middot; material $1,455, labor $1,300</span></div>
+      <div class="quote">Pressure wash $300, soffits 8g $368, body 12g $547, front and back door
+      1g $47, shutters and window sills 2g $93, extra material $100.</div>
     </div>
   </section>
 
   <section>
     <h2>Priority B &mdash; your call on budget</h2>
-
-    <div class="item b">
-      <span class="tag b">B &middot; Judgment call</span>
-      <h3>Bathroom medicine cabinet</h3>
-      <p class="why">The mirror is badly desilvered, spotted across most of its face. It is the
-      first thing anyone sees in that bathroom and it reads as neglect even though the room is
-      otherwise sound. A replacement cabinet is inexpensive and the return is disproportionate.</p>
-      <div class="grid">
-        <a href="photos/28.jpg" target="_blank"><img loading="lazy" src="photos/th/28.jpg" alt="Medicine cabinet with heavily desilvered mirror"><span>Mirror</span></a>
-      </div>
-      <div class="quote"><b>Proposed:</b> replace the cabinet. My recommendation is yes, this one is
-      worth it.</div>
-    </div>
 
     <div class="item b">
       <span class="tag b">B &middot; Judgment call</span>
@@ -432,11 +448,12 @@
       rehang the gate so it opens and closes. A buyer will discount a replaced fence by roughly
       what you spent on it, but a fence that visibly does not work reads as deferred maintenance
       across the whole property.</p>
-      <div class="quote"><b>Allow: <span class="amt">$300 to $500</span></b> &middot; my estimate
-      from doing this before, not a vendor quote. Covers pressure washing the fence, resetting the
-      leaning section, and rehanging the gate so it opens and closes. I would not quote a fence
-      replacement unless you ask me to. Note that the $300 pressure wash in the exterior paint
-      quote covers the house, not the fence, so this is separate.</div>
+      <div class="priceline est"><span class="lbl">Allow</span><span class="val">$300 to $500</span>
+        <span class="via">My estimate from doing this before, not a vendor quote</span></div>
+      <div class="quote">Covers pressure washing the fence, resetting the leaning section, and
+      rehanging the gate so it opens and closes. I would not quote a fence replacement unless you
+      ask me to. The $300 pressure wash in the exterior paint quote covers the house, not the
+      fence, so this is separate.</div>
     </div>
 
     <div class="item b">
@@ -449,8 +466,9 @@
         <a href="photos/25.jpg" target="_blank"><img loading="lazy" src="photos/th/25.jpg" alt="Vinyl plank floor with open seams"><span>Seams</span></a>
         <a href="photos/52.jpg" target="_blank"><img loading="lazy" src="photos/th/52.jpg" alt="Vinyl plank with gap between boards"><span>Gap</span></a>
       </div>
-      <div class="quote"><b>Quoted: <span class="amt">$5,445.00</span></b> &middot; replace
-      throughout. Material $1,945, labor $3,500. The selected products:</div>
+      <div class="priceline"><span class="lbl">Quoted</span><span class="val">$5,445.00</span>
+        <span class="via">Replace throughout &middot; material $1,945, labor $3,500</span></div>
+      <div class="quote">The selected products:</div>
 
       <div class="fxwrap">
         <table class="fx">
