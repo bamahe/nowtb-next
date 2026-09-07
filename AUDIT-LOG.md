@@ -4,6 +4,40 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-09-07 (Batch 52 — Inverness FL x10: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: AEO quick answer, 4+ question H2s, 6+ H3s, price/comparison tables, 14-link internal grid, 5-Q&A FAQ with JSON-LD FAQPage schema, BreadcrumbList schema, GEO citations, EEAT signals, author bio. Content dated 2026-09-06. Build green.)
+
+All 10 posts were boilerplate ~5,211-char stubs. Inverness-specific content throughout: ZIP 34450/34452/34453, county seat of Citrus County; Lake Henderson (3,000+ acres, in-city lakefront); Tsala Apopka chain (large shallow lake system with canal access); Withlacoochee State Trail (46-mile paved rail-trail starting in downtown Inverness); HCA Florida Citrus Hospital (502 W. Highland Blvd.); Citrus County School District (C grade, FLDOE); Citrus High School (600 W. Highland Blvd.); city millage ~14.0-16.5 mills total (city residents); unincorporated Citrus County ~11.5-14.5 mills; Tampa commute 90-110 min; Ocala 35-50 min; homestead exemption deadline March 1 (citruspa.org); Zone AE flood insurance $1,200-$3,500+/yr; Fort Cooper State Park (2 mi south); Crown Hotel downtown.
+
+1. **inverness-fl-homes-for-sale-guide** — 5,211 to 21,521 chars. Property type price table (starter SFH $140K-$195K, standard $195K-$290K, canal Tsala Apopka $280K-$560K, Lake Henderson $350K-$750K+), 6-market comparison table (Inverness vs Crystal River/Floral City/Lecanto/Homosassa/Ocala), flood zone/insurance section (Zone AE vs X), well/septic checklist, 4-step buyer checklist, FAQ (5 Q&As).
+
+2. **inverness-fl-schools-guide** — 5,211 to 18,716 chars. Citrus County School District C grade (fldoe.org), Inverness Primary School, Inverness Middle School, Citrus High School (600 W. Highland Blvd.), College of Central Florida Lecanto Campus dual enrollment, 6-district comparison table (Citrus vs Hernando/Marion/Pasco/Hillsborough/Sarasota), private school options table (Seven Rivers Christian/Crystal River, Ocala options), zone verification guidance ((352) 726-1931 / citrus.k12.fl.us), FAQ (5 Q&As).
+
+3. **inverness-fl-commute-guide** — 5,211 to 18,293 chars. 11-destination drive time matrix (Ocala 35-50 min, Crystal River 25-35 min, Gainesville 65-80 min, Tampa CBD 90-110 min, TPA 85-105 min, St. Pete 100-125 min, Orlando 100-120 min), US-41/I-75 and Suncoast Pkwy route analysis, Spectrum cable / Starlink internet guide, 6-market commute comparison table, FAQ (5 Q&As).
+
+4. **is-inverness-fl-good-place-to-live** — 5,211 to 19,472 chars. 4 genuine pros (affordability $230K-$255K median, Lake Henderson / Withlacoochee Trail, HCA Florida Citrus Hospital in-town, quiet low-crime character) and 4 real drawbacks (Tampa commute 90-110 min impractical, limited retail/dining, C-rated schools, thin job market), 8-buyer-profile fit table (retirees/remote workers/anglers: Excellent, daily Tampa commuters/families prioritizing schools: Poor), 5-city comparison table, FAQ (5 Q&As).
+
+5. **inverness-fl-real-estate-guide** — 5,211 to 19,137 chars. 2026 market snapshot table by segment (inland SFH 60-100 DOM buyer-favorable, Lake Henderson waterfront 30-65 DOM slightly seller-favorable), what sells vs sits analysis, buyer strategy (use DOM as leverage, get CMA from comps not Zillow), seller strategy (price from 90-day comps, not 2022 peak), 5-city comparison table, FAQ (5 Q&As).
+
+6. **inverness-fl-cost-of-living** — 5,211 to 18,419 chars. Monthly ownership cost table at 2 price points ($240K inland Zone X ~$1,548-$1,753/mo total; $430K Lake Henderson Zone AE ~$2,908-$3,338/mo total), grocery reality (Publix + Walmart local; Target/Costco requires Ocala 35-50 min), Duke Energy electric ($110-$280/mo), well/septic vs city utilities, commute cost analysis (Suncoast Pkwy ~$120-$200/mo tolls for Tampa trips), 6-market comparison table, FAQ (5 Q&As).
+
+7. **inverness-fl-property-taxes** — 5,211 to 19,628 chars. Millage breakdown table (county general ~6.0-6.5, school ~4.5-5.0, SWFWMD ~0.25-0.40, library/CF college/fire ~1.0-2.0, city municipal ~2.5-3.0 mills), homestead exemption $50K reduction/March 1 deadline/citruspa.org, Save Our Homes 3% cap buyer-reset warning, portability explanation, tax estimate table at 5 price points ($175K-$600K homesteaded/non-homesteaded city and unincorporated), senior/veteran exemptions, FAQ (5 Q&As).
+
+8. **inverness-fl-new-construction** — 5,211 to 19,095 chars. Why no production new construction (built-out grid, FEMA/FDEP permitting near lake/canal, limited vacant land), custom build cost table ($25K-$65K lot + $8K-$18K plans + $5K-$12K permits + $15K-$28K foundation + $210K-$370K construction + utilities/landscaping = $277K-$536K+ all-in), nearest production builders (Spring Hill/Hernando County $270K-$380K, Ocala/Marion County $245K-$360K), new vs resale comparison table, FAQ (5 Q&As).
+
+9. **inverness-fl-investment-property** — 5,211 to 19,631 chars. Long-term rental rate table (2BR $950-$1,250/mo, 3BR/2BA $1,200-$1,650/mo, canal-front $1,500-$2,200/mo), sample $225K NOI analysis (gross $16,800, expenses $10,024, NOI $6,776, cap rate ~3.0%, cash flow negative at 7.5% investor rate), STR honest assessment (weak demand, no beach/theme park), thin resale liquidity caveat, older inventory deferred maintenance risk, ViVi Property Management link, FAQ (5 Q&As).
+
+10. **inverness-fl-waterfront-homes** — 5,211 to 21,231 chars. 5-type waterfront comparison table (Lake Henderson $350K-$750K+ Zone AE $1,500-$3,500/yr insurance, Tsala Apopka lakefront $300K-$600K, canal-access $280K-$500K, Withlacoochee River $240K-$450K, interior pond $210K-$330K Zone X), Lake Henderson character (3,000+ acres, walkable to downtown, freshwater fishing), Tsala Apopka canal depth/navigability verification guide, 7-step buyer due diligence checklist (FEMA lookup, elevation cert, insurance quote, marine inspection, dock permits, canal navigation test, flood contingency), seawall replacement cost ($150-$400+/linear ft), 5-market comparison table vs Homosassa/Crystal River/Hernando Beach/Apollo Beach, FAQ (5 Q&As).
+
+**Build:** Passed (Next.js build green, 532 static pages pre-rendered)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `8ed1877` — pushed to `origin/main`
+
+---
+
 ## 2026-09-06 (Batch 51 — Fort Meade FL x5, Homosassa FL x4, Davenport FL x1: Major Expansions)
 
 **Pages improved: 10**
