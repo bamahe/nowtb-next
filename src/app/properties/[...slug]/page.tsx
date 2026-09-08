@@ -10,9 +10,11 @@ import { notFound, redirect } from "next/navigation";
 import { Suspense } from "react";
 import { Bed, Bath, Ruler, Calendar, LandPlot, Car, Home, ChevronRight } from "lucide-react";
 
-// ISR: cache property pages for 1 hour so cached listings survive rate limit windows.
+// ISR: cache property pages for 30 minutes, matching the bridgeFetch cache in
+// src/lib/bridge.ts. Anything shorter re-renders 7 Bridge calls per page against
+// data that provably has not changed. Cached listings also survive rate limits.
 // Without this, every visitor triggers fresh API calls (6 per page!), exhausting the quota.
-export const revalidate = 300;
+export const revalidate = 1800; // matches bridgeFetch, see above
 
 import BuyingPower from "@/components/ui/BuyingPower";
 import FavoriteButton from "@/components/ui/FavoriteButton";
