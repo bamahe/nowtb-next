@@ -394,8 +394,25 @@ const nextConfig = {
   },
   // Allow Bridge API listing photos and Showcase IDX images
   images: {
-    // Prefer modern image formats — avif first, then webp
-    formats: ["image/avif", "image/webp"],
+    // COST CONTROL (2026-09-08). Image Optimization was $160/mo on this project
+    // alone. Three settings drive that, all of them Next.js defaults:
+    //
+    // 1. minimumCacheTTL defaults to 60 SECONDS in Next 14. Every Bridge/Stellar
+    //    listing photo was being re-optimized and re-billed about once a minute,
+    //    which is why we saw 14.7M cache writes against 2M transformations.
+    //    2678400 seconds = 31 days.
+    // 2. Listing two formats generates a separate billable variant per format,
+    //    and AVIF is the most expensive encode Vercel bills. WebP only.
+    // 3. Default deviceSizes (8) + imageSizes (8) means up to 16 widths per
+    //    photo. The four below cover phone / tablet / laptop / retina.
+    //
+    // If a listing swaps photos and a stale one sticks around, Bridge is reusing
+    // the same photo URL for new images. Drop the TTL to 604800 (7 days) and run
+    // `vercel cache invalidate --srcimg <url>` on the stragglers.
+    minimumCacheTTL: 2678400,
+    formats: ["image/webp"],
+    deviceSizes: [640, 828, 1200, 1920],
+    imageSizes: [256, 384],
     remotePatterns: [
       {
         protocol: "https",
