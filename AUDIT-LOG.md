@@ -4,6 +4,187 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-09-08 (Batch 53 — Inverness FL x4, Davenport FL x6: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: AEO quick answer, 4+ question H2s, 6+ H3s, price/comparison tables, 14-link internal grid, 5-Q&A FAQ with JSON-LD FAQPage schema, BreadcrumbList schema, GEO citations, EEAT signals, author bio. Content dated 2026-09-07. Build green.)
+
+**Inverness FL (4 remaining stubs — ZIP 34450/34452/34453, Citrus County seat):**
+
+1. **inverness-fl-flood-zones** — 5,211 to 21,016 chars. FEMA Zone AE vs Zone X breakdown, Zone AE flood insurance table by property type (inland Zone X $0-$900/yr optional, canal-front Zone AE $1,200-$2,800, Lake Henderson $1,800-$3,500+), how to use msc.fema.gov, elevation certificate guidance ($200-$600, saves $500-$1,500/yr), NFIP vs private flood insurance, 7-step buyer due diligence checklist, evacuation zone vs flood zone distinction, Zone AE vs Zone X 7-factor comparison table, price impact section (Lake Henderson $350K-$750K+ Zone AE; inland Zone X $150K-$290K), FAQ (5 Q&As).
+
+2. **best-neighborhoods-inverness-fl** — 5,211 to 19,355 chars. 6-area comparison table (Lake Henderson waterfront $350K-$750K+ Zone AE, downtown historic $140K-$280K, Inverness Highlands $185K-$280K Zone X, south Inverness/Fort Cooper $160K-$250K, rural acreage $160K-$350K+, Tsala Apopka canal-front $280K-$500K Zone AE), city vs. unincorporated millage distinction (city ~2.5-3.0 mills extra; city water/sewer included), downtown Crown Hotel/walkability, Inverness vs. 5 neighboring community comparison table, FAQ (5 Q&As).
+
+3. **moving-to-inverness-fl** — 5,211 to 20,645 chars. Population/character (county seat ~8,000 city, Withlacoochee Trail 46 mi paved), daily life (Publix + Walmart local; Target/Costco Ocala 35-50 min), HCA Florida Citrus Hospital 502 W. Highland Blvd., Citrus County C-grade school district (citrus.k12.fl.us / (352) 726-1931), Duke Energy electric $110-$250/mo, Spectrum cable in city, Starlink rural, well/septic guidance, Tampa commute 90-110 min via Suncoast Pkwy ($6-$10/day toll), Ocala 35-50 min, 8-buyer-profile fit table (retirees/remote workers/anglers: Excellent; Tampa commuters/young professionals: Poor), 5-city comparison table, FAQ (5 Q&As).
+
+4. **things-to-do-inverness-fl** — 5,211 to 20,068 chars. Withlacoochee State Trail (46 miles paved, south terminus N. Pine Ave downtown, per FDEP), Lake Henderson boating/fishing (Wallace Brooks Park, free public launch, 3,000+ acres, largemouth bass), Fort Cooper State Park (3100 S. Old Floral City Rd., 710 acres, spring-fed Lake Holathlikaha swimming, Second Seminole War history, March reenactment), Tsala Apopka kayaking/wildlife, Crown Hotel (109 N. Seminole Ave., built 1901, NRHP), day trips (Crystal River manatees 25 mi, Silver Springs/Ocala 35-50 mi, Chassahowitzka NWR 30 mi south), 8-factor activity comparison table vs Crystal River vs Homosassa, FAQ (5 Q&As).
+
+**Davenport FL (6 stubs — ZIP 33836/33837/33896/33897, Polk County, I-4/US-27 corridor):**
+
+5. **davenport-fl-schools-guide** — 5,203 to 19,980 chars. Polk County School District B grade (FLDOE), school zone verification at schoolsearch.polk-fl.net, Ridge Community High School (1 Ridge Road, Davenport 33837), Davenport School of the Arts (PreK-8 magnet, 4107 US Hwy 27 N 33897), Loughman Oaks Elementary, Citrus Ridge: A School of Technology (K-8 magnet), private school options table (Calvary Christian/Santa Fe Catholic/Lakeland Christian/Polk State dual enrollment), STR community school enrollment reality section, 6-district comparison table (Polk vs Osceola/Hillsborough/Orange/Sarasota/Hernando), FAQ (5 Q&As).
+
+6. **davenport-fl-commute-guide** — 5,203 to 18,163 chars. 11-destination drive time matrix (Disney 35-45 min off-peak/45-60 peak, Orlando CBD 35-50/55-80, Tampa 55-70/70-95, MCO 45-60, Kissimmee 20-35, Lakeland 25-35, St. Pete 70-85), I-4/US-27 interchange analysis, I-4 express lanes (SunPass required, $5-$15 round trip peak), US-27 vs I-4 route strategy, Xfinity/Spectrum cable internet coverage, Starlink rural, Florida Turnpike toll guidance, 6-market commute comparison table, FAQ (5 Q&As).
+
+7. **is-davenport-fl-good-place-to-live** — 5,203 to 20,802 chars. STR resort vs primary-residence community split (critical distinction), 4 genuine pros (affordability $260K-$420K vs Kissimmee/Celebration, Disney 35-50 min, US-27 retail/dining, new construction available) and 4 real drawbacks (I-4 peak traffic adds 20-40 min, CDD fees $800-$3,000+/yr, resort community atmosphere poor for primary residence, school zone complexity), 8-buyer-profile fit table (remote workers/Disney employees/STR investors: Excellent; primary in resort community/families: Mixed or Risky), Davenport vs 5 alternatives table, FAQ (5 Q&As).
+
+8. **davenport-fl-real-estate-guide** — 5,203 to 20,583 chars. 5-segment 2026 market snapshot table (primary SFH no HOA $260K-$380K 30-60 DOM balanced; primary SFH with HOA $290K-$420K; townhome/condo $220K-$340K buyer-favorable; STR mid $350K-$550K 45-90 DOM; STR luxury $550K-$1.2M+ 60-120 DOM buyer-favorable), CDD fee explanation and discovery via polkpa.org, STR verification requirements (HOA docs, Polk County zoning, BTR receipt), full cost table for $475K resort home vs $800K luxury, STR income underwriting guidance (require 2-3 yrs actual Airbnb/Vrbo statements), buyer and seller strategy, 5-market comparison, FAQ (5 Q&As).
+
+9. **davenport-fl-cost-of-living** — 5,203 to 17,849 chars. Monthly cost table at 2 price points ($320K standard non-HOA: mortgage $1,704 + taxes $480 + insurance $175-$275 + utilities = $2,589-$2,949/mo total; $475K resort HOA+CDD: $4,500-$5,725/mo before rental income), grocery (Publix/Walmart/Aldi local, Costco Kissimmee 20-30 min), Duke Energy/SECO electric ($120-$200/mo primary, higher for STR guests), HOA range ($50-$600+/mo by community type), CDD discovery via polkpa.org, toll road cost guidance, 6-market cost comparison table, FAQ (5 Q&As).
+
+10. **davenport-fl-property-taxes** — 5,203 to 21,027 chars. Polk County millage breakdown table (county ~8.0-9.0 mills, school board ~7.0-7.5, SWFWMD ~0.25-0.40, library ~0.25-0.40, City of Davenport ~2.0-4.0 if incorporated, other ~0.5-1.5; total uninc. ~16-18 mills, city ~18-22 mills), assessed value reset on sale warning (SOH cap resets at purchase), CDD vs HOA 7-factor comparison table, CDD ranges $800-$3,000+/yr, homestead exemption ($50K, March 1 deadline, polkpa.org), Save Our Homes 3% cap explanation, tax estimate table at 5 price points ($260K-$650K homesteaded and non-homesteaded), senior/veteran exemptions ((863) 534-4777), 5-city comparison table including Inverness (Citrus County ~14-16 mills) and Spring Hill (Hernando ~11-14 mills), FAQ (5 Q&As).
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+---
+
+## 2026-09-07 (Batch 52 — Inverness FL x10: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: AEO quick answer, 4+ question H2s, 6+ H3s, price/comparison tables, 14-link internal grid, 5-Q&A FAQ with JSON-LD FAQPage schema, BreadcrumbList schema, GEO citations, EEAT signals, author bio. Content dated 2026-09-06. Build green.)
+
+All 10 posts were boilerplate ~5,211-char stubs. Inverness-specific content throughout: ZIP 34450/34452/34453, county seat of Citrus County; Lake Henderson (3,000+ acres, in-city lakefront); Tsala Apopka chain (large shallow lake system with canal access); Withlacoochee State Trail (46-mile paved rail-trail starting in downtown Inverness); HCA Florida Citrus Hospital (502 W. Highland Blvd.); Citrus County School District (C grade, FLDOE); Citrus High School (600 W. Highland Blvd.); city millage ~14.0-16.5 mills total (city residents); unincorporated Citrus County ~11.5-14.5 mills; Tampa commute 90-110 min; Ocala 35-50 min; homestead exemption deadline March 1 (citruspa.org); Zone AE flood insurance $1,200-$3,500+/yr; Fort Cooper State Park (2 mi south); Crown Hotel downtown.
+
+1. **inverness-fl-homes-for-sale-guide** — 5,211 to 21,521 chars. Property type price table (starter SFH $140K-$195K, standard $195K-$290K, canal Tsala Apopka $280K-$560K, Lake Henderson $350K-$750K+), 6-market comparison table (Inverness vs Crystal River/Floral City/Lecanto/Homosassa/Ocala), flood zone/insurance section (Zone AE vs X), well/septic checklist, 4-step buyer checklist, FAQ (5 Q&As).
+
+2. **inverness-fl-schools-guide** — 5,211 to 18,716 chars. Citrus County School District C grade (fldoe.org), Inverness Primary School, Inverness Middle School, Citrus High School (600 W. Highland Blvd.), College of Central Florida Lecanto Campus dual enrollment, 6-district comparison table (Citrus vs Hernando/Marion/Pasco/Hillsborough/Sarasota), private school options table (Seven Rivers Christian/Crystal River, Ocala options), zone verification guidance ((352) 726-1931 / citrus.k12.fl.us), FAQ (5 Q&As).
+
+3. **inverness-fl-commute-guide** — 5,211 to 18,293 chars. 11-destination drive time matrix (Ocala 35-50 min, Crystal River 25-35 min, Gainesville 65-80 min, Tampa CBD 90-110 min, TPA 85-105 min, St. Pete 100-125 min, Orlando 100-120 min), US-41/I-75 and Suncoast Pkwy route analysis, Spectrum cable / Starlink internet guide, 6-market commute comparison table, FAQ (5 Q&As).
+
+4. **is-inverness-fl-good-place-to-live** — 5,211 to 19,472 chars. 4 genuine pros (affordability $230K-$255K median, Lake Henderson / Withlacoochee Trail, HCA Florida Citrus Hospital in-town, quiet low-crime character) and 4 real drawbacks (Tampa commute 90-110 min impractical, limited retail/dining, C-rated schools, thin job market), 8-buyer-profile fit table (retirees/remote workers/anglers: Excellent, daily Tampa commuters/families prioritizing schools: Poor), 5-city comparison table, FAQ (5 Q&As).
+
+5. **inverness-fl-real-estate-guide** — 5,211 to 19,137 chars. 2026 market snapshot table by segment (inland SFH 60-100 DOM buyer-favorable, Lake Henderson waterfront 30-65 DOM slightly seller-favorable), what sells vs sits analysis, buyer strategy (use DOM as leverage, get CMA from comps not Zillow), seller strategy (price from 90-day comps, not 2022 peak), 5-city comparison table, FAQ (5 Q&As).
+
+6. **inverness-fl-cost-of-living** — 5,211 to 18,419 chars. Monthly ownership cost table at 2 price points ($240K inland Zone X ~$1,548-$1,753/mo total; $430K Lake Henderson Zone AE ~$2,908-$3,338/mo total), grocery reality (Publix + Walmart local; Target/Costco requires Ocala 35-50 min), Duke Energy electric ($110-$280/mo), well/septic vs city utilities, commute cost analysis (Suncoast Pkwy ~$120-$200/mo tolls for Tampa trips), 6-market comparison table, FAQ (5 Q&As).
+
+7. **inverness-fl-property-taxes** — 5,211 to 19,628 chars. Millage breakdown table (county general ~6.0-6.5, school ~4.5-5.0, SWFWMD ~0.25-0.40, library/CF college/fire ~1.0-2.0, city municipal ~2.5-3.0 mills), homestead exemption $50K reduction/March 1 deadline/citruspa.org, Save Our Homes 3% cap buyer-reset warning, portability explanation, tax estimate table at 5 price points ($175K-$600K homesteaded/non-homesteaded city and unincorporated), senior/veteran exemptions, FAQ (5 Q&As).
+
+8. **inverness-fl-new-construction** — 5,211 to 19,095 chars. Why no production new construction (built-out grid, FEMA/FDEP permitting near lake/canal, limited vacant land), custom build cost table ($25K-$65K lot + $8K-$18K plans + $5K-$12K permits + $15K-$28K foundation + $210K-$370K construction + utilities/landscaping = $277K-$536K+ all-in), nearest production builders (Spring Hill/Hernando County $270K-$380K, Ocala/Marion County $245K-$360K), new vs resale comparison table, FAQ (5 Q&As).
+
+9. **inverness-fl-investment-property** — 5,211 to 19,631 chars. Long-term rental rate table (2BR $950-$1,250/mo, 3BR/2BA $1,200-$1,650/mo, canal-front $1,500-$2,200/mo), sample $225K NOI analysis (gross $16,800, expenses $10,024, NOI $6,776, cap rate ~3.0%, cash flow negative at 7.5% investor rate), STR honest assessment (weak demand, no beach/theme park), thin resale liquidity caveat, older inventory deferred maintenance risk, ViVi Property Management link, FAQ (5 Q&As).
+
+10. **inverness-fl-waterfront-homes** — 5,211 to 21,231 chars. 5-type waterfront comparison table (Lake Henderson $350K-$750K+ Zone AE $1,500-$3,500/yr insurance, Tsala Apopka lakefront $300K-$600K, canal-access $280K-$500K, Withlacoochee River $240K-$450K, interior pond $210K-$330K Zone X), Lake Henderson character (3,000+ acres, walkable to downtown, freshwater fishing), Tsala Apopka canal depth/navigability verification guide, 7-step buyer due diligence checklist (FEMA lookup, elevation cert, insurance quote, marine inspection, dock permits, canal navigation test, flood contingency), seawall replacement cost ($150-$400+/linear ft), 5-market comparison table vs Homosassa/Crystal River/Hernando Beach/Apollo Beach, FAQ (5 Q&As).
+
+**Build:** Passed (Next.js build green, 532 static pages pre-rendered)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `8ed1877` — pushed to `origin/main`
+
+---
+
+## 2026-09-06 (Batch 51 — Fort Meade FL x5, Homosassa FL x4, Davenport FL x1: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: AEO quick answer, 4+ question H2s, 6+ H3s, comparison tables, 14 internal links, 5-Q&A FAQ with JSON-LD FAQPage schema, BreadcrumbList schema)
+
+All 10 posts were boilerplate ~5,183-5,203-char stubs. Each received a full expansion with: AEO direct-answer intro, price tables, comparison tables, 5-FAQ with JSON-LD FAQPage schema, 14-link internal grid, GEO citations (FEMA, FWC, Polk County, FDOE sources), EEAT signals, author bio. Content dated 2026-09-05. Build verified green.
+
+**Fort Meade FL (5 posts) — ZIP 33841, Polk County, ~5,500 population, Peace River corridor:**
+
+1. **fort-meade-fl-homes-for-sale-guide** — 5,183 to 20,140 chars. Property type price table (starter SFH $140K-$200K, mid-range $200K-$280K, acreage $220K-$350K, Peace River access $300K-$500K+), 6-city comparison table (Fort Meade vs Mulberry/Bartow/Avon Park/Wauchula/Lakeland), 4-neighborhood breakdown (historic downtown, north subdivisions, Peace River corridor, rural acreage), 5-step buyer checklist (flood zone check, well/septic inspection, survey, homestead), FAQ (5 Q&As).
+
+2. **fort-meade-fl-schools-guide** — 5,183 to 17,867 chars. Polk County School District B grade (fldoe.org), Fort Meade Elementary (K-5) and Fort Meade Middle-Senior High (grades 6-12 combined campus at 401 NW 7th Ave), Heritage Elementary, 5-district comparison table vs Hardee/Highlands/Hillsborough/Sarasota, 5-private school options table (Bartow Christian, Calvary Christian, Lakeland Christian, Santa Fe Catholic, Polk State dual enrollment), FAQ (5 Q&As).
+
+3. **fort-meade-fl-commute-guide** — 5,183 to 19,238 chars. 11-destination drive time matrix (Bartow 18-22 min, Mulberry 14-18 min, Lakeland 38-48 min, Avon Park 28-38 min, Sebring 48-58 min, Winter Haven 38-50 min, Tampa CBD 90-105 min, TPA 85-100 min, Orlando 95-110 min, MCO 100-115 min, Sarasota 65-80 min), US-27/I-4, US-98/US-17, SR-60 route analysis, internet/remote work section (Spectrum cable on corridors, Starlink for rural acreage), 6-market commute vs. affordability comparison table, FAQ (5 Q&As).
+
+4. **is-fort-meade-fl-good-place-to-live** — 5,183 to 17,500 chars. 4 genuine pros (affordability med ~$195K, rural character/acreage, Peace River access/Canoe Outpost, Old Florida historic heartland) and 4 real drawbacks (Tampa commute 90-110+ min impractical, no major grocery in town/Publix in Bartow 20 min, school campus grades inconsistent, rural acreage internet limited), 8-buyer-profile fit table (retirees/remote workers/anglers: Excellent, daily Tampa commuters/young professionals/urban seekers: Poor), FAQ (5 Q&As).
+
+5. **fort-meade-fl-investment-property** — 5,183 to 18,844 chars. Long-term rental rate table (2BR/1BA $1,000-$1,300/mo to 4BR+ $1,500-$2,100/mo), 2-scenario NOI analysis ($180K at $1,300/mo and $230K at $1,600/mo, including vacancy 10%, property tax non-homestead ~1.8%, insurance $2,400-$2,600, maintenance 1%, management 10%), STR honest assessment (poor market, no Disney/beach draw, Streamsong 35 min south minimal), Peace River Zone AE flood insurance $1,500-$4,000+/yr warning, thin resale market caveat, ViVi Property Management link, FAQ (5 Q&As).
+
+**Homosassa FL (4 posts) — ZIP 34446/34448, Citrus County (unincorporated), Homosassa River spring-fed 72F:**
+
+6. **homosassa-fl-flood-zones** — 5,197 to 21,718 chars. FEMA Zone AE/VE/X/shaded-X breakdown table, flood insurance cost table by zone (canal-front Zone AE $2,000-$4,000/yr, river-front AE $2,500-$5,500/yr, Zone VE $8,000-$20,000+/yr, Zone X optional $400-$900/yr), NFIP vs. private flood insurance explanation, elevation certificate guidance ($200-$600 surveyor cost), msc.fema.gov lookup instructions, Citrus County CRS participation note, storm surge and evacuation zone section (Zone A/B for river/canal-front), Zone AE due diligence checklist (7 items: elevation cert, insurance quote, seawall inspection, dock permits, flood history, evacuation zone, wind mitigation), FAQ (5 Q&As).
+
+7. **best-neighborhoods-homosassa-fl** — 5,197 to 20,969 chars. 6-area comparison table (Homosassa River corridor $500K-$1.2M+ Zone AE/Excellent Gulf boating, canal system $350K-$800K Zone AE, Halls River $320K-$650K, Homosassa Springs Village $220K-$400K/better services, US-19 corridor $180K-$320K/no water, inland rural $160K-$350K/Zone X), river corridor spring-fed 72F detail, no-fixed-bridge Gulf access, seawall/bulkhead inspection guidance ($150-$400+/linear ft replacement), dock permit verification (Citrus County + FDEP), FEMA Zone AE flood insurance reality, Halls River navigability caveat, Homosassa Springs Village vs. Homosassa proper distinction, area vs. area comparison table (water access/services/flood risk/appreciation), FAQ (5 Q&As).
+
+8. **moving-to-homosassa-fl** — 5,197 to 20,068 chars. Daily life reality (no major grocery in Homosassa, Publix/Winn-Dixie Crystal River 10 min north), healthcare (Seven Rivers Regional Medical Center Crystal River 15-25 min, HCA Florida Citrus Hospital Inverness 25-35 min), utilities (Duke Energy electric, well/septic most properties, Spectrum cable on US-19/US-98 corridors, Starlink for rural/canal-front), manatee November-March FWC sanctuary designation, no-fixed-bridge Gulf access 6-7 miles, Chassahowitzka NWR 30,000+ acres, 8-buyer-profile fit table (retirees/anglers/snowbirds/wildlife enthusiasts: Excellent, daily Tampa commuters/urban professionals: Poor), 5-city comparison table (Crystal River/Hernando Beach/Spring Hill/Inverness/Tarpon Springs), FAQ (5 Q&As).
+
+9. **things-to-do-homosassa-fl** — 5,197 to 19,594 chars. Manatee viewing November-March (FWC sanctuary designation, kayak/paddleboard approach, spring boil constant 72F), kayaking and snorkeling the Homosassa River (20+ ft visibility), Gulf saltwater fishing (snook/redfish/sea trout/tarpon/cobia via no-fixed-bridge access), Gulf scalloping July-September (Citrus County season, myfwc.com verification), Homosassa Springs Wildlife State Park (FWC-operated, underwater observatory, panthers/bears/bobcats/flamingos), Chassahowitzka NWR (30,000+ acres, CR-480/Miss Maggie Drive paddle launch), Yulee Sugar Mill Ruins State Historic Site (free, 40-ton cast iron mill, Senator David Yulee history), waterfront dining on the Homosassa River, Crystal River comparison table (manatee swimming/dining/retail), FAQ (5 Q&As).
+
+**Davenport FL (1 post) — ZIP 33836/33837/33896/33897, Polk County, I-4/US-27 corridor:**
+
+10. **davenport-fl-homes-for-sale-guide** — 5,203 to 20,717 chars. STR resort community vs primary-residence community split (critical distinction), 5-property-type price table (townhome primary $260K-$360K to luxury STR $700K-$1.2M+), 6-city comparison table (Davenport vs Champions Gate/Kissimmee/Celebration/Haines City/Winter Haven), CDD fee warning ($800-$3,000+/yr separate from HOA), STR zoning verification requirement (must verify in writing with HOA before purchase), full ownership cost breakdown (HOA $150-$400/mo + CDD $80-$250/mo + property tax + insurance + pool maintenance), commute context (I-4 congestion reality), Disney World proximity (35-50 min depending on address), buyer fit analysis (remote workers/Orlando commuters/STR investors vs established-neighborhood seekers), ViVi Property Management link, FAQ (5 Q&As).
+
+**Build:** Passed (Next.js build green, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `f8225cd` — pushed to `origin/main`
+
+---
+
+## 2026-09-05 (Batch 50 — Homosassa FL x10: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: AEO quick answer, 4+ question H2s, 6+ H3s, comparison tables, 14+ internal links, 5-Q&A FAQ with JSON-LD FAQPage schema, BreadcrumbList schema)
+
+All 10 posts were boilerplate ~5,197-char stubs. Each received a full expansion with: AEO direct-answer intro, price tables, commute matrix, comparison tables, 5-FAQ with JSON-LD FAQPage schema, 14-link internal grid, GEO citations, EEAT signals, author bio.
+
+Homosassa-specific content throughout: ZIP 34446/34448, unincorporated Citrus County; Homosassa River spring-fed (72F constant); no-fixed-bridge Gulf access ~6-7 miles; West Indian manatee aggregation Nov-March; Chassahowitzka NWR (30,000+ acres south) and Crystal River NWR (north); Citrus County millage ~11.5-14.5 mills total; homestead exemption citruspa.org; Tampa commute 85-110 min via US-19 to Suncoast Pkwy; Homosassa Elementary / Crystal River Middle / Crystal River High or Lecanto High school zone chain; Zone AE (river/canal) flood insurance $2,000-$6,000+/yr; Zone VE (Gulf-front) $8,000-$20,000+/yr; STR gross revenue $40K-$90K+/yr for canal-front with dock; ViVi Property Management linked from investment post. Content dated 2026-09-04. Build verified green.
+
+1. **homosassa-fl-homes-for-sale-guide** — 5,197 to 27,418 chars. Property type price table (older inland $160K-$235K, canal-front $350K-$800K+, river-front $500K-$1.2M+), Homosassa River corridor/Halls River/inland corridor/Homosassa Springs Village area breakdown, flood zone section (Zone AE vs X), well/septic checklist, seawall and dock due diligence, 4-step buying process, 6-market comparison table vs Crystal River/Lecanto/Inverness/Hernando Beach/Spring Hill, FAQ (5 Q&As).
+
+2. **homosassa-fl-schools-guide** — 5,197 to 20,656 chars. Citrus County School District C grade overview, Homosassa Elementary K-5, Crystal River Middle, Crystal River High / Lecanto High (address-dependent), zone verification guidance (352-726-1931 / citrus.k12.fl.us), College of Central Florida Lecanto Campus dual enrollment, 6-district comparison table vs Hernando/Pasco/Hillsborough/Sarasota/Pinellas, FAQ (5 Q&As).
+
+3. **homosassa-fl-commute-guide** — 5,197 to 26,338 chars. 11-destination drive time matrix (Crystal River 8-12 min, Inverness 18-25 min, Tampa CBD 85-105 min, TPA 80-100 min, Gainesville 70-85 min, St. Pete 95-120 min), US-19/US-98 coastal route analysis, Suncoast Parkway fastest-route guidance (SunPass recommended, $6-$10/day round-trip), remote work internet options (Xfinity cable on US-19 corridor), 6-market comparison table, FAQ (5 Q&As).
+
+4. **is-homosassa-fl-good-place-to-live** — 5,197 to 21,866 chars. 4 genuine pros (Gulf access via Homosassa River no fixed bridges, manatee viewing Nov-March, affordability vs coastal alternatives, low density/Old Florida character) and 4 real drawbacks (Tampa commute 85-110+ min impractical for daily commuters, limited local amenities/grocery drive to Crystal River 10 min, Citrus County C-rated schools, flood insurance costs on waterfront), 8-buyer-profile fit table (retirees/anglers/remote workers: Excellent, daily Tampa commuters: Poor), FAQ (5 Q&As).
+
+5. **homosassa-fl-real-estate-guide** — 5,197 to 25,245 chars. 2026 market snapshot table (inland $160K-$340K buyer-favorable 60-100 DOM; waterfront $350K-$1.2M+ more balanced 45-90 DOM), what sells vs sits analysis, buyer strategy table (5 steps: pre-approval, flood insurance quote pre-offer, well/septic inspection, marine contractor for seawall/dock, permit verification), seller strategy (price off 2026 comps not 2022 peaks; update elevation certificate), 6-market comparison table, FAQ (5 Q&As).
+
+6. **homosassa-fl-cost-of-living** — 5,197 to 23,061 chars. Monthly ownership cost table at 2 price points ($250K inland SFH ~$1,920-$2,350/mo total; $500K canal-front ~$3,715-$4,680/mo total including Zone AE flood insurance), grocery access reality (10 min to Crystal River Publix/Winn-Dixie; no major grocery in Homosassa proper), Duke Energy FL electric ($100-$220/mo moderate season), well/septic maintenance annualized, commute cost analysis (Tampa commuters $350-$600+/mo fuel + $120-$180/mo Suncoast tolls), 6-market comparison table, Florida no-income-tax advantage, FAQ (5 Q&As).
+
+7. **homosassa-fl-property-taxes** — 5,197 to 27,339 chars. Citrus County millage breakdown table (general fund ~6.0-6.5, school ~4.5-5.0, SWFWMD ~0.25-0.35, library ~0.25-0.50, CF college ~0.50-0.80, fire district variable, total ~11.5-14.5 mills), homestead exemption ($50K reduction, March 1 deadline, citruspa.org), Save Our Homes 3% cap buyer-reset warning, portability explanation, property tax estimate table at 6 price points ($200K-$800K homesteaded and non-homesteaded), additional exemptions (senior/veteran/widow), 6-county comparison table, FAQ (5 Q&As).
+
+8. **homosassa-fl-new-construction** — 5,197 to 25,152 chars. Why no production new construction (built-out canal system, conservation land surrounding river, FEMA/FDEP permitting complexity), custom waterfront build cost table ($100K-$400K land + $15K-$40K plans + $30K-$80K elevated foundation + $370K-$500K construction + $25K-$60K utilities + $30K-$100K+ dock = $570K-$1.18M+ all-in), nearest production builders (Spring Hill $240K-$400K Adams/Maronda/DR Horton, Inverness $270K-$420K custom, Crystal River limited), new vs resale comparison table, FAQ (5 Q&As).
+
+9. **homosassa-fl-investment-property** — 5,197 to 29,219 chars. STR income estimate table by type (2BR inland $18K-$30K, 3BR canal-front with dock $45K-$75K gross, 4BR+ river-front $70K-$120K+), long-term rental table (3BR/2BA inland $1,350-$1,800/mo, canal-front $1,800-$2,600/mo), sample $480K canal-front STR analysis (gross $58K, expenses $36K, NOI $21.7K, debt service $28.7K, cash flow -$7,060/yr at 7%/25% down — all-cash cap rate ~4.5%), STR vs long-term comparison, risk list (insurance, regulation, hurricane, deferred maintenance), Citrus County unincorporated no formal STR registration as of mid-2026, ViVi Property Management link, FAQ (5 Q&As).
+
+10. **homosassa-fl-waterfront-homes** — 5,197 to 30,879 chars. 6-type waterfront comparison table (canal-front Zone AE $350K-$800K $2,000-$5,500/yr insurance, Homosassa River front $500K-$1.2M+ $2,500-$6,500/yr, Halls River/tributary $320K-$650K, Gulf-front Zone VE very limited $1M+ $8,000-$20,000+/yr, interior pond X $220K-$380K, water-view $200K-$350K), spring-fed 72F river manatee Nov-March unique selling point, no-fixed-bridge Gulf access explanation (~6-7 miles), Chassahowitzka and Crystal River NWR protected character, seawall inspection ($150-$400+/linear ft replacement), dock permit verification (Citrus County + FDEP + Army Corps), elevation certificate guidance, canal depth/navigability check, 6-market comparison table vs Crystal River/Hernando Beach/Apollo Beach/Tarpon Springs/Englewood, 5-step buyer checklist, FAQ (5 Q&As).
+
+**Build:** Passed (Next.js build green, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `fd1a777` — pushed to `origin/main`
+
+---
+
+## 2026-09-04 (Batch 49 — Anna Maria FL x10: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: AEO quick answer, 5+ H2s, 6+ H3s, comparison tables, 15 internal links, 5-Q&A FAQ with JSON-LD FAQPage schema, BreadcrumbList schema)
+
+All 10 posts were boilerplate 5,392-char stubs. Each received a full expansion with: AEO direct-answer intro, price tables, commute matrix, comparison tables, 5-FAQ with JSON-LD FAQPage schema, 15-link internal grid, GEO citations, EEAT signals, author bio.
+
+Anna Maria Island-specific content throughout: ZIP 34216, Manatee County, 7-mile Gulf barrier island, 35-foot height limit, no high-rises, FEMA Zone AE/VE flood data, Manatee County + City of Anna Maria millage (~14-16 mills total), Anna Maria Elementary / Martha B. King Middle / Manatee High school zone chain, bridge commute times (Manatee Avenue SR-64 primary / Cortez Road SR-684 southern), Gulf-front vs bay-front vs canal-front pricing and insurance reality. Content dated 2026-09-03. Build verified green.
+
+1. **anna-maria-fl-homes-for-sale-guide** — 5,392 to 22,158 chars. Property type price table (non-waterfront SFH $700K-$1.5M, bay/canal front $900K-$3M+, Gulf-front $1.5M-$5M+, condos $600K-$1.5M), 6-market comparison table (Anna Maria vs Holmes Beach/Bradenton Beach/Longboat Key/Sarasota/Bradenton mainland), 4-step buyer process (pre-approval, flood zone research, inspection, STR rule verification), FAQ (5 Q&As).
+
+2. **anna-maria-fl-schools-guide** — 5,392 to 21,518 chars. Manatee County School District profile (B grade), Anna Maria Elementary K-5, Martha B. King Middle, Manatee High School, Saint Stephen's Episcopal in Bradenton private option, district comparison table vs Sarasota/Hillsborough/Pinellas, school zone verification guidance, island bridge commute reality for middle/high students, FAQ (5 Q&As).
+
+3. **anna-maria-fl-commute-guide** — 5,392 to 25,723 chars. 10-destination drive time matrix (Bradenton 15-25 min, Sarasota 35-50 min, Tampa CBD 65-80 min, TPA 60-75 min, St. Pete 55-70 min, Clearwater 60-75 min, Lakewood Ranch 25-40 min, Fort Myers 90-110 min, SRQ Airport 30-45 min, Naples 120-145 min), Manatee Avenue Bridge vs Cortez Road Bridge analysis, bridge peak season congestion guide, island internet (Xfinity cable) and remote work context, 6-island comparison table, FAQ (5 Q&As).
+
+4. **is-anna-maria-fl-good-place-to-live** — 5,392 to 23,928 chars. 3 genuine pros (Gulf beach access without high-rises, small community/low crime, boating access, no state income tax) and 5 real drawbacks (high cost of ownership, bridge traffic, Tampa distance, limited on-island amenities, hurricane/storm surge risk), 8-buyer-profile fit table (remote workers/retirees: Excellent, daily Tampa commuters/affordability seekers: Poor), FAQ (5 Q&As).
+
+5. **anna-maria-fl-real-estate-guide** — 5,392 to 25,207 chars. 2026 market snapshot table (30-70 active listings island-wide, 45-90+ DOM, 60-70%+ cash buyers, 93-97% sale-to-list), what sells vs sits analysis, buyer strategy (financed vs cash, vacation investors), seller strategy (correct pricing not 2022 peaks, disclosure guidance), 6-market comparison table, FAQ (5 Q&As).
+
+6. **anna-maria-fl-cost-of-living** — 5,392 to 26,878 chars. 3-scenario monthly cost tables ($800K non-waterfront/$1.3M bay-front/$2.5M Gulf-front: P+I, taxes, wind insurance, flood insurance, HOA, electric, water), 5-zone flood insurance cost table (VE $8K-$20K+, AE $3K-$8K, AE above BFE $1.5K-$4K, Zone X shaded $800-$2.5K, Zone X unshaded $500-$1.5K), everyday costs, 6-market comparison table, FAQ (5 Q&As).
+
+7. **anna-maria-fl-property-taxes** — 5,392 to 27,514 chars. Manatee County + City of Anna Maria millage breakdown table (6 components, 13.5-16.0 mills total), 5-scenario tax estimate table ($750K-$2.5M with/without homestead exemption), homestead exemption mechanics ($50K reduction, March 1 deadline, mcpafl.org), Save Our Homes 3% cap buyer reset warning, portability explanation, 6-market comparison table, FAQ (5 Q&As).
+
+8. **anna-maria-fl-new-construction** — 5,392 to 25,471 chars. Why no production new construction (fully built out, 35-foot height limit, FEMA elevation requirements), teardown-rebuild process, 8-item cost table ($600K-$1.5M+ land, $15K-$40K demo, $40K-$120K foundation, $720K-$1.8M+ construction, $30K-$100K architect, total $1.57M-$4M+), mainland alternatives (Bradenton $300K-$500K, Lakewood Ranch $400K-$1.5M, Parrish $330K-$600K), FAQ (5 Q&As).
+
+9. **anna-maria-fl-investment-property** — 5,392 to 28,782 chars. STR income estimate table by property type (5 types: non-waterfront cottage 2BR $55K-$80K gross to Gulf-front 4BR $150K-$250K+ gross), 10-line sample cash flow at $950K purchase (negative -$38,750/yr at 7% rate, ~1.4% net cap), STR vs long-term comparison, City of Anna Maria STR regulation warning, ViVi Property Management link, 5-market comparison table, FAQ (5 Q&As).
+
+10. **anna-maria-fl-waterfront-homes** — 5,392 to 27,556 chars. 5-type waterfront comparison table (Gulf-front Zone VE $1.5M-$5M+/$15K-$30K+/yr insurance, bay-front Zone AE $1.1M-$3M+, canal-front Zone AE $900K-$2M+, Gulf-view non-front, water-adjacent), seawall and dock due diligence checklist (4 steps), 4-step buying process, 6-market waterfront comparison table vs Holmes Beach/Bradenton Beach/Longboat Key/Siesta Key/Apollo Beach, FAQ (5 Q&As).
+
+**Build:** Passed (Next.js build green, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `6fe4330` — pushed to `origin/main`
+
+---
+
 ## 2026-09-01 (Batch 48 — Tampa Architecture x3, Fort Meade FL x5, Nokomis FL x2: Major Expansions)
 
 **Pages improved: 10**
@@ -1597,3 +1778,35 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js 14.2.35, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** `d4d17f1` — pushed to `origin/main`
+
+---
+
+## 2026-09-03 (Batch 48 — Crystal River FL x10)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: 5-Q&A FAQ with JSON-LD FAQPage schema, BreadcrumbList, Article schema, Quick Answer box, comparison tables, 18-link internal grid, Barrett Henry bio)
+
+1. **crystal-river-fl-homes-for-sale-guide** — Major expansion 5,269 to 17,764 chars. Title updated to "Crystal River Homes for Sale: Complete Buyer Guide". Added: Quick Answer box; Kings Bay/spring system overview; median price context ($285K-$302K, Redfin/Zillow mid-2026); market competitiveness score (11/100, slow market, ~130 DOM); waterfront vs. inland price table; step-by-step buyer process (pre-approval, agent, showings, offer, inspection, close); flood zone warning (Zone AE nearly everywhere in city); homestead exemption and Save Our Homes cap; 5-Q&A FAQ.
+
+2. **crystal-river-fl-flood-zones** — Major expansion 5,269 to 17,576 chars. Title updated to "Crystal River FL Flood Zones: Buyer Guide". Added: FEMA flood zone definitions table (Zone AE, Zone X, Zone AH); why Crystal River has high flood risk (Kings Bay, 30+ springs, Gulf connection); NFIP vs. private flood insurance; how to look up a property's flood zone (FEMA MSC portal step-by-step); elevation certificate explainer; flood insurance cost estimates by property type; CRS discount (Citrus County participation); 5-Q&A FAQ.
+
+3. **crystal-river-fl-new-construction** — Major expansion 5,269 to 17,788 chars. Title updated to "New Construction Homes Near Crystal River FL". Added: Why there is limited new construction in Crystal River proper (wetlands, FEMA zones, platted lots); 38+ new home communities in broader Citrus County area (NewHomeSource); price range $223,900-$3.4M+; builder profile table (D.R. Horton/Express, LGI, Highland Homes, Adams Homes); Citrus Springs vs. Beverly Hills vs. Lecanto new construction comparison; CDD fee warning; new construction vs. resale table; buyer's agent guidance; 5-Q&A FAQ.
+
+4. **crystal-river-fl-waterfront-homes** — Major expansion 5,269 to 18,535 chars. Title updated to "Waterfront Homes in Crystal River FL: Buyer Guide". Added: Kings Bay waterfront tiers (direct bay frontage $550K-$1.5M+, canal-front $350K-$750K, spring-fed lake); dock and boatlift considerations; flood insurance cost table by waterfront type; seawall inspection checklist; Zone AE flood requirements; manatee protection zone boating rules; USFWS Crystal River National Wildlife Refuge regulations; waterfront vs. inland comparison table; 5-Q&A FAQ.
+
+5. **best-neighborhoods-crystal-river-fl** — Major expansion 5,269 to 17,703 chars. Title updated to "Best Neighborhoods in Crystal River FL". Added: Crystal Manor (canal-front, dock access, $350K-$700K); Kings Bay Estates (direct Kings Bay, $500K-$1.5M+); Terra Vista (gated, newer construction); downtown/US-19 corridor (commercial proximity); Citrus Springs (unincorporated, inland, more affordable, $220K-$380K); comparison table (5 areas, price range, flood risk, HOA, water access); school zone table; 5-Q&A FAQ.
+
+6. **moving-to-crystal-river-fl** — Major expansion 5,269 to 19,766 chars. Title updated to "Moving to Crystal River FL: What to Know Before You Buy". Added: Housing price table by property type; commute matrix (7 destinations including Tampa 90-110 min); utilities breakdown (Duke Energy, Withlacoochee River Electric, Spectrum/Frontier, city water/sewer vs. well-septic); healthcare (Citrus Memorial Hospital/HCA Inverness 12-15 mi, Tampa Bay for specialty); grocery/shopping reality (Publix, Walmart local; Costco/Target requires 35-50 mi drive); internet options (Spectrum, Frontier, Starlink); who Crystal River suits; 5-Q&A FAQ.
+
+7. **things-to-do-crystal-river-fl** — Major expansion 5,269 to 19,114 chars. Title updated to "Things to Do in Crystal River FL: Complete Outdoor Guide". Added: Manatee swimming (Crystal River NWR, Three Sisters Springs, November-March window, USFWS regulations, tour operator guidance); Kings Bay kayaking and paddleboarding; scalloping season (FWC July 1 to late September, equipment checklist, best launch points); fishing (freshwater springs, Kings Bay, Gulf via Crystal River); Bird watching and nature photography; Crystal River Archaeological State Park; Homosassa Springs Wildlife State Park nearby; Hunter Springs Park; seasonal events calendar; 5-Q&A FAQ.
+
+8. **crystal-river-fl-property-taxes** — Major expansion 5,269 to 18,484 chars. Title updated to "Crystal River FL Property Taxes: 2026 Rate Guide". Added: Florida millage system explainer; Citrus County 2025-26 base millage (8.87 mills) plus school, fire, SWFWMD; City of Crystal River additional levy; example tax calculation ($302K assessed, $210K taxable with homestead, ~$3,150/yr at 15 mills); Florida homestead exemption ($25K first + $25K second); Save Our Homes 3% cap; portability; how to look up property taxes (ccpao.com); comparison table vs. Hillsborough/Sarasota/Pinellas counties; 5-Q&A FAQ.
+
+9. **crystal-river-fl-cost-of-living** — Major expansion 5,269 to 21,720 chars. Title updated to "Cost of Living in Crystal River FL". Added: Florida market comparison table (Crystal River $290K-$302K vs. Inverness/Spring Hill/Tampa/Sarasota/Naples); true monthly cost table for $290K inland vs. $500K canal-front (mortgage, taxes, homeowners insurance, flood insurance, HOA); insurance cost detail (homeowners $3K-$8K/yr, flood Zone AE $2K-$10K+/yr); everyday costs (groceries, dining, healthcare, transportation); why insurance is the most underestimated cost item; who Crystal River cost structure suits; 5-Q&A FAQ.
+
+10. **crystal-river-fl-investment-property** — Major expansion 5,269 to 21,496 chars. Title updated to "Investing in Crystal River FL Real Estate". Added: Rental market overview (manatee season Nov-Mar, scallop season Jul-Sep, snowbird demand, limited long-term rental market); investment property type table (canal-front vacation rental $400K-$750K, Kings Bay waterfront $550K-$1.5M+, inland SFR $220K-$350K, condo $150K-$350K with revenue estimates); operating cost reality table ($25K-$42K/yr on $500K waterfront before mortgage); short-term rental regulations (Florida DBPR license, Citrus County/City local requirements, SB 714); property management fees (20-30% STR, 8-10% LTR); ViVi Property Management reference; 5-Q&A FAQ.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `41e066c` — pushed to `origin/main`
