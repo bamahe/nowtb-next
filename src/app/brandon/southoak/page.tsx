@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   },
 };
 
-// --- ISR: revalidate every 5 minutes (matches main catch-all) ---
-export const revalidate = 300;
+// --- ISR: revalidate every hour (matches main catch-all) ---
+export const revalidate = 3600; // 1 hour, matches the hourly refresh-listings cron
 
 export default function SouthoakPage() {
   // Build nearby neighborhoods list from Brandon siblings (excluding Southoak itself)

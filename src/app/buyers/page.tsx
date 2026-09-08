@@ -492,7 +492,7 @@ export default function BuyersPage() {
           </h2>
           <div className="section-divider" />
           <p className="font-body text-white/70 font-light text-base md:text-lg max-w-2xl mx-auto mb-10">
-            Browse active listings across Tampa Bay — updated every 5 minutes from
+            Browse active listings across Tampa Bay — updated hourly from
             Stellar MLS. See something you like? Call me directly at{" "}
             <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a>.
           </p>

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
-export const revalidate = 300;
+export const revalidate = 3600; // 1 hour, matches the hourly refresh-listings cron
 
 export default async function SingleStoryPage() {
   let listings: Listing[] = [];

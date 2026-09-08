@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const revalidate = 300;
+export const revalidate = 3600; // 1 hour, matches the hourly refresh-listings cron
 
 export default async function PoolHomesPage() {
   let listings: Listing[] = [];

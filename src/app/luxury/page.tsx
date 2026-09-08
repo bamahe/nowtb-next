@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   },
 };
 
-// Revalidate luxury listings every 5 minutes
-export const revalidate = 300;
+// Revalidate luxury listings every hour
+export const revalidate = 3600; // 1 hour, matches the hourly refresh-listings cron
 
 // --- Top luxury areas with descriptions and internal links ---
 const luxuryAreas = [
@@ -296,7 +296,7 @@ export default async function LuxuryPage() {
       <ListingGrid
         listings={listings}
         title="Luxury Homes for Sale"
-        subtitle="Active listings priced at $750,000 and above across the Tampa Bay area. Updated every 5 minutes from Stellar MLS."
+        subtitle="Active listings priced at $750,000 and above across the Tampa Bay area. Updated hourly from Stellar MLS."
       />
 
       {/* === Luxury Property Types — white background === */}

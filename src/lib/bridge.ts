@@ -53,7 +53,7 @@ function markRateLimited(): void {
 /**
  * Low-level fetch wrapper for Bridge API.
  * Adds Bearer auth, merges query params, and returns typed response.
- * Uses Next.js ISR caching (revalidate every 300 seconds / 5 minutes).
+ * Uses Next.js ISR caching (revalidate every 1800 seconds / 30 minutes).
  * If Bridge returns 429 (rate limited), marks cooldown and throws.
  */
 async function bridgeFetch<T>(
@@ -61,7 +61,7 @@ async function bridgeFetch<T>(
   params?: Record<string, string>
 ): Promise<BridgeResponse<T>> {
   // If in cooldown from a recent 429, log but still try — the ISR cache
-  // means we only call once per 5 min, so we should always attempt the call.
+  // means we only call once per 30 min, so we should always attempt the call.
   // The old approach of throwing here caused cascading failures across all pages.
   if (isRateLimited()) {
     console.warn('[Bridge] In cooldown but attempting call anyway (ISR cached)');

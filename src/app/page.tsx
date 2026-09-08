@@ -18,7 +18,7 @@ import { getPrimaryAgent } from "@/data/agents";
 import { testimonials } from "@/data/testimonials";
 
 // ISR: cache the homepage for 1 hour to avoid burning Bridge API quota on every visit
-export const revalidate = 300;
+export const revalidate = 3600; // 1 hour, matches the hourly refresh-listings cron
 
 // -----------------------------------------------------------------------------
 // Metadata — SEO title, description, and Open Graph tags
