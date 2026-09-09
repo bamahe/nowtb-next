@@ -4,6 +4,42 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-09-09 (Batch 55 — Floral City FL x5, East Lake FL x5: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: AEO quick answer, 4+ question H2s, 6+ H3s, price/comparison tables, 14-link internal grid, 5-Q&A FAQ with JSON-LD FAQPage schema, BreadcrumbList schema, Article schema, GEO citations, EEAT signals, author bio. Content dated 2026-09-08. Build green.)
+
+**Floral City FL (5 remaining stubs):** All expanded from ~5,213-char boilerplate to 18,914-20,617 chars.
+
+1. **floral-city-fl-waterfront-homes** — 5,213 to 20,617 chars. Tsala Apopka chain overview (shallow 2-6 ft freshwater lake network, no Gulf access), 5-type waterfront price table (canal-front $280K-$400K Zone AE, direct lakefront $300K-$550K, updated lakefront $420K-$600K+, pond-view $195K-$320K Zone X, vacant canal lot $55K-$130K), Zone AE flood insurance $1,200-$3,500/yr, elevation certificate guidance ($200-$600), NFIP vs private flood insurance explanation, dock permitting (Citrus County + FDEP + Army Corps), canal depth/navigability verification, well/septic proximity risk, 5-market comparison vs Inverness/Homosassa/Crystal River/Weeki Wachee, buyer fit table (retirees/anglers Excellent; Tampa commuters/saltwater anglers Poor), FAQ (5 Q&As).
+
+2. **floral-city-fl-flood-zones** — 5,213 to 19,447 chars. FEMA zone breakdown (Zone X unshaded/minimal, Zone X shaded/moderate, Zone AE/high, Zone AE below BFE/elevated risk), 5-row zone cost table ($400-$8,000+/yr by zone), msc.fema.gov step-by-step lookup instructions, elevation certificate guidance, Citrus County Property Appraiser reference (citruspa.org), NFIP vs private flood insurance comparison, freshwater vs storm surge flood risk distinction (Floral City inland vs Gulf-coast Homosassa/Crystal River), 4-county comparison table (Floral City vs Inverness/Crystal River/Homosassa/Hernando Beach), FAQ (5 Q&As).
+
+3. **moving-to-floral-city-fl** — 5,213 to 19,727 chars. Daily life reality (Dollar General only in-town, Publix Inverness 8-10 mi, Walmart Crystal River 20+ mi), HCA Florida Citrus Hospital Inverness (14 mi), 8-destination commute matrix (Inverness 12-18 min, Ocala 40-50 min, Tampa CBD 75-90 min off-peak/90-120+ min rush), no public bus service (Citrus County Transit limited to Inverness/Crystal River), Floral City Elementary (8716 E. Orange Ave., PK-5), Citrus High school zone (600 W. Highland Blvd. Inverness), (352) 726-1931 for zone verification, Spectrum or Starlink internet, Duke Energy electric, well/septic reality, 7-profile buyer fit table, property tax example ($230K homestead ~$2,070-$2,645/yr at 11.5-14.5 mills), FAQ (5 Q&As).
+
+4. **things-to-do-floral-city-fl** — 5,213 to 18,914 chars. Withlacoochee State Trail (46 miles, FDEP-managed, trailhead downtown US-41, Floral City to Inverness segment 8 mi), Tsala Apopka bass fishing (largemouth bass, crappie, bluegill, shallow 2-6 ft, flat-bottom boats/kayaks best), Fort Cooper State Park (3100 S. Old Floral City Rd., Inverness, 710 acres, (352) 726-0315, living history event spring), Chassahowitzka NWR (30,000+ acres, 8600 W Miss Maggie Dr. Homosassa Springs, 25-30 min), Floral City Heritage Museum (phosphate/railroad history), Floral City Strawberry Festival (annual, March), 6-destination day trip table (Crystal River 25-35 min, Homosassa Springs 30-40 min, Weeki Wachee 40-50 min, Ichetucknee 75-90 min), FAQ (5 Q&As).
+
+5. **floral-city-fl-market-trends** — 5,213 to 18,937 chars. 2026 buyer-favorable market overview, 5-segment price/DOM table (older block $140K-$195K / 75-120 DOM, updated SFH $195K-$280K / 60-100 DOM, larger home $260K-$380K, waterfront $280K-$550K+, acreage $200K-$600K+ / 90-150 DOM), what sells faster (updated move-in-ready under $250K, clean well/septic) vs what sits (older needing updates, overpriced vs 2022 peak), cash buyer prevalence analysis, 5-market comparison table (Floral City vs Inverness/Crystal River/Lecanto/Dunnellon), buyer strategy (DOM leverage, manual CMA not Zestimate, well/septic first), seller strategy (90-day comps, address deferred maintenance), FAQ (5 Q&As).
+
+**East Lake FL (5 stubs):** All expanded from ~5,215-char boilerplate to 18,088-21,409 chars.
+
+6. **east-lake-fl-schools-guide** — 5,215 to 20,544 chars. Pinellas County School District (B grade overall, FLDOE), Pasco County boundary caveat (northern East Lake some addresses in Pasco), Brooker Creek Elementary (4980 East Lake Rd., Tarpon Springs 34688, A-rated), Cypress Woods Elementary (3111 Keystone Rd., Tarpon Springs 34688), East Lake Middle School Academy of Engineering (STEM focus, A-B rated), East Lake High School (1300 Silver Eagle Dr., Tarpon Springs 34688, A-rated consistent, IB/AP programs), zone verification at pinellas.k12.fl.us or (727) 588-6000, Pasco County at pasco.k12.fl.us or (813) 794-2000, 4-row school table, 5-row private school options table, 5-district comparison (Pinellas B, Pasco B, Hillsborough B, Sarasota A, Manatee B), FAQ (5 Q&As).
+
+7. **east-lake-fl-commute-guide** — 5,215 to 18,088 chars. 11-destination drive matrix (Clearwater 25-35 min, Palm Harbor 15-22 min, Tarpon Springs 12-20 min, Tampa CBD 40-55 min, TPA 40-50 min, St. Pete 50-65 min, Wesley Chapel/Trinity 20-30 min, Bradenton 60-75 min), SR-580/I-275 route analysis, East Lake Rd/CR-611 north-south spine, Keystone Rd east-west connector, no PSTA direct service (nearest park-and-ride Safety Harbor or US-19), Spectrum/Frontier fiber internet (up to 1 Gbps in newer developments), 6-community comparison table (East Lake vs Palm Harbor/Tarpon Springs/Trinity/Safety Harbor/Oldsmar), FAQ (5 Q&As).
+
+8. **east-lake-fl-real-estate-guide** — 5,215 to 18,585 chars. East Lake Woodlands (gated, 2 private 18-hole golf courses North/South, HOA $150-$450/mo, golf membership extra, $500K-$900K+), Lansbrook (250-acre Lansbrook Lake, HOA $200-$350/mo, family-oriented, $450K-$750K+), Tarpon Woods (golf course community, HOA $100-$250/mo, $380K-$700K), Keystone Park Colony and other subdivisions ($380K-$550K), 4-segment price/DOM table, 2026 balanced-to-seller's market conditions, CDD explanation and pcpao.gov/pascopa.com lookup, 5-market comparison (East Lake vs Palm Harbor/Tarpon Springs/Trinity/Safety Harbor), FAQ (5 Q&As).
+
+9. **east-lake-fl-cost-of-living** — 5,215 to 18,513 chars. 3-scenario monthly cost tables ($480K: ~$3,566-$4,011/mo; $620K: ~$4,626-$5,211/mo; $900K: ~$6,640-$7,740/mo — all including P&I, taxes, insurance, HOA, utilities), Pinellas ~18-22 mills tax context, HOA fee table by community (East Lake Woodlands $150-$450/mo, Lansbrook $200-$350/mo, Tarpon Woods $100-$250/mo, villas $300-$550/mo), Duke Energy electric $130-$380/mo, Pinellas County Utilities water/sewer $60-$120/mo, commute fuel cost $60-$140/mo, Publix/Costco/Target 10-15 min, 5-county comparison (East Lake vs Palm Harbor/Trinity/Safety Harbor/Inverness), FAQ (5 Q&As).
+
+10. **east-lake-fl-property-taxes** — 5,215 to 21,409 chars. 7-authority Pinellas County millage breakdown table (county general ~5.0-5.5, school board ~7.0-7.5, SWFWMD ~0.25-0.35, EMS ~0.50-0.75, library ~0.40-0.60, fire district ~2.0-3.5, sheriff/infrastructure ~1.5-2.5 mills, total ~17.5-21.0 mills), Pasco County boundary note (~16-19 mills), homestead exemption mechanics ($50K reduction, March 1 deadline, pcpao.gov/pascopa.com), SOH 3% cap buyer-reset warning, portability explanation, 5-price-point tax estimate table ($420K-$1.2M homestead vs non-homestead), CDD fee breakdown (bond debt service vs O&M, $500-$2,500+/yr range), senior exemption (65+, ~$35K income limit), veteran/disability exemptions, 5-county comparison table (Pinellas 18-22 vs Pasco 16-19 vs Hillsborough 18-22 vs Citrus 11-15 vs Manatee 15-19 mills), FAQ (5 Q&As).
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `6c78a2e` — pushed to `origin/main`
+
+---
+
 ## 2026-09-08 (Batch 54 — Davenport FL x3, Floral City FL x7: Major Expansions)
 
 **Pages improved: 10**
