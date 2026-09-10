@@ -72,6 +72,12 @@ export default function ValuationForm({ initialCity }: ValuationFormProps) {
     setTurnstileToken(token);
   }, []);
 
+  // --- Honeypot ---
+  // A decoy field hidden from real people with CSS. Humans never see it, so it
+  // always stays empty. Bots fill in every input they can find, so anything in
+  // here means the submission is automated. The API discards those silently.
+  const [honeypot, setHoneypot] = useState("");
+
   /** Submit the valuation request to /api/contact */
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -114,6 +120,7 @@ export default function ValuationForm({ initialCity }: ValuationFormProps) {
           source: "free-home-valuation",
           type: "valuation",
           turnstileToken,
+          honeypot,
         }),
       });
 
@@ -598,6 +605,34 @@ export default function ValuationForm({ initialCity }: ValuationFormProps) {
               {/* Turnstile + Submit                                            */}
               {/* ============================================================= */}
               <div>
+                {/* Honeypot — hidden decoy field. Real users never see or fill
+                    this; bots fill everything. aria-hidden + tabIndex keep it
+                    away from screen readers and keyboard navigation, so it
+                    stays invisible to humans using assistive tech too. */}
+                <div
+                  aria-hidden="true"
+                  style={{
+                    position: "absolute",
+                    left: "-9999px",
+                    width: "1px",
+                    height: "1px",
+                    overflow: "hidden",
+                  }}
+                >
+                  <label htmlFor="company-website">
+                    Company website (leave this field empty)
+                  </label>
+                  <input
+                    id="company-website"
+                    name="company-website"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={honeypot}
+                    onChange={(e) => setHoneypot(e.target.value)}
+                  />
+                </div>
+
                 {/* Turnstile spam protection */}
                 <TurnstileWidget onVerify={handleTurnstileVerify} />
 
@@ -623,7 +658,7 @@ export default function ValuationForm({ initialCity }: ValuationFormProps) {
                 <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 mt-3 text-xs text-muted/60 font-body">
                   <span>FL License #BK3313308</span>
                   <span>&bull;</span>
-                  <span>23+ Years Experience</span>
+                  <span>24+ Years Experience</span>
                   <span>&bull;</span>
                   <span>REMAX Collective</span>
                   <span>&bull;</span>

@@ -1,8 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 import { pushLeadToFub } from "@/lib/fub";
 import { sendBarrettAlert, sendLeadAutoResponder, sendLeadFailureAlert } from "@/lib/resend";
+import { validateLead } from "@/lib/lead-validation";
+import { rateLimit, getClientIp } from "@/lib/rate-limit";
 
 const N8N_BASE = process.env.N8N_WEBHOOK_BASE || "";
+
+// Max form submissions allowed from one IP address per 10 minutes.
+// Set generously — a real person comparing a few listings might legitimately
+// send 2-3 showing requests in a sitting. Bots send dozens.
+const RATE_LIMIT_MAX = 5;
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
 
 // Map form type → FUB source label (shows up in FUB's "Source" column)
 const fubSourceMap: Record<string, string> = {
@@ -35,34 +43,110 @@ const fubTagMap: Record<string, string[]> = {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { type, turnstileToken, ...formData } = body;
+    const { type, turnstileToken, honeypot, ...formData } = body;
+
+    // --- Rate limit by IP ---
+    // First gate, before any work. Stops floods regardless of how clever the
+    // bot is about the other checks.
+    const ip = getClientIp(request);
+    const limit = rateLimit(ip, RATE_LIMIT_MAX, RATE_LIMIT_WINDOW_MS);
+    if (!limit.ok) {
+      console.warn(`[SPAM] Rate limit hit for IP ${ip} on "${type}" form`);
+      return NextResponse.json(
+        { error: "Too many submissions. Please try again shortly." },
+        { status: 429, headers: { "Retry-After": String(limit.retryAfter) } }
+      );
+    }
 
     // --- Turnstile spam verification (Cloudflare) ---
-    // Skip verification if secret key isn't configured or token is the dev bypass
+    // This BLOCKS on failure. It used to only log a warning and let the
+    // submission through, which meant every bot passed and we were pushing
+    // junk leads into Follow Up Boss and emailing fake addresses.
     const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
-    if (turnstileSecret && turnstileToken && turnstileToken !== "no-turnstile-key-configured") {
-      try {
-        const verifyRes = await fetch(
-          "https://challenges.cloudflare.com/turnstile/v0/siteverify",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              secret: turnstileSecret,
-              response: turnstileToken,
-            }),
-          }
+    if (turnstileSecret) {
+      // A missing token means the request didn't come from our form at all —
+      // a bot POSTing straight to this endpoint. Reject it.
+      if (!turnstileToken) {
+        console.warn(`[SPAM] Missing Turnstile token from IP ${ip} on "${type}" form`);
+        return NextResponse.json(
+          { error: "Spam verification required. Please reload the page and try again." },
+          { status: 403 }
         );
-        const verification = await verifyRes.json();
-
-        if (!verification.success) {
-          // Log but don't block — Turnstile has known issues with expired/stuck tokens
-          console.warn("Turnstile verification failed (allowing submission):", verification);
-        }
-      } catch (err) {
-        // If Turnstile is down, don't block the form — log and continue
-        console.warn("Turnstile verification error (continuing):", err);
       }
+
+      // These sentinel values are emitted by TurnstileWidget when the challenge
+      // could not run (script blocked, render failed). A real browser with an
+      // ad-blocker can hit this, so we let it through rather than lose the lead —
+      // the validation checks below are the safety net for these.
+      const widgetFallback =
+        turnstileToken === "no-turnstile-key-configured" ||
+        turnstileToken === "turnstile-script-failed" ||
+        turnstileToken === "turnstile-render-failed";
+
+      if (!widgetFallback) {
+        try {
+          const verifyRes = await fetch(
+            "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                secret: turnstileSecret,
+                response: turnstileToken,
+                remoteip: ip,
+              }),
+            }
+          );
+          const verification = await verifyRes.json();
+
+          if (!verification.success) {
+            console.warn(
+              `[SPAM] Turnstile REJECTED submission from IP ${ip}:`,
+              verification["error-codes"]
+            );
+            return NextResponse.json(
+              { error: "Spam verification failed. Please reload the page and try again." },
+              { status: 403 }
+            );
+          }
+        } catch (err) {
+          // Cloudflare itself is unreachable. Don't punish real users for an
+          // outage on their end — allow through and lean on validation below.
+          console.warn("Turnstile verification error (allowing, validation still applies):", err);
+        }
+      }
+    }
+
+    // --- Content validation ---
+    // Catches the junk that gets past Turnstile: fake emails, impossible phone
+    // numbers, gibberish names, and the hidden honeypot field.
+    const verdict = validateLead({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      honeypot,
+    });
+
+    if (verdict.reject) {
+      console.warn(
+        `[SPAM] Rejected "${type}" submission from IP ${ip} —`,
+        verdict.reasons.join("; "),
+        { name: formData.name, email: formData.email, phone: formData.phone }
+      );
+      // Return 200 with success:true on purpose. If we told the bot it was
+      // blocked, whoever runs it would tune it until it got through. Letting it
+      // think it worked means it keeps sending junk we silently discard.
+      return NextResponse.json({ success: true });
+    }
+
+    if (verdict.suspect) {
+      // Not confident enough to throw the lead away — Barrett still gets it in
+      // Follow Up Boss — but we will NOT email this address. That is what
+      // protects our sending reputation from bounces.
+      console.warn(
+        `[SUSPECT] Accepting "${type}" lead but skipping auto-responder —`,
+        verdict.reasons.join("; ")
+      );
     }
 
     // Validate form type
@@ -152,7 +236,10 @@ export async function POST(request: NextRequest) {
           details: formData.details || undefined,
         }),
       ];
-      if (formData.email) {
+      // Only auto-respond when we have an email AND it passed validation.
+      // Emailing a suspect address is how bounces pile up and get our sending
+      // privileges restricted — Barrett still gets the lead either way.
+      if (formData.email && !verdict.suspect) {
         emailTasks.push(
           sendLeadAutoResponder({
             name: formData.name || "Unknown",

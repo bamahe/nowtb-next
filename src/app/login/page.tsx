@@ -5,9 +5,10 @@
 // Uses Supabase auth for both sign-in methods
 // =============================================================================
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
+import TurnstileWidget from "@/components/ui/TurnstileWidget";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -15,6 +16,17 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "magic-link-sent" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+
+  // --- Turnstile spam protection ---
+  // Bots were spraying fake addresses at this magic-link form. Every one of
+  // those made Supabase send an email that bounced, which is what triggered
+  // the "high rate of bounced emails" warning on the project.
+  // Supabase verifies this token server-side once CAPTCHA protection is
+  // enabled in the dashboard, so a bot can't skip it by calling the API direct.
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const handleTurnstileVerify = useCallback((token: string) => {
+    setTurnstileToken(token);
+  }, []);
 
   // If already logged in, redirect to account page
   useEffect(() => {
@@ -55,8 +67,10 @@ export default function LoginPage() {
     setStatus("loading");
     setErrorMessage("");
 
-    // Basic email validation
-    if (!email || !email.includes("@")) {
+    // Email validation — must be a real-looking address, not just "has an @".
+    // Every invalid address we accept here becomes a bounced Supabase email.
+    const emailShape = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+    if (!email || !emailShape.test(email.trim())) {
       setErrorMessage("Please enter a valid email address.");
       setStatus("error");
       return;
@@ -66,8 +80,14 @@ export default function LoginPage() {
       const supabase = createClient();
       if (!supabase) { setErrorMessage("Authentication is not configured."); setStatus("error"); return; }
       const { error } = await supabase.auth.signInWithOtp({
-        email,
-        options: { emailRedirectTo: `${window.location.origin}/auth/callback` },
+        email: email.trim(),
+        options: {
+          emailRedirectTo: `${window.location.origin}/auth/callback`,
+          // Supabase checks this against Cloudflare before sending any email.
+          // Requires CAPTCHA protection to be turned on in the Supabase
+          // dashboard (Authentication > Attack Protection).
+          captchaToken: turnstileToken || undefined,
+        },
       });
 
       if (error) {
@@ -203,9 +223,17 @@ export default function LoginPage() {
                   />
                 </div>
 
+                {/* Turnstile — proves a human is sending this magic link.
+                    The `key` remounts the widget after a failed attempt so we
+                    get a fresh token; Turnstile tokens are single-use. */}
+                <TurnstileWidget
+                  key={status === "error" ? "retry" : "initial"}
+                  onVerify={handleTurnstileVerify}
+                />
+
                 <button
                   type="submit"
-                  disabled={status === "loading"}
+                  disabled={status === "loading" || !turnstileToken}
                   className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-primary disabled:hover:text-white"
                 >
                   {status === "loading" ? (
