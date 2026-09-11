@@ -4,6 +4,42 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-09-11 (Batch 57 — Lake Wales FL x7, Haines City FL x3: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: AEO quick-answer box, H1 distinct from title, 4+ question H2s, 6+ H3s, price/comparison tables, 5-Q&A FAQ with JSON-LD FAQPage schema, BreadcrumbList schema, Article schema, GEO citations, EEAT first-person voice, 10-link internal resource grid, Barrett Henry author bio. Content dated 2026-09-10. Build green.)
+
+**Lake Wales FL (7 remaining stubs):** All expanded from ~5,217-char boilerplate to 20,923-26,274 chars.
+
+1. **lake-wales-fl-real-estate-guide** — 5,217 to 26,274 chars. 2026 buyer-favorable market overview; 5-segment price/DOM table (older SFH $170K-$240K / 75-120 DOM to Crooked Lake waterfront 45-90 DOM balanced); neighborhood guide (historic downtown/Lake Wailes, Bok Tower corridor/Mountain Lake Colony, Crooked Lake, eastern/southern subdivisions, rural/acreage); 4-step buyer checklist (pre-approval, water/sewer verify, flood zone check, full tax bill at polkpa.org, competitive offer); seller strategy (90-day comps, presentation discipline); 5-market comparison table (Lake Wales vs Winter Haven/Haines City/Lakeland/Avon Park); 5-Q&A FAQ.
+
+2. **lake-wales-fl-commute-guide** — 5,217 to 20,923 chars. 10-destination drive matrix (Lakeland 30-38 min, Winter Haven 20-25 min, Tampa 65-80 min peak, TPA 65-80 min, Orlando 60-75 min, Disney 45-55 min, Avon Park 30-45 min, Bartow 20-28 min, Haines City 18-25 min, Davenport 30-40 min); US-27 and SR-60 route analysis; I-4 access 30-35 min north; Tampa commute cost table (5-day $875/mo / 360 hrs/yr to 2-day $350/mo); remote work section (Spectrum 1 Gbps, Starlink fallback); 5-market commute comparison table; 5-Q&A FAQ.
+
+3. **lake-wales-fl-investment-property** — 5,217 to 22,299 chars. Rental rate table by type ($1,200-$3,200/mo); cash flow Example A ($220K leveraged, NOI positive but cash-flow negative at 7.75% investor rate); Example B ($175K cash purchase, ~5.4% cap rate); LTR vs STR analysis (STR poor, LTR steady local worker demand); Florida landlord law (security deposit, notice to enter, eviction timeline, Polk County no registration requirement for LTR); ViVi Property Management reference and link; 5-market cap rate comparison table; 5-Q&A FAQ.
+
+4. **lake-wales-fl-new-construction** — 5,217 to 21,520 chars. Why limited (built-out grid, Lake Wales Ridge ecology, builder economics); 3 options (infill lots $20K-$60K+, rural acreage builds, Haines City new construction 15-20 min north); all-in custom build cost table ($437K-$685K for 2-acre rural 1,800 sf); active builder table (D.R. Horton/Lennar/Pulte/Meritage in Haines City, starting $265K+); Winter Haven as additional option (20-25 min NW); new construction vs Lake Wales resale comparison table (CDD fees, character, price range); 5-Q&A FAQ.
+
+5. **lake-wales-fl-property-taxes** — 5,217 to 22,012 chars. Millage breakdown table (Polk County ~5.0-5.5, school ~6.5-7.5, City of Lake Wales ~3.5-5.0, SWFWMD ~0.25-0.40, total ~15.5-18.8 mills); note on unincorporated vs city millage; 6-price-point tax estimate table ($180K-$500K homesteaded and non-homesteaded); $50K homestead exemption mechanics (first $25K all authorities, second $25K excludes school board); SOH 3% cap buyer-reset warning; portability (up to $500K transfer, 3-year deadline, file at polkpa.org); senior exemption (~$35K income limit); 100% veteran exemption; 5-county comparison table; 5-Q&A FAQ.
+
+6. **lake-wales-fl-waterfront-homes** — 5,217 to 24,490 chars. Lake guide (Crooked Lake — larger, boating, $280K-$650K+; Lake Wailes — in-city park trail, adjacent homes $230K-$380K; Lake Bess/smaller lakes $200K-$320K; subdivision ponds — views only, not true lake-front); 5-type waterfront price/flood-zone/insurance table; FEMA lookup guide (msc.fema.gov step-by-step); elevation certificate guidance ($400-$700); 5-row flood insurance cost table ($400-$800/yr Zone X to $2,500-$5,000+/yr Zone AE below BFE); dock permitting (FDEP, Army Corps, SWFWMD); 8-item waterfront due-diligence checklist; 5-market comparison table (Lake Wales vs Winter Haven/Lakeland/Inverness/Clermont); 5-Q&A FAQ.
+
+7. **is-lake-wales-fl-good-place-to-live** — 5,217 to 23,391 chars. 5 genuine pros (affordability, Bok Tower Gardens/National Historic Landmark/Frederick Law Olmsted Jr., freshwater lake character, small-city quiet, central FL day trips); 5 genuine cons (long Tampa/Orlando commute, limited retail, mixed school quality, limited job market, insurance costs $2,500-$5,000+/yr); 9-row buyer profile fit table (retirees/remote workers Excellent; daily Tampa commuters Poor; STR investors Poor); 5-city Florida small-city comparison table (Lake Wales vs Bartow/Inverness/Avon Park/Crystal River); 5-Q&A FAQ.
+
+**Haines City FL (3 remaining stubs):** All expanded from ~5,223-char boilerplate to 21,523-23,195 chars.
+
+8. **haines-city-fl-homes-for-sale-guide** — 5,223 to 22,934 chars. 2026 market conditions (balanced to slightly buyer-favorable; builder incentives available on new construction); 5-segment price/DOM table; neighborhood guide (Southern Dunes golf community, Calabay Park, active new construction communities, lake-adjacent properties — Lake Eva, Lake Marion, Lake Lowery); 5-step buyer checklist (pre-approval with CDD factored, CDD fee verification at polkpa.org, school zone verification, flood zone check at msc.fema.gov, new construction negotiation strategy); 5-market comparison table (Haines City vs Davenport/Lake Wales/Winter Haven/Kissimmee); 5-Q&A FAQ.
+
+9. **haines-city-fl-commute-guide** — 5,223 to 21,523 chars. 11-destination drive matrix (Disney 20-28 min, Kissimmee corridor 25-35 min, Orlando downtown 45-55 min, MCO 45-55 min, Lake Nona 45-55 min, Lakeland 35-45 min, Tampa 65-80 min, TPA 70-85 min, Winter Haven 18-25 min, Lake Wales 18-25 min, Bartow 28-38 min); US-27 primary corridor analysis; SR-60 alternate western route; I-4 access 20-25 min north via US-27 (Davenport exits 55-58); Disney/hospitality worker case (20-30 min, most affordable Polk County option for cast members); Tampa commute cost table (5-day $830/mo to Disney 5-day $223/mo); 5-market commute comparison table; 5-Q&A FAQ.
+
+10. **haines-city-fl-cost-of-living** — 5,223 to 23,195 chars. 3-scenario monthly ownership cost tables ($285K: ~$2,380-$2,800/mo; $340K: ~$2,838-$3,401/mo; $420K: ~$3,528-$4,006/mo — all including P&I, taxes, CDD, insurance, HOA, utilities); Haines City millage breakdown (~20-22 mills total); homestead exemption/SOH buyer-reset warning; insurance detail ($2,800-$5,500/yr; wind mitigation credits for new construction; 4-point inspection flag for older homes; Zone AE flood insurance $1,200-$3,500+/yr); utility table (Duke Energy $120-$280/mo, water/sewer $60-$110/mo, internet $70-$100/mo); shopping/healthcare (Walmart+Publix in city; Costco Lakeland 35-40 min; AdventHealth Heart of Florida Regional in Davenport 20-25 min); 5-market cost comparison table (Haines City vs Kissimmee/Davenport/Lake Wales/Winter Haven); 5-Q&A FAQ.
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `784be5d` — pushed to `origin/main`
+
+---
+
 ## 2026-09-10 (Batch 56 — East Lake FL x7, Lake Wales FL x3: Major Expansions)
 
 **Pages improved: 10**
