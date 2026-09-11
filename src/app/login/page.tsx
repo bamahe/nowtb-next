@@ -5,10 +5,17 @@
 // Uses Supabase auth for both sign-in methods
 // =============================================================================
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
-import TurnstileWidget from "@/components/ui/TurnstileWidget";
+
+// NOTE: Turnstile is deliberately NOT used on this form.
+// The site key in NEXT_PUBLIC_TURNSTILE_SITE_KEY is rejected by Cloudflare on
+// nowtb.com with error 400020, so the widget never renders and never issues a
+// token. Gating the submit button on a token left this form permanently
+// unusable. Re-add Turnstile here only after the site key is fixed in the
+// Cloudflare dashboard (widget's allowed domains must include nowtb.com) and
+// verified rendering in a browser.
 
 export default function LoginPage() {
   const router = useRouter();
@@ -16,17 +23,6 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "magic-link-sent" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
-
-  // --- Turnstile spam protection ---
-  // Bots were spraying fake addresses at this magic-link form. Every one of
-  // those made Supabase send an email that bounced, which is what triggered
-  // the "high rate of bounced emails" warning on the project.
-  // Supabase verifies this token server-side once CAPTCHA protection is
-  // enabled in the dashboard, so a bot can't skip it by calling the API direct.
-  const [turnstileToken, setTurnstileToken] = useState("");
-  const handleTurnstileVerify = useCallback((token: string) => {
-    setTurnstileToken(token);
-  }, []);
 
   // If already logged in, redirect to account page
   useEffect(() => {
@@ -83,10 +79,6 @@ export default function LoginPage() {
         email: email.trim(),
         options: {
           emailRedirectTo: `${window.location.origin}/auth/callback`,
-          // Supabase checks this against Cloudflare before sending any email.
-          // Requires CAPTCHA protection to be turned on in the Supabase
-          // dashboard (Authentication > Attack Protection).
-          captchaToken: turnstileToken || undefined,
         },
       });
 
@@ -223,17 +215,9 @@ export default function LoginPage() {
                   />
                 </div>
 
-                {/* Turnstile — proves a human is sending this magic link.
-                    The `key` remounts the widget after a failed attempt so we
-                    get a fresh token; Turnstile tokens are single-use. */}
-                <TurnstileWidget
-                  key={status === "error" ? "retry" : "initial"}
-                  onVerify={handleTurnstileVerify}
-                />
-
                 <button
                   type="submit"
-                  disabled={status === "loading" || !turnstileToken}
+                  disabled={status === "loading"}
                   className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-primary disabled:hover:text-white"
                 >
                   {status === "loading" ? (

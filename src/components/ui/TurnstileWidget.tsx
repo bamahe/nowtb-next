@@ -52,6 +52,16 @@ export default function TurnstileWidget({ onVerify }: TurnstileProps) {
           sitekey: siteKey,
           callback: stableOnVerify,
           theme: "light",
+          // Cloudflare reports render/validation problems through this callback
+          // rather than by throwing. Without it, a bad sitekey (error 400020,
+          // which is what nowtb.com currently returns) means no token is ever
+          // emitted and every gated submit button stays disabled forever.
+          // Fail open with a sentinel so forms stay usable; the API-side
+          // validation in lib/lead-validation.ts is the real backstop.
+          "error-callback": (code: string) => {
+            console.warn("Turnstile error-callback:", code);
+            stableOnVerify("turnstile-render-failed");
+          },
         }) as string;
       }
     } catch (err) {
