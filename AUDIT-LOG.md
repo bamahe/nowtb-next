@@ -4,6 +4,42 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-09-12 (Batch 58 — Haines City FL x7, Ridge Manor FL x3: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: AEO quick-answer box, H1 distinct from title, 4+ question H2s, 6+ H3s, price/comparison tables, 5-Q&A FAQ with JSON-LD FAQPage schema, BreadcrumbList schema, Article schema, GEO citations, EEAT first-person voice, 10-link internal resource grid, Barrett Henry author bio. Content dated 2026-09-11. Build green.)
+
+**Haines City FL (7 remaining stubs):** All expanded from ~5,223-char boilerplate to 18,592-22,422 chars.
+
+1. **haines-city-fl-schools-guide** — 5,223 to 21,855 chars. Polk County School District context; Haines City Senior High (2800 Hornet Dr., 33844), Ridge Community High (Davenport, for southern addresses), Daniel Jenkins Academy magnet (STEM 6-12, 4020 Tuscany Blvd., (863) 421-3434); Boone Middle (701 W. Powell Rd.) and Eastside Middle (1050 S. 22nd St.) middle schools; Alta Vista, Bethune Academy, Horizons elementaries; school table with verification contacts; Florida FLDOE grading system explained; private schools (Lakeland 30-35 min, Winter Haven 20-25 min); zone verification steps (polkschoolsfl.com, (863) 534-0521); 5-district comparison table; 5-Q&A FAQ.
+
+2. **is-haines-city-fl-good-place-to-live** — 5,223 to 20,395 chars. 5 genuine pros (new construction affordability from $265K, Disney corridor access 20-28 min, central FL day-trip geography, Polk County tax structure, growing community); 5 genuine cons (mixed school ratings, limited walkability, Tampa commute 65-80 min peak, summer heat/humidity, insurance $2,500-$5,000+/yr); 9-row buyer fit table (Disney workers/first-time buyers Excellent; Tampa commuters/urban buyers Poor); 5-city comparison table (Haines City vs Davenport/Kissimmee/Winter Haven/Lake Wales); 2026 market overview; CDD fee warning; 5-Q&A FAQ.
+
+3. **haines-city-fl-real-estate-guide** — 5,223 to 20,980 chars. 5-segment price/DOM table (entry new construction $265K-$325K / builder timeline to Southern Dunes $350K-$600K+ / 60-120 DOM); neighborhood guide (Southern Dunes Golf and Country Club — Steve Smyers 18-hole design, Calabay Parc at Tower Lake, new construction communities US-27/US-17-92, established SFH, lake-adjacent); CDD fee deep-dive (30-year cost math, polkpa.org lookup); 2026 market assessment (buyer/seller conditions, builder incentives); new vs resale comparison table (8 factors); 5-step buying process; 5-Q&A FAQ.
+
+4. **haines-city-fl-property-taxes** — 5,223 to 22,422 chars. Millage breakdown table (Polk County ~5.0-5.5, school ~6.5-7.5, City of Haines City ~5.5-7.0, SWFWMD ~0.25-0.40, total ~18-22 mills); note on city vs unincorporated millage difference; 5-price-point tax estimate table ($240K-$500K homesteaded); $50K homestead exemption mechanics (first vs second $25K, school board exclusion); SOH 3% cap buyer-reset warning; portability (up to $500K, 3-year deadline, polkpa.org); senior exemption (~$35,167 income limit 2025); 100% disabled vet full exemption; CDD fee table by community type ($800-$3,500+/yr); 5-Q&A FAQ.
+
+5. **haines-city-fl-new-construction** — 5,223 to 20,808 chars. Active builder table (D.R. Horton $265K-$380K, Lennar $280K-$430K, Pulte $300K-$450K+, Meritage $290K-$420K, Casa Fresca $270K-$360K); US-27 north corridor and US-17/92 corridor community overview; Southern Dunes area; 8-factor new vs resale comparison table; 2026 incentive breakdown (rate buydowns, closing cost contributions $5K-$20K, lot premium reductions, upgrade credits); 8-item critical buyer checklist (register agent first visit, CDD at polkpa.org, independent inspection, compare builder mortgage); 5-market comparison table (Haines City vs Davenport/Kissimmee/Winter Haven/Lakeland); 5-Q&A FAQ.
+
+6. **haines-city-fl-investment-property** — 5,223 to 18,592 chars. LTR rental rate table by property type (2BR $1,400-$1,800 to 4BR+ $2,200-$2,900/mo); cap rate estimates (5-8% for older no-CDD; 4.5-6% for new construction with CDD); LTR vs STR analysis (Disney proximity creates STR potential but HOA and Polk County permit rules critical); cash flow comparison table (Scenario A older SFH $275K — negative ~$382/mo; Scenario B new construction $310K — negative ~$597/mo at 7.25% rate); investment grade table by property type; ViVi Property Management reference; 5-Q&A FAQ.
+
+7. **haines-city-fl-waterfront-homes** — 5,223 to 21,258 chars. Lake guide (Lake Eva in-city near Jacaranda Park; Lake Marion southeast/larger; Lake Lowery south/rural; Tower Lake via Calabay Parc; smaller lake systems); 5-type waterfront price table ($265K-$700K+); FEMA flood zone table (Zone X, shaded X, AE, AE below BFE — risk/insurance/location); flood insurance cost range ($1,200-$4,000+/yr depending on elevation); Elevation Certificate guidance ($400-$700); 10-item waterfront due-diligence checklist (msc.fema.gov lookup, elevation cert, flood insurance quote, water quality, shoreline, dock permits, water access rights, prior flood claims); 5-market comparison table (Haines City vs Winter Haven/Crooked Lake/Tampa Bay/Clermont); 5-Q&A FAQ.
+
+**Ridge Manor FL (3 stubs — new city, first batch):** All expanded from ~5,223-char boilerplate to 18,131-20,124 chars.
+
+8. **ridge-manor-fl-homes-for-sale-guide** — 5,223 to 20,124 chars. Hernando County unincorporated context; 5-segment price/DOM table (older SFH $160K-$240K / 60-120 DOM to acreage $230K-$350K+); neighborhood guide (Ridge Manor proper, Ridge Manor Estates, acreage properties, Withlacoochee River corridor); well/septic buyer guidance (inspection $200-$400 each); flood zone warning near Withlacoochee; Hernando County Property Appraiser (hernandopa-fl.us); homeowners insurance considerations; 5-community comparison table (Ridge Manor vs Brooksville/Dade City/Wesley Chapel/Zephyrhills); 8-step buying process; 5-Q&A FAQ.
+
+9. **ridge-manor-fl-schools-guide** — 5,223 to 18,131 chars. Hernando County School District context (hernandoschools.org, (352) 796-2141); FLDOE grading; Ridge Manor Elementary (primary K-5 campus serving community); middle and high school zone verification process; Hernando County vs Pasco/Hillsborough/Citrus districts comparison table; private schools (Brooksville 20-25 min, Dade City 10-15 min, Wesley Chapel 25-35 min nearest concentration); zone verification steps; 5-Q&A FAQ.
+
+10. **ridge-manor-fl-commute-guide** — 5,223 to 18,835 chars. I-75 Exit 301 (SR-50/Cortez Blvd) as primary access point; SR-50 east-west connector; US-301 alternate corridor; 10-destination drive matrix (Brooksville 20-25 min, Dade City 15-20 min, Wesley Chapel 25-35 min, Tampa CBD 50-65 min off-peak/65-85 min peak, TPA 50-65 min, Ocala 45-55 min, Gainesville 85-100 min, New Port Richey 45-60 min, Clearwater/St. Pete 65-80 min, Gainesville VA 85-95 min); Tampa commuter reality (100-110 mi/day, ~$700-$900/mo fuel); commute cost comparison table (Ridge Manor vs Wesley Chapel/Zephyrhills/Land O Lakes/Lutz); no HART or county transit service; remote worker internet notes (Spectrum + Starlink for some addresses); 5-Q&A FAQ.
+
+**Build:** Passed (Next.js build green)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `b28a238` — pushed to `origin/main`
+
+---
+
 ## 2026-09-11 (Batch 57 — Lake Wales FL x7, Haines City FL x3: Major Expansions)
 
 **Pages improved: 10**
