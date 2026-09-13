@@ -4,6 +4,44 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-09-13 (Batch 59 — Nokomis FL x2, Englewood FL x4, Ridge Manor FL x4: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: AEO quick-answer box, H1 distinct from title, 4+ question H2s, comparison tables, commute matrix, 5-Q&A FAQ with JSON-LD FAQPage schema, BreadcrumbList schema, Article schema, 18-link internal grid, Barrett Henry author bio. Content dated 2026-09-12. Build: JSON-only data change; Vercel builds on push.)
+
+**Nokomis FL (2 stubs):** All expanded from ~5,177-char boilerplate to 24,000-26,000+ chars.
+
+1. **is-nokomis-fl-good-place-to-live** — 5,177 to 26,287 chars. Sarasota County unincorporated village context; Casey Key barrier island profile; 7-factor pros/cons table (Legacy Trail access, Venice/Sarasota walkability pros; limited nightlife, I-75 noise near US-41 cons); 9-row buyer fit table; 5-city comparison table (Nokomis vs Venice/Osprey/Sarasota/North Port); Laurel Nokomis K-8 and Venice Senior High school context; flood zone realities (Zone AE near Intracoastal, Zone X inland); 18-link internal grid; 5-Q&A FAQ with JSON-LD.
+
+2. **best-neighborhoods-nokomis-fl** — 5,177 to 24,474 chars. 5-neighborhood profile table (Casey Key waterfront, Nokomis Beach area, Laurel Park, Mission Valley, East of US-41 inland); price range by neighborhood ($300K-$400K inland to $800K-$3M+ Casey Key); canal-front vs inland comparison table (8 factors); Sarasota County school assignment process; commute matrix (Venice 10-12 min, Sarasota 20-25 min, Tampa 65-80 min, Bradenton 30-40 min); flood zone guidance by neighborhood type; 18-link internal grid; 5-Q&A FAQ with JSON-LD.
+
+**Englewood FL (4 stubs):** All expanded from ~5,221-char boilerplate to 21,000-26,000+ chars.
+
+3. **is-englewood-fl-good-place-to-live** — 5,221 to 26,265 chars. Dual-county split (Charlotte/Sarasota) explained; Manasota Key barrier island profile; 7-factor pros/cons table (Lemon Bay fishing, Dearborn Street arts district, scalloping season pros; dual-county property tax confusion, limited dining/nightlife, hurricane exposure cons); 9-row buyer fit table; 5-city comparison table (Englewood vs Venice/Port Charlotte/Rotonda West/North Port); Charlotte County vs Sarasota County school zone clarification; hurricane Ian flood impact context; 18-link internal grid; 5-Q&A FAQ with JSON-LD.
+
+4. **best-neighborhoods-englewood-fl** — 5,221 to 24,274 chars. 5-neighborhood profile table (Manasota Key, Lemon Bay Isles, Rotonda West adj., Englewood Isles, East Englewood); waterfront vs inland comparison table (8 factors); Charlotte vs Sarasota county millage difference; school zones by county side; commute matrix (Port Charlotte 25-30 min, Sarasota 40-50 min, Tampa 90-110 min, Fort Myers 60-75 min); Dearborn Street arts village profile; 18-link internal grid; 5-Q&A FAQ with JSON-LD.
+
+5. **moving-to-englewood-fl** — 5,221 to 23,518 chars. County identification step (charlottepa.net vs sc-pa.com lookup); 8-item moving checklist (utilities — LCEC or FPL by address, Sarasota County or Charlotte County water); homeowners insurance dual-county impact (wind/flood zone differences); Lemon Bay profile; Englewood Beach access; scalloping season (FWC regulated, Charlotte Harbor waters, July-September general timeframe); commute reality table; 5-step move-in process; 18-link internal grid; 5-Q&A FAQ with JSON-LD.
+
+6. **things-to-do-englewood-fl** — 5,221 to 21,276 chars. Lemon Bay nature profile (kayaking, fishing, birding); Dearborn Street arts village (galleries, farmers market, dining); Englewood Beach/Manasota Key access; Ann Dever Memorial Regional Park (sports fields, pickleball); scalloping season (Charlotte Harbor/Peace River area, FWC license required); 5-activity comparison table (outdoor/arts/beach/fishing/community events); drive-time recreation matrix (Myakka River State Park 40 min, Boca Grande 30 min, Sarasota arts 45 min, Ft. Myers 70 min); 18-link internal grid; 5-Q&A FAQ with JSON-LD.
+
+**Ridge Manor FL (4 stubs — continuing second batch):** All expanded from ~5,223-char boilerplate to 20,000-26,000+ chars.
+
+7. **is-ridge-manor-fl-good-place-to-live** — 5,223 to 25,783 chars. Hernando County unincorporated context; I-75 Exit 293 location; Withlacoochee State Forest adjacency; 7-factor pros/cons table (affordability $160K-$280K, forest access, rural quiet pros; well/septic standard, no walkability, Tampa commute 50-65 min cons); 9-row buyer fit table; 5-city comparison table (Ridge Manor vs Brooksville/Dade City/Zephyrhills/Wesley Chapel); well/septic buyer awareness; flood zone near Withlacoochee River; 18-link internal grid; 5-Q&A FAQ with JSON-LD.
+
+8. **ridge-manor-fl-real-estate-guide** — 5,223 to 20,703 chars. 5-segment price/DOM table (entry SFH $160K-$220K / 45-90 DOM to acreage $230K-$350K+); neighborhood guide (Ridge Manor proper, Ridge Manor Estates, Withlacoochee River corridor, acreage lots); well/septic due-diligence checklist (water quality test $100-$200, septic inspection $200-$400, Federal Pacific/Zinsco panel warning, roof age insurance implications); hernandopa-fl.us lookup guidance; 5-community comparison table; 8-step buying process; 18-link internal grid; 5-Q&A FAQ with JSON-LD.
+
+9. **ridge-manor-fl-cost-of-living** — 5,223 to 24,199 chars. Hernando County millage context (12-16 mills typical); property tax estimate table by price point ($160K-$350K homesteaded); homeowners insurance rural realities ($1,800-$3,500+/yr typical, wind mitigation inspection value); well/septic ongoing cost table (annual inspection $150-$250, water treatment, septic pump-out $400-$600 every 3-5 yrs); grocery/services drive-time (Brooksville Publix 20-25 min, Wesley Chapel 30-40 min); cost-of-living comparison table (Ridge Manor vs Brooksville/Dade City/Wesley Chapel/Zephyrhills); 18-link internal grid; 5-Q&A FAQ with JSON-LD.
+
+10. **ridge-manor-fl-property-taxes** — 5,223 to 26,116 chars. Hernando County millage breakdown table (county general, school board, fire, SWFWMD, St. Johns/SWFWMD — total 12-16 mills typical); 5-price-point tax estimate table ($160K-$350K homesteaded vs non-homesteaded); $50K homestead exemption mechanics (first/second $25K, school board exclusion); SOH 3% cap buyer-reset warning; portability calculation example; senior exemption (income-limited); 100% disabled vet full exemption; hernandopa-fl.us lookup steps with TRIM notice explanation; 5-city comparison table (millage comparison); 18-link internal grid; 5-Q&A FAQ with JSON-LD.
+
+**Build:** JSON-only data change; local build skipped (no node_modules in container); Vercel builds on push
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `cea7af9` — pushed to `origin/main`
+
+---
+
 ## 2026-09-12 (Batch 58 — Haines City FL x7, Ridge Manor FL x3: Major Expansions)
 
 **Pages improved: 10**
