@@ -1985,3 +1985,35 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** `41e066c` — pushed to `origin/main`
+
+---
+
+## 2026-09-13 (Batch 60 — Ridge Manor FL x7 + Siesta Key FL x3)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, 18-link internal grid, comparison tables, Barrett Henry bio)
+
+1. **ridge-manor-fl-new-construction** — Expanded 5,200 to 30,371 chars. Custom build costs on Ridge Manor lots ($125-$175/sqft), Spring Hill as the main new-construction alternative, builder comparison table, lot-buying checklist, Hernando County permitting notes, I-75 commute context.
+
+2. **ridge-manor-fl-investment-property** — Expanded 5,200 to 30,842 chars. Long-term rental market focus; rental rate table by property type; cash flow example at 7.5% cap rate; well/septic operational costs; ViVi Property Management reference; Hernando County LDR zoning notes; STR regulatory caution.
+
+3. **ridge-manor-fl-waterfront-homes** — Expanded 5,200 to 28,351 chars. Withlacoochee River frontage pricing ($275K-$550K+); Zone AE flood zones; dock permitting via FDEP, Army Corps, and SWFWMD; riparian rights overview; boat ramp access (Silver Lake, Carter Road); flood insurance cost table.
+
+4. **ridge-manor-fl-flood-zones** — Expanded 5,200 to 26,262 chars. Zone X vs. Zone AE breakdown for Ridge Manor; msc.fema.gov FIRM lookup walkthrough; Elevation Certificate explainer; NFIP vs. private flood insurance comparison; cost table by property type; typical rates ($800-$3,500/yr).
+
+5. **best-neighborhoods-ridge-manor-fl** — Expanded 5,200 to 28,677 chars. Four micro-area breakdown (Core/Ridge Manor Estates/River Corridor/Acreage); buyer profile matching table; price range $185K-$550K+; school zone overview (Hernando County); commute distances to Tampa, Brooksville, Spring Hill.
+
+6. **moving-to-ridge-manor-fl** — Expanded 5,200 to 29,550 chars. Duke Energy service; well/septic setup costs and ongoing expenses; county services vs. city services table; homestead exemption walkthrough; school assignments (Nature Coast Tech, Hernando High); utility cost table; commute matrix.
+
+7. **things-to-do-ridge-manor-fl** — Expanded 5,200 to 24,146 chars. Withlacoochee State Forest (157,000+ acres, Croom Tract); Withlacoochee State Trail (46-mile paved rail-trail); Silver Lake Recreation Area; Brooksville for dining/shopping; YMCA Weeki Wachee proximity; seasonal activity calendar.
+
+8. **is-siesta-key-fl-good-place-to-live** — Expanded 5,200 to 31,572 chars. Pros/cons table; 5-city comparison (Siesta Key vs. Longboat Key/Venice/Anna Maria/Sarasota); hurricane Zone A evacuation reality; price-to-product table ($1.4M-$4M+ Gulf-front); two-bridge access; no island schools; lifestyle fit guide.
+
+9. **best-neighborhoods-siesta-key-fl** — Expanded 5,200 to 26,472 chars. North end/Village district; mid-island (Sanderling Club); south/Stickney Point Road area; Gulf-front vs. canal-front comparison; price range by area ($850K-$8M+); HOA vs. non-HOA breakdown; buyer profile matching.
+
+10. **moving-to-siesta-key-fl** — Expanded 5,200 to 26,136 chars. Bridge traffic reality (Siesta Drive north, Stickney Point Road south); FPL electric service; Sarasota County water/sewer (public); insurance cost table (homeowners $12K-$40K+/yr, flood Zone AE); nearest schools off-island; grocery/services access.
+
+**Build:** JSON-only data change; local build skipped; Vercel builds on push
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `c021eb3` — pushed to `origin/main`
