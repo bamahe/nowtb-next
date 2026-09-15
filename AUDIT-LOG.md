@@ -2017,3 +2017,35 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** JSON-only data change; local build skipped; Vercel builds on push
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** `c021eb3` — pushed to `origin/main`
+
+---
+
+## 2026-09-14 (Batch 61 — Siesta Key things-to-do x1 + Tierra Verde FL x9)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, 18-link internal grid, comparison tables, Barrett Henry bio)
+
+1. **things-to-do-siesta-key-fl** — Expanded 5,225 to 36,569 chars. Completes the Siesta Key cluster started in Batch 60. Added: Siesta Beach quartz sand detail (99% quartz, TripAdvisor #1 rated, Dr. Beach citation); Siesta Key Village dining and nightlife guide; drum circle history and logistics; water activities table (8 types including parasailing, kayaking, snorkeling, fishing); fishing species (snook, redfish, tarpon, cobia, mangrove snapper); snorkeling at Crescent Beach; 8-destination Sarasota attractions table (Mote Marine, Ringling Museum, Van Wezel, Selby Botanical, St. Armands Circle, Ed Smith Stadium, Sarasota Ballet, Siesta Key Farmers Market); 6-event seasonal calendar (Crystal Classic, Siesta Fiesta, Brew Fest, drum circle, Sarasota Film and Music festivals); parking and logistics reality; 5-Q&A FAQ.
+
+2. **tierra-verde-fl-homes-for-sale-guide** — Expanded 5,241 to 29,336 chars. Added: Island location context (33715, Pinellas Bayway toll, Fort De Soto adjacency); 6-tier price table ($400K-$3M+ by property type); what drives price differences (canal width, lot size, dock capacity); 5-community comparison table (Tierra Verde vs. St. Pete Beach/Pass-a-Grille/Gulfport/South St. Pete); Fort De Soto County Park detail (1,136 acres, 7-mile trail, beaches, camping); flood zone and insurance reality ($12K-$20K/yr combined for typical waterfront home); 4-step buyer process (pre-approval, elevation certificate, dock inspection, HOA/CDD verification); 5-Q&A FAQ.
+
+3. **tierra-verde-fl-waterfront-homes** — Expanded 5,241 to 28,392 chars. Added: 4-tier waterfront property table (canal-front entry to Gulf-adjacent with price, zone, insurance); canal system explainer (width ranges, depth, draft limitations); Gulf access routing (Tampa Bay to Mullet Key Channel to Gulf); seawall inspection guide ($300-$600 inspection cost, $500-$900/LF replacement); dock permit requirements (FDEP, Army Corps, Pinellas County); boatlift capacity guide; 4-scenario flood insurance cost table; boating lifestyle summary; 5-Q&A FAQ.
+
+4. **tierra-verde-fl-flood-zones** — Expanded 5,241 to 27,709 chars. Added: Zone AE/VE/AH/X definitions table; 3-step flood zone lookup guide (FEMA MSC portal, elevation certificate request, formal insurance quote); NFIP vs. private flood insurance comparison table (7 factors); Pinellas County CRS discount explanation; Risk Rating 2.0 methodology note; pre-FIRM vs. post-FIRM building distinction; buyer cost modeling discussion; 5-Q&A FAQ.
+
+5. **tierra-verde-fl-cost-of-living** — Expanded 5,241 to 28,627 chars. Added: Monthly cost table by property type ($500K-$1.5M); homeowners insurance by property type ($4K-$18K/yr); 5-community insurance comparison table (Tierra Verde vs. St. Pete Beach/Gulfport/South St. Pete/non-waterfront TV); property tax example ($700K home with homestead = ~$12,875/yr); Pinellas Bayway toll cost ($50-$100/mo for active commuters); no on-island grocery reality; Duke Energy electric cost ranges; 5-Q&A FAQ.
+
+6. **tierra-verde-fl-investment-property** — Expanded 5,241 to 27,849 chars. Added: 4-type investment table (non-waterfront to bay-front with purchase price, LTR rent, STR revenue, cap rate); annual operating cost table ($51K-$76K/yr for $700K canal-front); STR regulatory framework (DBPR, Pinellas TDT at 6%, SB 714 context); ViVi Property Management reference with link to /property-management/; LTR vs. STR strategy analysis; tenant/guest profile; 5-Q&A FAQ.
+
+7. **tierra-verde-fl-new-construction** — Expanded 5,241 to 27,710 chars. Added: Why new construction is rare (island built out in 1960s-1980s); teardown-rebuild 3-step process (finding teardown, demolition+abatement costs, Zone AE construction requirements); custom build cost table ($18K-$45K demo to $350-$500+/sqft luxury); dock/seawall rebuild costs if needed; 5-community new construction alternatives table (St. Pete Beach infill to Wesley Chapel with distances and builder names); honest buyer guidance; 5-Q&A FAQ.
+
+8. **tierra-verde-fl-property-taxes** — Expanded 5,241 to 26,560 chars. Added: Pinellas County millage breakdown table (7 components, ~18-22 mills total); first and second homestead exemption mechanics; sample tax calculation ($700K home with homestead = ~$12,875/yr); Save Our Homes 3% cap explanation; portability walkthrough; how to look up taxes at pcpao.gov and taxcollect.com; investment property vs. primary residence tax comparison; 5-Q&A FAQ.
+
+9. **best-neighborhoods-tierra-verde-fl** — Expanded 5,241 to 27,041 chars. Added: Island organization overview (no formal subdivisions; location-type framework); canal-front street characteristics table (main basin to back canals with width, vessel capacity, price range); wide vs. narrow canal premium (~$100K-$200K); bay-front property profile (rare, $900K-$2.5M+, open water exposure); interior non-waterfront streets ($400K-$700K); Bay Vista Park condo overview with SB 4D compliance note; buyer profile matching table (6 profiles); 5-Q&A FAQ.
+
+10. **moving-to-tierra-verde-fl** — Expanded 5,241 to 31,709 chars. Added: Location and character description; 7-destination commute matrix; car-essential context (no PSTA transit); boating as secondary transportation; school assignments table (Gulfport/Bay Point K-8, Bay Point Middle, Lakewood HS with pcsb.org verification); utilities breakdown (Duke Energy, Pinellas County water/sewer, Spectrum/Frontier, no natural gas); 4-scenario insurance cost table ($5.5K-$30K/yr combined); healthcare access (Bayfront Health, St. Anthony's, Johns Hopkins All Children's, Bay Pines VA); who Tierra Verde suits vs. who it doesn't; 5-Q&A FAQ.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `package-lock.json`, `AUDIT-LOG.md`
+**Git commit:** `87a7591` — pushed to `origin/main`
