@@ -4,6 +4,44 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-09-16 (Batch 62 — Tierra Verde FL x5 + Crystal Beach FL x5: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList/Article/FAQPage JSON-LD schemas, AEO quick-answer box, H2/H3 sections, comparison tables, commute matrix, 5-Q&A FAQ, 20-link internal grid, Barrett Henry REMAX Collective author bio. Content dated 2026-09-15. Build green.)
+
+**Tierra Verde FL (5 stubs — ZIP 33715):** All expanded from ~5,241-char boilerplate.
+
+1. **tierra-verde-fl-schools-guide** — 5,241 to 50,856 chars. Pinellas County school assignments: Gulfport Elementary (K-5, ~3 mi), Bay Point K-8 (alt option), Bay Point Middle (6-8), Lakewood High (9-12); no on-island school, Pinellas Bayway toll (~$50-$100/mo commute factor); private options (Berkeley Preparatory, Academy of the Holy Names); magnet program pathways; school ratings context; 20-link internal grid; 5-Q&A FAQ with JSON-LD.
+
+2. **tierra-verde-fl-commute-guide** — 5,241 to 45,644 chars. Pinellas Bayway toll context (~$50-$100/mo SunPass); drive-time matrix (Downtown St. Pete 20-25 min, Tampa 40-55 min via Sunshine Skyway, Clearwater 30-40 min); Sunshine Skyway Bridge ($4 toll); I-275 route options; no Pinellas Suncoast Transit in Tierra Verde; Park-n-Ride at Fort De Soto; WFH premium; 20-link internal grid; 5-Q&A FAQ with JSON-LD.
+
+3. **is-tierra-verde-fl-good-place-to-live** — 5,241 to 48,711 chars. Island character overview; 7-factor pros/cons table (Fort De Soto access, deep-water boating, quiet residential pros; Bayway toll, no walkable commercial, hurricane zone cons); 9-row buyer fit table; 5-city comparison (Tierra Verde vs St. Pete Beach/Pass-a-Grille/Gulfport/Pinellas Park); flood zone AE/VE reality; NFIP flood insurance cost context; 20-link internal grid; 5-Q&A FAQ with JSON-LD.
+
+4. **tierra-verde-fl-real-estate-guide** — 5,241 to 33,422 chars. 4-segment price/DOM table (townhomes $400K-$600K to deep-water SFH $800K-$2M+); canal-front vs gulf-front vs upland comparison; dock/lift permitting (Pinellas County BOCC, SWFWMD); flood zone AE/VE impact on insurance; homestead exemption and SOH cap; 8-step buying process; elevation certificate value; 20-link internal grid; 5-Q&A FAQ with JSON-LD.
+
+5. **things-to-do-tierra-verde-fl** — 5,241 to 54,632 chars. Fort De Soto County Park (1,136 acres, 7+ mi trail, 238 campsites, 2 fishing piers, dog beach, historic Spanish-American War fort); Egmont Key State Park (boat-only, ~20-30 min, loggerhead sea turtle nesting); kayak/paddleboard launch points; fishing: redfish, snook, tarpon in Mullet Key Channel; seasonal ferry to Egmont Key from Fort De Soto; 20-link internal grid; 5-Q&A FAQ with JSON-LD.
+
+**Crystal Beach FL (5 of 12 stubs — ZIP 34681):** All expanded from ~5,251-char boilerplate.
+
+6. **crystal-beach-fl-schools-guide** — 5,251 to 28,210 chars. Pinellas County school assignments: Ozona Elementary (K-5), Palm Harbor Middle (6-8), Palm Harbor University High School (9-12, IB program); unincorporated Pinellas County context; private options (Clearwater Academy International, Dunedin Christian); magnet pathways; 20-link internal grid; 5-Q&A FAQ with JSON-LD.
+
+7. **crystal-beach-fl-commute-guide** — 5,251 to 42,984 chars. Drive-time matrix (Dunedin 5-10 min, Clearwater 15-20 min, Tampa 35-50 min via US-19/SR-580/Veterans Expwy); Pinellas Trail access for cycling commuters; SR-580 to I-275 route; no local bus service; Clearwater Park-n-Ride options; WFH premium appeal; 20-link internal grid; 5-Q&A FAQ with JSON-LD.
+
+8. **crystal-beach-fl-real-estate-guide** — 5,251 to 49,021 chars. 4-segment price/DOM table (inland SFH $350K-$550K to waterfront $700K-$2M+); St. Joseph Sound waterfront profile; no HOA in most of Crystal Beach; dock/seawall permitting; flood zone AE along sound; Gulf access via Dunedin Pass (~4-6 mi) or Clearwater Pass (~8-12 mi); Pinellas County millage; 8-step buying process; 20-link internal grid; 5-Q&A FAQ with JSON-LD.
+
+9. **crystal-beach-fl-cost-of-living** — 5,251 to 54,098 chars. Pinellas County millage breakdown; property tax estimate table ($350K-$900K homesteaded); Duke Energy Florida electric rates; homeowners insurance coastal factors; grocery/services drive-time (Dunedin Publix 5-10 min, Clearwater 15-20 min); cost-of-living comparison table (Crystal Beach vs Dunedin/Ozona/Palm Harbor/Safety Harbor); no city utilities (unincorporated); 20-link internal grid; 5-Q&A FAQ with JSON-LD.
+
+10. **crystal-beach-fl-waterfront-homes** — 5,251 to 28,679 chars. St. Joseph Sound waterfront profile; tidal vs non-tidal canal distinction; dock/lift permitting (Pinellas County/SWFWMD/Army Corps); flood zone AE/X boundary awareness; seawall inspection checklist; elevation certificate value; NFIP vs private flood insurance comparison; Gulf access reality (Dunedin Pass 4-6 mi, Clearwater Pass 8-12 mi); 20-link internal grid; 5-Q&A FAQ with JSON-LD.
+
+**Remaining Crystal Beach thin stubs (7 of 12 not yet done):** crystal-beach-fl-market-trends, crystal-beach-fl-new-construction, crystal-beach-fl-investment-property, crystal-beach-fl-property-taxes, crystal-beach-fl-flood-zones, moving-to-crystal-beach-fl, things-to-do-crystal-beach-fl
+
+**Build:** npm run build green (local)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `e1a625d` — pushed to `origin/main`
+
+---
+
 ## 2026-09-13 (Batch 59 — Nokomis FL x2, Englewood FL x4, Ridge Manor FL x4: Major Expansions)
 
 **Pages improved: 10**
