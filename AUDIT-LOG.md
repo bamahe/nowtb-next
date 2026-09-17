@@ -4,6 +4,41 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-09-16 (Batch 63 — Crystal Beach FL x7 + Indian Shores FL x3: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList/Article/FAQPage JSON-LD schemas, AEO quick-answer box, H1 distinct from title, 4+ question H2s, 6+ H3s, comparison tables, 5-Q&A FAQ, 20-link internal grid, Barrett Henry REMAX Collective author bio. Content dated 2026-09-16.)
+
+**Crystal Beach FL (7 remaining stubs — ZIP 34681):** All expanded from ~5,251-char boilerplate.
+
+1. **crystal-beach-fl-market-trends** — 5,251 to 25,844 chars. Low inventory/high demand profile; Pinellas County median price trends; waterfront premium mechanics; SOH cap reset at resale; Days on Market context; seasonal buyer patterns; 5-segment price/time-on-market comparison table; interest rate sensitivity for $500K-$800K buyers; 5-Q&A FAQ with JSON-LD; 24-link internal grid.
+
+2. **crystal-beach-fl-new-construction** — 5,251 to 24,947 chars. Teardown-rebuild economics vs existing home; Pinellas County building permit process (BOCC, FEMA elevation requirements for Zone AE); construction cost reality ($250-$400+/sq ft); impact windows/roof straps requirement; builder vs owner-builder options; elevated construction for flood compliance; timeline reality (12-24 months); 5-Q&A FAQ with JSON-LD; 24-link internal grid.
+
+3. **crystal-beach-fl-investment-property** — 5,251 to 23,164 chars. Unincorporated Pinellas County STR rules (county ordinance, registration required); DBPR vacation rental license; Airbnb/VRBO income reality for Gulf Coast unincorporated areas; cap rate vs cash flow framing; property management cost range; seasonal occupancy patterns; 5-factor ROI table; 5-Q&A FAQ with JSON-LD; 24-link internal grid.
+
+4. **crystal-beach-fl-property-taxes** — 5,251 to 27,294 chars. Pinellas County millage 18-21 mills (unincorporated, no city millage); homestead exemption mechanics ($25K+$25K applied to assessed value); Save Our Homes cap buyer-reset warning (new buyers pay market-rate assessment); portability explained; senior/veteran/widow exemptions cited at pcpao.gov; 5-price-point tax estimate table ($350K-$900K homesteaded vs non-homesteaded); 5-city comparison table; 5-Q&A FAQ with JSON-LD; 24-link internal grid.
+
+5. **crystal-beach-fl-flood-zones** — 5,251 to 23,326 chars. Zone AE (St. Joseph Sound/Bayou waterfront), Zone X (inland), NFIP vs private flood insurance comparison table; elevation certificate guidance (how to get one, what it costs, how it affects premiums); BFE and freeboard concepts; buyer checklist (5 steps); FIRM panel lookup at msc.fema.gov; 5-Q&A FAQ with JSON-LD; 24-link internal grid.
+
+6. **moving-to-crystal-beach-fl** — 5,251 to 24,501 chars. Utilities table (Duke Energy Florida electric, Pinellas County Utilities water/sewer for some areas, Spectrum/Frontier internet); school feeder pattern (Ozona Elementary, Palm Harbor Middle, Palm Harbor University High with IB); grocery access (Dunedin Publix 5-10 min, Clearwater 15-20 min); hurricane preparedness checklist (Zone A evacuation, supplies, insurance); move-in checklist (utilities, USPS address, FL DL, voter reg); 5-Q&A FAQ with JSON-LD; 24-link internal grid.
+
+7. **things-to-do-crystal-beach-fl** — 5,251 to 23,872 chars. St. Joseph Sound kayaking/paddleboarding/fishing (redfish, snook, sea trout); Honeymoon Island State Park (15-20 min, Osprey Trail, dog beach, ferry to Caladesi); Caladesi Island State Park (consistently top-ranked FL beach); Pinellas Trail (38-mile multi-use trail, Crystal Beach access points); downtown Dunedin dining/brewery scene (5-10 min); day-trip distance table (Clearwater Beach, Tarpon Springs Sponge Docks, Safety Harbor, St. Pete); seasonal activity guide; 5-Q&A FAQ with JSON-LD; 24-link internal grid.
+
+**Indian Shores FL (3 stubs — ZIP 33785):** All expanded from ~5,257-char boilerplate.
+
+8. **indian-shores-fl-schools-guide** — 5,257 to 18,672 chars. Pinellas County feeder pattern for ZIP 33785: Anona Elementary, Seminole Middle School, Seminole High School (Cambridge AICE, AP, dual-enrollment SPC); private options table (St. Patrick Catholic School Largo ~15 min, Clearwater Central Catholic High ~20-25 min, Keswick Christian ~25-30 min, Shorecrest Prep ~35-40 min); charter schools (Pinellas Prep, Plato Academy); magnet programs (IB, STEM, arts, dual-language immersion); higher ed proximity (SPC Clearwater, USFSP, Eckerd, UT); causeway commute context for school drop-off; pcsb.org address verification guidance; 5-Q&A FAQ with JSON-LD; 24-link internal grid.
+
+9. **indian-shores-fl-commute-guide** — 5,257 to 20,870 chars. 10-destination drive-time matrix (Clearwater 20-25 min, Largo 15-20 min, Seminole 15-25 min, St. Pete 35-45 min, Madeira Beach 10-15 min, TPA 50-60 min, PIE 20-25 min, Tampa 55-65 min); Walsingham Road primary exit route; Indian Rocks Road northern alternative; Gulf Blvd South to Pinellas Bayway southern route; PSTA Route 35/79 transit reality (infrequent, not practical for daily commute); psta.net cited; bridge drawbridge delay context; SunPass value for Bayway; WFH premium; 5-Q&A FAQ with JSON-LD; 24-link internal grid.
+
+10. **indian-shores-fl-real-estate-guide** — 5,257 to 22,505 chars. 5-segment price table (non-waterfront condo $400K-$900K to Gulf-front SFH $1.5M-$5M+); Town of Indian Shores incorporated 1947, separate from Pinellas County for STR ordinance purposes; STR registration required, DBPR vacation rental license, HOA condo bylaw caveat; flood zone AE (Intracoastal) and VE (Gulf-front) throughout; elevation certificate guidance; condo HOA fee table by building size ($300-$2,000+/mo); FL condo milestone inspection law (SB 4-D 2022) warning; 6-community comparison table (Indian Shores vs Indian Rocks Beach/Madeira Beach/Treasure Island/Clearwater Beach/St. Pete Beach); buyer checklist 8 items; pcpao.gov and msc.fema.gov cited; 5-Q&A FAQ with JSON-LD; 24-link internal grid.
+
+**Build:** JSON-only data change; Vercel builds on push.
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+---
+
 ## 2026-09-16 (Batch 62 — Tierra Verde FL x5 + Crystal Beach FL x5: Major Expansions)
 
 **Pages improved: 10**
