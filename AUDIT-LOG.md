@@ -4,6 +4,41 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-09-17 (Batch 64 — Indian Shores FL x9 + Kenneth City FL x1: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList/Article/FAQPage JSON-LD schemas, AEO quick-answer box, H1 distinct from title, 4+ question H2s, 6+ H3s, price/comparison tables, 5-Q&A FAQ, 23-link internal grid, Barrett Henry REMAX Collective author bio. Content dated 2026-09-17. Build: JSON-only data change; Vercel builds on push.)
+
+**Indian Shores FL (9 remaining stubs — ZIP 33785):** All expanded from ~5,257-char boilerplate.
+
+1. **indian-shores-fl-cost-of-living** — 5,257 to 31,111 chars. 3-scenario monthly ownership cost tables ($600K condo $5,024-$6,344/mo; $900K condo $7,561-$9,911/mo; $1.5M SFH $11,885-$14,785/mo); Pinellas County millage breakdown (~18-22 mills total); HOA fee table by building type ($400-$2,000+/mo); flood insurance cost table by zone (Zone VE SFH $8,000-$20,000+/yr; AE SFH $3,000-$8,000+/yr); Duke Energy Florida electric; Pinellas County Utilities water/sewer; FL condo SB 4-D 2022 reserve warning; 5-comparison table (Indian Shores vs Indian Rocks/Redington/Madeira/Treasure Island); 5-Q&A FAQ with JSON-LD.
+
+2. **indian-shores-fl-property-taxes** — 5,257 to 26,620 chars. Millage breakdown table (county ~5.0-5.5, school ~7.0-7.5, Town of Indian Shores municipal ~2.0-3.5, SWFWMD ~0.25-0.35, fire/EMS ~1.5-2.5, total ~16-20 mills); 5-price-point tax estimate table ($500K-$2.5M homestead vs non-homestead); Save Our Homes cap buyer-reset worked example ($400K/2005 SOH vs $1.2M market value reset at sale); portability (up to $500K, 3-year deadline, Form DR-501T); senior exemption (65+, ~$35,167 income limit); veteran/disability exemptions; pcpao.gov verification steps; 5-town comparison table; 5-Q&A FAQ with JSON-LD.
+
+3. **indian-shores-fl-new-construction** — 5,257 to 24,911 chars. Fully built-out barrier island — no vacant land; teardown-rebuild as sole path to new construction; Zone VE open pile foundation requirements (no enclosed space below BFE); construction cost table ($350-$550/sq ft hard costs + demo $15K-$35K + foundation $60K-$150K + architecture/engineering $30K-$80K + permits $15K-$40K); all-in Gulf-front teardown-rebuild $1.8M-$3M+; Town of Indian Shores building permit process; FDEP Coastal Construction Control Line permit (3-6 month add for Gulf-front); new construction vs existing comparison table (7 factors); 5-Q&A FAQ with JSON-LD.
+
+4. **indian-shores-fl-investment-property** — 5,257 to 26,252 chars. Town of Indian Shores STR registration required; Florida DBPR vacation rental license process; condo HOA rental restriction warning (many buildings prohibit sub-30-day rentals — verify declaration before offer); STR income table by type (Gulf-front 1BR $55K-$85K gross to Gulf-front SFH $100K-$200K+ gross); cap rate reality (gross 3-5%, net 2-3.5%); long-term rental rates ($3,500-$8,000+/mo); FL condo SB 4-D 2022 special assessment warning; ViVi Property Management reference; 5-market STR comparison table; 5-Q&A FAQ with JSON-LD.
+
+5. **indian-shores-fl-waterfront-homes** — 5,257 to 27,868 chars. Gulf-front (Zone VE) vs Intracoastal (Zone AE) side-by-side comparison; 4-type Gulf-front price table ($500K-$5M+); 3-type Intracoastal price table ($400K-$2.5M+); dock/boatlift permitting (FDEP ERP, Army Corps Section 10/404, Town of Indian Shores — 3-6 month timeline, $15K-$100K+ cost); seawall inspection guidance ($300-$600 inspection, $350-$600/linear ft replacement); elevation certificate ($500-$800); 5-market comparison table; 10-item waterfront due diligence checklist; 5-Q&A FAQ with JSON-LD.
+
+6. **indian-shores-fl-flood-zones** — 5,257 to 26,158 chars. Zone VE (Gulf-front velocity wave action) vs Zone AE (Intracoastal/bay-front) definitions; 4-zone cost table (VE SFH $5K-$20K+/yr to Zone X shaded $400-$800/yr optional); msc.fema.gov step-by-step FIRM lookup (Pinellas County FIRM panels, Community Number 125096); elevation certificate guidance ($400-$800, key for premium reduction); NFIP vs private flood insurance comparison table (6 factors); NFIP Risk Rating 2.0 reform context; Pinellas County CRS discount; Evacuation Zone A mandatory evacuation warning; 5-Q&A FAQ with JSON-LD.
+
+7. **moving-to-indian-shores-fl** — 5,257 to 26,898 chars. Town character (~1,400 permanent residents, fully residential); utilities table (Duke Energy Florida (800) 700-8744, Pinellas County Utilities (727) 464-4000, Spectrum/Frontier internet); school feeder pattern (Anona Elementary, Seminole Middle, Seminole High — Cambridge AICE program, pinellas.k12.fl.us or (727) 588-6000 for verification); healthcare access (Largo Medical Center ~20-25 min, Palms of Pasadena ~30-40 min, Mease Dunedin ~25-30 min); grocery/errands drive table (Seminole Publix 15-20 min, Largo Walmart/Target 20-25 min, Downtown St. Pete 35-45 min); hurricane preparedness (Zone A mandatory evacuation, 7-day supply kit, 48-72 hour departure guidance); 9-item move-in checklist; 6-row buyer fit table; 5-Q&A FAQ with JSON-LD.
+
+8. **things-to-do-indian-shores-fl** — 5,257 to 22,302 chars. Gulf of Mexico beach access; surf fishing (whiting, pompano, snook, redfish — myfwc.com license); Intracoastal kayaking/paddleboarding on Boca Ciega Bay (dolphins, manatees, ospreys, roseate spoonbills); boating to Johns Pass (5-8 mi south) and Clearwater Pass (12-15 mi north); John's Pass Village Madeira Beach (10-15 min south, Hubbard's Marina charters); Clearwater Marine Aquarium (249 Windward Passage, Clearwater, (727) 441-1790, 20-25 min); Clearwater Beach (20-30 min, Pier 60 Sunsets festival); Fort De Soto County Park (3500 Pinellas Bayway S, Tierra Verde, 30-40 min, 1,136 acres); 8-destination day trip table; seasonal activity guide; 5-Q&A FAQ with JSON-LD.
+
+9. **indian-shores-fl-market-trends** — 5,257 to 24,260 chars. 2024-2025 market conditions (more inventory than 2021-2022 peak, buyer-favorable to balanced); 5-segment price/DOM table (non-waterfront condo $400K-$850K/60-120 DOM to Gulf-front SFH $1.2M-$5M+/90-180+ DOM); FL condo SB 4-D 2022 market impact (structural inspections, reserve funding mandates, special assessments driving longer DOM for older buildings); seasonal pattern (Oct-April stronger); buyer guidance (pre-approval with coastal lender, flood insurance quote before offer, condo due diligence package); 5-market comparison table (Indian Shores vs Indian Rocks/Redington/Madeira/Treasure Island); 5-Q&A FAQ with JSON-LD.
+
+**Kenneth City FL (1 of 10 stubs — ZIP 33709):**
+
+10. **kenneth-city-fl-homes-for-sale-guide** — 5,259 to 26,769 chars. Small incorporated city ~4,500-5,000 residents, 0.9 sq mi, surrounded by St. Pete and Pinellas Park; 4-segment price/DOM table ($175K entry needing work to $380K-$420K remodeled); 1950s-1970s concrete block construction — 4-point inspection guidance (HVAC, electrical, plumbing, roof), Federal Pacific/Zinsco panel warning, flat roof insurance issues; school zone (pinellas.k12.fl.us, (727) 588-6000 for verification); 8-destination commute matrix (downtown St. Pete 15-22 min, Tampa 30-45 min, TPA 25-40 min, PIE 15-25 min, Gulf beaches 20-30 min); no HOA/no CDD fees selling point; long-term rental cap rates 7-9% gross ($1,500-$2,000/mo rents); Zone X flood risk (most of city); ViVi Property Management reference; 5-market comparison table (Kenneth City vs Pinellas Park/St. Pete/Largo/Seminole); 8-step buying process; 5-Q&A FAQ with JSON-LD.
+
+**Build:** JSON-only data change; Vercel builds on push.
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+---
+
 ## 2026-09-16 (Batch 63 — Crystal Beach FL x7 + Indian Shores FL x3: Major Expansions)
 
 **Pages improved: 10**
