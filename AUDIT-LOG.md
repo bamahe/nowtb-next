@@ -2128,6 +2128,38 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 
 ---
 
+## 2026-09-19 (Batch 62 — South Pasadena FL x10)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, 18-link internal grid, comparison tables, Barrett Henry bio)
+
+1. **south-pasadena-fl-cost-of-living** — Expanded 5,259 to 33,508 chars. Added: monthly cost breakdown table (condo to waterfront SFH); homeowners insurance ranges ($3,500-$9,000 non-waterfront, $8,000-$20,000+ waterfront); flood insurance Zone AE ranges ($2,000-$8,000+/yr); property tax example with homestead exemption; FPL electric, PCU water/sewer, Spectrum/Frontier internet costs; grocery and dining options (Publix on Pasadena Ave, Corey Ave); 5-community cost-of-living comparison table (vs. St. Pete Beach, Gulfport, Treasure Island, Clearwater); 5-Q&A FAQ.
+
+2. **south-pasadena-fl-property-taxes** — Expanded 5,259 to 25,037 chars. Added: Pinellas County millage breakdown table (~17-19 mills for South Pasadena); Florida homestead exemption mechanics ($50K standard, $25K additional); Save Our Homes 3% cap explanation; portability walkthrough; sample tax calculation ($500K home with homestead = ~$7,500-$8,500/yr); how to look up at pcpao.gov; investment property vs. primary residence comparison; 5-Q&A FAQ.
+
+3. **south-pasadena-fl-flood-zones** — Expanded 5,259 to 25,108 chars. Added: Zone AE/X definitions with Boca Ciega Bay proximity context; FEMA Flood Map Service Center lookup guide; NFIP vs. private flood insurance comparison table; Pinellas County CRS discount note; elevation certificate explanation; buyer due diligence checklist; real cost modeling for waterfront vs. non-waterfront; 5-Q&A FAQ.
+
+4. **south-pasadena-fl-investment-property** — Expanded 5,259 to 24,828 chars. Added: 4-type investment table (non-waterfront condo to waterfront SFH with purchase price, LTR rent, STR revenue, cap rate); annual operating cost breakdown; STR regulatory framework (DBPR license, Pinellas TDT 6%, SB 714); ViVi Property Management reference with /property-management/ link; LTR vs. STR analysis; 5-Q&A FAQ.
+
+5. **south-pasadena-fl-new-construction** — Expanded 5,259 to 22,310 chars. Added: Why new construction is rare (mostly built out in 1960s-1980s); teardown-rebuild process (demo $20K-$40K, Zone AE requirements, seawall considerations); custom build cost ranges ($350-$500+/sqft); 5-city new construction alternatives table (St. Pete Beach infill to Wesley Chapel with distances); honest buyer guidance for those wanting new; 5-Q&A FAQ.
+
+6. **south-pasadena-fl-waterfront-homes** — Expanded 5,259 to 23,053 chars. Added: 4-tier waterfront property table (canal-front entry to bay-front premium); Boca Ciega Bay waterfront characteristics; seawall inspection guide ($300-$600 inspection, $500-$900/LF replacement); dock permit requirements (FDEP, Army Corps, Pinellas County); boatlift and slip details; 4-scenario flood insurance cost table; 5-Q&A FAQ.
+
+7. **south-pasadena-fl-schools-guide** — Expanded 5,259 to 21,662 chars. Added: Pasadena Fundamental Elementary (8-9/10 rating, lottery application required, pcsb.org); Azalea Middle School profile; Boca Ciega High School profile; Pinellas County school choice program explanation; private schools comparison table (Academy of the Holy Names, Shorecrest Preparatory, Canterbury, St. Pete Catholic HS with grade range, type, tuition range); higher ed access table (SPC, USFSP, Eckerd, Stetson Law Gulfport); 5-Q&A FAQ.
+
+8. **south-pasadena-fl-commute-guide** — Expanded 5,259 to 20,934 chars. Added: 7-destination commute matrix (St. Pete downtown 15-20 min, Tampa 40-50/55-80 min peak via I-275 Howard Frankland Bridge, TPA 40-50 min, PIE 25-35 min, Gulfport 5-8 min, Clearwater 35-45 min, Bradenton 55-75 min); Gandy Bridge alternative route; PSTA transit limitations (limited service, car-essential reality); Pinellas Trail access; peak vs. off-peak timing advice; 5-Q&A FAQ.
+
+9. **moving-to-south-pasadena-fl** — Expanded 5,259 to 22,175 chars. Added: Housing price table by property type; utility setup guide (FPL fpl.com, Pinellas County Utilities pcutilities.org, Spectrum/Frontier internet); homeowners insurance ranges; Wind Mitigation Report value explanation; FL driver's license within 30 days, vehicle registration within 10 days, homestead exemption by March 1, voter registration reminders; healthcare access (Bayfront Health, St. Anthony's, Johns Hopkins All Children's, Bay Pines VA, Palms of Pasadena); 5-Q&A FAQ.
+
+10. **things-to-do-south-pasadena-fl** — Expanded 5,259 to 22,314 chars. Added: Gulfport Arts District guide (Art Walk first Friday + third Saturday, Farmers Market Tuesdays, O'Maddy's Bar and Grille, The Sentimental, Gulfport Municipal Marina); Gulf beaches access (Pass-a-Grille 10-12 min, Corey Avenue Sunday Market, Treasure Island 12-18 min); Boca Ciega Bay water activities (kayaking, paddleboarding, boating, fishing); downtown St. Pete attractions table (The Dali Museum, MFA, Mahaffey Theater, St. Pete Pier, Sunken Gardens, Central Avenue); seasonal events calendar (Gulfport Art Walk, Corey Ave Market, SHINE Mural Festival, Sunscreen Film Festival); 5-Q&A FAQ.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `5746ba3` — pushed to `origin/main`
+
+---
+
 ## 2026-09-14 (Batch 61 — Siesta Key things-to-do x1 + Tierra Verde FL x9)
 
 **Pages improved: 10**
