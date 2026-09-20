@@ -4,6 +4,42 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-09-20 (Batch 65 — Kenneth City FL x9 + South Pasadena FL x1: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList/Article/FAQPage JSON-LD schemas, AEO quick-answer box, H1 distinct from title, 4+ question H2s, 6+ H3s, price/comparison tables, 5-Q&A FAQ, 20-link internal grid, Barrett Henry REMAX Collective author bio. Content dated 2026-09-19. Build green.)
+
+**Kenneth City FL (9 remaining stubs — ZIP 33709):** All expanded from ~5,259-char boilerplate.
+
+1. **kenneth-city-fl-schools-guide** — 5,259 to 29,335 chars. Pinellas County School District (pcsb.org, (727) 588-6000 for verification); elementary school zone table (Westgate, Pinellas Park, Sawgrass Lake, Blanton elementaries with addresses); Pinellas Park Middle School and Fitzgerald Middle School; Pinellas Park High School (6305 118th Ave N, (727) 547-7568) and Dixie M. Hollins High School; PCSB controlled open enrollment and magnet programs table (Perkins IB PYP, Pinellas Park HS IB, Northeast STEM, Pinellas Technical College); private schools comparison table (St. Petersburg Catholic HS, Canterbury, Shorecrest, Academy of the Holy Names, Bishop McLaughlin with tuition ranges); higher education table (SPC, USFSP, Eckerd, Stetson Law Gulfport, USF Tampa); 5-Q&A FAQ with JSON-LD.
+
+2. **kenneth-city-fl-commute-guide** — 5,259 to 25,087 chars. 9-destination commute matrix (downtown St. Pete 15-22 min, Tampa 30-45 min, TPA 25-40 min, PIE 20-30 min, beaches 20-30 min, Clearwater 28-38 min, Pinellas Park 8-15 min, Bradenton 55-75 min, Orlando 1h45min-2h); I-275 primary artery explanation (western KC boundary) and Howard Frankland Bridge context; Gandy Bridge alternative; US-19 corridor; PSTA bus service at psta.net; car-essential reality; TPA distance advantage vs other Pinellas markets; PIE (Allegiant/Sun Country); 5-community commute/price comparison table; 5-Q&A FAQ with JSON-LD.
+
+3. **is-kenneth-city-fl-good-place-to-live** — 5,259 to 27,519 chars. Pros: affordability ($175K-$380K), no HOA/CDD, Zone X flood status, central Pinellas location, low-maintenance CBS construction. Cons: 4-point inspection issues table (Federal Pacific panels $3K-$6K, flat roofs $8K-$20K, galvanized plumbing $5K-$20K, old HVAC $5K-$12K), limited amenities, car-dependent, no new construction. 4-community comparison table (Kenneth City vs Pinellas Park/Seminole/St. Pete with price, HOA, flood, beach/Tampa drive times). Buyer profile fit table (7 profiles from Excellent to Not a Fit); 5-Q&A FAQ with JSON-LD.
+
+4. **kenneth-city-fl-real-estate-guide** — 5,259 to 24,113 chars. 4-condition price/DOM table ($175K-$240K entry to $360K-$420K+ fully remodeled); condition-drives-value dynamic; 4-point insurance inspection explanation ($150-$250 for 4-point vs $350-$500 standard); Federal Pacific/Zinsco panel issue detail; roof type and flat roof insurance challenge; galvanized plumbing repipe costs; no HOA/CDD advantage; Zone X financial benefit vs Zone AE; rental cap rates 7-9% gross; 8-step buyer process table; 5-Q&A FAQ with JSON-LD.
+
+5. **kenneth-city-fl-cost-of-living** — 5,259 to 31,372 chars. 3-scenario monthly cost tables ($200K entry to $350K move-in ready with P+I, taxes, insurance, flood, HOA, utilities, and totals $1,640-$3,073/mo); homeowners insurance table by condition (updated CBS $2.2K-$3.8K/yr to flat roof $4K-$7K+/yr to panel refusal); Pinellas County millage breakdown table (7 components, ~17-20 mills); homestead exemption tax estimates by price point (homestead vs non-homestead, $175K-$400K); utility provider table (Duke Energy, Pinellas County Utilities, internet options, garbage); 5-community monthly cost comparison table; 5-Q&A FAQ with JSON-LD.
+
+6. **kenneth-city-fl-property-taxes** — 5,259 to 27,476 chars. Millage breakdown table (county ~5.0-5.5, school ~7.0-7.5, Kenneth City municipal ~3.0-4.0, SWFWMD ~0.25-0.35, fire/EMS ~2.0-3.0, total ~17-20 mills); annual tax estimates by price ($175K-$400K, homestead vs non-homestead); two-part homestead exemption explanation ($25K off all millage + $25K off non-school); application at pcpao.gov by March 1 (315 Court St., Clearwater, (727) 464-3207); Save Our Homes cap reset worked example ($120K 2005 to $300K 2025 = buyer pays $2,520/yr more); portability (Form DR-501T, $500K max, 3-year deadline); 5-step tax verification guide (pcpao.gov + taxcollect.com); 5-Q&A FAQ with JSON-LD.
+
+7. **kenneth-city-fl-new-construction** — 5,259 to 26,508 chars. Kenneth City fully built out explanation (0.9 sq mi, no vacant land, incorporated 1960); teardown-rebuild economics table ($80K-$150K lot + $15K-$30K demo + $180-$250/sqft construction = $440K-$600K+ vs $310K-$420K updated resale); Pinellas County new construction table (luxury infill $500K-$1.5M+, luxury townhomes $450K-$900K+, waterfront custom $800K-$3M+); new construction alternatives table by distance (Wesley Chapel 35-50mi D.R. Horton/Lennar/Pulte $310K-$700K, Land O'Lakes 30-45mi $290K-$600K, Riverview 30-45mi $280K-$550K, Parrish 45-60mi $300K-$650K, Palmetto 40-55mi $280K-$500K); KC resale vs Wesley Chapel new construction comparison table (7 factors); 5-Q&A FAQ with JSON-LD.
+
+8. **kenneth-city-fl-investment-property** — 5,259 to 22,608 chars. 3-scenario investment analysis table ($200K entry to $280K move-in ready with gross/net rent, cap rates 7-9% gross / 4-6% net, NOI estimates); no HOA rental restriction advantage; tenant demand profile (St. Pete/Pinellas Park workers); Zone X flood advantage ($0 vs $3K-$8K+/yr in Zone AE); 4-point inspection deal-killer section (panel refusal, flat roof issues); rent comps validation guidance; STR not viable for KC (no beach/tourist infrastructure); ViVi Property Management reference with /property-management/ link; 5-Q&A FAQ with JSON-LD.
+
+9. **kenneth-city-fl-waterfront-homes** — 5,259 to 27,086 chars. Honest statement: no waterfront in Kenneth City (landlocked, 0.9 sq mi); geographic explanation (surrounded by St. Pete and Pinellas Park); St. Pete waterfront neighborhoods table (Shore Acres, Snell Isle, Venetian Isles, Placido Bayou, Coquina Key — 12-22 mi, 18-32 min, $400K-$4M+); Gulf beach waterfront table (Treasure Island, St. Pete Beach/Pass-a-Grille, Madeira Beach, Indian Rocks/Shores, Redington, Clearwater Beach — 10-30 mi, $450K-$4M+); waterfront vs KC monthly cost comparison table ($280K KC to Treasure Island canal-front to Gulf-front with flood/HO insurance differentials); "between Kenneth City and beach" alternative markets table (South St. Pete, Gulfport, western Pinellas Park, Seminole); 5-Q&A FAQ with JSON-LD.
+
+**South Pasadena FL (1 remaining stub):**
+
+10. **south-pasadena-fl-real-estate-guide** — 5,259 to 29,255 chars. 5-type price table (non-waterfront condo $350K-$500K to Gulf-adjacent $700K-$3M+); price drivers (water access, view, canal width, seawall condition); condo SB 4-D reserve crisis section with 5-document due diligence checklist (reserve study, meeting minutes 3yr, financials, pending assessments, milestone inspection report); flood zone table (Zone X not required / Zone AE canal-front elevated $2K-$5K/yr to bay-front non-elevated $8K-$20K+/yr); 5-community comparison table (South Pasadena vs St. Pete Beach/Gulfport/Treasure Island/Madeira Beach with character, prices, flood risk); 8-step buyer process table; 5-Q&A FAQ with JSON-LD.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `55c24c4` — pushed to `origin/main`
+
+---
+
 ## 2026-09-17 (Batch 64 — Indian Shores FL x9 + Kenneth City FL x1: Major Expansions)
 
 **Pages improved: 10**
