@@ -75,15 +75,46 @@ export default function LoginPage() {
     try {
       const supabase = createClient();
       if (!supabase) { setErrorMessage("Authentication is not configured."); setStatus("error"); return; }
+      // shouldCreateUser: false is a spam fix, not a preference.
+      //
+      // With the default (true), ANY address typed here made Supabase create an
+      // account and email that person a "Confirm your email address" link from
+      // noreply@nowtb.com. Bots found it: 58 accounts were created between
+      // 2026-06-30 and 2026-09-19, 21 of them Gmail dot-abuse addresses, and
+      // exactly ONE account has ever actually signed in — Barrett's own, via
+      // Google. So every one of those emails was unsolicited mail sent to a
+      // stranger on our sending domain, and at least one recipient reported it
+      // as spam. That threatens the Resend reputation the lead alerts ride on.
+      //
+      // With this false, an unrecognised address gets no account and no email.
+      // Google OAuth (the button above) is unaffected and is how Barrett signs
+      // in anyway.
+      //
+      // NOTE: this only protects the form. The Supabase anon key ships in the
+      // client bundle, so a bot can call the auth endpoint directly and set its
+      // own options. The complete fix is server-side — turn OFF "Allow new
+      // users to sign up" in the Supabase dashboard (Authentication →
+      // Sign In / Providers).
       const { error } = await supabase.auth.signInWithOtp({
         email: email.trim(),
         options: {
           emailRedirectTo: `${window.location.origin}/auth/callback`,
+          shouldCreateUser: false,
         },
       });
 
       if (error) {
-        setErrorMessage(error.message);
+        // An unrecognised address now comes back as "Signups not allowed for
+        // otp", which is Supabase's wording and means nothing to a visitor.
+        // Point them at the Google button instead of showing the raw string.
+        const unknownAddress = /signups? not allowed|otp_disabled|user not found/i.test(
+          error.message || ""
+        );
+        setErrorMessage(
+          unknownAddress
+            ? "We don't have an account for that email. Use the Google button above, or call Barrett at (813) 733-7907 and he'll sort it out."
+            : error.message
+        );
         setStatus("error");
       } else {
         // Success — tell user to check their inbox
