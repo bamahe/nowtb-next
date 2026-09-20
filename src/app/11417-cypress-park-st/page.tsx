@@ -49,9 +49,8 @@ const FULL_ADDRESS = `${L.address}, ${L.city}, ${L.state} ${L.zip}`;
 const OPEN_HOUSE = "Sunday, September 20 · 2:00 – 4:00 PM";
 
 // Lender joining the open house, straight from Christian's own signature block.
-// Note: the phone here is his DIRECT line, which differs from the branch number
-// in src/data/vendors/lenders.json (813-921-3304) — use this one for the open
-// house. Any field left empty is skipped when rendering.
+// This is his direct line; src/data/vendors/lenders.json has been corrected to
+// match. Any field left empty is skipped when rendering.
 //
 // applyUrl deliberately drops the `_gl=` parameter that came with the link he
 // sent. That is a Google Analytics cross-domain session token — it goes stale,
