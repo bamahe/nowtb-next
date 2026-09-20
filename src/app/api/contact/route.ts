@@ -17,6 +17,7 @@ const fubSourceMap: Record<string, string> = {
   contact: "nowtb.com — Contact Form",
   showing: "nowtb.com — Showing Request",
   "open-house": "nowtb.com — Open House Sign In",
+  "open-house-feedback": "nowtb.com — Open House Feedback",
   valuation: "nowtb.com — Home Valuation",
   "seller-intake": "nowtb.com — Seller Intake",
   newsletter: "nowtb.com — Newsletter",
@@ -28,6 +29,7 @@ const fubTagMap: Record<string, string[]> = {
   contact: ["Website Lead", "Contact Form"],
   showing: ["Website Lead", "Showing Request", "Buyer"],
   "open-house": ["Website Lead", "Open House", "Buyer"],
+  "open-house-feedback": ["Website Lead", "Open House", "Feedback"],
   valuation: ["Website Lead", "Home Valuation", "Seller"],
   "seller-intake": ["Website Lead", "Seller Intake", "Seller"],
   newsletter: ["Website Lead", "Newsletter"],
@@ -58,12 +60,24 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Open house kiosk forms. These run on Barrett's own iPad at the front door
+    // of a house he is standing in, or on a walk-in guest's phone after they
+    // scan the sign. They deliberately carry no Turnstile widget: a challenge
+    // that stalls or needs a page refresh (which Turnstile does) would stop the
+    // line at the door, and every guest is physically present anyway.
+    const isOpenHouseKiosk = type === "open-house" || type === "open-house-feedback";
+
     // --- Turnstile spam verification (Cloudflare) ---
     // This BLOCKS on failure. It used to only log a warning and let the
     // submission through, which meant every bot passed and we were pushing
     // junk leads into Follow Up Boss and emailing fake addresses.
+    //
+    // The kiosks are exempt. They send no token, so this gate was returning 403
+    // for every walk-in while the kiosk still showed its "Thank You" screen —
+    // silently discarding 100% of open house sign-ins. Rate limiting and the
+    // content validation below still apply to these submissions.
     const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
-    if (turnstileSecret) {
+    if (turnstileSecret && !isOpenHouseKiosk) {
       // A missing token means the request didn't come from our form at all —
       // a bot POSTing straight to this endpoint. Reject it.
       if (!turnstileToken) {
@@ -125,6 +139,7 @@ export async function POST(request: NextRequest) {
       email: formData.email,
       phone: formData.phone,
       honeypot,
+      allowNoContact: isOpenHouseKiosk,
     });
 
     if (verdict.reject) {
@@ -154,6 +169,9 @@ export async function POST(request: NextRequest) {
       contact: `${N8N_BASE}/nowtb-contact`,
       showing: `${N8N_BASE}/nowtb-showing`,
       "open-house": `${N8N_BASE}/nowtb-open-house`,
+      // Feedback reuses the open house n8n flow - it was missing entirely, so every
+      // feedback submission 400d out as "Invalid form type" before reaching FUB.
+      "open-house-feedback": `${N8N_BASE}/nowtb-open-house`,
       valuation: `${N8N_BASE}/nowtb-valuation`,
       "seller-intake": `${N8N_BASE}/nowtb-seller-intake`,
       newsletter: `${N8N_BASE}/nowtb-newsletter`,
@@ -222,7 +240,12 @@ export async function POST(request: NextRequest) {
 
     // --- Send Resend alert email to Barrett + auto-responder to lead ---
     // Both are no-ops if RESEND_API_KEY is not configured — won't block the form
-    if (formData.email || formData.phone) {
+    //
+    // Open house kiosks alert unconditionally. Gating on email/phone meant a
+    // guest who signed in with just a name, or left anonymous feedback, never
+    // reached Barrett at all — the one notification that has to arrive while
+    // the guest is still standing in the house.
+    if (formData.email || formData.phone || isOpenHouseKiosk) {
       // Always alert Barrett so he sees the walk-in; only auto-respond when we
       // actually have an email address to reply to.
       const emailTasks: Promise<void>[] = [

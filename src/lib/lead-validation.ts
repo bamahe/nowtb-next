@@ -136,12 +136,17 @@ function checkName(name: string): string | null {
  * @param data.email   submitted email (optional — open-house walk-ins may omit)
  * @param data.phone   submitted phone (optional)
  * @param data.honeypot  hidden field value; ANY content means a bot filled it
+ * @param data.allowNoContact  skip the "must have email or phone" rejection.
+ *   Set ONLY for open house kiosks: the sign-in sheet requires just a name and
+ *   the exit feedback form requires nothing at all, so the default rule threw
+ *   away every name-only walk-in and every piece of anonymous seller feedback.
  */
 export function validateLead(data: {
   name?: string;
   email?: string;
   phone?: string;
   honeypot?: string;
+  allowNoContact?: boolean;
 }): LeadVerdict {
   const reasons: string[] = [];
   let reject = false;
@@ -155,7 +160,10 @@ export function validateLead(data: {
   }
 
   // --- Must have at least one way to contact them ---
-  if (!data.email && !data.phone) {
+  // Open house kiosks opt out: a walk-in who gives only a name is still a real
+  // person Barrett just shook hands with, and anonymous exit feedback is worth
+  // capturing for the seller report even with no way to reply.
+  if (!data.email && !data.phone && !data.allowNoContact) {
     return { reject: true, suspect: true, reasons: ["no email or phone provided"] };
   }
 
