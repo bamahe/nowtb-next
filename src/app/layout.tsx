@@ -3,6 +3,7 @@ import { Playfair_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ChromeGate from "@/components/layout/ChromeGate";
 import MobileBottomBar from "@/components/ui/MobileBottomBar";
 import BackToTop from "@/components/ui/BackToTop";
 import ClientChatWidget from "@/components/ui/ClientChatWidget";
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     shortcut: "/remax-favicon-32.png",
   },
   description:
-    "Barrett Henry is a licensed real estate Broker Associate with REMAX Collective serving Tampa Bay. 23+ years of real estate experience. Search homes, get market data, and connect with a trusted local expert.",
+    "Barrett Henry is a licensed real estate Broker Associate with REMAX Collective serving Tampa Bay. 24+ years of real estate experience. Search homes, get market data, and connect with a trusted local expert.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://nowtb.com"),
   openGraph: {
     type: "website",
@@ -114,7 +115,7 @@ export default function RootLayout({
               "name": "Barrett Henry",
               "jobTitle": "Broker Associate",
               "description":
-                "Licensed REALTOR\u00ae and Broker Associate with REMAX Collective, serving Tampa Bay with 23+ years of real estate experience.",
+                "Licensed REALTOR\u00ae and Broker Associate with REMAX Collective, serving Tampa Bay with 24+ years of real estate experience.",
               "image": "https://nowtb.com/images/barrett-henry-headshot.jpg",
               "url": "https://nowtb.com/about/",
               "telephone": "+1-813-733-7907",
@@ -225,16 +226,20 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
-        <Header />
+        {/* ChromeGate strips header/footer/bottom-bar on open house kiosk routes
+            so a guest mid-sign-in cannot tap into site nav and lose the form. */}
+        <ChromeGate><Header /></ChromeGate>
         {/* pb-16 md:pb-0 adds bottom padding on mobile so sticky MobileBottomBar doesn't cover content */}
         <main id="main-content" className="min-h-screen pb-16 md:pb-0">{children}</main>
-        <Footer />
+        <ChromeGate><Footer /></ChromeGate>
         {/* Mobile sticky bottom bar — Call + Contact buttons, iPhone safe-area aware */}
-        <MobileBottomBar />
+        <ChromeGate><MobileBottomBar /></ChromeGate>
         {/* Floating back-to-top button — appears after scrolling 400px */}
-        <BackToTop />
-        {/* AI chat assistant — lazy-loaded, client-only (no SSR) */}
-        <ClientChatWidget />
+        <ChromeGate><BackToTop /></ChromeGate>
+        {/* AI chat assistant — lazy-loaded, client-only (no SSR).
+            Gated off the kiosks: a floating chat bubble over a sign-in form is
+            something a guest taps by accident, and nobody is watching it. */}
+        <ChromeGate><ClientChatWidget /></ChromeGate>
         {/* Exit-intent popup — DISABLED per Barrett's request
         <ClientExitIntent />
         */}

@@ -35,7 +35,6 @@ export default function SignInKiosk() {
   const [financing, setFinancing] = useState("");
   const [meetLender, setMeetLender] = useState("");
   const [heard, setHeard] = useState("");
-  const [notes, setNotes] = useState("");
 
   // Honeypot: hidden from humans, irresistible to form-filling bots.
   const [hp, setHp] = useState("");
@@ -50,7 +49,7 @@ export default function SignInKiosk() {
     const t = setTimeout(() => {
       setName(""); setPhone(""); setEmail("");
       setAgent(""); setAgentName(""); setTimeframe("");
-      setFinancing(""); setMeetLender(""); setHeard(""); setNotes("");
+      setFinancing(""); setMeetLender(""); setHeard("");
       setStatus("idle");
       nameRef.current?.focus();
     }, 4000);
@@ -71,7 +70,6 @@ export default function SignInKiosk() {
       financing && `Financing: ${financing}`,
       meetLender && `Wants intro to lender (${LENDER_FIRST}): ${meetLender}`,
       heard && `Heard about us: ${heard}`,
-      notes && `Notes: ${notes}`,
     ].filter(Boolean).join("\n");
 
     try {
@@ -106,7 +104,7 @@ export default function SignInKiosk() {
   // ---- Thank-you screen ----
   if (status === "done") {
     return (
-      <main className="min-h-screen bg-primary text-white flex items-center justify-center p-8 pt-28">
+      <main className="min-h-screen bg-primary text-white flex items-center justify-center p-8">
         <div className="text-center">
           <div className="mx-auto mb-8 h-28 w-28 rounded-full bg-accent flex items-center justify-center">
             <Check className="h-16 w-16 text-primary" strokeWidth={3} />
@@ -127,7 +125,7 @@ export default function SignInKiosk() {
   return (
     <main className="min-h-screen bg-surface">
       {/* Header */}
-      <div className="bg-primary text-white px-8 pt-28 pb-7 text-center">
+      <div className="bg-primary text-white px-8 pt-10 pb-7 text-center">
         <h1 className="font-heading text-4xl md:text-5xl font-light uppercase tracking-wide">
           Welcome — Please Sign In
         </h1>
@@ -221,16 +219,6 @@ export default function SignInKiosk() {
         />
 
         <Choice label="How did you hear about this open house?" options={HEARD_OPTIONS} value={heard} onChange={setHeard} />
-
-        <Field label="Anything you're looking for? (optional)">
-          <input
-            type="text"
-            value={notes}
-            onChange={(e) => setNotes(e.target.value)}
-            autoComplete="off"
-            className={INPUT}
-          />
-        </Field>
 
         <button
           type="submit"
