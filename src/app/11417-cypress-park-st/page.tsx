@@ -87,12 +87,12 @@ const photos = Array.from({ length: PHOTO_COUNT }, (_, i) => ({
 export const metadata: Metadata = {
   title: "11417 Cypress Park St, Tampa FL 33624 | 3 Bed + Office | $514,990",
   description:
-    `Updated 3 bed, 2 bath, 2 car garage home with a dedicated office on a Carrollwood cul-de-sac. 1,800 sqft, single story, low $740/yr HOA. MLS ${L.mls}. Call Barrett Henry at ${PHONE}.`,
+    `Updated 3 bed, 2 bath, 2 car garage home with a home office on a Carrollwood cul-de-sac. 1,800 sqft, single story, low $740/yr HOA. MLS ${L.mls}. Call Barrett Henry at ${PHONE}.`,
   alternates: { canonical: "/11417-cypress-park-st/" },
   openGraph: {
     title: "Open House Sunday 2p–4p — 11417 Cypress Park St, Tampa FL",
     description:
-      "3 bed, 2 bath, 2 car garage plus a dedicated home office at the end of a quiet Carrollwood cul-de-sac. Hardwood floors, quartz kitchen, screened patio. Open house Sunday, 2:00 to 4:00.",
+      "3 bed, 2 bath, 2 car garage plus a home office at the end of a quiet Carrollwood cul-de-sac. Hardwood floors, quartz kitchen, screened patio. Open house Sunday, 2:00 to 4:00.",
     url: "/11417-cypress-park-st/",
     type: "website",
     images: [
@@ -118,7 +118,7 @@ const FACTS = [
   { icon: Bath, label: `${L.baths} Full Baths` },
   { icon: Ruler, label: `${L.sqft.toLocaleString()} Sq Ft` },
   { icon: Car, label: `${L.garage} Car Garage` },
-  { icon: Briefcase, label: "Dedicated Office" },
+  { icon: Briefcase, label: "Home Office / Den" },
   { icon: Home, label: "Single Story" },
 ];
 
@@ -181,7 +181,7 @@ export default function CypressParkListingPage() {
           "@type": "SingleFamilyResidence",
           name: FULL_ADDRESS,
           description:
-            "Updated single story 3 bedroom, 2 bath, 2 car garage home with a dedicated office on a cul-de-sac in Carrollwood, Tampa FL.",
+            "Updated single story 3 bedroom, 2 bath, 2 car garage home with a home office on a cul-de-sac in Carrollwood, Tampa FL.",
           numberOfRooms: L.beds,
           numberOfBathroomsTotal: L.baths,
           floorSize: { "@type": "QuantitativeValue", value: L.sqft, unitCode: "FTK" },
@@ -333,8 +333,9 @@ export default function CypressParkListingPage() {
                 flooring, and pendant lighting over the working space, open to the family room so
                 whoever is cooking is still part of the conversation. Past it, the split floorplan
                 puts the owners suite on its own side with a walk-in closet, and the two secondary
-                bedrooms on the other. The dedicated office is the fourth room most buyers at this
-                price never get — a real door, not a converted corner of the dining room.
+                bedrooms on the other. The home office is a fourth room on top of those three
+                bedrooms — open to the floorplan rather than closed off, so it reads as a bright
+                work space or a den depending on what you need from it.
               </p>
               <p>
                 Out back, the screened patio looks over tropical landscaping inside a wood privacy
@@ -609,7 +610,7 @@ export default function CypressParkListingPage() {
             Cul-de-Sac Homes in Carrollwood Go Fast
           </h2>
           <p className="font-body text-white/80 mb-7">
-            Walk it Sunday between 2 and 4, or call and I will open it for you sooner.
+            Walk it Sunday between 2 and 4, or call and I'll set up a private showing.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
@@ -633,10 +634,11 @@ export default function CypressParkListingPage() {
       <section className="bg-white py-8">
         <div className="max-w-6xl mx-auto px-4">
           <p className="font-body text-xs text-muted leading-relaxed">
-            Listed by Barrett Henry, Broker Associate, REMAX Collective. MLS {L.mls}. Information
-            deemed reliable but not guaranteed — buyer and buyer&rsquo;s agent should independently
-            verify all measurements, lot dimensions, flood zone, HOA fees, taxes, and school
-            assignments. Equal Housing Opportunity.
+            Listing courtesy of REMAX Collective. MLS {L.mls}. Open house hosted by Barrett Henry,
+            Broker Associate, REMAX Collective. Information deemed reliable but not guaranteed —
+            buyer and buyer&rsquo;s agent should independently verify all measurements, lot
+            dimensions, flood zone, HOA fees, taxes, and school assignments. Equal Housing
+            Opportunity.
           </p>
         </div>
       </section>
