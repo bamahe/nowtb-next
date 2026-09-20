@@ -12,6 +12,48 @@ const N8N_BASE = process.env.N8N_WEBHOOK_BASE || "";
 const RATE_LIMIT_MAX = 5;
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
 
+// Open house kiosks need their own ceiling. Every guest signs in on the SAME
+// iPad behind the SAME IP, so the normal limit of 5 would have locked out the
+// sixth person through the door and silently discarded the rest of the event.
+const KIOSK_RATE_LIMIT_MAX = 120;
+
+/**
+ * Tags for an open house lead: the standard type tags plus the things Barrett
+ * actually filters on later — which house, which day, and which lender was on
+ * site. Anything caller-supplied is sanitised and capped so a scripted POST
+ * cannot stuff arbitrary junk into the FUB tag list.
+ */
+function buildOpenHouseTags(
+  baseTags: string[],
+  address: string | undefined,
+  extraTags: unknown
+): string[] {
+  const tags = [...baseTags];
+
+  if (address && typeof address === "string") tags.push(address.trim().slice(0, 80));
+
+  // Date of the open house in Florida local time. Using UTC would roll an
+  // evening event onto the following day and split one event across two tags.
+  tags.push(
+    new Intl.DateTimeFormat("en-CA", {
+      timeZone: "America/New_York",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    }).format(new Date())
+  );
+
+  if (Array.isArray(extraTags)) {
+    for (const t of extraTags.slice(0, 5)) {
+      if (typeof t === "string" && t.trim()) tags.push(t.trim().slice(0, 60));
+    }
+  }
+
+  // De-duplicate, drop empties. Array.from rather than spreading the Set —
+  // this project's tsconfig target predates downlevelIteration.
+  return Array.from(new Set(tags.filter(Boolean)));
+}
+
 // Map form type → FUB source label (shows up in FUB's "Source" column)
 const fubSourceMap: Record<string, string> = {
   contact: "nowtb.com — Contact Form",
@@ -45,13 +87,24 @@ const fubTagMap: Record<string, string[]> = {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { type, turnstileToken, honeypot, ...formData } = body;
+    const { type, turnstileToken, honeypot, extraTags, ...formData } = body;
+
+    // Open house kiosk forms. These run on Barrett's own iPad at the front door
+    // of a house he is standing in, or on a walk-in guest's phone after they
+    // scan the sign. They deliberately carry no Turnstile widget: a challenge
+    // that stalls or needs a page refresh (which Turnstile does) would stop the
+    // line at the door, and every guest is physically present anyway.
+    const isOpenHouseKiosk = type === "open-house" || type === "open-house-feedback";
 
     // --- Rate limit by IP ---
     // First gate, before any work. Stops floods regardless of how clever the
     // bot is about the other checks.
     const ip = getClientIp(request);
-    const limit = rateLimit(ip, RATE_LIMIT_MAX, RATE_LIMIT_WINDOW_MS);
+    const limit = rateLimit(
+      ip,
+      isOpenHouseKiosk ? KIOSK_RATE_LIMIT_MAX : RATE_LIMIT_MAX,
+      RATE_LIMIT_WINDOW_MS
+    );
     if (!limit.ok) {
       console.warn(`[SPAM] Rate limit hit for IP ${ip} on "${type}" form`);
       return NextResponse.json(
@@ -60,12 +113,23 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Open house kiosk forms. These run on Barrett's own iPad at the front door
-    // of a house he is standing in, or on a walk-in guest's phone after they
-    // scan the sign. They deliberately carry no Turnstile widget: a challenge
-    // that stalls or needs a page refresh (which Turnstile does) would stop the
-    // line at the door, and every guest is physically present anyway.
-    const isOpenHouseKiosk = type === "open-house" || type === "open-house-feedback";
+    // --- Same-origin check: the kiosks' replacement for Turnstile ---
+    // Turnstile's real job is proving the POST came from our own page rather
+    // than a script hitting the endpoint directly. The kiosks can't run the
+    // widget, so require the browser-set Origin/Referer to be nowtb.com. A
+    // browser will not let a page forge these, so this blocks the drive-by
+    // scripted POSTs that would otherwise walk straight into Follow Up Boss.
+    if (isOpenHouseKiosk) {
+      const origin = request.headers.get("origin") || request.headers.get("referer") || "";
+      const allowed = /^https?:\/\/([a-z0-9-]+\.)*nowtb\.com(\/|$|:)/i.test(origin);
+      if (!allowed) {
+        console.warn(`[SPAM] Kiosk POST with bad origin "${origin}" from IP ${ip}`);
+        return NextResponse.json(
+          { error: "Spam verification failed. Please reload the page and try again." },
+          { status: 403 }
+        );
+      }
+    }
 
     // --- Turnstile spam verification (Cloudflare) ---
     // This BLOCKS on failure. It used to only log a warning and let the
@@ -200,7 +264,16 @@ export async function POST(request: NextRequest) {
           message: formData.message,
           source: fubSourceMap[type] || "nowtb.com",
           sourceId: formData.source,
-          tags: fubTagMap[type] || ["Website Lead"],
+          // Open house leads get the house, the date and the on-site lender as
+          // tags so Barrett can pull "everyone who walked 11417 Cypress Park on
+          // Sep 20" or "everyone Christian met" as a FUB smart list later.
+          tags: isOpenHouseKiosk
+            ? buildOpenHouseTags(
+                fubTagMap[type] || ["Website Lead"],
+                formData.property?.address,
+                extraTags
+              )
+            : fubTagMap[type] || ["Website Lead"],
           property: formData.property || undefined,
           details: formData.details || undefined,
         });

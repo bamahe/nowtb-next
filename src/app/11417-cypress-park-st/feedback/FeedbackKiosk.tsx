@@ -19,6 +19,9 @@ import { Check, Loader2 } from "lucide-react";
 const ADDRESS = "11417 Cypress Park St";
 const CITY_LINE = "Tampa, FL 33624";
 
+// Lender working the open house - tagged onto every lead for later filtering.
+const LENDER_NAME = "Christian Gardner";
+
 // The deliberate slow-down. Listing the rooms out makes them replay the walk-
 // through instead of answering "it was nice" — and multi-select means they
 // linger over more than one space.
@@ -50,6 +53,9 @@ export default function FeedbackKiosk() {
   const [price, setPrice] = useState("");
   const [change, setChange] = useState("");
   const [nextStep, setNextStep] = useState("");
+
+  // Honeypot: hidden from humans, irresistible to form-filling bots.
+  const [hp, setHp] = useState("");
 
   const [status, setStatus] = useState<"idle" | "sending" | "done">("idle");
   const nameRef = useRef<HTMLInputElement>(null);
@@ -98,6 +104,12 @@ export default function FeedbackKiosk() {
           message,
           source: "/11417-cypress-park-st/feedback/",
           type: "open-house-feedback",
+          // Tagged onto the FUB contact. The address and today's date are added
+          // server-side, so this only carries who was on site.
+          extraTags: [LENDER_NAME],
+          // Hidden field — invisible to a guest, but scripts fill every input
+          // they find. Anything in here means the submission is a bot.
+          honeypot: hp,
           property: {
             address: ADDRESS, city: "Tampa", state: "FL",
             price: 514990, mlsNumber: "TB8549024",
@@ -150,6 +162,19 @@ export default function FeedbackKiosk() {
       </div>
 
       <form onSubmit={handleSubmit} className="max-w-4xl mx-auto px-6 py-8 space-y-7">
+        {/* Honeypot. Off-screen rather than display:none - some bots skip
+            hidden inputs but still fill positioned ones. aria-hidden and
+            tabIndex keep it away from screen readers and keyboard users. */}
+        <input
+          type="text"
+          name="company"
+          value={hp}
+          onChange={(e) => setHp(e.target.value)}
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          className="absolute left-[-9999px] h-px w-px opacity-0"
+        />
         <Choice
           label="Overall, what did you think?"
           options={IMPRESSION_OPTIONS}

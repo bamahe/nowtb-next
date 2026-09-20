@@ -16,6 +16,7 @@ const PHONE = "(813) 733-7907";
 // Lender working the open house. Name only is enough for the kiosk — guests
 // just need to know who to walk over to.
 const LENDER_FIRST = "Christian";
+const LENDER_NAME = "Christian Gardner";
 
 // Radio-button groups. Kept short on purpose — long forms kill sign-in rates.
 const AGENT_OPTIONS = ["No, I'm on my own", "Yes, I have an agent"];
@@ -35,6 +36,9 @@ export default function SignInKiosk() {
   const [meetLender, setMeetLender] = useState("");
   const [heard, setHeard] = useState("");
   const [notes, setNotes] = useState("");
+
+  // Honeypot: hidden from humans, irresistible to form-filling bots.
+  const [hp, setHp] = useState("");
 
   const [status, setStatus] = useState<"idle" | "sending" | "done">("idle");
   const nameRef = useRef<HTMLInputElement>(null);
@@ -78,6 +82,12 @@ export default function SignInKiosk() {
           name, email, phone, message,
           source: "/11417-cypress-park-st/sign-in/",
           type: "open-house",
+          // Tagged onto the FUB contact. The address and today's date are added
+          // server-side, so this only carries who was on site.
+          extraTags: [LENDER_NAME],
+          // Hidden field — invisible to a guest, but scripts fill every input
+          // they find. Anything in here means the submission is a bot.
+          honeypot: hp,
           property: {
             address: ADDRESS, city: "Tampa", state: "FL",
             price: 514990, mlsNumber: "TB8549024",
@@ -130,6 +140,19 @@ export default function SignInKiosk() {
       </div>
 
       <form onSubmit={handleSubmit} className="max-w-4xl mx-auto px-6 py-8 space-y-7">
+        {/* Honeypot. Off-screen rather than display:none - some bots skip
+            hidden inputs but still fill positioned ones. aria-hidden and
+            tabIndex keep it away from screen readers and keyboard users. */}
+        <input
+          type="text"
+          name="company"
+          value={hp}
+          onChange={(e) => setHp(e.target.value)}
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          className="absolute left-[-9999px] h-px w-px opacity-0"
+        />
         {/* Name */}
         <Field label="Your Name" required>
           <input

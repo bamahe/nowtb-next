@@ -148,7 +148,19 @@ export async function pushLeadToFub(data: FubLeadData): Promise<boolean> {
     }
 
     // --- Step 3: Log an event so it shows in the timeline ---
-    await fetch(`${FUB_BASE}/events`, {
+    //
+    // ONLY when we have an email. FUB's /events endpoint matches an existing
+    // contact by EMAIL ONLY — verified against the live API: posting an event
+    // with a matching email returns 200 and reuses the contact, while posting
+    // one with only a phone returns 201 and creates a SECOND contact. Adding
+    // the name to the person payload does not help.
+    //
+    // That is what produced a junk "No name" duplicate for every open house
+    // walk-in, who typically gives a name and phone but no email. The note in
+    // Step 2 is attached to personId directly, so those leads still get their
+    // full detail in the timeline without the event.
+    if (data.email) {
+      await fetch(`${FUB_BASE}/events`, {
       method: "POST",
       headers: {
         Authorization: `Basic ${Buffer.from(FUB_API_KEY + ":").toString("base64")}`,
@@ -178,9 +190,10 @@ export async function pushLeadToFub(data: FubLeadData): Promise<boolean> {
               baths: data.property.baths,
               sqFt: data.property.sqft,
             }
-          : undefined,
-      }),
-    });
+            : undefined,
+        }),
+      });
+    }
 
     console.log(`[FUB] Lead pushed successfully: ${data.email || data.phone} (personId: ${personId})`);
     return true;
