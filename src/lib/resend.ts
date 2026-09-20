@@ -170,3 +170,66 @@ export async function sendLeadFailureAlert(
     console.error("[Resend] FAILED TO SEND LEAD-FAILURE ALERT:", err, lead);
   }
 }
+
+/**
+ * Schedule the "how was it?" email to an open house guest.
+ *
+ * Sent a short while AFTER they sign in, so it lands while the house is still
+ * fresh in their mind but they are no longer standing in the doorway. Resend
+ * queues it server-side via `scheduledAt` — verified against the live API,
+ * which reports the message as status "scheduled" until it fires. That means
+ * no cron job, no queue, and no function kept alive waiting.
+ *
+ * Only ever called when the guest actually gave us an email address.
+ *
+ * NOTE on timing: the delay is measured from SIGN-IN, which happens on the way
+ * in. Too short and the email arrives while they are still walking the house.
+ * FEEDBACK_DELAY_MINUTES is the single place to change it.
+ */
+export async function scheduleFeedbackRequest(opts: {
+  name: string;
+  email: string;
+  propertyAddress: string;
+  feedbackUrl: string;
+  delayMinutes: number;
+}): Promise<void> {
+  const resend = getResend();
+  if (!resend) return;
+
+  const firstName = opts.name.split(" ")[0] || "there";
+  const when = new Date(Date.now() + opts.delayMinutes * 60 * 1000).toISOString();
+
+  try {
+    await resend.emails.send({
+      from: "Barrett Henry <barrett@nowtb.com>",
+      to: [opts.email],
+      subject: `${firstName}, what did you think of ${opts.propertyAddress}?`,
+      scheduledAt: when,
+      html: `
+        <h2>Thanks for stopping by, ${firstName}.</h2>
+        <p>It was good meeting you at <strong>${opts.propertyAddress}</strong> today.</p>
+        <p>Would you take about 30 seconds and tell me what you thought? I pass
+        every note straight to the seller, and honest answers help them more
+        than polite ones.</p>
+        <p style="margin:28px 0;">
+          <a href="${opts.feedbackUrl}"
+             style="background:#101a2e;color:#ffffff;padding:14px 28px;border-radius:6px;text-decoration:none;font-weight:bold;display:inline-block;">
+            Share your feedback
+          </a>
+        </p>
+        <p>And if it is not the one, tell me what was missing — that is usually
+        the fastest way for me to find the house that is.</p>
+        <hr>
+        <p>Talk soon,<br>
+        <strong>Barrett Henry, REALTOR®</strong><br>
+        REMAX Collective<br>
+        <a href="tel:+18137337907">(813) 733-7907</a><br>
+        <a href="https://nowtb.com">nowtb.com</a>
+        </p>
+      `,
+    });
+  } catch (err) {
+    // Log but never block — the guest is already signed in and in FUB.
+    console.warn("[Resend] Feedback request scheduling failed:", err);
+  }
+}

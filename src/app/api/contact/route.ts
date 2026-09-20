@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { pushLeadToFub } from "@/lib/fub";
-import { sendBarrettAlert, sendLeadAutoResponder, sendLeadFailureAlert } from "@/lib/resend";
+import { sendBarrettAlert, sendLeadAutoResponder, sendLeadFailureAlert, scheduleFeedbackRequest } from "@/lib/resend";
 import { validateLead } from "@/lib/lead-validation";
 import { rateLimit, getClientIp } from "@/lib/rate-limit";
 
@@ -16,6 +16,11 @@ const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
 // iPad behind the SAME IP, so the normal limit of 5 would have locked out the
 // sixth person through the door and silently discarded the rest of the event.
 const KIOSK_RATE_LIMIT_MAX = 120;
+
+// How long after SIGN-IN to email an open house guest asking what they thought.
+// Measured from the moment they walk in, not when they leave — set too short
+// and the email arrives while they are still in the kitchen.
+const FEEDBACK_DELAY_MINUTES = 10;
 
 /**
  * Tags for an open house lead: the standard type tags plus the things Barrett
@@ -343,6 +348,29 @@ export async function POST(request: NextRequest) {
           })
         );
       }
+
+      // Open house sign-in with an email address: queue the "what did you
+      // think?" note for a few minutes from now. Resend holds it server-side,
+      // so it still goes out even though this function has long since exited.
+      // Only on sign-in — emailing the feedback form to someone who just
+      // FILLED IN the feedback form would be daft.
+      if (
+        type === "open-house" &&
+        formData.email &&
+        !verdict.suspect &&
+        formData.property?.url
+      ) {
+        emailTasks.push(
+          scheduleFeedbackRequest({
+            name: formData.name || "there",
+            email: formData.email,
+            propertyAddress: formData.property?.address || "the home",
+            feedbackUrl: `${String(formData.property.url).replace(/\/$/, "")}/feedback/`,
+            delayMinutes: FEEDBACK_DELAY_MINUTES,
+          })
+        );
+      }
+
       // Fire in parallel — neither blocks the response if they fail
       Promise.all(emailTasks).catch((err) => console.warn("[Resend] Email batch failed:", err));
     }
