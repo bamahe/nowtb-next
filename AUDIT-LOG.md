@@ -2225,3 +2225,33 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `package-lock.json`, `AUDIT-LOG.md`
 **Git commit:** `87a7591` — pushed to `origin/main`
+
+## 2026-09-21 (Batch 66 — South Pasadena FL x1 + Redington Beach FL x9)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, 22-link internal grid, comparison tables, Barrett Henry bio)
+
+1. **south-pasadena-fl-market-trends** — Expanded stub to 29,960 chars. Added: Market snapshot table (median price $375K-$520K, avg DOM 45-75 days, absorption rate 2-4 months); price-by-property-type table (condo vs SFH ranges); SB 4-D 2022 condo impact section (milestone inspections, reserve funding mandate, buyer due diligence 5-doc checklist); waterfront vs. non-waterfront premium analysis; Boca Ciega Bay and Intracoastal access; 6-community market comparison table (South Pasadena vs. Gulfport/St. Pete Beach/Treasure Island/Madeira Beach/Redington Beach); seasonal demand patterns; investor considerations (STR rules, LTR yield); 5-Q&A FAQ. Date: 2026-09-20.
+
+2. **redington-beach-fl-schools-guide** — Expanded stub to 29,277 chars. Added: Gulf Beaches Elementary Magnet (120 121st Ave W, Treasure Island; (727) 893-2139; magnet application process); Bay Point K-8 middle school; Boca Ciega High School (924 58th St S, Gulfport; (727) 893-2100); PCSB overview and school choice/open enrollment process; private school alternatives (Pinellas County); school ratings context; 6-question FAQ covering assignment, magnet lottery, athletics, private options. Date: 2026-09-20.
+
+3. **redington-beach-fl-commute-guide** — Expanded stub to 25,230 chars. Added: Park Blvd (SR-694) as primary causeway; destination commute time table (St. Pete 25-40 min, Tampa 45-65 min, TPA 45-60 min, PIE 18-28 min, Clearwater 30-45 min); PSTA Route 35 reality check (not practical for commuting; psta.net); congestion windows by direction; remote work as viable strategy; 7-neighborhood remote-work cafe/cowork resource; rideshare realities; 5-Q&A FAQ. Date: 2026-09-20.
+
+4. **redington-beach-fl-real-estate-guide** — Expanded stub to 28,029 chars. Added: Market snapshot (ZIP 33708, ~1,600 residents, incorporated 1940, fully built); price-by-tier table (non-waterfront condo to Gulf-front SFH); ownership type distribution (majority condos); what drives price (Gulf-front vs canal-front vs interior; floor height; building year vs SB 4-D compliance); top streets/buildings overview; buyer demand profile; negotiation environment; 5-Q&A FAQ. Date: 2026-09-20.
+
+5. **redington-beach-fl-cost-of-living** — Expanded stub to 38,739 chars. Added: Monthly cost model by property type ($350K condo to $1.5M Gulf-front SFH); 5-category expense breakdown (housing/insurance/HOA/utilities/transportation); flood insurance tiers (Zone VE $8K-$25K+/yr, Zone AE canal $2.5K-$8K+/yr, Zone AE interior $1.5K-$4K/yr); Duke Energy Florida / Pinellas County Utilities costs; Spectrum/Frontier internet; Park Blvd commute cost; grocery and dining reality (no on-island grocery); 6-community cost comparison table; 5-Q&A FAQ. Date: 2026-09-20.
+
+6. **redington-beach-fl-property-taxes** — Expanded stub to 28,492 chars. Added: Pinellas County millage breakdown table (~16-21 mills total: county ~5.0-5.5, school ~7.0-7.5, Town of RB municipal ~2.0-4.0, SWFWMD ~0.25-0.35, fire/EMS ~1.5-2.5); sample tax calculation ($500K home with homestead); Save Our Homes 3% cap explanation; portability mechanics; homestead exemption ($50K standard + additional $25K); pcpao.gov and taxcollect.com lookup guides (315 Court St., Clearwater; (727) 464-3207); investment property vs. primary residence comparison; 5-Q&A FAQ. Date: 2026-09-20.
+
+7. **redington-beach-fl-new-construction** — Expanded stub to 29,838 chars. Added: No vacant land reality (fully built barrier island); teardown-rebuild process (finding teardown, demo/abatement costs, permit requirements); Zone VE open pile foundation requirement; FDEP CCCL permit for Gulf-front (3-6 months); Army Corps/SWFWMD/Pinellas County approvals; cost range ($1.5M-$4M+ Gulf-front, $600K-$1.2M canal/interior teardown-rebuild); timeline 18-36 months end-to-end; who should consider new construction vs. resale; 5-Q&A FAQ. Date: 2026-09-20.
+
+8. **redington-beach-fl-investment-property** — Expanded stub to 28,069 chars. Added: Property type investment table (interior condo to Gulf-front SFH with purchase price, rental range, cap rate); Pinellas County STR registration requirement; FL DBPR vacation rental license; condo STR prohibition note (check declaration); Pinellas County TDT; annual operating cost model; ViVi Property Management reference with link to /property-management/; LTR vs STR strategy; 5-Q&A FAQ. Date: 2026-09-20.
+
+9. **redington-beach-fl-waterfront-homes** — Expanded stub to 33,424 chars. Added: Gulf-front vs Intracoastal/canal distinction; Johns Pass (~2-3 mi south) for Gulf boat access; dock permitting stack (Pinellas County BOCC + SWFWMD ERP + Army Corps 10/404); seawall inspection ($300-$600) and replacement ($350-$600/linear ft); elevation certificate ($400-$800); boatlift sizing guide; waterfront property tier table (4 types, price and insurance); what to inspect before buying waterfront; 5-Q&A FAQ. Date: 2026-09-20.
+
+10. **redington-beach-fl-flood-zones** — Expanded stub to 28,146 chars. Added: Zone VE (Gulf-front, open pile required, $8K-$25K+/yr insurance), Zone AE (canal-front and interior), Zone X (rare/minimal in RB); FEMA Community #125096; Evacuation Zone A status; NFIP max $250K building coverage; NFIP vs. private flood comparison table; elevation certificate ($400-$800) workflow; Risk Rating 2.0 methodology; pre-FIRM vs. post-FIRM; buyer due diligence checklist; 5-Q&A FAQ. Date: 2026-09-20.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** TBD — pushing to `origin/main`
