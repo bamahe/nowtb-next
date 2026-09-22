@@ -2226,6 +2226,38 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Files changed:** `src/data/posts-export.json`, `package-lock.json`, `AUDIT-LOG.md`
 **Git commit:** `87a7591` — pushed to `origin/main`
 
+## 2026-09-22 (Batch 67 — Redington Beach FL x3 + Weeki Wachee FL x4 + Hernando Beach FL x3)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, 22-23-link internal grid, comparison tables, Barrett Henry bio)
+
+1. **moving-to-redington-beach-fl** — Expanded 5,263 to 34,942 chars. Added: Moving cost table (studio to 5BR with full-service movers, PODS, self-haul); neighborhood character overview (Johns Pass proximity, Gulf access, ~1,600 residents); housing price table by type (condo/SFH/Gulf-front); utilities setup guide (Duke Energy FPL, Pinellas County Utilities, Spectrum/Frontier); FL driver license and vehicle registration deadlines; homestead exemption by March 1 reminder; healthcare access (Bayfront Health, St. Anthony's, Johns Hopkins All Children's, Bay Pines VA); who Redington Beach suits vs. who it doesn't; 5-Q&A FAQ. Date: 2026-09-21.
+
+2. **things-to-do-redington-beach-fl** — Expanded 5,263 to 26,552 chars. Added: Redington Beach Public Access beach overview; Johns Pass Village and Boardwalk guide (~2 mi south; shopping, dining, dolphin tours, parasailing, fishing charters); on-island dining overview; Pinellas Trail cycling access; Gulf fishing access (snook, redfish, tarpon, pompano, Spanish mackerel); kayaking and paddleboarding launch points; Treasure Island and Madeira Beach proximity; Clearwater Beach day trip guide; 5-Q&A FAQ. Date: 2026-09-21.
+
+3. **redington-beach-fl-market-trends** — Expanded 5,263 to 28,104 chars. Added: Market snapshot table (median price $450K-$700K, avg DOM 60-90 days, absorption 3-5 months); price-by-property-type table (interior condo to Gulf-front SFH); SB 4-D 2022 condo impact (milestone inspections, reserve funding mandate, buyer due diligence checklist); waterfront premium analysis; FEMA flood zone influence on buyer demand; 6-community market comparison table (Redington Beach vs. Madeira Beach/Treasure Island/St. Pete Beach/Clearwater Beach/Indian Rocks Beach); seasonal demand patterns; 5-Q&A FAQ. Date: 2026-09-21.
+
+4. **weeki-wachee-fl-flood-zones** — Expanded 5,265 to 28,044 chars. Added: Hernando County NFIP Community #120108; Zone AE floodplain areas (Spring Hill Road corridor, US-19 lowlands); Zone X (shaded) moderate-risk areas; Zone X (unshaded) minimal-risk areas; 3-step flood zone lookup (FEMA MSC portal, elevation certificate, insurance quote); NFIP vs. private flood insurance comparison table (7 factors); Hernando County CRS Class 8 discount (10%) explanation; Risk Rating 2.0 methodology; elevation certificate ($400-$800) workflow; pre-FIRM vs. post-FIRM distinction; 5-Q&A FAQ. Date: 2026-09-21.
+
+5. **best-neighborhoods-weeki-wachee-fl** — Expanded 5,265 to 27,487 chars. Added: Community character overview (unincorporated Hernando County, Spring Hill adjacency, Weeki Wachee Springs State Park); 5-area comparison table (US-19 corridor vs. Spring Hill road network vs. rural tracts vs. waterfront canal vs. Spring Hill master-planned with price range, lot size, commute, flood risk); waterfront canal section (Old Weeki Wachee area, spring-fed, kayak/canoe access); lot size reality (quarter-acre to multi-acre); no HOA majority context; buyer profile matching; 5-Q&A FAQ. Date: 2026-09-21.
+
+6. **moving-to-weeki-wachee-fl** — Expanded 5,265 to 27,564 chars. Added: Location context (unincorporated Hernando County, SR-50/US-19 junction); 6-destination commute matrix (Tampa 50-65 min, Brooksville 20-30 min, Spring Hill 10-20 min, TPA 55-70 min, Clearwater 55-70 min, Crystal River 40-55 min); car-essential reality (no transit); utilities guide (Duke Energy, SECO Energy, Hernando County Utilities, HCUD sewer); FL driver license/registration deadlines; homestead exemption by March 1; healthcare (Bayfront Health Spring Hill, Oak Hill Hospital, HCA Florida Brooksville); who Weeki Wachee suits; 5-Q&A FAQ. Date: 2026-09-21.
+
+7. **things-to-do-weeki-wachee-fl** — Expanded 5,265 to 27,968 chars. Added: Weeki Wachee Springs State Park overview (live mermaid shows, Buccaneer Bay water park, river boat tours; weekswachee.com); Weeki Wachee River paddling (11.5-mile spring-fed paddling trail, Rogers Park put-in); fishing species (largemouth bass, bluegill, snook below spring head, redfish near Gulf confluence); Hunter Springs and Three Sisters Springs (Crystal River, 30-40 min north); Pine Island Beach (Hernando Beach, 15 min south); Rogers Park boat ramp; dining and local spots; 5-Q&A FAQ. Date: 2026-09-21.
+
+8. **hernando-beach-fl-flood-zones** — Expanded 5,277 to 28,704 chars. Added: Hernando County NFIP Community #120108; Zone VE (Gulf-front canal-head structures with wave action exposure); Zone AE (canal-front homes throughout Hernando Beach); Zone X areas (higher ground east of canals); 4-scenario flood insurance cost table (Zone VE to Zone X with NFIP vs. private); FEMA MSC portal lookup guide; elevation certificate ($400-$800) importance; Risk Rating 2.0 individual property factors; CRS Class 8 Hernando County 10% NFIP discount; pre-FIRM vs post-FIRM building distinction; 5-Q&A FAQ. Date: 2026-09-21.
+
+9. **best-neighborhoods-hernando-beach-fl** — Expanded 5,277 to 28,075 chars. Added: Canal system overview (3-4 mile Gulf access, ~90 min to open Gulf depending on canal); 4-area comparison table (Gulf-front canal head vs. main canal front vs. side canal vs. interior with price range, flood zone, insurance estimate, vessel draft limit); dock and boatlift requirements; seawall inspection costs ($300-$600 inspection, $500-$900/LF replacement); HOA reality (most of Hernando Beach has no formal HOA); buyer profile matching table; Hernando Beach South vs. North distinction; 5-Q&A FAQ. Date: 2026-09-21.
+
+10. **moving-to-hernando-beach-fl** — Expanded 5,277 to 30,326 chars. Added: Canal community character (85+ miles of canals, boating community, ~1,500-2,000 residents); 6-destination commute matrix (Tampa 55-70 min via US-19/Suncoast Pkwy, Brooksville 25-35 min, Spring Hill 15-25 min, TPA 60-75 min, Clearwater 60-75 min, Weeki Wachee Springs 10-15 min); car-essential reality; utilities guide (Duke Energy, HCUD water/sewer, Spectrum/Frontier); homestead by March 1; healthcare (Bayfront Health Spring Hill, Oak Hill Hospital); boat and kayak launch reality; who Hernando Beach suits vs. who it doesn't; 5-Q&A FAQ. Date: 2026-09-21.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** TBD — pushing to `origin/main`
+
+---
+
 ## 2026-09-21 (Batch 66 — South Pasadena FL x1 + Redington Beach FL x9)
 
 **Pages improved: 10**
