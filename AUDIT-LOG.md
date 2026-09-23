@@ -4,6 +4,38 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-09-23 (Batch 68 — Madeira Beach FL x10)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, 24-link internal grid, comparison tables, Barrett Henry bio)
+
+1. **madeira-beach-fl-homes-for-sale-guide** — Expanded 6,673 to 26,864 chars. Added: 6-tier price table (interior cottage to Gulf-front SFH); SB 4-D condo compliance section; 5-community comparison table (Madeira Beach vs. Treasure Island/Indian Rocks Beach/Redington Beach/St. Pete Beach); 4-step buyer process (pre-approval, elevation certificate, wind mitigation, HOA docs); flood zone buyer guidance; FAQ x5.
+
+2. **madeira-beach-fl-schools-guide** — Expanded 6,687 to 26,604 chars. Added: Madeira Beach Fundamental K-8 profile (400 150th Ave, (727) 547-7818, magnet, K-8, application/lottery); how the fundamental magnet application works; Seminole High School profile; Boca Ciega High open enrollment option; private school comparison table (Shorecrest, Canterbury, St. Pete Catholic HS, Academy Prep); SPC and USFSP higher ed access; FAQ x5.
+
+3. **madeira-beach-fl-commute-guide** — Expanded 6,684 to 24,935 chars. Added: 8-destination commute matrix (St. Pete 30-40 min, Tampa 45-60 min, TPA 45-60 min, PIE 25-35 min, Clearwater 30-42 min, Largo/Seminole 15-25 min, Bradenton 60-75 min, Sarasota 70-90 min); Tom Stuart Causeway congestion analysis; 3 route options to Tampa; PSTA Route 35 reality check; Pinellas Trail; remote work considerations; FAQ x5.
+
+4. **is-madeira-beach-fl-good-place-to-live** — Expanded 6,672 to 28,563 chars. Added: Lifestyle activity quality table (8 activities from Gulf swimming to daily commute); honest drawbacks (high insurance, hurricane Zone A evacuation, no on-island grocery, car-essential); 7-column 5-community comparison table (Madeira Beach vs. Treasure Island/Indian Rocks/Redington/St. Pete Beach including population, walkability, tourism traffic, avg price, insurance, school, Gulf access); FAQ x5.
+
+5. **madeira-beach-fl-real-estate-guide** — Expanded 6,671 to 24,056 chars. Added: 6-segment market table (interior SFH to investment/mixed-use with price range, absorption, key due diligence); SB 4-D compliance condo section; coastal lending considerations; offer strategy guidance; seller pre-listing preparation; FAQ x5.
+
+6. **madeira-beach-fl-cost-of-living** — Expanded 6,668 to 31,118 chars. Added: 4-tier monthly ownership cost model ($400K condo to $1.8M Gulf-front SFH, 6 cost categories each); homeowners insurance ranges ($4K-$25K+); flood insurance 4-zone table (Zone VE to Zone X with NFIP vs. private notes); Duke Energy, Pinellas County Utilities, Spectrum/Frontier costs; no on-island grocery reality; 5-community cost comparison table; FAQ x5.
+
+7. **madeira-beach-fl-property-taxes** — Expanded 6,680 to 26,655 chars. Added: Pinellas County millage breakdown table (6 components, ~16-20 mills total); 5-row sample tax calculation table ($400K-$1.8M with homestead); investment property vs. primary comparison; homestead exemption eligibility and March 1 deadline; Save Our Homes 3% cap mechanics; portability walkthrough; pcpao.gov and pinellastaxcollector.com lookup guides; FAQ x5.
+
+8. **madeira-beach-fl-new-construction** — Expanded 6,678 to 25,903 chars. Added: Why new construction is rare (fully built island); teardown-rebuild 7-phase table (lot purchase to all-in cost); Zone VE open pile construction requirements; FDEP CCCL permit for Gulf-front (3-6 months); Army Corps/SWFWMD permitting; total teardown-rebuild cost ranges ($1.5M-$3M+ for Gulf-adjacent 2,500 sqft); 5-community new construction alternatives table; FAQ x5.
+
+9. **madeira-beach-fl-investment-property** — Expanded 6,678 to 25,462 chars. Added: 4-type investment table (interior condo to Gulf-front SFH with purchase price, gross STR revenue, LTR revenue, cap rate); STR regulatory framework (FL DBPR license, Pinellas County STR registration, Pinellas TDT 6%, SB 714 2024 context); ViVi Property Management reference with /property-management/ link; LTR vs. STR strategy; FAQ x5.
+
+10. **madeira-beach-fl-waterfront-homes** — Expanded 6,672 to 28,466 chars. Added: 4-type waterfront comparison table (Gulf-front SFH to Boca Ciega Bay front with price, flood zone, insurance, boating access); Boca Ciega Bay canal system overview; John's Pass Gulf access routing; 4-agency dock permit table (Pinellas County, SWFWMD, Army Corps, FDEP); seawall inspection ($300-$600) and replacement ($500-$900/LF) costs; elevation certificate importance; Zone VE vs. Zone AE flood insurance cost comparison; FAQ x5.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `6459f5a` — pushed to `origin/main`
+
+---
+
 ## 2026-09-20 (Batch 65 — Kenneth City FL x9 + South Pasadena FL x1: Major Expansions)
 
 **Pages improved: 10**
