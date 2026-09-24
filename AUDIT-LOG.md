@@ -2319,3 +2319,35 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** TBD — pushing to `origin/main`
+
+---
+
+## 2026-09-24 (Batch 68 — Longboat Key FL x10)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, 22-link internal grid, comparison tables, Barrett Henry bio)
+
+1. **longboat-key-fl-homes-for-sale-guide** — Expanded 5,289 to 36,848 chars. Added: 7-tier price table (Gulf-front SFH to interior condo); Manatee vs Sarasota county split explanation; community overview (Bay Isles, LBK Club, Cedars East, mid-key, north key); insurance cost table by property type and flood zone (Zone VE vs AE); NFIP vs. private flood insurance; 5-item pre-offer checklist (elevation cert, insurance quotes, permit history, HOA/CDD, rental restrictions); typical closing costs table; 5-Q&A FAQ. Date: 2026-09-23.
+
+2. **is-longboat-key-fl-good-place-to-live** — Expanded 5,289 to 27,286 chars. Added: Gulf beaches and natural beauty section; privacy and low density assessment; Sarasota cultural access (Ringling Museum, Van Wezel, St. Armands Circle); boating and water recreation (New Pass, Longboat Pass); drawbacks (cost, limited amenities, hurricane/flood risk, commute); 9-factor lifestyle priority table; 5-community island comparison table (LBK vs Siesta Key, Casey Key, Anna Maria, Venice Island); who-suits-LBK buyer profile list; 5-Q&A FAQ. Date: 2026-09-23.
+
+3. **longboat-key-fl-real-estate-guide** — Expanded 5,289 to 31,720 chars. Added: Market segment breakdown table (6 segments by property type and transaction share); seasonal demand patterns; cash buyer dominance discussion; 8-factor price driver table (Gulf-front to SB 4-D compliance premium); inventory overview; 6-community luxury market comparison table (LBK vs Siesta Key, Casey Key, AMI, Naples, Sanibel); SB 4-D assessment risk analysis; insurance market instability; NOAA sea level rise context; 5-Q&A FAQ. Date: 2026-09-23.
+
+4. **longboat-key-fl-cost-of-living** — Expanded 5,289 to 31,683 chars. Added: Monthly carrying cost model (3 property types from $450K interior condo to $3.5M Gulf-front SFH); FPL electric rate context; Town of LBK water/sewer; HOA fee table (6 community types); groceries/dining reality (no on-island grocery); Sarasota Memorial Hospital healthcare access; transportation costs; 5-community cost comparison table (LBK vs Siesta Key, AMI, Sarasota, Bradenton); Florida no-income-tax advantage; 5-Q&A FAQ. Date: 2026-09-23.
+
+5. **longboat-key-fl-property-taxes** — Expanded 5,289 to 33,010 chars. Added: Sarasota County millage breakdown table (8 components, ~12.5-14.0 mills); Manatee County millage breakdown table (8 components, ~14.0-16.5 mills); 7-scenario sample tax calculations; homestead exemption mechanics; Save Our Homes 3% cap; portability walkthrough with 3-scenario table; county PA websites (sc-pa.com, mcpafl.org); county tax collector websites (sarasotataxcollector.com, taxcollector.com); senior exemption; 5-Q&A FAQ. Date: 2026-09-23.
+
+6. **longboat-key-fl-waterfront-homes** — Expanded 5,289 to 31,745 chars. Added: 6-tier waterfront property table (Gulf-front SFH to bay/canal view without frontage with price, flood zone, insurance); seawall inspection guide ($300-$600 inspection, $500-$900/LF replacement); dock and lift inspection; elevation certificate ($400-$800); water depth verification; 7-item inspection cost table; dock permitting stack (Town, SWFWMD, Army Corps, FDEP); New Pass vs Longboat Pass Gulf access comparison; Zone VE open pile foundation requirement; SB 4-D condo warrantability; 5-Q&A FAQ. Date: 2026-09-23.
+
+7. **longboat-key-fl-investment-property** — Expanded 5,289 to 25,634 chars. Added: 4-type investment table (interior condo to Gulf-front SFH with gross rent LTR and STR); Town STR ordinance restrictions; HOA/condo declaration STR prohibitions; DBPR vacation rental license; Manatee/Sarasota TDT (5-6%); LTR market analysis ($2,200-$12,000/mo range); 4-scenario cap rate analysis (all negative to 0.6%); ViVi Property Management reference; 5-Q&A FAQ. Date: 2026-09-23.
+
+8. **longboat-key-fl-new-construction** — Expanded 5,289 to 29,447 chars. Added: Why no vacant land exists; teardown process (6-step sequence from acquisition to CO); 4-type project cost table (Gulf-front to interior with land, construction, soft costs, total, timeline); Town Building Department process; FDEP CCCL permit (3-9 months for Gulf-front); FEMA Zone VE open pile foundation requirement; substantial improvement 50% rule; build-new vs. buy-existing comparison table; 4-location new construction alternatives table (Lakewood Ranch, Sarasota County east, Bradenton, North Port/Venice); 5-Q&A FAQ. Date: 2026-09-23.
+
+9. **longboat-key-fl-commute-guide** — Expanded 5,289 to 25,622 chars. Added: 10-destination commute time table (Sarasota to Naples with off-peak and rush times); on-island and off-island congestion patterns; no public transit reality; SRQ airport (25-35 min) and TPA airport (80-100 min) access; SRQ route coverage (major hubs + leisure); remote work assessment; 6-worker-profile fit table (Sarasota professional to retiree); 5-Q&A FAQ. Date: 2026-09-23.
+
+10. **longboat-key-fl-schools-guide** — Expanded 5,289 to 27,917 chars. Added: Manatee vs Sarasota county split explanation; Sarasota County sequence (Longboat Key Elementary, Booker Middle magnet, Riverview/Sarasota HS); Manatee County sequence (Anna Maria Elementary, Martha B. King Middle, Bayshore/Manatee HS); county school assignment table; Pine View School gifted program overview; IB programs in Sarasota County; 6-entry private school table (Out-of-Door Academy, Cardinal Mooney, IMG Academy, Saint Stephen's, etc.); family-with-children honest assessment; 5-Q&A FAQ. Date: 2026-09-23.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `c1d315e` — pushed to `origin/main`
