@@ -4,6 +4,44 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-09-25 (Batch 69 — Crystal River FL x4 + Hernando Beach FL x1 + FishHawk Ranch FL x5)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, comparison tables, 22-link internal grid, Barrett Henry bio, CTA box. All dated 2026-09-24.)
+
+**Crystal River FL (4 stubs — Citrus County):**
+
+1. **crystal-river-fl-schools-guide** — Expanded 5,269 to 25,761 chars. Added: Citrus County School District overview (CCSD, (352) 726-1931); elementary/middle/high school zone table for Crystal River area; Crystal River Primary and Crystal River Middle; Crystal River High School profile; private school comparison table; College of Central Florida (Citrus Campus) and Saint Leo University; controlled open enrollment; FAQ x5.
+
+2. **crystal-river-fl-commute-guide** — Expanded 5,269 to 24,562 chars. Added: 8-destination commute matrix (Ocala 45-55 min, Gainesville 75-90 min, Tampa 90-110 min, Inverness 15-25 min, Homosassa 10-20 min, Orlando 110-130 min, Brooksville 45-60 min, Clearwater 95-115 min); US-19/US-98 as primary corridor; SR-44 to I-75 Tampa route; Suncoast Parkway (SR-589) via Brooksville; remote work reality; no commuter rail; carpool/coworking options; 5-community comparison table; FAQ x5.
+
+3. **is-crystal-river-fl-good-place-to-live** — Expanded 5,269 to 24,933 chars. Added: Crystal River lifestyle quality table (8 categories: diving/snorkeling, fishing, nature access, dining, healthcare, school quality, hurricane risk, commute flexibility); honest drawbacks (limited dining variety, 90+ min to Tampa/Orlando, limited nightlife, higher car insurance); 5-community comparison table (Crystal River vs. Homosassa Springs/Inverness/New Port Richey/Brooksville); scallop season and Three Sisters Springs uniqueness; FAQ x5.
+
+4. **crystal-river-fl-real-estate-guide** — Expanded 5,269 to 22,920 chars. Added: 4-segment market table (waterfront/canal/inland SFH/condo with price ranges, absorption, due diligence); canal access and Kings Bay boating proximity premium; flood zone (AE/X) buyer guidance; Citrus County Property Appraiser resource; offer strategy; seller pre-listing preparation; FAQ x5.
+
+**Hernando Beach FL (1 stub — Hernando County):**
+
+5. **things-to-do-hernando-beach-fl** — Expanded 5,277 to 26,426 chars. Added: 8-activity comparison table (kayaking, fishing charters, paddleboarding, boat rentals, nature tours, dining, swimming, birdwatching with cost/access/skill level); Gulf access via Weeki Wachee River and Hernando Beach canals; Bayport Park boat ramp; local dining options; proximity to Weeki Wachee Springs State Park; scallop season (Aug-Sept typically); Hernando County Nature Coast access; FAQ x5.
+
+**FishHawk Ranch FL (5 stubs — Hillsborough County):**
+
+6. **fishhawk-fl-restaurants-dining** — Expanded 5,161 to 20,150 chars. Added: FishHawk dining overview (Fishhawk Crossing Blvd corridor); restaurant categories table (casual, pizza, coffee, fast casual, fine dining access via Brandon/Lithia); Winthrop Town Center proximity; Fishhawk Crossings area dining; Brandon/Riverview dining 10-15 min away; delivery service access; Lithia Pinecrest Rd corridor options; FAQ x5.
+
+7. **fishhawk-fl-parks-trails** — Expanded 5,632 to 21,090 chars. Added: FishHawk Ranch trail system overview (26+ miles of paved trails); 5-park comparison table (FishHawk Park, Eagle Park, Osprey Park, Starling Club, Hawk Park with amenities); Hawk Park aquatic center; community pools by section; Lithia Springs County Park proximity (5 mi, natural spring swimming); Little Manatee River State Park; Alafia River State Park; FAQ x5.
+
+8. **fishhawk-fl-commute-guide** — Expanded 6,494 to 20,465 chars. Added: 7-destination commute matrix (downtown Tampa 35-50 min, TPA 40-55 min, Brandon 15-20 min, Riverview 15-25 min, Plant City 20-30 min, St. Pete 55-70 min, Orlando 80-100 min); CR-672/Lithia Pinecrest Rd as primary corridor; I-75 via Big Bend Rd/Gibsonton Dr; Crosstown Expressway toll option; HART bus limited; 5-community comparison table; FAQ x5.
+
+9. **fishhawk-fl-market-trends** — Expanded 5,979 to 22,564 chars. Added: FishHawk Ranch market overview (Hillsborough County, 33547 ZIP); 4-segment price table (starter townhome to custom executive SFH with price ranges and absorption); new construction vs. resale comparison; HOA/CDD structure overview (FishHawk Ranch Master, sub-associations, typical annual CDD ~$1,200-$2,500); demand drivers (A-rated Newsome HS, trail system, amenity centers); 5-community comparison table; FAQ x5.
+
+10. **fishhawk-ranch-best-sections** — Expanded 5,680 to 22,102 chars. Added: FishHawk Ranch section comparison table (FishHawk Ranch West, Starling, Cannons, Fishhawk Trails, FishHawk Ranch II with age, price range, CDD status, access to amenities); Newsome HS and Bevis Elementary zone notes; trail connectivity by section; new construction availability by section; buyer decision guide (budget vs. school vs. amenity proximity); FAQ x5.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `package-lock.json`, `AUDIT-LOG.md`
+**Git commit:** `386aed9` — pushed to `origin/main`
+
+---
+
 ## 2026-09-23 (Batch 68 — Madeira Beach FL x10)
 
 **Pages improved: 10**
