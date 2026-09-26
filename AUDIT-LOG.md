@@ -2389,3 +2389,35 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** `c1d315e` — pushed to `origin/main`
+
+---
+
+## 2026-09-25 (Batch 69 — Hudson FL x10)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 + 4+ H2 question headings + 6+ H3 subheadings, 22-link internal resource grid, comparison tables, Barrett Henry bio, ViVi Property Management mention)
+
+1. **hudson-fl-homes-for-sale-guide** — Expanded 5,319 to 32,190 chars. Added: 6-tier price table by property type (non-waterfront to Gulf-front); neighborhood profiles for Beacon Woods, Sea Ranch Lakes, Hudson Beach, Barrington Woods, River Bend; 6-factor price driver table; flood insurance cost table by zone (VE to X); 4-step buying process guide; 5-community comparison table (Hudson vs. Port Richey, New Port Richey, Spring Hill, Holiday, Tarpon Springs); 5 buyer tips (insurance first, canal depth, older construction diligence, no city tax, Suncoast Pkwy toll math); 5-Q&A FAQ. Date: 2026-09-25.
+
+2. **hudson-fl-schools-guide** — Expanded 5,319 to 26,400 chars. Added: Pasco County School District (pasco.k12.fl.us) address lookup guide; Hudson Elementary and Gulf Trace Elementary profiles; Hudson Middle and Crews Lake Middle; Hudson High School (Cobras) and Fivay High profiles; magnet/choice program table (IB MYP, Cambridge AICE, STEM, Arts, Dual Language); charter schools overview; private school options near New Port Richey; PHSC Porter Campus dual enrollment; district comparison table (Pasco vs. Pinellas, Hillsborough, Hernando); after-school care notes; 5-Q&A FAQ. Date: 2026-09-25.
+
+3. **hudson-fl-commute-guide** — Expanded 5,319 to 26,330 chars. Added: 10-destination commute time matrix (Tampa to Brooksville with off-peak and rush times); US-19 vs. Suncoast Pkwy (SR-589) detailed comparison; SR-52 approach road context; Suncoast Pkwy toll cost ($6-$10/day, $130-$200/mo for 5-day commuter); 3-airport table (TPA, PIE, MCO); no transit reality; remote work assessment; 6-profile fit table (remote worker to daily Tampa commuter); 5-Q&A FAQ. Date: 2026-09-25.
+
+4. **is-hudson-fl-good-place-to-live** — Expanded 5,319 to 26,153 chars. Added: Pros section (Gulf access at affordable prices, Hudson Beach/SunWest Park, boating culture, Beacon Woods golf, no state income tax); cons section (Tampa commute reality, no walkable downtown, aging housing stock, insurance costs, mid-tier schools, hurricane/flood risk); 8-profile fit table (retirees to families); 5-community comparison table; 5-Q&A FAQ covering safety, families, weather, flooding, population. Date: 2026-09-25.
+
+5. **hudson-fl-real-estate-guide** — Expanded 5,319 to 26,761 chars. Added: Market snapshot table (median SFH $280K-$420K, DOM 35-75 days, inventory 2.5-5.0 months, cash buyer share); 4-segment breakdown (canal-front, Beacon Woods 55+, inland non-waterfront, newer east-side construction); 6-driver table (Pinellas price pressure, remote work, insurance headwinds, Suncoast access); selling strategy (pricing, pre-listing, insurance docs); buying strategy (off-season timing, contingency structure); 5-community comparison table; 5-Q&A FAQ. Date: 2026-09-25.
+
+6. **hudson-fl-cost-of-living** — Expanded 5,319 to 24,292 chars. Added: 3-scenario monthly ownership model ($280K Zone X to $580K main canal with all components); Duke Energy Florida electric costs; Pasco County Utilities water/sewer; Spectrum and Frontier internet; homeowners insurance by age/zone ($2,200-$6,000/yr); flood insurance by zone (Zone AE $1,800-$5,000+, Zone VE $7,000-$25,000+); grocery/dining realities; transportation costs (Suncoast Pkwy toll $130-$200/mo); 6-community cost comparison table; 5-Q&A FAQ. Date: 2026-09-25.
+
+7. **hudson-fl-property-taxes** — Expanded 5,319 to 25,429 chars. Added: Pasco County millage breakdown table (8 components, ~17-20 mills total; no city tax for unincorporated Hudson); 5-scenario sample tax calculations; just value vs. assessed value explanation; Save Our Homes 3% cap; portability mechanics; homestead exemption by March 1 (PascoPA.net, 727-847-8151); senior and disability/veteran exemptions; pascotaxes.com payment lookup; why seller's tax bill doesn't predict buyer's; 5-Q&A FAQ. Date: 2026-09-25.
+
+8. **hudson-fl-new-construction** — Expanded 5,319 to 26,222 chars. Added: Why Gulf-side is built out (1960s-1980s dredge era); SR-52 corridor and eastern 34669 as current development zone; teardown/rebuild process (find candidate, demolition $12K-$30K, Zone AE/VE floor elevation requirements, dock/lift construction); cost table (lot + demo + build + elevated foundation + dock + soft costs = $552K-$985K all-in); Pasco County Building Services permitting (8-16 week review); SWFWMD ERP and Army Corps permit requirements; 5-alternative community table (Connerton, Epperson Ranch, Spring Hill, SR-52 corridor, Brooksville); buy-new vs. resale comparison table; 5-Q&A FAQ. Date: 2026-09-25.
+
+9. **hudson-fl-investment-property** — Expanded 5,319 to 22,525 chars. Added: 4-type property investment table with LTR/STR gross rents and cap rates; LTR demand profile (retirees, Gulf workers, remote workers); LTR cash flow analysis showing why leveraged LTR is challenging at current rates; Pasco County STR regulations (Florida 509.032 preemption, HOA restrictions override); DBPR vacation rental license requirement; Pasco County TDT 5% remittance; STR platform realities for Hudson; ViVi Property Management reference; investment due diligence checklist (insurance quotes, canal condition, HOA restrictions); 5-Q&A FAQ. Date: 2026-09-25.
+
+10. **hudson-fl-waterfront-homes** — Expanded 5,319 to 30,116 chars. Added: 5-tier waterfront property table (main canal to intracoastal with price, flood zone, insurance); Hudson Bayou canal system overview (dredge history, 1-3 mile Gulf route); canal depth (4-6 ft mean low water in established sections) and tidal variation; bridge clearances (~10-14 ft typical); seawall inspection guide ($250-$500, replacement $500-$900/LF); dock inspection (15-25 yr wood life); boatlift inspection; elevation certificate ($350-$600) workflow; 4-scenario flood insurance table (Zone AE above/below BFE, Zone VE); NFIP Risk Rating 2.0 context; dock permitting stack (Pasco County + SWFWMD ERP + Army Corps NWP); waterfront buying process (multiple inspections, flood quotes during contingency, riparian rights); Hudson vs. Pinellas comparison table; 5-Q&A FAQ. Date: 2026-09-25.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `ba4fd50` — pushed to `origin/main`
