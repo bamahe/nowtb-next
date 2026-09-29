@@ -4,41 +4,37 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
-## 2026-09-25 (Batch 69 — Crystal River FL x4 + Hernando Beach FL x1 + FishHawk Ranch FL x5)
+## 2026-09-28 (Batch 71 — Ozona FL x10: Major Expansions)
 
 **Pages improved: 10**
 
-### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, comparison tables, 22-link internal grid, Barrett Henry bio, CTA box. All dated 2026-09-24.)
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, 4+ H2 question headings, 6+ H3 subheadings, price/comparison tables, 5-Q&A FAQ, 22-link internal grid, Barrett Henry REMAX Collective author bio. Content dated 2026-09-28.)
 
-**Crystal River FL (4 stubs — Citrus County):**
+**Ozona FL (all 10 posts — ZIP 34681, CDP in Palm Harbor area, Pinellas County):**
 
-1. **crystal-river-fl-schools-guide** — Expanded 5,269 to 25,761 chars. Added: Citrus County School District overview (CCSD, (352) 726-1931); elementary/middle/high school zone table for Crystal River area; Crystal River Primary and Crystal River Middle; Crystal River High School profile; private school comparison table; College of Central Florida (Citrus Campus) and Saint Leo University; controlled open enrollment; FAQ x5.
+1. **is-ozona-fl-good-place-to-live** — Expanded to 27,946 chars. Added: lifestyle comparison table (8 activities from Gulf kayaking to commute scoring); honest drawbacks (septic prevalence, no sidewalks, flooding risk near lagoon, limited retail); 5-community comparison table (Ozona vs Palm Harbor/Dunedin/Safety Harbor/Tarpon Springs with population, walkability, avg price, school score, Gulf access); buyer profile fit table; FAQ x5.
 
-2. **crystal-river-fl-commute-guide** — Expanded 5,269 to 24,562 chars. Added: 8-destination commute matrix (Ocala 45-55 min, Gainesville 75-90 min, Tampa 90-110 min, Inverness 15-25 min, Homosassa 10-20 min, Orlando 110-130 min, Brooksville 45-60 min, Clearwater 95-115 min); US-19/US-98 as primary corridor; SR-44 to I-75 Tampa route; Suncoast Parkway (SR-589) via Brooksville; remote work reality; no commuter rail; carpool/coworking options; 5-community comparison table; FAQ x5.
+2. **best-neighborhoods-ozona-fl** — Expanded to 31,358 chars. Added: 5-neighborhood breakdown (Ozona waterfront, Crystal Beach adjacent, historic village core, US-19 corridor, Alt-19 edge); price range tables per area; walkability scores; flood zone breakdown per neighborhood; comparison to Dunedin/Palm Harbor alternatives; FAQ x5.
 
-3. **is-crystal-river-fl-good-place-to-live** — Expanded 5,269 to 24,933 chars. Added: Crystal River lifestyle quality table (8 categories: diving/snorkeling, fishing, nature access, dining, healthcare, school quality, hurricane risk, commute flexibility); honest drawbacks (limited dining variety, 90+ min to Tampa/Orlando, limited nightlife, higher car insurance); 5-community comparison table (Crystal River vs. Homosassa Springs/Inverness/New Port Richey/Brooksville); scallop season and Three Sisters Springs uniqueness; FAQ x5.
+3. **ozona-fl-homes-for-sale-guide** — Expanded to 28,762 chars. Added: 6-tier price table (starter CBS to waterfront/deepwater lots); septic vs sewer status by area; lot size and setback considerations; Pinellas County permitting notes; buyer process 8-step table; flood zone due diligence checklist; FAQ x5.
 
-4. **crystal-river-fl-real-estate-guide** — Expanded 5,269 to 22,920 chars. Added: 4-segment market table (waterfront/canal/inland SFH/condo with price ranges, absorption, due diligence); canal access and Kings Bay boating proximity premium; flood zone (AE/X) buyer guidance; Citrus County Property Appraiser resource; offer strategy; seller pre-listing preparation; FAQ x5.
+4. **ozona-fl-schools-guide** — Expanded to 25,764 chars. Added: Pinellas County school zone table (Ozona Elementary, Palm Harbor Middle, Palm Harbor University HS with addresses); magnet/IB program options table; private school comparison table (Shorecrest, Canterbury, St. Pete Catholic HS, Bishop McLaughlin with tuition ranges); higher education table (SPC, USFSP, Eckerd, USF Tampa); FAQ x5.
 
-**Hernando Beach FL (1 stub — Hernando County):**
+5. **ozona-fl-commute-guide** — Expanded to 26,975 chars. Added: 9-destination commute matrix (Clearwater 15-25 min, Tampa 35-55 min, TPA 30-50 min, PIE 20-35 min, St. Pete 40-60 min, Dunedin 10-20 min, Palm Harbor 8-15 min, Tarpon Springs 15-25 min, Orlando 2h+); Alt-19 vs US-19 routing; Bayside Bridge/Courtney Campbell options to Tampa; PSTA context; remote-work advantage; 5-community commute comparison table; FAQ x5.
 
-5. **things-to-do-hernando-beach-fl** — Expanded 5,277 to 26,426 chars. Added: 8-activity comparison table (kayaking, fishing charters, paddleboarding, boat rentals, nature tours, dining, swimming, birdwatching with cost/access/skill level); Gulf access via Weeki Wachee River and Hernando Beach canals; Bayport Park boat ramp; local dining options; proximity to Weeki Wachee Springs State Park; scallop season (Aug-Sept typically); Hernando County Nature Coast access; FAQ x5.
+6. **ozona-fl-real-estate-guide** — Expanded to 25,175 chars. Added: 4-segment market table (entry CBS to waterfront with price range, DOM, flood zone, key due diligence); septic system inspection and permit-to-connect considerations; elevation certificate importance for coastal CDP; seller pre-listing guidance; 8-step buyer process; FAQ x5.
 
-**FishHawk Ranch FL (5 stubs — Hillsborough County):**
+7. **ozona-fl-waterfront-homes** — Expanded to 28,491 chars. Added: 4-type waterfront comparison table (lagoon-adjacent to deepwater Gulf-access canal with price, flood zone, dock/lift options, insurance estimate); St. Joseph Sound boating access explanation; dock permit 4-agency table (Pinellas County, SWFWMD, Army Corps, FDEP); seawall inspection ($300-$600) and replacement costs ($500-$900/LF); elevation certificate requirement; Zone AE vs Zone VE insurance cost comparison; FAQ x5.
 
-6. **fishhawk-fl-restaurants-dining** — Expanded 5,161 to 20,150 chars. Added: FishHawk dining overview (Fishhawk Crossing Blvd corridor); restaurant categories table (casual, pizza, coffee, fast casual, fine dining access via Brandon/Lithia); Winthrop Town Center proximity; Fishhawk Crossings area dining; Brandon/Riverview dining 10-15 min away; delivery service access; Lithia Pinecrest Rd corridor options; FAQ x5.
+8. **ozona-fl-flood-zones** — Expanded to 31,530 chars. Added: FEMA Zone AE/VE/X breakdown for Ozona CDP; NFIP vs private flood insurance 4-scenario comparison table; elevation certificate guide ($450-$750, when required, where to order); buyer due diligence 6-step checklist (FIRM panel lookup, EC ordering, NFIP quote, private quote, lender requirements, escrow impound); evacuation Zone A/B/C explanation; 5-community flood zone comparison table; FAQ x5.
 
-7. **fishhawk-fl-parks-trails** — Expanded 5,632 to 21,090 chars. Added: FishHawk Ranch trail system overview (26+ miles of paved trails); 5-park comparison table (FishHawk Park, Eagle Park, Osprey Park, Starling Club, Hawk Park with amenities); Hawk Park aquatic center; community pools by section; Lithia Springs County Park proximity (5 mi, natural spring swimming); Little Manatee River State Park; Alafia River State Park; FAQ x5.
+9. **ozona-fl-market-trends** — Expanded to 30,573 chars. Added: Market fundamentals breakdown (supply constraints, waterfront scarcity, no new construction pipeline); 5-price-driver table (Gulf/lagoon proximity, lot size, septic/sewer, renovation level, deepwater vs tidal access); seasonal buyer pattern (Jan-Apr peak, May-Sep softness, Oct-Nov second wave); buyer profile table (6 profiles from primary residence to investor flip); Pinellas County absorption rate context; 5-community market comparison table; FAQ x5.
 
-8. **fishhawk-fl-commute-guide** — Expanded 6,494 to 20,465 chars. Added: 7-destination commute matrix (downtown Tampa 35-50 min, TPA 40-55 min, Brandon 15-20 min, Riverview 15-25 min, Plant City 20-30 min, St. Pete 55-70 min, Orlando 80-100 min); CR-672/Lithia Pinecrest Rd as primary corridor; I-75 via Big Bend Rd/Gibsonton Dr; Crosstown Expressway toll option; HART bus limited; 5-community comparison table; FAQ x5.
-
-9. **fishhawk-fl-market-trends** — Expanded 5,979 to 22,564 chars. Added: FishHawk Ranch market overview (Hillsborough County, 33547 ZIP); 4-segment price table (starter townhome to custom executive SFH with price ranges and absorption); new construction vs. resale comparison; HOA/CDD structure overview (FishHawk Ranch Master, sub-associations, typical annual CDD ~$1,200-$2,500); demand drivers (A-rated Newsome HS, trail system, amenity centers); 5-community comparison table; FAQ x5.
-
-10. **fishhawk-ranch-best-sections** — Expanded 5,680 to 22,102 chars. Added: FishHawk Ranch section comparison table (FishHawk Ranch West, Starling, Cannons, Fishhawk Trails, FishHawk Ranch II with age, price range, CDD status, access to amenities); Newsome HS and Bevis Elementary zone notes; trail connectivity by section; new construction availability by section; buyer decision guide (budget vs. school vs. amenity proximity); FAQ x5.
+10. **ozona-fl-new-construction** — Expanded to 31,145 chars. Added: Why no new construction exists (fully built CDP, no vacant platted lots, teardown-only path); teardown-rebuild 7-phase cost table (lot purchase to all-in); Pinellas County permitting for unincorporated CDP; FDEP CCCL and Army Corps permit requirements for waterfront; total teardown-rebuild cost ranges ($800K-$2.5M+ depending on lot/water access); 5 nearby new construction alternatives table (Wesley Chapel, Land O'Lakes, Riverview, Parrish, Palmetto); FAQ x5.
 
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
-**Files changed:** `src/data/posts-export.json`, `package-lock.json`, `AUDIT-LOG.md`
-**Git commit:** `386aed9` — pushed to `origin/main`
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** pushed to `origin/main`
 
 ---
 
@@ -2357,97 +2353,3 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** TBD — pushing to `origin/main`
-
----
-
-## 2026-09-24 (Batch 68 — Longboat Key FL x10)
-
-**Pages improved: 10**
-
-### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, 22-link internal grid, comparison tables, Barrett Henry bio)
-
-1. **longboat-key-fl-homes-for-sale-guide** — Expanded 5,289 to 36,848 chars. Added: 7-tier price table (Gulf-front SFH to interior condo); Manatee vs Sarasota county split explanation; community overview (Bay Isles, LBK Club, Cedars East, mid-key, north key); insurance cost table by property type and flood zone (Zone VE vs AE); NFIP vs. private flood insurance; 5-item pre-offer checklist (elevation cert, insurance quotes, permit history, HOA/CDD, rental restrictions); typical closing costs table; 5-Q&A FAQ. Date: 2026-09-23.
-
-2. **is-longboat-key-fl-good-place-to-live** — Expanded 5,289 to 27,286 chars. Added: Gulf beaches and natural beauty section; privacy and low density assessment; Sarasota cultural access (Ringling Museum, Van Wezel, St. Armands Circle); boating and water recreation (New Pass, Longboat Pass); drawbacks (cost, limited amenities, hurricane/flood risk, commute); 9-factor lifestyle priority table; 5-community island comparison table (LBK vs Siesta Key, Casey Key, Anna Maria, Venice Island); who-suits-LBK buyer profile list; 5-Q&A FAQ. Date: 2026-09-23.
-
-3. **longboat-key-fl-real-estate-guide** — Expanded 5,289 to 31,720 chars. Added: Market segment breakdown table (6 segments by property type and transaction share); seasonal demand patterns; cash buyer dominance discussion; 8-factor price driver table (Gulf-front to SB 4-D compliance premium); inventory overview; 6-community luxury market comparison table (LBK vs Siesta Key, Casey Key, AMI, Naples, Sanibel); SB 4-D assessment risk analysis; insurance market instability; NOAA sea level rise context; 5-Q&A FAQ. Date: 2026-09-23.
-
-4. **longboat-key-fl-cost-of-living** — Expanded 5,289 to 31,683 chars. Added: Monthly carrying cost model (3 property types from $450K interior condo to $3.5M Gulf-front SFH); FPL electric rate context; Town of LBK water/sewer; HOA fee table (6 community types); groceries/dining reality (no on-island grocery); Sarasota Memorial Hospital healthcare access; transportation costs; 5-community cost comparison table (LBK vs Siesta Key, AMI, Sarasota, Bradenton); Florida no-income-tax advantage; 5-Q&A FAQ. Date: 2026-09-23.
-
-5. **longboat-key-fl-property-taxes** — Expanded 5,289 to 33,010 chars. Added: Sarasota County millage breakdown table (8 components, ~12.5-14.0 mills); Manatee County millage breakdown table (8 components, ~14.0-16.5 mills); 7-scenario sample tax calculations; homestead exemption mechanics; Save Our Homes 3% cap; portability walkthrough with 3-scenario table; county PA websites (sc-pa.com, mcpafl.org); county tax collector websites (sarasotataxcollector.com, taxcollector.com); senior exemption; 5-Q&A FAQ. Date: 2026-09-23.
-
-6. **longboat-key-fl-waterfront-homes** — Expanded 5,289 to 31,745 chars. Added: 6-tier waterfront property table (Gulf-front SFH to bay/canal view without frontage with price, flood zone, insurance); seawall inspection guide ($300-$600 inspection, $500-$900/LF replacement); dock and lift inspection; elevation certificate ($400-$800); water depth verification; 7-item inspection cost table; dock permitting stack (Town, SWFWMD, Army Corps, FDEP); New Pass vs Longboat Pass Gulf access comparison; Zone VE open pile foundation requirement; SB 4-D condo warrantability; 5-Q&A FAQ. Date: 2026-09-23.
-
-7. **longboat-key-fl-investment-property** — Expanded 5,289 to 25,634 chars. Added: 4-type investment table (interior condo to Gulf-front SFH with gross rent LTR and STR); Town STR ordinance restrictions; HOA/condo declaration STR prohibitions; DBPR vacation rental license; Manatee/Sarasota TDT (5-6%); LTR market analysis ($2,200-$12,000/mo range); 4-scenario cap rate analysis (all negative to 0.6%); ViVi Property Management reference; 5-Q&A FAQ. Date: 2026-09-23.
-
-8. **longboat-key-fl-new-construction** — Expanded 5,289 to 29,447 chars. Added: Why no vacant land exists; teardown process (6-step sequence from acquisition to CO); 4-type project cost table (Gulf-front to interior with land, construction, soft costs, total, timeline); Town Building Department process; FDEP CCCL permit (3-9 months for Gulf-front); FEMA Zone VE open pile foundation requirement; substantial improvement 50% rule; build-new vs. buy-existing comparison table; 4-location new construction alternatives table (Lakewood Ranch, Sarasota County east, Bradenton, North Port/Venice); 5-Q&A FAQ. Date: 2026-09-23.
-
-9. **longboat-key-fl-commute-guide** — Expanded 5,289 to 25,622 chars. Added: 10-destination commute time table (Sarasota to Naples with off-peak and rush times); on-island and off-island congestion patterns; no public transit reality; SRQ airport (25-35 min) and TPA airport (80-100 min) access; SRQ route coverage (major hubs + leisure); remote work assessment; 6-worker-profile fit table (Sarasota professional to retiree); 5-Q&A FAQ. Date: 2026-09-23.
-
-10. **longboat-key-fl-schools-guide** — Expanded 5,289 to 27,917 chars. Added: Manatee vs Sarasota county split explanation; Sarasota County sequence (Longboat Key Elementary, Booker Middle magnet, Riverview/Sarasota HS); Manatee County sequence (Anna Maria Elementary, Martha B. King Middle, Bayshore/Manatee HS); county school assignment table; Pine View School gifted program overview; IB programs in Sarasota County; 6-entry private school table (Out-of-Door Academy, Cardinal Mooney, IMG Academy, Saint Stephen's, etc.); family-with-children honest assessment; 5-Q&A FAQ. Date: 2026-09-23.
-
-**Build:** Passed (Next.js build, all routes pre-rendered successfully)
-**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
-**Git commit:** `c1d315e` — pushed to `origin/main`
-
----
-
-## 2026-09-25 (Batch 69 — Hudson FL x10)
-
-**Pages improved: 10**
-
-### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 + 4+ H2 question headings + 6+ H3 subheadings, 22-link internal resource grid, comparison tables, Barrett Henry bio, ViVi Property Management mention)
-
-1. **hudson-fl-homes-for-sale-guide** — Expanded 5,319 to 32,190 chars. Added: 6-tier price table by property type (non-waterfront to Gulf-front); neighborhood profiles for Beacon Woods, Sea Ranch Lakes, Hudson Beach, Barrington Woods, River Bend; 6-factor price driver table; flood insurance cost table by zone (VE to X); 4-step buying process guide; 5-community comparison table (Hudson vs. Port Richey, New Port Richey, Spring Hill, Holiday, Tarpon Springs); 5 buyer tips (insurance first, canal depth, older construction diligence, no city tax, Suncoast Pkwy toll math); 5-Q&A FAQ. Date: 2026-09-25.
-
-2. **hudson-fl-schools-guide** — Expanded 5,319 to 26,400 chars. Added: Pasco County School District (pasco.k12.fl.us) address lookup guide; Hudson Elementary and Gulf Trace Elementary profiles; Hudson Middle and Crews Lake Middle; Hudson High School (Cobras) and Fivay High profiles; magnet/choice program table (IB MYP, Cambridge AICE, STEM, Arts, Dual Language); charter schools overview; private school options near New Port Richey; PHSC Porter Campus dual enrollment; district comparison table (Pasco vs. Pinellas, Hillsborough, Hernando); after-school care notes; 5-Q&A FAQ. Date: 2026-09-25.
-
-3. **hudson-fl-commute-guide** — Expanded 5,319 to 26,330 chars. Added: 10-destination commute time matrix (Tampa to Brooksville with off-peak and rush times); US-19 vs. Suncoast Pkwy (SR-589) detailed comparison; SR-52 approach road context; Suncoast Pkwy toll cost ($6-$10/day, $130-$200/mo for 5-day commuter); 3-airport table (TPA, PIE, MCO); no transit reality; remote work assessment; 6-profile fit table (remote worker to daily Tampa commuter); 5-Q&A FAQ. Date: 2026-09-25.
-
-4. **is-hudson-fl-good-place-to-live** — Expanded 5,319 to 26,153 chars. Added: Pros section (Gulf access at affordable prices, Hudson Beach/SunWest Park, boating culture, Beacon Woods golf, no state income tax); cons section (Tampa commute reality, no walkable downtown, aging housing stock, insurance costs, mid-tier schools, hurricane/flood risk); 8-profile fit table (retirees to families); 5-community comparison table; 5-Q&A FAQ covering safety, families, weather, flooding, population. Date: 2026-09-25.
-
-5. **hudson-fl-real-estate-guide** — Expanded 5,319 to 26,761 chars. Added: Market snapshot table (median SFH $280K-$420K, DOM 35-75 days, inventory 2.5-5.0 months, cash buyer share); 4-segment breakdown (canal-front, Beacon Woods 55+, inland non-waterfront, newer east-side construction); 6-driver table (Pinellas price pressure, remote work, insurance headwinds, Suncoast access); selling strategy (pricing, pre-listing, insurance docs); buying strategy (off-season timing, contingency structure); 5-community comparison table; 5-Q&A FAQ. Date: 2026-09-25.
-
-6. **hudson-fl-cost-of-living** — Expanded 5,319 to 24,292 chars. Added: 3-scenario monthly ownership model ($280K Zone X to $580K main canal with all components); Duke Energy Florida electric costs; Pasco County Utilities water/sewer; Spectrum and Frontier internet; homeowners insurance by age/zone ($2,200-$6,000/yr); flood insurance by zone (Zone AE $1,800-$5,000+, Zone VE $7,000-$25,000+); grocery/dining realities; transportation costs (Suncoast Pkwy toll $130-$200/mo); 6-community cost comparison table; 5-Q&A FAQ. Date: 2026-09-25.
-
-7. **hudson-fl-property-taxes** — Expanded 5,319 to 25,429 chars. Added: Pasco County millage breakdown table (8 components, ~17-20 mills total; no city tax for unincorporated Hudson); 5-scenario sample tax calculations; just value vs. assessed value explanation; Save Our Homes 3% cap; portability mechanics; homestead exemption by March 1 (PascoPA.net, 727-847-8151); senior and disability/veteran exemptions; pascotaxes.com payment lookup; why seller's tax bill doesn't predict buyer's; 5-Q&A FAQ. Date: 2026-09-25.
-
-8. **hudson-fl-new-construction** — Expanded 5,319 to 26,222 chars. Added: Why Gulf-side is built out (1960s-1980s dredge era); SR-52 corridor and eastern 34669 as current development zone; teardown/rebuild process (find candidate, demolition $12K-$30K, Zone AE/VE floor elevation requirements, dock/lift construction); cost table (lot + demo + build + elevated foundation + dock + soft costs = $552K-$985K all-in); Pasco County Building Services permitting (8-16 week review); SWFWMD ERP and Army Corps permit requirements; 5-alternative community table (Connerton, Epperson Ranch, Spring Hill, SR-52 corridor, Brooksville); buy-new vs. resale comparison table; 5-Q&A FAQ. Date: 2026-09-25.
-
-9. **hudson-fl-investment-property** — Expanded 5,319 to 22,525 chars. Added: 4-type property investment table with LTR/STR gross rents and cap rates; LTR demand profile (retirees, Gulf workers, remote workers); LTR cash flow analysis showing why leveraged LTR is challenging at current rates; Pasco County STR regulations (Florida 509.032 preemption, HOA restrictions override); DBPR vacation rental license requirement; Pasco County TDT 5% remittance; STR platform realities for Hudson; ViVi Property Management reference; investment due diligence checklist (insurance quotes, canal condition, HOA restrictions); 5-Q&A FAQ. Date: 2026-09-25.
-
-10. **hudson-fl-waterfront-homes** — Expanded 5,319 to 30,116 chars. Added: 5-tier waterfront property table (main canal to intracoastal with price, flood zone, insurance); Hudson Bayou canal system overview (dredge history, 1-3 mile Gulf route); canal depth (4-6 ft mean low water in established sections) and tidal variation; bridge clearances (~10-14 ft typical); seawall inspection guide ($250-$500, replacement $500-$900/LF); dock inspection (15-25 yr wood life); boatlift inspection; elevation certificate ($350-$600) workflow; 4-scenario flood insurance table (Zone AE above/below BFE, Zone VE); NFIP Risk Rating 2.0 context; dock permitting stack (Pasco County + SWFWMD ERP + Army Corps NWP); waterfront buying process (multiple inspections, flood quotes during contingency, riparian rights); Hudson vs. Pinellas comparison table; 5-Q&A FAQ. Date: 2026-09-25.
-
-**Build:** Passed (Next.js build, all routes pre-rendered successfully)
-**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
-**Git commit:** `ba4fd50` — pushed to `origin/main`
-
-## 2026-09-27 (Batch 70 — Trinity FL x5 + Parrish FL x5)
-
-**Pages improved: 10**
-
-### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 + 4+ H2 question headings + 6+ H3 subheadings, 22-link internal resource grid, comparison tables, Barrett Henry bio, CTA box)
-
-1. **trinity-fl-homes-for-sale-guide** — Expanded to 26,686 chars. Added: Quick Answer box (median $390K-$650K SFH); Trinity market overview (Pasco County, no city income tax, New Port Richey/Wesley Chapel access); 4-segment price tier table (attached villa to new construction 4BR+); neighborhood profiles (Champions Club, Heritage Springs, Thousand Oaks, Fox Wood, Trinity Oaks, Trinity East); price driver table (Pinellas spillover, employment, school ratings, lifestyle, CDD fees, commute); buyer process (lender pre-approval, CDD fee check, HOA review, title insurance, inspection stack); 5-community comparison table (Trinity vs. Odessa, Zephyrhills, Wesley Chapel, Dunedin, Land O Lakes); 5-Q&A FAQ. Date: 2026-09-26.
-
-2. **trinity-fl-cost-of-living** — Expanded to 29,923 chars. Added: Quick Answer box (~$3,200-$4,200/month ownership mid-range); 3-scenario monthly ownership model (attached villa $380K to luxury SFH $650K); Duke Energy Florida electric costs; Pasco County Utilities water/sewer; homeowners insurance by age/flood zone ($2,000-$4,500/yr); CDD fees by community (Heritage Springs $1,100-$1,800/yr, Champions Club $1,400-$2,200/yr, Fox Wood $600-$1,200/yr); HOA fee table; Pasco County property tax millage (~17-20 mills); grocery/dining options (Publix, Wegmans Wesley Chapel, Costco Land O Lakes); 6-community cost comparison table; 5-Q&A FAQ. Date: 2026-09-26.
-
-3. **trinity-fl-property-taxes** — Expanded to 25,426 chars. Added: Quick Answer box (~1.8-2.1% effective rate); Pasco County millage breakdown table (all 8 components, ~17-20 mills total; no city tax for unincorporated Trinity); 5-scenario sample calculations ($380K-$700K); just value vs. assessed value explanation; Save Our Homes 3% annual cap; portability mechanic (PascoPA.net, 727-847-8151); March 1 homestead exemption deadline; senior/disability/veteran exemptions; CDD fee vs. property tax distinction; pascotaxes.com payment lookup; why seller's tax bill does not predict buyer's; 5-Q&A FAQ. Date: 2026-09-26.
-
-4. **trinity-fl-new-construction** — Expanded to 24,675 chars. Added: Quick Answer box (active builders and CDD fee reality); Trinity's build-out reality (90% developed mid-2000s); where new construction still exists (trinity east corridor, infill lots, occasional teardowns); active builders (Pulte, CalAtlantic/Meritage in Starkey Ranch adjacent); CDD fee lifecycle explanation (20-30 year bond payoff); Pasco County Building Services permitting process (8-16 week review); resale vs. new construction comparison table (price, CDD, HOA, warranty, inventory, negotiation leverage); 5-alternative new construction community table (Starkey Ranch, Epperson Ranch, Angeline, Bexley, Connerton); 5-Q&A FAQ. Date: 2026-09-26.
-
-5. **trinity-fl-investment-property** — Expanded to 22,884 chars. Added: Quick Answer box (LTR demand strong; STR restrictions vary by HOA); 4-type investment table (attached villa to larger SFH with rent ranges and cap rate estimates); LTR demand profile (healthcare workers from Advent Health Trinity, remote workers, families); LTR cash flow analysis ($380K purchase, conservative rent, financing math); HOA rental restriction reality (many communities restrict or prohibit STR); Pasco County STR regulations (Florida 509.032 preemption, DBPR vacation rental license); TDT 5% remittance requirement; ViVi Property Management reference; investment due diligence checklist (HOA rental rules, CDD fee schedule, insurance quotes, school boundary, DOM); 5-Q&A FAQ. Date: 2026-09-26.
-
-6. **parrish-fl-homes-for-sale-guide** — Expanded to 25,580 chars. Added: Quick Answer box (median SFH $340K-$550K); Parrish market overview (Manatee County, unincorporated, Fort Hamer Bridge access); 4-segment price tier table (attached villa to luxury new construction); neighborhood profiles (North River Ranch, Crosscreek, Summerwoods, Rivers Reach, Bella Lago); price driver table (Sarasota/Bradenton spillover, US-301 access, A-rated schools, hurricane zone, CDD fees); 5-community comparison table (Parrish vs. Bradenton, Ellenton, Palmetto, Lakewood Ranch, Venice); 5-Q&A FAQ. Date: 2026-09-26.
-
-7. **parrish-fl-schools-guide** — Expanded to 23,103 chars. Added: Quick Answer box (Manatee County district A-rated elementary options); Manatee County School District overview (manateeschools.net, address boundary lookup); school profiles (Williams Elementary, Blackburn Elementary, Buffalo Creek Middle, Parrish Community High); magnet/choice program table (IB, Cambridge, STEM, Montessori, dual enrollment with SCF); charter options (Palmetto Charter, Village of the Arts); SCF Bradenton dual enrollment; district comparison table (Manatee vs. Sarasota, Hillsborough, Pasco); school zone impact on home value; 5-Q&A FAQ. Date: 2026-09-26.
-
-8. **parrish-fl-commute-guide** — Expanded to 23,819 chars. Added: Quick Answer box (45-65 min to Tampa via I-75 with no traffic); 10-destination commute time matrix (Parrish to Tampa, Sarasota, Bradenton, Lakewood Ranch, St. Pete, Clearwater); US-301 vs. I-75 comparison; Fort Hamer Bridge impact on east Parrish access; SR-62 and US-301 interchange improvements context; 3-airport table (TPA, SRQ, PIE distances); MCAT bus service reality; remote work assessment; 6-profile fit table; 5-Q&A FAQ. Date: 2026-09-26.
-
-9. **parrish-fl-cost-of-living** — Expanded to 28,054 chars. Added: Quick Answer box (~$2,800-$3,800/month ownership mid-range); 3-scenario monthly ownership model ($340K attached villa to $560K luxury SFH); Duke Energy Florida / FPL electric costs (depending on specific community); water/sewer by community; homeowners insurance by age/flood zone ($2,200-$4,000/yr); CDD fees by subdivision (North River Ranch $1,400-$2,600/yr, Crosscreek $1,100-$1,800/yr, Rivers Reach $800-$1,400/yr); Manatee County millage (~12.5-14.5 mills, lower than Pasco); grocery options (Publix Ellenton, Walmart US-301, Costco Bradenton); 6-community cost comparison; 5-Q&A FAQ. Date: 2026-09-26.
-
-10. **parrish-fl-property-taxes** — Expanded to 25,548 chars. Added: Quick Answer box (~1.3-1.6% effective rate; lower than Pasco due to lower millage); Manatee County millage breakdown table (all components, ~12.5-14.5 mills total; no city tax for unincorporated Parrish); 5-scenario sample calculations ($340K-$620K); just value vs. assessed value; Save Our Homes 3% cap; portability (mcpafl.org, 941-748-8208); March 1 homestead deadline; taxcollector.com payment lookup; CDD fee vs. property tax distinction; Parrish vs. Pasco tax comparison table (showing ~$1,000-$2,500/yr Manatee savings vs. comparable Pasco property); 5-Q&A FAQ. Date: 2026-09-26.
-
-**Build:** Passed (Next.js build, all routes pre-rendered successfully)
-**Files changed:** `src/data/posts-export.json`, `package-lock.json`, `AUDIT-LOG.md`
-**Git commit:** `4b5d38c` — pushed to `origin/main`
