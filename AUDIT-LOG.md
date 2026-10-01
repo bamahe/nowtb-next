@@ -4,6 +4,41 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-10-01 (Batch 68 — Redington Shores FL x10: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, 4+ H2 question headings, 6+ H3 subheadings, price/comparison tables, 5-Q&A FAQ, 22-link internal grid, Barrett Henry REMAX Collective author bio. Content dated 2026-09-30.)
+
+**Redington Shores FL (all 10 posts — ZIP 33708, barrier island, Pinellas County):**
+
+1. **redington-shores-fl-flood-zones** — Expanded to 33,371 chars. FEMA Zone VE/AE/X breakdown; NFIP vs private flood 4-scenario comparison; Risk Rating 2.0 impact; elevation certificate guide; buyer 6-step due diligence checklist; evacuation zone A/B/C; 5-community flood comparison table; FAQ x5.
+
+2. **redington-shores-fl-cost-of-living** — Expanded to 35,876 chars. Full cost breakdown (housing, insurance, utilities, HOA, food, transport, healthcare); comparison to St. Pete/Clearwater/Tampa metros; homestead exemption and Save Our Homes 3% cap; real vs perceived affordability analysis; FAQ x5.
+
+3. **redington-shores-fl-property-taxes** — Expanded to 30,921 chars. Pinellas County millage structure; homestead exemption + $50K cap; Save Our Homes portability explained; non-homestead 10% cap; TRIM notice timeline; 5-year property tax estimate table by price tier; FAQ x5.
+
+4. **redington-shores-fl-investment-property** — Expanded to 32,678 chars. STR vs LTR comparison; DBPR Vacation Rental License process; Pinellas TDT 6% collection; Florida SB 714 (2023) preemption; ViVi Property Management reference; 4-scenario ROI table; condo SB 4-D compliance notes; FAQ x5.
+
+5. **redington-shores-fl-waterfront-homes** — Expanded to 28,711 chars. Gulf-front vs canal-front vs bay-front comparison table; dock permit 4-agency table; seawall inspection and replacement costs; FDEP CCCL permit for Gulf construction; Zone VE vs AE insurance cost comparison; elevation certificate; FAQ x5.
+
+6. **redington-shores-fl-schools-guide** — Expanded to 23,181 chars. Gulf Beaches Elementary Magnet (200 120th Ave W, Treasure Island; (727) 893-2139); Boca Ciega High (924 58th St S, Gulfport; (727) 893-2100); pcsb.org verification guidance; private school comparison table; FAQ x5.
+
+7. **redington-shores-fl-commute-guide** — Expanded to 28,186 chars. 8-destination commute matrix (St. Pete 25-35 min, Tampa 45-55 min, TPA 40-52 min, PIE 18-28 min); Park Blvd traffic patterns; PSTA bus reality check; remote work compatibility; 5-community commute comparison; FAQ x5.
+
+8. **redington-shores-fl-real-estate-guide** — Expanded to 30,143 chars. Market overview; 4-segment property type table; value drivers; comparison to neighboring barrier island markets; buyer due diligence checklist; 8-step buy process; FAQ x5.
+
+9. **redington-shores-fl-new-construction** — Expanded to 28,699 chars. Teardown-rebuild process; all-in cost range ($800K-$3.5M+); FDEP CCCL permit; 18-36 month timeline; custom vs spec vs renovation comparison table; lot due diligence checklist; FAQ x5.
+
+10. **moving-to-redington-shores-fl** — Expanded to 34,484 chars. Neighborhood character; who it suits vs. doesn't; 8-destination commute matrix; utilities setup (Duke Energy, Pinellas County Utilities); FL driver license 30-day deadline; homestead exemption by March 1 at pcpao.gov; insurance setup; healthcare access (Palms of Pasadena, Bayfront Health, Johns Hopkins All Children's); FAQ x5.
+
+**Build:** Passed — all routes pre-rendered successfully.
+**Git:** Committed and pushed to origin/main (commit a810885).
+
+**Tomorrow:** Expand remaining 2 Redington Shores stubs: things-to-do-redington-shores-fl and redington-shores-fl-market-trends.
+
+---
+
 ## 2026-09-28 (Batch 71 — Ozona FL x10: Major Expansions)
 
 **Pages improved: 10**
