@@ -1,5 +1,5 @@
 # nowtb.com Monthly Audit Report
-**Date:** September 1, 2026  
+**Date:** October 1, 2026  
 **Auditor:** Claude Code (automated)
 
 ---
@@ -9,17 +9,18 @@
 | Category | Status | Notes |
 |---|---|---|
 | Build | ✅ PASS | Clean build, 1 known warning |
-| Sitemap | ✅ PASS | ~11,585 URLs across all sections |
-| Page availability (10 spot checks) | ⚠️ UNTESTABLE | Proxy returns 403 on outbound; live site verified via build |
-| Schema / JSON-LD | ✅ PASS | All 5 checked pages have valid structured data |
-| Broken internal links | ✅ PASS | All top linked targets resolve to valid routes |
-| Blog freshness | ✅ PASS | 1,752 posts; latest posted 2026-08-30 (1 day ago) |
+| Sitemap | ✅ PASS | ~4,028 URLs across all sections |
+| Page availability (10 spot checks) | ⚠️ UNTESTABLE | Outbound proxy returns 403; verified via build output |
+| Schema / JSON-LD | ✅ PASS | Valid structured data confirmed on homepage and city pages |
+| Broken internal links | ✅ PASS | All spot-checked top links resolve to valid routes |
+| Blog freshness | ✅ PASS | 1,752 posts; latest posted 2026-09-30 (1 day ago) |
 | robots.txt | ✅ PASS | AI crawlers allowed, spam bots blocked |
-| Meta tags | ⚠️ FIXED | 4 pages had descriptions > 155 chars — trimmed |
-| Forms / API | ✅ PASS | `/api/contact` returns 400 for invalid type |
-| Image alt text | ✅ PASS | All sampled Image components have alt attributes |
-| Content freshness | ✅ PASS | Year references are accurate (Hall of Fame 2024 is factual) |
+| Meta tags | ✅ FIXED | `/sell-your-home` description trimmed (was 171 chars → 148) |
+| Forms / API | ✅ PASS | `/api/contact` returns 400 for invalid form type |
+| Image alt text | ✅ PASS | No `<img>` tags missing alt attributes found |
+| Content freshness | ✅ PASS | Year references accurate; 2024 Hall of Fame factual |
 | Competitive intel | ✅ DONE | Top 5 Tampa Bay competitors identified |
+| Dependencies | ✅ FIXED | `npm audit fix` applied; 2 remaining require breaking Next.js upgrade |
 
 ---
 
@@ -27,14 +28,13 @@
 
 **Result: PASS**
 
-`npm run build` completed cleanly. Only one warning:
+`npm run build` completed successfully after `npm install`. One known warning:
 
 ```
 Warning: total number of custom routes exceeds 1000, this can reduce performance.
-Route counts: redirects: 1064
 ```
 
-This is a known, accepted warning caused by 1,752+ WordPress blog redirect rules. No errors.
+This is the accepted consequence of 1,752+ WordPress blog redirect rules in `next.config.mjs`. No errors.
 
 ---
 
@@ -42,63 +42,60 @@ This is a known, accepted warning caused by 1,752+ WordPress blog redirect rules
 
 **Result: PASS**
 
-Estimated total sitemap URLs: **~11,585**
+Estimated total sitemap URLs: **~4,028** (up from ~3,400 cited in comment header)
 
 | Section | Count |
 |---|---|
 | Static pages | 24 |
 | Property type landing pages | 11 |
 | Blog posts | 1,752 |
-| Market updates | 233 (232 + index) |
-| Guides | 49 |
-| City hubs | 117 |
-| City spoke pages (~71 topics/city) | ~8,307 |
-| City realtor pages | 117 |
-| Sell-city pages | 117 |
-| Neighborhood pages | 749 |
-| Builder pages | 8 |
-| Loan guide pages | 8 |
-| Comparison pages | 24 |
+| Market updates | 233 |
+| City hub pages | 119 |
+| City spoke pages (est.) | ~952 |
+| Neighborhoods | 751 |
+| Guides | 52 |
+| Comparisons | 33 |
 | Regional pages | 36 |
-| Misc catch-all pages | 33 |
+| Misc pages | 55 |
+| Builders | 10 |
 
-All major route groups are represented. The `sitemap.ts` dynamically generates URLs from data files.
-
----
-
-## 3. Page Spot-Check (10 Pages)
-
-**Result: UNTESTABLE from remote container** (outbound HTTPS returns 403 via proxy policy)
-
-Pages verified structurally through build output (all routes rendered without error):
-- `/` — homepage
-- `/blog/` — blog index
-- `/sellers/` — sellers hub
-- `/buyers/` — buyers hub
-- `/brandon/` — city hub
-- `/waterfront/` — property type
-- `/guides/` — guides index
-- `/mortgage-calculator/` — calculator tool
-- `/luxury/` — luxury listings
-- `/contact/` — contact page
-
-All pages appeared in the Next.js build output as either static (○) or dynamic (ƒ) routes. No 404 routes detected.
+**Note:** The sitemap header comment says "3,400+ pages" but the actual count is closer to **4,000+**. The comment should be updated.
 
 ---
 
-## 4. Schema Validation (JSON-LD)
+## 3. Page Availability (10 Spot Checks)
+
+**Result: UNTESTABLE (outbound proxy blocks curl to live site)**
+
+The cloud environment's proxy returns 403 on outbound HTTPS requests to external domains, including nowtb.com. This is a known environment limitation. Pages are verified as built via `.next/server/app/` build artifacts.
+
+Verified in build output:
+- `/` (homepage)
+- `/contact/`
+- `/sellers/`
+- `/buyers/`
+- `/blog/` (dynamic)
+- `/properties/` (dynamic)
+- `/luxury/`
+- `/valrico/` (city page, dynamic SSG)
+- `/blog/redington-shores-fl-schools-guide/`
+- `/market-updates/dunedin-housing-market-update/`
+
+---
+
+## 4. Schema / JSON-LD Validation
 
 **Result: PASS**
 
-All 5 sampled pages have `application/ld+json` structured data:
+Spot-checked 5 pages. Valid JSON-LD found:
 
-| Page | Has JSON-LD |
+| Page | Schema Types |
 |---|---|
-| `/about/` | ✅ LocalBusiness schema |
-| `/contact/` | ✅ Present |
-| `/sellers/` | ✅ Present |
-| `/buyers/` | ✅ Present |
-| `/blog/` | ✅ Present |
+| `/` (homepage) | `RealEstateAgent`, `PostalAddress`, `RealEstateOrganization`, `AggregateRating`, `Review` |
+| `/[citySlug]` pages | `FAQPage` with `Question`/`Answer` entries |
+| `/blog/[slug]` | `BlogPosting` via layout.tsx |
+| `/guides/[slug]` | `HowTo` or `Article` |
+| `/market-updates/[slug]` | `Article` |
 
 ---
 
@@ -106,24 +103,23 @@ All 5 sampled pages have `application/ld+json` structured data:
 
 **Result: PASS**
 
-Top internal links audited against app routes and data files:
+Checked top internal link targets (by frequency in `src/app/`):
 
-| Link | Status |
+| URL | Status |
 |---|---|
-| `/contact/` | ✅ app route |
-| `/mortgage-calculator/` | ✅ app route |
-| `/properties/` | ✅ app route |
-| `/free-home-valuation/` | ✅ app route |
-| `/fha-loan-florida/` | ✅ [citySlug] dynamic route (loan guide) |
-| `/jumbo-loan-florida/` | ✅ [citySlug] dynamic route (loan guide) |
-| `/remax-tampa/` | ✅ misc-pages data |
-| `/remax-largo/` | ✅ misc-pages data |
-| `/remax-brandon/` | ✅ misc-pages data |
-| `/new-construction-homes-tampa-bay/` | ✅ regional-pages data |
-| `/south-tampa/` | ✅ neighborhoods data |
-| `/davis-islands/` | ✅ neighborhoods data |
-
-No broken internal links found.
+| `/contact/` | ✅ Static route |
+| `/properties/` | ✅ Dynamic route |
+| `/free-home-valuation/` | ✅ Static route |
+| `/home-valuation/` | ✅ Static route |
+| `/guides/` | ✅ Static route |
+| `/sell-your-home/` | ✅ Static route |
+| `/market-updates/` | ✅ Static route |
+| `/mortgage-calculator/` | ✅ Static route |
+| `/south-tampa/` | ✅ Neighborhood page (resolves via `[citySlug]` dynamic route) |
+| `/davis-islands/` | ✅ Neighborhood page (resolves via `[citySlug]` dynamic route) |
+| `/clearwater-beach/` | ✅ Neighborhood page (resolves via `[citySlug]` dynamic route) |
+| `/riverview/` | ✅ City hub page (resolves via `[citySlug]`) |
+| `/valrico/` | ✅ City hub page |
 
 ---
 
@@ -131,11 +127,12 @@ No broken internal links found.
 
 **Result: PASS**
 
-- **Total posts:** 1,752
-- **Latest post:** `things-to-do-lecanto-fl` — 2026-08-30 (1 day ago)
-- **Recent posts also:** `moving-to-lecanto-fl`, `lecanto-fl-flood-zones` — all 2026-08-30
+- **Total posts:** 1,752 (JSON export) + Supabase auto-generated posts
+- **Latest post date:** 2026-09-30
+- **Days since last post:** 1 day (well under the 7-day flag threshold)
+- **Recent batch:** 10 Redington Shores FL posts (Batch 68)
 
-Blog is actively updated. No freshness flag needed.
+Auto-post cron is running as expected.
 
 ---
 
@@ -143,13 +140,11 @@ Blog is actively updated. No freshness flag needed.
 
 **Result: PASS**
 
-`/src/app/robots.ts` is configured correctly:
-
-- ✅ All legitimate crawlers: `allow: "/"`
-- ✅ AI crawlers explicitly allowed: GPTBot, ClaudeBot, PerplexityBot, Applebot-Extended, GoogleOther, Google-Extended, Bytespider, ChatGPT-User, anthropic-ai, cohere-ai
-- ✅ Private paths blocked: `/api/`, `/admin/`, `/auth/`, `/account/`, `/login/`, `/card/`, `/thank-you/`, `/compare/`, `/c/`
-- ✅ Spam bots blocked: SemrushBot, AhrefsBot, MJ12bot, DotBot, BLEXBot, DataForSeoBot
-- ✅ Sitemap URL included
+Configured in `src/app/robots.ts`. Correctly:
+- ✅ Allows all legitimate crawlers via `userAgent: "*"`
+- ✅ Explicitly allows AI bots: `GPTBot`, `ClaudeBot`, `PerplexityBot`, `Applebot-Extended`, `GoogleOther`, `Google-Extended`, `ChatGPT-User`, `anthropic-ai`, `cohere-ai`, `Bytespider`
+- ✅ Blocks spam/scraper bots: `SemrushBot`, `AhrefsBot`, `MJ12bot`, `DotBot`, `BLEXBot`, `DataForSeoBot`
+- ✅ Disallows private paths (`/api/`, `/auth/`, `/account/`, `/login/`, `/card/`, `/thank-you/`, `/compare/`, `/c/`) from all crawlers
 
 ---
 
@@ -157,23 +152,17 @@ Blog is actively updated. No freshness flag needed.
 
 **Result: FIXED**
 
-4 pages had `description` meta tags exceeding 155 characters (Google truncates beyond this).
+Spot-checked 5 key pages:
 
-| Page | Before (chars) | After (chars) | Status |
-|---|---|---|---|
-| `/about/` | 204 | 134 | ✅ Fixed |
-| `/sellers/` | 172 | 150 | ✅ Fixed |
-| `/buyers/` | 169 | 148 | ✅ Fixed |
-| `/blog/` | 171 | 151 | ✅ Fixed |
-| `/contact/` | 143 | 143 | ✅ Already good |
+| Page | Title (≤60) | Description (120–155) | Canonical | Status |
+|---|---|---|---|---|
+| Homepage | 50 chars ✅ | 135 chars ✅ | `https://nowtb.com/` ✅ | PASS |
+| `/about/` | 57 chars ✅ | 134 chars ✅ | `/about/` ✅ | PASS |
+| `/sellers/` | 55 chars ✅ | 150 chars ✅ | `/sellers/` ✅ | PASS |
+| `/contact/` | 59 chars ✅ | 143 chars ✅ | `/contact/` ✅ | PASS |
+| `/sell-your-home/` | 56 chars ✅ | **171 → 148 chars** ✅ | `/sell-your-home/` ✅ | **FIXED** |
 
-All title tags are within 60-character limit.
-
-**Changes applied:**
-- `src/app/about/page.tsx` — description trimmed to 134 chars
-- `src/app/sellers/page.tsx` — description trimmed to 150 chars
-- `src/app/buyers/page.tsx` — description trimmed to 148 chars
-- `src/app/blog/page.tsx` — description trimmed to 151 chars
+**Fix applied:** `/sell-your-home/` description was 171 characters (over the 155-char limit). Trimmed to 148 characters.
 
 ---
 
@@ -181,11 +170,13 @@ All title tags are within 60-character limit.
 
 **Result: PASS**
 
-`/api/contact` (the site's lead form endpoint) returns:
-- `400` with `{ error: "Invalid form type" }` for missing/invalid `type` field on empty POST
-- `500` with `{ error: "Failed to submit form" }` on unexpected server errors
+The `/api/contact` endpoint (`src/app/api/contact/route.ts`) returns:
+- `400 { error: "Invalid form type" }` for empty or invalid `type` field
+- `429` for rate limit violations (5 submissions per IP per 10 minutes)
+- `403` for open-house kiosk requests from non-nowtb.com origins
+- Turnstile spam verification required for standard forms
 
-Note: The audit task referenced `/api/lead` — this route does not exist. The live lead endpoint is `/api/contact`, which handles all form types (contact, showing, valuation, seller-intake, newsletter, buyer-reg). This appears intentional per the route design.
+The endpoint correctly validates via `validateLead()` and rejects disposable email domains, Gmail dot-abuse, and known spam patterns.
 
 ---
 
@@ -193,75 +184,77 @@ Note: The audit task referenced `/api/lead` — this route does not exist. The l
 
 **Result: PASS**
 
-All sampled `<Image>` components have `alt` attributes:
-
-| Component | Alt attribute |
-|---|---|
-| `CityContent.tsx` | `alt="Barrett Henry, REALTOR® and Broker Associate at REMAX Collective"` |
-| `ListingCard.tsx` | `alt={displayAddress}` (dynamic) |
-| `agents/page.tsx` | `alt="Barrett Henry, REALTOR® — Broker Associate at REMAX Collective"` |
-
-No hardcoded external image URLs found. No `<img>` tags without `alt` attributes found in the source.
+- No `<img>` tags missing `alt` attributes found in `src/app/` or `src/components/`
+- All `next/image` (`Image`) usages include `alt` props
+- Static HTML listing pages in `/public/` (`.html` files) use inline images but are legacy WP pages
 
 ---
 
 ## 11. Content Freshness
 
-**Result: PASS (no changes needed)**
+**Result: PASS**
 
 Year references reviewed:
 
-| Reference | Location | Assessment |
+| Reference | Location | Status |
 |---|---|---|
-| "REMAX Hall of Fame in 2024" | `the-now-team/page.tsx`, `card/page.tsx`, `layout.tsx` | ✅ Factual — this is a historical achievement year, correct to keep |
-| "Irrigation — 2023" | `3813-polumbo-dr/page.tsx` | ✅ Listing-specific property data, correct |
+| "REMAX Hall of Fame 2024" | `the-now-team/page.tsx`, `card/page.tsx`, `layout.tsx`, `api/chat/route.ts` | ✅ Factual |
+| "2026 market data" | `relocation/page.tsx` | ✅ Current |
+| "Q2 2026 Market Updates" | `market-updates/page.tsx` | ✅ Current |
+| "Last updated: May 2026" | Privacy policy, terms of use, accessibility | ✅ Acceptable |
+| `claude-sonnet-4-20250514` model in API routes | `api/cron/generate-post/route.ts`, `api/chat/route.ts` | ⚠️ Prior generation model — see note |
+| Roof year 2022, irrigation 2023 | `3813-polumbo-dr/page.tsx` | ✅ Property-specific factual data |
 
-No expired programs or misleading year references found.
+**Note on Claude model:** Both the cron post-generator and the AI chat use `claude-sonnet-4-20250514`. This is a prior-generation model. Consider upgrading to `claude-sonnet-4-6` or `claude-sonnet-5-5` for improved quality. This is not blocking but worth a conscious decision.
 
 ---
 
 ## 12. Competitive Intel
 
-**Search:** "tampa bay real estate 2026"
+**Top 5 Tampa Bay Real Estate Competitors (October 2026)**
 
-**Top 5 competitors appearing in results:**
+| Competitor | Type | Strength |
+|---|---|---|
+| **Zillow** | National portal | Dominant consumer traffic, iBuyer brand |
+| **Realtor.com** | National portal | MLS accuracy (updates every 15 min), brand trust |
+| **Redfin** | National brokerage/portal | Commission discount, tech-forward UX |
+| **HomeLight** | Agent matching | High-intent buyer/seller matching; ranks locally |
+| **The Keyes Company** | Florida-specific brokerage | Strong Florida brand; agent volume |
 
-1. **Liane Jamason / Corcoran Dwellings** (lianejamason.com) — Active market commentary, March 2026 update; high content frequency
-2. **DeCosta Realty** (decostarealty.com) — Published 2026 Tampa Bay forecast guide
-3. **Mangrove Bay Realty** (mangrovebayrealty.com) — Detailed 2026 market trends/investment guide
-4. **3 Aves Group** (3avesgroup.com) — Two active 2026 market update posts (March 2026)
-5. **Multiple independent brokerages** — Publishing seasonal market updates targeting buyer/seller intent
+**Local/regional also-rans:** Houzeo (FSBO-adjacent), Clever Real Estate (discount model), FastExpert.
 
-**Market context (September 2026):**
-- Hillsborough County median sale price: **$456K** (up 4.8% YoY)
-- Inventory: 3.8 months supply; active listings up ~18% vs spring 2025
-- Single-family: flat to appreciating; condo segment elevated due to HOA reserve legislation
-- Buyer leverage improving; opportunities in downtown St. Pete condos and Clearwater Beach
-
-**Observation:** nowtb.com's content volume (1,752 blog posts, 117 city hubs) is competitive, but publishing cadence on seasonal market updates should stay consistent with competitors who are posting multiple times monthly on current market conditions.
-
----
-
-## Issues Found & Fixed
-
-| # | Issue | Severity | Status |
-|---|---|---|---|
-| 1 | Meta description > 155 chars on `/about/` (204 chars) | Medium | ✅ Fixed |
-| 2 | Meta description > 155 chars on `/sellers/` (172 chars) | Medium | ✅ Fixed |
-| 3 | Meta description > 155 chars on `/buyers/` (169 chars) | Medium | ✅ Fixed |
-| 4 | Meta description > 155 chars on `/blog/` (171 chars) | Medium | ✅ Fixed |
-| 5 | Redirect count > 1,000 (build warning) | Low | ⚠ Known/Accepted |
-
-## No Issues Found In
-
-- Build integrity
-- JSON-LD schema presence
-- Internal link targets
-- robots.txt AI crawler policy
-- Image alt attributes
-- Blog freshness (posted yesterday)
-- Content year accuracy
+**Opportunities vs. competitors:**
+- nowtb.com's blog content depth (1,752 posts) significantly exceeds any local competitor
+- Hyper-local city/neighborhood pages (4,000+ URLs) outpace local brokerages
+- Continue building AEO/GEO content for AI search visibility (AI bots already explicitly allowed in robots.txt)
 
 ---
 
-*Generated by Claude Code automated monthly audit — September 1, 2026*
+## 13. Dependencies / Security
+
+**Result: PARTIALLY FIXED**
+
+`npm audit` showed 4 vulnerabilities (1 low, 2 high, 1 critical) before this audit.
+
+`npm audit fix` applied (without `--force`), updating:
+- `postcss-selector-parser` 6.1.2 → 6.1.4 (fixes DoS via uncontrolled AST recursion)
+- Two other minor dependency bumps
+
+**2 remaining vulnerabilities** (1 high, 1 critical) require `npm audit fix --force`, which would install `next@16.3.8` — a **breaking major version change** from `next@14.x`. This should be planned as a separate upgrade sprint, not applied automatically.
+
+---
+
+## Fixes Applied This Run
+
+| Fix | File | Change |
+|---|---|---|
+| Meta description over 155 chars | `src/app/sell-your-home/page.tsx` | Trimmed from 171 → 148 chars |
+| Dependency security patches | `package-lock.json` | `npm audit fix` (3 package bumps) |
+
+---
+
+## Recommended Follow-Ups (Not Auto-Fixed)
+
+1. **Update sitemap comment** — Header says "3,400+ pages"; actual count is closer to 4,000+
+2. **Plan Next.js 14 → 16 upgrade** — Required to resolve 2 remaining npm audit vulnerabilities (postcss path traversal, GHSA-fxqj-rqcc-2cmp)
+3. **Consider Claude model upgrade** — `claude-sonnet-4-20250514` in cron/chat routes is prior generation; `claude-sonnet-5-5` or `claude-sonnet-4-6` available
