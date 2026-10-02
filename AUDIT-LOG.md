@@ -39,6 +39,44 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-10-02 (Batch 69 — Redington Shores FL x2 + Ellenton FL x8: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, 4+ H2 question headings, 6+ H3 subheadings, price/comparison tables, 5-Q&A FAQ, 22-link internal grid, Barrett Henry REMAX Collective author bio. Content dated 2026-10-01.)
+
+**Redington Shores FL (2 remaining stubs — ZIP 33708, Pinellas County):**
+
+1. **things-to-do-redington-shores-fl** — Expanded to 36,765 chars. Added: activities comparison table (Gulf beach, Suncoast Seabird Sanctuary, Johns Pass Village, fishing, kayaking, paddleboarding); distance table to Fort De Soto/Caladesi/St. Pete/Clearwater; lifestyle comparison table (Redington Shores vs beach vs inland); detailed day-trip guides; local restaurant and activity context; FAQ x5.
+
+2. **redington-shores-fl-market-trends** — Expanded to 38,152 chars. Added: market fundamentals breakdown (~900-1000 homes total, no vacant land, price tiers by water access); buyer profile table (6 profiles from primary residence to STR investor); 5-community comparison table (Redington Shores vs Indian Rocks Beach/Redington Beach/Madeira Beach/Treasure Island); seasonal demand patterns; insurance headwinds analysis; FAQ x5.
+
+**Ellenton FL (8 stubs — ZIP 34222, unincorporated Manatee County):**
+
+3. **ellenton-fl-homes-for-sale-guide** — Expanded from 5,341 to 33,034 chars. Added: price tier table (starter SFH to premium/waterfront, 5 tiers); 8-step buyer process table; Manatee County flood zone due diligence; HOA/CDD fee comparison table; Ellenton vs Parrish vs Palmetto community comparison table; FAQ x5.
+
+4. **ellenton-fl-schools-guide** — Expanded from 5,341 to 31,403 chars. Added: Manatee County School District zone table (Virgil Mills Elementary/Buffalo Creek/Lincoln Middle/Palmetto High); Palmetto High School profile (1200 17th St W, (941) 721-6900); private school comparison table (St. Stephen's Episcopal, IMG Academy, Bradenton Academy with tuition ranges); SCF and USF Sarasota-Manatee higher ed table; FAQ x5.
+
+5. **ellenton-fl-commute-guide** — Expanded from 5,341 to 31,960 chars. Added: 9-destination commute matrix (Tampa 40-55 min, Bradenton 15-25 min, Sarasota 30-45 min, TPA 42-58 min, St. Pete 55-70 min, Clearwater 60-75 min, Lakeland 45-60 min, Orlando 90-110 min, PIE 50-65 min); I-75/US-301 routing analysis; MCAT transit reality check; 5-community commute comparison table; FAQ x5.
+
+6. **is-ellenton-fl-good-place-to-live** — Expanded from 5,341 to 31,066 chars. Added: lifestyle comparison table (Ellenton Premium Outlets, Gamble Plantation Historic State Park at 3708 Patten Ave, (941) 723-4536, outdoor activities, commute scoring); honest drawbacks (limited walkability, I-75 noise, flood risk in parts, retail gaps); 6-community comparison table; buyer profile fit table; FAQ x5.
+
+7. **ellenton-fl-real-estate-guide** — Expanded from 5,341 to 28,094 chars. Added: 5-segment price table (starter SFH to luxury/waterfront); inspection priorities for Manatee County homes (roof age, HVAC, septic vs sewer zones, flood zone); HOA/CDD fee table; seller pre-listing strategy; ViVi Property Management reference at /property-management/; FAQ x5.
+
+8. **ellenton-fl-cost-of-living** — Expanded from 5,341 to 31,933 chars. Added: 3-scenario monthly cost table ($240K/$310K/$400K purchase price, 8 cost categories each); FPL electric ranges ($130-$350/mo); Manatee County Utilities water/sewer ($60-$130/mo); HO insurance by home condition/age table; 6-community cost comparison table; FAQ x5.
+
+9. **ellenton-fl-property-taxes** — Expanded from 5,341 to 30,308 chars. Added: Manatee County millage breakdown table (~16-19 mills, 7 components); homestead exemption mechanics ($50K in two tiers); Save Our Homes cap reset warning for buyers; property tax estimate table by purchase price ($200K-$600K); manateepa.gov and taxcollector.com lookup guides; FAQ x5.
+
+10. **ellenton-fl-new-construction** — Expanded from 5,341 to 33,948 chars. Added: Why Ellenton is built-out (infill only, no large vacant parcels); Parrish as primary new construction market; 5-builder comparison table (D.R. Horton, Lennar, Neal Communities, GL Homes, M/I Homes with communities and price ranges); new vs resale comparison table (6 criteria); CDD fee warning (often $1,500-$3,000/yr); 5-community new construction alternatives table; FAQ x5.
+
+**Tomorrow:** ellenton-fl-investment-property, ellenton-fl-waterfront-homes (2 remaining Ellenton stubs)
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** pushed to `origin/main`
+
+---
+
 ## 2026-09-28 (Batch 71 — Ozona FL x10: Major Expansions)
 
 **Pages improved: 10**
