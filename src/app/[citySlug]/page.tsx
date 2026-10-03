@@ -322,13 +322,21 @@ export async function generateMetadata({
     case "remax-office": {
       const ofc = getRemaxOffice(citySlug);
       const cityName = ofc?.city || parsed.officeKey;
+      // Offices can override title/description with keyword-tuned copy (see OFFICES data).
+      // Falls back to the generic template for any office that hasn't been tuned yet.
       return {
-        title: `REMAX ${cityName} | REMAX Collective`,
-        description: `Barrett Henry, Broker Associate at REMAX Collective ${cityName}. 23+ years experience. Search homes, get market data. Call (813) 733-7907.`,
+        title: ofc?.metaTitle || `REMAX ${cityName} | REMAX Collective`,
+        description:
+          ofc?.metaDescription ||
+          `Barrett Henry, Broker Associate at REMAX Collective ${cityName}. 24+ years of real estate experience. Search homes, get market data. Call (813) 733-7907.`,
         alternates: { canonical },
         openGraph: {
           title: `REMAX ${cityName} — Barrett Henry, REALTOR®`,
-          description: `Your REMAX expert in ${cityName}. 23+ years, FL Broker #BK3313308.`,
+          description:
+            ofc?.metaDescription ||
+            `Your REMAX expert in ${cityName}. 24+ years, FL Broker #BK3313308.`,
+          url: canonical,
+          type: "website",
           images: [{ url: "/og-default.png", width: 1200, height: 630 }],
         },
       };
@@ -362,11 +370,11 @@ export async function generateMetadata({
     case "realtor":
       return {
         title: `${parsed.city.name} REALTOR® | REMAX Collective`,
-        description: `Looking for a trusted REALTOR in ${parsed.city.name}, FL? Barrett Henry has 23+ years of real estate experience. REMAX Collective. Call (813) 733-7907.`,
+        description: `Looking for a trusted REALTOR in ${parsed.city.name}, FL? Barrett Henry has 24+ years of real estate experience. REMAX Collective. Call (813) 733-7907.`,
         alternates: { canonical },
         openGraph: {
           title: `${parsed.city.name} REALTOR® — Barrett Henry | REMAX Collective`,
-          description: `Your trusted REALTOR in ${parsed.city.name}, FL. 23+ years of real estate experience.`,
+          description: `Your trusted REALTOR in ${parsed.city.name}, FL. 24+ years of real estate experience.`,
           url: canonical,
           type: "website",
           images: [{ url: "/og-default.png", width: 1200, height: 630 }],
@@ -430,11 +438,11 @@ export async function generateMetadata({
       const nrCityName = nrCity ? nrCity.name : "Tampa Bay";
       return {
         title: `${parsed.name} REALTOR® | ${nrCityName}, FL`,
-        description: `Looking for a trusted REALTOR in ${parsed.name}, ${nrCityName}? Barrett Henry has 23+ years of real estate experience. REMAX Collective. Call (813) 733-7907.`,
+        description: `Looking for a trusted REALTOR in ${parsed.name}, ${nrCityName}? Barrett Henry has 24+ years of real estate experience. REMAX Collective. Call (813) 733-7907.`,
         alternates: { canonical },
         openGraph: {
           title: `${parsed.name} REALTOR® — Barrett Henry | ${nrCityName}, FL`,
-          description: `Your local REALTOR in ${parsed.name}, ${nrCityName}. 23+ years of experience.`,
+          description: `Your local REALTOR in ${parsed.name}, ${nrCityName}. 24+ years of real estate experience.`,
           url: canonical,
           type: "website",
           images: [{ url: "/og-default.png", width: 1200, height: 630 }],
@@ -1002,8 +1010,8 @@ async function HubPage({ city }: { city: CityData }) {
               },
               {
                 question: `How do I buy a home in ${city.name}?`,
-                answerText: `Start by getting pre-approved for a mortgage, then work with a local REALTOR who knows the ${city.name} market. Barrett Henry and The NOW Team have 23+ years of experience helping buyers in ${city.county} County. Call (813) 733-7907 to get started.`,
-                answerHtml: `Start by getting pre-approved for a mortgage, then work with a local <strong>REALTOR®</strong> who knows the ${city.name} market. <strong>Barrett Henry</strong> and The NOW Team have 23+ years of experience helping buyers in <strong>${city.county} County</strong>. Call <a href="tel:+18137337907" class="text-link hover:underline"><strong>(813) 733-7907</strong></a> to get started.`,
+                answerText: `Start by getting pre-approved for a mortgage, then work with a local REALTOR who knows the ${city.name} market. Barrett Henry and The NOW Team have 24+ years of real estate experience helping buyers in ${city.county} County. Call (813) 733-7907 to get started.`,
+                answerHtml: `Start by getting pre-approved for a mortgage, then work with a local <strong>REALTOR®</strong> who knows the ${city.name} market. <strong>Barrett Henry</strong> and The NOW Team have 24+ years of real estate experience helping buyers in <strong>${city.county} County</strong>. Call <a href="tel:+18137337907" class="text-link hover:underline"><strong>(813) 733-7907</strong></a> to get started.`,
               },
               {
                 question: `What ZIP codes are in ${city.name}?`,
@@ -1162,7 +1170,7 @@ async function HubPage({ city }: { city: CityData }) {
               Looking for homes in {city.name}?
             </p>
             <p className="font-body text-white/70 text-sm">
-              Barrett Henry, REALTOR® — 23+ years of real estate experience
+              Barrett Henry, REALTOR® — 24+ years of real estate experience
             </p>
           </div>
           <div className="flex gap-3 flex-shrink-0">
@@ -1403,7 +1411,7 @@ async function SpokePage({
               Looking for {topic.label.toLowerCase()} in {city.name}?
             </h2>
             <p className="font-body text-white/70 text-sm">
-              Barrett Henry, REALTOR® — 23+ years of real estate experience
+              Barrett Henry, REALTOR® — 24+ years of real estate experience
             </p>
           </div>
           <div className="flex gap-3 flex-shrink-0">
@@ -1530,7 +1538,7 @@ function HomeValuationSpokePage({ city }: { city: CityData }) {
               {" "}{city.name} are actually paying right now.
             </p>
             <p>
-              Barrett Henry has 23+ years of real estate experience and deep knowledge of {city.county} County
+              Barrett Henry has 24+ years of real estate experience and deep knowledge of {city.county} County
               neighborhoods. His CMA compares your home to recently sold properties in {city.name} that match your home&apos;s
               size, condition, and features. This gives you a reliable price range backed by real transaction data from
               Stellar MLS.
@@ -1665,7 +1673,7 @@ function HomeValuationSpokePage({ city }: { city: CityData }) {
               Thinking about selling in {city.name}?
             </h2>
             <p className="font-body text-white/70 text-sm">
-              Barrett Henry, REALTOR® — 23+ years of real estate experience
+              Barrett Henry, REALTOR® — 24+ years of real estate experience
             </p>
           </div>
           <div className="flex gap-3 flex-shrink-0">
@@ -1840,7 +1848,7 @@ function PropertyManagementSpokePage({ city }: { city: CityData }) {
             </p>
             <p>
               Barrett Henry, Broker Associate at REMAX Collective, founded ViVi PM to give Tampa Bay rental owners a management
-              option backed by 23+ years of real estate experience. That means your property manager is also a licensed broker
+              option backed by 24+ years of real estate experience. That means your property manager is also a licensed broker
               who understands {city.name} property values, rental comps, and the local market inside and out.
             </p>
           </div>
