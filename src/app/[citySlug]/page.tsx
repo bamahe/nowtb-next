@@ -45,6 +45,7 @@ import {
   type CityData,
 } from "@/data/cities";
 import { neighborhoods, getNeighborhoodBySlug, getNeighborhoodsByCity } from "@/data/neighborhoods";
+import { getCommunityPageBySlug, getCommunityPagesByCity } from "@/data/community-pages";
 import { comparisons, getComparisonBySlug, type ComparisonData } from "@/data/comparisons";
 import { regionalPages, getRegionalPageBySlug, type RegionalPageData } from "@/data/regional-pages";
 import { miscPages, getMiscPageBySlug, type MiscPageData } from "@/data/misc-pages";
@@ -569,6 +570,18 @@ export default async function CityPage({
   params: Promise<{ citySlug: string }>;
 }) {
   const { citySlug } = await params;
+
+  // Hand-built community pages live nested under their city
+  // (e.g. /auburndale/gapway-lakes-estates/). Send the bare root-level slug to
+  // the nested canonical URL so inbound links and old shares land on the one
+  // indexable copy. This has to run BEFORE the notFound() below: parseSlug()
+  // does not know about these communities, so it returns null for them and the
+  // 404 would win.
+  const communityPage = getCommunityPageBySlug(citySlug);
+  if (communityPage) {
+    permanentRedirect(communityPage.href);
+  }
+
   const parsed = parseSlug(citySlug);
 
   if (!parsed) notFound();
@@ -1032,6 +1045,42 @@ async function HubPage({ city }: { city: CityData }) {
                     dangerouslySetInnerHTML={{ __html: faq.answerHtml }}
                   />
                 </div>
+              ))}
+            </div>
+          </section>
+        );
+      })()}
+
+      {/* === Featured communities with their own hand-built page === */}
+      {/* These live nested under the city (e.g. /auburndale/gapway-lakes-estates/)
+          and are usually pre-development, so they get a described card rather
+          than the bare name tile the neighborhood grid below uses. */}
+      {(() => {
+        const featured = getCommunityPagesByCity(city.slug);
+        if (featured.length === 0) return null;
+        return (
+          <section id="featured-communities" className="container-wide py-12">
+            <h3 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2">
+              Featured Communities in {city.name}
+            </h3>
+            <p className="font-body text-muted font-light mb-6">
+              In-depth guides to specific {city.name} communities, including projects
+              still in development.
+            </p>
+            <div className="grid gap-4 md:grid-cols-2">
+              {featured.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={c.href}
+                  className="block border border-gray-200 bg-white p-5 transition-colors hover:border-accent hover:bg-accent/5"
+                >
+                  <span className="block font-heading font-bold text-lg text-primary">
+                    {c.name}
+                  </span>
+                  <span className="block font-body text-sm text-muted mt-1">
+                    {c.blurb}
+                  </span>
+                </Link>
               ))}
             </div>
           </section>

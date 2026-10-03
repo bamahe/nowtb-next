@@ -8,6 +8,7 @@ import { MetadataRoute } from "next";
 import { cities, SPOKE_TOPICS, getCityTopics } from "@/data/cities";
 import { neighborhoods } from "@/data/neighborhoods";
 import { builders } from "@/data/builders";
+import { communityPages } from "@/data/community-pages";
 import { getAllComparisonSlugs } from "@/data/comparisons";
 import { getAllRegionalSlugs } from "@/data/regional-pages";
 import { getCatchAllMiscSlugs } from "@/data/misc-pages";
@@ -156,6 +157,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]);
 
+  // ── Hand-built community pages nested under a city ──
+  // e.g. /auburndale/gapway-lakes-estates/. Only the one real page per community
+  // goes in, not the -homes-for-sale / -realtor variants, because these
+  // communities have no MLS inventory to put on those pages.
+  const communityPagesList: MetadataRoute.Sitemap = communityPages.map((c) => ({
+    url: `${siteUrl}${c.href}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.6,
+  }));
+
   // ── County pages (8 pages) ──
   const countyPages: MetadataRoute.Sitemap = [
     "hillsborough-county", "pinellas-county", "pasco-county", "manatee-county",
@@ -215,6 +227,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...sellCityPages,
     ...builderPages,
     ...neighborhoodPages,
+    ...communityPagesList,
     ...countyPages,
     ...loanPages,
     ...comparisonPages,

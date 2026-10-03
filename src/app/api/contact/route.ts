@@ -23,10 +23,28 @@ const KIOSK_RATE_LIMIT_MAX = 120;
 const FEEDBACK_DELAY_MINUTES = 10;
 
 /**
+ * Merges caller-supplied tags into a base tag list. Anything that arrives in
+ * the request body is sanitised, trimmed and capped so a scripted POST cannot
+ * stuff arbitrary junk into the FUB tag list.
+ */
+function mergeExtraTags(baseTags: string[], extraTags: unknown): string[] {
+  const tags = [...baseTags];
+
+  if (Array.isArray(extraTags)) {
+    for (const t of extraTags.slice(0, 5)) {
+      if (typeof t === "string" && t.trim()) tags.push(t.trim().slice(0, 60));
+    }
+  }
+
+  // De-duplicate, drop empties. Array.from rather than spreading the Set,
+  // because this project's tsconfig target predates downlevelIteration.
+  return Array.from(new Set(tags.filter(Boolean)));
+}
+
+/**
  * Tags for an open house lead: the standard type tags plus the things Barrett
  * actually filters on later — which house, which day, and which lender was on
- * site. Anything caller-supplied is sanitised and capped so a scripted POST
- * cannot stuff arbitrary junk into the FUB tag list.
+ * site.
  */
 function buildOpenHouseTags(
   baseTags: string[],
@@ -48,15 +66,7 @@ function buildOpenHouseTags(
     }).format(new Date())
   );
 
-  if (Array.isArray(extraTags)) {
-    for (const t of extraTags.slice(0, 5)) {
-      if (typeof t === "string" && t.trim()) tags.push(t.trim().slice(0, 60));
-    }
-  }
-
-  // De-duplicate, drop empties. Array.from rather than spreading the Set —
-  // this project's tsconfig target predates downlevelIteration.
-  return Array.from(new Set(tags.filter(Boolean)));
+  return mergeExtraTags(tags, extraTags);
 }
 
 // Map form type → FUB source label (shows up in FUB's "Source" column)
@@ -69,6 +79,11 @@ const fubSourceMap: Record<string, string> = {
   "seller-intake": "nowtb.com — Seller Intake",
   newsletter: "nowtb.com — Newsletter",
   "buyer-reg": "nowtb.com — Buyer Registration",
+  // Community interest lists (Gapway Lakes Estates and any future pre-development
+  // community). Deliberately the bare domain: these leads are tagged with the
+  // community name, so a per-community source label would only fragment Barrett's
+  // FUB source reporting.
+  "community-interest": "nowtb.com",
 };
 
 // Map form type → FUB tags (for smart lists and automations)
@@ -81,6 +96,8 @@ const fubTagMap: Record<string, string[]> = {
   "seller-intake": ["Website Lead", "Seller Intake", "Seller"],
   newsletter: ["Website Lead", "Newsletter"],
   "buyer-reg": ["Website Lead", "Buyer Registration", "Buyer"],
+  // The page itself supplies the community-specific tags via extraTags.
+  "community-interest": ["Website Lead", "Community Interest"],
 };
 
 /**
@@ -245,6 +262,10 @@ export async function POST(request: NextRequest) {
       "seller-intake": `${N8N_BASE}/nowtb-seller-intake`,
       newsletter: `${N8N_BASE}/nowtb-newsletter`,
       "buyer-reg": `${N8N_BASE}/nowtb-buyer-reg`,
+      // Reuses the general contact flow in n8n, the same way
+      // "open-house-feedback" reuses the open house flow. No new n8n webhook is
+      // needed, so these leads can't 400 out as "Invalid form type".
+      "community-interest": `${N8N_BASE}/nowtb-contact`,
     };
 
     const webhookUrl = webhookMap[type];
@@ -278,7 +299,11 @@ export async function POST(request: NextRequest) {
                 formData.property?.address,
                 extraTags
               )
-            : fubTagMap[type] || ["Website Lead"],
+            // Every other form type gets its base tags plus whatever the page
+            // asked for. That is how a community page tags its own leads
+            // ("Gapway Lakes Estates", "Lake Juliana", "Lot Buyer") without
+            // needing a dedicated form type per community.
+            : mergeExtraTags(fubTagMap[type] || ["Website Lead"], extraTags),
           property: formData.property || undefined,
           details: formData.details || undefined,
         });

@@ -1,0 +1,82 @@
+GAPWAY LAKES ESTATES: WORDPRESS SEO SETUP
+Generated for nowtb.com. Last updated October 2026.
+
+SUGGESTED WORDPRESS SLUG
+/gapway-lakes-estates-auburndale/
+Full URL: https://nowtb.com/gapway-lakes-estates-auburndale/
+
+TITLE TAG (77 characters)
+Gapway Lakes Estates Auburndale FL | Lake Juliana Estate Lots | Barrett Henry
+
+META DESCRIPTION (150 characters)
+45 one-acre estate lots on Lake Juliana in Auburndale. Status, timeline, lot map, and early updates from local expert Barrett Henry, REMAX Collective.
+
+FOCUS KEYWORD
+Gapway Lakes Estates
+
+SECONDARY KEYWORDS
+1. Gapway Lakes Estates Auburndale FL
+2. Lake Juliana lots for sale
+3. Lake Juliana lakefront homes Auburndale
+4. Auburndale FL one acre estate lots
+5. new lakefront community Polk County FL
+
+SQUIRRLY SEO FIELDS
+  SEO Title:        Gapway Lakes Estates Auburndale FL | Lake Juliana Estate Lots | Barrett Henry
+  SEO Description:  45 one-acre estate lots on Lake Juliana in Auburndale. Status, timeline, lot map, and early updates from local expert Barrett Henry, REMAX Collective.
+  Keyword:          Gapway Lakes Estates
+  Canonical URL:    https://nowtb.com/gapway-lakes-estates-auburndale/
+  Index / Follow:   Index, Follow
+  OG Title:         Gapway Lakes Estates, Auburndale FL | 45 Estate Lots on Lake Juliana
+  OG Description:   45 approved one acre estate lots on Lake Juliana in Auburndale, Polk County. Approvals, timeline, lot layout, and early updates from Barrett Henry, REMAX Collective.
+  OG Image:         upload a generic Florida lakefront image, 1200x630
+
+HOW TO PUBLISH
+1. New Page, title it "Gapway Lakes Estates" (the H1 is inside the HTML block,
+   so set the WordPress page title display to hidden if your theme prints it,
+   otherwise you get two H1s on the page).
+2. Add ONE block: Custom HTML. Paste the entire contents of
+   gapway-lakes-estates-wordpress.html into it.
+3. Set the slug to gapway-lakes-estates-auburndale
+4. Upload a generic Florida lakefront photo to the Media Library, then replace
+   the placeholder src in the <img> tag:
+     /wp-content/uploads/florida-lakefront-at-sunset.jpg
+   Leave the alt text as written. It says the photo is generic on purpose,
+   because there are no real site photos yet.
+5. Fill in the Squirrly fields above. Do NOT let Squirrly inject its own
+   FAQ or breadcrumb schema on this page: the JSON-LD block at the bottom of
+   the HTML already supplies WebPage, BreadcrumbList, Place, FAQPage and
+   RealEstateAgent. Two FAQPage blocks on one URL is a Rich Results error.
+6. Publish, then submit the URL for indexing:
+     ~/index-urls.sh https://nowtb.com/gapway-lakes-estates-auburndale/
+
+INTERNAL LINKS TO ADD ON THE WORDPRESS SIDE
+Add a link TO this page from each of these, or it will sit orphaned:
+  /auburndale/                     (Auburndale city page)
+  /polk-county/                    (Polk County page)
+  /waterfront/                     (waterfront hub)
+  /new-construction/               (new construction hub)
+  /communities/                    (communities index)
+  /auburndale-waterfront-homes/    (Auburndale waterfront spoke)
+
+SCHEMA INCLUDED IN THE HTML FILE
+  WebPage          dateModified 2026-10-03, author and provider point at Barrett
+  BreadcrumbList   Home > Polk County > Auburndale > Gapway Lakes Estates
+  Place            Gapway Rd, Auburndale FL 33823, geo 28.1128, -81.8035
+  FAQPage          all 10 questions, answer text identical to the visible page
+  RealEstateAgent  Barrett Henry, Broker Associate, REMAX Collective
+
+GEO COORDINATES NOTE
+28.1128, -81.8035 is the north side of Gapway Rd on the south shore of Lake Juliana,
+verified against OpenStreetMap: Gapway Rd runs east to west at about 28.1122 N
+spanning -81.8187 to -81.7893, and Lake Juliana's south shore sits at about
+28.1132 N spanning -81.8120 to -81.7952. Lake Arietta is immediately south of
+Gapway Rd, centred 28.1022, -81.8046, which is consistent with lots 26 to 45
+having Arietta views across the road.
+
+CONTENT RULES THIS FILE FOLLOWS
+  No em dashes or en dashes anywhere.
+  "REMAX" always written without a slash.
+  Navy, white, clean blues and slate greys only. No gold.
+  Every forward looking statement is labelled an estimate.
+  No prices, no builder names, and no invented dates.

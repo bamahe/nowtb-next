@@ -7,6 +7,7 @@
 import Link from "next/link";
 import ListingGrid from "@/components/ui/ListingGrid";
 import { getListings } from "@/lib/bridge";
+import { getCommunityPagesByCounty } from "@/data/community-pages";
 import type { CityData } from "@/data/cities";
 
 interface CountyPageProps {
@@ -126,6 +127,41 @@ export default async function CountyPage({
           ))}
         </div>
       </section>
+
+      {/* === Featured communities in this county with their own guide page === */}
+      {(() => {
+        const featured = getCommunityPagesByCounty(countyName);
+        if (featured.length === 0) return null;
+        return (
+          <section className="container-wide py-12">
+            <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2 text-center">
+              Featured Communities in {countyName} County
+            </h2>
+            <p className="font-body text-muted text-center mb-8 max-w-2xl mx-auto">
+              In-depth community guides, including projects still in development.
+            </p>
+            <div className="grid gap-4 md:grid-cols-2 max-w-4xl mx-auto">
+              {featured.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={c.href}
+                  className="block rounded-lg border border-gray-200 bg-white p-5 transition-colors hover:border-accent hover:bg-accent/10"
+                >
+                  <span className="block font-heading font-bold text-lg text-primary">
+                    {c.name}
+                  </span>
+                  <span className="block font-body text-sm text-muted mt-1">
+                    {c.cityName}, {c.county} County
+                  </span>
+                  <span className="block font-body text-sm text-muted mt-2">
+                    {c.blurb}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        );
+      })()}
 
       {/* === Listings across the county === */}
       <ListingGrid

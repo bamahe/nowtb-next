@@ -8,6 +8,7 @@ import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
 import SearchBar from "@/components/ui/SearchBar";
 import ContactForm from "@/components/ui/ContactForm";
+import { communityPages } from "@/data/community-pages";
 import type { RegionalPageData } from "@/data/regional-pages";
 import { getPageContent } from "@/lib/page-content";
 import { cleanWpContent } from "@/lib/utils";
@@ -110,6 +111,51 @@ export default function RegionalPage({ page }: RegionalPageProps) {
           )}
         </div>
       </section>
+
+      {/* === Featured community guides ===
+           Only on the regional pages where these are actually relevant. Note
+           that /new-construction/ and /waterfront/ both 308 to a regional slug,
+           so this component is where those two hubs really get rendered. */}
+      {(() => {
+        const featured = communityPages.filter((c) =>
+          page.slug.includes("new-construction")
+            ? c.newConstruction
+            : page.slug.includes("waterfront")
+              ? c.waterfront
+              : false
+        );
+        if (featured.length === 0) return null;
+        return (
+          <section className="container-wide pb-12">
+            <h2 className="font-heading font-bold text-2xl text-primary mb-2">
+              Featured Community Guides
+            </h2>
+            <p className="font-body text-muted mb-6">
+              Specific communities worth knowing about, including projects still in
+              development.
+            </p>
+            <div className="grid gap-4 md:grid-cols-2">
+              {featured.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={c.href}
+                  className="block rounded-lg border border-gray-200 bg-white p-5 transition-colors hover:border-accent hover:bg-accent/10"
+                >
+                  <span className="block font-heading font-bold text-lg text-primary">
+                    {c.name}
+                  </span>
+                  <span className="block font-body text-xs text-muted mt-1">
+                    {c.cityName}, {c.county} County
+                  </span>
+                  <span className="block font-body text-sm text-muted mt-2">
+                    {c.blurb}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        );
+      })()}
 
       {/* === City links grid === */}
       <section className="bg-gray-50 py-12">

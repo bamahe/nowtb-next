@@ -94,6 +94,36 @@ function getBlogRootRedirects() {
   }
 }
 
+// Hand-built community pages that live NESTED under a city, e.g.
+// /auburndale/gapway-lakes-estates/. Two legacy WordPress "flatten the nested
+// URL" redirects below would otherwise 308 these down to a root-level URL that
+// does not exist, so every one of them has to be excluded from both rules.
+//
+// THIS IS THE BUG THIS FUNCTION EXISTS TO PREVENT:
+// The /:city/:city-:topic rule splits any hyphenated second segment on its
+// first hyphen. "gapway-lakes-estates" parsed as city "gapway" + topic
+// "lakes-estates" and redirected to /gapway-lakes-estates/, which 404d.
+// "southoak" survived only because it has no hyphen in it. Reading the slugs
+// out of the data file means adding a community page cannot reintroduce this.
+function getNestedCommunitySlugs() {
+  // "southoak" predates src/data/community-pages.ts and lives only as a route,
+  // so it stays hardcoded here.
+  const slugs = new Set(['southoak']);
+  try {
+    const filePath = path.join(process.cwd(), 'src/data/community-pages.ts');
+    const content = fs.readFileSync(filePath, 'utf-8');
+    for (const m of content.matchAll(/^\s*slug:\s*"([^"]+)"/gm)) slugs.add(m[1]);
+  } catch {
+    console.warn('Could not load community pages for nested-route exclusions');
+  }
+  // Longest first so the regex alternation cannot match a shorter prefix of a
+  // longer slug.
+  return [...slugs].sort((a, b) => b.length - a.length);
+}
+
+// Alternation for a negative lookahead, e.g. "gapway-lakes-estates|southoak"
+const NESTED_COMMUNITY_EXCLUDE = getNestedCommunitySlugs().join('|');
+
 const nextConfig = {
   // Don't expose "X-Powered-By: Next.js" header
   poweredByHeader: false,
@@ -297,11 +327,16 @@ const nextConfig = {
       { source: "/properties/listing", destination: "/properties/", permanent: true },
 
       // ── WordPress nested city spoke pages → flat structure ──
-      { source: "/:city((?!blog|api|auth|properties|guides|images|wp-content|_next|compare|market-updates|builders|communities|account|3813-polumbo-dr|11417-cypress-park-st).[^/]+)/:city-:topic", destination: "/:city-:topic/", permanent: true },
+      // The second segment excludes the nested community slugs. Without that,
+      // this rule splits a hyphenated community slug on its first hyphen and
+      // sends the page to a root URL that does not exist. See
+      // getNestedCommunitySlugs() above.
+      { source: `/:city((?!blog|api|auth|properties|guides|images|wp-content|_next|compare|market-updates|builders|communities|account|3813-polumbo-dr|11417-cypress-park-st).[^/]+)/:city((?!${NESTED_COMMUNITY_EXCLUDE})[^/]+?)-:topic`, destination: "/:city-:topic/", permanent: true },
 
       // ── WordPress nested neighborhood pages → flat structure ──
-      // The :neighborhood param excludes "southoak" because /brandon/southoak/ has a dedicated page
-      { source: "/:city((?!blog|api|auth|properties|guides|images|wp-content|_next|compare|market-updates|builders|communities|account|3813-polumbo-dr|11417-cypress-park-st).[^/]+)/:neighborhood((?!southoak).[^/]+)", destination: "/:neighborhood/", permanent: true },
+      // Same exclusion, for the same reason: /brandon/southoak/ and
+      // /auburndale/gapway-lakes-estates/ have dedicated pages.
+      { source: `/:city((?!blog|api|auth|properties|guides|images|wp-content|_next|compare|market-updates|builders|communities|account|3813-polumbo-dr|11417-cypress-park-st).[^/]+)/:neighborhood((?!${NESTED_COMMUNITY_EXCLUDE}).[^/]+)`, destination: "/:neighborhood/", permanent: true },
 
       // ── WordPress Showcase IDX property pages ──
       // Old IDX used /properties/slug-name format. Bridge uses /properties/ListingKey.

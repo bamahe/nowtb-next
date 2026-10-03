@@ -8,6 +8,7 @@ import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
 import SearchBar from "@/components/ui/SearchBar";
 import { cities } from "@/data/cities";
+import { communityPages } from "@/data/community-pages";
 
 // Leaflet requires window/DOM — load client-side only
 const TampaBayMap = dynamic(() => import("@/components/ui/TampaBayMap"), {
@@ -99,6 +100,39 @@ export default function CommunitiesPage() {
           Click any city marker to explore homes for sale in that area.
         </p>
       </section>
+
+      {/* === Featured community guides === */}
+      {/* Specific communities with their own hand-written page, including
+          pre-development projects that have no MLS inventory to list yet. */}
+      {communityPages.length > 0 && (
+        <section className="container-wide pt-8 pb-4">
+          <h2 className="heading-section text-xl text-primary mb-2">
+            Featured Community Guides
+          </h2>
+          <p className="font-body text-muted mb-6">
+            Deep dives on specific communities, including projects still in development.
+          </p>
+          <div className="grid gap-4 md:grid-cols-2">
+            {communityPages.map((c) => (
+              <Link
+                key={c.slug}
+                href={c.href}
+                className="group card p-5 hover:shadow-lg transition-shadow"
+              >
+                <span className="font-heading font-bold text-base text-primary group-hover:text-accent transition-colors">
+                  {c.name}
+                </span>
+                <span className="block font-body text-xs text-muted mt-1">
+                  {c.cityName}, {c.county} County
+                </span>
+                <span className="block font-body text-sm text-muted mt-2">
+                  {c.blurb}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* === Cities by county === */}
       <section className="container-wide py-12">
