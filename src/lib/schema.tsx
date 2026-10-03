@@ -18,7 +18,7 @@ export function realEstateAgentSchema() {
     "@type": "RealEstateAgent",
     name: "Barrett Henry, REALTOR®",
     description:
-      "Licensed real estate Broker Associate with REMAX Collective serving Tampa Bay. 23+ years of real estate experience.",
+      "Licensed real estate Broker Associate with REMAX Collective serving Tampa Bay. 24+ years of real estate experience.",
     url: SITE_URL,
     telephone: PHONE,
     email: EMAIL,
@@ -216,6 +216,86 @@ export function breadcrumbSchema(
       position: index + 1,
       name: item.name,
       item: item.url,
+    })),
+  };
+}
+
+/**
+ * Article schema for editorial content pages (market reports, rules guides).
+ * Author is always Barrett Henry, Broker Associate at REMAX Collective, and the
+ * publisher reuses the site's RealEstateAgent entity so Google and the AI
+ * crawlers tie the page back to one consistent author.
+ */
+export function articleSchema(article: {
+  headline: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.headline,
+    description: article.description,
+    datePublished: article.datePublished,
+    dateModified: article.dateModified || article.datePublished,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": article.url,
+    },
+    author: {
+      "@type": "Person",
+      name: "Barrett Henry",
+      jobTitle: "Broker Associate",
+      worksFor: {
+        "@type": "RealEstateAgent",
+        name: "REMAX Collective",
+      },
+      url: `${SITE_URL}/about/`,
+      image: `${SITE_URL}/images/barrett-henry-headshot.jpg`,
+      telephone: PHONE,
+      sameAs: [
+        SITE_URL,
+        "https://barretthenry.remax.com",
+        "https://www.linkedin.com/in/barretthenry",
+      ],
+      hasCredential: [
+        { "@type": "EducationalOccupationalCredential", credentialCategory: "Designation", name: "e-PRO" },
+        { "@type": "EducationalOccupationalCredential", credentialCategory: "Designation", name: "MRP (Military Relocation Professional)" },
+        { "@type": "EducationalOccupationalCredential", credentialCategory: "Designation", name: "SRS (Seller Representative Specialist)" },
+      ],
+    },
+    publisher: {
+      "@type": "RealEstateAgent",
+      name: "Barrett Henry, REALTOR®",
+      url: SITE_URL,
+      telephone: PHONE,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/images/remax-logo-white.png`,
+      },
+    },
+    // Tells AI assistants and voice search which part of the page to read aloud
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".quick-answer", "h1"],
+    },
+  };
+}
+
+/** FAQPage schema — pass the same questions rendered on the page */
+export function faqSchema(faqs: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
     })),
   };
 }
