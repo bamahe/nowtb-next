@@ -2426,3 +2426,34 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** TBD — pushing to `origin/main`
+
+## 2026-10-02 (Batch 72 — Ellenton FL x2, Parrish FL x3, Palmetto FL x5)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, 22-link internal grid, comparison tables, Barrett Henry bio)
+
+1. **ellenton-fl-investment-property** — Expanded stub to 34,432 chars. Added: Ellenton investment market overview (ZIP 34222, unincorporated Manatee County, median ~$308K); rental yield analysis (~8.3% gross, avg rent $2,314/mo, cash-on-cash ~12%); canal-front vs Manatee River-front investment tiers ($500K-$750K vs $1.2M-$1.5M+); 4-market comparison table (Ellenton vs Parrish/Palmetto/Bradenton); buy-hold vs short-term rental strategy; ViVi Property Management reference (/property-management/); FEMA flood zone investor considerations; 6-Q&A FAQ. Date: 2026-10-02.
+
+2. **ellenton-fl-waterfront-homes** — Expanded stub to 31,589 chars. Added: Tampa Bay and Manatee River waterfront tiers; canal-access homes ($400K-$650K) vs river-front ($800K-$1.5M+); dock permitting (Manatee County BOCC + SWFWMD + Army Corps); seawall inspection and replacement costs; FEMA Zone AE flood insurance implications; elevation certificate workflow; boatlift sizing; waterfront buyer due diligence checklist; 5-Q&A FAQ. Date: 2026-10-02.
+
+3. **is-parrish-fl-good-place-to-live** — Expanded stub to 27,317 chars. Added: Pros/cons analysis for Parrish (ZIP 34219, unincorporated Manatee County); school quality (Barbara A Harvey Elementary, Annie Lucy Williams Elementary top 25-30% FL, Parrish Community High 97.1% graduation); commute times (Tampa 50-65 min, Sarasota 35-50 min, Bradenton 20-35 min); North River Ranch master-planned community overview; CDD fee range ($1,500-$3,500/yr); cost of living snapshot (median ~$375K, 0.83% effective tax rate); flood risk (primarily Zone X interior); 5-Q&A FAQ. Date: 2026-10-02.
+
+4. **parrish-fl-real-estate-guide** — Expanded stub to 26,786 chars. Added: Market metrics (655 listings, median ~$375K, -6% YoY, 54 DOM, $196/sqft); neighborhood price tiers (North River Ranch Pulte/Weekley/West Bay/Mattamy; Crosswind Point DR Horton/Pulte; Del Webb BayView 55+; Summerwoods; Willow Bend; Bella Lago Neal Communities); new construction vs resale analysis; buyers vs sellers market 2026; investment outlook; 5-Q&A FAQ. Date: 2026-10-02.
+
+5. **parrish-fl-new-construction** — Expanded stub to 25,188 chars. Added: Active builders and communities (Pulte, DR Horton, Weekley Homes, West Bay Homes, Mattamy Homes, Neal Communities); North River Ranch geographic overview (west of US-301 between Erie and Buckeye Roads); CDD fee structure and disclosure requirements ($1,500-$3,500/yr); base price vs final price gap; new construction contingencies; warranty coverage; 5-Q&A FAQ. Date: 2026-10-02.
+
+6. **palmetto-fl-homes-for-sale-guide** — Expanded stub to 25,368 chars. Added: Market overview (ZIP 34221, City of Palmetto, ~655 active listings, $137K-$4.75M, median ~$340K); 4-market comparison table (Palmetto vs Bradenton/Parrish/Ellenton); waterfront vs interior vs eastern subdivision tiers; FEMA flood zone breakdown (VE/AE/X); flood insurance cost range ($800-$4,500+/yr); buying process 5-step walkthrough; homeowner's insurance timing guidance; NAR settlement buyer broker changes; 6-Q&A FAQ. Date: 2026-10-02.
+
+7. **palmetto-fl-schools-guide** — Expanded stub to 23,104 chars. Added: Manatee County School District overview; Palmetto Elementary; James Tillman Elementary Magnet (application process); Palm View K-8 (6025 Bayshore Road, 34221); Buffalo Creek Middle School (7320 69th St E, 34221); Palmetto High School (1200 17th St W, ~2,065 students; AP, dual enrollment, CTE programs); Parrish Community High (97.1% graduation, for eastern Palmetto); private school options (faith-based Bradenton area, $8K-$22K/yr); Step Up For Students and Family Empowerment Scholarships; 5-Q&A FAQ. Date: 2026-10-02.
+
+8. **palmetto-fl-commute-guide** — Expanded stub to 22,112 chars. Added: Sunshine Skyway Bridge mechanics (SunPass, 40mph wind closure policy); drive time tables (Tampa 45-55 min normal/65-80 min peak; St. Pete 35-45 min; Sarasota 30-45 min; Bradenton 15-25 min); Westshore and USF sub-destinations; hybrid worker analysis; MCAT local transit coverage; no cross-bay public transit reality; airport distances (TPA 45-55 min, SRQ 30-40 min, PIE 45-55 min); 5-Q&A FAQ. Date: 2026-10-02.
+
+9. **is-palmetto-fl-good-place-to-live** — Expanded stub to 20,609 chars. Added: Who Palmetto is right for (hybrid commuters, retirees, investors, value buyers); pros (lower prices, Skyway access, Tampa Bay waterfront, Florida lifestyle, Manatee County taxes); cons (mixed schools, flood risk for waterfront, Skyway dependency, above-average crime rate, car-dependent); Palmetto vs Parrish vs Bradenton comparison table; cost of living breakdown (housing, HOA, insurance $2,500-$4,500/yr, flood insurance for AE zone); 5-Q&A FAQ. Date: 2026-10-02.
+
+10. **palmetto-fl-real-estate-guide** — Expanded stub to 20,144 chars. Added: Market metrics table (655 listings, median ~$340K, 45-60 DOM, $205-$230/sqft, 40-150% waterfront premium, 42+ communities); 4 neighborhood price tiers (bayfront $600K-$4.75M; canal access $350K-$700K; established interior $280K-$380K; eastern subdivisions $300K-$450K); rental market overview ($1,800-$2,800/mo SFR); STR considerations (city ordinance/HOA verification required); buy vs. rent analysis; post-NAR settlement buyer agent context; seller strategy for 2026; 5-Q&A FAQ. Date: 2026-10-02.
+
+**Build:** Passed (Next.js build, 535/535 static pages pre-rendered)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** 05dd46f
+
