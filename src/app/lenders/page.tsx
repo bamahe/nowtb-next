@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mortgage Lenders Tampa Bay | Barrett Henry, REALTOR",
     description:
-      "Trusted mortgage lender referrals from a Broker Associate with 23+ years of real estate experience. No kickbacks, no conflicts of interest.",
+      "Trusted mortgage lender referrals from a Broker Associate with 24+ years of real estate experience. No kickbacks, no conflicts of interest.",
     type: "website",
   },
 };
@@ -215,7 +215,7 @@ export default function LendersPage() {
               market where sellers expect fast, clean closings.
             </p>
             <p>
-              With 23+ years of real estate experience, Barrett Henry has worked with
+              With 24+ years of real estate experience, Barrett Henry has worked with
               every type of lender and knows which ones deliver. He connects buyers
               with mortgage professionals who have proven track records for competitive
               rates, responsive communication, and on-time closings. Call{" "}
@@ -388,7 +388,7 @@ export default function LendersPage() {
             Barrett connects buyers with mortgage professionals who close on
             time, communicate clearly, and fight for the best rates. No
             kickbacks, no conflicts of interest — just trusted referrals from
-            23+ years of real estate experience.
+            24+ years of real estate experience.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+18137337907" className="btn-primary bg-accent hover:bg-accent/90 inline-block">
@@ -409,7 +409,7 @@ export default function LendersPage() {
           </h2>
           <div className="font-body text-muted space-y-4 text-lg">
             <p>
-              Over 23+ years in real estate, Barrett Henry has built relationships
+              Over 24+ years in real estate, Barrett Henry has built relationships
               with mortgage professionals across every loan category —
               conventional, FHA, VA, USDA, jumbo, construction, and investor
               DSCR loans. These are not paid partnerships. Barrett does not

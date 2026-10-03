@@ -46,7 +46,7 @@ export default function GuidesIndexPage() {
       {/* === Hero === */}
       <HeroSection
         title="Real Estate Guides"
-        subtitle="Free guides for buyers, sellers, and investors. 23+ years of real estate experience, distilled into actionable advice."
+        subtitle="Free guides for buyers, sellers, and investors. 24+ years of real estate experience, distilled into actionable advice."
       >
         <SearchBar />
       </HeroSection>

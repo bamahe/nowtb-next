@@ -13,14 +13,14 @@ import ContactForm from "@/components/ui/ContactForm";
 export const metadata: Metadata = {
   title: "Buy a Home in Tampa Bay | Buyer Guide | Barrett Henry",
   description:
-    "Step-by-step guide to buying a home in Tampa Bay. Barrett Henry, Broker Associate at REMAX Collective, 23+ years of experience. Call (813) 733-7907.",
+    "Step-by-step guide to buying a home in Tampa Bay. Barrett Henry, Broker Associate with REMAX Collective, brings 24+ years of real estate experience. Call (813) 733-7907.",
   alternates: {
     canonical: "/buyers/",
   },
   openGraph: {
     title: "Buy a Home in Tampa Bay | Barrett Henry, REALTOR®",
     description:
-      "Your step-by-step guide to buying a home in Tampa Bay with a Broker who has 23+ years of real estate experience.",
+      "Your step-by-step guide to buying a home in Tampa Bay with a Broker who has 24+ years of real estate experience.",
     type: "website",
   },
 };
@@ -35,7 +35,7 @@ const benefits = [
   {
     title: "I Fight for Your Deal",
     description:
-      "23+ years of negotiation experience means I know how to write offers that win, terms that protect you, and strategies that keep more money in your pocket.",
+      "24+ years of negotiation experience means I know how to write offers that win, terms that protect you, and strategies that keep more money in your pocket.",
   },
   {
     title: "The NOW Team Has Your Back",
@@ -68,7 +68,7 @@ const buyingSteps = [
     step: 4,
     title: "Make an Offer",
     description:
-      "I'll analyze comparable sales, craft a competitive offer, and negotiate terms that protect your interests. This is where 23+ years of experience pays off.",
+      "I'll analyze comparable sales, craft a competitive offer, and negotiate terms that protect your interests. This is where 24+ years of real estate experience pays off.",
   },
   {
     step: 5,
@@ -220,7 +220,7 @@ export default function BuyersPage() {
               When you work with me as your buyer&apos;s agent, I represent your interests
               exclusively throughout the entire transaction. That means I&apos;m negotiating
               for the lowest price, the best terms, and the strongest protections — not
-              trying to close a quick deal. With 23+ years of real estate experience, I&apos;ve
+              trying to close a quick deal. With 24+ years of real estate experience, I&apos;ve
               seen every scenario that can come up between contract and closing, and I know
               how to handle each one.
             </p>

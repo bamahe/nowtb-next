@@ -373,7 +373,7 @@ export default async function NeighborhoodPage({
               Looking for homes in {name}?
             </h2>
             <p className="font-body text-white/70 text-sm">
-              Barrett Henry, REALTOR® — 23+ years of real estate experience
+              Barrett Henry, REALTOR® — 24+ years of real estate experience
             </p>
           </div>
           <div className="flex gap-3 flex-shrink-0">

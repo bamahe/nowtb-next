@@ -201,7 +201,7 @@ export default function CardPage() {
         {/* ================================================================= */}
         <div className="px-7 pb-5">
           <div className="flex flex-wrap gap-2">
-            <span className="text-[10px] bg-white/[0.06] text-white/50 px-3 py-1.5 rounded-full font-semibold tracking-wide">23+ Years Experience</span>
+            <span className="text-[10px] bg-white/[0.06] text-white/50 px-3 py-1.5 rounded-full font-semibold tracking-wide">24+ Years Experience</span>
             <span className="text-[10px] bg-white/[0.06] text-white/50 px-3 py-1.5 rounded-full font-semibold tracking-wide">FL License #3313308</span>
             <span className="text-[10px] bg-white/[0.06] text-white/50 px-3 py-1.5 rounded-full font-semibold tracking-wide">e-PRO</span>
             <span className="text-[10px] bg-white/[0.06] text-white/50 px-3 py-1.5 rounded-full font-semibold tracking-wide">MRP</span>

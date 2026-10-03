@@ -45,7 +45,7 @@ const pillars = [
     step: 3,
     title: "Relentless Negotiation",
     description:
-      "23+ years of deal-making means I know how to get you more at the closing table. Better terms, stronger counter-offers, and more net proceeds — that's the whole point.",
+      "24+ years of deal-making means I know how to get you more at the closing table. Better terms, stronger counter-offers, and more net proceeds — that's the whole point.",
   },
   {
     step: 4,
@@ -132,7 +132,7 @@ export default function SellersPage() {
                 name: "What does it take to sell a home in Tampa Bay?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Selling a home successfully comes down to three things: accurate pricing, aggressive marketing, and a listing agent who actually negotiates. Barrett Henry brings 23+ years of real estate experience and a full-service approach — professional photography, MLS syndication, digital advertising, and hands-on guidance from first meeting through closing day.",
+                  text: "Selling a home successfully comes down to three things: accurate pricing, aggressive marketing, and a listing agent who actually negotiates. Barrett Henry brings 24+ years of real estate experience and a full-service approach — professional photography, MLS syndication, digital advertising, and hands-on guidance from first meeting through closing day.",
                 },
               },
               {
@@ -184,7 +184,7 @@ export default function SellersPage() {
       <HeroSection
         title="Sell Your Home"
         label="BARRETT HENRY | THE NOW TEAM"
-        subtitle="I don't guess on price and I don't cut corners on marketing. 23+ years of getting sellers top dollar."
+        subtitle="I don't guess on price and I don't cut corners on marketing. 24+ years of getting sellers top dollar."
       />
 
       {/* ---- Seller Lead Form — right after hero ---- */}
@@ -217,7 +217,7 @@ export default function SellersPage() {
               negotiates. That is exactly what I do.
             </p>
             <p>
-              With 23+ years of real estate experience and a track record of selling homes
+              With 24+ years of real estate experience and a track record of selling homes
               across Hillsborough, Pinellas, Pasco, Polk, and Manatee counties, I bring a
               level of market knowledge that newer agents simply cannot match. Every listing
               gets the same full-service treatment — professional photography, MLS syndication,

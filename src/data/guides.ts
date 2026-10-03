@@ -26,7 +26,7 @@ function makeSections(title: string, bullets: string[]): GuideSection[] {
   return bullets.map((b, i) => ({
     id: `section-${i + 1}`,
     heading: b,
-    content: `<p>This section covers ${b.toLowerCase()} as part of our ${title.toLowerCase()} resource. Barrett Henry, Broker Associate at REMAX Collective with 23+ years of real estate experience, breaks down everything you need to know.</p><p>Contact Barrett at (813) 733-7907 for personalized guidance on this topic.</p>`,
+    content: `<p>This section covers ${b.toLowerCase()} as part of our ${title.toLowerCase()} resource. Barrett Henry, Broker Associate at REMAX Collective with 24+ years of real estate experience, breaks down everything you need to know.</p><p>Contact Barrett at (813) 733-7907 for personalized guidance on this topic.</p>`,
   }));
 }
 

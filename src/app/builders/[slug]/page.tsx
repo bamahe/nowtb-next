@@ -175,7 +175,7 @@ export default async function BuilderDetailPage({
           <p className="text-blue-100 mb-6 font-body">
             Barrett Henry provides free buyer representation on all {builder.name}{" "}
             homes. The builder pays the agent commission — you get an expert
-            negotiator at no cost. 23+ years of real estate experience.
+            negotiator at no cost. 24+ years of real estate experience.
           </p>
           <div className="flex gap-3 justify-center flex-wrap">
             <a

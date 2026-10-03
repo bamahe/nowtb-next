@@ -251,7 +251,7 @@ export default function ContactForm({
         <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 mt-3 text-xs text-muted/60 font-body">
           <span>FL License #BK3313308</span>
           <span>&bull;</span>
-          <span>23+ Years Experience</span>
+          <span>24+ Years Experience</span>
           <span>&bull;</span>
           <span>REMAX Collective</span>
           <span>&bull;</span>

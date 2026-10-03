@@ -451,7 +451,7 @@ export default function PolumboListingPage() {
                 </a>
 
                 <p className="font-body text-xs text-white/60 mt-4 leading-relaxed">
-                  23+ years of real estate experience. Text or call anytime — I answer my own phone.
+                  24+ years of real estate experience. Text or call anytime — I answer my own phone.
                 </p>
               </div>
 

@@ -252,7 +252,7 @@ function SearchPageInner() {
   const locationLabel = q || "Tampa Bay";
   const searchHeading = `${typeLabel} for Sale in ${locationLabel}`;
   const searchSubheading = propType === "Commercial Sale"
-    ? `Browse ${total.toLocaleString()} active commercial properties in ${locationLabel}. Office, retail, industrial, multifamily, and land. Barrett Henry, Broker Associate at REMAX Collective, has 23+ years of real estate experience. Call (813) 733-7907 for a consultation.`
+    ? `Browse ${total.toLocaleString()} active commercial properties in ${locationLabel}. Office, retail, industrial, multifamily, and land. Barrett Henry, Broker Associate at REMAX Collective, has 24+ years of real estate experience. Call (813) 733-7907 for a consultation.`
     : propType === "Land"
     ? `Search ${total.toLocaleString()} available lots and land parcels in ${locationLabel}. Barrett Henry at REMAX Collective helps investors, builders, and buyers find the right parcel. Call (813) 733-7907.`
     : `Search ${total.toLocaleString()} active listings in ${locationLabel}. Updated daily from Stellar MLS. Barrett Henry, REALTOR® at REMAX Collective. Call (813) 733-7907 for expert guidance.`;

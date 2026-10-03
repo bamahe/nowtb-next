@@ -54,7 +54,7 @@ export const conceptContent: Record<string, ConceptComparisonContent> = {
 
 Florida adds layers of complexity that many FSBO sellers underestimate. Sellers are required to provide specific disclosures under Florida Statute 689.25, including known defects, flood zone status, and association obligations. Miss one, and you're exposed to post-closing litigation. The contract itself — typically the FAR/BAR "As-Is" or standard residential contract — runs over 12 pages of legal terms covering inspection periods, financing contingencies, title insurance, and closing procedures. Following the 2024 NAR settlement, commission structures have changed: buyer agent compensation is no longer guaranteed through the MLS, meaning sellers need to understand how to handle buyer-side commission offers or risk limiting their buyer pool.
 
-Barrett Henry has guided sellers through both paths over 23+ years of real estate experience. Whether you choose FSBO or hire a REALTOR, understanding the true costs, risks, and time commitment will help you make the right call for your situation.`,
+Barrett Henry has guided sellers through both paths over 24+ years of real estate experience. Whether you choose FSBO or hire a REALTOR, understanding the true costs, risks, and time commitment will help you make the right call for your situation.`,
 
     comparisonRows: [
       {
@@ -164,7 +164,7 @@ Barrett Henry has guided sellers through both paths over 23+ years of real estat
       },
       {
         question: "What does a REALTOR actually do to justify their commission?",
-        answer: "A listing agent provides a comparative market analysis for accurate pricing, professional photography and virtual tours, MLS syndication to 500+ websites, showing coordination and buyer screening, contract negotiation, disclosure compliance, inspection and appraisal management, and closing coordination with the title company and lender. Barrett Henry has handled hundreds of transactions over 23+ years of real estate experience — call (813) 733-7907 for a detailed breakdown.",
+        answer: "A listing agent provides a comparative market analysis for accurate pricing, professional photography and virtual tours, MLS syndication to 500+ websites, showing coordination and buyer screening, contract negotiation, disclosure compliance, inspection and appraisal management, and closing coordination with the title company and lender. Barrett Henry has handled hundreds of transactions over 24+ years of real estate experience — call (813) 733-7907 for a detailed breakdown.",
       },
     ],
   },
@@ -177,7 +177,7 @@ Barrett Henry has guided sellers through both paths over 23+ years of real estat
 
 The decision comes down to your priorities: timeline, budget, customization, location, and long-term costs. New construction in Florida comes with builder warranties (typically 1-year workmanship, 2-year systems, 10-year structural), but it also comes with CDD (Community Development District) fees that can add $1,500-$4,000+ per year on top of property taxes. Resale homes in established neighborhoods often have lower total carrying costs, mature landscaping, and locations closer to employment centers — but they may need updates and won't have the latest energy codes.
 
-Understanding the full cost picture — including impact fees, CDD assessments, upgrade pricing at the design center, and Florida's 2023 Building Code energy requirements — is critical before you sign a builder contract. Barrett Henry has represented buyers on both sides of this decision across 23+ years of real estate experience and can walk you through the numbers specific to your situation.`,
+Understanding the full cost picture — including impact fees, CDD assessments, upgrade pricing at the design center, and Florida's 2023 Building Code energy requirements — is critical before you sign a builder contract. Barrett Henry has represented buyers on both sides of this decision across 24+ years of real estate experience and can walk you through the numbers specific to your situation.`,
 
     comparisonRows: [
       {
@@ -302,7 +302,7 @@ Understanding the full cost picture — including impact fees, CDD assessments, 
 
 That doesn't mean buying is a bad deal in Florida — far from it. Florida's Homestead Exemption knocks $50,000 off your assessed value for property tax purposes, and the Save Our Homes cap limits annual assessed value increases to 3% or CPI (whichever is lower), regardless of how fast market values climb. This means the longer you own a Florida home, the bigger the gap between your capped assessed value and actual market value — creating significant savings that renters never see.
 
-The break-even point — where buying becomes cheaper than renting — typically falls at 3-5 years in most Florida markets, depending on purchase price, interest rate, appreciation, and rental increases. Barrett Henry has walked hundreds of clients through this analysis over 23+ years of real estate experience. The answer is never one-size-fits-all, but the math usually favors buying if you plan to stay at least 3-4 years.`,
+The break-even point — where buying becomes cheaper than renting — typically falls at 3-5 years in most Florida markets, depending on purchase price, interest rate, appreciation, and rental increases. Barrett Henry has walked hundreds of clients through this analysis over 24+ years of real estate experience. The answer is never one-size-fits-all, but the math usually favors buying if you plan to stay at least 3-4 years.`,
 
     comparisonRows: [
       {
@@ -427,7 +427,7 @@ The break-even point — where buying becomes cheaper than renting — typically
 
 The Tampa Bay market has specific characteristics that make buying particularly attractive for long-term residents. Florida's Homestead Exemption saves $750-$1,250/year in property taxes. The Save Our Homes cap limits your annual assessed value increase to 3% — critical in a market where home values have been climbing 4-8% annually. And with no state income tax, your take-home pay goes further toward a mortgage payment than it would in states like New York or California.
 
-Not every Tampa Bay neighborhood favors buying equally, though. Areas with active new construction (Riverview, Wesley Chapel, Land O' Lakes) offer lower price points but come with CDD fees that increase your total monthly cost. Established neighborhoods like Brandon, Valrico, Westchase, and South Tampa have higher purchase prices but lower carrying costs and stronger appreciation track records. Barrett Henry has helped hundreds of Tampa Bay buyers and renters make this decision over 23+ years of real estate experience.`,
+Not every Tampa Bay neighborhood favors buying equally, though. Areas with active new construction (Riverview, Wesley Chapel, Land O' Lakes) offer lower price points but come with CDD fees that increase your total monthly cost. Established neighborhoods like Brandon, Valrico, Westchase, and South Tampa have higher purchase prices but lower carrying costs and stronger appreciation track records. Barrett Henry has helped hundreds of Tampa Bay buyers and renters make this decision over 24+ years of real estate experience.`,
 
     comparisonRows: [
       {

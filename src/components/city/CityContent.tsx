@@ -104,7 +104,7 @@ export default function CityContent({ city, topic }: CityContentProps) {
                 Here&apos;s what I tell every client: know the neighborhoods, understand the
                 pricing, and work with someone who knows <strong>{city.county} County</strong>{" "}
                 inside and out. My name is <strong>Barrett Henry</strong>, and I&apos;m a licensed
-                Broker Associate with <strong>REMAX Collective</strong> with 23+ years of real
+                Broker Associate with <strong>REMAX Collective</strong> with 24+ years of real
                 estate experience. Call me at{" "}
                 <strong><a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a></strong>{" "}
                 — I&apos;d love to help you find your next home.
@@ -144,7 +144,7 @@ export default function CityContent({ city, topic }: CityContentProps) {
                 something for everyone.
               </p>
               <p>
-                I bring 23+ years of real estate experience to every
+                I bring 24+ years of real estate experience to every
                 transaction. As a local market expert, I help buyers and
                 sellers in {city.name} navigate pricing, negotiations, and
                 inspections with confidence. My goal is to make your home search
@@ -311,7 +311,7 @@ function SpokeTopicContent({
       Ready to take the next step? Call <PhoneLink /> or{" "}
       <a href="/contact/" className="text-link font-semibold hover:underline">fill out my contact form</a>{" "}
       to get a personalized list of {topic.label.toLowerCase()} in {city.name} sent straight
-      to your inbox. I bring 23+ years of real estate experience to every transaction and
+      to your inbox. I bring 24+ years of real estate experience to every transaction and
       will guide you from first showing to closing day.
     </p>
   );
@@ -946,7 +946,7 @@ function SpokeTopicContent({
             Florida, and covers ZIP codes {zipList}. {city.tagline}.
           </p>
           <p>
-            I bring 23+ years of real estate experience to every transaction.
+            I bring 24+ years of real estate experience to every transaction.
             Whether you are searching for {fallbackTopic.label.toLowerCase()} or exploring other
             options in {city.name}, I provide expert guidance from
             first showing to closing day. We will review comparable sales,

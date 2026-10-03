@@ -96,7 +96,7 @@ export default function ListingGrid({
                 <p className="font-heading text-lg font-bold text-primary leading-snug">
                   {areaName ? `Looking for homes in ${areaName}?` : "Looking for the right home?"}
                 </p>
-                <p className="font-body text-muted text-sm">Barrett Henry can help. 23+ years of experience.</p>
+                <p className="font-body text-muted text-sm">Barrett Henry can help. 24+ years of real estate experience.</p>
                 <a
                   href="tel:+18137337907"
                   className="inline-block rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary/90"

@@ -145,7 +145,7 @@ export default function CommunitiesPage() {
             Not Sure Where to Start?
           </h2>
           <p className="font-body text-muted mb-6">
-            Barrett Henry knows every corner of Tampa Bay after 23+ years of
+            Barrett Henry knows every corner of Tampa Bay, backed by 24+ years of
             real estate experience. Tell him your priorities and he will match
             you with the perfect community.
           </p>

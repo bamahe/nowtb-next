@@ -51,7 +51,7 @@ export default function RegionalPage({ page }: RegionalPageProps) {
             <div className="prose prose-lg font-body text-dark max-w-none prose-headings:font-heading prose-headings:text-primary prose-a:text-link">
               <p>
                 {excerpt} Barrett Henry, Broker Associate at REMAX Collective,
-                brings 23+ years of real estate experience to help you navigate
+                brings 24+ years of real estate experience to help you navigate
                 the Tampa Bay market.
               </p>
 
@@ -100,7 +100,7 @@ export default function RegionalPage({ page }: RegionalPageProps) {
                   <h2>About Barrett Henry</h2>
                   <p>
                     Barrett Henry is a licensed real estate Broker Associate with REMAX Collective
-                    and team lead of The NOW Team. With 23+ years of real estate experience,
+                    and team lead of The NOW Team. With 24+ years of real estate experience,
                     Barrett specializes in residential sales, investment properties, new construction,
                     and military relocation across Tampa Bay.
                   </p>

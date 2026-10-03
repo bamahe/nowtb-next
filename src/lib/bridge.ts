@@ -634,3 +634,33 @@ export async function getListingsByZip(
   const res = await getListings({ zip, limit: String(limit) });
   return res.value || [];
 }
+
+/**
+ * Active listings inside a single named building or subdivision.
+ *
+ * Used by the luxury-tower blog posts (ONE Tampa, Virage, Altura, etc.) so the
+ * article can show what is actually for sale in that building rather than
+ * describing it in the abstract. Sorted high to low — these are showcase pages,
+ * and the flagship unit should lead.
+ *
+ * If it breaks, check: SubdivisionName in Stellar is the building name in caps,
+ * e.g. "ONE TAMPA" — not the marketing name "ONE Tampa Residences".
+ */
+export async function getListingsBySubdivision(
+  subdivision: string,
+  limit = 12
+): Promise<Listing[]> {
+  if (IS_BUILD_TIME) return [];
+  try {
+    const res = await getListings({
+      subdivision_name: subdivision,
+      status: "Active",
+      limit: String(limit),
+    } as ListingSearchParams);
+    const rows = res.value || [];
+    return rows.sort((a, b) => (b.ListPrice || 0) - (a.ListPrice || 0));
+  } catch (error) {
+    console.error(`Failed to fetch listings for subdivision ${subdivision}:`, error);
+    return [];
+  }
+}

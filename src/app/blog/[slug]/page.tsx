@@ -228,7 +228,7 @@ export default async function BlogPostPage({
               <div className="text-center md:text-right">
                 <p className="font-heading font-bold text-3xl text-primary mb-1">2 Offers</p>
                 <p className="font-body text-muted text-sm">Market value vs. cash offer</p>
-                <p className="font-body text-muted text-xs mt-2">Barrett Henry — 23+ years experience</p>
+                <p className="font-body text-muted text-xs mt-2">Barrett Henry — 24+ years of real estate experience</p>
               </div>
             </div>
           </div>
@@ -358,7 +358,7 @@ export default async function BlogPostPage({
               </h2>
               <p className="font-body text-muted text-sm mb-5">
                 Find out what your home is worth in today&apos;s market — no obligation, no pressure.
-                Barrett Henry has 23+ years of real estate experience and can help you make a
+                Barrett Henry has 24+ years of real estate experience and can help you make a
                 confident decision.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">

@@ -18,7 +18,7 @@ export const revalidate = 3600; // 1 hour, matches the hourly refresh-listings c
 export const metadata: Metadata = {
   title: "Commercial Real Estate Tampa Bay | Barrett Henry, REALTOR®",
   description:
-    "Tampa Bay commercial real estate — office, retail, industrial, multifamily, and land. 23+ years of experience. Barrett Henry, REMAX Collective. (813) 733-7907.",
+    "Tampa Bay commercial real estate — office, retail, industrial, multifamily, and land. 24+ years of real estate experience. Barrett Henry, REMAX Collective. (813) 733-7907.",
   alternates: {
     canonical: "/commercial/",
   },
@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     q: "Do I need a commercial real estate license to buy commercial property in Florida?",
-    a: "No. Buyers do not need a license to purchase commercial property in Florida. However, working with a licensed REALTOR who understands commercial transactions, zoning regulations, environmental due diligence, and lease analysis is strongly recommended. Barrett Henry holds a Florida Broker Associate license and has 23+ years of real estate experience.",
+    a: "No. Buyers do not need a license to purchase commercial property in Florida. However, working with a licensed REALTOR who understands commercial transactions, zoning regulations, environmental due diligence, and lease analysis is strongly recommended. Barrett Henry holds a Florida Broker Associate license and has 24+ years of real estate experience.",
   },
   {
     q: "Which Tampa Bay corridors are best for commercial investment?",
@@ -149,7 +149,7 @@ export default async function CommercialPage() {
               evaluating land opportunities, Tampa Bay delivers.
             </p>
             <p>
-              Barrett Henry is a Broker Associate at REMAX Collective with 23+ years of real
+              Barrett Henry is a Broker Associate at REMAX Collective with 24+ years of real
               estate experience. He works with buyers, sellers, tenants, and investors on
               commercial transactions ranging from small retail storefronts to multifamily
               apartment complexes. Barrett provides market analysis, property evaluation,
@@ -391,7 +391,7 @@ export default async function CommercialPage() {
               Commercial real estate transactions are more complex than residential deals.
               They involve longer due diligence periods, environmental assessments, zoning
               verification, lease audits, tenant estoppels, and financial underwriting that
-              residential agents rarely encounter. Barrett Henry brings 23+ years of real
+              residential agents rarely encounter. Barrett Henry brings 24+ years of real
               estate experience and a Broker Associate license to every commercial
               engagement.
             </p>

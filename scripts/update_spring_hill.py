@@ -28,7 +28,7 @@ def cta(headline="Looking for Homes in Spring Hill FL?"):
     return (f'<div style="background:#0f172a;border-radius:12px;padding:28px 32px;margin:40px 0;text-align:center;">'
             f'<p style="color:#fff;font-size:20px;font-weight:700;margin:0 0 8px;">{headline}</p>'
             f'<p style="color:rgba(255,255,255,0.85);font-size:16px;margin:0 0 16px;">'
-            f'Barrett Henry — REMAX Collective. 23+ years of real estate experience.</p>'
+            f'Barrett Henry — REMAX Collective. 24+ years of real estate experience.</p>'
             f'<a href="/contact/" style="display:inline-block;background:#fff;color:#0f172a;padding:12px 24px;'
             f'border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;margin:0 8px 8px 0;">Contact Barrett</a>'
             f'<a href="tel:8137337907" style="display:inline-block;border:2px solid rgba(255,255,255,0.4);'
@@ -62,7 +62,7 @@ def faq_ld(qas):
             f'"mainEntity":[{",".join(items)}]}}</script>\n')
 
 def footer():
-    return p('<strong style="color:#0f172a;">About Barrett Henry</strong>: Licensed REALTOR and Broker Associate with REMAX Collective. 23+ years of real estate experience. <a href="/about/">Learn more</a>.')
+    return p('<strong style="color:#0f172a;">About Barrett Henry</strong>: Licensed REALTOR and Broker Associate with REMAX Collective. 24+ years of real estate experience. <a href="/about/">Learn more</a>.')
 
 def wrap(body):
     return (f'<div class="nowtb-post-content" style="max-width:840px;margin:0 auto;padding:0 20px;">\n'

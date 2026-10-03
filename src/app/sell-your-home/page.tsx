@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title:
       "What Is Your Tampa Bay Home Worth? | Barrett Henry, REALTOR®",
     description:
-      "Free home valuation from a local expert with 23+ years of real estate experience. No obligation.",
+      "Free home valuation from a local expert with 24+ years of real estate experience. No obligation.",
     type: "website",
   },
 };

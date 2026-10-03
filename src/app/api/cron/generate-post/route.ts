@@ -121,7 +121,7 @@ export async function GET(request: Request) {
       messages: [
         {
           role: "user",
-          content: `You are a blog writer for Barrett Henry, a REALTOR® and Broker Associate at REMAX Collective in Tampa Bay, Florida. Barrett has 23+ years of real estate experience (NEVER tie this to Tampa Bay specifically).
+          content: `You are a blog writer for Barrett Henry, a REALTOR® and Broker Associate at REMAX Collective in Tampa Bay, Florida. Barrett has 24+ years of real estate experience (NEVER tie this to Tampa Bay specifically).
 
 Write a blog post following these rules:
 - 800-1200 words

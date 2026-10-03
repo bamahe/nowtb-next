@@ -233,7 +233,7 @@ New guide: the full Hillsborough County home buying timeline. Every deadline fro
 - [ ] "Owners suite" if the term appears, never "master suite"
 - [ ] No mention of AC in attic
 - [ ] No mobile or manufactured home references
-- [ ] "23+ years of real estate experience" used once, max
+- [ ] "24+ years of real estate experience" used once, max
 - [ ] REALTOR with registered symbol used once, max
 - [ ] Barrett Henry named before The NOW Team
 - [ ] MOVE WITH CONFIDENCE. Straight talk. Smart Strategy. uppercase, not italic

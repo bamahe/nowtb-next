@@ -143,7 +143,7 @@ export default function InvestingPage() {
           </h2>
           <p className="font-body text-muted text-center mb-8">
             Barrett Henry helps investors find high-ROI properties and navigate
-            the Tampa Bay market. 23+ years of real estate experience.
+            the Tampa Bay market. 24+ years of real estate experience.
           </p>
           <ContactForm webhookUrl="/api/contact" source="investing" />
         </div>

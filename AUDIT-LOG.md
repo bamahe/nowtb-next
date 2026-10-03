@@ -4,260 +4,6 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
-## 2026-09-20 (Batch 65 — Kenneth City FL x9 + South Pasadena FL x1: Major Expansions)
-
-**Pages improved: 10**
-
-### Blog Posts — Full Expansion (All posts: BreadcrumbList/Article/FAQPage JSON-LD schemas, AEO quick-answer box, H1 distinct from title, 4+ question H2s, 6+ H3s, price/comparison tables, 5-Q&A FAQ, 20-link internal grid, Barrett Henry REMAX Collective author bio. Content dated 2026-09-19. Build green.)
-
-**Kenneth City FL (9 remaining stubs — ZIP 33709):** All expanded from ~5,259-char boilerplate.
-
-1. **kenneth-city-fl-schools-guide** — 5,259 to 29,335 chars. Pinellas County School District (pcsb.org, (727) 588-6000 for verification); elementary school zone table (Westgate, Pinellas Park, Sawgrass Lake, Blanton elementaries with addresses); Pinellas Park Middle School and Fitzgerald Middle School; Pinellas Park High School (6305 118th Ave N, (727) 547-7568) and Dixie M. Hollins High School; PCSB controlled open enrollment and magnet programs table (Perkins IB PYP, Pinellas Park HS IB, Northeast STEM, Pinellas Technical College); private schools comparison table (St. Petersburg Catholic HS, Canterbury, Shorecrest, Academy of the Holy Names, Bishop McLaughlin with tuition ranges); higher education table (SPC, USFSP, Eckerd, Stetson Law Gulfport, USF Tampa); 5-Q&A FAQ with JSON-LD.
-
-2. **kenneth-city-fl-commute-guide** — 5,259 to 25,087 chars. 9-destination commute matrix (downtown St. Pete 15-22 min, Tampa 30-45 min, TPA 25-40 min, PIE 20-30 min, beaches 20-30 min, Clearwater 28-38 min, Pinellas Park 8-15 min, Bradenton 55-75 min, Orlando 1h45min-2h); I-275 primary artery explanation (western KC boundary) and Howard Frankland Bridge context; Gandy Bridge alternative; US-19 corridor; PSTA bus service at psta.net; car-essential reality; TPA distance advantage vs other Pinellas markets; PIE (Allegiant/Sun Country); 5-community commute/price comparison table; 5-Q&A FAQ with JSON-LD.
-
-3. **is-kenneth-city-fl-good-place-to-live** — 5,259 to 27,519 chars. Pros: affordability ($175K-$380K), no HOA/CDD, Zone X flood status, central Pinellas location, low-maintenance CBS construction. Cons: 4-point inspection issues table (Federal Pacific panels $3K-$6K, flat roofs $8K-$20K, galvanized plumbing $5K-$20K, old HVAC $5K-$12K), limited amenities, car-dependent, no new construction. 4-community comparison table (Kenneth City vs Pinellas Park/Seminole/St. Pete with price, HOA, flood, beach/Tampa drive times). Buyer profile fit table (7 profiles from Excellent to Not a Fit); 5-Q&A FAQ with JSON-LD.
-
-4. **kenneth-city-fl-real-estate-guide** — 5,259 to 24,113 chars. 4-condition price/DOM table ($175K-$240K entry to $360K-$420K+ fully remodeled); condition-drives-value dynamic; 4-point insurance inspection explanation ($150-$250 for 4-point vs $350-$500 standard); Federal Pacific/Zinsco panel issue detail; roof type and flat roof insurance challenge; galvanized plumbing repipe costs; no HOA/CDD advantage; Zone X financial benefit vs Zone AE; rental cap rates 7-9% gross; 8-step buyer process table; 5-Q&A FAQ with JSON-LD.
-
-5. **kenneth-city-fl-cost-of-living** — 5,259 to 31,372 chars. 3-scenario monthly cost tables ($200K entry to $350K move-in ready with P+I, taxes, insurance, flood, HOA, utilities, and totals $1,640-$3,073/mo); homeowners insurance table by condition (updated CBS $2.2K-$3.8K/yr to flat roof $4K-$7K+/yr to panel refusal); Pinellas County millage breakdown table (7 components, ~17-20 mills); homestead exemption tax estimates by price point (homestead vs non-homestead, $175K-$400K); utility provider table (Duke Energy, Pinellas County Utilities, internet options, garbage); 5-community monthly cost comparison table; 5-Q&A FAQ with JSON-LD.
-
-6. **kenneth-city-fl-property-taxes** — 5,259 to 27,476 chars. Millage breakdown table (county ~5.0-5.5, school ~7.0-7.5, Kenneth City municipal ~3.0-4.0, SWFWMD ~0.25-0.35, fire/EMS ~2.0-3.0, total ~17-20 mills); annual tax estimates by price ($175K-$400K, homestead vs non-homestead); two-part homestead exemption explanation ($25K off all millage + $25K off non-school); application at pcpao.gov by March 1 (315 Court St., Clearwater, (727) 464-3207); Save Our Homes cap reset worked example ($120K 2005 to $300K 2025 = buyer pays $2,520/yr more); portability (Form DR-501T, $500K max, 3-year deadline); 5-step tax verification guide (pcpao.gov + taxcollect.com); 5-Q&A FAQ with JSON-LD.
-
-7. **kenneth-city-fl-new-construction** — 5,259 to 26,508 chars. Kenneth City fully built out explanation (0.9 sq mi, no vacant land, incorporated 1960); teardown-rebuild economics table ($80K-$150K lot + $15K-$30K demo + $180-$250/sqft construction = $440K-$600K+ vs $310K-$420K updated resale); Pinellas County new construction table (luxury infill $500K-$1.5M+, luxury townhomes $450K-$900K+, waterfront custom $800K-$3M+); new construction alternatives table by distance (Wesley Chapel 35-50mi D.R. Horton/Lennar/Pulte $310K-$700K, Land O'Lakes 30-45mi $290K-$600K, Riverview 30-45mi $280K-$550K, Parrish 45-60mi $300K-$650K, Palmetto 40-55mi $280K-$500K); KC resale vs Wesley Chapel new construction comparison table (7 factors); 5-Q&A FAQ with JSON-LD.
-
-8. **kenneth-city-fl-investment-property** — 5,259 to 22,608 chars. 3-scenario investment analysis table ($200K entry to $280K move-in ready with gross/net rent, cap rates 7-9% gross / 4-6% net, NOI estimates); no HOA rental restriction advantage; tenant demand profile (St. Pete/Pinellas Park workers); Zone X flood advantage ($0 vs $3K-$8K+/yr in Zone AE); 4-point inspection deal-killer section (panel refusal, flat roof issues); rent comps validation guidance; STR not viable for KC (no beach/tourist infrastructure); ViVi Property Management reference with /property-management/ link; 5-Q&A FAQ with JSON-LD.
-
-9. **kenneth-city-fl-waterfront-homes** — 5,259 to 27,086 chars. Honest statement: no waterfront in Kenneth City (landlocked, 0.9 sq mi); geographic explanation (surrounded by St. Pete and Pinellas Park); St. Pete waterfront neighborhoods table (Shore Acres, Snell Isle, Venetian Isles, Placido Bayou, Coquina Key — 12-22 mi, 18-32 min, $400K-$4M+); Gulf beach waterfront table (Treasure Island, St. Pete Beach/Pass-a-Grille, Madeira Beach, Indian Rocks/Shores, Redington, Clearwater Beach — 10-30 mi, $450K-$4M+); waterfront vs KC monthly cost comparison table ($280K KC to Treasure Island canal-front to Gulf-front with flood/HO insurance differentials); "between Kenneth City and beach" alternative markets table (South St. Pete, Gulfport, western Pinellas Park, Seminole); 5-Q&A FAQ with JSON-LD.
-
-**South Pasadena FL (1 remaining stub):**
-
-10. **south-pasadena-fl-real-estate-guide** — 5,259 to 29,255 chars. 5-type price table (non-waterfront condo $350K-$500K to Gulf-adjacent $700K-$3M+); price drivers (water access, view, canal width, seawall condition); condo SB 4-D reserve crisis section with 5-document due diligence checklist (reserve study, meeting minutes 3yr, financials, pending assessments, milestone inspection report); flood zone table (Zone X not required / Zone AE canal-front elevated $2K-$5K/yr to bay-front non-elevated $8K-$20K+/yr); 5-community comparison table (South Pasadena vs St. Pete Beach/Gulfport/Treasure Island/Madeira Beach with character, prices, flood risk); 8-step buyer process table; 5-Q&A FAQ with JSON-LD.
-
-**Build:** Passed (Next.js build, all routes pre-rendered successfully)
-**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
-**Git commit:** `55c24c4` — pushed to `origin/main`
-
----
-
-## 2026-09-17 (Batch 64 — Indian Shores FL x9 + Kenneth City FL x1: Major Expansions)
-
-**Pages improved: 10**
-
-### Blog Posts — Full Expansion (All posts: BreadcrumbList/Article/FAQPage JSON-LD schemas, AEO quick-answer box, H1 distinct from title, 4+ question H2s, 6+ H3s, price/comparison tables, 5-Q&A FAQ, 23-link internal grid, Barrett Henry REMAX Collective author bio. Content dated 2026-09-17. Build: JSON-only data change; Vercel builds on push.)
-
-**Indian Shores FL (9 remaining stubs — ZIP 33785):** All expanded from ~5,257-char boilerplate.
-
-1. **indian-shores-fl-cost-of-living** — 5,257 to 31,111 chars. 3-scenario monthly ownership cost tables ($600K condo $5,024-$6,344/mo; $900K condo $7,561-$9,911/mo; $1.5M SFH $11,885-$14,785/mo); Pinellas County millage breakdown (~18-22 mills total); HOA fee table by building type ($400-$2,000+/mo); flood insurance cost table by zone (Zone VE SFH $8,000-$20,000+/yr; AE SFH $3,000-$8,000+/yr); Duke Energy Florida electric; Pinellas County Utilities water/sewer; FL condo SB 4-D 2022 reserve warning; 5-comparison table (Indian Shores vs Indian Rocks/Redington/Madeira/Treasure Island); 5-Q&A FAQ with JSON-LD.
-
-2. **indian-shores-fl-property-taxes** — 5,257 to 26,620 chars. Millage breakdown table (county ~5.0-5.5, school ~7.0-7.5, Town of Indian Shores municipal ~2.0-3.5, SWFWMD ~0.25-0.35, fire/EMS ~1.5-2.5, total ~16-20 mills); 5-price-point tax estimate table ($500K-$2.5M homestead vs non-homestead); Save Our Homes cap buyer-reset worked example ($400K/2005 SOH vs $1.2M market value reset at sale); portability (up to $500K, 3-year deadline, Form DR-501T); senior exemption (65+, ~$35,167 income limit); veteran/disability exemptions; pcpao.gov verification steps; 5-town comparison table; 5-Q&A FAQ with JSON-LD.
-
-3. **indian-shores-fl-new-construction** — 5,257 to 24,911 chars. Fully built-out barrier island — no vacant land; teardown-rebuild as sole path to new construction; Zone VE open pile foundation requirements (no enclosed space below BFE); construction cost table ($350-$550/sq ft hard costs + demo $15K-$35K + foundation $60K-$150K + architecture/engineering $30K-$80K + permits $15K-$40K); all-in Gulf-front teardown-rebuild $1.8M-$3M+; Town of Indian Shores building permit process; FDEP Coastal Construction Control Line permit (3-6 month add for Gulf-front); new construction vs existing comparison table (7 factors); 5-Q&A FAQ with JSON-LD.
-
-4. **indian-shores-fl-investment-property** — 5,257 to 26,252 chars. Town of Indian Shores STR registration required; Florida DBPR vacation rental license process; condo HOA rental restriction warning (many buildings prohibit sub-30-day rentals — verify declaration before offer); STR income table by type (Gulf-front 1BR $55K-$85K gross to Gulf-front SFH $100K-$200K+ gross); cap rate reality (gross 3-5%, net 2-3.5%); long-term rental rates ($3,500-$8,000+/mo); FL condo SB 4-D 2022 special assessment warning; ViVi Property Management reference; 5-market STR comparison table; 5-Q&A FAQ with JSON-LD.
-
-5. **indian-shores-fl-waterfront-homes** — 5,257 to 27,868 chars. Gulf-front (Zone VE) vs Intracoastal (Zone AE) side-by-side comparison; 4-type Gulf-front price table ($500K-$5M+); 3-type Intracoastal price table ($400K-$2.5M+); dock/boatlift permitting (FDEP ERP, Army Corps Section 10/404, Town of Indian Shores — 3-6 month timeline, $15K-$100K+ cost); seawall inspection guidance ($300-$600 inspection, $350-$600/linear ft replacement); elevation certificate ($500-$800); 5-market comparison table; 10-item waterfront due diligence checklist; 5-Q&A FAQ with JSON-LD.
-
-6. **indian-shores-fl-flood-zones** — 5,257 to 26,158 chars. Zone VE (Gulf-front velocity wave action) vs Zone AE (Intracoastal/bay-front) definitions; 4-zone cost table (VE SFH $5K-$20K+/yr to Zone X shaded $400-$800/yr optional); msc.fema.gov step-by-step FIRM lookup (Pinellas County FIRM panels, Community Number 125096); elevation certificate guidance ($400-$800, key for premium reduction); NFIP vs private flood insurance comparison table (6 factors); NFIP Risk Rating 2.0 reform context; Pinellas County CRS discount; Evacuation Zone A mandatory evacuation warning; 5-Q&A FAQ with JSON-LD.
-
-7. **moving-to-indian-shores-fl** — 5,257 to 26,898 chars. Town character (~1,400 permanent residents, fully residential); utilities table (Duke Energy Florida (800) 700-8744, Pinellas County Utilities (727) 464-4000, Spectrum/Frontier internet); school feeder pattern (Anona Elementary, Seminole Middle, Seminole High — Cambridge AICE program, pinellas.k12.fl.us or (727) 588-6000 for verification); healthcare access (Largo Medical Center ~20-25 min, Palms of Pasadena ~30-40 min, Mease Dunedin ~25-30 min); grocery/errands drive table (Seminole Publix 15-20 min, Largo Walmart/Target 20-25 min, Downtown St. Pete 35-45 min); hurricane preparedness (Zone A mandatory evacuation, 7-day supply kit, 48-72 hour departure guidance); 9-item move-in checklist; 6-row buyer fit table; 5-Q&A FAQ with JSON-LD.
-
-8. **things-to-do-indian-shores-fl** — 5,257 to 22,302 chars. Gulf of Mexico beach access; surf fishing (whiting, pompano, snook, redfish — myfwc.com license); Intracoastal kayaking/paddleboarding on Boca Ciega Bay (dolphins, manatees, ospreys, roseate spoonbills); boating to Johns Pass (5-8 mi south) and Clearwater Pass (12-15 mi north); John's Pass Village Madeira Beach (10-15 min south, Hubbard's Marina charters); Clearwater Marine Aquarium (249 Windward Passage, Clearwater, (727) 441-1790, 20-25 min); Clearwater Beach (20-30 min, Pier 60 Sunsets festival); Fort De Soto County Park (3500 Pinellas Bayway S, Tierra Verde, 30-40 min, 1,136 acres); 8-destination day trip table; seasonal activity guide; 5-Q&A FAQ with JSON-LD.
-
-9. **indian-shores-fl-market-trends** — 5,257 to 24,260 chars. 2024-2025 market conditions (more inventory than 2021-2022 peak, buyer-favorable to balanced); 5-segment price/DOM table (non-waterfront condo $400K-$850K/60-120 DOM to Gulf-front SFH $1.2M-$5M+/90-180+ DOM); FL condo SB 4-D 2022 market impact (structural inspections, reserve funding mandates, special assessments driving longer DOM for older buildings); seasonal pattern (Oct-April stronger); buyer guidance (pre-approval with coastal lender, flood insurance quote before offer, condo due diligence package); 5-market comparison table (Indian Shores vs Indian Rocks/Redington/Madeira/Treasure Island); 5-Q&A FAQ with JSON-LD.
-
-**Kenneth City FL (1 of 10 stubs — ZIP 33709):**
-
-10. **kenneth-city-fl-homes-for-sale-guide** — 5,259 to 26,769 chars. Small incorporated city ~4,500-5,000 residents, 0.9 sq mi, surrounded by St. Pete and Pinellas Park; 4-segment price/DOM table ($175K entry needing work to $380K-$420K remodeled); 1950s-1970s concrete block construction — 4-point inspection guidance (HVAC, electrical, plumbing, roof), Federal Pacific/Zinsco panel warning, flat roof insurance issues; school zone (pinellas.k12.fl.us, (727) 588-6000 for verification); 8-destination commute matrix (downtown St. Pete 15-22 min, Tampa 30-45 min, TPA 25-40 min, PIE 15-25 min, Gulf beaches 20-30 min); no HOA/no CDD fees selling point; long-term rental cap rates 7-9% gross ($1,500-$2,000/mo rents); Zone X flood risk (most of city); ViVi Property Management reference; 5-market comparison table (Kenneth City vs Pinellas Park/St. Pete/Largo/Seminole); 8-step buying process; 5-Q&A FAQ with JSON-LD.
-
-**Build:** JSON-only data change; Vercel builds on push.
-**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
-
----
-
-## 2026-09-16 (Batch 63 — Crystal Beach FL x7 + Indian Shores FL x3: Major Expansions)
-
-**Pages improved: 10**
-
-### Blog Posts — Full Expansion (All posts: BreadcrumbList/Article/FAQPage JSON-LD schemas, AEO quick-answer box, H1 distinct from title, 4+ question H2s, 6+ H3s, comparison tables, 5-Q&A FAQ, 20-link internal grid, Barrett Henry REMAX Collective author bio. Content dated 2026-09-16.)
-
-**Crystal Beach FL (7 remaining stubs — ZIP 34681):** All expanded from ~5,251-char boilerplate.
-
-1. **crystal-beach-fl-market-trends** — 5,251 to 25,844 chars. Low inventory/high demand profile; Pinellas County median price trends; waterfront premium mechanics; SOH cap reset at resale; Days on Market context; seasonal buyer patterns; 5-segment price/time-on-market comparison table; interest rate sensitivity for $500K-$800K buyers; 5-Q&A FAQ with JSON-LD; 24-link internal grid.
-
-2. **crystal-beach-fl-new-construction** — 5,251 to 24,947 chars. Teardown-rebuild economics vs existing home; Pinellas County building permit process (BOCC, FEMA elevation requirements for Zone AE); construction cost reality ($250-$400+/sq ft); impact windows/roof straps requirement; builder vs owner-builder options; elevated construction for flood compliance; timeline reality (12-24 months); 5-Q&A FAQ with JSON-LD; 24-link internal grid.
-
-3. **crystal-beach-fl-investment-property** — 5,251 to 23,164 chars. Unincorporated Pinellas County STR rules (county ordinance, registration required); DBPR vacation rental license; Airbnb/VRBO income reality for Gulf Coast unincorporated areas; cap rate vs cash flow framing; property management cost range; seasonal occupancy patterns; 5-factor ROI table; 5-Q&A FAQ with JSON-LD; 24-link internal grid.
-
-4. **crystal-beach-fl-property-taxes** — 5,251 to 27,294 chars. Pinellas County millage 18-21 mills (unincorporated, no city millage); homestead exemption mechanics ($25K+$25K applied to assessed value); Save Our Homes cap buyer-reset warning (new buyers pay market-rate assessment); portability explained; senior/veteran/widow exemptions cited at pcpao.gov; 5-price-point tax estimate table ($350K-$900K homesteaded vs non-homesteaded); 5-city comparison table; 5-Q&A FAQ with JSON-LD; 24-link internal grid.
-
-5. **crystal-beach-fl-flood-zones** — 5,251 to 23,326 chars. Zone AE (St. Joseph Sound/Bayou waterfront), Zone X (inland), NFIP vs private flood insurance comparison table; elevation certificate guidance (how to get one, what it costs, how it affects premiums); BFE and freeboard concepts; buyer checklist (5 steps); FIRM panel lookup at msc.fema.gov; 5-Q&A FAQ with JSON-LD; 24-link internal grid.
-
-6. **moving-to-crystal-beach-fl** — 5,251 to 24,501 chars. Utilities table (Duke Energy Florida electric, Pinellas County Utilities water/sewer for some areas, Spectrum/Frontier internet); school feeder pattern (Ozona Elementary, Palm Harbor Middle, Palm Harbor University High with IB); grocery access (Dunedin Publix 5-10 min, Clearwater 15-20 min); hurricane preparedness checklist (Zone A evacuation, supplies, insurance); move-in checklist (utilities, USPS address, FL DL, voter reg); 5-Q&A FAQ with JSON-LD; 24-link internal grid.
-
-7. **things-to-do-crystal-beach-fl** — 5,251 to 23,872 chars. St. Joseph Sound kayaking/paddleboarding/fishing (redfish, snook, sea trout); Honeymoon Island State Park (15-20 min, Osprey Trail, dog beach, ferry to Caladesi); Caladesi Island State Park (consistently top-ranked FL beach); Pinellas Trail (38-mile multi-use trail, Crystal Beach access points); downtown Dunedin dining/brewery scene (5-10 min); day-trip distance table (Clearwater Beach, Tarpon Springs Sponge Docks, Safety Harbor, St. Pete); seasonal activity guide; 5-Q&A FAQ with JSON-LD; 24-link internal grid.
-
-**Indian Shores FL (3 stubs — ZIP 33785):** All expanded from ~5,257-char boilerplate.
-
-8. **indian-shores-fl-schools-guide** — 5,257 to 18,672 chars. Pinellas County feeder pattern for ZIP 33785: Anona Elementary, Seminole Middle School, Seminole High School (Cambridge AICE, AP, dual-enrollment SPC); private options table (St. Patrick Catholic School Largo ~15 min, Clearwater Central Catholic High ~20-25 min, Keswick Christian ~25-30 min, Shorecrest Prep ~35-40 min); charter schools (Pinellas Prep, Plato Academy); magnet programs (IB, STEM, arts, dual-language immersion); higher ed proximity (SPC Clearwater, USFSP, Eckerd, UT); causeway commute context for school drop-off; pcsb.org address verification guidance; 5-Q&A FAQ with JSON-LD; 24-link internal grid.
-
-9. **indian-shores-fl-commute-guide** — 5,257 to 20,870 chars. 10-destination drive-time matrix (Clearwater 20-25 min, Largo 15-20 min, Seminole 15-25 min, St. Pete 35-45 min, Madeira Beach 10-15 min, TPA 50-60 min, PIE 20-25 min, Tampa 55-65 min); Walsingham Road primary exit route; Indian Rocks Road northern alternative; Gulf Blvd South to Pinellas Bayway southern route; PSTA Route 35/79 transit reality (infrequent, not practical for daily commute); psta.net cited; bridge drawbridge delay context; SunPass value for Bayway; WFH premium; 5-Q&A FAQ with JSON-LD; 24-link internal grid.
-
-10. **indian-shores-fl-real-estate-guide** — 5,257 to 22,505 chars. 5-segment price table (non-waterfront condo $400K-$900K to Gulf-front SFH $1.5M-$5M+); Town of Indian Shores incorporated 1947, separate from Pinellas County for STR ordinance purposes; STR registration required, DBPR vacation rental license, HOA condo bylaw caveat; flood zone AE (Intracoastal) and VE (Gulf-front) throughout; elevation certificate guidance; condo HOA fee table by building size ($300-$2,000+/mo); FL condo milestone inspection law (SB 4-D 2022) warning; 6-community comparison table (Indian Shores vs Indian Rocks Beach/Madeira Beach/Treasure Island/Clearwater Beach/St. Pete Beach); buyer checklist 8 items; pcpao.gov and msc.fema.gov cited; 5-Q&A FAQ with JSON-LD; 24-link internal grid.
-
-**Build:** JSON-only data change; Vercel builds on push.
-**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
-
----
-
-## 2026-09-16 (Batch 62 — Tierra Verde FL x5 + Crystal Beach FL x5: Major Expansions)
-
-**Pages improved: 10**
-
-### Blog Posts — Full Expansion (All posts: BreadcrumbList/Article/FAQPage JSON-LD schemas, AEO quick-answer box, H2/H3 sections, comparison tables, commute matrix, 5-Q&A FAQ, 20-link internal grid, Barrett Henry REMAX Collective author bio. Content dated 2026-09-15. Build green.)
-
-**Tierra Verde FL (5 stubs — ZIP 33715):** All expanded from ~5,241-char boilerplate.
-
-1. **tierra-verde-fl-schools-guide** — 5,241 to 50,856 chars. Pinellas County school assignments: Gulfport Elementary (K-5, ~3 mi), Bay Point K-8 (alt option), Bay Point Middle (6-8), Lakewood High (9-12); no on-island school, Pinellas Bayway toll (~$50-$100/mo commute factor); private options (Berkeley Preparatory, Academy of the Holy Names); magnet program pathways; school ratings context; 20-link internal grid; 5-Q&A FAQ with JSON-LD.
-
-2. **tierra-verde-fl-commute-guide** — 5,241 to 45,644 chars. Pinellas Bayway toll context (~$50-$100/mo SunPass); drive-time matrix (Downtown St. Pete 20-25 min, Tampa 40-55 min via Sunshine Skyway, Clearwater 30-40 min); Sunshine Skyway Bridge ($4 toll); I-275 route options; no Pinellas Suncoast Transit in Tierra Verde; Park-n-Ride at Fort De Soto; WFH premium; 20-link internal grid; 5-Q&A FAQ with JSON-LD.
-
-3. **is-tierra-verde-fl-good-place-to-live** — 5,241 to 48,711 chars. Island character overview; 7-factor pros/cons table (Fort De Soto access, deep-water boating, quiet residential pros; Bayway toll, no walkable commercial, hurricane zone cons); 9-row buyer fit table; 5-city comparison (Tierra Verde vs St. Pete Beach/Pass-a-Grille/Gulfport/Pinellas Park); flood zone AE/VE reality; NFIP flood insurance cost context; 20-link internal grid; 5-Q&A FAQ with JSON-LD.
-
-4. **tierra-verde-fl-real-estate-guide** — 5,241 to 33,422 chars. 4-segment price/DOM table (townhomes $400K-$600K to deep-water SFH $800K-$2M+); canal-front vs gulf-front vs upland comparison; dock/lift permitting (Pinellas County BOCC, SWFWMD); flood zone AE/VE impact on insurance; homestead exemption and SOH cap; 8-step buying process; elevation certificate value; 20-link internal grid; 5-Q&A FAQ with JSON-LD.
-
-5. **things-to-do-tierra-verde-fl** — 5,241 to 54,632 chars. Fort De Soto County Park (1,136 acres, 7+ mi trail, 238 campsites, 2 fishing piers, dog beach, historic Spanish-American War fort); Egmont Key State Park (boat-only, ~20-30 min, loggerhead sea turtle nesting); kayak/paddleboard launch points; fishing: redfish, snook, tarpon in Mullet Key Channel; seasonal ferry to Egmont Key from Fort De Soto; 20-link internal grid; 5-Q&A FAQ with JSON-LD.
-
-**Crystal Beach FL (5 of 12 stubs — ZIP 34681):** All expanded from ~5,251-char boilerplate.
-
-6. **crystal-beach-fl-schools-guide** — 5,251 to 28,210 chars. Pinellas County school assignments: Ozona Elementary (K-5), Palm Harbor Middle (6-8), Palm Harbor University High School (9-12, IB program); unincorporated Pinellas County context; private options (Clearwater Academy International, Dunedin Christian); magnet pathways; 20-link internal grid; 5-Q&A FAQ with JSON-LD.
-
-7. **crystal-beach-fl-commute-guide** — 5,251 to 42,984 chars. Drive-time matrix (Dunedin 5-10 min, Clearwater 15-20 min, Tampa 35-50 min via US-19/SR-580/Veterans Expwy); Pinellas Trail access for cycling commuters; SR-580 to I-275 route; no local bus service; Clearwater Park-n-Ride options; WFH premium appeal; 20-link internal grid; 5-Q&A FAQ with JSON-LD.
-
-8. **crystal-beach-fl-real-estate-guide** — 5,251 to 49,021 chars. 4-segment price/DOM table (inland SFH $350K-$550K to waterfront $700K-$2M+); St. Joseph Sound waterfront profile; no HOA in most of Crystal Beach; dock/seawall permitting; flood zone AE along sound; Gulf access via Dunedin Pass (~4-6 mi) or Clearwater Pass (~8-12 mi); Pinellas County millage; 8-step buying process; 20-link internal grid; 5-Q&A FAQ with JSON-LD.
-
-9. **crystal-beach-fl-cost-of-living** — 5,251 to 54,098 chars. Pinellas County millage breakdown; property tax estimate table ($350K-$900K homesteaded); Duke Energy Florida electric rates; homeowners insurance coastal factors; grocery/services drive-time (Dunedin Publix 5-10 min, Clearwater 15-20 min); cost-of-living comparison table (Crystal Beach vs Dunedin/Ozona/Palm Harbor/Safety Harbor); no city utilities (unincorporated); 20-link internal grid; 5-Q&A FAQ with JSON-LD.
-
-10. **crystal-beach-fl-waterfront-homes** — 5,251 to 28,679 chars. St. Joseph Sound waterfront profile; tidal vs non-tidal canal distinction; dock/lift permitting (Pinellas County/SWFWMD/Army Corps); flood zone AE/X boundary awareness; seawall inspection checklist; elevation certificate value; NFIP vs private flood insurance comparison; Gulf access reality (Dunedin Pass 4-6 mi, Clearwater Pass 8-12 mi); 20-link internal grid; 5-Q&A FAQ with JSON-LD.
-
-**Remaining Crystal Beach thin stubs (7 of 12 not yet done):** crystal-beach-fl-market-trends, crystal-beach-fl-new-construction, crystal-beach-fl-investment-property, crystal-beach-fl-property-taxes, crystal-beach-fl-flood-zones, moving-to-crystal-beach-fl, things-to-do-crystal-beach-fl
-
-**Build:** npm run build green (local)
-**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
-**Git commit:** `e1a625d` — pushed to `origin/main`
-
----
-
-## 2026-09-13 (Batch 59 — Nokomis FL x2, Englewood FL x4, Ridge Manor FL x4: Major Expansions)
-
-**Pages improved: 10**
-
-### Blog Posts — Full Expansion (All posts: AEO quick-answer box, H1 distinct from title, 4+ question H2s, comparison tables, commute matrix, 5-Q&A FAQ with JSON-LD FAQPage schema, BreadcrumbList schema, Article schema, 18-link internal grid, Barrett Henry author bio. Content dated 2026-09-12. Build: JSON-only data change; Vercel builds on push.)
-
-**Nokomis FL (2 stubs):** All expanded from ~5,177-char boilerplate to 24,000-26,000+ chars.
-
-1. **is-nokomis-fl-good-place-to-live** — 5,177 to 26,287 chars. Sarasota County unincorporated village context; Casey Key barrier island profile; 7-factor pros/cons table (Legacy Trail access, Venice/Sarasota walkability pros; limited nightlife, I-75 noise near US-41 cons); 9-row buyer fit table; 5-city comparison table (Nokomis vs Venice/Osprey/Sarasota/North Port); Laurel Nokomis K-8 and Venice Senior High school context; flood zone realities (Zone AE near Intracoastal, Zone X inland); 18-link internal grid; 5-Q&A FAQ with JSON-LD.
-
-2. **best-neighborhoods-nokomis-fl** — 5,177 to 24,474 chars. 5-neighborhood profile table (Casey Key waterfront, Nokomis Beach area, Laurel Park, Mission Valley, East of US-41 inland); price range by neighborhood ($300K-$400K inland to $800K-$3M+ Casey Key); canal-front vs inland comparison table (8 factors); Sarasota County school assignment process; commute matrix (Venice 10-12 min, Sarasota 20-25 min, Tampa 65-80 min, Bradenton 30-40 min); flood zone guidance by neighborhood type; 18-link internal grid; 5-Q&A FAQ with JSON-LD.
-
-**Englewood FL (4 stubs):** All expanded from ~5,221-char boilerplate to 21,000-26,000+ chars.
-
-3. **is-englewood-fl-good-place-to-live** — 5,221 to 26,265 chars. Dual-county split (Charlotte/Sarasota) explained; Manasota Key barrier island profile; 7-factor pros/cons table (Lemon Bay fishing, Dearborn Street arts district, scalloping season pros; dual-county property tax confusion, limited dining/nightlife, hurricane exposure cons); 9-row buyer fit table; 5-city comparison table (Englewood vs Venice/Port Charlotte/Rotonda West/North Port); Charlotte County vs Sarasota County school zone clarification; hurricane Ian flood impact context; 18-link internal grid; 5-Q&A FAQ with JSON-LD.
-
-4. **best-neighborhoods-englewood-fl** — 5,221 to 24,274 chars. 5-neighborhood profile table (Manasota Key, Lemon Bay Isles, Rotonda West adj., Englewood Isles, East Englewood); waterfront vs inland comparison table (8 factors); Charlotte vs Sarasota county millage difference; school zones by county side; commute matrix (Port Charlotte 25-30 min, Sarasota 40-50 min, Tampa 90-110 min, Fort Myers 60-75 min); Dearborn Street arts village profile; 18-link internal grid; 5-Q&A FAQ with JSON-LD.
-
-5. **moving-to-englewood-fl** — 5,221 to 23,518 chars. County identification step (charlottepa.net vs sc-pa.com lookup); 8-item moving checklist (utilities — LCEC or FPL by address, Sarasota County or Charlotte County water); homeowners insurance dual-county impact (wind/flood zone differences); Lemon Bay profile; Englewood Beach access; scalloping season (FWC regulated, Charlotte Harbor waters, July-September general timeframe); commute reality table; 5-step move-in process; 18-link internal grid; 5-Q&A FAQ with JSON-LD.
-
-6. **things-to-do-englewood-fl** — 5,221 to 21,276 chars. Lemon Bay nature profile (kayaking, fishing, birding); Dearborn Street arts village (galleries, farmers market, dining); Englewood Beach/Manasota Key access; Ann Dever Memorial Regional Park (sports fields, pickleball); scalloping season (Charlotte Harbor/Peace River area, FWC license required); 5-activity comparison table (outdoor/arts/beach/fishing/community events); drive-time recreation matrix (Myakka River State Park 40 min, Boca Grande 30 min, Sarasota arts 45 min, Ft. Myers 70 min); 18-link internal grid; 5-Q&A FAQ with JSON-LD.
-
-**Ridge Manor FL (4 stubs — continuing second batch):** All expanded from ~5,223-char boilerplate to 20,000-26,000+ chars.
-
-7. **is-ridge-manor-fl-good-place-to-live** — 5,223 to 25,783 chars. Hernando County unincorporated context; I-75 Exit 293 location; Withlacoochee State Forest adjacency; 7-factor pros/cons table (affordability $160K-$280K, forest access, rural quiet pros; well/septic standard, no walkability, Tampa commute 50-65 min cons); 9-row buyer fit table; 5-city comparison table (Ridge Manor vs Brooksville/Dade City/Zephyrhills/Wesley Chapel); well/septic buyer awareness; flood zone near Withlacoochee River; 18-link internal grid; 5-Q&A FAQ with JSON-LD.
-
-8. **ridge-manor-fl-real-estate-guide** — 5,223 to 20,703 chars. 5-segment price/DOM table (entry SFH $160K-$220K / 45-90 DOM to acreage $230K-$350K+); neighborhood guide (Ridge Manor proper, Ridge Manor Estates, Withlacoochee River corridor, acreage lots); well/septic due-diligence checklist (water quality test $100-$200, septic inspection $200-$400, Federal Pacific/Zinsco panel warning, roof age insurance implications); hernandopa-fl.us lookup guidance; 5-community comparison table; 8-step buying process; 18-link internal grid; 5-Q&A FAQ with JSON-LD.
-
-9. **ridge-manor-fl-cost-of-living** — 5,223 to 24,199 chars. Hernando County millage context (12-16 mills typical); property tax estimate table by price point ($160K-$350K homesteaded); homeowners insurance rural realities ($1,800-$3,500+/yr typical, wind mitigation inspection value); well/septic ongoing cost table (annual inspection $150-$250, water treatment, septic pump-out $400-$600 every 3-5 yrs); grocery/services drive-time (Brooksville Publix 20-25 min, Wesley Chapel 30-40 min); cost-of-living comparison table (Ridge Manor vs Brooksville/Dade City/Wesley Chapel/Zephyrhills); 18-link internal grid; 5-Q&A FAQ with JSON-LD.
-
-10. **ridge-manor-fl-property-taxes** — 5,223 to 26,116 chars. Hernando County millage breakdown table (county general, school board, fire, SWFWMD, St. Johns/SWFWMD — total 12-16 mills typical); 5-price-point tax estimate table ($160K-$350K homesteaded vs non-homesteaded); $50K homestead exemption mechanics (first/second $25K, school board exclusion); SOH 3% cap buyer-reset warning; portability calculation example; senior exemption (income-limited); 100% disabled vet full exemption; hernandopa-fl.us lookup steps with TRIM notice explanation; 5-city comparison table (millage comparison); 18-link internal grid; 5-Q&A FAQ with JSON-LD.
-
-**Build:** JSON-only data change; local build skipped (no node_modules in container); Vercel builds on push
-**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
-**Git commit:** `cea7af9` — pushed to `origin/main`
-
----
-
-## 2026-09-12 (Batch 58 — Haines City FL x7, Ridge Manor FL x3: Major Expansions)
-
-**Pages improved: 10**
-
-### Blog Posts — Full Expansion (All posts: AEO quick-answer box, H1 distinct from title, 4+ question H2s, 6+ H3s, price/comparison tables, 5-Q&A FAQ with JSON-LD FAQPage schema, BreadcrumbList schema, Article schema, GEO citations, EEAT first-person voice, 10-link internal resource grid, Barrett Henry author bio. Content dated 2026-09-11. Build green.)
-
-**Haines City FL (7 remaining stubs):** All expanded from ~5,223-char boilerplate to 18,592-22,422 chars.
-
-1. **haines-city-fl-schools-guide** — 5,223 to 21,855 chars. Polk County School District context; Haines City Senior High (2800 Hornet Dr., 33844), Ridge Community High (Davenport, for southern addresses), Daniel Jenkins Academy magnet (STEM 6-12, 4020 Tuscany Blvd., (863) 421-3434); Boone Middle (701 W. Powell Rd.) and Eastside Middle (1050 S. 22nd St.) middle schools; Alta Vista, Bethune Academy, Horizons elementaries; school table with verification contacts; Florida FLDOE grading system explained; private schools (Lakeland 30-35 min, Winter Haven 20-25 min); zone verification steps (polkschoolsfl.com, (863) 534-0521); 5-district comparison table; 5-Q&A FAQ.
-
-2. **is-haines-city-fl-good-place-to-live** — 5,223 to 20,395 chars. 5 genuine pros (new construction affordability from $265K, Disney corridor access 20-28 min, central FL day-trip geography, Polk County tax structure, growing community); 5 genuine cons (mixed school ratings, limited walkability, Tampa commute 65-80 min peak, summer heat/humidity, insurance $2,500-$5,000+/yr); 9-row buyer fit table (Disney workers/first-time buyers Excellent; Tampa commuters/urban buyers Poor); 5-city comparison table (Haines City vs Davenport/Kissimmee/Winter Haven/Lake Wales); 2026 market overview; CDD fee warning; 5-Q&A FAQ.
-
-3. **haines-city-fl-real-estate-guide** — 5,223 to 20,980 chars. 5-segment price/DOM table (entry new construction $265K-$325K / builder timeline to Southern Dunes $350K-$600K+ / 60-120 DOM); neighborhood guide (Southern Dunes Golf and Country Club — Steve Smyers 18-hole design, Calabay Parc at Tower Lake, new construction communities US-27/US-17-92, established SFH, lake-adjacent); CDD fee deep-dive (30-year cost math, polkpa.org lookup); 2026 market assessment (buyer/seller conditions, builder incentives); new vs resale comparison table (8 factors); 5-step buying process; 5-Q&A FAQ.
-
-4. **haines-city-fl-property-taxes** — 5,223 to 22,422 chars. Millage breakdown table (Polk County ~5.0-5.5, school ~6.5-7.5, City of Haines City ~5.5-7.0, SWFWMD ~0.25-0.40, total ~18-22 mills); note on city vs unincorporated millage difference; 5-price-point tax estimate table ($240K-$500K homesteaded); $50K homestead exemption mechanics (first vs second $25K, school board exclusion); SOH 3% cap buyer-reset warning; portability (up to $500K, 3-year deadline, polkpa.org); senior exemption (~$35,167 income limit 2025); 100% disabled vet full exemption; CDD fee table by community type ($800-$3,500+/yr); 5-Q&A FAQ.
-
-5. **haines-city-fl-new-construction** — 5,223 to 20,808 chars. Active builder table (D.R. Horton $265K-$380K, Lennar $280K-$430K, Pulte $300K-$450K+, Meritage $290K-$420K, Casa Fresca $270K-$360K); US-27 north corridor and US-17/92 corridor community overview; Southern Dunes area; 8-factor new vs resale comparison table; 2026 incentive breakdown (rate buydowns, closing cost contributions $5K-$20K, lot premium reductions, upgrade credits); 8-item critical buyer checklist (register agent first visit, CDD at polkpa.org, independent inspection, compare builder mortgage); 5-market comparison table (Haines City vs Davenport/Kissimmee/Winter Haven/Lakeland); 5-Q&A FAQ.
-
-6. **haines-city-fl-investment-property** — 5,223 to 18,592 chars. LTR rental rate table by property type (2BR $1,400-$1,800 to 4BR+ $2,200-$2,900/mo); cap rate estimates (5-8% for older no-CDD; 4.5-6% for new construction with CDD); LTR vs STR analysis (Disney proximity creates STR potential but HOA and Polk County permit rules critical); cash flow comparison table (Scenario A older SFH $275K — negative ~$382/mo; Scenario B new construction $310K — negative ~$597/mo at 7.25% rate); investment grade table by property type; ViVi Property Management reference; 5-Q&A FAQ.
-
-7. **haines-city-fl-waterfront-homes** — 5,223 to 21,258 chars. Lake guide (Lake Eva in-city near Jacaranda Park; Lake Marion southeast/larger; Lake Lowery south/rural; Tower Lake via Calabay Parc; smaller lake systems); 5-type waterfront price table ($265K-$700K+); FEMA flood zone table (Zone X, shaded X, AE, AE below BFE — risk/insurance/location); flood insurance cost range ($1,200-$4,000+/yr depending on elevation); Elevation Certificate guidance ($400-$700); 10-item waterfront due-diligence checklist (msc.fema.gov lookup, elevation cert, flood insurance quote, water quality, shoreline, dock permits, water access rights, prior flood claims); 5-market comparison table (Haines City vs Winter Haven/Crooked Lake/Tampa Bay/Clermont); 5-Q&A FAQ.
-
-**Ridge Manor FL (3 stubs — new city, first batch):** All expanded from ~5,223-char boilerplate to 18,131-20,124 chars.
-
-8. **ridge-manor-fl-homes-for-sale-guide** — 5,223 to 20,124 chars. Hernando County unincorporated context; 5-segment price/DOM table (older SFH $160K-$240K / 60-120 DOM to acreage $230K-$350K+); neighborhood guide (Ridge Manor proper, Ridge Manor Estates, acreage properties, Withlacoochee River corridor); well/septic buyer guidance (inspection $200-$400 each); flood zone warning near Withlacoochee; Hernando County Property Appraiser (hernandopa-fl.us); homeowners insurance considerations; 5-community comparison table (Ridge Manor vs Brooksville/Dade City/Wesley Chapel/Zephyrhills); 8-step buying process; 5-Q&A FAQ.
-
-9. **ridge-manor-fl-schools-guide** — 5,223 to 18,131 chars. Hernando County School District context (hernandoschools.org, (352) 796-2141); FLDOE grading; Ridge Manor Elementary (primary K-5 campus serving community); middle and high school zone verification process; Hernando County vs Pasco/Hillsborough/Citrus districts comparison table; private schools (Brooksville 20-25 min, Dade City 10-15 min, Wesley Chapel 25-35 min nearest concentration); zone verification steps; 5-Q&A FAQ.
-
-10. **ridge-manor-fl-commute-guide** — 5,223 to 18,835 chars. I-75 Exit 301 (SR-50/Cortez Blvd) as primary access point; SR-50 east-west connector; US-301 alternate corridor; 10-destination drive matrix (Brooksville 20-25 min, Dade City 15-20 min, Wesley Chapel 25-35 min, Tampa CBD 50-65 min off-peak/65-85 min peak, TPA 50-65 min, Ocala 45-55 min, Gainesville 85-100 min, New Port Richey 45-60 min, Clearwater/St. Pete 65-80 min, Gainesville VA 85-95 min); Tampa commuter reality (100-110 mi/day, ~$700-$900/mo fuel); commute cost comparison table (Ridge Manor vs Wesley Chapel/Zephyrhills/Land O Lakes/Lutz); no HART or county transit service; remote worker internet notes (Spectrum + Starlink for some addresses); 5-Q&A FAQ.
-
-**Build:** Passed (Next.js build green)
-**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
-**Git commit:** `b28a238` — pushed to `origin/main`
-
----
-
-## 2026-09-11 (Batch 57 — Lake Wales FL x7, Haines City FL x3: Major Expansions)
-
-**Pages improved: 10**
-
-### Blog Posts — Full Expansion (All posts: AEO quick-answer box, H1 distinct from title, 4+ question H2s, 6+ H3s, price/comparison tables, 5-Q&A FAQ with JSON-LD FAQPage schema, BreadcrumbList schema, Article schema, GEO citations, EEAT first-person voice, 10-link internal resource grid, Barrett Henry author bio. Content dated 2026-09-10. Build green.)
-
-**Lake Wales FL (7 remaining stubs):** All expanded from ~5,217-char boilerplate to 20,923-26,274 chars.
-
-1. **lake-wales-fl-real-estate-guide** — 5,217 to 26,274 chars. 2026 buyer-favorable market overview; 5-segment price/DOM table (older SFH $170K-$240K / 75-120 DOM to Crooked Lake waterfront 45-90 DOM balanced); neighborhood guide (historic downtown/Lake Wailes, Bok Tower corridor/Mountain Lake Colony, Crooked Lake, eastern/southern subdivisions, rural/acreage); 4-step buyer checklist (pre-approval, water/sewer verify, flood zone check, full tax bill at polkpa.org, competitive offer); seller strategy (90-day comps, presentation discipline); 5-market comparison table (Lake Wales vs Winter Haven/Haines City/Lakeland/Avon Park); 5-Q&A FAQ.
-
-2. **lake-wales-fl-commute-guide** — 5,217 to 20,923 chars. 10-destination drive matrix (Lakeland 30-38 min, Winter Haven 20-25 min, Tampa 65-80 min peak, TPA 65-80 min, Orlando 60-75 min, Disney 45-55 min, Avon Park 30-45 min, Bartow 20-28 min, Haines City 18-25 min, Davenport 30-40 min); US-27 and SR-60 route analysis; I-4 access 30-35 min north; Tampa commute cost table (5-day $875/mo / 360 hrs/yr to 2-day $350/mo); remote work section (Spectrum 1 Gbps, Starlink fallback); 5-market commute comparison table; 5-Q&A FAQ.
-
-3. **lake-wales-fl-investment-property** — 5,217 to 22,299 chars. Rental rate table by type ($1,200-$3,200/mo); cash flow Example A ($220K leveraged, NOI positive but cash-flow negative at 7.75% investor rate); Example B ($175K cash purchase, ~5.4% cap rate); LTR vs STR analysis (STR poor, LTR steady local worker demand); Florida landlord law (security deposit, notice to enter, eviction timeline, Polk County no registration requirement for LTR); ViVi Property Management reference and link; 5-market cap rate comparison table; 5-Q&A FAQ.
-
-4. **lake-wales-fl-new-construction** — 5,217 to 21,520 chars. Why limited (built-out grid, Lake Wales Ridge ecology, builder economics); 3 options (infill lots $20K-$60K+, rural acreage builds, Haines City new construction 15-20 min north); all-in custom build cost table ($437K-$685K for 2-acre rural 1,800 sf); active builder table (D.R. Horton/Lennar/Pulte/Meritage in Haines City, starting $265K+); Winter Haven as additional option (20-25 min NW); new construction vs Lake Wales resale comparison table (CDD fees, character, price range); 5-Q&A FAQ.
-
-5. **lake-wales-fl-property-taxes** — 5,217 to 22,012 chars. Millage breakdown table (Polk County ~5.0-5.5, school ~6.5-7.5, City of Lake Wales ~3.5-5.0, SWFWMD ~0.25-0.40, total ~15.5-18.8 mills); note on unincorporated vs city millage; 6-price-point tax estimate table ($180K-$500K homesteaded and non-homesteaded); $50K homestead exemption mechanics (first $25K all authorities, second $25K excludes school board); SOH 3% cap buyer-reset warning; portability (up to $500K transfer, 3-year deadline, file at polkpa.org); senior exemption (~$35K income limit); 100% veteran exemption; 5-county comparison table; 5-Q&A FAQ.
-
-6. **lake-wales-fl-waterfront-homes** — 5,217 to 24,490 chars. Lake guide (Crooked Lake — larger, boating, $280K-$650K+; Lake Wailes — in-city park trail, adjacent homes $230K-$380K; Lake Bess/smaller lakes $200K-$320K; subdivision ponds — views only, not true lake-front); 5-type waterfront price/flood-zone/insurance table; FEMA lookup guide (msc.fema.gov step-by-step); elevation certificate guidance ($400-$700); 5-row flood insurance cost table ($400-$800/yr Zone X to $2,500-$5,000+/yr Zone AE below BFE); dock permitting (FDEP, Army Corps, SWFWMD); 8-item waterfront due-diligence checklist; 5-market comparison table (Lake Wales vs Winter Haven/Lakeland/Inverness/Clermont); 5-Q&A FAQ.
-
-7. **is-lake-wales-fl-good-place-to-live** — 5,217 to 23,391 chars. 5 genuine pros (affordability, Bok Tower Gardens/National Historic Landmark/Frederick Law Olmsted Jr., freshwater lake character, small-city quiet, central FL day trips); 5 genuine cons (long Tampa/Orlando commute, limited retail, mixed school quality, limited job market, insurance costs $2,500-$5,000+/yr); 9-row buyer profile fit table (retirees/remote workers Excellent; daily Tampa commuters Poor; STR investors Poor); 5-city Florida small-city comparison table (Lake Wales vs Bartow/Inverness/Avon Park/Crystal River); 5-Q&A FAQ.
-
-**Haines City FL (3 remaining stubs):** All expanded from ~5,223-char boilerplate to 21,523-23,195 chars.
-
-8. **haines-city-fl-homes-for-sale-guide** — 5,223 to 22,934 chars. 2026 market conditions (balanced to slightly buyer-favorable; builder incentives available on new construction); 5-segment price/DOM table; neighborhood guide (Southern Dunes golf community, Calabay Park, active new construction communities, lake-adjacent properties — Lake Eva, Lake Marion, Lake Lowery); 5-step buyer checklist (pre-approval with CDD factored, CDD fee verification at polkpa.org, school zone verification, flood zone check at msc.fema.gov, new construction negotiation strategy); 5-market comparison table (Haines City vs Davenport/Lake Wales/Winter Haven/Kissimmee); 5-Q&A FAQ.
-
-9. **haines-city-fl-commute-guide** — 5,223 to 21,523 chars. 11-destination drive matrix (Disney 20-28 min, Kissimmee corridor 25-35 min, Orlando downtown 45-55 min, MCO 45-55 min, Lake Nona 45-55 min, Lakeland 35-45 min, Tampa 65-80 min, TPA 70-85 min, Winter Haven 18-25 min, Lake Wales 18-25 min, Bartow 28-38 min); US-27 primary corridor analysis; SR-60 alternate western route; I-4 access 20-25 min north via US-27 (Davenport exits 55-58); Disney/hospitality worker case (20-30 min, most affordable Polk County option for cast members); Tampa commute cost table (5-day $830/mo to Disney 5-day $223/mo); 5-market commute comparison table; 5-Q&A FAQ.
-
-10. **haines-city-fl-cost-of-living** — 5,223 to 23,195 chars. 3-scenario monthly ownership cost tables ($285K: ~$2,380-$2,800/mo; $340K: ~$2,838-$3,401/mo; $420K: ~$3,528-$4,006/mo — all including P&I, taxes, CDD, insurance, HOA, utilities); Haines City millage breakdown (~20-22 mills total); homestead exemption/SOH buyer-reset warning; insurance detail ($2,800-$5,500/yr; wind mitigation credits for new construction; 4-point inspection flag for older homes; Zone AE flood insurance $1,200-$3,500+/yr); utility table (Duke Energy $120-$280/mo, water/sewer $60-$110/mo, internet $70-$100/mo); shopping/healthcare (Walmart+Publix in city; Costco Lakeland 35-40 min; AdventHealth Heart of Florida Regional in Davenport 20-25 min); 5-market cost comparison table (Haines City vs Kissimmee/Davenport/Lake Wales/Winter Haven); 5-Q&A FAQ.
-
-**Build:** Passed (Next.js build green)
-**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
-**Git commit:** `784be5d` — pushed to `origin/main`
-
----
-
 ## 2026-09-10 (Batch 56 — East Lake FL x7, Lake Wales FL x3: Major Expansions)
 
 **Pages improved: 10**
@@ -992,7 +738,7 @@ All 9 Odessa blog posts expanded from identical 5,284-char generic templates to 
 
 **Pages improved: 10**
 
-All 10 posts expanded from 5,351-char boilerplate to 16,301-22,376 chars each. All dated 2026-08-14. Each page has: AEO Quick Answer box, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, REMAX Collective, 23+ years, (813) 733-7907), and 5-question FAQ with JSON-LD FAQPage schema. Meta descriptions added to all 10. Facts verified via web search: median sale price $400K-$409K (down ~2.8% YoY, July 2026), 66 DOM (down from 74), 304 homes sold June 2026; Sarasota County School District top 10% FL; Venice Senior HS A grade (3.82/5, #5 Sarasota County, #135 FL, 2,562 students, 47% AP participation); Wellen Park 10+ builders from high $300Ks to $2M+; Esplanade at Wellen Park (Taylor Morrison, ~877 homes, 55+, opened 2026); Sarasota County combined millage ~13.5 mills; effective tax rate Venice ~1.29% avg; homestead exemption $50K (apply sc-pa.com by March 1); Save Our Homes 3% annual cap; CDD fees appear on tax bill not HOA; waterfront ~235 active listings, median listing ~$415K; Venice-Tampa commute ~70 miles, 65-80 min off-peak via I-75.
+All 10 posts expanded from 5,351-char boilerplate to 16,301-22,376 chars each. All dated 2026-08-14. Each page has: AEO Quick Answer box, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, REMAX Collective, 24+ years, (813) 733-7907), and 5-question FAQ with JSON-LD FAQPage schema. Meta descriptions added to all 10. Facts verified via web search: median sale price $400K-$409K (down ~2.8% YoY, July 2026), 66 DOM (down from 74), 304 homes sold June 2026; Sarasota County School District top 10% FL; Venice Senior HS A grade (3.82/5, #5 Sarasota County, #135 FL, 2,562 students, 47% AP participation); Wellen Park 10+ builders from high $300Ks to $2M+; Esplanade at Wellen Park (Taylor Morrison, ~877 homes, 55+, opened 2026); Sarasota County combined millage ~13.5 mills; effective tax rate Venice ~1.29% avg; homestead exemption $50K (apply sc-pa.com by March 1); Save Our Homes 3% annual cap; CDD fees appear on tax bill not HOA; waterfront ~235 active listings, median listing ~$415K; Venice-Tampa commute ~70 miles, 65-80 min off-peak via I-75.
 
 ### Venice FL Spoke Pages (10)
 
@@ -1026,7 +772,7 @@ All 10 posts expanded from 5,351-char boilerplate to 16,301-22,376 chars each. A
 
 **Pages improved: 10**
 
-All 10 posts expanded from 5,143-char boilerplate to 14,501-18,948 chars each. All dated 2026-08-13. Each page has: AEO Quick Answer box, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, REMAX Collective, 23+ years, (813) 733-7907), and 5-question FAQ with JSON-LD FAQPage schema. Meta descriptions updated on all 10. Facts verified via web search: median listing ~$792K (April 2026), ~$335/sqft, ~85 DOM, prices down 6-14% from 2022 peak; Pine View School #12 nationally A+ Niche 10/10 GS grades 2-12 gifted-only; Sarasota County School District top 10% FL, 62% math/reading vs 52% FL avg; The Oaks Bayside $1.5M-$7M+ on Little Sarasota Bay; Casey Key Gulf-front $2.5M-$10M+; Edgewater at Hidden Bay gated 12-acre resort on bay; Sarasota avg rent $2,535/mo; Sarasota County ~14-15 mills combined millage; Oscar Scherer State Park 1,400 acres in-community; Osprey-Sarasota 13 miles (~15 min), Osprey-Venice 8 miles (~12 min), Osprey-Tampa 69 miles (~70-85 min).
+All 10 posts expanded from 5,143-char boilerplate to 14,501-18,948 chars each. All dated 2026-08-13. Each page has: AEO Quick Answer box, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, REMAX Collective, 24+ years, (813) 733-7907), and 5-question FAQ with JSON-LD FAQPage schema. Meta descriptions updated on all 10. Facts verified via web search: median listing ~$792K (April 2026), ~$335/sqft, ~85 DOM, prices down 6-14% from 2022 peak; Pine View School #12 nationally A+ Niche 10/10 GS grades 2-12 gifted-only; Sarasota County School District top 10% FL, 62% math/reading vs 52% FL avg; The Oaks Bayside $1.5M-$7M+ on Little Sarasota Bay; Casey Key Gulf-front $2.5M-$10M+; Edgewater at Hidden Bay gated 12-acre resort on bay; Sarasota avg rent $2,535/mo; Sarasota County ~14-15 mills combined millage; Oscar Scherer State Park 1,400 acres in-community; Osprey-Sarasota 13 miles (~15 min), Osprey-Venice 8 miles (~12 min), Osprey-Tampa 69 miles (~70-85 min).
 
 ### Osprey FL Spoke Pages (10)
 
@@ -1060,7 +806,7 @@ All 10 posts expanded from 5,143-char boilerplate to 14,501-18,948 chars each. A
 
 **Pages improved: 10**
 
-All 10 posts expanded from 5,373-char boilerplate to 16,792-19,338 chars each. All dated 2026-08-12. Each page has: AEO Quick Answer box, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, REMAX Collective, 23+ years, (813) 733-7907), and 5-question FAQ with JSON-LD FAQPage schema. Meta descriptions updated on all 10. Facts verified via web search: ~$319K median (July 2026), 5,800+ active listings, 16.19 mills Polk County combined millage, Polk State Collegiate HS A-rated (#4 Polk County), Lakeland Christian School 4.36/5 Niche, 38 named lakes, median rent $1,895/month, DR Horton from $260K, Lennar Cypress Point at Lake Parker from $312,900.
+All 10 posts expanded from 5,373-char boilerplate to 16,792-19,338 chars each. All dated 2026-08-12. Each page has: AEO Quick Answer box, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, REMAX Collective, 24+ years, (813) 733-7907), and 5-question FAQ with JSON-LD FAQPage schema. Meta descriptions updated on all 10. Facts verified via web search: ~$319K median (July 2026), 5,800+ active listings, 16.19 mills Polk County combined millage, Polk State Collegiate HS A-rated (#4 Polk County), Lakeland Christian School 4.36/5 Niche, 38 named lakes, median rent $1,895/month, DR Horton from $260K, Lennar Cypress Point at Lake Parker from $312,900.
 
 ### Lakeland FL Spoke Pages (10)
 
@@ -1094,7 +840,7 @@ All 10 posts expanded from 5,373-char boilerplate to 16,792-19,338 chars each. A
 
 **Pages improved: 10**
 
-All 10 posts expanded from ~5,321-5,471-char boilerplate to full SEO/AEO content. All dated 2026-08-11. Each page has: AEO Quick Answer box, question-format H2s, H3 subsections, comparison tables, dark CTA box (Barrett Henry, REMAX Collective, 23+ years, (813) 733-7907), and 5-6 question FAQ with JSON-LD FAQPage schema. Meta descriptions updated on all 10. Three high-traffic Pasco County suburbs covered.
+All 10 posts expanded from ~5,321-5,471-char boilerplate to full SEO/AEO content. All dated 2026-08-11. Each page has: AEO Quick Answer box, question-format H2s, H3 subsections, comparison tables, dark CTA box (Barrett Henry, REMAX Collective, 24+ years, (813) 733-7907), and 5-6 question FAQ with JSON-LD FAQPage schema. Meta descriptions updated on all 10. Three high-traffic Pasco County suburbs covered.
 
 ### Wesley Chapel FL (2 pages)
 
@@ -1132,7 +878,7 @@ All 10 posts expanded from ~5,321-5,471-char boilerplate to full SEO/AEO content
 
 **Pages improved: 10**
 
-All 10 posts expanded from ~5,000-5,700-char boilerplate to 14,860-20,908 chars each. All dated 2026-08-10. Each page has: AEO Quick Answer box, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, 23+ years, (813) 733-7907), and 5-question FAQ with JSON-LD FAQPage schema. Meta descriptions updated on all 10. Area: Seffner FL (ZIP 33584), I-4/I-275 corridor, Hillsborough County.
+All 10 posts expanded from ~5,000-5,700-char boilerplate to 14,860-20,908 chars each. All dated 2026-08-10. Each page has: AEO Quick Answer box, question-format H2s, H3 subsections, data/comparison tables, dark CTA box (Barrett Henry, 24+ years, (813) 733-7907), and 5-question FAQ with JSON-LD FAQPage schema. Meta descriptions updated on all 10. Area: Seffner FL (ZIP 33584), I-4/I-275 corridor, Hillsborough County.
 
 ### Seffner FL Spoke Pages (10)
 
@@ -1897,11 +1643,11 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 
 ### Blog Posts (6)
 
-1. **valrico-fl-daycare-preschools** — Full content replacement. Added VPK free pre-K explainer (Florida state program, 4-year-olds), licensed center types (KinderCare, Learning Experience, Primrose, Bright Horizons), home daycares (Family Child Care Homes licensed by DCF), Head Start, School Readiness subsidies, evaluation checklist (DCF license number, staff ratios, curriculum, outdoor play, inspection history), how to search myflfamilies.com, elchc.org for subsidized care; fixed em dashes and 23+years CTA; 5-Q&A FAQ with JSON-LD schema. Content grew from 4,157 to 11,617 chars.
+1. **valrico-fl-daycare-preschools** — Full content replacement. Added VPK free pre-K explainer (Florida state program, 4-year-olds), licensed center types (KinderCare, Learning Experience, Primrose, Bright Horizons), home daycares (Family Child Care Homes licensed by DCF), Head Start, School Readiness subsidies, evaluation checklist (DCF license number, staff ratios, curriculum, outdoor play, inspection history), how to search myflfamilies.com, elchc.org for subsidized care; fixed em dashes and 24+years CTA; 5-Q&A FAQ with JSON-LD schema. Content grew from 4,157 to 11,617 chars.
 
-2. **valrico-fl-churches-worship** — Full content replacement. Added faith tradition breakdown (Baptist, non-denominational/evangelical, Catholic via St. Joseph's in Brandon under Diocese of St. Petersburg, Methodist/Presbyterian/mainline, Hispanic/multicultural Pentecostal along SR-60/US-301, other faiths noting Jewish/Muslim/Hindu options 20-40 min in Tampa metro); fixed em dashes and 23+years CTA; 5-Q&A FAQ with JSON-LD schema. Content grew from 4,161 to 10,654 chars.
+2. **valrico-fl-churches-worship** — Full content replacement. Added faith tradition breakdown (Baptist, non-denominational/evangelical, Catholic via St. Joseph's in Brandon under Diocese of St. Petersburg, Methodist/Presbyterian/mainline, Hispanic/multicultural Pentecostal along SR-60/US-301, other faiths noting Jewish/Muslim/Hindu options 20-40 min in Tampa metro); fixed em dashes and 24+years CTA; 5-Q&A FAQ with JSON-LD schema. Content grew from 4,161 to 10,654 chars.
 
-3. **valrico-fl-pet-friendly** — Full content replacement. Added dog parks (Bloomingdale Dog Park, Brandon Dog Park, Lithia Springs Conservation Park), vet options (Bloomingdale Animal Hospital, Brandon area practices, emergency vet note), pet stores (PetSmart Brandon, Pet Supermarket, independent groomers), outdoor activities (Alafia River State Park leashed hiking, Balm Boyette Scrub, neighborhood sidewalks), HOA pet policy considerations (number limits, breed/weight restrictions, fenced yards), Florida basics (county licensing, heartworm year-round); fixed em dashes and 23+years CTA; 5-Q&A FAQ with JSON-LD schema. Content grew from 4,168 to 11,701 chars.
+3. **valrico-fl-pet-friendly** — Full content replacement. Added dog parks (Bloomingdale Dog Park, Brandon Dog Park, Lithia Springs Conservation Park), vet options (Bloomingdale Animal Hospital, Brandon area practices, emergency vet note), pet stores (PetSmart Brandon, Pet Supermarket, independent groomers), outdoor activities (Alafia River State Park leashed hiking, Balm Boyette Scrub, neighborhood sidewalks), HOA pet policy considerations (number limits, breed/weight restrictions, fenced yards), Florida basics (county licensing, heartworm year-round); fixed em dashes and 24+years CTA; 5-Q&A FAQ with JSON-LD schema. Content grew from 4,168 to 11,701 chars.
 
 4. **tampa-condos-ev-charging** — Added EV charging level explainer (Level 1 inadequate, Level 2 minimum for residential EV, DC Fast Charging not in condos); what to ask before buying section (shared vs. dedicated circuits, who pays electricity, Florida Statute 718.113(9) protecting owners' right to install EVSE, NACS vs. J1772 connectors, building electrical capacity); where to find (Water Street Tampa best post-2020, Channelside/Harbour Island varies by age, Downtown towers correlate with age, Westshore Marina District); Florida EV landscape context; fixed CTA box; 5-Q&A FAQ with JSON-LD schema. Content grew from 3,619 to 12,963 chars.
 
@@ -1934,13 +1680,13 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 
 2. **tampa-historic-homes** — Added full neighborhood writeups for Hyde Park ($700K-$3M+), Seminole Heights ($450K-$900K), Ybor City ($280K-$550K), Palma Ceia ($650K-$2M+), Beach Park ($650K-$1.5M), Old Seminole Heights ($380K-$700K); added "What to Expect When Buying" section (electrical, plumbing, roofing, foundation, windows); added "Historic Designation" explainer (National Register vs. local designation vs. H overlay); 5-Q&A FAQ with JSON-LD schema. Content grew from 3,340 to 15,343 chars.
 
-3. **tampa-colonial-homes** — Added "What Makes Colonial Style" section (Georgian, Federal, Dutch, Southern Colonial variants); neighborhood writeups for Hyde Park ($750K-$2.5M), Palma Ceia ($650K-$2M), Beach Park ($600K-$1.5M), Bayshore Beautiful ($700K-$2M), Parkland Estates ($800K-$3M), New Tampa/FishHawk ($500K-$900K); "Original vs. New Construction Colonial" comparison; fixed 23+years/Tampa Bay co-occurrence in body text; 5-Q&A FAQ with JSON-LD schema. Content grew from 3,557 to 13,001 chars.
+3. **tampa-colonial-homes** — Added "What Makes Colonial Style" section (Georgian, Federal, Dutch, Southern Colonial variants); neighborhood writeups for Hyde Park ($750K-$2.5M), Palma Ceia ($650K-$2M), Beach Park ($600K-$1.5M), Bayshore Beautiful ($700K-$2M), Parkland Estates ($800K-$3M), New Tampa/FishHawk ($500K-$900K); "Original vs. New Construction Colonial" comparison; fixed 24+years/Tampa Bay co-occurrence in body text; 5-Q&A FAQ with JSON-LD schema. Content grew from 3,557 to 13,001 chars.
 
 4. **tampa-key-west-homes** — Added "What Defines Key West Style" section (7 architectural features with detail); neighborhood writeups for Davis Islands ($800K-$3M+), South Tampa custom builds ($700K-$2.5M), Apollo Beach ($450K-$1.5M), Harbour Island ($700K-$1.5M), Channelside ($500K-$1.2M); "Metal Roofs and Insurance in Florida" section; "Original vs. New Construction" comparison; fixed CTA box; 5-Q&A FAQ with JSON-LD schema. Content grew from 3,557 to 14,857 chars.
 
-5. **seffner-fl-shopping-dining** — Fixed CTA box (removed Tampa Bay tie from 23+ years); expanded Local Favorites with specific restaurant names (La Isla Cafe, Sam's Seafood, Don Jose's Mexican Grill, Sims Smoked BBQ, Kim's Cuban Sandwich Shop, Bob Evans); added Parsons Village section (US-92 Seffner anchor: Winn-Dixie, Family Dollar); added Regency Square section (47 stores, AMC, TJ Maxx, Barnes & Noble); added Parks section (Lake Weeks, Eureka Springs Park, Seffner-Mango Park); KB Home new construction mention; 5-Q&A FAQ with JSON-LD schema. Content grew from 5,083 to 12,169 chars.
+5. **seffner-fl-shopping-dining** — Fixed CTA box (removed Tampa Bay tie from 24+ years); expanded Local Favorites with specific restaurant names (La Isla Cafe, Sam's Seafood, Don Jose's Mexican Grill, Sims Smoked BBQ, Kim's Cuban Sandwich Shop, Bob Evans); added Parsons Village section (US-92 Seffner anchor: Winn-Dixie, Family Dollar); added Regency Square section (47 stores, AMC, TJ Maxx, Barnes & Noble); added Parks section (Lake Weeks, Eureka Springs Park, Seffner-Mango Park); KB Home new construction mention; 5-Q&A FAQ with JSON-LD schema. Content grew from 5,083 to 12,169 chars.
 
-6. **plant-city-fl-vs-valrico** — Fixed CTA box (removed Tampa Bay tie from 23+ years); updated Plant City median to ~$330K and Valrico to $413K-$430K per 2026 data; added "New Construction Options" section (D.R. Horton, LGI Homes in $290K-$420K range in Plant City; Valrico largely built out); added "Investment Perspective" section; 5-Q&A FAQ with JSON-LD schema. Content grew from 5,111 to 12,038 chars.
+6. **plant-city-fl-vs-valrico** — Fixed CTA box (removed Tampa Bay tie from 24+ years); updated Plant City median to ~$330K and Valrico to $413K-$430K per 2026 data; added "New Construction Options" section (D.R. Horton, LGI Homes in $290K-$420K range in Plant City; Valrico largely built out); added "Investment Perspective" section; 5-Q&A FAQ with JSON-LD schema. Content grew from 5,111 to 12,038 chars.
 
 ### Neighborhood Descriptions (4)
 
@@ -2129,99 +1875,3 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** `41e066c` — pushed to `origin/main`
-
----
-
-## 2026-09-13 (Batch 60 — Ridge Manor FL x7 + Siesta Key FL x3)
-
-**Pages improved: 10**
-
-### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, 18-link internal grid, comparison tables, Barrett Henry bio)
-
-1. **ridge-manor-fl-new-construction** — Expanded 5,200 to 30,371 chars. Custom build costs on Ridge Manor lots ($125-$175/sqft), Spring Hill as the main new-construction alternative, builder comparison table, lot-buying checklist, Hernando County permitting notes, I-75 commute context.
-
-2. **ridge-manor-fl-investment-property** — Expanded 5,200 to 30,842 chars. Long-term rental market focus; rental rate table by property type; cash flow example at 7.5% cap rate; well/septic operational costs; ViVi Property Management reference; Hernando County LDR zoning notes; STR regulatory caution.
-
-3. **ridge-manor-fl-waterfront-homes** — Expanded 5,200 to 28,351 chars. Withlacoochee River frontage pricing ($275K-$550K+); Zone AE flood zones; dock permitting via FDEP, Army Corps, and SWFWMD; riparian rights overview; boat ramp access (Silver Lake, Carter Road); flood insurance cost table.
-
-4. **ridge-manor-fl-flood-zones** — Expanded 5,200 to 26,262 chars. Zone X vs. Zone AE breakdown for Ridge Manor; msc.fema.gov FIRM lookup walkthrough; Elevation Certificate explainer; NFIP vs. private flood insurance comparison; cost table by property type; typical rates ($800-$3,500/yr).
-
-5. **best-neighborhoods-ridge-manor-fl** — Expanded 5,200 to 28,677 chars. Four micro-area breakdown (Core/Ridge Manor Estates/River Corridor/Acreage); buyer profile matching table; price range $185K-$550K+; school zone overview (Hernando County); commute distances to Tampa, Brooksville, Spring Hill.
-
-6. **moving-to-ridge-manor-fl** — Expanded 5,200 to 29,550 chars. Duke Energy service; well/septic setup costs and ongoing expenses; county services vs. city services table; homestead exemption walkthrough; school assignments (Nature Coast Tech, Hernando High); utility cost table; commute matrix.
-
-7. **things-to-do-ridge-manor-fl** — Expanded 5,200 to 24,146 chars. Withlacoochee State Forest (157,000+ acres, Croom Tract); Withlacoochee State Trail (46-mile paved rail-trail); Silver Lake Recreation Area; Brooksville for dining/shopping; YMCA Weeki Wachee proximity; seasonal activity calendar.
-
-8. **is-siesta-key-fl-good-place-to-live** — Expanded 5,200 to 31,572 chars. Pros/cons table; 5-city comparison (Siesta Key vs. Longboat Key/Venice/Anna Maria/Sarasota); hurricane Zone A evacuation reality; price-to-product table ($1.4M-$4M+ Gulf-front); two-bridge access; no island schools; lifestyle fit guide.
-
-9. **best-neighborhoods-siesta-key-fl** — Expanded 5,200 to 26,472 chars. North end/Village district; mid-island (Sanderling Club); south/Stickney Point Road area; Gulf-front vs. canal-front comparison; price range by area ($850K-$8M+); HOA vs. non-HOA breakdown; buyer profile matching.
-
-10. **moving-to-siesta-key-fl** — Expanded 5,200 to 26,136 chars. Bridge traffic reality (Siesta Drive north, Stickney Point Road south); FPL electric service; Sarasota County water/sewer (public); insurance cost table (homeowners $12K-$40K+/yr, flood Zone AE); nearest schools off-island; grocery/services access.
-
-**Build:** JSON-only data change; local build skipped; Vercel builds on push
-**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
-**Git commit:** `c021eb3` — pushed to `origin/main`
-
----
-
-## 2026-09-19 (Batch 62 — South Pasadena FL x10)
-
-**Pages improved: 10**
-
-### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, 18-link internal grid, comparison tables, Barrett Henry bio)
-
-1. **south-pasadena-fl-cost-of-living** — Expanded 5,259 to 33,508 chars. Added: monthly cost breakdown table (condo to waterfront SFH); homeowners insurance ranges ($3,500-$9,000 non-waterfront, $8,000-$20,000+ waterfront); flood insurance Zone AE ranges ($2,000-$8,000+/yr); property tax example with homestead exemption; FPL electric, PCU water/sewer, Spectrum/Frontier internet costs; grocery and dining options (Publix on Pasadena Ave, Corey Ave); 5-community cost-of-living comparison table (vs. St. Pete Beach, Gulfport, Treasure Island, Clearwater); 5-Q&A FAQ.
-
-2. **south-pasadena-fl-property-taxes** — Expanded 5,259 to 25,037 chars. Added: Pinellas County millage breakdown table (~17-19 mills for South Pasadena); Florida homestead exemption mechanics ($50K standard, $25K additional); Save Our Homes 3% cap explanation; portability walkthrough; sample tax calculation ($500K home with homestead = ~$7,500-$8,500/yr); how to look up at pcpao.gov; investment property vs. primary residence comparison; 5-Q&A FAQ.
-
-3. **south-pasadena-fl-flood-zones** — Expanded 5,259 to 25,108 chars. Added: Zone AE/X definitions with Boca Ciega Bay proximity context; FEMA Flood Map Service Center lookup guide; NFIP vs. private flood insurance comparison table; Pinellas County CRS discount note; elevation certificate explanation; buyer due diligence checklist; real cost modeling for waterfront vs. non-waterfront; 5-Q&A FAQ.
-
-4. **south-pasadena-fl-investment-property** — Expanded 5,259 to 24,828 chars. Added: 4-type investment table (non-waterfront condo to waterfront SFH with purchase price, LTR rent, STR revenue, cap rate); annual operating cost breakdown; STR regulatory framework (DBPR license, Pinellas TDT 6%, SB 714); ViVi Property Management reference with /property-management/ link; LTR vs. STR analysis; 5-Q&A FAQ.
-
-5. **south-pasadena-fl-new-construction** — Expanded 5,259 to 22,310 chars. Added: Why new construction is rare (mostly built out in 1960s-1980s); teardown-rebuild process (demo $20K-$40K, Zone AE requirements, seawall considerations); custom build cost ranges ($350-$500+/sqft); 5-city new construction alternatives table (St. Pete Beach infill to Wesley Chapel with distances); honest buyer guidance for those wanting new; 5-Q&A FAQ.
-
-6. **south-pasadena-fl-waterfront-homes** — Expanded 5,259 to 23,053 chars. Added: 4-tier waterfront property table (canal-front entry to bay-front premium); Boca Ciega Bay waterfront characteristics; seawall inspection guide ($300-$600 inspection, $500-$900/LF replacement); dock permit requirements (FDEP, Army Corps, Pinellas County); boatlift and slip details; 4-scenario flood insurance cost table; 5-Q&A FAQ.
-
-7. **south-pasadena-fl-schools-guide** — Expanded 5,259 to 21,662 chars. Added: Pasadena Fundamental Elementary (8-9/10 rating, lottery application required, pcsb.org); Azalea Middle School profile; Boca Ciega High School profile; Pinellas County school choice program explanation; private schools comparison table (Academy of the Holy Names, Shorecrest Preparatory, Canterbury, St. Pete Catholic HS with grade range, type, tuition range); higher ed access table (SPC, USFSP, Eckerd, Stetson Law Gulfport); 5-Q&A FAQ.
-
-8. **south-pasadena-fl-commute-guide** — Expanded 5,259 to 20,934 chars. Added: 7-destination commute matrix (St. Pete downtown 15-20 min, Tampa 40-50/55-80 min peak via I-275 Howard Frankland Bridge, TPA 40-50 min, PIE 25-35 min, Gulfport 5-8 min, Clearwater 35-45 min, Bradenton 55-75 min); Gandy Bridge alternative route; PSTA transit limitations (limited service, car-essential reality); Pinellas Trail access; peak vs. off-peak timing advice; 5-Q&A FAQ.
-
-9. **moving-to-south-pasadena-fl** — Expanded 5,259 to 22,175 chars. Added: Housing price table by property type; utility setup guide (FPL fpl.com, Pinellas County Utilities pcutilities.org, Spectrum/Frontier internet); homeowners insurance ranges; Wind Mitigation Report value explanation; FL driver's license within 30 days, vehicle registration within 10 days, homestead exemption by March 1, voter registration reminders; healthcare access (Bayfront Health, St. Anthony's, Johns Hopkins All Children's, Bay Pines VA, Palms of Pasadena); 5-Q&A FAQ.
-
-10. **things-to-do-south-pasadena-fl** — Expanded 5,259 to 22,314 chars. Added: Gulfport Arts District guide (Art Walk first Friday + third Saturday, Farmers Market Tuesdays, O'Maddy's Bar and Grille, The Sentimental, Gulfport Municipal Marina); Gulf beaches access (Pass-a-Grille 10-12 min, Corey Avenue Sunday Market, Treasure Island 12-18 min); Boca Ciega Bay water activities (kayaking, paddleboarding, boating, fishing); downtown St. Pete attractions table (The Dali Museum, MFA, Mahaffey Theater, St. Pete Pier, Sunken Gardens, Central Avenue); seasonal events calendar (Gulfport Art Walk, Corey Ave Market, SHINE Mural Festival, Sunscreen Film Festival); 5-Q&A FAQ.
-
-**Build:** Passed (Next.js build, all routes pre-rendered successfully)
-**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
-**Git commit:** `5746ba3` — pushed to `origin/main`
-
----
-
-## 2026-09-14 (Batch 61 — Siesta Key things-to-do x1 + Tierra Verde FL x9)
-
-**Pages improved: 10**
-
-### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, 18-link internal grid, comparison tables, Barrett Henry bio)
-
-1. **things-to-do-siesta-key-fl** — Expanded 5,225 to 36,569 chars. Completes the Siesta Key cluster started in Batch 60. Added: Siesta Beach quartz sand detail (99% quartz, TripAdvisor #1 rated, Dr. Beach citation); Siesta Key Village dining and nightlife guide; drum circle history and logistics; water activities table (8 types including parasailing, kayaking, snorkeling, fishing); fishing species (snook, redfish, tarpon, cobia, mangrove snapper); snorkeling at Crescent Beach; 8-destination Sarasota attractions table (Mote Marine, Ringling Museum, Van Wezel, Selby Botanical, St. Armands Circle, Ed Smith Stadium, Sarasota Ballet, Siesta Key Farmers Market); 6-event seasonal calendar (Crystal Classic, Siesta Fiesta, Brew Fest, drum circle, Sarasota Film and Music festivals); parking and logistics reality; 5-Q&A FAQ.
-
-2. **tierra-verde-fl-homes-for-sale-guide** — Expanded 5,241 to 29,336 chars. Added: Island location context (33715, Pinellas Bayway toll, Fort De Soto adjacency); 6-tier price table ($400K-$3M+ by property type); what drives price differences (canal width, lot size, dock capacity); 5-community comparison table (Tierra Verde vs. St. Pete Beach/Pass-a-Grille/Gulfport/South St. Pete); Fort De Soto County Park detail (1,136 acres, 7-mile trail, beaches, camping); flood zone and insurance reality ($12K-$20K/yr combined for typical waterfront home); 4-step buyer process (pre-approval, elevation certificate, dock inspection, HOA/CDD verification); 5-Q&A FAQ.
-
-3. **tierra-verde-fl-waterfront-homes** — Expanded 5,241 to 28,392 chars. Added: 4-tier waterfront property table (canal-front entry to Gulf-adjacent with price, zone, insurance); canal system explainer (width ranges, depth, draft limitations); Gulf access routing (Tampa Bay to Mullet Key Channel to Gulf); seawall inspection guide ($300-$600 inspection cost, $500-$900/LF replacement); dock permit requirements (FDEP, Army Corps, Pinellas County); boatlift capacity guide; 4-scenario flood insurance cost table; boating lifestyle summary; 5-Q&A FAQ.
-
-4. **tierra-verde-fl-flood-zones** — Expanded 5,241 to 27,709 chars. Added: Zone AE/VE/AH/X definitions table; 3-step flood zone lookup guide (FEMA MSC portal, elevation certificate request, formal insurance quote); NFIP vs. private flood insurance comparison table (7 factors); Pinellas County CRS discount explanation; Risk Rating 2.0 methodology note; pre-FIRM vs. post-FIRM building distinction; buyer cost modeling discussion; 5-Q&A FAQ.
-
-5. **tierra-verde-fl-cost-of-living** — Expanded 5,241 to 28,627 chars. Added: Monthly cost table by property type ($500K-$1.5M); homeowners insurance by property type ($4K-$18K/yr); 5-community insurance comparison table (Tierra Verde vs. St. Pete Beach/Gulfport/South St. Pete/non-waterfront TV); property tax example ($700K home with homestead = ~$12,875/yr); Pinellas Bayway toll cost ($50-$100/mo for active commuters); no on-island grocery reality; Duke Energy electric cost ranges; 5-Q&A FAQ.
-
-6. **tierra-verde-fl-investment-property** — Expanded 5,241 to 27,849 chars. Added: 4-type investment table (non-waterfront to bay-front with purchase price, LTR rent, STR revenue, cap rate); annual operating cost table ($51K-$76K/yr for $700K canal-front); STR regulatory framework (DBPR, Pinellas TDT at 6%, SB 714 context); ViVi Property Management reference with link to /property-management/; LTR vs. STR strategy analysis; tenant/guest profile; 5-Q&A FAQ.
-
-7. **tierra-verde-fl-new-construction** — Expanded 5,241 to 27,710 chars. Added: Why new construction is rare (island built out in 1960s-1980s); teardown-rebuild 3-step process (finding teardown, demolition+abatement costs, Zone AE construction requirements); custom build cost table ($18K-$45K demo to $350-$500+/sqft luxury); dock/seawall rebuild costs if needed; 5-community new construction alternatives table (St. Pete Beach infill to Wesley Chapel with distances and builder names); honest buyer guidance; 5-Q&A FAQ.
-
-8. **tierra-verde-fl-property-taxes** — Expanded 5,241 to 26,560 chars. Added: Pinellas County millage breakdown table (7 components, ~18-22 mills total); first and second homestead exemption mechanics; sample tax calculation ($700K home with homestead = ~$12,875/yr); Save Our Homes 3% cap explanation; portability walkthrough; how to look up taxes at pcpao.gov and taxcollect.com; investment property vs. primary residence tax comparison; 5-Q&A FAQ.
-
-9. **best-neighborhoods-tierra-verde-fl** — Expanded 5,241 to 27,041 chars. Added: Island organization overview (no formal subdivisions; location-type framework); canal-front street characteristics table (main basin to back canals with width, vessel capacity, price range); wide vs. narrow canal premium (~$100K-$200K); bay-front property profile (rare, $900K-$2.5M+, open water exposure); interior non-waterfront streets ($400K-$700K); Bay Vista Park condo overview with SB 4D compliance note; buyer profile matching table (6 profiles); 5-Q&A FAQ.
-
-10. **moving-to-tierra-verde-fl** — Expanded 5,241 to 31,709 chars. Added: Location and character description; 7-destination commute matrix; car-essential context (no PSTA transit); boating as secondary transportation; school assignments table (Gulfport/Bay Point K-8, Bay Point Middle, Lakewood HS with pcsb.org verification); utilities breakdown (Duke Energy, Pinellas County water/sewer, Spectrum/Frontier, no natural gas); 4-scenario insurance cost table ($5.5K-$30K/yr combined); healthcare access (Bayfront Health, St. Anthony's, Johns Hopkins All Children's, Bay Pines VA); who Tierra Verde suits vs. who it doesn't; 5-Q&A FAQ.
-
-**Build:** Passed (Next.js build, all routes pre-rendered successfully)
-**Files changed:** `src/data/posts-export.json`, `package-lock.json`, `AUDIT-LOG.md`
-**Git commit:** `87a7591` — pushed to `origin/main`

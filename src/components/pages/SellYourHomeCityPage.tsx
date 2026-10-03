@@ -237,7 +237,7 @@ export default async function SellYourHomeCityPage({
                   Relentless Negotiation
                 </h3>
                 <p className="font-body text-muted text-sm">
-                  Barrett&apos;s 23+ years of real estate experience mean he
+                  Barrett&apos;s 24+ years of real estate experience mean he
                   knows how to handle multiple offers, navigate inspections, and
                   protect your bottom line through closing.
                 </p>
@@ -316,7 +316,7 @@ export default async function SellYourHomeCityPage({
           </h2>
           <p className="font-body text-muted mb-4">
             Professional photography, strategic pricing, MLS syndication to Zillow, Realtor.com, and Redfin,
-            targeted social media marketing, and aggressive negotiation — Barrett&apos;s 23+ years of real estate
+            targeted social media marketing, and aggressive negotiation — Barrett&apos;s 24+ years of real estate
             experience means your {cityName} home gets maximum exposure and top dollar.
           </p>
           <a href={`tel:${agent.phone.replace(/[^\d]/g, "")}`} className="text-accent font-bold hover:underline">

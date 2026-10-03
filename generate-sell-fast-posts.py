@@ -551,7 +551,7 @@ def build_content(city_slug, data):
 
 <h2 style="font-size:24px;font-weight:700;color:#0f172a;margin-top:48px;margin-bottom:16px;" id="what-barrett-does-differently">What Barrett Henry Does Differently</h2>
 
-<p style="font-size:18px;line-height:1.8;color:#374151;">Barrett Henry is a Broker Associate with REMAX Collective and brings 23+ years of real estate experience to every transaction. That experience means fewer surprises, better negotiations, and a smoother path from list to close.</p>
+<p style="font-size:18px;line-height:1.8;color:#374151;">Barrett Henry is a Broker Associate with REMAX Collective and brings 24+ years of real estate experience to every transaction. That experience means fewer surprises, better negotiations, and a smoother path from list to close.</p>
 
 <p style="font-size:18px;line-height:1.8;color:#374151;">Here's what working with Barrett looks like for {city} sellers:</p>
 

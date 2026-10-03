@@ -15,14 +15,14 @@ import { testimonials } from "@/data/testimonials";
 export const metadata: Metadata = {
   title: "About Barrett Henry | Broker Associate | REMAX Collective",
   description:
-    "Barrett Henry — Broker Associate at REMAX Collective. 23+ years serving Tampa Bay buyers, sellers, and investors. Call (813) 733-7907.",
+    "Barrett Henry, licensed Broker Associate with REMAX Collective and lead of The NOW Team. 24+ years of real estate experience. Call (813) 733-7907.",
   alternates: {
     canonical: "/about/",
   },
   openGraph: {
     title: "About Barrett Henry | Broker Associate | REMAX Collective",
     description:
-      "23+ years of real estate experience. Broker Associate with REMAX Collective serving Tampa Bay.",
+      "24+ years of real estate experience. Broker Associate with REMAX Collective serving Tampa Bay.",
     type: "website",
   },
 };
@@ -33,7 +33,7 @@ const jsonLd = {
   "@type": "LocalBusiness",
   name: "Barrett Henry, REALTOR®",
   description:
-    "Licensed real estate Broker Associate with REMAX Collective serving Tampa Bay. 23+ years of real estate experience.",
+    "Licensed real estate Broker Associate with REMAX Collective serving Tampa Bay. 24+ years of real estate experience.",
   telephone: "(813) 733-7907",
   email: "barrett@nowtb.com",
   url: "https://nowtb.com",
@@ -70,7 +70,7 @@ const personLd = {
   "@type": "Person",
   name: "Barrett Henry",
   jobTitle: "Broker Associate",
-  description: "Licensed Florida REALTOR and Broker Associate with 23+ years of real estate experience.",
+  description: "Licensed Florida REALTOR and Broker Associate with 24+ years of real estate experience.",
   url: "https://nowtb.com/about",
   image: "https://nowtb.com/images/barrett-henry.jpg",
   telephone: "(813) 733-7907",
@@ -155,7 +155,7 @@ export default function AboutPage() {
             <div className="aspect-[3/4] bg-[#e8e4df] overflow-hidden">
               <Image
                 src="/images/barrett-headshot.png"
-                alt="Barrett Henry, REALTOR® and Broker Associate at REMAX Collective — Tampa Bay real estate expert with 23+ years experience"
+                alt="Barrett Henry, REALTOR® and Broker Associate at REMAX Collective — Tampa Bay real estate expert with 24+ years of real estate experience"
                 width={378}
                 height={373}
                 className="w-full h-full object-cover object-top"
@@ -172,7 +172,7 @@ export default function AboutPage() {
               <div className="section-divider !mx-0 !ml-0" />
               <div className="font-body text-muted font-light space-y-4 leading-relaxed">
                 <p>
-                  I&apos;ve been in real estate since 2003 — 23+ years and
+                  I&apos;ve been in real estate since 2003 — 24+ years and
                   counting. I&apos;m a licensed Broker Associate with REMAX
                   Collective and the team lead of The NOW Team. My focus is
                   simple: get my clients the best possible outcome, whether

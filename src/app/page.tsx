@@ -27,14 +27,14 @@ export const revalidate = 3600; // 1 hour, matches the hourly refresh-listings c
 export const metadata: Metadata = {
   title: "Tampa Bay Homes for Sale | Barrett Henry, REALTOR®",
   description:
-    "Search Tampa Bay homes for sale with Barrett Henry, Broker Associate at REMAX Collective. 23+ years of experience. Call (813) 733-7907.",
+    "Search Tampa Bay homes for sale with Barrett Henry, Broker Associate at REMAX Collective. 24+ years of real estate experience. Call (813) 733-7907.",
   alternates: {
     canonical: "https://nowtb.com/",
   },
   openGraph: {
     title: "Tampa Bay Homes for Sale | Barrett Henry, REALTOR®",
     description:
-      "Search Tampa Bay homes for sale with Barrett Henry, Broker Associate at REMAX Collective. 23+ years of real estate experience.",
+      "Search Tampa Bay homes for sale with Barrett Henry, Broker Associate at REMAX Collective. 24+ years of real estate experience.",
     url: "https://nowtb.com/",
     type: "website",
     images: [{ url: "/og-default.png", width: 1200, height: 630 }],
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 const VALUE_PROPS = [
   {
     icon: Shield,
-    title: "23+ Years Closing Deals",
+    title: "24+ Years Closing Deals",
     description:
       "I've been in this business since 2003. That means I've seen every market cycle, every curveball, and every creative solution. Experience isn't a bullet point — it's your safety net.",
   },
@@ -172,7 +172,7 @@ export default async function HomePage() {
       <HeroSection
         title="Tampa Bay Homes for Sale"
         label="BARRETT HENRY | THE NOW TEAM"
-        subtitle="Broker Associate with 23+ years in the business. I help buyers, sellers, and investors across Tampa Bay get the deal done."
+        subtitle="Broker Associate with 24+ years in the business. I help buyers, sellers, and investors across Tampa Bay get the deal done."
         bgImage="/images/hero-desktop.jpg"
         bgVideo="/images/tampa-aerial-bg.mp4"
       >

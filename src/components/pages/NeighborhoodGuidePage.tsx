@@ -272,7 +272,7 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
                         Need help finding the right neighborhood?
                       </p>
                       <p className="font-body text-white/70 text-sm">
-                        Barrett Henry, REALTOR® — 23+ years of real estate experience.
+                        Barrett Henry, REALTOR® — 24+ years of real estate experience.
                         Local knowledge, no pressure.
                       </p>
                     </div>
@@ -313,7 +313,7 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
               Ready to explore {city.name} neighborhoods in person?
             </h2>
             <p className="font-body text-white/70 text-sm">
-              Barrett Henry, REALTOR® at REMAX Collective — 23+ years of real estate experience
+              Barrett Henry, REALTOR® at REMAX Collective — 24+ years of real estate experience
             </p>
           </div>
           <div className="flex gap-3 flex-shrink-0">

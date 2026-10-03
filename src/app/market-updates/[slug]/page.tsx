@@ -203,7 +203,7 @@ export default async function MarketUpdatePage({
                   Questions About {city}?
                 </h3>
                 <p className="font-body text-muted text-xs mb-3">
-                  Barrett Henry has 23+ years of real estate experience. Call or text anytime.
+                  Barrett Henry has 24+ years of real estate experience. Call or text anytime.
                 </p>
                 <a
                   href={`tel:${agent.phone.replace(/[^\d]/g, "")}`}

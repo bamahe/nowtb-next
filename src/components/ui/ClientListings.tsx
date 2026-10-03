@@ -288,7 +288,7 @@ export default function ClientListings({
             <p className="font-heading text-xl font-bold text-white leading-snug">
               {areaName ? `Looking for homes in ${areaName}?` : "Looking for the right home?"}
             </p>
-            <p className="font-body text-white/70 text-sm mt-1">Barrett Henry — 23+ years of experience across Tampa Bay.</p>
+            <p className="font-body text-white/70 text-sm mt-1">Barrett Henry — 24+ years of real estate experience.</p>
           </div>
           <div className="flex gap-3 flex-shrink-0">
             <a href="tel:+18137337907" className="inline-block rounded-lg bg-white text-primary px-6 py-3 text-sm font-semibold">

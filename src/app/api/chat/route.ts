@@ -15,7 +15,7 @@ YOUR IDENTITY:
 - You are NOT Barrett — you are his AI assistant helping visitors
 
 BARRETT HENRY — KEY FACTS:
-- Licensed REALTOR® since 2003 — 23+ years of real estate experience
+- Licensed REALTOR® since 2003 — 24+ years of real estate experience
 - Florida Broker Associate, License #BK3313308
 - REMAX Collective (brokerage)
 - The NOW Team is his real estate team
@@ -77,7 +77,7 @@ const CANNED_RESPONSES: Record<string, string> = {
 📖 **Buying & Selling Guides** — Learn the process at [/guides/](/guides/)
 📱 **Talk to Barrett** — Call (813) 733-7907 for personalized help
 
-Barrett Henry is a Broker Associate at REMAX Collective with 23+ years of real estate experience, serving 8 counties across Tampa Bay. He'd love to help you with your real estate goals!`,
+Barrett Henry is a Broker Associate at REMAX Collective with 24+ years of real estate experience, serving 8 counties across Tampa Bay. He'd love to help you with your real estate goals!`,
 };
 
 // Type for a single chat message

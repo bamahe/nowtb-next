@@ -41,7 +41,7 @@ export default async function PriceReducedPage() {
       <section className="bg-[#003da5] py-16 px-4 text-center text-white">
         <div className="mx-auto max-w-2xl">
           <h2 className="text-2xl font-heading font-bold mb-4">Get Price Drop Alerts</h2>
-          <p className="text-blue-100 mb-6 font-body">Barrett can set up automatic notifications when homes drop in price in your target area. 23+ years of real estate experience.</p>
+          <p className="text-blue-100 mb-6 font-body">Barrett can set up automatic notifications when homes drop in price in your target area. 24+ years of real estate experience.</p>
           <a href="tel:8137337907" className="inline-block bg-white text-[#003da5] font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors">(813) 733-7907</a>
         </div>
       </section>

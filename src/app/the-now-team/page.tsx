@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "The NOW Team | Tampa Bay Real Estate | REMAX Collective",
     description:
-      "Barrett Henry's real estate team at REMAX Collective serving Tampa Bay since 2015. 23+ years of real estate experience.",
+      "Barrett Henry's real estate team at REMAX Collective serving Tampa Bay since 2015. 24+ years of real estate experience.",
     type: "website",
   },
 };
@@ -172,7 +172,7 @@ export default function TheNowTeamPage() {
             <p>
               The NOW Team is Barrett Henry&apos;s real estate team at REMAX
               Collective, formed in 2015. Led by Barrett — a licensed Broker
-              Associate with 23+ years of real estate experience — the team
+              Associate with 24+ years of real estate experience — the team
               serves buyers, sellers, and investors across 8 counties in the
               Tampa Bay region.
             </p>
@@ -309,7 +309,7 @@ export default function TheNowTeamPage() {
           <div className="section-divider" />
           <p className="font-body text-white/70 font-light text-base md:text-lg leading-relaxed mb-12">
             Barrett Henry is a licensed Florida Broker Associate and the driving
-            force behind The NOW Team. With 23+ years of real estate experience,
+            force behind The NOW Team. With 24+ years of real estate experience,
             Barrett holds three professional designations and was inducted into the
             REMAX Hall of Fame in 2024.
           </p>

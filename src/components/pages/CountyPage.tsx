@@ -158,7 +158,7 @@ export default async function CountyPage({
               estate seekers.
             </p>
             <p>
-              Barrett Henry, Broker Associate at REMAX Collective, has 23+ years
+              Barrett Henry, Broker Associate at REMAX Collective, has 24+ years
               of real estate experience helping buyers and sellers navigate the{" "}
               {countyName} County market. Whether you&apos;re relocating, investing,
               or selling your current home, Barrett provides data-driven guidance
@@ -206,7 +206,7 @@ export default async function CountyPage({
               Buying or Selling in {countyName} County?
             </h2>
             <p className="font-body text-white/70 text-sm">
-              REALTOR&reg; &amp; Broker Associate — 23+ years of real estate experience
+              REALTOR&reg; &amp; Broker Associate — 24+ years of real estate experience
             </p>
           </div>
           <div className="flex gap-3 flex-shrink-0">

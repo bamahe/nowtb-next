@@ -204,7 +204,7 @@ export default async function GuidePage({
                     Need Personal Guidance?
                   </h3>
                   <p className="font-body text-muted text-xs mb-3 text-center">
-                    Barrett Henry has 23+ years of real estate experience. Call or
+                    Barrett Henry has 24+ years of real estate experience. Call or
                     text anytime.
                   </p>
                   <a
@@ -295,7 +295,7 @@ export default async function GuidePage({
                     Need Personal Guidance?
                   </h3>
                   <p className="font-body text-muted text-xs mb-3 text-center">
-                    Barrett Henry has 23+ years of real estate experience. Call or
+                    Barrett Henry has 24+ years of real estate experience. Call or
                     text anytime.
                   </p>
                   <a

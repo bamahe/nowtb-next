@@ -324,7 +324,7 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
                 Need help deciding between {sideA.toLowerCase()} and {sideB.toLowerCase()}?
               </p>
               <p className="font-body text-white/70 text-sm">
-                Barrett Henry, Broker Associate at REMAX Collective — 23+ years of real estate experience
+                Barrett Henry, Broker Associate at REMAX Collective — 24+ years of real estate experience
               </p>
             </div>
             <div className="flex gap-3">
@@ -599,12 +599,12 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
                   }
                 </p>
                 <p>
-                  The right choice depends on your budget, commute, school preferences, and lifestyle priorities. Barrett Henry has helped hundreds of buyers make this exact decision over 23+ years of real estate experience. Call <a href="tel:+18137337907" className="text-accent font-semibold">(813) 733-7907</a> for a personalized comparison.
+                  The right choice depends on your budget, commute, school preferences, and lifestyle priorities. Barrett Henry has helped hundreds of buyers make this exact decision over 24+ years of real estate experience. Call <a href="tel:+18137337907" className="text-accent font-semibold">(813) 733-7907</a> for a personalized comparison.
                 </p>
               </>
             ) : (
               <p>
-                Both options have their strengths. The best choice depends on your specific situation, goals, and timeline. Barrett Henry can walk you through the pros and cons based on 23+ years of real estate experience. Call <a href="tel:+18137337907" className="text-accent font-semibold">(813) 733-7907</a>.
+                Both options have their strengths. The best choice depends on your specific situation, goals, and timeline. Barrett Henry can walk you through the pros and cons based on 24+ years of real estate experience. Call <a href="tel:+18137337907" className="text-accent font-semibold">(813) 733-7907</a>.
               </p>
             )}
           </div>

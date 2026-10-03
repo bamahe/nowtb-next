@@ -346,7 +346,7 @@ export const BRANDON_NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescr
       <p>Commuters have easy access to SR-60, I-75, and the Selmon Expressway toward downtown Tampa. Everyday shopping, restaurants, and medical care run along the Bloomingdale Avenue and Lithia Pinecrest Road corridors, with HCA Florida Brandon Hospital as the closest major medical facility.</p>
 
       <h3>Why Work with Barrett Henry in Southoak</h3>
-      <p>I have spent 23+ years working every corner of the Bloomingdale area, and Southoak is exactly the kind of neighborhood where local knowledge matters. Acreage homes do not comp like tract homes. Lot size, conservation setbacks, septic tank age and drainfield condition, whether a lot has its own irrigation well, and any outbuildings all move the number, and pricing it wrong in either direction costs you money.</p>
+      <p>I have spent over a decade working every corner of the Bloomingdale area, and Southoak is exactly the kind of neighborhood where local knowledge matters. Acreage homes do not comp like tract homes. Lot size, conservation setbacks, septic tank age and drainfield condition, whether a lot has its own irrigation well, and any outbuildings all move the number, and pricing it wrong in either direction costs you money.</p>
       <p>As a Broker Associate with REMAX Collective, I bring a full-service approach to every Southoak transaction. Whether you are prepping a home to sell or settling into one you just bought, I coordinate every detail from pricing through closing.</p>
       <p><strong>MOVE WITH CONFIDENCE. Straight talk. Smart Strategy.</strong></p>
       <p>Phone: <a href="tel:+18137337907">(813) 733-7907</a> | Email: <a href="mailto:barrett@nowtb.com">barrett@nowtb.com</a></p>

@@ -13,7 +13,7 @@ import ContactForm from "@/components/ui/ContactForm";
 export const metadata: Metadata = {
   title: "Tampa Bay Home Builders | New Construction | Barrett Henry",
   description:
-    "Top home builders in Tampa Bay — Lennar, DR Horton, Pulte, Taylor Morrison, Toll Brothers, and more. Free buyer representation from a Broker with 23+ years of experience. Call (813) 733-7907.",
+    "Top home builders in Tampa Bay — Lennar, DR Horton, Pulte, Taylor Morrison, Toll Brothers, and more. Free buyer representation from a Broker with 24+ years of real estate experience. Call (813) 733-7907.",
   alternates: {
     canonical: "/builders/",
   },
@@ -200,7 +200,7 @@ export default function BuildersPage() {
       <HeroSection
         title="New Construction Homes"
         label="TAMPA BAY HOME BUILDERS"
-        subtitle="Browse communities from the area's top builders — and get a Broker with 23+ years of experience representing you at no cost."
+        subtitle="Browse communities from the area's top builders — and get a Broker with 24+ years of real estate experience representing you at no cost."
       >
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
           <Link href="/new-construction-homes-tampa-bay/" className="btn-primary">
@@ -241,7 +241,7 @@ export default function BuildersPage() {
                 kept by the builder's brokerage.
               </p>
               <p>
-                With 23+ years of real estate experience and hundreds of new construction
+                With 24+ years of real estate experience and hundreds of new construction
                 transactions, Barrett knows which builders deliver on their promises, which
                 upgrades hold resale value, and which contract clauses need pushback. That
                 knowledge costs you nothing and can save you tens of thousands of dollars.

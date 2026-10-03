@@ -81,7 +81,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Strong rental demand for single-story Valrico homes in this price range. If you are buying as an investment, expect $1,900-$2,200/mo for a 3-bedroom. <a href="https://valricopropertymgmt.com/neighborhoods/abbey-grove" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -97,7 +97,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Schools are a big draw. Bloomingdale High School is right in the community, and elementary-age kids attend Bloomingdale Elementary or Cimino Elementary depending on where in the neighborhood you are. Randall Middle School serves the area.</p>
       <p>Location-wise, Bloomingdale sits right along Bloomingdale Avenue with quick access to the Selmon Expressway for commuters heading into Tampa. Shopping along Bell Shoals Road and Bloomingdale Avenue is within a few minutes of most homes in the community.</p>
       <p>Expect HOA dues in most sections — they're typically reasonable and cover the common areas and community amenities. Homes here tend to price below newer construction in the area, which makes Bloomingdale popular with first-time buyers and families looking for more square footage per dollar.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/river-hills-country-club/">River Hills</a> and <a href="/buckhorn-preserve/">Buckhorn Preserve</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/river-hills-country-club/">River Hills</a> and <a href="/buckhorn-preserve/">Buckhorn Preserve</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -164,7 +164,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Leasing:</strong> The HOA has leasing requirements. If you are buying as an investment, review the rules with the <a href="https://savannahlandings.com/" target="_blank" rel="noopener">HOA</a> or <a href="/about/">contact Barrett</a> for help navigating the process.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and drives through this area regularly. If you are considering Savannah Landings, whether buying, selling, or renting, call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and drives through this area regularly. If you are considering Savannah Landings, whether buying, selling, or renting, call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -178,7 +178,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Golf club membership is optional — you can live in River Hills without joining the club. The course itself is well-maintained and the clubhouse hosts events and dining. There's also a community pool and tennis courts.</p>
       <p>School zones here typically fall under Durant High School, which is just a few minutes east on Durant Road. For families, the combination of good schools, a gated community, and the extra space makes River Hills one of the more sought-after Valrico addresses.</p>
       <p>One thing to know: HOA fees here are higher than average because of the gated entry and community amenities. And if you're on the golf course, you'll want to factor in potential golf ball damage and the restrictions that come with course-adjacent lots.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/diamond-hill/">Diamond Hill</a> and <a href="/eagles-landing/">Eagles Landing</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/diamond-hill/">Diamond Hill</a> and <a href="/eagles-landing/">Eagles Landing</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -192,7 +192,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The homes themselves vary quite a bit. You'll find original 1970s block construction alongside fully renovated properties and some newer infill builds. Prices reflect that range — a fixer-upper on a big lot will be priced very differently from a recently updated home next door.</p>
       <p>Location is solid. Diamond Hill is near Durant Road with easy access to both Valrico's main corridors and the more rural areas to the east toward Lithia and Plant City. Durant High School is nearby, and Buckhorn Elementary serves part of the area.</p>
       <p>If you're considering Diamond Hill, bring your inspector and look closely at the older homes — roof age, plumbing type (some older homes have polybutylene), and septic vs. sewer connections are all things worth checking early.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/river-hills-country-club/">River Hills Country Club</a> and <a href="/durant-estates/">Durant Estates</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/river-hills-country-club/">River Hills Country Club</a> and <a href="/durant-estates/">Durant Estates</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -207,7 +207,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The subdivision has a community pool and playground, maintained through the HOA. Fees are in the typical range for the area. Homes are mostly 3-4 bedrooms with two-car garages, ranging from about 1,600 to 2,800 square feet.</p>
       <p>The big draw is school zoning — Buckhorn Elementary is literally next door, which matters if you've got young kids. The middle and high school zones are also well-regarded.</p>
       <p>Access is straightforward. You're close to both <a href="/bloomingdale-community/">Bloomingdale</a> Avenue and Lithia-Pinecrest Road, so getting to the Selmon Expressway or I-75 doesn't take long. Shopping and restaurants along SR-60 are about 10 minutes away.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/buckhorn-springs/">Buckhorn Springs</a> and <a href="/copper-ridge/">Copper Ridge</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/buckhorn-springs/">Buckhorn Springs</a> and <a href="/copper-ridge/">Copper Ridge</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -220,7 +220,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Homes are primarily 3 and 4 bedrooms, most with two-car garages and screened-in lanais. Square footage ranges from about 1,500 to 2,500. The streets are relatively quiet with cul-de-sacs throughout, which families with younger kids tend to appreciate.</p>
       <p>School zoning is one of the main reasons people look at Buckhorn Springs — Buckhorn Elementary is close by and consistently rated well. Middle and high school assignments round out a solid school path.</p>
       <p>The neighborhood is positioned well for commuters. Lithia-Pinecrest Road and <a href="/bloomingdale-community/">Bloomingdale</a> Avenue are both accessible within a few minutes, connecting to the Selmon Expressway and I-75.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/buckhorn-preserve/">Buckhorn Preserve</a> and <a href="/heritage-crest/">Heritage Crest</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/buckhorn-preserve/">Buckhorn Preserve</a> and <a href="/heritage-crest/">Heritage Crest</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -239,7 +239,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Homes are a mix of ages — some from the 1990s, others newer. Many are larger single-family homes with 4+ bedrooms and generous floor plans. You'll see properties with workshops, RV parking, and room for a pool that would be hard to find in the more compact western Valrico neighborhoods.</p>
       <p>The name gives away the school connection — Durant High School is nearby, and the area is well-served by Hillsborough County schools. For families who want the school zoning without the density of a typical subdivision, this area checks a lot of boxes.</p>
       <p>One trade-off: you're a bit farther from the main shopping corridors along SR-60 and <a href="/bloomingdale-community/">Bloomingdale</a> Avenue. Most errands are a 10-15 minute drive. If you work in Tampa, the commute will be on the longer side of what Valrico offers.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/diamond-hill/">Diamond Hill</a> and <a href="/river-hills-country-club/">River Hills Country Club</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/diamond-hill/">Diamond Hill</a> and <a href="/river-hills-country-club/">River Hills Country Club</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -254,7 +254,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Homes are mostly 3 to 5 bedrooms, ranging from about 1,800 to 3,200 square feet. Floor plans tend to be open-concept with the modern touches buyers expect — granite or quartz counters, tile throughout the main living areas, and covered lanais.</p>
       <p>The gated entry and community pool are maintained through the HOA, and fees reflect the amenities — expect them to be higher than older, non-gated communities in the area. CDD fees may also apply, so ask about the total carrying cost before making an offer.</p>
       <p>Location puts you close to the <a href="/bloomingdale-community/">Bloomingdale</a>/Lithia-Pinecrest corridor with reasonable access to the Selmon and I-75 for commuters. Buckhorn Elementary and Durant High School zones typically serve this area.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/buckhorn-preserve/">Buckhorn Preserve</a> and <a href="/eagles-landing/">Eagles Landing</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/buckhorn-preserve/">Buckhorn Preserve</a> and <a href="/eagles-landing/">Eagles Landing</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -269,7 +269,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Homes are predominantly 3-4 bedrooms, two-car garage, with screened lanais — the standard Valrico suburban setup. Square footage is typically 1,600 to 2,600. Construction is concrete block with barrel tile or shingle roofs.</p>
       <p>The streets are wide with sidewalks on both sides, and there are enough cul-de-sacs to keep through-traffic minimal. It's the kind of neighborhood where kids ride bikes and play in front yards — which is exactly why it appeals to the families who buy here.</p>
       <p>School assignments are strong, and the location gives you access to both the <a href="/bloomingdale-community/">Bloomingdale</a> Avenue shopping corridor and the quieter eastern Valrico roads. Commute times into Tampa are typical for the area — 25 to 40 minutes depending on the route and time of day.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/copper-ridge/">Copper Ridge</a> and <a href="/heritage-crest/">Heritage Crest</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/copper-ridge/">Copper Ridge</a> and <a href="/heritage-crest/">Heritage Crest</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -283,7 +283,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p><a href="/valrico/">Valrico</a> Village is a smaller, established neighborhood with homes built primarily in the 1980s and 1990s. It's not a large subdivision — the tight-knit size is part of its appeal for buyers who prefer a quieter community without hundreds of homes and a complicated HOA.</p>
       <p>Homes are mostly 3-bedroom ranch-style with some two-story layouts mixed in. Square footage runs from about 1,200 to 2,000. Lots are reasonably sized with mature landscaping throughout.</p>
       <p>The location works well — close enough to the main Valrico corridors for convenience, but tucked away enough to feel removed from the busier roads. It's a straightforward neighborhood where the homes do the talking.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/valrico-groves/">Valrico Groves</a> and <a href="/valrico-oaks/">Valrico Oaks</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/valrico-groves/">Valrico Groves</a> and <a href="/valrico-oaks/">Valrico Oaks</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -295,7 +295,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p><a href="/valrico/">Valrico</a> Groves lives up to its name — the neighborhood has mature citrus and oak trees throughout, giving it a shaded, established character. Homes here were built across several decades, so you'll see a range from 1970s-era block construction to renovated or rebuilt properties.</p>
       <p>Lot sizes tend to be generous by Valrico standards, and many homeowners have taken advantage of the extra space for pools, detached garages, or garden areas. Some lots back up to small natural areas or drainage retention ponds.</p>
       <p>There's minimal HOA presence in most sections, which appeals to buyers who don't want to deal with architectural review committees. The neighborhood has a low-key feel — it's not flashy, but for buyers who value space and established landscaping over new construction amenities, it's worth a look.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/valrico-village/">Valrico Village</a> and <a href="/valrico-hills/">Valrico Hills</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/valrico-village/">Valrico Village</a> and <a href="/valrico-hills/">Valrico Hills</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -307,7 +307,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p><a href="/valrico/">Valrico</a> Oaks is a residential neighborhood with — you guessed it — a lot of oak trees. The canopy coverage gives the streets a shaded, comfortable feel, especially during Tampa Bay's summer months.</p>
       <p>Homes are mostly from the 1990s and early 2000s, with a typical layout of 3-4 bedrooms, two-car garages, and screened lanais or patios. The neighborhood has a community feel without being oversized — it's large enough to have amenities but small enough that neighbors actually recognize each other.</p>
       <p>HOA fees are moderate, covering common areas and basic maintenance. School zoning is solid for the area, and the location provides easy access to both SR-60 and <a href="/bloomingdale-community/">Bloomingdale</a> Avenue for shopping and commuting.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/valrico-village/">Valrico Village</a> and <a href="/brentwood-hills/">Brentwood Hills</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/valrico-village/">Valrico Village</a> and <a href="/brentwood-hills/">Brentwood Hills</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -322,7 +322,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Homes range from about 1,800 to 3,000 square feet, with 3-5 bedroom floor plans. Most have two-car garages, covered lanais, and the open-concept layouts that have become standard in Florida construction.</p>
       <p>There's a community pool and common areas maintained by the HOA. Fees are in line with what you'd expect for a community of this size and age. The streets are well-lit with good sidewalk coverage throughout.</p>
       <p>Access to <a href="/bloomingdale-community/">Bloomingdale</a> Avenue and Lithia-Pinecrest Road is convenient, making errands and commuting straightforward. It's a solid, no-surprises kind of neighborhood — well-built homes in good condition with the amenities families expect.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/eagles-landing/">Eagles Landing</a> and <a href="/arbor-reserve/">Arbor Reserve</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/eagles-landing/">Eagles Landing</a> and <a href="/arbor-reserve/">Arbor Reserve</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -337,7 +337,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Homes were built across several phases, generally from the late 1990s through the 2000s. You'll find a range of sizes from around 1,500 to 2,800 square feet, mostly 3-4 bedrooms with two-car garages. The neighborhood is broken into a few sub-sections (Bent Tree Estates, Bent Tree South) that share the community amenities.</p>
       <p>School zoning has historically been one of the draws — Newsome High School, in particular, has a strong reputation. Families planning for the long term tend to pay attention to high school zones, and Bent Tree's zoning has held up well.</p>
       <p>The neighborhood is located along the Lithia-Pinecrest corridor, giving you access to both the quieter eastern reaches of Valrico and the shopping and dining closer to Brandon.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/valrico-forest/">Valrico Forest</a> and <a href="/heritage-crest/">Heritage Crest</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/valrico-forest/">Valrico Forest</a> and <a href="/heritage-crest/">Heritage Crest</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -353,7 +353,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Campos is a smaller neighborhood in <a href="/valrico/">Valrico</a> that doesn't get a lot of attention — which is part of what some buyers like about it. It's not a massive subdivision with a branded entrance and amenity center. It's just a well-situated residential neighborhood with homes on decent-sized lots.</p>
       <p>Homes here are a mix of ages and styles, generally from the 1980s through 2000s. Lot sizes tend to be larger than what you'll find in the cookie-cutter developments, and there's no CDD (Community Development District) fee layered on top of property taxes.</p>
       <p>The location near <a href="/bloomingdale-community/">Bloomingdale</a> Avenue is genuinely convenient — grocery stores, restaurants, and the Selmon Expressway entrance are all close. If you work in Tampa and want a short commute by Valrico standards, Campos delivers without the price premium of gated communities.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/brandon-lakes/">Brandon Lakes</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/brandon-lakes/">Brandon Lakes</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -368,7 +368,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The neighborhood was built primarily in the 1980s and 1990s. Homes range from about 1,200 to 2,500 square feet, with a mix of ranch-style and two-story layouts. Many have been updated over the years, but you'll still find original-condition homes priced accordingly.</p>
       <p>Mature trees and established landscaping give Brandon Lakes a settled feel. The lake views and natural areas create buffer zones between sections of the neighborhood, so it doesn't feel as dense as some of the newer developments despite its relatively central location.</p>
       <p>Access to SR-60 and <a href="/bloomingdale-community/">Bloomingdale</a> Avenue is easy, and the Westfield Brandon mall area is a short drive north. Schools are in the Hillsborough County system with assignments varying by specific address.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/campos-valrico/">Campos</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/campos-valrico/">Campos</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -383,7 +383,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Construction is modern — impact-rated windows, higher-efficiency HVAC systems, open floor plans with islands and walk-in pantries. Homes are mostly 3-5 bedrooms, ranging from about 1,800 to 3,200 square feet.</p>
       <p>The community has a pool and common areas. HOA fees and CDD assessments both apply here, so make sure you're factoring in the full monthly carrying cost beyond just the mortgage payment. It's a common oversight, especially for first-time buyers.</p>
       <p>School zoning and location are typical for central Valrico — solid schools and reasonable access to the main commuter routes. The surrounding area has seen steady development, so amenities and services continue to improve.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/heritage-crest/">Heritage Crest</a> and <a href="/eagles-landing/">Eagles Landing</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/heritage-crest/">Heritage Crest</a> and <a href="/eagles-landing/">Eagles Landing</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -398,7 +398,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Homes here span from the 1960s through the 1990s. You'll find everything from modest 3-bedroom ranches to larger custom-built homes. The variety means there's a wide price range within the same neighborhood.</p>
       <p>No HOA is a significant draw for many buyers. You can park your truck, build a workshop, or let your yard grow a little wild without getting a letter from a review committee. For some buyers, that freedom is worth more than a community pool.</p>
       <p>The trade-off with older homes is always the same: budget for updates and inspections. Roofs, plumbing, electrical panels, and HVAC systems all have useful lifespans, and homes from the 1960s-70s may need attention in one or more of those areas. That said, a well-maintained Valrico Hills home on a big lot is hard to beat for the price.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/valrico-forest/">Valrico Forest</a> and <a href="/diamond-hill/">Diamond Hill</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/valrico-forest/">Valrico Forest</a> and <a href="/diamond-hill/">Diamond Hill</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -413,7 +413,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Homes were built mostly in the 1980s and 1990s. They're well-spaced, typically 3-4 bedrooms, and sit on lots that range from a quarter-acre to nearly an acre in some spots. The construction is mostly concrete block, which is standard and holds up well in Florida.</p>
       <p>The community is quiet and residential. There's no community pool or clubhouse — it's just a neighborhood of homes with natural surroundings. HOA presence is minimal, though some sections have basic covenants.</p>
       <p>Lithia-Pinecrest Road is the main access, connecting you south toward Lithia and FishHawk or north to the <a href="/bloomingdale-community/">Bloomingdale</a> area and beyond. It's not the most direct route into Tampa, but for people who work in Brandon, Riverview, or along the I-75 corridor, the commute is manageable.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/valrico-hills/">Valrico Hills</a> and <a href="/bent-tree/">Bent Tree</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/valrico-hills/">Valrico Hills</a> and <a href="/bent-tree/">Bent Tree</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -428,7 +428,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The golf course is the centerpiece, but the appeal goes beyond the fairways. Privacy, security, and the caliber of neighbors matter here as much as the home itself. You'll find architectural variety — Mediterranean, traditional Florida, and contemporary custom designs — but the common thread is quality construction and attention to detail.</p>
       <p>The buyer profile leans toward luxury buyers, retirees, and snowbirds who want a low-maintenance, high-amenity lifestyle. Many homes have private pools, three-car garages, and custom outdoor living spaces. Lot sizes give real breathing room compared to the typical Florida subdivision.</p>
       <p>If you're considering Cypress Run, budget beyond the list price — HOA fees reflecting the 24-hour gate staff and course maintenance are significant. Club membership options vary, so confirm what's included versus optional. For buyers in this price range, that's expected; what Cypress Run delivers in return is a hard combination to replicate elsewhere in Pinellas County.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/crescent-oaks/">Crescent Oaks</a> and <a href="/north-lake-estates/">North Lake Estates</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/crescent-oaks/">Crescent Oaks</a> and <a href="/north-lake-estates/">North Lake Estates</a>.</p>
       <p>Browse <a href="/tarpon-springs-homes-for-sale/">homes for sale in Tarpon Springs</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -441,7 +441,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The community draws a diverse mix — golf enthusiasts who want the course practically in their backyard, families attracted by the security and quiet streets, and snowbirds looking for a Florida base that feels like a real neighborhood rather than a condo complex. The combination of manned gates and an active social scene around the golf club creates a genuine sense of community.</p>
       <p>Homes are a mix of single-family executive homes and attached villas. The villas in particular attract low-maintenance buyers — landscaping and exterior upkeep handled by the association, so you can lock up and leave without the weekend project list. Single-family homes offer more space and privacy while still accessing the community amenities.</p>
       <p>Worth knowing: CDD fees can apply in sections of Crescent Oaks, so confirm the full carrying cost with your agent before making an offer. Golf club membership may be separate from community HOA fees. That said, for buyers who want gated security, a golf course, and a genuine <a href="/tarpon-springs/">Tarpon Springs</a> address at a price point below the ultra-luxury tier, Crescent Oaks checks most of the boxes.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/cypress-run/">Cypress Run</a> and <a href="/keystone-woodfield/">Keystone and Woodfield</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/cypress-run/">Cypress Run</a> and <a href="/keystone-woodfield/">Keystone and Woodfield</a>.</p>
       <p>Browse <a href="/tarpon-springs-homes-for-sale/">homes for sale in Tarpon Springs</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -454,7 +454,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The architecture here is genuinely different from the rest of Tampa Bay. You'll find bungalows, craftsman cottages, and Victorian-era homes with wide front porches, mature trees, and the kind of streetscape that actually invites walking. Spring Bayou itself — the natural spring-fed bayou that gives the neighborhood half its name — is stunning and just blocks from the historic district's main streets.</p>
       <p>Walkability is the thing buyers who land here can't stop talking about. The Sponge Docks, Greek restaurants, bakeries, and coffee shops are within easy walking distance. The Epiphany Celebration held every January around the bayou is one of the most unique community events in Florida — a cultural tradition that's been running for over a century.</p>
       <p>This is not a gated community, not a planned subdivision, and not a neighborhood with cookie-cutter construction. Buyers here tend to be people who specifically want character and don't need a community pool to feel at home. It attracts artists, retirees, remote workers, and buyers relocating from the Northeast who recognize walkable historic neighborhoods when they see them.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/downtown-tarpon-springs/">Downtown Tarpon Springs</a> and <a href="/tarpon-springs-waterfront/">Tarpon Springs Waterfront</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/downtown-tarpon-springs/">Downtown Tarpon Springs</a> and <a href="/tarpon-springs-waterfront/">Tarpon Springs Waterfront</a>.</p>
       <p>Browse <a href="/tarpon-springs-homes-for-sale/">homes for sale in Tarpon Springs</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -467,7 +467,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The district is listed on the National Register of Historic Places, which has real implications for buyers. Renovations on historic properties come with design review requirements, which can slow projects and limit certain exterior changes. On the flip side, the historic designation has helped preserve the character that drives the neighborhood's long-term appeal — there's no risk of the bungalow next door getting torn down for a three-story stucco box.</p>
       <p>First-time buyers and investors both find opportunity here. The condo and townhome inventory gives first-timers a way into homeownership without taking on a full historic renovation. Investors see the tourism draw, the short-term rental potential near the Sponge Docks area, and a price basis that still makes sense compared to Clearwater or Dunedin.</p>
       <p>Downtown Tarpon Springs has a genuine small-town Florida feel that draws buyers tired of the suburbs. The main street has independent restaurants, boutiques, and arts venues. The Pinellas Trail runs through the area. And the bayou is minutes away on foot. For buyers who want a neighborhood with real texture and history, this is one of the better options left in the county.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/greektown-spring-bayou/">Greektown and Spring Bayou</a> and <a href="/tarpon-springs-south/">Tarpon Springs South</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/greektown-spring-bayou/">Greektown and Spring Bayou</a> and <a href="/tarpon-springs-south/">Tarpon Springs South</a>.</p>
       <p>Browse <a href="/tarpon-springs-homes-for-sale/">homes for sale in Tarpon Springs</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -480,7 +480,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Construction in both neighborhoods is typical Florida suburban — concrete block, tile roofs, two-car garages, and open floor plans. Lot sizes are modest but functional, with room for a pool in most cases. The deed restrictions keep the community looking consistent, which matters for long-term property values and is exactly what buyers with young families tend to prioritize.</p>
       <p>The East Lake school zone is a significant draw. East Lake High School and the middle and elementary schools in the zone have strong reputations and draw families specifically looking for this part of Pinellas County. If school zoning is on your checklist, confirm your specific address before committing — zone boundaries can shift.</p>
       <p>Location puts you close to the Keystone Road corridor with easy access to East Lake Road and the communities stretching toward Palm Harbor and Oldsmar. You're not walking-distance to the Sponge Docks or historic downtown, but the drive is short. For families where school zone and newer construction matter more than walkability and historic character, Keystone and Woodfield consistently land on the shortlist.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/crescent-oaks/">Crescent Oaks</a> and <a href="/north-lake-estates/">North Lake Estates</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/crescent-oaks/">Crescent Oaks</a> and <a href="/north-lake-estates/">North Lake Estates</a>.</p>
       <p>Browse <a href="/tarpon-springs-homes-for-sale/">homes for sale in Tarpon Springs</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -493,7 +493,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>This is the neighborhood that attracts first-time buyers who've been priced out of tighter markets and investors looking for properties with renovation potential. The bones are solid — Florida block construction holds up well — and the lots are often larger than what you get in newer developments. The work is cosmetic in the best cases, though older homes always warrant a thorough inspection of roof, electrical, plumbing, and HVAC age.</p>
       <p>The trade-off is that you're getting an older neighborhood without the amenities of a newer community. No community pool, no gated entry, no landscaped common areas. What you get is ownership in a city with genuine character and a diverse, established population — not a master-planned suburb built from scratch in 2005.</p>
       <p>The location still connects you to everything that makes <a href="/tarpon-springs/">Tarpon Springs</a> worth considering: the Sponge Docks, Gulf access, the historic district, and the overall waterfront lifestyle are all within a short drive. For buyers who are willing to accept an older home in exchange for a lower price point and no HOA overhead, Tarpon Springs South delivers consistent value.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/downtown-tarpon-springs/">Downtown Tarpon Springs</a> and <a href="/greektown-spring-bayou/">Greektown and Spring Bayou</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/downtown-tarpon-springs/">Downtown Tarpon Springs</a> and <a href="/greektown-spring-bayou/">Greektown and Spring Bayou</a>.</p>
       <p>Browse <a href="/tarpon-springs-homes-for-sale/">homes for sale in Tarpon Springs</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -506,7 +506,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>New construction in this part of Pinellas County means impact-resistant windows, open-concept floor plans, energy-efficient systems, and the kind of kitchen and bath finishes that don't require a gut renovation before you move in. Builder warranties provide additional peace of mind for buyers who've been burned by older home surprises. Select sections include gated access, which adds a layer of security and privacy.</p>
       <p>The buyer profile trends toward people making a deliberate move — relocation buyers who want a specific home package, buyers downsizing from larger markets who want the Florida lifestyle without a fixer-upper, and buyers who've been watching the Tarpon Springs market and want in before the next cycle of appreciation.</p>
       <p>One thing to verify: CDD fees are common on new construction communities in Florida and can add meaningfully to your monthly cost. Ask your agent to get the full fee disclosure from the builder before you're deep in the process. With new construction, the sticker price and the true carrying cost are two different conversations, and North Lake Estates is no exception.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/cypress-run/">Cypress Run</a> and <a href="/keystone-woodfield/">Keystone and Woodfield</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/cypress-run/">Cypress Run</a> and <a href="/keystone-woodfield/">Keystone and Woodfield</a>.</p>
       <p>Browse <a href="/tarpon-springs-homes-for-sale/">homes for sale in Tarpon Springs</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -521,7 +521,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The community was developed by Newland Communities starting in the early 2000s and built out over roughly 15 years. Construction quality is solid across the board, with concrete block, barrel tile roofs, and hurricane-rated windows standard on most homes. Floor plans range from 1,800 to 4,500+ square feet, with 3 to 6 bedrooms depending on the section and lot type.</p>
       <p>Amenities are the draw beyond the homes themselves. The MiraBay Club includes a fitness center, resort pool, tennis and pickleball courts, playgrounds, walking trails, and a private bay beach with kayak and paddleboard access. The community also has a boat ramp for residents. HOA and CDD fees reflect the amenity package and run higher than non-gated Apollo Beach neighborhoods, so factor those into your monthly budget.</p>
       <p>Schools are zoned for Apollo Beach Elementary, Eisenhower Middle, and Lennard High School. The location puts you about 25 minutes from downtown Tampa via US-41 or I-75, and MacDill Air Force Base is accessible without the worst of Tampa traffic. For a deeper look at all the neighborhoods in the area, check out our guide to the <a href="/blog/best-neighborhoods-apollo-beach-fl/">best neighborhoods in Apollo Beach</a>.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Apollo Beach. Also worth exploring nearby: <a href="/waterset/">Waterset</a> and <a href="/symphony-isles/">Symphony Isles</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Apollo Beach. Also worth exploring nearby: <a href="/waterset/">Waterset</a> and <a href="/symphony-isles/">Symphony Isles</a>.</p>
       <p>Browse <a href="/apollo-beach-homes-for-sale/">homes for sale in Apollo Beach</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -534,7 +534,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The community is built around an active outdoor lifestyle. Waterset has miles of paved trails, a resort-style pool and splash pad, fitness center, sports courts, dog park, and community garden. The trail system connects different sections of the neighborhood and links to surrounding natural areas along the Alafia River corridor.</p>
       <p>Homes are modern Florida construction with open floor plans, impact windows, and energy-efficient systems. Most are 3 to 5 bedrooms in the 1,800 to 3,200 square foot range. Both HOA and CDD fees apply, which is standard for newer master-planned communities in Hillsborough County. The total monthly carrying cost beyond your mortgage can be meaningful, so get the exact numbers before writing an offer.</p>
       <p>School zoning includes Waterset Charter School (K-5), which is on-site, plus Eisenhower Middle and Lennard High School. The location provides reasonable commuter access via US-41 and I-75. For a full comparison of neighborhoods in the area, see our guide to the <a href="/blog/best-neighborhoods-apollo-beach-fl/">best neighborhoods in Apollo Beach</a>.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Apollo Beach. Also worth exploring nearby: <a href="/mirabay/">MiraBay</a> and <a href="/covington-park/">Covington Park</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Apollo Beach. Also worth exploring nearby: <a href="/mirabay/">MiraBay</a> and <a href="/covington-park/">Covington Park</a>.</p>
       <p>Browse <a href="/apollo-beach-homes-for-sale/">homes for sale in Apollo Beach</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -595,7 +595,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The inventory includes attached villas with small yards and traditional condominium units in multi-story buildings. Most were built in the 1980s through 2000s. Sizes range from 1-bedroom units around 700 square feet to 3-bedroom villas pushing 1,500 square feet. Construction and condition vary, so inspection matters here more than in newer communities.</p>
       <p>HOA or condo association fees apply to all of these communities and typically cover exterior maintenance, landscaping, and shared amenities like pools where they exist. Monthly fees can range from $200 to $500+ depending on the community and what's included. Factor this into your affordability calculation alongside the mortgage payment.</p>
       <p>For investors, the rental math can work well at this price point given Apollo Beach's proximity to Tampa and MacDill AFB. For owner-occupants, it's a way to live in Apollo Beach and access the waterfront lifestyle without the $400K+ entry point of the single-family neighborhoods. See how condos compare to the other options in our <a href="/blog/best-neighborhoods-apollo-beach-fl/">best neighborhoods in Apollo Beach</a> guide.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Apollo Beach. Also worth exploring nearby: <a href="/covington-park/">Covington Park</a> and <a href="/copperleaf/">Copperleaf</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Apollo Beach. Also worth exploring nearby: <a href="/covington-park/">Covington Park</a> and <a href="/copperleaf/">Copperleaf</a>.</p>
       <p>Browse <a href="/apollo-beach-homes-for-sale/">homes for sale in Apollo Beach</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -608,7 +608,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The community was built in the 2000s and 2010s with typical Florida construction: concrete block, tile roofs, two-car garages, and open floor plans. Homes are mostly 3 to 4 bedrooms in the 1,600 to 2,400 square foot range. The subdivision has a community pool, playground, and sidewalk-lined streets that make it family-friendly.</p>
       <p>HOA fees apply and cover the common areas and community amenities. There's no CDD in most sections, which gives Covington Park a cost advantage over some of the newer master-planned communities where both HOA and CDD stack up. Confirm the fee structure for the specific lot you're considering.</p>
       <p>School zoning follows the standard Apollo Beach assignments, and the location along US-41 provides the same commuter access as the rest of the area. For families and commuters who want a well-maintained neighborhood at a fair price, Covington Park consistently delivers. See how it compares in our <a href="/blog/best-neighborhoods-apollo-beach-fl/">best neighborhoods in Apollo Beach</a> guide.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Apollo Beach. Also worth exploring nearby: <a href="/copperleaf/">Copperleaf</a> and <a href="/waterset/">Waterset</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Apollo Beach. Also worth exploring nearby: <a href="/copperleaf/">Copperleaf</a> and <a href="/waterset/">Waterset</a>.</p>
       <p>Browse <a href="/apollo-beach-homes-for-sale/">homes for sale in Apollo Beach</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -645,7 +645,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The community includes a resort-style pool, splash park, fitness center, sports courts, and playground. Walking trails wind through the neighborhood and connect to common areas. The amenity package is strong for the price point and gives SouthShore Falls an edge over comparably priced communities that offer just a pool and a sign at the entrance.</p>
       <p>Homes are 3 to 5 bedrooms, mostly 1,700 to 3,000 square feet, with the open floor plans and concrete block construction standard for the era. Both HOA and CDD fees apply, which is typical for communities of this size and vintage in southern Hillsborough County. Get the exact annual amounts before you budget, as they can add $300 to $500+ per month on top of your mortgage.</p>
       <p>School zoning includes the standard Apollo Beach elementary and middle school assignments, with Lennard High School serving the area. The location along US-41 provides access to Tampa and I-75, with the growing SouthShore commercial corridor nearby for daily shopping and dining. For a side-by-side comparison, see our <a href="/blog/best-neighborhoods-apollo-beach-fl/">best neighborhoods in Apollo Beach</a> guide.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Apollo Beach. Also worth exploring nearby: <a href="/seabreeze/">Seabreeze</a> and <a href="/covington-park/">Covington Park</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Apollo Beach. Also worth exploring nearby: <a href="/seabreeze/">Seabreeze</a> and <a href="/covington-park/">Covington Park</a>.</p>
       <p>Browse <a href="/apollo-beach-homes-for-sale/">homes for sale in Apollo Beach</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -658,7 +658,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The variety is real. Bayou-front properties offer calm-water boat access and the scenery of Tarpon Springs' natural waterways without the exposure of open Gulf frontage. Gulf-access homes with seawall and dock give you direct boating range without hauling a trailer. Condos in waterfront complexes deliver the water views and lifestyle at a fraction of the single-family cost, with the trade-off of association rules and shared amenities.</p>
       <p>Buyers here are almost always coming with a specific water-use case in mind — boating, fishing, kayaking, or simply the view and proximity. Flood zone designations and flood insurance costs vary significantly by specific location along the waterfront, and this is one area where doing that homework before going under contract can save you thousands annually on insurance alone. Ask your agent to pull the flood zone map for any property you're seriously considering.</p>
       <p>Tarpon Springs' waterfront has held its appeal through multiple market cycles because the supply is genuinely limited. The combination of the natural bayou system, Gulf access, and the historic character of the surrounding city creates a setting that doesn't replicate easily. If water access is non-negotiable on your list, <a href="/tarpon-springs/">Tarpon Springs</a> waterfront deserves a serious look before you settle elsewhere in Pinellas County.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/greektown-spring-bayou/">Greektown and Spring Bayou</a> and <a href="/downtown-tarpon-springs/">Downtown Tarpon Springs</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/greektown-spring-bayou/">Greektown and Spring Bayou</a> and <a href="/downtown-tarpon-springs/">Downtown Tarpon Springs</a>.</p>
       <p>Browse <a href="/tarpon-springs-homes-for-sale/">homes for sale in Tarpon Springs</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -692,7 +692,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
           <p>Yes. Epperson has both single-family homes and townhomes. Townhomes typically start in the low to mid $300Ks, giving buyers a more accessible entry point to the lagoon community lifestyle.</p>
         </div>
       </div>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Wesley Chapel. Also worth exploring nearby: <a href="/seven-oaks/">Seven Oaks</a> and <a href="/wiregrass-ranch/">Wiregrass Ranch</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Wesley Chapel. Also worth exploring nearby: <a href="/seven-oaks/">Seven Oaks</a> and <a href="/wiregrass-ranch/">Wiregrass Ranch</a>.</p>
       <p>Browse <a href="/wesley-chapel-homes-for-sale/">homes for sale in Wesley Chapel</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -732,7 +732,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
           <p>Bexley is in the Pasco County school district. Schools include Bexley Elementary School (located within the community), Charles S. Rushe Middle School, and Sunlake High School. Confirm your specific address with the district since zone assignments can change.</p>
         </div>
       </div>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Land O Lakes. Also worth exploring nearby: <a href="/seven-oaks/">Seven Oaks</a> and <a href="/wiregrass-ranch/">Wiregrass Ranch</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Land O Lakes. Also worth exploring nearby: <a href="/seven-oaks/">Seven Oaks</a> and <a href="/wiregrass-ranch/">Wiregrass Ranch</a>.</p>
       <p>Browse <a href="/land-o-lakes-homes-for-sale/">homes for sale in Land O Lakes</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -772,7 +772,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Multiple builders have contributed to the community over its development timeline, including DR Horton, CalAtlantic (now Lennar), Ryland Homes, and others. That means floor plan variety is real, but it also means construction quality and finishes vary by builder and phase. Homes range from about 1,600 to 3,800 square feet, mostly 3 to 5 bedrooms with two-car garages.</p>
       <p>Community amenities include a resort-style pool and recreation center. HOA and CDD fees apply. The CDD fees in particular can be meaningful, so get the exact annual assessments for any home you are seriously considering. Some buyers are surprised when the effective monthly cost is higher than they budgeted.</p>
       <p>School zoning puts most of Wiregrass Ranch in the Wiregrass Ranch High School zone, which was built to serve the growing student population in this part of Wesley Chapel. Confirm your specific address with the Pasco County school district. For commuters, the proximity to I-75 via SR-56 is a legitimate convenience. For a full comparison of Wesley Chapel communities, see our <a href="/wesley-chapel/">Wesley Chapel real estate guide</a>.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Wesley Chapel. Also worth exploring nearby: <a href="/seven-oaks/">Seven Oaks</a> and <a href="/epperson/">Epperson</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Wesley Chapel. Also worth exploring nearby: <a href="/seven-oaks/">Seven Oaks</a> and <a href="/epperson/">Epperson</a>.</p>
       <p>Browse <a href="/wesley-chapel-homes-for-sale/">homes for sale in Wesley Chapel</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -802,7 +802,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
           <p>Triple Creek is roughly 25 to 30 miles from downtown Tampa via I-75 north. Commute times vary significantly by time of day, but most residents heading into Tampa should budget 35 to 50 minutes during peak hours.</p>
         </div>
       </div>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Riverview. Also worth exploring nearby: <a href="/panther-trace/">Panther Trace</a> and <a href="/south-fork/">South Fork</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Riverview. Also worth exploring nearby: <a href="/panther-trace/">Panther Trace</a> and <a href="/south-fork/">South Fork</a>.</p>
       <p>Browse <a href="/riverview-homes-for-sale/">homes for sale in Riverview</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -815,7 +815,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The community amenity center includes a resort-style pool, tennis courts, a fitness center, and playground areas. The design of Panther Trace was intended to encourage outdoor use, with sidewalks throughout and common areas connecting the residential sections. It is a functional, well-organized neighborhood without the complications of a community that tried to do too much.</p>
       <p>Homes are mostly 3 to 4 bedrooms, ranging from about 1,400 to 2,800 square feet, built to the concrete block standard typical of Florida construction in that era. Two-car garages and screened lanais are common. HOA fees are moderate and cover the community amenities. CDD fees apply in some sections, so confirm which applies to a specific home before finalizing your budget.</p>
       <p>US-301 access gives you a direct path north to the Selmon Expressway and into Tampa or south toward the Ruskin and Sun City Center area. I-75 is accessible nearby. The surrounding Riverview area has built out significantly since Panther Trace was developed, so shopping, dining, and medical services are all close. School zoning falls within Hillsborough County, generally in the Riverview High School or East Bay High School zone depending on the specific section. For a side-by-side look at Riverview communities, see our <a href="/riverview/">Riverview real estate guide</a>.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Riverview. Also worth exploring nearby: <a href="/triple-creek/">Triple Creek</a> and <a href="/south-fork/">South Fork</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Riverview. Also worth exploring nearby: <a href="/triple-creek/">Triple Creek</a> and <a href="/south-fork/">South Fork</a>.</p>
       <p>Browse <a href="/riverview-homes-for-sale/">homes for sale in Riverview</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -828,7 +828,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Each phase of South Fork has its own HOA section and amenities. Earlier phases typically have a community pool and common areas; newer phases added more elaborate amenity packages. This structure means that two homes in South Fork might have different fees and access to different amenities depending on which phase they are in. Ask your agent to clarify the specific phase and associated fees for any home you are seriously considering.</p>
       <p>Homes range from single-story 3-bedroom layouts around 1,500 square feet to larger 5-bedroom two-story homes approaching 3,000 square feet. Construction is standard Florida block, and quality is consistent across phases. The newer sections built in the 2010s and later have the open-concept floor plans and energy-efficient systems buyers expect from more recent construction.</p>
       <p>Location along US-301 is practical. The commercial corridor nearby provides shopping, dining, and services without a long drive. I-75 access for Tampa commuters is reasonable. Hillsborough County school zoning serves the community, with school assignments varying by section. For context on the broader area, see our <a href="/riverview/">Riverview neighborhood overview</a>.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Riverview. Also worth exploring nearby: <a href="/panther-trace/">Panther Trace</a> and <a href="/summerfield/">Summerfield</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Riverview. Also worth exploring nearby: <a href="/panther-trace/">Panther Trace</a> and <a href="/summerfield/">Summerfield</a>.</p>
       <p>Browse <a href="/riverview-homes-for-sale/">homes for sale in Riverview</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -841,7 +841,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The community is anchored by the Summerfield Crossings Golf Club, a public course that winds through sections of the neighborhood. Non-golfers still benefit from the green space the course creates. Summerfield also has a community pool, tennis courts, and a clubhouse. The HOA fees cover the common area maintenance and amenities, and they are generally reasonable by Riverview standards.</p>
       <p>Homes are mostly 3 to 4 bedrooms in the 1,400 to 2,400 square foot range. The construction is typical 1990s to early 2000s Florida block, and buyers should pay attention to roof age, HVAC condition, and kitchen and bathroom updates when evaluating specific properties. Many homes in Summerfield have been updated over the years; others are still in largely original condition, which creates a spread in both price and value.</p>
       <p>Summerfield Crossing Boulevard provides the main access point, connecting to US-301 and the broader Riverview grid. Commuters heading into Tampa via I-75 or US-41 have a reasonable drive from here. Hillsborough County school assignments vary by section. This is a good neighborhood for buyers who want established character and lower prices rather than brand-new construction. See our <a href="/riverview/">Riverview real estate guide</a> for a full neighborhood comparison.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Riverview. Also worth exploring nearby: <a href="/south-fork/">South Fork</a> and <a href="/triple-creek/">Triple Creek</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Riverview. Also worth exploring nearby: <a href="/south-fork/">South Fork</a> and <a href="/triple-creek/">Triple Creek</a>.</p>
       <p>Browse <a href="/riverview-homes-for-sale/">homes for sale in Riverview</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -912,7 +912,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
           <p>Kings Point is the most comprehensive 55+ option within Sun City Center in terms of amenities and included services. Valencia Lakes and Del Webb Sun City Center are the other major options, each with a different feel and fee structure. Working with a local agent who knows all three is the best way to compare them accurately.</p>
         </div>
       </div>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Sun City Center. Also worth exploring nearby: <a href="/southshore-falls/">SouthShore Falls</a> and <a href="/waterset/">Waterset</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Sun City Center. Also worth exploring nearby: <a href="/southshore-falls/">SouthShore Falls</a> and <a href="/waterset/">Waterset</a>.</p>
       <p>Browse <a href="/sun-city-center-homes-for-sale/">homes for sale in Sun City Center</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -937,7 +937,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Bloomingdale is served by Bloomingdale High School, Burns Middle School, and either Alafia Elementary or Cimino Elementary depending on exact address. Both elementary schools carry A ratings from the Florida Department of Education. School zoning can vary within the community, so confirm the assignment for any specific address at the Hillsborough County Schools website.</p>
       <h4>Is Bloomingdale a good neighborhood to buy in 2026?</h4>
       <p>Bloomingdale offers a combination of established community character, strong schools, and a range of home options that is difficult to match at comparable prices in the Brandon area. The community's size means inventory is generally available, which gives buyers negotiating room that smaller neighborhoods don't offer. It is one of the consistently strong performers in the eastern Hillsborough resale market.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Brandon. Also worth exploring nearby: <a href="/arbor-oaks/">Arbor Oaks</a> and <a href="/brandon-traces/">Brandon Traces</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Brandon. Also worth exploring nearby: <a href="/arbor-oaks/">Arbor Oaks</a> and <a href="/brandon-traces/">Brandon Traces</a>.</p>
       <p>Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -957,7 +957,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Homes in Arbor Oaks typically sell in the $350,000-$500,000 range. Smaller homes needing updates sell toward the lower end. Larger, renovated homes with updated kitchens and updated roofs sell toward the higher end. The price range makes Arbor Oaks accessible for first-time buyers and mid-market move-up buyers alike.</p>
       <h4>Does Arbor Oaks Brandon have an HOA?</h4>
       <p>Yes, Arbor Oaks has an HOA with fees that cover common area maintenance. Fees are modest compared to communities with pools or extensive amenities. Confirm the current fee and any rules with the listing agent or HOA management company before going under contract.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Brandon. Also worth exploring nearby: <a href="/brandon-traces/">Brandon Traces</a> and <a href="/bloomingdale-community/">Bloomingdale</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Brandon. Also worth exploring nearby: <a href="/brandon-traces/">Brandon Traces</a> and <a href="/bloomingdale-community/">Bloomingdale</a>.</p>
       <p>Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -977,7 +977,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Most sections of Alafia Estates do not have an HOA, which is one of the neighborhood's primary selling points. No HOA means no monthly fees and no approval process for exterior changes, boat parking, or other property use decisions. Confirm the HOA status for any specific address before going under contract, as some sections may have deed restrictions even without a formal HOA.</p>
       <h4>How much do homes cost in Alafia Estates?</h4>
       <p>Prices range from approximately $320,000 for smaller, original-condition homes to $550,000+ for larger, updated properties on premium lots. River-access or river-view properties command the highest prices. The range makes Alafia Estates accessible across a broad buyer spectrum from first-time buyers to families looking for more space.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Brandon. Also worth exploring nearby: <a href="/four-winds-estates/">Four Winds Estates</a> and <a href="/dominion/">Dominion</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Brandon. Also worth exploring nearby: <a href="/four-winds-estates/">Four Winds Estates</a> and <a href="/dominion/">Dominion</a>.</p>
       <p>Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -1241,7 +1241,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Prices range from approximately $700K for an older unrenovated home to $3M+ for a new custom build or fully renovated premium property. The typical move-in-ready home in the $900K-$1.5M range represents the most active segment of the market. Lot size, school proximity, and renovation quality drive significant price variation within the neighborhood.</p>
       <h3>Is Bayshore Beautiful in the Plant High School zone?</h3>
       <p>Yes, most of Bayshore Beautiful is zoned for Plant High School, Roosevelt Elementary, and Coleman Middle School. Always verify your specific address with Hillsborough County Schools before purchasing since zone boundaries occasionally shift.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in South Tampa. Also worth exploring nearby: <a href="/beach-park/">Beach Park</a> and <a href="/ballast-point/">Ballast Point</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in South Tampa. Also worth exploring nearby: <a href="/beach-park/">Beach Park</a> and <a href="/ballast-point/">Ballast Point</a>.</p>
       <p>Browse <a href="/south-tampa-homes-for-sale/">homes for sale in South Tampa</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -1273,7 +1273,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Beach Park prices typically run $600K-$2.5M+ depending on home size, condition, and improvements. The most active segment is $900K-$1.5M for updated and renovated properties. New custom construction on larger lots runs $1.5M-$2.5M.</p>
       <h3>Is Beach Park in the Plant High School zone?</h3>
       <p>Yes. Beach Park is generally zoned for Dale Mabry Elementary, Coleman Middle, and Plant High School. Verify the specific school assignment for any address at the Hillsborough County Schools website, as zone boundaries can change.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in South Tampa. Also worth exploring nearby: <a href="/ballast-point/">Ballast Point</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in South Tampa. Also worth exploring nearby: <a href="/ballast-point/">Ballast Point</a>.</p>
       <p>Browse <a href="/south-tampa-homes-for-sale/">homes for sale in South Tampa</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -1307,7 +1307,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Prices range from approximately $550K for an older unrenovated home to $2M+ for a new custom build or renovated premium property. Well-maintained updated homes typically sell in the $800K-$1.3M range.</p>
       <h3>Is Ballast Point close to MacDill Air Force Base?</h3>
       <p>Yes. Ballast Point is one of the closest residential neighborhoods to MacDill AFB, making it highly popular with military families. The base boundary is at the southern end of the Ballast Point area. Military housing allowances for MacDill assignments align well with the neighborhood's price range.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in South Tampa. Also worth exploring nearby: <a href="/bayshore-beautiful/">Bayshore Beautiful</a> and <a href="/beach-park/">Beach Park</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in South Tampa. Also worth exploring nearby: <a href="/bayshore-beautiful/">Bayshore Beautiful</a> and <a href="/beach-park/">Beach Park</a>.</p>
       <p>Browse <a href="/south-tampa-homes-for-sale/">homes for sale in South Tampa</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -1344,7 +1344,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Arbor Greene prices typically run $400K-$900K+ depending on home size, section, and condition. The most active price range is $475K-$750K. The community is fully built out with no new construction, so all purchases are resale. Condition and updates drive significant price variation between homes in the same section.</p>
       <h3>Is Arbor Greene in the Freedom High School zone?</h3>
       <p>Yes, Arbor Greene is generally zoned for Freedom High School, Liberty Middle School, and Turner Elementary School. These are well-regarded New Tampa schools. Always verify the specific school assignment for any address at the Hillsborough County Schools website before purchasing.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in New Tampa. Also worth exploring nearby: <a href="/channelside/">Channelside</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in New Tampa. Also worth exploring nearby: <a href="/channelside/">Channelside</a>.</p>
       <p>Browse <a href="/new-tampa-homes-for-sale/">homes for sale in New Tampa</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -1383,7 +1383,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Avila homes typically start around $900K-$1.2M for entry-level properties and range to $5M+ for the largest estate homes on premium fairway or lake lots. Inventory is limited, and homes sell less frequently than in open communities. Work with a REALTOR who actively monitors the Avila market to know what is available before it hits the general public MLS.</p>
       <h3>Does buying a home in Avila include golf membership?</h3>
       <p>No. Avila Golf and Country Club membership is separate from home ownership. The club has its own membership process, initiation fees, and dues. Contact the club directly to confirm current membership availability and fees before purchasing a home with the intent of joining.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Tampa. Also worth exploring nearby: <a href="/arbor-greene/">Arbor Greene</a> and <a href="/bayshore-beautiful/">Bayshore Beautiful</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Tampa. Also worth exploring nearby: <a href="/arbor-greene/">Arbor Greene</a> and <a href="/bayshore-beautiful/">Bayshore Beautiful</a>.</p>
       <p>Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -1420,7 +1420,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Channelside and Water Street condos range from approximately $350K for a 1-bedroom in an older building to $2M+ for large units in newer luxury towers. The most active segment is $550K-$900K for 2-bedroom units. Monthly condo fees add $700-$1,500+ to the cost of ownership.</p>
       <h3>Can I do short-term rentals in a Channelside condo?</h3>
       <p>It depends entirely on the specific building's governing documents. Some buildings in Channelside permit short-term rentals, others prohibit them. Always review the condo declaration for the specific building before purchasing with rental intent. Do not rely on verbal assurances from sellers or listing agents.</p>
-      <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Tampa. Also worth exploring nearby: <a href="/bayshore-beautiful/">Bayshore Beautiful</a> and <a href="/beach-park/">Beach Park</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> has 24+ years of real estate experience and can help you find the right home in Tampa. Also worth exploring nearby: <a href="/bayshore-beautiful/">Bayshore Beautiful</a> and <a href="/beach-park/">Beach Park</a>.</p>
       <p>Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
@@ -1471,7 +1471,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Good rental demand for single-family Valrico homes in this size range. Expect $2,100-$2,500/mo. <a href="https://valricopropertymgmt.com/neighborhoods/angel-run" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -1522,7 +1522,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Solid rental market for single-family homes in this area. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals throughout Valrico.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -1571,7 +1571,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Solid rental demand in this part of Valrico. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> manages properties throughout the area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -1621,7 +1621,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Strong demand for gated single-family rentals. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> manages properties in the Valrico area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -1670,7 +1670,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Strong rental demand, especially for the smaller homes. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -1719,7 +1719,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Good rental demand in the Bloomingdale school zone. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals throughout Valrico.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -1768,7 +1768,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> New construction rents well. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -1818,7 +1818,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Strong rental demand in Buckhorn Elementary zone. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -1867,7 +1867,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> New homes in Buckhorn Elementary zone are high-demand rentals. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -1920,7 +1920,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Solid rental demand in this school zone. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -1969,7 +1969,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Buckhorn Elementary zone drives rental demand. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -2019,7 +2019,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Good rental market in this school zone. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> manages properties throughout Valrico.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -2068,7 +2068,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Buckhorn Elementary zone means strong rental demand. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -2117,7 +2117,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Strong demand in this school zone. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -2166,7 +2166,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Premium rental potential for larger custom homes. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -2215,7 +2215,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Strong rental demand for affordable homes in this school zone. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -2264,7 +2264,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -2313,7 +2313,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Affordable Valrico homes rent quickly. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -2362,7 +2362,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Larger homes command premium rents. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -2411,7 +2411,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Affordable homes in Valrico rent quickly. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -2460,7 +2460,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Newsome zone rentals are in high demand. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -2510,7 +2510,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Premium custom homes command premium rents. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -2558,7 +2558,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Steady demand for south Valrico rentals. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -2607,7 +2607,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Affordable homes in Valrico rent quickly. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -2656,7 +2656,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Strong rental demand near FishHawk. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -2705,7 +2705,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Premium luxury rentals are a niche market. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -2754,7 +2754,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> New construction in premium school zones commands top rental rates. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in the area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -2803,7 +2803,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Gated community rentals with club amenities are premium. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -2852,7 +2852,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Larger homes on acreage attract a specific renter profile. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -2903,7 +2903,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Rural-suburban rentals attract a specific tenant — families who want space and are willing to commute. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -2966,7 +2966,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Check HOA rental restrictions before buying as an investment. Strong rental demand for gated Valrico homes in this size range — expect $2,800-$3,400/mo for a 4-bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -3023,7 +3023,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Strong rental demand. Expect $2,200-$2,800/mo for a 3-4 bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -3078,7 +3078,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Good rental demand in the Bloomingdale school zone. Expect $2,000-$2,600/mo for a 3-4 bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -3134,7 +3134,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> New construction in the Bloomingdale zone rents well. Expect $2,400-$3,000/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -3188,7 +3188,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Solid rental market. Expect $1,800-$2,400/mo for a 3-bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -3241,7 +3241,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Steady rental demand. Expect $1,900-$2,400/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -3295,7 +3295,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Strong rental demand. Expect $2,000-$2,800/mo depending on size. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -3346,7 +3346,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Good rental demand at this price point. Expect $1,900-$2,400/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -3397,7 +3397,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Buckhorn Elementary zoning drives rental demand. Expect $2,000-$2,600/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -3451,7 +3451,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Excellent rental demand in the Newsome zone. Expect $2,400-$3,200/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -3504,7 +3504,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Customization:</strong> If buying from the builder before completion, you may have options to customize finishes. Ask about available upgrades and their cost — the standard package is already strong, so be strategic about where you add.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -3555,7 +3555,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Good rental demand in the Bloomingdale school zone. Expect $2,100-$2,700/mo for a 3-4 bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -3606,7 +3606,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Buckhorn Elementary zoning creates steady rental demand. Expect $2,200-$2,700/mo for a 4-bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -3657,7 +3657,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Parking:</strong> Each unit has a 2-car garage. Guest parking may be limited — check HOA policies for overnight guest vehicles.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -3711,7 +3711,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Lakefront properties command premium rental rates. Expect $2,000-$3,000/mo depending on lake access and home size. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -3762,7 +3762,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Steady rental demand. Expect $1,800-$2,400/mo depending on home size and condition. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -3813,7 +3813,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Buckhorn Elementary zoning creates strong rental demand. Expect $2,400-$2,900/mo for a 4-bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -3865,7 +3865,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Property taxes:</strong> Average annual property tax runs approximately $10,786. Factor this into your monthly budget calculation.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -3916,7 +3916,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Good rental market. Expect $1,800-$2,300/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -3973,7 +3973,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Strong rental demand for gated country club homes. Expect $2,800-$4,000+/mo depending on size and views. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -4025,7 +4025,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Premium rental rates for large custom homes in a gated golf community. Expect $3,500-$5,000+/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -4077,7 +4077,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Newer homes in Valrico rent well. Expect $2,200-$2,800/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -4146,7 +4146,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Strong rental demand for homes with amenity access. Expect $2,000-$2,800/mo for a 3-4 bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -4205,7 +4205,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Lakefront properties command premium rents. Expect $2,000-$2,800/mo depending on views and home size. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -4256,7 +4256,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Newer construction rents at premium rates in Valrico. Expect $2,200-$2,700/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -4307,7 +4307,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Larger Valrico homes on big lots rent well to families wanting space. Expect $2,200-$3,000+/mo depending on size and condition. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -4362,7 +4362,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Larger homes on big lots rent well to families who want space. Expect $2,200-$3,200/mo depending on size and condition. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -4415,7 +4415,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Custom homes in this price range and location rent well. Expect $2,200-$2,800/mo for a 3-4 bedroom. <a href="https://valricopropertymgmt.com/neighborhoods/durant-oaks" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -4472,7 +4472,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Strong rental demand for family homes with pool access. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -4524,7 +4524,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Larger homes in this area rent well to families. Expect $2,400-$3,200/mo depending on size and upgrades. <a href="https://valricopropertymgmt.com/neighborhoods/durant-woods" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -4578,7 +4578,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> The Weekley homes rent well to families and professionals. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -4631,7 +4631,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Smaller Valrico homes in this price range have strong rental demand. Expect $1,600-$1,900/mo for a 2-3 bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -4696,7 +4696,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Executive homes in gated communities have strong rental demand from corporate relocations and families. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -4751,7 +4751,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Large custom homes on acreage rent at premium rates. Expect $3,500-$5,000+/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -4804,7 +4804,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Solid rental demand for established Valrico homes near the Bloomingdale corridor. Expect $1,900-$2,300/mo for a 3-4 bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -4857,7 +4857,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Golf course-adjacent homes have consistent rental appeal. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -4911,7 +4911,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Small-community homes near golf courses have steady rental demand. Expect $2,100-$2,600/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -4974,7 +4974,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Large custom homes on big lots rent at premium rates. Expect $2,500-$3,200/mo depending on condition and pool status. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -5023,13 +5023,13 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Home age:</strong> Built 2003-2005, these homes are 21-23 years old. Roofs (shingle) are likely approaching or at replacement age. HVAC units may be on the second system. Water heaters are definitely past their lifespan if original.</li>
+        <li><strong>Home age:</strong> Built 2003-2005, these homes are 21-24 years old. Roofs (shingle) are likely approaching or at replacement age. HVAC units may be on the second system. Water heaters are definitely past their lifespan if original.</li>
         <li><strong>Southern Heritage quality:</strong> Southern Heritage Neighborhoods was a reputable local builder. Construction quality is generally solid for this era — concrete block, standard Florida construction methods.</li>
         <li><strong>Only 49 homes:</strong> Small community means few comps and infrequent listings. Price carefully when selling, and act quickly when buying.</li>
         <li><strong>Rentals:</strong> Well-maintained homes in this price range and location have consistent rental demand. Expect $2,000-$2,400/mo for a 3-4 bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -5083,7 +5083,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Midsize Valrico homes in established neighborhoods rent well to families. Expect $1,800-$2,200/mo for a 3-bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -5137,7 +5137,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Affordable homes in central Valrico locations rent well. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -5191,7 +5191,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Strong rental demand for affordable single-family homes in central Valrico. Expect $1,900-$2,200/mo for a 3-bedroom. <a href="https://valricopropertymgmt.com/neighborhoods/innergary-point" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -5246,7 +5246,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Townhomes in gated communities rent consistently. Expect $1,600-$1,900/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -5298,7 +5298,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Affordable Valrico homes have strong rental demand. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -5351,7 +5351,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Affordable single-family homes in Valrico rent quickly. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -5405,7 +5405,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Affordable Valrico homes near the Brandon border have consistent rental demand. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -5462,7 +5462,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Executive homes in gated communities command premium rents. Expect $3,500-$4,500/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -5520,7 +5520,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Strong rental demand in the Bloomingdale corridor. Expect $2,000-$2,400/mo for a 3-4 bedroom home in good condition. <a href="https://valricopropertymgmt.com/neighborhoods/lithia-ridge" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -5575,7 +5575,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> No HOA means no rental restrictions. Single-family homes in this area rent well to families. Expect $1,900-$2,300/mo depending on size and condition. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -5631,7 +5631,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Check the HOA leasing rules before buying as an investment. Gated communities sometimes have rental caps or minimum lease terms. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -5686,7 +5686,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Strong demand for single-family rentals along the Lumsden corridor. Expect $1,900-$2,300/mo for a 3-4 bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -5741,7 +5741,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Executive-style homes in this price range rent well to professionals and military families. Expect $2,200-$2,700/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -5795,7 +5795,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Premium Valrico homes rent in the $2,500-$3,200/mo range. Strong demand from relocating professionals and military families. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -5851,7 +5851,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Executive homes in the Newsome zone rent in the $2,500-$3,200/mo range with strong demand from relocating families. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -5905,7 +5905,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Mid-range Valrico homes rent well. Expect $1,800-$2,400/mo depending on size and condition. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -5959,7 +5959,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Affordable Valrico homes in strong school zones have excellent rental demand. Expect $1,700-$2,200/mo depending on size, condition, and updates. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -6013,7 +6013,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Check the HOA's leasing rules. Some mandatory HOAs have rental caps, minimum lease terms, or tenant screening requirements. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area and can help navigate HOA requirements.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -6070,7 +6070,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Strong rental demand for affordable Valrico homes near Buckhorn Elementary. Expect $1,800-$2,200/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -6127,7 +6127,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Luxury Valrico homes on large lots rent well to families wanting space and privacy. Expect $2,400-$3,200/mo depending on size and condition. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -6182,7 +6182,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Newer Valrico homes with modern floor plans rent well. Expect $2,000-$2,500/mo depending on size. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -6236,7 +6236,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Executive one-story homes with pools on private lots are premium rentals. Expect $2,800-$3,500/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -6290,7 +6290,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Newer homes with open floor plans and 4-5 bedrooms are in high demand from families. Expect $2,100-$2,600/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -6347,7 +6347,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Strong rental demand in the Bloomingdale corridor, especially for homes in the Cimino Elementary zone. Expect $1,900-$2,400/mo depending on size and updates. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -6403,7 +6403,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Newer Valrico homes from reputable builders rent well to families. Expect $2,100-$2,700/mo depending on size and bedroom count. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -6458,7 +6458,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Brand-new homes command premium rental rates. Expect $2,200-$2,800/mo depending on size and bedroom count. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -6525,7 +6525,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Bloomingdale's size and school quality create consistent rental demand. Expect $1,800-$2,300/mo depending on section, size, and condition. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -6581,7 +6581,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Rentals:</strong> Strong rental demand for mid-size Valrico homes in the Buckhorn Elementary zone. Expect $2,000-$2,500/mo depending on size and condition. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -6632,12 +6632,12 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Name confusion:</strong> Do not confuse Valrico Lake (2003-2004) with Valrico Lake Estates (1966-1979). They are different neighborhoods. If you are searching online, verify the build year and specific address.</li>
-        <li><strong>Home age:</strong> 2003-2004 construction means homes are 22-23 years old. Roof, HVAC, and water heater are your inspection priorities. Shingle roofs from this era may be nearing replacement; tile roofs should still be serviceable.</li>
+        <li><strong>Home age:</strong> 2003-2004 construction means homes are 22-24 years old. Roof, HVAC, and water heater are your inspection priorities. Shingle roofs from this era may be nearing replacement; tile roofs should still be serviceable.</li>
         <li><strong>Lake proximity:</strong> If you are specifically drawn to lakefront or lake-view lots, verify the flood zone designation, check for any easements or setback restrictions, and understand that lake-adjacent properties may have higher insurance costs.</li>
         <li><strong>Rentals:</strong> Central Valrico homes in this size range rent well to families. Expect $2,000-$2,400/mo depending on condition and updates. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -6683,7 +6683,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Resale value:</strong> Bent Tree South homes move well because of the low HOA and central location.</li>
         <li><strong>Rentals:</strong> Strong rental demand for affordable Valrico homes. Expect $1,800-$2,100/mo for a 3-bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -6726,7 +6726,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Community feel:</strong> The trail network and shared amenities create a neighborhood feel that isolated subdivisions cannot match.</li>
         <li><strong>Rentals:</strong> Bloomingdale High zoning drives consistent rental demand. Expect $1,800-$2,300/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -6769,7 +6769,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Trail access:</strong> The broader Bloomingdale trail network is a genuine daily-use amenity.</li>
         <li><strong>Rentals:</strong> Bloomingdale High zoning drives steady rental demand. Expect $1,900-$2,400/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -6817,7 +6817,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Insurance:</strong> Condo insurance (HO-6) is typically more affordable. Verify what the master policy covers.</li>
         <li><strong>Investment:</strong> Bloomingdale location and school zoning support strong rental demand. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -6859,7 +6859,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>No gate is a feature:</strong> You avoid gate fees and callbox drama.</li>
         <li><strong>Rentals:</strong> Affordable Valrico homes rent well. Expect $1,800-$2,200/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -6901,7 +6901,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Insurance:</strong> Older roofs and electrical systems inflate premiums. Factor in a new roof cost.</li>
         <li><strong>Rentals:</strong> Affordable Valrico homes rent quickly. Expect $1,600-$2,000/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -6942,7 +6942,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Quiet streets:</strong> Minimal through traffic. Interior streets are safe for evening walks.</li>
         <li><strong>Rentals:</strong> Affordable homes rent consistently. Expect $1,600-$1,900/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -6983,7 +6983,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>No community amenities:</strong> No pool, no clubhouse. You are buying the home and the lot.</li>
         <li><strong>Rentals:</strong> Expect $1,700-$2,100/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -7025,7 +7025,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>No amenities:</strong> No pool, no clubhouse, no gate. You are buying location and lot.</li>
         <li><strong>Rentals:</strong> Bloomingdale High zone supports solid demand. Expect $1,700-$2,100/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -7066,7 +7066,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Mature canopy:</strong> 30+ years of tree growth provides natural shade and curb appeal you cannot buy.</li>
         <li><strong>Rentals:</strong> Larger homes rent well. Expect $2,000-$2,500/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -7106,7 +7106,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Freedom:</strong> No HOA means RV parking, boats in the driveway, and exterior paint choices are yours.</li>
         <li><strong>Rentals:</strong> No HOA leasing restrictions attract investors. Expect $1,700-$2,000/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -7148,7 +7148,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Country club is separate:</strong> Not part of the HOA. You do not have to join.</li>
         <li><strong>Rentals:</strong> Buckhorn Elementary zoning drives strong demand. Expect $2,100-$2,800/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -7189,7 +7189,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Low comps:</strong> Smaller community means limited comparable sales. An agent who knows the neighborhood is essential.</li>
         <li><strong>Rentals:</strong> Larger homes with low HOA rent well. Expect $2,200-$2,700/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -7230,7 +7230,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Small gated community:</strong> 68 homes behind a gate — you will know your neighbors.</li>
         <li><strong>Rentals:</strong> Gated Bloomingdale High zone homes command premium rents. Expect $2,400-$3,500/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -7273,7 +7273,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Quiet living:</strong> Low traffic, no commercial encroachment, mature landscaping.</li>
         <li><strong>Rentals:</strong> Affordable Valrico homes rent consistently. Expect $1,700-$2,100/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -7314,7 +7314,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Deed restrictions:</strong> Review before purchasing — covers exterior modifications, fencing, parking.</li>
         <li><strong>Rentals:</strong> 2000s-era Valrico homes rent well. Expect $2,000-$2,400/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -7354,7 +7354,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Simple living:</strong> No pool, no clubhouse, no gate. That simplicity is the appeal for many buyers.</li>
         <li><strong>Rentals:</strong> Affordable Valrico homes with no HOA leasing restrictions attract investors. Expect $1,700-$2,000/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -7395,7 +7395,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Renovation potential:</strong> Larger lots and Valrico location make strong renovation candidates.</li>
         <li><strong>Rentals:</strong> Affordable homes with no HOA leasing restrictions are investor gold. Expect $1,600-$2,000/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -7435,7 +7435,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Privacy is real:</strong> 11 homes behind a gate on a cul-de-sac provides genuine seclusion.</li>
         <li><strong>Rentals:</strong> Luxury Valrico homes rent at premium rates. Expect $3,000-$4,500/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles luxury rentals.</li>
       </ul>
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -7476,7 +7476,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Community of 10:</strong> Personalities and relationships matter more than in a 500-home subdivision. Drive the street and talk to residents before committing.</li>
         <li><strong>Rentals:</strong> Custom homes on premium lots command $3,000-$4,000+/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles luxury rentals.</li>
       </ul>
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },
@@ -7518,7 +7518,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Small community:</strong> Limited comparable sales. An agent who knows the neighborhood is essential for pricing.</li>
         <li><strong>Rentals:</strong> Buckhorn Elementary zoning creates steady demand. Expect $2,200-$2,800/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
-      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
+      <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 24+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
     `,
   },

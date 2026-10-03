@@ -90,7 +90,7 @@ export default function PropertyManagementPage() {
                   {[
                     "No hidden fees — flat monthly rate",
                     "Trusted local vendor network for fast maintenance",
-                    "23+ years of real estate experience",
+                    "24+ years of real estate experience",
                     "Online owner portal with real-time reporting",
                     "Licensed Broker oversight on every property",
                   ].map((item) => (

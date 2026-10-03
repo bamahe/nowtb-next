@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Luxury Homes for Sale in Tampa Bay | Barrett Henry",
     description:
-      "Browse luxury real estate across Tampa Bay — waterfront estates, gated communities, and premium properties from $750K. 23+ years of real estate experience.",
+      "Browse luxury real estate across Tampa Bay — waterfront estates, gated communities, and premium properties from $750K. 24+ years of real estate experience.",
     type: "website",
   },
 };
@@ -372,7 +372,7 @@ export default async function LuxuryPage() {
             <p className="font-body text-white/70 font-light text-base leading-relaxed">
               Luxury real estate demands more than a license and a lockbox. It requires an agent who
               understands the financial complexity, the marketing sophistication, and the discretion
-              that high-value transactions require. With 23+ years of real estate experience, Barrett
+              that high-value transactions require. With 24+ years of real estate experience, Barrett
               Henry has closed transactions at every price point and understands what separates a
               standard sale from a luxury one.
             </p>

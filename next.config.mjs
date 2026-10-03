@@ -135,6 +135,23 @@ const nextConfig = {
       { source: "/terms", destination: "/terms-of-use/", permanent: true },
       { source: "/privacy", destination: "/privacy-policy/", permanent: true },
 
+      // ── Removed bad "Largo neighborhood" data → real municipalities ──
+      // "Belleair Meadows" was not a real place. "Indian Rocks" was a mislabel of
+      // Indian Rocks Beach, which is its own city. Both were in the sitemap, so
+      // these 301s preserve the URLs instead of leaving 404s behind.
+      { source: "/belleair-meadows", destination: "/belleair/", permanent: true },
+      { source: "/belleair-meadows/", destination: "/belleair/", permanent: true },
+      { source: "/belleair-meadows-homes-for-sale", destination: "/belleair-homes-for-sale/", permanent: true },
+      { source: "/belleair-meadows-homes-for-sale/", destination: "/belleair-homes-for-sale/", permanent: true },
+      { source: "/belleair-meadows-realtor", destination: "/belleair-realtor/", permanent: true },
+      { source: "/belleair-meadows-realtor/", destination: "/belleair-realtor/", permanent: true },
+      { source: "/indian-rocks", destination: "/indian-rocks-beach/", permanent: true },
+      { source: "/indian-rocks/", destination: "/indian-rocks-beach/", permanent: true },
+      { source: "/indian-rocks-homes-for-sale", destination: "/indian-rocks-beach-homes-for-sale/", permanent: true },
+      { source: "/indian-rocks-homes-for-sale/", destination: "/indian-rocks-beach-homes-for-sale/", permanent: true },
+      { source: "/indian-rocks-realtor", destination: "/indian-rocks-beach-realtor/", permanent: true },
+      { source: "/indian-rocks-realtor/", destination: "/indian-rocks-beach-realtor/", permanent: true },
+
       // ── Duplicate neighborhood slugs → canonical versions ──
       { source: "/brentwood-hills-community", destination: "/brentwood-hills/", permanent: true },
       { source: "/brentwood-hills-community/", destination: "/brentwood-hills/", permanent: true },

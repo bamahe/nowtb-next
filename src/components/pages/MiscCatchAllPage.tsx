@@ -43,7 +43,7 @@ export default async function MiscCatchAllPage({ page }: MiscCatchAllPageProps) 
           <div className="prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-link">
             <p>
               {page.excerpt} Barrett Henry, Broker Associate at REMAX Collective,
-              brings 23+ years of real estate experience to help you with every
+              brings 24+ years of real estate experience to help you with every
               step of your real estate journey.
             </p>
             <p>

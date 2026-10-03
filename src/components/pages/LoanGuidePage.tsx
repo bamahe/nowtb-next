@@ -107,7 +107,7 @@ export default function LoanGuidePage({
             {/* Only show generic filler paragraph when no specific description is provided */}
             {!description && (
               <p>
-                With 23+ years of real estate experience, Barrett has guided
+                With 24+ years of real estate experience, Barrett has guided
                 hundreds of buyers through the financing process. He works with a
                 network of lenders who can get you the best rate and terms for
                 your {loanType}.

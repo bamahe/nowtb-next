@@ -101,7 +101,7 @@ export const regionalPages: RegionalPageData[] = [
   {
     slug: "remax-agent-tampa-bay",
     title: "REMAX Agent in Tampa Bay — Barrett Henry",
-    excerpt: "Barrett Henry is a REMAX Collective Broker Associate with 23+ years of real estate experience serving Tampa Bay.",
+    excerpt: "Barrett Henry is a REMAX Collective Broker Associate with 24+ years of real estate experience.",
     category: "Agent",
   },
   {
@@ -175,7 +175,7 @@ export const regionalPages: RegionalPageData[] = [
   {
     slug: "tampa-bay-real-estate-agent",
     title: "Tampa Bay Real Estate Agent — Barrett Henry",
-    excerpt: "Barrett Henry is a top Tampa Bay real estate agent with 23+ years of experience at REMAX Collective.",
+    excerpt: "Barrett Henry is a top Tampa Bay real estate agent with 24+ years of real estate experience at REMAX Collective.",
     category: "Agent",
   },
   {
