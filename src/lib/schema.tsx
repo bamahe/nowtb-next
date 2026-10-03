@@ -18,7 +18,7 @@ export function realEstateAgentSchema() {
     "@type": "RealEstateAgent",
     name: "Barrett Henry, REALTOR®",
     description:
-      "Licensed real estate Broker Associate with REMAX Collective serving Tampa Bay. 24+ years of real estate experience.",
+      "Licensed real estate Broker Associate with REMAX Collective serving Tampa Bay. 23+ years of real estate experience, licensed since September 2003.",
     url: SITE_URL,
     telephone: PHONE,
     email: EMAIL,
