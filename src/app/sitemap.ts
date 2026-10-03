@@ -15,6 +15,7 @@ import { getCatchAllMiscSlugs } from "@/data/misc-pages";
 import { getAllPosts } from "@/lib/posts";
 import { getAllGuideSlugs } from "@/data/guides";
 import { getAllMarketUpdates } from "@/lib/market-updates";
+import { getBeachCondoSlugs } from "@/data/beach-condo-pages";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://nowtb.com").trim();
@@ -215,9 +216,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.4,
   }));
 
+  // ── Pinellas Gulf beach condo content cluster (7 pages) ──
+  const beachCondoPages: MetadataRoute.Sitemap = getBeachCondoSlugs().map((slug) => ({
+    url: `${siteUrl}/${slug}/`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
   return [
     ...staticPages,
     ...propertyTypeLandingPages,
+    ...beachCondoPages,
     ...blogPosts,
     ...marketUpdatePages,
     ...guidesPages,
