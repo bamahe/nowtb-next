@@ -4,6 +4,42 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-10-04 (Batch 70 — Palmetto FL x5 + Bradenton Beach FL x5: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, 4+ H2 question headings, 6+ H3 subheadings, price/comparison tables, 5-Q&A FAQ, 22-link internal grid, Barrett Henry REMAX Collective author bio. Content dated 2026-10-03.)
+
+**Palmetto FL (5 stubs — ZIP 34221/34220, Manatee County):**
+
+1. **palmetto-fl-cost-of-living** — Expanded to 35,313 chars. Full cost breakdown (housing, insurance, utilities, HOA/CDD, food, transport, healthcare); 3-scenario monthly cost table ($260K/$340K/$450K purchase price, 8 categories); FPL electric ranges ($120-$340/mo); City of Palmetto utilities (941) 721-5500; HO insurance by flood zone; 6-community cost comparison (Palmetto vs Ellenton/Parrish/Bradenton/Sarasota/Clearwater); homestead exemption + Save Our Homes cap; FAQ x5.
+
+2. **palmetto-fl-property-taxes** — Expanded to 27,029 chars. Manatee County millage breakdown (~17-21 mills, 7 components); homestead exemption mechanics ($50K two-tier); Save Our Homes cap reset warning for buyers; property tax estimate table by purchase price ($200K-$600K); manateepao.gov and taxcollector.com lookup guides; effective rate ~0.83%; FAQ x5.
+
+3. **palmetto-fl-new-construction** — Expanded to 27,448 chars. Palmetto vs Parrish new construction comparison; 5-builder comparison table (D.R. Horton, Lennar, Neal Communities, GL Homes, M/I Homes with communities and price ranges); new vs resale comparison table; CDD fee warning ($1,500-$3,000/yr); ZIP 34219 Parrish as primary alternative; FAQ x5.
+
+4. **palmetto-fl-investment-property** — Expanded to 25,637 chars. STR vs LTR comparison; Manatee County TDT 5%; DBPR vacation rental license process; 4-scenario ROI table; ViVi Property Management reference at /property-management/; flood zone AE/X investment risk; FAQ x5.
+
+5. **palmetto-fl-waterfront-homes** — Expanded to 27,519 chars. Terra Ceia Bay vs Manatee River vs canal vs inland comparison table; dock permit process; FEMA flood zones AE/VE/X; 4-point inspection requirements; HO and flood insurance cost ranges; mangrove setback (FDEP) considerations; FAQ x5.
+
+**Bradenton Beach FL (5 stubs — ZIP 34217, Anna Maria Island, Manatee County):**
+
+6. **bradenton-beach-fl-homes-for-sale-guide** — Expanded to 24,449 chars. Price tier table (Gulf-front $2M+ to east-side/canal cottages $700K-$1.2M); 8-step buyer process table; Hurricane Zone A flood zone VE/AE breakdown; Historic Bridge Street district; Cortez Bridge (drawbridge) logistics; condo SB 4-D milestone inspection compliance notes; FAQ x5.
+
+7. **bradenton-beach-fl-commute-guide** — Expanded to 23,868 chars. 9-destination commute matrix (Bradenton 15-25 min, Tampa 65-85 min, Sarasota 30-45 min, TPA 60-75 min, St. Pete 75-90 min, Clearwater 80-95 min, Lakeland 90-110 min, Orlando 140-160 min, PIE 65-80 min); Cortez Bridge drawbridge delay analysis; Manatee Ave (SR-64) routing; remote work compatibility; 5-barrier-island commute comparison; FAQ x5.
+
+8. **bradenton-beach-fl-cost-of-living** — Expanded to 29,007 chars. Full cost breakdown including Gulf-front HO insurance ($7K-$35K+/yr) and flood insurance ($1.5K-$20K+/yr); FPL electric; Manatee County Utilities water/sewer; 3-scenario monthly cost table; 6-community cost comparison (Bradenton Beach vs Holmes Beach/Anna Maria/Longboat Key/Siesta Key/Clearwater Beach); island premium analysis; FAQ x5.
+
+9. **bradenton-beach-fl-investment-property** — Expanded to 25,210 chars. STR gross revenue $40K-$280K+/yr; Manatee County TDT 5%; DBPR vacation rental license; Hurricane Zone A STR risk disclosure; 4-scenario ROI table; ViVi Property Management reference at /property-management/; condo SB 4-D impact on financing; FAQ x5.
+
+10. **is-bradenton-beach-fl-good-place-to-live** — Expanded to 24,151 chars. Honest pros/cons (~1,200-1,500 permanent residents, Historic Bridge Street, Gulf beach access vs Cortez Bridge traffic, Hurricane Zone A, limited grocery/services, seasonal crowds); 6-community lifestyle comparison table; buyer profile fit table; FAQ x5.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** pushed to `origin/main`
+
+---
+
 ## 2026-10-01 (Batch 68 — Redington Shores FL x10: Major Expansions)
 
 **Pages improved: 10**
