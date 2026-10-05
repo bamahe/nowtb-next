@@ -16,9 +16,11 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
   computeAll,
+  commuteLeg,
+  readableMonth,
+  bestMonthly,
   type ClientData,
   type ComputedHome,
-  bestMonthly,
 } from "@/lib/clientCompare";
 
 const DATA_DIR = join(process.cwd(), "data", "clients");
@@ -61,9 +63,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const data = loadClient(slug);
   return {
-    title: data
-      ? `Home Comparison for ${data.client}`
-      : "Home Comparison",
+    title: data ? `Home Comparison for ${data.client}` : "Home Comparison",
     // Private client packet. Keep it out of search entirely.
     robots: {
       index: false,
@@ -77,8 +77,10 @@ export async function generateMetadata({
 // ── Formatting helpers ───────────────────────────────────────────────────────
 
 const money = (n: number) => `$${Math.round(n).toLocaleString("en-US")}`;
-const pct = (r: number) =>
-  `${(r * 100).toFixed(r * 100 % 1 === 0 ? 2 : 3).replace(/0+$/, "").replace(/\.$/, "")}%`;
+/** settings rates are decimals, so 0.06875 reads as 6.875% */
+const pctDec = (r: number) => `${+(r * 100).toFixed(3)}%`;
+/** loan.rate is already a whole percent, so 3.01 reads as 3.01% */
+const pctWhole = (r: number) => `${r}%`;
 
 // ── Small presentational pieces ──────────────────────────────────────────────
 
@@ -124,9 +126,7 @@ function Row({
         <td
           key={i}
           className={`min-w-[11rem] border-r border-slate-200 px-3 py-2.5 text-sm ${
-            bold
-              ? "bg-[#F5F7FA] font-bold text-[#0B2545]"
-              : "text-[#0B2545]"
+            bold ? "bg-[#F5F7FA] font-bold text-[#0B2545]" : "text-[#0B2545]"
           }`}
         >
           {c}
@@ -167,6 +167,15 @@ function Bullets({ items }: { items: string[] }) {
   );
 }
 
+function NotAvailable() {
+  return <span className="font-normal text-[#475569]">Not available</span>;
+}
+
+/** "4 bed / 2.5 bath" */
+function bedsBaths(beds: number, baths: number) {
+  return `${beds} bed / ${baths} bath`;
+}
+
 // ── The page ─────────────────────────────────────────────────────────────────
 
 export default async function ClientComparePage({
@@ -195,32 +204,33 @@ export default async function ClientComparePage({
             Prepared for {data.client} by Barrett Henry, REMAX Collective.
             Updated {data.updated}.
           </p>
+          {s.rentNow && (
+            <p className="mt-3 text-sm text-slate-300">
+              For reference, you pay {s.rentNow} in rent today.
+            </p>
+          )}
         </div>
       </header>
 
       <main className="mx-auto max-w-6xl px-4 py-8">
         {/* 2. Summary cards */}
         <section aria-labelledby="summary-heading">
-          <h2
-            id="summary-heading"
-            className="text-lg font-bold text-[#0B2545]"
-          >
+          <h2 id="summary-heading" className="text-lg font-bold text-[#0B2545]">
             The short version
           </h2>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
             {rows.map((c) => {
               const h = c.home;
+              const leg1 = commuteLeg(h, 0);
               return (
                 <article
-                  key={h.name}
+                  key={h.id}
                   className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm"
                 >
                   <h3 className="text-base font-bold leading-snug text-[#0B2545]">
                     {h.name}
                   </h3>
-                  <p className="mt-0.5 text-xs text-[#475569]">
-                    {h.community}, {h.city}
-                  </p>
+                  <p className="mt-0.5 text-xs text-[#475569]">{h.community}</p>
 
                   <p className="mt-3 text-2xl font-bold text-[#1565C0]">
                     {money(bestMonthly(c))}
@@ -244,8 +254,7 @@ export default async function ClientComparePage({
                   </p>
 
                   <p className="mt-3 border-t border-slate-200 pt-3 text-xs text-[#475569]">
-                    {h.commute[0].minutes} min to {s.workplaces[0].name}
-                    {s.workplaces[0].who ? ` (${s.workplaces[0].who})` : ""}
+                    {leg1.time} to {s.workplaces[0]}
                   </p>
                 </article>
               );
@@ -277,7 +286,7 @@ export default async function ClientComparePage({
                   </th>
                   {rows.map((c) => (
                     <th
-                      key={c.home.name}
+                      key={c.home.id}
                       scope="col"
                       className="min-w-[11rem] border-b-2 border-r border-slate-200 bg-white px-3 py-3 align-top text-sm font-bold text-[#0B2545]"
                     >
@@ -302,9 +311,9 @@ export default async function ClientComparePage({
                   cells={cells((c) => (
                     <>
                       {money(c.home.price)}
-                      {c.home.origPrice !== c.home.price && (
-                        <span className="ml-1 block text-xs font-normal text-[#C62828]">
-                          was {money(c.home.origPrice)}
+                      {c.home.orig !== c.home.price && (
+                        <span className="mt-0.5 block text-xs font-normal text-[#C62828]">
+                          was {money(c.home.orig)}
                         </span>
                       )}
                     </>
@@ -312,11 +321,11 @@ export default async function ClientComparePage({
                 />
                 <Row
                   label="Days on market"
-                  cells={cells((c) => `${c.home.daysOnMarket}`)}
+                  cells={cells((c) => `${c.home.dom}`)}
                 />
                 <Row
                   label="Beds / baths"
-                  cells={cells((c) => c.home.bedsBaths)}
+                  cells={cells((c) => bedsBaths(c.home.beds, c.home.baths))}
                 />
                 <Row
                   label="Square feet"
@@ -330,13 +339,19 @@ export default async function ClientComparePage({
                   label="Year built / stories"
                   cells={cells(
                     (c) =>
-                      `${c.home.yearBuilt} / ${c.home.stories} ${
+                      `${c.home.year} / ${c.home.stories} ${
                         c.home.stories === 1 ? "story" : "stories"
                       }`
                   )}
                 />
-                <Row label="Garage" cells={cells((c) => c.home.garage)} />
-                <Row label="Lot" cells={cells((c) => c.home.lot)} />
+                <Row
+                  label="Garage"
+                  cells={cells((c) => `${c.home.garage} car`)}
+                />
+                <Row
+                  label="Lot"
+                  cells={cells((c) => `${c.home.lot} acre`)}
+                />
                 <Row label="Roof" cells={cells((c) => c.home.roof)} />
 
                 {/* SELLER'S LOAN */}
@@ -365,14 +380,15 @@ export default async function ClientComparePage({
                     <>
                       {c.home.loan.lender}
                       <span className="mt-0.5 block text-xs text-[#475569]">
-                        Recorded {c.home.loan.recorded}, {c.home.loan.term}
+                        Recorded {readableMonth(c.home.loan.recorded)},{" "}
+                        {c.home.loan.term}
                       </span>
                     </>
                   ))}
                 />
                 <Row
                   label="Est. rate"
-                  cells={cells((c) => pct(c.home.loan.rate))}
+                  cells={cells((c) => pctWhole(c.home.loan.rate))}
                 />
                 <Row
                   label="Est. balance"
@@ -384,23 +400,15 @@ export default async function ClientComparePage({
                 />
 
                 {/* OPTION A */}
-                <SectionRow
-                  title="Option A, new VA loan, 0% down"
-                  span={span}
-                />
+                <SectionRow title="Option A, new VA loan, 0% down" span={span} />
                 <Row
                   label="Principal + interest"
                   cells={cells((c) => money(c.newVaPI))}
                 />
-                <Row
-                  label="Property tax"
-                  cells={cells((c) => money(c.taxMo))}
-                />
+                <Row label="Property tax" cells={cells((c) => money(c.taxMo))} />
                 <Row
                   label="CDD"
-                  cells={cells((c) =>
-                    c.cddMo > 0 ? money(c.cddMo) : "None"
-                  )}
+                  cells={cells((c) => (c.cddMo > 0 ? money(c.cddMo) : "None"))}
                 />
                 <Row label="HOA" cells={cells((c) => money(c.hoaMo))} />
                 <Row label="Insurance" cells={cells((c) => money(c.insMo))} />
@@ -425,21 +433,23 @@ export default async function ClientComparePage({
                   cells={cells((c) =>
                     c.assume ? (
                       <>
-                        {money(c.home.loan.bal)} at {pct(c.home.loan.rate)}
+                        {money(c.home.loan.bal)} at{" "}
+                        {pctWhole(c.home.loan.rate)}
+                        {c.home.loan.remaining && (
+                          <span className="mt-0.5 block text-xs text-[#475569]">
+                            {c.home.loan.remaining} payments left
+                          </span>
+                        )}
                       </>
                     ) : (
-                      <span className="text-[#475569]">Not available</span>
+                      <NotAvailable />
                     )
                   )}
                 />
                 <Row
                   label="Gap to the price"
                   cells={cells((c) =>
-                    c.assume ? (
-                      money(c.assume.gap)
-                    ) : (
-                      <span className="text-[#475569]">Not available</span>
-                    )
+                    c.assume ? money(c.assume.gap) : <NotAvailable />
                   )}
                 />
                 <Row
@@ -450,11 +460,11 @@ export default async function ClientComparePage({
                         {money(c.assume.cashDown)} cash
                         <span className="mt-0.5 block text-xs text-[#475569]">
                           plus a {money(c.assume.second)} second at{" "}
-                          {pct(s.secondRate)}
+                          {pctDec(s.secondRate)}
                         </span>
                       </>
                     ) : (
-                      <span className="text-[#475569]">Not available</span>
+                      <NotAvailable />
                     )
                   )}
                 />
@@ -463,9 +473,9 @@ export default async function ClientComparePage({
                   cells={cells((c) =>
                     c.assume ? (
                       <>
-                        {money(c.home.loan.pi)} first
+                        {money(c.home.loan.pi ?? 0)} first
                         <span className="mt-0.5 block text-xs text-[#475569]">
-                          {money(c.home.loan.mip)} MIP,{" "}
+                          {money(c.home.loan.mip ?? 0)} MIP,{" "}
                           {money(c.assume.secondPI)} second
                         </span>
                         <span className="mt-0.5 block text-xs font-semibold">
@@ -473,7 +483,7 @@ export default async function ClientComparePage({
                         </span>
                       </>
                     ) : (
-                      <span className="text-[#475569]">Not available</span>
+                      <NotAvailable />
                     )
                   )}
                 />
@@ -493,9 +503,7 @@ export default async function ClientComparePage({
                         )}
                       </>
                     ) : (
-                      <span className="font-normal text-[#475569]">
-                        Not available
-                      </span>
+                      <NotAvailable />
                     )
                   )}
                 />
@@ -510,7 +518,7 @@ export default async function ClientComparePage({
                         </span>
                       </>
                     ) : (
-                      <span className="text-[#475569]">Not available</span>
+                      <NotAvailable />
                     )
                   )}
                 />
@@ -519,16 +527,19 @@ export default async function ClientComparePage({
                 <SectionRow title="Commute" span={span} />
                 {s.workplaces.map((w, wi) => (
                   <Row
-                    key={w.name}
-                    label={`${w.name}${w.who ? ` (${w.who})` : ""}`}
-                    cells={cells((c) => (
-                      <>
-                        {c.home.commute[wi].minutes} min
-                        <span className="mt-0.5 block text-xs text-[#475569]">
-                          {c.home.commute[wi].miles} miles each way
-                        </span>
-                      </>
-                    ))}
+                    key={w}
+                    label={w}
+                    cells={cells((c) => {
+                      const leg = commuteLeg(c.home, wi);
+                      return (
+                        <>
+                          {leg.time}
+                          <span className="mt-0.5 block text-xs text-[#475569]">
+                            {leg.miles} each way
+                          </span>
+                        </>
+                      );
+                    })}
                   />
                 ))}
                 <Row
@@ -560,13 +571,13 @@ export default async function ClientComparePage({
                 />
                 <Row
                   label="Watch outs"
-                  cells={cells((c) => <Bullets items={c.home.watchOuts} />)}
+                  cells={cells((c) => <Bullets items={c.home.cons} />)}
                 />
                 <Row
                   label="Negotiating room"
                   cells={cells((c) => (
                     <span className="text-sm leading-snug">
-                      {c.home.negotiatingRoom}
+                      {c.home.leverage}
                     </span>
                   ))}
                 />
@@ -617,22 +628,23 @@ export default async function ClientComparePage({
           <h3 className="mt-5 text-sm font-bold uppercase tracking-wide text-[#475569]">
             Where each home stands
           </h3>
-          <ul className="mt-2 space-y-2 text-sm leading-relaxed text-[#0B2545]">
+          <p className="mt-2 text-sm leading-relaxed text-[#475569]">
+            These come from public records, which tell us the loan type, the
+            rate and roughly what is owed, but not whether the servicer will
+            actually approve an assumption. That is a phone call I make on your
+            behalf once you pick a favorite, and the answer can change the
+            numbers below.
+          </p>
+          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-[#0B2545]">
             {rows.map((c) => (
-              <li key={c.home.name}>
-                <strong>{c.home.name}:</strong>{" "}
+              <li key={c.home.id}>
+                <strong>{c.home.name}:</strong> {c.home.loan.type} at{" "}
+                {pctWhole(c.home.loan.rate)} through {c.home.loan.lender}, and
+                it is{" "}
                 {c.home.loan.assumable ? (
-                  <>
-                    {c.home.loan.type} at {pct(c.home.loan.rate)} and it is
-                    assumable, so Option B is open. Loan company:{" "}
-                    {c.home.loan.lender}.
-                  </>
+                  <>assumable, so Option B is open.</>
                 ) : (
-                  <>
-                    {c.home.loan.type} at {pct(c.home.loan.rate)} and it is not
-                    assumable, so a new VA loan is the path here. Loan company:{" "}
-                    {c.home.loan.lender}.
-                  </>
+                  <>not assumable, so a new VA loan is the path here.</>
                 )}
               </li>
             ))}
@@ -652,7 +664,7 @@ export default async function ClientComparePage({
           </h2>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-[#0B2545]">
             <li>
-              New VA loans are priced at {pct(s.vaRate)} over 30 years with
+              New VA loans are priced at {pctDec(s.vaRate)} over 30 years with
               nothing down.
             </li>
             <li>
@@ -666,14 +678,13 @@ export default async function ClientComparePage({
               monthly figures.
             </li>
             <li>
-              Electric is estimated at {s.kwh_per_sf} kilowatt hours per square
-              foot per month at ${s.electricPerKwh.toFixed(2)} per kilowatt
-              hour.
+              Electric is estimated per house from its own usage rate at $
+              {s.electricPerKwh.toFixed(3)} per kilowatt hour.
             </li>
             <li>
               On an assumption, a second lender is assumed to go to{" "}
               {Math.round(s.secondMaxCltv * 100)}% of the price at{" "}
-              {pct(s.secondRate)} over 30 years, and you bring the remaining{" "}
+              {pctDec(s.secondRate)} over 30 years, and you bring the remaining{" "}
               {Math.round((1 - s.secondMaxCltv) * 100)}% in cash.
             </li>
             <li>
@@ -683,7 +694,8 @@ export default async function ClientComparePage({
               {s.gasCostPerMile.toFixed(2)} per mile for gas.
             </li>
             <li>
-              Extra drive time and gas are measured against {s.baselineHome},
+              Extra drive time and gas are measured against{" "}
+              {rows.find((r) => r.isBaseline)?.home.name ?? s.baselineHomeId},
               the closest home on this list.
             </li>
           </ul>

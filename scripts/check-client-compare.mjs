@@ -47,31 +47,32 @@ const rows = computeAll(data);
 // "newVa"  = Option A, a brand new VA loan at 0% down
 // "assume" = Option B, taking over the seller's existing loan
 const EXPECTED = [
-  { name: "11412 Lake Lucaya Dr", field: "newVa", value: 3965 },
-  { name: "12349 Blue Pacific Dr", field: "assume", value: 3119 },
-  { name: "11967 Cinnamon Fern Dr", field: "assume", value: 3982 },
-  { name: "10415 Alcon Blue Dr", field: "newVa", value: 4407 },
+  { id: "lake-lucaya", field: "newVa", value: 3965 },
+  { id: "blue-pacific", field: "assume", value: 3119 },
+  { id: "cinnamon-fern", field: "assume", value: 3982 },
+  { id: "alcon-blue", field: "newVa", value: 4407 },
 ];
 
 const TOLERANCE = 3;
 let failures = 0;
 
 for (const want of EXPECTED) {
-  const row = rows.find((r) => r.home.name === want.name);
+  const row = rows.find((r) => r.home.id === want.id);
 
   if (!row) {
-    console.error(`FAIL  ${want.name} is not in the client file at all`);
+    console.error(`FAIL  no home with id "${want.id}" in the client file`);
     failures++;
     continue;
   }
 
+  const label = row.home.name;
   const got =
     want.field === "assume" ? row.assume?.assumeAllIn : row.newVaAllIn;
 
   if (typeof got !== "number") {
     console.error(
-      `FAIL  ${want.name} has no ${want.field} total. ` +
-        `For an assume total the home needs "assumable": true and a filled in loan block.`
+      `FAIL  ${label} has no ${want.field} total. ` +
+        `For an assume total the home needs "assumable": true plus pi, mip and bal in its loan block.`
     );
     failures++;
     continue;
@@ -80,21 +81,42 @@ for (const want of EXPECTED) {
   const drift = Math.abs(got - want.value);
   if (drift > TOLERANCE) {
     console.error(
-      `FAIL  ${want.name} ${want.field} all in is $${got}, expected about $${want.value} (off by $${drift})`
+      `FAIL  ${label} ${want.field} all in is $${got}, expected about $${want.value} (off by $${drift})`
     );
     failures++;
   } else {
     console.log(
-      `ok    ${want.name} ${want.field} all in $${got} (expected about $${want.value})`
+      `ok    ${label.padEnd(23)} ${want.field.padEnd(6)} all in $${got} (expected about $${want.value})`
     );
   }
 }
 
-// ── A couple of structural checks so the page never renders something broken ──
+// ── Structural checks so the page never renders something broken ──
+
+// The commute block has exactly two legs, so there must be exactly two
+// workplaces for the table to line up.
+if (data.settings.workplaces.length !== 2) {
+  console.error(
+    `FAIL  settings.workplaces has ${data.settings.workplaces.length} entries, but the commute block only holds toWork1 and toWork2`
+  );
+  failures++;
+}
+
 for (const row of rows) {
-  if (row.home.commute.length !== data.settings.workplaces.length) {
+  for (const leg of ["toWork1", "toWork2"]) {
+    const v = row.home.commute?.[leg];
+    if (!v || typeof v.miles !== "string" || typeof v.time !== "string") {
+      console.error(
+        `FAIL  ${row.home.name} is missing commute.${leg}.miles or .time`
+      );
+      failures++;
+    }
+  }
+
+  // An assumable home without pi silently loses its whole Option B column.
+  if (row.home.loan.assumable && typeof row.home.loan.pi !== "number") {
     console.error(
-      `FAIL  ${row.home.name} has ${row.home.commute.length} commute entries but there are ${data.settings.workplaces.length} workplaces`
+      `FAIL  ${row.home.name} is marked assumable but has no loan.pi, so Option B will not render`
     );
     failures++;
   }
@@ -102,7 +124,7 @@ for (const row of rows) {
 
 if (!rows.some((r) => r.isBaseline)) {
   console.error(
-    `FAIL  settings.baselineHome is "${data.settings.baselineHome}" but no home has that exact name`
+    `FAIL  settings.baselineHomeId is "${data.settings.baselineHomeId}" but no home has that id`
   );
   failures++;
 }
