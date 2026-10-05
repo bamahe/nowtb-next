@@ -61,6 +61,18 @@ Valrico, Brandon, Riverview, Lithia, Apollo Beach, Seffner, Plant City, Dover, T
 - /market-updates — Tampa Bay market updates and data
 - /commercial — Commercial real estate
 
+## Pinellas Gulf Beach Condo Guides (updated October 2026)
+Building-level research on Gulf-front condos from Indian Rocks Beach to Madeira Beach,
+covering Structural Integrity Reserve Study (SIRS) status, milestone inspections,
+Florida condo law, rental rules, and purchase structure.
+- /gulf-front-condos-sirs-milestone-complete — Which Gulf-front buildings have a filed SIRS and a completed milestone inspection
+- /pinellas-beach-condo-market-report — Q4 2026 Gulf beach condo market report: inventory, price per square foot, days on market
+- /florida-condo-rules-buyers-2026 — Florida condo rules for buyers in 2026: HB 913, SIRS deadlines, Fannie Mae LL-2026-03, Citizens SB 1028
+- /indian-rocks-beach-rental-rules — Indian Rocks Beach vacation rental rules under Ordinance 2023-02, plus building minimum stays
+- /buying-beach-condo-llc-florida — Buying a Florida beach condo in an LLC: financing, association approval, taxes, document checklist
+- /beach-condo-renovation-math — Renovation cost estimates for a dated Gulf-front condo versus buying updated
+- /how-to-tell-if-condo-is-55-plus — How to verify whether a Florida condo is age restricted
+
 ## Related Sites
 - https://barretthenry.remax.com — REMAX team site
 - https://vivipm.com — ViVi Property Management

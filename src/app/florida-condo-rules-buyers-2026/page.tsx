@@ -13,7 +13,8 @@ import BeachCondoInventory from "@/components/ui/BeachCondoInventory";
 import QuickAnswer from "@/components/ui/QuickAnswer";
 import FaqSection, { type Faq } from "@/components/ui/FaqSection";
 import BeachCondoFooterBlock from "@/components/ui/BeachCondoFooterBlock";
-import { JsonLd, breadcrumbSchema, articleSchema, faqSchema } from "@/lib/schema";
+import SourcesSection, { type Source } from "@/components/ui/SourcesSection";
+import { JsonLd, breadcrumbSchema, articleSchema, faqSchema, webPageSchema } from "@/lib/schema";
 import { BEACH_CONDO_PUBLISH_DATE } from "@/data/beach-condo-pages";
 
 const SLUG = "florida-condo-rules-buyers-2026";
@@ -28,7 +29,12 @@ export const metadata: Metadata = {
   title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: `/${SLUG}/` },
-  openGraph: { title: TITLE, description: DESCRIPTION, type: "article" },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    type: "article",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
 };
 
 // --- Dated timeline of what changes when ---
@@ -62,6 +68,31 @@ const timeline = [
     change: "Reserve minimum rises",
     detail:
       "Fannie Mae raises the reserve minimum from 10 percent to 15 percent of annual budgeted assessment income. Budgets that qualify today may not qualify in January.",
+  },
+];
+
+// --- Sources cited on this page (GEO: name the sources on-page) ---
+const sources: Source[] = [
+  {
+    name: 'Florida HB 913 (2025)',
+    used: 'SIRS deadlines, the no waiver rule on SIRS reserves, permitted funding methods, the 365 day Phase 2 clock, and the 115 percent substitute budget requirement.',
+  },
+  {
+    name: 'Florida Legislature 2026 regular session record',
+    used: 'Confirmation that no new condo laws passed and that HB 657 died. Session ended March 13, 2026.',
+  },
+  {
+    name: 'Fannie Mae Lender Letter LL-2026-03, issued March 18, 2026',
+    used: 'Limited Review retirement, the $50,000 per unit deductible cap, the reserve minimum increase, the investor concentration cap removal, and the Florida PERS retirement.',
+  },
+  {
+    name: 'Florida SB 1028, effective June 16, 2026',
+    used: 'Citizens Property Insurance commercial clearinghouse requirement and the 15 percent comparable offer eligibility rule.',
+  },
+  {
+    name: 'Florida DBPR SIRS reporting database',
+    used: 'Public SIRS lookup. No equivalent statewide milestone database exists.',
+    href: "https://www.myfloridalicense.com/",
   },
 ];
 
@@ -117,6 +148,14 @@ export default function FloridaCondoRulesBuyersPage() {
         })}
       />
       <JsonLd data={faqSchema(faqs)} />
+      <JsonLd
+        data={webPageSchema({
+          name: TITLE,
+          description: DESCRIPTION,
+          url: CANONICAL,
+          datePublished: BEACH_CONDO_PUBLISH_DATE,
+        })}
+      />
 
       <HeroSection
         label="FLORIDA CONDO LAW | 2026"
@@ -143,6 +182,21 @@ export default function FloridaCondoRulesBuyersPage() {
               1, 2027.
             </p>
           </QuickAnswer>
+          <p className="font-body text-muted text-sm mt-4 leading-relaxed">
+            According to Florida HB 913 (2025), the 2026 regular session record, Fannie Mae Lender Letter LL-2026-03, and Florida SB 1028, checked October 2026.
+          </p>
+          <p className="font-body text-muted text-sm mt-3 leading-relaxed">
+            Keep reading:
+              <Link href="/gulf-front-condos-sirs-milestone-complete/" className="text-link hover:underline">
+                which Gulf-front buildings already have both reports
+              </Link>,{" "}
+              <Link href="/buying-beach-condo-llc-florida/" className="text-link hover:underline">
+                how entity purchases change the loan
+              </Link>, and{" "}
+              <Link href="/how-to-tell-if-condo-is-55-plus/" className="text-link hover:underline">
+                how to verify age restriction status
+              </Link>.
+          </p>
         </div>
       </section>
 
@@ -360,6 +414,8 @@ export default function FloridaCondoRulesBuyersPage() {
       />
 
       <FaqSection heading="Florida Condo Rule Questions" faqs={faqs} />
+
+      <SourcesSection sources={sources} />
 
       <BeachCondoFooterBlock
         currentSlug={SLUG}

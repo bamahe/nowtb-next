@@ -12,7 +12,8 @@ import BeachCondoInventory from "@/components/ui/BeachCondoInventory";
 import QuickAnswer from "@/components/ui/QuickAnswer";
 import FaqSection, { type Faq } from "@/components/ui/FaqSection";
 import BeachCondoFooterBlock from "@/components/ui/BeachCondoFooterBlock";
-import { JsonLd, breadcrumbSchema, articleSchema, faqSchema } from "@/lib/schema";
+import SourcesSection, { type Source } from "@/components/ui/SourcesSection";
+import { JsonLd, breadcrumbSchema, articleSchema, faqSchema, webPageSchema } from "@/lib/schema";
 import { BEACH_CONDO_PUBLISH_DATE } from "@/data/beach-condo-pages";
 
 const SLUG = "pinellas-beach-condo-market-report";
@@ -27,7 +28,12 @@ export const metadata: Metadata = {
   title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: `/${SLUG}/` },
-  openGraph: { title: TITLE, description: DESCRIPTION, type: "article" },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    type: "article",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
 };
 
 // --- Headline numbers for the snapshot grid ---
@@ -66,6 +72,23 @@ const reflectionsFacts = [
   { label: "January 2025 comparison", value: "About $686 per square foot" },
   { label: "Monthly fees", value: "Roughly $900 to $1,000 depending on the unit" },
   { label: "Reports", value: "SIRS filed and milestone completed" },
+];
+
+// --- Sources cited on this page (GEO: name the sources on-page) ---
+const sources: Source[] = [
+  {
+    name: 'Stellar MLS active, pending, and closed sales, zips 33785, 33708, and 33786',
+    used: 'Inventory count, price per square foot ranges, days on market, and the building level sales history.',
+  },
+  {
+    name: 'Florida DBPR SIRS reporting database',
+    used: 'SIRS status for the buildings named in this report.',
+    href: "https://www.myfloridalicense.com/",
+  },
+  {
+    name: 'Current listing disclosures',
+    used: 'Monthly fee ranges, insurance inclusion, and special assessment notes.',
+  },
 ];
 
 const faqs: Faq[] = [
@@ -115,6 +138,14 @@ export default function PinellasBeachCondoMarketReportPage() {
         })}
       />
       <JsonLd data={faqSchema(faqs)} />
+      <JsonLd
+        data={webPageSchema({
+          name: TITLE,
+          description: DESCRIPTION,
+          url: CANONICAL,
+          datePublished: BEACH_CONDO_PUBLISH_DATE,
+        })}
+      />
 
       <HeroSection
         label="MARKET REPORT | Q4 2026"
@@ -138,6 +169,21 @@ export default function PinellasBeachCondoMarketReportPage() {
               heading into the end of the year.
             </p>
           </QuickAnswer>
+          <p className="font-body text-muted text-sm mt-4 leading-relaxed">
+            According to Stellar MLS active, pending, and closed sales data for zip codes 33785, 33708, and 33786, checked October 2026.
+          </p>
+          <p className="font-body text-muted text-sm mt-3 leading-relaxed">
+            Keep reading:
+              <Link href="/gulf-front-condos-sirs-milestone-complete/" className="text-link hover:underline">
+                which buildings have the SIRS and milestone done
+              </Link>,{" "}
+              <Link href="/beach-condo-renovation-math/" className="text-link hover:underline">
+                the dated versus updated renovation math
+              </Link>, and{" "}
+              <Link href="/florida-condo-rules-buyers-2026/" className="text-link hover:underline">
+                the 2026 condo rules that slow these deals down
+              </Link>.
+          </p>
         </div>
       </section>
 
@@ -311,6 +357,8 @@ export default function PinellasBeachCondoMarketReportPage() {
         heading="Pinellas Beach Condo Market Questions"
         faqs={faqs}
       />
+
+      <SourcesSection sources={sources} />
 
       <BeachCondoFooterBlock
         currentSlug={SLUG}

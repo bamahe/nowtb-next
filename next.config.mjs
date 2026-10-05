@@ -152,6 +152,55 @@ const nextConfig = {
       { source: "/indian-rocks-realtor", destination: "/indian-rocks-beach-realtor/", permanent: true },
       { source: "/indian-rocks-realtor/", destination: "/indian-rocks-beach-realtor/", permanent: true },
 
+      // ── Out-of-area "neighborhood" data → nearest service-area county ──
+      // These were listed in neighborhoods.ts as neighborhoods of Sarasota (and
+      // Indian Harbour Beach as one of Lakeland), but they are separate cities in
+      // Lee, Collier, Charlotte, and Brevard counties, all outside the 8-county
+      // service area. The catch-all route auto-generated a hub, a homes-for-sale
+      // page, and a REALTOR page for each one, and they reached the sitemap. These
+      // 301s retire the URLs without leaving 404s behind.
+      // Cape Coral is in Lee County, not a neighborhood of its listed city
+      { source: "/cape-coral", destination: "/sarasota-county/", permanent: true },
+      { source: "/cape-coral/", destination: "/sarasota-county/", permanent: true },
+      { source: "/cape-coral-homes-for-sale", destination: "/sarasota-county/", permanent: true },
+      { source: "/cape-coral-homes-for-sale/", destination: "/sarasota-county/", permanent: true },
+      { source: "/cape-coral-realtor", destination: "/sarasota-county/", permanent: true },
+      { source: "/cape-coral-realtor/", destination: "/sarasota-county/", permanent: true },
+      // Fort Myers is in Lee County, not a neighborhood of its listed city
+      { source: "/fort-myers", destination: "/sarasota-county/", permanent: true },
+      { source: "/fort-myers/", destination: "/sarasota-county/", permanent: true },
+      { source: "/fort-myers-homes-for-sale", destination: "/sarasota-county/", permanent: true },
+      { source: "/fort-myers-homes-for-sale/", destination: "/sarasota-county/", permanent: true },
+      { source: "/fort-myers-realtor", destination: "/sarasota-county/", permanent: true },
+      { source: "/fort-myers-realtor/", destination: "/sarasota-county/", permanent: true },
+      // Naples is in Collier County, not a neighborhood of its listed city
+      { source: "/naples", destination: "/sarasota-county/", permanent: true },
+      { source: "/naples/", destination: "/sarasota-county/", permanent: true },
+      { source: "/naples-homes-for-sale", destination: "/sarasota-county/", permanent: true },
+      { source: "/naples-homes-for-sale/", destination: "/sarasota-county/", permanent: true },
+      { source: "/naples-realtor", destination: "/sarasota-county/", permanent: true },
+      { source: "/naples-realtor/", destination: "/sarasota-county/", permanent: true },
+      // Port Charlotte is in Charlotte County, not a neighborhood of its listed city
+      { source: "/port-charlotte", destination: "/sarasota-county/", permanent: true },
+      { source: "/port-charlotte/", destination: "/sarasota-county/", permanent: true },
+      { source: "/port-charlotte-homes-for-sale", destination: "/sarasota-county/", permanent: true },
+      { source: "/port-charlotte-homes-for-sale/", destination: "/sarasota-county/", permanent: true },
+      { source: "/port-charlotte-realtor", destination: "/sarasota-county/", permanent: true },
+      { source: "/port-charlotte-realtor/", destination: "/sarasota-county/", permanent: true },
+      // Punta Gorda is in Charlotte County, not a neighborhood of its listed city
+      { source: "/punta-gorda", destination: "/sarasota-county/", permanent: true },
+      { source: "/punta-gorda/", destination: "/sarasota-county/", permanent: true },
+      { source: "/punta-gorda-homes-for-sale", destination: "/sarasota-county/", permanent: true },
+      { source: "/punta-gorda-homes-for-sale/", destination: "/sarasota-county/", permanent: true },
+      { source: "/punta-gorda-realtor", destination: "/sarasota-county/", permanent: true },
+      { source: "/punta-gorda-realtor/", destination: "/sarasota-county/", permanent: true },
+      // Indian Harbour Beach is in Brevard County, not a neighborhood of its listed city
+      { source: "/indian-harbour-beach", destination: "/polk-county/", permanent: true },
+      { source: "/indian-harbour-beach/", destination: "/polk-county/", permanent: true },
+      { source: "/indian-harbour-beach-homes-for-sale", destination: "/polk-county/", permanent: true },
+      { source: "/indian-harbour-beach-homes-for-sale/", destination: "/polk-county/", permanent: true },
+      { source: "/indian-harbour-beach-realtor", destination: "/polk-county/", permanent: true },
+      { source: "/indian-harbour-beach-realtor/", destination: "/polk-county/", permanent: true },
       // ── Duplicate neighborhood slugs → canonical versions ──
       { source: "/brentwood-hills-community", destination: "/brentwood-hills/", permanent: true },
       { source: "/brentwood-hills-community/", destination: "/brentwood-hills/", permanent: true },

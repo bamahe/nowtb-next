@@ -300,6 +300,48 @@ export function faqSchema(faqs: { question: string; answer: string }[]) {
   };
 }
 
+/**
+ * WebPage schema with a speakable specification. Required alongside the
+ * page-specific type so AI answer engines and voice search know which block on
+ * the page is the quotable answer.
+ */
+export function webPageSchema(page: {
+  name: string;
+  description: string;
+  url: string;
+  datePublished?: string;
+  dateModified?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: page.name,
+    description: page.description,
+    url: page.url,
+    ...(page.datePublished ? { datePublished: page.datePublished } : {}),
+    ...(page.dateModified ? { dateModified: page.dateModified } : {}),
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Barrett Henry, REALTOR\u00ae",
+      url: SITE_URL,
+    },
+    about: {
+      "@type": "Thing",
+      name: "Florida condominium purchases",
+    },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".quick-answer", "h1"],
+    },
+    publisher: {
+      "@type": "RealEstateAgent",
+      name: "Barrett Henry, REALTOR\u00ae",
+      url: SITE_URL,
+      telephone: PHONE,
+    },
+  };
+}
+
 /** Helper to render JSON-LD as a script tag */
 export function JsonLd({ data }: { data: Record<string, unknown> }) {
   return (

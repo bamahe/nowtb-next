@@ -1,6 +1,7 @@
 // /condos — Tampa Bay Condos for Sale
 
 import type { Metadata } from "next";
+import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
 import SearchBar from "@/components/ui/SearchBar";
 import ListingGrid from "@/components/ui/ListingGrid";
@@ -50,6 +51,34 @@ export default async function CondosPage() {
       <section className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <h2 className="text-2xl font-heading font-bold text-primary mb-4">Buying a Condo in Tampa Bay</h2>
         <p className="text-muted mb-6 font-body leading-relaxed">Before buying any condo, review the HOA financials, reserve study, and check for pending special assessments. Florida now requires milestone structural inspections for buildings 3+ stories and 30+ years old. HOA fees range from $200-$1,500/month depending on amenities. Always calculate total monthly cost before comparing condos to single-family homes.</p>
+      </section>
+
+      {/* === Pinellas Gulf beach condo research cluster === */}
+      <section className="mx-auto max-w-4xl px-4 pb-12 sm:px-6 lg:px-8">
+        <h2 className="text-2xl font-heading font-bold text-primary mb-4">Buying a Gulf-Front Beach Condo?</h2>
+        <p className="text-muted mb-6 font-body leading-relaxed">
+          Beach condos carry questions inland condos do not: reserve studies, milestone
+          inspections, storm assessments, and rental minimums that change building by
+          building. These guides cover the Pinellas Gulf beaches from Indian Rocks Beach
+          to Madeira Beach, updated October 2026.
+        </p>
+        <ul className="space-y-2 font-body text-muted">
+          {[
+            { href: "/gulf-front-condos-sirs-milestone-complete/", label: "Gulf-front condos with SIRS and milestone inspections done" },
+            { href: "/pinellas-beach-condo-market-report/", label: "Pinellas Gulf beach condo market report, Q4 2026" },
+            { href: "/florida-condo-rules-buyers-2026/", label: "Florida condo rules for buyers in 2026" },
+            { href: "/indian-rocks-beach-rental-rules/", label: "Indian Rocks Beach rental rules" },
+            { href: "/buying-beach-condo-llc-florida/", label: "Buying a Florida beach condo in an LLC" },
+            { href: "/beach-condo-renovation-math/", label: "Beach condo renovation math: dated versus updated" },
+            { href: "/how-to-tell-if-condo-is-55-plus/", label: "How to tell if a Florida condo is 55+" },
+          ].map((item) => (
+            <li key={item.href}>
+              <Link href={item.href} className="text-link hover:underline">
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="bg-[#003da5] py-16 px-4 text-center text-white">

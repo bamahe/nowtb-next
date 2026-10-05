@@ -12,7 +12,8 @@ import BeachCondoInventory from "@/components/ui/BeachCondoInventory";
 import QuickAnswer from "@/components/ui/QuickAnswer";
 import FaqSection, { type Faq } from "@/components/ui/FaqSection";
 import BeachCondoFooterBlock from "@/components/ui/BeachCondoFooterBlock";
-import { JsonLd, breadcrumbSchema, articleSchema, faqSchema } from "@/lib/schema";
+import SourcesSection, { type Source } from "@/components/ui/SourcesSection";
+import { JsonLd, breadcrumbSchema, articleSchema, faqSchema, webPageSchema } from "@/lib/schema";
 import { BEACH_CONDO_PUBLISH_DATE } from "@/data/beach-condo-pages";
 
 const SLUG = "buying-beach-condo-llc-florida";
@@ -27,7 +28,12 @@ export const metadata: Metadata = {
   title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: `/${SLUG}/` },
-  openGraph: { title: TITLE, description: DESCRIPTION, type: "article" },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    type: "article",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
 };
 
 // --- Documents to request early ---
@@ -48,28 +54,49 @@ const documentChecklist = [
 const comparison = [
   {
     item: "Typical loan type",
-    personal: "Standard conventional loan",
-    entity: "Non-QM, DSCR, portfolio, or commercial loan. Confirm with a lender.",
+    personal: "\u2713 Standard conventional loan",
+    entity: "\u2717 Not a standard conventional loan. Non-QM, DSCR, portfolio, or commercial. Confirm with a lender.",
   },
   {
     item: "Building review",
-    personal: "Lender reviews the project",
-    entity: "Lender still reviews the project. Condo docs, SIRS, milestone, insurance, and budget are needed early.",
+    personal: "\u2713 Lender reviews the project",
+    entity: "\u2713 Lender still reviews the project. Condo docs, SIRS, milestone, insurance, and budget are needed early.",
   },
   {
     item: "Association approval",
-    personal: "Buyer approval is common",
-    entity: "Buyer approval is common, and some associations restrict or set rules for entity ownership.",
+    personal: "\u2713 Buyer approval is common",
+    entity: "\u2717 Buyer approval plus possible entity ownership restrictions. Ask before you offer.",
   },
   {
     item: "Homestead exemption",
-    personal: "Available on a primary residence",
-    entity: "Not available on a second home or entity-owned unit.",
+    personal: "\u2713 Available on a primary residence",
+    entity: "\u2717 Not available on a second home or entity-owned unit.",
   },
   {
     item: "Property tax basis",
-    personal: "Assessment cap applies to a homesteaded primary residence",
-    entity: "No cap. Taxes reset based on the purchase price.",
+    personal: "\u2713 Assessment cap applies to a homesteaded primary residence",
+    entity: "\u2717 No cap. Taxes reset based on the purchase price.",
+  },
+];
+
+// --- Sources cited on this page (GEO: name the sources on-page) ---
+const sources: Source[] = [
+  {
+    name: 'Florida homestead exemption and assessment cap rules',
+    used: 'Why a second home or entity owned unit gets no exemption and no cap, and why taxes reset at the purchase price.',
+  },
+  {
+    name: 'Pinellas County Property Appraiser millage data',
+    used: 'Why the 1.5 to 1.7 percent planning figure is an estimate that varies by millage.',
+    href: "https://www.pcpao.gov/",
+  },
+  {
+    name: 'Florida HB 913 (2025)',
+    used: 'The association document portal requirement for associations with 25 or more units.',
+  },
+  {
+    name: 'Current association declarations and purchase applications',
+    used: 'Entity ownership restrictions and buyer approval requirements.',
   },
 ];
 
@@ -125,6 +152,14 @@ export default function BuyingBeachCondoLlcPage() {
         })}
       />
       <JsonLd data={faqSchema(faqs)} />
+      <JsonLd
+        data={webPageSchema({
+          name: TITLE,
+          description: DESCRIPTION,
+          url: CANONICAL,
+          datePublished: BEACH_CONDO_PUBLISH_DATE,
+        })}
+      />
 
       <HeroSection
         label="ENTITY AND SECOND-HOME BUYERS"
@@ -150,6 +185,21 @@ export default function BuyingBeachCondoLlcPage() {
               entity-owned unit, and taxes reset based on the purchase price.
             </p>
           </QuickAnswer>
+          <p className="font-body text-muted text-sm mt-4 leading-relaxed">
+            According to Florida homestead and property tax rules and current association declarations, checked October 2026.
+          </p>
+          <p className="font-body text-muted text-sm mt-3 leading-relaxed">
+            Keep reading:
+              <Link href="/florida-condo-rules-buyers-2026/" className="text-link hover:underline">
+                the 2026 lending and insurance changes
+              </Link>,{" "}
+              <Link href="/indian-rocks-beach-rental-rules/" className="text-link hover:underline">
+                rental rules that stack on building rules
+              </Link>, and{" "}
+              <Link href="/pinellas-beach-condo-market-report/" className="text-link hover:underline">
+                what the buildings are actually selling for
+              </Link>.
+          </p>
         </div>
       </section>
 
@@ -344,6 +394,8 @@ export default function BuyingBeachCondoLlcPage() {
       />
 
       <FaqSection heading="LLC and Second-Home Condo Questions" faqs={faqs} />
+
+      <SourcesSection sources={sources} />
 
       <BeachCondoFooterBlock
         currentSlug={SLUG}

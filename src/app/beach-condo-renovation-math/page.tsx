@@ -12,7 +12,8 @@ import BeachCondoInventory from "@/components/ui/BeachCondoInventory";
 import QuickAnswer from "@/components/ui/QuickAnswer";
 import FaqSection, { type Faq } from "@/components/ui/FaqSection";
 import BeachCondoFooterBlock from "@/components/ui/BeachCondoFooterBlock";
-import { JsonLd, breadcrumbSchema, articleSchema, faqSchema } from "@/lib/schema";
+import SourcesSection, { type Source } from "@/components/ui/SourcesSection";
+import { JsonLd, breadcrumbSchema, articleSchema, faqSchema, webPageSchema } from "@/lib/schema";
 import { BEACH_CONDO_PUBLISH_DATE } from "@/data/beach-condo-pages";
 
 const SLUG = "beach-condo-renovation-math";
@@ -27,7 +28,12 @@ export const metadata: Metadata = {
   title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: `/${SLUG}/` },
-  openGraph: { title: TITLE, description: DESCRIPTION, type: "article" },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    type: "article",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
 };
 
 // --- Estimated renovation line items for the example unit ---
@@ -44,6 +50,22 @@ const associationRules = [
   "Licensed and insured contractors only",
   "Limits on work hours, and often on which days work is allowed",
   "Sound underlayment required under any hard flooring",
+];
+
+// --- Sources cited on this page (GEO: name the sources on-page) ---
+const sources: Source[] = [
+  {
+    name: 'Stellar MLS closed sales and active listings, Pinellas Gulf beaches',
+    used: 'The per square foot sales range used to compare dated units against updated ones.',
+  },
+  {
+    name: 'Local renovation cost ranges, Tampa Bay trades, October 2026',
+    used: 'The paint, flooring, kitchen, and bathroom estimates. These are planning ranges, not quotes.',
+  },
+  {
+    name: 'Current association rules and regulations',
+    used: 'Renovation approval requirements, licensed and insured contractor rules, work hour limits, and sound underlayment requirements.',
+  },
 ];
 
 const faqs: Faq[] = [
@@ -98,6 +120,14 @@ export default function BeachCondoRenovationMathPage() {
         })}
       />
       <JsonLd data={faqSchema(faqs)} />
+      <JsonLd
+        data={webPageSchema({
+          name: TITLE,
+          description: DESCRIPTION,
+          url: CANONICAL,
+          datePublished: BEACH_CONDO_PUBLISH_DATE,
+        })}
+      />
 
       <HeroSection
         label="GULF-FRONT CONDOS"
@@ -123,6 +153,21 @@ export default function BeachCondoRenovationMathPage() {
               loan.
             </p>
           </QuickAnswer>
+          <p className="font-body text-muted text-sm mt-4 leading-relaxed">
+            According to Stellar MLS closed sales for the Pinellas Gulf beaches and local trade cost ranges, checked October 2026.
+          </p>
+          <p className="font-body text-muted text-sm mt-3 leading-relaxed">
+            Keep reading:
+              <Link href="/pinellas-beach-condo-market-report/" className="text-link hover:underline">
+                the per square foot sales data behind this comparison
+              </Link>,{" "}
+              <Link href="/gulf-front-condos-sirs-milestone-complete/" className="text-link hover:underline">
+                whether the building has structural work pending
+              </Link>, and{" "}
+              <Link href="/buying-beach-condo-llc-florida/" className="text-link hover:underline">
+                how the cash works on an entity purchase
+              </Link>.
+          </p>
         </div>
       </section>
 
@@ -337,6 +382,8 @@ export default function BeachCondoRenovationMathPage() {
       />
 
       <FaqSection heading="Condo Renovation Questions" faqs={faqs} />
+
+      <SourcesSection sources={sources} />
 
       <BeachCondoFooterBlock
         currentSlug={SLUG}

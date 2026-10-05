@@ -12,7 +12,8 @@ import BeachCondoInventory from "@/components/ui/BeachCondoInventory";
 import QuickAnswer from "@/components/ui/QuickAnswer";
 import FaqSection, { type Faq } from "@/components/ui/FaqSection";
 import BeachCondoFooterBlock from "@/components/ui/BeachCondoFooterBlock";
-import { JsonLd, breadcrumbSchema, articleSchema, faqSchema } from "@/lib/schema";
+import SourcesSection, { type Source } from "@/components/ui/SourcesSection";
+import { JsonLd, breadcrumbSchema, articleSchema, faqSchema, webPageSchema } from "@/lib/schema";
 import { BEACH_CONDO_PUBLISH_DATE } from "@/data/beach-condo-pages";
 
 const SLUG = "indian-rocks-beach-rental-rules";
@@ -27,7 +28,12 @@ export const metadata: Metadata = {
   title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: `/${SLUG}/` },
-  openGraph: { title: TITLE, description: DESCRIPTION, type: "article" },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    type: "article",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
 };
 
 // --- What the city requires before you rent ---
@@ -64,6 +70,27 @@ const buildingMinimums = [
   { building: "Beach Cottage", minimum: "Weekly" },
   { building: "Redington Place", minimum: "30 days" },
   { building: "Club Redington", minimum: "3 months" },
+];
+
+// --- Sources cited on this page (GEO: name the sources on-page) ---
+const sources: Source[] = [
+  {
+    name: 'City of Indian Rocks Beach Ordinance 2023-02, effective August 1, 2023',
+    used: 'Registration and inspection fees, guest caps, parking limits, and the around the clock contact requirement.',
+    href: "https://www.indian-rocks-beach.com/",
+  },
+  {
+    name: 'City of Indian Rocks Beach meeting records',
+    used: 'Enforcement activity, including the violation count at the start of 2026, and the status of the ordinance litigation.',
+  },
+  {
+    name: 'Pinellas County Tourist Development Tax registration requirements',
+    used: 'The county level tax registration required in addition to city approvals.',
+  },
+  {
+    name: 'Current Stellar MLS listing disclosures',
+    used: 'Building level minimum stay requirements.',
+  },
 ];
 
 const faqs: Faq[] = [
@@ -118,6 +145,14 @@ export default function IndianRocksBeachRentalRulesPage() {
         })}
       />
       <JsonLd data={faqSchema(faqs)} />
+      <JsonLd
+        data={webPageSchema({
+          name: TITLE,
+          description: DESCRIPTION,
+          url: CANONICAL,
+          datePublished: BEACH_CONDO_PUBLISH_DATE,
+        })}
+      />
 
       <HeroSection
         label="INDIAN ROCKS BEACH | 2026"
@@ -143,6 +178,21 @@ export default function IndianRocksBeachRentalRulesPage() {
               rules, so verify both.
             </p>
           </QuickAnswer>
+          <p className="font-body text-muted text-sm mt-4 leading-relaxed">
+            According to City of Indian Rocks Beach Ordinance 2023-02 and city meeting records, checked October 2026.
+          </p>
+          <p className="font-body text-muted text-sm mt-3 leading-relaxed">
+            Keep reading:
+              <Link href="/indian-rocks-beach/" className="text-link hover:underline">
+                Indian Rocks Beach homes and condos for sale
+              </Link>,{" "}
+              <Link href="/pinellas-beach-condo-market-report/" className="text-link hover:underline">
+                current Gulf beach condo pricing
+              </Link>, and{" "}
+              <Link href="/gulf-front-condos-sirs-milestone-complete/" className="text-link hover:underline">
+                building reserve and inspection status
+              </Link>.
+          </p>
         </div>
       </section>
 
@@ -315,6 +365,8 @@ export default function IndianRocksBeachRentalRulesPage() {
         heading="Indian Rocks Beach Rental Questions"
         faqs={faqs}
       />
+
+      <SourcesSection sources={sources} />
 
       <BeachCondoFooterBlock
         currentSlug={SLUG}

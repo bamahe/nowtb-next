@@ -12,7 +12,8 @@ import BeachCondoInventory from "@/components/ui/BeachCondoInventory";
 import QuickAnswer from "@/components/ui/QuickAnswer";
 import FaqSection, { type Faq } from "@/components/ui/FaqSection";
 import BeachCondoFooterBlock from "@/components/ui/BeachCondoFooterBlock";
-import { JsonLd, breadcrumbSchema, articleSchema, faqSchema } from "@/lib/schema";
+import SourcesSection, { type Source } from "@/components/ui/SourcesSection";
+import { JsonLd, breadcrumbSchema, articleSchema, faqSchema, webPageSchema } from "@/lib/schema";
 import { BEACH_CONDO_PUBLISH_DATE } from "@/data/beach-condo-pages";
 
 const SLUG = "gulf-front-condos-sirs-milestone-complete";
@@ -27,7 +28,12 @@ export const metadata: Metadata = {
   title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: `/${SLUG}/` },
-  openGraph: { title: TITLE, description: DESCRIPTION, type: "article" },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    type: "article",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
 };
 
 // --- Buildings with both reports complete per listing disclosures ---
@@ -62,6 +68,23 @@ const sirsComponents = [
   "Waterproofing and exterior painting",
   "Windows and exterior doors",
   "Any other item with a replacement cost over $25,000 (the threshold adjusts annually)",
+];
+
+// --- Sources cited on this page (GEO: name the sources on-page) ---
+const sources: Source[] = [
+  {
+    name: 'Florida DBPR Structural Integrity Reserve Study reporting database',
+    used: 'Which buildings have a SIRS on file. Entries are self-reported by associations.',
+    href: "https://www.myfloridalicense.com/",
+  },
+  {
+    name: 'Florida HB 913 (2025)',
+    used: 'SIRS requirements, the reserve funding rules, and the 365 day Phase 2 repair clock.',
+  },
+  {
+    name: 'Current Stellar MLS listing disclosures',
+    used: 'Milestone inspection status, monthly fees, and special assessment notes per building.',
+  },
 ];
 
 const faqs: Faq[] = [
@@ -111,6 +134,14 @@ export default function GulfFrontSirsMilestonePage() {
         })}
       />
       <JsonLd data={faqSchema(faqs)} />
+      <JsonLd
+        data={webPageSchema({
+          name: TITLE,
+          description: DESCRIPTION,
+          url: CANONICAL,
+          datePublished: BEACH_CONDO_PUBLISH_DATE,
+        })}
+      />
 
       <HeroSection
         label="PINELLAS GULF BEACHES"
@@ -135,6 +166,21 @@ export default function GulfFrontSirsMilestonePage() {
               next to the budget before you write an offer.
             </p>
           </QuickAnswer>
+          <p className="font-body text-muted text-sm mt-4 leading-relaxed">
+            According to the Florida DBPR Structural Integrity Reserve Study reporting database and current Stellar MLS listing disclosures, checked October 2026.
+          </p>
+          <p className="font-body text-muted text-sm mt-3 leading-relaxed">
+            Keep reading:
+              <Link href="/florida-condo-rules-buyers-2026/" className="text-link hover:underline">
+                what Florida condo law requires in 2026
+              </Link>,{" "}
+              <Link href="/pinellas-beach-condo-market-report/" className="text-link hover:underline">
+                what Gulf-front condos are selling for
+              </Link>, and{" "}
+              <Link href="/buying-beach-condo-llc-florida/" className="text-link hover:underline">
+                the full condo document checklist
+              </Link>.
+          </p>
         </div>
       </section>
 
@@ -378,6 +424,8 @@ export default function GulfFrontSirsMilestonePage() {
         heading="SIRS and Milestone Questions Buyers Ask"
         faqs={faqs}
       />
+
+      <SourcesSection sources={sources} />
 
       <BeachCondoFooterBlock
         currentSlug={SLUG}

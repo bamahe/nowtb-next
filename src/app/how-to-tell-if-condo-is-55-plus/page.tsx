@@ -12,7 +12,8 @@ import BeachCondoInventory from "@/components/ui/BeachCondoInventory";
 import QuickAnswer from "@/components/ui/QuickAnswer";
 import FaqSection, { type Faq } from "@/components/ui/FaqSection";
 import BeachCondoFooterBlock from "@/components/ui/BeachCondoFooterBlock";
-import { JsonLd, breadcrumbSchema, articleSchema, faqSchema } from "@/lib/schema";
+import SourcesSection, { type Source } from "@/components/ui/SourcesSection";
+import { JsonLd, breadcrumbSchema, articleSchema, faqSchema, webPageSchema } from "@/lib/schema";
 import { BEACH_CONDO_PUBLISH_DATE } from "@/data/beach-condo-pages";
 
 const SLUG = "how-to-tell-if-condo-is-55-plus";
@@ -27,7 +28,12 @@ export const metadata: Metadata = {
   title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: `/${SLUG}/` },
-  openGraph: { title: TITLE, description: DESCRIPTION, type: "article" },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    type: "article",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
 };
 
 // --- The verification sequence ---
@@ -51,6 +57,22 @@ const steps = [
     title: "Match the answer to who will live there",
     detail:
       "If the building is age restricted, confirm how the requirement applies to every occupant, not just the person on the deed. Then confirm the same for guests and for tenants if you plan to rent.",
+  },
+];
+
+// --- Sources cited on this page (GEO: name the sources on-page) ---
+const sources: Source[] = [
+  {
+    name: 'Recorded declarations of condominium and current association rules',
+    used: 'The only controlling source for whether a building is age restricted.',
+  },
+  {
+    name: 'Federal and Florida housing for older persons requirements',
+    used: 'How a community lawfully operates as age restricted.',
+  },
+  {
+    name: 'Florida HB 913 (2025)',
+    used: 'The document portal requirement that makes declarations and rules obtainable for associations with 25 or more units.',
   },
 ];
 
@@ -101,6 +123,14 @@ export default function HowToTellIfCondoIs55PlusPage() {
         })}
       />
       <JsonLd data={faqSchema(faqs)} />
+      <JsonLd
+        data={webPageSchema({
+          name: TITLE,
+          description: DESCRIPTION,
+          url: CANONICAL,
+          datePublished: BEACH_CONDO_PUBLISH_DATE,
+        })}
+      />
 
       <HeroSection
         label="FLORIDA CONDO BUYERS"
@@ -125,6 +155,21 @@ export default function HowToTellIfCondoIs55PlusPage() {
               whether a specific building is 55+.
             </p>
           </QuickAnswer>
+          <p className="font-body text-muted text-sm mt-4 leading-relaxed">
+            According to recorded condominium declarations and Florida housing for older persons requirements, checked October 2026.
+          </p>
+          <p className="font-body text-muted text-sm mt-3 leading-relaxed">
+            Keep reading:
+              <Link href="/florida-condo-rules-buyers-2026/" className="text-link hover:underline">
+                the document portal rules that get you the declaration
+              </Link>,{" "}
+              <Link href="/indian-rocks-beach-rental-rules/" className="text-link hover:underline">
+                how rental restrictions differ from age restrictions
+              </Link>, and{" "}
+              <Link href="/gulf-front-condos-sirs-milestone-complete/" className="text-link hover:underline">
+                reserve and inspection status by building
+              </Link>.
+          </p>
         </div>
       </section>
 
@@ -268,6 +313,8 @@ export default function HowToTellIfCondoIs55PlusPage() {
       />
 
       <FaqSection heading="55+ Condo Questions" faqs={faqs} />
+
+      <SourcesSection sources={sources} />
 
       <BeachCondoFooterBlock
         currentSlug={SLUG}
