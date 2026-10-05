@@ -728,13 +728,10 @@ export default async function ClientComparePage({
           className="mt-8 rounded-xl border border-slate-200 bg-white p-5 shadow-sm"
         >
           <h2 id="links-heading" className="text-lg font-bold text-[#0B2545]">
-            The listings and more on nowtb.com
+            The listings on nowtb.com
           </h2>
 
-          <h3 className="mt-4 text-sm font-bold uppercase tracking-wide text-[#475569]">
-            These four homes
-          </h3>
-          <ul className="mt-2 grid gap-2 sm:grid-cols-2">
+          <ul className="mt-4 grid gap-2 sm:grid-cols-2">
             {rows.map((c) => (
               <li key={c.home.id}>
                 <Link
@@ -750,62 +747,6 @@ export default async function ClientComparePage({
             ))}
           </ul>
 
-          <h3 className="mt-5 text-sm font-bold uppercase tracking-wide text-[#475569]">
-            Worth reading before you write an offer
-          </h3>
-          <ul className="mt-2 grid gap-2 sm:grid-cols-2">
-            {[
-              {
-                href: "/va-loan-florida/",
-                label: "VA loans in Florida",
-                note: "How your entitlement works and what it covers",
-              },
-              {
-                href: "/fha-loan-florida/",
-                label: "FHA loans in Florida",
-                note: "Relevant to the Blue Pacific assumption",
-              },
-              {
-                href: "/mortgage-calculator/",
-                label: "Mortgage calculator",
-                note: "Run a payment on any price you like",
-              },
-              {
-                href: "/buyers/",
-                label: "Buyer guide",
-                note: "What happens at each step, start to close",
-              },
-              {
-                href: "/properties/",
-                label: "Search every listing",
-                note: "The full MLS, updated hourly",
-              },
-              {
-                href: "/contact/",
-                label: "Reach me",
-                note: "Call, text or send a question",
-              },
-            ].map((l) => (
-              <li key={l.href}>
-                <Link
-                  href={l.href}
-                  className="text-sm font-semibold text-[#1565C0] underline"
-                >
-                  {l.label}
-                </Link>
-                <span className="block text-xs text-[#475569]">{l.note}</span>
-              </li>
-            ))}
-          </ul>
-
-          <p className="mt-5 rounded-lg bg-[#0B2545] p-4 text-sm leading-relaxed text-white">
-            Seen enough? Text or call me at{" "}
-            <a href="tel:+18137337907" className="font-bold underline">
-              (813) 733-7907
-            </a>{" "}
-            and I will call the servicer on your favorite to confirm the
-            assumption before we write anything.
-          </p>
         </section>
       </main>
 
