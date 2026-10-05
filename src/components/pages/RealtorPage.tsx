@@ -70,7 +70,31 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
                   name: `Who is the best realtor in ${city.name}, Florida?`,
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: `Barrett Henry is a top-producing REALTOR\u00AE and Broker Associate with REMAX Collective serving ${city.name} and the Tampa Bay area. With 23+ years of real estate experience, FL Broker License #BK3313308, and designations including e-PRO, MRP, and SRS, Barrett has the credentials and track record to deliver results. He is a REMAX Hall of Fame member. Call (813) 733-7907.`,
+                    text: `Barrett Henry is a top-producing REALTOR\u00AE and Broker Associate with REMAX Collective serving ${city.name} and the Tampa Bay area. With 24+ years of real estate experience, FL Broker License #BK3313308, and designations including e-PRO, MRP, and SRS, Barrett has the credentials and track record to deliver results. He is a REMAX Hall of Fame member. Call (813) 733-7907.`,
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: `Who is the best realtor in ${city.name} for relocation?`,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: `Barrett Henry holds the MRP (Military Relocation Professional) designation and works relocating buyers into ${city.name} and ${city.county} County regularly, including remote buyers who tour and close without flying down twice. Relocation needs more than listing access: Florida property taxes reset to market value at purchase rather than carrying over the seller's capped assessment, homestead portability only transfers between Florida homesteads so an out-of-state buyer starts fresh, and insurance underwriting on roof age and flood zone decides more deals than the inspection does. Call (813) 733-7907.`,
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: `Will my property taxes in ${city.name} match the seller's current bill?`,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: `Almost certainly not, and this is the biggest surprise for out-of-state buyers. Florida's Save Our Homes cap limits annual assessed-value increases on a homesteaded property, so a long-time owner may pay far less than you will on an identical house. You reset to market value at purchase. Homestead portability transfers an accumulated Save Our Homes benefit only from one Florida homestead to another, so a buyer moving in from out of state starts fresh: apply for homestead exemption with the county property appraiser and the cap protects you going forward. A second home or rental gets the 10 percent non-homestead cap instead, with no exemption. Budget from the actual parcel record, not the seller's bill.`,
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: `Can I buy a home in ${city.name} without flying to Florida?`,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: `Yes. Barrett Henry runs relocation buyers and sellers remotely as standard practice: video walkthroughs on request rather than canned listing tours, honest condition read-outs, electronic signatures, and a title company that closes remotely. Military families relocating to MacDill AFB on a PCS timeline are a regular part of the work, which is what the MRP designation covers. Call (813) 733-7907 with your timeline and where you are moving from.`,
                   },
                 },
                 {
@@ -129,7 +153,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
               "@type": "RealEstateAgent",
               name: "Barrett Henry",
               jobTitle: "Broker Associate",
-              description: `Top-producing REALTOR\u00AE and Broker Associate with REMAX Collective serving ${city.name}, ${city.county} County, and the Tampa Bay area. 23+ years of real estate experience. REMAX Hall of Fame member.`,
+              description: `Top-producing REALTOR\u00AE and Broker Associate with REMAX Collective serving ${city.name}, ${city.county} County, and the Tampa Bay area. 24+ years of real estate experience. REMAX Hall of Fame member.`,
               telephone: "+1-813-733-7907",
               email: "barrett@nowtb.com",
               url: `https://nowtb.com/${city.slug}-realtor`,
@@ -183,7 +207,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
           </h1>
           <p className="font-body text-white/80 text-lg max-w-3xl mb-4 leading-relaxed">
             Broker Associate with REMAX Collective serving {city.name}, {city.county} County, and the
-            entire Tampa Bay metro. 23+ years of real estate experience. REMAX Hall of Fame member.
+            entire Tampa Bay metro. 24+ years of real estate experience. REMAX Hall of Fame member.
             FL Broker License #BK3313308.
           </p>
           <p className="font-body text-white/60 text-sm mb-8">
@@ -225,7 +249,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
                   Finding the right REALTOR&reg; in {city.name} can make the difference between a smooth transaction
                   and a stressful one. <strong>Barrett Henry</strong> is a licensed Florida Real Estate{" "}
                   <strong>Broker Associate</strong> with REMAX Collective &mdash; not a sales agent learning on
-                  your deal. With <strong>23+ years of real estate experience</strong>, Barrett brings the market
+                  your deal. With <strong>24+ years of real estate experience</strong>, Barrett brings the market
                   knowledge, negotiation skill, and local expertise that {city.name} buyers and sellers need to
                   win in today&apos;s competitive market.
                 </p>
@@ -252,7 +276,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
                 <div className="space-y-4 font-body text-sm">
                   <div className="flex justify-between border-b border-white/10 pb-3">
                     <span className="text-white/70">Experience</span>
-                    <span className="font-medium">23+ Years</span>
+                    <span className="font-medium">24+ Years</span>
                   </div>
                   <div className="flex justify-between border-b border-white/10 pb-3">
                     <span className="text-white/70">License</span>
@@ -545,7 +569,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
               {
                 step: "4",
                 title: "Offer & Negotiation",
-                desc: `Barrett writes competitive offers backed by comp analysis, not emotion. He negotiates on your behalf — price, closing costs, repairs, timelines, contingencies. With 23+ years of experience, Barrett knows how to win in multiple-offer situations without overpaying.`,
+                desc: `Barrett writes competitive offers backed by comp analysis, not emotion. He negotiates on your behalf — price, closing costs, repairs, timelines, contingencies. With 24+ years of real estate experience, Barrett knows how to win in multiple-offer situations without overpaying.`,
               },
               {
                 step: "5",
@@ -568,6 +592,183 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
       </section>
 
       {/* ================================================================== */}
+      {/* RELOCATION — targets "[city] relocation realtor" / "moving to [city]" */}
+      {/* ================================================================== */}
+      <section className="section-light">
+        <div className="container-wide max-w-3xl">
+          <p className="heading-label mb-4">MOVING FROM OUT OF STATE</p>
+          <h2 className="font-heading font-extralight text-2xl md:text-3xl tracking-[0.08em] uppercase text-primary mb-6">
+            Relocating to {city.name}? Start Here
+          </h2>
+          <p className="font-body text-muted font-light leading-relaxed mb-8">
+            Relocation is a different job than a local move, and most of what trips people up in
+            Florida has nothing to do with the house itself. Barrett Henry holds the{" "}
+            <strong>MRP (Military Relocation Professional)</strong> designation and works relocating
+            buyers into {city.name} and {city.county} County regularly &mdash; including remote
+            buyers who tour and close without flying down twice. Here is what actually matters.
+          </p>
+
+          <div className="space-y-8">
+            <div>
+              <h3 className="font-heading font-bold text-lg text-primary mb-3">
+                Your property taxes will not match your neighbor&apos;s
+              </h3>
+              <div className="font-body text-muted font-light space-y-3 leading-relaxed">
+                <p>
+                  This is the single biggest surprise for out-of-state buyers. Florida&apos;s{" "}
+                  <strong>Save Our Homes</strong> cap limits how much a homesteaded property&apos;s
+                  assessed value can rise each year, so a neighbor who has owned since 2012 may pay a
+                  fraction of what you will on an identical house. You are not inheriting their
+                  number &mdash; you reset to market value at purchase.
+                </p>
+                <p>
+                  And <strong>portability does not help you</strong> on a move into Florida. It
+                  transfers an accumulated Save Our Homes benefit from one <em>Florida</em> homestead
+                  to another. Coming from out of state, you start fresh: apply for{" "}
+                  <strong>homestead exemption</strong> with the county property appraiser, and the
+                  cap begins protecting you going forward. If the property will be a second home or a
+                  rental rather than your primary residence, you get the <strong>10% non-homestead
+                  cap</strong> instead of the homestead cap, and no exemption. Budget from the actual
+                  parcel record, never from the seller&apos;s current tax bill.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="font-heading font-bold text-lg text-primary mb-3">
+                Insurance is the real gate, not the inspection
+              </h3>
+              <div className="font-body text-muted font-light space-y-3 leading-relaxed">
+                <p>
+                  In Florida, deals die at underwriting more often than at inspection. The deciding
+                  factors are usually <strong>roof age</strong>, <strong>flood zone</strong>, and
+                  whether anyone has filed a current wind mitigation inspection.
+                </p>
+                <p>
+                  Useful protection to know: under Florida Statute 627.7011(5), an insurer{" "}
+                  <strong>may not refuse to issue or renew</strong> a policy on a home with a roof{" "}
+                  <strong>less than 15 years old</strong> solely because of the roof&apos;s age. If
+                  the roof is 15 or older, an inspection showing <strong>five or more years of
+                  remaining useful life</strong> gives you the same protection. Separately, a{" "}
+                  <strong>four-point inspection</strong> is not required by Florida law at all
+                  &mdash; it is a carrier underwriting requirement, and Citizens triggers one on
+                  properties more than 20 years old.
+                </p>
+                <p>
+                  Do this before your inspection period closes: pull the flood zone, ask the roof&apos;s
+                  age and documented remaining life, get a current wind mitigation inspection on the
+                  state form, and have the policy <strong>quoted in your own name</strong>. A quote in
+                  the seller&apos;s name tells you very little.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="font-heading font-bold text-lg text-primary mb-3">
+                If you are buying a condo, the documents decide it
+              </h3>
+              <div className="font-body text-muted font-light leading-relaxed">
+                <p>
+                  Florida&apos;s post-Surfside law requires condo and co-op buildings{" "}
+                  <strong>three habitable stories or more</strong> to complete a{" "}
+                  <strong>milestone structural inspection</strong> and fund a{" "}
+                  <strong>Structural Integrity Reserve Study</strong>, and associations subject to a
+                  reserve study can no longer vote to underfund those structural components. That has
+                  pushed dues up and triggered special assessments across Tampa Bay. Before you waive
+                  due diligence, get the completed milestone report, the reserve study, current
+                  reserve balances, twelve months of board minutes, and any assessment already voted
+                  or under discussion. A well-funded building at a higher price usually beats a cheap
+                  one whose assessment has not landed yet.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="font-heading font-bold text-lg text-primary mb-3">
+                Ask which jurisdiction the parcel is actually in
+              </h3>
+              <div className="font-body text-muted font-light leading-relaxed">
+                <p>
+                  A {city.name} mailing address does not always mean the property sits inside{" "}
+                  {city.name} city limits &mdash; Tampa Bay is full of unincorporated pockets with
+                  city mailing addresses. The distinction is not cosmetic: it changes your{" "}
+                  <strong>property tax millage</strong>, <strong>who issues your permits</strong>,
+                  your <strong>floodplain repair rules</strong>, and even your{" "}
+                  <strong>flood insurance discount</strong>, since FEMA rates each community
+                  separately. Confirm it on the county property appraiser&apos;s parcel record before
+                  you write an offer.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="font-heading font-bold text-lg text-primary mb-3">
+                You do not have to fly down twice
+              </h3>
+              <div className="font-body text-muted font-light leading-relaxed">
+                <p>
+                  Barrett runs relocation buyers and sellers remotely as a matter of course: video
+                  walkthroughs on request rather than canned listing tours, honest read-outs on
+                  condition, electronic signatures, and coordination with a title company that closes
+                  remotely. Military families moving to MacDill AFB on a PCS timeline are a regular
+                  part of the work &mdash; that is what the MRP designation is for. See the{" "}
+                  <Link href="/remote-seller-process/" className="text-link hover:underline">
+                    remote process
+                  </Link>{" "}
+                  if you are selling from out of the area.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Relocation CTA + guides */}
+          <div className="mt-10 bg-primary p-8">
+            <h3 className="font-heading font-bold text-xl text-white mb-2">
+              Moving to {city.name} from out of state?
+            </h3>
+            <p className="font-body text-white/70 text-sm leading-relaxed mb-6">
+              Tell Barrett your timeline, your must-haves, and where you are coming from. You will get
+              a straight read on neighborhoods, taxes, and insurance before you book a trip &mdash; not
+              a drip campaign.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="tel:+18137337907"
+                className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 text-sm hover:bg-accent/90 transition-colors"
+              >
+                Call (813) 733-7907
+              </a>
+              <Link
+                href="/relocation/"
+                className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 text-sm hover:bg-white/10 transition-colors"
+              >
+                Relocation Services
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
+            {[
+              { href: "/blog/ultimate-tampa-bay-relocation-guide/", label: "The ultimate Tampa Bay relocation guide" },
+              { href: "/blog/relocating-tampa-bay-2026/", label: "Relocating to Tampa Bay: what to know first" },
+              { href: "/blog/military-relocation-tampa-macdill-guide/", label: "Military relocation & MacDill AFB" },
+              { href: "/blog/relocating-to-florida-from-northeast/", label: "Relocating from the Northeast" },
+              { href: "/blog/moving-to-tampa-bay-cost-of-living-guide/", label: "Tampa Bay cost of living" },
+              { href: "/blog/homestead-exemption-florida-guide/", label: "Florida homestead exemption guide" },
+            ].map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className="font-body text-sm text-link hover:underline font-light leading-snug"
+              >
+                {l.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ================================================================== */}
       {/* FAQ — Comprehensive, targeting long-tail "[city] realtor" queries   */}
       {/* ================================================================== */}
       <section className="section-white">
@@ -578,7 +779,19 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
           <div className="space-y-6">
             <div className="border-b border-gray-100 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">Who is the best realtor in {city.name}, Florida?</h3>
-              <p className="font-body text-muted font-light">Barrett Henry is a top-producing REALTOR&reg; and Broker Associate with REMAX Collective serving {city.name} and the Tampa Bay area. With 23+ years of real estate experience, FL Broker License #BK3313308, and designations including e-PRO, MRP, and SRS, Barrett has the credentials and track record that matter. He is a REMAX Hall of Fame member. Call <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a>.</p>
+              <p className="font-body text-muted font-light">Barrett Henry is a top-producing REALTOR&reg; and Broker Associate with REMAX Collective serving {city.name} and the Tampa Bay area. With 24+ years of real estate experience, FL Broker License #BK3313308, and designations including e-PRO, MRP, and SRS, Barrett has the credentials and track record that matter. He is a REMAX Hall of Fame member. Call <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a>.</p>
+            </div>
+            <div className="border-b border-gray-100 pb-6">
+              <h3 className="font-heading font-bold text-lg text-primary mb-2">Who is the best realtor in {city.name} for relocation?</h3>
+              <p className="font-body text-muted font-light">Barrett Henry holds the <strong>MRP (Military Relocation Professional)</strong> designation and works relocating buyers into {city.name} and {city.county} County regularly &mdash; including remote buyers who tour and close without flying down twice. Relocation takes more than listing access: Florida property taxes reset to market value at purchase instead of carrying over the seller&apos;s capped assessment, homestead portability only transfers between Florida homesteads so an out-of-state buyer starts fresh, and insurance underwriting on roof age and flood zone kills more deals than the inspection does. Call <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a>.</p>
+            </div>
+            <div className="border-b border-gray-100 pb-6">
+              <h3 className="font-heading font-bold text-lg text-primary mb-2">Will my {city.name} property taxes match the seller&apos;s current bill?</h3>
+              <p className="font-body text-muted font-light">Almost certainly not. Florida&apos;s <strong>Save Our Homes</strong> cap limits annual assessed-value increases on a homesteaded property, so a long-time owner may pay a fraction of what you will on an identical house &mdash; you reset to market value at purchase. <strong>Portability transfers only between Florida homesteads</strong>, so moving in from out of state you start fresh: apply for homestead exemption with the county property appraiser and the cap protects you going forward. A second home or rental gets the 10% non-homestead cap instead, with no exemption. See our <a href="/blog/homestead-exemption-florida-guide/" className="text-link hover:underline">Florida homestead exemption guide</a>.</p>
+            </div>
+            <div className="border-b border-gray-100 pb-6">
+              <h3 className="font-heading font-bold text-lg text-primary mb-2">Can I buy a home in {city.name} without flying to Florida?</h3>
+              <p className="font-body text-muted font-light">Yes. Barrett runs relocation buyers and sellers remotely as standard practice: video walkthroughs on request rather than canned listing tours, honest condition read-outs, electronic signatures, and a title company that closes remotely. Military families on a PCS timeline to MacDill AFB are a regular part of the work. See the <a href="/remote-seller-process/" className="text-link hover:underline">remote process</a> or call <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a>.</p>
             </div>
             <div className="border-b border-gray-100 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">How do I find a REALTOR&reg; in {city.name}?</h3>
@@ -636,7 +849,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
               Work with the Best REALTOR&reg; in {city.name}
             </h2>
             <p className="font-body text-white/70 text-sm">
-              Barrett Henry &bull; Broker Associate &bull; REMAX Hall of Fame &bull; 23+ years of real estate experience
+              Barrett Henry &bull; Broker Associate &bull; REMAX Hall of Fame &bull; 24+ years of real estate experience
             </p>
           </div>
           <div className="flex gap-3 flex-shrink-0">

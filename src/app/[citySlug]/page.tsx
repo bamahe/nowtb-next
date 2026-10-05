@@ -368,9 +368,19 @@ export async function generateMetadata({
         },
       };
     case "realtor":
+      // layout.tsx appends " | Barrett Henry, REALTOR®" (26 chars), so the page
+      // portion must stay short. The old "| REMAX Collective" suffix pushed 80 of
+      // 93 city pages past 60 characters. Append "| Relocation" only when the
+      // city name is short enough that the full tag still fits.
+      const realtorBase = `${parsed.city.name} REALTOR®`;
+      const withReloc = `${realtorBase} | Relocation`;
+      const realtorTitle =
+        withReloc.length + " | Barrett Henry, REALTOR®".length <= 60
+          ? withReloc
+          : realtorBase;
       return {
-        title: `${parsed.city.name} REALTOR® | REMAX Collective`,
-        description: `Looking for a trusted REALTOR in ${parsed.city.name}, FL? Barrett Henry has 24+ years of real estate experience. REMAX Collective. Call (813) 733-7907.`,
+        title: realtorTitle,
+        description: `Buying, selling, or relocating to ${parsed.city.name}, FL? Barrett Henry, Broker Associate at REMAX Collective. MRP relocation specialist. Call (813) 733-7907.`,
         alternates: { canonical },
         openGraph: {
           title: `${parsed.city.name} REALTOR® — Barrett Henry | REMAX Collective`,
