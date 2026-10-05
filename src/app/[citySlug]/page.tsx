@@ -54,6 +54,7 @@ import { getListings, getListingsByCity, getOpenHouses } from "@/lib/bridge";
 import { CITY_FAQS } from "@/data/valrico-faqs";
 import { JsonLd, cityPlaceSchema, listingItemListSchema } from "@/lib/schema";
 import { getCachedListings } from "@/lib/listing-cache";
+import { getCityMarketStats, hasReliableSample, AS_OF } from "@/data/city-market-stats";
 import { NEIGHBORHOOD_DESCRIPTIONS } from "@/data/neighborhood-descriptions";
 
 // --- County data for county pages ---
@@ -753,15 +754,14 @@ async function HubPage({ city }: { city: CityData }) {
   // grid below still renders exactly as it does today.
   const seoListings = await getCachedListings(city.zip_codes || [], 12);
 
+  // Verified MLS closed-sale medians for the stats bar below. Undefined for
+  // cities we have not pulled yet, in which case the block is skipped.
+  const cityStats = getCityMarketStats(city.slug);
+
   // No server-side market stats — listings load client-side now
   const listings: never[] = [];
   const rentalListings: never[] = [];
   const soldListings: never[] = [];
-  const totalActive = 0;
-  const totalRentals = 0;
-  const avgPrice = 0;
-  const avgDom = 0;
-  const priceRange = { low: 0, high: 0 };
 
   // Get neighboring cities (same county, excluding current)
   const neighbors = cities.filter(
@@ -869,50 +869,75 @@ async function HubPage({ city }: { city: CityData }) {
         </div>
       </section>
 
-      {/* === Market Stats Bar === */}
-      {listings.length > 0 && (
+      {/* === Market Stats Bar ===
+          Driven by verified Stellar MLS closed-sale medians (src/data/
+          city-market-stats.ts), not live listings. The previous version read
+          client-side listing state that was always empty, so this block never
+          rendered and crawlers saw no market data on city pages at all.
+          Renders only for cities we have pulled, and omits any property type
+          whose sample is too small to support a median. */}
+      {cityStats && (
         <section className="bg-white border-b border-border">
           <div className="container-wide py-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div>
                 <p className="font-heading font-bold text-2xl md:text-3xl text-primary">
-                  {totalActive.toLocaleString()}
+                  {cityStats.totalSales.toLocaleString()}
                 </p>
                 <p className="font-body text-xs tracking-[0.15em] uppercase text-muted mt-1">
-                  Active Listings
+                  Homes Sold
                 </p>
               </div>
-              <div>
-                <p className="font-heading font-bold text-2xl md:text-3xl text-primary">
-                  {formatPrice(avgPrice)}
-                </p>
-                <p className="font-body text-xs tracking-[0.15em] uppercase text-muted mt-1">
-                  Avg. List Price
-                </p>
-              </div>
-              <div>
-                <p className="font-heading font-bold text-2xl md:text-3xl text-primary">
-                  {formatPrice(priceRange.low)} – {formatPrice(priceRange.high)}
-                </p>
-                <p className="font-body text-xs tracking-[0.15em] uppercase text-muted mt-1">
-                  Price Range
-                </p>
-              </div>
-              <div>
-                <p className="font-heading font-bold text-2xl md:text-3xl text-primary">
-                  {avgDom}
-                </p>
-                <p className="font-body text-xs tracking-[0.15em] uppercase text-muted mt-1">
-                  Avg. Days on Market
-                </p>
-              </div>
+              {cityStats.sfMedian !== null && hasReliableSample(cityStats.sfSales) && (
+                <div>
+                  <p className="font-heading font-bold text-2xl md:text-3xl text-primary">
+                    {formatPrice(cityStats.sfMedian)}
+                  </p>
+                  <p className="font-body text-xs tracking-[0.15em] uppercase text-muted mt-1">
+                    Median House
+                  </p>
+                </div>
+              )}
+              {cityStats.sfDom !== null && hasReliableSample(cityStats.sfSales) && (
+                <div>
+                  <p className="font-heading font-bold text-2xl md:text-3xl text-primary">
+                    {cityStats.sfDom}
+                  </p>
+                  <p className="font-body text-xs tracking-[0.15em] uppercase text-muted mt-1">
+                    Days on Market
+                  </p>
+                </div>
+              )}
+              {cityStats.condoMedian !== null && hasReliableSample(cityStats.condoSales) ? (
+                <div>
+                  <p className="font-heading font-bold text-2xl md:text-3xl text-primary">
+                    {formatPrice(cityStats.condoMedian)}
+                  </p>
+                  <p className="font-body text-xs tracking-[0.15em] uppercase text-muted mt-1">
+                    Median Condo
+                  </p>
+                </div>
+              ) : cityStats.thMedian !== null && hasReliableSample(cityStats.thSales) ? (
+                <div>
+                  <p className="font-heading font-bold text-2xl md:text-3xl text-primary">
+                    {formatPrice(cityStats.thMedian)}
+                  </p>
+                  <p className="font-body text-xs tracking-[0.15em] uppercase text-muted mt-1">
+                    Median Townhome
+                  </p>
+                </div>
+              ) : null}
             </div>
+            <p className="font-body text-muted/70 text-xs text-center mt-5 leading-relaxed">
+              {city.name} closed sales over {AS_OF}, from Stellar MLS. Rentals and
+              manufactured housing excluded.
+            </p>
             <div className="text-center mt-6">
               <Link
                 href={`/properties/?q=${encodeURIComponent(city.name)}`}
                 className="font-body text-xs tracking-[0.15em] uppercase text-accent hover:text-primary transition-colors"
               >
-                View All {totalActive.toLocaleString()} Listings in {city.name} →
+                Browse {city.name} Listings →
               </Link>
             </div>
           </div>
