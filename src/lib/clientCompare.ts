@@ -79,6 +79,8 @@ export type Home = {
   lot: number;
   stories: number;
   roof: string;
+  /** Optional. Only used to make the listing URL read nicely. */
+  city?: string;
   /** HOA in dollars per MONTH */
   hoa: number;
   /** Annual CDD fee in dollars. 0 when the community has none. */
@@ -152,6 +154,32 @@ function usd(n: number): number {
   return Math.round(n);
 }
 
+/**
+ * What the sliders on the page can change. Leave a field out and the number
+ * from settings is used instead, so computeHome(home, settings) with no third
+ * argument behaves exactly as it always did.
+ */
+export type Overrides = {
+  /** Cash down as a share of price, so 0.05 is 5% down. Defaults to 0. */
+  downPct?: number;
+  /** New VA rate as a decimal. Defaults to settings.vaRate. */
+  vaRate?: number;
+  /** Second loan rate as a decimal. Defaults to settings.secondRate. */
+  secondRate?: number;
+  /** Insurance per month, applied to every home. Defaults to each home's ins. */
+  insMo?: number;
+}
+
+/** Build a listing URL on nowtb.com. Only the MLS id is used for the lookup. */
+export function listingUrl(home: Home): string {
+  const slug = home.name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+  const city = home.city ? home.city : "fl";
+  return `/properties/StellarMLS/${home.mls}/${city}/${slug}/`;
+}
+
 // ── What one home works out to ───────────────────────────────────────────────
 
 export type ComputedHome = {
@@ -172,9 +200,11 @@ export type ComputedHome = {
   /** tax + CDD + HOA + insurance. Does not include electric. */
   fixed: number;
 
-  // Option A, a brand new VA loan at 0% down
+  // Option A, a brand new VA loan
   newVaPI: number;
   newVaAllIn: number;
+  /** Cash the buyer puts down under Option A. Zero unless a slider moved it. */
+  newVaDown: number;
 
   // The seller's side
   sellerEquity: number;
@@ -190,6 +220,11 @@ export type ComputedHome = {
     saveVsNewVa: number;
     /** What it costs monthly if they bring the whole gap in cash, no second */
     allCashGapAllIn: number;
+    /**
+     * True when the cash slider was pushed below what a second lender allows.
+     * The math floors the cash at that minimum, so the page can say why.
+     */
+    cashFloored: boolean;
   };
 
   // Commute versus the baseline home
@@ -198,11 +233,22 @@ export type ComputedHome = {
 };
 
 /** Run one home through the whole model. */
-export function computeHome(home: Home, s: Settings): ComputedHome {
-  const { price, sqft, cdd, hoa, ins, loan } = home;
+export function computeHome(
+  home: Home,
+  s: Settings,
+  o: Overrides = {}
+): ComputedHome {
+  const { price, sqft, cdd, hoa, loan } = home;
 
-  // Option A, a new VA loan for the full price
-  const newVaPI = usd(pmt(price, s.vaRate));
+  // Slider values when the page sends them, otherwise the file's own numbers
+  const downPct = o.downPct ?? 0;
+  const vaRate = o.vaRate ?? s.vaRate;
+  const secondRate = o.secondRate ?? s.secondRate;
+  const ins = o.insMo ?? home.ins;
+
+  // Option A, a new VA loan for whatever is left after the cash down
+  const newVaDown = usd(price * downPct);
+  const newVaPI = usd(pmt(price - newVaDown, vaRate));
 
   // Property tax. Assessed value times millage, less the homestead exemption.
   const taxYear = usd(
@@ -231,10 +277,18 @@ export function computeHome(home: Home, s: Settings): ComputedHome {
 
     // What is left to cover between the seller's balance and the price
     const gap = usd(price - loan.bal);
-    // A second lender will not go past secondMaxCltv of price, so the rest is cash
-    const cashDown = usd(price * (1 - s.secondMaxCltv));
-    const second = usd(Math.max(0, price * s.secondMaxCltv - loan.bal));
-    const secondPI = usd(pmt(second, s.secondRate));
+
+    // A second lender will not go past secondMaxCltv of price, so there is a
+    // floor on how little cash can work. Sliding below it is not an option a
+    // lender would actually fund, so the math holds it at the floor.
+    const minCash = price * (1 - s.secondMaxCltv);
+    const wantCash = downPct > 0 ? price * downPct : minCash;
+    const cashFloored = wantCash < minCash;
+    // Never ask for more cash than the gap itself
+    const cashDown = usd(Math.min(Math.max(wantCash, minCash), gap));
+
+    const second = usd(Math.max(0, gap - cashDown));
+    const secondPI = usd(pmt(second, secondRate));
 
     const assumePI = usd(pi + mip + secondPI);
     const assumeAllIn = assumePI + fixed + elecMo;
@@ -249,6 +303,7 @@ export function computeHome(home: Home, s: Settings): ComputedHome {
       saveVsNewVa: newVaPI - assumePI,
       // Same loan, no second: they fund the gap out of pocket instead
       allCashGapAllIn: usd(pi + mip) + fixed + elecMo,
+      cashFloored,
     };
   }
 
@@ -273,6 +328,7 @@ export function computeHome(home: Home, s: Settings): ComputedHome {
     fixed,
     newVaPI,
     newVaAllIn,
+    newVaDown,
     sellerEquity,
     assume,
     extraDriveHoursMo,
@@ -281,8 +337,11 @@ export function computeHome(home: Home, s: Settings): ComputedHome {
 }
 
 /** Run every home in a client file through the model. */
-export function computeAll(data: ClientData): ComputedHome[] {
-  return data.homes.map((h) => computeHome(h, data.settings));
+export function computeAll(
+  data: ClientData,
+  o: Overrides = {}
+): ComputedHome[] {
+  return data.homes.map((h) => computeHome(h, data.settings, o));
 }
 
 /**

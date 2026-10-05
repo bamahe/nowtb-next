@@ -46,6 +46,7 @@ For Ethan and Madison that is `data/clients/ellenburg-x7k2.json`
 | `cdd` | Annual CDD fee. Use `0` when the community has none. The page divides by 12 |
 | `ins` | Homeowners insurance **per month**. Use a real quote when you have one |
 | `kwh_per_sf` | Monthly kilowatt hours per square foot for this house. Around `0.55` for one story, a little lower for a well sealed two story |
+| `city` | Optional. Only makes the listing link read nicer, for example `"riverview"`. Leave it out and the link still works, the MLS number is what resolves it |
 
 ### From PropWire (the seller's existing loan), under `"loan"`
 
@@ -103,6 +104,31 @@ catches this.
    update the `EXPECTED` table to the new correct numbers.
 
 ---
+
+## The sliders
+
+Every packet gets a "Run your own numbers" block with four sliders: cash down,
+new VA rate, second loan rate, and the insurance estimate. Dragging one
+recalculates all the homes at once and highlights the cheapest.
+
+You do not configure this. It reads the same JSON and runs the same math as the
+table, so the two can never disagree. The sliders start at whatever `settings`
+says, and the Reset button puts them back.
+
+Two behaviors worth knowing so you can explain them:
+
+- **Cash down below 10% on an assumption.** A second lender will not go past
+  `secondMaxCltv` of the price, so there is a hard floor on how little cash can
+  work. Slide under it and the number holds at the floor with a note in red
+  saying why, rather than quietly showing a payment nobody will fund.
+- **Cash down above the gap.** Once the cash covers the whole gap, the second
+  loan goes to zero and the payment stops dropping. That is correct, there is
+  nothing left to borrow.
+
+The links block at the bottom points at the four listings on nowtb.com plus the
+VA loan, FHA loan, mortgage calculator, buyer guide, search and contact pages.
+Listing links are built from the MLS number, so they keep working even if the
+address slug is off.
 
 ## The settings block
 
