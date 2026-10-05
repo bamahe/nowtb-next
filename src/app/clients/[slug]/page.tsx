@@ -13,12 +13,15 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
+import CompareCalculator from "@/components/clients/CompareCalculator";
 import {
   computeAll,
   commuteLeg,
   readableMonth,
   bestMonthly,
+  listingUrl,
   type ClientData,
   type ComputedHome,
 } from "@/lib/clientCompare";
@@ -256,10 +259,22 @@ export default async function ClientComparePage({
                   <p className="mt-3 border-t border-slate-200 pt-3 text-xs text-[#475569]">
                     {leg1.time} to {s.workplaces[0]}
                   </p>
+
+                  <Link
+                    href={listingUrl(h)}
+                    className="mt-3 inline-block text-xs font-semibold text-[#1565C0] underline"
+                  >
+                    See all photos and details on nowtb.com
+                  </Link>
                 </article>
               );
             })}
           </div>
+        </section>
+
+        {/* 2b. Sliders, so they can push the numbers around themselves */}
+        <section className="mt-10">
+          <CompareCalculator data={data} />
         </section>
 
         {/* 3. Side by side table */}
@@ -704,6 +719,92 @@ export default async function ClientComparePage({
             Loan balances and rates come from public records and will be
             confirmed with each seller's loan company. Your lender will provide
             official numbers.
+          </p>
+        </section>
+
+        {/* 7. Links back into nowtb.com */}
+        <section
+          aria-labelledby="links-heading"
+          className="mt-8 rounded-xl border border-slate-200 bg-white p-5 shadow-sm"
+        >
+          <h2 id="links-heading" className="text-lg font-bold text-[#0B2545]">
+            The listings and more on nowtb.com
+          </h2>
+
+          <h3 className="mt-4 text-sm font-bold uppercase tracking-wide text-[#475569]">
+            These four homes
+          </h3>
+          <ul className="mt-2 grid gap-2 sm:grid-cols-2">
+            {rows.map((c) => (
+              <li key={c.home.id}>
+                <Link
+                  href={listingUrl(c.home)}
+                  className="text-sm font-semibold text-[#1565C0] underline"
+                >
+                  {c.home.name}
+                </Link>
+                <span className="block text-xs text-[#475569]">
+                  {money(c.home.price)}, {c.home.community}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          <h3 className="mt-5 text-sm font-bold uppercase tracking-wide text-[#475569]">
+            Worth reading before you write an offer
+          </h3>
+          <ul className="mt-2 grid gap-2 sm:grid-cols-2">
+            {[
+              {
+                href: "/va-loan-florida/",
+                label: "VA loans in Florida",
+                note: "How your entitlement works and what it covers",
+              },
+              {
+                href: "/fha-loan-florida/",
+                label: "FHA loans in Florida",
+                note: "Relevant to the Blue Pacific assumption",
+              },
+              {
+                href: "/mortgage-calculator/",
+                label: "Mortgage calculator",
+                note: "Run a payment on any price you like",
+              },
+              {
+                href: "/buyers/",
+                label: "Buyer guide",
+                note: "What happens at each step, start to close",
+              },
+              {
+                href: "/properties/",
+                label: "Search every listing",
+                note: "The full MLS, updated hourly",
+              },
+              {
+                href: "/contact/",
+                label: "Reach me",
+                note: "Call, text or send a question",
+              },
+            ].map((l) => (
+              <li key={l.href}>
+                <Link
+                  href={l.href}
+                  className="text-sm font-semibold text-[#1565C0] underline"
+                >
+                  {l.label}
+                </Link>
+                <span className="block text-xs text-[#475569]">{l.note}</span>
+              </li>
+            ))}
+          </ul>
+
+          <p className="mt-5 rounded-lg bg-[#0B2545] p-4 text-sm leading-relaxed text-white">
+            Seen enough? Text or call me at{" "}
+            <a href="tel:+18137337907" className="font-bold underline">
+              (813) 733-7907
+            </a>{" "}
+            and I will call the servicer on your favorite to confirm the
+            assumption before we write anything.
           </p>
         </section>
       </main>
