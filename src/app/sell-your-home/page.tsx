@@ -257,9 +257,14 @@ export default function SellYourHomePage() {
             want to see the experience and credentials behind the listing before
             you call, start here.
           </p>
-          <Link href="/brandon-listing-agent/" className="btn-primary inline-block">
-            Experienced Brandon Listing Agent
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/brandon-listing-agent/" className="btn-primary inline-block">
+              Brandon Listing Agent
+            </Link>
+            <Link href="/valrico-listing-agent/" className="btn-primary inline-block">
+              Valrico Listing Agent
+            </Link>
+          </div>
         </div>
       </section>
 

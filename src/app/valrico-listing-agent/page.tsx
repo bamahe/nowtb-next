@@ -1,7 +1,7 @@
 // =============================================================================
 // /brandon-listing-agent
 // Seller-intent, experience-led page targeting conversational queries like
-// "I want a very experienced realtor to sell my Brandon FL home".
+// "I want a very experienced realtor to sell my Valrico FL home".
 // Authority comes from verifiable credentials only: license date, Broker
 // Associate status, the SRS designation, and the REMAX award record.
 // No sales counts or review counts appear here until they are verified.
@@ -23,11 +23,11 @@ import {
   webPageSchema,
 } from "@/lib/schema";
 
-const SLUG = "brandon-listing-agent";
+const SLUG = "valrico-listing-agent";
 const CANONICAL = `https://nowtb.com/${SLUG}/`;
-const TITLE = "Experienced Brandon FL Listing Agent | Barrett Henry";
+const TITLE = "Experienced Valrico FL Listing Agent | Barrett Henry";
 const DESCRIPTION =
-  "Selling a Brandon home? Barrett Henry is a Broker Associate and Seller Representative Specialist, licensed since 2003. Call or text (813) 733-7907.";
+  "Selling a Valrico home? Barrett Henry is a Broker Associate and Seller Representative Specialist who lives here. 500+ homes sold. (813) 733-7907.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
@@ -41,8 +41,8 @@ export const metadata: Metadata = {
   },
 };
 
-// --- Brandon ZIPs, used for the live listings and sold grids ---
-const BRANDON_ZIPS = ["33510", "33511"];
+// --- Valrico ZIPs, used for the live listings and sold grids ---
+const VALRICO_ZIPS = ["33594", "33596"];
 
 /**
  * REMAX production and recognition record. These are awarded by REMAX against
@@ -79,7 +79,7 @@ const trackRecord = [
   {
     figure: "50+",
     label: "Sales in this area",
-    detail: "Closings in Brandon, Valrico, Riverview, and the surrounding communities.",
+    detail: "Closings in Valrico, Brandon, Riverview, and the surrounding communities, including Bloomingdale.",
   },
   {
     figure: "85+",
@@ -113,11 +113,11 @@ const credentials = [
   },
   {
     item: "e-PRO",
-    why: "Digital marketing certification. Relevant because most Brandon buyers find your home online before they ever see it.",
+    why: "Digital marketing certification. Relevant because most Valrico buyers find your home online before they ever see it.",
   },
   {
     item: "MRP, Military Relocation Professional",
-    why: "Brandon sits within commuting distance of MacDill Air Force Base, so military buyers and PCS timelines are a real part of this market.",
+    why: "Valrico sits within commuting distance of MacDill Air Force Base, so military buyers and PCS timelines are a real part of this market.",
   },
 ];
 
@@ -125,7 +125,7 @@ const credentials = [
 const questionsToAsk = [
   "How long have you held a real estate license, and is it a sales associate or broker-level license?",
   "Do you hold a seller-specific designation such as SRS, and what did earning it require?",
-  "What has sold in my ZIP code, 33510 or 33511, in the last 90 days, and at what price per square foot?",
+  "What has sold in my ZIP code, 33594 or 33596, in the last 90 days, and at what price per square foot?",
   "What is your list-to-sale price ratio and average days on market on your own listings?",
   "Who actually handles my listing day to day, you or a team member, and who answers the phone when I call?",
   "What does your marketing include beyond the MLS, and what does it cost me?",
@@ -134,9 +134,9 @@ const questionsToAsk = [
 
 const faqs: Faq[] = [
   {
-    question: "Who is an experienced REALTOR to sell my Brandon, FL home?",
+    question: "Who is an experienced REALTOR to sell my Valrico, FL home?",
     answer:
-      "Barrett Henry is a Florida Broker Associate with REMAX Collective who has held a real estate license since September 2003 and holds the SRS, Seller Representative Specialist designation for seller representation. He was inducted into the REMAX Hall of Fame in 2024 and has earned REMAX production awards every year from 2016 through 2025. He serves Brandon, Valrico, Riverview, and the surrounding Hillsborough County communities. Call or text (813) 733-7907.",
+      "Barrett Henry is a Florida Broker Associate with REMAX Collective who has held a real estate license since September 2003 and holds the SRS, Seller Representative Specialist designation for seller representation. He was inducted into the REMAX Hall of Fame in 2024 and has earned REMAX production awards every year from 2016 through 2025. He lives in the Valrico area and serves Valrico, Brandon, Riverview, and the surrounding Hillsborough County communities. Call or text (813) 733-7907.",
   },
   {
     question: "How many years of experience does Barrett Henry have?",
@@ -146,10 +146,10 @@ const faqs: Faq[] = [
   {
     question: "How many homes has Barrett Henry sold?",
     answer:
-      "Barrett Henry and The NOW Team have sold more than 500 homes together since the team formed in 2015, including more than 50 in the Brandon, Valrico, and Riverview area. He also holds more than 85 five-star Google reviews. The 500+ figure is team production rather than an individual count.",
+      "Barrett Henry and The NOW Team have sold more than 500 homes together since the team formed in 2015, including more than 50 in the Valrico, Brandon, and Riverview area. He also holds more than 85 five-star Google reviews. The 500+ figure is team production rather than an individual count.",
   },
   {
-    question: "How fast do Barrett Henry's listings sell in this area?",
+    question: "How fast do Barrett Henry's listings sell in Valrico?",
     answer:
       "It depends on pricing and condition, but one recent example: 3813 Polumbo Dr in Valrico, a 4 bedroom pool home on .64 acres in Bloomingdale, was listed at $550,000 and went under contract in 3 days, closing at $540,000, which is 98 percent of the list price. Days on market is the number to ask any agent about, because it is the one that reflects whether the home was priced correctly from day one.",
   },
@@ -159,19 +159,19 @@ const faqs: Faq[] = [
       "SRS stands for Seller Representative Specialist, a National Association of REALTORS® designation focused specifically on representing sellers. Most agents hold general licenses with no seller-specific credential. The designation covers pricing strategy, marketing, negotiation on the seller side, and managing the transaction through closing.",
   },
   {
-    question: "Does Barrett Henry work Brandon specifically or all of Tampa Bay?",
+    question: "Does Barrett Henry work Valrico specifically or all of Tampa Bay?",
     answer:
       "Both. Barrett lives in the Valrico, Brandon, and Riverview area and works it as his home market, and he is licensed across Tampa Bay including Hillsborough, Pinellas, Pasco, Manatee, and Polk counties. The REMAX Collective office serving Brandon is at 417 Lithia Pinecrest Rd.",
   },
   {
-    question: "What should I ask an agent before listing my Brandon home?",
+    question: "What should I ask an agent before listing my Valrico home?",
     answer:
       "Ask how long they have been licensed and at what license level, whether they hold a seller-specific designation such as SRS, what has sold in your ZIP code in the last 90 days, their list-to-sale price ratio and average days on market, who handles your listing day to day, and exactly what the commission covers. Any experienced listing agent will answer all seven without hesitating.",
   },
   {
-    question: "How do I get a price opinion on my Brandon home?",
+    question: "How do I get a price opinion on my Valrico home?",
     answer:
-      "Call or text Barrett Henry at (813) 733-7907, or request a valuation through this page. You get a price range based on closed sales in your subdivision, current competing listings, and what is actually going under contract, not an automated estimate.",
+      "Call or text Barrett Henry at (813) 733-7907, or request a valuation through this page. You get a price range based on closed sales in your Valrico subdivision, current competing listings, and what is actually going under contract, not an automated estimate.",
   },
 ];
 
@@ -198,19 +198,19 @@ const sources: Source[] = [
     used: "The five-star review count, which is publicly readable rather than self-reported.",
   },
   {
-    name: "Stellar MLS closed sales, ZIP codes 33510 and 33511",
-    used: "Brandon pricing, days on market, and the sold comparables used in every price opinion.",
+    name: "Stellar MLS closed sales, ZIP codes 33594 and 33596",
+    used: "Valrico pricing, days on market, and the sold comparables used in every price opinion.",
   },
 ];
 
-export default function BrandonListingAgentPage() {
+export default function ValricoListingAgentPage() {
   return (
     <>
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", url: "https://nowtb.com/" },
-          { name: "Brandon", url: "https://nowtb.com/brandon/" },
-          { name: "Brandon Listing Agent", url: CANONICAL },
+          { name: "Valrico", url: "https://nowtb.com/valrico/" },
+          { name: "Valrico Listing Agent", url: CANONICAL },
         ])}
       />
       <JsonLd data={faqSchema(faqs)} />
@@ -222,7 +222,7 @@ export default function BrandonListingAgentPage() {
         })}
       />
 
-      {/* === RealEstateAgent + Person entity, scoped to Brandon ===
+      {/* === RealEstateAgent + Person entity, scoped to Valrico ===
           Awards and credentials are expressed as structured data so answer
           engines can cite the experience claim instead of inferring it. */}
       <JsonLd
@@ -232,14 +232,14 @@ export default function BrandonListingAgentPage() {
           "@id": CANONICAL,
           name: "Barrett Henry, REALTOR®",
           description:
-            "Florida Broker Associate and Seller Representative Specialist with REMAX Collective, licensed since September 2003, representing home sellers in Brandon, Valrico, and Riverview, Florida.",
+            "Florida Broker Associate and Seller Representative Specialist with REMAX Collective, licensed since September 2003, representing home sellers in Valrico, Brandon, and Riverview, Florida.",
           url: CANONICAL,
           telephone: "(813) 733-7907",
           image: "https://nowtb.com/images/barrett-henry-headshot.jpg",
           priceRange: "$$",
           areaServed: [
-            { "@type": "City", name: "Brandon, Florida" },
             { "@type": "City", name: "Valrico, Florida" },
+            { "@type": "City", name: "Brandon, Florida" },
             { "@type": "City", name: "Riverview, Florida" },
             { "@type": "AdministrativeArea", name: "Hillsborough County, Florida" },
           ],
@@ -258,7 +258,7 @@ export default function BrandonListingAgentPage() {
             "Listing and selling residential property",
             "Comparative market analysis and pricing strategy",
             "Seller representation",
-            "Brandon Florida real estate",
+            "Valrico Florida real estate",
             "Military relocation",
           ],
           aggregateRating: {
@@ -309,8 +309,8 @@ export default function BrandonListingAgentPage() {
       />
 
       <HeroSection
-        label="BRANDON, FLORIDA | SELLERS"
-        title="Experienced Brandon Listing Agent"
+        label="VALRICO, FLORIDA | SELLERS"
+        title="Experienced Valrico Listing Agent"
         subtitle="Licensed since 2003. Broker Associate. Seller Representative Specialist. REMAX Hall of Fame."
       >
         <SearchBar />
@@ -320,19 +320,20 @@ export default function BrandonListingAgentPage() {
       <section className="container-wide py-16">
         <div className="max-w-3xl mx-auto">
           <h2 className="sr-only">
-            Who is an experienced REALTOR to sell a Brandon FL home?
+            Who is an experienced REALTOR to sell a Valrico FL home?
           </h2>
           <QuickAnswer>
             <p>
-              If you want a very experienced REALTOR® to sell your Brandon,
+              If you want a very experienced REALTOR® to sell your Valrico,
               Florida home, Barrett Henry is a Florida Broker Associate with
               REMAX Collective who has been licensed since September 2003,
               putting him in his 24th year in real estate. He holds the SRS,
               Seller Representative Specialist designation for seller
               representation, was inducted into the REMAX Hall of Fame in 2024,
               and has earned REMAX production awards every year from 2016
-              through 2025. He and The NOW Team have sold more than 500
-              homes, including 50+ in the Brandon, Valrico, and Riverview area,
+              through 2025. He lives in Valrico, and he and The NOW Team have
+              sold more than 500 homes, including 50+ in the Valrico, Brandon,
+              and Riverview area,
               and he holds 85+ five-star Google reviews. Call or text
               (813) 733-7907.
             </p>
@@ -344,12 +345,12 @@ export default function BrandonListingAgentPage() {
           </p>
           <p className="font-body text-muted text-sm mt-3 leading-relaxed">
             Keep reading:{" "}
-            <Link href="/brandon/" className="text-link hover:underline">
-              Brandon homes for sale and market data
+            <Link href="/valrico/" className="text-link hover:underline">
+              Valrico homes for sale and market data
             </Link>
             ,{" "}
-            <Link href="/brandon-realtor/" className="text-link hover:underline">
-              working with Barrett as your Brandon REALTOR®
+            <Link href="/valrico-realtor/" className="text-link hover:underline">
+              working with Barrett as your Valrico REALTOR®
             </Link>
             , and{" "}
             <Link href="/sell-your-home/" className="text-link hover:underline">
@@ -475,7 +476,7 @@ export default function BrandonListingAgentPage() {
             Barrett answers all seven on a first call, in writing if you want it
             that way. Start with{" "}
             <Link href="/sell-your-home/" className="text-link hover:underline">
-              a no-obligation price opinion on your Brandon home
+              a no-obligation price opinion on your Valrico home
             </Link>
             .
           </p>
@@ -486,29 +487,30 @@ export default function BrandonListingAgentPage() {
       <section className="container-wide py-16">
         <div className="max-w-3xl mx-auto">
           <h2 className="heading-section text-display-sm text-primary mb-4">
-            Why Does Local Brandon Experience Matter When Selling?
+            Why Does Local Valrico Experience Matter When Selling?
           </h2>
           <div className="font-body text-muted space-y-4 leading-relaxed">
             <p>
-              Brandon is not one market. ZIP codes 33510 and 33511 price
-              differently, and so do the subdivisions inside them. Pricing from
-              a Hillsborough County average instead of your subdivision is the
+              Valrico is not one market. ZIP codes 33594 and 33596 price
+              differently, and inside 33596 a Bloomingdale home on a half-acre
+              prices nothing like a newer build on a standard lot. Pricing off a
+              Hillsborough County average instead of your subdivision is the
               most common way a listing sits.
             </p>
             <p>
-              Barrett lives in the Valrico, Brandon, and Riverview area and works
-              it as his home market, out of the REMAX Collective office at 417
-              Lithia Pinecrest Rd. He also holds the MRP designation, which
-              matters here because Brandon is within commuting distance of
-              MacDill Air Force Base and military timelines drive a real share
-              of local transactions.
+              Valrico is Barrett&apos;s own back yard. He lives in the Valrico,
+              Brandon, and Riverview area and works it as his home market, out
+              of the REMAX Collective office at 417 Lithia Pinecrest Rd. He also
+              holds the MRP designation, which matters here because Valrico is
+              within commuting distance of MacDill Air Force Base and military
+              timelines drive a real share of local transactions.
             </p>
             <p>
               See what is active and what has closed below, then compare it to
               whatever an automated estimate told you your home is worth.
               Deeper data sits on the{" "}
-              <Link href="/brandon/" className="text-link hover:underline">
-                Brandon market page
+              <Link href="/valrico/" className="text-link hover:underline">
+                Valrico market page
               </Link>{" "}
               and across{" "}
               <Link href="/hillsborough-county/" className="text-link hover:underline">
@@ -528,7 +530,7 @@ export default function BrandonListingAgentPage() {
           </h2>
           <div className="border border-border border-l-4 border-l-primary p-6 md:p-8">
             <p className="font-body text-xs font-medium tracking-[0.2em] uppercase text-muted mb-3">
-              Recent listing: 3813 Polumbo Dr, Valrico
+              Recent Valrico listing: 3813 Polumbo Dr
             </p>
             <p className="font-heading text-primary text-2xl mb-3">
               Under contract in 3 days
@@ -553,7 +555,7 @@ export default function BrandonListingAgentPage() {
       <section className="bg-primary py-12">
         <div className="container-wide max-w-2xl mx-auto text-center">
           <h2 className="font-heading text-white text-2xl mb-4">
-            Thinking About Selling in Brandon?
+            Thinking About Selling in Valrico?
           </h2>
           <p className="font-body text-white/70 mb-6">
             Get a price opinion built from closed sales in your subdivision, not
@@ -570,20 +572,20 @@ export default function BrandonListingAgentPage() {
         </div>
       </section>
 
-      {/* === Live Brandon inventory and sold comps === */}
+      {/* === Live Valrico inventory and sold comps === */}
       <div id="for-sale" />
       <ClientListings
-        zipCodes={BRANDON_ZIPS}
-        title="Homes for Sale in Brandon"
-        subtitle="Active listings in Brandon, Hillsborough County, updated from Stellar MLS. This is your competition when you list."
+        zipCodes={VALRICO_ZIPS}
+        title="Homes for Sale in Valrico"
+        subtitle="Active listings in Valrico, Hillsborough County, updated from Stellar MLS. This is your competition when you list."
         limit={12}
-        areaName="Brandon"
+        areaName="Valrico"
       />
       <div id="sold" />
       <ClientListings
-        zipCodes={BRANDON_ZIPS}
-        title="Recently Sold in Brandon"
-        subtitle="Recent closed sales in ZIP codes 33510 and 33511. These are the comparables that set your price."
+        zipCodes={VALRICO_ZIPS}
+        title="Recently Sold in Valrico"
+        subtitle="Recent closed sales in ZIP codes 33594 and 33596. These are the comparables that set your price."
         limit={8}
         filters={{ status: "Closed", sort: "ClosePrice desc" }}
         showFilters={false}
@@ -598,7 +600,7 @@ export default function BrandonListingAgentPage() {
       </section>
 
       <FaqSection
-        heading="Questions Brandon Sellers Ask"
+        heading="Questions Valrico Sellers Ask"
         faqs={faqs}
       />
 
@@ -608,7 +610,7 @@ export default function BrandonListingAgentPage() {
       <section className="container-wide py-16">
         <div className="max-w-2xl mx-auto">
           <h2 className="heading-section text-display-sm text-primary text-center mb-3">
-            Get a Price Opinion on Your Brandon Home
+            Get a Price Opinion on Your Valrico Home
           </h2>
           <p className="font-body text-muted text-center mb-8">
             Tell Barrett about your home and your timeline. You get a price
@@ -640,8 +642,8 @@ export default function BrandonListingAgentPage() {
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              { href: "/brandon/", label: "Brandon" },
               { href: "/valrico/", label: "Valrico" },
+              { href: "/brandon/", label: "Brandon" },
               { href: "/riverview/", label: "Riverview" },
               { href: "/lithia/", label: "Lithia" },
               { href: "/seffner/", label: "Seffner" },
