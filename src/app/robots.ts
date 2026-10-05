@@ -17,23 +17,24 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        // /c/ holds private per-client packets (CMAs, net sheets). Kept out of
-        // search entirely, and also served with X-Robots-Tag via vercel.json.
-        disallow: ["/api/", "/admin/", "/auth/", "/account/", "/login/", "/card/", "/thank-you/", "/compare/", "/c/"],
+        // /c/ and /clients/ hold private per-client packets (CMAs, net sheets,
+        // home comparisons). Kept out of search entirely, and also served with
+        // X-Robots-Tag via vercel.json.
+        disallow: ["/api/", "/admin/", "/auth/", "/account/", "/login/", "/card/", "/thank-you/", "/compare/", "/c/", "/clients/"],
       },
       // Explicitly allow AI crawlers for AEO/GEO visibility.
       // Each still gets /c/ disallowed — an unqualified allow:"/" would
       // otherwise invite them straight into the private client packets.
-      { userAgent: "GPTBot", allow: "/", disallow: ["/c/"] },
-      { userAgent: "ClaudeBot", allow: "/", disallow: ["/c/"] },
-      { userAgent: "PerplexityBot", allow: "/", disallow: ["/c/"] },
-      { userAgent: "Applebot-Extended", allow: "/", disallow: ["/c/"] },
-      { userAgent: "GoogleOther", allow: "/", disallow: ["/c/"] },
-      { userAgent: "Google-Extended", allow: "/", disallow: ["/c/"] },
-      { userAgent: "Bytespider", allow: "/", disallow: ["/c/"] },
-      { userAgent: "ChatGPT-User", allow: "/", disallow: ["/c/"] },
-      { userAgent: "anthropic-ai", allow: "/", disallow: ["/c/"] },
-      { userAgent: "cohere-ai", allow: "/", disallow: ["/c/"] },
+      { userAgent: "GPTBot", allow: "/", disallow: ["/c/", "/clients/"] },
+      { userAgent: "ClaudeBot", allow: "/", disallow: ["/c/", "/clients/"] },
+      { userAgent: "PerplexityBot", allow: "/", disallow: ["/c/", "/clients/"] },
+      { userAgent: "Applebot-Extended", allow: "/", disallow: ["/c/", "/clients/"] },
+      { userAgent: "GoogleOther", allow: "/", disallow: ["/c/", "/clients/"] },
+      { userAgent: "Google-Extended", allow: "/", disallow: ["/c/", "/clients/"] },
+      { userAgent: "Bytespider", allow: "/", disallow: ["/c/", "/clients/"] },
+      { userAgent: "ChatGPT-User", allow: "/", disallow: ["/c/", "/clients/"] },
+      { userAgent: "anthropic-ai", allow: "/", disallow: ["/c/", "/clients/"] },
+      { userAgent: "cohere-ai", allow: "/", disallow: ["/c/", "/clients/"] },
       // Block spam/scraper bots
       { userAgent: "SemrushBot", disallow: "/" },
       { userAgent: "AhrefsBot", disallow: "/" },
