@@ -5,106 +5,129 @@
 // JSON from data/clients/<slug>.json and it hands back one computed row per
 // home. Everything that lands on the page in dollars is rounded to whole
 // dollars here, so the page never has to think about cents.
+//
+// Two quirks of the data worth knowing before you edit anything:
+//  - settings.vaRate and settings.secondRate are DECIMALS (0.06875 is 6.875%)
+//    but loan.rate is a WHOLE PERCENT (3.18 is 3.18%). Loan rate is only ever
+//    displayed, never used in a calculation, so the two never meet.
+//  - kwh_per_sf lives on each home, not in settings, because a two story house
+//    and a one story house of the same size do not use the same power.
 // =============================================================================
 
 // ── Shapes of the JSON ───────────────────────────────────────────────────────
 
-/** One workplace the clients drive to. */
-export type Workplace = {
-  name: string;
-  /** Which of the two of them drives there. Optional. */
-  who?: string;
+/** Drive time and distance from one home to one workplace. Both free text. */
+export type CommuteLeg = {
+  miles: string;
+  time: string;
 };
 
-/** Drive time and distance from one home to one workplace. */
-export type Commute = {
-  minutes: number;
-  miles: number;
+export type CommuteBlock = {
+  toWork1: CommuteLeg;
+  toWork2: CommuteLeg;
+  /** One way miles added versus the baseline home. The baseline itself is 0. */
+  extraMilesOneWayVsBaseline: number;
 };
 
 /**
  * The seller's existing mortgage, pulled from public records.
- * `assumable` is the switch that turns Option B on for a home.
+ * `assumable` is the switch that turns Option B on for a home. When it is true,
+ * pi, mip and bal all have to be filled in or Option B cannot be computed.
  */
 export type Loan = {
-  assumable: boolean;
-  /** VA, FHA, USDA, Conventional, etc. */
+  /** VA, FHA, USDA, Conventional */
   type: string;
   lender: string;
+  /** Year and month the mortgage was recorded, as "2021-09" */
   recorded: string;
-  term: string;
-  /** Decimal, so 2.75% is 0.0275 */
-  rate: number;
+  /** Original loan amount */
+  orig: number;
   /** Estimated balance remaining today */
   bal: number;
-  /** The seller's monthly principal and interest */
-  pi: number;
-  /** Monthly mortgage insurance that rides along with the loan (FHA) */
-  mip: number;
+  /** A WHOLE PERCENT, so 3.01 means 3.01% */
+  rate: number;
+  /** Free text, for example "30-yr" or "ends 2051" */
+  term: string;
+  assumable: boolean;
+  /** The seller's monthly principal and interest. Assumable homes only. */
+  pi?: number;
+  /** Monthly mortgage insurance riding with the loan. FHA has it, VA does not. */
+  mip?: number;
+  /** Payments left on the seller's loan. Assumable homes only. */
+  remaining?: number;
 };
 
 export type Home = {
+  id: string;
   name: string;
-  mls: string;
   community: string;
-  city: string;
+  mls: string;
   price: number;
   /** Original list price. Shown as "was $X" when it differs from price. */
-  origPrice: number;
-  daysOnMarket: number;
-  bedsBaths: string;
+  orig: number;
+  /** Days on market */
+  dom: number;
+  beds: number;
+  /** Can be a half, for example 2.5 */
+  baths: number;
   sqft: number;
-  yearBuilt: number;
+  /** Year built */
+  year: number;
+  /** Garage spaces */
+  garage: number;
+  /** Lot size in acres */
+  lot: number;
   stories: number;
-  garage: string;
-  lot: string;
   roof: string;
-  /** Annual CDD fee in dollars. 0 when the community has none. */
-  cdd: number;
   /** HOA in dollars per MONTH */
   hoa: number;
+  /** Annual CDD fee in dollars. 0 when the community has none. */
+  cdd: number;
   /** Homeowners insurance in dollars per MONTH */
   ins: number;
-  loan: Loan;
-  /** One entry per workplace, in the same order as settings.workplaces */
-  commute: Commute[];
-  /** One way miles added versus the baseline home. The baseline itself is 0. */
-  extraMilesOneWayVsBaseline: number;
+  /** Monthly kilowatt hours used per square foot, for this house */
+  kwh_per_sf: number;
   likes: string[];
-  watchOuts: string[];
-  negotiatingRoom: string;
+  /** Watch outs */
+  cons: string[];
+  /** Negotiating room, one paragraph */
+  leverage: string;
+  loan: Loan;
+  commute: CommuteBlock;
 };
 
 export type Settings = {
-  /** Today's VA rate as a decimal, so 6.75% is 0.0675 */
+  /** Today's VA rate as a decimal, so 6.875% is 0.06875 */
   vaRate: number;
-  /** Assessed value as a share of price, so 0.80 means 80% of price */
-  assessRatio: number;
-  /** Homestead exemption in dollars */
-  homesteadExemption: number;
-  /** Total millage as a decimal, so 19.1 mills is 0.0191 */
-  millage: number;
-  /** Monthly kilowatt hours used per square foot */
-  kwh_per_sf: number;
-  /** Cost per kilowatt hour in dollars */
-  electricPerKwh: number;
-  /** How far a second lender will go, counting the first loan. 0.90 is typical. */
-  secondMaxCltv: number;
   /** Rate on the second loan as a decimal */
   secondRate: number;
-  /** How many of them commute */
-  drivers: number;
-  /** Work days per month */
-  workDays: number;
+  /** How far a second lender will go, counting the first loan. 0.9 is typical. */
+  secondMaxCltv: number;
+  /** Total millage as a decimal, so 17.5 mills is 0.0175 */
+  millage: number;
+  /** Homestead exemption in dollars */
+  homesteadExemption: number;
+  /** Assessed value as a share of price, so 0.85 means 85% of price */
+  assessRatio: number;
+  /** Cost per kilowatt hour in dollars */
+  electricPerKwh: number;
+  gasCostPerMile: number;
   /** Average speed in traffic, used to turn extra miles into extra hours */
   avgMph: number;
-  gasCostPerMile: number;
-  /** Name of the home all commutes are measured against */
-  baselineHome: string;
-  workplaces: Workplace[];
+  /** Work days per month */
+  workDays: number;
+  /** How many of them commute */
+  drivers: number;
+  /** Must match one home's id. That home shows "Baseline" in the commute rows. */
+  baselineHomeId: string;
+  /** Workplace names, in the same order as toWork1 and toWork2 */
+  workplaces: string[];
+  /** What they pay in rent today, free text. Optional. */
+  rentNow?: string;
 };
 
 export type ClientData = {
+  slug: string;
   client: string;
   updated: string;
   settings: Settings;
@@ -190,7 +213,7 @@ export function computeHome(home: Home, s: Settings): ComputedHome {
   const cddMo = usd(cdd / 12);
   const hoaMo = usd(hoa);
   const insMo = usd(ins);
-  const elecMo = usd(sqft * s.kwh_per_sf * s.electricPerKwh);
+  const elecMo = usd(sqft * home.kwh_per_sf * s.electricPerKwh);
 
   // Everything that does not change based on which loan they use
   const fixed = taxMo + cddMo + hoaMo + insMo;
@@ -202,7 +225,10 @@ export function computeHome(home: Home, s: Settings): ComputedHome {
 
   // Option B, only for homes with an assumable loan
   let assume: ComputedHome["assume"] = null;
-  if (loan.assumable) {
+  if (loan.assumable && typeof loan.pi === "number") {
+    const pi = loan.pi;
+    const mip = loan.mip ?? 0;
+
     // What is left to cover between the seller's balance and the price
     const gap = usd(price - loan.bal);
     // A second lender will not go past secondMaxCltv of price, so the rest is cash
@@ -210,7 +236,7 @@ export function computeHome(home: Home, s: Settings): ComputedHome {
     const second = usd(Math.max(0, price * s.secondMaxCltv - loan.bal));
     const secondPI = usd(pmt(second, s.secondRate));
 
-    const assumePI = usd(loan.pi + loan.mip + secondPI);
+    const assumePI = usd(pi + mip + secondPI);
     const assumeAllIn = assumePI + fixed + elecMo;
 
     assume = {
@@ -222,12 +248,12 @@ export function computeHome(home: Home, s: Settings): ComputedHome {
       assumeAllIn,
       saveVsNewVa: newVaPI - assumePI,
       // Same loan, no second: they fund the gap out of pocket instead
-      allCashGapAllIn: usd(loan.pi + loan.mip) + fixed + elecMo,
+      allCashGapAllIn: usd(pi + mip) + fixed + elecMo,
     };
   }
 
   // Commute penalty versus the baseline home. Round trip, both drivers.
-  const extraMiles = home.extraMilesOneWayVsBaseline;
+  const extraMiles = home.commute.extraMilesOneWayVsBaseline;
   const extraDriveHoursMo =
     (extraMiles * 2 * s.drivers * s.workDays) / s.avgMph;
   const extraDriveCostMo = usd(
@@ -236,7 +262,7 @@ export function computeHome(home: Home, s: Settings): ComputedHome {
 
   return {
     home,
-    isBaseline: home.name === s.baselineHome,
+    isBaseline: home.id === s.baselineHomeId,
     pricePerSqft,
     taxYear,
     taxMo,
@@ -266,4 +292,22 @@ export function computeAll(data: ClientData): ComputedHome[] {
  */
 export function bestMonthly(c: ComputedHome): number {
   return c.assume ? c.assume.assumeAllIn : c.newVaAllIn;
+}
+
+/** Pull one commute leg by workplace index. */
+export function commuteLeg(home: Home, i: number): CommuteLeg {
+  return i === 0 ? home.commute.toWork1 : home.commute.toWork2;
+}
+
+/** "2021-09" reads as "September 2021". Anything unexpected passes through. */
+export function readableMonth(ym: string): string {
+  const m = /^(\d{4})-(\d{2})$/.exec(ym);
+  if (!m) return ym;
+  const names = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December",
+  ];
+  const idx = Number(m[2]) - 1;
+  if (idx < 0 || idx > 11) return ym;
+  return `${names[idx]} ${m[1]}`;
 }
