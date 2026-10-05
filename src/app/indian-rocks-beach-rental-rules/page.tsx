@@ -7,6 +7,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
+import SearchBar from "@/components/ui/SearchBar";
+import BeachCondoInventory from "@/components/ui/BeachCondoInventory";
 import QuickAnswer from "@/components/ui/QuickAnswer";
 import FaqSection, { type Faq } from "@/components/ui/FaqSection";
 import BeachCondoFooterBlock from "@/components/ui/BeachCondoFooterBlock";
@@ -121,7 +123,9 @@ export default function IndianRocksBeachRentalRulesPage() {
         label="INDIAN ROCKS BEACH | 2026"
         title="Indian Rocks Beach Rental Rules"
         subtitle="What the city requires, what it costs, and why your building rules matter just as much as the ordinance."
-      />
+      >
+        <SearchBar />
+      </HeroSection>
 
       {/* === Quick answer === */}
       <section className="container-wide py-16">
@@ -301,6 +305,11 @@ export default function IndianRocksBeachRentalRulesPage() {
           </div>
         </div>
       </section>
+
+      <BeachCondoInventory
+        title="Indian Rocks Beach Area Condos for Sale"
+        subtitle="Active condo listings on the Gulf beaches. Verify the building's rental minimum before you write an offer."
+      />
 
       <FaqSection
         heading="Indian Rocks Beach Rental Questions"

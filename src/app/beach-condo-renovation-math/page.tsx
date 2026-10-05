@@ -7,6 +7,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
+import SearchBar from "@/components/ui/SearchBar";
+import BeachCondoInventory from "@/components/ui/BeachCondoInventory";
 import QuickAnswer from "@/components/ui/QuickAnswer";
 import FaqSection, { type Faq } from "@/components/ui/FaqSection";
 import BeachCondoFooterBlock from "@/components/ui/BeachCondoFooterBlock";
@@ -101,7 +103,9 @@ export default function BeachCondoRenovationMathPage() {
         label="GULF-FRONT CONDOS"
         title="The Renovation Math"
         subtitle="What it takes to turn a dated Gulf-front condo into the one you actually wanted, and whether the numbers work."
-      />
+      >
+        <SearchBar />
+      </HeroSection>
 
       {/* === Quick answer === */}
       <section className="container-wide py-16">
@@ -326,6 +330,11 @@ export default function BeachCondoRenovationMathPage() {
           </div>
         </div>
       </section>
+
+      <BeachCondoInventory
+        title="Gulf Beach Condos for Sale"
+        subtitle="Active condo listings on the Pinellas Gulf beaches. Compare dated units to the updated sales below."
+      />
 
       <FaqSection heading="Condo Renovation Questions" faqs={faqs} />
 

@@ -7,6 +7,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
+import SearchBar from "@/components/ui/SearchBar";
+import BeachCondoInventory from "@/components/ui/BeachCondoInventory";
 import QuickAnswer from "@/components/ui/QuickAnswer";
 import FaqSection, { type Faq } from "@/components/ui/FaqSection";
 import BeachCondoFooterBlock from "@/components/ui/BeachCondoFooterBlock";
@@ -128,7 +130,9 @@ export default function BuyingBeachCondoLlcPage() {
         label="ENTITY AND SECOND-HOME BUYERS"
         title="Buying a Beach Condo in an LLC"
         subtitle="Different loan, same building review, plus an association that gets a vote on your buyer entity."
-      />
+      >
+        <SearchBar />
+      </HeroSection>
 
       {/* === Quick answer === */}
       <section className="container-wide py-16">
@@ -333,6 +337,11 @@ export default function BuyingBeachCondoLlcPage() {
           </div>
         </div>
       </section>
+
+      <BeachCondoInventory
+        title="Gulf Beach Condos for Sale"
+        subtitle="Active condo listings on the Pinellas Gulf beaches. Ask whether the association permits entity ownership."
+      />
 
       <FaqSection heading="LLC and Second-Home Condo Questions" faqs={faqs} />
 
