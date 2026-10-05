@@ -47,6 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/lenders/`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${siteUrl}/builders/`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${siteUrl}/inspectors/`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${siteUrl}/brandon-listing-agent/`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
   ];
 
   // ── Property type landing pages (11 pages) ──

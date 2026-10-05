@@ -246,6 +246,23 @@ export default function SellYourHomePage() {
         </div>
       </section>
 
+      {/* ---- Selling in a specific area ---- */}
+      <section className="section-light py-16">
+        <div className="container-wide max-w-3xl mx-auto text-center">
+          <h2 className="heading-section text-display-sm text-primary mb-4">
+            Selling in Brandon, Valrico, or Riverview?
+          </h2>
+          <p className="font-body text-muted mb-6 leading-relaxed">
+            Barrett lives and works this corner of Hillsborough County. If you
+            want to see the experience and credentials behind the listing before
+            you call, start here.
+          </p>
+          <Link href="/brandon-listing-agent/" className="btn-primary inline-block">
+            Experienced Brandon Listing Agent
+          </Link>
+        </div>
+      </section>
+
       {/* ---- Not Ready CTA ---- */}
       <section className="container-wide py-16 text-center">
         <p className="font-body text-muted text-lg mb-4">
