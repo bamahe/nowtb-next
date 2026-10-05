@@ -7,6 +7,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
+import SearchBar from "@/components/ui/SearchBar";
+import BeachCondoInventory from "@/components/ui/BeachCondoInventory";
 import QuickAnswer from "@/components/ui/QuickAnswer";
 import FaqSection, { type Faq } from "@/components/ui/FaqSection";
 import BeachCondoFooterBlock from "@/components/ui/BeachCondoFooterBlock";
@@ -114,7 +116,9 @@ export default function GulfFrontSirsMilestonePage() {
         label="PINELLAS GULF BEACHES"
         title="Condos With SIRS and Milestone Done"
         subtitle="Two reports matter more than the view. Here is where they stand, building by building, as of October 2026."
-      />
+      >
+        <SearchBar />
+      </HeroSection>
 
       {/* === Quick answer === */}
       <section className="container-wide py-16">
@@ -364,6 +368,11 @@ export default function GulfFrontSirsMilestonePage() {
           </div>
         </div>
       </section>
+
+      <BeachCondoInventory
+        title="Gulf Beach Condos for Sale Now"
+        subtitle="Active condo listings across the buildings on this page and the rest of the Gulf beaches, updated from Stellar MLS."
+      />
 
       <FaqSection
         heading="SIRS and Milestone Questions Buyers Ask"

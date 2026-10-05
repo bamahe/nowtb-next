@@ -7,6 +7,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
+import SearchBar from "@/components/ui/SearchBar";
+import BeachCondoInventory from "@/components/ui/BeachCondoInventory";
 import QuickAnswer from "@/components/ui/QuickAnswer";
 import FaqSection, { type Faq } from "@/components/ui/FaqSection";
 import BeachCondoFooterBlock from "@/components/ui/BeachCondoFooterBlock";
@@ -118,7 +120,9 @@ export default function PinellasBeachCondoMarketReportPage() {
         label="MARKET REPORT | Q4 2026"
         title="Gulf Beach Condo Market Report"
         subtitle="Indian Rocks Beach to Madeira Beach. What is listed, what is closing, and where buyers have leverage."
-      />
+      >
+        <SearchBar />
+      </HeroSection>
 
       {/* === Quick answer === */}
       <section className="container-wide py-16">
@@ -297,6 +301,11 @@ export default function PinellasBeachCondoMarketReportPage() {
           </div>
         </div>
       </section>
+
+      <BeachCondoInventory
+        title="The 73 Listings Behind This Report"
+        subtitle="Active condo inventory in zips 33785, 33708, and 33786, the same ZIPs the numbers above are drawn from."
+      />
 
       <FaqSection
         heading="Pinellas Beach Condo Market Questions"

@@ -8,6 +8,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
+import SearchBar from "@/components/ui/SearchBar";
+import BeachCondoInventory from "@/components/ui/BeachCondoInventory";
 import QuickAnswer from "@/components/ui/QuickAnswer";
 import FaqSection, { type Faq } from "@/components/ui/FaqSection";
 import BeachCondoFooterBlock from "@/components/ui/BeachCondoFooterBlock";
@@ -120,7 +122,9 @@ export default function FloridaCondoRulesBuyersPage() {
         label="FLORIDA CONDO LAW | 2026"
         title="Condo Rules for Buyers in 2026"
         subtitle="No new condo laws passed this year. The rules that affect your purchase came earlier, and the lending and insurance changes are the ones with dates on them."
-      />
+      >
+        <SearchBar />
+      </HeroSection>
 
       {/* === Quick answer === */}
       <section className="container-wide py-16">
@@ -349,6 +353,11 @@ export default function FloridaCondoRulesBuyersPage() {
           </div>
         </div>
       </section>
+
+      <BeachCondoInventory
+        title="Gulf Beach Condos for Sale"
+        subtitle="Active condo listings on the Pinellas Gulf beaches. Ask for the SIRS and milestone status on any of them."
+      />
 
       <FaqSection heading="Florida Condo Rule Questions" faqs={faqs} />
 
