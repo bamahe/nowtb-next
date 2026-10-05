@@ -1,0 +1,218 @@
+{
+  "client": "Ethan and Madison",
+  "updated": "October 4, 2026",
+  "settings": {
+    "vaRate": 0.0675,
+    "assessRatio": 0.8,
+    "homesteadExemption": 50000,
+    "millage": 0.0191,
+    "kwh_per_sf": 0.5,
+    "electricPerKwh": 0.17,
+    "secondMaxCltv": 0.9,
+    "secondRate": 0.085,
+    "drivers": 2,
+    "workDays": 21,
+    "avgMph": 32,
+    "gasCostPerMile": 0.18,
+    "baselineHome": "10415 Alcon Blue Dr",
+    "workplaces": [
+      { "name": "Downtown Tampa", "who": "Ethan" },
+      { "name": "Seminole Hard Rock Tampa", "who": "Madison" }
+    ]
+  },
+  "homes": [
+    {
+      "name": "11412 Lake Lucaya Dr",
+      "mls": "TB8509023",
+      "community": "Lucaya Lake Club",
+      "city": "Riverview, FL 33579",
+      "price": 425000,
+      "origPrice": 465000,
+      "daysOnMarket": 119,
+      "bedsBaths": "4 bed / 2 bath + office",
+      "sqft": 2266,
+      "yearBuilt": 2015,
+      "stories": 1,
+      "garage": "3 car attached",
+      "lot": "0.21 acre (9,120 sq ft)",
+      "roof": "Shingle, about 11 years old",
+      "cdd": 2072,
+      "hoa": 78.82,
+      "ins": 302.78,
+      "loan": {
+        "assumable": false,
+        "type": "Conventional",
+        "lender": "Not identified in the records pulled",
+        "recorded": "June 2015",
+        "term": "30 year",
+        "rate": 0.03875,
+        "bal": 205957,
+        "pi": 1293.15,
+        "mip": 0
+      },
+      "commute": [
+        { "minutes": 35, "miles": 22 },
+        { "minutes": 30, "miles": 20 }
+      ],
+      "extraMilesOneWayVsBaseline": 8,
+      "likes": [
+        "One story with 4 bedrooms plus a dedicated office and a flex dining space",
+        "Rare 3 car garage on a 0.21 acre lot, split bedroom plan",
+        "Fenced vinyl yard and a screened covered patio",
+        "Lucaya Lake Club amenities: 78 acre lake, resort pool, gym, splash park"
+      ],
+      "watchOuts": [
+        "Only 2 full baths for 4 bedrooms",
+        "Shingle roof is about 11 years old with no replacement listed, so get an insurance quote early",
+        "Listing photos are virtually staged, so rooms may feel smaller in person",
+        "HOA has pet breed restrictions, worth confirming before you fall in love with it"
+      ],
+      "negotiatingRoom": "On the market 119 days and already cut from $465,000 to $425,000, down 8.6 percent. This is a corporate relocation sale, so the seller usually wants a clean, fast close and extra relocation addenda come with it. Trade speed and certainty for price."
+    },
+    {
+      "name": "12349 Blue Pacific Dr",
+      "mls": "TB8503019",
+      "community": "Lucaya Lake Club",
+      "city": "Riverview, FL 33579",
+      "price": 399000,
+      "origPrice": 449900,
+      "daysOnMarket": 156,
+      "bedsBaths": "3 bed / 2.5 bath",
+      "sqft": 2679,
+      "yearBuilt": 2021,
+      "stories": 2,
+      "garage": "2 car attached",
+      "lot": "0.13 acre (5,790 sq ft)",
+      "roof": "Shingle, about 5 years old",
+      "cdd": 2489,
+      "hoa": 83.82,
+      "ins": 149.75,
+      "loan": {
+        "assumable": true,
+        "type": "FHA",
+        "lender": "Confirm servicer with the listing agent",
+        "recorded": "September 2021",
+        "term": "30 year",
+        "rate": 0.0275,
+        "bal": 319495,
+        "pi": 1477.29,
+        "mip": 240
+      },
+      "commute": [
+        { "minutes": 37, "miles": 23 },
+        { "minutes": 32, "miles": 21 }
+      ],
+      "extraMilesOneWayVsBaseline": 9,
+      "likes": [
+        "Most square footage on the tour at 2,679 sq ft, and the cheapest at $148.94 per sq ft",
+        "Pond view with no rear neighbors, fully fenced yard",
+        "Newest build on the tour, 2021 Ryan Homes with a tankless gas water heater and full gutters",
+        "Morning room extension and over $36,000 in structural upgrades"
+      ],
+      "watchOuts": [
+        "Two stories with the owners suite upstairs",
+        "Only 3 bedrooms and 2.5 baths despite being the largest home here",
+        "IKEA PAX closets and the washer and dryer do not convey, and the home sells as is",
+        "Farthest south on the tour, so the longest commute for both of you"
+      ],
+      "negotiatingRoom": "Best leverage of the four. On the market 156 days with six price cuts, $449,900 down to $399,000, a drop of $50,900 or 11 percent. The listing says motivated sellers and advertises a $5,000 seller contribution. Ask how that $5,000 is structured and whether it can cover closing costs."
+    },
+    {
+      "name": "11967 Cinnamon Fern Dr",
+      "mls": "TB8554224",
+      "community": "Waterleaf",
+      "city": "Riverview, FL 33579",
+      "price": 485000,
+      "origPrice": 485000,
+      "daysOnMarket": 1,
+      "bedsBaths": "4 bed / 3 bath",
+      "sqft": 2381,
+      "yearBuilt": 2019,
+      "stories": 1,
+      "garage": "3 car oversized attached",
+      "lot": "0.20 acre (8,920 sq ft)",
+      "roof": "Tile, the only tile roof on the tour",
+      "cdd": 3406,
+      "hoa": 91.67,
+      "ins": 304.12,
+      "loan": {
+        "assumable": true,
+        "type": "VA",
+        "lender": "Confirm servicer with the listing agent",
+        "recorded": "2019",
+        "term": "30 year",
+        "rate": 0.0325,
+        "bal": 312721,
+        "pi": 1610.26,
+        "mip": 0
+      },
+      "commute": [
+        { "minutes": 33, "miles": 21 },
+        { "minutes": 29, "miles": 19 }
+      ],
+      "extraMilesOneWayVsBaseline": 7,
+      "likes": [
+        "One story 4 bed / 3 bath, the only true 4 and 3 on this shortlist",
+        "Tile roof, which lasts far longer and helps on insurance",
+        "3 car oversized garage with a circular drive on a curved street",
+        "Rear bath is already plumbed as a future pool bath, and the backyard is big enough for one"
+      ],
+      "watchOuts": [
+        "Highest carrying cost of the four: CDD $3,406 a year plus HOA",
+        "Seller taxes of $4,345 reflect a long held homestead, so budget much higher as a new buyer",
+        "Guard dog and pets on the property, and the home records audio and video",
+        "Waterleaf sits off Big Bend, the farthest south of the four"
+      ],
+      "negotiatingRoom": "Almost none right now. It listed October 2 and has been on the market 1 day. There is no price history to work from. If you want this one you are competing on terms, not price. The gym equipment in the garage may be available separately."
+    },
+    {
+      "name": "10415 Alcon Blue Dr",
+      "mls": "TB8543485",
+      "community": "Mariposa",
+      "city": "Riverview, FL 33578",
+      "price": 495000,
+      "origPrice": 495000,
+      "daysOnMarket": 4,
+      "bedsBaths": "3 bed / 2 bath",
+      "sqft": 2056,
+      "yearBuilt": 2016,
+      "stories": 1,
+      "garage": "2 car attached",
+      "lot": "0.12 acre (5,400 sq ft)",
+      "roof": "Shingle, about 10 years old",
+      "cdd": 0,
+      "hoa": 191.67,
+      "ins": 279.29,
+      "loan": {
+        "assumable": false,
+        "type": "Conventional",
+        "lender": "Not identified in the records pulled",
+        "recorded": "July 2016",
+        "term": "30 year",
+        "rate": 0.04,
+        "bal": 196906,
+        "pi": 1203.09,
+        "mip": 0
+      },
+      "commute": [
+        { "minutes": 25, "miles": 14 },
+        { "minutes": 18, "miles": 11 }
+      ],
+      "extraMilesOneWayVsBaseline": 0,
+      "likes": [
+        "Best commute of the four for both of you, close to I-75 and the Selmon",
+        "No CDD at all, the only one of the four without it",
+        "Conservation pond view, flex room up front, huge owners suite with two separate closets",
+        "Small gated community with private roads, and the hot tub and washer and dryer are included"
+      ],
+      "watchOuts": [
+        "Only 3 bed / 2 bath and 2,056 sq ft for $495,000, which is $240.76 per sq ft",
+        "Smallest lot of the four at 0.12 acre",
+        "Shingle roof is about 10 years old with no replacement listed",
+        "No homestead on it now, so the $8,057 tax bill is close to what a new buyer actually pays",
+        "HOA is $191.67 a month, the highest HOA of the four"
+      ],
+      "negotiatingRoom": "Thin. Listed September 29 and on the market 4 days. The listing does say the hot tub is included with strong offers, so there is a little room on terms. Send a pre-approval letter with any offer."
+    }
+  ]
+}
