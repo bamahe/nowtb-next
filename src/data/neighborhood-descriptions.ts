@@ -1465,7 +1465,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Construction:</strong> Late 1990s concrete block. Homes are 25+ years old — inspect roofs (may need replacement), HVAC systems (likely on second or third unit), and water heaters carefully.</li>
+        <li><strong>Construction:</strong> Late 1990s concrete block. Homes are 23+ years old — inspect roofs (may need replacement), HVAC systems (likely on second or third unit), and water heaters carefully.</li>
         <li><strong>Insurance:</strong> Concrete block helps with rates. Check roof material — tile roofs command better insurance pricing than shingle.</li>
         <li><strong>Resale:</strong> Small community means fewer comps. Price carefully and do not overpay based on one outlier sale.</li>
         <li><strong>Rentals:</strong> Good rental demand for single-family Valrico homes in this size range. Expect $2,100-$2,500/mo. <a href="https://valricopropertymgmt.com/neighborhoods/angel-run" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
@@ -2258,7 +2258,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Construction:</strong> 1999-2000 build means homes are 25+ years old. Roof, HVAC, and water heater should all be inspected carefully. Some may be on original systems.</li>
+        <li><strong>Construction:</strong> 1999-2000 build means homes are 23+ years old. Roof, HVAC, and water heater should all be inspected carefully. Some may be on original systems.</li>
         <li><strong>Small community:</strong> Only 22 homes means very few comps. When a home in Camden Oaks sells, it sets the benchmark for the entire community — price your offer carefully.</li>
         <li><strong>Investment potential:</strong> Low HOA, low entry price, and steady Valrico rental demand make Camden Oaks a viable investment play. The numbers work at current interest rates if you buy right.</li>
         <li><strong>Rentals:</strong> <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
@@ -2799,7 +2799,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <ul>
         <li><strong>Gated access:</strong> 24-hour manned gate provides genuine security. Understand the guest access process before buying — it affects deliveries, visitors, and service providers.</li>
         <li><strong>Club membership:</strong> Your HOA includes luxury residential membership. If you use the pool, playground, and restaurants, this is excellent value. If you never use them, the higher HOA still gives you the gated lifestyle.</li>
-        <li><strong>Construction:</strong> Late 1990s concrete block. Homes are 28+ years old. Inspect roof, HVAC, water heater, and plumbing. Some original systems may be due for replacement.</li>
+        <li><strong>Construction:</strong> Late 1990s concrete block. Homes are 23+ years old. Inspect roof, HVAC, water heater, and plumbing. Some original systems may be due for replacement.</li>
         <li><strong>Rentals:</strong> Gated community rentals with club amenities are premium. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
@@ -3600,7 +3600,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Construction age:</strong> 2001-2002 homes are 24+ years old. Check the roof — original tile should still be in reasonable shape but verify underlayment condition. HVAC is likely on its second unit. Water heater replacement should be budgeted if original.</li>
+        <li><strong>Construction age:</strong> 2001-2002 homes are 23+ years old. Check the roof — original tile should still be in reasonable shape but verify underlayment condition. HVAC is likely on its second unit. Water heater replacement should be budgeted if original.</li>
         <li><strong>Small community means fewer comps:</strong> When you sell, there may only be 1-2 recent comparable sales in the neighborhood. An agent who knows the Valrico market specifically is essential for accurate pricing.</li>
         <li><strong>Quiet living:</strong> No community amenities means no pool maintenance drama, no clubhouse booking conflicts, and no multi-thousand-dollar special assessments for amenity repairs. Some buyers see that as a feature, not a bug.</li>
         <li><strong>Rentals:</strong> Buckhorn Elementary zoning creates steady rental demand. Expect $2,200-$2,700/mo for a 4-bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
@@ -5736,7 +5736,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Low inventory:</strong> With only 62 homes, listings are infrequent. Set up an alert and be ready to act. The median price has been around $470K.</li>
-        <li><strong>Construction quality:</strong> Paragon Homes built a solid product. Concrete block, tile roofs on most units, and floor plans designed for families who need space. Still, at 24+ years old, inspect the roof, HVAC, and any original plumbing fixtures.</li>
+        <li><strong>Construction quality:</strong> Paragon Homes built a solid product. Concrete block, tile roofs on most units, and floor plans designed for families who need space. Still, at 23+ years old, inspect the roof, HVAC, and any original plumbing fixtures.</li>
         <li><strong>3-car garage premium:</strong> In a market where 2-car garages are standard, the 3-car garage at Lumsden Trace adds real value — both for daily use and at resale.</li>
         <li><strong>Rentals:</strong> Executive-style homes in this price range rent well to professionals and military families. Expect $2,200-$2,700/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
@@ -6008,7 +6008,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Mandatory HOA:</strong> Read the covenants, conditions, and restrictions (CC&Rs) before making an offer. Understand what you can and cannot do with your property, including any rental restrictions.</li>
-        <li><strong>2002 construction:</strong> Homes are 24+ years old. Roof, HVAC, and water heater are your top inspection priorities. Many original components will be at or past their expected lifespan.</li>
+        <li><strong>2002 construction:</strong> Homes are 23+ years old. Roof, HVAC, and water heater are your top inspection priorities. Many original components will be at or past their expected lifespan.</li>
         <li><strong>Reserve fund health:</strong> Ask about the HOA's reserve fund status. A well-funded reserve means no surprise special assessments. A poorly funded reserve is a red flag.</li>
         <li><strong>Rentals:</strong> Check the HOA's leasing rules. Some mandatory HOAs have rental caps, minimum lease terms, or tenant screening requirements. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area and can help navigate HOA requirements.</li>
       </ul>
@@ -7309,7 +7309,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>2002-2009 range:</strong> Earlier homes are 24+ years old. Tile roofs may have a decade left; shingle roofs may need replacement.</li>
+        <li><strong>2002-2009 range:</strong> Earlier homes are 23+ years old. Tile roofs may have a decade left; shingle roofs may need replacement.</li>
         <li><strong>Professional management:</strong> McNeil provides consistent enforcement and financial record-keeping. Homeowner portal available.</li>
         <li><strong>Deed restrictions:</strong> Review before purchasing — covers exterior modifications, fencing, parking.</li>
         <li><strong>Rentals:</strong> 2000s-era Valrico homes rent well. Expect $2,000-$2,400/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
@@ -7513,7 +7513,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Construction age:</strong> 2001-2002 homes are 24+ years old. Check tile roof underlayment. HVAC likely on second unit. Budget for water heater if original.</li>
+        <li><strong>Construction age:</strong> 2001-2002 homes are 23+ years old. Check tile roof underlayment. HVAC likely on second unit. Budget for water heater if original.</li>
         <li><strong>Quality floor plans:</strong> The 4/3 layouts with 2-3 car garages live bigger than the square footage suggests.</li>
         <li><strong>Small community:</strong> Limited comparable sales. An agent who knows the neighborhood is essential for pricing.</li>
         <li><strong>Rentals:</strong> Buckhorn Elementary zoning creates steady demand. Expect $2,200-$2,800/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>

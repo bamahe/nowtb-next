@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     shortcut: "/remax-favicon-32.png",
   },
   description:
-    "Barrett Henry is a licensed real estate Broker Associate with REMAX Collective serving Tampa Bay. 24+ years of real estate experience. Search homes, get market data, and connect with a trusted local expert.",
+    "Barrett Henry is a licensed real estate Broker Associate with REMAX Collective serving Tampa Bay. 23+ years of real estate experience. Search homes, get market data, and connect with a trusted local expert.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://nowtb.com"),
   openGraph: {
     type: "website",
@@ -115,7 +115,7 @@ export default function RootLayout({
               "name": "Barrett Henry",
               "jobTitle": "Broker Associate",
               "description":
-                "Licensed REALTOR\u00ae and Broker Associate with REMAX Collective, serving Tampa Bay with 24+ years of real estate experience.",
+                "Licensed REALTOR\u00ae and Broker Associate with REMAX Collective, serving Tampa Bay with 23+ years of real estate experience.",
               "image": "https://nowtb.com/images/barrett-henry-headshot.jpg",
               "url": "https://nowtb.com/about/",
               "telephone": "+1-813-733-7907",

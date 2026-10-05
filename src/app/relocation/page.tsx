@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Relocating to Tampa Bay | Barrett Henry, REALTOR®",
     description:
-      "Full-service relocation support from a Broker Associate with 24+ years of real estate experience. Virtual tours, area research, and seamless coordination.",
+      "Full-service relocation support from a Broker Associate with 23+ years of real estate experience. Virtual tours, area research, and seamless coordination.",
     type: "website",
   },
 };
@@ -156,7 +156,7 @@ export default function RelocationPage() {
       <HeroSection
         title="Tampa Bay Relocation REALTOR®"
         label="BARRETT HENRY | BROKER ASSOCIATE"
-        subtitle="Moving to Tampa Bay from out of state? Barrett Henry makes the transition seamless with 24+ years of real estate experience."
+        subtitle="Moving to Tampa Bay from out of state? Barrett Henry makes the transition seamless with 23+ years of real estate experience."
       />
 
       {/* ---- Direct answer up top for AI engines and skimmers ---- */}
@@ -443,7 +443,7 @@ export default function RelocationPage() {
 
           <div className="mt-12">
             <p className="font-body text-white/70 font-light text-base max-w-2xl mx-auto mb-8">
-              Barrett Henry is a Broker Associate at REMAX Collective with 24+ years of
+              Barrett Henry is a Broker Associate at REMAX Collective with 23+ years of
               real estate experience, MRP certification for military relocations, and a
               deep knowledge of every Tampa Bay community. Call{" "}
               <a href="tel:+18137337907" className="text-link hover:underline">

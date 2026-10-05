@@ -1037,8 +1037,8 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
                   acceptedAnswer: { "@type": "Answer", text: toPlainText(f.a) },
                 })),
                 { "@type": "Question", name: `Where is the REMAX office in ${office.city}?`, acceptedAnswer: { "@type": "Answer", text: `The REMAX Collective ${office.city} office is located at ${office.address}. Barrett Henry is a Broker Associate at this location. Call (813) 733-7907.` } },
-                { "@type": "Question", name: `Why should I choose REMAX in ${office.city}?`, acceptedAnswer: { "@type": "Answer", text: `REMAX is the most recognized real estate brand in the world, operating in 120+ countries with 145,000+ agents. REMAX agents averaged 11.7 transaction sides in 2025 versus 5.4 for agents at competing large brokerages \u2014 more than double, per the 2026 RealTrends Verified rankings. Barrett Henry at REMAX Collective ${office.city} brings 24+ years of real estate experience and the full power of REMAX\u2019s global network to every client.` } },
-                { "@type": "Question", name: `Who is the best REMAX agent in ${office.city}?`, acceptedAnswer: { "@type": "Answer", text: `Barrett Henry is a top-producing Broker Associate at REMAX Collective in ${office.city} with 24+ years of real estate experience, FL Broker License #BK3313308, and designations including e-PRO, MRP, and SRS. Barrett is a REMAX Hall of Fame member.` } },
+                { "@type": "Question", name: `Why should I choose REMAX in ${office.city}?`, acceptedAnswer: { "@type": "Answer", text: `REMAX is the most recognized real estate brand in the world, operating in 120+ countries with 145,000+ agents. REMAX agents averaged 11.7 transaction sides in 2025 versus 5.4 for agents at competing large brokerages \u2014 more than double, per the 2026 RealTrends Verified rankings. Barrett Henry at REMAX Collective ${office.city} brings 23+ years of real estate experience and the full power of REMAX\u2019s global network to every client.` } },
+                { "@type": "Question", name: `Who is the best REMAX agent in ${office.city}?`, acceptedAnswer: { "@type": "Answer", text: `Barrett Henry is a top-producing Broker Associate at REMAX Collective in ${office.city} with 23+ years of real estate experience, FL Broker License #BK3313308, and designations including e-PRO, MRP, and SRS. Barrett is a REMAX Hall of Fame member.` } },
                 { "@type": "Question", name: `Does REMAX ${office.city} handle commercial real estate?`, acceptedAnswer: { "@type": "Answer", text: `Yes. Through REMAX Commercial, Barrett Henry handles commercial transactions including retail, office, multifamily, industrial, and land deals in ${office.city} and the Tampa Bay area. REMAX Commercial agents have access to CoStar, LoopNet Premium, and Crexi Professional.` } },
                 { "@type": "Question", name: `How does the REMAX referral network work?`, acceptedAnswer: { "@type": "Answer", text: `REMAX operates the largest agent-to-agent referral network in real estate with 145,000+ agents in 120+ countries. If you\u2019re moving to or from ${office.city}, Barrett connects you with a vetted REMAX agent at your destination through MAXRefer, the AI-powered global referral platform REMAX launched in 2025.` } },
                 { "@type": "Question", name: `How do I contact REMAX in ${office.city}?`, acceptedAnswer: { "@type": "Answer", text: `Call Barrett Henry directly at (813) 733-7907 or email barrett@nowtb.com. The ${office.city} office is at ${office.address}.` } },
@@ -1062,7 +1062,7 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
               "@type": "RealEstateAgent",
               "@id": `https://nowtb.com/remax-${officeKey}/#agent`,
               name: "Barrett Henry, REALTOR®",
-              description: `Barrett Henry is a licensed Florida Broker Associate with REMAX Collective ${office.city}, serving ${office.county} County. 24+ years of real estate experience.`,
+              description: `Barrett Henry is a licensed Florida Broker Associate with REMAX Collective ${office.city}, serving ${office.county} County. 23+ years of real estate experience.`,
               url: `https://nowtb.com/remax-${officeKey}/`,
               telephone: "+1-813-733-7907",
               email: "barrett@nowtb.com",
@@ -1135,7 +1135,7 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
             {office.intro}
           </p>
           <p className="font-body text-white/60 text-sm mb-8">
-            Barrett Henry, Broker Associate &bull; FL License #BK3313308 &bull; 24+ years of real estate experience
+            Barrett Henry, Broker Associate &bull; FL License #BK3313308 &bull; 23+ years of real estate experience
           </p>
           <div className="flex flex-wrap gap-3">
             <a href="tel:+18137337907" className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 text-sm hover:bg-accent/90 transition-colors">
@@ -1183,7 +1183,7 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
               <div className="font-body text-muted font-light space-y-4 leading-relaxed">
                 <p>
                   <strong>Barrett Henry</strong> is a licensed Florida Real Estate <strong>Broker Associate</strong> with
-                  REMAX Collective. With <strong>24+ years of real estate experience</strong>, Barrett brings deep market
+                  REMAX Collective. With <strong>23+ years of real estate experience</strong>, Barrett brings deep market
                   knowledge, strong negotiation skills, and a no-nonsense approach to every transaction. Barrett is a
                   <strong> REMAX Hall of Fame</strong> member and holds the <strong>e-PRO</strong>, <strong>MRP</strong> (Military
                   Relocation Professional), and <strong>SRS</strong> (Seller Representative Specialist) designations.
@@ -1412,7 +1412,7 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
             </p>
             <p>
               That&apos;s the agent you want in your corner. In {office.city}, Barrett Henry embodies that REMAX
-              standard: 24+ years of real estate experience, a REMAX Hall of Fame member, and a track record of getting
+              standard: 23+ years of real estate experience, a REMAX Hall of Fame member, and a track record of getting
               deals done in every market condition.
             </p>
           </div>
@@ -1494,7 +1494,7 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
             <p>
               Barrett Henry doesn&apos;t just list homes in {office.city} &mdash; he knows the inventory, the comps,
               the school zones, the flood maps, the HOA restrictions, and the price trends block by block. That&apos;s
-              the difference between a REMAX Broker Associate with 24+ years of real estate experience and an agent who
+              the difference between a REMAX Broker Associate with 23+ years of real estate experience and an agent who
               just got their license last year.
             </p>
           </div>
@@ -1924,11 +1924,11 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
             </div>
             <div className="border-b border-gray-200 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">Why should I choose REMAX over other brokerages in {office.city}?</h3>
-              <p className="font-body text-muted font-light">REMAX is the most recognized real estate brand in the world, operating in 120+ countries with 145,000+ agents. REMAX agents averaged 11.7 transaction sides in 2025 versus 5.4 for agents at competing large brokerages &mdash; more than double, per the 2026 RealTrends Verified rankings. When you list with REMAX, your property benefits from global brand recognition, the largest referral network in real estate, and an agent (Barrett Henry) with 24+ years of real estate experience.</p>
+              <p className="font-body text-muted font-light">REMAX is the most recognized real estate brand in the world, operating in 120+ countries with 145,000+ agents. REMAX agents averaged 11.7 transaction sides in 2025 versus 5.4 for agents at competing large brokerages &mdash; more than double, per the 2026 RealTrends Verified rankings. When you list with REMAX, your property benefits from global brand recognition, the largest referral network in real estate, and an agent (Barrett Henry) with 23+ years of real estate experience.</p>
             </div>
             <div className="border-b border-gray-200 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">Who is the best REMAX agent in {office.city}?</h3>
-              <p className="font-body text-muted font-light">Barrett Henry is a top-producing Broker Associate and REMAX Hall of Fame member at REMAX Collective in {office.city}. With 24+ years of real estate experience, FL Broker License #BK3313308, and designations including e-PRO, MRP, and SRS, Barrett has the credentials and track record that matter.</p>
+              <p className="font-body text-muted font-light">Barrett Henry is a top-producing Broker Associate and REMAX Hall of Fame member at REMAX Collective in {office.city}. With 23+ years of real estate experience, FL Broker License #BK3313308, and designations including e-PRO, MRP, and SRS, Barrett has the credentials and track record that matter.</p>
             </div>
             <div className="border-b border-gray-200 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">Does REMAX {office.city} handle commercial real estate?</h3>
@@ -2012,7 +2012,7 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
               Ready to Work with REMAX {office.city}?
             </h2>
             <p className="font-body text-white/70 text-sm">
-              Barrett Henry, Broker Associate &bull; REMAX Hall of Fame &bull; 24+ years of real estate experience
+              Barrett Henry, Broker Associate &bull; REMAX Hall of Fame &bull; 23+ years of real estate experience
             </p>
           </div>
           <div className="flex gap-3 flex-shrink-0">
