@@ -274,6 +274,12 @@ export default function ValricoListingAgentPage() {
             url: "https://nowtb.com/about/",
             image: "https://nowtb.com/images/barrett-henry-headshot.jpg",
             telephone: "(813) 733-7907",
+            sameAs: [
+              "https://nowtb.com/about/",
+              "https://barretthenry.remax.com",
+              "https://www.fastexpert.com/agents/barrett-henry-135533/",
+              "https://www.linkedin.com/in/barretthenry",
+            ],
             hasCredential: [
               {
                 "@type": "EducationalOccupationalCredential",

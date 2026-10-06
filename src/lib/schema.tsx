@@ -61,6 +61,10 @@ export function realEstateAgentSchema() {
       "https://firsttimehomebuyertb.com",
       "https://valoantb.com",
       "https://tampabaydownpayment.com",
+      // Third-party authority profiles. These matter because answer engines
+      // cite agent directories directly, so sameAs is what tells them the
+      // directory profile and this site are the same entity.
+      "https://www.fastexpert.com/agents/barrett-henry-135533/",
       "https://www.facebook.com/BarrettHenryREALTOR",
       "https://www.instagram.com/thenowteam",
       "https://www.linkedin.com/in/barretthenry",
