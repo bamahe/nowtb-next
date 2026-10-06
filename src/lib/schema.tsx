@@ -11,7 +11,12 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://nowtb.com";
 const PHONE = process.env.NEXT_PUBLIC_CONTACT_PHONE || "(813) 733-7907";
 const EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "barrett@nowtb.com";
 
-/** RealEstateAgent schema — for homepage and about page */
+/** RealEstateAgent schema.
+ *  NOTE: currently unused. The homepage, /about, and layout.tsx each build
+ *  their own RealEstateAgent / Person JSON-LD inline, so editing this function
+ *  changes nothing on the live site. Update those three files instead, or
+ *  refactor them onto this helper. Kept because the shape here is the most
+ *  complete of the four. */
 export function realEstateAgentSchema() {
   return {
     "@context": "https://schema.org",
