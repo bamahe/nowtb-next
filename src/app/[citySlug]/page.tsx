@@ -54,7 +54,7 @@ import { getListings, getListingsByCity, getOpenHouses } from "@/lib/bridge";
 import { CITY_FAQS } from "@/data/valrico-faqs";
 import { JsonLd, cityPlaceSchema, listingItemListSchema } from "@/lib/schema";
 import { getCachedListings } from "@/lib/listing-cache";
-import { getCityMarketStats, hasReliableSample, AS_OF } from "@/data/city-market-stats";
+import { getCityMarketStats, hasReliableSample, statsSourceNote } from "@/data/city-market-stats";
 import { NEIGHBORHOOD_DESCRIPTIONS } from "@/data/neighborhood-descriptions";
 
 // --- County data for county pages ---
@@ -929,8 +929,7 @@ async function HubPage({ city }: { city: CityData }) {
               ) : null}
             </div>
             <p className="font-body text-muted/70 text-xs text-center mt-5 leading-relaxed">
-              {city.name} closed sales over {AS_OF}, from Stellar MLS. Rentals and
-              manufactured housing excluded.
+              {statsSourceNote(cityStats, city.name)}
             </p>
             <div className="text-center mt-6">
               <Link
