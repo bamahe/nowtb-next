@@ -4,6 +4,38 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-10-06 (Batch 73 — Clearwater FL x7 + St. Petersburg FL x3)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, 22-link internal grid, comparison tables, Barrett Henry bio)
+
+1. **clearwater-fl-homes-for-sale-guide** — Expanded 6,643 to 32,360 chars. Added: Market overview (Pinellas County density context); price-by-neighborhood-type table (inland condo $200K-$320K to Gulf-front estate $1.5M-$4M+); neighborhood profiles (Clearwater Beach, Countryside, East Lake, North CW, Harbor Oaks, Belleair); FEMA flood zone table (VE/AE/X with insurance cost ranges); HOA fee table by community type; SB 4-D condo buyer due diligence checklist; 4-step buying process; investment property overview with ViVi PM reference; schools overview; 6-Q&A FAQ. Date: 2026-10-06.
+
+2. **clearwater-fl-schools-guide** — Expanded 6,660 to 28,502 chars. Added: PCSD overview (pcsb.org); 4-high-school table (Clearwater, Countryside, East Lake, Dunedin) with addresses and phone numbers; middle school table; selected elementary school table by area; magnet program table (IB, visual/performing arts, STEM, SPC Collegiate High); private school options with tuition ranges (CCC, Calvary Christian, Pinellas Prep, St. Cecelia); school choice and open enrollment guide; 3-point buyer checklist; 5-Q&A FAQ. Date: 2026-10-06.
+
+3. **clearwater-fl-commute-guide** — Expanded 6,657 to 25,497 chars. Added: Route breakdown (SR-60/Courtney Campbell, US-19, SR-580); 10-destination commute time table (Tampa 35-50 min normal, 55-75 min peak; TPA 25-40 min; St. Pete 30-45 min; PIE 10-20 min); Clearwater Beach causeway congestion context; PSTA bus route table (routes 52/60/19, SunRunner); Pinellas Trail cycling context; TPA and PIE airport access; hybrid work analysis; 5-Q&A FAQ. Date: 2026-10-06.
+
+4. **is-clearwater-fl-good-place-to-live** — Expanded 6,645 to 28,410 chars. Added: Pros section (beach access, Gulf weather, outdoor recreation, Tampa Bay metro proximity, no state income tax); 8-factor pros/cons comparison table; 6-city comparison table (Clearwater vs. Dunedin/Safety Harbor/Largo/Palm Harbor/St. Pete Beach); who Clearwater is right for and who it is not; hurricane risk and evacuation zones; insurance cost table; cost-of-living summary table; 5-Q&A FAQ. Date: 2026-10-06.
+
+5. **clearwater-fl-real-estate-guide** — Expanded 6,644 to 28,820 chars. Added: 2026 market metrics table (median ~$395K, 45-65 DOM, 3-4 months supply); neighborhood price tier table (7 areas); SB 4-D condo market section with 6-item due diligence checklist; waterfront premium analysis table (Gulf-front 150-300%+ to view-only 10-20%); STR/LTR investment analysis table (Countryside SFH 6-7% gross to CW Beach condo STR); buyer strategy and seller strategy for 2026; 5-Q&A FAQ. Date: 2026-10-06.
+
+6. **clearwater-fl-cost-of-living** — Expanded 6,641 to 33,025 chars. Added: 5-column monthly cost model (inland condo to Clearwater Beach condo with mortgage/taxes/HO insurance/flood/HOA/utilities totals); HO insurance cost table by property type (inland Zone X to Gulf-front Zone VE); flood insurance table (NFIP vs. private by zone); property taxes estimate; utilities table (Duke Energy, CW/Pinellas County water, Spectrum/Frontier); transportation cost table; grocery/dining context; 5-city cost comparison table; 5-Q&A FAQ. Date: 2026-10-06.
+
+7. **clearwater-fl-property-taxes** — Expanded 6,653 to 27,839 chars. Added: How FL property taxes work (ad valorem, arrears payment, discount schedule); Pinellas County + City of Clearwater millage breakdown table (~19-22 mills total with component breakdown); 6-scenario sample tax calculation table (homestead vs. non-homestead, $280K-$700K range); homestead exemption details (who qualifies, how much it saves, how to apply by March 1 at pcpao.gov); additional exemptions table (senior, disability, veteran, widow); SOH portability mechanics; non-homestead investment property analysis; pcpao.gov and taxcollect.com lookup guide; 5-Q&A FAQ. Date: 2026-10-06.
+
+8. **st-petersburg-fl-homes-for-sale-guide** — Expanded 6,738 to 25,927 chars. Added: City overview (265K population, third-largest FL city, Peninsula geography, walkable downtown); neighborhood price tier table (Snell Isle $800K-$3M+ to south St. Pete inland $220K-$380K); flood risk and SB 4-D context; Pinellas County land constraint analysis; 2026 market snapshot table; 4-step buying process; STR/LTR investment overview with ViVi PM reference; 5-Q&A FAQ. Date: 2026-10-06.
+
+9. **st-petersburg-fl-schools-guide** — Expanded 6,751 to 27,330 chars. Added: PCSD overview; 5-high-school table (Northeast, St. Petersburg, Lakewood, Gibbs, Pinellas Park) with addresses; middle school table; selected elementary school table; magnet program table (IB, arts, dual enrollment, Montessori); private school options with tuition ranges (Canterbury $16K-$28K, Shorecrest $15K-$25K, Saint Paul's, Bishop Larkin); school quality variation by St. Pete area; Step Up For Students and Family Empowerment Scholarship notes; 5-Q&A FAQ. Date: 2026-10-06.
+
+10. **st-petersburg-fl-commute-guide** — Expanded 6,748 to 27,377 chars. Added: Primary routes (I-275/Howard Frankland, Gandy/US-92, I-275 north, US-19 corridor); 10-destination commute table (Tampa 30-45 min normal, 50-70 min peak; MacDill 35-50 min; Clearwater 30-45 min; Sarasota 55-70 min); Howard Frankland vs. Gandy comparison; Sunshine Skyway context; SunRunner BRT table (free, 10-15 min frequency); PSTA transit table; cross-bay transit reality (no bus to Tampa); Friendship Trail bicycle bridge; TPA/PIE airport access; hybrid/remote work analysis; 5-Q&A FAQ. Date: 2026-10-06.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `1f7be11` — pushed to `origin/main`
+
+---
+
 ## 2026-10-05 (Batch 72 — Dade City FL x10: Major Expansions)
 
 **Pages improved: 10**
