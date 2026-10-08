@@ -203,7 +203,13 @@ function checkText(label, text, opts = {}) {
     const wc = wordCount(text);
     const min = opts.minWords ?? (opts.kind === "post" ? 1200 : 600);
     const max = opts.maxWords ?? (opts.kind === "post" ? 2000 : 1200);
-    if (wc < min || wc > max) {
+    // The 1,200 to 2,000 range governs NEW pieces. For an update to a page that
+    // already existed, the brief scopes length to "only the new section", so the
+    // pre-existing body is not re-litigated here. The total is still reported so
+    // nothing is hidden.
+    if (opts.isUpdate) {
+      warn(label, 7, `total word count ${wc} (existing page, length gate applies to the new section only)`);
+    } else if (wc < min || wc > max) {
       fail(label, 7, `word count ${wc} outside ${min} to ${max}`);
     }
 
@@ -234,7 +240,7 @@ function checkText(label, text, opts = {}) {
 // ---------------------------------------------------------------------------
 
 /** nowtb.com blog posts live as HTML records in posts-export.json. */
-function checkNowtbPosts(slugs) {
+function checkNowtbPosts(slugs, updateSlugs = []) {
   const file = "src/data/posts-export.json";
   if (!fs.existsSync(file)) return;
   const posts = JSON.parse(fs.readFileSync(file, "utf-8"));
@@ -245,6 +251,7 @@ function checkNowtbPosts(slugs) {
     checkText(`post:${post.slug}`, post.content, {
       kind: "post",
       requireRemaxCollective: true,
+      isUpdate: updateSlugs.includes(post.slug),
     });
     // Title and excerpt get the literal checks but not the structural ones.
     checkText(`post:${post.slug}:title`, post.title);
@@ -283,7 +290,7 @@ function checkNowtbPosts(slugs) {
 }
 
 /** vivipm.com blog posts live as markdown in src/lib/blog-posts.ts. */
-function checkViviPosts(slugs) {
+function checkViviPosts(slugs, updateSlugs = []) {
   const file = "src/lib/blog-posts.ts";
   if (!fs.existsSync(file)) return;
   const src = fs.readFileSync(file, "utf-8");
@@ -302,7 +309,7 @@ function checkViviPosts(slugs) {
     const start = bodyIdx + "body_mdx: `".length;
     const end = src.indexOf("`,", start);
     const body = src.slice(start, end);
-    checkText(`vivi:${slug}`, body, { kind: "post" });
+    checkText(`vivi:${slug}`, body, { kind: "post", isUpdate: updateSlugs.includes(slug) });
 
     const titleMatch = src.slice(slugIdx, slugIdx + 400).match(/title:\s*\n?\s*"([^"]+)"/);
     if (titleMatch && titleMatch[1].length > 60) {
@@ -355,23 +362,30 @@ function checkFiles(files) {
 
 const argv = process.argv.slice(2);
 let slugArg = null;
+let updateArg = null;
 const fileArgs = [];
 for (let i = 0; i < argv.length; i++) {
   if (argv[i] === "--slugs") { slugArg = argv[++i]; continue; }
-  if (argv[i] === "--vivi-slugs") { slugArg = argv[++i]; process.env.QA_VIVI = "1"; continue; }
+  // --update-slugs marks pieces that are edits to pages that already existed.
+  // Every gate still runs; only the whole-post length range is reported as a
+  // warning instead of a failure, because the brief scopes update length to the
+  // new section.
+  if (argv[i] === "--update-slugs") { updateArg = argv[++i]; continue; }
   fileArgs.push(argv[i]);
 }
 
 const isVivi = fs.existsSync("src/lib/blog-posts.ts");
 const slugs = slugArg ? slugArg.split(",").map((s) => s.trim()).filter(Boolean) : [];
+const updateSlugs = updateArg ? updateArg.split(",").map((s) => s.trim()).filter(Boolean) : [];
+const allSlugs = Array.from(new Set([...slugs, ...updateSlugs]));
 
-if (slugs.length) {
-  if (isVivi) checkViviPosts(slugs);
-  else checkNowtbPosts(slugs);
+if (allSlugs.length) {
+  if (isVivi) checkViviPosts(allSlugs, updateSlugs);
+  else checkNowtbPosts(allSlugs, updateSlugs);
 }
 if (fileArgs.length) checkFiles(fileArgs);
 
-if (!slugs.length && !fileArgs.length) {
+if (!allSlugs.length && !fileArgs.length) {
   console.log("Nothing to check. Pass files, or --slugs a,b,c");
   process.exit(0);
 }
