@@ -4,6 +4,43 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-10-08 (Batch 74 — Port Richey FL x4 + New Port Richey FL x6)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, 4+ H2 question headings, 6+ H3 subheadings, price/comparison tables, 5-Q&A FAQ, 22-link internal grid, Barrett Henry REMAX Collective author bio. Content dated 2026-10-07.)
+
+**Port Richey FL (Pasco County, ZIP 34668):**
+
+1. **port-richey-fl-homes-for-sale-guide** — Expanded to 29,048 chars. Added: Market snapshot table (median ~$220K-$236K, 30-50 DOM, 3-5 months supply); 5-neighborhood tier table (Gulf-adjacent waterfront $350K-$600K+ to budget-friendly inland $185K-$240K); FEMA flood zone table (AE/VE Gulf areas vs Zone X inland); first-time buyer affordability breakdown; HOA comparison table; SB 4-D condo due diligence section; 4-step buying process; STR/LTR investment overview with ViVi PM reference; 5-Q&A FAQ. Date: 2026-10-07.
+
+2. **port-richey-fl-schools-guide** — Expanded to 27,784 chars. Added: Pasco County School District overview (pasco.k12.fl.us); high school table (Gulf High 5085 Madison St (727) 774-3300, Fivay High); middle school table; elementary school table by area; Pasco County magnet programs table; private school options with tuition ranges; school choice and open enrollment guide; 3-point buyer checklist; 5-Q&A FAQ. Date: 2026-10-07.
+
+3. **port-richey-fl-commute-guide** — Expanded to 26,996 chars. Added: Route breakdown (US-19, SR-52, Suncoast Pkwy SR-589); 10-destination commute time table (Tampa 40-55 min normal, 60-80 min peak; TPA 35-50 min; Clearwater 25-40 min); US-19 congestion context; Suncoast Pkwy toll analysis; Pasco County Transit (PCPT) table; hybrid/remote work analysis; real-world buyer scenarios; 5-Q&A FAQ. Date: 2026-10-07.
+
+4. **is-port-richey-fl-good-place-to-live** — Expanded to 27,134 chars. Added: Pros section (affordability, Gulf access, small-city feel, no state income tax); 8-factor pros/cons table; 6-city comparison table (Port Richey vs New Port Richey/Holiday/Hudson/Tarpon Springs/Dunedin); who Port Richey is and is not right for; hurricane risk and flood zone discussion; insurance cost table by zone; cost-of-living summary table; 5-Q&A FAQ. Date: 2026-10-07.
+
+**New Port Richey FL (Pasco County, ZIP 34652/34653/34654/34655):**
+
+5. **new-port-richey-fl-homes-for-sale-guide** — Expanded to 29,113 chars. Added: Market snapshot table (median ~$265K-$290K, 30-55 DOM, 4-5 months supply); 5-neighborhood tier table (Jasmine Estates/Trinity border $320K-$450K to downtown/older grid $200K-$285K); downtown NPR Railroad Square Park context (opening May 2026); FEMA flood zone table; SB 4-D condo section; HOA fee table; 4-step buying process; STR/LTR investment overview with ViVi PM reference; 5-Q&A FAQ. Date: 2026-10-07.
+
+6. **new-port-richey-fl-schools-guide** — Expanded to 30,348 chars. Added: Pasco County School District overview; high school table (Gulf High 5085 Madison St (727) 774-3300, River Ridge High 11646 Town Center Rd (727) 774-7200); middle school table (Gulf Middle, River Ridge Middle co-located with RRHS); elementary school table by area; magnet programs table (STEM, IB, Pasco Virtual); private school options with tuition ranges; school choice guide; 5-Q&A FAQ. Date: 2026-10-07.
+
+7. **new-port-richey-fl-commute-guide** — Expanded to 26,124 chars. Added: Route breakdown (US-19, SR-54, Suncoast Pkwy SR-589 from Ridge Rd interchange); 10-destination commute table (Tampa 38-50 min normal, 55-70 min peak via Suncoast Pkwy); US-19 vs Suncoast Pkwy comparison table (toll $4-$8 vs. 10-15 min savings); PCPT/PSTA transit options; airport access table (TPA 35-50 min, PIE 30-45 min); hybrid/remote work analysis; 5-Q&A FAQ. Date: 2026-10-07.
+
+8. **is-new-port-richey-fl-good-place-to-live** — Expanded to 26,410 chars. Added: Pros section (affordability vs Pinellas, downtown walkability, Gulf access, Suncoast Pkwy access, no state income tax); 8-factor pros/cons table; 6-city comparison table (NPR vs Port Richey/Holiday/Hudson/Tarpon Springs/Trinity); honest assessment by buyer type; hurricane/flood risk discussion; insurance cost table; cost-of-living summary; 5-Q&A FAQ. Date: 2026-10-07.
+
+9. **new-port-richey-fl-real-estate-guide** — Expanded to 26,267 chars. Added: 2026 market metrics table (median ~$265K-$290K, ~45 DOM, 4-5 months supply, balanced market); neighborhood price tier table (5 areas); SB 4-D condo market section; buyer strategy and seller strategy for 2026; investment property analysis table (SFH 6-8% gross yield vs. condo 5-7%); title and closing cost table; 5-Q&A FAQ. Date: 2026-10-07.
+
+10. **new-port-richey-fl-cost-of-living** — Expanded to 31,001 chars. Added: 3-scenario monthly cost model (first-time buyer $280K/inland condo $230K/established family $350K with mortgage/taxes/HO insurance/flood/HOA/utilities totals); Duke Energy average ~$265/mo; City of NPR water $60-$130/mo; HO insurance cost table by zone; flood insurance table (NFIP vs. private by zone); property tax estimate table; grocery/dining context; transportation cost table; 5-city cost comparison table; 5-Q&A FAQ. Date: 2026-10-07.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+**Remaining NPR stubs for future batch:** new-port-richey-fl-property-taxes, new-port-richey-fl-new-construction, new-port-richey-fl-investment-property
+
+---
+
 ## 2026-10-06 (Batch 73 — Clearwater FL x7 + St. Petersburg FL x3)
 
 **Pages improved: 10**
