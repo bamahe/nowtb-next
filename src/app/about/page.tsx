@@ -1,11 +1,12 @@
 // =============================================================================
-// /about — About Barrett Henry & The NOW Team
+// /about, About Barrett Henry & The NOW Team
 // Bio, designations, brokerage info, and JSON-LD LocalBusiness schema
 // =============================================================================
 
 import Image from "next/image";
 
 import type { Metadata } from "next";
+import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
 import ContactForm from "@/components/ui/ContactForm";
 import { getPrimaryAgent } from "@/data/agents";
@@ -15,7 +16,7 @@ import { testimonials } from "@/data/testimonials";
 export const metadata: Metadata = {
   title: "About Barrett Henry | Broker Associate | REMAX Collective",
   description:
-    "Barrett Henry — Broker Associate at REMAX Collective. 23+ years serving Tampa Bay buyers, sellers, and investors. Call (813) 733-7907.",
+    "Barrett Henry, Broker Associate at REMAX Collective. 23+ years serving Tampa Bay buyers, sellers, and investors. Call (813) 733-7907.",
   alternates: {
     canonical: "/about/",
   },
@@ -119,13 +120,41 @@ const breadcrumbLd = {
   ],
 };
 
+// --- Credentials a client can independently check (October 2026) ---
+const verifiableRecord = [
+  {
+    item: "Licensed REALTOR since September 2003",
+    why: "Entering his 24th year in real estate, across the 2008 downturn, the recovery, the 2020 to 2022 run-up, and the slower market since. License status is public through the Florida Department of Business and Professional Regulation.",
+  },
+  {
+    item: "Florida Broker Associate since 2017",
+    why: "A broker-level license, which requires additional education and experience beyond a sales associate license.",
+  },
+  {
+    item: "REMAX Hall of Fame, 2024",
+    why: "A career production award from REMAX, earned against actual closed production rather than a self-reported number.",
+  },
+  {
+    item: "SRS, Seller Representative Specialist",
+    why: "The National Association of REALTORS designation specifically for representing sellers. Most agents hold a general license with no seller-specific credential.",
+  },
+  {
+    item: "e-PRO",
+    why: "Digital marketing certification. Relevant because nearly every buyer sees a home online before they see it in person.",
+  },
+  {
+    item: "MRP, Military Relocation Professional",
+    why: "Tampa Bay has MacDill Air Force Base, so PCS timelines, VA financing and deployed sellers are a routine part of this market, not an exception.",
+  },
+];
+
 export default function AboutPage() {
   // Pull Barrett's data from the agents data file
   const agent = getPrimaryAgent();
 
   return (
     <>
-      {/* JSON-LD structured data — injected into <head> */}
+      {/* JSON-LD structured data, injected into <head> */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -141,13 +170,13 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
 
-      {/* ---- Hero Section — full viewport with label ---- */}
+      {/* ---- Hero Section, full viewport with label ---- */}
       <HeroSection
         title="About"
         label="BARRETT HENRY, REALTOR®"
       />
 
-      {/* ---- Bio Section — luxury 2-column layout ---- */}
+      {/* ---- Bio Section, luxury 2-column layout ---- */}
       <section className="section-white">
         <div className="container-wide">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 items-start">
@@ -155,7 +184,7 @@ export default function AboutPage() {
             <div className="aspect-[3/4] bg-[#e8e4df] overflow-hidden">
               <Image
                 src="/images/barrett-headshot.png"
-                alt="Barrett Henry, REALTOR® and Broker Associate at REMAX Collective — Tampa Bay real estate expert with 23+ years experience"
+                alt="Barrett Henry, REALTOR® and Broker Associate at REMAX Collective, Tampa Bay real estate expert with 23+ years experience"
                 width={378}
                 height={373}
                 className="w-full h-full object-cover object-top"
@@ -163,7 +192,7 @@ export default function AboutPage() {
               />
             </div>
 
-            {/* Bio text (right column) — first-person, personal tone */}
+            {/* Bio text (right column), first-person, personal tone */}
             <div className="py-8">
               <p className="heading-label mb-4">Broker Associate | REMAX Collective</p>
               <h2 className="font-heading font-extralight text-3xl md:text-4xl tracking-[0.1em] uppercase text-primary mb-2">
@@ -172,7 +201,7 @@ export default function AboutPage() {
               <div className="section-divider !mx-0 !ml-0" />
               <div className="font-body text-muted font-light space-y-4 leading-relaxed">
                 <p>
-                  I&apos;ve been in real estate since 2003 — 23+ years and
+                  I&apos;ve been in real estate since 2003 to 23+ years and
                   counting. I&apos;m a licensed Broker Associate with REMAX
                   Collective and the team lead of The NOW Team. My focus is
                   simple: get my clients the best possible outcome, whether
@@ -181,17 +210,17 @@ export default function AboutPage() {
                 <p>
                   I specialize in residential sales, investment properties, new
                   construction, and military relocation across Tampa Bay. My
-                  approach is data-driven and no-nonsense — I give you the real
+                  approach is data-driven and no-nonsense, I give you the real
                   numbers, the honest advice, and the relentless negotiation it
                   takes to win in this market. The NOW Team and I serve buyers
                   and sellers across 8 counties, and we treat every transaction
-                  like our reputation depends on it — because it does.
+                  like our reputation depends on it, because it does.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Stats row — large ultra-light numbers */}
+          {/* Stats row, large ultra-light numbers */}
           <div className="grid grid-cols-3 gap-8 mt-24 max-w-3xl mx-auto text-center">
             <div>
               <p className="stat-number text-primary">23+</p>
@@ -209,7 +238,107 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ---- Designations & Specialties — warm cream bg ---- */}
+      {/* ---- Where the name came from, and how I work (October 2026) ---- */}
+      <section className="section-light">
+        <div className="container-wide">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-5xl mx-auto">
+            <div>
+              <p className="heading-label mb-4">The Name</p>
+              <h2 className="heading-section text-display-sm text-primary mb-6">
+                Why The NOW Team
+              </h2>
+              <div className="section-divider !mx-0 !ml-0" />
+              <div className="font-body text-muted font-light space-y-4 leading-relaxed">
+                <p>
+                  The team name came from a book I read about living in the
+                  present. The idea stuck with me: most of the suffering in a
+                  decision comes from replaying the past or dreading the future,
+                  and almost none of it comes from the thing actually in front of
+                  you.
+                </p>
+                <p>
+                  That turned out to describe real estate pretty well. Clients
+                  come to me stuck on what the house was worth in 2022, or
+                  paralyzed by what rates might do next spring. Neither of those
+                  is the decision in front of them. The decision in front of them
+                  is what to do with the house, this month, with the information
+                  that actually exists.
+                </p>
+                <p>
+                  So the name is a reminder for me as much as anything.{" "}
+                  <strong className="text-primary">Now That&apos;s Better.</strong>
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <p className="heading-label mb-4">How I Work</p>
+              <h2 className="heading-section text-display-sm text-primary mb-6">
+                You reach me, not a call center
+              </h2>
+              <div className="section-divider !mx-0 !ml-0" />
+              <div className="font-body text-muted font-light space-y-4 leading-relaxed">
+                <p>
+                  My cell number is on every page of this site. When you call it,
+                  I answer it. Not an assistant, not a rotating junior agent, not
+                  a lead routing service that sells your information to four other
+                  people before anyone calls you back.
+                </p>
+                <p>
+                  That is a real constraint on how many clients I can take at
+                  once, and I would rather have that constraint than the
+                  alternative. If you want to test it before you hire me, call{" "}
+                  <a
+                    href="tel:+18137337907"
+                    className="text-link hover:underline font-medium"
+                  >
+                    (813) 733-7907
+                  </a>{" "}
+                  and see who picks up.
+                </p>
+                <p>
+                  The other thing I will do is tell you when the answer is no.
+                  Do not list right now. Do not buy that one. Rent it instead.
+                  Fix the roof first. I lose listings over this and it is still
+                  the right way to do the job.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Verifiable record */}
+          <div className="max-w-5xl mx-auto mt-20">
+            <p className="heading-label mb-4 text-center">The Record</p>
+            <h2 className="heading-section text-display-sm text-primary text-center mb-4">
+              What you can verify
+            </h2>
+            <div className="section-divider" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+              {verifiableRecord.map((r) => (
+                <div key={r.item} className="bg-white border border-border p-6">
+                  <h3 className="heading-section text-base text-primary mb-2">
+                    {r.item}
+                  </h3>
+                  <p className="font-body text-muted text-sm leading-relaxed">
+                    {r.why}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <p className="font-body text-muted text-sm text-center mt-10 leading-relaxed max-w-2xl mx-auto">
+              If you want to see production numbers, ask me for the MLS report
+              rather than taking a marketing claim at face value. I wrote up how
+              to read any agent&apos;s numbers, including mine, in{" "}
+              <Link href="/guides/how-to-choose-a-realtor/" className="text-link hover:underline">
+                how to choose a real estate agent
+              </Link>
+              .
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ---- Designations & Specialties, warm cream bg ---- */}
       <section className="section-light">
         <div className="container-wide">
           <div className="text-center mb-16">
@@ -259,7 +388,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ---- Why Tampa Bay — dark navy section ---- */}
+      {/* ---- Why Tampa Bay, dark navy section ---- */}
       <section className="section-dark">
         <div className="container-wide max-w-3xl mx-auto text-center">
           <p className="heading-label text-white/50 mb-6">The Region</p>
@@ -270,7 +399,7 @@ export default function AboutPage() {
           <div className="font-body text-white/70 font-light space-y-6 text-base md:text-lg leading-relaxed">
             <p>
               Tampa Bay is one of the fastest-growing metro areas in the
-              country — and for good reason. Year-round sunshine, no state
+              country, and for good reason. Year-round sunshine, no state
               income tax, world-class beaches, a booming job market, and an
               unbeatable quality of life make this region a magnet for families,
               professionals, retirees, and investors.
@@ -285,7 +414,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ---- REMAX Collective Section — white bg ---- */}
+      {/* ---- REMAX Collective Section, white bg ---- */}
       <section className="section-white">
         <div className="container-wide text-center max-w-3xl mx-auto">
           <p className="heading-label mb-6">Brokerage</p>
@@ -302,14 +431,14 @@ export default function AboutPage() {
             </p>
             <p>
               The REMAX network gives Barrett&apos;s listings global exposure
-              across 110+ countries and territories — meaning more eyes on your
+              across 110+ countries and territories, meaning more eyes on your
               property and faster results.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ---- Barrett's Services — contextual cross-site links ---- */}
+      {/* ---- Barrett's Services, contextual cross-site links ---- */}
       <section className="section-light">
         <div className="container-wide max-w-3xl mx-auto">
           <div className="text-center mb-16">
@@ -365,7 +494,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ---- Testimonials — real Google reviews ---- */}
+      {/* ---- Testimonials, real Google reviews ---- */}
       <section id="testimonials" className="section-dark">
         <div className="container-wide">
           <div className="text-center mb-16">
@@ -385,7 +514,7 @@ export default function AboutPage() {
               return (
                 <div key={t.name} className="p-6 bg-white/5 border border-white/10 rounded-lg transition-all duration-300 hover:-translate-y-1">
                   {/* Stars */}
-                  <div className="text-amber-400 text-sm mb-3">★★★★★</div>
+                  <div className="text-link text-sm mb-3">★★★★★</div>
                   {/* Quote */}
                   <p className="font-body text-white/80 font-light text-sm leading-relaxed mb-4">
                     &ldquo;{t.quote}&rdquo;
@@ -418,7 +547,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ---- Contact CTA — warm cream bg ---- */}
+      {/* ---- Contact CTA, warm cream bg ---- */}
       <section className="section-light">
         <div className="container-wide max-w-xl mx-auto">
           <ContactForm
