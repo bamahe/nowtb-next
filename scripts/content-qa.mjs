@@ -86,9 +86,16 @@ const BANNED_CLIENT_TERMS = [
 
 /** Gate 6: gold, yellow and amber are banned in design. */
 const BANNED_COLORS = [
+  // Named gold hexes from the brief
   "#FFD700", "#D4AF37", "#C9A227", "#B8860B",
+  // Tailwind utility classes
   "text-yellow-", "bg-yellow-", "border-yellow-", "from-yellow-", "to-yellow-",
   "text-amber-", "bg-amber-", "border-amber-", "from-amber-", "to-amber-",
+  // Raw Tailwind amber/yellow hex values. These are what inline-styled legacy
+  // content actually uses, and the class-name checks above never catch them.
+  "#fffbeb", "#fef3c7", "#fde68a", "#fcd34d", "#fbbf24", "#f59e0b",
+  "#d97706", "#b45309", "#92400e", "#78350f", "#fff8e1", "#fffde7",
+  "#eab308", "#facc15", "#fef08a", "#fde047", "#ca8a04", "#a16207",
   "gold",
 ];
 
@@ -318,6 +325,34 @@ function checkViviPosts(slugs, updateSlugs = []) {
   }
 }
 
+/**
+ * nowtb.com guides live as records in guides-content.json. Check only the slugs
+ * we actually edited. Scanning the whole 1.5MB file would report violations in
+ * the other 47 guides, which this batch did not touch and must not silently
+ * rewrite.
+ */
+function checkGuides(slugs, updateSlugs = []) {
+  const file = "src/data/guides-content.json";
+  if (!fs.existsSync(file)) return;
+  const guides = JSON.parse(fs.readFileSync(file, "utf-8"));
+  for (const slug of slugs) {
+    const g = guides.find((x) => x.slug === slug);
+    if (!g) {
+      fail(`guide:${slug}`, 0, "slug not found in guides-content.json");
+      continue;
+    }
+    checkText(`guide:${slug}`, g.content, {
+      kind: "post",
+      requireRemaxCollective: true,
+      isUpdate: updateSlugs.includes(slug),
+    });
+    checkText(`guide:${slug}:title`, g.title);
+    if (g.title.length > 60) {
+      fail(`guide:${slug}`, 8, `title ${g.title.length} chars, max 60: "${g.title}"`);
+    }
+  }
+}
+
 /** Plain source files: pages, components, data modules. */
 function checkFiles(files) {
   for (const file of files) {
@@ -363,6 +398,7 @@ function checkFiles(files) {
 const argv = process.argv.slice(2);
 let slugArg = null;
 let updateArg = null;
+let guideArg = null;
 const fileArgs = [];
 for (let i = 0; i < argv.length; i++) {
   if (argv[i] === "--slugs") { slugArg = argv[++i]; continue; }
@@ -371,6 +407,7 @@ for (let i = 0; i < argv.length; i++) {
   // warning instead of a failure, because the brief scopes update length to the
   // new section.
   if (argv[i] === "--update-slugs") { updateArg = argv[++i]; continue; }
+  if (argv[i] === "--guide-slugs") { guideArg = argv[++i]; continue; }
   fileArgs.push(argv[i]);
 }
 
@@ -379,13 +416,16 @@ const slugs = slugArg ? slugArg.split(",").map((s) => s.trim()).filter(Boolean) 
 const updateSlugs = updateArg ? updateArg.split(",").map((s) => s.trim()).filter(Boolean) : [];
 const allSlugs = Array.from(new Set([...slugs, ...updateSlugs]));
 
+const guideSlugs = guideArg ? guideArg.split(",").map((s) => s.trim()).filter(Boolean) : [];
+
 if (allSlugs.length) {
   if (isVivi) checkViviPosts(allSlugs, updateSlugs);
   else checkNowtbPosts(allSlugs, updateSlugs);
 }
+if (guideSlugs.length) checkGuides(guideSlugs, guideSlugs);
 if (fileArgs.length) checkFiles(fileArgs);
 
-if (!allSlugs.length && !fileArgs.length) {
+if (!allSlugs.length && !fileArgs.length && !guideSlugs.length) {
   console.log("Nothing to check. Pass files, or --slugs a,b,c");
   process.exit(0);
 }
