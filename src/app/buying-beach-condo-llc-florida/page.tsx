@@ -366,6 +366,109 @@ export default function BuyingBeachCondoLlcPage() {
         </div>
       </section>
 
+      {/* === Non-warrantable buildings, added October 2026 === */}
+      <section className="section-light py-16">
+        <div className="container-wide max-w-3xl mx-auto">
+          <h2 className="heading-section text-display-sm text-primary mb-4">
+            Why Non-Warrantable Buildings Make This Harder
+          </h2>
+          <p className="font-body text-muted mb-4 leading-relaxed">
+            Entity ownership and non-warrantable buildings are two separate
+            problems, and on the Gulf beaches you often get both at once. That
+            combination is what actually kills these deals.
+          </p>
+          <p className="font-body text-muted mb-4 leading-relaxed">
+            A building is non-warrantable when it does not meet agency
+            requirements. The usual causes are deferred maintenance or needed
+            structural repairs, inadequate reserves relative to the structural
+            integrity reserve study, too high a share of investor-owned units, too
+            much commercial space, pending litigation involving the structure, or
+            a milestone inspection identifying substantial structural
+            deterioration that has not been addressed.
+          </p>
+          <p className="font-body text-muted mb-4 leading-relaxed">
+            Here is the compounding effect. A conventional second-home loan
+            already will not work for an entity purchase. A business-purpose or
+            DSCR loan is the usual alternative, but those lenders run their own
+            condo project review, and many will decline a non-warrantable building
+            outright. So the pool of lenders that will do an entity purchase in a
+            non-warrantable building is genuinely small, and the pricing reflects
+            that.
+          </p>
+          <p className="font-body text-muted mb-6 leading-relaxed">
+            Two practical consequences worth pricing in before you offer. First,
+            your exit is narrower: when you sell, your buyer faces the same
+            financing problem, which is why non-warrantable buildings trade at a
+            discount and sit longer. Second, a high investor-owned percentage is
+            self-reinforcing, because every entity purchase pushes that ratio
+            further in the wrong direction.
+          </p>
+          <div className="border-l-4 border-accent bg-white p-6">
+            <p className="font-heading font-bold text-primary mb-2">
+              Get quotes from two lenders, not one
+            </p>
+            <p className="font-body text-muted text-sm leading-relaxed">
+              This is the single most useful thing you can do on an entity condo
+              purchase. Overlays on entity vesting, on investor concentration, and
+              on non-warrantable projects vary enormously between lenders, and the
+              first quote you get is frequently not representative. Two quotes also
+              tell you whether a decline is about the building or about that
+              particular lender&apos;s appetite. Ask me for current lender
+              recommendations and I will point you to people who actually close
+              these.
+            </p>
+          </div>
+          <p className="font-body text-muted mt-6 leading-relaxed">
+            If the building you are looking at is in Indian Rocks Beach, start with
+            the building itself before the entity question. My{" "}
+            <Link href="/blog/buying-condo-indian-rocks-beach/" className="text-link hover:underline">
+              Indian Rocks Beach condo buyer guide
+            </Link>{" "}
+            walks through the SIRS, milestone and reserve documents that determine
+            warrantability in the first place.
+          </p>
+        </div>
+      </section>
+
+      {/* === Homestead and title vesting, added October 2026 === */}
+      <section className="container-wide py-16">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="heading-section text-display-sm text-primary mb-4">
+            Homestead, Title Vesting and What You Give Up
+          </h2>
+          <p className="font-body text-muted mb-4 leading-relaxed">
+            An entity cannot claim Florida homestead exemption. Homestead requires
+            a natural person who owns the property and maintains it as a permanent
+            residence. An LLC is not a natural person and does not have a permanent
+            residence, so the exemption is unavailable.
+          </p>
+          <p className="font-body text-muted mb-4 leading-relaxed">
+            That is not just the tax exemption. You also give up the Save Our Homes
+            assessment cap that limits annual increases in assessed value on
+            homesteaded property, and the constitutional homestead protection from
+            forced sale by creditors. For a true second home none of this applies
+            to you anyway, since you could not homestead a property you do not live
+            in. But if there was ever a thought of making the unit a primary
+            residence later, understand that moving title out of the entity to
+            claim homestead is a separate transaction with its own documentary
+            stamp tax consequences.
+          </p>
+          <p className="font-body text-muted mb-4 leading-relaxed">
+            On vesting, get the exact name right before closing. The deed should
+            name the entity precisely as it is registered with the Florida Division
+            of Corporations, including the entity designator. A mismatch between
+            the deed, the operating agreement, the association&apos;s approval and the
+            insurance policy is the kind of error that surfaces years later when
+            you try to sell.
+          </p>
+          <p className="font-body text-muted leading-relaxed">
+            Both the tax treatment and the liability structure here depend on facts
+            specific to you. Confirm with your CPA and a Florida real estate
+            attorney before you form the entity, not after.
+          </p>
+        </div>
+      </section>
+
       {/* === Mid-page CTA === */}
       <section className="bg-primary py-12">
         <div className="container-wide max-w-2xl mx-auto text-center">

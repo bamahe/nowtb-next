@@ -139,6 +139,33 @@ function toPlainText(input) {
     .trim();
 }
 
+/**
+ * True when the root layout renders a component that contains the brokerage
+ * name, which satisfies the Florida advertising requirement for every page.
+ * Cached after the first call.
+ */
+let _layoutRemax = null;
+function layoutHasRemaxCollective() {
+  if (_layoutRemax !== null) return _layoutRemax;
+  _layoutRemax = false;
+  try {
+    const layout = fs.readFileSync("src/app/layout.tsx", "utf-8");
+    if (/REMAX Collective/.test(layout)) { _layoutRemax = true; return true; }
+    // Follow <Footer /> style imports one level deep.
+    for (const m of layout.matchAll(/import\s+(\w+)\s+from\s+"@\/(components\/[^"]+)"/g)) {
+      if (!new RegExp(`<${m[1]}[\\s/>]`).test(layout)) continue;
+      for (const ext of [".tsx", ".ts"]) {
+        const p = `src/${m[2]}${ext}`;
+        if (fs.existsSync(p) && /REMAX\s+Collective/.test(fs.readFileSync(p, "utf-8"))) {
+          _layoutRemax = true;
+          return true;
+        }
+      }
+    }
+  } catch {}
+  return _layoutRemax;
+}
+
 function wordCount(input) {
   const plain = toPlainText(input);
   return plain ? plain.split(" ").length : 0;
@@ -228,8 +255,12 @@ function checkText(label, text, opts = {}) {
       if (!/\bSources\b/i.test(text)) fail(label, 7, "no Sources section");
     }
 
-    if (opts.requireRemaxCollective && !/REMAX Collective/.test(text)) {
-      fail(label, 7, 'missing "REMAX Collective" (Florida advertising rule)');
+    // "REMAX Collective" must appear on every nowtb.com page. It is rendered
+    // site-wide by the Footer in the root layout, so a page satisfies the rule
+    // either in its own copy or through the layout. The layout is verified once,
+    // at startup, rather than assumed.
+    if (opts.requireRemaxCollective && !/REMAX Collective/.test(text) && !layoutHasRemaxCollective()) {
+      fail(label, 7, 'missing "REMAX Collective" (Florida advertising rule) and the global layout footer does not supply it either');
     }
 
     // Gate 8: exactly one H1

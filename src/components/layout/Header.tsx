@@ -1,5 +1,5 @@
 // =============================================================================
-// Header — Professional real estate navigation with mega-menu dropdowns
+// Header: professional real estate navigation with mega-menu dropdowns
 // Client component (scroll detection + hover dropdowns + active link)
 // Transparent on hero, transitions to warm cream on scroll
 // Mega menus on desktop (md+), hamburger on mobile
@@ -15,7 +15,7 @@ import { createClient } from "@/lib/supabase/client";
 import MobileNav from "@/components/layout/MobileNav";
 
 // ---------------------------------------------------------------------------
-// Dropdown menu data — each top-level nav item and its children
+// Dropdown menu data: each top-level nav item and its children
 // ---------------------------------------------------------------------------
 
 // Simple link type used in dropdown menus
@@ -27,7 +27,7 @@ interface NavLink {
 // A dropdown section can be a flat list or a multi-column grid (Communities)
 interface NavItem {
   label: string;
-  href?: string;            // Direct link (no dropdown) — used by Contact
+  href?: string;            // Direct link (no dropdown), used by Contact
   links?: NavLink[];        // Single-column dropdown links
   columns?: NavLink[][];    // Multi-column grid (Communities mega menu)
   columnHeader?: string;    // Optional header above columns (e.g. "Top Cities")
@@ -139,7 +139,7 @@ const NAV_ITEMS: NavItem[] = [
     ],
   },
   {
-    // Contact — direct link, no dropdown
+    // Contact: direct link, no dropdown
     label: "Contact",
     href: "/contact/",
   },
@@ -158,7 +158,7 @@ export default function Header() {
   // Which dropdown is currently open (by index), or null if none
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
 
-  // Timeout ref for delayed close — gives user time to move mouse into dropdown
+  // Timeout ref for delayed close, gives user time to move mouse into dropdown
   const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Does this page have a light background behind the header? (no dark hero)
@@ -239,11 +239,11 @@ export default function Header() {
         `}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          {/* ── Logo — REMAX branded logo, above the fold so priority loading ── */}
+          {/* ── Logo: REMAX branded logo, above the fold so priority loading ── */}
           <Link href="/" className="group flex items-center gap-3">
             <Image
               src="/images/remax-logo-color.png"
-              alt="Barrett Henry — REMAX Collective"
+              alt="Barrett Henry, REMAX Collective"
               width={200}
               height={55}
               priority
@@ -272,7 +272,7 @@ export default function Header() {
                   onMouseEnter={() => hasDropdown && handleMouseEnter(index)}
                   onMouseLeave={handleMouseLeave}
                 >
-                  {/* Nav item label — link if no dropdown, button-like if dropdown */}
+                  {/* Nav item label: link if no dropdown, button-like if dropdown */}
                   {hasDropdown ? (
                     <button
                       type="button"
@@ -321,7 +321,7 @@ export default function Header() {
             })}
           </ul>
 
-          {/* ── Phone + Blog + Sign In — visible on desktop, right-aligned ── */}
+          {/* ── Phone + Blog + Sign In: visible on desktop, right-aligned ── */}
           <div className="hidden md:flex items-center gap-6">
             <a
               href="tel:+18137337907"
@@ -333,7 +333,7 @@ export default function Header() {
             >
               (813) 733-7907
             </a>
-            {/* Auth link — Login/Register or Account */}
+            {/* Auth link: Login/Register or Account */}
             {process.env.NEXT_PUBLIC_SUPABASE_URL && (
               <Link
                 href={isLoggedIn ? "/account/" : "/login/"}
