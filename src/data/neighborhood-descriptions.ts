@@ -4158,7 +4158,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Lakeside community of 200+ homes built 1997-2005 between Lake Michaela and Lake Stearns in Valrico. Tennis, basketball courts, open fields. Active HOA. Peaceful coexistence with nature.",
     contentHtml: `
       <h3>What Is Twin Lakes of Brandon Like?</h3>
-      <p>Twin Lakes of Brandon is a lakeside community of 200+ single-family homes nestled between <strong>Lake Michaela and Lake Stearns</strong> in <a href="/valrico/">Valrico</a>. Built between 1997 and 2005, the neighborhood offers something most Valrico subdivisions cannot — two natural lakes creating a water-oriented setting with views, wildlife, and a genuine sense of peace. The community's identity of "quiet and peaceful coexistence with nature" is not hyperbole; the lakes define the character of the neighborhood.</p>
+      <p>Twin Lakes of Brandon is a lakeside community of 200+ single-family homes set between <strong>Lake Michaela and Lake Stearns</strong> in <a href="/valrico/">Valrico</a>. Built between 1997 and 2005, the neighborhood offers something most Valrico subdivisions cannot: two natural lakes creating a water-oriented setting with views, wildlife, and a genuine sense of peace. The community's identity of "quiet and peaceful coexistence with nature" is not hyperbole; the lakes define the character of the neighborhood.</p>
       <p>Homes are single-family detached, primarily 3-4 bedrooms with 2-car garages, ranging from about 1,500 to 2,800 square feet. Construction is concrete block with a mix of tile and shingle roofs. Lakefront lots command premium prices, but even interior homes benefit from the open space and natural beauty the lakes create.</p>
 
       <h3>What Are the Amenities?</h3>
@@ -4186,12 +4186,12 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Twin Lakes of Brandon is zoned for Hillsborough County public schools in the Valrico area. Verify the specific elementary, middle, and high school assignments with the school district for your address.</p>
 
       <h3>What Is the Flood Risk?</h3>
-      <p>With two natural lakes in the community, flood zone designations are important to check. <strong>Lakefront lots may carry flood zone designations other than Zone X</strong> that require flood insurance. Interior lots away from the lakeshores are typically <strong>FEMA Flood Zone X</strong> (minimal risk). Get a flood determination for the specific parcel — do not assume.</p>
+      <p>With two natural lakes in the community, flood zone designations are important to check. <strong>Lakefront lots may carry flood zone designations other than Zone X</strong> that require flood insurance. Interior lots away from the lakeshores are typically <strong>FEMA Flood Zone X</strong> (minimal risk). Get a flood determination for the specific parcel, do not assume.</p>
 
       <h3>How Does Twin Lakes Compare?</h3>
       <ul>
         <li><strong><a href="/lake-valrico/">Lake Valrico</a></strong> (2 miles): Another lakefront option around the larger Valrico Lake. Different character but similar water-oriented appeal.</li>
-        <li><strong><a href="/somerset/">Somerset</a></strong> (1.5 miles): More amenities (pool, dog park, etc.) but no lake setting. Different lifestyle — resort amenities vs natural lakeside.</li>
+        <li><strong><a href="/somerset/">Somerset</a></strong> (1.5 miles): More amenities (pool, dog park, etc.) but no lake setting. Different lifestyle, resort amenities vs natural lakeside.</li>
         <li><strong><a href="/bloomingdale-cove/">Bloomingdale Cove</a></strong> (2 miles): Deed restricted, shared park, established. No water features. Lower HOA in some sections.</li>
         <li><strong><a href="/eagles-landing/">Eagles Landing</a></strong> (1 mile): Pool, playground, family-friendly. Similar price range but no lakes.</li>
       </ul>
@@ -4202,8 +4202,25 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Construction age:</strong> 1997-2005 homes are 21-29 years old. Check roof, HVAC, and water heater age. Some homes may need kitchen and bathroom updates.</li>
         <li><strong>Lake maintenance:</strong> Natural lakes require community management for water quality, aquatic vegetation, and shoreline erosion. These costs are shared through the HOA.</li>
         <li><strong>Wildlife:</strong> Living near natural lakes means wildlife. Wading birds, turtles, fish, and occasionally alligators are part of the Florida lakeside experience. If that appeals to you, Twin Lakes delivers. If it concerns you, consider an interior lot or a non-lakeside community.</li>
-        <li><strong>Rentals:</strong> Lakefront properties command premium rents. Expect $2,000-$2,800/mo depending on views and home size. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
+        <li><strong>Rentals:</strong> Lakefront properties command premium rents. Expect $2,000-$2,800/mo depending on views and home size. <a href="https://vivipm.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
+
+      <h3>Who Manages the HOA and How Do I Submit a Request?</h3>
+      <p>The association is the <strong>Twin Lakes of Brandon Homeowners Association</strong>, and its official site is <a href="https://www.tlbhoa.org/" target="_blank" rel="noopener nofollow">tlbhoa.org</a>. Day to day management, including the online request and billing portal, is handled by <strong>Greenacre</strong>.</p>
+      <ul>
+        <li><strong>Management phone:</strong> <a href="tel:+18136001100">(813) 600-1100</a></li>
+        <li><strong>Management email:</strong> <a href="mailto:manager@tlbhoa.org">manager@tlbhoa.org</a></li>
+        <li><strong>Architectural requests:</strong> submitted through the association portal as an Exterior Modification Request, or an Exterior Paint Request for color changes</li>
+      </ul>
+      <p>Exterior changes go through the <strong>Architectural Control Committee</strong>, usually written ACC. All exterior modifications need written approval <em>before</em> work starts, and that includes fencing, elevation changes, and landscaping planting or removal. Starting first and asking later is how people end up tearing something out.</p>
+      <h3>What Are the Fence Rules?</h3>
+      <p>Fences must follow the Twin Lakes of Brandon Fence Guidelines Supplement. The rules that catch buyers most often:</p>
+      <ul>
+        <li>No fence may extend forward of the front of the house, or into the 25 foot setback from public rights of way.</li>
+        <li>Fences are 6 feet in height, except that fences adjacent to the park and the side and rear fences on lots along the lake may not exceed 4 feet.</li>
+        <li>Written ACC approval is required before installation, not after.</li>
+      </ul>
+      <p>If a fence or an addition matters to your plans for the house, get the current rules and the approval requirement in writing from management before you remove your inspection contingency. Association rules get amended, and the recorded amendments control.</p>
 
       <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
       <p>Also explore: <a href="/valrico-homes-for-sale/">Valrico homes for sale</a> | <a href="/valrico-neighborhood-guide/">Valrico neighborhood guide</a> | <a href="/valrico-housing-market/">Valrico housing market</a></p>
