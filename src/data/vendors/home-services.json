@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "title": "Barrett's Trusted Vendors",
+    "description": "Title companies, insurance, and home service providers Barrett Henry has worked with directly. Not a paid directory.",
+    "source": "Each company's own website, verified individually",
+    "last_updated": "2026-10-07",
+    "count": 6,
+    "disclaimer": "Barrett Henry receives no referral fees from any provider on this page. These are companies he has worked with directly. Clients should independently verify licensing, insurance, and current pricing before hiring anyone."
+  },
+  "title_companies": [
+    {
+      "name": "Lakeland Title",
+      "county": "Polk",
+      "city": "Lakeland",
+      "address": "307 W. Highland Drive, Lakeland, FL 33813",
+      "phone": "863-701-2500",
+      "lat": null,
+      "lng": null,
+      "place_id": null,
+      "google_rating": null,
+      "google_review_count": null,
+      "google_maps_url": null,
+      "website": "https://lakelandtitlellc.com",
+      "bio": "Where I send Polk County closings. Family owned and operated. Ask for Mallory Gillum.",
+      "preferred": true
+    },
+    {
+      "name": "Milestone Title Services",
+      "county": "Hillsborough",
+      "city": "Apollo Beach",
+      "address": "431 Apollo Beach Blvd, Apollo Beach, FL 33572",
+      "phone": "813-513-9848",
+      "lat": null,
+      "lng": null,
+      "place_id": null,
+      "google_rating": null,
+      "google_review_count": null,
+      "google_maps_url": null,
+      "website": "https://milestonetitlesvcs.com",
+      "bio": "South Hillsborough closings, convenient for Apollo Beach, Ruskin and Sun City Center transactions.",
+      "preferred": true
+    },
+    {
+      "name": "Coastal Collective Title",
+      "county": "Hillsborough",
+      "city": "Tampa",
+      "address": null,
+      "phone": "813-544-8626",
+      "lat": null,
+      "lng": null,
+      "place_id": null,
+      "google_rating": null,
+      "google_review_count": null,
+      "google_maps_url": null,
+      "website": "https://coastalcollectivetitle.com",
+      "bio": "Florida title, escrow and settlement services. Orders at orders@coastalcollectivetitle.com.",
+      "preferred": true
+    }
+  ],
+  "insurance": [
+    {
+      "name": "Park Insurance",
+      "county": "Polk",
+      "city": "Lakeland",
+      "address": "231 N Kentucky Ave, Suite 201, Lakeland, FL 33801",
+      "phone": "863-250-1424",
+      "lat": null,
+      "lng": null,
+      "place_id": null,
+      "google_rating": null,
+      "google_review_count": null,
+      "google_maps_url": null,
+      "website": "https://parkinsurancefl.com",
+      "bio": "Allstate affiliated agency that also brokers other carriers, which matters in the current Florida market. Ask for Bryce McDonald.",
+      "preferred": true
+    }
+  ],
+  "home_services": [
+    {
+      "name": "Tampa Bay Appliance Repair",
+      "county": "Hillsborough",
+      "city": "Tampa",
+      "address": null,
+      "phone": "813-815-0503",
+      "lat": null,
+      "lng": null,
+      "place_id": null,
+      "google_rating": null,
+      "google_review_count": null,
+      "google_maps_url": null,
+      "website": "https://813appliancerepair.com",
+      "bio": "Serves Tampa, Brandon, Lutz, Thonotosassa, Wesley Chapel and Lakeland. Useful when an inspection flags an appliance days before closing.",
+      "preferred": true
+    },
+    {
+      "name": "D & D Garage Doors",
+      "county": "Hillsborough",
+      "city": "Tampa",
+      "address": null,
+      "phone": "888-371-7242",
+      "lat": null,
+      "lng": null,
+      "place_id": null,
+      "google_rating": null,
+      "google_review_count": null,
+      "google_maps_url": null,
+      "website": "https://www.danddgaragedoors.com",
+      "bio": "Garage door repair and replacement across the Tampa and St. Pete area. Wind-rated door replacement can also affect an insurance wind mitigation credit.",
+      "preferred": true
+    },
+    {
+      "name": "Best Bay Services",
+      "county": "Hillsborough",
+      "city": "Valrico",
+      "address": null,
+      "phone": "813-416-8676",
+      "lat": null,
+      "lng": null,
+      "place_id": null,
+      "google_rating": null,
+      "google_review_count": null,
+      "google_maps_url": null,
+      "website": "https://bestbayservices.com",
+      "bio": "Handyman and ongoing property maintenance. Disclosure: this company is owned by a member of my family.",
+      "preferred": true,
+      "note": "Owned by a member of Barrett's family. Disclosed so you can weigh the recommendation accordingly."
+    }
+  ]
+}

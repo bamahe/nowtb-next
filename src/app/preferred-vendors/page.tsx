@@ -1,5 +1,5 @@
 // =============================================================================
-// /preferred-vendors — Tampa Bay Preferred Vendors
+// /preferred-vendors, Tampa Bay Preferred Vendors
 // Insurance, home inspectors, and mortgage lenders across 8 counties
 // Data-driven from src/data/vendors/ JSON files
 // =============================================================================
@@ -15,12 +15,13 @@ import CountyGroup from "@/components/vendors/CountyGroup";
 import insuranceData from "@/data/vendors/insurance.json";
 import inspectorsData from "@/data/vendors/inspectors.json";
 import lendersData from "@/data/vendors/lenders.json";
+import homeServicesData from "@/data/vendors/home-services.json";
 
 // --- Constants ---
 const SITE_URL = "https://nowtb.com";
 const PHONE = "(813) 733-7907";
 
-// County display order — matches the 8-county service area
+// County display order, matches the 8-county service area
 const COUNTY_ORDER = [
   "Hillsborough",
   "Pinellas",
@@ -34,12 +35,12 @@ const COUNTY_ORDER = [
 
 // --- SEO metadata ---
 export const metadata: Metadata = {
-  title: "Tampa Bay Preferred Vendors | Insurance, Inspectors & Lenders",
+  title: "Tampa Bay Preferred Vendors | Barrett Henry",
   description:
-    "Trusted insurance agencies, home inspectors, and mortgage lenders across 8 Tampa Bay counties. Hand-picked by Barrett Henry, REALTOR® with REMAX Collective. Call (813) 733-7907.",
+    "Title, insurance, inspectors and lenders across 8 Tampa Bay counties, hand-picked by Barrett Henry. No referral fees. Call (813) 733-7907.",
   alternates: { canonical: "/preferred-vendors/" },
   openGraph: {
-    title: "Tampa Bay Preferred Vendors | Insurance, Inspectors & Lenders",
+    title: "Tampa Bay Preferred Vendors | Barrett Henry",
     description:
       "Insurance, home inspection, and mortgage pros Barrett Henry trusts across Tampa Bay. All 8 counties covered.",
     url: "/preferred-vendors/",
@@ -106,7 +107,7 @@ function itemListSchema(sectionName: string, vendors: Vendor[]) {
   };
 }
 
-/** FAQPage schema — 5 Q&As about the vendor page */
+/** FAQPage schema, 5 Q&As about the vendor page */
 const faqLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -170,12 +171,18 @@ export default function PreferredVendorsPage() {
   const insurance = insuranceData.agencies as Vendor[];
   const inspectors = inspectorsData.inspectors as Vendor[];
   const lenders = lendersData.lenders as Vendor[];
+  // Barrett's own short list, added October 2026. These are companies he has
+  // worked with directly, verified one at a time from each company's own site,
+  // and he takes no referral fee from any of them.
+  const trustedTitle = homeServicesData.title_companies as Vendor[];
+  const trustedInsurance = homeServicesData.insurance as Vendor[];
+  const trustedHomeServices = homeServicesData.home_services as Vendor[];
 
   // Split preferred vs. county-grouped for lenders (only lenders have preferred in the data)
   const preferredLenders = getPreferred(lenders);
   const lendersByCounty = groupByCounty(getNonPreferred(lenders));
 
-  // Insurance and inspectors have no preferred flag — group all by county
+  // Insurance and inspectors have no preferred flag, group all by county
   const insuranceByCounty = groupByCounty(insurance);
   const inspectorsByCounty = groupByCounty(inspectors);
 
@@ -219,7 +226,7 @@ export default function PreferredVendorsPage() {
         </div>
       </nav>
 
-      {/* ── Hero Section — navy background ── */}
+      {/* ── Hero Section, navy background ── */}
       <section className="bg-primary text-white py-20 md:py-28">
         <div className="container-wide text-center">
           <p className="heading-label mb-4">Tampa Bay Resources</p>
@@ -261,6 +268,67 @@ export default function PreferredVendorsPage() {
       {/* ══════════════════════════════════════════════════════════════════════
          SECTION 1: Insurance
          ══════════════════════════════════════════════════════════════════════ */}
+      {/* ══════════════════════════════════════════════════════════════════════
+         SECTION 0: Barrett's own short list (October 2026)
+         Verified individually from each company's own website. No referral fees.
+         Home inspectors are deliberately NOT in this list yet.
+         ══════════════════════════════════════════════════════════════════════ */}
+      <section id="barretts-list" className="scroll-mt-16 py-16 md:py-20 bg-white">
+        <div className="container-wide">
+          <h2 className="font-heading text-display-sm font-light tracking-wide text-primary mb-2">
+            Vendors I Actually Use
+          </h2>
+          <p className="text-muted text-sm md:text-base mb-4 max-w-3xl">
+            The lists further down this page are broader, organized by county, and
+            built from public data. This shorter list is different: these are the
+            companies I personally call when a closing needs something handled.
+          </p>
+          <div className="border-l-4 border-primary bg-light p-5 mb-10 max-w-3xl">
+            <p className="font-heading font-bold text-primary text-sm mb-1">
+              I receive no referral fees from these vendors.
+            </p>
+            <p className="text-muted text-sm leading-relaxed">
+              Nothing on this page is a paid placement, and no one here pays me for
+              a recommendation. One company is owned by a member of my family and
+              that is disclosed on its card. For lenders, ask me for current lender
+              recommendations rather than relying on a static list, because the
+              right lender depends on your loan type.
+            </p>
+          </div>
+
+          <h3 className="font-heading text-lg font-bold text-primary mb-4">
+            Title and Closing
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {trustedTitle.map((vendor) => (
+              <VendorCard key={vendor.name} vendor={vendor} />
+            ))}
+          </div>
+
+          <h3 className="font-heading text-lg font-bold text-primary mb-4">
+            Insurance
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {trustedInsurance.map((vendor) => (
+              <VendorCard key={vendor.name} vendor={vendor} />
+            ))}
+          </div>
+
+          <h3 className="font-heading text-lg font-bold text-primary mb-4">
+            Home Services
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {trustedHomeServices.map((vendor) => (
+              <VendorCard key={vendor.name} vendor={vendor} />
+            ))}
+          </div>
+
+          <p className="text-xs text-muted italic mt-8 border-t border-border pt-4 max-w-3xl">
+            {homeServicesData.meta.disclaimer}
+          </p>
+        </div>
+      </section>
+
       <section id="insurance" className="scroll-mt-16 py-16 md:py-20">
         <div className="container-wide">
           <h2 className="font-heading text-display-sm font-light tracking-wide text-primary mb-2">
@@ -327,7 +395,7 @@ export default function PreferredVendorsPage() {
           </h2>
           <p className="text-muted text-sm md:text-base mb-8 max-w-3xl">
             Mortgage brokers and loan officers who close on time and communicate
-            clearly. Compare rates, fees, and terms — and verify licensing at{" "}
+            clearly. Compare rates, fees, and terms, and verify licensing at{" "}
             <a
               href="https://nmlsconsumeraccess.org"
               target="_blank"
@@ -339,7 +407,7 @@ export default function PreferredVendorsPage() {
             .
           </p>
 
-          {/* Preferred lenders — Barrett Recommends, shown first */}
+          {/* Preferred lenders, Barrett Recommends, shown first */}
           {preferredLenders.length > 0 && (
             <div className="mb-10">
               <h3 className="font-body text-xs font-medium tracking-[0.2em] uppercase text-accent mb-4">

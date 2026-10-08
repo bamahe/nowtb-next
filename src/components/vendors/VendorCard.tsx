@@ -1,5 +1,5 @@
 // =============================================================================
-// VendorCard — Displays a single vendor with name, city, rating, bio, and links
+// VendorCard: displays a single vendor with name, city, rating, bio, and links
 // Reused across insurance, inspectors, and lenders sections
 // =============================================================================
 
@@ -10,7 +10,8 @@ export interface Vendor {
   name: string;
   county: string;
   city: string;
-  address: string;
+  /** Street address, or null for service-area businesses with no public address */
+  address: string | null;
   phone: string | null;
   lat: number | null;
   lng: number | null;
@@ -50,7 +51,7 @@ export default function VendorCard({ vendor }: VendorCardProps) {
       {/* City */}
       <p className="text-sm text-muted mb-2">{vendor.city}, FL</p>
 
-      {/* Rating badge — uses text-link blue (not gold) */}
+      {/* Rating badge: uses text-link blue, never a yellow star */}
       {hasRating && (
         <div className="flex items-center gap-1.5 mb-3">
           <Star className="w-4 h-4 fill-link text-link" />
