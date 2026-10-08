@@ -373,8 +373,15 @@ function checkFiles(files) {
     });
 
     if (isPage) {
-      const h1 = (text.match(/<h1[\s>]/gi) || []).length;
-      if (h1 !== 1) fail(file, 8, `${h1} H1 tags, expected exactly 1`);
+      // Many pages on this site get their single H1 from <HeroSection title=...>,
+      // which renders the <h1> internally. Count that as the page's H1 so the
+      // gate measures the rendered output rather than the literal JSX.
+      const literalH1 = (text.match(/<h1[\s>]/gi) || []).length;
+      const heroH1 = /<HeroSection[\s\S]*?\btitle=/.test(text) ? 1 : 0;
+      const h1 = literalH1 + heroH1;
+      if (h1 !== 1) {
+        fail(file, 8, `${h1} H1 tags (${literalH1} literal + ${heroH1} from HeroSection), expected exactly 1`);
+      }
       if (!/alternates:\s*{\s*canonical/.test(text)) fail(file, 8, "missing alternates.canonical");
       const title = text.match(/title:\s*"([^"]{1,200})"/);
       if (title && title[1].length > 60) {
