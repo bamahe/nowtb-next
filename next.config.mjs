@@ -121,11 +121,13 @@ const nextConfig = {
       // would be sent to the OLD listing forever and re-pointing would silently
       // stop working for them. If it breaks, check this flag first.
       //
-      // Currently pointing at: 11417 Cypress Park St (open house Sun Sep 20)
-      { source: "/3813-polumbo-dr", destination: "/11417-cypress-park-st/", permanent: false },
-      { source: "/3813-polumbo-dr/", destination: "/11417-cypress-park-st/", permanent: false },
-      { source: "/3813-polumbo-dr/sign-in", destination: "/11417-cypress-park-st/sign-in/", permanent: false },
-      { source: "/3813-polumbo-dr/sign-in/", destination: "/11417-cypress-park-st/sign-in/", permanent: false },
+      // Currently pointing at: 30935 Whitlock Dr (open house Sat Oct 10 + Sun Oct 11)
+      { source: "/3813-polumbo-dr", destination: "/30935-whitlock-dr/", permanent: false },
+      { source: "/3813-polumbo-dr/", destination: "/30935-whitlock-dr/", permanent: false },
+      { source: "/3813-polumbo-dr/sign-in", destination: "/30935-whitlock-dr/sign-in/", permanent: false },
+      { source: "/3813-polumbo-dr/sign-in/", destination: "/30935-whitlock-dr/sign-in/", permanent: false },
+      { source: "/3813-polumbo-dr/feedback", destination: "/30935-whitlock-dr/feedback/", permanent: false },
+      { source: "/3813-polumbo-dr/feedback/", destination: "/30935-whitlock-dr/feedback/", permanent: false },
 
       // ── Manual redirects (all destinations end with / for trailingSlash: true) ──
       { source: "/home", destination: "/", permanent: true },
@@ -363,11 +365,11 @@ const nextConfig = {
       { source: "/properties/listing", destination: "/properties/", permanent: true },
 
       // ── WordPress nested city spoke pages → flat structure ──
-      { source: "/:city((?!blog|api|auth|clients|properties|guides|images|wp-content|_next|compare|market-updates|builders|communities|account|sell|resources|3813-polumbo-dr|11417-cypress-park-st).[^/]+)/:city-:topic", destination: "/:city-:topic/", permanent: true },
+      { source: "/:city((?!blog|api|auth|clients|properties|guides|images|wp-content|_next|compare|market-updates|builders|communities|account|sell|resources|3813-polumbo-dr|11417-cypress-park-st|30935-whitlock-dr).[^/]+)/:city-:topic", destination: "/:city-:topic/", permanent: true },
 
       // ── WordPress nested neighborhood pages → flat structure ──
       // The :neighborhood param excludes "southoak" because /brandon/southoak/ has a dedicated page
-      { source: "/:city((?!blog|api|auth|clients|properties|guides|images|wp-content|_next|compare|market-updates|builders|communities|account|sell|resources|3813-polumbo-dr|11417-cypress-park-st).[^/]+)/:neighborhood((?!southoak).[^/]+)", destination: "/:neighborhood/", permanent: true },
+      { source: "/:city((?!blog|api|auth|clients|properties|guides|images|wp-content|_next|compare|market-updates|builders|communities|account|sell|resources|3813-polumbo-dr|11417-cypress-park-st|30935-whitlock-dr).[^/]+)/:neighborhood((?!southoak).[^/]+)", destination: "/:neighborhood/", permanent: true },
 
       // ── WordPress Showcase IDX property pages ──
       // Old IDX used /properties/slug-name format. Bridge uses /properties/ListingKey.
