@@ -1,5 +1,5 @@
 // =============================================================================
-// Sitemap — includes ALL 3,400+ pages for complete Google indexing
+// Sitemap: includes ALL 3,400+ pages for complete Google indexing
 // Static pages + blog posts + guides + city hubs + city spokes + neighborhoods
 // + counties + loan guides + comparisons + regional + misc catch-all pages
 // =============================================================================
@@ -65,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  // ── Blog posts (624 posts) — canonical URL is /blog/{slug} ──
+  // ── Blog posts (624 posts), canonical URL is /blog/{slug} ──
   const blogPosts: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
     url: `${siteUrl}/blog/${post.slug}/`,
     lastModified: post.date ? new Date(post.date) : now,
@@ -137,7 +137,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  // ── Neighborhood pages — filter out neighborhoods whose slug matches a city slug ──
+  // ── Neighborhood pages, filter out neighborhoods whose slug matches a city slug ──
   // City routes take priority, so these neighborhood base pages are unreachable
   const citySlugs = new Set(cities.map((c) => c.slug));
   const filteredNeighborhoods = neighborhoods.filter((n) => !citySlugs.has(n.slug));
