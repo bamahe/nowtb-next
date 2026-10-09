@@ -87,6 +87,7 @@ const personLd = {
   },
   sameAs: [
     "https://barretthenry.remax.com",
+    "https://www.fastexpert.com/agents/barrett-henry-135533/",
     "https://www.linkedin.com/in/barretthenry",
     "https://www.facebook.com/BarrettHenryREALTOR",
     "https://www.instagram.com/thenowteam",

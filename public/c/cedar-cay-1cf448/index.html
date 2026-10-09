@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>3902 Cedar Cay Selling Plan</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+body{margin:0}
+
+/* Layout: client seller plan. Navy header, price summary, timeline, interactive net sheet, comps, what I handle. */
+:root{
+  --navy:#1A2744; --blue:#003DA5; --red:#DC1C2E; --slate:#5B6676; --line:#D9DFE8;
+  --bg:#F5F7FA; --paper:#FFFFFF; --fg:#18202E; --soft:#EEF2F8; --onnavy:#FFFFFF; --head:#1A2744;
+  --good-bg:#E2F4E8; --good-fg:#1F6B3A; --act-bg:#E3EDFF; --act-fg:#003DA5; --can-bg:#F3E4E6; --can-fg:#9B1C2A;
+  --display:"DM Serif Display",Georgia,serif; --body:"DM Sans",system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --navy:#22345C; --blue:#7FA6EE; --red:#F0606C; --slate:#A3ADBD; --line:#2E3A52;
+  --bg:#0F1522; --paper:#161E2E; --fg:#E8ECF3; --soft:#1C2639; --onnavy:#FFFFFF; --head:#E8ECF3;
+  --good-bg:#183526; --good-fg:#8FD6A8; --act-bg:#1B2B4B; --act-fg:#9DBBF2; --can-bg:#3A1E24; --can-fg:#F09AA4; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --navy:#22345C; --blue:#7FA6EE; --red:#F0606C; --slate:#A3ADBD; --line:#2E3A52;
+  --bg:#0F1522; --paper:#161E2E; --fg:#E8ECF3; --soft:#1C2639; --onnavy:#FFFFFF; --head:#E8ECF3;
+  --good-bg:#183526; --good-fg:#8FD6A8; --act-bg:#1B2B4B; --act-fg:#9DBBF2; --can-bg:#3A1E24; --can-fg:#F09AA4; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:14px;line-height:1.5}
+.page{max-width:880px;margin:0 auto;padding-block:20px;padding-inline:16px}
+.sheet{background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+header{background:var(--navy);color:var(--onnavy);padding:20px 24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:flex-end}
+header h1{font-family:var(--display);font-weight:400;font-size:28px;margin:0;line-height:1.1;text-wrap:balance}
+header .sub{opacity:.85;font-size:13px;margin-top:4px}
+header .agent{text-align:right;font-size:12.5px;opacity:.92}
+header .agent b{font-size:14px;display:block}
+main{padding:20px 24px;display:grid;gap:26px}
+h2{font-family:var(--display);font-weight:400;font-size:21px;margin:0 0 10px;color:var(--head)}
+.kicker{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--slate);font-weight:700;margin:0 0 6px}
+.lead{margin:0;max-width:65ch}
+.hero{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.box{border:1px solid var(--line);border-radius:5px;padding:12px 14px;min-width:0}
+.box.main{background:var(--soft);border-left:4px solid var(--red)}
+.box span{font-size:10.5px;color:var(--slate);text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+.box strong{display:block;font-family:var(--display);font-weight:400;font-size:26px;line-height:1.15;color:var(--head);font-variant-numeric:tabular-nums}
+.box p{margin:4px 0 0;font-size:12.5px;color:var(--slate)}
+@media (max-width:640px){.hero{grid-template-columns:1fr} header .agent{text-align:left}}
+
+/* timeline */
+.tl{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.tl li{display:grid;grid-template-columns:118px 18px 1fr;gap:10px;align-items:start}
+.tl .when{font-weight:700;font-size:13px;text-align:right;padding-top:1px;font-variant-numeric:tabular-nums}
+.tl .dot{position:relative;height:100%;min-height:44px}
+.tl .dot::before{content:"";position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--line)}
+.tl .dot::after{content:"";position:absolute;left:3px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--blue)}
+.tl li.now .dot::after{background:var(--red);border-color:var(--red)}
+.tl li.goal .dot::after{background:var(--blue)}
+.tl li:last-child .dot::before{bottom:auto;height:10px}
+.tl .what{padding-bottom:14px;min-width:0}
+.tl .what b{display:block}
+.tl .what small{color:var(--slate);font-size:12.5px}
+@media (max-width:520px){.tl li{grid-template-columns:84px 18px 1fr}.tl .when{font-size:12px}}
+
+/* net sheet */
+.ns{border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.ns-top{background:var(--navy);color:var(--onnavy);padding:14px 16px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.ns-top label{font-size:12px;text-transform:uppercase;letter-spacing:.08em;opacity:.85;font-weight:700}
+.pricewrap{display:flex;align-items:center;gap:4px;background:rgba(255,255,255,.12);border-radius:4px;padding:4px 10px}
+.pricewrap span{font-family:var(--display);font-size:24px}
+#price{background:transparent;border:none;color:var(--onnavy);font-family:var(--display);font-size:24px;width:150px;font-variant-numeric:tabular-nums}
+#price:focus{outline:2px solid #fff;outline-offset:2px;border-radius:2px}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}
+.tabs button{font:inherit;background:var(--paper);color:var(--fg);border:none;border-right:1px solid var(--line);padding:10px 8px;cursor:pointer;text-align:center}
+.tabs button:last-child{border-right:none}
+.tabs button b{display:block;font-size:16px}
+.tabs button small{color:var(--slate);font-size:11.5px}
+.tabs button[aria-selected="true"]{background:var(--soft);box-shadow:inset 0 -3px 0 var(--blue)}
+.tabs button:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
+.ns table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:13px}
+.ns td{padding:7px 16px;border-bottom:1px solid var(--line)}
+.ns td.r{text-align:right;white-space:nowrap}
+.ns tr.sec td{background:var(--soft);font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--slate);padding-block:5px}
+.ns tr.sub td{font-weight:700}
+.net{background:var(--navy);color:var(--onnavy);display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 16px;flex-wrap:wrap}
+.net span{font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;opacity:.9}
+.net strong{font-family:var(--display);font-weight:400;font-size:30px;font-variant-numeric:tabular-nums}
+.fine{font-size:11.5px;color:var(--slate);margin:8px 0 0;max-width:80ch}
+
+/* comps */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}
+@media (max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{border:1px solid var(--line);border-radius:4px;padding:8px 10px}
+.stat span{font-size:10.5px;color:var(--slate);text-transform:uppercase;letter-spacing:.06em}
+.stat strong{display:block;font-size:17px;font-variant-numeric:tabular-nums;color:var(--blue)}
+.tw{overflow-x:auto}
+.ct{width:100%;border-collapse:collapse;font-size:12.5px;font-variant-numeric:tabular-nums}
+.ct th{text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--slate);border-bottom:2px solid var(--navy);padding:5px 6px;white-space:nowrap}
+.ct td{padding:5px 6px;border-bottom:1px solid var(--line);white-space:nowrap}
+.ct .r{text-align:right}
+.ct a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}
+.ct a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.tag{display:inline-block;font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;text-transform:uppercase;letter-spacing:.04em}
+.t-sold{background:var(--good-bg);color:var(--good-fg)}.t-act{background:var(--act-bg);color:var(--act-fg)}.t-pen{background:var(--good-bg);color:var(--good-fg)}.t-can{background:var(--can-bg);color:var(--can-fg)}
+.handle{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 20px;margin:0;padding:0;list-style:none}
+.handle li{padding-left:18px;position:relative}
+.handle li::before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;background:var(--blue);border-radius:2px}
+@media (max-width:640px){.handle{grid-template-columns:1fr}}
+footer{background:var(--navy);color:var(--onnavy);text-align:center;padding:10px;font-size:11px;letter-spacing:.2em;font-weight:700}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+</head>
+<body>
+<div class="page"><div class="sheet">
+<header>
+  <div>
+    <h1>3902 Cedar Cay Circle</h1>
+    <div class="sub">River Hills, Valrico, FL 33596 &middot; Selling plan prepared for Mike Baltes &middot; October 6, 2026</div>
+  </div>
+  <div class="agent"><b>Barrett Henry, Broker Associate</b>REMAX Collective &middot; (813) 733-7907<br>barrett@nowtb.com &middot; BK3313308</div>
+</header>
+
+<main>
+  <section>
+    <p class="kicker">The plan in one line</p>
+    <p class="lead">Sell as-is at <b>$449,900</b>. Go live around October 22, after your mom tags the furniture she is taking. Be under contract by mid November and close between <b>December 15 and December 31</b>. You can stay in the house until you head back to DC.</p>
+  </section>
+
+  <section class="hero">
+    <div class="box main"><span>List price</span><strong>$449,900</strong><p>Pool home, brand new roof, sold as-is.</p></div>
+    <div class="box"><span>Closing window</span><strong>Dec 15 to 31</strong><p>Done before the new year.</p></div>
+    <div class="box"><span>Est. net at 6%</span><strong id="heroNet">$412,400</strong><p>Worst case, before any payoff.</p></div>
+  </section>
+
+  <section>
+    <h2>Timeline</h2>
+    <ol class="tl">
+      <li class="now"><div class="when">Oct 6</div><div class="dot"></div><div class="what"><b>Walkthrough and pricing</b><small>Done. New roof, refreshed pool deck, clean owner&#39;s suite. The home shows well.</small></div></li>
+      <li><div class="when">By Oct 9</div><div class="dot"></div><div class="what"><b>Sign listing paperwork</b><small>Six month listing, signed electronically. No cancellation fee: if I am not doing my job, you can let me go. Signed by your mom, or by you if you hold power of attorney.</small></div></li>
+      <li><div class="when">Oct 12 to 17</div><div class="dot"></div><div class="what"><b>Mom&#39;s last visit and furniture tagging</b><small>She picks what goes to her new apartment. We sell as-is, so no repairs. Just a pool clean and that one light fixture.</small></div></li>
+      <li><div class="when">Oct 19 to 20</div><div class="dot"></div><div class="what"><b>Professional photos, drone, 3D tour</b><small>Lockbox and showing instructions set.</small></div></li>
+      <li><div class="when">Thu Oct 22</div><div class="dot"></div><div class="what"><b>Live on the MLS, Zillow, Realtor.com, Redfin</b><small>Email blast to local agents. Social launch.</small></div></li>
+      <li><div class="when">Oct 24 to 25</div><div class="dot"></div><div class="what"><b>First weekend open house</b><small>Friday is a neighbors preview, then open to the public Saturday and Sunday. Most serious buyers see a home in its first 10 days.</small></div></li>
+      <li><div class="when">Nov 5</div><div class="dot"></div><div class="what"><b>Two week check-in</b><small>Showings, feedback, online views. If the market is not responding, we adjust together.</small></div></li>
+      <li class="goal"><div class="when">By Nov 13 to 20</div><div class="dot"></div><div class="what"><b>Under contract</b><small>The latest date that still fits a December closing.</small></div></li>
+      <li><div class="when">Nov 13 to Dec 4</div><div class="dot"></div><div class="what"><b>Inspection, appraisal, loan approval</b><small>I handle repair requests and keep the deal on schedule.</small></div></li>
+      <li class="goal"><div class="when">Dec 15 to 31</div><div class="dot"></div><div class="what"><b>Closing</b><small>Signed remotely from DC if you are back home. If you need a little more time in the house, we can ask for a short leaseback after closing.</small></div></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Estimated net proceeds</h2>
+    <div class="ns">
+      <div class="ns-top">
+        <label for="price">Sale price</label>
+        <div class="pricewrap"><span>$</span><input id="price" type="text" inputmode="numeric" value="449,900" aria-label="Sale price"></div>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Who brings the buyer">
+        <button role="tab" id="t1" data-rate="0.01" aria-selected="false"><b>1%</b><small>You bring the buyer</small></button>
+        <button role="tab" id="t4" data-rate="0.04" aria-selected="false"><b>4%</b><small>My marketing brings the buyer</small></button>
+        <button role="tab" id="t6" data-rate="0.06" aria-selected="true"><b>6%</b><small>Two agents involved</small></button>
+      </div>
+      <table>
+        <tbody id="rows"></tbody>
+      </table>
+      <div class="net"><span>Estimated net to seller<br><small style="text-transform:none;letter-spacing:0;font-weight:400;opacity:.85">Before any mortgage payoff</small></span><strong id="net">$0</strong></div>
+    </div>
+    <p class="fine">Estimate for discussion only. Assumes a mid December closing with 2026 property taxes ($2,615) prorated and paid by the seller at closing. Actual figures come from the title company. Not legal or tax advice.</p>
+  </section>
+
+  <section>
+    <h2>What the market says</h2>
+    <p class="kicker">River Hills closed sales, last 6 months</p>
+    <div class="stats">
+      <div class="stat"><span>Avg sold price</span><strong>$460,667</strong></div>
+      <div class="stat"><span>Avg $ / sq ft</span><strong>$230</strong></div>
+      <div class="stat"><span>Avg days on market</span><strong>54</strong></div>
+      <div class="stat"><span>Sale to list</span><strong>98%</strong></div>
+    </div>
+    <div class="tw"><table class="ct">
+      <thead><tr><th>Address</th><th>Status</th><th class="r">Price</th><th>Date</th><th>Bd/Ba</th><th class="r">Sq ft</th><th class="r">$/sf</th><th>Pool</th><th class="r">DOM</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/TB8505218/valrico/3412-stonebridge-trail/" target="_blank" rel="noopener">3412 Stonebridge Trl</a></td><td><span class="tag t-sold">Sold</span></td><td class="r">$490,000</td><td>6/15/26</td><td>4/2</td><td class="r">2,042</td><td class="r">$240</td><td>N</td><td class="r">4</td></tr>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/TB8470571/valrico/3522-fox-squirrel-lane/" target="_blank" rel="noopener">3522 Fox Squirrel Ln</a></td><td><span class="tag t-sold">Sold</span></td><td class="r">$490,000</td><td>6/5/26</td><td>3/2</td><td class="r">1,834</td><td class="r">$267</td><td>Y</td><td class="r">89</td></tr>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/TB8535828/valrico/5418-twin-creeks-drive/" target="_blank" rel="noopener">5418 Twin Creeks Dr</a></td><td><span class="tag t-sold">Sold</span></td><td class="r">$455,000</td><td>9/8/26</td><td>3/3</td><td class="r">2,084</td><td class="r">$218</td><td>Y</td><td class="r">3</td></tr>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/TB8482262/valrico/3408-stonebridge-trail/" target="_blank" rel="noopener">3408 Stonebridge Trl</a></td><td><span class="tag t-sold">Sold</span></td><td class="r">$455,000</td><td>8/12/26</td><td>3/2</td><td class="r">2,172</td><td class="r">$209</td><td>Y</td><td class="r">90</td></tr>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/TB8456280/valrico/4906-willow-ridge-terrace/" target="_blank" rel="noopener">4906 Willow Ridge Ter</a></td><td><span class="tag t-sold">Sold</span></td><td class="r">$439,000</td><td>7/30/26</td><td>4/2</td><td class="r">2,077</td><td class="r">$211</td><td>Y</td><td class="r">117</td></tr>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/O6411963/valrico/4941-willow-ridge-terrace/" target="_blank" rel="noopener">4941 Willow Ridge Ter</a></td><td><span class="tag t-sold">Sold</span></td><td class="r">$435,000</td><td>7/24/26</td><td>3/2</td><td class="r">1,860</td><td class="r">$234</td><td>Y</td><td class="r">18</td></tr>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/TB8551245/valrico/3134-bent-creek-drive/" target="_blank" rel="noopener">3134 Bent Creek Dr</a></td><td><span class="tag t-act">Active</span></td><td class="r">$449,900</td><td></td><td>4/2</td><td class="r">2,048</td><td class="r">$220</td><td>N</td><td class="r">7</td></tr>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/TB8532922/valrico/5306-waterleaf-court/" target="_blank" rel="noopener">5306 Waterleaf Ct</a></td><td><span class="tag t-act">Active</span></td><td class="r">$479,900</td><td></td><td>4/2</td><td class="r">1,936</td><td class="r">$248</td><td>Y</td><td class="r">65</td></tr>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/O6361189/valrico/3316-stonebridge-trail/" target="_blank" rel="noopener">3316 Stonebridge Trl</a></td><td><span class="tag t-act">Active</span></td><td class="r">$410,000</td><td></td><td>3/2</td><td class="r">1,978</td><td class="r">$207</td><td>Y</td><td class="r">316</td></tr>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/TB8537752/valrico/5616-rockfield-loop/" target="_blank" rel="noopener">5616 Rockfield Loop</a></td><td><span class="tag t-pen">Pending</span></td><td class="r">$475,000</td><td></td><td>4/2</td><td class="r">1,804</td><td class="r">$263</td><td>N</td><td class="r">38</td></tr>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/TB8529422/valrico/3530-fox-squirrel-lane/" target="_blank" rel="noopener">3530 Fox Squirrel Ln</a></td><td><span class="tag t-pen">Pending</span></td><td class="r">$525,000</td><td></td><td>3/2</td><td class="r">1,829</td><td class="r">$287</td><td>Y</td><td class="r">65</td></tr>
+        <tr><td>5120 Fairway One Dr</td><td><span class="tag t-can">Canceled</span></td><td class="r">$450,000</td><td></td><td>3/3</td><td class="r">2,165</td><td class="r">$208</td><td>N</td><td class="r">183</td></tr>
+        <tr><td>3306 Fox Squirrel Ln</td><td><span class="tag t-can">Canceled</span></td><td class="r">$479,000</td><td></td><td>4/2</td><td class="r">2,009</td><td class="r">$238</td><td>N</td><td class="r">0</td></tr>
+      </tbody>
+    </table></div>
+    <p class="fine">Why $449,900: River Hills pool homes sold between $435,000 and $490,000. Your new roof and pool deck put you in the upper half, while the original kitchen and baths keep us from chasing the top. The two canceled listings at $450K to $479K sat without selling. Staying just under $450K puts you in front of every buyer searching up to $450K, and we read the market after the first week. Tap any address to see that home on nowtb.com.</p>
+  </section>
+
+  <section>
+    <h2>What I handle for you</h2>
+    <ul class="handle">
+      <li>Pricing, paperwork, and disclosures</li>
+      <li>Photos, drone, 3D tour, and listing copy</li>
+      <li>Lawn watering, pool service access, and checking on the house after you leave</li>
+      <li>Every showing, with feedback sent to you</li>
+      <li>Offers, negotiation, and repair requests</li>
+      <li>Title, closing, and remote signing from DC</li>
+    </ul>
+  </section>
+</main>
+<footer>MOVE WITH CONFIDENCE</footer>
+</div></div>
+
+<script>
+(function(){
+  var rate = 0.06;
+  var TAXES = 2615, CLOSE_DAY = 349; // Dec 15 = day 349 of 2026
+  var priceEl = document.getElementById('price');
+  var fmt = function(n){ return '$' + Math.round(n).toLocaleString('en-US'); };
+  function title(p){ return p <= 100000 ? p*0.00575 : 575 + (p-100000)*0.005; }
+  function calc(p, r){
+    var items = [
+      ['Documentary stamp tax on deed', p*0.007],
+      ["Owner's title insurance policy", title(p)],
+      ['Title search, exam and settlement', 750],
+      ['Deed preparation', 175],
+      ['Recording fees', 45],
+      ['Municipal lien search', 225],
+      ['HOA estoppel letter', 250],
+      ['Wire fee', 50],
+      ['Property tax proration (Jan 1 to closing)', TAXES*CLOSE_DAY/365]
+    ];
+    var closing = items.reduce(function(s,i){return s+i[1];},0);
+    var comm = p*r, tsf = 990;
+    return {items:items, closing:closing, comm:comm, tsf:tsf, net:p-closing-comm-tsf};
+  }
+  function row(label, val, cls){ return '<tr'+(cls?' class="'+cls+'"':'')+'><td>'+label+'</td><td class="r">'+val+'</td></tr>'; }
+  function render(){
+    var p = parseFloat(String(priceEl.value).replace(/[^0-9.]/g,'')) || 0;
+    var c = calc(p, rate);
+    var h = row('Sale proceeds','', 'sec') + row('Sale price', fmt(p));
+    h += row('Closing costs','', 'sec');
+    c.items.forEach(function(i){ h += row(i[0], '&minus;' + fmt(i[1])); });
+    h += row('Total closing costs', '&minus;' + fmt(c.closing), 'sub');
+    h += row('Commission and brokerage','', 'sec');
+    h += row('Real estate commission (' + Math.round(rate*100) + '%)', '&minus;' + fmt(c.comm));
+    h += row('Transaction services fee', '&minus;' + fmt(c.tsf));
+    document.getElementById('rows').innerHTML = h;
+    document.getElementById('net').textContent = fmt(c.net);
+    document.getElementById('heroNet').textContent = fmt(calc(449900,0.06).net);
+  }
+  priceEl.addEventListener('input', render);
+  priceEl.addEventListener('blur', function(){
+    var p = parseFloat(String(priceEl.value).replace(/[^0-9.]/g,'')) || 0;
+    priceEl.value = Math.round(p).toLocaleString('en-US');
+  });
+  document.querySelectorAll('.tabs button').forEach(function(b){
+    b.addEventListener('click', function(){
+      document.querySelectorAll('.tabs button').forEach(function(x){ x.setAttribute('aria-selected','false'); });
+      b.setAttribute('aria-selected','true');
+      rate = parseFloat(b.dataset.rate);
+      render();
+    });
+  });
+  render();
+})();
+</script>
+
+</body>
+</html>

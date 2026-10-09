@@ -111,6 +111,7 @@ export default async function HomePage() {
             },
             sameAs: [
               "https://barretthenry.remax.com",
+              "https://www.fastexpert.com/agents/barrett-henry-135533/",
               "https://www.instagram.com/nowtampa/",
               "https://www.facebook.com/NOWTampaBay",
               "https://www.linkedin.com/in/barretthenry/",

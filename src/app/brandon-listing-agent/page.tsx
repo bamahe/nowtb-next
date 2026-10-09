@@ -64,6 +64,35 @@ const awards = [
   { year: "2016", award: "Platinum Club Team" },
 ];
 
+/**
+ * Track record. Figures supplied by Barrett Henry, October 2026.
+ * The 500+ figure is The NOW Team's production, not an individual count, and is
+ * labeled that way everywhere it appears. Do not restate it as Barrett's
+ * personal number.
+ */
+const trackRecord = [
+  {
+    figure: "500+",
+    label: "Homes sold",
+    detail: "Closed by Barrett Henry and The NOW Team, which was formed in 2015.",
+  },
+  {
+    figure: "50+",
+    label: "Sales in this area",
+    detail: "Closings in Brandon, Valrico, Riverview, and the surrounding communities.",
+  },
+  {
+    figure: "85+",
+    label: "Five-star Google reviews",
+    detail: "Public reviews from past clients, readable on Google before you call.",
+  },
+  {
+    figure: "24th year",
+    label: "In real estate",
+    detail: "Licensed since September 2003, with a Broker Associate license since 2017.",
+  },
+];
+
 // --- Credentials that bear directly on representing a seller ---
 const credentials = [
   {
@@ -115,6 +144,16 @@ const faqs: Faq[] = [
       "Barrett has been a licensed REALTOR® since September 2003, which puts him in his 24th year in real estate, and he has held a Florida Broker Associate license since 2017. That span covers the 2008 downturn, the recovery, the 2020 to 2022 price run-up, and the current slower market, which is the part that matters when pricing a home today.",
   },
   {
+    question: "How many homes has Barrett Henry sold?",
+    answer:
+      "Barrett Henry and The NOW Team have sold more than 500 homes together since the team formed in 2015, including more than 50 in the Brandon, Valrico, and Riverview area. He also holds more than 85 five-star Google reviews. The 500+ figure is team production rather than an individual count.",
+  },
+  {
+    question: "How fast do Barrett Henry's listings sell in this area?",
+    answer:
+      "It depends on pricing and condition, but one recent example: 3813 Polumbo Dr in Valrico, a 4 bedroom pool home on .64 acres in Bloomingdale, was listed at $550,000 and went under contract in 3 days, closing at $540,000, which is 98 percent of the list price. Days on market is the number to ask any agent about, because it is the one that reflects whether the home was priced correctly from day one.",
+  },
+  {
     question: "What is the SRS designation and why does it matter when selling?",
     answer:
       "SRS stands for Seller Representative Specialist, a National Association of REALTORS® designation focused specifically on representing sellers. Most agents hold general licenses with no seller-specific credential. The designation covers pricing strategy, marketing, negotiation on the seller side, and managing the transaction through closing.",
@@ -149,6 +188,14 @@ const sources: Source[] = [
   {
     name: "National Association of REALTORS® designation requirements",
     used: "What the SRS, MRP, and e-PRO designations require and cover.",
+  },
+  {
+    name: "Production and review figures supplied by Barrett Henry, October 2026",
+    used: "The 500+ team homes sold, 50+ area sales, and 85+ five-star Google review counts. The 500+ figure is The NOW Team's production, not an individual count.",
+  },
+  {
+    name: "Google Business Profile reviews",
+    used: "The five-star review count, which is publicly readable rather than self-reported.",
   },
   {
     name: "Stellar MLS closed sales, ZIP codes 33510 and 33511",
@@ -214,6 +261,12 @@ export default function BrandonListingAgentPage() {
             "Brandon Florida real estate",
             "Military relocation",
           ],
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "5",
+            reviewCount: "85",
+            bestRating: "5",
+          },
           employee: {
             "@type": "Person",
             name: "Barrett Henry",
@@ -221,6 +274,12 @@ export default function BrandonListingAgentPage() {
             url: "https://nowtb.com/about/",
             image: "https://nowtb.com/images/barrett-henry-headshot.jpg",
             telephone: "(813) 733-7907",
+            sameAs: [
+              "https://nowtb.com/about/",
+              "https://barretthenry.remax.com",
+              "https://www.fastexpert.com/agents/barrett-henry-135533/",
+              "https://www.linkedin.com/in/barretthenry",
+            ],
             hasCredential: [
               {
                 "@type": "EducationalOccupationalCredential",
@@ -278,8 +337,10 @@ export default function BrandonListingAgentPage() {
               Seller Representative Specialist designation for seller
               representation, was inducted into the REMAX Hall of Fame in 2024,
               and has earned REMAX production awards every year from 2016
-              through 2025. He works Brandon, Valrico, and Riverview as his home
-              market. Call or text (813) 733-7907.
+              through 2025. He and The NOW Team have sold more than 500
+              homes, including 50+ in the Brandon, Valrico, and Riverview area,
+              and he holds 85+ five-star Google reviews. Call or text
+              (813) 733-7907.
             </p>
           </QuickAnswer>
           <p className="font-body text-muted text-sm mt-4 leading-relaxed">
@@ -303,6 +364,30 @@ export default function BrandonListingAgentPage() {
             .
           </p>
         </div>
+      </section>
+
+      {/* === Track record === */}
+      <section className="container-wide pb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          {trackRecord.map((item) => (
+            <div key={item.label} className="border border-border p-6">
+              <p className="font-heading text-primary text-3xl mb-1">
+                {item.figure}
+              </p>
+              <p className="font-body text-primary font-medium text-sm mb-2">
+                {item.label}
+              </p>
+              <p className="font-body text-muted text-xs leading-relaxed">
+                {item.detail}
+              </p>
+            </div>
+          ))}
+        </div>
+        <p className="font-body text-muted text-xs text-center mt-6 max-w-2xl mx-auto leading-relaxed">
+          The 500+ figure is production for Barrett Henry and The NOW Team
+          together. Individual and team numbers are reported separately here on
+          purpose.
+        </p>
       </section>
 
       {/* === Credentials === */}
@@ -438,6 +523,35 @@ export default function BrandonListingAgentPage() {
               .
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* === Named proof point === */}
+      <section className="section-light py-16">
+        <div className="container-wide max-w-3xl mx-auto">
+          <h2 className="heading-section text-display-sm text-primary mb-4">
+            What Does a Correctly Priced Listing Look Like?
+          </h2>
+          <div className="border border-border border-l-4 border-l-primary p-6 md:p-8">
+            <p className="font-body text-xs font-medium tracking-[0.2em] uppercase text-muted mb-3">
+              Recent listing: 3813 Polumbo Dr, Valrico
+            </p>
+            <p className="font-heading text-primary text-2xl mb-3">
+              Under contract in 3 days
+            </p>
+            <p className="font-body text-muted text-sm leading-relaxed">
+              A 4 bedroom, 3 bath pool home on .64 acres in Bloomingdale,
+              listed at $550,000. It went under contract in 3 days and closed at
+              $540,000, which is 98 percent of the list price. Three days is the
+              number that matters: it means the price was right on day one
+              instead of being discovered through six weeks of reductions.
+            </p>
+          </div>
+          <p className="font-body text-muted text-sm mt-6 leading-relaxed">
+            Ask any agent you interview for their average days on market and
+            their list-to-sale ratio on their own listings. Those two numbers
+            tell you more than any marketing brochure.
+          </p>
         </div>
       </section>
 

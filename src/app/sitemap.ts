@@ -48,6 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/builders/`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${siteUrl}/inspectors/`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${siteUrl}/brandon-listing-agent/`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${siteUrl}/valrico-listing-agent/`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     // October 2026 content batch. /sell/ is a nested route, so it is also listed
     // in both :city flatten redirect lookaheads in next.config.mjs.
     { url: `${siteUrl}/sell/why-didnt-my-house-sell/`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },

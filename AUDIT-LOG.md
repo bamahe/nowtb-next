@@ -4,6 +4,111 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-10-08 (Batch 74 — Port Richey FL x4 + New Port Richey FL x6)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, 4+ H2 question headings, 6+ H3 subheadings, price/comparison tables, 5-Q&A FAQ, 22-link internal grid, Barrett Henry REMAX Collective author bio. Content dated 2026-10-07.)
+
+**Port Richey FL (Pasco County, ZIP 34668):**
+
+1. **port-richey-fl-homes-for-sale-guide** — Expanded to 29,048 chars. Added: Market snapshot table (median ~$220K-$236K, 30-50 DOM, 3-5 months supply); 5-neighborhood tier table (Gulf-adjacent waterfront $350K-$600K+ to budget-friendly inland $185K-$240K); FEMA flood zone table (AE/VE Gulf areas vs Zone X inland); first-time buyer affordability breakdown; HOA comparison table; SB 4-D condo due diligence section; 4-step buying process; STR/LTR investment overview with ViVi PM reference; 5-Q&A FAQ. Date: 2026-10-07.
+
+2. **port-richey-fl-schools-guide** — Expanded to 27,784 chars. Added: Pasco County School District overview (pasco.k12.fl.us); high school table (Gulf High 5085 Madison St (727) 774-3300, Fivay High); middle school table; elementary school table by area; Pasco County magnet programs table; private school options with tuition ranges; school choice and open enrollment guide; 3-point buyer checklist; 5-Q&A FAQ. Date: 2026-10-07.
+
+3. **port-richey-fl-commute-guide** — Expanded to 26,996 chars. Added: Route breakdown (US-19, SR-52, Suncoast Pkwy SR-589); 10-destination commute time table (Tampa 40-55 min normal, 60-80 min peak; TPA 35-50 min; Clearwater 25-40 min); US-19 congestion context; Suncoast Pkwy toll analysis; Pasco County Transit (PCPT) table; hybrid/remote work analysis; real-world buyer scenarios; 5-Q&A FAQ. Date: 2026-10-07.
+
+4. **is-port-richey-fl-good-place-to-live** — Expanded to 27,134 chars. Added: Pros section (affordability, Gulf access, small-city feel, no state income tax); 8-factor pros/cons table; 6-city comparison table (Port Richey vs New Port Richey/Holiday/Hudson/Tarpon Springs/Dunedin); who Port Richey is and is not right for; hurricane risk and flood zone discussion; insurance cost table by zone; cost-of-living summary table; 5-Q&A FAQ. Date: 2026-10-07.
+
+**New Port Richey FL (Pasco County, ZIP 34652/34653/34654/34655):**
+
+5. **new-port-richey-fl-homes-for-sale-guide** — Expanded to 29,113 chars. Added: Market snapshot table (median ~$265K-$290K, 30-55 DOM, 4-5 months supply); 5-neighborhood tier table (Jasmine Estates/Trinity border $320K-$450K to downtown/older grid $200K-$285K); downtown NPR Railroad Square Park context (opening May 2026); FEMA flood zone table; SB 4-D condo section; HOA fee table; 4-step buying process; STR/LTR investment overview with ViVi PM reference; 5-Q&A FAQ. Date: 2026-10-07.
+
+6. **new-port-richey-fl-schools-guide** — Expanded to 30,348 chars. Added: Pasco County School District overview; high school table (Gulf High 5085 Madison St (727) 774-3300, River Ridge High 11646 Town Center Rd (727) 774-7200); middle school table (Gulf Middle, River Ridge Middle co-located with RRHS); elementary school table by area; magnet programs table (STEM, IB, Pasco Virtual); private school options with tuition ranges; school choice guide; 5-Q&A FAQ. Date: 2026-10-07.
+
+7. **new-port-richey-fl-commute-guide** — Expanded to 26,124 chars. Added: Route breakdown (US-19, SR-54, Suncoast Pkwy SR-589 from Ridge Rd interchange); 10-destination commute table (Tampa 38-50 min normal, 55-70 min peak via Suncoast Pkwy); US-19 vs Suncoast Pkwy comparison table (toll $4-$8 vs. 10-15 min savings); PCPT/PSTA transit options; airport access table (TPA 35-50 min, PIE 30-45 min); hybrid/remote work analysis; 5-Q&A FAQ. Date: 2026-10-07.
+
+8. **is-new-port-richey-fl-good-place-to-live** — Expanded to 26,410 chars. Added: Pros section (affordability vs Pinellas, downtown walkability, Gulf access, Suncoast Pkwy access, no state income tax); 8-factor pros/cons table; 6-city comparison table (NPR vs Port Richey/Holiday/Hudson/Tarpon Springs/Trinity); honest assessment by buyer type; hurricane/flood risk discussion; insurance cost table; cost-of-living summary; 5-Q&A FAQ. Date: 2026-10-07.
+
+9. **new-port-richey-fl-real-estate-guide** — Expanded to 26,267 chars. Added: 2026 market metrics table (median ~$265K-$290K, ~45 DOM, 4-5 months supply, balanced market); neighborhood price tier table (5 areas); SB 4-D condo market section; buyer strategy and seller strategy for 2026; investment property analysis table (SFH 6-8% gross yield vs. condo 5-7%); title and closing cost table; 5-Q&A FAQ. Date: 2026-10-07.
+
+10. **new-port-richey-fl-cost-of-living** — Expanded to 31,001 chars. Added: 3-scenario monthly cost model (first-time buyer $280K/inland condo $230K/established family $350K with mortgage/taxes/HO insurance/flood/HOA/utilities totals); Duke Energy average ~$265/mo; City of NPR water $60-$130/mo; HO insurance cost table by zone; flood insurance table (NFIP vs. private by zone); property tax estimate table; grocery/dining context; transportation cost table; 5-city cost comparison table; 5-Q&A FAQ. Date: 2026-10-07.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+**Remaining NPR stubs for future batch:** new-port-richey-fl-property-taxes, new-port-richey-fl-new-construction, new-port-richey-fl-investment-property
+
+---
+
+## 2026-10-06 (Batch 73 — Clearwater FL x7 + St. Petersburg FL x3)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, 22-link internal grid, comparison tables, Barrett Henry bio)
+
+1. **clearwater-fl-homes-for-sale-guide** — Expanded 6,643 to 32,360 chars. Added: Market overview (Pinellas County density context); price-by-neighborhood-type table (inland condo $200K-$320K to Gulf-front estate $1.5M-$4M+); neighborhood profiles (Clearwater Beach, Countryside, East Lake, North CW, Harbor Oaks, Belleair); FEMA flood zone table (VE/AE/X with insurance cost ranges); HOA fee table by community type; SB 4-D condo buyer due diligence checklist; 4-step buying process; investment property overview with ViVi PM reference; schools overview; 6-Q&A FAQ. Date: 2026-10-06.
+
+2. **clearwater-fl-schools-guide** — Expanded 6,660 to 28,502 chars. Added: PCSD overview (pcsb.org); 4-high-school table (Clearwater, Countryside, East Lake, Dunedin) with addresses and phone numbers; middle school table; selected elementary school table by area; magnet program table (IB, visual/performing arts, STEM, SPC Collegiate High); private school options with tuition ranges (CCC, Calvary Christian, Pinellas Prep, St. Cecelia); school choice and open enrollment guide; 3-point buyer checklist; 5-Q&A FAQ. Date: 2026-10-06.
+
+3. **clearwater-fl-commute-guide** — Expanded 6,657 to 25,497 chars. Added: Route breakdown (SR-60/Courtney Campbell, US-19, SR-580); 10-destination commute time table (Tampa 35-50 min normal, 55-75 min peak; TPA 25-40 min; St. Pete 30-45 min; PIE 10-20 min); Clearwater Beach causeway congestion context; PSTA bus route table (routes 52/60/19, SunRunner); Pinellas Trail cycling context; TPA and PIE airport access; hybrid work analysis; 5-Q&A FAQ. Date: 2026-10-06.
+
+4. **is-clearwater-fl-good-place-to-live** — Expanded 6,645 to 28,410 chars. Added: Pros section (beach access, Gulf weather, outdoor recreation, Tampa Bay metro proximity, no state income tax); 8-factor pros/cons comparison table; 6-city comparison table (Clearwater vs. Dunedin/Safety Harbor/Largo/Palm Harbor/St. Pete Beach); who Clearwater is right for and who it is not; hurricane risk and evacuation zones; insurance cost table; cost-of-living summary table; 5-Q&A FAQ. Date: 2026-10-06.
+
+5. **clearwater-fl-real-estate-guide** — Expanded 6,644 to 28,820 chars. Added: 2026 market metrics table (median ~$395K, 45-65 DOM, 3-4 months supply); neighborhood price tier table (7 areas); SB 4-D condo market section with 6-item due diligence checklist; waterfront premium analysis table (Gulf-front 150-300%+ to view-only 10-20%); STR/LTR investment analysis table (Countryside SFH 6-7% gross to CW Beach condo STR); buyer strategy and seller strategy for 2026; 5-Q&A FAQ. Date: 2026-10-06.
+
+6. **clearwater-fl-cost-of-living** — Expanded 6,641 to 33,025 chars. Added: 5-column monthly cost model (inland condo to Clearwater Beach condo with mortgage/taxes/HO insurance/flood/HOA/utilities totals); HO insurance cost table by property type (inland Zone X to Gulf-front Zone VE); flood insurance table (NFIP vs. private by zone); property taxes estimate; utilities table (Duke Energy, CW/Pinellas County water, Spectrum/Frontier); transportation cost table; grocery/dining context; 5-city cost comparison table; 5-Q&A FAQ. Date: 2026-10-06.
+
+7. **clearwater-fl-property-taxes** — Expanded 6,653 to 27,839 chars. Added: How FL property taxes work (ad valorem, arrears payment, discount schedule); Pinellas County + City of Clearwater millage breakdown table (~19-22 mills total with component breakdown); 6-scenario sample tax calculation table (homestead vs. non-homestead, $280K-$700K range); homestead exemption details (who qualifies, how much it saves, how to apply by March 1 at pcpao.gov); additional exemptions table (senior, disability, veteran, widow); SOH portability mechanics; non-homestead investment property analysis; pcpao.gov and taxcollect.com lookup guide; 5-Q&A FAQ. Date: 2026-10-06.
+
+8. **st-petersburg-fl-homes-for-sale-guide** — Expanded 6,738 to 25,927 chars. Added: City overview (265K population, third-largest FL city, Peninsula geography, walkable downtown); neighborhood price tier table (Snell Isle $800K-$3M+ to south St. Pete inland $220K-$380K); flood risk and SB 4-D context; Pinellas County land constraint analysis; 2026 market snapshot table; 4-step buying process; STR/LTR investment overview with ViVi PM reference; 5-Q&A FAQ. Date: 2026-10-06.
+
+9. **st-petersburg-fl-schools-guide** — Expanded 6,751 to 27,330 chars. Added: PCSD overview; 5-high-school table (Northeast, St. Petersburg, Lakewood, Gibbs, Pinellas Park) with addresses; middle school table; selected elementary school table; magnet program table (IB, arts, dual enrollment, Montessori); private school options with tuition ranges (Canterbury $16K-$28K, Shorecrest $15K-$25K, Saint Paul's, Bishop Larkin); school quality variation by St. Pete area; Step Up For Students and Family Empowerment Scholarship notes; 5-Q&A FAQ. Date: 2026-10-06.
+
+10. **st-petersburg-fl-commute-guide** — Expanded 6,748 to 27,377 chars. Added: Primary routes (I-275/Howard Frankland, Gandy/US-92, I-275 north, US-19 corridor); 10-destination commute table (Tampa 30-45 min normal, 50-70 min peak; MacDill 35-50 min; Clearwater 30-45 min; Sarasota 55-70 min); Howard Frankland vs. Gandy comparison; Sunshine Skyway context; SunRunner BRT table (free, 10-15 min frequency); PSTA transit table; cross-bay transit reality (no bus to Tampa); Friendship Trail bicycle bridge; TPA/PIE airport access; hybrid/remote work analysis; 5-Q&A FAQ. Date: 2026-10-06.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `1f7be11` — pushed to `origin/main`
+
+---
+
+## 2026-10-05 (Batch 72 — Dade City FL x10: Major Expansions)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, 4+ H2 question headings, 6+ H3 subheadings, price/comparison tables, 5-Q&A FAQ, 22-link internal grid, Barrett Henry REMAX Collective author bio. Content dated 2026-10-04.)
+
+**Dade City FL (all 10 stubs — ZIP 33523/33525, Pasco County):**
+
+1. **dade-city-fl-homes-for-sale-guide** — Expanded to 26,208 chars. Added: 5-tier price table (entry $200K-$270K to Lake Jovita luxury $900K-$1.5M+); ZIP 33523 vs 33525 median comparison table ($290K historic core vs $415K east/Lake Jovita); 8-step buyer process table; insurance 4-point issues for older stock (flat roofs, Federal Pacific panels, galvanized plumbing); HOA/CDD comparison; 5-community comparison table (Dade City vs Wesley Chapel/Zephyrhills/San Antonio FL/Land O'Lakes); FAQ x5.
+
+2. **dade-city-fl-schools-guide** — Expanded to 28,059 chars. Added: Elementary school zone table (Pasco Elementary, Centennial Elementary, Academy at the Farm 8.2/10, Sanders Memorial); middle/high school table (Pasco Middle, Centennial Middle, Pasco High 1,602 students, Centennial High); Pasco County magnet programs table; private school comparison table (Pasco Christian Academy, Saint Leo area); higher education table (PHSC Dade City campus, Saint Leo University 33701 CR-52 Saint Leo FL 33574, USF Tampa, HCC); 5-community school comparison table; FAQ x5.
+
+3. **dade-city-fl-commute-guide** — Expanded to 24,186 chars. Added: 9-destination commute matrix (Tampa 45-60 min, Wesley Chapel 15-25 min, TPA 50-65 min, Zephyrhills 10-20 min, New Tampa/USF 35-50 min, Lakeland 35-50 min, PIE 60-75 min, Orlando 90-110 min, Saint Leo 8-12 min); I-75/SR-52 interchange analysis; US-301 alternate route; Suncoast Parkway option; PCPT transit reality; internet provider table for remote workers; 5-community commute comparison; FAQ x5.
+
+4. **is-dade-city-fl-good-place-to-live** — Expanded to 22,664 chars. Added: Honest pros (affordability, historic downtown, rolling hills/Zone X, Withlacoochee State Trail, Saint Leo University); honest cons (45-60 min Tampa commute, limited retail, Pasco schools vs Hillsborough, older housing stock issues); buyer profile fit table (8 profiles from remote workers/Excellent to full-time Tampa commuters/Poor); 5-community comparison table; FAQ x5.
+
+5. **dade-city-fl-real-estate-guide** — Expanded to 22,907 chars. Added: Market overview (340 closed sales, ~$353,820 median, ~51 DOM, ~150 active listings); 4-segment price/DOM table (fixer to luxury); 4-point inspection issue table (flat roof, FPE/Zinsco panel, galvanized plumbing, HVAC); well/septic inspection notes for rural properties; seller pre-listing strategy; HOA/CDD transparency for new construction; FAQ x5.
+
+6. **dade-city-fl-cost-of-living** — Expanded to 26,566 chars. Added: 3-scenario monthly cost table ($240K/$355K/$450K purchase, PITI + HOA for each); HO insurance by condition table (Zone X, $1,400-$3,000+/yr); utility provider table (Duke Energy $110-$260/mo, City of Dade City Utilities $60-$120/mo); grocery/transportation realities; 5-community cost comparison table; FAQ x5.
+
+7. **dade-city-fl-property-taxes** — Expanded to 23,687 chars. Added: Pasco County millage breakdown table (~16.69 mills: county 9.50, school 5.43, SWFWMD 0.26, fire/EMS ~1.50, city ~2.00); two-tier homestead exemption table ($50K total); property tax estimate table by purchase price ($220K-$900K homestead vs non-homestead); Pasco County Property Appraiser address (14236 Sixth Street Suite 201, Dade City FL 33523, (352) 521-4420); Save Our Homes reset warning; portability (DR-501T) explanation; FAQ x5.
+
+8. **dade-city-fl-new-construction** — Expanded to 21,021 chars. Added: 3-community builder table (Adams Homes/Sandhill $300K-$350K+, Meritage/Summit View off Happy Hill Road, Lake Jovita luxury $500K-$1.5M+); new construction vs resale comparison table (8 criteria); CDD fee transparency section ($1,000-$2,500/yr, bond payoff); builder incentive negotiation guide; FAQ x5.
+
+9. **dade-city-fl-investment-property** — Expanded to 26,263 chars. Added: 5-segment LTR income table (entry $180K-$230K at ~8-8.7% gross to new construction $330K-$450K at ~6-7%); STR assessment (limited market; not a vacation destination); 4-scenario ROI table (entry LTR ~9.0% cash-on-cash to new construction ~6.0%); inspection due diligence table (6 issues: flat roof, FPE panel, galvanized plumbing, HVAC, septic, WDO); ViVi Property Management reference at /property-management/; 5-market comparison table; FAQ x5.
+
+10. **dade-city-fl-waterfront-homes** — Expanded to 27,607 chars. Added: Withlacoochee River frontage price table (raw land $37K-$200K to premium riverfront estate $500K-$700K+); FEMA flood zone table (Zone X vs AE/AH with insurance cost ranges); outdoor recreation table (kayaking, fishing, small motorboats, wildlife watching); dock permit 4-agency table (Pasco County, SWFWMD, Army Corps, FL DEP); buyer due diligence checklist (6-step: flood zone, elevation certificate, well/septic, dock permits, survey/riparian rights, access road); Lake Jovita distinction (golf community, not traditional lakefront); FAQ x5.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** pushed to `origin/main` (commit 9a98b5f)
+
+**Tomorrow:** Port Richey FL stubs (10 posts — port-richey-fl-homes-for-sale-guide and 9 related stubs at ~5,356 chars each)
+
+---
+
 ## 2026-10-04 (Batch 70 — Palmetto FL x5 + Bradenton Beach FL x5: Major Expansions)
 
 **Pages improved: 10**
