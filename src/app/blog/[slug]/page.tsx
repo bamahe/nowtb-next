@@ -1,5 +1,5 @@
 // =============================================================================
-// /blog/[slug] — Blog post page (canonical URL for all blog posts)
+// /blog/[slug]: blog post page (canonical URL for all blog posts)
 // The root /{slug} route 308-redirects here via [citySlug] catch-all.
 // =============================================================================
 
@@ -63,7 +63,7 @@ export default async function BlogPostPage({
   const thumbnail = getPostThumbnail(post);
   const related = getRelatedPosts(slug, 3);
 
-  // Intelligent related posts — uses city + topic + county scoring (6-8 posts)
+  // Intelligent related posts, uses city + topic + county scoring (6-8 posts)
   const allPosts = getAllPosts();
   const smartRelated = findRelatedPosts(slug, allPosts, 8);
   const smartRelatedTitle = getRelatedPostsTitle(slug, smartRelated);
@@ -115,7 +115,7 @@ export default async function BlogPostPage({
             headline: post.title,
             datePublished: post.date,
             dateModified: post.date,
-            description: plainExcerpt || `${post.title} — Barrett Henry, REALTOR® at REMAX Collective.`,
+            description: plainExcerpt || `${post.title}, Barrett Henry, REALTOR® at REMAX Collective.`,
             mainEntityOfPage: {
               "@type": "WebPage",
               "@id": canonicalUrl,
@@ -147,7 +147,7 @@ export default async function BlogPostPage({
               },
             },
             ...(thumbnail ? { image: thumbnail } : {}),
-            // Speakable schema — tells AI assistants & voice search which parts to read aloud
+            // Speakable schema, tells AI assistants & voice search which parts to read aloud
             speakable: {
               "@type": "SpeakableSpecification",
               cssSelector: [".quick-answer", "article h1", "article h2 + p"],
@@ -170,7 +170,7 @@ export default async function BlogPostPage({
         )}
         <div className={`absolute inset-0 ${thumbnail ? 'bg-primary/85' : 'bg-primary'}`} />
         <div className="container-wide max-w-3xl text-center relative z-10">
-          {/* Breadcrumb trail — Home > Blog > Post Title */}
+          {/* Breadcrumb trail, Home > Blog > Post Title */}
           <nav
             aria-label="Breadcrumb"
             className="flex items-center justify-center gap-2 text-xs font-body text-white/80 mb-6 tracking-wide uppercase"
@@ -197,7 +197,7 @@ export default async function BlogPostPage({
         </div>
       </section>
 
-      {/* Seller lead capture — shows on sell-home-fast posts */}
+      {/* Seller lead capture, shows on sell-home-fast posts */}
       {slug.startsWith("sell-home-fast") && (
         <section className="container-wide py-8">
           <div className="rounded-xl border-2 border-primary/20 bg-primary/5 p-6 md:p-8">
@@ -207,7 +207,7 @@ export default async function BlogPostPage({
                   What&apos;s Your Home Worth?
                 </h2>
                 <p className="font-body text-muted text-sm mb-4">
-                  Get two valuations — see what your home could sell for on the open market
+                  Get two valuations, see what your home could sell for on the open market
                   AND what cash buyers would offer. No obligation, no pressure.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
@@ -221,14 +221,14 @@ export default async function BlogPostPage({
                     href="tel:+18137337907"
                     className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary font-semibold px-6 py-3 rounded-lg text-sm hover:bg-primary hover:text-white transition-colors"
                   >
-                    Get Cash Offer — (813) 733-7907
+                    Get Cash Offer, (813) 733-7907
                   </a>
                 </div>
               </div>
               <div className="text-center md:text-right">
                 <p className="font-heading font-bold text-3xl text-primary mb-1">2 Offers</p>
                 <p className="font-body text-muted text-sm">Market value vs. cash offer</p>
-                <p className="font-body text-muted text-xs mt-2">Barrett Henry — 23+ years experience</p>
+                <p className="font-body text-muted text-xs mt-2">Barrett Henry, 23+ years experience</p>
               </div>
             </div>
           </div>
@@ -287,7 +287,7 @@ export default async function BlogPostPage({
                 </div>
               )}
 
-              {/* Loan & financing guides — helps readers explore mortgage options */}
+              {/* Loan & financing guides, helps readers explore mortgage options */}
               <div className="card p-5">
                 <h3 className="font-heading font-bold text-sm text-primary mb-3">
                   Financing Guides
@@ -321,7 +321,7 @@ export default async function BlogPostPage({
                 </Link>
               </div>
 
-              {/* Home valuation CTA — drives leads from blog readers */}
+              {/* Home valuation CTA, drives leads from blog readers */}
               <div className="card p-5 bg-accent/10 border-accent/20">
                 <h3 className="font-heading font-bold text-sm text-primary mb-2">
                   What&apos;s Your Home Worth?
@@ -341,7 +341,7 @@ export default async function BlogPostPage({
 
           {/* Main content */}
           <article className="lg:col-span-3 order-1 lg:order-2">
-            {/* Photo credit — shows for Wikimedia Commons and attributed images */}
+            {/* Photo credit, shows for Wikimedia Commons and attributed images */}
             {thumbnail && <PhotoCredit src={thumbnail} />}
             <div
               className="blog-content prose prose-lg font-body text-dark max-w-none
@@ -351,13 +351,13 @@ export default async function BlogPostPage({
               dangerouslySetInnerHTML={{ __html: cleanWpContent(post.content) }}
             />
 
-            {/* === Bottom CTA — appears on every blog post for lead capture === */}
+            {/* === Bottom CTA, appears on every blog post for lead capture === */}
             <div className="mt-10 rounded-xl border-2 border-primary/20 bg-primary/5 p-6 md:p-8">
               <h2 className="font-heading font-bold text-xl md:text-2xl text-primary mb-2">
                 Thinking About Selling?
               </h2>
               <p className="font-body text-muted text-sm mb-5">
-                Find out what your home is worth in today&apos;s market — no obligation, no pressure.
+                Find out what your home is worth right now. No obligation, no pressure.
                 Barrett Henry has 23+ years of real estate experience and can help you make a
                 confident decision.
               </p>
@@ -391,7 +391,7 @@ export default async function BlogPostPage({
       {/* === Live listings for search category blog posts === */}
       <SearchCategoryListings slug={slug} />
 
-      {/* === Intelligent Related Posts — scored by city + topic + county matching === */}
+      {/* === Intelligent Related Posts, scored by city + topic + county matching === */}
       {smartRelated.length > 0 && (
         <section className="bg-gray-50 py-12">
           <div className="container-wide">
