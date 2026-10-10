@@ -4,6 +4,39 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-10-10 (Batch 75 — Zephyrhills FL x10)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, comparison tables, 5-Q&A FAQ, 25-link internal grid, CTA block, Barrett Henry REMAX Collective bio. Content dated 2026-10-09.)
+
+**Zephyrhills FL (Pasco County, ZIPs 33540/33541/33542):**
+
+1. **zephyrhills-fl-homes-for-sale-guide** — Expanded 5,410 → 22,096 chars. Added: Market snapshot table (median ~$265K-$300K, 40-60 DOM, 4-5 months supply); 5-neighborhood tier table (established subdivisions $350K-$500K+ to budget-friendly $200K-$265K); FEMA flood zone discussion; 4-step buying process; first-time buyer affordability breakdown; STR/LTR investment overview with ViVi PM reference; 5-Q&A FAQ. Date: 2026-10-09.
+
+2. **zephyrhills-fl-schools-guide** — Expanded 5,410 → 20,135 chars. Added: Pasco County School District overview (pascoschools.org); high school table (Zephyrhills High 6335 12th St (813) 782-1506); middle school and elementary school tables; Pasco County magnet programs table; private school options with tuition ranges; school choice and open enrollment guide; 5-Q&A FAQ. Date: 2026-10-09.
+
+3. **zephyrhills-fl-commute-guide** — Expanded 5,410 → 21,188 chars. Added: Route breakdown (US-301, SR-54, SR-56, I-4); 10-destination commute time table (Tampa 45-55 min normal, 60-80 min peak; Wesley Chapel 15-20 min; Lakeland 30-40 min); Pasco County Transit options; airport access table; hybrid/remote work analysis; 5-Q&A FAQ. Date: 2026-10-09.
+
+4. **is-zephyrhills-fl-good-place-to-live** — Expanded 5,410 → 22,860 chars. Added: Pros/cons section; 8-factor pros/cons table; 6-city comparison table (Zephyrhills vs Wesley Chapel/Dade City/Land O Lakes/Plant City/Lakeland); honest assessment by buyer type; hurricane/flood risk discussion; AdventHealth Zephyrhills context; 5-Q&A FAQ. Date: 2026-10-09.
+
+5. **zephyrhills-fl-real-estate-guide** — Expanded 5,410 → 21,063 chars. Added: 2026 market metrics table (median ~$265K-$300K, ~50 DOM, 4-5 months supply, balanced market); 4-price-tier neighborhood table; buyer/seller strategy for 2026; investment property analysis table (SFH 6-8% gross yield); title and closing cost overview; 5-Q&A FAQ. Date: 2026-10-09.
+
+6. **zephyrhills-fl-cost-of-living** — Expanded 5,410 → 24,404 chars. Added: 3-scenario monthly cost model (starter SFH $250K/mid-range $310K/move-up $410K with mortgage/taxes/HO insurance/utilities totals); Duke Energy average ~$200-$265/mo; utility breakdown table; city comparison cost table (Zephyrhills vs Wesley Chapel/Dade City/Land O Lakes/Plant City); grocery/dining context; transportation cost table; 5-Q&A FAQ. Date: 2026-10-09.
+
+7. **zephyrhills-fl-property-taxes** — Expanded 5,410 → 24,477 chars. Added: Pasco County millage rate breakdown table (county general, school board, city of Zephyrhills, fire district, etc.); homestead exemption full explanation ($25K + $25K); Save Our Homes cap; portability; sample calculation table (3 scenarios: $265K/$310K/$410K purchase); how to file (pascopa.com); Pasco County Tax Collector (pascotaxes.com) contact; 5-Q&A FAQ. Date: 2026-10-09.
+
+8. **zephyrhills-fl-new-construction** — Expanded 5,410 → 39,050 chars. Added: Builder activity overview; 4-tier price range table ($280K-$550K+); base vs. total price upgrade analysis; new construction vs. resale comparison table; builder sales process explanation; builder contract review guidance; inspection schedule (pre-drywall, final, 11-month); builder incentives and negotiation strategy; financing: construction-to-perm vs. end loan, rate lock timing; HOA/CDD fees table; full build timeline table; 5-Q&A FAQ. Date: 2026-10-09.
+
+9. **zephyrhills-fl-investment-property** — Expanded 5,410 → 33,849 chars. Added: Investment fundamentals (lower entry price, population growth, retiree tenant profile); rental rate benchmark table (2 bed $1,200-$1,500 to 4 bed $1,800-$2,200/mo); 3-scenario cap rate table (6.6% to 9.3% gross); gross vs. net cap rate breakdown; long-term vs. short-term vs. mid-term rental strategy comparison; property type analysis table; investment financing table (owner-occupied vs. investment down payments/rates); DSCR loan explanation; ViVi Property Management reference; Florida landlord-tenant law summary; 5-Q&A FAQ. Date: 2026-10-09.
+
+10. **zephyrhills-fl-waterfront-homes** — Expanded 5,410 → 31,688 chars. Added: Water type classification (natural lake, Hillsborough River corridor, community retention ponds, wetland buffers); waterfront premium table (lakefront 20-40%+, community pond 5-15%); flood zone and flood insurance deep dive; riparian rights and dock permitting; home elevation/construction considerations; shoreline maintenance and erosion control; Hillsborough River State Park context; 6-area waterfront comparison table (Zephyrhills vs Dade City/Wesley Chapel/New Port Richey/Holiday/Land O Lakes); 5-Q&A FAQ. Date: 2026-10-09.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+---
+
 ## 2026-10-08 (Batch 74 — Port Richey FL x4 + New Port Richey FL x6)
 
 **Pages improved: 10**
