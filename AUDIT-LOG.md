@@ -4,6 +4,40 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-10-11 (Batch 76 — Holmes Beach FL x10)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, 4+ H2 question headings, 6+ H3 subheadings, comparison tables, 5-Q&A FAQ, 25-link internal grid, Barrett Henry REMAX Collective bio. Content dated 2026-10-10.)
+
+**Holmes Beach FL (Manatee County, ZIP 34217 — Anna Maria Island):**
+
+1. **holmes-beach-fl-homes-for-sale-guide** — Expanded 5,423 → 26,116 chars. Added: 5-property-type price table (Gulf-front $2M-$8M+ to condo $500K-$2M); 2026 market snapshot table (median SFH $1.1M-$1.4M, 45-90 DOM, 4-7 months supply); 4-neighborhood sections (Gulf-front west side, Manatee Public Beach area, bay-front east side, interior streets); 4-step buying process with flood zone and insurance research emphasis; Holmes Beach vs. Anna Maria vs. Bradenton Beach comparison table; 5-Q&A FAQ. Date: 2026-10-10.
+
+2. **holmes-beach-fl-schools-guide** — Expanded 5,423 → 23,811 chars. Added: Zoned school table (Anna Maria Elementary 516 Manatee Ave (941) 782-8600; Martha B. King Middle 600 75th St W (941) 741-3357; Manatee High 902 33rd St W (941) 741-3334); Manatee County magnet programs table; private school options table (Saint Stephen's Episcopal, IMG Academy, etc. $8K-$85K/yr); Florida Step Up/Family Empowerment scholarships; on-island vs. off-island school commute reality; 5-Q&A FAQ. Date: 2026-10-10.
+
+3. **holmes-beach-fl-commute-guide** — Expanded 5,423 → 23,302 chars. Added: 8-destination commute time table (Bradenton 25-35 min, Sarasota 40-55 min, Tampa 65-90 min, TPA 65-85 min, St. Pete 75-100 min, SRQ 35-45 min, Venice 55-70 min, Lakewood Ranch 35-50 min); Manatee Ave causeway single-point-of-entry analysis; tourist season congestion windows; Tampa commute reality check; remote work internet options (Spectrum/Frontier); golf cart on-island transport; 5-Q&A FAQ. Date: 2026-10-10.
+
+4. **is-holmes-beach-fl-good-place-to-live** — Expanded 5,423 → 24,205 chars. Added: 7-factor pros/cons table; 6-community comparison table (Holmes Beach vs. Anna Maria/Bradenton Beach/Mainland Bradenton including entry price, annual insurance, commute, beach access, STR viability); who Holmes Beach is right for (remote workers, retirees, STR investors, families with young children); who it is not right for; tourist season reality; hurricane and weather risk section; daily life description; 5-Q&A FAQ. Date: 2026-10-10.
+
+5. **holmes-beach-fl-real-estate-guide** — Expanded 5,423 → 23,645 chars. Added: 2026 market metrics table (median SFH $1.1M-$1.4M, 45-90 DOM, 4-7 months supply, -8% to -15% from 2022 peak); 5-neighborhood price tier table; what drives value (water orientation, elevation/construction quality, STR rental history); buyer strategy (negotiate from data, price in insurance costs, inspect thoroughly); seller strategy (price to current market, disclosure and documentation); 5-Q&A FAQ. Date: 2026-10-10.
+
+6. **holmes-beach-fl-cost-of-living** — Expanded 5,423 → 28,209 chars. Added: 3-scenario monthly ownership cost table (inland $850K, bay-front $1.5M, Gulf-front $3M with all costs including mortgage, wind/flood insurance, taxes, utilities, maintenance); Zone VE/AE/inland flood insurance cost table ($1.5K-$20K+/yr by zone); utilities breakdown (Duke Energy Florida, Manatee County water/sewer, Spectrum/Frontier, no natural gas on island); 5-community cost comparison table; grocery and shopping reality (on-island Publix); 5-Q&A FAQ. Date: 2026-10-10.
+
+7. **holmes-beach-fl-property-taxes** — Expanded 5,423 → 24,963 chars. Added: Manatee County millage rate breakdown table (~11.5-13.5 mills total: county general ~3.4-3.8, school board operational ~4.2-4.8, school board capital ~1.5-2.0, City of Holmes Beach ~2.0-2.5, SWFWMD ~0.25-0.35); 4-scenario sample tax table ($900K non-homestead to $2M homestead); homestead exemption application (mcpafl.org, 915 4th Ave W Bradenton, March 1 deadline); Save Our Homes cap and portability; non-homestead investment property tax reality; new buyer first-year reassessment warning; 5-Q&A FAQ. Date: 2026-10-10.
+
+8. **holmes-beach-fl-new-construction** — Expanded 5,423 → 24,031 chars. Added: No vacant lots reality (fully built barrier island); 5-step teardown-rebuild process; 3-tier cost table (inland $1.4M-$2.5M all-in; bay-front $2.5M-$5M; Gulf-front $4M-$10M+); Zone VE open pile construction requirements; Zone AE elevation requirements; FDEP CCCL permit process (3-18 months for Gulf-front); 50% substantial improvement rule and renovation implications; City of Holmes Beach Building Dept (5801 Marina Dr (941) 708-5800); 5-Q&A FAQ. Date: 2026-10-10.
+
+9. **holmes-beach-fl-investment-property** — Expanded 5,423 → 29,966 chars. Added: 6-property-type STR income table (2BR cottage $50K-$75K to Gulf-front 4BR $150K-$250K+ gross/yr); 3-scenario cash flow table (inland 3BR $950K, bay-front 3BR $1.5M, Gulf-front 4BR $3M with all expenses); gross vs. net cap rate breakdown (gross 5-10%; net 2.5-4.5%); Holmes Beach STR registration with City; FL DBPR vacation rental license; Manatee County TDT (5%); condo STR restriction warning; STR vs. LTR strategy comparison table; ViVi Property Management reference; long-term investment thesis; 5-Q&A FAQ. Date: 2026-10-10.
+
+10. **holmes-beach-fl-waterfront-homes** — Expanded 5,423 → 26,733 chars. Added: 4-waterfront-type comparison table (Gulf-front Zone VE $2M-$8M+; Gulf-adjacent AE/VE $850K-$2M; bay-front AE $1.2M-$3.5M; canal-access AE $800K-$1.8M with insurance estimates); Zone VE open pile construction; bay-front dock permitting stack (Manatee County, SWFWMD ERP, Army Corps, State submerged lands); seawall inspection costs ($300-$600) and replacement ($300-$900/LF); canal depth verification guidance; 8-item waterfront buyer due diligence checklist with costs; salt-air maintenance premium discussion; 5-Q&A FAQ. Date: 2026-10-10.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** `d36afdf` — pushed to `origin/main`
+
+---
+
 ## 2026-10-10 (Batch 75 — Zephyrhills FL x10)
 
 **Pages improved: 10**
