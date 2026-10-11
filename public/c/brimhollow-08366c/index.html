@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>2510 Brimhollow Net Sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+/* Layout: single narrow column, a printed closing-statement feel, one navy net block */
+:root{
+  --bg:#F1F5F9; --card:#FFFFFF; --ink:#1A2744; --muted:#64748B; --line:#E2E8F0;
+  --stripe:#F8FAFC; --accent:#003DA5; --navy:#1A2744; --onnavy:#FFFFFF; --neg:#B4232F;
+  --display:"DM Serif Display",Georgia,serif; --body:"DM Sans",system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1526; --card:#162038; --ink:#E6ECF5; --muted:#94A3B8; --line:#26324D;
+  --stripe:#1A2541; --accent:#6C9CFF; --navy:#22305A; --onnavy:#FFFFFF; --neg:#FF8A92; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1526; --card:#162038; --ink:#E6ECF5; --muted:#94A3B8; --line:#26324D;
+  --stripe:#1A2541; --accent:#6C9CFF; --navy:#22305A; --onnavy:#FFFFFF; --neg:#FF8A92; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;padding:0 16px;padding-block:20px 32px}
+.wrap{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+header{display:flex;flex-direction:column;gap:2px}
+.brand{font-family:var(--display);font-size:26px;line-height:1.1}
+.sub{color:var(--muted);font-size:13px}
+.addr{margin-top:10px;font-weight:700;font-size:17px}
+.addr small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+.pricebar{background:var(--navy);color:var(--onnavy);border-radius:10px;padding:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.pricebar label{display:flex;flex-direction:column;gap:4px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.85}
+.pricebar input{font:inherit;font-size:18px;font-weight:700;letter-spacing:0;text-transform:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:6px;padding:8px 10px;width:100%;box-sizing:border-box;font-variant-numeric:tabular-nums}
+.pricebar input:focus{outline:3px solid var(--accent);outline-offset:1px}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.tab{font:inherit;cursor:pointer;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:10px 6px;display:flex;flex-direction:column;align-items:center;gap:2px}
+.tab b{font-size:20px}
+.tab span{font-size:11.5px;color:var(--muted);text-align:center}
+.tab[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.tab[aria-pressed="true"] span{color:#fff;opacity:.9}
+.tab:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+section{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+h2{margin:0;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:12px 16px;border-bottom:1px solid var(--line)}
+.row{display:flex;justify-content:space-between;gap:12px;padding:9px 16px;font-variant-numeric:tabular-nums}
+.row:nth-child(odd){background:var(--stripe)}
+.row .l{min-width:0}
+.row .l small{display:block;color:var(--muted);font-size:12px}
+.row .v{white-space:nowrap}
+.row.total{font-weight:700;border-top:1px solid var(--line);background:var(--card)}
+.neg{color:var(--neg)}
+.net{background:var(--navy);color:var(--onnavy);border-radius:10px;padding:20px 16px;display:flex;flex-direction:column;gap:4px}
+.net .k{font-size:11px;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+.net .amt{font-family:var(--display);font-size:42px;line-height:1.05;font-variant-numeric:tabular-nums}
+.net .note{font-size:13px;opacity:.85}
+.ref{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.ref div{background:var(--card);padding:12px 16px;font-variant-numeric:tabular-nums}
+.ref .k{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ref .x{font-size:18px;font-weight:700}
+.disc{font-size:12px;color:var(--muted)}
+footer{text-align:center;font-size:12px;letter-spacing:.2em;font-weight:700;color:var(--accent);padding-top:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">Barrett Henry, REALTOR&reg;</div>
+    <div class="sub">The NOW Team at REMAX Collective &nbsp;|&nbsp; (813) 733-7907</div>
+    <div class="addr">2510 Brimhollow Dr, Valrico, FL 33596
+      <small>Seller Net Sheet &nbsp;|&nbsp; J&amp;ZL Investment LLC &nbsp;|&nbsp; Hillsborough County</small></div>
+  </header>
+
+  <div class="pricebar">
+    <label for="price">Sale price<input id="price" inputmode="numeric" value="479,900"></label>
+    <label for="close">Estimated closing<input id="close" type="date" value="2026-11-20"></label>
+    <label for="payoff">Mortgage payoff<input id="payoff" inputmode="numeric" value="0"></label>
+    <label for="conc">Seller concessions<input id="conc" inputmode="numeric" value="0"></label>
+  </div>
+
+  <div class="tabs" role="group" aria-label="Commission">
+    <button class="tab" data-r="0.01" aria-pressed="false"><b>1%</b><span>Seller brings buyer</span></button>
+    <button class="tab" data-r="0.04" aria-pressed="false"><b>4%</b><span>My marketing brings buyer</span></button>
+    <button class="tab" data-r="0.06" aria-pressed="true"><b>6%</b><span>Two agents involved</span></button>
+  </div>
+
+  <section><h2>Sale proceeds</h2>
+    <div class="row total"><span class="l">Gross sale price</span><span class="v" id="gross"></span></div>
+  </section>
+
+  <section><h2>Closing costs</h2><div id="costs"></div>
+    <div class="row total"><span class="l">Total closing costs</span><span class="v neg" id="ctotal"></span></div>
+  </section>
+
+  <section><h2>Commission &amp; brokerage</h2><div id="comm"></div>
+    <div class="row total"><span class="l">Total commission &amp; fees</span><span class="v neg" id="mtotal"></span></div>
+  </section>
+
+  <div class="net">
+    <span class="k">Estimated net proceeds</span>
+    <span class="amt" id="net"></span>
+    <span class="note" id="netnote"></span>
+  </div>
+
+  <section><h2>Quick reference</h2>
+    <div class="ref">
+      <div><div class="k">Total cost to sell</div><div class="x" id="pct"></div></div>
+      <div><div class="k">Net vs. prior sale ($470,000)</div><div class="x" id="vs"></div></div>
+    </div>
+  </section>
+
+  <p class="disc">This is an estimate for discussion purposes only. Actual closing costs will be calculated by the title company and may differ. Assumes 2026 property taxes of $8,044 (Hillsborough tax record, non-homestead) are unpaid at closing and prorated from January 1 to the closing date, an HOA estoppel for the $30/mo association, and a Florida promulgated owner's title policy. Prior sale of $470,000 closed 5/12/2023 per Stellar MLS. Enter the actual loan payoff for a true bottom line. Not legal or tax advice; the LLC should review the sale with its CPA.</p>
+
+  <footer>MOVE WITH CONFIDENCE</footer>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const fmt=n=>(n<0?"-":"")+"$"+Math.round(Math.abs(n)).toLocaleString("en-US");
+const num=v=>Number(String(v).replace(/[^0-9.]/g,""))||0;
+let rate=0.06;
+const TAX=8044;
+function title(p){return p<=100000?p*0.00575:575+(p-100000)*0.005}
+function rows(list){return list.map(([l,s,v])=>`<div class="row"><span class="l">${l}${s?`<small>${s}</small>`:""}</span><span class="v neg">${fmt(-v)}</span></div>`).join("")}
+function calc(){
+  const p=num($("price").value), payoff=num($("payoff").value), conc=num($("conc").value);
+  const d=new Date($("close").value+"T12:00:00");
+  const start=new Date(d.getFullYear(),0,1,12);
+  const days=isNaN(d)?182:Math.max(0,Math.round((d-start)/864e5));
+  const prorate=TAX/365*days;
+  const costs=[
+    ["Documentary stamp tax","$0.70 per $100 on the deed",p*0.007],
+    ["Owner's title insurance","FL promulgated rate",title(p)],
+    ["Title search, exam &amp; settlement","",750],
+    ["Deed preparation","",175],
+    ["Recording fees","",30],
+    ["Municipal lien search","",225],
+    ["HOA estoppel letter","",250],
+    ["Property tax proration",`${days} days of $8,044 annual taxes`,prorate],
+    ["Wire transfer fee","",50]
+  ];
+  if(conc>0)costs.push(["Seller concessions","",conc]);
+  const ctot=costs.reduce((a,c)=>a+c[2],0);
+  const comm=[["Real estate commission",`${Math.round(rate*100)}% of sale price`,p*rate],["Transaction services fee","REMAX Collective flat fee",990]];
+  const mtot=comm.reduce((a,c)=>a+c[2],0);
+  const net=p-ctot-mtot-payoff;
+  $("gross").textContent=fmt(p);
+  $("costs").innerHTML=rows(costs); $("ctotal").textContent=fmt(-ctot);
+  $("comm").innerHTML=rows(comm)+(payoff>0?rows([["Mortgage payoff","",payoff]]):"");
+  $("mtotal").textContent=fmt(-(mtot+payoff));
+  $("net").textContent=fmt(net);
+  $("netnote").textContent=payoff>0?"After mortgage payoff":"Before mortgage payoff";
+  $("pct").textContent=p?((ctot+mtot)/p*100).toFixed(1)+"%":"0%";
+  $("vs").textContent=fmt(net+payoff-470000);
+}
+document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{
+  rate=Number(b.dataset.r);
+  document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-pressed",t===b?"true":"false"));
+  calc();
+}));
+["price","close","payoff","conc"].forEach(id=>$(id).addEventListener("input",calc));
+["price","payoff","conc"].forEach(id=>$(id).addEventListener("blur",e=>{const n=num(e.target.value);e.target.value=n.toLocaleString("en-US")}));
+calc();
+</script>
+</body>
+</html>
