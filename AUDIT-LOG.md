@@ -2665,3 +2665,33 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** 05dd46f
 
+
+## 2026-10-11 (Batch 77 — Gulfport FL x10)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, 22-link internal grid, comparison tables, Barrett Henry bio)
+
+1. **gulfport-fl-homes-for-sale-guide** — Expanded stub to 27,002 chars. Added: Gulfport market overview (ZIP 33707, Pinellas County, ~12,000-13,000 residents, ~3.4 sq mi); median SFH price ~$410K-$480K; Boca Ciega Bay waterfront tiers (beach-block, canal-access, interior); 4-market comparison table (Gulfport vs St. Pete Beach/Treasure Island/St. Petersburg); buyer process walkthrough; homestead exemption and SOH 3% cap; flood insurance for Zone AE waterfront vs Zone X interior; NFIP Risk Rating 2.0 context; NAR settlement buyer agent agreement; 5-Q&A FAQ. Date: 2026-10-11.
+
+2. **gulfport-fl-schools-guide** — Expanded stub to 21,600 chars. Added: Pinellas County Schools overview (pcsb.org, (727) 588-6000); Gulfport Elementary School Arts Magnet (2014 52nd Street South); Bay Point K-8 School; Boca Ciega High School (924 58th Street South, (727) 893-2100); Pinellas County magnet program application process; Step Up For Students and Family Empowerment scholarships; private school options; school zone verification at pcsb.org; comparison table (Gulfport schools vs Gulf District/Pinellas average metrics); 5-Q&A FAQ. Date: 2026-10-11.
+
+3. **gulfport-fl-commute-guide** — Expanded stub to 26,544 chars. Added: Drive time tables (downtown St. Pete 10-20 min; Tampa 35-50 min via I-275/Howard Frankland; TPA 35-50 min; PIE 20-30 min; Clearwater 25-35 min); PSTA bus service (psta.net) coverage; no SunRail or commuter rail; hybrid worker analysis; I-275 peak congestion guidance; beach alternative routes (Gulf Blvd); airport comparison table; 5-Q&A FAQ. Date: 2026-10-11.
+
+4. **gulfport-fl-real-estate-guide** — Expanded stub to 23,554 chars. Added: Market metrics (fully built-out city, median ~$410K-$480K, no new construction, active artist-community character); 4-neighborhood price tiers (Boca Ciega Bay waterfront $600K-$1.5M+; beach-adjacent $450K-$750K; Beach Boulevard arts district $380K-$550K; interior residential $300K-$440K); rental market ($1,800-$2,800/mo SFH, cap rates 4-6%); STR overview (Pinellas County registration + FL DBPR + City of Gulfport ordinance + TDT); 5-Q&A FAQ. Date: 2026-10-11.
+
+5. **gulfport-fl-cost-of-living** — Expanded stub to 28,701 chars. Added: Full cost of living breakdown (housing, utilities, Duke Energy Florida electricity, City of Gulfport water/sewer, no piped gas, homeowner's insurance $3,500-$6,500/yr, flood insurance AE zone vs X zone); total millage breakdown (~18-22 mills; County ~5.5-6.0, School Board ~6.0-7.0, City of Gulfport ~4.0-5.5, SWFWMD ~0.25-0.35, EMS/Fire ~1.5-2.0); homestead exemption $50K; Save Our Homes 3% annual cap; 3-city cost comparison table (Gulfport vs St. Pete Beach/Indian Rocks Beach); 5-Q&A FAQ. Date: 2026-10-11.
+
+6. **gulfport-fl-property-taxes** — Expanded stub to 25,111 chars. Added: Pinellas County Property Appraiser detail (pcpao.gov, 315 Court Street Clearwater, (727) 464-3207); Pinellas County Tax Collector (taxcollect.com); full millage rate breakdown by taxing authority; homestead exemption $50K and March 1 filing deadline; Save Our Homes 3% annual assessment cap; SOH portability worksheet walkthrough; investment property vs primary home tax comparison; just value vs assessed value mechanics; 5-Q&A FAQ. Date: 2026-10-11.
+
+7. **gulfport-fl-new-construction** — Expanded stub to 23,651 chars. Added: Fully built-out reality explanation; teardown-rebuild process (demo permit, land cost $250K-$450K, construction $450K-$900K, all-in $700K-$1.5M+); builder selection and permitting with City of Gulfport; historic district overlay considerations; flood zone AE elevation requirements and FEMA LOMA process; deed restrictions and setback rules; resale vs teardown-rebuild cost comparison table; 5-Q&A FAQ. Date: 2026-10-11.
+
+8. **gulfport-fl-investment-property** — Expanded stub to 24,863 chars. Added: LTR yields analysis ($1,800-$2,800/mo SFH; cap rates 4-6% after expenses); STR requirements (Pinellas County registration + FL DBPR vacation rental license + City of Gulfport ordinance + Pinellas TDT); ViVi Property Management reference (/property-management/); investor comparison table (Gulfport vs St. Pete Beach/Treasure Island/South Pasadena on cap rate/appreciation/STR difficulty); FEMA Zone AE investor flood insurance considerations; rental income vs appreciation strategy analysis; 5-Q&A FAQ. Date: 2026-10-11.
+
+9. **is-gulfport-fl-good-place-to-live** — Expanded stub to 22,073 chars. Added: Pros/cons analysis (arts community, walkable Beach Boulevard, Boca Ciega Bay access, no HOA, small-town feel vs limited retail, flood risk, older housing stock, car dependency for Tampa commuters); who it suits (retirees, remote workers, artists, local-commute professionals) vs who it doesn't (large-family with school-age children needing top-rated schools, Tampa daily commuters, buyers wanting new construction); 3-city comparison table (Gulfport vs St. Pete Beach/South Pasadena); 5-Q&A FAQ. Date: 2026-10-11.
+
+10. **gulfport-fl-waterfront-homes** — Expanded stub to 25,401 chars. Added: Boca Ciega Bay waterfront tiers (direct bay-front $750K-$1.5M+; canal-access $500K-$900K; bay-view/beach-adjacent $450K-$700K); seawall repair ($500-$900/lf) vs replacement ($600-$1,200+/lf) cost breakdown; dock permitting (Pinellas County + SWFWMD ERP + Army Corps Section 10/404); FEMA Zone AE flood insurance and NFIP Risk Rating 2.0; elevation certificate workflow ($400-$800); boatlift sizing and permitting; waterfront buyer due diligence checklist; 5-Q&A FAQ. Date: 2026-10-11.
+
+**Build:** Passed (Next.js build, static pages pre-rendered)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** pending
