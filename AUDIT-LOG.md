@@ -4,6 +4,44 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-10-12 (Batch 78 — Bradenton FL x4 + Bradenton Beach FL x5 + Sarasota Flood Zones x1)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, 4+ H2 headings, 6+ H3 subheadings, price/comparison tables, 5-Q&A FAQ, 10-12 internal links. Content dated 2026-10-12.)
+
+**Bradenton FL (Manatee County):**
+
+1. **bradenton-fl-homes-for-sale-guide** — Expanded 5,411 → 22,801 chars. Added: Median price ~$338K-$360K; 5-property-type price table (SFH $300K-$600K+, waterfront $800K-$5M+, etc.); Manatee County vs Palmetto/Parrish/Lakewood Ranch/Sarasota comparison table; flood zone guidance (Zone X inland, AE/VE near water); CDD fees warning; 5-step buying process; 5-Q&A FAQ. Date: 2026-10-12.
+
+2. **bradenton-fl-schools-guide** — Expanded 5,395 → 20,593 chars. Added: Manatee County School District overview (grade B per FL Dept of Ed, 35th in FL, 57% math proficiency, 82% grad rate, new supt Dr. Breslin); high school comparison table (Lakewood Ranch High top-rated, Manatee High 456th/838 FL, Southeast High 655th/838); private schools table (Saint Stephen's Episcopal, Out-of-Door Academy, Cardinal Mooney, Bayshore Christian, IMG Academy, $14K-$85K/yr); school zone lookup steps; 5-Q&A FAQ. Date: 2026-10-12.
+
+3. **bradenton-fl-commute-guide** — Expanded 5,396 → 16,684 chars. Added: 9-destination drive time matrix (Tampa 45-55 min normal / 60-80 min peak; SRQ 15-25 min; I-75 vs US-41 guidance; Lakewood Ranch 10-20 min; St. Pete 60-80 min; Orlando 100-120 min); snowbird season effect Nov-April; MCAT transit info; airport comparison table; 5-Q&A FAQ. Date: 2026-10-12.
+
+4. **is-bradenton-fl-good-place-to-live** — Expanded 5,450 → 19,996 chars. Added: Pros/cons table; 5-city comparison table (Bradenton vs Sarasota/Lakewood Ranch/Tampa/Clearwater); who Bradenton is right for (remote workers, retirees, families, investors); who it is not right for; tourist traffic analysis; hurricane risk; 5-Q&A FAQ. Date: 2026-10-12.
+
+**Bradenton Beach FL (Manatee County, Anna Maria Island, ZIP 34217):**
+
+5. **bradenton-beach-fl-schools-guide** — Expanded 5,454 → 16,182 chars. Added: Anna Maria Elementary (4700 Gulf Drive North, Holmes Beach, K-5 only); no middle/high school on island; off-island commute reality for 6th grade+; zoned middle school (Martha B. King Middle) and high school (Manatee High); private schools table (Saint Stephen's Episcopal, IMG Academy); school zone lookup steps; 5-Q&A FAQ. Date: 2026-10-12.
+
+6. **bradenton-beach-fl-real-estate-guide** — Expanded 5,454 → 16,972 chars. Added: Market snapshot (92+ active listings, $349K-$10.995M, median ~$1.1M-$1.3M); property type table with flood zones and prices (Gulf-front SFH Zone VE $2M-$10M+ to condo Zone AE $349K-$1.5M); SB 4-D condo compliance requirements/checklist; flood zone insurance costs ($12K-$30K+/yr combined); 4-market comparison table (Bradenton Beach vs Holmes Beach/Anna Maria/Longboat Key); 5-Q&A FAQ. Date: 2026-10-12.
+
+7. **bradenton-beach-fl-property-taxes** — Expanded 5,454 → 22,962 chars. Added: Millage rate breakdown table (Manatee County ~14.15 mills + City of Bradenton Beach 2.3329 mills = ~16.48 total); homestead exemption layers ($25K + $25K); Save Our Homes 3% cap explanation; non-homestead 10% cap; 5-scenario sample tax table ($600K vacation rental $9,888/yr to $4M Gulf-front $65,920/yr); Bradenton Beach vs Holmes Beach/Anna Maria/Longboat Key comparison table; tangible personal property tax; Tourist Development Tax (12% total); key tax dates; 5-Q&A FAQ. Date: 2026-10-12.
+
+8. **bradenton-beach-fl-new-construction** — Expanded 5,454 → 22,724 chars. Added: Fully-built-out island reality (teardown-rebuild only); Zone VE open piling foundation requirements; FEMA BFE (12-16 ft NAVD88 on Gulf-front); Zone AE vs VE construction differences; Coastal Construction Control Line (CCCL) permit process (FL DEP, 90-day review); City of Bradenton Beach setbacks (front 20 ft, side 7.5 ft, rear 15 ft); height limit 35 ft; asbestos inspection requirements for pre-1980 structures; cost breakdown table ($800K-$3M lot + $400-$1,000+/sq ft construction = $1.8M-$5M+ total); sea turtle nesting season construction restrictions May-Oct; 5-Q&A FAQ. Date: 2026-10-12.
+
+9. **bradenton-beach-fl-waterfront-homes** — Expanded 5,454 → 24,473 chars. Added: 3-tier waterfront classification (Gulf-front Zone VE $2M-$10M+; canalfront Zone AE $600K-$3M; Sarasota Bay/Intracoastal Zone AE $800K-$5M+); waterfront pricing table with annual flood insurance ranges ($8K-$30K+/yr); NFIP vs private flood insurance comparison; dock permitting stack (Manatee County + ACOE + FL DEP + FWC); canal water depth 4-6 ft MLW; boatlift sizing table (4-post cradle 2,500-20,000 lb; $5K-$35K installed); seawall condition inspection checklist; seawall replacement cost $800-$1,500/linear ft; 6-market waterfront comparison table; 5-Q&A FAQ. Date: 2026-10-12.
+
+**Sarasota County:**
+
+10. **sarasota-fl-flood-zones** — Expanded 5,352 → 28,557 chars. Added: March 27, 2024 FEMA FIRM effective date for Sarasota County; Zone X/X500/AE/VE/AO definitions; Coastal A Zone with LIMWA (Limit of Moderate Wave Action) added in 2024 update; flood zone by area table (Siesta Key Gulf-front Zone VE; Casey Key Zone VE/AE; Palmer Ranch Zone X; downtown Sarasota Zone AE); NFIP Risk Rating 2.0 explanation; NFIP vs private flood market comparison; 5-step flood zone verification checklist (msc.fema.gov, elevation certificate, insurance quote, lender determination, repetitive loss check); Sarasota vs Manatee County comparison table; LOMA application process; 5-Q&A FAQ. Date: 2026-10-12.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `package-lock.json`, `AUDIT-LOG.md`
+**Git commit:** `fae9238` — pushed to `origin/main`
+
+---
+
 ## 2026-10-11 (Batch 76 — Holmes Beach FL x10)
 
 **Pages improved: 10**
