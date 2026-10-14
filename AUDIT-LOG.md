@@ -4,6 +4,38 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-10-13 (Batch 79 — Gibsonton FL x6 + Ruskin FL x4)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, 22-link internal grid, comparison tables, Barrett Henry bio)
+
+1. **gibsonton-fl-schools-guide** — Expanded stub to 21,852 chars. Added: East Bay High School (4/5 GreatSchools), Giunta Middle School (3/5), Corr Elementary/Southshore Elementary overview; Hillsborough County Schools enrollment process (sdhc.k12.fl.us); charter/private options; ZIP 33534 school zone verification; 4-school comparison table (Gibsonton vs Brandon/Riverview/Apollo Beach); Step Up For Students scholarship info; 5-Q&A FAQ. Date: 2026-10-13.
+
+2. **gibsonton-fl-commute-guide** — Expanded stub to 22,186 chars. Added: Drive time tables (downtown Tampa 25-40 min via US-41 or I-75; MacDill AFB 30-45 min; Brandon 15-25 min; Riverview 10-20 min); HART bus service overview; no commuter rail; hybrid vs daily commuter analysis; I-75/US-41 peak congestion guidance; airport comparison table (TPA vs PIE vs SRQ); 5-Q&A FAQ. Date: 2026-10-13.
+
+3. **gibsonton-fl-new-construction** — Expanded stub to 21,711 chars. Added: Active builder communities near 33534 (Ventana Groves, Belmont, Summerfield); price ranges $280K-$420K; CDD fee explanation; builder incentive season context; resale vs new construction cost comparison; flood zone AE elevation requirements; Hillsborough County permitting overview; 5-Q&A FAQ. Date: 2026-10-13.
+
+4. **gibsonton-fl-real-estate-guide** — Expanded stub to 21,328 chars. Added: Market overview (ZIP 33534, median SFH ~$280K-$350K); 4-neighborhood price tiers (waterfront canal $350K-$600K+; newer subdivisions $300K-$400K; older SFH $250K-$320K; manufactured excluded); rental market analysis; I-75 corridor context; 4-market comparison table (Gibsonton vs Riverview/Apollo Beach/Ruskin); NAR settlement buyer agreement explanation; 5-Q&A FAQ. Date: 2026-10-13.
+
+5. **gibsonton-fl-property-taxes** — Expanded stub to 21,571 chars. Added: Hillsborough County Property Appraiser (hcpafl.org, (813) 272-6100); full millage rate breakdown (~20-22 mills: County ~5.3, School Board ~7.0, SWFWMD ~0.25, unincorporated Hillsborough ~6.5-8.5); homestead exemption $50K and March 1 deadline; Save Our Homes 3% annual cap; SOH portability worksheet; CDD special assessments; investment property vs primary home comparison; 5-Q&A FAQ. Date: 2026-10-13.
+
+6. **gibsonton-fl-cost-of-living** — Expanded stub to 22,003 chars. Added: Full monthly cost breakdown (housing $280K-$350K median; TECO electricity avg $150-$200/mo; Hillsborough County Utilities water/sewer; no piped gas in most areas; homeowner's insurance $2,800-$5,500/yr; flood insurance AE zone $1,200-$3,500/yr); total millage ~20-22 mills; homestead exemption savings; 3-city comparison table (Gibsonton vs Riverview/Apollo Beach); grocery/healthcare/transport costs; 5-Q&A FAQ. Date: 2026-10-13.
+
+7. **ruskin-fl-commute-guide** — Expanded stub to 21,351 chars. Added: Drive time tables (downtown Tampa 30-45 min via I-75; MacDill AFB 35-50 min; Brandon 20-30 min; Sarasota 40-55 min); HART bus service; hybrid worker analysis; I-75/US-41 congestion patterns; SkyWay Bridge toll note; airport comparison table; 5-Q&A FAQ. Date: 2026-10-13.
+
+8. **ruskin-fl-waterfront-homes** — Expanded stub to 21,160 chars. Added: Tampa Bay/Little Manatee River waterfront tiers (direct bay-front $500K-$1.2M+; canal-access $350K-$650K; river-access $300K-$550K); seawall repair costs ($400-$900/lf); dock permitting (Hillsborough County + SWFWMD ERP + Army Corps); FEMA Zone AE flood insurance; elevation certificate workflow; NFIP Risk Rating 2.0 context; waterfront due diligence checklist; 5-Q&A FAQ. Date: 2026-10-13.
+
+9. **ruskin-fl-investment-properties** — Expanded stub to 21,431 chars. Added: LTR yield analysis ($1,600-$2,400/mo SFH; cap rates 5-7%); STR requirements (Hillsborough County + FL DBPR + Tourist Development Tax); ViVi Property Management reference; investor comparison table (Ruskin vs Apollo Beach/Gibsonton/Sun City Center); FEMA AE flood risk impact on insurance costs; rental income vs appreciation strategy; 5-Q&A FAQ. Date: 2026-10-13.
+
+10. **ruskin-fl-new-construction** — Expanded stub to 22,241 chars. Added: Active builder communities (SouthShore Bay, Shell Cove, Belmont, Cypress Creek); Minto, Lennar, DR Horton, Pulte presence; price ranges $290K-$450K; CDD fee breakdown; builder incentive programs; flood zone considerations for new builds; resale vs new construction analysis; Hillsborough County impact fees; 5-Q&A FAQ. Date: 2026-10-13.
+
+**Build:** Passed (Next.js build with NEXT_PUBLIC_DISABLE_STATIC=1, static pages pre-rendered, 550 pages generated)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** 17a4ca7
+
+---
+
 ## 2026-10-12 (Batch 78 — Bradenton FL x4 + Bradenton Beach FL x5 + Sarasota Flood Zones x1)
 
 **Pages improved: 10**
