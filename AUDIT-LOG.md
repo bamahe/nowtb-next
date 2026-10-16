@@ -2797,3 +2797,33 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** 5f6219f — pushed to `origin/main`
+
+## 2026-10-16 (Batch 79 — Lakewood Ranch FL x8 + Land O Lakes FL x2)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, 22-link internal grid, comparison tables, Barrett Henry bio)
+
+1. **lakewood-ranch-fl-homes-for-sale-guide** — Expanded stub to 26,734 chars. Added: Manatee/Sarasota county overview (ZIPs 34202/34211/34212/34240); Schroeder-Manatee Ranch context; 5-tier price table (townhomes $300K to luxury $1.2M+); village types (55+, golf, family, luxury); 5-step buyer process (pre-approval, village selection, CDD/HOA review, inspection, flood zone check); 5-market comparison table (Lakewood Ranch vs Parrish/Wesley Chapel/Venice/Bradenton); NAR settlement buyer agreement note; 5-Q&A FAQ. Date: 2026-10-15.
+
+2. **lakewood-ranch-fl-schools-guide** — Expanded stub to 22,616 chars. Added: Manatee County School District overview (manateeschools.net, (941) 708-8770, 215 Manatee Ave W Bradenton FL 34205); Sarasota County district for ZIP 34240; Gullett Elementary, McNeal Elementary, Freedom Elementary, Blackburn Elementary; Nolan Middle School (8100 N Lakewood Ranch Blvd) and Dr. Mona Jain Middle School; Lakewood Ranch High School (8001 Lakewood Ranch Blvd, (941) 727-6215); The Out-of-Door Academy private school; Florida FES and Step Up For Students scholarships; school zone table; 5-Q&A FAQ. Date: 2026-10-15.
+
+3. **lakewood-ranch-fl-commute-guide** — Expanded stub to 23,715 chars. Added: 8-destination drive time matrix (Tampa downtown 55-65 min normal/75-95 min peak; TPA 55-70 min; Westshore 55-70 min; Sarasota 20-30 min; SRQ 15-25 min; Bradenton 15-22 min; UTC 8-12 min; St. Pete 65-80 min); SR-70 and University Parkway routes; I-75 Howard Frankland congestion; SRQ vs TPA air travel comparison; MCAT local transit overview; Spectrum/Frontier broadband for remote workers; 5-Q&A FAQ. Date: 2026-10-15.
+
+4. **is-lakewood-ranch-fl-good-place-to-live** — Expanded stub to 23,858 chars. Added: 5 pros (master-planned quality, Gulf beach proximity 35-55 min, strong schools, new construction variety, Florida homestead benefits); 4 cons (Tampa commute 55-90 min, CDD fees on top of HOA, car-dependent suburban character, hurricane exposure); 7-profile buyer fit table (families, retirees, remote workers, daily Tampa commuters, Sarasota-focused buyers, investors, urban lifestyle seekers); 5-Q&A FAQ. Date: 2026-10-15.
+
+5. **lakewood-ranch-fl-real-estate-guide** — Expanded stub to 22,737 chars. Added: Market metrics table (median $480K-$550K, 45-75 DOM, $240-$310/sqft, balanced market); village price tiers (entry $300K-$395K Lorraine Lakes/Solera; mid $380K-$500K Del Webb/Lorraine; premium $500K-$750K Lakewood National/Esplanade; luxury $750K-$1.2M Country Club; $1.2M+ The Concession); buyer/seller strategy sections; NAR settlement buyer agreement context; 5-Q&A FAQ. Date: 2026-10-15.
+
+6. **lakewood-ranch-fl-cost-of-living** — Expanded stub to 23,518 chars. Added: Full 8-row annual/monthly cost table ($500K homesteaded: mortgage $2,595/mo; taxes $750-$917/mo; CDD $83-$292/mo; HOA $100-$500/mo; insurance $250-$542/mo; FPL electricity $200-$300/mo); FPL electricity overview; Polo Run solar community note; water/sewer/trash costs; transportation and SunPass context; homestead exemption and SOH cap summary; 5-Q&A FAQ. Date: 2026-10-15.
+
+7. **lakewood-ranch-fl-property-taxes** — Expanded stub to 26,724 chars. Added: Manatee County Property Appraiser (manateepao.com, 915 4th Ave W Bradenton FL 34205, (941) 748-8208); Manatee County Tax Collector (manateetaxcollector.com); 6-row millage breakdown table (county ~5.0-5.5; school ~6.5-7.5; SWFWMD ~0.25-0.35; special districts ~1.5-2.5; total ~20-22 mills); sample calculation ($500K homesteaded = ~$9,450/yr ad valorem + $1K-$3.5K CDD); homestead exemption mechanics; SOH 3% cap and portability up to $500K; Manatee County tax calendar; 5-Q&A FAQ. Date: 2026-10-15.
+
+8. **lakewood-ranch-fl-new-construction** — Expanded stub to 23,403 chars. Added: 6-builder overviews (Lennar, Pulte/Del Webb, D.R. Horton, Taylor Morrison/Esplanade, Neal Communities, Stock Development/The Concession); 5-tier price table ($330K-$395K villas through $1.2M+ custom); base-vs-final price gap (15-30% upgrades/premiums); builder incentive types (closing cost contributions, design center credits, rate buydowns); buyer's agent value for new construction; Florida Statute 553.84 warranty (1/2/10 yr); 5-Q&A FAQ. Date: 2026-10-15.
+
+9. **land-o-lakes-fl-real-estate-guide** — Expanded stub to 22,030 chars. Added: Pasco County overview (ZIPs 34638/34639/34637, unincorporated); Pascopa.com and pascotaxes.com references; 7-row market metrics table (median $390K-$480K, 40-65 DOM); 5-tier neighborhood price breakdown (entry $290K-$390K older neighborhoods; Connerton $320K-$550K; Bexley $380K-$700K; Ballantrae $350K-$600K; lakefront $550K-$1.1M+); buyer/seller strategy sections; ViVi Property Management reference; 5-Q&A FAQ. Date: 2026-10-15.
+
+10. **land-o-lakes-fl-cost-of-living** — Expanded stub to 23,668 chars. Added: Full cost breakdown (mortgage P+I at $420K; Pasco County taxes $7K-$7.8K/yr at 19-21 mills; CDD $800-$3K+; HOA $0-$350/mo; insurance $2,200-$4,500/yr; TECO/Duke electricity $130-$350/mo; water/sewer $80-$150/mo); 5-community comparison table (Land O Lakes vs Wesley Chapel/Lutz/Zephyrhills/New Tampa); Suncoast Parkway toll costs; wind mitigation credit note; Citizens Property Insurance reference; 5-Q&A FAQ. Date: 2026-10-15.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** cc8b6dd — pushed to `origin/main`
