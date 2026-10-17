@@ -4,7 +4,51 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
-## 2026-10-12 (Batch 78 — Bradenton FL x4 + Bradenton Beach FL x5 + Sarasota Flood Zones x1)
+## 2026-10-16 (Batch 80 — New Port Richey x3 + Land O' Lakes x2 + Wesley Chapel x2 + Spring Hill x1 + North Port x1 + Brooksville x1)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, 4+ H2 headings, 6+ H3 subheadings, comparison tables, 5-Q&A FAQ, 12 internal links, Barrett Henry bio. Content dated 2026-10-16.)
+
+**New Port Richey FL (Pasco County) — flagged stubs from Batch 79:**
+
+1. **new-port-richey-fl-property-taxes** — Expanded stub → 28,185 chars. Added: Pasco County millage table (city ~18-21 mills vs unincorporated ~14-15 mills); 4-sample-scenario tax table; 5-community comparison table; homestead exemption how-to (pascopa.com, March 1 deadline); Save Our Homes portability; payment schedule with discounts; CDD fee note; 5-Q&A FAQ; 12 internal links. Date: 2026-10-16.
+
+2. **new-port-richey-fl-new-construction** — Expanded stub → 24,787 chars. Added: 5-community builder table (Longleaf, Seven Springs, Mitchell Ranch, Trinity, Land O Lakes); price tiers ($285K-$700K+); CDD debt service vs O&M explanation; new vs resale comparison table; buyer tips; 5-Q&A FAQ; 12 internal links. Date: 2026-10-16.
+
+3. **new-port-richey-fl-investment-property** — Expanded stub → 24,757 chars. Added: LTR rental rate benchmark table ($1,350-$3,200/mo by property type); full NOI calculation on $260K SFH (net cap rate ~3.7%); STR regulatory framework (FL DBPR + Pasco TDT 5%); 5-market investment comparison table; ViVi Property Management reference; FL Ch. 83 landlord-tenant law; 5-Q&A FAQ; 12 internal links. Date: 2026-10-16.
+
+**Land O' Lakes FL (Pasco County, unincorporated — no city millage):**
+
+4. **land-o-lakes-fl-property-taxes** — Expanded stub → 22,544 chars. Added: Pasco County millage table (~14-15 mills, no city levy); CDD fees by community table (Connerton $1,500-$2,200, Concord Station $1,200-$1,800, Ballantrae $800-$1,400); 4-sample tax scenarios including CDD add-on; 5-community comparison; homestead application (pascopa.com west office: 4111 Land O Lakes Blvd Suite 214); 5-Q&A FAQ; 12 internal links. Date: 2026-10-16.
+
+5. **land-o-lakes-fl-new-construction** — Expanded stub → 20,974 chars. Added: Builder community table (Connerton: Pulte/Lennar/DR Horton/Meritage $310K-$550K; Concord Station: Pulte/Taylor Morrison $370K-$550K; Suncoast Crossings $295K-$420K; Bexley $420K-$700K+); price tiers; CDD debt vs O&M components; monthly cost comparison with/without CDD; new vs resale table; 5-Q&A FAQ; 12 internal links. Date: 2026-10-16.
+
+**Wesley Chapel FL (Pasco County, unincorporated):**
+
+6. **wesley-chapel-fl-real-estate-guide** — Expanded stub → 24,012 chars. Added: 2026 market snapshot table (median $380K-$420K, 30-55 DOM, 3-5 months supply, 96-99% list-to-sale); 6-community price tier table (Seven Oaks, Wiregrass Ranch, Epperson, Union Park, Watergrass, Lexington Oaks); Wiregrass Ranch school premium analysis; buyer and seller strategy; 5-community comparison table; 5-Q&A FAQ; 12 internal links. Date: 2026-10-16.
+
+7. **wesley-chapel-fl-cost-of-living** — Expanded stub → 23,389 chars. Added: Three complete monthly cost model tables (Scenario 1 $320K no-CDD ~$2,780/mo; Scenario 2 $420K new construction CDD ~$3,783/mo; Scenario 3 $550K Wiregrass Ranch ~$4,481/mo); community cost comparison table (Wesley Chapel vs Land O Lakes, Riverview, New Tampa, Zephyrhills); no state income tax; HOA fees by community; Duke Energy electricity costs; 5-Q&A FAQ; 12 internal links. Date: 2026-10-16.
+
+**Spring Hill FL (Hernando County):**
+
+8. **spring-hill-fl-flood-zones** — Expanded stub → 22,315 chars. Added: FEMA zone definitions table (X, X-shaded, AE, AH, A); specific high-risk areas in Spring Hill (Weeki Wachee River, Withlacoochee, coastal 34607); 5-step verification checklist (msc.fema.gov); flood insurance cost table (NFIP vs private by zone); NFIP Risk Rating 2.0 explanation; community flood zone comparison table; Hurricane Idalia/Ian context; LOMA process; 5-Q&A FAQ; 12 internal links. Date: 2026-10-16.
+
+**North Port FL (Sarasota County):**
+
+9. **north-port-fl-flood-zones** — Expanded stub → 24,875 chars. Added: FEMA zone definitions table (X, AE, AH, A, VE); flood risk by area (Zone X interior, Zone AE Peace River corridor, Myakka River corridor, Wellen Park engineered to X standards); 5-step verification process (msc.fema.gov); flood insurance cost table (Zone X $400-$700 to Zone AE below BFE $3,500-$6,000); NFIP vs private comparison; Hurricane Ian impact; North Port vs. neighboring markets comparison table (Port Charlotte, Englewood, Sarasota, Venice, Punta Gorda); negotiation and due diligence guidance; LOMA process; 5-Q&A FAQ; 12 internal links. Date: 2026-10-16.
+
+**Brooksville FL (Hernando County):**
+
+10. **is-brooksville-fl-good-place-to-live** — Expanded stub → 22,105 chars. Added: Honest pros/cons assessment; who Brooksville works best for (8-row buyer-type fit table); Brooksville vs Spring Hill/Zephyrhills/New Port Richey/Land O Lakes/Wesley Chapel comparison table; affordability data (median $265K-$295K, 30-40% below Wesley Chapel); historic downtown character; Withlacoochee State Forest/Weeki Wachee Springs nature access; commute reality (45-50 mi, 55-90 min to Tampa); limited local employment; retail and healthcare limitations; Hernando County property tax estimates; 5-Q&A FAQ; 12 internal links. Date: 2026-10-16.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `package-lock.json`, `AUDIT-LOG.md`
+**Git commit:** pending
+
+---
+
+## 2026-10-13 (Batch 79 — Bradenton FL x4 + Bradenton Beach FL x5 + Sarasota Flood Zones x1)
 
 **Pages improved: 10**
 
