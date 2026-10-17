@@ -44,12 +44,44 @@ Track completed pages here to avoid repeating work each day.
 
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `package-lock.json`, `AUDIT-LOG.md`
-**Git commit:** pending
+**Git commit:** 9d25627
+
 
 ---
 
-## 2026-10-13 (Batch 79 — Bradenton FL x4 + Bradenton Beach FL x5 + Sarasota Flood Zones x1)
+## 2026-10-13 (Batch 79 — Gibsonton FL x6 + Ruskin FL x4)
 
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, 22-link internal grid, comparison tables, Barrett Henry bio)
+
+1. **gibsonton-fl-schools-guide** — Expanded stub to 21,852 chars. Added: East Bay High School (4/5 GreatSchools), Giunta Middle School (3/5), Corr Elementary/Southshore Elementary overview; Hillsborough County Schools enrollment process (sdhc.k12.fl.us); charter/private options; ZIP 33534 school zone verification; 4-school comparison table (Gibsonton vs Brandon/Riverview/Apollo Beach); Step Up For Students scholarship info; 5-Q&A FAQ. Date: 2026-10-13.
+
+2. **gibsonton-fl-commute-guide** — Expanded stub to 22,186 chars. Added: Drive time tables (downtown Tampa 25-40 min via US-41 or I-75; MacDill AFB 30-45 min; Brandon 15-25 min; Riverview 10-20 min); HART bus service overview; no commuter rail; hybrid vs daily commuter analysis; I-75/US-41 peak congestion guidance; airport comparison table (TPA vs PIE vs SRQ); 5-Q&A FAQ. Date: 2026-10-13.
+
+3. **gibsonton-fl-new-construction** — Expanded stub to 21,711 chars. Added: Active builder communities near 33534 (Ventana Groves, Belmont, Summerfield); price ranges $280K-$420K; CDD fee explanation; builder incentive season context; resale vs new construction cost comparison; flood zone AE elevation requirements; Hillsborough County permitting overview; 5-Q&A FAQ. Date: 2026-10-13.
+
+4. **gibsonton-fl-real-estate-guide** — Expanded stub to 21,328 chars. Added: Market overview (ZIP 33534, median SFH ~$280K-$350K); 4-neighborhood price tiers (waterfront canal $350K-$600K+; newer subdivisions $300K-$400K; older SFH $250K-$320K; manufactured excluded); rental market analysis; I-75 corridor context; 4-market comparison table (Gibsonton vs Riverview/Apollo Beach/Ruskin); NAR settlement buyer agreement explanation; 5-Q&A FAQ. Date: 2026-10-13.
+
+5. **gibsonton-fl-property-taxes** — Expanded stub to 21,571 chars. Added: Hillsborough County Property Appraiser (hcpafl.org, (813) 272-6100); full millage rate breakdown (~20-22 mills: County ~5.3, School Board ~7.0, SWFWMD ~0.25, unincorporated Hillsborough ~6.5-8.5); homestead exemption $50K and March 1 deadline; Save Our Homes 3% annual cap; SOH portability worksheet; CDD special assessments; investment property vs primary home comparison; 5-Q&A FAQ. Date: 2026-10-13.
+
+6. **gibsonton-fl-cost-of-living** — Expanded stub to 22,003 chars. Added: Full monthly cost breakdown (housing $280K-$350K median; TECO electricity avg $150-$200/mo; Hillsborough County Utilities water/sewer; no piped gas in most areas; homeowner's insurance $2,800-$5,500/yr; flood insurance AE zone $1,200-$3,500/yr); total millage ~20-22 mills; homestead exemption savings; 3-city comparison table (Gibsonton vs Riverview/Apollo Beach); grocery/healthcare/transport costs; 5-Q&A FAQ. Date: 2026-10-13.
+
+7. **ruskin-fl-commute-guide** — Expanded stub to 21,351 chars. Added: Drive time tables (downtown Tampa 30-45 min via I-75; MacDill AFB 35-50 min; Brandon 20-30 min; Sarasota 40-55 min); HART bus service; hybrid worker analysis; I-75/US-41 congestion patterns; SkyWay Bridge toll note; airport comparison table; 5-Q&A FAQ. Date: 2026-10-13.
+
+8. **ruskin-fl-waterfront-homes** — Expanded stub to 21,160 chars. Added: Tampa Bay/Little Manatee River waterfront tiers (direct bay-front $500K-$1.2M+; canal-access $350K-$650K; river-access $300K-$550K); seawall repair costs ($400-$900/lf); dock permitting (Hillsborough County + SWFWMD ERP + Army Corps); FEMA Zone AE flood insurance; elevation certificate workflow; NFIP Risk Rating 2.0 context; waterfront due diligence checklist; 5-Q&A FAQ. Date: 2026-10-13.
+
+9. **ruskin-fl-investment-properties** — Expanded stub to 21,431 chars. Added: LTR yield analysis ($1,600-$2,400/mo SFH; cap rates 5-7%); STR requirements (Hillsborough County + FL DBPR + Tourist Development Tax); ViVi Property Management reference; investor comparison table (Ruskin vs Apollo Beach/Gibsonton/Sun City Center); FEMA AE flood risk impact on insurance costs; rental income vs appreciation strategy; 5-Q&A FAQ. Date: 2026-10-13.
+
+10. **ruskin-fl-new-construction** — Expanded stub to 22,241 chars. Added: Active builder communities (SouthShore Bay, Shell Cove, Belmont, Cypress Creek); Minto, Lennar, DR Horton, Pulte presence; price ranges $290K-$450K; CDD fee breakdown; builder incentive programs; flood zone considerations for new builds; resale vs new construction analysis; Hillsborough County impact fees; 5-Q&A FAQ. Date: 2026-10-13.
+
+**Build:** Passed (Next.js build with NEXT_PUBLIC_DISABLE_STATIC=1, static pages pre-rendered, 550 pages generated)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** 17a4ca7
+
+---
+
+## 2026-10-12 (Batch 78 — Bradenton FL x4 + Bradenton Beach FL x5 + Sarasota Flood Zones x1)
 **Pages improved: 10**
 
 ### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, 4+ H2 headings, 6+ H3 subheadings, price/comparison tables, 5-Q&A FAQ, 10-12 internal links. Content dated 2026-10-12.)
@@ -2776,4 +2808,66 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 
 **Build:** Passed (Next.js build, static pages pre-rendered)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
-**Git commit:** pending
+**Git commit:** 14d64ab — pushed to `origin/main`
+
+---
+
+## 2026-10-15 (Batch 78 — Winter Haven FL x9 + Venice FL x1)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, 22-link internal grid, comparison tables, Barrett Henry bio)
+
+1. **winter-haven-fl-homes-for-sale-guide** — Expanded stub to 23,988 chars. Added: Polk County market overview (55-60 mi from Tampa, 50 mi from Orlando); price tier table (under $220K to $600K+); property types (SFH, lakefront Chain of Lakes, 55+ communities, new construction); 5-step buyer process (pre-approval, flood zone check, inspection); 5-market comparison table (Winter Haven vs Lakeland/Haines City/Davenport/Plant City); 5-Q&A FAQ. Date: 2026-10-14.
+
+2. **winter-haven-fl-schools-guide** — Expanded stub to 22,068 chars. Added: Polk County School District overview (polkschoolsfl.com, (863) 534-0500); Winter Haven Senior High School; Ridge Community High; Polk County Career/Technical schools; Jewett Middle Academy and Westwood Middle; Elbert/Inwood/Lake Shipp elementary; magnet program application (January opening); Holy Trinity Academy and faith-based private schools ($5K-$18K/yr); Step Up for Students and Family Empowerment Scholarships; comparison table (key district factors); 5-Q&A FAQ. Date: 2026-10-14.
+
+3. **winter-haven-fl-commute-guide** — Expanded stub to 25,943 chars. Added: Drive time matrix (Tampa downtown 65-80 min; TPA 65-75 min; Westshore 70-80 min; Brandon 45-55 min; Lakeland 20-28 min; Bartow 18-25 min); Orlando matrix (downtown 55-65 min; MCO 55-65 min; Kissimmee/Disney 35-45 min; Lake Nona 55-70 min); I-4 congestion windows (westbound peak 6:30-8:30am); alternative routes (US-92, US-17, SR-60); Polk County Transit Service (PCTS) coverage; SunRail non-coverage; intercity bus reality; broadband internet (Spectrum/Frontier); coworking options; 5-Q&A FAQ. Date: 2026-10-14.
+
+4. **is-winter-haven-fl-good-place-to-live** — Expanded stub to 23,431 chars. Added: 5 pros (affordability vs Tampa/Orlando; Chain of Lakes lifestyle; central location; LEGOLAND economy; downtown growth); 5 cons (Tampa commute 65-85 min on congested I-4; mixed school quality; intense summer heat; car-dependent; hurricane/storm risk); 7-profile buyer fit table (remote worker, retiree 55+, Tampa daily commuter, family with children, investor, Gulf beach buyer, lakefront lifestyle buyer); 5-Q&A FAQ. Date: 2026-10-14.
+
+5. **winter-haven-fl-real-estate-guide** — Expanded stub to 23,107 chars. Added: Market metrics table (median $265K-$330K SFH; $400K-$1M+ lakefront; 45-75 DOM; $155-$210/sqft; balanced to slight buyer advantage; 3-5 month absorption); 4 price tiers (non-waterfront $220K-$330K; lake-view/adjacent $280K-$425K; direct lakefront with dock $400K-$750K; luxury $750K+); buyer strategies (pre-approval, negotiation, flood zone verification); seller strategies (pricing, lakefront prep, disclosure); 5-Q&A FAQ. Date: 2026-10-14.
+
+6. **winter-haven-fl-cost-of-living** — Expanded stub to 22,894 chars. Added: 5-category comparison table (Winter Haven vs Tampa Bay vs Orlando: price, mortgage, taxes, insurance, electricity); HOA fee range ($0 to $500+/mo); property tax calculation model ($295K homesteaded: ~$4,900/yr at 20 mills); homeowner's insurance ($2,000-$4,500/yr non-waterfront; $1,500-$5,000/yr flood in Zone AE); Duke Energy Florida electricity ($120-$320/mo by season); water/sewer ($50-$120/mo); Spectrum/Frontier internet ($80-$100/mo); daily Tampa commute operating cost ($600-$870+/mo); 5-Q&A FAQ. Date: 2026-10-14.
+
+7. **winter-haven-fl-property-taxes** — Expanded stub to 24,111 chars. Added: Polk County Property Appraiser (polkpa.org, 255 N Wilson Ave Bartow, (863) 534-4777) and Tax Collector (polktaxes.com); millage breakdown table (Polk County ~5.5-6.5 mills, School Board ~6.0-7.5 mills, City of Winter Haven ~4.0-6.0 mills, SWFWMD ~0.25-0.35 mills; total ~17-22 mills); sample calculation ($295K homesteaded: $245K taxable at 20 mills = ~$4,900/yr); homestead exemption mechanics (March 1 deadline; online at polkpa.org); SOH 3% cap explanation; SOH portability up to $500K; senior and disability additional exemptions; CDD fee warning ($500-$3,000+/yr); early payment discounts (4% November, 3% December); 5-Q&A FAQ. Date: 2026-10-14.
+
+8. **winter-haven-fl-new-construction** — Expanded stub to 21,483 chars. Added: New construction geography (south/southeast Winter Haven near LEGOLAND; east toward Dundee/Haines City on US-27; north toward Auburndale); active builder overview (D.R. Horton, Lennar, regional Florida builders); price range table ($280K-$600K+); base price vs final price reality (15-30% upgrade gap); CDD fees in addition to property taxes ($1,000-$3,000+/yr); Florida Statute 553.84 builder warranty coverage (1/2/10 years); builder's contract vs FAR/BAR consumer protections; buyer's agent value for new construction; 5-Q&A FAQ. Date: 2026-10-14.
+
+9. **winter-haven-fl-investment-property** — Expanded stub to 26,333 chars. Added: Rental market table (5 property types from $220K-$800K+ with rent range and gross yield 4-9%); LTR vs STR analysis (LEGOLAND tourism demand; DBPR vacation rental license; City of Winter Haven STR ordinance; Polk County TDT); ViVi Property Management reference (/property-management/); operating cost table (property taxes ~$5K-$9K non-homesteaded; landlord insurance $2,500-$5,500/yr; flood insurance if Zone AE; management 8-12%; maintenance 1-2%); 4-market cap rate comparison table (Winter Haven vs Tampa Bay/Lakeland/Haines City); 5-Q&A FAQ. Date: 2026-10-14.
+
+10. **venice-fl-flood-zones** — Expanded stub to 24,323 chars. Added: Sarasota County FEMA Community #125151 reference (msc.fema.gov); Zone VE explanation (Gulf-front; wave action; open-pile required; $6K-$20K+/yr insurance); Zone AE explanation (1% annual chance; BFE-specific; $2K-$8K/yr depending on elevation); Zone X (mainland areas; not required for most mortgages); property-location-to-zone table (6 Venice locations); Venice Island Evacuation Zone A requirement; mainland evacuation zones B/C/D (sarasotacountyfl.gov); NFIP max coverage ($250K building/$100K contents); private flood insurance comparison; Hurricane Ian impact context; 10-step buyer due diligence checklist; 5-Q&A FAQ. Date: 2026-10-14.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** 5f6219f — pushed to `origin/main`
+
+## 2026-10-16 (Batch 79 — Lakewood Ranch FL x8 + Land O Lakes FL x2)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, 22-link internal grid, comparison tables, Barrett Henry bio)
+
+1. **lakewood-ranch-fl-homes-for-sale-guide** — Expanded stub to 26,734 chars. Added: Manatee/Sarasota county overview (ZIPs 34202/34211/34212/34240); Schroeder-Manatee Ranch context; 5-tier price table (townhomes $300K to luxury $1.2M+); village types (55+, golf, family, luxury); 5-step buyer process (pre-approval, village selection, CDD/HOA review, inspection, flood zone check); 5-market comparison table (Lakewood Ranch vs Parrish/Wesley Chapel/Venice/Bradenton); NAR settlement buyer agreement note; 5-Q&A FAQ. Date: 2026-10-15.
+
+2. **lakewood-ranch-fl-schools-guide** — Expanded stub to 22,616 chars. Added: Manatee County School District overview (manateeschools.net, (941) 708-8770, 215 Manatee Ave W Bradenton FL 34205); Sarasota County district for ZIP 34240; Gullett Elementary, McNeal Elementary, Freedom Elementary, Blackburn Elementary; Nolan Middle School (8100 N Lakewood Ranch Blvd) and Dr. Mona Jain Middle School; Lakewood Ranch High School (8001 Lakewood Ranch Blvd, (941) 727-6215); The Out-of-Door Academy private school; Florida FES and Step Up For Students scholarships; school zone table; 5-Q&A FAQ. Date: 2026-10-15.
+
+3. **lakewood-ranch-fl-commute-guide** — Expanded stub to 23,715 chars. Added: 8-destination drive time matrix (Tampa downtown 55-65 min normal/75-95 min peak; TPA 55-70 min; Westshore 55-70 min; Sarasota 20-30 min; SRQ 15-25 min; Bradenton 15-22 min; UTC 8-12 min; St. Pete 65-80 min); SR-70 and University Parkway routes; I-75 Howard Frankland congestion; SRQ vs TPA air travel comparison; MCAT local transit overview; Spectrum/Frontier broadband for remote workers; 5-Q&A FAQ. Date: 2026-10-15.
+
+4. **is-lakewood-ranch-fl-good-place-to-live** — Expanded stub to 23,858 chars. Added: 5 pros (master-planned quality, Gulf beach proximity 35-55 min, strong schools, new construction variety, Florida homestead benefits); 4 cons (Tampa commute 55-90 min, CDD fees on top of HOA, car-dependent suburban character, hurricane exposure); 7-profile buyer fit table (families, retirees, remote workers, daily Tampa commuters, Sarasota-focused buyers, investors, urban lifestyle seekers); 5-Q&A FAQ. Date: 2026-10-15.
+
+5. **lakewood-ranch-fl-real-estate-guide** — Expanded stub to 22,737 chars. Added: Market metrics table (median $480K-$550K, 45-75 DOM, $240-$310/sqft, balanced market); village price tiers (entry $300K-$395K Lorraine Lakes/Solera; mid $380K-$500K Del Webb/Lorraine; premium $500K-$750K Lakewood National/Esplanade; luxury $750K-$1.2M Country Club; $1.2M+ The Concession); buyer/seller strategy sections; NAR settlement buyer agreement context; 5-Q&A FAQ. Date: 2026-10-15.
+
+6. **lakewood-ranch-fl-cost-of-living** — Expanded stub to 23,518 chars. Added: Full 8-row annual/monthly cost table ($500K homesteaded: mortgage $2,595/mo; taxes $750-$917/mo; CDD $83-$292/mo; HOA $100-$500/mo; insurance $250-$542/mo; FPL electricity $200-$300/mo); FPL electricity overview; Polo Run solar community note; water/sewer/trash costs; transportation and SunPass context; homestead exemption and SOH cap summary; 5-Q&A FAQ. Date: 2026-10-15.
+
+7. **lakewood-ranch-fl-property-taxes** — Expanded stub to 26,724 chars. Added: Manatee County Property Appraiser (manateepao.com, 915 4th Ave W Bradenton FL 34205, (941) 748-8208); Manatee County Tax Collector (manateetaxcollector.com); 6-row millage breakdown table (county ~5.0-5.5; school ~6.5-7.5; SWFWMD ~0.25-0.35; special districts ~1.5-2.5; total ~20-22 mills); sample calculation ($500K homesteaded = ~$9,450/yr ad valorem + $1K-$3.5K CDD); homestead exemption mechanics; SOH 3% cap and portability up to $500K; Manatee County tax calendar; 5-Q&A FAQ. Date: 2026-10-15.
+
+8. **lakewood-ranch-fl-new-construction** — Expanded stub to 23,403 chars. Added: 6-builder overviews (Lennar, Pulte/Del Webb, D.R. Horton, Taylor Morrison/Esplanade, Neal Communities, Stock Development/The Concession); 5-tier price table ($330K-$395K villas through $1.2M+ custom); base-vs-final price gap (15-30% upgrades/premiums); builder incentive types (closing cost contributions, design center credits, rate buydowns); buyer's agent value for new construction; Florida Statute 553.84 warranty (1/2/10 yr); 5-Q&A FAQ. Date: 2026-10-15.
+
+9. **land-o-lakes-fl-real-estate-guide** — Expanded stub to 22,030 chars. Added: Pasco County overview (ZIPs 34638/34639/34637, unincorporated); Pascopa.com and pascotaxes.com references; 7-row market metrics table (median $390K-$480K, 40-65 DOM); 5-tier neighborhood price breakdown (entry $290K-$390K older neighborhoods; Connerton $320K-$550K; Bexley $380K-$700K; Ballantrae $350K-$600K; lakefront $550K-$1.1M+); buyer/seller strategy sections; ViVi Property Management reference; 5-Q&A FAQ. Date: 2026-10-15.
+
+10. **land-o-lakes-fl-cost-of-living** — Expanded stub to 23,668 chars. Added: Full cost breakdown (mortgage P+I at $420K; Pasco County taxes $7K-$7.8K/yr at 19-21 mills; CDD $800-$3K+; HOA $0-$350/mo; insurance $2,200-$4,500/yr; TECO/Duke electricity $130-$350/mo; water/sewer $80-$150/mo); 5-community comparison table (Land O Lakes vs Wesley Chapel/Lutz/Zephyrhills/New Tampa); Suncoast Parkway toll costs; wind mitigation credit note; Citizens Property Insurance reference; 5-Q&A FAQ. Date: 2026-10-15.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** cc8b6dd — pushed to `origin/main`
