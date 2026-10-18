@@ -4,6 +4,38 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-10-17 (Batch 81 — Dunedin FL x8 + Belleair FL x2)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, 4+ H2 headings, 6+ H3 subheadings, comparison tables, 5-Q&A FAQ, 12+ internal links, Barrett Henry bio. Content dated 2026-10-17.)
+
+**Dunedin FL (Pinellas County) — medium-length posts expanded to 24,000-31,000 chars:**
+
+1. **dunedin-fl-homes-for-sale-guide** — Expanded → 28,118 chars. Added: 2026 market snapshot table; 5-step buying process; neighborhood breakdown (downtown, golf course, waterfront); FEMA flood zone info (Zone AE vs X); 5-community comparison table; 5-Q&A FAQ; 12 internal links. Date: 2026-10-17.
+
+2. **dunedin-fl-cost-of-living** — Expanded → 28,759 chars. Added: 3-scenario monthly cost models ($390K/$480K/$750K); insurance breakdown (HO + flood for Zone AE); property tax samples; Duke Energy Florida electricity; City of Dunedin water/sewer; 5-community comparison table; 5-Q&A FAQ. Date: 2026-10-17.
+
+3. **dunedin-fl-real-estate-guide** — Expanded → 25,188 chars. Added: 2026 metrics table; 4 price tiers ($350K-$2M+); buyer/seller strategy; condo SB 4-D milestone inspection warning; 5-community comparison table; 5-Q&A FAQ. Date: 2026-10-17.
+
+4. **is-dunedin-fl-good-place-to-live** — Expanded → 26,928 chars. Added: 5 pros/5 cons analysis; 8-row buyer fit table; 6-city comparison table; lifestyle section (Honeymoon Island, Highland Games, Blue Jays spring training); 5-Q&A FAQ. Date: 2026-10-17.
+
+5. **dunedin-fl-new-construction** — Expanded → 24,785 chars. Added: teardown-rebuild process; 5-step new construction guide; cost table (inland vs waterfront); FEMA flood zone requirements; alternatives comparison (Wesley Chapel, Lakewood Ranch); 5-Q&A FAQ. Date: 2026-10-17.
+
+6. **dunedin-fl-property-taxes** — Expanded → 31,157 chars. Added: Pinellas County millage table (8 taxing authorities, ~18-21 mills total); homestead exemption how-to (pcpao.gov, March 1 deadline); Save Our Homes cap/portability; 6-scenario tax table ($390K-$900K); Pinellas tax payment schedule with early-pay discounts; 7-community comparison; 5-Q&A FAQ. Date: 2026-10-17.
+
+7. **dunedin-fl-investment-property** — Expanded → 30,887 chars. Added: LTR yield table (5 property types, 3.5-7.2% gross); NOI model ($480K SFH showing thin/negative cash flow); STR gross revenue estimates; STR regulatory requirements (Pinellas County + FL DBPR + 6% TDT); ViVi Property Management reference; 6-market comparison table; 5-Q&A FAQ. Date: 2026-10-17.
+
+8. **dunedin-fl-commute-guide** — Expanded → 28,813 chars. Added: 11-destination drive time matrix (Tampa, TPA, PIE, St. Pete, Clearwater, MacDill, Sarasota, Orlando); SR-580/I-275 and US-19 route analysis; airport comparison table; PSTA overview; 7-profile commuter fit table; 5-Q&A FAQ. Date: 2026-10-17.
+
+**Belleair FL (Pinellas County, luxury enclave):**
+
+9. **belleair-fl-homes-for-sale-guide** — Expanded → 23,450 chars. Added: Luxury market snapshot table ($600K to $5M+); Belleair Country Club history (est. 1897); interior vs Intracoastal waterfront tiers; City of Belleair permitting notes; 6-community comparison table; 5-Q&A FAQ; 12 internal links. Date: 2026-10-17.
+
+10. **belleair-fl-cost-of-living** — Expanded → 28,965 chars. Added: 3-scenario monthly cost tables ($750K/$1.2M/$2.5M with mortgage/tax/insurance/flood/utilities); wind mitigation value; NFIP Zone AE Intracoastal flood insurance; luxury maintenance reserve budgeting (1-2% of value/yr); Duke Energy Florida; 6-community cost comparison; 5-Q&A FAQ. Date: 2026-10-17.
+
+---
+
 ## 2026-10-16 (Batch 80 — New Port Richey x3 + Land O' Lakes x2 + Wesley Chapel x2 + Spring Hill x1 + North Port x1 + Brooksville x1)
 
 **Pages improved: 10**
