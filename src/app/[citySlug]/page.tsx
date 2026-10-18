@@ -36,6 +36,7 @@ import {
   AreaCtaBar,
 } from "@/components/city/AreaCta";
 import { cleanWpContent, formatPrice } from "@/lib/utils";
+import CityMarketTable from "@/components/ui/CityMarketTable";
 // Single source of truth for how many characters the layout's brand suffix
 // leaves a page title. See the TITLE_SUFFIX comment in src/app/layout.tsx.
 import { TITLE_BUDGET } from "@/app/layout";
@@ -947,6 +948,14 @@ async function HubPage({ city }: { city: CityData }) {
           </div>
         </section>
       )}
+
+      {/* === Verified market table — closed sales broken out by property type ===
+           The stat bar above shows 4 scalar tiles. This publishes the rest of
+           the figures already verified in city-market-stats.ts (up to 13 per
+           city) as a table, which is what both readers and AI answer engines
+           actually extract. Rows under MIN_SAMPLE suppress their median rather
+           than publish noise — see the component header. */}
+      {cityStats && <CityMarketTable stats={cityStats} cityName={city.name} />}
 
       {/* === Crawler-visible inventory ===
            Rendered server-side from the cache so search engines and AI models

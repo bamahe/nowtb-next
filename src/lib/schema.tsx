@@ -41,15 +41,17 @@ export const BARRETT_HEADSHOT_URL = `${SITE_URL}${BARRETT_HEADSHOT_PATH}`;
 /**
  * Barrett's social profiles.
  *
- * OPEN QUESTION FOR BARRETT — two different pairs of handles are currently
- * published across the repo and we cannot verify from the codebase which ones
- * are live:
- *   (A) instagram.com/thenowteam  + facebook.com/BarrettHenryREALTOR  ← used here
- *   (B) instagram.com/nowtampa    + facebook.com/NOWTampaBay
- * Pair (A) was already the value in this file, so it is the single source of
- * truth until Barrett confirms. Publishing the wrong pair means publishing a
- * dead link in structured data, which is worse than publishing none — so DO NOT
- * guess, and do not "fix" one side to match the other without confirmation.
+ * RESOLVED 2026-10-18 — Barrett confirmed the live pair is:
+ *     instagram.com/thenowteam  +  facebook.com/BarrettHenryREALTOR
+ * The other pair that used to appear in layout.tsx and page.tsx
+ * (instagram.com/nowtampa + facebook.com/NOWTampaBay) is NOT live and has been
+ * removed from both. Publishing a dead profile in `sameAs` is worse than
+ * publishing none — it weakens entity resolution by pointing answer engines at
+ * a profile that does not resolve back to Barrett.
+ *
+ * This constant is the single source of truth. Any JSON-LD that needs social
+ * profiles must import BARRETT_SOCIAL_PROFILES rather than inlining handles,
+ * which is how the two pairs drifted apart in the first place.
  */
 export const BARRETT_SOCIAL_PROFILES = [
   "https://www.facebook.com/BarrettHenryREALTOR",

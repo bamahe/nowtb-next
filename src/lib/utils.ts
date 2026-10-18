@@ -19,6 +19,11 @@ const PLACEHOLDER_IMAGE = '/images/no-photo.jpg';
  * Combines clsx (conditional classes) + tailwind-merge (deduplication).
  * Usage: cn('px-4 py-2', isActive && 'bg-blue-500', className)
  */
+// NOTE: TITLE_SUFFIX / TITLE_BUDGET deliberately live in src/app/layout.tsx,
+// next to the Metadata `title.template` they describe — not here. Do not add a
+// second copy in this file; two definitions of the same budget is how the
+// realtor-page title bug happened in the first place.
+
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
