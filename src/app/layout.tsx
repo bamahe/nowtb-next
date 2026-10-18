@@ -8,7 +8,10 @@ import ChromeGate from "@/components/layout/ChromeGate";
 import MobileBottomBar from "@/components/ui/MobileBottomBar";
 import BackToTop from "@/components/ui/BackToTop";
 import ClientChatWidget from "@/components/ui/ClientChatWidget";
-import ClientExitIntent from "@/components/ui/ClientExitIntent";
+// Exit-intent popup is disabled (see the comment at its render site below).
+// Import stays commented out so the component is not bundled while unused —
+// re-enabling means uncommenting BOTH this line and the render line.
+// import ClientExitIntent from "@/components/ui/ClientExitIntent";
 import CookieConsent from "@/components/ui/CookieConsent";
 import FubPixel from "@/components/tracking/FubPixel";
 import { Analytics } from "@vercel/analytics/react";
@@ -350,16 +353,22 @@ export default function RootLayout({
             Gated off the kiosks: a floating chat bubble over a sign-in form is
             something a guest taps by accident, and nobody is watching it. */}
         <ChromeGate><ClientChatWidget /></ChromeGate>
-        {/* Exit-intent popup — RE-ENABLED Oct 2026 at Barrett's direction.
-            It was switched off earlier, but the component was fully built and
-            working the whole time: ClientExitIntent reads the current path and
-            picks a buyer, seller or general variant, so someone leaving a
+        {/* Exit-intent popup — DISABLED 2026-10-18 at Barrett's direction
+            ("turn the popup back off, I don't like it — it's too much").
+            This is the second time it has been switched off, so do NOT
+            re-enable it without Barrett asking for it by name.
+
+            The component is intentionally left in place, not deleted: it is
+            fully built and working. ClientExitIntent reads the current path
+            and picks a buyer, seller or general variant, so someone leaving a
             valuation page sees a seller offer rather than a generic plea.
-            Lazy-loaded with ssr:false, so it costs nothing until it fires.
-            If it breaks, check: ClientExitIntent.tsx's BUYER_PATTERNS /
-            SELLER_PATTERNS path lists — a new route that matches neither
-            silently falls back to the "general" variant. */}
-        <ChromeGate><ClientExitIntent /></ChromeGate>
+            Lazy-loaded with ssr:false, so re-enabling is just uncommenting
+            the line below.
+
+            If it is ever turned back on, check ClientExitIntent.tsx's
+            BUYER_PATTERNS / SELLER_PATTERNS path lists — a new route that
+            matches neither silently falls back to the "general" variant. */}
+        {/* <ChromeGate><ClientExitIntent /></ChromeGate> */}
         {/* FUB tracking pixel — tracks page views across the site
             so you can see which listings leads browsed in Follow Up Boss */}
         <FubPixel />
