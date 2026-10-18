@@ -79,7 +79,7 @@ fi
 # This used to point at /tmp/download-blog-images.py, which does not exist, so
 # it errored every night. /tmp is wiped by macOS anyway, which makes it the
 # wrong home for a scheduled script. Run it only if it is actually present.
-IMG_SCRIPT="$REPO/scripts/download-blog-images.py"
+IMG_SCRIPT="$REPO/scripts/download_blog_images.py"
 if [ -f "$IMG_SCRIPT" ]; then
   echo "$(date): backfilling missing blog images"
   python3 -u "$IMG_SCRIPT" 2>&1 | tail -5

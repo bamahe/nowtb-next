@@ -21,7 +21,20 @@ import glob
 from datetime import datetime
 from collections import defaultdict
 
-PROJECT = os.path.expanduser("~/Projects/nowtb-next")
+# Analyse the checkout this script actually lives in, not a hardcoded path.
+#
+# This used to be a literal ~/Projects/nowtb-next. That checkout is routinely
+# left on a feature branch with uncommitted edits, so when the scheduled job
+# started running from a clean worktree, the analysis still read the OLD tree's
+# data: it reported "No custom FAQs" for Tampa, Riverview, Westchase and others
+# whose FAQ files existed on main but not in the stale checkout. A report that
+# points enrichment work at already-finished cities is worse than no report.
+#
+# NOWTB_PROJECT overrides it if you ever genuinely want to analyse elsewhere.
+PROJECT = os.environ.get(
+    "NOWTB_PROJECT",
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+)
 REPORT_PATH = os.path.join(PROJECT, "ENRICHMENT-REPORT.md")
 
 def load_posts():
@@ -39,9 +52,31 @@ def load_neighborhoods():
     return re.findall(r'slug: "([^"]+)", name: "([^"]+)", city: "([^"]+)"', content)
 
 def load_faqs():
-    with open(os.path.join(PROJECT, "src/data/valrico-faqs.ts")) as f:
-        content = f.read()
-    return set(re.findall(r'^\s+(\w[\w-]+):\s*\[', content, re.MULTILINE))
+    """Every city slug that has custom FAQs, across ALL the batch files.
+
+    This used to read valrico-faqs.ts alone. That file merges in BRANDON_FAQS,
+    BATCH1..7_FAQS, REMAINING_COUNTY_FAQS and DOVER_FAQS by import, so reading
+    only that one file saw a single key and reported "Cities with custom FAQs:
+    1/93" when the true figure was 76/93. The report then sent enrichment work
+    at cities that already had FAQs while the ones that genuinely lacked them —
+    including Tampa and Riverview — sat at the bottom of the list.
+
+    Glob every *faqs*.ts instead, so a new batch file is picked up with no edit
+    here. If it breaks, check: a batch file that nests its city keys deeper than
+    two spaces will not match the indent in the pattern below.
+    """
+    import glob
+    keys = set()
+    paths = glob.glob(os.path.join(PROJECT, "src/data/*faqs*.ts"))
+    paths.append(os.path.join(PROJECT, "src/data/brandon-content.ts"))
+    for path in paths:
+        try:
+            with open(path) as f:
+                content = f.read()
+        except OSError:
+            continue
+        keys |= set(re.findall(r'^\s{2,4}"?([a-z][\w-]+)"?:\s*\[', content, re.MULTILINE))
+    return keys
 
 def load_descriptions():
     with open(os.path.join(PROJECT, "src/data/neighborhood-descriptions.ts")) as f:
