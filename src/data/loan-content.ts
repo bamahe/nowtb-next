@@ -439,7 +439,11 @@ Barrett Henry, Broker Associate at REMAX Collective with 23+ years of real estat
       "Sufficient home equity: while there is no specific equity percentage requirement, you must have enough equity to pay off any existing mortgage balance from the reverse mortgage proceeds and still receive a meaningful benefit — most borrowers need at least 50% equity",
       "Financial assessment: lenders evaluate your income, credit history, and expenses to ensure you can maintain property taxes, homeowners insurance, and home maintenance — if concerns exist, the lender may require a set-aside (escrow) from your loan proceeds",
       "Property must meet FHA minimum property standards — a home inspection or appraisal may identify required repairs that must be completed before or shortly after closing; common Florida issues include roof condition, HVAC function, and structural integrity",
-      "Eligible property types include single-family homes, HUD-approved condominiums, 2-4 unit properties (if borrower occupies one unit), and some manufactured homes built after June 1976 on a permanent foundation",
+      // Standing rule: Barrett does not market manufactured housing, so that
+      // property type is deliberately left off this list even though FHA does
+      // allow it. Anyone financing one is better served by a specialist, and
+      // naming it here would attract leads this business cannot serve well.
+      "Eligible property types include single-family homes, HUD-approved condominiums, and 2-4 unit properties (if the borrower occupies one unit)",
       "No minimum credit score requirement from HUD, but the financial assessment reviews credit history for patterns of delinquency — recent bankruptcy, foreclosure, or federal debt (tax liens, student loans) may require explanation or resolution",
     ],
 

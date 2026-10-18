@@ -6,9 +6,17 @@
 
 import Link from "next/link";
 import ListingGrid from "@/components/ui/ListingGrid";
+import QuickAnswer from "@/components/ui/QuickAnswer";
 import { getListings } from "@/lib/bridge";
 import { getCommunityPagesByCounty } from "@/data/community-pages";
 import type { CityData } from "@/data/cities";
+import {
+  JsonLd,
+  breadcrumbSchema,
+  webPageSchema,
+  localBusinessSchema,
+  countyAreaSchema,
+} from "@/lib/schema";
 
 interface CountyPageProps {
   /** Display name of the county (e.g. "Hillsborough") */
@@ -37,31 +45,97 @@ export default async function CountyPage({
     listings = [];
   }
 
+  // ---------------------------------------------------------------------------
+  // STRUCTURED DATA
+  // This template previously emitted only a BreadcrumbList. A county page is an
+  // area page, so the answer engines also need (a) the county as a real place
+  // with coordinates and (b) the local business that serves it.
+  // ---------------------------------------------------------------------------
+  const canonicalUrl = `https://nowtb.com/${countySlug}/`;
+
+  // Geographic centre of the county, averaged from the VERIFIED lat/lng of every
+  // city in src/data/cities.ts. This is computed, never guessed — if a county
+  // somehow has no cities on file we omit geo entirely rather than ship a 0,0
+  // coordinate pointing at the Atlantic Ocean.
+  const geoCenter =
+    cities.length > 0
+      ? {
+          latitude:
+            Math.round(
+              (cities.reduce((sum, c) => sum + c.lat, 0) / cities.length) * 10000
+            ) / 10000,
+          longitude:
+            Math.round(
+              (cities.reduce((sum, c) => sum + c.lng, 0) / cities.length) * 10000
+            ) / 10000,
+        }
+      : null;
+
+  const pageDescription = `Browse homes for sale across ${countyName} County, Florida. ${cities.length} cities and communities, with listings updated daily from Stellar MLS.`;
+
   return (
     <>
-      {/* --- JSON-LD BreadcrumbList for SEO --- */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              {
-                "@type": "ListItem",
-                position: 1,
-                name: "Home",
-                item: "https://nowtb.com",
-              },
-              {
-                "@type": "ListItem",
-                position: 2,
-                name: `${countyName} County`,
-                item: `https://nowtb.com/${countySlug}`,
-              },
-            ],
-          }),
-        }}
+      {/* --- JSON-LD: BreadcrumbList --- */}
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: "https://nowtb.com" },
+          { name: `${countyName} County`, url: canonicalUrl },
+        ])}
+      />
+
+      {/* --- JSON-LD: WebPage ---
+           `about` passed explicitly; the helper's default topic is condos. */}
+      <JsonLd
+        data={webPageSchema({
+          name: `${countyName} County Real Estate`,
+          description: pageDescription,
+          url: canonicalUrl,
+          about: `${countyName} County, Florida real estate`,
+          // The <QuickAnswer> block below is what makes `.quick-answer` resolve.
+          speakableSelectors: [".quick-answer", "h1"],
+        })}
+      />
+
+      {/* --- JSON-LD: AdministrativeArea ---
+           Makes "{County} County" a resolvable place with real coordinates
+           instead of just words in a page title. */}
+      {geoCenter && (
+        <JsonLd
+          data={countyAreaSchema({
+            name: countyName,
+            slug: countySlug,
+            lat: geoCenter.latitude,
+            lng: geoCenter.longitude,
+            cityNames: cities.map((c) => c.name),
+          })}
+        />
+      )}
+
+      {/* --- JSON-LD: LocalBusiness ---
+           NOTE: the geo sits on `areaServed`, not on the business itself. The
+           business geo is supposed to be the office location, and we have no
+           verified coordinates for the REMAX Collective street address —
+           inventing them would be fabricating data. The areaServed coordinates
+           ARE factual: they are the centre of the county being served. */}
+      <JsonLd
+        data={localBusinessSchema({
+          name: `Barrett Henry, REALTOR® — ${countyName} County, FL`,
+          description: `Real estate services across ${countyName} County, Florida from Barrett Henry, Broker Associate at REMAX Collective.`,
+          url: canonicalUrl,
+          areaServed: {
+            "@type": "AdministrativeArea",
+            name: `${countyName} County, Florida`,
+            ...(geoCenter
+              ? {
+                  geo: {
+                    "@type": "GeoCoordinates",
+                    latitude: geoCenter.latitude,
+                    longitude: geoCenter.longitude,
+                  },
+                }
+              : {}),
+          },
+        })}
       />
 
       {/* === Hero — compact with breadcrumb + CTA (matches spoke page pattern) === */}
@@ -98,6 +172,37 @@ export default async function CountyPage({
             </Link>
           </div>
         </div>
+      </section>
+
+      {/* === QUICK ANSWER ===
+           A direct, up-front answer to the page's primary question. This is the
+           block AI answer engines lift, and it is also the element the
+           `.quick-answer` speakable selector above points at — so this section
+           and that schema must stay together. If you remove this, remove
+           `.quick-answer` from the speakable selectors too, or the schema will
+           be pointing at an element that no longer exists.
+
+           Every number here comes from real data (cities.length, the county
+           name) — no invented market statistics. */}
+      <section className="container-wide pt-12">
+        <QuickAnswer heading={`What to know about ${countyName} County real estate`}>
+          <p>
+            {countyName} County, Florida covers {cities.length}{" "}
+            {cities.length === 1 ? "city" : "cities"} and communities featured on
+            this site, and active listings here update daily from Stellar MLS.
+            Use the city links below to narrow your search, then browse current
+            homes for sale further down the page.
+          </p>
+          <p>
+            Barrett Henry, Broker Associate at REMAX Collective, brings 23+ years
+            of real estate experience to buyers and sellers in {countyName}{" "}
+            County. Call{" "}
+            <a href="tel:+18137337907" className="text-link font-semibold">
+              (813) 733-7907
+            </a>{" "}
+            for a straight answer on pricing, timing, or a specific neighborhood.
+          </p>
+        </QuickAnswer>
       </section>
 
       {/* === Cities in this county — clickable grid of city hub links === */}

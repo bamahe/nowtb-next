@@ -1,4 +1,28 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+/**
+ * Explicit metadata for the 404 page.
+ *
+ * WHY THIS EXISTS: this page used to export no metadata at all, so it inherited
+ * whatever the root layout declared. The root layout declared the homepage as
+ * its canonical URL, which meant every missing URL on the site was telling
+ * Google "the canonical version of me is the homepage" — an instruction to fold
+ * dead URLs into the homepage's identity.
+ *
+ * `index: false` keeps 404s out of the index where they belong. `follow: true`
+ * is deliberate: a visitor landing here still gets real navigation, and letting
+ * crawlers follow those links means link equity reaching a dead URL is passed
+ * on to live pages instead of being thrown away.
+ *
+ * No `alternates.canonical` here — a 404 has no canonical version.
+ */
+export const metadata: Metadata = {
+  title: "Page Not Found",
+  description:
+    "That page could not be found. Search Tampa Bay homes for sale or reach Barrett Henry, REALTOR® at REMAX Collective, on (813) 733-7907.",
+  robots: { index: false, follow: true },
+};
 
 /**
  * Custom 404 page — catches all unmatched routes.

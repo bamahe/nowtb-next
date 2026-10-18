@@ -10,6 +10,10 @@ import ValuationForm from "@/components/ui/ValuationForm";
 import { getPrimaryAgent } from "@/data/agents";
 import { getListings } from "@/lib/bridge";
 import { formatPrice } from "@/lib/utils";
+// Needed for the contextual body links added below. getCityTopics tells us which
+// spoke pages this specific city actually has, so we never link a page that
+// does not exist; `cities` lets us find sibling seller pages in the same county.
+import { cities, getCityBySlug, getCityTopics } from "@/data/cities";
 
 interface SellYourHomeCityPageProps {
   /** Display name of the city (e.g. "Valrico") */
@@ -27,6 +31,45 @@ export default async function SellYourHomeCityPage({
   zipCodes,
 }: SellYourHomeCityPageProps) {
   const agent = getPrimaryAgent();
+
+  // ------------------------------------------------------------------
+  // CONTEXTUAL BODY LINKS — why this block exists.
+  //
+  // All 93 of these seller pages used to have exactly ONE outbound link (the
+  // "Sell Your Home Overview" back-link in the hero) and zero links in the body
+  // copy. This is the template closest to an actual listing appointment — the
+  // highest-value page type on the site — and it was a dead end: every visitor
+  // who wanted market data, a valuation, or the seller playbook had to leave via
+  // the header nav, and crawlers found nothing to follow.
+  //
+  // The links below are woven into the copy where a seller would genuinely want
+  // them, not stacked in a bare "related links" list. Each destination is
+  // verified to exist, and each anchor is a real keyword phrase — never
+  // "click here" or "read more", because the anchor text is what tells Google
+  // and the AI answer engines what the destination page is about.
+  //
+  // If it breaks, check:
+  //   - A link 404s => the spoke topic is not in this city's `topics` array in
+  //     src/data/cities.ts. The `has*` flags below guard against exactly that.
+  //   - cityData is undefined => this component was handed a slug that is not a
+  //     city. The [citySlug] route only renders it for real cities, so this
+  //     should not happen, but the optional chaining keeps the page rendering.
+  const cityData = getCityBySlug(citySlug);
+  const cityTopics = cityData ? getCityTopics(cityData).map((t) => t.slug) : [];
+  const hasHousingMarket = cityTopics.includes("housing-market");
+  const hasHomesForSale = cityTopics.includes("homes-for-sale");
+  const county = cityData?.county;
+
+  // Two or three sibling seller pages in the same county. These 93 seller pages
+  // never linked to each other, so the whole set sat isolated from one another;
+  // a seller in Brandon comparing notes on Riverview is a completely normal
+  // journey. Same-county keeps the suggestion geographically honest.
+  const siblingSellerCities = cityData
+    ? cities
+        .filter((c) => c.county === cityData.county && c.slug !== cityData.slug)
+        .sort((a, b) => a.tier - b.tier || a.name.localeCompare(b.name))
+        .slice(0, 3)
+    : [];
 
   // ------------------------------------------------------------------
   // Fetch live market stats from Bridge API using the city's ZIP codes.
@@ -117,13 +160,17 @@ export default async function SellYourHomeCityPage({
                 "@type": "ListItem",
                 position: 2,
                 name: "Sell Your Home",
-                item: "https://nowtb.com/sell-your-home",
+                // Trailing slashes here too. `trailingSlash: true` means the
+                // canonical URL of every page on this site ends in "/", so a
+                // schema `item` without one points at a redirect rather than at
+                // the page — a mismatched signal for anything reading the graph.
+                item: "https://nowtb.com/sell-your-home/",
               },
               {
                 "@type": "ListItem",
                 position: 3,
                 name: `Sell Your ${cityName} Home`,
-                item: `https://nowtb.com/sell-your-home-${citySlug}`,
+                item: `https://nowtb.com/sell-your-home-${citySlug}/`,
               },
             ],
           }),
@@ -165,7 +212,33 @@ export default async function SellYourHomeCityPage({
         </h2>
         <p className="font-body text-muted text-center mb-8 max-w-2xl mx-auto">
           Four pillars that consistently get {cityName} sellers above-market
-          results.
+          results. Start by seeing what you are up against: the{" "}
+          {hasHousingMarket ? (
+            <Link
+              href={`/${citySlug}-housing-market/`}
+              className="text-link hover:underline font-semibold"
+            >
+              {cityName} housing market
+            </Link>
+          ) : (
+            <Link href="/market-updates/" className="text-link hover:underline font-semibold">
+              Tampa Bay market updates
+            </Link>
+          )}{" "}
+          and the{" "}
+          {hasHomesForSale ? (
+            <Link
+              href={`/${citySlug}-homes-for-sale/`}
+              className="text-link hover:underline"
+            >
+              homes for sale in {cityName}
+            </Link>
+          ) : (
+            <Link href={`/${citySlug}/`} className="text-link hover:underline">
+              {cityName} real estate overview
+            </Link>
+          )}{" "}
+          that your listing will compete against.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -292,6 +365,34 @@ export default async function SellYourHomeCityPage({
               </div>
             </div>
           </div>
+
+          {/* Contextual links straight after the numbers — this is the point in
+              the page where a seller wants more detail, so it is the natural
+              place to hand them the deeper pages instead of a dead end. */}
+          <p className="font-body text-muted text-sm text-center mt-6 max-w-3xl mx-auto leading-relaxed">
+            These figures move every week. For the trend behind them see the{" "}
+            {hasHousingMarket ? (
+              <Link
+                href={`/${citySlug}-housing-market/`}
+                className="text-link hover:underline"
+              >
+                {cityName} housing market report
+              </Link>
+            ) : (
+              <Link href="/market-updates/" className="text-link hover:underline">
+                latest Tampa Bay market reports
+              </Link>
+            )}
+            , browse the{" "}
+            <Link href={`/${citySlug}/`} className="text-link hover:underline">
+              {cityName} real estate overview
+            </Link>{" "}
+            for neighborhood-level detail, or read the{" "}
+            <Link href="/guides/how-to-price-your-home/" className="text-link hover:underline">
+              guide to pricing your home
+            </Link>{" "}
+            before you settle on a number.
+          </p>
         </div>
       </section>
 
@@ -302,7 +403,16 @@ export default async function SellYourHomeCityPage({
             What&apos;s Your {cityName} Home Worth?
           </h2>
           <p className="font-body text-muted text-center mb-8">
-            Get a free, no-obligation home valuation from Barrett Henry.
+            Get a free, no-obligation home valuation from Barrett Henry. Prefer
+            to read first? The{" "}
+            <Link href="/sell-your-home/" className="text-link hover:underline">
+              step-by-step home selling process
+            </Link>{" "}
+            walks through every stage, and the{" "}
+            <Link href="/free-home-valuation/" className="text-link hover:underline">
+              free home valuation page
+            </Link>{" "}
+            explains exactly how Barrett builds the number.
           </p>
           <ValuationForm />
         </div>
@@ -319,11 +429,48 @@ export default async function SellYourHomeCityPage({
             targeted social media marketing, and aggressive negotiation — Barrett&apos;s 23+ years of real estate
             experience means your {cityName} home gets maximum exposure and top dollar.
           </p>
+          <p className="font-body text-muted mb-4">
+            Have a question before you commit to anything? Reach Barrett through
+            the{" "}
+            <Link href="/contact/" className="text-link hover:underline">
+              contact page
+            </Link>{" "}
+            or call direct.
+          </p>
           <a href={`tel:${agent.phone.replace(/[^\d]/g, "")}`} className="text-accent font-bold hover:underline">
             {agent.phone}
           </a>
         </div>
       </section>
+
+      {/* === Sibling seller pages ===
+           The 93 city seller pages never linked to one another, so each sat on
+           its own island. Sellers comparing two towns in the same county is a
+           normal journey, and it also gives every page in this set inbound
+           links from its neighbors instead of from nowhere. Kept to three so
+           this stays a useful suggestion rather than a link farm. */}
+      {siblingSellerCities.length > 0 && (
+        <section className="container-wide py-12 border-t border-gray-100">
+          <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2">
+            Selling Elsewhere in {county} County?
+          </h2>
+          <p className="font-body text-muted font-light mb-6">
+            Barrett lists homes across {county} County. Same strategy, local
+            pricing data for each market.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {siblingSellerCities.map((sibling) => (
+              <Link
+                key={sibling.slug}
+                href={`/sell-your-home-${sibling.slug}/`}
+                className="block border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10 hover:text-accent"
+              >
+                Sell Your {sibling.name} Home
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* === Phone CTA bar === */}
       <section className="bg-primary py-8">

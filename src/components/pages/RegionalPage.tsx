@@ -25,9 +25,37 @@ export default function RegionalPage({ page }: RegionalPageProps) {
 
   return (
     <>
-      {/* === Hero === */}
+      {/* === Hero ===
+           The hero now carries an above-the-fold conversion path as well as the
+           search bar. Before this, all 36 regional pages rendered with no phone
+           number ANYWHERE on the page — a visitor who wanted to talk to Barrett
+           had to scroll to the very bottom and fill in a form.
+
+           Note on `hidden md:block`: it is deliberately NOT used on the phone
+           link. Mobile is where a tap-to-call actually converts, so hiding the
+           number on small screens is exactly backwards. Both buttons are
+           full-width on mobile and sit side by side from `sm:` up. */}
       <HeroSection title={title} subtitle={excerpt}>
         <SearchBar />
+
+        {/* Tap-to-call + a conversion page link.
+            tel: hrefs must be bare digits, no spaces/parens, or iOS and
+            Android will not recognise the number. The human-readable
+            formatting lives in the link text instead. */}
+        <div className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
+          <a
+            href="tel:8137337907"
+            className="inline-flex items-center justify-center gap-2 bg-accent text-primary font-semibold px-6 py-3 text-sm hover:bg-accent/90 transition-colors"
+          >
+            Call (813) 733-7907
+          </a>
+          <Link
+            href="/contact/"
+            className="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 text-sm hover:bg-white/10 transition-colors"
+          >
+            Schedule a Consultation
+          </Link>
+        </div>
       </HeroSection>
 
       {/* === Main content === */}
@@ -193,8 +221,19 @@ export default function RegionalPage({ page }: RegionalPageProps) {
           <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2 text-center">
             Let Barrett Help You
           </h2>
+          {/* A second, in-body phone number. Plenty of visitors scroll straight
+              past the hero, and the form is not the right CTA for someone who
+              just wants a quick answer. Matches how LoanGuidePage words its
+              bottom CTA. */}
           <p className="font-body text-muted text-center mb-8">
-            Have questions about Tampa Bay real estate? Barrett Henry is ready to help.
+            Have questions about Tampa Bay real estate? Call Barrett Henry at{" "}
+            <a
+              href="tel:8137337907"
+              className="text-accent font-semibold hover:underline"
+            >
+              (813) 733-7907
+            </a>{" "}
+            or send a message below.
           </p>
           <ContactForm
             webhookUrl="/api/contact"

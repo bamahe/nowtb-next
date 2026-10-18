@@ -54,17 +54,21 @@ function checkEmail(email: string): { reject?: string; suspect?: string } {
     return { reject: `disposable email domain (${domain})` };
   }
 
-  // --- Gmail dot-abuse ---
-  // Gmail ignores dots, so "s.jg.e.nc.o@gmail.com" and "sjgenco@gmail.com" are
-  // the SAME inbox. Bots scatter dots to generate thousands of unique-looking
-  // addresses from one real account. A real person types at most one dot.
-  // 3+ dots is our threshold — "first.middle.last@gmail.com" (2 dots) is safe.
-  if (domain === "gmail.com" || domain === "googlemail.com") {
-    const dotCount = (localPart.match(/\./g) || []).length;
-    if (dotCount >= 3) {
-      return { reject: `gmail dot-abuse (${dotCount} dots in address)` };
-    }
-  }
+  // --- Gmail dot-abuse rule: REMOVED on purpose ---
+  // This used to hard-reject any gmail address with 3+ dots in the local part,
+  // on the theory that bots scatter dots to fake unique addresses.
+  //
+  // It was removed because it costs more than it saves:
+  //   1. It rejects real people. "barrett.a.b.henry@gmail.com" is a perfectly
+  //      normal address, and so is any first.middle.last.suffix pattern.
+  //   2. The thing this whole file exists to prevent is BOUNCES wrecking our
+  //      sending reputation. A dotted gmail address does not bounce — Gmail
+  //      ignores dots, so it delivers to the same real inbox either way. So
+  //      the rule was blocking leads without protecting anything.
+  //
+  // The honeypot, the rate limit, and the signals below still catch the bots.
+  // If dot-spam ever becomes a real problem again, flag it as `suspect` (lead
+  // reaches Follow Up Boss, no auto-responder sent) — never `reject`.
 
   // --- Random-string local part ---
   // Flag (don't reject) local parts with a long run of consonants, which is
@@ -196,12 +200,30 @@ export function validateLead(data: {
   }
 
   // --- Combination rule ---
-  // Any ONE weak signal is forgivable (people typo). But a bad phone AND a
-  // gibberish name together is the exact fingerprint of the bot spam we saw,
-  // so two or more independent flags escalates to a hard reject.
-  if (!reject && reasons.length >= 2) {
+  // THRESHOLD TRADEOFF, read this before changing the number.
+  //
+  // This used to hard-reject at TWO soft flags. Two weak signals is not proof:
+  // a seller who mistypes their phone number AND has an unusual short name
+  // (think "Ngoc Tran" — the no-vowel word check flags words like that) hit the
+  // limit and had their lead thrown away while the website told them "Message
+  // Sent!". That is the worst possible outcome on the site.
+  //
+  // Now it takes THREE independent flags — which means a bad phone AND a
+  // gibberish name AND a machine-looking email address, all at once, in one
+  // submission. That is a bot, not a person having a bad typing day.
+  //
+  // What happens at one or two flags instead: `suspect` stays true (any single
+  // flag sets it). The lead still lands in Follow Up Boss so Barrett can call
+  // it, but we do NOT send the auto-responder email — which is the actual
+  // protection we needed, since bounces are what damage our sending
+  // reputation. We keep the lead and skip the risky email.
+  //
+  // Hard rejects that are NOT subject to this threshold and still fire on their
+  // own: the honeypot being filled, no email and no phone at all, a malformed
+  // email, and disposable-domain addresses. Those are certainties, not guesses.
+  if (!reject && reasons.length >= 3) {
     reject = true;
-    reasons.push("multiple independent spam signals");
+    reasons.push("three or more independent spam signals");
   }
 
   return { reject, suspect, reasons };

@@ -13,6 +13,9 @@ import ContactForm from "@/components/ui/ContactForm";
 import PortabilityCalc from "@/components/ui/PortabilityCalc";
 import { getPrimaryAgent } from "@/data/agents";
 import { cleanWpContent } from "@/lib/utils";
+// Single source of truth for Barrett's author entity and for speakable
+// selectors. See src/lib/schema.tsx — do not re-hardcode these values here.
+import { barrettAuthorPerson, speakableSelectorsForContent } from "@/lib/schema";
 import {
   guides,
   getGuideBySlug,
@@ -36,6 +39,27 @@ export async function generateStaticParams() {
   return guides.map((guide) => ({ slug: guide.slug }));
 }
 
+// --- Social share image for guide pages ---
+//
+// Guides have no per-guide artwork. The GuideData interface in src/data/guides.ts
+// has no image field, and public/images/guides/ holds only six in-article
+// infographics whose filenames do not line up with guide slugs. So every guide
+// shares the site-wide card.
+//
+// VERIFIED ON DISK before being referenced here (2026-10-17):
+//   ls -la public/og-default.png   ->  exists, 41,673 bytes
+//   PNG header reports 1200 x 630  ->  matches the width/height declared below
+// Do not change this path without re-running that check. There is a standing
+// bug on this site where schema pointed at /images/barrett-henry-headshot.jpg,
+// a file that has never existed (the real headshot is barrett-headshot.png), so
+// an unverified image path here is a realistic failure mode, not a hypothetical.
+const GUIDE_OG_IMAGE = {
+  url: "/og-default.png",
+  width: 1200,
+  height: 630,
+  alt: "Barrett Henry, REALTOR® — Tampa Bay Homes for Sale",
+};
+
 // --- Dynamic SEO metadata ---
 export async function generateMetadata({
   params,
@@ -46,24 +70,73 @@ export async function generateMetadata({
   const guide = getGuideBySlug(slug);
   if (!guide) return {};
 
-  const ogTitle = `${guide.title} | Barrett Henry, REALTOR®`;
+  // ─── TITLE: the brand is deliberately NOT in this string ───────────────────
+  // src/app/layout.tsx sets `title.template = "%s | Barrett Henry"`, and Next.js
+  // applies that template to a plain-string `title` — and ALSO to
+  // `openGraph.title` and `twitter.title`. (Confirmed in the installed copy of
+  // Next 14: node_modules/next/dist/lib/metadata/resolvers/resolve-opengraph.js
+  // calls resolveTitle(openGraph.title, titleTemplate) and the same for twitter.)
+  //
+  // This function used to build `${guide.title} | Barrett Henry, REALTOR®` and
+  // hand it to all three fields, so the template appended the brand a SECOND
+  // time and 100% of live /guides/ pages rendered a doubled suffix:
+  //
+  //   before:  "Home Appraisal Guide | Barrett Henry, REALTOR® | Barrett Henry"  (62)
+  //   after:   "Home Appraisal Guide | Barrett Henry"                            (36)
+  //
+  // Google truncates around 60 characters, so the duplicate was eating the part
+  // of the title that actually ranks. ONE source of truth for the brand: the
+  // template in layout.tsx. The REALTOR® credential is not lost — it is stated
+  // properly in the Person/author schema further down this file, which is where
+  // search and AI answer engines read credentials from.
+  //
+  // BUDGET: the suffix is 16 characters, so this string must stay at or under
+  // 44 characters to keep the rendered <title> under 60. Two guide titles in
+  // src/data/guides.ts currently exceed that (the Hillsborough County timeline
+  // guide at 73 chars, and the homestead exemption guide at 50) and need
+  // shortening in that data file, which this file cannot do for them.
+  //
+  // If it breaks, check: a doubled brand reappearing means someone put
+  // "Barrett Henry" back into this string or into guide.title itself. A page
+  // that genuinely needs to bypass the suffix uses `title: { absolute: "..." }`.
+  const title = guide.title;
+
   return {
-    title: ogTitle,
+    title,
     description: guide.excerpt,
     alternates: {
       canonical: `/guides/${slug}/`,
     },
     openGraph: {
-      title: ogTitle,
+      title,
       description: guide.excerpt,
       url: `/guides/${slug}/`,
       type: "article",
       publishedTime: guide.date,
+      // siteName/locale are repeated here because a child `openGraph` object
+      // REPLACES the root layout's openGraph wholesale rather than merging into
+      // it — same reason `images` has to be repeated, see below.
+      siteName: "Barrett Henry, REALTOR® — REMAX Collective",
+      locale: "en_US",
+      // ─── og:image is REQUIRED here, it is NOT inherited ───────────────────
+      // layout.tsx declares a site-wide openGraph.images, but Next.js does not
+      // merge nested metadata objects field-by-field: the moment this page
+      // defines `openGraph` at all, the parent's entire openGraph object is
+      // replaced, images included. The resolver then does
+      // `target.images = resolveImages(og.images, ...)` unconditionally, so an
+      // absent `images` key resolves to undefined and the page ships with NO
+      // og:image. That is what made every guide share as a blank grey box:
+      // twitter:card below promises a large-image card, and nothing supplied
+      // the image. Half the sampled pages on the live site had this.
+      images: [GUIDE_OG_IMAGE],
     },
     twitter: {
       card: "summary_large_image",
-      title: ogTitle,
+      title,
       description: guide.excerpt,
+      // Same non-inheritance rule applies to twitter.images. Without this,
+      // card="summary_large_image" is a promise with nothing behind it.
+      images: [GUIDE_OG_IMAGE.url],
     },
   };
 }
@@ -87,6 +160,14 @@ export default async function GuidePage({
   // Check for real WordPress content (falls back to placeholder sections)
   const wpContent = getGuideContent(guide.slug);
 
+  // The exact cleaned HTML the body renders when WordPress content exists.
+  // Computed once here so the `speakable` selectors in the JSON-LD below are
+  // feature-detected against the SAME string that reaches the DOM further down
+  // (the dangerouslySetInnerHTML below reuses this const). Guides with no
+  // WordPress export fall back to generated placeholder sections, which never
+  // contain a quick-answer block — hence null, which yields just "h1".
+  const cleanedBody = wpContent ? cleanWpContent(wpContent) : null;
+
   return (
     <>
       {/* --- JSON-LD Article structured data --- */}
@@ -99,27 +180,47 @@ export default async function GuidePage({
             headline: guide.title,
             description: guide.excerpt,
             datePublished: guide.date,
-            author: {
-              "@type": "Person",
-              name: agent.name,
-              jobTitle: "Broker Associate",
-              url: "https://nowtb.com/about",
-              image: "https://nowtb.com/images/barrett-henry.jpg",
-              sameAs: [
-                "https://www.linkedin.com/in/barretthenry",
-                "https://www.facebook.com/BarrettHenryREALTOR",
-                "https://barretthenry.remax.com",
-              ],
-            },
+            // AUTHOR — built from the shared helper in src/lib/schema.tsx
+            // rather than retyped here (fixed 2026-10-17).
+            //
+            // The hand-written version this replaces had its own `image`, its
+            // own short `sameAs` list, and NO credentials, so guides described
+            // a slightly different Barrett than blog posts and city pages did.
+            // Answer engines resolve an author by matching those fields; three
+            // near-identical Person nodes read as three weaker entities instead
+            // of one strong one. barrettAuthorPerson() emits the verified
+            // headshot URL, the full sameAs set, and his three real
+            // designations (e-PRO, MRP, SRS — he holds no others).
+            //
+            // If it breaks, check: src/lib/schema.tsx owns these values now.
+            // Fix them there, not here.
+            author: barrettAuthorPerson(),
             publisher: {
               "@type": "Organization",
               name: "Barrett Henry, REALTOR\u00AE",
               url: "https://nowtb.com",
             },
-            // Speakable schema — tells AI assistants & voice search which parts to read aloud
+            // SPEAKABLE — tells voice search and AI assistants which element
+            // holds the quotable answer.
+            //
+            // The old hardcoded list was `[".quick-answer", "article h1",
+            // "article h2 + p"]` and every selector in it matched NOTHING:
+            //  - this template never renders <QuickAnswer>, so nothing on the
+            //    page has class "quick-answer". The migrated WordPress content
+            //    uses "bbs-quick-answer" instead, and CSS class selectors match
+            //    whole tokens, not substrings — ".quick-answer" does not match
+            //    "bbs-quick-answer".
+            //  - "article h1" fails because the <h1> is in the hero <section>,
+            //    outside <article>.
+            // A speakable spec that resolves to nothing is worse than none: it
+            // promises assistants a quotable block that does not exist.
+            //
+            // speakableSelectorsForContent() inspects the real cleaned body
+            // HTML and returns only selectors that actually resolve, falling
+            // back to the bare "h1" this template does render.
             speakable: {
               "@type": "SpeakableSpecification",
-              cssSelector: [".quick-answer", "article h1", "article h2 + p"],
+              cssSelector: speakableSelectorsForContent(cleanedBody),
             },
           }),
         }}
@@ -229,7 +330,7 @@ export default async function GuidePage({
                   prose-headings:font-heading prose-headings:text-primary
                   prose-a:text-link prose-a:no-underline hover:prose-a:underline
                   prose-p:leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: cleanWpContent(wpContent) }}
+                dangerouslySetInnerHTML={{ __html: cleanedBody ?? "" }}
               />
 
               {/* Back to guides link */}

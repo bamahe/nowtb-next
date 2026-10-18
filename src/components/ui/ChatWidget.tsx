@@ -4,16 +4,20 @@
 // navigate the site, and connects visitors with Barrett Henry.
 //
 // Features:
-// - Floating bubble in bottom-right (above MobileBottomBar + BackToTop)
+// - Floating bubble in bottom-right
 // - Expandable chat panel with message history
 // - Streams AI responses with a typing indicator
 // - Persists conversation in sessionStorage
+// - LEAD CAPTURE: after a real exchange, offers to have Barrett follow up and
+//   posts name/phone/email to /api/contact so it reaches Follow Up Boss
 // =============================================================================
 
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import { MessageCircle, X, Send, Bot, User } from "lucide-react";
+import { MessageCircle, X, Send, Bot, User, Phone } from "lucide-react";
+import TurnstileWidget from "@/components/ui/TurnstileWidget";
+import { trackPhoneTap, trackChatLeadCaptured } from "@/lib/analytics";
 
 // -- Types --
 
@@ -22,12 +26,47 @@ interface ChatMessage {
   content: string;
 }
 
+/**
+ * Where the lead-capture card is in its life. Kept as one value rather than
+ * four booleans so it is impossible to be in two states at once.
+ *  hidden  — nothing shown yet (visitor hasn't earned the ask)
+ *  offered — "Want Barrett to follow up?" with Yes / No thanks
+ *  form    — the 3-field form is open
+ *  sent    — it reached /api/contact successfully
+ */
+type CaptureStage = "hidden" | "offered" | "form" | "sent";
+
 // -- Constants --
 
 const INITIAL_GREETING =
   "Hi! I'm the NOW Team Assistant. I can help you with Tampa Bay real estate questions, finding homes, understanding the market, or connecting you with Barrett Henry. What can I help you with?";
 
 const STORAGE_KEY = "nowtb-chat-history";
+
+// Remembers that we already asked this session, so a visitor who said "no
+// thanks" (or already submitted) is never nagged again while they browse.
+const CAPTURE_STATE_KEY = "nowtb-chat-capture";
+
+const PHONE_DISPLAY = "(813) 733-7907";
+const PHONE_HREF = "tel:+18137337907";
+
+// ─── WHEN WE ASK FOR CONTACT DETAILS ──────────────────────────────────────────
+// Never on the first reply. Gating the opening answer behind a form is how you
+// kill a conversation before it starts — and this widget's whole problem was
+// that it captured NOTHING, not that it asked too late.
+//
+// Two ways a visitor earns the ask:
+//  1. They have sent this many messages — they are clearly engaged.
+//  2. Their message contains high-intent language (they want to see a house,
+//     sell one, get pre-approved). One of those is worth more than ten
+//     "what's the weather in Tampa" questions.
+const MIN_USER_MESSAGES_BEFORE_ASK = 2;
+
+// High-intent phrases. Deliberately about the TRANSACTION — we ask what they
+// want to do, never anything personal. (Barrett's rule: no creepy CTAs. Never
+// ask about children, ages, income, marital status or anything like it.)
+const HIGH_INTENT_PATTERN =
+  /\b(buy|buying|sell|selling|list(ing)?\b|showing|tour|schedule|appointment|pre-?approv|mortgage|offer|make an offer|my home'?s? (value|worth)|home value|valuation|what'?s my house worth|move|moving|relocat|agent|realtor|call me|text me|email me)\b/i;
 
 // -- Helper: load chat history from sessionStorage --
 function loadHistory(): ChatMessage[] {
@@ -96,6 +135,22 @@ export default function ChatWidget() {
   // Whether to show the proactive tooltip bubble near the chat icon
   const [showTooltip, setShowTooltip] = useState(false);
 
+  // -- Lead capture state --
+  const [captureStage, setCaptureStage] = useState<CaptureStage>("hidden");
+  const [leadName, setLeadName] = useState("");
+  const [leadPhone, setLeadPhone] = useState("");
+  const [leadEmail, setLeadEmail] = useState("");
+  const [isSubmittingLead, setIsSubmittingLead] = useState(false);
+  // Empty string = no error. Shown above the form, with the phone number, if
+  // the POST fails — we never fake a success.
+  const [leadError, setLeadError] = useState("");
+  // Cloudflare Turnstile token. TurnstileWidget hands us either a real token or
+  // one of its documented sentinel values when the challenge could not run.
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const handleTurnstileVerify = useCallback((token: string) => {
+    setTurnstileToken(token);
+  }, []);
+
   // -- Refs --
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -116,10 +171,13 @@ export default function ChatWidget() {
     }
   }, [messages, hasLoaded]);
 
-  // Auto-scroll to the bottom when new messages arrive
+  // Auto-scroll to the bottom when new messages arrive.
+  // captureStage is a dependency so the lead-capture card scrolls into view the
+  // moment it appears — otherwise it can render below the fold of the panel and
+  // the visitor never sees the ask.
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages, isLoading]);
+  }, [messages, isLoading, captureStage]);
 
   // Proactive chat tooltip — show after 30s if not already shown this session
   useEffect(() => {
@@ -264,6 +322,183 @@ export default function ChatWidget() {
     }
   }, [input, isLoading, messages]);
 
+  // ───────────────────────────────────────────────────────────────────────────
+  // LEAD CAPTURE — decide when to offer it
+  //
+  // THE PROBLEM THIS SOLVES: this widget is on all ~3,400 pages and captured
+  // nothing. Someone would ask three questions about Riverview schools, get a
+  // genuinely good answer, and be handed a /contact/ URL. Barrett never learned
+  // they existed. Every one of those was a lead that engaged and then
+  // evaporated.
+  //
+  // Fires once per session, only after the assistant has finished answering
+  // (so the card never interrupts a reply mid-stream).
+  // ───────────────────────────────────────────────────────────────────────────
+  useEffect(() => {
+    // Already offered, open, or submitted — nothing to do.
+    if (captureStage !== "hidden") return;
+    // Already handled earlier this session (they submitted or said no thanks).
+    try {
+      if (sessionStorage.getItem(CAPTURE_STATE_KEY)) return;
+    } catch {
+      // sessionStorage unavailable (private mode) — carry on, worst case we
+      // offer again on the next page. Better than crashing the widget.
+    }
+    // Don't interrupt a reply that is still streaming in.
+    if (isLoading) return;
+
+    const userMessages = messages.filter((m) => m.role === "user");
+    if (userMessages.length === 0) return;
+
+    // The assistant must have actually answered — the last message is a
+    // non-empty assistant turn.
+    const last = messages[messages.length - 1];
+    if (!last || last.role !== "assistant" || !last.content.trim()) return;
+
+    const lastUserMessage = userMessages[userMessages.length - 1].content;
+    const showsIntent = HIGH_INTENT_PATTERN.test(lastUserMessage);
+
+    if (userMessages.length >= MIN_USER_MESSAGES_BEFORE_ASK || showsIntent) {
+      setCaptureStage("offered");
+    }
+  }, [messages, isLoading, captureStage]);
+
+  /** Remember that we asked, so we don't ask again this session. */
+  const rememberCaptureHandled = useCallback((how: "sent" | "dismissed") => {
+    try {
+      sessionStorage.setItem(CAPTURE_STATE_KEY, how);
+    } catch {
+      // Non-fatal — see note above.
+    }
+  }, []);
+
+  /**
+   * Builds the note Barrett reads in Follow Up Boss: the tail of the actual
+   * conversation plus the page they were on. Without this he gets a name and a
+   * phone number with no idea what they wanted.
+   *
+   * Trimmed to the last few turns and hard-capped in length so one very long
+   * chat can't produce a payload FUB will refuse.
+   */
+  const buildTranscriptNote = useCallback(() => {
+    const recent = messages.slice(-8);
+    const lines = recent.map(
+      (m) => `${m.role === "user" ? "Visitor" : "Assistant"}: ${m.content.trim()}`
+    );
+    const pagePath =
+      typeof window !== "undefined" ? window.location.pathname : "unknown";
+
+    const note = [
+      "Lead captured by the website AI chat assistant.",
+      `Page they were on: ${pagePath}`,
+      "",
+      "--- Recent conversation ---",
+      ...lines,
+    ].join("\n");
+
+    // 4,000 characters is comfortably inside what the API and FUB accept.
+    return note.length > 4000 ? `${note.slice(0, 4000)}\n[trimmed]` : note;
+  }, [messages]);
+
+  /**
+   * POST the captured lead to /api/contact.
+   *
+   * CONFORMS TO THE EXISTING CONTRACT — this sends exactly the shape
+   * ContactForm.tsx sends, because /api/contact destructures
+   * { type, turnstileToken, honeypot, extraTags, ...formData }:
+   *   - type: "contact"  → the only sensible existing type. There is NO "chat"
+   *     type in the route's webhookMap, and an unknown type returns 400
+   *     "Invalid form type", which would silently lose every chat lead.
+   *   - source: "/chat/" → stored as FUB's sourceId, so chat leads are
+   *     separable from page forms at a glance.
+   *   - extraTags       → merged into the FUB tags by the route's
+   *     mergeExtraTags(), giving Barrett a "Chat Lead" tag to build a smart
+   *     list from.
+   *   - turnstileToken  → a real Cloudflare token when the widget below can
+   *     run, or one of the widget's own sentinel values when it cannot. The
+   *     route already accepts those sentinels; we do NOT invent a new one and
+   *     we do NOT bypass the endpoint.
+   *
+   * If it breaks, check:
+   *  - A 403 means Turnstile rejected it. The sentinel escape hatch lives in
+   *    src/app/api/contact/route.ts — look for `widgetFallback`.
+   *  - A 400 "Invalid form type" means someone changed `type` below to a value
+   *    that isn't a key of that route's webhookMap.
+   *  - A 200 with no lead in FUB means the FUB_API_KEY is bad; the route logs
+   *    "[LEAD AT RISK]" and emails a failure alert in that case.
+   *  - A 429 means the per-IP rate limit (5 per 10 minutes) was hit.
+   */
+  const submitLead = useCallback(async () => {
+    if (isSubmittingLead) return;
+
+    const name = leadName.trim();
+    const phone = leadPhone.trim();
+    const email = leadEmail.trim();
+
+    // Client-side sanity check so an obviously incomplete form doesn't burn one
+    // of the visitor's five allowed submissions per 10 minutes.
+    if (!name || !phone || !email) {
+      setLeadError("Please add your name, phone and email so Barrett can reach you.");
+      return;
+    }
+
+    setIsSubmittingLead(true);
+    setLeadError("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          message: buildTranscriptNote(),
+          source: "/chat/",
+          type: "contact",
+          extraTags: ["Chat Lead", "AI Chat Assistant"],
+          turnstileToken,
+        }),
+      });
+
+      if (!res.ok) throw new Error(`Server responded with ${res.status}`);
+
+      // Success — tell them in the conversation, not with a popup.
+      setCaptureStage("sent");
+      rememberCaptureHandled("sent");
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          content: `Got it, ${name.split(" ")[0]} — Barrett has your details and will reach out personally, usually within 2 hours. If you'd rather not wait, call him directly at ${PHONE_DISPLAY}. Anything else I can help with in the meantime?`,
+        },
+      ]);
+
+      // Conversion event. No personal data is sent to Google — just the fact
+      // that a chat lead was captured and which page it happened on.
+      trackChatLeadCaptured(
+        typeof window !== "undefined" ? window.location.pathname : "unknown"
+      );
+    } catch (err) {
+      // BE HONEST ON FAILURE. Showing "thanks, we'll be in touch!" when the
+      // lead never arrived is worse than showing nothing — they stop trying.
+      console.error("Chat lead capture failed:", err);
+      setLeadError(
+        `That didn't go through. Please call or text Barrett at ${PHONE_DISPLAY} — or try sending again.`
+      );
+    } finally {
+      setIsSubmittingLead(false);
+    }
+  }, [
+    isSubmittingLead,
+    leadName,
+    leadPhone,
+    leadEmail,
+    turnstileToken,
+    buildTranscriptNote,
+    rememberCaptureHandled,
+  ]);
+
   // Handle Enter key to send
   function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
     if (e.key === "Enter" && !e.shiftKey) {
@@ -283,7 +518,12 @@ export default function ChatWidget() {
       {/* ── Chat Panel ── */}
       {isOpen && (
         <div
-          className="fixed z-50 flex flex-col
+          // z-[80] = the "dialog/overlay" tier of the stacking scale in
+          // src/app/layout.tsx. The panel was z-50, which put it UNDER the
+          // cookie banner (z-90 at the time) — a first-time visitor could open
+          // the chat and have the banner sitting across the bottom of it. A
+          // dialog the visitor deliberately opened outranks a banner.
+          className="fixed z-[80] flex flex-col
                      bottom-0 right-0 w-full h-[85vh]
                      sm:bottom-24 sm:right-4 sm:w-[380px] sm:h-[520px]
                      md:bottom-8 md:right-4
@@ -364,6 +604,145 @@ export default function ChatWidget() {
               </div>
             )}
 
+            {/* ── Lead capture card ───────────────────────────────────────
+                Appears inside the conversation after a real exchange. Three
+                fields only — name, phone, email. Nothing else is ever asked;
+                no "how many kids", no budget interrogation, no personal
+                details. ──────────────────────────────────────────────────── */}
+            {captureStage === "offered" && !isLoading && (
+              <div className="bg-white border border-accent/60 rounded-lg p-3 shadow-sm">
+                <p className="font-body text-sm text-dark leading-snug mb-3">
+                  Want Barrett to follow up personally? He&apos;s a licensed
+                  REALTOR&reg; with 23+ years of real estate experience and can
+                  answer this properly in a 5-minute call.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setCaptureStage("form");
+                      setLeadError("");
+                    }}
+                    className="flex items-center gap-1.5 bg-primary text-white
+                               font-body text-xs font-semibold
+                               px-3 py-2 rounded-lg hover:bg-primary/90 transition-colors"
+                  >
+                    <Phone size={13} strokeWidth={2.5} aria-hidden="true" />
+                    Yes — have Barrett reach out
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      // "No thanks" is respected for the rest of the session.
+                      setCaptureStage("hidden");
+                      rememberCaptureHandled("dismissed");
+                    }}
+                    className="font-body text-xs text-muted hover:text-dark
+                               px-3 py-2 rounded-lg transition-colors"
+                  >
+                    No thanks
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {captureStage === "form" && (
+              <div className="bg-white border border-accent/60 rounded-lg p-3 shadow-sm">
+                <p className="font-body text-xs font-semibold text-dark mb-2">
+                  Where should Barrett reach you?
+                </p>
+
+                {/* Honest failure state — shows the phone number rather than a
+                    fake "thanks!". The API returning anything but 200 lands
+                    here. */}
+                {leadError && (
+                  <div className="rounded-md bg-red-50 border border-red-200 p-2 mb-2">
+                    <p className="font-body text-xs text-red-800 leading-snug">
+                      {leadError}
+                    </p>
+                  </div>
+                )}
+
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    submitLead();
+                  }}
+                  className="space-y-2"
+                >
+                  <input
+                    type="text"
+                    required
+                    autoComplete="name"
+                    placeholder="Your name"
+                    value={leadName}
+                    onChange={(e) => setLeadName(e.target.value)}
+                    aria-label="Your name"
+                    className="w-full px-3 py-2 text-sm font-body border border-border rounded-lg
+                               focus:border-accent focus:ring-2 focus:ring-accent/30 focus:outline-none
+                               bg-white text-dark placeholder:text-muted"
+                  />
+                  <input
+                    type="tel"
+                    required
+                    autoComplete="tel"
+                    placeholder="Phone"
+                    value={leadPhone}
+                    onChange={(e) => setLeadPhone(e.target.value)}
+                    aria-label="Your phone number"
+                    className="w-full px-3 py-2 text-sm font-body border border-border rounded-lg
+                               focus:border-accent focus:ring-2 focus:ring-accent/30 focus:outline-none
+                               bg-white text-dark placeholder:text-muted"
+                  />
+                  <input
+                    type="email"
+                    required
+                    autoComplete="email"
+                    placeholder="Email"
+                    value={leadEmail}
+                    onChange={(e) => setLeadEmail(e.target.value)}
+                    aria-label="Your email address"
+                    className="w-full px-3 py-2 text-sm font-body border border-border rounded-lg
+                               focus:border-accent focus:ring-2 focus:ring-accent/30 focus:outline-none
+                               bg-white text-dark placeholder:text-muted"
+                  />
+
+                  {/* Same spam protection every other form on the site uses.
+                      Renders nothing when no site key is configured and
+                      auto-emits the sentinel token the API already accepts, so
+                      the button can never be permanently stuck. */}
+                  <TurnstileWidget onVerify={handleTurnstileVerify} />
+
+                  <button
+                    type="submit"
+                    disabled={isSubmittingLead || !turnstileToken}
+                    className={`w-full bg-primary text-white font-body text-xs font-semibold
+                                px-3 py-2.5 rounded-lg transition-colors
+                                ${
+                                  isSubmittingLead || !turnstileToken
+                                    ? "opacity-60 cursor-not-allowed"
+                                    : "hover:bg-primary/90"
+                                }`}
+                  >
+                    {isSubmittingLead ? "Sending..." : "Send to Barrett"}
+                  </button>
+
+                  <p className="font-body text-[10px] text-muted leading-snug">
+                    By sending this you agree to be contacted by Barrett Henry,
+                    The NOW Team, REMAX Collective by call, text or email. Opt
+                    out any time. Prefer to call?{" "}
+                    <a
+                      href={PHONE_HREF}
+                      onClick={() => trackPhoneTap("chat-capture-form")}
+                      className="text-link underline"
+                    >
+                      {PHONE_DISPLAY}
+                    </a>
+                  </p>
+                </form>
+              </div>
+            )}
+
             {/* Invisible anchor to scroll into view */}
             <div ref={messagesEndRef} />
           </div>
@@ -397,8 +776,12 @@ export default function ChatWidget() {
             </div>
             <p className="text-[10px] text-muted text-center mt-1.5 font-body">
               AI assistant — for personalized advice, call{" "}
-              <a href="tel:+18137337907" className="text-link hover:underline">
-                (813) 733-7907
+              <a
+                href={PHONE_HREF}
+                onClick={() => trackPhoneTap("chat-panel-footer")}
+                className="text-link hover:underline"
+              >
+                {PHONE_DISPLAY}
               </a>
             </p>
           </div>
@@ -407,7 +790,14 @@ export default function ChatWidget() {
 
       {/* ── Proactive Chat Tooltip ── */}
       {showTooltip && !isOpen && (
-        <div className="fixed z-50 right-4 bottom-28 sm:bottom-32 md:bottom-20">
+        <div
+          // z-[45] = the "chat bubble" tier (below MobileBottomBar's z-50 so
+          // the Call button always wins). marginBottom lifts it clear of the
+          // cookie banner while that banner is on screen — the variable is
+          // published by CookieConsent.tsx and is 0px otherwise.
+          style={{ marginBottom: "var(--cookie-banner-lift, 0px)" }}
+          className="fixed z-[45] right-4 bottom-28 sm:bottom-32 md:bottom-20"
+        >
           <div className="relative bg-white text-dark rounded-xl shadow-2xl px-4 py-3 w-[240px] border border-border">
             <p className="font-body text-sm leading-snug pr-4">
               Looking for homes in Tampa Bay? I can help!
@@ -433,8 +823,18 @@ export default function ChatWidget() {
           setShowTooltip(false); // Dismiss tooltip when clicking chat bubble
         }}
         aria-label={isOpen ? "Close chat" : "Ask a question"}
+        // Two offsets stacked into one bottom margin:
+        //  - --cookie-banner-lift keeps the bubble above the cookie banner on a
+        //    first visit (it used to be buried under it on every mobile visit).
+        //  - env(safe-area-inset-bottom) keeps it above the MobileBottomBar on
+        //    notched iPhones, where that bar grows by the home-indicator inset.
+        // Both resolve to 0 when they don't apply, so desktop is unaffected.
+        style={{
+          marginBottom:
+            "calc(var(--cookie-banner-lift, 0px) + env(safe-area-inset-bottom, 0px))",
+        }}
         className={`
-          fixed z-50 right-4
+          fixed z-[45] right-4
           bottom-[4.5rem] sm:bottom-20 md:bottom-8
           h-14 rounded-full px-5
           bg-primary text-white shadow-lg

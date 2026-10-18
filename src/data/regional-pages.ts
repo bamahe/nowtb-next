@@ -101,7 +101,12 @@ export const regionalPages: RegionalPageData[] = [
   {
     slug: "remax-agent-tampa-bay",
     title: "REMAX Agent in Tampa Bay — Barrett Henry",
-    excerpt: "Barrett Henry is a REMAX Collective Broker Associate with 23+ years of real estate experience serving Tampa Bay.",
+    // Was "...23+ years of real estate experience serving Tampa Bay", where the
+    // participle "serving Tampa Bay" hangs directly off the year count and so
+    // reads as 23 years of Tampa Bay service. Split into two sentences so the
+    // number stays on the license (September 2003) and the service area stands
+    // on its own. See the longer note on the tampa-bay-real-estate-agent entry.
+    excerpt: "Barrett Henry is a REMAX Collective Broker Associate serving Tampa Bay. 23+ years of real estate experience.",
     category: "Agent",
   },
   {
@@ -175,7 +180,12 @@ export const regionalPages: RegionalPageData[] = [
   {
     slug: "tampa-bay-real-estate-agent",
     title: "Tampa Bay Real Estate Agent — Barrett Henry",
-    excerpt: "Barrett Henry is a top Tampa Bay real estate agent with 23+ years of experience at REMAX Collective.",
+    // The experience figure is kept unlocalized on purpose: Barrett has been
+    // licensed since September 2003 (23+ years of real estate experience) but
+    // has only been in Florida about a decade. "23+ years of experience" sitting
+    // next to "Tampa Bay" reads as 23 years of Tampa Bay experience, which is
+    // factually false. Never merge the two numbers.
+    excerpt: "Barrett Henry is a Tampa Bay real estate agent with 23+ years of real estate experience at REMAX Collective.",
     category: "Agent",
   },
   {

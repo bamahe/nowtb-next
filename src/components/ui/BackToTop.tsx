@@ -27,6 +27,15 @@ export default function BackToTop() {
     <button
       onClick={scrollToTop}
       aria-label="Back to top"
+      // Lifts out of the way while the cookie banner is on screen.
+      // `--cookie-banner-lift` is published on <html> by CookieConsent.tsx and
+      // is 0px the rest of the time, so this is a no-op once dismissed.
+      // Margin rather than `bottom` on purpose: it stacks on top of whichever
+      // responsive `bottom-*` class is active and leaves the show/hide
+      // translate animation below untouched.
+      // If it breaks, check: inspect <html> in DevTools for the variable. See
+      // the full explanation in src/components/ui/CookieConsent.tsx.
+      style={{ marginBottom: "var(--cookie-banner-lift, 0px)" }}
       className={`
         fixed bottom-[7.5rem] sm:bottom-36 md:bottom-24 right-4 z-40
         w-14 h-14 rounded-full

@@ -24,7 +24,21 @@ import ValuationForm from "@/components/ui/ValuationForm";
 import SpokeNav from "@/components/city/SpokeNav";
 import CityContent from "@/components/city/CityContent";
 import CityResources from "@/components/city/CityResources";
+// Lead capture + slug-keyed CTA copy for the city hub and spoke templates.
+// These pages had NO form at all before — only links — so every visitor with
+// buying intent had to click again to convert. AreaCta wraps the existing
+// ContactForm (Turnstile + /api/contact + Follow Up Boss) and picks its headline
+// deterministically from the page slug so 3,200 pages don't share one sentence.
+// See src/components/city/AreaCta.tsx for the full explanation.
+import {
+  AreaHeroCtaButtons,
+  AreaLeadCapture,
+  AreaCtaBar,
+} from "@/components/city/AreaCta";
 import { cleanWpContent, formatPrice } from "@/lib/utils";
+// Single source of truth for how many characters the layout's brand suffix
+// leaves a page title. See the TITLE_SUFFIX comment in src/app/layout.tsx.
+import { TITLE_BUDGET } from "@/app/layout";
 import CountyPage from "@/components/pages/CountyPage";
 import RealtorPage from "@/components/pages/RealtorPage";
 import NeighborhoodPage from "@/components/pages/NeighborhoodPage";
@@ -369,16 +383,18 @@ export async function generateMetadata({
         },
       };
     case "realtor":
-      // layout.tsx appends " | Barrett Henry, REALTOR®" (26 chars), so the page
-      // portion must stay short. The old "| REMAX Collective" suffix pushed 80 of
-      // 93 city pages past 60 characters. Append "| Relocation" only when the
-      // city name is short enough that the full tag still fits.
+      // layout.tsx appends a brand suffix to every title, so the page portion
+      // must stay inside the leftover budget or Google truncates the keyword
+      // mid-phrase. Append "| Relocation" only when the city name is short
+      // enough that the full tag still fits.
+      //
+      // TITLE_BUDGET is imported rather than hardcoded on purpose: this line
+      // used to spell out the old 26-character suffix, and when the suffix was
+      // shortened to 16 the stale copy kept reserving characters that no longer
+      // existed — dropping "| Relocation" from 23 cities where it now fits.
       const realtorBase = `${parsed.city.name} REALTOR®`;
       const withReloc = `${realtorBase} | Relocation`;
-      const realtorTitle =
-        withReloc.length + " | Barrett Henry, REALTOR®".length <= 60
-          ? withReloc
-          : realtorBase;
+      const realtorTitle = withReloc.length <= TITLE_BUDGET ? withReloc : realtorBase;
       return {
         title: realtorTitle,
         description: `Buying, selling, or relocating to ${parsed.city.name}, FL? Barrett Henry, Broker Associate at REMAX Collective. MRP relocation specialist. Call (813) 733-7907.`,
@@ -825,21 +841,10 @@ async function HubPage({ city }: { city: CityData }) {
             {city.county} County, Florida — Updated daily from Stellar MLS
           </p>
 
-          {/* CTA row */}
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="tel:+18137337907"
-              className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 rounded text-sm hover:bg-accent/90 transition-colors"
-            >
-              (813) 733-7907
-            </a>
-            <Link
-              href="/contact/"
-              className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
-            >
-              Schedule a Tour
-            </Link>
-          </div>
+          {/* CTA row — above the fold, tap-to-call phone number always visible
+              (never hidden on mobile), plus a same-page jump to the lead form
+              further down so nobody has to leave the page to convert. */}
+          <AreaHeroCtaButtons />
         </div>
       </section>
 
@@ -997,7 +1002,22 @@ async function HubPage({ city }: { city: CityData }) {
       <div id="about" />
       <CityContent city={city} />
 
+      {/* === LEAD FORM — mid-page, right after the listings and the prose ===
+           This is the piece these pages were missing entirely. It sits here (not
+           only at the very bottom) because a visitor who just read the city
+           overview is at peak intent, and on a page this long most people never
+           reach the footer. `source` is what Barrett sees in Follow Up Boss, so
+           it has to say which page produced the lead. */}
+      <AreaLeadCapture
+        areaName={city.name}
+        slug={city.slug}
+        source={`${city.slug}-city-hub`}
+      />
+
       {/* === Resources & internal links — neighborhoods, loans, guides, blog posts === */}
+      {/* Sibling-area resource grid: neighborhoods, nearby cities ("Brandon Homes
+          for Sale" style keyword anchors), loan guides and city blog posts.
+          CityResources already builds all of that; the hub just has to render it. */}
       <CityResources city={city} />
 
       {/* === Recently Sold — client-side === */}
@@ -1196,33 +1216,11 @@ async function HubPage({ city }: { city: CityData }) {
         </div>
       </section>
 
-      {/* === CTA bar (matches spoke pattern) === */}
-      <section className="bg-primary py-12">
-        <div className="container-wide flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <p className="font-heading font-bold text-xl md:text-2xl text-white mb-1">
-              Looking for homes in {city.name}?
-            </p>
-            <p className="font-body text-white/70 text-sm">
-              Barrett Henry, REALTOR® — 23+ years of real estate experience
-            </p>
-          </div>
-          <div className="flex gap-3 flex-shrink-0">
-            <a
-              href="tel:+18137337907"
-              className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 rounded text-sm hover:bg-accent/90 transition-colors"
-            >
-              Call Now
-            </a>
-            <Link
-              href="/contact/"
-              className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
-            >
-              Send a Message
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* === CTA bar ===
+           Was a hard-coded "Looking for homes in {city}?" on every one of these
+           pages. Now slug-keyed, so neighbouring cities read differently and the
+           bar echoes the same message as the form above it. */}
+      <AreaCtaBar areaName={city.name} slug={city.slug} />
     </>
   );
 }
@@ -1269,6 +1267,37 @@ async function SpokePage({
     u.slug.startsWith(city.slug + "-housing-market") ||
     u.slug.startsWith(city.slug + "-real-estate-market")
   )?.slug;
+
+  // --- Hub-and-spoke silo links -------------------------------------------
+  // A "silo" only works if each spoke points BACK at its city hub and SIDEWAYS
+  // at a couple of its siblings. Without that, these are ~1,700 disconnected
+  // pages and the link equity never pools on the hub.
+  //
+  // The siblings are picked by walking forward from this topic's own position in
+  // the list and wrapping around. That is deterministic (same page = same
+  // siblings every render, so no hydration mismatch) and it rotates, so the
+  // whole set of spokes for a city ends up cross-linked instead of every spoke
+  // pointing at the same three.
+  //
+  // If it breaks, check: getCityTopics() drops "horse-properties" for non-rural
+  // cities, so the list length differs per city. The loop below handles that by
+  // bounding on cityTopics.length and de-duplicating.
+  const cityTopics = getCityTopics(city);
+  const currentTopicIndex = Math.max(
+    cityTopics.findIndex((t) => t.slug === topic.slug),
+    0
+  );
+  const siblingTopics: { slug: string; label: string }[] = [];
+  for (let offset = 1; offset <= cityTopics.length && siblingTopics.length < 3; offset++) {
+    const candidate = cityTopics[(currentTopicIndex + offset) % cityTopics.length];
+    if (
+      candidate &&
+      candidate.slug !== topic.slug &&
+      !siblingTopics.some((s) => s.slug === candidate.slug)
+    ) {
+      siblingTopics.push({ slug: candidate.slug, label: candidate.label });
+    }
+  }
 
   return (
     <>
@@ -1360,21 +1389,10 @@ async function SpokePage({
             {city.county} County, Florida — Updated daily from Stellar MLS
           </p>
 
-          {/* CTA row */}
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="tel:+18137337907"
-              className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 rounded text-sm hover:bg-accent/90 transition-colors"
-            >
-              (813) 733-7907
-            </a>
-            <Link
-              href="/contact/"
-              className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
-            >
-              Schedule a Tour
-            </Link>
-          </div>
+          {/* CTA row — same above-the-fold treatment as the city hub: visible
+              tap-to-call number (never hidden on mobile) plus a same-page jump
+              down to the lead form. */}
+          <AreaHeroCtaButtons />
         </div>
       </section>
 
@@ -1434,36 +1452,62 @@ async function SpokePage({
       {/* === SEO content — clean single column, no boilerplate === */}
       <CityContent city={city} topic={topic} />
 
-      {/* === Explore more — spoke nav === */}
+      {/* === Silo links — back to the hub, sideways to sibling spokes ===
+           Short, contextual, in-body prose links with keyword anchor text. This
+           is the hub-and-spoke wiring: the hub link concentrates authority, the
+           sibling links spread it across the city's other topic pages. */}
+      <section className="container-wide pb-4">
+        <p className="font-body text-muted font-light leading-relaxed max-w-3xl">
+          Looking more broadly? Start with{" "}
+          <Link href={`/${city.slug}/`} className="text-link hover:underline font-semibold">
+            {city.name} homes for sale
+          </Link>{" "}
+          for everything on the market in {city.county} County
+          {siblingTopics.length > 0 && (
+            <>
+              , or narrow it down by{" "}
+              {siblingTopics.map((sibling, i) => (
+                <span key={sibling.slug}>
+                  {i > 0 && (i === siblingTopics.length - 1 ? ", and " : ", ")}
+                  <Link
+                    href={`/${city.slug}-${sibling.slug}/`}
+                    className="text-link hover:underline"
+                  >
+                    {sibling.label.toLowerCase()} in {city.name}
+                  </Link>
+                </span>
+              ))}
+            </>
+          )}
+          .
+        </p>
+      </section>
+
+      {/* === LEAD FORM — the piece spoke pages were missing entirely ===
+           Placed right after the content and before the big link grids, because
+           this is where someone who read the page is most likely to act. The
+           source string includes the full page slug so Follow Up Boss shows
+           Barrett exactly which topic page produced the lead — a "luxury homes"
+           lead and a "55+ communities" lead need completely different
+           follow-up. */}
+      <AreaLeadCapture
+        areaName={city.name}
+        slug={slug}
+        source={`${slug}-spoke`}
+      />
+
+      {/* === Explore more — spoke nav (all sibling topic pages) === */}
       <SpokeNav city={city} currentTopic={topic.slug} />
 
-      {/* === Contact — single clean CTA bar, no full form === */}
-      <section className="bg-primary py-12">
-        <div className="container-wide flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <h2 className="font-heading font-bold text-xl md:text-2xl text-white mb-1">
-              Looking for {topic.label.toLowerCase()} in {city.name}?
-            </h2>
-            <p className="font-body text-white/70 text-sm">
-              Barrett Henry, REALTOR® — 23+ years of real estate experience
-            </p>
-          </div>
-          <div className="flex gap-3 flex-shrink-0">
-            <a
-              href="tel:+18137337907"
-              className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 rounded text-sm hover:bg-accent/90 transition-colors"
-            >
-              Call Now
-            </a>
-            <Link
-              href="/contact/"
-              className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
-            >
-              Send a Message
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* === Sibling-area resource grid ===
+           Spoke pages never rendered this before, so they had no links to
+           neighbouring cities, neighborhoods, loan guides or city articles.
+           CityResources already builds that grid with keyword anchors
+           ("Brandon Homes for Sale"); the spoke just has to render it. */}
+      <CityResources city={city} />
+
+      {/* === Contact CTA bar — slug-keyed copy, not the old repeated sentence === */}
+      <AreaCtaBar areaName={city.name} slug={slug} />
     </>
   );
 }

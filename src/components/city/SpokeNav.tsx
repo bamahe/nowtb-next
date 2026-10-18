@@ -8,6 +8,9 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import type { CityData } from "@/data/cities";
 import { getCityTopics } from "@/data/cities";
+// Used to confirm the "Sell My {City} House Fast" blog post actually exists
+// before linking it — see the comment at that link below.
+import { getPostBySlug } from "@/lib/posts";
 
 interface SpokeNavProps {
   /** The city whose spoke links to display */
@@ -20,6 +23,16 @@ export default function SpokeNav({ city, currentTopic }: SpokeNavProps) {
   // Get all topics that apply to this city
   const topics = getCityTopics(city);
 
+  // Only link the "sell fast" article for cities that actually have one.
+  // 84 of the 93 cities do; the other 9 (Ozona, Tierra Verde, Crystal Beach,
+  // and six more small Pinellas/Citrus communities) have no such post, and the
+  // tile was pointing at a slug that does not exist in posts-export.json — a
+  // hard 404 on every page that renders this nav for those cities.
+  // If it breaks, check: posts-export.json is owned by Barrett's content
+  // automation, so a city gains this tile automatically once the post ships.
+  const sellFastSlug = `sell-home-fast-${city.slug}`;
+  const hasSellFastPost = Boolean(getPostBySlug(sellFastSlug));
+
   return (
     <section className="container-wide py-12">
       {/* Section heading */}
@@ -31,7 +44,12 @@ export default function SpokeNav({ city, currentTopic }: SpokeNavProps) {
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         {topics.map((topic) => {
           const isActive = currentTopic === topic.slug;
-          const href = `/${city.slug}-${topic.slug}`;
+          // TRAILING SLASH REQUIRED. next.config.mjs sets `trailingSlash: true`,
+          // so "/brandon-homes-for-sale" is not a page — it is a 308 redirect to
+          // "/brandon-homes-for-sale/". This grid renders up to 22 tiles on every
+          // city hub, every city spoke and every neighborhood page, which is how
+          // one missing character here turned into 46,440 measured redirects.
+          const href = `/${city.slug}-${topic.slug}/`;
           return (
             <Link
               key={topic.slug}
@@ -96,12 +114,16 @@ export default function SpokeNav({ city, currentTopic }: SpokeNavProps) {
         >
           {city.name} Property Management
         </Link>
-        <Link
-          href={`/blog/sell-home-fast-${city.slug}/`}
-          className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary hover:border-accent hover:bg-accent/10 transition-colors"
-        >
-          Sell My {city.name} House Fast
-        </Link>
+        {/* Guarded — see hasSellFastPost above. Blog posts live at
+            /blog/<slug>/; the bare root form 308s away. */}
+        {hasSellFastPost && (
+          <Link
+            href={`/blog/${sellFastSlug}/`}
+            className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary hover:border-accent hover:bg-accent/10 transition-colors"
+          >
+            Sell My {city.name} House Fast
+          </Link>
+        )}
       </div>
     </section>
   );

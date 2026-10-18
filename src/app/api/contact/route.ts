@@ -234,9 +234,41 @@ export async function POST(request: NextRequest) {
         verdict.reasons.join("; "),
         { name: formData.name, email: formData.email, phone: formData.phone }
       );
+
+      // --- Make the discard VISIBLE ---
+      // This branch is where a false positive used to disappear completely: the
+      // visitor saw "Message Sent!", nothing reached Follow Up Boss, and nobody
+      // ever knew the lead existed. Now Barrett gets the full submission by
+      // email, so a real person the filter got wrong is a lead he can still
+      // call back instead of revenue that vanished.
+      //
+      // Two kinds of reject are deliberately NOT emailed, because they are
+      // certainties rather than judgement calls and alerting on them would bury
+      // the real ones in noise:
+      //   - honeypot filled: a human cannot do this, the field is off-screen
+      //   - no email AND no phone: there is nobody to call back anyway
+      const honeypotTripped = verdict.reasons.some((r) => r.startsWith("honeypot"));
+      const hasContactPath = Boolean(formData.email || formData.phone);
+
+      if (!honeypotTripped && hasContactPath) {
+        await sendLeadFailureAlert(
+          {
+            name: formData.name || "Unknown",
+            email: formData.email || "",
+            phone: formData.phone,
+            message: formData.message,
+            type,
+            propertyAddress: formData.property?.address,
+          },
+          `Spam validation REJECTED this submission, so it was never written to Follow Up Boss — ${verdict.reasons.join("; ")}. ` +
+            `If this is a real person, add them by hand and loosen the matching rule in src/lib/lead-validation.ts.`
+        );
+      }
+
       // Return 200 with success:true on purpose. If we told the bot it was
       // blocked, whoever runs it would tune it until it got through. Letting it
-      // think it worked means it keeps sending junk we silently discard.
+      // think it worked means it keeps sending junk we silently discard — and
+      // now the alert above means "silently" only applies to the bot, not to us.
       return NextResponse.json({ success: true });
     }
 

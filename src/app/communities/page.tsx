@@ -178,10 +178,15 @@ export default function CommunitiesPage() {
           <h2 className="heading-section text-xl text-primary mb-4">
             Not Sure Where to Start?
           </h2>
+          {/* "knows every corner of Tampa Bay AFTER 23+ years" claimed the 23
+              years were spent in Tampa Bay. They were not — the 23+ figure is
+              his license, held since September 2003, and is independent of where
+              he has lived. Local knowledge is asserted on its own, with no year
+              count attached. */}
           <p className="font-body text-muted mb-6">
-            Barrett Henry knows every corner of Tampa Bay after 23+ years of
-            real estate experience. Tell him your priorities and he will match
-            you with the perfect community.
+            Barrett Henry knows every corner of Tampa Bay and brings 23+ years of
+            real estate experience to the search. Tell him your priorities and he
+            will match you with the perfect community.
           </p>
           <Link href="/contact/" className="btn-primary inline-block px-8 py-3">
             Get Barrett&apos;s Recommendation

@@ -22,7 +22,7 @@ Valrico, Brandon, Riverview, Lithia, Apollo Beach, Seffner, Plant City, Dover, T
 - Free home valuation / comparative market analysis (CMA)
 - Real estate investing (rental properties, 1031 exchanges, short-term rentals)
 - Luxury homes ($750K+)
-- City and neighborhood guides (69+ cities, 460+ neighborhoods)
+- City and neighborhood guides (93 cities, 740 neighborhoods)
 - Market reports and data
 - Open houses
 - New construction / builder communities
@@ -45,7 +45,7 @@ Valrico, Brandon, Riverview, Lithia, Apollo Beach, Seffner, Plant City, Dover, T
 - /sell-your-home — Sell your home with Barrett Henry
 - /investing — Investment property resources
 - /luxury — Luxury homes $750K+
-- /communities — Browse all 69+ cities by county
+- /communities — Browse all 93 cities by county
 - /guides — Free real estate guides
 - /blog — Tampa Bay real estate blog
 - /about — About Barrett Henry
@@ -87,6 +87,6 @@ Florida condo law, rental rules, and purchase structure.
 - https://firsttimehomebuyertb.com — Tampa Bay first-time home buyer programs, down payment assistance, and eligibility guides
 
 ## Social Profiles
-- https://www.instagram.com/nowtampa/
-- https://www.facebook.com/NOWTampaBay
+- https://www.facebook.com/BarrettHenryREALTOR
+- https://www.instagram.com/thenowteam
 - https://www.linkedin.com/in/barretthenry/

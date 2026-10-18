@@ -94,6 +94,48 @@ function getBlogRootRedirects() {
   }
 }
 
+// Community pages that live NESTED under their city (/auburndale/gapway-lakes-estates/)
+// must be excluded from the ":city flatten" redirect further down, or the site
+// builds an infinite 308 loop and the page becomes permanently unreachable:
+//
+//   1. next.config flattens /auburndale/gapway-lakes-estates/ -> /gapway-lakes-estates/
+//   2. src/app/[citySlug]/page.tsx looks the bare slug up in community-pages.ts
+//      and permanentRedirects it back to /auburndale/gapway-lakes-estates/
+//   3. go to 1. forever.
+//
+// This bit the site in production on 2026-10-17 (verified with curl: six 308s
+// ping-ponging between the two URLs). It is invisible in `next dev`, because
+// local dev hits the filesystem route before the redirect, so it ONLY ever shows
+// up on the live domain. That is why this list is generated from the data file
+// instead of hand-maintained: adding a new entry to community-pages.ts now
+// excludes itself automatically and cannot reintroduce the loop.
+//
+// If it breaks, check:
+//   - A nested community 404s instead of rendering => the folder
+//     src/app/{citySlug}/{slug}/page.tsx does not exist. The exclusion only stops
+//     the redirect; it does not create the route.
+//   - A nested community still loops => confirm its slug appears in the built
+//     regex by running: node -e "import('./next.config.mjs')" and logging it, or
+//     check that its `slug:` line in community-pages.ts uses double quotes.
+//   - Every slug here is matched as a PREFIX of the second path segment, so a
+//     slug that is a prefix of another community's slug will shadow it.
+function getCommunityFlattenExclusions() {
+  // "southoak" predates community-pages.ts and is not registered there, so it is
+  // always included. /brandon/southoak/ is a real hand-built page.
+  const always = ['southoak'];
+  try {
+    const filePath = path.join(process.cwd(), 'src/data/community-pages.ts');
+    const content = fs.readFileSync(filePath, 'utf-8');
+    // Same parse style as getGuideRedirects above: only `slug: "value"` lines
+    // match, so the `slug: string;` interface declaration is skipped.
+    const slugs = [...content.matchAll(/slug: "([^"]+)"/g)].map((m) => m[1]);
+    return [...new Set([...always, ...slugs])];
+  } catch {
+    console.warn('Could not load community pages for flatten exclusions');
+    return always;
+  }
+}
+
 const nextConfig = {
   // Don't expose "X-Powered-By: Next.js" header
   poweredByHeader: false,
@@ -107,6 +149,11 @@ const nextConfig = {
     // blog post slugs at runtime and returns 308 redirects to /blog/{slug}/.
     // This keeps us under Vercel's 2048 route limit.
     const guideRedirects = getGuideRedirects();
+
+    // Pipe-joined slugs for the ":neighborhood" negative lookahead below, e.g.
+    // "southoak|gapway-lakes-estates". See getCommunityFlattenExclusions above
+    // for why this exists — it is the fix for a live 308 redirect loop.
+    const communityFlattenExclusions = getCommunityFlattenExclusions().join('|');
 
     return [
       // ── CURRENT OPEN HOUSE — the reusable printed QR ────────────────────────
@@ -128,6 +175,66 @@ const nextConfig = {
       { source: "/3813-polumbo-dr/sign-in/", destination: "/2510-brimhollow-dr/sign-in/", permanent: false },
       { source: "/3813-polumbo-dr/feedback", destination: "/2510-brimhollow-dr/feedback/", permanent: false },
       { source: "/3813-polumbo-dr/feedback/", destination: "/2510-brimhollow-dr/feedback/", permanent: false },
+
+      // ── /home-valuation/ → /free-home-valuation/ (CRAWLER FIX, 2026-10-17) ──
+      // This used to be done by `redirect("/free-home-valuation/")` inside the
+      // server component at src/app/home-valuation/page.tsx. That looked fine in
+      // a browser, because the React client router quietly follows it. It was
+      // badly broken for every crawler.
+      //
+      // WHY: `redirect()` called during a STATIC render has no real HTTP
+      // response to attach a Location header to. Next.js prerenders the route,
+      // the redirect throws, and what gets served to a plain HTTP client is a
+      // 307 with NO Location header plus Next's __next_error__ HTML shell.
+      // Verified live with curl: status 307, zero Location. A redirect with no
+      // destination is a dead end — Googlebot cannot follow it, so ~1,500+
+      // internal links (this is the most-linked valuation URL on the site,
+      // roughly twice as many links as /free-home-valuation/ itself) all
+      // terminate in nothing.
+      //
+      // A redirect declared HERE is handled by the platform's routing layer
+      // before any React code runs, so it emits a normal HTTP response with a
+      // correct Location header. Crawlers follow it; browsers follow it.
+      //
+      // WHY `permanent: false` (307) AND NOT `permanent: true` (308):
+      // The 307-vs-308 choice is NOT what was broken — the missing Location
+      // header was. So there is no reason to spend the one-way door here.
+      // 308 is cached hard by browsers and tells Google "consolidate all signal
+      // onto /free-home-valuation/ and drop the old URL." The site owner has
+      // NOT yet decided which of the two URLs should host the real page, and
+      // /home-valuation/ is arguably the better home for it: it is the shorter
+      // keyword ("free" is just a modifier) and it already carries about twice
+      // the internal links. If that flip ever happens, a cached 308 pointing
+      // the wrong way has to be un-taught to every browser that cached it and
+      // to Google's consolidated index. A 307 says "temporary, keep the source
+      // URL in the index", which fixes the crawl dead end today and keeps the
+      // decision reversible. Do not "upgrade" this to permanent until the
+      // direction is settled. See src/app/home-valuation/page.tsx for the
+      // full write-up of that open question.
+      //
+      // The trailing slash on the destination is REQUIRED. `trailingSlash: true`
+      // is set above, so a destination of "/free-home-valuation" (no slash)
+      // would 308 again to the slashed form — two hops instead of one, paid by
+      // every one of those ~1,500 links.
+      //
+      // Safe against the other rules in this file:
+      //  - The two ":city" flatten rules (further down) only match paths with
+      //    TWO segments (/:city/:something). "/home-valuation/" is one segment,
+      //    so it can never reach them.
+      //  - /free-home-valuation/ is not the `source` of any rule here, so this
+      //    cannot form a loop. (grep it: it only ever appears as a destination.)
+      //  - No guide, post, or market-update slug is named "home-valuation", so
+      //    none of the generated redirect lists can produce a competing rule.
+      //
+      // If it breaks, check:
+      //  - /home-valuation/ now 404s => src/app/free-home-valuation/page.tsx was
+      //    moved or renamed. The redirect only points; it does not create.
+      //  - Redirect loop => something started redirecting /free-home-valuation/.
+      //    Grep this file for it as a `source`.
+      //  - Still seeing the old 307-with-no-Location => a CDN edge is serving a
+      //    cached response from before this deploy. Purge, then re-curl.
+      { source: "/home-valuation", destination: "/free-home-valuation/", permanent: false },
+      { source: "/home-valuation/", destination: "/free-home-valuation/", permanent: false },
 
       // ── Manual redirects (all destinations end with / for trailingSlash: true) ──
       { source: "/home", destination: "/", permanent: true },
@@ -345,6 +452,20 @@ const nextConfig = {
       // ── Common broken URLs — redirect to correct pages ──
       { source: "/neighborhoods", destination: "/communities/", permanent: true },
       { source: "/neighborhoods/", destination: "/communities/", permanent: true },
+      // These two DELIBERATELY shadow the route at src/app/new-construction/page.tsx.
+      // Reviewed 2026-10-17 and kept on purpose: /new-construction-homes-tampa-bay/
+      // is the established page (src/data/regional-pages.ts, rendered through the
+      // [citySlug] catch-all) and holds effectively all the internal link equity —
+      // the /builders/ page CTAs plus dozens of blog-post CTAs point at it. Letting
+      // /new-construction/ render too would create two competing "new construction"
+      // pages and cannibalize the keyword.
+      //
+      // If it breaks, check: src/app/new-construction/page.tsx is UNREACHABLE dead
+      // code while these lines exist. Do not "fix" that page's canonical or content
+      // and expect to see it live. Either delete that route or remove these two
+      // redirects — but if you remove them, repoint the internal links first.
+      // NOTE: /new-construction/ must also stay OUT of sitemap.ts, or the sitemap
+      // advertises a URL that 308s away. See the propertyTypeLandingPages array.
       { source: "/new-construction", destination: "/new-construction-homes-tampa-bay/", permanent: true },
       { source: "/new-construction/", destination: "/new-construction-homes-tampa-bay/", permanent: true },
       { source: "/market-reports", destination: "/market-updates/", permanent: true },
@@ -368,8 +489,23 @@ const nextConfig = {
       { source: "/:city((?!blog|api|auth|clients|properties|guides|images|wp-content|_next|compare|market-updates|builders|communities|account|sell|resources|3813-polumbo-dr|11417-cypress-park-st|30935-whitlock-dr|2510-brimhollow-dr).[^/]+)/:city-:topic", destination: "/:city-:topic/", permanent: true },
 
       // ── WordPress nested neighborhood pages → flat structure ──
-      // The :neighborhood param excludes "southoak" because /brandon/southoak/ has a dedicated page
-      { source: "/:city((?!blog|api|auth|clients|properties|guides|images|wp-content|_next|compare|market-updates|builders|communities|account|sell|resources|3813-polumbo-dr|11417-cypress-park-st|30935-whitlock-dr|2510-brimhollow-dr).[^/]+)/:neighborhood((?!southoak).[^/]+)", destination: "/:neighborhood/", permanent: true },
+      // The :neighborhood param excludes every slug in community-pages.ts (plus
+      // "southoak") because those have real hand-built nested pages. Flattening
+      // them created an infinite 308 loop with the [citySlug] catch-all, which is
+      // why the list is now generated instead of typed by hand.
+      //
+      // DO NOT replace `${communityFlattenExclusions}` with a hardcoded slug list.
+      // That is exactly how /auburndale/gapway-lakes-estates/ went dead.
+      //
+      // NOTE: there are TWO ":city" lookahead lists — this one and the
+      // ":city-:topic" rule directly above. They are byte-identical on purpose and
+      // must stay that way; if you add a path prefix to one, add it to the other.
+      // Only the ":neighborhood" lookahead below carries the community slugs,
+      // because the rule above only matches a second segment that starts with the
+      // city name (e.g. /auburndale/auburndale-homes-for-sale) and so can never
+      // match a community slug. Adding cities to the ":city" lists instead would
+      // break legacy WordPress flattening for that whole city.
+      { source: `/:city((?!blog|api|auth|clients|properties|guides|images|wp-content|_next|compare|market-updates|builders|communities|account|sell|resources|3813-polumbo-dr|11417-cypress-park-st|30935-whitlock-dr|2510-brimhollow-dr).[^/]+)/:neighborhood((?!${communityFlattenExclusions}).[^/]+)`, destination: "/:neighborhood/", permanent: true },
 
       // ── WordPress Showcase IDX property pages ──
       // Old IDX used /properties/slug-name format. Bridge uses /properties/ListingKey.

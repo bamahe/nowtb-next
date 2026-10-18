@@ -17,34 +17,70 @@ import { getListings } from "@/lib/bridge";
 import type { ListingSearchParams } from "@/lib/types";
 import { formatPrice } from "@/lib/utils";
 
-// ISR: cache for 1 hour to reduce Bridge API calls
+// ISR: re-fetch from Bridge at most once every 300 seconds (5 minutes) to keep
+// listing data fresh without hammering the MLS API. (The comment here used to say
+// "1 hour", which did not match the value.)
 export const revalidate = 300;
 
 // -----------------------------------------------------------------------------
 // Metadata
 // -----------------------------------------------------------------------------
 
-export const metadata: Metadata = {
-  title: "Tampa Bay Homes for Sale | Search Properties | MLS Listings",
-  description:
-    "Browse homes for sale across Tampa Bay. Filter by city, price, bedrooms, and more. Updated daily from Stellar MLS. Barrett Henry, REMAX Collective. Call (813) 733-7907.",
-  // Prevent Google from indexing the search/filter page — individual listings
-  // have their own canonical pages at /properties/StellarMLS/{id}/{city}/{address}.
-  // Without noindex, Google indexes filtered search results as duplicate listings.
-  robots: {
-    index: false,
-    follow: true, // still follow links to individual listing pages
-  },
-  alternates: {
-    canonical: "/properties/",
-  },
-  openGraph: {
-    title: "Search Tampa Bay Properties | Barrett Henry, REALTOR®",
+// The page used to be blanket `noindex`, which fought with sitemap.ts (it lists
+// /properties/ at priority 0.9, changeFrequency hourly — the second-highest
+// priority on the site). Google was being told "this is one of our most important
+// pages, recrawl it hourly" and then "do not index it."
+//
+// The original reason for the noindex was real but too broad: this one route also
+// renders every filter permutation (?city=, ?min_price=, ?page=...), and letting
+// Google index those creates near-duplicate faceted search pages. That is a
+// reason to noindex the FILTERED views, not the clean entry point.
+//
+// So: the bare /properties/ is indexable — it is the primary commercial-intent
+// "Tampa Bay homes for sale" landing page and the top of the IDX funnel — and any
+// URL carrying query params is noindex,follow. "follow" is kept in both cases so
+// crawlers still walk through to individual listing pages, which hold their own
+// canonicals at /properties/StellarMLS/{id}/{city}/{address}.
+//
+// If it breaks, check:
+//   - Dropping out of the index after a filter change => a new param name is
+//     making the bare URL look filtered. Only a genuinely empty query string
+//     should be indexable; log `Object.keys(params)` to see what arrived.
+//   - Faceted URLs showing up in Search Console => confirm the param is actually
+//     in the query string and not baked into the path by a rewrite.
+//   - If Stellar MLS / Bridge IDX terms ever require the whole search page be
+//     non-indexable, set `index: false` unconditionally here AND drop the
+//     /properties/ entry out of sitemap.ts. Compliance beats the SEO upside.
+export async function generateMetadata({
+  searchParams,
+}: PropertiesPageProps): Promise<Metadata> {
+  const params = await searchParams;
+
+  // Any query param at all means this is a filtered/paginated view, not the
+  // canonical entry point.
+  const isFiltered = Object.keys(params).length > 0;
+
+  return {
+    title: "Tampa Bay Homes for Sale | Search Properties | MLS Listings",
     description:
-      "Browse homes for sale across Tampa Bay. Filter by city, price, bedrooms, and more.",
-    url: "/properties",
-  },
-};
+      "Browse homes for sale across Tampa Bay. Filter by city, price, bedrooms, and more. Updated daily from Stellar MLS. Barrett Henry, REMAX Collective. Call (813) 733-7907.",
+    robots: {
+      index: !isFiltered,
+      follow: true, // always follow links through to individual listing pages
+    },
+    // Every filtered view points back at the clean URL, so the filter
+    // permutations consolidate instead of competing.
+    alternates: {
+      canonical: "/properties/",
+    },
+    openGraph: {
+      title: "Search Tampa Bay Properties | Barrett Henry, REALTOR®",
+      description:
+        "Browse homes for sale across Tampa Bay. Filter by city, price, bedrooms, and more.",
+      url: "/properties/",
+    },
+  };
+}
 
 // -----------------------------------------------------------------------------
 // Helper: build a human-readable filter summary from search params
@@ -207,8 +243,12 @@ export default async function PropertiesPage({
       {/* =================================================================
           SECTION 1: Hero — shorter 50vh with search bar
           ================================================================= */}
+      {/* H1 is "Tampa Bay Homes for Sale", not "Properties" — now that this page
+          is indexable (see generateMetadata above) the single H1 needs to carry
+          the target keyword and match the title tag. HeroSection renders `title`
+          as the page's only <h1>. */}
       <HeroSection
-        title="Properties"
+        title="Tampa Bay Homes for Sale"
         label="TAMPA BAY REAL ESTATE"
         subtitle="Search homes for sale across 8 Tampa Bay counties. Updated daily from Stellar MLS."
         fullHeight={false}

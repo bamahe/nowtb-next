@@ -13,6 +13,31 @@
 // instead. One entry gives us: the link from the parent city hub, the link from
 // the county page, the sitemap entry, and the root-level redirect. One route, no
 // thin pages.
+//
+// -----------------------------------------------------------------------------
+// ADDING AN ENTRY — read this first, it has broken the live site before
+// -----------------------------------------------------------------------------
+// The CANONICAL URL for a community is the NESTED one in `href`
+// (/auburndale/gapway-lakes-estates/). Four places have to agree on that, and
+// they already do automatically EXCEPT the first one:
+//
+//   1. next.config.mjs — the ":city flatten" redirect turns /{city}/{anything}
+//      into /{anything}/. Any slug in this file must be excluded from it, or the
+//      flatten and the redirect in step 2 bounce off each other forever (308 ->
+//      308 -> 308...). As of 2026-10-17 that exclusion list is GENERATED from
+//      this file by getCommunityFlattenExclusions(), so a new entry excludes
+//      itself. Do not hardcode slugs back into that regex.
+//   2. src/app/[citySlug]/page.tsx — sends the bare /{slug}/ to `href` with one
+//      308. Driven by getCommunityPageBySlug() below, so it needs no edit.
+//   3. src/app/sitemap.ts — emits `${siteUrl}${c.href}`, so it needs no edit.
+//   4. The actual page file must exist at src/app/{citySlug}/{slug}/page.tsx.
+//      Nothing here creates the route; this file only registers and links it.
+//
+// If it breaks, check: this trap is INVISIBLE in `next dev` (the filesystem
+// route wins locally) and only appears on the live domain. Verify a new
+// community with:
+//   curl -sSI -L --max-redirs 5 https://nowtb.com/{city}/{slug}/ | grep -iE "^HTTP|^location"
+// You want exactly one 200 and no repeating Location values.
 // =============================================================================
 
 export interface CommunityPage {

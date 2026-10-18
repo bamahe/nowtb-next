@@ -235,7 +235,7 @@ export default function ValricoListingAgentPage() {
             "Florida Broker Associate and Seller Representative Specialist with REMAX Collective, licensed since September 2003, representing home sellers in Valrico, Brandon, and Riverview, Florida.",
           url: CANONICAL,
           telephone: "(813) 733-7907",
-          image: "https://nowtb.com/images/barrett-henry-headshot.jpg",
+          image: "https://nowtb.com/images/barrett-headshot.png",
           priceRange: "$$",
           areaServed: [
             { "@type": "City", name: "Valrico, Florida" },
@@ -272,7 +272,7 @@ export default function ValricoListingAgentPage() {
             name: "Barrett Henry",
             jobTitle: "Broker Associate",
             url: "https://nowtb.com/about/",
-            image: "https://nowtb.com/images/barrett-henry-headshot.jpg",
+            image: "https://nowtb.com/images/barrett-headshot.png",
             telephone: "(813) 733-7907",
             sameAs: [
               "https://nowtb.com/about/",

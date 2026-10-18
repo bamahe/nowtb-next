@@ -12,6 +12,12 @@ import { cities, getCityBySlug } from "@/data/cities";
 import type { ComparisonData } from "@/data/comparisons";
 import { getConceptContent } from "@/data/concept-comparisons";
 import type { Listing } from "@/lib/types";
+import {
+  JsonLd,
+  breadcrumbSchema,
+  webPageSchema,
+  faqSchema,
+} from "@/lib/schema";
 
 interface ComparisonPageProps {
   comparison: ComparisonData;
@@ -191,10 +197,48 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
   // Load concept comparison content for non-city comparisons
   const conceptData = category === "concept" ? getConceptContent(comparison.slug) : undefined;
 
+  // ---------------------------------------------------------------------------
+  // STRUCTURED DATA
+  // This template emitted NO BreadcrumbList and NO WebPage entity — only the
+  // concept layout had FAQPage markup. The visible breadcrumb nav below was
+  // never backed by schema, so search engines saw no trail at all.
+  // ---------------------------------------------------------------------------
+  const canonicalUrl = `https://nowtb.com/${comparison.slug}/`;
+
   // ── Concept comparison layout (FSBO vs REALTOR, renting vs buying, etc.) ──
   if (category === "concept" && conceptData) {
     return (
       <>
+        {/* === JSON-LD: BreadcrumbList — mirrors the visible nav below === */}
+        <JsonLd
+          data={breadcrumbSchema([
+            { name: "Home", url: "https://nowtb.com" },
+            { name: "Guides", url: "https://nowtb.com/guides/" },
+            { name: title, url: canonicalUrl },
+          ])}
+        />
+
+        {/* === JSON-LD: WebPage ===
+             `about` passed explicitly; the helper's default topic is condos.
+             `.quick-answer` is safe to claim here because the Bottom Line box
+             further down carries that class. */}
+        <JsonLd
+          data={webPageSchema({
+            name: title,
+            description: excerpt,
+            url: canonicalUrl,
+            about: `${sideA} compared with ${sideB}`,
+            speakableSelectors: [".quick-answer", "h1"],
+          })}
+        />
+
+        {/* === JSON-LD: FAQPage ===
+             Built from conceptData.faq — the exact same array the accordion
+             below renders, so markup and schema cannot drift apart. */}
+        {conceptData.faq.length > 0 && (
+          <JsonLd data={faqSchema(conceptData.faq)} />
+        )}
+
         {/* === Breadcrumb + Hero === */}
         <section className="bg-primary pt-36 pb-16">
           <div className="container-wide">
@@ -306,9 +350,14 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
           </div>
         </section>
 
-        {/* === Bottom Line / Verdict === */}
+        {/* === Bottom Line / Verdict ===
+             The `quick-answer` class is what makes the `.quick-answer`
+             speakable selector in the WebPage schema above resolve. This box
+             holds the page's direct answer, so it is the correct target.
+             If it breaks, check: removing this class silently turns the
+             speakable spec back into a selector that matches nothing. */}
         <section className="container-wide py-12">
-          <div className="bg-primary/5 rounded-xl p-8 max-w-3xl mx-auto">
+          <div className="quick-answer bg-primary/5 rounded-xl p-8 max-w-3xl mx-auto">
             <h2 className="font-heading font-bold text-xl text-primary mb-3">
               The Bottom Line: {sideA} or {sideB}?
             </h2>
@@ -364,24 +413,8 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
           </div>
         </section>
 
-        {/* === FAQPage JSON-LD Schema === */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: conceptData.faq.map((item) => ({
-                "@type": "Question",
-                name: item.question,
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: item.answer,
-                },
-              })),
-            }),
-          }}
-        />
+        {/* FAQPage JSON-LD now lives at the top of this component, built from
+            the same conceptData.faq array via the shared faqSchema() helper. */}
 
         {/* === Contact form === */}
         <section className="py-16">
@@ -406,6 +439,33 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
 
   return (
     <>
+      {/* === JSON-LD: BreadcrumbList — mirrors the visible nav below === */}
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: "https://nowtb.com" },
+          { name: "Communities", url: "https://nowtb.com/communities/" },
+          { name: title, url: canonicalUrl },
+        ])}
+      />
+
+      {/* === JSON-LD: WebPage ===
+           `about` passed explicitly; the helper's default topic is condos.
+           `.quick-answer` is safe to claim because the "So Which Is Better"
+           box below carries that class.
+
+           NOTE: no FAQPage on this layout — the city comparison renders no
+           question-and-answer section. Emitting FAQ schema for questions a
+           visitor cannot see would be a structured-data violation. */}
+      <JsonLd
+        data={webPageSchema({
+          name: title,
+          description: excerpt,
+          url: canonicalUrl,
+          about: `${sideA} compared with ${sideB}`,
+          speakableSelectors: [".quick-answer", "h1"],
+        })}
+      />
+
       {/* === Breadcrumb + Hero === */}
       <section className="bg-primary pt-36 pb-16">
         <div className="container-wide">
@@ -577,9 +637,14 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
         </div>
       </section>
 
-      {/* === Quick Answer for AEO === */}
+      {/* === Quick Answer for AEO ===
+           The `quick-answer` class is what makes the `.quick-answer` speakable
+           selector in the WebPage schema above resolve. Before October 2026 this
+           box had no class, so the selector matched nothing.
+           If it breaks, check: removing this class silently turns the speakable
+           spec back into a selector that matches no element. */}
       <section className="container-wide pb-12">
-        <div className="bg-primary/5 rounded-xl p-8 max-w-3xl mx-auto">
+        <div className="quick-answer bg-primary/5 rounded-xl p-8 max-w-3xl mx-auto">
           <h2 className="font-heading font-bold text-xl text-primary mb-3">
             So Which Is Better: {sideA} or {sideB}?
           </h2>

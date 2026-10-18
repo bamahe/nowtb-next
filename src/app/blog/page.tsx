@@ -90,6 +90,63 @@ export default async function BlogIndexPage({
   const startIdx = (safePage - 1) * POSTS_PER_PAGE;
   const posts = allPosts.slice(startIdx, startIdx + POSTS_PER_PAGE);
 
+  // ------------------------------------------------------------------
+  // A-Z ARCHIVE INDEX — the fix for 204 orphaned blog posts.
+  //
+  // THE PROBLEM: this page paginates with query strings (?page=2, ?page=3 …).
+  // Google largely does not crawl query-string pagination, so of 1,760 posts
+  // only the 24 cards on page 1 ever received an index link. The audit measured
+  // 204 fully orphaned posts, 329 unreachable pages, and 1,027 posts sitting at
+  // crawl depth 4 or worse.
+  //
+  // WHY THIS APPROACH and not the obvious alternative: path-based pagination
+  // (/blog/page/2/) is the textbook fix, and it is IMPOSSIBLE here —
+  // next.config.mjs line ~423 already 301s "/blog/page/:num" straight back to
+  // "/blog/". Shipping /blog/page/2/ would just redirect to page 1 and change
+  // nothing. That config file belongs to another owner, so the fix has to work
+  // inside this route. A category index was the other option, but
+  // categorizePost() buckets 1,760 posts into a handful of categories, which
+  // leaves the same problem one level down.
+  //
+  // So: render a plain-text link to EVERY post, grouped A-Z by title, right on
+  // /blog/. Every post then has at least one crawlable inbound link and sits at
+  // depth 2 (home -> /blog/ -> post). The query-string pagination above stays
+  // exactly as it is, because it works fine for humans.
+  //
+  // Trade-off, stated honestly: ~1,760 links on one page dilutes how much
+  // signal each individual link carries. That is still strictly better than the
+  // zero links these posts have today, and it is the standard HTML-sitemap
+  // pattern for a large archive.
+  //
+  // If it breaks, check:
+  //   - Posts missing from the index => they are missing from getAllPostsAsync()
+  //     (JSON export + Supabase merge), not from this component.
+  //   - The index is built from `everyPost`, deliberately NOT the category-
+  //     filtered `allPosts`. Filtering it would re-orphan every post outside the
+  //     selected category whenever a crawler hits a ?category= URL.
+  const archiveGroups = (() => {
+    const groups = new Map<string, typeof everyPost>();
+    for (const post of [...everyPost].sort((a, b) => a.title.localeCompare(b.title))) {
+      // First letter of the title; anything that is not A-Z (numbers,
+      // quotes, symbols) is bucketed under "#".
+      const first = post.title.trim().charAt(0).toUpperCase();
+      const key = /[A-Z]/.test(first) ? first : "#";
+      const bucket = groups.get(key);
+      if (bucket) bucket.push(post);
+      else groups.set(key, [post]);
+    }
+    // Sort so "#" comes last rather than first.
+    //
+    // Array.from(groups) instead of [...groups.entries()] on purpose: this repo
+    // compiles with an ES5-era `target` in tsconfig.json, and spreading a Map
+    // iterator needs --downlevelIteration. Array.from works at any target.
+    return Array.from(groups).sort(([a], [b]) => {
+      if (a === "#") return 1;
+      if (b === "#") return -1;
+      return a.localeCompare(b);
+    });
+  })();
+
   return (
     <>
       {/* BreadcrumbList schema */}
@@ -294,9 +351,74 @@ export default async function BlogIndexPage({
             </span>
           )}
         </div>
+
+        {/* Escape hatch out of the query-string pagination. Google largely
+            ignores ?page= URLs, so this fragment link is how both a reader on
+            page 1 and a crawler reach the complete A-Z index below. */}
+        <p className="font-body text-sm text-center mt-6">
+          <a
+            href="#browse-all-articles"
+            className="font-semibold text-accent hover:text-primary transition-colors"
+          >
+            Browse all {allPosts.length} articles A&ndash;Z
+          </a>
+        </p>
       </section>
         );
       })()}
+
+      {/* === A-Z archive index — every post, crawlable ===
+           See the long comment next to `archiveGroups` above for why this
+           exists and why path-based pagination was not an option.
+
+           Rendered inside <details> elements so the page stays readable: the
+           markup (and therefore every link) is present in the HTML on first
+           load whether or not a group is expanded, which is what crawlers read.
+           Collapsed <details> content is still indexed and its links are still
+           followed — this is the normal HTML-sitemap pattern, not cloaking. */}
+      <section id="browse-all-articles" className="container-wide pb-16 border-t border-gray-200 pt-12">
+        <h2 className="font-heading font-bold text-2xl text-primary mb-2">
+          Browse Every Article A&ndash;Z
+        </h2>
+        <p className="font-body text-muted text-sm mb-6 max-w-2xl">
+          All {everyPost.length} Tampa Bay real estate articles, grouped by
+          title. Open a letter to see the full list.
+        </p>
+
+        <div className="space-y-2">
+          {archiveGroups.map(([letter, groupPosts]) => (
+            <details
+              key={letter}
+              className="border border-gray-200 rounded-lg bg-white"
+            >
+              <summary className="cursor-pointer px-4 py-3 font-heading font-bold text-sm text-primary hover:text-accent transition-colors">
+                {letter}{" "}
+                <span className="font-body font-normal text-muted">
+                  ({groupPosts.length})
+                </span>
+              </summary>
+              <ul className="px-4 pb-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-1">
+                {groupPosts.map((post) => (
+                  <li key={post.slug}>
+                    {/* Blog posts live at /blog/<slug>/. The trailing slash is
+                        required — next.config.mjs sets `trailingSlash: true`, so
+                        "/blog/<slug>" is answered with a 308 redirect and is
+                        never served directly. The anchor text is the post title,
+                        which is the descriptive keyword phrase we want; never
+                        "read more". */}
+                    <Link
+                      href={`/blog/${post.slug}/`}
+                      className="font-body text-xs text-muted hover:text-accent transition-colors"
+                    >
+                      {post.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          ))}
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="bg-[#003da5] py-16 px-4 text-center text-white">

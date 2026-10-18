@@ -24,6 +24,14 @@ import { BATCH4_FAQS } from "./batch4-faqs";
 import { REMAINING_COUNTY_FAQS } from "./remaining-county-faqs";
 import { BATCH5_FAQS } from "./batch5-faqs";
 import { DOVER_FAQS } from "./dover-faqs";
+// Batches 6 and 7 (Oct 2026) closed the last 17 cities that had no custom FAQs
+// at all — including Tampa and Riverview, two of the four core markets. Those
+// cities were falling back to the generic hub FAQs, which say nothing specific
+// enough for an answer engine to quote. Every answer in these two files is
+// built from Stellar MLS figures in city-market-stats.ts or a named external
+// source, with unverifiable numbers deliberately left out rather than invented.
+import { BATCH6_FAQS } from "./city-faqs-batch6";
+import { BATCH7_FAQS } from "./city-faqs-batch7";
 
 export const CITY_FAQS: Record<string, CityFAQ[]> = {
   ...BRANDON_FAQS,
@@ -34,6 +42,8 @@ export const CITY_FAQS: Record<string, CityFAQ[]> = {
   ...REMAINING_COUNTY_FAQS,
   ...BATCH5_FAQS,
   ...DOVER_FAQS,
+  ...BATCH6_FAQS,
+  ...BATCH7_FAQS,
   valrico: [
     {
       question: "What's the difference between ZIP codes 33594 and 33596 in Valrico?",

@@ -15,8 +15,15 @@ import { testimonials } from "@/data/testimonials";
 // --- SEO metadata + Open Graph tags ---
 export const metadata: Metadata = {
   title: "About Barrett Henry | Broker Associate | REMAX Collective",
+  // 149 characters. Target is 120-155 so it does not get truncated in the SERP.
+  // WHY the wording changed: the old copy read "23+ years serving Tampa Bay
+  // buyers, sellers, and investors", which claims 23 years of Tampa Bay service.
+  // False — Barrett has been licensed since September 2003 (23+ years of real
+  // estate experience) but has only been in Florida about a decade. Here the
+  // number modifies "real estate experience" and "Tampa Bay" modifies the
+  // clients, so the two facts stay separate.
   description:
-    "Barrett Henry, Broker Associate at REMAX Collective. 23+ years serving Tampa Bay buyers, sellers, and investors. Call (813) 733-7907.",
+    "Barrett Henry, Broker Associate at REMAX Collective, brings 23+ years of real estate experience to Tampa Bay buyers and sellers. Call (813) 733-7907.",
   alternates: {
     canonical: "/about/",
   },
@@ -71,7 +78,11 @@ const personLd = {
   "@type": "Person",
   name: "Barrett Henry",
   jobTitle: "Broker Associate",
-  description: "Licensed Florida REALTOR and Broker Associate with 23+ years of real estate experience.",
+  // Was "Licensed Florida REALTOR and Broker Associate with 23+ years of real
+  // estate experience." Google reads schema literally, and hanging the year
+  // count off "Licensed Florida REALTOR" implies 23 years licensed in Florida.
+  // He has only been in Florida about a decade, so the sentences are split.
+  description: "Licensed Florida Broker Associate with REMAX Collective. 23+ years of real estate experience.",
   url: "https://nowtb.com/about",
   image: "https://nowtb.com/images/barrett-henry.jpg",
   telephone: "(813) 733-7907",
@@ -181,11 +192,17 @@ export default function AboutPage() {
       <section className="section-white">
         <div className="container-wide">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 items-start">
-            {/* Barrett's headshot (left column) */}
+            {/* Barrett's headshot (left column).
+                Alt-text word order matters here. The old version read "Tampa
+                Bay real estate expert with 23+ years experience", which hangs
+                the year count off "Tampa Bay". Putting the experience clause
+                before the service area keeps the number attached to his license
+                (held since September 2003) rather than to Florida, where he has
+                lived about a decade. Those are two different numbers. */}
             <div className="aspect-[3/4] bg-[#e8e4df] overflow-hidden">
               <Image
                 src="/images/barrett-headshot.png"
-                alt="Barrett Henry, REALTOR® and Broker Associate at REMAX Collective, Tampa Bay real estate expert with 23+ years experience"
+                alt="Barrett Henry, REALTOR® and Broker Associate at REMAX Collective, with 23+ years of real estate experience, serving Tampa Bay"
                 width={378}
                 height={373}
                 className="w-full h-full object-cover object-top"

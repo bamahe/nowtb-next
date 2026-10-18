@@ -7,9 +7,17 @@
 // appointment: utility costs, HOA, roof and system ages, updates, and
 // occupancy. Answers are POSTed to /api/contact as a `details` array so they
 // land in the Follow Up Boss note and the alert email, not just n8n.
+//
+// SPAM GATE: this form carries a Turnstile widget and a honeypot, exactly like
+// ContactForm and CommunityInterestForm. It did not used to. /api/contact
+// returns 403 for any non-kiosk POST with no turnstileToken, so EVERY seller
+// intake was rejected and the visitor saw "That did not go through" after
+// filling in 30-odd questions. If you ever copy this form, copy the Turnstile
+// wiring with it.
 // =============================================================================
 
-import { useState, type FormEvent } from "react";
+import { useState, useCallback, type FormEvent } from "react";
+import TurnstileWidget from "@/components/ui/TurnstileWidget";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -188,6 +196,19 @@ export default function SellerIntakeForm() {
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
+  // --- Turnstile spam protection token ---
+  // Same pattern as ContactForm: the widget hands us a token (or one of its
+  // sentinel strings when the challenge can't run), we send it with the POST,
+  // and the submit button stays disabled until we have one.
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const handleTurnstileVerify = useCallback((token: string) => {
+    setTurnstileToken(token);
+  }, []);
+
+  // Hidden honeypot. A human never sees it, so anything typed here is a bot.
+  // /api/contact silently discards submissions that fill it in.
+  const [honeypot, setHoneypot] = useState("");
+
   const set = (key: string, value: string) =>
     setValues((prev) => ({ ...prev, [key]: value }));
 
@@ -218,6 +239,10 @@ export default function SellerIntakeForm() {
           // Raw answers too, so n8n can map individual fields if needed
           ...values,
           property: values.address ? { address: values.address } : undefined,
+          // Without these two the API 403s (missing token) or silently drops
+          // the lead (honeypot). They are not optional.
+          turnstileToken,
+          honeypot,
         }),
       });
 
@@ -366,13 +391,44 @@ export default function SellerIntakeForm() {
       )}
 
       <div>
+        {/* Honeypot: visually hidden, never focusable by a real visitor */}
+        <div
+          className="absolute left-[-9999px] h-px w-px overflow-hidden"
+          aria-hidden="true"
+        >
+          <label htmlFor="seller-intake-company">Company</label>
+          <input
+            id="seller-intake-company"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            value={honeypot}
+            onChange={(e) => setHoneypot(e.target.value)}
+          />
+        </div>
+
+        {/* Turnstile spam protection: must verify before submitting.
+            Placed directly above the button, same as every other form here. */}
+        <TurnstileWidget onVerify={handleTurnstileVerify} />
+
         <button
           type="submit"
-          disabled={status === "submitting"}
-          className="w-full rounded bg-primary px-6 py-3.5 font-body font-semibold text-white transition-colors hover:bg-primary/90 disabled:opacity-60 sm:w-auto"
+          disabled={status === "submitting" || !turnstileToken}
+          className="mt-4 w-full rounded bg-primary px-6 py-3.5 font-body font-semibold text-white transition-colors hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
         >
           {status === "submitting" ? "Sending..." : "Send my intake"}
         </button>
+
+        {/* Why is the button grey? Tell them, instead of letting them wonder.
+            The widget refreshes itself if the check expires, so this clears on
+            its own within a second or two. */}
+        {!turnstileToken && status !== "submitting" && (
+          <p className="font-body mt-2 text-xs text-muted">
+            Finishing the quick spam check. The button turns on in a second — your
+            answers are safe.
+          </p>
+        )}
+
         <p className="font-body mt-3 text-xs text-muted">
           This goes straight to me. It is not shared, listed, or published anywhere.
         </p>

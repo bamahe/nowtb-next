@@ -44,6 +44,15 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
   // Get neighborhoods for this city
   const cityNeighborhoods = neighborhoods.filter((n) => n.city === city.slug);
 
+  // Split the neighborhood list into a small spotlight set (which gets the
+  // high-intent "-homes-for-sale" and "-realtor" spoke links further down) and
+  // the remainder (plain hub links, exactly as before). See the long comment at
+  // the neighborhood grid for why this is capped instead of applied to all of
+  // them — Valrico alone has 139 neighborhoods.
+  const SPOTLIGHT_COUNT = 8;
+  const spotlightNeighborhoods = cityNeighborhoods.slice(0, SPOTLIGHT_COUNT);
+  const remainingNeighborhoods = cityNeighborhoods.slice(SPOTLIGHT_COUNT);
+
   // Get real testimonials (use first 3)
   const featured = testimonials.slice(0, 3);
 
@@ -197,7 +206,12 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
           <nav className="flex items-center gap-2 text-xs font-body text-white/80 mb-6 tracking-wide uppercase">
             <Link href="/" className="hover:text-white/80 transition-colors">Home</Link>
             <span>/</span>
-            <Link href={`/${city.slug}`} className="hover:text-white/80 transition-colors">{city.name}</Link>
+            {/* Trailing slash required: next.config.mjs sets `trailingSlash: true`,
+                so "/brandon" is answered with a 308 redirect to "/brandon/" and is
+                never served directly. This breadcrumb renders on all 93 city
+                REALTOR pages plus ~740 neighborhood REALTOR pages, so the missing
+                character was ~833 guaranteed redirects. */}
+            <Link href={`/${city.slug}/`} className="hover:text-white/80 transition-colors">{city.name}</Link>
             <span>/</span>
             <span className="text-accent">REALTOR&reg;</span>
           </nav>
@@ -443,17 +457,66 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
               you&apos;re buying, selling, or just exploring, Barrett knows the streets, the schools, the HOAs,
               and the price trends in each of these communities.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-              {cityNeighborhoods.map((n) => (
-                <Link
-                  key={n.slug}
-                  href={`/${n.slug}/`}
-                  className="block border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10"
-                >
-                  {n.name}
-                </Link>
-              ))}
-            </div>
+            {/* Tier 1 — the first few neighborhoods get the full three-link
+                treatment: the neighborhood page plus its "-homes-for-sale" and
+                "-realtor" spokes. Those spoke pages are real routes (served by
+                src/app/[citySlug]/page.tsx, see its neighborhood-spoke and
+                neighborhood-realtor cases) but nothing on the site linked them —
+                this grid emitted the bare hub URL only, which is a big part of
+                how 1,384 high-intent pages ended up with zero inbound links.
+
+                Capped with spotlightNeighborhoods (computed above) on purpose:
+                Valrico has 139 neighborhoods, so three links each would mean 417
+                links in one section. A link dump that size passes almost no
+                signal per link and reads as manipulation. The remaining
+                neighborhoods keep the plain hub tile they already had, so no
+                page loses an inbound link. */}
+            {spotlightNeighborhoods.length > 0 && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-3">
+                {spotlightNeighborhoods.map((n) => (
+                  <div key={n.slug} className="border border-gray-200 bg-white px-4 py-3">
+                    <Link
+                      href={`/${n.slug}/`}
+                      className="block text-sm font-semibold text-primary transition-colors hover:text-accent"
+                    >
+                      {n.name}
+                    </Link>
+                    {/* Keyword anchor text, never "click here" — the anchor is
+                        what tells Google and the AI answer engines what the
+                        destination page is for. */}
+                    <div className="mt-1 flex flex-col gap-0.5">
+                      <Link
+                        href={`/${n.slug}-homes-for-sale/`}
+                        className="font-body text-xs text-muted transition-colors hover:text-accent"
+                      >
+                        {n.name} Homes for Sale
+                      </Link>
+                      <Link
+                        href={`/${n.slug}-realtor/`}
+                        className="font-body text-xs text-muted transition-colors hover:text-accent"
+                      >
+                        {n.name} REALTOR
+                      </Link>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Tier 2 — every other neighborhood in the city, hub links only */}
+            {remainingNeighborhoods.length > 0 && (
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                {remainingNeighborhoods.map((n) => (
+                  <Link
+                    key={n.slug}
+                    href={`/${n.slug}/`}
+                    className="block border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10"
+                  >
+                    {n.name}
+                  </Link>
+                ))}
+              </div>
+            )}
           </div>
         </section>
       )}

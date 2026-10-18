@@ -11,6 +11,14 @@ import ContactForm from "@/components/ui/ContactForm";
 import type { MiscPageData } from "@/data/misc-pages";
 import { getPageContent } from "@/lib/page-content";
 import { cleanWpContent } from "@/lib/utils";
+import {
+  JsonLd,
+  breadcrumbSchema,
+  webPageSchema,
+  faqSchema,
+  extractFaqsFromHtml,
+  speakableSelectorsForContent,
+} from "@/lib/schema";
 
 interface MiscCatchAllPageProps {
   page: MiscPageData;
@@ -23,8 +31,53 @@ export default async function MiscCatchAllPage({ page }: MiscCatchAllPageProps) 
   // Clean WP artifacts: strip shortcodes, fix image URLs
   const pageContent = rawWpContent ? cleanWpContent(rawWpContent) : null;
 
+  // ---------------------------------------------------------------------------
+  // STRUCTURED DATA
+  // Before October 2026 this template emitted NO schema at all, which meant 32
+  // live pages were invisible to the AI answer engines — they had no breadcrumb
+  // trail, no page entity, and no FAQ markup even though 17 of them display a
+  // full FAQ section. Everything below is derived from real page data.
+  // ---------------------------------------------------------------------------
+  const canonicalUrl = `https://nowtb.com/${page.slug}/`;
+
+  // FAQs are pulled out of the SAME cleaned HTML string we render below, so the
+  // FAQPage markup can only ever describe questions the visitor can see. Pages
+  // with no content (10 of the 32 fall back to the placeholder copy) and pages
+  // with fewer than 3 questions correctly get no FAQPage node — we do not invent
+  // questions to fill the schema.
+  const faqs = extractFaqsFromHtml(pageContent);
+
+  // Only claim `.quick-answer` is speakable when the content really contains
+  // such an element. "h1" always resolves because HeroSection renders one.
+  const speakableSelectors = speakableSelectorsForContent(pageContent);
+
   return (
     <>
+      {/* === JSON-LD: BreadcrumbList ===
+           Every page except the homepage needs one. */}
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: "https://nowtb.com" },
+          { name: page.title, url: canonicalUrl },
+        ])}
+      />
+
+      {/* === JSON-LD: WebPage ===
+           `about` is passed explicitly — webPageSchema() defaults to a condo
+           topic that would be wrong for these pages. */}
+      <JsonLd
+        data={webPageSchema({
+          name: page.title,
+          description: page.excerpt,
+          url: canonicalUrl,
+          about: page.title,
+          speakableSelectors,
+        })}
+      />
+
+      {/* === JSON-LD: FAQPage — only when 3+ questions are actually visible === */}
+      {faqs.length > 0 && <JsonLd data={faqSchema(faqs)} />}
+
       {/* === Hero === */}
       <HeroSection title={page.title} subtitle={page.excerpt}>
         <SearchBar />

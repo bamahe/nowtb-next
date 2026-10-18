@@ -16,6 +16,13 @@
 
 import Link from "next/link";
 import SpokeNav from "@/components/city/SpokeNav";
+import QuickAnswer from "@/components/ui/QuickAnswer";
+import {
+  JsonLd,
+  breadcrumbSchema,
+  webPageSchema,
+  localBusinessSchema,
+} from "@/lib/schema";
 import { getNeighborhoodsByCity } from "@/data/neighborhoods";
 import { NEIGHBORHOOD_DESCRIPTIONS } from "@/data/neighborhood-descriptions";
 import type { CityData } from "@/data/cities";
@@ -44,37 +51,75 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
 
   const neighborhoodCount = cityNeighborhoods.length;
 
+  // ---------------------------------------------------------------------------
+  // STRUCTURED DATA
+  // This template previously emitted only a BreadcrumbList. It is an area page,
+  // so it also needs a WebPage entity and the local business that serves the
+  // area. The city's lat/lng in src/data/cities.ts gives us real coordinates.
+  //
+  // No FAQPage here: this template renders no question-and-answer section, and
+  // inventing one in markup only would be a structured-data violation.
+  // ---------------------------------------------------------------------------
+  const canonicalUrl = `https://nowtb.com/${city.slug}-neighborhood-guide/`;
+
+  // The first few neighborhood names, used in the visible quick answer below.
+  const sampleNames = cityNeighborhoods.slice(0, 4).map((n) => n.name);
+
+  const pageDescription = `Guide to ${neighborhoodCount} ${
+    neighborhoodCount === 1 ? "neighborhood" : "neighborhoods"
+  } in ${city.name}, ${city.county} County, Florida, with an overview and active listings for each area.`;
+
   return (
     <>
-      {/* --- JSON-LD BreadcrumbList for SEO --- */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              {
-                "@type": "ListItem",
-                position: 1,
-                name: "Home",
-                item: "https://nowtb.com",
-              },
-              {
-                "@type": "ListItem",
-                position: 2,
-                name: `${city.name} Homes for Sale`,
-                item: `https://nowtb.com/${city.slug}/`,
-              },
-              {
-                "@type": "ListItem",
-                position: 3,
-                name: `${city.name} Neighborhood Guide`,
-                item: `https://nowtb.com/${city.slug}-neighborhood-guide/`,
-              },
-            ],
-          }),
-        }}
+      {/* --- JSON-LD: BreadcrumbList --- */}
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: "https://nowtb.com" },
+          { name: `${city.name} Homes for Sale`, url: `https://nowtb.com/${city.slug}/` },
+          { name: `${city.name} Neighborhood Guide`, url: canonicalUrl },
+        ])}
+      />
+
+      {/* --- JSON-LD: WebPage ---
+           `about` passed explicitly; the helper's default topic is condos. */}
+      <JsonLd
+        data={webPageSchema({
+          name: `Neighborhood Guide — ${city.name}, FL`,
+          description: pageDescription,
+          url: canonicalUrl,
+          about: `${city.name}, Florida neighborhoods`,
+          // The <QuickAnswer> block below is what makes `.quick-answer` resolve
+          // — and it only renders when the city actually has neighborhoods on
+          // file, so the selector is only claimed in that same case. "h1"
+          // always resolves. Never advertise a selector the page might not render.
+          speakableSelectors:
+            neighborhoodCount > 0 ? [".quick-answer", "h1"] : ["h1"],
+        })}
+      />
+
+      {/* --- JSON-LD: LocalBusiness ---
+           geo rides on `areaServed` (the city), not on the business node: we
+           have verified coordinates for the CITY in src/data/cities.ts, but not
+           for the brokerage street address, and we do not invent coordinates. */}
+      <JsonLd
+        data={localBusinessSchema({
+          name: `Barrett Henry, REALTOR® — ${city.name}, FL`,
+          description: `Neighborhood-level real estate guidance in ${city.name}, ${city.county} County, Florida from Barrett Henry, Broker Associate at REMAX Collective.`,
+          url: canonicalUrl,
+          areaServed: {
+            "@type": "City",
+            name: `${city.name}, Florida`,
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: city.lat,
+              longitude: city.lng,
+            },
+            containedInPlace: {
+              "@type": "AdministrativeArea",
+              name: `${city.county} County, Florida`,
+            },
+          },
+        })}
       />
 
       {/* ======================================================================
@@ -130,6 +175,49 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
           </div>
         </div>
       </section>
+
+      {/* ======================================================================
+          QUICK ANSWER — direct answer to "what neighborhoods are in {city}?"
+
+          This is the block AI answer engines lift, and it is the element the
+          `.quick-answer` speakable selector in the WebPage schema above points
+          at. The two must stay together: if you delete this section, also
+          remove `.quick-answer` from those selectors, otherwise the schema
+          points at an element that does not exist.
+
+          Everything stated here is derived from real data — the neighborhood
+          count and names come straight from src/data/neighborhoods.ts.
+      ====================================================================== */}
+      {neighborhoodCount > 0 && (
+        <section className="container-wide pt-12">
+          <QuickAnswer heading={`What neighborhoods are in ${city.name}?`}>
+            <p>
+              {city.name}, Florida has {neighborhoodCount}{" "}
+              {neighborhoodCount === 1 ? "neighborhood" : "neighborhoods"}{" "}
+              covered in this guide
+              {sampleNames.length > 0 ? (
+                <>
+                  , including {sampleNames.slice(0, -1).join(", ")}
+                  {sampleNames.length > 1 ? " and " : ""}
+                  {sampleNames[sampleNames.length - 1]}
+                </>
+              ) : null}
+              . Each section below gives an overview of the area plus the homes
+              currently for sale there, so you can compare neighborhoods before
+              you book a single showing.
+            </p>
+            <p>
+              Not sure which area fits? Barrett Henry, Broker Associate at REMAX
+              Collective, has 23+ years of real estate experience. Call{" "}
+              <a href="tel:+18137337907" className="text-link font-semibold">
+                (813) 733-7907
+              </a>{" "}
+              for an honest rundown of the trade-offs between {city.name}{" "}
+              neighborhoods.
+            </p>
+          </QuickAnswer>
+        </section>
+      )}
 
       {/* ======================================================================
           TABLE OF CONTENTS — compact jump-link grid so users can skip to any

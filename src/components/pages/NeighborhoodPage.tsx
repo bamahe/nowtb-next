@@ -13,6 +13,18 @@ import Image from "next/image";
 import ListingGrid from "@/components/ui/ListingGrid";
 import ClientNeighborhoodSection from "@/components/ui/ClientNeighborhoodSection";
 import SpokeNav from "@/components/city/SpokeNav";
+import CityResources from "@/components/city/CityResources";
+// Lead capture + slug-keyed CTA copy. These ~1,440 neighborhood pages had no
+// form at all — only tel: and /contact/ links — so a visitor searching
+// "Bloomingdale homes for sale" had to click away to convert. AreaCta wraps the
+// existing ContactForm (Turnstile + /api/contact + Follow Up Boss) and varies
+// its headline per neighborhood slug so the copy is not identical 1,440 times.
+// Full explanation lives in src/components/city/AreaCta.tsx.
+import {
+  AreaHeroCtaButtons,
+  AreaLeadCapture,
+  AreaCtaBar,
+} from "@/components/city/AreaCta";
 import { getCityBySlug } from "@/data/cities";
 import { getPageContent } from "@/lib/page-content";
 import { cleanWpContent } from "@/lib/utils";
@@ -91,6 +103,51 @@ export default async function NeighborhoodPage({
   // Empty arrays — server-side listing fetch disabled to protect Bridge API rate limits
   const soldListings: never[] = [];
 
+  // ------------------------------------------------------------------
+  // Which sibling neighborhoods get the full three-link treatment.
+  //
+  // THE PROBLEM THIS SOLVES: every neighborhood has three real pages —
+  // /bloomingdale/, /bloomingdale-homes-for-sale/ and /bloomingdale-realtor/
+  // (all served by src/app/[citySlug]/page.tsx). The "Nearby Neighborhoods"
+  // grid below only ever linked the first one, so the other two had zero
+  // inbound links anywhere on the site: 1,384 orphaned pages, and the two
+  // page types with the strongest buying intent at that.
+  //
+  // WHY A ROTATING WINDOW instead of just linking all of them: Valrico has 139
+  // neighborhoods and Tampa has 42. Three links each would put 417 links in one
+  // section — a link dump that passes almost no signal per link and reads as
+  // spam. Instead each page spotlights a window of SPOTLIGHT_COUNT siblings,
+  // and the window STARTS at this neighborhood's own position in the list. So
+  // the windows overlap across the city's pages and every sibling lands in
+  // roughly SPOTLIGHT_COUNT of them — full coverage of all the spoke pages,
+  // with only ~27 extra links on any single page.
+  //
+  // It is deterministic (the order of src/data/neighborhoods.ts is fixed), so
+  // the same page renders the same links on every build and crawl. That matters:
+  // links that shuffle per request look unstable to a crawler.
+  //
+  // If it breaks, check:
+  //   - A neighborhood's spoke pages look orphaned again => confirm this city
+  //     actually has more than one neighborhood. A city with a single
+  //     neighborhood has no siblings to link it, so its spokes depend on the
+  //     RealtorPage and CityResources grids instead.
+  //   - indexOf returns -1 when the current slug is not in the sibling list
+  //     (the [citySlug] route filters the current neighborhood out before
+  //     passing the array). We normalise that to 0 below rather than slicing
+  //     from -1, which would silently return the tail of the array.
+  const SPOTLIGHT_COUNT = 9;
+  const ownIndex = Math.max(0, nearbyNeighborhoods.findIndex((n) => n.slug === slug));
+  const spotlightNeighborhoods = Array.from(
+    { length: Math.min(SPOTLIGHT_COUNT, nearbyNeighborhoods.length) },
+    (_, i) => nearbyNeighborhoods[(ownIndex + i) % nearbyNeighborhoods.length]
+  );
+  // Everything not spotlighted keeps the plain hub tile it already had, so this
+  // change only ADDS links — no neighborhood loses an inbound link it has today.
+  const spotlightSlugs = new Set(spotlightNeighborhoods.map((n) => n.slug));
+  const remainingNeighborhoods = nearbyNeighborhoods.filter(
+    (n) => !spotlightSlugs.has(n.slug)
+  );
+
   return (
     <>
       {/* --- JSON-LD BreadcrumbList for SEO --- */}
@@ -144,21 +201,11 @@ export default async function NeighborhoodPage({
             {county} County, Florida — Updated daily from Stellar MLS
           </p>
 
-          {/* CTA row */}
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="tel:+18137337907"
-              className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 rounded text-sm hover:bg-accent/90 transition-colors"
-            >
-              (813) 733-7907
-            </a>
-            <Link
-              href="/contact/"
-              className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
-            >
-              Schedule a Tour
-            </Link>
-          </div>
+          {/* CTA row — above the fold. The phone number is plain visible text
+              at every breakpoint (NOT hidden on mobile), and the middle button
+              scrolls to the lead form further down this same page rather than
+              shipping the visitor off to /contact/ and losing them. */}
+          <AreaHeroCtaButtons />
         </div>
       </section>
 
@@ -252,8 +299,41 @@ export default async function NeighborhoodPage({
               </p>
             </div>
           )}
+
+          {/* === Silo links — back to the parent city hub and across to
+               conversion pages. Keyword anchor text, never "click here", because
+               the anchor text tells Google and the AI answer engines what the
+               destination is about. All single-segment routes, which keeps them
+               clear of the `:city` flatten redirects in next.config.mjs that
+               break nested paths on the live domain only. === */}
+          <p className="font-body text-muted font-light leading-relaxed mt-6 max-w-3xl">
+            Want the wider picture? See every{" "}
+            <Link href={`/${citySlug}/`} className="text-link hover:underline font-semibold">
+              {city} home for sale
+            </Link>{" "}
+            across {county} County, check the{" "}
+            <Link href={`/${citySlug}-housing-market/`} className="text-link hover:underline">
+              {city} housing market
+            </Link>
+            , or if you already own in {name}, get a{" "}
+            <Link href="/free-home-valuation/" className="text-link hover:underline">
+              free home valuation
+            </Link>
+            . Thinking about listing? Start with{" "}
+            <Link href="/sell-your-home/" className="text-link hover:underline">
+              how to sell your home
+            </Link>
+            .
+          </p>
         </div>
       </section>
+
+      {/* === LEAD FORM — the piece these pages were missing entirely ===
+           Mid-page, straight after the neighborhood write-up, which is where
+           intent peaks. `source` carries the neighborhood slug into Follow Up
+           Boss so Barrett can see the lead came from this specific community
+           rather than from "the website" generically. */}
+      <AreaLeadCapture areaName={name} slug={slug} source={`${slug}-neighborhood`} />
 
       {/* === Photo gallery — only shown when neighborhood has photos === */}
       {neighborhoodPhotos.length > 0 && (
@@ -343,55 +423,92 @@ export default async function NeighborhoodPage({
       {/* === Spoke nav — explore more in the parent city === */}
       {parentCity && <SpokeNav city={parentCity} />}
 
-      {/* === Nearby neighborhoods — cross-linking === */}
+      {/* === Sibling-area resource grid ===
+           Standing rule: every page gets a resource grid linking sibling areas.
+           Neighborhood pages had only the eight hand-written tiles above, so
+           they never linked to NEARBY CITIES at all. CityResources already
+           builds that grid with descriptive keyword anchors ("Brandon Homes for
+           Sale"), plus sibling neighborhoods, loan guides and city articles.
+           It returns null on its own for cities with nothing to show, so this
+           is safe to render on all of them. */}
+      {parentCity && <CityResources city={parentCity} />}
+
+      {/* === Nearby neighborhoods — cross-linking ===
+           Two tiers on purpose:
+
+           1. `spotlightNeighborhoods` (computed above) get three links each:
+              the neighborhood page plus its "-homes-for-sale" and "-realtor"
+              spokes. Those two spoke page types are the highest commercial
+              intent pages on the whole site and NOTHING linked them before —
+              this grid only ever emitted the bare hub URL, which is how 1,384
+              pages (21% of the site) ended up with zero inbound links.
+           2. Every remaining sibling keeps the plain hub tile it already had,
+              so no neighborhood loses the inbound link it has today. */}
       {nearbyNeighborhoods.length > 0 && (
         <section className="bg-gray-50 py-12">
           <div className="container-wide">
             <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6 text-center">
               Nearby Neighborhoods
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-              {nearbyNeighborhoods.map((neighborhood) => (
-                <Link
-                  key={neighborhood.slug}
-                  href={`/${neighborhood.slug}/`}
-                  className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10"
+
+            {/* Tier 1 — spotlight cards with keyword anchors */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+              {spotlightNeighborhoods.map((n) => (
+                <div
+                  key={n.slug}
+                  className="rounded-lg border border-gray-200 bg-white px-4 py-3"
                 >
-                  {neighborhood.name}
-                </Link>
+                  <Link
+                    href={`/${n.slug}/`}
+                    className="block text-sm font-semibold text-primary transition-colors hover:text-accent"
+                  >
+                    {n.name}
+                  </Link>
+                  {/* Descriptive keyword anchors, never "read more" — the anchor
+                      text is the single strongest signal of what the destination
+                      page is about, for Google and for AI answer engines alike. */}
+                  <div className="mt-1 flex flex-col gap-0.5">
+                    <Link
+                      href={`/${n.slug}-homes-for-sale/`}
+                      className="font-body text-xs text-muted transition-colors hover:text-accent"
+                    >
+                      {n.name} Homes for Sale
+                    </Link>
+                    <Link
+                      href={`/${n.slug}-realtor/`}
+                      className="font-body text-xs text-muted transition-colors hover:text-accent"
+                    >
+                      {n.name} REALTOR
+                    </Link>
+                  </div>
+                </div>
               ))}
             </div>
+
+            {/* Tier 2 — the rest of the city's neighborhoods, hub links only */}
+            {remainingNeighborhoods.length > 0 && (
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                {remainingNeighborhoods.map((neighborhood) => (
+                  <Link
+                    key={neighborhood.slug}
+                    href={`/${neighborhood.slug}/`}
+                    className="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10"
+                  >
+                    {neighborhood.name}
+                  </Link>
+                ))}
+              </div>
+            )}
           </div>
         </section>
       )}
 
-      {/* === CTA bar — clean dark bar, no full form (matches SpokePage) === */}
-      <section className="bg-primary py-12">
-        <div className="container-wide flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <h2 className="font-heading font-bold text-xl md:text-2xl text-white mb-1">
-              Looking for homes in {name}?
-            </h2>
-            <p className="font-body text-white/70 text-sm">
-              Barrett Henry, REALTOR® — 23+ years of real estate experience
-            </p>
-          </div>
-          <div className="flex gap-3 flex-shrink-0">
-            <a
-              href="tel:+18137337907"
-              className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 rounded text-sm hover:bg-accent/90 transition-colors"
-            >
-              Call Now
-            </a>
-            <Link
-              href="/contact/"
-              className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
-            >
-              Send a Message
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* === CTA bar ===
+           Was a hard-coded "Looking for homes in {name}?" on all ~1,440 of
+           these pages — exactly the repeated boilerplate that reads as
+           near-duplicate content. Now slug-keyed, so adjacent neighborhoods get
+           different copy and each page stays consistent across crawls. */}
+      <AreaCtaBar areaName={name} slug={slug} />
     </>
   );
 }

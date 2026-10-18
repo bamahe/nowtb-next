@@ -7,67 +7,94 @@
 import Link from "next/link";
 
 // Footer navigation organized into themed columns
+//
+// ⚠️ EVERY internal href in this file MUST end in a trailing slash.
+//
+// WHY: next.config.mjs sets `trailingSlash: true`. With that flag on, the
+// canonical form of every URL on this site is "/buyers/", and a request for
+// "/buyers" (no slash) is answered with a 308 redirect to "/buyers/" — it is
+// never served directly. This footer renders on all ~6,657 pages, so a single
+// slash-less href here is not one wasted redirect, it is ~6,657 of them. The
+// 36 links below were all missing the slash, which the Oct 2026 link audit
+// measured as 239,652 needless 308s sitewide. Every one of them cost a crawler
+// two round trips instead of one and a visitor an extra hop on every click.
+//
+// If it breaks, check:
+//   - A footer link 404s => the destination route does not exist. Static routes
+//     live in src/app/<name>/page.tsx; single-segment slugs like /brandon/ or
+//     /fha-loan-florida/ are served by the src/app/[citySlug]/ catch-all, which
+//     resolves them against src/data/*.ts. Confirm the slug is in that data.
+//   - A footer link still 301s => it points at a slug that redirects. Guide
+//     slugs are the common case: /first-time-home-buyer-guide/ is rewritten to
+//     /guides/first-time-home-buyer-guide/ by getGuideRedirects() in
+//     next.config.mjs, so link the /guides/ form directly (done below).
 const FOOTER_COLUMNS = [
   {
     title: "Buy",
     links: [
-      { href: "/buyers", label: "Buyer's Guide" },
-      { href: "/properties", label: "Search Properties" },
-      { href: "/mortgage-calculator", label: "Mortgage Calculator" },
-      { href: "/open-houses", label: "Open Houses" },
-      { href: "/first-time-home-buyer-guide", label: "First-Time Buyers" },
-      { href: "/fha-loan-florida", label: "FHA Loans" },
-      { href: "/va-loan-florida", label: "VA Loans" },
+      { href: "/buyers/", label: "Buyer's Guide" },
+      { href: "/properties/", label: "Search Properties" },
+      // Anchor text here is deliberately NOT the bare phrase "mortgage
+      // calculator". That exact anchor already fires ~48,000 times sitewide
+      // from a boilerplate block, and identical exact-match anchor text at
+      // that volume reads as manipulation rather than as a helpful link.
+      { href: "/mortgage-calculator/", label: "Estimate a Mortgage Payment" },
+      { href: "/open-houses/", label: "Open Houses" },
+      // Linked at its canonical /guides/ path, not the root slug — see the
+      // "still 301s" note above.
+      { href: "/guides/first-time-home-buyer-guide/", label: "First-Time Buyers" },
+      { href: "/fha-loan-florida/", label: "FHA Loans" },
+      { href: "/va-loan-florida/", label: "VA Loans" },
       { href: "https://firsttimehomebuyertb.com", label: "Down Payment Programs", external: true },
     ],
   },
   {
     title: "Sell",
     links: [
-      { href: "/sellers", label: "Seller's Guide" },
-      { href: "/free-home-valuation", label: "Free Home Valuation" },
-      { href: "/sell-your-home", label: "Sell Your Home" },
-      { href: "/fsbo-vs-realtor", label: "FSBO vs. REALTOR" },
+      { href: "/sellers/", label: "Seller's Guide" },
+      { href: "/free-home-valuation/", label: "Free Home Valuation" },
+      { href: "/sell-your-home/", label: "Sell Your Home" },
+      { href: "/fsbo-vs-realtor/", label: "FSBO vs. REALTOR" },
     ],
   },
   {
     title: "Explore",
     links: [
-      { href: "/communities", label: "Communities" },
-      { href: "/market-updates", label: "Market Updates" },
-      { href: "/guides", label: "Guides" },
-      { href: "/investing", label: "Investing" },
-      { href: "/luxury", label: "Luxury Homes" },
-      { href: "/commercial", label: "Commercial" },
-      { href: "/preferred-vendors", label: "Preferred Vendors" },
+      { href: "/communities/", label: "Communities" },
+      { href: "/market-updates/", label: "Market Updates" },
+      { href: "/guides/", label: "Guides" },
+      { href: "/investing/", label: "Investing" },
+      { href: "/luxury/", label: "Luxury Homes" },
+      { href: "/commercial/", label: "Commercial" },
+      { href: "/preferred-vendors/", label: "Preferred Vendors" },
     ],
   },
   {
     title: "Cities",
     links: [
-      { href: "/valrico", label: "Valrico" },
-      { href: "/brandon", label: "Brandon" },
-      { href: "/riverview", label: "Riverview" },
-      { href: "/lithia", label: "Lithia" },
-      { href: "/apollo-beach", label: "Apollo Beach" },
-      { href: "/seffner", label: "Seffner" },
-      { href: "/plant-city", label: "Plant City" },
-      { href: "/dover", label: "Dover" },
-      { href: "/thonotosassa", label: "Thonotosassa" },
-      { href: "/ruskin", label: "Ruskin" },
-      { href: "/tampa", label: "Tampa" },
+      { href: "/valrico/", label: "Valrico" },
+      { href: "/brandon/", label: "Brandon" },
+      { href: "/riverview/", label: "Riverview" },
+      { href: "/lithia/", label: "Lithia" },
+      { href: "/apollo-beach/", label: "Apollo Beach" },
+      { href: "/seffner/", label: "Seffner" },
+      { href: "/plant-city/", label: "Plant City" },
+      { href: "/dover/", label: "Dover" },
+      { href: "/thonotosassa/", label: "Thonotosassa" },
+      { href: "/ruskin/", label: "Ruskin" },
+      { href: "/tampa/", label: "Tampa" },
     ],
   },
   {
     title: "Company",
     links: [
-      { href: "/about", label: "About" },
-      { href: "/contact", label: "Contact" },
-      { href: "/blog", label: "Blog" },
-      { href: "/privacy-policy", label: "Privacy Policy" },
-      { href: "/terms-of-use", label: "Terms of Use" },
-      { href: "/fair-housing", label: "Fair Housing" },
-      { href: "/accessibility", label: "Accessibility" },
+      { href: "/about/", label: "About" },
+      { href: "/contact/", label: "Contact" },
+      { href: "/blog/", label: "Blog" },
+      { href: "/privacy-policy/", label: "Privacy Policy" },
+      { href: "/terms-of-use/", label: "Terms of Use" },
+      { href: "/fair-housing/", label: "Fair Housing" },
+      { href: "/accessibility/", label: "Accessibility" },
     ],
   },
 ];

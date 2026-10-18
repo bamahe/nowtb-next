@@ -8,11 +8,17 @@
 
 import { Phone, MessageCircle, MessageSquare } from "lucide-react";
 import Link from "next/link";
+import { trackPhoneTap } from "@/lib/analytics";
 
 export default function MobileBottomBar() {
   return (
     <div
-      className="fixed bottom-0 left-0 right-0 z-40 md:hidden
+      // z-50 = the "MobileBottomBar" tier of the stacking scale documented in
+      // src/app/layout.tsx. It was z-40, tied with BackToTop and BELOW the chat
+      // bubble (z-50 at the time). The Call button here is the single most
+      // valuable element on a phone screen, so it now outranks both the chat
+      // bubble (z-45) and BackToTop (z-40) and can never be covered by them.
+      className="fixed bottom-0 left-0 right-0 z-50 md:hidden
                  bg-white border-t border-gray-200 shadow-[0_-2px_10px_rgba(0,0,0,0.08)]"
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
     >
@@ -20,6 +26,10 @@ export default function MobileBottomBar() {
         {/* Call button — takes 1/2 of the width, green/accent background */}
         <a
           href="tel:+18137337907"
+          // Conversion tracking. Safe no-op until NEXT_PUBLIC_GA_ID is set in
+          // Vercel — see src/lib/analytics.ts. Wrapped so it can never throw
+          // and cancel the call the visitor is placing.
+          onClick={() => trackPhoneTap("mobile-bottom-bar")}
           className="flex-[2] flex items-center justify-center gap-2
                      bg-green-600 text-white font-body text-sm font-semibold
                      py-3.5 active:bg-green-700 transition-colors"

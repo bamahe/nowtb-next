@@ -11,8 +11,10 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { Phone } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
 import MobileNav from "@/components/layout/MobileNav";
+import { trackPhoneTap } from "@/lib/analytics";
 
 // ---------------------------------------------------------------------------
 // Dropdown menu data: each top-level nav item and its children
@@ -228,7 +230,12 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full">
+    // z-[60] = the "Header bar" tier of the site-wide stacking scale documented
+    // at the top of src/app/layout.tsx. It was z-50, which tied with the chat
+    // bubble and sat BEHIND nothing in particular — and crucially it must stay
+    // above in-page sticky bars (the property search filter bar), which the
+    // scale caps at z-30.
+    <header className="fixed top-0 left-0 right-0 z-[60] w-full">
       <nav
         className={`
           ${mobileMenuOpen ? "transition-none" : "transition-all duration-500 ease-in-out"}
@@ -239,15 +246,18 @@ export default function Header() {
         `}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          {/* ── Logo: REMAX branded logo, above the fold so priority loading ── */}
-          <Link href="/" className="group flex items-center gap-3">
+          {/* ── Logo: REMAX branded logo, above the fold so priority loading ──
+              h-9 on phones, h-11 from md up. Shrinking it by 8px frees about
+              30px of horizontal room, which is what lets the phone number sit
+              next to the hamburger on a 360px-wide screen without wrapping. */}
+          <Link href="/" className="group flex items-center gap-3 shrink-0">
             <Image
               src="/images/remax-logo-color.png"
               alt="Barrett Henry, REMAX Collective"
               width={200}
               height={55}
               priority
-              className="h-11 w-auto"
+              className="h-9 md:h-11 w-auto"
             />
           </Link>
 
@@ -325,6 +335,9 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-6">
             <a
               href="tel:+18137337907"
+              // Tracked separately from the mobile button so Barrett can see
+              // which one actually earns calls. No-op until GA4 is configured.
+              onClick={() => trackPhoneTap("header-desktop")}
               className={`
                 font-body text-xs tracking-[0.15em] uppercase
                 transition-colors duration-500
@@ -349,8 +362,46 @@ export default function Header() {
             {/* Language switcher */}
           </div>
 
-          {/* ── Mobile hamburger toggle ── */}
-          <MobileNav scrolled={useDarkText} onOpenChange={setMobileMenuOpen} />
+          {/* ── Mobile: tap-to-call button + hamburger ──────────────────────
+              WHY THIS EXISTS: the phone block above is `hidden md:flex`, so on
+              a phone the header used to show a logo and a hamburger and NOTHING
+              ELSE — no way to reach Barrett without first opening the menu.
+              Most real estate traffic is mobile, so that was the site's single
+              biggest conversion leak, and it broke the standing rule that the
+              phone number is visible on mobile and never hidden.
+
+              Sizing notes for a 360px-wide phone (the narrowest common screen):
+              logo ~131px + this pill ~112px + hamburger ~40px + gaps ~24px
+              ≈ 307px inside the 328px of space px-4 leaves. It fits with room
+              to spare. `whitespace-nowrap` guarantees the number never wraps
+              onto two lines, and `tracking-normal` keeps it narrow (the
+              desktop link's 0.15em letter-spacing would add ~12px).
+
+              If it breaks, check: if anything is ever added to this row, shrink
+              the number to the icon plus "Call" rather than letting the row
+              wrap — a wrapped header changes height and makes the sticky
+              header jump on scroll. ───────────────────────────────────────── */}
+          <div className="flex items-center gap-2 md:hidden">
+            <a
+              href="tel:+18137337907"
+              // trackPhoneTap is a no-op until NEXT_PUBLIC_GA_ID exists in
+              // Vercel — see src/lib/analytics.ts. It can never throw, which
+              // matters here: an exception in this handler would cancel the
+              // call the visitor was trying to place.
+              onClick={() => trackPhoneTap("header-mobile")}
+              className="flex items-center gap-1.5 rounded-full bg-accent px-2.5 py-2
+                         text-primary font-body text-[11px] font-bold tracking-normal
+                         whitespace-nowrap shadow-sm
+                         active:bg-accent/80 transition-colors"
+              aria-label="Call Barrett Henry at (813) 733-7907"
+            >
+              <Phone size={14} strokeWidth={2.75} aria-hidden="true" />
+              (813) 733-7907
+            </a>
+
+            {/* Hamburger toggle (opens the full-screen MobileNav overlay) */}
+            <MobileNav scrolled={useDarkText} onOpenChange={setMobileMenuOpen} />
+          </div>
         </div>
       </nav>
 
@@ -363,10 +414,13 @@ export default function Header() {
         const isOpen = openDropdown === index;
 
         return (
+          // z-[65] = the "Header mega-menu" tier of the stacking scale in
+          // src/app/layout.tsx. It must outrank the header bar itself (z-[60])
+          // or the panel would render behind the nav it drops out of.
           <div
             key={item.label}
             className={`
-              hidden md:block absolute left-0 right-0 z-[60]
+              hidden md:block absolute left-0 right-0 z-[65]
               transition-all duration-200 ease-out
               ${isOpen
                 ? "opacity-100 translate-y-0 pointer-events-auto"

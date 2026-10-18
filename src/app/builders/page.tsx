@@ -288,10 +288,26 @@ export default function BuildersPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Builder detail pages live at /builders/<slug>/ — that is the real
+                route (src/app/builders/[slug]/page.tsx) and the canonical URL its
+                generateMetadata declares. This grid used to link the bare root
+                form, "/lennar-homes-tampa-bay/", which is NOT a route: the
+                src/app/[citySlug]/ catch-all resolves single-segment slugs against
+                the city/neighborhood/guide data files, finds no builder there, and
+                404s. Result: all 8 builder pages had zero working inbound links
+                and were orphaned from the whole site.
+
+                The trailing slash is also mandatory — next.config.mjs sets
+                `trailingSlash: true`, so "/builders/lennar-homes-tampa-bay"
+                without it is a guaranteed 308 redirect rather than a page.
+
+                If it breaks, check: builder slugs come from src/data/builders.ts
+                and are pre-rendered by generateStaticParams in the [slug] route,
+                so a new builder added to that data file works here with no change. */}
             {builders.map((builder) => (
               <Link
                 key={builder.slug}
-                href={`/${builder.slug}/`}
+                href={`/builders/${builder.slug}/`}
                 className="group card p-8 hover:shadow-lg transition-shadow"
               >
                 <div className="flex items-baseline gap-3 mb-3">

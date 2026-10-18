@@ -2,12 +2,22 @@
 // /market-updates/[slug] — Individual market update page
 // =============================================================================
 
+import fs from "fs";
+import path from "path";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import ContactForm from "@/components/ui/ContactForm";
 import { getPrimaryAgent } from "@/data/agents";
 import { cleanWpContent } from "@/lib/utils";
+import {
+  JsonLd,
+  breadcrumbSchema,
+  articleSchema,
+  faqSchema,
+  extractFaqsFromHtml,
+  speakableSelectorsForContent,
+} from "@/lib/schema";
 import {
   getAllMarketUpdateSlugs,
   getMarketUpdateBySlug,
@@ -51,6 +61,32 @@ export async function generateMetadata({
   };
 }
 
+/**
+ * Confirm a site-root image path really exists in /public before we publish it
+ * in structured data.
+ *
+ * WHY THIS IS HERE: getMarketUpdateThumbnail() returns `/images/blog/<slug>.jpg`
+ * for EVERY update, but 36 of the 232 files are missing from public/images/blog.
+ * Putting a 404 URL in an Article's `image` is the same class of bug as the
+ * phantom `barrett-henry-headshot.jpg` we just removed: it quietly weakens the
+ * page in exactly the systems we are trying to win. So the schema below only
+ * claims an image when the bytes are on disk.
+ *
+ * Safe to call during the build because this is a server component.
+ *
+ * If it breaks, check: this resolves against process.cwd()/public, which is the
+ * repo root during `next build`. The 36 missing files are also rendering a
+ * broken <img> in the hero — that is a separate fix in src/lib/market-updates.ts.
+ */
+function publicFileExists(sitePath: string): boolean {
+  try {
+    return fs.existsSync(path.join(process.cwd(), "public", sitePath));
+  } catch {
+    // Never let an image check break a page render
+    return false;
+  }
+}
+
 // --- Helper: format dates ---
 function formatDate(dateStr: string): string {
   return new Date(dateStr).toLocaleDateString("en-US", {
@@ -79,67 +115,71 @@ export default async function MarketUpdatePage({
 
   // Build JSON-LD structured data for this market update
   const canonicalUrl = `https://nowtb.com/market-updates/${slug}/`;
+  const description =
+    update.excerpt ||
+    `${update.title} — latest housing market data from Barrett Henry, REALTOR® at REMAX Collective.`;
+
+  // ---------------------------------------------------------------------------
+  // Clean the WordPress HTML ONCE, then use that exact string for BOTH the
+  // visible article body and the FAQPage schema below.
+  //
+  // WHY: FAQPage structured data has to describe FAQs the visitor can actually
+  // see. Deriving the schema from the same string we render makes a mismatch
+  // impossible — if the content ever loses its FAQ section, extractFaqsFromHtml
+  // returns [] and we emit no FAQ schema instead of lying about it.
+  // ---------------------------------------------------------------------------
+  const contentHtml = cleanWpContent(update.content);
+
+  // 229 of the 232 market updates ship a visible FAQ section. The other 3 have
+  // none, and correctly get no FAQPage node.
+  const faqs = extractFaqsFromHtml(contentHtml);
+
+  // Speakable selectors that actually match something on THIS page.
+  // The old value was [".quick-answer", "article h1", "article h2 + p"] and all
+  // three matched nothing: this template never renders <QuickAnswer>, the <h1>
+  // lives in the hero <section> OUTSIDE <article>, and the exported content puts
+  // its answer block in `.bbs-quick-answer-text` (which `.quick-answer` does NOT
+  // match — class selectors match whole tokens, not substrings).
+  const speakableSelectors = speakableSelectorsForContent(contentHtml);
+
+  // Only publish the lead image in schema if the file is actually there.
+  const schemaImage =
+    thumbnail && publicFileExists(thumbnail)
+      ? `https://nowtb.com${thumbnail}`
+      : undefined;
 
   return (
     <>
       {/* === JSON-LD: BreadcrumbList === */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://nowtb.com" },
-              { "@type": "ListItem", position: 2, name: "Market Updates", item: "https://nowtb.com/market-updates/" },
-              { "@type": "ListItem", position: 3, name: update.title, item: canonicalUrl },
-            ],
-          }),
-        }}
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: "https://nowtb.com" },
+          { name: "Market Updates", url: "https://nowtb.com/market-updates/" },
+          { name: update.title, url: canonicalUrl },
+        ])}
       />
 
-      {/* === JSON-LD: Article schema === */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            headline: update.title,
-            datePublished: update.date,
-            dateModified: update.date,
-            description: update.excerpt || `${update.title} — latest housing market data from Barrett Henry, REALTOR® at REMAX Collective.`,
-            mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
-            author: {
-              "@type": "Person",
-              name: "Barrett Henry",
-              jobTitle: "Broker Associate",
-              url: "https://nowtb.com/about/",
-              image: "https://nowtb.com/images/barrett-henry-headshot.jpg",
-              sameAs: [
-                "https://nowtb.com",
-                "https://www.instagram.com/nowtampa/",
-                "https://www.facebook.com/NOWTampaBay",
-              ],
-            },
-            publisher: {
-              "@type": "RealEstateAgent",
-              name: "Barrett Henry, REALTOR\u00ae",
-              url: "https://nowtb.com",
-              logo: {
-                "@type": "ImageObject",
-                url: "https://nowtb.com/images/remax-logo-white.png",
-              },
-            },
-            ...(thumbnail ? { image: thumbnail } : {}),
-            // Speakable schema — tells AI assistants & voice search which parts to read aloud
-            speakable: {
-              "@type": "SpeakableSpecification",
-              cssSelector: [".quick-answer", "article h1", "article h2 + p"],
-            },
-          }),
-        }}
+      {/* === JSON-LD: Article schema ===
+           Uses the shared helper so the author Person node (headshot, job title,
+           sameAs, designations) is identical to every other article on the site.
+           This template used to inline its own author with a 404 headshot path
+           and a second, conflicting pair of social handles. */}
+      <JsonLd
+        data={articleSchema({
+          headline: update.title,
+          description,
+          url: canonicalUrl,
+          datePublished: update.date,
+          dateModified: update.date,
+          // Verified-to-exist absolute URL, or omitted entirely
+          ...(schemaImage ? { image: schemaImage } : {}),
+          speakableSelectors,
+        })}
       />
+
+      {/* === JSON-LD: FAQPage ===
+           Only emitted when the page really does display 3+ questions. */}
+      {faqs.length > 0 && <JsonLd data={faqSchema(faqs)} />}
 
       {/* === Header — the market update photo is the hero background ===
            The image sits behind the title with a navy scrim over it so the
@@ -248,7 +288,9 @@ export default async function MarketUpdatePage({
                 prose-headings:font-heading prose-headings:text-primary
                 prose-a:text-link prose-a:no-underline hover:prose-a:underline
                 prose-p:leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: cleanWpContent(update.content) }}
+              // Same string the FAQ schema above was derived from, so the
+              // visible FAQs and the FAQPage JSON-LD can never disagree.
+              dangerouslySetInnerHTML={{ __html: contentHtml }}
             />
           </article>
         </div>
