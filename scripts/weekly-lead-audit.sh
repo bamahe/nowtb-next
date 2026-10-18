@@ -133,6 +133,25 @@ if [ "${AUDIT_ONLY:-0}" = "1" ]; then
 fi
 
 # -----------------------------------------------------------------------------
+# PHASE 1.5 — top up missing hero images
+# -----------------------------------------------------------------------------
+# A post with no hero image at public/images/blog/<slug>.jpg renders with no
+# hero and shares to social as a blank grey box. The old job that did this lived
+# at /tmp/download-blog-images.py, which macOS deleted; the cron then logged
+# "No such file or directory" hourly for weeks. It lives in the repo now.
+#
+# Unsplash demo apps are capped at 50 requests/hour, so this deliberately takes
+# a bite rather than the whole backlog. It stops cleanly on a 429/403 and the
+# next run resumes. Never fatal — a missing image must not block the audit.
+say "PHASE 1.5  backfilling missing hero images"
+if [ -f scripts/download_blog_images.py ]; then
+  LIMIT="${IMAGE_LIMIT:-18}" python3 scripts/download_blog_images.py 2>&1 | tail -6 \
+    || echo "image backfill failed (non-fatal, continuing)"
+else
+  echo "scripts/download_blog_images.py not present — skipping"
+fi
+
+# -----------------------------------------------------------------------------
 # PHASE 2 — the fix pass
 # -----------------------------------------------------------------------------
 # Headless Claude reads the report and fixes what is safely fixable. It is
