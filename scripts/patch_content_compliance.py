@@ -202,7 +202,7 @@ FIX1_LOCATIVE_TAIL = regex(
 FIX1_LOCALISED_NOUN = regex(
     "FIX 1",
     "place used as a modifier inside the experience noun phrase",
-    r"\b(?:over|more than|nearly)?\s*2\d\s*\+?\s*years of (?:" +
+    r"\b(?:(?:over|more than|nearly)\s+)?2\d\s*\+?\s*years of (?:" +
     "|".join(re.escape(p) for p in _PLACES) +
     r")(?:\s+County)?(?:\s+(?:real estate|market|residential))?\s+"
     r"(?:experience|expertise|knowledge)",
@@ -213,7 +213,7 @@ FIX1_LOCALISED_NOUN = regex(
 FIX1_LOCAL_KNOWLEDGE = regex(
     "FIX 1",
     "numbered local knowledge -> unnumbered",
-    r"\b(?:over|more than|nearly)?\s*2\d\s*\+?\s*years of local (?:knowledge|expertise)",
+    r"\b(?:(?:over|more than|nearly)\s+)?2\d\s*\+?\s*years of local (?:knowledge|expertise)",
     "deep local knowledge",
 )
 
@@ -274,7 +274,7 @@ FIX1_BARE_YEARS_SERVING = regex(
 FIX1_24_OF_EXPERIENCE = regex(
     "FIX 1",
     "24+ years of <experience noun> -> 23+",
-    r"\b(?:over|more than|nearly)?\s*24\s*\+?\s*years of "
+    r"\b(?:(?:over|more than|nearly)\s+)?24\s*\+?\s*years of "
     r"((?:[a-z][a-z-]*\s+){0,3}(?:experience|expertise|knowledge))",
     r"23+ years of \1",
 )
