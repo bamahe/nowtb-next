@@ -486,7 +486,38 @@ const nextConfig = {
       { source: "/properties/listing", destination: "/properties/", permanent: true },
 
       // ── WordPress nested city spoke pages → flat structure ──
-      { source: "/:city((?!blog|api|auth|clients|properties|guides|images|wp-content|_next|compare|market-updates|builders|communities|account|sell|resources|3813-polumbo-dr|11417-cypress-park-st|30935-whitlock-dr|2510-brimhollow-dr).[^/]+)/:city-:topic", destination: "/:city-:topic/", permanent: true },
+      // THE SECOND ":city" IS NOT A BACK-REFERENCE. This is the trap that kept
+      // /auburndale/gapway-lakes-estates/ in an infinite 308 loop even after
+      // the :neighborhood rule below was fixed.
+      //
+      // It is tempting to read "/:city(...)/:city-:topic" as "the second
+      // segment must start with the SAME city name". path-to-regexp does not
+      // work that way — a repeated parameter name is just another independent
+      // capture. Proven against the compiled routes-manifest:
+      //
+      //   /auburndale/gapway-lakes-estates  ->  MATCHES, groups:
+      //        city="auburndale", city="gapway", topic="lakes-estates"
+      //
+      // So this rule happily flattened a community page to /gapway-lakes-estates/,
+      // the [citySlug] route redirected that back to the nested path, and the
+      // two bounced forever. /brandon/southoak escaped only because "southoak"
+      // has no hyphen and so cannot satisfy ":city-:topic" at all.
+      //
+      // Hence the second segment now carries the SAME generated community
+      // exclusion list as the :neighborhood rule below. Any hyphenated slug in
+      // community-pages.ts is vulnerable to this; new entries exclude
+      // themselves automatically.
+      //
+      // If it breaks, check: verify with the compiled regex, not by reading the
+      // source string. `node -e` over .next/routes-manifest.json after a build
+      // is the only reliable way to know what actually matches.
+      // The lookahead must reject the WHOLE second segment when it is a
+      // community slug, which is why it is anchored with (?:$|/).
+      // A bare (?!southoak|gapway-lakes-estates) would NOT work here: :topicCity
+      // only captures up to the last hyphen, so for "gapway-lakes-estates" it
+      // tries "gapway-lakes" — which does not start with the full slug, so an
+      // unanchored lookahead passes and the loop survives.
+      { source: `/:city((?!blog|api|auth|clients|properties|guides|images|wp-content|_next|compare|market-updates|builders|communities|account|sell|resources|3813-polumbo-dr|11417-cypress-park-st|30935-whitlock-dr|2510-brimhollow-dr).[^/]+)/:topicCity((?!(?:${communityFlattenExclusions})(?:$|/))[^/]+)-:topic`, destination: "/:topicCity-:topic/", permanent: true },
 
       // ── WordPress nested neighborhood pages → flat structure ──
       // The :neighborhood param excludes every slug in community-pages.ts (plus
