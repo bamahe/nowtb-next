@@ -2903,3 +2903,33 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** cc8b6dd — pushed to `origin/main`
+
+## 2026-10-19 (Batch 80 — Tampa Bay Quarterly Market Reports x10)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, 4+ H2 question headings, 6+ H3 subheadings, county comparison table, 22-link internal grid, Barrett Henry bio)
+
+1. **tampa-bay-quarterly-market-report-q1-2022** — Expanded stub to 12,310 chars. Added: Peak seller's market context (18-22% YoY appreciation, sub-1 month supply, 5-12 offers per listing); cash buyer dominance (35% all-cash, out-of-state buyers); county price table ($285K Polk to $430K Sarasota); waived inspection reality and risk analysis; how Q1 2022 buyers fared long-term; 5-Q&A FAQ. Date: 2022-04-15.
+
+2. **tampa-bay-quarterly-market-report-q2-2022** — Expanded stub to 11,901 chars. Added: Rate shock from 3.5% to 5.5% (January-June 2022); $70K-$100K purchasing power loss mechanics; geographic displacement (Brandon/Plant City buyers shifting to Lakeland/Ruskin); inventory building from 0.8 to 1.5 months; seller timing analysis (May 2022 = peak window); county comparison table with trend signals; 5-Q&A FAQ. Date: 2022-07-15.
+
+3. **tampa-bay-quarterly-market-report-q3-2022** — Expanded stub to 12,291 chars. Added: Official seller-to-transitional market shift; Hurricane Ian (Sep 28 landfall near Fort Myers) insurance market consequences (30-50% premium spikes, carrier exits, Citizens growth); inspection contingencies returning; days on market expanding to 25-35 days; roof premium analysis; overpriced listing dynamics; 5-Q&A FAQ. Date: 2022-10-14.
+
+4. **tampa-bay-quarterly-market-report-q1-2023** — Expanded stub to 12,463 chars. Added: Soft landing confirmation (no crash despite rate shock); lock-in effect suppressing supply; insurance crisis deepening (Citizens over 1.3M policies, premiums +30-40%, $200-$500/month carrying cost impact); FHA/VA buyer comeback as sellers softened; Q1 2022 vs Q1 2023 comparison table; roof premium and flood zone buyer due diligence; 5-Q&A FAQ. Date: 2023-04-15.
+
+5. **tampa-bay-quarterly-market-report-q2-2023** — Expanded stub to 12,674 chars. Added: Strongest spring since 2021 (25% transaction growth Q1-to-Q2); price segment dynamics (sub-$400K competitive, $400K-$600K balanced, $600K+ slow); builder incentives detailed (2-1 buydowns, $10K-$20K credits, upgrade packages = $20K-$40K total benefit); resale vs new construction math; winning buyer/seller strategies; Q2 2023 county comparison table; 5-Q&A FAQ. Date: 2023-07-15.
+
+6. **tampa-bay-quarterly-market-report-q3-2023** — Expanded stub to 12,148 chars. Added: First real normalization analysis; 35-45 day average DOM; 2.5 months supply; seller concessions in 40% of transactions; new construction role (Pasco/Manatee builders adding hundreds of homes); "21 days or less" as accurate pricing signal; wait-and-see buyer analysis (those who waited through 2023-2024 did not gain as expected); 5-Q&A FAQ. Date: 2023-10-20.
+
+7. **tampa-bay-quarterly-market-report-q1-2024** — Expanded stub to 12,959 chars. Added: 3 months supply milestone; lock-in effect easing as life circumstances overrode rate hesitancy; 97-98% sale-to-list ratio shift; 40% concession rate standard; NAR settlement announcement (March 2024) and buyer broker agreement context; Q1 2024 sale-to-list and concession rate table by county; winning buyer/seller strategies; 5-Q&A FAQ. Date: 2024-04-12.
+
+8. **tampa-bay-quarterly-market-report-q2-2024** — Expanded stub to 12,871 chars. Added: Spring market +12% transaction volume from Q1; QMI (quick-move-in spec) homes $15K-$30K below list detail; builder incentive comparison (builder credit vs rate reduction math); NAR settlement implementation in Q2; insurance cost continued climb (+8-12%); price segment breakdown (sub-$350K competitive through $700K+ buyer-favorable); 5-Q&A FAQ. Date: 2024-07-15.
+
+9. **tampa-bay-quarterly-market-report-q3-2024** — Expanded stub to 12,817 chars. Added: 30% YoY inventory growth; 3.5 months supply approaching balanced; rate decline from 7.2% to 6.5% ($180/month, $30K purchasing power improvement); wait-and-see dynamic analysis; 50% seller concession rate; inspection repairs fully negotiable; Hurricane Helene/Milton context (just outside Q3 period); 5-Q&A FAQ. Date: 2024-09-15.
+
+10. **tampa-bay-quarterly-market-report-q1-2025** — Expanded stub to 14,825 chars. Added: Balanced equilibrium confirmation (3.5-4 months supply); insurance cost +10-15% wildcard; Hurricane Helene/Milton post-storm flood disclosure context; rate lock-in effect diminishing organically; 45% concession rate; Wesley Chapel $445K median milestone; Q1 2024 vs Q1 2025 full comparison table; buy vs. rent guidance; best-value-by-buyer-profile analysis; 5-Q&A FAQ. Date: 2025-03-18.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** e7c64bb — pushed to `origin/main`
