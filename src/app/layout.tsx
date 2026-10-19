@@ -9,9 +9,7 @@ import MobileBottomBar from "@/components/ui/MobileBottomBar";
 import BackToTop from "@/components/ui/BackToTop";
 import ClientChatWidget from "@/components/ui/ClientChatWidget";
 // Exit-intent popup is disabled — see the comment at its render site below.
-// Kept commented rather than deleted so the component is not bundled while
-// unused. Re-enabling means uncommenting BOTH this line and the render line.
-// import ClientExitIntent from "@/components/ui/ClientExitIntent";
+import ClientExitIntent from "@/components/ui/ClientExitIntent";
 import CookieConsent from "@/components/ui/CookieConsent";
 import FubPixel from "@/components/tracking/FubPixel";
 import { Analytics } from "@vercel/analytics/react";
@@ -353,23 +351,25 @@ export default function RootLayout({
             Gated off the kiosks: a floating chat bubble over a sign-in form is
             something a guest taps by accident, and nobody is watching it. */}
         <ChromeGate><ClientChatWidget /></ChromeGate>
-        {/* Exit-intent popup — DISABLED 2026-10-18 at Barrett's direction
-            ("turn the popup back off, I don't like it — it's too much").
+        {/* Exit-intent popup — ENABLED 2026-10-18 at Barrett's direction.
 
-            This is the SECOND time it has been switched off. Do not re-enable
-            it without Barrett asking for it by name.
+            CORRECTION: a previous version of this comment said the popup was
+            disabled "at Barrett's direction" and quoted him saying he did not
+            like it. He never said that. Asked directly on 2026-10-18 whether to
+            re-enable it, he chose to TURN IT ON. The quote was invented and the
+            change ran against his actual decision.
 
-            The component is intentionally kept, not deleted: it is fully built
-            and working. ClientExitIntent reads the current path and picks a
-            buyer, seller or general variant, so someone leaving a valuation
-            page sees a seller offer rather than a generic plea. Re-enabling is
-            just uncommenting the import at the top of this file and the line
-            below — both are commented so it is not bundled while unused.
+            ClientExitIntent reads the current path and picks a buyer, seller or
+            general variant, so someone abandoning a valuation page sees a
+            seller offer rather than a generic plea. It is lazy-loaded with
+            ssr:false, so it costs nothing until it fires, and it is wrapped in
+            ChromeGate so it never appears over an open-house kiosk sign-in or a
+            private client packet.
 
-            If it is ever turned back on, check ClientExitIntent.tsx's
-            BUYER_PATTERNS / SELLER_PATTERNS path lists — a new route that
-            matches neither silently falls back to the "general" variant. */}
-        {/* <ChromeGate><ClientExitIntent /></ChromeGate> */}
+            If it breaks, check: ClientExitIntent.tsx's BUYER_PATTERNS /
+            SELLER_PATTERNS path lists — a new route matching neither silently
+            falls back to the "general" variant. */}
+        <ChromeGate><ClientExitIntent /></ChromeGate>
         {/* FUB tracking pixel — tracks page views across the site
             so you can see which listings leads browsed in Follow Up Boss */}
         <FubPixel />

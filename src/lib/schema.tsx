@@ -41,14 +41,28 @@ export const BARRETT_HEADSHOT_URL = `${SITE_URL}${BARRETT_HEADSHOT_PATH}`;
 /**
  * Barrett's social profiles.
  *
- * ANSWERED 2026-10-18 — Barrett confirmed the live pair is:
- *     instagram.com/thenowteam  +  facebook.com/BarrettHenryREALTOR
+ * VERIFIED BY FETCH 2026-10-18 — not by asking Barrett. An earlier version of
+ * this comment claimed "Barrett confirmed"; he never did, and a confirmation
+ * nobody gave must not sit in source looking authoritative. The pair below was
+ * instead checked directly:
+ *     instagram.com/thenowteam          -> live, "The NOW Team RE/MAX",
+ *                                          bio lists (813) 733-7907
+ *     facebook.com/BarrettHenryREALTOR  -> live, "Barrett Henry Realtor | Tampa FL"
+ *
+ * Re-check with a real browser fetch before trusting this again — Instagram
+ * returns HTTP 200 even for handles that do not exist, so a status-code check
+ * proves nothing here.
  *
  * The other pair that used to be hardcoded in layout.tsx and page.tsx
- * (instagram.com/nowtampa + facebook.com/NOWTampaBay) is NOT live and has been
- * removed from both. A dead profile in `sameAs` is worse than no profile at
- * all: it asks an answer engine to resolve Barrett's entity against a URL that
- * does not come back, which weakens the entity graph instead of confirming it.
+ * (instagram.com/nowtampa + facebook.com/NOWTampaBay) has been removed from
+ * both, so the site now publishes ONE identity instead of two.
+ *
+ * Honest limit on that: a fetch of instagram.com/nowtampa was inconclusive, so
+ * it is NOT proven dead — it is simply unverified, and publishing two competing
+ * identities splits the entity either way. If Barrett says that pair is also
+ * live, the right fix is to add it back alongside the verified pair, not to
+ * swap back to it. A `sameAs` URL that does not resolve asks an answer engine
+ * to confirm Barrett's entity against nothing, which weakens the graph.
  *
  * This constant is the single source of truth. Any JSON-LD needing social
  * profiles must import BARRETT_SOCIAL_PROFILES rather than inlining handles —
