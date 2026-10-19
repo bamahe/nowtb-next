@@ -149,13 +149,19 @@ src/app/layout.tsx:244-246
 
 The cost is real: the abandoning-visitor capture layer is zero across every page, including the 1,676 blog posts that have no other on-page form (#2) and the ~1,767 hub/spoke pages that have none either (#3).
 
-## ⛔ RESOLVED 2026-10-18 — DO NOT RE-OPEN THIS
+## ⛔ RESOLVED 2026-10-18 — SELLER PAGES ONLY. DO NOT RE-OPEN THIS
 
-**Barrett's decision: the exit-intent popup stays OFF. Permanently.**
+**Barrett's decision: the exit-intent popup runs on SELLER PAGES ONLY.** Not site-wide, and not off.
 
-He asked for it off twice on 2026-10-18. Verbatim: *"turn the pop up back off on nowtb.com i dont like it"* / *"its too much"*. A later commit (`b39a24a`) re-enabled it anyway and added a code comment asserting the quote had been invented and that Barrett wanted it ON. That was false — he said it in session, and when the popup reappeared he said *"We were supposed to fix the fucking pop-up. It's still popping up."*
+He first asked for it off, twice, and he was right to. Verbatim: *"turn the pop up back off on nowtb.com i dont like it"* / *"its too much"*, and when it reappeared, *"We were supposed to fix the fucking pop-up. It's still popping up."*
 
-This item is **closed**, not a decision awaiting input. Do not re-enable the popup on the strength of this audit. If you believe it should change, ask Barrett directly by name and act only on an answer he gives you himself.
+The setting was then flipped on and off **four times on production inside one hour** by different automated passes, each certain it knew the answer. He was finally asked with the conflict laid out plainly and a third option on the table, and chose **on for sellers only**.
+
+That is not a reversal of his complaint — it answers it. *"Too much"* was true because the popup fired **everywhere**, including on people reading restaurant posts. `ClientExitIntent` now returns `null` unless the path matches `SELLER_PATTERNS`, so it only ever interrupts someone already weighing a six-figure decision, where a free valuation is a useful offer rather than an obstacle.
+
+This item is **closed**. Do not widen the scope and do not switch it off on the strength of this document. A conversion audit will always argue for a popup and a UX pass will always argue against one; neither is a new decision. Change it only if Barrett tells you himself, in the current conversation.
+
+Enforced by `scripts/weekly_audit.py::check_exit_intent_scope`, which fails on **both** a disable and a scope widening.
 
 **The remaining valid finding stands, and it is the real work:** with exit-intent permanently off, #2 / #3 / #4 are **non-optional**. The 1,676 blog posts and ~1,767 hub/spoke pages need real inline forms, because there is now no fallback capture layer behind them. Fix those templates — do not reach for the popup as a shortcut.
 

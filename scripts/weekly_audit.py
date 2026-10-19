@@ -1228,6 +1228,56 @@ def check_trailing_slashes():
             pages_affected=total, evidence=ev)
 
 
+def check_exit_intent_scope():
+    """The exit-intent popup must be ON, and scoped to seller pages only.
+
+    Barrett settled this on 2026-10-18: "on for sellers only". It is recorded
+    here because the setting was flipped FOUR times on production inside one
+    hour by different automated passes, each confident it knew better, and one
+    of them invented a quote from Barrett to justify the flip.
+
+    A conversion audit will always argue for a popup and a UX pass will always
+    argue against one. Neither is a new decision. Only Barrett saying so
+    directly changes this; until then a flip is a defect, not an improvement.
+    """
+    layout = APP / "layout.tsx"
+    client = COMPONENTS / "ui" / "ClientExitIntent.tsx"
+    if not layout.exists() or not client.exists():
+        return
+
+    lt = read(layout)
+    skip = comment_lines(lt)
+
+    rendered = any(
+        "ClientExitIntent" in line and "<" in line and ln not in skip
+        for ln, line in lines_matching(lt, re.compile(r"ClientExitIntent"))
+    )
+    imported = any(
+        line.lstrip().startswith("import ClientExitIntent") and ln not in skip
+        for ln, line in lines_matching(lt, re.compile(r"import ClientExitIntent"))
+    )
+
+    if not (rendered and imported):
+        add("conversion", "critical",
+            "Exit-intent popup is switched OFF — Barrett set it to seller-pages-only",
+            "Re-enable it in src/app/layout.tsx (both the import and the render). This has been "
+            "flipped repeatedly by automated passes; it is a settled decision, not an open "
+            "question. Do not change it without Barrett saying so directly by name.",
+            pages_affected=3400,
+            evidence=[f"{rel(layout)}  import={imported}  rendered={rendered}"])
+        return
+
+    # Enabled — now confirm it is still SCOPED, not firing site-wide.
+    ct = read(client)
+    if 'variant !== "seller"' not in ct and "variant !== 'seller'" not in ct:
+        add("conversion", "high",
+            "Exit-intent popup is enabled but no longer scoped to seller pages",
+            'Restore the `if (variant !== "seller") return null;` guard in '
+            "ClientExitIntent.tsx. Barrett chose seller-pages-only: on a valuation or sell page "
+            "the offer earns the interruption, on a restaurant blog post it is just an obstacle.",
+            pages_affected=3400, evidence=[rel(client)])
+
+
 def check_root_layout_canonical():
     """The root layout must never declare a canonical URL.
 
@@ -1579,6 +1629,7 @@ def main():
         check_city_coverage,
         check_money_query_coverage,
         check_trailing_slashes,
+        check_exit_intent_scope,
         check_root_layout_canonical,
         check_missing_assets,
         check_title_length_with_template,

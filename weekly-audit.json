@@ -3,7 +3,7 @@
   "correct_experience_claim": "23+ years",
   "completed_years": 23,
   "severity_counts": {
-    "high": 10,
+    "high": 11,
     "critical": 3,
     "medium": 5
   },
@@ -23,13 +23,26 @@
     },
     {
       "check": "conversion",
+      "severity": "high",
+      "title": "Exit-intent popup is enabled but no longer scoped to seller pages",
+      "fix": "Restore the `if (variant !== \"seller\") return null;` guard in ClientExitIntent.tsx. Barrett chose seller-pages-only: on a valuation or sell page the offer earns the interruption, on a restaurant blog post it is just an obstacle.",
+      "pages_affected": 3400,
+      "evidence": [
+        "src/components/ui/ClientExitIntent.tsx"
+      ],
+      "score": 340000
+    },
+    {
+      "check": "conversion",
       "severity": "critical",
-      "title": "12 lead-eligible page(s) render NO lead form",
+      "title": "14 lead-eligible page(s) render NO lead form",
       "fix": "Add a compact 3-field form (name / phone / email) or at minimum a prominent CTA block linking to /free-home-valuation or /contact. Traffic with no capture is wasted spend.",
-      "pages_affected": 12,
+      "pages_affected": 14,
       "evidence": [
         "src/app/11417-cypress-park-st/feedback/page.tsx  (route /11417-cypress-park-st/feedback)",
         "src/app/11417-cypress-park-st/sign-in/page.tsx  (route /11417-cypress-park-st/sign-in)",
+        "src/app/2510-brimhollow-dr/feedback/page.tsx  (route /2510-brimhollow-dr/feedback)",
+        "src/app/2510-brimhollow-dr/sign-in/page.tsx  (route /2510-brimhollow-dr/sign-in)",
         "src/app/30935-whitlock-dr/feedback/page.tsx  (route /30935-whitlock-dr/feedback)",
         "src/app/30935-whitlock-dr/sign-in/page.tsx  (route /30935-whitlock-dr/sign-in)",
         "src/app/3813-polumbo-dr/sign-in/page.tsx  (route /3813-polumbo-dr/sign-in)",
@@ -41,17 +54,19 @@
         "src/app/preferred-vendors/page.tsx  (route /preferred-vendors)",
         "src/app/properties/search/page.tsx  (route /properties/search)"
       ],
-      "score": 12000
+      "score": 14000
     },
     {
       "check": "conversion",
       "severity": "critical",
-      "title": "12 page(s) with no clickable tel: link",
+      "title": "14 page(s) with no clickable tel: link",
       "fix": "Add <a href=\"tel:8137337907\">(813) 733-7907</a> visible on mobile. Real estate converts by phone; a page without a tappable number loses the call.",
-      "pages_affected": 12,
+      "pages_affected": 14,
       "evidence": [
         "src/app/11417-cypress-park-st/feedback/page.tsx  (route /11417-cypress-park-st/feedback)",
         "src/app/11417-cypress-park-st/sign-in/page.tsx  (route /11417-cypress-park-st/sign-in)",
+        "src/app/2510-brimhollow-dr/feedback/page.tsx  (route /2510-brimhollow-dr/feedback)",
+        "src/app/2510-brimhollow-dr/sign-in/page.tsx  (route /2510-brimhollow-dr/sign-in)",
         "src/app/30935-whitlock-dr/feedback/page.tsx  (route /30935-whitlock-dr/feedback)",
         "src/app/30935-whitlock-dr/sign-in/page.tsx  (route /30935-whitlock-dr/sign-in)",
         "src/app/3813-polumbo-dr/sign-in/page.tsx  (route /3813-polumbo-dr/sign-in)",
@@ -63,20 +78,25 @@
         "src/app/properties/search/page.tsx  (route /properties/search)",
         "src/app/sell-your-home/page.tsx  (route /sell-your-home)"
       ],
-      "score": 12000
+      "score": 14000
     },
     {
       "check": "metadata",
       "severity": "high",
-      "title": "89 literal title(s) exceed 60 chars once the 16-char template suffix is added",
+      "title": "94 literal title(s) exceed 60 chars once the 16-char template suffix is added",
       "fix": "Each title must be <= 44 characters so the rendered title fits in 60. Put the primary keyword first so that if it is truncated, the important words survive.",
-      "pages_affected": 89,
+      "pages_affected": 94,
       "evidence": [
         "src/app/11417-cypress-park-st/feedback/page.tsx  53+16=69 chars: Open House Feedback | 11417 Cypress Park St, Tampa FL",
         "src/app/11417-cypress-park-st/page.tsx  65+16=81 chars: 11417 Cypress Park St, Tampa FL 33624 | 3 Bed + Office | $514,990",
         "src/app/11417-cypress-park-st/page.tsx  57+16=73 chars: Open House Sunday 2p\u20134p \u2014 11417 Cypress Park St, Tampa FL",
         "src/app/11417-cypress-park-st/page.tsx  57+16=73 chars: Open House Sunday 2p\u20134p \u2014 11417 Cypress Park St, Tampa FL",
         "src/app/11417-cypress-park-st/sign-in/page.tsx  52+16=68 chars: Open House Sign In | 11417 Cypress Park St, Tampa FL",
+        "src/app/2510-brimhollow-dr/feedback/page.tsx  52+16=68 chars: Open House Feedback | 2510 Brimhollow Dr, Valrico FL",
+        "src/app/2510-brimhollow-dr/page.tsx  68+16=84 chars: 2510 Brimhollow Dr, Valrico FL 33596 | Buckhorn Pool Home | $479,900",
+        "src/app/2510-brimhollow-dr/page.tsx  57+16=73 chars: Open House Sunday 2 to 4 \u2014 2510 Brimhollow Dr, Valrico FL",
+        "src/app/2510-brimhollow-dr/page.tsx  57+16=73 chars: Open House Sunday 2 to 4 \u2014 2510 Brimhollow Dr, Valrico FL",
+        "src/app/2510-brimhollow-dr/sign-in/page.tsx  51+16=67 chars: Open House Sign In | 2510 Brimhollow Dr, Valrico FL",
         "src/app/30935-whitlock-dr/feedback/page.tsx  57+16=73 chars: Open House Feedback | 30935 Whitlock Dr, Wesley Chapel FL",
         "src/app/30935-whitlock-dr/page.tsx  66+16=82 chars: 30935 Whitlock Dr, Wesley Chapel FL 33543 | 3 Bed Villa | $274,900",
         "src/app/30935-whitlock-dr/page.tsx  64+16=80 chars: Open House Sat & Sun 2p\u20134p \u2014 30935 Whitlock Dr, Wesley Chapel FL",
@@ -86,14 +106,9 @@
         "src/app/3813-polumbo-dr/page.tsx  56+16=72 chars: Open House Sat & Sun 2p\u20134p \u2014 3813 Polumbo Dr, Valrico FL",
         "src/app/3813-polumbo-dr/page.tsx  56+16=72 chars: Open House Sat & Sun 2p\u20134p \u2014 3813 Polumbo Dr, Valrico FL",
         "src/app/3813-polumbo-dr/sign-in/page.tsx  48+16=64 chars: Open House Sign In | 3813 Polumbo Dr, Valrico FL",
-        "src/app/55-plus-communities/page.tsx  62+16=78 chars: Tampa Bay 55+ Communities & Active Adult Homes | Barrett Henry",
-        "src/app/55-plus-communities/page.tsx  62+16=78 chars: Tampa Bay 55+ Communities & Active Adult Homes | Barrett Henry",
-        "src/app/about/page.tsx  57+16=73 chars: About Barrett Henry | Broker Associate | REMAX Collective",
-        "src/app/about/page.tsx  57+16=73 chars: About Barrett Henry | Broker Associate | REMAX Collective",
-        "src/app/accessibility/page.tsx  49+16=65 chars: Accessibility Statement | Barrett Henry, REALTOR\u00ae",
-        "src/app/account/page.tsx  45+16=61 chars: My Account | Barrett Henry | REMAX Collective"
+        "src/app/55-plus-communities/page.tsx  62+16=78 chars: Tampa Bay 55+ Communities & Active Adult Homes | Barrett Henry"
       ],
-      "score": 8900
+      "score": 9400
     },
     {
       "check": "coverage",
@@ -138,12 +153,14 @@
     {
       "check": "conversion",
       "severity": "high",
-      "title": "23 page(s) link to no conversion page",
+      "title": "25 page(s) link to no conversion page",
       "fix": "Add a contextual link to /free-home-valuation, /sell-your-home or /contact in the body.",
-      "pages_affected": 23,
+      "pages_affected": 25,
       "evidence": [
         "src/app/11417-cypress-park-st/feedback/page.tsx  (route /11417-cypress-park-st/feedback)",
         "src/app/11417-cypress-park-st/sign-in/page.tsx  (route /11417-cypress-park-st/sign-in)",
+        "src/app/2510-brimhollow-dr/feedback/page.tsx  (route /2510-brimhollow-dr/feedback)",
+        "src/app/2510-brimhollow-dr/sign-in/page.tsx  (route /2510-brimhollow-dr/sign-in)",
         "src/app/30935-whitlock-dr/feedback/page.tsx  (route /30935-whitlock-dr/feedback)",
         "src/app/30935-whitlock-dr/sign-in/page.tsx  (route /30935-whitlock-dr/sign-in)",
         "src/app/3813-polumbo-dr/sign-in/page.tsx  (route /3813-polumbo-dr/sign-in)",
@@ -166,17 +183,19 @@
         "src/app/townhomes/page.tsx  (route /townhomes)",
         "src/app/waterfront/page.tsx  (route /waterfront)"
       ],
-      "score": 2300
+      "score": 2500
     },
     {
       "check": "schema",
       "severity": "high",
-      "title": "14 page(s) with no BreadcrumbList schema",
+      "title": "16 page(s) with no BreadcrumbList schema",
       "fix": "Add breadcrumbSchema() from src/lib/schema.tsx. Breadcrumbs are what produce the path display in search results instead of a raw URL, which lifts click-through.",
-      "pages_affected": 14,
+      "pages_affected": 16,
       "evidence": [
         "src/app/11417-cypress-park-st/feedback/page.tsx  (route /11417-cypress-park-st/feedback)",
         "src/app/11417-cypress-park-st/sign-in/page.tsx  (route /11417-cypress-park-st/sign-in)",
+        "src/app/2510-brimhollow-dr/feedback/page.tsx  (route /2510-brimhollow-dr/feedback)",
+        "src/app/2510-brimhollow-dr/sign-in/page.tsx  (route /2510-brimhollow-dr/sign-in)",
         "src/app/30935-whitlock-dr/feedback/page.tsx  (route /30935-whitlock-dr/feedback)",
         "src/app/30935-whitlock-dr/sign-in/page.tsx  (route /30935-whitlock-dr/sign-in)",
         "src/app/3813-polumbo-dr/sign-in/page.tsx  (route /3813-polumbo-dr/sign-in)",
@@ -190,18 +209,21 @@
         "src/app/remote-seller-process/page.tsx  (route /remote-seller-process)",
         "src/app/seller-intake/page.tsx  (route /seller-intake)"
       ],
-      "score": 1400
+      "score": 1600
     },
     {
       "check": "metadata",
       "severity": "medium",
-      "title": "130 literal description(s) outside the 120-155 character window",
+      "title": "133 literal description(s) outside the 120-155 character window",
       "fix": "Rewrite to 120-155 chars: direct answer first, then a CTA with the phone number.",
-      "pages_affected": 130,
+      "pages_affected": 133,
       "evidence": [
         "src/app/11417-cypress-park-st/page.tsx  174 chars: 3 bed, 2 bath, 2 car garage plus a home office at the end of a quiet Carrollwood cul-de-sa",
         "src/app/11417-cypress-park-st/page.tsx  78 chars: 3 bed, 2 bath, 2 car garage plus office on a Carrollwood cul-de-sac. $514,990.",
         "src/app/11417-cypress-park-st/page.tsx  118 chars: Updated single story 3 bedroom, 2 bath, 2 car garage home with a home office on a cul-de-s",
+        "src/app/2510-brimhollow-dr/page.tsx  177 chars: Buckhorn pool home. 3 bedrooms, 2.5 baths, 2 car garage, private office, and a screened la",
+        "src/app/2510-brimhollow-dr/page.tsx  92 chars: Buckhorn pool home. 3 bed, 2.5 bath, 2 car garage, private office, screened lanai. $479,90",
+        "src/app/2510-brimhollow-dr/page.tsx  103 chars: Single story 3 bedroom, 2.5 bath, 2 car garage pool home with a private office in Buckhorn",
         "src/app/30935-whitlock-dr/page.tsx  187 chars: Lock-and-leave 3 bed, 2 bath, 2 car garage villa in gated Meadow Pointe III, backing to co",
         "src/app/30935-whitlock-dr/page.tsx  95 chars: Gated 3 bed, 2 bath, 2 car garage villa backing to conservation in Meadow Pointe III. $274",
         "src/app/3813-polumbo-dr/page.tsx  164 chars: 4 bed, 3 bath, 3 car garage on .64 acres with a screened pool. Fully renovated, single sto",
@@ -210,22 +232,21 @@
         "src/app/about/page.tsx  94 chars: 23+ years of real estate experience. Broker Associate with REMAX Collective serving Tampa ",
         "src/app/about/page.tsx  115 chars: Licensed real estate Broker Associate with REMAX Collective serving Tampa Bay. 23+ years o",
         "src/app/about/page.tsx  93 chars: Licensed Florida Broker Associate with REMAX Collective. 23+ years of real estate experien",
-        "src/app/account/page.tsx  102 chars: View your saved searches, favorite listings, recently viewed homes, and account settings o",
-        "src/app/agents/page.tsx  183 chars: Meet Barrett Henry and The NOW Team at REMAX Collective. Experienced REALTORS serving Tamp",
-        "src/app/agents/page.tsx  79 chars: The NOW Team at REMAX Collective \u2014 experienced agents serving all of Tampa Bay.",
-        "src/app/auburndale/gapway-lakes-estates/page.tsx  165 chars: 45 approved one acre estate lots on Lake Juliana in Auburndale, Polk County. Approvals, ti"
+        "src/app/account/page.tsx  102 chars: View your saved searches, favorite listings, recently viewed homes, and account settings o"
       ],
-      "score": 1300
+      "score": 1330
     },
     {
       "check": "headings",
       "severity": "high",
-      "title": "10 page(s) with no detectable H1",
+      "title": "12 page(s) with no detectable H1",
       "fix": "Add exactly one H1 containing the primary keyword. A page with no H1 gives Google nothing to match the query against.",
-      "pages_affected": 10,
+      "pages_affected": 12,
       "evidence": [
         "src/app/11417-cypress-park-st/feedback/page.tsx  (route /11417-cypress-park-st/feedback)",
         "src/app/11417-cypress-park-st/sign-in/page.tsx  (route /11417-cypress-park-st/sign-in)",
+        "src/app/2510-brimhollow-dr/feedback/page.tsx  (route /2510-brimhollow-dr/feedback)",
+        "src/app/2510-brimhollow-dr/sign-in/page.tsx  (route /2510-brimhollow-dr/sign-in)",
         "src/app/30935-whitlock-dr/feedback/page.tsx  (route /30935-whitlock-dr/feedback)",
         "src/app/30935-whitlock-dr/sign-in/page.tsx  (route /30935-whitlock-dr/sign-in)",
         "src/app/3813-polumbo-dr/sign-in/page.tsx  (route /3813-polumbo-dr/sign-in)",
@@ -235,7 +256,7 @@
         "src/app/mortgage-calculator/page.tsx  (route /mortgage-calculator)",
         "src/app/properties/search/page.tsx  (route /properties/search)"
       ],
-      "score": 1000
+      "score": 1200
     },
     {
       "check": "assets",
@@ -247,6 +268,25 @@
         "/images/no-photo.jpg  referenced from: src/lib/utils.ts:11"
       ],
       "score": 1000
+    },
+    {
+      "check": "metadata",
+      "severity": "high",
+      "title": "9 route(s) missing alternates.canonical",
+      "fix": "Add `alternates: { canonical: '/the-path' }`. Without a canonical, parameter and trailing-slash variants split ranking signals across duplicates.",
+      "pages_affected": 9,
+      "evidence": [
+        "src/app/11417-cypress-park-st/feedback/page.tsx  (route /11417-cypress-park-st/feedback)",
+        "src/app/11417-cypress-park-st/sign-in/page.tsx  (route /11417-cypress-park-st/sign-in)",
+        "src/app/2510-brimhollow-dr/feedback/page.tsx  (route /2510-brimhollow-dr/feedback)",
+        "src/app/2510-brimhollow-dr/sign-in/page.tsx  (route /2510-brimhollow-dr/sign-in)",
+        "src/app/30935-whitlock-dr/feedback/page.tsx  (route /30935-whitlock-dr/feedback)",
+        "src/app/30935-whitlock-dr/sign-in/page.tsx  (route /30935-whitlock-dr/sign-in)",
+        "src/app/3813-polumbo-dr/sign-in/page.tsx  (route /3813-polumbo-dr/sign-in)",
+        "src/app/clients/[slug]/page.tsx  (route /clients/[slug])",
+        "src/app/compare/[slug]/page.tsx  (route /compare/[slug])"
+      ],
+      "score": 900
     },
     {
       "check": "schema",
@@ -268,23 +308,6 @@
       "score": 900
     },
     {
-      "check": "metadata",
-      "severity": "high",
-      "title": "7 route(s) missing alternates.canonical",
-      "fix": "Add `alternates: { canonical: '/the-path' }`. Without a canonical, parameter and trailing-slash variants split ranking signals across duplicates.",
-      "pages_affected": 7,
-      "evidence": [
-        "src/app/11417-cypress-park-st/feedback/page.tsx  (route /11417-cypress-park-st/feedback)",
-        "src/app/11417-cypress-park-st/sign-in/page.tsx  (route /11417-cypress-park-st/sign-in)",
-        "src/app/30935-whitlock-dr/feedback/page.tsx  (route /30935-whitlock-dr/feedback)",
-        "src/app/30935-whitlock-dr/sign-in/page.tsx  (route /30935-whitlock-dr/sign-in)",
-        "src/app/3813-polumbo-dr/sign-in/page.tsx  (route /3813-polumbo-dr/sign-in)",
-        "src/app/clients/[slug]/page.tsx  (route /clients/[slug])",
-        "src/app/compare/[slug]/page.tsx  (route /compare/[slug])"
-      ],
-      "score": 700
-    },
-    {
       "check": "headings",
       "severity": "high",
       "title": "4 page(s) with MORE THAN ONE H1",
@@ -301,11 +324,12 @@
     {
       "check": "metadata",
       "severity": "medium",
-      "title": "22 literal title(s) over 60 characters",
+      "title": "23 literal title(s) over 60 characters",
       "fix": "Trim to under 60 chars with the primary keyword FIRST, or Google truncates it mid-phrase.",
-      "pages_affected": 22,
+      "pages_affected": 23,
       "evidence": [
         "src/app/11417-cypress-park-st/page.tsx  65 chars: 11417 Cypress Park St, Tampa FL 33624 | 3 Bed + Office | $514,990",
+        "src/app/2510-brimhollow-dr/page.tsx  68 chars: 2510 Brimhollow Dr, Valrico FL 33596 | Buckhorn Pool Home | $479,900",
         "src/app/30935-whitlock-dr/page.tsx  66 chars: 30935 Whitlock Dr, Wesley Chapel FL 33543 | 3 Bed Villa | $274,900",
         "src/app/30935-whitlock-dr/page.tsx  64 chars: Open House Sat & Sun 2p\u20134p \u2014 30935 Whitlock Dr, Wesley Chapel FL",
         "src/app/30935-whitlock-dr/page.tsx  64 chars: Open House Sat & Sun 2p\u20134p \u2014 30935 Whitlock Dr, Wesley Chapel FL",
@@ -318,20 +342,21 @@
         "src/app/brandon/southoak/page.tsx  63 chars: Southoak Homes for Sale in Bloomingdale | Barrett Henry | REMAX",
         "src/app/golf-homes/page.tsx  62 chars: Tampa Bay Golf Course Homes for Sale | Barrett Henry, REALTOR\u00ae",
         "src/app/golf-homes/page.tsx  62 chars: Tampa Bay Golf Course Homes for Sale | Barrett Henry, REALTOR\u00ae",
-        "src/app/inspectors/page.tsx  61 chars: Home Inspectors Tampa Bay | Trusted Referrals | Barrett Henry",
         "src/app/inspectors/page.tsx  61 chars: Home Inspectors Tampa Bay | Trusted Referrals | Barrett Henry"
       ],
-      "score": 220
+      "score": 230
     },
     {
       "check": "metadata",
       "severity": "medium",
-      "title": "17 route(s) missing openGraph",
+      "title": "19 route(s) missing openGraph",
       "fix": "Add openGraph with a 1200x630 image. Shared links without it look broken and get fewer clicks.",
-      "pages_affected": 17,
+      "pages_affected": 19,
       "evidence": [
         "src/app/11417-cypress-park-st/feedback/page.tsx  (route /11417-cypress-park-st/feedback)",
         "src/app/11417-cypress-park-st/sign-in/page.tsx  (route /11417-cypress-park-st/sign-in)",
+        "src/app/2510-brimhollow-dr/feedback/page.tsx  (route /2510-brimhollow-dr/feedback)",
+        "src/app/2510-brimhollow-dr/sign-in/page.tsx  (route /2510-brimhollow-dr/sign-in)",
         "src/app/30935-whitlock-dr/feedback/page.tsx  (route /30935-whitlock-dr/feedback)",
         "src/app/30935-whitlock-dr/sign-in/page.tsx  (route /30935-whitlock-dr/sign-in)",
         "src/app/3813-polumbo-dr/sign-in/page.tsx  (route /3813-polumbo-dr/sign-in)",
@@ -348,7 +373,7 @@
         "src/app/terms-of-use/page.tsx  (route /terms-of-use)",
         "src/app/thank-you/page.tsx  (route /thank-you)"
       ],
-      "score": 170
+      "score": 190
     },
     {
       "check": "crawl",
@@ -368,11 +393,11 @@
       "fix": "Swap to next/image for automatic AVIF/WebP, sizing and lazy loading. Raw <img> hurts Largest Contentful Paint, which is a ranking factor.",
       "pages_affected": 5,
       "evidence": [
-        "src/lib/utils.ts:226  // <img \u2026> / <div \u2026 /> have no separate closing tag",
-        "src/lib/utils.ts:434  out = out.replace(/<img\\b/i, `<img width=\"${width}\" height=\"${height}\"`);",
-        "src/lib/utils.ts:439  out = out.replace(/<img\\b/i, '<img decoding=\"async\"');",
-        "src/lib/utils.ts:443  out = out.replace(/<img\\b/i, '<img loading=\"lazy\"');",
-        "src/components/search/MapView.tsx:141  <img src=\"${photoUrl}\" alt=\"${address}\""
+        "src/components/search/MapView.tsx:141  <img src=\"${photoUrl}\" alt=\"${address}\"",
+        "src/lib/utils.ts:231  // <img \u2026> / <div \u2026 /> have no separate closing tag",
+        "src/lib/utils.ts:439  out = out.replace(/<img\\b/i, `<img width=\"${width}\" height=\"${height}\"`);",
+        "src/lib/utils.ts:444  out = out.replace(/<img\\b/i, '<img decoding=\"async\"');",
+        "src/lib/utils.ts:448  out = out.replace(/<img\\b/i, '<img loading=\"lazy\"');"
       ],
       "score": 50
     },
@@ -383,10 +408,10 @@
       "fix": "Add descriptive alt text using the target keyword naturally. Also an accessibility requirement.",
       "pages_affected": 4,
       "evidence": [
-        "src/lib/utils.ts:226  // <img \u2026> / <div \u2026 /> have no separate closing tag",
-        "src/lib/utils.ts:434  out = out.replace(/<img\\b/i, `<img width=\"${width}\" height=\"${height}\"`);",
-        "src/lib/utils.ts:439  out = out.replace(/<img\\b/i, '<img decoding=\"async\"');",
-        "src/lib/utils.ts:443  out = out.replace(/<img\\b/i, '<img loading=\"lazy\"');"
+        "src/lib/utils.ts:231  // <img \u2026> / <div \u2026 /> have no separate closing tag",
+        "src/lib/utils.ts:439  out = out.replace(/<img\\b/i, `<img width=\"${width}\" height=\"${height}\"`);",
+        "src/lib/utils.ts:444  out = out.replace(/<img\\b/i, '<img decoding=\"async\"');",
+        "src/lib/utils.ts:448  out = out.replace(/<img\\b/i, '<img loading=\"lazy\"');"
       ],
       "score": 40
     }
