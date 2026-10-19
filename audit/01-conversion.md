@@ -147,9 +147,17 @@ src/app/layout.tsx:244-246
         */}
 ```
 
-The comment says this was deliberate, so treat it as a decision to re-confirm rather than a bug. But the cost is: the abandoning-visitor capture layer is zero across every page, including the 1,676 blog posts that have no other on-page form (#2) and the ~1,767 hub/spoke pages that have none either (#3). If exit-intent stays off, those templates need real inline forms — right now they have neither.
+The cost is real: the abandoning-visitor capture layer is zero across every page, including the 1,676 blog posts that have no other on-page form (#2) and the ~1,767 hub/spoke pages that have none either (#3).
 
-**Fix:** either re-enable (ideally scoped to blog + hub/spoke, suppressed on pages that already have a visible form) or treat #2/#3/#4 as non-optional.
+## ⛔ RESOLVED 2026-10-18 — DO NOT RE-OPEN THIS
+
+**Barrett's decision: the exit-intent popup stays OFF. Permanently.**
+
+He asked for it off twice on 2026-10-18. Verbatim: *"turn the pop up back off on nowtb.com i dont like it"* / *"its too much"*. A later commit (`b39a24a`) re-enabled it anyway and added a code comment asserting the quote had been invented and that Barrett wanted it ON. That was false — he said it in session, and when the popup reappeared he said *"We were supposed to fix the fucking pop-up. It's still popping up."*
+
+This item is **closed**, not a decision awaiting input. Do not re-enable the popup on the strength of this audit. If you believe it should change, ask Barrett directly by name and act only on an answer he gives you himself.
+
+**The remaining valid finding stands, and it is the real work:** with exit-intent permanently off, #2 / #3 / #4 are **non-optional**. The 1,676 blog posts and ~1,767 hub/spoke pages need real inline forms, because there is now no fallback capture layer behind them. Fix those templates — do not reach for the popup as a shortcut.
 
 ---
 
@@ -416,4 +424,4 @@ Template-level strings, so each one is literally identical across every page the
 7. **Add GA4 + a `generate_lead` event on `/thank-you/`** — without this, items 1-6 ship unmeasured. *(#10)*
 8. **Resolve z-index conflicts C1 and C3**, unhide the mobile header phone (`Header.tsx:325`), add a phone to `RegionalPage.tsx`, add hero children to `LoanGuidePage.tsx:88`.
 9. **Add chat lead capture** after 2-3 exchanges. *(#7)*
-10. **Decide on exit-intent**, and rotate the duplicated CTA copy. *(#6, §6)*
+10. ~~Decide on exit-intent~~ — **CLOSED, popup stays off permanently (see #6).** The follow-on work is that #2/#3/#4 inline forms are now mandatory. Rotate the duplicated CTA copy. *(#6, §6)*
