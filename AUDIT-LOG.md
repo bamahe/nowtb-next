@@ -2933,3 +2933,38 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** e7c64bb — pushed to `origin/main`
+
+---
+
+## Batch 81 — October 20, 2026
+
+**Pages updated:** 10 (2 quarterly market reports + 8 Palm Harbor posts)
+**Strategy:** Expand under-optimized pages to 15,000–30,000+ chars with full SEO/AEO/GEO treatment
+
+### Quarterly Market Reports
+
+1. **tampa-bay-quarterly-market-report-q2-2025** — Expanded stub to 33,582 chars. Added: BreadcrumbList + Article + FAQPage JSON-LD schemas; Quick Answer box; 6-county price table (Hillsborough $435K median, Pinellas $399K, Pasco $370K, Manatee $410K, Sarasota $430K, Hernando $305K); 30-year rate analysis (6.875% in Q2 2025); builder/new construction section; insurance/flood zone analysis; county-by-county breakdown; buyer/seller strategies; 22-link internal grid; Barrett Henry EEAT bio; 5-question FAQ. Date: 2025-06-15.
+
+2. **tampa-bay-quarterly-market-report-q3-2025** — Expanded stub to 30,409 chars. Added: BreadcrumbList + Article + FAQPage JSON-LD schemas; Quick Answer box; 6-county price table (Hillsborough $441K median, Pinellas $405K, Pasco $375K, Manatee $415K, Sarasota $438K, Hernando $310K); rate trend analysis (6.75% in Q3 2025); storm season context; inventory growth analysis; buyer/seller strategies; 22-link internal grid; Barrett Henry EEAT bio; 5-question FAQ. Date: 2025-09-15.
+
+### Palm Harbor Posts (8)
+
+3. **palm-harbor-fl-homes-for-sale-guide** — Expanded to 29,289 chars. Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 6-row price tier table ($380K–$2M+); 5-step buyer process; 4 neighborhood profiles (Crystal Beach, Innisbrook/Tarpon Springs border, Ozona, East Lake Rd corridor); 5-market comparison table (Palm Harbor vs Dunedin vs Safety Harbor vs Oldsmar vs New Port Richey); 22-link internal grid; Barrett Henry bio; 5-question FAQ.
+
+4. **palm-harbor-fl-schools-guide** — Expanded to 21,812 chars. Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; PCS district details (301 4th St SW Largo FL 33770, (727) 588-6000, pinellasschools.org); Palm Harbor University HS (1900 Omaha St, (727) 669-1000) IB program detail; Carwise Middle (2414 Alderman Rd); private school comparison table; elementary zone mapping; 22-link internal grid; Barrett Henry bio; 5-question FAQ.
+
+5. **palm-harbor-fl-commute-guide** — Expanded to 25,031 chars. Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 10-row commute matrix (Tampa 45–65/60–80 peak, Clearwater 20–35, St. Pete 35–55, TPA 40–60, Westshore 40–60, Wesley Chapel 50–75); US-19 vs SR-589 SunCoast analysis; PSTA bus option; 22-link internal grid; Barrett Henry bio; 5-question FAQ.
+
+6. **is-palm-harbor-fl-good-place-to-live** — Expanded to 23,231 chars. Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 5 pros + 5 cons structured analysis; 8-row buyer profile table (families, retirees, remote workers, commuters, investors, first-time buyers, downsizers, vacation/seasonal); 22-link internal grid; Barrett Henry bio; 5-question FAQ.
+
+7. **palm-harbor-fl-real-estate-guide** — Expanded to 21,745 chars. Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 8-row market metrics table; 5 neighborhood price tier profiles; buyer and seller strategy sections; 22-link internal grid; Barrett Henry bio; 5-question FAQ.
+
+8. **palm-harbor-fl-cost-of-living** — Expanded to 25,825 chars. Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 9-row monthly cost table; 2 scenario calculations ($500K inland vs coastal comparison); 5-market comparison table; insurance cost breakdown; 22-link internal grid; Barrett Henry bio; 5-question FAQ.
+
+9. **palm-harbor-fl-property-taxes** — Expanded to 22,992 chars. Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; Pinellas PAO contact (315 Court St, Clearwater FL 33756, (727) 464-3207, pinellaspao.org); 7-row millage table (18–22 mills total); 3 sample calculations; homestead exemption + SOH cap + portability explanations; 22-link internal grid; Barrett Henry bio; 5-question FAQ.
+
+10. **palm-harbor-fl-new-construction** — Expanded to 22,520 chars. Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 3-option comparison table (teardown $850K–$1.5M+, infill $380K–$550K, Pasco alternatives $330K–$600K+); Florida Statute 553.84 warranty detail; builder vs resale analysis; 22-link internal grid; Barrett Henry bio; 5-question FAQ.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** 1046655 — pushed to `origin/main`
