@@ -22,6 +22,7 @@ import SavingsCalculator from "@/components/amendment3/SavingsCalculator";
 import ResidencyChecker from "@/components/amendment3/ResidencyChecker";
 import { AMD3_BLOCKS } from "@/data/amendment-3-content";
 import { AMD3_FAQS } from "@/data/amendment-3-faqs";
+import { BARRETT_TAKE } from "@/data/amendment-3-take";
 import {
   articleSchema,
   faqSchema,
@@ -56,6 +57,12 @@ export const metadata: Metadata = {
   },
 };
 
+/**
+ * Barrett's Take renders after the both sides section, so a reader has seen
+ * the neutral argument from each direction before they get his view.
+ */
+const TAKE_AFTER = "what-are-both-sides-saying-about-amendment-3";
+
 /** Sections that get an interactive tool injected directly after them. */
 const TOOL_AFTER: Record<string, "calculator" | "residency"> = {
   "what-would-amendment-3-actually-save-you": "calculator",
@@ -81,6 +88,33 @@ const SOURCES = [
     url: "https://floridarevenue.com/property/Documents/cpi_homestead_exemption.pdf",
   },
 ];
+
+/**
+ * Barrett's own view, visually separated from the neutral explainer so a
+ * reader can tell at a glance where the reporting stops and the opinion
+ * starts. Content comes from src/data/amendment-3-take.ts, which automation
+ * is forbidden from editing.
+ */
+function BarrettTake() {
+  return (
+    <aside
+      aria-label="Barrett's take"
+      className="my-10 rounded-lg border-2 border-[#0c1829] bg-gray-50 p-6"
+    >
+      <p className="font-heading text-xl font-bold text-[#0c1829]">
+        {BARRETT_TAKE.heading}
+      </p>
+      <div className="mt-3 space-y-3 font-body leading-relaxed text-dark">
+        {BARRETT_TAKE.paragraphs.map((p) => (
+          <p key={p.slice(0, 40)}>{p}</p>
+        ))}
+      </div>
+      <p className="mt-4 border-t border-gray-300 pt-3 text-xs italic text-gray-600">
+        {BARRETT_TAKE.disclaimer}
+      </p>
+    </aside>
+  );
+}
 
 export default function Amendment3Page() {
   const breadcrumbs = breadcrumbSchema([
@@ -242,6 +276,7 @@ export default function Amendment3Page() {
                 {TOOL_AFTER[block.id] === "residency" ? (
                   <ResidencyChecker />
                 ) : null}
+                {block.id === TAKE_AFTER ? <BarrettTake /> : null}
               </section>
             ))}
 
