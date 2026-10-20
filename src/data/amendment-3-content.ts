@@ -4,7 +4,7 @@
 
 export interface Amd3Block { id: string; heading: string; html: string }
 
-export const AMD3_BLOCKS = [
+export const AMD3_BLOCKS: Amd3Block[] = [
   {
     "id": "quick-answer",
     "heading": "Quick answer",

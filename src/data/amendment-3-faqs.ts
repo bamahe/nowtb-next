@@ -4,7 +4,7 @@
 
 export interface Amd3Faq { question: string; answer: string }
 
-export const AMD3_FAQS = [
+export const AMD3_FAQS: Amd3Faq[] = [
   {
     "question": "Does the new exemption stack on top of the homestead exemption I already have?",
     "answer": "No, it replaces the second exemption band instead of stacking on it. Today a Florida homestead gets $25,000 off every millage plus a CPI-adjusted $26,411 off non-school millage, $51,411 total (Florida DOR). Amendment 3 strikes that second band and substitutes up to $150,000 in 2027 and up to $250,000 in 2028 against non-school levies, so you end up with $25,000 against school taxes plus the new tier against everything else, not $51,411 plus $250,000 (enrolled CS/HJR 1F, Pinellas County Property Appraiser)."

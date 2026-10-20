@@ -139,12 +139,24 @@ def no_dashes(label, text):
     return True
 
 
-def write_ts(path, header, name, type_decl, payload):
+def write_ts(path, header, name, type_decl, payload, annotation=None):
+    """Write a generated TS data module.
+
+    `annotation` matters more than it looks. Without an explicit type on the
+    const, TypeScript infers the exact literal shape of the object, and then
+    indexing it with a plain `string` variable fails under noImplicitAny:
+
+        Element implicitly has an 'any' type because expression of type
+        'string' can't be used to index type '{ out_a_full_now: string; ... }'
+
+    That is exactly how a Vercel build broke once. Annotate anything that gets
+    looked up by a runtime key.
+    """
     with open(path, "w") as fh:
         fh.write(header)
         if type_decl:
             fh.write(type_decl + "\n\n")
-        fh.write(f"export const {name} = ")
+        fh.write(f"export const {name}{': ' + annotation if annotation else ''} = ")
         json.dump(payload, fh, indent=2, ensure_ascii=False)
         fh.write(";\n")
 
@@ -170,7 +182,7 @@ def main():
     write_ts(
         os.path.join(DATA, "amendment-3-content.ts"), banner, "AMD3_BLOCKS",
         "export interface Amd3Block { id: string; heading: string; html: string }",
-        blocks,
+        blocks, annotation="Amd3Block[]",
     )
 
     # --- residency checker outcomes ---
@@ -191,7 +203,7 @@ def main():
     write_ts(
         os.path.join(DATA, "amendment-3-outcomes.ts"), banner, "AMD3_OUTCOMES",
         "export type Amd3OutcomeMap = Record<string, string>;",
-        outcomes,
+        outcomes, annotation="Amd3OutcomeMap",
     )
 
     # --- FAQs ---
@@ -214,7 +226,7 @@ def main():
     write_ts(
         os.path.join(DATA, "amendment-3-faqs.ts"), banner, "AMD3_FAQS",
         "export interface Amd3Faq { question: string; answer: string }",
-        faqs,
+        faqs, annotation="Amd3Faq[]",
     )
 
     print(f"sections: {len(blocks)}  outcomes: {len(outcomes)}  faqs: {len(faqs)}")
