@@ -8,9 +8,9 @@ import ChromeGate from "@/components/layout/ChromeGate";
 import MobileBottomBar from "@/components/ui/MobileBottomBar";
 import BackToTop from "@/components/ui/BackToTop";
 import ClientChatWidget from "@/components/ui/ClientChatWidget";
-// Exit-intent popup is disabled — see the comment at its render site below.
-// Exit-intent popup is DISABLED — settled decision, see the comment at its
-import ClientExitIntent from "@/components/ui/ClientExitIntent";
+// Exit-intent popup is OFF everywhere (2026-10-20, Barrett's call). The import
+// and the render are both commented out; see the full note at the render site.
+// import ClientExitIntent from "@/components/ui/ClientExitIntent";
 import CookieConsent from "@/components/ui/CookieConsent";
 import FubPixel from "@/components/tracking/FubPixel";
 import { Analytics } from "@vercel/analytics/react";
@@ -352,37 +352,33 @@ export default function RootLayout({
             Gated off the kiosks: a floating chat bubble over a sign-in form is
             something a guest taps by accident, and nobody is watching it. */}
         <ChromeGate><ClientChatWidget /></ChromeGate>
-        {/* Exit-intent popup — SELLER PAGES ONLY. Settled 2026-10-18.
+        {/* Exit-intent popup — OFF EVERYWHERE. Settled 2026-10-20.
 
-            Barrett asked for this off, more than once, and he was right to:
-              "turn the pop up back off on nowtb.com i dont like it" / "its too much"
-              "We were supposed to fix the fucking pop-up. It's still popping up."
+            History: Barrett asked for this off repeatedly ("i dont like it",
+            "its too much"). It got flipped on and off four times in one hour by
+            different automated passes, one of which invented a quote from him.
+            On 2026-10-18 he agreed to a narrowed scope: seller pages only.
 
-            It then got flipped on and off four times in an hour by different
-            automated passes. When he was finally asked with the conflict laid
-            out plainly and a third option offered, he chose SELLER PAGES ONLY.
+            Two days of that was enough. On 2026-10-20 he asked for it off again,
+            himself, in conversation: "turn off the popup lead thing we just
+            turned on recently". That is the owner overruling the compromise, so
+            the compromise is gone. The scope experiment is CLOSED, not paused.
 
-            That is not a reversal of the complaint — it answers it. "Too much"
-            was true because the popup fired everywhere, including on people
-            reading about restaurants. Scoped to valuation and sell pages, it
-            only interrupts someone already weighing a six-figure decision, and
-            a free home valuation is a genuinely useful thing to offer them.
-            Everywhere else it now renders NOTHING: ClientExitIntent returns
-            null unless the path is seller intent.
+            The import and the render below are both commented out rather than
+            deleted so the history above travels with the code and the next pass
+            can see this was decided, not overlooked. ExitIntentPopup.tsx and
+            ClientExitIntent.tsx still exist and still work if he ever asks for
+            them back.
 
-            DO NOT widen this scope and DO NOT switch it off, on the strength of
-            an audit document. A conversion audit always argues for a popup and
-            a UX pass always argues against one; neither is a new decision.
-            audit/01-conversion.md #6 and action item #10 are CLOSED. Change it
-            only if Barrett tells you to himself, in the current conversation.
+            DO NOT re-enable this — not at any scope, not on seller pages, not on
+            the strength of an audit document. A conversion audit always argues
+            for a popup; that is not a new decision. audit/01-conversion.md #6
+            and action item #10 are CLOSED. Turn it back on only if Barrett says
+            so himself, in the current conversation.
 
-            scripts/weekly_audit.py::check_exit_intent_scope enforces both halves
-            — enabled, and still scoped — so a silent flip surfaces as a critical
-            finding in the next weekly report instead of quietly shipping.
-
-            If it breaks, check ClientExitIntent.tsx's SELLER_PATTERNS: a new
-            seller route that is not in that list silently shows no popup. */}
-        <ChromeGate><ClientExitIntent /></ChromeGate>
+            scripts/weekly_audit.py::check_exit_intent_scope enforces OFF and
+            will raise a critical finding if something re-enables it. */}
+        {/* <ChromeGate><ClientExitIntent /></ChromeGate> */}
         {/* FUB tracking pixel — tracks page views across the site
             so you can see which listings leads browsed in Follow Up Boss */}
         <FubPixel />
