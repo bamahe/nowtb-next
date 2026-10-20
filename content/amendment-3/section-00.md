@@ -1,0 +1,3 @@
+# Quick answer
+
+**Quick answer:** Florida Amendment 3 is a property tax measure on the November 3, 2026 ballot. If at least 60% of voters approve it, the homestead exemption against non-school taxes rises to $150,000 in 2027 and $250,000 in 2028, replacing today's $51,411 rather than stacking on it, and the annual assessment cap on non-homestead property drops from 10% to 5% for every levy except school district levies. That cap limits how fast assessed value can grow, not how much tax you pay, because millage rates are set separately. School taxes do not change: the $25,000 school exemption stays exactly where it is. The changes take effect January 1, 2027 and first appear on your August 2027 TRIM notice and your November 2027 tax bill.

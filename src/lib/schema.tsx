@@ -7,7 +7,11 @@ import React from "react";
 
 import { Listing } from "./types";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://nowtb.com";
+// Exported so pages can build canonical and schema URLs from the SAME value
+// the schema helpers use. Do not re-hardcode "https://nowtb.com" in a page:
+// the site is non-www, and a page that hardcodes www creates a canonical that
+// disagrees with its own schema.
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://nowtb.com";
 const PHONE = process.env.NEXT_PUBLIC_CONTACT_PHONE || "(813) 733-7907";
 const EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "barrett@nowtb.com";
 

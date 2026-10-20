@@ -1,0 +1,20 @@
+{
+ "rawClaims": 295,
+ "uniqueClaims": 292,
+ "adversariallyChecked": 40,
+ "confirmed": 38,
+ "corrected": [
+  {
+   "was": "New residents move up to the full $250,000 exemption 'beginning with the fifth year of exemption under this subparagraph' \u2014 meaning the fifth year of holding the homestead exemption, i.e. after four completed years, not after five. Supporting detail asserts the CURRENT ballot summary says 'beginning with the fifth year of exemption' while the ORIGINAL HJR ballot summary said 'maintain Florida residency for five years prior to receiving the increased homestead exemption.'",
+   "now": "The constitutional text and its verbatim quotation are correct, but the claim's account of the ballot summary is backwards. Art. VII s.6(a)(1)b.2. as enrolled reads exactly as quoted: \"For all levies other than school district levies, up to the assessed valuation of fifty thousand dollars. Unless otherwise revised under sub-subparagraph (4)a.2., beginning with the fifth year of exemption under this subparagraph, such person shall be exempt up to the amount of assessed valuation provided by sub-sub-subparagraph a.2.II., as adjusted pursuant to subparagraph (2)a.\" The Pinellas County Property Appraiser's official FAQ confirms the reading: \"After maintaining a Florida homestead exemption for four years, the property owner would become eligible for the larger homestead exemption beginning January 1 of the fifth year.\" However, the ballot summary did NOT change. The ENROLLED CS/HJR 1F \u2014 the operative, current version at the claimed source URL \u2014 still reads: \"Ensuring fairness for Florida residents. Requires any person who establishes Florida residency after January 1, 2027, to maintain Florida residency for five years prior to receiving the increased homestead exemption.\" The phrase \"beginning with the fifth year of exemption\" appears nowhere in the ballot summary of any version. A normalized diff of the Filed version against the Enrolled version shows that \"Ensuring fairness\" paragraph is identical in both; the only ballot-summary change between drafts was deletion of a separate trust-fund paragraph. So the real discrepancy is the opposite of what the claim describes: the operative ballot summary voters will read (\"five years of residency\") conflicts with the operative constitutional text (\"fifth year of exemption\"), and that conflict is live, not historical \u2014 it is the subject of pending ballot-language litigation. Two further precision points: the step-up amount is the a.2.II. value \"as adjusted pursuant to subparagraph (2)a.\", i.e. CPI-adjusted from 2029 forward, not a frozen $250,000; and the entry condition into sub-subparagraph b. is residency-based (a person \"who had not maintained a permanent residence in this state as of December 31, 2026\"), even though the step-up clock itself runs on years of exemption.",
+   "src": "https://www.flsenate.gov/Session/Bill/2026F/1F/BillText/er/PDF"
+  },
+  {
+   "was": "The net NEW exempt value under Florida Amendment 3 (2026, CS/HJR 1F) is $98,589 in 2027 and $198,589 in 2028, not the headline $150,000/$250,000, because the current $51,411 exemption is being replaced ($150,000 \u2212 $51,411; $250,000 \u2212 $51,411).",
+   "now": "Against NON-SCHOOL millage only, the net new exempt value is $98,589 in 2027 and $198,589 in 2028 \u2014 the new exemption replaces, not stacks on, the current $51,411 ($25,000 + $26,411). Against SCHOOL millage the change is zero: the $25,000 school exemption is untouched, and school taxes remain on the bill. The 2028 figure also assumes the $26,411 tier is frozen at its 2026 value; it is CPI-indexed, so the true 2028 counterfactual delta is roughly $197,000-$198,000. Quote it as: \"about $98,589 of additional exempt value against non-school millage in 2027 \u2014 roughly $1,203 at Pinellas' 12.2011-mill countywide average non-school rate \u2014 and no change to the school portion of your bill.\"",
+   "src": "https://www.flsenate.gov/Session/Bill/2026F/1F/BillText/er/PDF"
+  }
+ ],
+ "excludedAsUnverifiable": [],
+ "uncheckedNumericClaims": 237
+}
