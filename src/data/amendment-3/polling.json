@@ -1,5 +1,80 @@
 {
-  "checkedAt": "2026-10-20T00:00:00Z",
-  "note": "BOT OWNED. Polling on Amendment 3 is thin; an empty array renders nothing rather than inventing a number.",
-  "polls": []
+  "checkedAt": "2026-10-21T01:34:03Z",
+  "polls": [
+    {
+      "pollster": "Targoz Market Research",
+      "sponsor": "The James Madison Institute",
+      "fieldStart": "2026-09-28",
+      "fieldEnd": "2026-10-04",
+      "releasedAt": "2026-10-09",
+      "sampleSize": 1200,
+      "sampleDescription": "registered Florida voters",
+      "marginOfError": 2.77,
+      "yes": 63,
+      "no": 21,
+      "undecided": 15,
+      "sourceName": "The James Madison Institute",
+      "sourceUrl": "https://jamesmadison.org/new-jmi-poll-republicans-hold-double-digit-leads-in-key-statewide-races-florida-voters-focused-on-affordability/"
+    },
+    {
+      "pollster": "Stetson University Center for Public Opinion Research",
+      "sponsor": "Stetson University",
+      "fieldStart": "2026-10-01",
+      "fieldEnd": "2026-10-09",
+      "releasedAt": "2026-10-14",
+      "sampleSize": 716,
+      "sampleDescription": "registered voters, drawn from a survey of eight hundred twenty six Florida adults",
+      "marginOfError": null,
+      "yes": 56,
+      "no": 21,
+      "undecided": 23,
+      "sourceName": "WFTV",
+      "sourceUrl": "https://www.wftv.com/news/local/stetson-university-poll-shows-support-amendment-3-short-passage-threshold/VKTEZZNL5FGJJC7GQUVNUGEO7A/"
+    },
+    {
+      "pollster": "Mason-Dixon Polling and Strategy",
+      "sponsor": "NBC Six and the Telemundo Station Group",
+      "fieldStart": "2026-09-28",
+      "fieldEnd": "2026-10-01",
+      "releasedAt": "2026-10-07",
+      "sampleSize": 625,
+      "sampleDescription": "randomly selected registered Florida voters",
+      "marginOfError": 4,
+      "yes": 55,
+      "no": 26,
+      "undecided": 19,
+      "sourceName": "NBC Six South Florida",
+      "sourceUrl": "https://www.nbcmiami.com/elections/majority-of-florida-voters-support-amendment-3-new-poll-finds/3869270/"
+    },
+    {
+      "pollster": "McLaughlin and Associates",
+      "sponsor": "Associated Industries of Florida Center for Political Strategy",
+      "fieldStart": "2026-09-28",
+      "fieldEnd": "2026-10-01",
+      "releasedAt": "2026-10-14",
+      "sampleSize": 800,
+      "sampleDescription": "likely general election voters",
+      "marginOfError": 3.5,
+      "yes": 53,
+      "no": 28,
+      "undecided": 19,
+      "sourceName": "The Floridian",
+      "sourceUrl": "https://floridianpress.com/2026/10/poll-finds-amendment-3-failing-to-pass-when-voters-informed-of-language/"
+    },
+    {
+      "pollster": "St. Pete Polls",
+      "sponsor": "Florida Politics",
+      "fieldStart": "2026-10-05",
+      "fieldEnd": "2026-10-07",
+      "releasedAt": "2026-10-16",
+      "sampleSize": 836,
+      "sampleDescription": "likely voters",
+      "marginOfError": 3.4,
+      "yes": 42,
+      "no": 35,
+      "undecided": 23,
+      "sourceName": "FlaglerLive",
+      "sourceUrl": "https://flaglerlive.com/amendment-3-cool/"
+    }
+  ]
 }
