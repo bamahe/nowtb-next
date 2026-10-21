@@ -25,7 +25,7 @@ import SpokeNav from "@/components/city/SpokeNav";
 import CityContent from "@/components/city/CityContent";
 import CityResources from "@/components/city/CityResources";
 // Lead capture + slug-keyed CTA copy for the city hub and spoke templates.
-// These pages had NO form at all before — only links — so every visitor with
+// These pages had NO form at all before, only links, so every visitor with
 // buying intent had to click again to convert. AreaCta wraps the existing
 // ContactForm (Turnstile + /api/contact + Follow Up Boss) and picks its headline
 // deterministically from the page slug so 3,200 pages don't share one sentence.
@@ -97,7 +97,7 @@ const LOAN_TYPES = [
 ];
 
 // -----------------------------------------------------------------------------
-// Slug parser — determines if the URL is a hub page or a spoke page
+// Slug parser, determines if the URL is a hub page or a spoke page
 // Returns the matched city (and optional topic), or null for 404
 // -----------------------------------------------------------------------------
 
@@ -122,7 +122,7 @@ type PageType =
  * Parses a URL slug into a page type.
  */
 function parseSlug(slug: string): PageType | "market-update" | "blog-post" | null {
-  // 0a. Market update slugs — check directly against market updates data
+  // 0a. Market update slugs, check directly against market updates data
   if (/housing-market|real-estate-market/.test(slug)) {
     const { getMarketUpdateBySlug } = require("@/lib/market-updates");
     if (getMarketUpdateBySlug(slug)) {
@@ -163,7 +163,7 @@ function parseSlug(slug: string): PageType | "market-update" | "blog-post" | nul
   const directCity = getCityBySlug(slug);
   if (directCity) return { kind: "hub", city: directCity };
 
-  // 5. City spoke or realtor pages — iterate longest-slug-first
+  // 5. City spoke or realtor pages, iterate longest-slug-first
   const sortedCities = [...cities].sort(
     (a, b) => b.slug.length - a.slug.length
   );
@@ -183,7 +183,7 @@ function parseSlug(slug: string): PageType | "market-update" | "blog-post" | nul
     }
   }
 
-  // 6. Neighborhood fallback — check if the slug matches a known neighborhood
+  // 6. Neighborhood fallback, check if the slug matches a known neighborhood
   const neighborhood = getNeighborhoodBySlug(slug);
   if (neighborhood) {
     return { kind: "neighborhood", slug: neighborhood.slug, name: neighborhood.name, city: neighborhood.city };
@@ -216,7 +216,7 @@ function parseSlug(slug: string): PageType | "market-update" | "blog-post" | nul
   const misc = getMiscPageBySlug(slug);
   if (misc && misc.handling === "catch-all") return { kind: "misc", page: misc };
 
-  // 12. Blog posts — checked LAST so they don't interfere with other routes
+  // 12. Blog posts, checked LAST so they don't interfere with other routes
   const { getPostBySlug } = require("@/lib/posts");
   if (getPostBySlug(slug)) {
     return "blog-post";
@@ -228,14 +228,14 @@ function parseSlug(slug: string): PageType | "market-update" | "blog-post" | nul
 // -----------------------------------------------------------------------------
 // ISR: revalidate every 1 hour. This caches rendered pages so only 1 request
 // per page per hour hits the Bridge API. With force-dynamic, EVERY visitor
-// request triggered a fresh API call — ~3,000 unique pages × crawlers = rate limit.
+// request triggered a fresh API call, ~3,000 unique pages × crawlers = rate limit.
 // After deploy, the first visitor to each page triggers a fresh API call (build
 // returns empty via IS_BUILD_TIME), then the result is cached for subsequent visitors.
 export const revalidate = 3600; // 1 hour, matches the hourly refresh-listings cron
 // Allow pages not in generateStaticParams to render on-demand (ISR)
 export const dynamicParams = true;
 
-// generateStaticParams — pre-render all hub + spoke URLs at build time
+// generateStaticParams, pre-render all hub + spoke URLs at build time
 // Returns all city slugs AND all city-topic combos for Tier 1 cities
 // -----------------------------------------------------------------------------
 
@@ -244,38 +244,38 @@ export async function generateStaticParams() {
 
   // ⚠️ ONLY pre-render pages that DON'T call Bridge API at build time.
   // Pages with listings (hubs, spokes, neighborhoods, counties) render on-demand
-  // via ISR — first visitor triggers the API call, result is cached 15 min.
+  // via ISR, first visitor triggers the API call, result is cached 15 min.
   // This prevents every deploy from flooding Bridge with 3,000+ API calls.
 
-  // Loan guide pages — no API calls, just static content
+  // Loan guide pages, no API calls, just static content
   for (const loan of LOAN_TYPES) {
     params.push({ citySlug: loan.slug });
   }
 
-  // Comparison pages — concept comparisons don't call API
+  // Comparison pages, concept comparisons don't call API
   for (const comp of comparisons) {
     if (comp.category === "concept") {
       params.push({ citySlug: comp.slug });
     }
   }
 
-  // Tampa Bay regional pages — mostly static content
+  // Tampa Bay regional pages, mostly static content
   for (const rp of regionalPages) {
     params.push({ citySlug: rp.slug });
   }
 
-  // Guide pages — skipped. Config redirects in next.config.mjs redirect
+  // Guide pages, skipped. Config redirects in next.config.mjs redirect
   // /{slug}/ → /guides/{slug}/ before this route is reached. No need to
   // pre-render pages that will never be served.
 
-  // Misc catch-all pages — static content
+  // Misc catch-all pages, static content
   for (const mp of miscPages) {
     if (mp.handling === "catch-all") {
       params.push({ citySlug: mp.slug });
     }
   }
 
-  // Blog posts render on-demand via ISR — they have their own /blog/[slug]/ route.
+  // Blog posts render on-demand via ISR, they have their own /blog/[slug]/ route.
   // Pre-rendering 870+ blog slugs here hits the Vercel route limit (2048).
   // Market updates also render on-demand.
   // Both are still handled by this route's runtime logic (redirect to /blog/ or render).
@@ -284,7 +284,7 @@ export async function generateStaticParams() {
 }
 
 // -----------------------------------------------------------------------------
-// generateMetadata — dynamic SEO title + description for hub/spoke pages
+// generateMetadata, dynamic SEO title + description for hub/spoke pages
 // -----------------------------------------------------------------------------
 
 export async function generateMetadata({
@@ -298,7 +298,7 @@ export async function generateMetadata({
   // If the slug doesn't resolve, Next.js will render notFound() in the page
   if (!parsed) return {};
 
-  // Blog posts — redirect metadata points to canonical /blog/ URL
+  // Blog posts, redirect metadata points to canonical /blog/ URL
   if (parsed === "blog-post") {
     return {
       alternates: { canonical: `/blog/${citySlug}/` },
@@ -306,7 +306,7 @@ export async function generateMetadata({
     };
   }
 
-  // Market updates — serve full metadata here since /market-updates/ URLs
+  // Market updates, serve full metadata here since /market-updates/ URLs
   // have a stale CDN-cached 308 redirect. This URL is the working canonical
   // until the cache expires, then we can switch back to noindex + redirect.
   if (parsed === "market-update") {
@@ -314,7 +314,7 @@ export async function generateMetadata({
     if (mu) {
       return {
         title: mu.title,
-        description: mu.excerpt || `${mu.title} — latest housing market data from Barrett Henry, REALTOR® at REMAX Collective.`,
+        description: mu.excerpt || `${mu.title}, latest housing market data from Barrett Henry, REALTOR® at REMAX Collective.`,
         alternates: { canonical: `/${citySlug}/` },
         robots: { index: true, follow: true },
         openGraph: {
@@ -347,7 +347,7 @@ export async function generateMetadata({
           `Barrett Henry, Broker Associate at REMAX Collective ${cityName}. 23+ years of real estate experience. Search homes, get market data. Call (813) 733-7907.`,
         alternates: { canonical },
         openGraph: {
-          title: `REMAX ${cityName} — Barrett Henry, REALTOR®`,
+          title: `REMAX ${cityName}, Barrett Henry, REALTOR®`,
           description:
             ofc?.metaDescription ||
             `Your REMAX expert in ${cityName}. 23+ years, FL Broker #BK3313308.`,
@@ -392,7 +392,7 @@ export async function generateMetadata({
       // TITLE_BUDGET is imported rather than hardcoded on purpose: this line
       // used to spell out the old 26-character suffix, and when the suffix was
       // shortened to 16 the stale copy kept reserving characters that no longer
-      // existed — dropping "| Relocation" from 23 cities where it now fits.
+      // existed, dropping "| Relocation" from 23 cities where it now fits.
       const realtorBase = `${parsed.city.name} REALTOR®`;
       const withReloc = `${realtorBase} | Relocation`;
       const realtorTitle = withReloc.length <= TITLE_BUDGET ? withReloc : realtorBase;
@@ -401,7 +401,7 @@ export async function generateMetadata({
         description: `Buying, selling, or relocating to ${parsed.city.name}, FL? Barrett Henry, Broker Associate at REMAX Collective. MRP relocation specialist. Call (813) 733-7907.`,
         alternates: { canonical },
         openGraph: {
-          title: `${parsed.city.name} REALTOR® — Barrett Henry | REMAX Collective`,
+          title: `${parsed.city.name} REALTOR®, Barrett Henry | REMAX Collective`,
           description: `Your trusted REALTOR in ${parsed.city.name}, FL. 23+ years of real estate experience.`,
           url: canonical,
           type: "website",
@@ -428,7 +428,7 @@ export async function generateMetadata({
       // Use curated summary if available, otherwise generic
       const nDesc = NEIGHBORHOOD_DESCRIPTIONS[parsed.slug];
       const metaDesc = nDesc
-        ? `${parsed.name} in ${cityName}, FL — ${nDesc.summary} Browse homes for sale. Barrett Henry, REMAX Collective.`
+        ? `${parsed.name} in ${cityName}, FL, ${nDesc.summary} Browse homes for sale. Barrett Henry, REMAX Collective.`
         : `Explore homes for sale in ${parsed.name}, ${cityName}, FL. Updated daily from Stellar MLS. Barrett Henry, REMAX Collective. Call (813) 733-7907.`;
       return {
         title: `${parsed.name} Homes for Sale | ${cityName}, FL`,
@@ -448,11 +448,11 @@ export async function generateMetadata({
       const nsCity = getCityBySlug(parsed.city);
       const nsCityName = nsCity ? nsCity.name : "Tampa Bay";
       return {
-        title: `${parsed.name} Homes for Sale — ${nsCityName}, FL`,
+        title: `${parsed.name} Homes for Sale, ${nsCityName}, FL`,
         description: `Browse homes for sale in ${parsed.name}, ${nsCityName}, FL. Updated daily from Stellar MLS. Barrett Henry, REMAX Collective. Call (813) 733-7907.`,
         alternates: { canonical },
         openGraph: {
-          title: `${parsed.name} Homes for Sale — ${nsCityName}, FL`,
+          title: `${parsed.name} Homes for Sale, ${nsCityName}, FL`,
           description: `Current listings in ${parsed.name}, ${nsCityName}. Updated daily from Stellar MLS.`,
           url: canonical,
           type: "website",
@@ -469,7 +469,7 @@ export async function generateMetadata({
         description: `Looking for a trusted REALTOR in ${parsed.name}, ${nrCityName}? Barrett Henry has 23+ years of real estate experience. REMAX Collective. Call (813) 733-7907.`,
         alternates: { canonical },
         openGraph: {
-          title: `${parsed.name} REALTOR® — Barrett Henry | ${nrCityName}, FL`,
+          title: `${parsed.name} REALTOR®, Barrett Henry | ${nrCityName}, FL`,
           description: `Your local REALTOR in ${parsed.name}, ${nrCityName}. 23+ years of real estate experience.`,
           url: canonical,
           type: "website",
@@ -517,7 +517,7 @@ export async function generateMetadata({
         },
       };
     case "guide":
-      // Redirect metadata — noindex + canonical to prevent Google from
+      // Redirect metadata, noindex + canonical to prevent Google from
       // indexing /{slug}/ alongside /guides/{slug}/ (URL cannibalization)
       return {
         alternates: { canonical: `/guides/${parsed.guide.slug}/` },
@@ -527,7 +527,7 @@ export async function generateMetadata({
       break;
   }
 
-  // Hub and spoke pages — city is guaranteed here since other kinds returned above
+  // Hub and spoke pages, city is guaranteed here since other kinds returned above
   const city = (parsed as { city: CityData }).city;
   const topic = parsed.kind === "spoke" ? parsed.topic : null;
 
@@ -597,7 +597,7 @@ export async function generateMetadata({
 }
 
 // -----------------------------------------------------------------------------
-// Page component — renders either a Hub or Spoke page based on the slug
+// Page component, renders either a Hub or Spoke page based on the slug
 // -----------------------------------------------------------------------------
 
 export default async function CityPage({
@@ -622,7 +622,7 @@ export default async function CityPage({
 
   if (!parsed) notFound();
 
-  // Blog posts — 308 permanent redirect to canonical /blog/{slug}/ URL
+  // Blog posts, 308 permanent redirect to canonical /blog/{slug}/ URL
   // Must be permanentRedirect (308) not redirect (307) so Google consolidates
   // both URLs. Using temporary 307 caused GSC to keep indexing /{slug}/ AND
   // /blog/{slug}/ separately (URL cannibalization).
@@ -630,7 +630,7 @@ export default async function CityPage({
     permanentRedirect(`/blog/${citySlug}/`);
   }
 
-  // Market updates — use 307 (temporary) redirect instead of 308 (permanent)
+  // Market updates, use 307 (temporary) redirect instead of 308 (permanent)
   // to avoid CDN caching the redirect. A previous 308 from /market-updates/
   // back to /{slug}/ got stuck in Vercel's edge cache, creating a redirect loop.
   // 307 still tells the browser to go to /market-updates/ but won't get cached.
@@ -638,7 +638,7 @@ export default async function CityPage({
     redirect(`/market-updates/${citySlug}/`);
   }
 
-  // Southoak — redirect to nested /brandon/southoak/ canonical URL
+  // Southoak, redirect to nested /brandon/southoak/ canonical URL
   // The standalone page at /brandon/southoak/ has custom content and schema.
   if (citySlug === "southoak") {
     permanentRedirect("/brandon/southoak/");
@@ -658,7 +658,7 @@ export default async function CityPage({
       if (page.topic.slug === "property-management") {
         return <PropertyManagementSpokePage city={page.city} />;
       }
-      // Home valuation spoke pages — dedicated valuation form + CMA content
+      // Home valuation spoke pages, dedicated valuation form + CMA content
       if (page.topic.slug === "home-valuation") {
         return <HomeValuationSpokePage city={page.city} />;
       }
@@ -711,7 +711,7 @@ export default async function CityPage({
       );
     }
     case "neighborhood-spoke": {
-      // Neighborhood homes-for-sale page — reuses NeighborhoodPage with listings focus
+      // Neighborhood homes-for-sale page, reuses NeighborhoodPage with listings focus
       const nsCityData = getCityBySlug(page.city) || cities[0];
       const nsNearby = getNeighborhoodsByCity(page.city)
         .filter((n) => n.slug !== page.slug)
@@ -727,7 +727,7 @@ export default async function CityPage({
       );
     }
     case "neighborhood-realtor": {
-      // Neighborhood realtor page — reuses RealtorPage with neighborhood name
+      // Neighborhood realtor page, reuses RealtorPage with neighborhood name
       // Spread the parent city data but override the display name with the neighborhood name
       const nrCityData = getCityBySlug(page.city) || cities[0];
       return (
@@ -744,7 +744,7 @@ export default async function CityPage({
       return <MiscCatchAllPage page={page.page} />;
     case "guide":
       // 308 permanent redirect to canonical /guides/{slug}/ URL
-      // Prevents duplicate content — the dedicated /guides/[slug] route
+      // Prevents duplicate content, the dedicated /guides/[slug] route
       // has the full layout with sidebar, schema, related guides, etc.
       // Config redirects in next.config.mjs also handle this, but this
       // serves as a belt-and-suspenders fallback for runtime requests.
@@ -755,7 +755,7 @@ export default async function CityPage({
 }
 
 // =============================================================================
-// HUB PAGE — city overview with spoke links, listings, and about section
+// HUB PAGE, city overview with spoke links, listings, and about section
 // =============================================================================
 
 async function HubPage({ city }: { city: CityData }) {
@@ -767,7 +767,7 @@ async function HubPage({ city }: { city: CityData }) {
   // listings into the HTML, read from the Supabase cache that the hourly
   // /api/cron/refresh-listings job keeps warm. Reading the cache costs no
   // Bridge quota, so this adds crawler-visible inventory without changing
-  // the API budget. Empty cache just means no static block — the client
+  // the API budget. Empty cache just means no static block, the client
   // grid below still renders exactly as it does today.
   const seoListings = await getCachedListings(city.zip_codes || [], 12);
 
@@ -775,7 +775,7 @@ async function HubPage({ city }: { city: CityData }) {
   // cities we have not pulled yet, in which case the block is skipped.
   const cityStats = getCityMarketStats(city.slug);
 
-  // No server-side market stats — listings load client-side now
+  // No server-side market stats, listings load client-side now
   const listings: never[] = [];
   const rentalListings: never[] = [];
   const soldListings: never[] = [];
@@ -812,7 +812,7 @@ async function HubPage({ city }: { city: CityData }) {
         }}
       />
 
-      {/* === City entity — real coordinates, county, and ZIP for this place === */}
+      {/* === City entity, real coordinates, county, and ZIP for this place === */}
       <JsonLd data={cityPlaceSchema(city)} />
 
       {/* === ItemList of the listings actually rendered into the HTML below.
@@ -839,17 +839,17 @@ async function HubPage({ city }: { city: CityData }) {
             Homes for Sale in {city.name}
           </h1>
           <p className="font-body text-white/70 text-lg max-w-2xl mb-6">
-            {city.county} County, Florida — Updated daily from Stellar MLS
+            {city.county} County, Florida, Updated daily from Stellar MLS
           </p>
 
-          {/* CTA row — above the fold, tap-to-call phone number always visible
+          {/* CTA row, above the fold, tap-to-call phone number always visible
               (never hidden on mobile), plus a same-page jump to the lead form
               further down so nobody has to leave the page to convert. */}
           <AreaHeroCtaButtons />
         </div>
       </section>
 
-      {/* === Quick Nav Tabs — jump to For Sale / Rentals / Sold === */}
+      {/* === Quick Nav Tabs, jump to For Sale / Rentals / Sold === */}
       <section className="bg-white border-b border-border sticky top-16 z-20">
         <div className="container-wide">
           <nav className="flex items-center gap-0" aria-label="Listing sections">
@@ -949,19 +949,19 @@ async function HubPage({ city }: { city: CityData }) {
         </section>
       )}
 
-      {/* === Verified market table — closed sales broken out by property type ===
+      {/* === Verified market table, closed sales broken out by property type ===
            The stat bar above shows 4 scalar tiles. This publishes the rest of
            the figures already verified in city-market-stats.ts (up to 13 per
            city) as a table, which is what both readers and AI answer engines
            actually extract. Rows under MIN_SAMPLE suppress their median rather
-           than publish noise — see the component header. */}
+           than publish noise, see the component header. */}
       {cityStats && <CityMarketTable stats={cityStats} cityName={city.name} />}
 
       {/* === Crawler-visible inventory ===
            Rendered server-side from the cache so search engines and AI models
            read real addresses and prices in the HTML. Hidden from sighted users
            because the interactive grid directly below shows the same homes with
-           filtering — but it stays in the accessibility tree and in the DOM, so
+           filtering, but it stays in the accessibility tree and in the DOM, so
            it is readable markup rather than a cloaked block. */}
       {seoListings.length > 0 && (
         <section className="sr-only" aria-label={`Homes for sale in ${city.name}, Florida`}>
@@ -973,7 +973,7 @@ async function HubPage({ city }: { city: CityData }) {
                   {[l.StreetNumber, l.StreetName, l.StreetSuffix].filter(Boolean).join(" ")},{" "}
                   {l.City}, {l.StateOrProvince} {l.PostalCode}
                 </a>
-                {" — "}
+                {", "}
                 {typeof l.ListPrice === "number" ? `$${l.ListPrice.toLocaleString()}` : "Price on request"}
                 {l.BedroomsTotal ? `, ${l.BedroomsTotal} bed` : ""}
                 {l.BathroomsTotalInteger ? `, ${l.BathroomsTotalInteger} bath` : ""}
@@ -985,17 +985,17 @@ async function HubPage({ city }: { city: CityData }) {
         </section>
       )}
 
-      {/* === Latest listings — loads CLIENT-SIDE to avoid server API calls === */}
+      {/* === Latest listings, loads CLIENT-SIDE to avoid server API calls === */}
       <div id="for-sale" />
       <ClientListings
         zipCodes={city.zip_codes}
         title={`Homes for Sale in ${city.name}`}
-        subtitle={`Active listings in ${city.name}, ${city.county} County — updated from Stellar MLS.`}
+        subtitle={`Active listings in ${city.name}, ${city.county} County, updated from Stellar MLS.`}
         limit={24}
         areaName={city.name}
       />
 
-      {/* === MLS disclaimer — only shown when listings are displayed === */}
+      {/* === MLS disclaimer, only shown when listings are displayed === */}
       {listings.length > 0 && (
         <section className="container-wide pb-4">
           <p className="font-body text-xs text-muted/60 leading-relaxed max-w-4xl">
@@ -1004,14 +1004,14 @@ async function HubPage({ city }: { city: CityData }) {
         </section>
       )}
 
-      {/* === Spoke navigation — links to all topic pages for this city === */}
+      {/* === Spoke navigation, links to all topic pages for this city === */}
       <SpokeNav city={city} />
 
-      {/* === About section — city overview content === */}
+      {/* === About section, city overview content === */}
       <div id="about" />
       <CityContent city={city} />
 
-      {/* === LEAD FORM — mid-page, right after the listings and the prose ===
+      {/* === LEAD FORM, mid-page, right after the listings and the prose ===
            This is the piece these pages were missing entirely. It sits here (not
            only at the very bottom) because a visitor who just read the city
            overview is at peak intent, and on a page this long most people never
@@ -1023,18 +1023,18 @@ async function HubPage({ city }: { city: CityData }) {
         source={`${city.slug}-city-hub`}
       />
 
-      {/* === Resources & internal links — neighborhoods, loans, guides, blog posts === */}
+      {/* === Resources & internal links, neighborhoods, loans, guides, blog posts === */}
       {/* Sibling-area resource grid: neighborhoods, nearby cities ("Brandon Homes
           for Sale" style keyword anchors), loan guides and city blog posts.
           CityResources already builds all of that; the hub just has to render it. */}
       <CityResources city={city} />
 
-      {/* === Recently Sold — client-side === */}
+      {/* === Recently Sold, client-side === */}
       <div id="sold" />
       <ClientListings
         zipCodes={city.zip_codes}
         title={`Recently Sold in ${city.name}`}
-        subtitle={`Recent sales in ${city.name} — see what homes are selling for.`}
+        subtitle={`Recent sales in ${city.name}, see what homes are selling for.`}
         limit={8}
         filters={{ status: "Closed", sort: "ClosePrice desc" }}
         showFilters={false}
@@ -1050,7 +1050,7 @@ async function HubPage({ city }: { city: CityData }) {
         </Link>
       </section>
 
-      {/* === FAQ Section — uses city-specific FAQs when available, generic fallback otherwise === */}
+      {/* === FAQ Section, uses city-specific FAQs when available, generic fallback otherwise === */}
       {(() => {
         // Check for city-specific FAQs (e.g. Valrico has detailed, useful answers)
         const specificFaqs = CITY_FAQS[city.slug];
@@ -1205,7 +1205,7 @@ async function HubPage({ city }: { city: CityData }) {
         </section>
       )}
 
-      {/* === ViVi PM callout — rental property management === */}
+      {/* === ViVi PM callout, rental property management === */}
       <section className="container-wide py-8">
         <div className="rounded-xl border border-gray-200 bg-gray-50 p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <div>
@@ -1235,7 +1235,7 @@ async function HubPage({ city }: { city: CityData }) {
 }
 
 // =============================================================================
-// SPOKE PAGE — filtered listings for a specific city + topic
+// SPOKE PAGE, filtered listings for a specific city + topic
 // =============================================================================
 
 async function SpokePage({
@@ -1259,12 +1259,12 @@ async function SpokePage({
   const isHousingMarket = topic.slug === "housing-market";
   let soldListings: import("@/lib/types").Listing[] = [];
 
-  // Crawler-visible inventory, read from the Supabase cache rather than Bridge —
+  // Crawler-visible inventory, read from the Supabase cache rather than Bridge 
   // costs no API quota. Spoke pages are the ones that rank for "<city> homes for
   // sale", so they need real homes in the HTML more than anything else on the site.
   const seoListings = await getCachedListings(city.zip_codes || [], 12);
 
-  // LISTINGS NOW LOAD CLIENT-SIDE — no server-side API calls on spoke pages.
+  // LISTINGS NOW LOAD CLIENT-SIDE, no server-side API calls on spoke pages.
   // This prevents Bridge API rate limiting from deploys and crawlers.
 
   // Find a market update post for this city if one exists
@@ -1341,7 +1341,7 @@ async function SpokePage({
         }}
       />
 
-      {/* === City entity — coordinates, county, ZIP for this place === */}
+      {/* === City entity, coordinates, county, ZIP for this place === */}
       <JsonLd data={cityPlaceSchema(city)} />
 
       {/* === The listings server-rendered on this page, as an ItemList.
@@ -1366,7 +1366,7 @@ async function SpokePage({
                   {[l.StreetNumber, l.StreetName, l.StreetSuffix].filter(Boolean).join(" ")},{" "}
                   {l.City}, {l.StateOrProvince} {l.PostalCode}
                 </a>
-                {" — "}
+                {", "}
                 {typeof l.ListPrice === "number" ? `$${l.ListPrice.toLocaleString()}` : "Price on request"}
                 {l.BedroomsTotal ? `, ${l.BedroomsTotal} bed` : ""}
                 {l.BathroomsTotalInteger ? `, ${l.BathroomsTotalInteger} bath` : ""}
@@ -1378,7 +1378,7 @@ async function SpokePage({
         </section>
       )}
 
-      {/* === Hero — compact with breadcrumb + CTA === */}
+      {/* === Hero, compact with breadcrumb + CTA === */}
       <section className="bg-primary pt-36 pb-16">
         <div className="container-wide">
           {/* Breadcrumb trail */}
@@ -1395,19 +1395,19 @@ async function SpokePage({
             {topic.label} in {city.name}
           </h1>
           <p className="font-body text-white/70 text-lg max-w-2xl mb-6">
-            {city.county} County, Florida — Updated daily from Stellar MLS
+            {city.county} County, Florida, Updated daily from Stellar MLS
           </p>
 
-          {/* CTA row — same above-the-fold treatment as the city hub: visible
+          {/* CTA row, same above-the-fold treatment as the city hub: visible
               tap-to-call number (never hidden on mobile) plus a same-page jump
               down to the lead form. */}
           <AreaHeroCtaButtons />
         </div>
       </section>
 
-      {/* === Housing Market Stats — CLIENT-SIDE only on housing-market spoke pages === */}
+      {/* === Housing Market Stats, CLIENT-SIDE only on housing-market spoke pages === */}
       {/* Uses ClientMarketSnapshot so data fetches in the browser (not at build time). */}
-      {/* The old server-side version always showed "—" because listings=[] at build. */}
+      {/* The old server-side version always showed ", " because listings=[] at build. */}
       {isHousingMarket && (
         <ClientMarketSnapshot
           cityName={city.name}
@@ -1416,12 +1416,12 @@ async function SpokePage({
         />
       )}
 
-      {/* === Listings — loads CLIENT-SIDE to avoid API rate limits === */}
+      {/* === Listings, loads CLIENT-SIDE to avoid API rate limits === */}
       <ClientListings
         zipCodes={city.zip_codes}
         title={`${topic.label} in ${city.name}`}
         subtitle={topic.slug === "recently-sold"
-          ? `Recent sales in ${city.name}, ${city.county} County — see what homes are selling for.`
+          ? `Recent sales in ${city.name}, ${city.county} County, see what homes are selling for.`
           : `Active ${topic.label.toLowerCase()} in ${city.name}, ${city.county} County.`}
         limit={48}
         filters={topic.filter as Record<string, string>}
@@ -1449,7 +1449,7 @@ async function SpokePage({
         </section>
       )}
 
-      {/* === MLS disclaimer — only shown when listings are displayed === */}
+      {/* === MLS disclaimer, only shown when listings are displayed === */}
       {listings.length > 0 && (
         <section className="container-wide pb-4">
           <p className="font-body text-xs text-muted/60 leading-relaxed max-w-4xl">
@@ -1458,10 +1458,10 @@ async function SpokePage({
         </section>
       )}
 
-      {/* === SEO content — clean single column, no boilerplate === */}
+      {/* === SEO content, clean single column, no boilerplate === */}
       <CityContent city={city} topic={topic} />
 
-      {/* === Silo links — back to the hub, sideways to sibling spokes ===
+      {/* === Silo links, back to the hub, sideways to sibling spokes ===
            Short, contextual, in-body prose links with keyword anchor text. This
            is the hub-and-spoke wiring: the hub link concentrates authority, the
            sibling links spread it across the city's other topic pages. */}
@@ -1492,11 +1492,11 @@ async function SpokePage({
         </p>
       </section>
 
-      {/* === LEAD FORM — the piece spoke pages were missing entirely ===
+      {/* === LEAD FORM, the piece spoke pages were missing entirely ===
            Placed right after the content and before the big link grids, because
            this is where someone who read the page is most likely to act. The
            source string includes the full page slug so Follow Up Boss shows
-           Barrett exactly which topic page produced the lead — a "luxury homes"
+           Barrett exactly which topic page produced the lead, a "luxury homes"
            lead and a "55+ communities" lead need completely different
            follow-up. */}
       <AreaLeadCapture
@@ -1505,7 +1505,7 @@ async function SpokePage({
         source={`${slug}-spoke`}
       />
 
-      {/* === Explore more — spoke nav (all sibling topic pages) === */}
+      {/* === Explore more, spoke nav (all sibling topic pages) === */}
       <SpokeNav city={city} currentTopic={topic.slug} />
 
       {/* === Sibling-area resource grid ===
@@ -1515,14 +1515,14 @@ async function SpokePage({
            ("Brandon Homes for Sale"); the spoke just has to render it. */}
       <CityResources city={city} />
 
-      {/* === Contact CTA bar — slug-keyed copy, not the old repeated sentence === */}
+      {/* === Contact CTA bar, slug-keyed copy, not the old repeated sentence === */}
       <AreaCtaBar areaName={city.name} slug={slug} />
     </>
   );
 }
 
 // =============================================================================
-// HOME VALUATION SPOKE PAGE — city-specific valuation form + CMA content
+// HOME VALUATION SPOKE PAGE, city-specific valuation form + CMA content
 // Renders at /{city}-home-valuation/ for every city in the system
 // =============================================================================
 
@@ -1760,7 +1760,7 @@ function HomeValuationSpokePage({ city }: { city: CityData }) {
               Thinking about selling in {city.name}?
             </h2>
             <p className="font-body text-white/70 text-sm">
-              Barrett Henry, REALTOR® — 23+ years of real estate experience
+              Barrett Henry, REALTOR®, 23+ years of real estate experience
             </p>
           </div>
           <div className="flex gap-3 flex-shrink-0">
@@ -1784,7 +1784,7 @@ function HomeValuationSpokePage({ city }: { city: CityData }) {
 }
 
 // =============================================================================
-// PROPERTY MANAGEMENT SPOKE PAGE — city-specific ViVi PM page
+// PROPERTY MANAGEMENT SPOKE PAGE, city-specific ViVi PM page
 // Renders at /{city}-property-management/ for every city in the system.
 // Highlights ViVi PM services, links to the main /property-management/ page,
 // and mentions Best Bay Services (run by James Evans) for maintenance.
@@ -2104,7 +2104,7 @@ function PropertyManagementSpokePage({ city }: { city: CityData }) {
         </section>
       )}
 
-      {/* === Spoke nav — all topic pages for this city === */}
+      {/* === Spoke nav, all topic pages for this city === */}
       <SpokeNav city={city} currentTopic="property-management" />
 
       {/* === Bottom CTA bar === */}

@@ -1,5 +1,5 @@
 // =============================================================================
-// Blog Post Auto-Generator — /api/cron/generate-post
+// Blog Post Auto-Generator, /api/cron/generate-post
 // Triggered every 3 days by Vercel Cron.
 // Uses Claude API to write a Tampa Bay real estate blog post,
 // then inserts it into the Supabase blog_posts table.
@@ -10,7 +10,7 @@ import Anthropic from "@anthropic-ai/sdk";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
-export const maxDuration = 120; // 2 minutes — AI generation can take time
+export const maxDuration = 120; // 2 minutes, AI generation can take time
 
 // Barrett's real phone number. Defined once so a typo can't spread across posts.
 const CONTACT_PHONE = "(813) 733-7907";
@@ -19,7 +19,7 @@ const CONTACT_PHONE_TEL = "8137337907";
 // Top-level URL paths that are real pages on the site. Anything else the AI
 // writes as a bare path is assumed to be a blog article and gets /blog/ added.
 // City pages (/valrico/, /brandon/, ...) are handled by the single-segment check
-// in sanitizeInternalLinks — they are the only bare slugs that legitimately exist.
+// in sanitizeInternalLinks, they are the only bare slugs that legitimately exist.
 const REAL_TOP_LEVEL_PATHS = new Set([
   "blog", "properties", "contact", "about", "agents", "guides", "compare",
   "builders", "market-updates", "relocation", "property-management",
@@ -32,8 +32,8 @@ const REAL_TOP_LEVEL_PATHS = new Set([
 /**
  * Rewrite internal links that point at pages which don't exist.
  *
- * The AI reliably writes blog cross-links as bare slugs — href="/moving-to-brandon-fl/"
- * — but blog articles are served from /blog/<slug>/. Left as-is, every one of those
+ * The AI reliably writes blog cross-links as bare slugs, href="/moving-to-brandon-fl/"
+ *, but blog articles are served from /blog/<slug>/. Left as-is, every one of those
  * links is a dead end. This adds the missing /blog/ prefix.
  *
  * A path is left alone when it is a known real section (/properties/, /contact/, ...)
@@ -49,10 +49,10 @@ function sanitizeInternalLinks(html: string): string {
     const rest = url.slice(path.length);
     const segments = path.split("/").filter(Boolean);
 
-    if (segments.length === 0) return whole;                  // "/" — homepage
+    if (segments.length === 0) return whole; // "/", homepage
     if (REAL_TOP_LEVEL_PATHS.has(segments[0])) return whole;  // real section, leave alone
 
-    // Invented sub-page like /valrico/luxury-homes/ — only the city page exists
+    // Invented sub-page like /valrico/luxury-homes/, only the city page exists
     if (segments.length > 1) return `href=${quote}/${segments[0]}/${rest}${quote}`;
 
     // Single bare slug. City slugs are short (valrico, wesley-chapel, sun-city-center);
@@ -136,7 +136,7 @@ Write a blog post following these rules:
 - Write like a knowledgeable local agent, direct and practical
 - Internal links: city pages are /valrico/, /brandon/, /riverview/, /wesley-chapel/, /lithia/, /tampa/
 - CRITICAL: links to other blog articles MUST start with /blog/ (e.g. /blog/moving-to-brandon-fl/). A bare /moving-to-brandon-fl/ is a dead 404 page.
-- Only link to city pages listed above or /blog/ articles. Never invent paths like /brandon-fl-homes-for-sale/ or /city/luxury-homes/ — those do not exist.
+- Only link to city pages listed above or /blog/ articles. Never invent paths like /brandon-fl-homes-for-sale/ or /city/luxury-homes/, those do not exist.
 - Content should sound like it was written today (${new Date().toLocaleDateString("en-US", { month: "long", year: "numeric" })})
 
 ${topic.prompt}

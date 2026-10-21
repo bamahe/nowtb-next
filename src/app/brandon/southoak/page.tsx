@@ -1,5 +1,5 @@
 // =============================================================================
-// Southoak Neighborhood Page — /brandon/southoak/
+// Southoak Neighborhood Page, /brandon/southoak/
 // Custom acreage community page in Bloomingdale/Brandon, FL.
 // Uses the shared NeighborhoodPage component with custom metadata and
 // additional JSON-LD schema blocks (RealEstateAgent + FAQPage + Breadcrumb).

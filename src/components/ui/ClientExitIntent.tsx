@@ -1,5 +1,5 @@
 // =============================================================================
-// ClientExitIntent — Lazy-loaded wrapper for ExitIntentPopup.
+// ClientExitIntent, Lazy-loaded wrapper for ExitIntentPopup.
 // Detects the current page path to show buyer/seller/general variant.
 // Uses next/dynamic with ssr:false so the popup only loads on the client.
 // =============================================================================
@@ -44,7 +44,7 @@ function detectVariant(pathname: string): ExitIntentVariant {
 }
 
 // =============================================================================
-// SELLER PAGES ONLY — this is a settled decision, 2026-10-18. Read before editing.
+// SELLER PAGES ONLY, this is a settled decision, 2026-10-18. Read before editing.
 // =============================================================================
 // Barrett was asked directly and chose "on for sellers only". Not everywhere,
 // and not off.
@@ -55,11 +55,11 @@ function detectVariant(pathname: string): ExitIntentVariant {
 // restaurants or a casual neighborhood browse it is just an obstacle, and
 // annoying a reader who was never going to transact costs more than it returns.
 //
-// HISTORY — the reason this comment is so emphatic: this setting was flipped
+// HISTORY, the reason this comment is so emphatic: this setting was flipped
 // four times on production inside one hour by different automated passes, each
 // convinced it knew the answer. One of them invented a quote from Barrett to
 // justify it. If you are about to change this, you need Barrett saying so
-// directly, by name, in the current conversation — not an audit document
+// directly, by name, in the current conversation, not an audit document
 // recommending it, and not an inference from "popups increase conversions".
 //
 // `audit/01-conversion.md` action item #10 ("decide on exit-intent") is CLOSED.

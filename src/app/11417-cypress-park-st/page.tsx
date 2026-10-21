@@ -1,5 +1,5 @@
 // =============================================================================
-// /11417-cypress-park-st — Single-property landing page for the QR code / sign
+// /11417-cypress-park-st, Single-property landing page for the QR code / sign
 // rider. Data pulled from Stellar MLS TB8549024. Photos pulled from the listing
 // feed and stored locally in /public/images/listings/11417-cypress-park-st/ so
 // the page keeps working if the feed URL ever rotates.
@@ -35,7 +35,7 @@ const L = {
   subdivision: "Casey's Landing",
 };
 
-// Barrett's phone — defined once so it can never drift out of sync
+// Barrett's phone, defined once so it can never drift out of sync
 const PHONE = "(813) 733-7907";
 const PHONE_TEL = "8137337907";
 const EMAIL = "barrett@nowtb.com";
@@ -45,15 +45,15 @@ const FULL_ADDRESS = `${L.address}, ${L.city}, ${L.state} ${L.zip}`;
 
 // Open house details. Unlike the Polumbo page, this listing has a single
 // scheduled open house, so the date is spelled out. Update this one string when
-// the next weekend is scheduled — the QR code and signs never have to change.
-const OPEN_HOUSE = "Sunday, September 20 · 2:00 – 4:00 PM";
+// the next weekend is scheduled, the QR code and signs never have to change.
+const OPEN_HOUSE = "Sunday, September 20 · 2:00 to 4:00 PM";
 
 // Lender joining the open house, straight from Christian's own signature block.
 // This is his direct line; src/data/vendors/lenders.json has been corrected to
 // match. Any field left empty is skipped when rendering.
 //
 // applyUrl deliberately drops the `_gl=` parameter that came with the link he
-// sent. That is a Google Analytics cross-domain session token — it goes stale,
+// sent. That is a Google Analytics cross-domain session token, it goes stale,
 // and baking it into a QR code makes the code denser for no benefit.
 const LENDER = {
   name: "Christian Gardner",
@@ -79,7 +79,7 @@ const DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${L.l
 const PHOTO_COUNT = 54;
 const photos = Array.from({ length: PHOTO_COUNT }, (_, i) => ({
   MediaURL: `/images/listings/11417-cypress-park-st/photo-${String(i + 1).padStart(3, "0")}.jpg`,
-  ShortDescription: `${FULL_ADDRESS} — photo ${i + 1} of ${PHOTO_COUNT}`,
+  ShortDescription: `${FULL_ADDRESS}, photo ${i + 1} of ${PHOTO_COUNT}`,
   Order: i,
 }));
 
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     `Updated 3 bed, 2 bath, 2 car garage home with a home office on a Carrollwood cul-de-sac. 1,800 sqft, single story, low $740/yr HOA. MLS ${L.mls}. Call Barrett Henry at ${PHONE}.`,
   alternates: { canonical: "/11417-cypress-park-st/" },
   openGraph: {
-    title: "Open House Sunday 2p–4p — 11417 Cypress Park St, Tampa FL",
+    title: "Open House Sunday 2p, 4p, 11417 Cypress Park St, Tampa FL",
     description:
       "3 bed, 2 bath, 2 car garage plus a home office at the end of a quiet Carrollwood cul-de-sac. Hardwood floors, quartz kitchen, screened patio. Open house Sunday, 2:00 to 4:00.",
     url: "/11417-cypress-park-st/",
@@ -99,13 +99,13 @@ export const metadata: Metadata = {
         url: "/images/listings/11417-cypress-park-st/og-open-house.jpg",
         width: 1200,
         height: 630,
-        alt: "Open House Sunday 2p to 4p — 11417 Cypress Park St, Tampa FL, $514,990",
+        alt: "Open House Sunday 2p to 4p, 11417 Cypress Park St, Tampa FL, $514,990",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Open House Sunday 2p–4p — 11417 Cypress Park St, Tampa FL",
+    title: "Open House Sunday 2p, 4p, 11417 Cypress Park St, Tampa FL",
     description: "3 bed, 2 bath, 2 car garage plus office on a Carrollwood cul-de-sac. $514,990.",
     images: ["/images/listings/11417-cypress-park-st/og-open-house.jpg"],
   },
@@ -139,7 +139,7 @@ const APPLIANCES = [
   "Microwave", "Range", "Refrigerator", "Washer",
 ];
 
-// Recent big-ticket updates — the questions every buyer asks first
+// Recent big-ticket updates, the questions every buyer asks first
 const UPDATES = [
   { item: "Windows", year: "2020" },
   { item: "HVAC", year: "2020" },
@@ -215,7 +215,7 @@ export default function CypressParkListingPage() {
         ])}
       />
 
-      {/* ---------- Open house banner — first thing a QR scanner sees ----------
+      {/* ---------- Open house banner, first thing a QR scanner sees ----------
            pt-24 clears the fixed 80px site header, which otherwise sits on top
            of this band and hides the directions button. */}
       <section className="bg-accent text-primary pt-24">
@@ -322,7 +322,7 @@ export default function CypressParkListingPage() {
             <div className="space-y-4 font-body text-base leading-relaxed text-body">
               <p>
                 This one sits at the end of a quiet cul-de-sac, which is the part you feel before
-                you ever walk inside — no through traffic, no headlights sweeping the front window.
+                you ever walk inside, no through traffic, no headlights sweeping the front window.
                 Homes in this pocket of Carrollwood rarely come up. Inside, {L.sqft.toLocaleString()}{" "}
                 square feet opens up with hardwood floors, tall ceilings, and plantation shutters on
                 the windows, so you can dial the light exactly where you want it.
@@ -333,7 +333,7 @@ export default function CypressParkListingPage() {
                 whoever is cooking is still part of the conversation. Past it, the split floorplan
                 puts the owners suite on its own side with a walk-in closet, and the two secondary
                 bedrooms on the other. The home office is a fourth room on top of those three
-                bedrooms — open to the floorplan rather than closed off, so it reads as a bright
+                bedrooms, open to the floorplan rather than closed off, so it reads as a bright
                 work space or a den depending on what you need from it.
               </p>
               <p>
@@ -365,7 +365,7 @@ export default function CypressParkListingPage() {
             <div className="space-y-4 font-body text-base leading-relaxed text-body">
               <p>
                 Carrollwood is one of Tampa&rsquo;s original established suburbs, and this address
-                puts you minutes from Carrollwood Village Park just up Casey Road — one of the best
+                puts you minutes from Carrollwood Village Park just up Casey Road, one of the best
                 public parks in the county, with a playground, dog park, skate park, splash area, and
                 an amphitheater that runs events through the cooler months. The Carrollwood Cultural
                 Center sits nearby with classes, galleries, and live performances.
@@ -374,7 +374,7 @@ export default function CypressParkListingPage() {
                 Everyday errands are short: Gunn Highway and Dale Mabry both carry full runs of
                 grocery stores, gyms, and restaurants, with a local brewery scene that has grown
                 steadily in the last few years. Veterans Expressway is the on-ramp that makes the
-                location work — Tampa International is roughly twenty minutes, downtown Tampa about
+                location work, Tampa International is roughly twenty minutes, downtown Tampa about
                 twenty-five, and the Gulf beaches at Clearwater around forty-five. The home is zoned
                 for Gaither High School.
               </p>
@@ -462,14 +462,14 @@ export default function CypressParkListingPage() {
                   {PHONE}
                 </a>
                 <a
-                  href={`mailto:${EMAIL}?subject=${encodeURIComponent(`Showing request — ${FULL_ADDRESS}`)}`}
+                  href={`mailto:${EMAIL}?subject=${encodeURIComponent(`Showing request, ${FULL_ADDRESS}`)}`}
                   className="flex items-center justify-center gap-2 border border-white/40 px-4 py-3 rounded hover:bg-white/10 transition"
                 >
                   <Mail className="h-4 w-4" />
                   Email Barrett
                 </a>
 
-                {/* Save-my-contact QR. Encodes a vCard, not a URL — scanning it
+                {/* Save-my-contact QR. Encodes a vCard, not a URL, scanning it
                     opens the phone's "Add Contact" card directly, so a buyer
                     walking the open house leaves with Barrett already in their
                     phone instead of a business card in a pocket. */}
@@ -491,11 +491,11 @@ export default function CypressParkListingPage() {
                 </div>
 
                 <p className="font-body text-xs text-white/60 mt-4 leading-relaxed">
-                  23+ years of real estate experience. Text or call anytime — I answer my own phone.
+                  23+ years of real estate experience. Text or call anytime, I answer my own phone.
                 </p>
               </div>
 
-              {/* Lender on site — only renders the fields that are filled in */}
+              {/* Lender on site, only renders the fields that are filled in */}
               <div className="bg-surface border border-border rounded p-6">
                 <p className="font-body text-xs uppercase tracking-wide text-muted mb-2">
                   Lender On Site at the Open House
@@ -526,7 +526,7 @@ export default function CypressParkListingPage() {
                   </div>
                 </div>
 
-                {/* Apply QR — the whole point of having him here. A buyer can
+                {/* Apply QR, the whole point of having him here. A buyer can
                     start the application from the living room without typing a
                     URL off a business card. */}
                 {LENDER.applyQr && (
@@ -555,7 +555,7 @@ export default function CypressParkListingPage() {
 
                 <p className="font-body text-sm text-body leading-relaxed mb-4">
                   Get pre-approved on the spot Sunday. Bring your questions on payment, down payment
-                  assistance, and what you actually qualify for — no appointment needed.
+                  assistance, and what you actually qualify for, no appointment needed.
                 </p>
                 {LENDER.phone && (
                   <a
@@ -568,7 +568,7 @@ export default function CypressParkListingPage() {
                 )}
                 {LENDER.email && (
                   <a
-                    href={`mailto:${LENDER.email}?subject=${encodeURIComponent(`Pre-approval question — ${FULL_ADDRESS}`)}`}
+                    href={`mailto:${LENDER.email}?subject=${encodeURIComponent(`Pre-approval question, ${FULL_ADDRESS}`)}`}
                     className="flex items-center justify-center gap-2 border border-border px-4 py-2.5 rounded text-primary hover:bg-white transition"
                   >
                     <Mail className="h-4 w-4" />
@@ -634,7 +634,7 @@ export default function CypressParkListingPage() {
         <div className="max-w-6xl mx-auto px-4">
           <p className="font-body text-xs text-muted leading-relaxed">
             Listing courtesy of REMAX Collective. MLS {L.mls}. Open house hosted by Barrett Henry,
-            Broker Associate, REMAX Collective. Information deemed reliable but not guaranteed —
+            Broker Associate, REMAX Collective. Information deemed reliable but not guaranteed 
             buyer and buyer&rsquo;s agent should independently verify all measurements, lot
             dimensions, flood zone, HOA fees, taxes, and school assignments. Equal Housing
             Opportunity.

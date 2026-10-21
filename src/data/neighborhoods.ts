@@ -217,7 +217,7 @@ export const neighborhoods: NeighborhoodData[] = [
   { slug: "del-webb", name: "Del Webb", city: "sun-city-center" },
   { slug: "freedom-plaza", name: "Freedom Plaza", city: "sun-city-center" },
   { slug: "kings-point", name: "Kings Point", city: "sun-city-center" },
-  // Removed: kings-point-sun-city-center (dup — canonical is kings-point above)
+  // Removed: kings-point-sun-city-center (dup, canonical is kings-point above)
   { slug: "valencia-lakes", name: "Valencia Lakes", city: "sun-city-center" },
   { slug: "arbor-greene", name: "Arbor Greene New Tampa", city: "tampa" },
   { slug: "avila", name: "Avila Tampa", city: "tampa" },
@@ -363,7 +363,7 @@ export const neighborhoods: NeighborhoodData[] = [
   { slug: "camden-oaks", name: "Camden Oaks", city: "valrico" },
   { slug: "camelot", name: "Camelot", city: "valrico" },
   { slug: "campos-valrico", name: "Campos Valrico", city: "valrico" },
-  // Removed: canterbury-oaks-community (dup — canonical is canterbury-oaks below)
+  // Removed: canterbury-oaks-community (dup, canonical is canterbury-oaks below)
   { slug: "carriage-park", name: "Carriage Park", city: "valrico" },
   { slug: "chatford", name: "Chatford", city: "valrico" },
   { slug: "chelsea-woods", name: "Chelsea Woods", city: "valrico" },
@@ -482,7 +482,7 @@ export const neighborhoods: NeighborhoodData[] = [
   { slug: "west-park-village", name: "West Park Village", city: "westchase" },
   { slug: "ayersworth-glen", name: "Ayersworth Glen", city: "wimauma" },
   { slug: "sereno", name: "Sereno", city: "wimauma" },
-  // Removed: southshore-bay "Southshore Bay Wimauma" (dup — canonical is "SouthShore Bay" below)
+  // Removed: southshore-bay "Southshore Bay Wimauma" (dup, canonical is "SouthShore Bay" below)
   { slug: "downtown-winter-haven", name: "Downtown Winter Haven", city: "winter-haven" },
   { slug: "eagle-lake", name: "Eagle Lake", city: "winter-haven" },
   { slug: "lake-ashton", name: "Lake Ashton", city: "winter-haven" },
@@ -502,15 +502,15 @@ export const neighborhoods: NeighborhoodData[] = [
   { slug: "st-pete-beach", name: "St. Pete Beach", city: "st-petersburg" },
   { slug: "starling-fishhawk", name: "Starling at FishHawk", city: "fishhawk" },
   // Removed: fishhawk-ranch, fishhawk-trails, fishhawk-preserve, fishhawk-landing,
-  // fishhawk-ranch-west (dup slugs — canonicals under lithia),
-  // waterset (dup slug — canonical under riverview),
-  // alafia-plantation (dup slug — canonical under lithia)
+  // fishhawk-ranch-west (dup slugs, canonicals under lithia),
+  // waterset (dup slug, canonical under riverview),
+  // alafia-plantation (dup slug, canonical under lithia)
   { slug: "dover-oaks", name: "Dover Oaks", city: "dover" },
   { slug: "dover-estates", name: "Dover Estates", city: "dover" },
   { slug: "turkey-creek-dover", name: "Turkey Creek", city: "dover" },
   { slug: "cork-road-area", name: "Cork Road Area", city: "dover" },
   { slug: "durant-road-dover", name: "Durant Road Area", city: "dover" },
-  // Removed: alafia-river-estates (dup slug — canonical is under riverview)
+  // Removed: alafia-river-estates (dup slug, canonical is under riverview)
   { slug: "gibsonton-drive-area", name: "Gibsonton Drive Area", city: "gibsonton" },
   { slug: "east-bay-gibsonton", name: "East Bay", city: "gibsonton" },
   { slug: "palm-river-gibsonton", name: "Palm River", city: "gibsonton" },

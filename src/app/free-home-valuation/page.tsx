@@ -1,5 +1,5 @@
 // =============================================================================
-// /free-home-valuation — Free CMA / home valuation landing page
+// /free-home-valuation, Free CMA / home valuation landing page
 // Compact hero banner, detailed valuation form up top, then supporting content
 // sections: why online estimates fail, what's included, how it works, why
 // Barrett, and FAQ
@@ -13,14 +13,14 @@ import ValuationForm from "@/components/ui/ValuationForm";
 export const metadata: Metadata = {
   title: "Free Home Valuation Tampa Bay | Barrett Henry, REALTOR",
   description:
-    "Get a free, professional home valuation from Barrett Henry, Broker Associate at REMAX Collective. Accurate CMA — not a Zillow guess. Call (813) 733-7907.",
+    "Get a free, professional home valuation from Barrett Henry, Broker Associate at REMAX Collective. Accurate CMA, not a Zillow guess. Call (813) 733-7907.",
   alternates: {
     canonical: "/free-home-valuation/",
   },
   openGraph: {
     title: "Free Home Valuation | Barrett Henry, Broker Associate",
     description:
-      "Find out what your Tampa Bay home is actually worth with a professional Comparative Market Analysis — free and no obligation.",
+      "Find out what your Tampa Bay home is actually worth with a professional Comparative Market Analysis, free and no obligation.",
     type: "website",
   },
 };
@@ -30,7 +30,7 @@ const cmaIncludes = [
   {
     title: "Recent Comparable Sales",
     description:
-      "Verified closed sales within your neighborhood and price range, pulled directly from Stellar MLS — not scraped from the internet.",
+      "Verified closed sales within your neighborhood and price range, pulled directly from Stellar MLS, not scraped from the internet.",
   },
   {
     title: "Active Competition Analysis",
@@ -60,7 +60,7 @@ const steps = [
     step: 1,
     title: "Fill Out the Form",
     description:
-      "Tell Barrett about your property — address, beds, baths, upgrades, condition. The more detail, the more accurate your valuation.",
+      "Tell Barrett about your property, address, beds, baths, upgrades, condition. The more detail, the more accurate your valuation.",
   },
   {
     step: 2,
@@ -230,7 +230,7 @@ export default function FreeHomeValuationPage() {
         </div>
       </section>
 
-      {/* ---- How It Works — numbered steps ---- */}
+      {/* ---- How It Works, numbered steps ---- */}
       <section className="section-dark">
         <div className="container-wide">
           <div className="text-center mb-16">

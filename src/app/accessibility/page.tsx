@@ -1,5 +1,5 @@
 // =============================================================================
-// /accessibility — Accessibility statement page
+// /accessibility, Accessibility statement page
 // =============================================================================
 
 import type { Metadata } from "next";

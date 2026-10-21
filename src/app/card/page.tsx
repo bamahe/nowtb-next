@@ -1,5 +1,5 @@
 // =============================================================================
-// /card — Barrett Henry's digital business card
+// /card, Barrett Henry's digital business card
 // Professional business card design with headshot, REMAX branding, and contact.
 // Full-screen, mobile-first (max-width 430px). Hides site header/footer.
 // =============================================================================
@@ -10,7 +10,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 // ---------------------------------------------------------------------------
-// vCard download — creates a .vcf and triggers browser download
+// vCard download, creates a .vcf and triggers browser download
 // ---------------------------------------------------------------------------
 function downloadVCard() {
   const vcard = [
@@ -27,7 +27,7 @@ function downloadVCard() {
     "ADR;TYPE=WORK;LABEL=Tampa Office:;;14310 N Dale Mabry Hwy, Ste 100;Tampa;FL;33618;US",
     "ADR;TYPE=WORK;LABEL=Brandon Office:;;417 Lithia Pinecrest Rd;Brandon;FL;33511;US",
     "ADR;TYPE=WORK;LABEL=Largo Office:;;11200 Seminole Blvd, Ste 202 & 204;Largo;FL;33778;US",
-    "NOTE:Your REALTOR® from REMAX Collective — Tampa Bay Real Estate",
+    "NOTE:Your REALTOR® from REMAX Collective, Tampa Bay Real Estate",
     "END:VCARD",
   ].join("\n");
 
@@ -43,12 +43,12 @@ function downloadVCard() {
 }
 
 // ---------------------------------------------------------------------------
-// Web Share API — falls back to clipboard copy
+// Web Share API, falls back to clipboard copy
 // ---------------------------------------------------------------------------
 function shareCard() {
   const shareData = {
-    title: "Barrett Henry — REMAX Collective",
-    text: "Barrett Henry, Broker Associate at REMAX Collective — Tampa Bay real estate.",
+    title: "Barrett Henry, REMAX Collective",
+    text: "Barrett Henry, Broker Associate at REMAX Collective, Tampa Bay real estate.",
     url: "https://nowtb.com/card/",
   };
   if (navigator.share) {
@@ -81,10 +81,10 @@ export default function CardPage() {
       <div className="w-full max-w-[430px] min-h-screen relative overflow-hidden">
 
         {/* ================================================================= */}
-        {/* CARD FRONT — the business card look                               */}
+        {/* CARD FRONT, the business card look */}
         {/* ================================================================= */}
         <div className="relative">
-          {/* Pro headshot — full width, top half of card */}
+          {/* Pro headshot, full width, top half of card */}
           <div className="relative w-full aspect-[4/3] overflow-hidden">
             <Image
               src="/images/barrett-henry-pro.png"
@@ -97,7 +97,7 @@ export default function CardPage() {
             {/* Gradient fade to navy at bottom */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/40 to-transparent" />
 
-            {/* REMAX balloon — top right corner */}
+            {/* REMAX balloon, top right corner */}
             <div className="absolute top-5 right-5">
               <Image
                 src="/images/remax-balloon.png"
@@ -109,7 +109,7 @@ export default function CardPage() {
             </div>
           </div>
 
-          {/* Name and title — overlaid on gradient */}
+          {/* Name and title, overlaid on gradient */}
           <div className="relative -mt-24 px-7 pb-6 z-10">
             <h1 className="text-[34px] font-extrabold text-white tracking-tight leading-tight">
               Barrett Henry
@@ -136,7 +136,7 @@ export default function CardPage() {
         <div className="h-[2px] mx-7 bg-gradient-to-r from-[#DC1C2E] via-[#DC1C2E]/60 to-transparent" />
 
         {/* ================================================================= */}
-        {/* CONTACT INFO — phone, email, website                              */}
+        {/* CONTACT INFO, phone, email, website */}
         {/* ================================================================= */}
         <div className="px-7 py-6">
           {/* Phone */}
@@ -197,7 +197,7 @@ export default function CardPage() {
         </div>
 
         {/* ================================================================= */}
-        {/* CREDENTIALS — trust badges                                        */}
+        {/* CREDENTIALS, trust badges */}
         {/* ================================================================= */}
         <div className="px-7 pb-5">
           <div className="flex flex-wrap gap-2">
@@ -211,7 +211,7 @@ export default function CardPage() {
         </div>
 
         {/* ================================================================= */}
-        {/* ACTION BUTTONS — Save Contact & Share                             */}
+        {/* ACTION BUTTONS, Save Contact & Share */}
         {/* ================================================================= */}
         <div className="px-7 pb-4">
           <button
@@ -241,7 +241,7 @@ export default function CardPage() {
         </div>
 
         {/* ================================================================= */}
-        {/* QUICK LINKS — search homes, valuation, contact                    */}
+        {/* QUICK LINKS, search homes, valuation, contact */}
         {/* ================================================================= */}
         <div className="px-7 py-4">
           <div className="grid grid-cols-3 gap-2.5">

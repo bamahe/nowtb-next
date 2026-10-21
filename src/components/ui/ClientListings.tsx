@@ -1,5 +1,5 @@
 // =============================================================================
-// ClientListings — Fetches and displays listings CLIENT-SIDE with filter bar
+// ClientListings, Fetches and displays listings CLIENT-SIDE with filter bar
 // This prevents server-side API calls from burning through the Bridge rate limit.
 // Pages render their static SEO content server-side, listings load after.
 // =============================================================================
@@ -35,7 +35,7 @@ interface ClientListingsProps {
   areaName?: string;
   /** Show filter bar (default true for hub/spoke, false for homepage) */
   showFilters?: boolean;
-  /** Callback fired when listings load — passes computed market stats */
+  /** Callback fired when listings load, passes computed market stats */
   onStatsReady?: (stats: MarketStats) => void;
 }
 
@@ -87,7 +87,7 @@ export default function ClientListings({
         // Collect ALL open houses per listing, then sort ascending. The Bridge
         // openhouses endpoint returns results in DESCENDING start-time order, so
         // taking whichever record happens to arrive last would surface an
-        // arbitrary slot — including obvious MLS typos (years like 3021, 6202).
+        // arbitrary slot, including obvious MLS typos (years like 3021, 6202).
         const ohMap = new Map<string, { start: string; end: string }[]>();
         for (const oh of (ohData.value || []) as Listing[]) {
           if (oh.ListingKey && oh.OpenHouseStartTime) {
@@ -186,12 +186,12 @@ export default function ClientListings({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           event: "SearchSaved",
-          message: `Saved search: ${areaName || "Tampa Bay"} — ${filterDesc || "all listings"}`,
+          message: `Saved search: ${areaName || "Tampa Bay"}, ${filterDesc || "all listings"}`,
           property: { city: areaName, state: "FL" },
         }),
       });
     } catch {
-      // Non-critical — search is saved locally regardless
+      // Non-critical, search is saved locally regardless
     }
 
     setSearchSaved(true);
@@ -290,11 +290,11 @@ export default function ClientListings({
             </p>
             {/* The year count must never be attached to a place. "23+ years of
                 experience across Tampa Bay" claimed 23 years of Tampa Bay
-                tenure — false, Barrett has been in Florida about a decade. The
+                tenure, false, Barrett has been in Florida about a decade. The
                 23+ figure counts his license, held since September 2003, and is
                 location-independent. Local tenure gets "longtime local" with no
                 number. */}
-            <p className="font-body text-white/70 text-sm mt-1">Barrett Henry — 23+ years of real estate experience, longtime Tampa Bay local.</p>
+            <p className="font-body text-white/70 text-sm mt-1">Barrett Henry, 23+ years of real estate experience, longtime Tampa Bay local.</p>
           </div>
           <div className="flex gap-3 flex-shrink-0">
             <a href="tel:+18137337907" className="inline-block rounded-lg bg-white text-primary px-6 py-3 text-sm font-semibold">

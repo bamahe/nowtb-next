@@ -1,5 +1,5 @@
 // =============================================================================
-// SignOutButton — Client component for signing out via Supabase
+// SignOutButton, Client component for signing out via Supabase
 // Used on the account/dashboard page
 // =============================================================================
 

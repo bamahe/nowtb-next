@@ -1,5 +1,5 @@
 // =============================================================================
-// LoanGuidePage — Loan type information pages
+// LoanGuidePage, Loan type information pages
 // Rendered inside the [citySlug] route for slugs like /fha-loan-florida,
 // /va-loan-florida, /usda-loan-florida, etc. (8 loan type pages)
 // =============================================================================
@@ -32,7 +32,7 @@ interface LoanGuidePageProps {
 // --- The other 7 loan guide pages, for sibling cross-linking ---
 //
 // These slugs are served by src/app/[citySlug]/page.tsx (its LOAN_TYPES array,
-// parseSlug step 2). Keep this list in sync with that one — if a slug here is
+// parseSlug step 2). Keep this list in sync with that one, if a slug here is
 // not in that array, the link is a hard 404.
 //
 // Every href is written with a trailing slash. next.config.mjs sets
@@ -70,7 +70,7 @@ export default function LoanGuidePage({
   const agent = getPrimaryAgent();
 
   // ------------------------------------------------------------------
-  // OUTBOUND LINKS — why this page needed them badly.
+  // OUTBOUND LINKS, why this page needed them badly.
   //
   // These 8 loan guides were a link SINK. They hold roughly 56,858 contextual
   // inbound links between them (/fha-loan-florida/ alone has ~14,165) and
@@ -144,7 +144,7 @@ export default function LoanGuidePage({
            HeroSection takes a `children` slot for CTA buttons (see its props in
            src/components/ui/HeroSection.tsx). This template previously passed
            nothing, so all 8 loan guide pages rendered with no above-the-fold
-           call to action at all — the only phone number was in the final
+           call to action at all, the only phone number was in the final
            section, past ~1,000 words of loan requirements and FAQs.
 
            Note on `hidden md:block`: deliberately NOT used on the phone link.
@@ -156,7 +156,7 @@ export default function LoanGuidePage({
         subtitle={`Everything you need to know about using a ${loanType} to buy a home in Florida. Expert guidance from Barrett Henry, REALTOR® at REMAX Collective.`}
       >
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
-          {/* tel: hrefs must be bare digits — the stripping regex turns
+          {/* tel: hrefs must be bare digits, the stripping regex turns
               "(813) 733-7907" into "8137337907". Spaces and parens in a tel:
               href stop iOS/Android recognising it as a number. The readable
               formatting stays in the link text. */}
@@ -298,7 +298,7 @@ export default function LoanGuidePage({
         </>
       )}
 
-      {/* === Next steps — contextual outbound links ===
+      {/* === Next steps, contextual outbound links ===
            Placed straight after the benefits, which is where a reader has
            decided this program might fit and wants to do something about it.
            Keyword anchors only, never "click here". */}
@@ -349,7 +349,7 @@ export default function LoanGuidePage({
           </p>
         </div>
 
-        {/* Sibling loan guides — the comparison journey.
+        {/* Sibling loan guides, the comparison journey.
             Capped at 4 (plus the 3 market links below) so this stays a useful
             related-links block rather than the 15-link spam pattern. */}
         <h3 className="font-heading font-bold text-lg text-primary mt-10 mb-4">
@@ -367,7 +367,7 @@ export default function LoanGuidePage({
           ))}
         </div>
 
-        {/* Where this financing actually gets used — hands some of this page's
+        {/* Where this financing actually gets used, hands some of this page's
             considerable inbound authority down to the city spoke pages. */}
         <h3 className="font-heading font-bold text-lg text-primary mt-8 mb-4">
           Where Buyers Use a {loanType} in Tampa Bay
@@ -405,7 +405,7 @@ export default function LoanGuidePage({
         </section>
       )}
 
-      {/* === CTA — Contact Barrett === */}
+      {/* === CTA, Contact Barrett === */}
       <section className="bg-gray-50 py-16">
         <div className="container-wide max-w-2xl">
           <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2 text-center">

@@ -4,7 +4,7 @@
 // WHAT THIS PAGE IS: the seller closing-cost page for Hillsborough County.
 // It exists because nowtb.com had nothing matching "cost to sell a house" and
 // cash-buyer sites owned the query. The thing that wins here is NOT word count
-// — it is itemized dollar figures tied to a statute or a promulgated rate.
+//, it is itemized dollar figures tied to a statute or a promulgated rate.
 //
 // WHY COUNTY-LEVEL: a competitor outranks a more thorough statewide page simply
 // because its page says "Hillsborough" and ours said "Florida." Specificity is
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
 };
 
 // =============================================================================
-// RATES — the only hand-entered numbers in this file. Everything else is math.
+// RATES, the only hand-entered numbers in this file. Everything else is math.
 // =============================================================================
 const RATES = {
   /** Fla. Stat. 201.02(1)(a): 70 cents per $100 "or portion thereof" of
@@ -155,7 +155,7 @@ const costLines = [
     item: "Documentary stamp tax on the deed",
     amount: `${RATES.DOC_STAMP_PER_100.toFixed(2)} per $100 of price`,
     setBy: "Fla. Stat. 201.02(1)(a)",
-    negotiable: "No — it is a tax. Who pays it is contractual.",
+    negotiable: "No, it is a tax. Who pays it is contractual.",
   },
   {
     item: "Owner's title insurance policy",
@@ -167,7 +167,7 @@ const costLines = [
     item: "Title search and closing (settlement) fee",
     amount: "Roughly $350 to $900, varies by closing agent",
     setBy: "The title company or closing attorney",
-    negotiable: "Yes — shop it",
+    negotiable: "Yes, shop it",
   },
   {
     item: "Municipal lien / estoppel search",
@@ -185,7 +185,7 @@ const costLines = [
   },
   {
     item: "HOA or condo estoppel certificate",
-    amount: `Capped — ${usd(RATES.ESTOPPEL_BASE_CAP)} base, plus up to ${usd(
+    amount: `Capped, ${usd(RATES.ESTOPPEL_BASE_CAP)} base, plus up to ${usd(
       RATES.ESTOPPEL_EXPEDITED_ADDITIONAL
     )} expedited`,
     setBy: "Fla. Stat. 720.30851(6) / 718.116(8)",
@@ -193,13 +193,13 @@ const costLines = [
   },
   {
     item: "Prorated property taxes",
-    amount: "Your actual annual bill, divided by day — see below",
+    amount: "Your actual annual bill, divided by day, see below",
     setBy: "Fla. Stat. 197.162 and your closing agent",
     negotiable: "No, but it is calculable",
   },
   {
     item: "Repairs or repair credits after inspection",
-    amount: "Varies entirely — $0 on some sales, five figures on others",
+    amount: "Varies entirely, $0 on some sales, five figures on others",
     setBy: "Negotiated after the inspection period",
     negotiable: "Yes",
   },
@@ -246,12 +246,12 @@ const faqs: Faq[] = [
   {
     question: "Who pays for title insurance in Hillsborough County?",
     answer:
-      "In Hillsborough County the seller customarily pays for the owner's title insurance policy and generally selects the closing agent. That is a county custom, not a statute — nothing in the Florida Statutes says who must pay, and the purchase contract can assign it either way. The custom differs elsewhere in the state: Sarasota County, for example, customarily puts the owner's policy on the buyer. The premium itself is identical at every underwriter because Florida promulgates title rates by rule.",
+      "In Hillsborough County the seller customarily pays for the owner's title insurance policy and generally selects the closing agent. That is a county custom, not a statute, nothing in the Florida Statutes says who must pay, and the purchase contract can assign it either way. The custom differs elsewhere in the state: Sarasota County, for example, customarily puts the owner's policy on the buyer. The premium itself is identical at every underwriter because Florida promulgates title rates by rule.",
   },
   {
     question: "How are Florida property taxes prorated when I sell?",
     answer:
-      "Florida property taxes are assessed as of January 1 and cover that calendar year, but they are paid in arrears — the bill does not go out until on or about November 1. So at closing the seller is debited for January 1 through the day before closing and the buyer takes it from there. If you close before the current bill exists, the closing agent estimates from the prior year's bill, and Standard K of the FAR/BAR AS IS contract lets either party demand a re-proration once the real bill arrives. Florida Statute 197.162 also gives a 4 percent discount for paying in November, so ask your closing agent whether your estimate used the gross or the discounted figure.",
+      "Florida property taxes are assessed as of January 1 and cover that calendar year, but they are paid in arrears, the bill does not go out until on or about November 1. So at closing the seller is debited for January 1 through the day before closing and the buyer takes it from there. If you close before the current bill exists, the closing agent estimates from the prior year's bill, and Standard K of the FAR/BAR AS IS contract lets either party demand a re-proration once the real bill arrives. Florida Statute 197.162 also gives a 4 percent discount for paying in November, so ask your closing agent whether your estimate used the gross or the discounted figure.",
   },
   {
     question: "Can an HOA charge me whatever it wants for an estoppel letter?",
@@ -262,27 +262,27 @@ const faqs: Faq[] = [
 
 const sources: Source[] = [
   {
-    name: "Florida Statute 201.02(1)(a) and 201.031 — Documentary Stamp Tax",
+    name: "Florida Statute 201.02(1)(a) and 201.031, Documentary Stamp Tax",
     used: "The 70 cents per $100 deed rate used in every table on this page, and the Miami-Dade exception.",
     href: "https://floridarevenue.com/taxes/taxesfees/pages/doc_stamp.aspx",
   },
   {
-    name: "Florida Administrative Code R. 69O-186.003 — Title Insurance Rates",
+    name: "Florida Administrative Code R. 69O-186.003, Title Insurance Rates",
     used: "The promulgated owner's policy premium brackets ($5.75 per thousand to $100,000, then $5.00 per thousand), the $100 minimum premium, and the $25 minimum simultaneous-issue lender's policy charge.",
     href: "https://www.law.cornell.edu/regulations/florida/Fla-Admin-Code-Ann-R-69O-186-003",
   },
   {
-    name: "Florida Statute 28.24(13) — Clerk's Recording Charges",
+    name: "Florida Statute 28.24(13), Clerk's Recording Charges",
     used: "The $10.00 first page and $8.50 each additional page recording charge for the deed.",
     href: "https://www.flsenate.gov/Laws/Statutes/2026/28.24",
   },
   {
-    name: "Florida Statute 720.30851 — HOA Estoppel Certificates",
+    name: "Florida Statute 720.30851, HOA Estoppel Certificates",
     used: "The $250 base fee cap, the $100 expedited and $150 delinquent additions, the 10-business-day delivery deadline, the 30/35 day validity window, and the five-year CPI adjustment published by DBPR.",
     href: "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799%2F0720%2FSections%2F0720.30851.html",
   },
   {
-    name: "Florida Statute 197.162 — Discounts for Early Payment of Taxes",
+    name: "Florida Statute 197.162, Discounts for Early Payment of Taxes",
     used: "The 4 percent November, 3 percent December, 2 percent January and 1 percent February discount schedule referenced in the proration section.",
     href: "https://www.flsenate.gov/Laws/Statutes/2026/197.162",
   },
@@ -342,7 +342,7 @@ export default function CostToSellHillsboroughPage() {
             <p>
               Selling a {usd(EXAMPLE_PRICE)} house in Hillsborough County costs
               about <strong>{usd(EX_FIXED_TOTAL)} in charges that are fixed by
-              statute or by promulgated rate</strong> — {usd(EX_DOC_STAMPS)} in
+              statute or by promulgated rate</strong> {usd(EX_DOC_STAMPS)} in
               documentary stamp tax on the deed, {usd(EX_TITLE)} for the owner&apos;s
               title insurance policy, and {usdCents(EX_RECORDING)} to record a
               two-page deed. Add a closing agent&apos;s settlement fee and a
@@ -478,13 +478,13 @@ export default function CostToSellHillsboroughPage() {
             portion thereof,&rdquo; so a $400,050 contract is taxed on 4,001
             increments, not 4,000.5. Second, when a buyer is financing, a
             lender&apos;s policy issued at the same time as the owner&apos;s
-            policy costs a minimum of $25 rather than a second full premium —
+            policy costs a minimum of $25 rather than a second full premium 
             that simultaneous-issue rate is in the same rule.
           </p>
         </div>
       </section>
 
-      {/* === Property tax proration — the differentiator === */}
+      {/* === Property tax proration, the differentiator === */}
       <section className="container-wide py-16">
         <div className="max-w-3xl mx-auto">
           <h2 className="heading-section text-display-sm text-primary mb-3">
@@ -492,7 +492,7 @@ export default function CostToSellHillsboroughPage() {
           </h2>
           <p className="font-body text-dark mb-4 leading-relaxed">
             Florida real property taxes are assessed as of January 1 and cover
-            that calendar year, but you pay them <strong>in arrears</strong> —
+            that calendar year, but you pay them <strong>in arrears</strong> 
             the Tax Collector&apos;s bill does not go out until on or about
             November 1 for a year that is already almost over. That one fact
             drives the whole proration, and it is where most sellers get
@@ -505,8 +505,8 @@ export default function CostToSellHillsboroughPage() {
             from the prior year&apos;s bill. Standard K of the FAR/BAR AS IS
             Residential Contract then lets either party demand a re-proration
             once the real bill shows up, and that provision survives closing. If
-            your assessment jumped — new construction, a lost homestead cap, a
-            big reassessment after a sale — that survival clause is the thing
+            your assessment jumped, new construction, a lost homestead cap, a
+            big reassessment after a sale, that survival clause is the thing
             that protects you, and it is worth asking your closing agent to walk
             you through it in writing.
           </p>
@@ -531,7 +531,7 @@ export default function CostToSellHillsboroughPage() {
             which special districts your parcel sits in, and a number that is
             wrong by two mills is worse than no number at all. Pull your actual
             annual tax amount off your most recent Hillsborough County Tax
-            Collector bill — that is the figure your proration will be built
+            Collector bill, that is the figure your proration will be built
             from, and it is the only one that matters.
           </p>
         </div>
@@ -616,7 +616,7 @@ export default function CostToSellHillsboroughPage() {
                     Settlement fee + municipal lien search
                   </td>
                   <td className="font-body text-dark py-3 pr-4 text-sm whitespace-nowrap">
-                    {usd(EX_SERVICE_LOW)}&ndash;{usd(EX_SERVICE_HIGH)}
+                    {usd(EX_SERVICE_LOW)}, {usd(EX_SERVICE_HIGH)}
                   </td>
                   <td className="font-body text-muted py-3 text-sm">
                     Set by the closing agent. Shop this.
@@ -639,7 +639,7 @@ export default function CostToSellHillsboroughPage() {
                     HOA or condo estoppel
                   </td>
                   <td className="font-body text-dark py-3 pr-4 text-sm whitespace-nowrap">
-                    $0&ndash;{usd(RATES.ESTOPPEL_BASE_CAP)}+
+                    $0, {usd(RATES.ESTOPPEL_BASE_CAP)}+
                   </td>
                   <td className="font-body text-muted py-3 text-sm">
                     $0 with no association; statutory cap applies if you have one
@@ -673,7 +673,7 @@ export default function CostToSellHillsboroughPage() {
                     Running total before taxes, HOA, repairs and compensation
                   </td>
                   <td className="font-body text-primary font-bold py-3 pr-4 text-sm whitespace-nowrap">
-                    {usd(EX_FIXED_TOTAL + EX_SERVICE_LOW)}&ndash;
+                    {usd(EX_FIXED_TOTAL + EX_SERVICE_LOW)}
                     {usd(EX_FIXED_TOTAL + EX_SERVICE_HIGH)}
                   </td>
                   <td className="font-body text-muted py-3 text-sm">
@@ -681,7 +681,7 @@ export default function CostToSellHillsboroughPage() {
                       ((EX_FIXED_TOTAL + EX_SERVICE_LOW) / EXAMPLE_PRICE) *
                       100
                     ).toFixed(2)}
-                    &ndash;
+                    
                     {(
                       ((EX_FIXED_TOTAL + EX_SERVICE_HIGH) / EXAMPLE_PRICE) *
                       100

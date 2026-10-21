@@ -1,5 +1,5 @@
 // =============================================================================
-// Footer — Refined, minimal luxury footer
+// Footer, Refined, minimal luxury footer
 // Server component
 // Centered layout, generous whitespace, restrained typography
 // =============================================================================
@@ -12,7 +12,7 @@ import Link from "next/link";
 //
 // WHY: next.config.mjs sets `trailingSlash: true`. With that flag on, the
 // canonical form of every URL on this site is "/buyers/", and a request for
-// "/buyers" (no slash) is answered with a 308 redirect to "/buyers/" — it is
+// "/buyers" (no slash) is answered with a 308 redirect to "/buyers/", it is
 // never served directly. This footer renders on all ~6,657 pages, so a single
 // slash-less href here is not one wasted redirect, it is ~6,657 of them. The
 // 36 links below were all missing the slash, which the Oct 2026 link audit
@@ -40,7 +40,7 @@ const FOOTER_COLUMNS = [
       // that volume reads as manipulation rather than as a helpful link.
       { href: "/mortgage-calculator/", label: "Estimate a Mortgage Payment" },
       { href: "/open-houses/", label: "Open Houses" },
-      // Linked at its canonical /guides/ path, not the root slug — see the
+      // Linked at its canonical /guides/ path, not the root slug, see the
       // "still 301s" note above.
       { href: "/guides/first-time-home-buyer-guide/", label: "First-Time Buyers" },
       { href: "/fha-loan-florida/", label: "FHA Loans" },
@@ -102,12 +102,12 @@ const FOOTER_COLUMNS = [
 export default function Footer() {
   return (
     <footer className="bg-primary text-white font-body">
-      {/* ── Main footer content — centered, generous vertical padding ── */}
+      {/* ── Main footer content, centered, generous vertical padding ── */}
       <div className="container-wide py-24 text-center">
         {/* Accent divider */}
         <div className="section-divider" />
 
-        {/* Phone number — prominent, larger than email */}
+        {/* Phone number, prominent, larger than email */}
         <a
           href="tel:+18137337907"
           className="block font-heading font-extralight text-xl md:text-2xl tracking-wide text-white/70
@@ -116,7 +116,7 @@ export default function Footer() {
           (813) 733-7907
         </a>
 
-        {/* Email — smaller, muted */}
+        {/* Email, smaller, muted */}
         <a
           href="mailto:barrett@nowtb.com"
           className="block text-xs tracking-[0.15em] uppercase text-white/40
@@ -125,11 +125,11 @@ export default function Footer() {
           barrett@nowtb.com
         </a>
 
-        {/* Nav links — organized into themed columns */}
+        {/* Nav links, organized into themed columns */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-left mb-16">
           {FOOTER_COLUMNS.map((column) => (
             <div key={column.title}>
-              {/* p tag for column header — NOT h2/h3, footer headings waste SEO hierarchy */}
+              {/* p tag for column header, NOT h2/h3, footer headings waste SEO hierarchy */}
               <p className="text-xs tracking-[0.2em] uppercase text-white/80 font-semibold mb-4">
                 {column.title}
               </p>
@@ -164,7 +164,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* ── Bottom bar — copyright, license, MLS/IDX disclaimer ── */}
+      {/* ── Bottom bar, copyright, license, MLS/IDX disclaimer ── */}
       <div className="border-t border-white/5">
         <div className="container-wide py-8 text-center space-y-4">
           {/* Copyright + license */}
@@ -178,7 +178,7 @@ export default function Footer() {
             REMAX Collective &nbsp;|&nbsp; 14310 N. Dale Mabry Hwy, Ste 100, Tampa, FL 33618
           </p>
 
-          {/* MLS/IDX disclaimer — required by MFRMLS/Stellar MLS */}
+          {/* MLS/IDX disclaimer, required by MFRMLS/Stellar MLS */}
           <div className="text-[10px] text-white/30 leading-relaxed max-w-3xl mx-auto space-y-3">
             <p>
               Copyright © MFRMLS.com. All information deemed reliable but not guaranteed.

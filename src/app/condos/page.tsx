@@ -1,4 +1,4 @@
-// /condos — Tampa Bay Condos for Sale
+// /condos, Tampa Bay Condos for Sale
 
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -12,11 +12,11 @@ import type { Listing } from "@/lib/types";
 export const metadata: Metadata = {
   title: "Tampa Bay Condos for Sale | Barrett Henry, REALTOR®",
   description:
-    "Condos for sale in Tampa Bay — downtown Tampa, Clearwater Beach, St. Pete, and more. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
+    "Condos for sale in Tampa Bay, downtown Tampa, Clearwater Beach, St. Pete, and more. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
   alternates: { canonical: "/condos/" },
   openGraph: {
     title: "Tampa Bay Condos for Sale | Barrett Henry, REALTOR®",
-    description: "Condos for sale in Tampa Bay — downtown Tampa, Clearwater Beach, St. Pete, and more. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
+    description: "Condos for sale in Tampa Bay, downtown Tampa, Clearwater Beach, St. Pete, and more. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
     type: "website",
   },
 };
@@ -37,7 +37,7 @@ export default async function CondosPage() {
         { name: "Condos", url: "https://nowtb.com/condos/" },
       ])} />
 
-      <HeroSection label="Tampa Bay Real Estate" title="Condos for Sale" subtitle="Condominiums across Tampa Bay — downtown high-rises, beach condos, and suburban complexes. From $150K to $2M+.">
+      <HeroSection label="Tampa Bay Real Estate" title="Condos for Sale" subtitle="Condominiums across Tampa Bay, downtown high-rises, beach condos, and suburban complexes. From $150K to $2M+.">
         <SearchBar />
       </HeroSection>
 

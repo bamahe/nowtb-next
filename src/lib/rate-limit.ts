@@ -1,5 +1,5 @@
 // =============================================================================
-// Rate Limiting — caps how often one IP address can submit a form
+// Rate Limiting, caps how often one IP address can submit a form
 //
 // WHY: even with Turnstile and validation, a determined bot can grind away at
 // a form. Rate limiting stops the volume, which is what actually damages our
@@ -13,7 +13,7 @@
 // This is per-server-instance memory. Vercel may run several instances of the
 // function at once, so the real-world limit is roughly (limit x instances).
 // That's fine for stopping spam floods. If you ever need exact global limits,
-// swap this for Upstash Redis (@upstash/ratelimit) — same function signature.
+// swap this for Upstash Redis (@upstash/ratelimit), same function signature.
 // Memory is NOT shared between instances and resets on redeploy; that's OK
 // because the window here is only minutes long.
 // =============================================================================
@@ -36,7 +36,7 @@ export interface RateLimitResult {
 /**
  * Checks and records one request against the limit.
  *
- * @param key       identifier to limit on — normally the client IP
+ * @param key identifier to limit on, normally the client IP
  * @param limit     max requests allowed inside the window
  * @param windowMs  size of the rolling window, in milliseconds
  */
@@ -50,7 +50,7 @@ export function rateLimit(
 
   // Housekeeping: if we're tracking too many keys, drop the ones that are
   // fully expired. Cheap way to keep memory bounded.
-  // (forEach rather than for...of — this project's TS target predates
+  // (forEach rather than for...of, this project's TS target predates
   // downlevel Map iteration.)
   if (hits.size > MAX_TRACKED_KEYS) {
     const expired: string[] = [];
@@ -72,7 +72,7 @@ export function rateLimit(
     return { ok: false, remaining: 0, retryAfter };
   }
 
-  // Under the limit — record this request and allow it.
+  // Under the limit, record this request and allow it.
   recent.push(now);
   hits.set(key, recent);
   return { ok: true, remaining: limit - recent.length, retryAfter: 0 };

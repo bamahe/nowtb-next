@@ -1,5 +1,5 @@
 // =============================================================================
-// /open-houses — Open Houses in Tampa Bay
+// /open-houses, Open Houses in Tampa Bay
 // Full content page with open house guide for buyers and sellers,
 // tips, virtual tour info, and live listing grid from Bridge API.
 // Luxury minimalist design: alternating sections, accent dividers.
@@ -12,7 +12,7 @@ import ListingGrid from "@/components/ui/ListingGrid";
 import ContactForm from "@/components/ui/ContactForm";
 import { getOpenHouses } from "@/lib/bridge";
 
-// Force dynamic rendering — open houses must fetch live data, not build-time cache.
+// Force dynamic rendering, open houses must fetch live data, not build-time cache.
 // Build-time renders return [] because IS_BUILD_TIME skips API calls.
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -39,7 +39,7 @@ const buyerTips = [
     step: 1,
     title: "Arrive Early and Take Your Time",
     description:
-      "The first few minutes of an open house are the least crowded. Walk through every room, open closets, check water pressure, and test light switches. Don't rush — this is a major purchase.",
+      "The first few minutes of an open house are the least crowded. Walk through every room, open closets, check water pressure, and test light switches. Don't rush, this is a major purchase.",
   },
   {
     step: 2,
@@ -83,7 +83,7 @@ const sellerBenefits = [
   {
     title: "Real-Time Buyer Feedback",
     description:
-      "I collect feedback from every visitor — what they loved, what gave them pause, and how your home compares to others they've seen. This data helps us fine-tune pricing and presentation.",
+      "I collect feedback from every visitor, what they loved, what gave them pause, and how your home compares to others they've seen. This data helps us fine-tune pricing and presentation.",
   },
   {
     title: "Professional Presentation",
@@ -142,7 +142,7 @@ export default async function OpenHousesPage() {
         subtitle="Walk through homes in person, ask questions on the spot, and get a real feel for the space. Updated daily from Stellar MLS."
       />
 
-      {/* ---- What to Expect — white background ---- */}
+      {/* ---- What to Expect, white background ---- */}
       <section className="section-white">
         <div className="container-wide">
           <div className="text-center mb-16">
@@ -155,8 +155,8 @@ export default async function OpenHousesPage() {
 
           <div className="max-w-3xl mx-auto">
             <p className="font-body text-muted font-light text-base md:text-lg leading-relaxed mb-6">
-              An open house is a scheduled window — usually on a Saturday or
-              Sunday afternoon — when a listed home is open for anyone to walk
+              An open house is a scheduled window, usually on a Saturday or
+              Sunday afternoon, when a listed home is open for anyone to walk
               through without an appointment. You sign in at the door, grab a
               property flyer, and tour the home at your own pace.
             </p>
@@ -171,13 +171,13 @@ export default async function OpenHousesPage() {
               In Tampa Bay, open houses are most common on weekends between
               12:00 PM and 4:00 PM, though some agents schedule Thursday and
               Friday twilight events as well. Check the listings below for
-              exact dates and times — schedules change weekly.
+              exact dates and times, schedules change weekly.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ---- Buyer Tips — warm cream bg, numbered steps ---- */}
+      {/* ---- Buyer Tips, warm cream bg, numbered steps ---- */}
       <section className="section-light">
         <div className="container-wide">
           <div className="text-center mb-16">
@@ -192,7 +192,7 @@ export default async function OpenHousesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
             {buyerTips.map((tip) => (
               <div key={tip.step} className="flex gap-6">
-                {/* Large step number — ultra-light weight */}
+                {/* Large step number, ultra-light weight */}
                 <div className="flex-shrink-0">
                   <span className="font-heading text-5xl font-extralight text-accent/40 leading-none">
                     {String(tip.step).padStart(2, "0")}
@@ -217,7 +217,7 @@ export default async function OpenHousesPage() {
         <ListingGrid
           listings={listings}
           title="Upcoming Open Houses"
-          subtitle="Homes with open houses scheduled in the next 7 days — pulled live from Stellar MLS"
+          subtitle="Homes with open houses scheduled in the next 7 days, pulled live from Stellar MLS"
         />
       ) : (
         /* ---- No Open Houses Fallback ---- */
@@ -228,7 +228,7 @@ export default async function OpenHousesPage() {
             </h2>
             <p className="font-body text-muted text-lg max-w-2xl mx-auto mb-8">
               There are no open houses listed in Tampa Bay for the next 7 days.
-              New open houses are added throughout the week — check back soon, or
+              New open houses are added throughout the week, check back soon, or
               browse all available listings.
             </p>
             <Link href="/properties/" className="btn-primary inline-block">
@@ -238,7 +238,7 @@ export default async function OpenHousesPage() {
         </section>
       )}
 
-      {/* ---- Seller Benefits — white bg, 3-column cards ---- */}
+      {/* ---- Seller Benefits, white bg, 3-column cards ---- */}
       <section className="section-white">
         <div className="container-wide">
           <div className="text-center mb-16">
@@ -268,7 +268,7 @@ export default async function OpenHousesPage() {
             <p className="font-body text-muted font-light text-base md:text-lg leading-relaxed">
               If you are thinking about selling, an open house is one of the
               most effective tools in the marketing plan. I coordinate
-              everything — from timing and promotion to follow-up with every
+              everything, from timing and promotion to follow-up with every
               visitor who walked through the door. The goal is simple: get your
               home in front of as many qualified buyers as possible, as fast as
               possible.
@@ -277,7 +277,7 @@ export default async function OpenHousesPage() {
         </div>
       </section>
 
-      {/* ---- Virtual Tours — dark navy ---- */}
+      {/* ---- Virtual Tours, dark navy ---- */}
       <section className="section-dark">
         <div className="container-wide text-center">
           <p className="heading-label text-white/50 mb-6">Tour From Anywhere</p>
@@ -288,7 +288,7 @@ export default async function OpenHousesPage() {
           <p className="font-body text-white/70 font-light text-base md:text-lg max-w-2xl mx-auto mb-6">
             Can&apos;t attend in person? Many of our listings include 3D
             Matterport tours, HD video walkthroughs, and interactive floor
-            plans. Browse the home room by room from your phone or laptop — no
+            plans. Browse the home room by room from your phone or laptop, no
             appointment needed.
           </p>
           <p className="font-body text-white/70 font-light text-base md:text-lg max-w-2xl mx-auto mb-10">
@@ -303,7 +303,7 @@ export default async function OpenHousesPage() {
         </div>
       </section>
 
-      {/* ---- Private Showing CTA — warm cream bg ---- */}
+      {/* ---- Private Showing CTA, warm cream bg ---- */}
       <section className="section-light">
         <div className="container-wide text-center">
           <p className="heading-label mb-6">Private Showing</p>
@@ -313,7 +313,7 @@ export default async function OpenHousesPage() {
           <div className="section-divider" />
           <p className="font-body text-muted font-light text-base md:text-lg max-w-2xl mx-auto mb-10">
             Open houses don&apos;t always line up with your calendar. I
-            schedule private showings seven days a week — mornings, evenings,
+            schedule private showings seven days a week, mornings, evenings,
             and weekends. Call me directly or fill out the form below and
             I&apos;ll get back to you within two hours.
           </p>
@@ -328,7 +328,7 @@ export default async function OpenHousesPage() {
         </div>
       </section>
 
-      {/* ---- Contact Form — white bg ---- */}
+      {/* ---- Contact Form, white bg ---- */}
       <section className="section-white">
         <div className="container-wide max-w-xl mx-auto">
           <ContactForm

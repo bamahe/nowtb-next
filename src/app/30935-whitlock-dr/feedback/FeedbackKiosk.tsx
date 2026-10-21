@@ -1,9 +1,9 @@
 "use client";
 
 // =============================================================================
-// FeedbackKiosk — the "on your way out" survey.
+// FeedbackKiosk, the "on your way out" survey.
 //
-// The point is NOT the data alone — it is to slow the visitor down. A buyer who
+// The point is NOT the data alone, it is to slow the visitor down. A buyer who
 // walks a house in ninety seconds never forms an opinion worth acting on. The
 // room-by-room question forces them to mentally walk back through the home one
 // space at a time, which is where attachment actually happens. Everything else
@@ -11,7 +11,7 @@
 //
 // Posts to /api/contact (same pipe as every other form, so it lands in FUB) and
 // resets itself for the next guest. `type: "open-house-feedback"` is what tells
-// the API to skip Turnstile and lead validation — do not change it.
+// the API to skip Turnstile and lead validation, do not change it.
 // =============================================================================
 
 import { useState, useEffect, useRef, type FormEvent } from "react";
@@ -20,12 +20,12 @@ import { Check, Loader2 } from "lucide-react";
 const ADDRESS = "30935 Whitlock Dr";
 const CITY_LINE = "Wesley Chapel, FL 33543";
 
-// Lender working the open house — tagged onto every lead for later filtering.
+// Lender working the open house, tagged onto every lead for later filtering.
 // Leave empty when nobody is confirmed.
 const LENDER_NAME = "";
 
 // The deliberate slow-down. Listing the rooms out makes them replay the walk-
-// through instead of answering "it was nice" — and multi-select means they
+// through instead of answering "it was nice", and multi-select means they
 // linger over more than one space.
 const ROOM_OPTIONS = [
   "The kitchen",
@@ -43,7 +43,7 @@ const IMPRESSION_OPTIONS = ["Loved it", "Liked it", "It's just okay", "Not for m
 const PRICE_OPTIONS = ["Great value", "Priced about right", "A little high", "Too high"];
 const NEXT_STEP_OPTIONS = [
   "I want to see it again",
-  "I'm interested — call me",
+  "I'm interested, call me",
   "Send me similar homes",
   "Just looking today",
 ];
@@ -87,9 +87,9 @@ export default function FeedbackKiosk() {
     setStatus("sending");
 
     // Folded into the message body so it reaches Follow Up Boss without needing
-    // new API fields — and so it can be pasted straight into a seller report.
+    // new API fields, and so it can be pasted straight into a seller report.
     const message = [
-      `OPEN HOUSE FEEDBACK — ${ADDRESS}`,
+      `OPEN HOUSE FEEDBACK, ${ADDRESS}`,
       impression && `Overall: ${impression}`,
       price && `Price opinion: ${price}`,
       rooms.length > 0 && `Favorite spaces: ${rooms.join(", ")}`,
@@ -110,7 +110,7 @@ export default function FeedbackKiosk() {
           // Tagged onto the FUB contact. The address and today's date are added
           // server-side, so this only carries who was on site.
           extraTags: [LENDER_NAME].filter(Boolean),
-          // Hidden field — invisible to a guest, but scripts fill every input
+          // Hidden field, invisible to a guest, but scripts fill every input
           // they find. Anything in here means the submission is a bot.
           honeypot: hp,
           property: {
@@ -122,7 +122,7 @@ export default function FeedbackKiosk() {
         }),
       });
     } catch {
-      // Never show an error at an open house — a failed POST must not stop the
+      // Never show an error at an open house, a failed POST must not stop the
       // line at the door. The guest still sees the thank-you.
     }
     setStatus("done");
@@ -140,7 +140,7 @@ export default function FeedbackKiosk() {
             Thank You
           </h1>
           <p className="font-body text-2xl text-white/80">
-            That genuinely helps — I pass every note straight to the seller.
+            That genuinely helps, I pass every note straight to the seller.
           </p>
           <p className="font-body text-lg text-white/50 mt-10">Ready for the next guest…</p>
         </div>
@@ -185,7 +185,7 @@ export default function FeedbackKiosk() {
           onChange={setImpression}
         />
 
-        {/* The slow-down question — multi-select on purpose */}
+        {/* The slow-down question, multi-select on purpose */}
         <MultiChoice
           label="Which spaces stood out? (pick any)"
           options={ROOM_OPTIONS}
@@ -218,7 +218,7 @@ export default function FeedbackKiosk() {
           onChange={setNextStep}
         />
 
-        {/* Name and phone last and optional — asking up front makes people bail */}
+        {/* Name and phone last and optional, asking up front makes people bail */}
         <div className="grid md:grid-cols-2 gap-7">
           <Field label="Your name (optional)">
             <input
@@ -266,7 +266,7 @@ export default function FeedbackKiosk() {
   );
 }
 
-// Oversized inputs — 24px text stops iOS from zooming on focus
+// Oversized inputs, 24px text stops iOS from zooming on focus
 const INPUT =
   "w-full rounded-xl border-2 border-border bg-white px-5 py-5 text-2xl text-primary focus:border-accent focus:outline-none placeholder:text-base placeholder:text-muted";
 
@@ -279,7 +279,7 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
   );
 }
 
-// Big tap-target button group — faster than a dropdown on a touchscreen
+// Big tap-target button group, faster than a dropdown on a touchscreen
 function Choice({
   label, options, value, onChange,
 }: { label: string; options: string[]; value: string; onChange: (v: string) => void }) {

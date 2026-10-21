@@ -56,7 +56,7 @@ export default function GalleryView({
         <p className="font-body text-xs text-muted">
           {loading ? "Searching..." : `${total.toLocaleString()} Properties`}
         </p>
-        {/* Top pagination — only renders if there's more than 1 page */}
+        {/* Top pagination, only renders if there's more than 1 page */}
         <Pagination
           currentPage={currentPage}
           totalResults={total}
@@ -65,7 +65,7 @@ export default function GalleryView({
         />
       </div>
 
-      {/* ── Loading skeleton — 12 placeholder cards ── */}
+      {/* ── Loading skeleton, 12 placeholder cards ── */}
       {loading && (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4">
           {Array.from({ length: 12 }).map((_, i) => (
@@ -81,7 +81,7 @@ export default function GalleryView({
         </div>
       )}
 
-      {/* ── Card grid — rendered when listings are loaded ── */}
+      {/* ── Card grid, rendered when listings are loaded ── */}
       {!loading && listings.length > 0 && (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4">
           {listings.map((listing) => (
@@ -90,7 +90,7 @@ export default function GalleryView({
         </div>
       )}
 
-      {/* ── Empty state — no results for current filters ── */}
+      {/* ── Empty state, no results for current filters ── */}
       {!loading && listings.length === 0 && (
         <div className="p-12 text-center">
           <p className="font-heading text-xl text-primary mb-2">No Properties Found</p>

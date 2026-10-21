@@ -18,26 +18,26 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GA_MEASUREMENT_ID, isGaConfigured } from "@/lib/analytics";
 
 // =============================================================================
-// THE SITE-WIDE Z-INDEX SCALE — read this before adding any fixed/sticky thing
+// THE SITE-WIDE Z-INDEX SCALE, read this before adding any fixed/sticky thing
 // =============================================================================
 // "z-index" is just stacking order: when two things overlap on screen, the
-// higher number wins and sits on top. The numbers mean nothing on their own —
+// higher number wins and sits on top. The numbers mean nothing on their own 
 // only their order relative to each other matters.
 //
 // This site had three different people pick numbers independently, and the
 // result was the cookie banner (z-90) sitting on top of the chat bubble (z-50)
 // and the back-to-top button (z-40) for every single first-time mobile
-// visitor — burying the exact buttons we want them to press.
+// visitor, burying the exact buttons we want them to press.
 //
 // ONE SCALE. If you add a floating element, pick a tier from this list; do not
 // invent a number:
 //
-//   10–30  In-page sticky bars (property search filters, table headers, etc.)
+// 10 to 30 In-page sticky bars (property search filters, table headers, etc.)
 //          MUST stay at or below 30 so they slide UNDER the fixed site header.
 //   40     BackToTop ................... src/components/ui/BackToTop.tsx
 //   45     Chat bubble + its tooltip ... src/components/ui/ChatWidget.tsx
 //   50     MobileBottomBar ............. src/components/ui/MobileBottomBar.tsx
-//          (above the chat bubble on purpose — the Call button is the single
+// (above the chat bubble on purpose, the Call button is the single
 //           most valuable thing on a phone screen and must never be covered)
 //   60     Header bar .................. src/components/layout/Header.tsx
 //   65     Header mega-menu panels ..... src/components/layout/Header.tsx
@@ -46,10 +46,10 @@ import { GA_MEASUREMENT_ID, isGaConfigured } from "@/lib/analytics";
 //          (a dialog the visitor deliberately opened outranks the banner)
 //   9999   Skip-to-content link (below, keyboard users only)
 //   10000  MobileNav full-screen overlay / its hamburger button
-//          ... src/components/layout/MobileNav.tsx — it covers the whole
+// ... src/components/layout/MobileNav.tsx, it covers the whole
 //          viewport by design, so it legitimately sits above everything.
 //
-// SEPARATE FROM Z-INDEX — the cookie banner also physically MOVES the floating
+// SEPARATE FROM Z-INDEX, the cookie banner also physically MOVES the floating
 // buttons rather than just sitting behind them. CookieConsent measures itself
 // and publishes its height as the CSS variable `--cookie-banner-lift` on
 // <html>; BackToTop and the chat bubble add that value to their bottom margin
@@ -69,7 +69,7 @@ import { GA_MEASUREMENT_ID, isGaConfigured } from "@/lib/analytics";
  * search-result limit need to know how many characters the suffix will eat.
  * src/app/[citySlug]/page.tsx did that by hardcoding the old 26-character
  * string. When the suffix was shortened to 16, that copy went stale and the
- * page kept reserving 10 characters that no longer existed — silently dropping
+ * page kept reserving 10 characters that no longer existed, silently dropping
  * the "| Relocation" modifier from 23 city pages where it now fits fine.
  *
  * If it breaks, check: change the suffix HERE and in `template` together, and
@@ -80,7 +80,7 @@ export const TITLE_SUFFIX = " | Barrett Henry";
 /** Characters a page title may use before the suffix pushes it past 60. */
 export const TITLE_BUDGET = 60 - TITLE_SUFFIX.length;
 
-// Heading font — Playfair Display 800 (editorial, elegant)
+// Heading font, Playfair Display 800 (editorial, elegant)
 const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "700", "800"],
@@ -88,7 +88,7 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-// Body font — DM Sans 400/500/600 (clean, modern)
+// Body font, DM Sans 400/500/600 (clean, modern)
 const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -102,26 +102,26 @@ export const metadata: Metadata = {
     // complete title already, so the template below is NOT applied to it.
     default: "Barrett Henry, REALTOR® | Tampa Bay Homes for Sale",
 
-    // ─── THE TITLE SUFFIX — the single highest-leverage string on the site ───
+    // ─── THE TITLE SUFFIX, the single highest-leverage string on the site ───
     // `template` wraps the title of EVERY page that sets a plain string title.
     // Google truncates search-result titles at roughly 60 characters, so this
     // suffix is spent out of the same 60-character budget as the page's actual
     // keyword phrase.
     //
-    // It used to be " | Barrett Henry, REALTOR®" — 26 characters of brand on
+    // It used to be " | Barrett Henry, REALTOR®", 26 characters of brand on
     // every one of ~3,400 pages. Measured across the sitemap that pushed about
     // 75% of all pages past 60 characters (91% of blog posts, 94% of
     // neighborhood pages) and Google was cutting their keywords off mid-phrase.
-    // Critically, ZERO city pages exceeded 60 characters without the suffix —
+    // Critically, ZERO city pages exceeded 60 characters without the suffix 
     // the suffix alone was the entire cause.
     //
-    // Now " | Barrett Henry" — 16 characters, a 10-character saving per page.
+    // Now " | Barrett Henry", 16 characters, a 10-character saving per page.
     // "REALTOR®" was dropped from the suffix on purpose: repeating it 3,400
     // times earns no ranking, and the credential is already stated properly in
     // the Person schema below (jobTitle + hasCredential), which is where search
     // engines and AI answer engines actually read it from.
     //
-    // Barrett's personal name stays — personal brand outranks team brand, and
+    // Barrett's personal name stays, personal brand outranks team brand, and
     // a recognisable name in the result is what earns the click.
     //
     // If it breaks, check: a page that needs to bypass this suffix entirely
@@ -129,7 +129,18 @@ export const metadata: Metadata = {
     // do that today and are unaffected by this change. Pages that budget their
     // own titles around the old 26-character suffix (notably
     // src/app/[citySlug]/page.tsx) now have 10 characters of headroom back.
-    template: "%s | Barrett Henry",
+    // No brand suffix. It was " | Barrett Henry", 18 characters bolted onto
+    // every page title, and it pushed 313 of 531 content pages (58%) past the
+    // 60 character budget so Google truncated them mid-phrase. Brand in the
+    // title is worth less than the keywords it was cutting off.
+    //
+    // Pages that genuinely want a suffix can set it themselves, and pages
+    // using `title: { absolute: "..." }` were never affected either way.
+    //
+    // If it breaks, check: anything that was writing a short title ASSUMING
+    // the suffix would pad it out now renders bare. Run
+    // scripts/page_quality_score.py to see rendered title lengths.
+    template: "%s",
   },
   icons: {
     icon: [
@@ -145,13 +156,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "Barrett Henry, REALTOR® — REMAX Collective",
+    siteName: "Barrett Henry, REALTOR®, REMAX Collective",
     images: [
       {
         url: "/og-default.png",
         width: 1200,
         height: 630,
-        alt: "Barrett Henry, REALTOR® — Tampa Bay Homes for Sale",
+        alt: "Barrett Henry, REALTOR®, Tampa Bay Homes for Sale",
       },
     ],
   },
@@ -159,24 +170,24 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: ["/og-default.png"],
   },
-  // NO `alternates.canonical` HERE — ON PURPOSE. DO NOT ADD IT BACK.
+  // NO `alternates.canonical` HERE, ON PURPOSE. DO NOT ADD IT BACK.
   //
   // A canonical in the ROOT layout is inherited by every page that does not set
   // its own. This file used to declare `canonical: "https://nowtb.com/"`, which
   // meant every such page was telling Google "the real version of me is the
-  // homepage" — the strongest possible instruction to drop that page from the
+  // homepage", the strongest possible instruction to drop that page from the
   // index and fold it into the homepage.
   //
   // The worst case was 404s: src/app/not-found.tsx sets no metadata, so every
   // missing URL on the site declared itself to be the homepage.
   //
-  // It was also redundant for the only page it was correct for — src/app/page.tsx
+  // It was also redundant for the only page it was correct for, src/app/page.tsx
   // already sets `canonical: "https://nowtb.com/"` itself.
   //
   // If it breaks, check: a canonical belongs on the individual page (or its
   // generateMetadata), never in the shared root layout.
   //
-  // robots: index,follow is the default — omitting to avoid a redundant meta tag
+  // robots: index,follow is the default, omitting to avoid a redundant meta tag
 };
 
 export default function RootLayout({
@@ -187,7 +198,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
       <head>
-        {/* WebSite schema — tells Google the site name to display in search results */}
+        {/* WebSite schema, tells Google the site name to display in search results */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -213,7 +224,7 @@ export default function RootLayout({
             }),
           }}
         />
-        {/* Person schema — Barrett Henry identity anchor for Google Knowledge Graph.
+        {/* Person schema, Barrett Henry identity anchor for Google Knowledge Graph.
             This ties all digital properties together via sameAs and gives Google
             the structured signals it needs to build a Knowledge Panel. */}
         <script
@@ -293,7 +304,7 @@ export default function RootLayout({
             }),
           }}
         />
-        {/* SiteNavigationElement schema — helps search engines and AI understand main nav */}
+        {/* SiteNavigationElement schema, helps search engines and AI understand main nav */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -344,15 +355,15 @@ export default function RootLayout({
         {/* pb-16 md:pb-0 adds bottom padding on mobile so sticky MobileBottomBar doesn't cover content */}
         <main id="main-content" className="min-h-screen pb-16 md:pb-0">{children}</main>
         <ChromeGate><Footer /></ChromeGate>
-        {/* Mobile sticky bottom bar — Call + Contact buttons, iPhone safe-area aware */}
+        {/* Mobile sticky bottom bar, Call + Contact buttons, iPhone safe-area aware */}
         <ChromeGate><MobileBottomBar /></ChromeGate>
-        {/* Floating back-to-top button — appears after scrolling 400px */}
+        {/* Floating back-to-top button, appears after scrolling 400px */}
         <ChromeGate><BackToTop /></ChromeGate>
-        {/* AI chat assistant — lazy-loaded, client-only (no SSR).
+        {/* AI chat assistant, lazy-loaded, client-only (no SSR).
             Gated off the kiosks: a floating chat bubble over a sign-in form is
             something a guest taps by accident, and nobody is watching it. */}
         <ChromeGate><ClientChatWidget /></ChromeGate>
-        {/* Exit-intent popup — OFF EVERYWHERE. Settled 2026-10-20.
+        {/* Exit-intent popup, OFF EVERYWHERE. Settled 2026-10-20.
 
             History: Barrett asked for this off repeatedly ("i dont like it",
             "its too much"). It got flipped on and off four times in one hour by
@@ -370,7 +381,7 @@ export default function RootLayout({
             ClientExitIntent.tsx still exist and still work if he ever asks for
             them back.
 
-            DO NOT re-enable this — not at any scope, not on seller pages, not on
+            DO NOT re-enable this, not at any scope, not on seller pages, not on
             the strength of an audit document. A conversion audit always argues
             for a popup; that is not a new decision. audit/01-conversion.md #6
             and action item #10 are CLOSED. Turn it back on only if Barrett says
@@ -379,23 +390,23 @@ export default function RootLayout({
             scripts/weekly_audit.py::check_exit_intent_scope enforces OFF and
             will raise a critical finding if something re-enables it. */}
         {/* <ChromeGate><ClientExitIntent /></ChromeGate> */}
-        {/* FUB tracking pixel — tracks page views across the site
+        {/* FUB tracking pixel, tracks page views across the site
             so you can see which listings leads browsed in Follow Up Boss */}
         <FubPixel />
         <Analytics />
         <SpeedInsights />
-        {/* Cookie consent banner — shows on first visit, dismissible */}
+        {/* Cookie consent banner, shows on first visit, dismissible */}
         <CookieConsent />
 
         {/* ──────────────────────────────────────────────────────────────────
-            Google Analytics 4 — CONVERSION tracking (phone taps, chat leads)
+            Google Analytics 4, CONVERSION tracking (phone taps, chat leads)
             Vercel Analytics above gives pageviews; it cannot tell you that
             someone tapped the phone number, which is the number that matters.
 
             MANUAL STEP STILL REQUIRED: none of this reports anything until
             NEXT_PUBLIC_GA_ID is added in the Vercel dashboard (Settings →
             Environment Variables) with the GA4 Measurement ID, e.g.
-            "G-ABC1234XYZ". It is NOT set today, which is fine — isGaConfigured()
+            "G-ABC1234XYZ". It is NOT set today, which is fine, isGaConfigured()
             returns false, both <Script> tags below are skipped entirely, and
             every trackEvent() call in the app quietly does nothing. No crash,
             no console error, no network request.

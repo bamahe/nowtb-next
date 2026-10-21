@@ -1,5 +1,5 @@
 // =============================================================================
-// /fair-housing — Fair housing statement
+// /fair-housing, Fair housing statement
 // =============================================================================
 
 import type { Metadata } from "next";

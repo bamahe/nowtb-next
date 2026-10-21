@@ -1,4 +1,4 @@
-// /townhomes — Tampa Bay Townhomes for Sale
+// /townhomes, Tampa Bay Townhomes for Sale
 
 import type { Metadata } from "next";
 import HeroSection from "@/components/ui/HeroSection";
@@ -36,7 +36,7 @@ export default async function TownhomesPage() {
         { name: "Townhomes", url: "https://nowtb.com/townhomes/" },
       ])} />
 
-      <HeroSection label="Tampa Bay Real Estate" title="Townhomes for Sale" subtitle="The middle ground between condos and single-family — private entrance, small yard, lower maintenance.">
+      <HeroSection label="Tampa Bay Real Estate" title="Townhomes for Sale" subtitle="The middle ground between condos and single-family, private entrance, small yard, lower maintenance.">
         <SearchBar />
       </HeroSection>
 
@@ -49,7 +49,7 @@ export default async function TownhomesPage() {
 
       <section className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <h2 className="text-2xl font-heading font-bold text-primary mb-4">Townhome Communities in Tampa Bay</h2>
-        <p className="text-muted mb-6 font-body leading-relaxed">Townhomes in Tampa Bay range from $220K for older resale to $450K+ for new construction. HOA fees typically run $150-$400/month — less than condos because you own the structure. Popular for first-time buyers, downsizers, and investors seeking lower entry price with strong rental demand.</p>
+        <p className="text-muted mb-6 font-body leading-relaxed">Townhomes in Tampa Bay range from $220K for older resale to $450K+ for new construction. HOA fees typically run $150-$400/month, less than condos because you own the structure. Popular for first-time buyers, downsizers, and investors seeking lower entry price with strong rental demand.</p>
       </section>
 
       <section className="bg-[#003da5] py-16 px-4 text-center text-white">

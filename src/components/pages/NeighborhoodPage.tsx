@@ -1,5 +1,5 @@
 // =============================================================================
-// NeighborhoodPage — Neighborhood-level page within a city
+// NeighborhoodPage, Neighborhood-level page within a city
 // Rendered inside the [citySlug] route for slugs like /valrico-bloomingdale
 // (452 neighborhood pages)
 //
@@ -15,7 +15,7 @@ import ClientNeighborhoodSection from "@/components/ui/ClientNeighborhoodSection
 import SpokeNav from "@/components/city/SpokeNav";
 import CityResources from "@/components/city/CityResources";
 // Lead capture + slug-keyed CTA copy. These ~1,440 neighborhood pages had no
-// form at all — only tel: and /contact/ links — so a visitor searching
+// form at all, only tel: and /contact/ links, so a visitor searching
 // "Bloomingdale homes for sale" had to click away to convert. AreaCta wraps the
 // existing ContactForm (Turnstile + /api/contact + Follow Up Boss) and varies
 // its headline per neighborhood slug so the copy is not identical 1,440 times.
@@ -73,11 +73,11 @@ export default async function NeighborhoodPage({
         .map((f) => ({
           src: `/images/neighborhoods/${slug}/${f}`,
           // Convert filename to readable alt text: "aerial-view.jpg" → "Aerial view of Broadway Centre Townhomes"
-          alt: `${f.replace(/\.[^.]+$/, "").replace(/-/g, " ").replace(/^\w/, (c) => c.toUpperCase())} — ${name}, ${city} FL`,
+          alt: `${f.replace(/\.[^.]+$/, "").replace(/-/g, " ").replace(/^\w/, (c) => c.toUpperCase())}, ${name}, ${city} FL`,
         }));
     }
   } catch {
-    // No photos directory — that's fine, most neighborhoods won't have one
+    // No photos directory, that's fine, most neighborhoods won't have one
   }
 
   // Try to load real WordPress content for this neighborhood page.
@@ -91,7 +91,7 @@ export default async function NeighborhoodPage({
         .replace(/<\/h2>/gi, '</h3>')
     : null;
 
-  // LISTINGS LOAD CLIENT-SIDE — no server-side API calls.
+  // LISTINGS LOAD CLIENT-SIDE, no server-side API calls.
   // This prevents Bridge API rate limiting from deploys and crawlers.
   // Compute the subdivision search name for the client-side component
   const parentCityName = parentCity?.name || "";
@@ -100,13 +100,13 @@ export default async function NeighborhoodPage({
     .replace(/,?\s*(FL|Florida)$/i, '')
     .trim();
 
-  // Empty arrays — server-side listing fetch disabled to protect Bridge API rate limits
+  // Empty arrays, server-side listing fetch disabled to protect Bridge API rate limits
   const soldListings: never[] = [];
 
   // ------------------------------------------------------------------
   // Which sibling neighborhoods get the full three-link treatment.
   //
-  // THE PROBLEM THIS SOLVES: every neighborhood has three real pages —
+  // THE PROBLEM THIS SOLVES: every neighborhood has three real pages 
   // /bloomingdale/, /bloomingdale-homes-for-sale/ and /bloomingdale-realtor/
   // (all served by src/app/[citySlug]/page.tsx). The "Nearby Neighborhoods"
   // grid below only ever linked the first one, so the other two had zero
@@ -115,11 +115,11 @@ export default async function NeighborhoodPage({
   //
   // WHY A ROTATING WINDOW instead of just linking all of them: Valrico has 139
   // neighborhoods and Tampa has 42. Three links each would put 417 links in one
-  // section — a link dump that passes almost no signal per link and reads as
+  // section, a link dump that passes almost no signal per link and reads as
   // spam. Instead each page spotlights a window of SPOTLIGHT_COUNT siblings,
   // and the window STARTS at this neighborhood's own position in the list. So
   // the windows overlap across the city's pages and every sibling lands in
-  // roughly SPOTLIGHT_COUNT of them — full coverage of all the spoke pages,
+  // roughly SPOTLIGHT_COUNT of them, full coverage of all the spoke pages,
   // with only ~27 extra links on any single page.
   //
   // It is deterministic (the order of src/data/neighborhoods.ts is fixed), so
@@ -142,7 +142,7 @@ export default async function NeighborhoodPage({
     (_, i) => nearbyNeighborhoods[(ownIndex + i) % nearbyNeighborhoods.length]
   );
   // Everything not spotlighted keeps the plain hub tile it already had, so this
-  // change only ADDS links — no neighborhood loses an inbound link it has today.
+  // change only ADDS links, no neighborhood loses an inbound link it has today.
   const spotlightSlugs = new Set(spotlightNeighborhoods.map((n) => n.slug));
   const remainingNeighborhoods = nearbyNeighborhoods.filter(
     (n) => !spotlightSlugs.has(n.slug)
@@ -181,7 +181,7 @@ export default async function NeighborhoodPage({
         }}
       />
 
-      {/* === Hero — compact with breadcrumb + CTA (matches SpokePage pattern) === */}
+      {/* === Hero, compact with breadcrumb + CTA (matches SpokePage pattern) === */}
       <section className="bg-primary pt-36 pb-16">
         <div className="container-wide">
           {/* Breadcrumb trail */}
@@ -198,10 +198,10 @@ export default async function NeighborhoodPage({
             {h1Override || `${name} Homes for Sale`}
           </h1>
           <p className="font-body text-white/70 text-lg max-w-2xl mb-6">
-            {county} County, Florida — Updated daily from Stellar MLS
+            {county} County, Florida, Updated daily from Stellar MLS
           </p>
 
-          {/* CTA row — above the fold. The phone number is plain visible text
+          {/* CTA row, above the fold. The phone number is plain visible text
               at every breakpoint (NOT hidden on mobile), and the middle button
               scrolls to the lead form further down this same page rather than
               shipping the visitor off to /contact/ and losing them. */}
@@ -209,7 +209,7 @@ export default async function NeighborhoodPage({
         </div>
       </section>
 
-      {/* === Search/Filter Links — quick property type filters === */}
+      {/* === Search/Filter Links, quick property type filters === */}
       <section className="container-wide py-4">
         <div className="flex flex-wrap gap-2">
           <Link
@@ -239,7 +239,7 @@ export default async function NeighborhoodPage({
         </div>
       </section>
 
-      {/* === Market Stats + Listings — both load client-side from same fetch === */}
+      {/* === Market Stats + Listings, both load client-side from same fetch === */}
       <ClientNeighborhoodSection
         name={name}
         city={city}
@@ -249,7 +249,7 @@ export default async function NeighborhoodPage({
         limit={24}
       />
 
-      {/* === Recently Sold — shows recent closed sales in this neighborhood === */}
+      {/* === Recently Sold, shows recent closed sales in this neighborhood === */}
       {soldListings.length > 0 && (
         <ListingGrid
           listings={soldListings}
@@ -259,19 +259,19 @@ export default async function NeighborhoodPage({
         />
       )}
 
-      {/* === Structured Neighborhood Data — stats, schools, commute, HOA, comparison, FAQ === */}
+      {/* === Structured Neighborhood Data, stats, schools, commute, HOA, comparison, FAQ === */}
       {NEIGHBORHOOD_STATS[slug] && (
         <NeighborhoodStatsSection stats={NEIGHBORHOOD_STATS[slug]} name={name} city={city} county={county} />
       )}
 
-      {/* === About the neighborhood — SEO content === */}
+      {/* === About the neighborhood, SEO content === */}
       <section className="container-wide py-12">
         <div>
           <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6">
             About {name}
           </h2>
           {NEIGHBORHOOD_DESCRIPTIONS[slug] ? (
-            // Curated neighborhood description takes priority — real, useful info
+            // Curated neighborhood description takes priority, real, useful info
             <div
               className="blog-content prose prose-lg max-w-none text-muted font-body"
               dangerouslySetInnerHTML={{ __html: NEIGHBORHOOD_DESCRIPTIONS[slug].contentHtml }}
@@ -283,7 +283,7 @@ export default async function NeighborhoodPage({
               dangerouslySetInnerHTML={{ __html: neighborhoodContent }}
             />
           ) : (
-            // No content at all — show a brief, honest fallback
+            // No content at all, show a brief, honest fallback
             <div className="prose font-body text-dark max-w-none space-y-4">
               <p>
                 {name} is a residential neighborhood in {city}, {county} County,
@@ -294,13 +294,13 @@ export default async function NeighborhoodPage({
               <p>
                 Barrett Henry, Broker Associate at REMAX Collective, knows the
                 {" "}{city} market well and can walk you through everything currently
-                available in {name} — active listings, recent sales, and what
+                available in {name}, active listings, recent sales, and what
                 comparable homes are fetching right now.
               </p>
             </div>
           )}
 
-          {/* === Silo links — back to the parent city hub and across to
+          {/* === Silo links, back to the parent city hub and across to
                conversion pages. Keyword anchor text, never "click here", because
                the anchor text tells Google and the AI answer engines what the
                destination is about. All single-segment routes, which keeps them
@@ -328,14 +328,14 @@ export default async function NeighborhoodPage({
         </div>
       </section>
 
-      {/* === LEAD FORM — the piece these pages were missing entirely ===
+      {/* === LEAD FORM, the piece these pages were missing entirely ===
            Mid-page, straight after the neighborhood write-up, which is where
            intent peaks. `source` carries the neighborhood slug into Follow Up
            Boss so Barrett can see the lead came from this specific community
            rather than from "the website" generically. */}
       <AreaLeadCapture areaName={name} slug={slug} source={`${slug}-neighborhood`} />
 
-      {/* === Photo gallery — only shown when neighborhood has photos === */}
+      {/* === Photo gallery, only shown when neighborhood has photos === */}
       {neighborhoodPhotos.length > 0 && (
         <section className="bg-gray-50 py-12">
           <div className="container-wide">
@@ -360,7 +360,7 @@ export default async function NeighborhoodPage({
         </section>
       )}
 
-      {/* === Navigation Links — resources and parent pages === */}
+      {/* === Navigation Links, resources and parent pages === */}
       <section className="container-wide py-12 border-t border-gray-100">
         <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2">
           {city} Resources & Quick Links
@@ -420,7 +420,7 @@ export default async function NeighborhoodPage({
         </div>
       </section>
 
-      {/* === Spoke nav — explore more in the parent city === */}
+      {/* === Spoke nav, explore more in the parent city === */}
       {parentCity && <SpokeNav city={parentCity} />}
 
       {/* === Sibling-area resource grid ===
@@ -433,13 +433,13 @@ export default async function NeighborhoodPage({
            is safe to render on all of them. */}
       {parentCity && <CityResources city={parentCity} />}
 
-      {/* === Nearby neighborhoods — cross-linking ===
+      {/* === Nearby neighborhoods, cross-linking ===
            Two tiers on purpose:
 
            1. `spotlightNeighborhoods` (computed above) get three links each:
               the neighborhood page plus its "-homes-for-sale" and "-realtor"
               spokes. Those two spoke page types are the highest commercial
-              intent pages on the whole site and NOTHING linked them before —
+              intent pages on the whole site and NOTHING linked them before 
               this grid only ever emitted the bare hub URL, which is how 1,384
               pages (21% of the site) ended up with zero inbound links.
            2. Every remaining sibling keeps the plain hub tile it already had,
@@ -451,7 +451,7 @@ export default async function NeighborhoodPage({
               Nearby Neighborhoods
             </h2>
 
-            {/* Tier 1 — spotlight cards with keyword anchors */}
+            {/* Tier 1, spotlight cards with keyword anchors */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
               {spotlightNeighborhoods.map((n) => (
                 <div
@@ -464,7 +464,7 @@ export default async function NeighborhoodPage({
                   >
                     {n.name}
                   </Link>
-                  {/* Descriptive keyword anchors, never "read more" — the anchor
+                  {/* Descriptive keyword anchors, never "read more", the anchor
                       text is the single strongest signal of what the destination
                       page is about, for Google and for AI answer engines alike. */}
                   <div className="mt-1 flex flex-col gap-0.5">
@@ -485,7 +485,7 @@ export default async function NeighborhoodPage({
               ))}
             </div>
 
-            {/* Tier 2 — the rest of the city's neighborhoods, hub links only */}
+            {/* Tier 2, the rest of the city's neighborhoods, hub links only */}
             {remainingNeighborhoods.length > 0 && (
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                 {remainingNeighborhoods.map((neighborhood) => (
@@ -505,7 +505,7 @@ export default async function NeighborhoodPage({
 
       {/* === CTA bar ===
            Was a hard-coded "Looking for homes in {name}?" on all ~1,440 of
-           these pages — exactly the repeated boilerplate that reads as
+           these pages, exactly the repeated boilerplate that reads as
            near-duplicate content. Now slug-keyed, so adjacent neighborhoods get
            different copy and each page stays consistent across crawls. */}
       <AreaCtaBar areaName={name} slug={slug} />
@@ -514,7 +514,7 @@ export default async function NeighborhoodPage({
 }
 
 // =============================================================================
-// NeighborhoodStatsSection — Rich structured data blocks
+// NeighborhoodStatsSection, Rich structured data blocks
 // Only renders when NEIGHBORHOOD_STATS has data for this neighborhood.
 // Combines the best of valricoagent's structured data with nowtb's luxury aesthetic.
 // =============================================================================
@@ -649,7 +649,7 @@ function NeighborhoodStatsSection({
                   </tr>
                 </thead>
                 <tbody>
-                  {/* Current neighborhood row — highlighted */}
+                  {/* Current neighborhood row, highlighted */}
                   <tr className="border-b border-border bg-primary/5">
                     <td className="py-3 pr-4 font-semibold text-primary">{name}</td>
                     <td className="py-3 pr-4 text-dark">{stats.priceRange}</td>

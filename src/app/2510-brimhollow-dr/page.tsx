@@ -1,10 +1,10 @@
 // =============================================================================
-// /2510-brimhollow-dr — Single-property landing page for the QR code / sign
+// /2510-brimhollow-dr, Single-property landing page for the QR code / sign
 // rider. Data pulled from Stellar MLS TB8558255. Photos pulled from the listing
 // feed and stored locally in /public/images/listings/2510-brimhollow-dr/ so the
 // page keeps working if the feed URL ever rotates.
 //
-// This is the destination the permanent printed QR codes currently point at —
+// This is the destination the permanent printed QR codes currently point at 
 // see the CURRENT OPEN HOUSE block at the top of next.config.mjs.
 // =============================================================================
 
@@ -32,7 +32,7 @@ const L = {
   yearBuilt: 1987,
   // The MLS record has GarageSpaces: 0 while GarageYN and AttachedGarageYN are
   // both true and the listing remarks say "two car garage". That is a data
-  // entry slip in the feed, not a house without a garage — 2 is correct.
+  // entry slip in the feed, not a house without a garage, 2 is correct.
   garage: 2,
   mls: "TB8558255",
   status: "Active",
@@ -43,7 +43,7 @@ const L = {
   subdivision: "Buckhorn",
 };
 
-// Barrett's phone — defined once so it can never drift out of sync
+// Barrett's phone, defined once so it can never drift out of sync
 const PHONE = "(813) 733-7907";
 const PHONE_TEL = "8137337907";
 const EMAIL = "barrett@nowtb.com";
@@ -52,13 +52,13 @@ const PRICE_FMT = `$${L.price.toLocaleString()}`;
 const FULL_ADDRESS = `${L.address}, ${L.city}, ${L.state} ${L.zip}`;
 
 // Sunday only this time. Update this one string when the next date is
-// scheduled — the printed QR never changes.
+// scheduled, the printed QR never changes.
 const OPEN_HOUSE = "Sunday, October 18 · 2:00 - 4:00 PM";
 
-// Unbranded Stellar virtual tour — fine to link publicly under IDX rules
+// Unbranded Stellar virtual tour, fine to link publicly under IDX rules
 const TOUR_URL = "https://www.propertypanorama.com/instaview/stellar/TB8558255";
 
-// Lender joining the open house. Set to null when nobody is confirmed — every
+// Lender joining the open house. Set to null when nobody is confirmed, every
 // lender block on the page is wrapped in a check, so leaving it null simply
 // removes the sidebar card and the kiosk's "want an intro?" question.
 //
@@ -81,7 +81,7 @@ const DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${L.l
 const PHOTO_COUNT = 25;
 const photos = Array.from({ length: PHOTO_COUNT }, (_, i) => ({
   MediaURL: `/images/listings/2510-brimhollow-dr/photo-${String(i + 1).padStart(3, "0")}.jpg`,
-  ShortDescription: `${FULL_ADDRESS} — photo ${i + 1} of ${PHOTO_COUNT}`,
+  ShortDescription: `${FULL_ADDRESS}, photo ${i + 1} of ${PHOTO_COUNT}`,
   Order: i,
 }));
 
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
     `Buckhorn pool home with 3 bedrooms, 2.5 baths, 2 car garage and a private office. 2,280 sqft single story, screened lanai, wood burning fireplace, optional $30/yr HOA. MLS ${L.mls}. Call Barrett Henry at ${PHONE}.`,
   alternates: { canonical: "/2510-brimhollow-dr/" },
   openGraph: {
-    title: "Open House Sunday 2 to 4 — 2510 Brimhollow Dr, Valrico FL",
+    title: "Open House Sunday 2 to 4 to 2510 Brimhollow Dr, Valrico FL",
     description:
       "Buckhorn pool home. 3 bedrooms, 2.5 baths, 2 car garage, private office, and a screened lanai around an in-ground pool. 2,280 sqft on one floor. Open house Sunday, 2:00 to 4:00.",
     url: "/2510-brimhollow-dr/",
@@ -101,13 +101,13 @@ export const metadata: Metadata = {
         url: "/images/listings/2510-brimhollow-dr/og-open-house.jpg",
         width: 1200,
         height: 630,
-        alt: "Open House Sunday 2 to 4 — 2510 Brimhollow Dr, Valrico FL, $479,900",
+        alt: "Open House Sunday 2 to 4 to 2510 Brimhollow Dr, Valrico FL, $479,900",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Open House Sunday 2 to 4 — 2510 Brimhollow Dr, Valrico FL",
+    title: "Open House Sunday 2 to 4 to 2510 Brimhollow Dr, Valrico FL",
     description: "Buckhorn pool home. 3 bed, 2.5 bath, 2 car garage, private office, screened lanai. $479,900.",
     images: ["/images/listings/2510-brimhollow-dr/og-open-house.jpg"],
   },
@@ -222,7 +222,7 @@ export default function BrimhollowListingPage() {
         ])}
       />
 
-      {/* ---------- Open house banner — first thing a QR scanner sees ----------
+      {/* ---------- Open house banner, first thing a QR scanner sees ----------
            pt-24 clears the fixed 80px site header, which otherwise sits on top
            of this band and hides the directions button. */}
       <section className="bg-accent text-primary pt-24">
@@ -332,14 +332,14 @@ export default function BrimhollowListingPage() {
                 house. The screened enclosure wraps a tiled deck and an in-ground pool, with a bath
                 you can reach from outside so nobody tracks through the living room. Buckhorn is an
                 established neighborhood with real trees and sidewalks, and homes here are not
-                stacked on top of each other &mdash; this one sits on a {L.acres} acre lot, 75 by 110,
+                stacked on top of each other, this one sits on a {L.acres} acre lot, 75 by 110,
                 with a fenced yard.
               </p>
               <p>
                 Inside, {L.sqft.toLocaleString()} square feet is laid out the way people actually
                 live rather than as one open box. There is a formal living room and a separate dining
                 room, a family room with a wood burning fireplace, and a private office that is a
-                real room with a door &mdash; not a corner of a bedroom. The split plan puts the
+                real room with a door, not a corner of a bedroom. The split plan puts the
                 owners suite on its own side with a walk-in closet and a remodeled bath with a tiled
                 shower, and the two secondary bedrooms on the other. Wood, vinyl, and tile run
                 throughout.
@@ -354,7 +354,7 @@ export default function BrimhollowListingPage() {
               </p>
             </div>
 
-            {/* Pool — the reason most people come to this one */}
+            {/* Pool, the reason most people come to this one */}
             <h2 className="font-heading text-2xl font-light uppercase tracking-wide text-primary mt-10 mb-5">
               Tell Me About the Pool
             </h2>
@@ -493,14 +493,14 @@ export default function BrimhollowListingPage() {
                   {PHONE}
                 </a>
                 <a
-                  href={`mailto:${EMAIL}?subject=${encodeURIComponent(`Showing request — ${FULL_ADDRESS}`)}`}
+                  href={`mailto:${EMAIL}?subject=${encodeURIComponent(`Showing request, ${FULL_ADDRESS}`)}`}
                   className="flex items-center justify-center gap-2 border border-white/40 px-4 py-3 rounded hover:bg-white/10 transition"
                 >
                   <Mail className="h-4 w-4" />
                   Email Barrett
                 </a>
 
-                {/* Save-my-contact QR. Encodes a vCard, not a URL — scanning it
+                {/* Save-my-contact QR. Encodes a vCard, not a URL, scanning it
                     opens the phone's "Add Contact" card directly, so a buyer
                     walking the open house leaves with Barrett already in their
                     phone instead of a business card in a pocket. */}
@@ -522,11 +522,11 @@ export default function BrimhollowListingPage() {
                 </div>
 
                 <p className="font-body text-xs text-white/60 mt-4 leading-relaxed">
-                  23 years licensed. Text or call anytime — I answer my own phone.
+                  23 years licensed. Text or call anytime, I answer my own phone.
                 </p>
               </div>
 
-              {/* Lender on site — only renders when one is confirmed */}
+              {/* Lender on site, only renders when one is confirmed */}
               {LENDER && (
                 <div className="bg-surface border border-border rounded p-6">
                   <p className="font-body text-xs uppercase tracking-wide text-muted mb-2">
@@ -552,7 +552,7 @@ export default function BrimhollowListingPage() {
                     </div>
                   </div>
 
-                  {/* Apply QR — a buyer can start the application from the
+                  {/* Apply QR, a buyer can start the application from the
                       living room without typing a URL off a business card. */}
                   <a
                     href={LENDER.applyUrl}
@@ -581,7 +581,7 @@ export default function BrimhollowListingPage() {
                     {LENDER.phone}
                   </a>
                   <a
-                    href={`mailto:${LENDER.email}?subject=${encodeURIComponent(`Pre-approval question — ${FULL_ADDRESS}`)}`}
+                    href={`mailto:${LENDER.email}?subject=${encodeURIComponent(`Pre-approval question, ${FULL_ADDRESS}`)}`}
                     className="flex items-center justify-center gap-2 border border-border px-4 py-2.5 rounded text-primary hover:bg-white transition"
                   >
                     <Mail className="h-4 w-4" />
@@ -648,7 +648,7 @@ export default function BrimhollowListingPage() {
         <div className="max-w-6xl mx-auto px-4">
           <p className="font-body text-xs text-muted leading-relaxed">
             Listed by Barrett Henry, Licensed Florida Real Estate Broker, REMAX Collective.
-            MLS {L.mls}. Information deemed reliable but not guaranteed &mdash; buyer and
+            MLS {L.mls}. Information deemed reliable but not guaranteed, buyer and
             buyer&rsquo;s agent should independently verify all measurements, lot dimensions, flood
             zone, HOA fees, taxes, pool equipment, and school assignments. Equal Housing
             Opportunity.

@@ -1,5 +1,5 @@
 // =============================================================================
-// analytics.ts — one tiny, crash-proof wrapper around Google Analytics 4 (GA4)
+// analytics.ts, one tiny, crash-proof wrapper around Google Analytics 4 (GA4)
 //
 // WHY THIS FILE EXISTS:
 // The site had Vercel Analytics (pageviews) but ZERO conversion tracking. So we
@@ -14,7 +14,7 @@
 // THE IMPORTANT RULE:
 // GA4 only loads when the NEXT_PUBLIC_GA_ID environment variable is set in
 // Vercel. It is NOT set today. So `window.gtag` will be undefined on every page
-// and every call below must do nothing at all — no crash, no console error.
+// and every call below must do nothing at all, no crash, no console error.
 // That is why every function here checks before it calls.
 //
 // REMAINING MANUAL STEP FOR BARRETT:
@@ -25,11 +25,11 @@
 // If it breaks, check:
 //  1. Is NEXT_PUBLIC_GA_ID set in Vercel for the Production environment?
 //  2. Does the value start with "G-"? A "UA-" id is old Universal Analytics and
-//     is deliberately rejected by isGaConfigured() below — it no longer works.
+// is deliberately rejected by isGaConfigured() below, it no longer works.
 //  3. Did the value get saved with a trailing newline? Vercel env values ending
 //     in a literal "\n" have silently broken keys on this project before. The
 //     .trim() below defends against it.
-//  4. In the browser console on the live site, type `window.gtag` — if it says
+// 4. In the browser console on the live site, type `window.gtag`, if it says
 //     "undefined", the script never loaded and no events are being sent.
 // =============================================================================
 
@@ -47,7 +47,7 @@ export const GA_MEASUREMENT_ID = (process.env.NEXT_PUBLIC_GA_ID || "").trim();
  *
  * We validate the shape instead of just checking "is it non-empty" for two
  * reasons: a typo'd value would otherwise inject junk into the page, and the
- * ID is interpolated into a <script> tag in layout.tsx — so restricting it to
+ * ID is interpolated into a <script> tag in layout.tsx, so restricting it to
  * letters, numbers and dashes also means it can never carry anything
  * executable into that script.
  */
@@ -56,7 +56,7 @@ export function isGaConfigured(): boolean {
 }
 
 // Tell TypeScript that these two globals may exist on `window`. Without this,
-// `window.gtag` is a compile error. `?` means "might not be there" — which is
+// `window.gtag` is a compile error. `?` means "might not be there", which is
 // the normal case on this site right now.
 declare global {
   interface Window {
@@ -82,7 +82,7 @@ export const CONVERSION_EVENTS = {
  *
  * Everything is wrapped in try/catch on purpose. A third-party script throwing
  * inside a React click handler has broken client-side navigation on this site
- * before — an analytics call must never be able to take a page down.
+ * before, an analytics call must never be able to take a page down.
  */
 export function trackEvent(name: string, params?: Record<string, unknown>): void {
   try {
@@ -105,7 +105,7 @@ export function trackEvent(name: string, params?: Record<string, unknown>): void
 /**
  * Convenience wrapper for a phone tap.
  *
- * @param location where on the site they tapped — "header-mobile",
+ * @param location where on the site they tapped, "header-mobile",
  *   "mobile-bottom-bar", "chat-widget". Lets Barrett see WHICH call button
  *   earns its keep, which is the whole point of tracking it.
  */
@@ -120,7 +120,7 @@ export function trackPhoneTap(location: string): void {
 /**
  * Convenience wrapper for a captured chat lead.
  *
- * Deliberately records NO personal information — GA4's terms forbid sending
+ * Deliberately records NO personal information, GA4's terms forbid sending
  * names, emails or phone numbers to Google, and the lead itself already went
  * to Follow Up Boss where it belongs. We only record that it happened.
  */

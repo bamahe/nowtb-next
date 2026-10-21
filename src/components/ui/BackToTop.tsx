@@ -1,5 +1,5 @@
 // =============================================================================
-// BackToTop — Floating button that appears after scrolling down ~400px
+// BackToTop, Floating button that appears after scrolling down ~400px
 // Smoothly scrolls the user back to the top of the page.
 // =============================================================================
 

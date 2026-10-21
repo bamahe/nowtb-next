@@ -1,5 +1,5 @@
 // =============================================================================
-// SearchBar — Elegant property search with underline-style input
+// SearchBar, Elegant property search with underline-style input
 // "use client" because it manages input state and handles form submission
 // Minimal: transparent bg, bottom border only, uppercase submit text
 // =============================================================================
@@ -28,10 +28,10 @@ export default function SearchBar() {
       onSubmit={handleSubmit}
       className="flex w-full max-w-xl mx-auto items-center gap-4 border-b border-white/30 pb-2"
     >
-      {/* Search icon — subtle, on the left */}
+      {/* Search icon, subtle, on the left */}
       <Search className="h-4 w-4 text-white/40 flex-shrink-0" />
 
-      {/* Text input — transparent, no border except parent's bottom border */}
+      {/* Text input, transparent, no border except parent's bottom border */}
       <input
         type="text"
         value={query}
@@ -42,7 +42,7 @@ export default function SearchBar() {
                    focus:outline-none focus:ring-0 font-body text-base font-light tracking-wide"
       />
 
-      {/* Submit — text only, uppercase, wide tracking */}
+      {/* Submit, text only, uppercase, wide tracking */}
       <button
         type="submit"
         className="font-body text-xs font-medium tracking-[0.2em] uppercase text-white/70

@@ -1,7 +1,7 @@
 // =============================================================================
-// Neighborhood descriptions — real, useful writeups for key neighborhoods
+// Neighborhood descriptions, real, useful writeups for key neighborhoods
 // Used by NeighborhoodPage when no WordPress content exists.
-// Written in natural language — no keyword stuffing, just honest info
+// Written in natural language, no keyword stuffing, just honest info
 // someone would want before touring a neighborhood.
 // =============================================================================
 
@@ -14,7 +14,7 @@ export interface NeighborhoodDescription {
 
 /**
  * Key = neighborhood slug (must match the slug in neighborhoods.ts)
- * Only add entries for neighborhoods worth writing about — not every
+ * Only add entries for neighborhoods worth writing about, not every
  * subdivision needs a custom description.
  */
 import { BRANDON_NEIGHBORHOOD_DESCRIPTIONS } from "./brandon-content";
@@ -92,11 +92,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary:
       "One of Valrico's largest and most established communities, built mostly in the 1980s and 90s with a mix of home styles and an active community association.",
     contentHtml: `
-      <p>Bloomingdale is one of the biggest master-planned communities in the <a href="/valrico/">Valrico</a>/Brandon area. Most homes were built between the early 1980s and mid-1990s, so you'll see a range of styles — from smaller ranch homes to larger two-story colonials. Lot sizes are modest by today's standards but generous compared to newer construction.</p>
-      <p>The community is known for its network of trails, playgrounds, and common areas maintained by the Bloomingdale Community Association. The former Bloomingdale Golf Course has been a topic of local discussion for years — it closed and the land has been going through the redevelopment process.</p>
+      <p>Bloomingdale is one of the biggest master-planned communities in the <a href="/valrico/">Valrico</a>/Brandon area. Most homes were built between the early 1980s and mid-1990s, so you'll see a range of styles, from smaller ranch homes to larger two-story colonials. Lot sizes are modest by today's standards but generous compared to newer construction.</p>
+      <p>The community is known for its network of trails, playgrounds, and common areas maintained by the Bloomingdale Community Association. The former Bloomingdale Golf Course has been a topic of local discussion for years, it closed and the land has been going through the redevelopment process.</p>
       <p>Schools are a big draw. Bloomingdale High School is right in the community, and elementary-age kids attend Bloomingdale Elementary or Cimino Elementary depending on where in the neighborhood you are. Randall Middle School serves the area.</p>
       <p>Location-wise, Bloomingdale sits right along Bloomingdale Avenue with quick access to the Selmon Expressway for commuters heading into Tampa. Shopping along Bell Shoals Road and Bloomingdale Avenue is within a few minutes of most homes in the community.</p>
-      <p>Expect HOA dues in most sections — they're typically reasonable and cover the common areas and community amenities. Homes here tend to price below newer construction in the area, which makes Bloomingdale popular with first-time buyers and families looking for more square footage per dollar.</p>
+      <p>Expect HOA dues in most sections, they're typically reasonable and cover the common areas and community amenities. Homes here tend to price below newer construction in the area, which makes Bloomingdale popular with first-time buyers and families looking for more square footage per dollar.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/river-hills-country-club/">River Hills</a> and <a href="/buckhorn-preserve/">Buckhorn Preserve</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
@@ -173,9 +173,9 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary:
       "Gated golf course community in south Valrico with larger homes, mature landscaping, and a country club lifestyle.",
     contentHtml: `
-      <p>River Hills is a gated community in the southern part of <a href="/valrico/">Valrico</a> built around the River Hills Country Club golf course. Homes here are generally larger — most are 2,000 to 4,000+ square feet — and sit on bigger lots than you'll find in the typical Valrico subdivision.</p>
+      <p>River Hills is a gated community in the southern part of <a href="/valrico/">Valrico</a> built around the River Hills Country Club golf course. Homes here are generally larger, most are 2,000 to 4,000+ square feet, and sit on bigger lots than you'll find in the typical Valrico subdivision.</p>
       <p>The neighborhood was developed primarily in the 1990s and 2000s, so the landscaping is mature with large oaks and well-established yards. The gated entry and country club setting give it a different feel from the more open neighborhoods nearby.</p>
-      <p>Golf club membership is optional — you can live in River Hills without joining the club. The course itself is well-maintained and the clubhouse hosts events and dining. There's also a community pool and tennis courts.</p>
+      <p>Golf club membership is optional, you can live in River Hills without joining the club. The course itself is well-maintained and the clubhouse hosts events and dining. There's also a community pool and tennis courts.</p>
       <p>School zones here typically fall under Durant High School, which is just a few minutes east on Durant Road. For families, the combination of good schools, a gated community, and the extra space makes River Hills one of the more sought-after Valrico addresses.</p>
       <p>One thing to know: HOA fees here are higher than average because of the gated entry and community amenities. And if you're on the golf course, you'll want to factor in potential golf ball damage and the restrictions that come with course-adjacent lots.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/diamond-hill/">Diamond Hill</a> and <a href="/eagles-landing/">Eagles Landing</a>.</p>
@@ -187,11 +187,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary:
       "Established Valrico neighborhood with larger lots, no HOA in many sections, and a mix of older and updated homes along Durant Road.",
     contentHtml: `
-      <p>Diamond Hill is one of <a href="/valrico/">Valrico</a>'s more established neighborhoods, with many homes dating back to the 1970s and 1980s. What sets it apart from newer subdivisions is the lot sizes — half-acre to one-acre parcels are common here, which is increasingly rare in the area.</p>
+      <p>Diamond Hill is one of <a href="/valrico/">Valrico</a>'s more established neighborhoods, with many homes dating back to the 1970s and 1980s. What sets it apart from newer subdivisions is the lot sizes, half-acre to one-acre parcels are common here, which is increasingly rare in the area.</p>
       <p>A big selling point for many buyers: large sections of Diamond Hill have no HOA. That means no restrictions on parking your boat in the driveway, no approval process for paint colors, and no monthly fees. For buyers who value that kind of freedom, Diamond Hill is one of the go-to neighborhoods.</p>
-      <p>The homes themselves vary quite a bit. You'll find original 1970s block construction alongside fully renovated properties and some newer infill builds. Prices reflect that range — a fixer-upper on a big lot will be priced very differently from a recently updated home next door.</p>
+      <p>The homes themselves vary quite a bit. You'll find original 1970s block construction alongside fully renovated properties and some newer infill builds. Prices reflect that range, a fixer-upper on a big lot will be priced very differently from a recently updated home next door.</p>
       <p>Location is solid. Diamond Hill is near Durant Road with easy access to both Valrico's main corridors and the more rural areas to the east toward Lithia and Plant City. Durant High School is nearby, and Buckhorn Elementary serves part of the area.</p>
-      <p>If you're considering Diamond Hill, bring your inspector and look closely at the older homes — roof age, plumbing type (some older homes have polybutylene), and septic vs. sewer connections are all things worth checking early.</p>
+      <p>If you're considering Diamond Hill, bring your inspector and look closely at the older homes, roof age, plumbing type (some older homes have polybutylene), and septic vs. sewer connections are all things worth checking early.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/river-hills-country-club/">River Hills Country Club</a> and <a href="/durant-estates/">Durant Estates</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
@@ -203,9 +203,9 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary:
       "Newer subdivision near Buckhorn Elementary with community amenities, an active HOA, and homes built in the 2000s and 2010s.",
     contentHtml: `
-      <p>Buckhorn Preserve is one of several neighborhoods in the Buckhorn area of <a href="/valrico/">Valrico</a>, and it's among the newer ones — most homes were built in the 2000s and early 2010s. Construction quality is generally solid, with concrete block and barrel tile roofs common throughout.</p>
+      <p>Buckhorn Preserve is one of several neighborhoods in the Buckhorn area of <a href="/valrico/">Valrico</a>, and it's among the newer ones, most homes were built in the 2000s and early 2010s. Construction quality is generally solid, with concrete block and barrel tile roofs common throughout.</p>
       <p>The subdivision has a community pool and playground, maintained through the HOA. Fees are in the typical range for the area. Homes are mostly 3-4 bedrooms with two-car garages, ranging from about 1,600 to 2,800 square feet.</p>
-      <p>The big draw is school zoning — Buckhorn Elementary is literally next door, which matters if you've got young kids. The middle and high school zones are also well-regarded.</p>
+      <p>The big draw is school zoning, Buckhorn Elementary is literally next door, which matters if you've got young kids. The middle and high school zones are also well-regarded.</p>
       <p>Access is straightforward. You're close to both <a href="/bloomingdale-community/">Bloomingdale</a> Avenue and Lithia-Pinecrest Road, so getting to the Selmon Expressway or I-75 doesn't take long. Shopping and restaurants along SR-60 are about 10 minutes away.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/buckhorn-springs/">Buckhorn Springs</a> and <a href="/copper-ridge/">Copper Ridge</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
@@ -216,9 +216,9 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary:
       "Family-friendly Valrico subdivision in the Buckhorn school zone with community pool, playground, and homes from the early 2000s.",
     contentHtml: `
-      <p>Buckhorn Springs is a well-kept subdivision in the Buckhorn area of <a href="/valrico/">Valrico</a>, with most homes built in the early to mid-2000s. It's a classic suburban neighborhood — sidewalks, community pool, playground, and a homeowners association that keeps the common areas maintained.</p>
+      <p>Buckhorn Springs is a well-kept subdivision in the Buckhorn area of <a href="/valrico/">Valrico</a>, with most homes built in the early to mid-2000s. It's a classic suburban neighborhood, sidewalks, community pool, playground, and a homeowners association that keeps the common areas maintained.</p>
       <p>Homes are primarily 3 and 4 bedrooms, most with two-car garages and screened-in lanais. Square footage ranges from about 1,500 to 2,500. The streets are relatively quiet with cul-de-sacs throughout, which families with younger kids tend to appreciate.</p>
-      <p>School zoning is one of the main reasons people look at Buckhorn Springs — Buckhorn Elementary is close by and consistently rated well. Middle and high school assignments round out a solid school path.</p>
+      <p>School zoning is one of the main reasons people look at Buckhorn Springs, Buckhorn Elementary is close by and consistently rated well. Middle and high school assignments round out a solid school path.</p>
       <p>The neighborhood is positioned well for commuters. Lithia-Pinecrest Road and <a href="/bloomingdale-community/">Bloomingdale</a> Avenue are both accessible within a few minutes, connecting to the Selmon Expressway and I-75.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/buckhorn-preserve/">Buckhorn Preserve</a> and <a href="/heritage-crest/">Heritage Crest</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
@@ -227,7 +227,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
   // ===== BRENTWOOD HILLS =====
 
-  // brentwood-hills-community removed — canonical is "brentwood-hills" below
+  // brentwood-hills-community removed, canonical is "brentwood-hills" below
 
   // ===== DURANT AREA =====
 
@@ -236,8 +236,8 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Spacious Valrico homes near Durant High School, many on half-acre or larger lots with a more rural feel than western Valrico.",
     contentHtml: `
       <p>Durant Estates sits in the eastern part of <a href="/valrico/">Valrico</a>, and it feels different from the denser subdivisions closer to Brandon. Lots here are often a half-acre or larger, and the spacing between homes gives the neighborhood a more open, semi-rural character.</p>
-      <p>Homes are a mix of ages — some from the 1990s, others newer. Many are larger single-family homes with 4+ bedrooms and generous floor plans. You'll see properties with workshops, RV parking, and room for a pool that would be hard to find in the more compact western Valrico neighborhoods.</p>
-      <p>The name gives away the school connection — Durant High School is nearby, and the area is well-served by Hillsborough County schools. For families who want the school zoning without the density of a typical subdivision, this area checks a lot of boxes.</p>
+      <p>Homes are a mix of ages, some from the 1990s, others newer. Many are larger single-family homes with 4+ bedrooms and generous floor plans. You'll see properties with workshops, RV parking, and room for a pool that would be hard to find in the more compact western Valrico neighborhoods.</p>
+      <p>The name gives away the school connection, Durant High School is nearby, and the area is well-served by Hillsborough County schools. For families who want the school zoning without the density of a typical subdivision, this area checks a lot of boxes.</p>
       <p>One trade-off: you're a bit farther from the main shopping corridors along SR-60 and <a href="/bloomingdale-community/">Bloomingdale</a> Avenue. Most errands are a 10-15 minute drive. If you work in Tampa, the commute will be on the longer side of what Valrico offers.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/diamond-hill/">Diamond Hill</a> and <a href="/river-hills-country-club/">River Hills Country Club</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
@@ -250,9 +250,9 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary:
       "Newer gated community in Valrico with modern homes, community amenities, and a clean, well-maintained streetscape.",
     contentHtml: `
-      <p>Copper Ridge is one of <a href="/valrico/">Valrico</a>'s newer gated communities, with homes built primarily in the 2010s. The neighborhood has a clean, well-maintained appearance — newer construction, consistent architectural standards, and landscaped common areas throughout.</p>
-      <p>Homes are mostly 3 to 5 bedrooms, ranging from about 1,800 to 3,200 square feet. Floor plans tend to be open-concept with the modern touches buyers expect — granite or quartz counters, tile throughout the main living areas, and covered lanais.</p>
-      <p>The gated entry and community pool are maintained through the HOA, and fees reflect the amenities — expect them to be higher than older, non-gated communities in the area. CDD fees may also apply, so ask about the total carrying cost before making an offer.</p>
+      <p>Copper Ridge is one of <a href="/valrico/">Valrico</a>'s newer gated communities, with homes built primarily in the 2010s. The neighborhood has a clean, well-maintained appearance, newer construction, consistent architectural standards, and landscaped common areas throughout.</p>
+      <p>Homes are mostly 3 to 5 bedrooms, ranging from about 1,800 to 3,200 square feet. Floor plans tend to be open-concept with the modern touches buyers expect, granite or quartz counters, tile throughout the main living areas, and covered lanais.</p>
+      <p>The gated entry and community pool are maintained through the HOA, and fees reflect the amenities, expect them to be higher than older, non-gated communities in the area. CDD fees may also apply, so ask about the total carrying cost before making an offer.</p>
       <p>Location puts you close to the <a href="/bloomingdale-community/">Bloomingdale</a>/Lithia-Pinecrest corridor with reasonable access to the Selmon and I-75 for commuters. Buckhorn Elementary and Durant High School zones typically serve this area.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/buckhorn-preserve/">Buckhorn Preserve</a> and <a href="/eagles-landing/">Eagles Landing</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
@@ -263,12 +263,12 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
   "eagles-landing": {
     summary:
-      "Popular Valrico subdivision with a community pool, playground, and homes built in the 2000s — a go-to for families.",
+      "Popular Valrico subdivision with a community pool, playground, and homes built in the 2000s, a go-to for families.",
     contentHtml: `
       <p>Eagles Landing is a mid-2000s subdivision that has become one of the more popular family neighborhoods in <a href="/valrico/">Valrico</a>. The community has a pool, playground, and basketball court, and the HOA keeps the common areas well-maintained.</p>
-      <p>Homes are predominantly 3-4 bedrooms, two-car garage, with screened lanais — the standard Valrico suburban setup. Square footage is typically 1,600 to 2,600. Construction is concrete block with barrel tile or shingle roofs.</p>
-      <p>The streets are wide with sidewalks on both sides, and there are enough cul-de-sacs to keep through-traffic minimal. It's the kind of neighborhood where kids ride bikes and play in front yards — which is exactly why it appeals to the families who buy here.</p>
-      <p>School assignments are strong, and the location gives you access to both the <a href="/bloomingdale-community/">Bloomingdale</a> Avenue shopping corridor and the quieter eastern Valrico roads. Commute times into Tampa are typical for the area — 25 to 40 minutes depending on the route and time of day.</p>
+      <p>Homes are predominantly 3-4 bedrooms, two-car garage, with screened lanais, the standard Valrico suburban setup. Square footage is typically 1,600 to 2,600. Construction is concrete block with barrel tile or shingle roofs.</p>
+      <p>The streets are wide with sidewalks on both sides, and there are enough cul-de-sacs to keep through-traffic minimal. It's the kind of neighborhood where kids ride bikes and play in front yards, which is exactly why it appeals to the families who buy here.</p>
+      <p>School assignments are strong, and the location gives you access to both the <a href="/bloomingdale-community/">Bloomingdale</a> Avenue shopping corridor and the quieter eastern Valrico roads. Commute times into Tampa are typical for the area, 25 to 40 minutes depending on the route and time of day.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/copper-ridge/">Copper Ridge</a> and <a href="/heritage-crest/">Heritage Crest</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
@@ -280,9 +280,9 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary:
       "Small, established Valrico neighborhood with a tight-knit feel and homes from the 1980s and 90s on tree-lined streets.",
     contentHtml: `
-      <p><a href="/valrico/">Valrico</a> Village is a smaller, established neighborhood with homes built primarily in the 1980s and 1990s. It's not a large subdivision — the tight-knit size is part of its appeal for buyers who prefer a quieter community without hundreds of homes and a complicated HOA.</p>
+      <p><a href="/valrico/">Valrico</a> Village is a smaller, established neighborhood with homes built primarily in the 1980s and 1990s. It's not a large subdivision, the tight-knit size is part of its appeal for buyers who prefer a quieter community without hundreds of homes and a complicated HOA.</p>
       <p>Homes are mostly 3-bedroom ranch-style with some two-story layouts mixed in. Square footage runs from about 1,200 to 2,000. Lots are reasonably sized with mature landscaping throughout.</p>
-      <p>The location works well — close enough to the main Valrico corridors for convenience, but tucked away enough to feel removed from the busier roads. It's a straightforward neighborhood where the homes do the talking.</p>
+      <p>The location works well, close enough to the main Valrico corridors for convenience, but tucked away enough to feel removed from the busier roads. It's a straightforward neighborhood where the homes do the talking.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/valrico-groves/">Valrico Groves</a> and <a href="/valrico-oaks/">Valrico Oaks</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
@@ -292,9 +292,9 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary:
       "Quiet Valrico neighborhood with generous lot sizes, mature citrus and oak trees, and a mix of original and updated homes.",
     contentHtml: `
-      <p><a href="/valrico/">Valrico</a> Groves lives up to its name — the neighborhood has mature citrus and oak trees throughout, giving it a shaded, established character. Homes here were built across several decades, so you'll see a range from 1970s-era block construction to renovated or rebuilt properties.</p>
+      <p><a href="/valrico/">Valrico</a> Groves lives up to its name, the neighborhood has mature citrus and oak trees throughout, giving it a shaded, established character. Homes here were built across several decades, so you'll see a range from 1970s-era block construction to renovated or rebuilt properties.</p>
       <p>Lot sizes tend to be generous by Valrico standards, and many homeowners have taken advantage of the extra space for pools, detached garages, or garden areas. Some lots back up to small natural areas or drainage retention ponds.</p>
-      <p>There's minimal HOA presence in most sections, which appeals to buyers who don't want to deal with architectural review committees. The neighborhood has a low-key feel — it's not flashy, but for buyers who value space and established landscaping over new construction amenities, it's worth a look.</p>
+      <p>There's minimal HOA presence in most sections, which appeals to buyers who don't want to deal with architectural review committees. The neighborhood has a low-key feel, it's not flashy, but for buyers who value space and established landscaping over new construction amenities, it's worth a look.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/valrico-village/">Valrico Village</a> and <a href="/valrico-hills/">Valrico Hills</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
@@ -304,8 +304,8 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary:
       "Tree-lined Valrico neighborhood with a community feel, moderate HOA, and solid school zoning.",
     contentHtml: `
-      <p><a href="/valrico/">Valrico</a> Oaks is a residential neighborhood with — you guessed it — a lot of oak trees. The canopy coverage gives the streets a shaded, comfortable feel, especially during Tampa Bay's summer months.</p>
-      <p>Homes are mostly from the 1990s and early 2000s, with a typical layout of 3-4 bedrooms, two-car garages, and screened lanais or patios. The neighborhood has a community feel without being oversized — it's large enough to have amenities but small enough that neighbors actually recognize each other.</p>
+      <p><a href="/valrico/">Valrico</a> Oaks is a residential neighborhood with, you guessed it, a lot of oak trees. The canopy coverage gives the streets a shaded, comfortable feel, especially during Tampa Bay's summer months.</p>
+      <p>Homes are mostly from the 1990s and early 2000s, with a typical layout of 3-4 bedrooms, two-car garages, and screened lanais or patios. The neighborhood has a community feel without being oversized, it's large enough to have amenities but small enough that neighbors actually recognize each other.</p>
       <p>HOA fees are moderate, covering common areas and basic maintenance. School zoning is solid for the area, and the location provides easy access to both SR-60 and <a href="/bloomingdale-community/">Bloomingdale</a> Avenue for shopping and commuting.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/valrico-village/">Valrico Village</a> and <a href="/brentwood-hills/">Brentwood Hills</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
@@ -318,10 +318,10 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary:
       "Well-maintained Valrico subdivision with newer homes, a community pool, and convenient access to major roads.",
     contentHtml: `
-      <p>Heritage Crest is a well-maintained subdivision in <a href="/valrico/">Valrico</a> with homes built primarily in the mid-2000s to 2010s. The community has a clean, organized feel — consistent architectural standards, sidewalks, and landscaped entrances.</p>
+      <p>Heritage Crest is a well-maintained subdivision in <a href="/valrico/">Valrico</a> with homes built primarily in the mid-2000s to 2010s. The community has a clean, organized feel, consistent architectural standards, sidewalks, and landscaped entrances.</p>
       <p>Homes range from about 1,800 to 3,000 square feet, with 3-5 bedroom floor plans. Most have two-car garages, covered lanais, and the open-concept layouts that have become standard in Florida construction.</p>
       <p>There's a community pool and common areas maintained by the HOA. Fees are in line with what you'd expect for a community of this size and age. The streets are well-lit with good sidewalk coverage throughout.</p>
-      <p>Access to <a href="/bloomingdale-community/">Bloomingdale</a> Avenue and Lithia-Pinecrest Road is convenient, making errands and commuting straightforward. It's a solid, no-surprises kind of neighborhood — well-built homes in good condition with the amenities families expect.</p>
+      <p>Access to <a href="/bloomingdale-community/">Bloomingdale</a> Avenue and Lithia-Pinecrest Road is convenient, making errands and commuting straightforward. It's a solid, no-surprises kind of neighborhood, well-built homes in good condition with the amenities families expect.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/eagles-landing/">Eagles Landing</a> and <a href="/arbor-reserve/">Arbor Reserve</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
@@ -333,16 +333,16 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary:
       "Popular Valrico subdivision with a community pool, tennis courts, and homes in the Newsome High School zone.",
     contentHtml: `
-      <p>Bent Tree is a well-known <a href="/valrico/">Valrico</a> subdivision that has been popular with families for years. The community has a pool, tennis courts, and playground — amenities that get regular use, especially during the school year.</p>
+      <p>Bent Tree is a well-known <a href="/valrico/">Valrico</a> subdivision that has been popular with families for years. The community has a pool, tennis courts, and playground, amenities that get regular use, especially during the school year.</p>
       <p>Homes were built across several phases, generally from the late 1990s through the 2000s. You'll find a range of sizes from around 1,500 to 2,800 square feet, mostly 3-4 bedrooms with two-car garages. The neighborhood is broken into a few sub-sections (Bent Tree Estates, Bent Tree South) that share the community amenities.</p>
-      <p>School zoning has historically been one of the draws — Newsome High School, in particular, has a strong reputation. Families planning for the long term tend to pay attention to high school zones, and Bent Tree's zoning has held up well.</p>
+      <p>School zoning has historically been one of the draws, Newsome High School, in particular, has a strong reputation. Families planning for the long term tend to pay attention to high school zones, and Bent Tree's zoning has held up well.</p>
       <p>The neighborhood is located along the Lithia-Pinecrest corridor, giving you access to both the quieter eastern reaches of Valrico and the shopping and dining closer to Brandon.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/valrico-forest/">Valrico Forest</a> and <a href="/heritage-crest/">Heritage Crest</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
   },
 
-  // bloomingdale-oaks-community removed — canonical is "bloomingdale-oaks" below
+  // bloomingdale-oaks-community removed, canonical is "bloomingdale-oaks" below
 
   // ===== CAMPOS =====
 
@@ -350,9 +350,9 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary:
       "Small, quiet Valrico neighborhood with homes on larger lots, no CDD, and a convenient location near Bloomingdale Avenue.",
     contentHtml: `
-      <p>Campos is a smaller neighborhood in <a href="/valrico/">Valrico</a> that doesn't get a lot of attention — which is part of what some buyers like about it. It's not a massive subdivision with a branded entrance and amenity center. It's just a well-situated residential neighborhood with homes on decent-sized lots.</p>
+      <p>Campos is a smaller neighborhood in <a href="/valrico/">Valrico</a> that doesn't get a lot of attention, which is part of what some buyers like about it. It's not a massive subdivision with a branded entrance and amenity center. It's just a well-situated residential neighborhood with homes on decent-sized lots.</p>
       <p>Homes here are a mix of ages and styles, generally from the 1980s through 2000s. Lot sizes tend to be larger than what you'll find in the cookie-cutter developments, and there's no CDD (Community Development District) fee layered on top of property taxes.</p>
-      <p>The location near <a href="/bloomingdale-community/">Bloomingdale</a> Avenue is genuinely convenient — grocery stores, restaurants, and the Selmon Expressway entrance are all close. If you work in Tampa and want a short commute by Valrico standards, Campos delivers without the price premium of gated communities.</p>
+      <p>The location near <a href="/bloomingdale-community/">Bloomingdale</a> Avenue is genuinely convenient, grocery stores, restaurants, and the Selmon Expressway entrance are all close. If you work in Tampa and want a short commute by Valrico standards, Campos delivers without the price premium of gated communities.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/brandon-lakes/">Brandon Lakes</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
@@ -364,7 +364,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary:
       "Lakefront community on the Valrico/Brandon line with water views, mature trees, and a mix of updated and original homes.",
     contentHtml: `
-      <p>Brandon Lakes straddles the <a href="/valrico/">Valrico</a>/Brandon line and centers around several small lakes that give the community its name and character. Some homes here have direct water views — a feature that's increasingly hard to find at non-luxury prices in the Tampa Bay area.</p>
+      <p>Brandon Lakes straddles the <a href="/valrico/">Valrico</a>/Brandon line and centers around several small lakes that give the community its name and character. Some homes here have direct water views, a feature that's increasingly hard to find at non-luxury prices in the Tampa Bay area.</p>
       <p>The neighborhood was built primarily in the 1980s and 1990s. Homes range from about 1,200 to 2,500 square feet, with a mix of ranch-style and two-story layouts. Many have been updated over the years, but you'll still find original-condition homes priced accordingly.</p>
       <p>Mature trees and established landscaping give Brandon Lakes a settled feel. The lake views and natural areas create buffer zones between sections of the neighborhood, so it doesn't feel as dense as some of the newer developments despite its relatively central location.</p>
       <p>Access to SR-60 and <a href="/bloomingdale-community/">Bloomingdale</a> Avenue is easy, and the Westfield Brandon mall area is a short drive north. Schools are in the Hillsborough County system with assignments varying by specific address.</p>
@@ -377,12 +377,12 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
   "arbor-reserve": {
     summary:
-      "Newer Valrico community with modern floor plans, energy-efficient construction, and a community pool — a solid pick for move-in-ready buyers.",
+      "Newer Valrico community with modern floor plans, energy-efficient construction, and a community pool, a solid pick for move-in-ready buyers.",
     contentHtml: `
       <p>Arbor Reserve is one of <a href="/valrico/">Valrico</a>'s newer communities, with homes built in the 2010s. If you're looking for something move-in-ready without the project of updating an older home, this is the kind of neighborhood to consider.</p>
-      <p>Construction is modern — impact-rated windows, higher-efficiency HVAC systems, open floor plans with islands and walk-in pantries. Homes are mostly 3-5 bedrooms, ranging from about 1,800 to 3,200 square feet.</p>
+      <p>Construction is modern, impact-rated windows, higher-efficiency HVAC systems, open floor plans with islands and walk-in pantries. Homes are mostly 3-5 bedrooms, ranging from about 1,800 to 3,200 square feet.</p>
       <p>The community has a pool and common areas. HOA fees and CDD assessments both apply here, so make sure you're factoring in the full monthly carrying cost beyond just the mortgage payment. It's a common oversight, especially for first-time buyers.</p>
-      <p>School zoning and location are typical for central Valrico — solid schools and reasonable access to the main commuter routes. The surrounding area has seen steady development, so amenities and services continue to improve.</p>
+      <p>School zoning and location are typical for central Valrico, solid schools and reasonable access to the main commuter routes. The surrounding area has seen steady development, so amenities and services continue to improve.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/heritage-crest/">Heritage Crest</a> and <a href="/eagles-landing/">Eagles Landing</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
@@ -392,9 +392,9 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
   "valrico-hills": {
     summary:
-      "One of Valrico's original neighborhoods with character homes, large lots, and no HOA — great for buyers who want space and freedom.",
+      "One of Valrico's original neighborhoods with character homes, large lots, and no HOA, great for buyers who want space and freedom.",
     contentHtml: `
-      <p><a href="/valrico/">Valrico</a> Hills is one of the area's older neighborhoods, and it has a character that newer subdivisions simply can't replicate. Lots are large — often a quarter-acre or more — and the mature landscaping creates a canopy that keeps things shaded and private.</p>
+      <p><a href="/valrico/">Valrico</a> Hills is one of the area's older neighborhoods, and it has a character that newer subdivisions simply can't replicate. Lots are large, often a quarter-acre or more, and the mature landscaping creates a canopy that keeps things shaded and private.</p>
       <p>Homes here span from the 1960s through the 1990s. You'll find everything from modest 3-bedroom ranches to larger custom-built homes. The variety means there's a wide price range within the same neighborhood.</p>
       <p>No HOA is a significant draw for many buyers. You can park your truck, build a workshop, or let your yard grow a little wild without getting a letter from a review committee. For some buyers, that freedom is worth more than a community pool.</p>
       <p>The trade-off with older homes is always the same: budget for updates and inspections. Roofs, plumbing, electrical panels, and HVAC systems all have useful lifespans, and homes from the 1960s-70s may need attention in one or more of those areas. That said, a well-maintained Valrico Hills home on a big lot is hard to beat for the price.</p>
@@ -409,9 +409,9 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary:
       "Quiet, tree-covered Valrico neighborhood with a private feel, homes from the 1980s and 90s, and easy access to Lithia-Pinecrest Road.",
     contentHtml: `
-      <p><a href="/valrico/">Valrico</a> Forest earned its name — the neighborhood is heavily treed, giving it a private, tucked-away feel despite being close to one of Valrico's main roads. If you like the idea of having woods behind your house rather than another row of rooftops, this might be your spot.</p>
+      <p><a href="/valrico/">Valrico</a> Forest earned its name, the neighborhood is heavily treed, giving it a private, tucked-away feel despite being close to one of Valrico's main roads. If you like the idea of having woods behind your house rather than another row of rooftops, this might be your spot.</p>
       <p>Homes were built mostly in the 1980s and 1990s. They're well-spaced, typically 3-4 bedrooms, and sit on lots that range from a quarter-acre to nearly an acre in some spots. The construction is mostly concrete block, which is standard and holds up well in Florida.</p>
-      <p>The community is quiet and residential. There's no community pool or clubhouse — it's just a neighborhood of homes with natural surroundings. HOA presence is minimal, though some sections have basic covenants.</p>
+      <p>The community is quiet and residential. There's no community pool or clubhouse, it's just a neighborhood of homes with natural surroundings. HOA presence is minimal, though some sections have basic covenants.</p>
       <p>Lithia-Pinecrest Road is the main access, connecting you south toward Lithia and FishHawk or north to the <a href="/bloomingdale-community/">Bloomingdale</a> area and beyond. It's not the most direct route into Tampa, but for people who work in Brandon, Riverview, or along the I-75 corridor, the commute is manageable.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Valrico. Also worth exploring nearby: <a href="/valrico-hills/">Valrico Hills</a> and <a href="/bent-tree/">Bent Tree</a>.</p>
       <p>Browse <a href="/valrico-homes-for-sale/">homes for sale in Valrico</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
@@ -424,10 +424,10 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary:
       "Luxury gated golf community in Tarpon Springs with custom homes from $500K to $1.2M+, 24-hour manned entry, and a private golf course.",
     contentHtml: `
-      <p>Cypress Run is one of Tarpon Springs' most prestigious addresses — a gated, 24-hour manned community built around a private golf course. Homes here range from $500K into the $1.2M+ tier, with custom builds and luxury villas on generous lots. The community caters to buyers who want a true country club lifestyle without leaving <a href="/tarpon-springs/">Tarpon Springs</a>.</p>
-      <p>The golf course is the centerpiece, but the appeal goes beyond the fairways. Privacy, security, and the caliber of neighbors matter here as much as the home itself. You'll find architectural variety — Mediterranean, traditional Florida, and contemporary custom designs — but the common thread is quality construction and attention to detail.</p>
+      <p>Cypress Run is one of Tarpon Springs' most prestigious addresses, a gated, 24-hour manned community built around a private golf course. Homes here range from $500K into the $1.2M+ tier, with custom builds and luxury villas on generous lots. The community caters to buyers who want a true country club lifestyle without leaving <a href="/tarpon-springs/">Tarpon Springs</a>.</p>
+      <p>The golf course is the centerpiece, but the appeal goes beyond the fairways. Privacy, security, and the caliber of neighbors matter here as much as the home itself. You'll find architectural variety, Mediterranean, traditional Florida, and contemporary custom designs, but the common thread is quality construction and attention to detail.</p>
       <p>The buyer profile leans toward luxury buyers, retirees, and snowbirds who want a low-maintenance, high-amenity lifestyle. Many homes have private pools, three-car garages, and custom outdoor living spaces. Lot sizes give real breathing room compared to the typical Florida subdivision.</p>
-      <p>If you're considering Cypress Run, budget beyond the list price — HOA fees reflecting the 24-hour gate staff and course maintenance are significant. Club membership options vary, so confirm what's included versus optional. For buyers in this price range, that's expected; what Cypress Run delivers in return is a hard combination to replicate elsewhere in Pinellas County.</p>
+      <p>If you're considering Cypress Run, budget beyond the list price, HOA fees reflecting the 24-hour gate staff and course maintenance are significant. Club membership options vary, so confirm what's included versus optional. For buyers in this price range, that's expected; what Cypress Run delivers in return is a hard combination to replicate elsewhere in Pinellas County.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/crescent-oaks/">Crescent Oaks</a> and <a href="/north-lake-estates/">North Lake Estates</a>.</p>
       <p>Browse <a href="/tarpon-springs-homes-for-sale/">homes for sale in Tarpon Springs</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
     `,
@@ -438,8 +438,8 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Executive gated golf community in Tarpon Springs with homes from $350K to $850K, 24-hour manned entry, and a strong appeal among golf lovers and snowbirds.",
     contentHtml: `
       <p>Crescent Oaks is a gated, 24-hour manned community in <a href="/tarpon-springs/">Tarpon Springs</a> built around an 18-hole golf course. Price points run from about $350K for villas to $850K for the larger executive homes, making it more accessible than some of the area's ultra-luxury gated communities without sacrificing the private, resort-style feel.</p>
-      <p>The community draws a diverse mix — golf enthusiasts who want the course practically in their backyard, families attracted by the security and quiet streets, and snowbirds looking for a Florida base that feels like a real neighborhood rather than a condo complex. The combination of manned gates and an active social scene around the golf club creates a genuine sense of community.</p>
-      <p>Homes are a mix of single-family executive homes and attached villas. The villas in particular attract low-maintenance buyers — landscaping and exterior upkeep handled by the association, so you can lock up and leave without the weekend project list. Single-family homes offer more space and privacy while still accessing the community amenities.</p>
+      <p>The community draws a diverse mix, golf enthusiasts who want the course practically in their backyard, families attracted by the security and quiet streets, and snowbirds looking for a Florida base that feels like a real neighborhood rather than a condo complex. The combination of manned gates and an active social scene around the golf club creates a genuine sense of community.</p>
+      <p>Homes are a mix of single-family executive homes and attached villas. The villas in particular attract low-maintenance buyers, landscaping and exterior upkeep handled by the association, so you can lock up and leave without the weekend project list. Single-family homes offer more space and privacy while still accessing the community amenities.</p>
       <p>Worth knowing: CDD fees can apply in sections of Crescent Oaks, so confirm the full carrying cost with your agent before making an offer. Golf club membership may be separate from community HOA fees. That said, for buyers who want gated security, a golf course, and a genuine <a href="/tarpon-springs/">Tarpon Springs</a> address at a price point below the ultra-luxury tier, Crescent Oaks checks most of the boxes.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/cypress-run/">Cypress Run</a> and <a href="/keystone-woodfield/">Keystone and Woodfield</a>.</p>
       <p>Browse <a href="/tarpon-springs-homes-for-sale/">homes for sale in Tarpon Springs</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
@@ -448,11 +448,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
   "greektown-spring-bayou": {
     summary:
-      "Historic heart of Tarpon Springs — walkable, culturally rich neighborhood with cottages, bungalows, and some of the most character-filled streets in Pinellas County.",
+      "Historic heart of Tarpon Springs, walkable, culturally rich neighborhood with cottages, bungalows, and some of the most character-filled streets in Pinellas County.",
     contentHtml: `
       <p>Greektown and Spring Bayou are the soul of <a href="/tarpon-springs/">Tarpon Springs</a>. This is the historic neighborhood where the Greek sponge diving community built its roots in the early 1900s, and the area has retained that character in a way that's increasingly rare in Florida. Prices run from about $275K for smaller cottages to $700K for larger, fully renovated historic homes.</p>
-      <p>The architecture here is genuinely different from the rest of Tampa Bay. You'll find bungalows, craftsman cottages, and Victorian-era homes with wide front porches, mature trees, and the kind of streetscape that actually invites walking. Spring Bayou itself — the natural spring-fed bayou that gives the neighborhood half its name — is stunning and just blocks from the historic district's main streets.</p>
-      <p>Walkability is the thing buyers who land here can't stop talking about. The Sponge Docks, Greek restaurants, bakeries, and coffee shops are within easy walking distance. The Epiphany Celebration held every January around the bayou is one of the most unique community events in Florida — a cultural tradition that's been running for over a century.</p>
+      <p>The architecture here is genuinely different from the rest of Tampa Bay. You'll find bungalows, craftsman cottages, and Victorian-era homes with wide front porches, mature trees, and the kind of streetscape that actually invites walking. Spring Bayou itself, the natural spring-fed bayou that gives the neighborhood half its name, is stunning and just blocks from the historic district's main streets.</p>
+      <p>Walkability is the thing buyers who land here can't stop talking about. The Sponge Docks, Greek restaurants, bakeries, and coffee shops are within easy walking distance. The Epiphany Celebration held every January around the bayou is one of the most unique community events in Florida, a cultural tradition that's been running for over a century.</p>
       <p>This is not a gated community, not a planned subdivision, and not a neighborhood with cookie-cutter construction. Buyers here tend to be people who specifically want character and don't need a community pool to feel at home. It attracts artists, retirees, remote workers, and buyers relocating from the Northeast who recognize walkable historic neighborhoods when they see them.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/downtown-tarpon-springs/">Downtown Tarpon Springs</a> and <a href="/tarpon-springs-waterfront/">Tarpon Springs Waterfront</a>.</p>
       <p>Browse <a href="/tarpon-springs-homes-for-sale/">homes for sale in Tarpon Springs</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
@@ -461,10 +461,10 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
   "downtown-tarpon-springs": {
     summary:
-      "Victorian homes, condos, and townhomes in Tarpon Springs' historic core — walkable, affordable entry point, and a strong pick for first-time buyers and investors.",
+      "Victorian homes, condos, and townhomes in Tarpon Springs' historic core, walkable, affordable entry point, and a strong pick for first-time buyers and investors.",
     contentHtml: `
       <p>Downtown Tarpon Springs' Historic District gives buyers something genuinely different: Victorian-era homes, period cottages, and more recent condo and townhome developments all layered into a compact, walkable historic core. Price points start around $250K and reach $600K for the larger renovated historic homes, making it one of the more accessible entry points into <a href="/tarpon-springs/">Tarpon Springs</a> real estate.</p>
-      <p>The district is listed on the National Register of Historic Places, which has real implications for buyers. Renovations on historic properties come with design review requirements, which can slow projects and limit certain exterior changes. On the flip side, the historic designation has helped preserve the character that drives the neighborhood's long-term appeal — there's no risk of the bungalow next door getting torn down for a three-story stucco box.</p>
+      <p>The district is listed on the National Register of Historic Places, which has real implications for buyers. Renovations on historic properties come with design review requirements, which can slow projects and limit certain exterior changes. On the flip side, the historic designation has helped preserve the character that drives the neighborhood's long-term appeal, there's no risk of the bungalow next door getting torn down for a three-story stucco box.</p>
       <p>First-time buyers and investors both find opportunity here. The condo and townhome inventory gives first-timers a way into homeownership without taking on a full historic renovation. Investors see the tourism draw, the short-term rental potential near the Sponge Docks area, and a price basis that still makes sense compared to Clearwater or Dunedin.</p>
       <p>Downtown Tarpon Springs has a genuine small-town Florida feel that draws buyers tired of the suburbs. The main street has independent restaurants, boutiques, and arts venues. The Pinellas Trail runs through the area. And the bayou is minutes away on foot. For buyers who want a neighborhood with real texture and history, this is one of the better options left in the county.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/greektown-spring-bayou/">Greektown and Spring Bayou</a> and <a href="/tarpon-springs-south/">Tarpon Springs South</a>.</p>
@@ -474,11 +474,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
   "keystone-woodfield": {
     summary:
-      "Family-friendly Tarpon Springs neighborhoods with newer homes from the 2000s, deed restrictions, and East Lake school zone — popular with growing families.",
+      "Family-friendly Tarpon Springs neighborhoods with newer homes from the 2000s, deed restrictions, and East Lake school zone, popular with growing families.",
     contentHtml: `
       <p>Keystone and Woodfield are neighboring deed-restricted communities in eastern <a href="/tarpon-springs/">Tarpon Springs</a> that attract buyers looking for newer construction, good school zoning, and a family-friendly environment without the premium price of a gated community. Homes here are primarily 3 and 4 bedrooms built in the 2000s, with prices ranging from about $375K to $650K.</p>
-      <p>Construction in both neighborhoods is typical Florida suburban — concrete block, tile roofs, two-car garages, and open floor plans. Lot sizes are modest but functional, with room for a pool in most cases. The deed restrictions keep the community looking consistent, which matters for long-term property values and is exactly what buyers with young families tend to prioritize.</p>
-      <p>The East Lake school zone is a significant draw. East Lake High School and the middle and elementary schools in the zone have strong reputations and draw families specifically looking for this part of Pinellas County. If school zoning is on your checklist, confirm your specific address before committing — zone boundaries can shift.</p>
+      <p>Construction in both neighborhoods is typical Florida suburban, concrete block, tile roofs, two-car garages, and open floor plans. Lot sizes are modest but functional, with room for a pool in most cases. The deed restrictions keep the community looking consistent, which matters for long-term property values and is exactly what buyers with young families tend to prioritize.</p>
+      <p>The East Lake school zone is a significant draw. East Lake High School and the middle and elementary schools in the zone have strong reputations and draw families specifically looking for this part of Pinellas County. If school zoning is on your checklist, confirm your specific address before committing, zone boundaries can shift.</p>
       <p>Location puts you close to the Keystone Road corridor with easy access to East Lake Road and the communities stretching toward Palm Harbor and Oldsmar. You're not walking-distance to the Sponge Docks or historic downtown, but the drive is short. For families where school zone and newer construction matter more than walkability and historic character, Keystone and Woodfield consistently land on the shortlist.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/crescent-oaks/">Crescent Oaks</a> and <a href="/north-lake-estates/">North Lake Estates</a>.</p>
       <p>Browse <a href="/tarpon-springs-homes-for-sale/">homes for sale in Tarpon Springs</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
@@ -489,9 +489,9 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary:
       "Budget-friendly Tarpon Springs neighborhood with older ranch homes, no HOA in many sections, and strong value for first-time buyers and investors.",
     contentHtml: `
-      <p>Tarpon Springs South is where the value lives in <a href="/tarpon-springs/">Tarpon Springs</a> real estate. Prices run from about $225K to $425K — the most affordable range you'll find in the city — and the inventory is mostly older ranch-style and block homes from the 1960s through 1980s. No HOA in many sections means fewer restrictions and no monthly association fees.</p>
-      <p>This is the neighborhood that attracts first-time buyers who've been priced out of tighter markets and investors looking for properties with renovation potential. The bones are solid — Florida block construction holds up well — and the lots are often larger than what you get in newer developments. The work is cosmetic in the best cases, though older homes always warrant a thorough inspection of roof, electrical, plumbing, and HVAC age.</p>
-      <p>The trade-off is that you're getting an older neighborhood without the amenities of a newer community. No community pool, no gated entry, no landscaped common areas. What you get is ownership in a city with genuine character and a diverse, established population — not a master-planned suburb built from scratch in 2005.</p>
+      <p>Tarpon Springs South is where the value lives in <a href="/tarpon-springs/">Tarpon Springs</a> real estate. Prices run from about $225K to $425K, the most affordable range you'll find in the city, and the inventory is mostly older ranch-style and block homes from the 1960s through 1980s. No HOA in many sections means fewer restrictions and no monthly association fees.</p>
+      <p>This is the neighborhood that attracts first-time buyers who've been priced out of tighter markets and investors looking for properties with renovation potential. The bones are solid, Florida block construction holds up well, and the lots are often larger than what you get in newer developments. The work is cosmetic in the best cases, though older homes always warrant a thorough inspection of roof, electrical, plumbing, and HVAC age.</p>
+      <p>The trade-off is that you're getting an older neighborhood without the amenities of a newer community. No community pool, no gated entry, no landscaped common areas. What you get is ownership in a city with genuine character and a diverse, established population, not a master-planned suburb built from scratch in 2005.</p>
       <p>The location still connects you to everything that makes <a href="/tarpon-springs/">Tarpon Springs</a> worth considering: the Sponge Docks, Gulf access, the historic district, and the overall waterfront lifestyle are all within a short drive. For buyers who are willing to accept an older home in exchange for a lower price point and no HOA overhead, Tarpon Springs South delivers consistent value.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/downtown-tarpon-springs/">Downtown Tarpon Springs</a> and <a href="/greektown-spring-bayou/">Greektown and Spring Bayou</a>.</p>
       <p>Browse <a href="/tarpon-springs-homes-for-sale/">homes for sale in Tarpon Springs</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
@@ -504,7 +504,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     contentHtml: `
       <p>North Lake Estates is one of the newer construction opportunities in <a href="/tarpon-springs/">Tarpon Springs</a>, with homes coming online from 2024 forward. Price points range from roughly $500K to $800K and above, putting it in the upper-middle tier for the area. If you want contemporary construction with modern finishes rather than a renovation project, this is one of the few places in Tarpon Springs to find it.</p>
       <p>New construction in this part of Pinellas County means impact-resistant windows, open-concept floor plans, energy-efficient systems, and the kind of kitchen and bath finishes that don't require a gut renovation before you move in. Builder warranties provide additional peace of mind for buyers who've been burned by older home surprises. Select sections include gated access, which adds a layer of security and privacy.</p>
-      <p>The buyer profile trends toward people making a deliberate move — relocation buyers who want a specific home package, buyers downsizing from larger markets who want the Florida lifestyle without a fixer-upper, and buyers who've been watching the Tarpon Springs market and want in before the next cycle of appreciation.</p>
+      <p>The buyer profile trends toward people making a deliberate move, relocation buyers who want a specific home package, buyers downsizing from larger markets who want the Florida lifestyle without a fixer-upper, and buyers who've been watching the Tarpon Springs market and want in before the next cycle of appreciation.</p>
       <p>One thing to verify: CDD fees are common on new construction communities in Florida and can add meaningfully to your monthly cost. Ask your agent to get the full fee disclosure from the builder before you're deep in the process. With new construction, the sticker price and the true carrying cost are two different conversations, and North Lake Estates is no exception.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/cypress-run/">Cypress Run</a> and <a href="/keystone-woodfield/">Keystone and Woodfield</a>.</p>
       <p>Browse <a href="/tarpon-springs-homes-for-sale/">homes for sale in Tarpon Springs</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
@@ -652,11 +652,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
   "tarpon-springs-waterfront": {
     summary:
-      "Waterfront homes and condos on the bayous and Gulf coast of Tarpon Springs, ranging from $350K condos to $2M+ estate homes — built for buyers who want water access.",
+      "Waterfront homes and condos on the bayous and Gulf coast of Tarpon Springs, ranging from $350K condos to $2M+ estate homes, built for buyers who want water access.",
     contentHtml: `
-      <p>Waterfront & Bayou covers the water-access properties scattered along <a href="/tarpon-springs/">Tarpon Springs'</a> coastline, bayous, and inlets — everything from Gulf-front condos starting around $350K to estate-sized single-family homes pushing $2M and above. It's less a single neighborhood than a category: if water access is the primary feature, you're shopping in this space.</p>
+      <p>Waterfront & Bayou covers the water-access properties scattered along <a href="/tarpon-springs/">Tarpon Springs'</a> coastline, bayous, and inlets, everything from Gulf-front condos starting around $350K to estate-sized single-family homes pushing $2M and above. It's less a single neighborhood than a category: if water access is the primary feature, you're shopping in this space.</p>
       <p>The variety is real. Bayou-front properties offer calm-water boat access and the scenery of Tarpon Springs' natural waterways without the exposure of open Gulf frontage. Gulf-access homes with seawall and dock give you direct boating range without hauling a trailer. Condos in waterfront complexes deliver the water views and lifestyle at a fraction of the single-family cost, with the trade-off of association rules and shared amenities.</p>
-      <p>Buyers here are almost always coming with a specific water-use case in mind — boating, fishing, kayaking, or simply the view and proximity. Flood zone designations and flood insurance costs vary significantly by specific location along the waterfront, and this is one area where doing that homework before going under contract can save you thousands annually on insurance alone. Ask your agent to pull the flood zone map for any property you're seriously considering.</p>
+      <p>Buyers here are almost always coming with a specific water-use case in mind, boating, fishing, kayaking, or simply the view and proximity. Flood zone designations and flood insurance costs vary significantly by specific location along the waterfront, and this is one area where doing that homework before going under contract can save you thousands annually on insurance alone. Ask your agent to pull the flood zone map for any property you're seriously considering.</p>
       <p>Tarpon Springs' waterfront has held its appeal through multiple market cycles because the supply is genuinely limited. The combination of the natural bayou system, Gulf access, and the historic character of the surrounding city creates a setting that doesn't replicate easily. If water access is non-negotiable on your list, <a href="/tarpon-springs/">Tarpon Springs</a> waterfront deserves a serious look before you settle elsewhere in Pinellas County.</p>
       <p><a href="/about/">Barrett Henry</a> has 23+ years of real estate experience and can help you find the right home in Tarpon Springs. Also worth exploring nearby: <a href="/greektown-spring-bayou/">Greektown and Spring Bayou</a> and <a href="/downtown-tarpon-springs/">Downtown Tarpon Springs</a>.</p>
       <p>Browse <a href="/tarpon-springs-homes-for-sale/">homes for sale in Tarpon Springs</a> to see what is available right now. Get a <a href="/free-home-valuation/">free home valuation</a> to see what your home is worth.</p>
@@ -1432,8 +1432,8 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Small late-1990s single-family subdivision off SR 60 in Valrico with homes around 2,400-2,800 sqft on quiet streets. No CDD. Zoned for Buckhorn Elementary, Mulrennan Middle, and Durant High.",
     contentHtml: `
       <h3>What Is Angel Run Like?</h3>
-      <p>Angel Run is a compact single-family neighborhood tucked off State Road 60 in central <a href="/valrico/">Valrico</a>. Built primarily in the late 1990s, the community has around 30 homes on quiet residential streets with no through traffic. These are not cookie-cutter tract homes — most were built with some variation in floor plans, giving the neighborhood a slightly custom feel despite its small footprint.</p>
-      <p>Homes here are predominantly concrete block construction, ranging from about 2,400 to 2,800 square feet with 3-4 bedrooms and 2-car garages. Most have screened lanais and fenced backyards. The lots are decent-sized for the era — not the postage stamps you see in newer developments, but not the half-acre spreads of the older Buckhorn estates either.</p>
+      <p>Angel Run is a compact single-family neighborhood tucked off State Road 60 in central <a href="/valrico/">Valrico</a>. Built primarily in the late 1990s, the community has around 30 homes on quiet residential streets with no through traffic. These are not cookie-cutter tract homes, most were built with some variation in floor plans, giving the neighborhood a slightly custom feel despite its small footprint.</p>
+      <p>Homes here are predominantly concrete block construction, ranging from about 2,400 to 2,800 square feet with 3-4 bedrooms and 2-car garages. Most have screened lanais and fenced backyards. The lots are decent-sized for the era, not the postage stamps you see in newer developments, but not the half-acre spreads of the older Buckhorn estates either.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
       <p>Angel Run has a modest HOA that covers basic common area maintenance and community standards. There is <strong>no CDD fee</strong>, which is a real advantage compared to newer communities like <a href="/copper-ridge/">Copper Ridge</a> where the CDD can add $2,000+ per year to your tax bill. The low carrying cost makes Angel Run attractive to both homeowners and investors.</p>
@@ -1457,7 +1457,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>How Does Angel Run Compare to Nearby Neighborhoods?</h3>
       <ul>
-        <li><strong><a href="/abbey-grove/">Abbey Grove</a></strong> (0.5 miles): Similar era, similar size, $40/mo HOA. Very comparable — comes down to which street layout you prefer.</li>
+        <li><strong><a href="/abbey-grove/">Abbey Grove</a></strong> (0.5 miles): Similar era, similar size, $40/mo HOA. Very comparable, comes down to which street layout you prefer.</li>
         <li><strong><a href="/savannah-landings/">Savannah Landings</a></strong> (1 mile): Gated townhomes, maintenance-free lifestyle. Higher HOA but no yard work. Different product entirely.</li>
         <li><strong><a href="/somerset/">Somerset</a></strong> (1 mile): Larger community with pool, tennis, more amenities. More neighbors but more activity.</li>
         <li><strong><a href="/valri-park/">Valri Park</a></strong> (1.5 miles): No HOA, older homes, bigger lots. More affordable but less cohesive.</li>
@@ -1465,8 +1465,8 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Construction:</strong> Late 1990s concrete block. Homes are 25+ years old — inspect roofs (may need replacement), HVAC systems (likely on second or third unit), and water heaters carefully.</li>
-        <li><strong>Insurance:</strong> Concrete block helps with rates. Check roof material — tile roofs command better insurance pricing than shingle.</li>
+        <li><strong>Construction:</strong> Late 1990s concrete block. Homes are 25+ years old, inspect roofs (may need replacement), HVAC systems (likely on second or third unit), and water heaters carefully.</li>
+        <li><strong>Insurance:</strong> Concrete block helps with rates. Check roof material, tile roofs command better insurance pricing than shingle.</li>
         <li><strong>Resale:</strong> Small community means fewer comps. Price carefully and do not overpay based on one outlier sale.</li>
         <li><strong>Rentals:</strong> Good rental demand for single-family Valrico homes in this size range. Expect $2,100-$2,500/mo. <a href="https://valricopropertymgmt.com/neighborhoods/angel-run" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
@@ -1483,8 +1483,8 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Established 1985-1990 single-family neighborhood on Avalon Terrace Drive in Valrico. Homes range 1,735-2,700 sqft on generous lots. No CDD. Zoned for Bloomingdale-area schools.",
     contentHtml: `
       <h3>What Is Avalon Terrace Like?</h3>
-      <p>Avalon Terrace is a small, established neighborhood in <a href="/valrico/">Valrico</a> built between 1985 and 1990. The community sits on a single cul-de-sac street — Avalon Terrace Drive — with roughly 20-25 single-family homes. That is it. No phases, no expansion, no new construction coming in next door. If you want a quiet, settled pocket neighborhood where your neighbors have been there for years, this is the kind of place you look at.</p>
-      <p>Homes range from about 1,735 to 2,700 square feet with 3-4 bedrooms. Construction is concrete block, which is standard for this era in Hillsborough County. Lots are generous by today's standards — most have real backyards with mature trees providing shade and privacy.</p>
+      <p>Avalon Terrace is a small, established neighborhood in <a href="/valrico/">Valrico</a> built between 1985 and 1990. The community sits on a single cul-de-sac street, Avalon Terrace Drive, with roughly 20-25 single-family homes. That is it. No phases, no expansion, no new construction coming in next door. If you want a quiet, settled pocket neighborhood where your neighbors have been there for years, this is the kind of place you look at.</p>
+      <p>Homes range from about 1,735 to 2,700 square feet with 3-4 bedrooms. Construction is concrete block, which is standard for this era in Hillsborough County. Lots are generous by today's standards, most have real backyards with mature trees providing shade and privacy.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
       <p>Avalon Terrace has minimal HOA oversight. The fees are low and cover basic common area upkeep. There is <strong>no CDD fee</strong>. This keeps your monthly carrying costs straightforward compared to newer Valrico neighborhoods where CDDs can add $150-$200 per month on top of everything else.</p>
@@ -1516,9 +1516,9 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Construction:</strong> 1985-1990 build means these homes are 35-40 years old. Expect updated plumbing in some homes (check for polybutylene pipes — common in this era and a deal-breaker for many insurers). Roof, HVAC, and water heater are all inspection priorities.</li>
+        <li><strong>Construction:</strong> 1985-1990 build means these homes are 35-40 years old. Expect updated plumbing in some homes (check for polybutylene pipes, common in this era and a deal-breaker for many insurers). Roof, HVAC, and water heater are all inspection priorities.</li>
         <li><strong>Insurance:</strong> Older construction can mean higher insurance. Upgraded roofs and electrical panels help offset this.</li>
-        <li><strong>Renovation potential:</strong> Many homes in this price range are candidates for kitchen and bathroom updates. Buy right and renovate — there is equity opportunity here.</li>
+        <li><strong>Renovation potential:</strong> Many homes in this price range are candidates for kitchen and bathroom updates. Buy right and renovate, there is equity opportunity here.</li>
         <li><strong>Rentals:</strong> Solid rental market for single-family homes in this area. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals throughout Valrico.</li>
       </ul>
 
@@ -1534,8 +1534,8 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Quiet 40-home subdivision in north Valrico with established homes on wooded lots. Low-key community with mature landscaping and no CDD fee.",
     contentHtml: `
       <h3>What Is Belle Timbre Like?</h3>
-      <p>Belle Timbre is one of those small <a href="/valrico/">Valrico</a> neighborhoods that flies under the radar. About 40 single-family homes on quiet streets in north Valrico, near the Bloomingdale corridor. The community has been around since the late 1980s and early 1990s, so the landscaping is fully mature — large oaks, established hedges, and real shade throughout the neighborhood.</p>
-      <p>Homes here are typically 3-4 bedrooms, concrete block construction, ranging from about 1,600 to 2,400 square feet. The lots are well-sized with genuine backyards. Most homes have screened lanais and 2-car garages. The feel is suburban and settled — this is not a flashy neighborhood, it is a comfortable one.</p>
+      <p>Belle Timbre is one of those small <a href="/valrico/">Valrico</a> neighborhoods that flies under the radar. About 40 single-family homes on quiet streets in north Valrico, near the Bloomingdale corridor. The community has been around since the late 1980s and early 1990s, so the landscaping is fully mature, large oaks, established hedges, and real shade throughout the neighborhood.</p>
+      <p>Homes here are typically 3-4 bedrooms, concrete block construction, ranging from about 1,600 to 2,400 square feet. The lots are well-sized with genuine backyards. Most homes have screened lanais and 2-car garages. The feel is suburban and settled, this is not a flashy neighborhood, it is a comfortable one.</p>
 
       <h3>How Much Does the HOA Cost?</h3>
       <p>Belle Timbre has a modest HOA with low fees covering common area maintenance and community standards. There is <strong>no CDD fee</strong>. For comparison, newer neighborhoods in south Valrico routinely add $1,500-$2,500 per year in CDD on top of the HOA, so Belle Timbre's simple fee structure is a real advantage for budget-conscious buyers.</p>
@@ -1553,7 +1553,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>Which Schools Serve Belle Timbre?</h3>
-      <p>Belle Timbre is in the <strong>Bloomingdale</strong> school zone area. Cimino Elementary and Bloomingdale High School serve parts of this neighborhood. School zoning in this part of Valrico is a consistent draw for families — the Bloomingdale schools have solid reputations and strong community support.</p>
+      <p>Belle Timbre is in the <strong>Bloomingdale</strong> school zone area. Cimino Elementary and Bloomingdale High School serve parts of this neighborhood. School zoning in this part of Valrico is a consistent draw for families, the Bloomingdale schools have solid reputations and strong community support.</p>
 
       <h3>How Does Belle Timbre Compare to Nearby Neighborhoods?</h3>
       <ul>
@@ -1584,14 +1584,14 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     contentHtml: `
       <h3>What Is Bonterra Like?</h3>
       <p>Bonterra is a gated, upscale community in <a href="/valrico/">Valrico</a> with fewer than 100 single-family homes, built between 2003 and 2005. The community sits just off SR 60 (East Brandon Boulevard) near I-75, which puts it in one of the most convenient locations in the entire Valrico area for commuters. The gated entry, tree-lined streets, and well-maintained common areas give Bonterra a premium feel without the premium price tag of places like <a href="/river-hills-country-club/">River Hills</a> or <a href="/fishhawk-ranch/">FishHawk Ranch</a>.</p>
-      <p>Homes typically have 3-5 bedrooms and 2-4 bathrooms with two- or three-car garages. Construction is concrete block — standard for the early 2000s — with barrel tile or architectural shingle roofs. The floor plans are open and spacious, built during that era when builders still gave you real living space and reasonable lot sizes.</p>
+      <p>Homes typically have 3-5 bedrooms and 2-4 bathrooms with two- or three-car garages. Construction is concrete block, standard for the early 2000s, with barrel tile or architectural shingle roofs. The floor plans are open and spacious, built during that era when builders still gave you real living space and reasonable lot sizes.</p>
 
       <h3>What Does the HOA Cover and How Much Does It Cost?</h3>
-      <p>The HOA fee ranges from approximately <strong>$350 to $1,400 per year</strong> depending on the section and assessment schedule. This covers grounds maintenance, community road upkeep, gated entry maintenance, and common area landscaping. There is <strong>no CDD fee</strong> — a significant advantage when you compare Bonterra to newer gated communities in the area where CDDs can add $2,000+ annually.</p>
+      <p>The HOA fee ranges from approximately <strong>$350 to $1,400 per year</strong> depending on the section and assessment schedule. This covers grounds maintenance, community road upkeep, gated entry maintenance, and common area landscaping. There is <strong>no CDD fee</strong> a significant advantage when you compare Bonterra to newer gated communities in the area where CDDs can add $2,000+ annually.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
-        <li><strong>I-75:</strong> 2 miles (5 minutes) — this is the big selling point</li>
+        <li><strong>I-75:</strong> 2 miles (5 minutes), this is the big selling point</li>
         <li><strong>I-4:</strong> 5 miles (10 minutes via I-75)</li>
         <li><strong>Publix:</strong> 1 mile on SR 60</li>
         <li><strong>Walmart Supercenter:</strong> 2 miles</li>
@@ -1603,7 +1603,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The location is genuinely excellent. If you commute to Tampa, Brandon, or anywhere along the I-75/I-4 corridor, Bonterra puts you closer to the highway than almost any other Valrico neighborhood.</p>
 
       <h3>Which Schools Serve Bonterra?</h3>
-      <p>Bonterra is zoned for Hillsborough County public schools. The specific zoning depends on your address within the community — verify with the school district before purchasing, as zone lines can shift. The neighborhood is convenient to several well-rated elementary schools in the Valrico corridor.</p>
+      <p>Bonterra is zoned for Hillsborough County public schools. The specific zoning depends on your address within the community, verify with the school district before purchasing, as zone lines can shift. The neighborhood is convenient to several well-rated elementary schools in the Valrico corridor.</p>
 
       <h3>How Does Bonterra Compare to Similar Communities?</h3>
       <ul>
@@ -1616,7 +1616,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Construction:</strong> 2003-2005 build means homes are 20+ years old. Roof, HVAC, and water heater inspections are critical. Some original tile roofs may be nearing replacement age.</li>
-        <li><strong>Gate access:</strong> The gated entry adds security and perceived value. Make sure you understand guest access procedures before buying — it matters for visitors, deliveries, and service providers.</li>
+        <li><strong>Gate access:</strong> The gated entry adds security and perceived value. Make sure you understand guest access procedures before buying, it matters for visitors, deliveries, and service providers.</li>
         <li><strong>Resale:</strong> Gated communities with low HOA and no CDD hold value well in this market. Under 100 homes means limited inventory when listings come up, which supports pricing.</li>
         <li><strong>Rentals:</strong> Strong demand for gated single-family rentals. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> manages properties in the Valrico area.</li>
       </ul>
@@ -1633,8 +1633,8 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Established 1988-1998 single-family community on Brandon Brook Road in Valrico. Homes 1,000-2,400 sqft with HOA $18-$125/mo. No CDD. Mix of one and two-story homes.",
     contentHtml: `
       <h3>What Is Brandon Brook Like?</h3>
-      <p>Brandon Brook is an established residential neighborhood in <a href="/valrico/">Valrico</a> built between 1988 and 1998. The community stretches along Brandon Brook Road with a mix of one-story and two-story single-family homes. What makes Brandon Brook interesting is the range — homes span from about 1,000 to 2,400 square feet, so you can find a starter home or a family-sized property on the same street.</p>
-      <p>Construction is concrete block throughout, and the neighborhood has that settled, mature feel you only get from 25-35 year old landscaping. Large oaks line many of the lots, and the streets are quiet enough for evening walks. This is not a flashy neighborhood — it is a practical one that delivers value.</p>
+      <p>Brandon Brook is an established residential neighborhood in <a href="/valrico/">Valrico</a> built between 1988 and 1998. The community stretches along Brandon Brook Road with a mix of one-story and two-story single-family homes. What makes Brandon Brook interesting is the range, homes span from about 1,000 to 2,400 square feet, so you can find a starter home or a family-sized property on the same street.</p>
+      <p>Construction is concrete block throughout, and the neighborhood has that settled, mature feel you only get from 25-35 year old landscaping. Large oaks line many of the lots, and the streets are quiet enough for evening walks. This is not a flashy neighborhood, it is a practical one that delivers value.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
       <p>The HOA ranges from <strong>$18 to $125 per month</strong> depending on the section. There is <strong>no CDD fee</strong>. Even at the high end, $125/month is well below what newer communities charge, and the $18/month sections are essentially just a nominal fee for basic standards enforcement. Average annual property taxes run about $3,027.</p>
@@ -1652,7 +1652,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>Which Schools Serve Brandon Brook?</h3>
-      <p>Brandon Brook is zoned for Hillsborough County public schools in the Valrico corridor. The specific elementary, middle, and high school assignments depend on your exact address — verify with the school district. Schools in this part of Valrico are generally well-regarded and a draw for families.</p>
+      <p>Brandon Brook is zoned for Hillsborough County public schools in the Valrico corridor. The specific elementary, middle, and high school assignments depend on your exact address, verify with the school district. Schools in this part of Valrico are generally well-regarded and a draw for families.</p>
 
       <h3>How Does Brandon Brook Compare to Nearby Neighborhoods?</h3>
       <ul>
@@ -1665,7 +1665,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Construction:</strong> 1988-1998 build means wide age variation within the same neighborhood. Newer sections (late 1990s) will have fewer deferred maintenance issues than the 1988 homes. Always inspect thoroughly.</li>
-        <li><strong>Plumbing:</strong> Homes built in the late 1980s may have polybutylene pipes. This is an insurance issue — many carriers will not insure homes with poly plumbing. Budget $5,000-$10,000 for a repipe if needed.</li>
+        <li><strong>Plumbing:</strong> Homes built in the late 1980s may have polybutylene pipes. This is an insurance issue, many carriers will not insure homes with poly plumbing. Budget $5,000-$10,000 for a repipe if needed.</li>
         <li><strong>Value play:</strong> Brandon Brook is one of the more affordable Valrico neighborhoods. First-time buyers and investors should look here. Price per square foot runs below the Valrico average.</li>
         <li><strong>Rentals:</strong> Strong rental demand, especially for the smaller homes. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
@@ -1682,11 +1682,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Family-friendly neighborhood of about 454 residents near the Bloomingdale corridor in Valrico. Well-maintained homes with lush greenery, close to Cimino Elementary and shopping on Bloomingdale Avenue.",
     contentHtml: `
       <h3>What Is Bristol Green Like?</h3>
-      <p>Bristol Green is a quiet, family-oriented neighborhood in <a href="/valrico/">Valrico</a> near the <a href="/bloomingdale-community/">Bloomingdale</a> corridor. About 454 residents call this community home, and the neighborhood is known for well-maintained homes surrounded by lush greenery and mature trees. Built primarily in the late 1980s and early 1990s, Bristol Green has that established suburban feel — sidewalks, shade trees, and neighbors who know each other.</p>
+      <p>Bristol Green is a quiet, family-oriented neighborhood in <a href="/valrico/">Valrico</a> near the <a href="/bloomingdale-community/">Bloomingdale</a> corridor. About 454 residents call this community home, and the neighborhood is known for well-maintained homes surrounded by lush greenery and mature trees. Built primarily in the late 1980s and early 1990s, Bristol Green has that established suburban feel, sidewalks, shade trees, and neighbors who know each other.</p>
       <p>Homes are mostly single-family, 3-4 bedrooms, concrete block construction with screened lanais and 2-car garages. The lots back up to tree lines in many sections, giving a sense of privacy that newer, tighter developments cannot replicate.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
-      <p>Bristol Green has an active homeowners association with reasonable fees. There is <strong>no CDD fee</strong>. The HOA maintains community standards and common areas without being overbearing — residents report a good balance between neighborhood upkeep and personal freedom.</p>
+      <p>Bristol Green has an active homeowners association with reasonable fees. There is <strong>no CDD fee</strong>. The HOA maintains community standards and common areas without being overbearing, residents report a good balance between neighborhood upkeep and personal freedom.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -1714,7 +1714,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Construction:</strong> Late 1980s to early 1990s concrete block. Inspect for polybutylene plumbing, original electrical panels, and roof age. These are the big-ticket items.</li>
-        <li><strong>Insurance:</strong> Roof age drives insurance costs in Florida. If the seller has not replaced the roof, negotiate a credit or replace it yourself — the insurance savings pay for themselves within a few years.</li>
+        <li><strong>Insurance:</strong> Roof age drives insurance costs in Florida. If the seller has not replaced the roof, negotiate a credit or replace it yourself, the insurance savings pay for themselves within a few years.</li>
         <li><strong>Location premium:</strong> Being walkable to Cimino Elementary adds value. Families will pay more for this, which helps your resale.</li>
         <li><strong>Rentals:</strong> Good rental demand in the Bloomingdale school zone. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals throughout Valrico.</li>
       </ul>
@@ -1731,11 +1731,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Newer 2019-2020 D.R. Horton single-family community near the Brandon/Valrico border. HOA $61-$79/mo, no CDD. Modern construction with energy-efficient features.",
     contentHtml: `
       <h3>What Is Brooker Ridge Like?</h3>
-      <p>Brooker Ridge is one of the newer communities in the <a href="/valrico/">Valrico</a>/Brandon area, built by D.R. Horton in 2019-2020. If you want modern construction without the sticker shock of the premium master-planned communities, Brooker Ridge is worth a look. The homes are contemporary — open floor plans, modern kitchens, energy-efficient windows and HVAC systems, and the kind of builder-grade finishes that look good on move-in day.</p>
-      <p>The community features single-family homes with 3-4 bedrooms, 2-car garages, and relatively compact lots. That is the trade-off with new construction in this price range — you get a brand-new (or nearly new) home, but the lots are smaller than what the 1990s and 2000s neighborhoods offer.</p>
+      <p>Brooker Ridge is one of the newer communities in the <a href="/valrico/">Valrico</a>/Brandon area, built by D.R. Horton in 2019-2020. If you want modern construction without the sticker shock of the premium master-planned communities, Brooker Ridge is worth a look. The homes are contemporary, open floor plans, modern kitchens, energy-efficient windows and HVAC systems, and the kind of builder-grade finishes that look good on move-in day.</p>
+      <p>The community features single-family homes with 3-4 bedrooms, 2-car garages, and relatively compact lots. That is the trade-off with new construction in this price range, you get a brand-new (or nearly new) home, but the lots are smaller than what the 1990s and 2000s neighborhoods offer.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
-      <p>The HOA runs <strong>$61 to $79 per month</strong>, which is reasonable for a newer community. There is <strong>no CDD fee</strong> — and that is a big deal. Many D.R. Horton communities in the Tampa Bay area carry CDDs that add $1,500-$3,000 per year. Brooker Ridge skips that, keeping your total monthly costs lower.</p>
+      <p>The HOA runs <strong>$61 to $79 per month</strong>, which is reasonable for a newer community. There is <strong>no CDD fee</strong> and that is a big deal. Many D.R. Horton communities in the Tampa Bay area carry CDDs that add $1,500-$3,000 per year. Brooker Ridge skips that, keeping your total monthly costs lower.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -1780,11 +1780,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Part of the greater Buckhorn community in Valrico with homes from the late 1980s and early 1990s. Concrete block construction, 1,700-2,750 sqft. Near Buckhorn Springs Golf and Country Club. Durant school zone.",
     contentHtml: `
       <h3>What Is Buckhorn East Like?</h3>
-      <p>Buckhorn East is one of several distinct subdivisions that make up the greater Buckhorn community in <a href="/valrico/">Valrico</a>. Built primarily in the late 1980s and early 1990s, Buckhorn East sits near Buckhorn Springs Golf and Country Club between Durant Road, Lithia Pinecrest Road, and Valrico Road. The community has a mature, established feel — large oaks, well-kept yards, and quiet streets where you can hear the birds in the morning.</p>
+      <p>Buckhorn East is one of several distinct subdivisions that make up the greater Buckhorn community in <a href="/valrico/">Valrico</a>. Built primarily in the late 1980s and early 1990s, Buckhorn East sits near Buckhorn Springs Golf and Country Club between Durant Road, Lithia Pinecrest Road, and Valrico Road. The community has a mature, established feel, large oaks, well-kept yards, and quiet streets where you can hear the birds in the morning.</p>
       <p>Homes range from about 1,700 to 2,750 square feet with 3-4 bedrooms and 2-car garages. Construction is concrete block, standard for the era. Most homes have screened lanais and genuine backyards with room for a pool, play equipment, or just open space.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
-      <p>Buckhorn East has a homeowners association with modest fees covering common area maintenance and deed restriction enforcement. There is <strong>no CDD fee</strong>. The overall Buckhorn community keeps things simple — you pay your HOA, maintain your property, and live your life without a lot of bureaucratic oversight.</p>
+      <p>Buckhorn East has a homeowners association with modest fees covering common area maintenance and deed restriction enforcement. There is <strong>no CDD fee</strong>. The overall Buckhorn community keeps things simple, you pay your HOA, maintain your property, and live your life without a lot of bureaucratic oversight.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -1813,7 +1813,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Construction:</strong> Late 1980s to early 1990s means homes are 35+ years old. Inspect the roof, HVAC, plumbing (check for polybutylene), and electrical panel carefully. Budget accordingly.</li>
-        <li><strong>Golf course proximity:</strong> Buckhorn Springs Golf and Country Club is nearby but it is a private membership club — living in Buckhorn East does not give you access. Membership is separate.</li>
+        <li><strong>Golf course proximity:</strong> Buckhorn Springs Golf and Country Club is nearby but it is a private membership club, living in Buckhorn East does not give you access. Membership is separate.</li>
         <li><strong>Insurance:</strong> Roof age and plumbing type are the biggest cost drivers. A new roof and copper repipe can save you thousands annually on premiums.</li>
         <li><strong>Rentals:</strong> Strong rental demand in Buckhorn Elementary zone. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
@@ -1830,11 +1830,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Newer Pulte Homes (Willowbrooke) community on Buckhorn Forest Drive in Valrico. Built 2020s, HOA ~$90/mo. Modern single-family homes with contemporary floor plans. Durant school zone.",
     contentHtml: `
       <h3>What Is Buckhorn Forest Like?</h3>
-      <p>Buckhorn Forest — part of the Willowbrooke development by Pulte Homes — is one of the newest additions to the Buckhorn area of <a href="/valrico/">Valrico</a>. Homes along Buckhorn Forest Drive were built in the early 2020s, making this community a standout among the predominantly 1980s-1990s Buckhorn neighborhoods. If you want the Buckhorn location with new construction, this is where you look.</p>
-      <p>The homes feature modern open floor plans with 3-5 bedrooms, contemporary kitchens, energy-efficient systems, and the kind of finishes you expect from a national builder like Pulte. Lots are typical of new construction — functional but not sprawling.</p>
+      <p>Buckhorn Forest, part of the Willowbrooke development by Pulte Homes, is one of the newest additions to the Buckhorn area of <a href="/valrico/">Valrico</a>. Homes along Buckhorn Forest Drive were built in the early 2020s, making this community a standout among the predominantly 1980s-1990s Buckhorn neighborhoods. If you want the Buckhorn location with new construction, this is where you look.</p>
+      <p>The homes feature modern open floor plans with 3-5 bedrooms, contemporary kitchens, energy-efficient systems, and the kind of finishes you expect from a national builder like Pulte. Lots are typical of new construction, functional but not sprawling.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
-      <p>The HOA runs approximately <strong>$90 per month</strong>, which is reasonable for a newer community with maintained common areas. Verify whether there is a CDD component to your annual tax bill — some newer Valrico developments carry CDDs that show up on your property tax statement rather than as a separate fee.</p>
+      <p>The HOA runs approximately <strong>$90 per month</strong>, which is reasonable for a newer community with maintained common areas. Verify whether there is a CDD component to your annual tax bill, some newer Valrico developments carry CDDs that show up on your property tax statement rather than as a separate fee.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -1861,7 +1861,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Construction:</strong> Built in the 2020s — these are the newest homes in the Buckhorn area. Builder warranties may still be active. Review all warranty documentation and transfer requirements.</li>
+        <li><strong>Construction:</strong> Built in the 2020s, these are the newest homes in the Buckhorn area. Builder warranties may still be active. Review all warranty documentation and transfer requirements.</li>
         <li><strong>Pulte Homes:</strong> A reputable national builder. Their homes are well-built with good standard features, but upgrades add up fast. Know what is included and what was upgraded by the original buyer.</li>
         <li><strong>Resale:</strong> New construction in an established school zone holds value well. Limited inventory in Buckhorn Forest means homes tend to sell quickly.</li>
         <li><strong>Rentals:</strong> New homes in Buckhorn Elementary zone are high-demand rentals. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
@@ -1883,7 +1883,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Homes here are detached single-family residences, typically 3-4 bedrooms with 2-car garages. The construction is concrete block with a mix of tile and shingle roofs. Yards are well-maintained with mature trees throughout, and the neighborhood has the kind of settled character that newer subdivisions take decades to develop.</p>
 
       <h3>What Does the HOA Cost and Is There a CDD?</h3>
-      <p>The HOA fee is approximately <strong>$300 per year</strong>. That covers real estate taxes for common areas and basic community maintenance. There is <strong>no CDD fee</strong>. This is one of the most affordable fee structures in all of Valrico — you are paying less than $25 per month for HOA.</p>
+      <p>The HOA fee is approximately <strong>$300 per year</strong>. That covers real estate taxes for common areas and basic community maintenance. There is <strong>no CDD fee</strong>. This is one of the most affordable fee structures in all of Valrico, you are paying less than $25 per month for HOA.</p>
       <p>Buckhorn Groves is a deed-restricted community, so the HOA enforces standards on property maintenance, exterior modifications, and general upkeep. The restrictions keep the neighborhood looking good without being overbearing.</p>
 
       <h3>How Close Is Everything?</h3>
@@ -1932,11 +1932,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Part of the greater Buckhorn community in Valrico with established 1990s homes near Buckhorn Springs Golf and Country Club. Quiet residential streets, mature trees, Durant school zone.",
     contentHtml: `
       <h3>What Is Buckhorn Hills Like?</h3>
-      <p>Buckhorn Hills is another piece of the greater Buckhorn community in <a href="/valrico/">Valrico</a>, sitting alongside <a href="/buckhorn-groves/">Buckhorn Groves</a>, <a href="/buckhorn-east/">Buckhorn East</a>, and <a href="/buckhorn-oaks/">Buckhorn Oaks</a>. Built primarily in the 1990s, Buckhorn Hills features single-family homes on quiet residential streets with mature landscaping throughout. The subdivision has the same settled, comfortable feel as the rest of the Buckhorn area — large oaks, well-kept yards, and the kind of low-key neighborhood energy that comes from decades of stable homeownership.</p>
+      <p>Buckhorn Hills is another piece of the greater Buckhorn community in <a href="/valrico/">Valrico</a>, sitting alongside <a href="/buckhorn-groves/">Buckhorn Groves</a>, <a href="/buckhorn-east/">Buckhorn East</a>, and <a href="/buckhorn-oaks/">Buckhorn Oaks</a>. Built primarily in the 1990s, Buckhorn Hills features single-family homes on quiet residential streets with mature landscaping throughout. The subdivision has the same settled, comfortable feel as the rest of the Buckhorn area, large oaks, well-kept yards, and the kind of low-key neighborhood energy that comes from decades of stable homeownership.</p>
       <p>Homes are typically 3-4 bedrooms with 2-car garages, ranging from about 1,700 to 2,500 square feet. Construction is concrete block with a mix of tile and shingle roofs.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
-      <p>Buckhorn Hills has a homeowners association with modest annual dues. There is <strong>no CDD fee</strong>. The fee structure across the Buckhorn subdivisions is consistently affordable — you are not going to get hit with surprise assessments or escalating CDDs like you see in some of the newer master-planned communities.</p>
+      <p>Buckhorn Hills has a homeowners association with modest annual dues. There is <strong>no CDD fee</strong>. The fee structure across the Buckhorn subdivisions is consistently affordable, you are not going to get hit with surprise assessments or escalating CDDs like you see in some of the newer master-planned communities.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -1951,7 +1951,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>Which Schools Serve Buckhorn Hills?</h3>
-      <p>Buckhorn Hills is in the <strong>Durant High School</strong> zone with <strong>Buckhorn Elementary</strong> as a feeder. Buckhorn Elementary is the anchor for home values across all the Buckhorn subdivisions — it consistently earns strong ratings and is one of the top reasons families choose this part of Valrico.</p>
+      <p>Buckhorn Hills is in the <strong>Durant High School</strong> zone with <strong>Buckhorn Elementary</strong> as a feeder. Buckhorn Elementary is the anchor for home values across all the Buckhorn subdivisions, it consistently earns strong ratings and is one of the top reasons families choose this part of Valrico.</p>
 
       <h3>How Does Buckhorn Hills Compare to Other Buckhorn Neighborhoods?</h3>
       <ul>
@@ -1963,7 +1963,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Construction:</strong> 1990s concrete block. At 30+ years old, inspect roof condition, HVAC age, and plumbing type. Some homes may have polybutylene pipes — check with your insurer.</li>
+        <li><strong>Construction:</strong> 1990s concrete block. At 30+ years old, inspect roof condition, HVAC age, and plumbing type. Some homes may have polybutylene pipes, check with your insurer.</li>
         <li><strong>Multiple Buckhorn neighborhoods:</strong> When searching, make sure you and your agent specify which Buckhorn subdivision you mean. "Buckhorn" encompasses at least seven distinct neighborhoods, and comps from one may not apply to another.</li>
         <li><strong>Value:</strong> Buckhorn Hills offers strong value for the school zone. You get Buckhorn Elementary zoning at a lower price point than Buckhorn Preserve or the Newsome-zoned neighborhoods.</li>
         <li><strong>Rentals:</strong> Buckhorn Elementary zone drives rental demand. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
@@ -1981,7 +1981,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Established Buckhorn community in Valrico with large homes (2,000-2,600 sqft) under a lush tree canopy. Minimal HOA, no management company. Durant school zone near Buckhorn Springs Golf and Country Club.",
     contentHtml: `
       <h3>What Is Buckhorn Oaks Like?</h3>
-      <p>Buckhorn Oaks is one of the most tree-covered neighborhoods in the entire Buckhorn corridor of <a href="/valrico/">Valrico</a>. The name is accurate — this community is full of mature oaks that provide shade at every turn. You can walk the entire neighborhood and never leave the tree canopy. Built in the late 1980s and early 1990s, Buckhorn Oaks has larger homes than some of its Buckhorn neighbors, ranging from about 2,000 to 2,600 square feet.</p>
+      <p>Buckhorn Oaks is one of the most tree-covered neighborhoods in the entire Buckhorn corridor of <a href="/valrico/">Valrico</a>. The name is accurate, this community is full of mature oaks that provide shade at every turn. You can walk the entire neighborhood and never leave the tree canopy. Built in the late 1980s and early 1990s, Buckhorn Oaks has larger homes than some of its Buckhorn neighbors, ranging from about 2,000 to 2,600 square feet.</p>
       <p>Homes are single-family with 3-4 bedrooms, concrete block construction, and 2-car garages. Many back to wooded areas or conservation, and the lots are generous enough that you feel space between properties.</p>
 
       <h3>How Is the HOA Structured?</h3>
@@ -2006,7 +2006,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>How Does Buckhorn Oaks Compare to Other Buckhorn Neighborhoods?</h3>
       <ul>
         <li><strong><a href="/buckhorn-groves/">Buckhorn Groves</a></strong>: Same era, deed-restricted with $300/year HOA. Slightly more formal structure than Oaks.</li>
-        <li><strong><a href="/buckhorn-hills/">Buckhorn Hills</a></strong>: Very similar — same vintage, same feel. Pick based on specific available homes.</li>
+        <li><strong><a href="/buckhorn-hills/">Buckhorn Hills</a></strong>: Very similar, same vintage, same feel. Pick based on specific available homes.</li>
         <li><strong><a href="/buckhorn-east/">Buckhorn East</a></strong>: Adjacent, same era. Interchangeable for most buyers.</li>
         <li><strong><a href="/diamond-hill/">Diamond Hill</a></strong> (2 miles): Older homes, bigger lots, no HOA. Even more freedom but older construction.</li>
       </ul>
@@ -2031,11 +2031,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Distinct subdivision within the greater Buckhorn community of Valrico. Established single-family homes near Buckhorn Springs Golf and Country Club. Durant school zone with Buckhorn Elementary.",
     contentHtml: `
       <h3>What Is Buckhorn Reserve Like?</h3>
-      <p>Buckhorn Reserve is a separate subdivision within the greater Buckhorn community of <a href="/valrico/">Valrico</a> — distinct from <a href="/buckhorn-preserve/">Buckhorn Preserve</a> despite the similar name. Buckhorn Reserve sits near Buckhorn Springs Golf and Country Club between Durant Road, Lithia Pinecrest Road, and Valrico Road, alongside the other Buckhorn neighborhoods that share this corridor.</p>
-      <p>Homes in Buckhorn Reserve are single-family with 3-4 bedrooms, concrete block construction, and 2-car garages. The community has mature landscaping and quiet streets. The overall feel is consistent with the rest of the Buckhorn area — established, residential, and family-oriented.</p>
+      <p>Buckhorn Reserve is a separate subdivision within the greater Buckhorn community of <a href="/valrico/">Valrico</a> distinct from <a href="/buckhorn-preserve/">Buckhorn Preserve</a> despite the similar name. Buckhorn Reserve sits near Buckhorn Springs Golf and Country Club between Durant Road, Lithia Pinecrest Road, and Valrico Road, alongside the other Buckhorn neighborhoods that share this corridor.</p>
+      <p>Homes in Buckhorn Reserve are single-family with 3-4 bedrooms, concrete block construction, and 2-car garages. The community has mature landscaping and quiet streets. The overall feel is consistent with the rest of the Buckhorn area, established, residential, and family-oriented.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
-      <p>Buckhorn Reserve has a homeowners association with modest dues. There is <strong>no CDD fee</strong>. The Buckhorn neighborhoods are consistently affordable when it comes to carrying costs — no surprise assessments, no escalating CDDs, just a straightforward fee to maintain community standards.</p>
+      <p>Buckhorn Reserve has a homeowners association with modest dues. There is <strong>no CDD fee</strong>. The Buckhorn neighborhoods are consistently affordable when it comes to carrying costs, no surprise assessments, no escalating CDDs, just a straightforward fee to maintain community standards.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -2050,13 +2050,13 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>Which Schools Serve Buckhorn Reserve?</h3>
-      <p>Buckhorn Reserve is in the <strong>Durant High School</strong> zone with <strong>Buckhorn Elementary</strong> as the feeder. Same school zoning as the rest of the Buckhorn subdivisions — which is one of the main reasons people buy here.</p>
+      <p>Buckhorn Reserve is in the <strong>Durant High School</strong> zone with <strong>Buckhorn Elementary</strong> as the feeder. Same school zoning as the rest of the Buckhorn subdivisions, which is one of the main reasons people buy here.</p>
 
       <h3>How Does Buckhorn Reserve Compare to Nearby Neighborhoods?</h3>
       <ul>
         <li><strong><a href="/buckhorn-groves/">Buckhorn Groves</a></strong>: Similar era and character. $300/year HOA. Nearly interchangeable.</li>
         <li><strong><a href="/buckhorn-oaks/">Buckhorn Oaks</a></strong>: Same vintage with exceptional tree canopy. Minimal HOA management.</li>
-        <li><strong><a href="/buckhorn-preserve/">Buckhorn Preserve</a></strong> (2 miles south): Newer, gated, community pool. Higher price point. Newsome HS zone — different school district. Do not confuse these two.</li>
+        <li><strong><a href="/buckhorn-preserve/">Buckhorn Preserve</a></strong> (2 miles south): Newer, gated, community pool. Higher price point. Newsome HS zone, different school district. Do not confuse these two.</li>
         <li><strong><a href="/buckhorn-run/">Buckhorn Run</a></strong>: Smaller enclave of just 36 custom homes. Same era, more exclusive feel.</li>
       </ul>
 
@@ -2080,7 +2080,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Part of the greater Buckhorn community in Valrico with established single-family homes. Deed-restricted, no CDD. Near Buckhorn Springs Golf and Country Club. Durant school zone.",
     contentHtml: `
       <h3>What Is Buckhorn Ridge Like?</h3>
-      <p>Buckhorn Ridge is yet another distinct subdivision within the sprawling Buckhorn community of <a href="/valrico/">Valrico</a>. Like its neighbors — <a href="/buckhorn-groves/">Buckhorn Groves</a>, <a href="/buckhorn-hills/">Buckhorn Hills</a>, <a href="/buckhorn-oaks/">Buckhorn Oaks</a>, and others — Buckhorn Ridge features established single-family homes on quiet residential streets with mature landscaping. The Buckhorn area is one of Valrico's most popular residential corridors, and Buckhorn Ridge delivers the same formula: good homes, good schools, manageable HOA costs.</p>
+      <p>Buckhorn Ridge is yet another distinct subdivision within the sprawling Buckhorn community of <a href="/valrico/">Valrico</a>. Like its neighbors, <a href="/buckhorn-groves/">Buckhorn Groves</a>, <a href="/buckhorn-hills/">Buckhorn Hills</a>, <a href="/buckhorn-oaks/">Buckhorn Oaks</a>, and others, Buckhorn Ridge features established single-family homes on quiet residential streets with mature landscaping. The Buckhorn area is one of Valrico's most popular residential corridors, and Buckhorn Ridge delivers the same formula: good homes, good schools, manageable HOA costs.</p>
       <p>Homes are concrete block construction with 3-4 bedrooms and 2-car garages. The neighborhood is deed-restricted, so property maintenance standards are enforced, but the HOA keeps a light touch compared to newer master-planned communities.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
@@ -2099,7 +2099,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>Which Schools Serve Buckhorn Ridge?</h3>
-      <p>Buckhorn Ridge is in the <strong>Durant High School</strong> zone with <strong>Buckhorn Elementary</strong> as the feeder school. This is the same zoning as all the other Buckhorn subdivisions in this corridor — and it is the reason people keep buying here.</p>
+      <p>Buckhorn Ridge is in the <strong>Durant High School</strong> zone with <strong>Buckhorn Elementary</strong> as the feeder school. This is the same zoning as all the other Buckhorn subdivisions in this corridor, and it is the reason people keep buying here.</p>
 
       <h3>How Does Buckhorn Ridge Compare?</h3>
       <ul>
@@ -2112,7 +2112,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Construction:</strong> Established 1990s concrete block. Inspect roof age, HVAC condition, and plumbing type. Budget for updates on older systems.</li>
-        <li><strong>Multiple Buckhorn neighborhoods:</strong> There are at least seven Buckhorn-named subdivisions in Valrico. Comps matter — make sure you are comparing within the right community.</li>
+        <li><strong>Multiple Buckhorn neighborhoods:</strong> There are at least seven Buckhorn-named subdivisions in Valrico. Comps matter, make sure you are comparing within the right community.</li>
         <li><strong>Value proposition:</strong> Buckhorn Ridge gives you Buckhorn Elementary zoning without the premium of newer or gated communities. Solid value for families.</li>
         <li><strong>Rentals:</strong> Strong demand in this school zone. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
@@ -2129,7 +2129,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Exclusive enclave of just 36 custom residences built around 1988-1990 in the Buckhorn area of Valrico. Larger custom-built homes on premium lots. Durant school zone.",
     contentHtml: `
       <h3>What Is Buckhorn Run Like?</h3>
-      <p>Buckhorn Run is one of <a href="/valrico/">Valrico's</a> most exclusive small enclaves — just 36 custom-built residences on Buckhorn Run Drive. Built around 1988-1990, these are not tract homes. The original owners worked with custom builders to create one-of-a-kind floor plans, and that individuality shows. You will not find two identical homes in Buckhorn Run.</p>
+      <p>Buckhorn Run is one of <a href="/valrico/">Valrico's</a> most exclusive small enclaves, just 36 custom-built residences on Buckhorn Run Drive. Built around 1988-1990, these are not tract homes. The original owners worked with custom builders to create one-of-a-kind floor plans, and that individuality shows. You will not find two identical homes in Buckhorn Run.</p>
       <p>The homes are larger and more upscale than the typical Buckhorn area subdivision, with custom finishes, generous room sizes, and premium lot placement. Most are concrete block construction with tile roofs. The lots are well-sized with mature landscaping providing privacy and character.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
@@ -2160,7 +2160,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Construction:</strong> 1988-1990 custom builds are now 35+ years old. Custom construction quality varies — some builders used premium materials, others cut corners. A thorough inspection is essential. Pay special attention to roof condition, plumbing type, and HVAC.</li>
+        <li><strong>Construction:</strong> 1988-1990 custom builds are now 35+ years old. Custom construction quality varies, some builders used premium materials, others cut corners. A thorough inspection is essential. Pay special attention to roof condition, plumbing type, and HVAC.</li>
         <li><strong>Custom home appraisals:</strong> With only 36 homes and custom floor plans, comps are tricky. Your appraiser may need to pull from neighboring Buckhorn subdivisions, which can complicate financing.</li>
         <li><strong>Scarcity:</strong> Homes in Buckhorn Run rarely hit the market. When they do, they tend to move quickly because buyers who want this product have few options.</li>
         <li><strong>Rentals:</strong> Premium rental potential for larger custom homes. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
@@ -2178,11 +2178,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Established early 1990s subdivision in the Buckhorn area of Valrico with homes 1,500-1,950 sqft on cul-de-sac streets. Family-friendly with Buckhorn Elementary zoning. Durant High zone.",
     contentHtml: `
       <h3>What Is Buckhorn Trace Like?</h3>
-      <p>Buckhorn Trace is a family-friendly subdivision in the Buckhorn area of <a href="/valrico/">Valrico</a>, built primarily in the early 1990s. The community features cul-de-sac street layouts, which means minimal through traffic and safer streets for kids to ride bikes. Homes range from about 1,500 to 1,950 square feet with 3-4 bedrooms — slightly more modest than some of the larger Buckhorn neighborhoods, making Buckhorn Trace one of the more affordable entry points into the Buckhorn school zone.</p>
+      <p>Buckhorn Trace is a family-friendly subdivision in the Buckhorn area of <a href="/valrico/">Valrico</a>, built primarily in the early 1990s. The community features cul-de-sac street layouts, which means minimal through traffic and safer streets for kids to ride bikes. Homes range from about 1,500 to 1,950 square feet with 3-4 bedrooms, slightly more modest than some of the larger Buckhorn neighborhoods, making Buckhorn Trace one of the more affordable entry points into the Buckhorn school zone.</p>
       <p>Construction is concrete block with 2-car garages and screened lanais on most homes. The landscaping is mature after 30+ years, and the neighborhood has a relaxed, lived-in feel that families appreciate.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
-      <p>Buckhorn Trace has a modest HOA with low annual dues. There is <strong>no CDD fee</strong>. The straightforward cost structure is consistent with the rest of the Buckhorn neighborhoods — you pay a small amount to maintain community standards and that is it.</p>
+      <p>Buckhorn Trace has a modest HOA with low annual dues. There is <strong>no CDD fee</strong>. The straightforward cost structure is consistent with the rest of the Buckhorn neighborhoods, you pay a small amount to maintain community standards and that is it.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -2209,7 +2209,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Construction:</strong> Early 1990s concrete block. At 30+ years old, inspect roof, HVAC, water heater, and plumbing. Some homes have been extensively renovated, others have original everything — price should reflect the difference.</li>
+        <li><strong>Construction:</strong> Early 1990s concrete block. At 30+ years old, inspect roof, HVAC, water heater, and plumbing. Some homes have been extensively renovated, others have original everything, price should reflect the difference.</li>
         <li><strong>Cul-de-sacs:</strong> The layout is great for families but means only one way in and out. During school drop-off and pick-up, nearby streets can get busy.</li>
         <li><strong>Starter home territory:</strong> The smaller home sizes make Buckhorn Trace ideal for first-time buyers who want the Buckhorn Elementary school zone without stretching their budget.</li>
         <li><strong>Rentals:</strong> Strong rental demand for affordable homes in this school zone. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
@@ -2228,7 +2228,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     contentHtml: `
       <h3>What Is Camden Oaks Like?</h3>
       <p>Camden Oaks is a compact subdivision of just 22 homes on Camden Oaks Place in <a href="/valrico/">Valrico</a>, built around 1999-2000. This is one of those small pocket neighborhoods that most people have never heard of, and that is part of the charm. No through traffic, no commercial development nearby, just a quiet residential cul-de-sac where your neighbors know your name.</p>
-      <p>Homes range from about 1,253 to 2,163 square feet with 3-4 bedrooms and 2 bathrooms. Construction is concrete block with 2-car garages. The floor plans are practical and efficient — built for living, not for impressing guests.</p>
+      <p>Homes range from about 1,253 to 2,163 square feet with 3-4 bedrooms and 2 bathrooms. Construction is concrete block with 2-car garages. The floor plans are practical and efficient, built for living, not for impressing guests.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
       <p>Camden Oaks has a <strong>low HOA with no CDD</strong>. This keeps your monthly carrying cost well below what you would pay in newer Valrico communities. For budget-conscious buyers or investors, the low fees are a significant advantage.</p>
@@ -2259,7 +2259,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Construction:</strong> 1999-2000 build means homes are 25+ years old. Roof, HVAC, and water heater should all be inspected carefully. Some may be on original systems.</li>
-        <li><strong>Small community:</strong> Only 22 homes means very few comps. When a home in Camden Oaks sells, it sets the benchmark for the entire community — price your offer carefully.</li>
+        <li><strong>Small community:</strong> Only 22 homes means very few comps. When a home in Camden Oaks sells, it sets the benchmark for the entire community, price your offer carefully.</li>
         <li><strong>Investment potential:</strong> Low HOA, low entry price, and steady Valrico rental demand make Camden Oaks a viable investment play. The numbers work at current interest rates if you buy right.</li>
         <li><strong>Rentals:</strong> <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
@@ -2276,11 +2276,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Established Valrico neighborhood with midsize homes (1,526-2,344 sqft) at reasonable prices. Well-maintained community with mature landscaping in central Valrico near SR 60.",
     contentHtml: `
       <h3>What Is Camelot Like?</h3>
-      <p>Camelot is an established residential neighborhood in central <a href="/valrico/">Valrico</a> with midsize single-family homes that are very reasonably priced. The community has been around long enough that the trees are tall, the hedges are thick, and the neighborhood has real character. Homes range from about 1,526 to 2,344 square feet with 3-4 bedrooms — the sweet spot for families who need room but do not need a mansion.</p>
-      <p>Construction is concrete block with a mix of one and two-story floor plans. Most homes have screened lanais, 2-car garages, and fenced backyards. The lots are typical for their era — not huge, but functional with enough room for outdoor living.</p>
+      <p>Camelot is an established residential neighborhood in central <a href="/valrico/">Valrico</a> with midsize single-family homes that are very reasonably priced. The community has been around long enough that the trees are tall, the hedges are thick, and the neighborhood has real character. Homes range from about 1,526 to 2,344 square feet with 3-4 bedrooms, the sweet spot for families who need room but do not need a mansion.</p>
+      <p>Construction is concrete block with a mix of one and two-story floor plans. Most homes have screened lanais, 2-car garages, and fenced backyards. The lots are typical for their era, not huge, but functional with enough room for outdoor living.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
-      <p>Camelot has a homeowners association with modest fees. There is <strong>no CDD fee</strong>. The low carrying cost is one of Camelot's strengths — you get a solid Valrico address without the escalating fees that come with newer master-planned communities.</p>
+      <p>Camelot has a homeowners association with modest fees. There is <strong>no CDD fee</strong>. The low carrying cost is one of Camelot's strengths, you get a solid Valrico address without the escalating fees that come with newer master-planned communities.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -2309,7 +2309,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <ul>
         <li><strong>Construction age:</strong> Established community means homes need thorough inspection. Roof age, HVAC vintage, plumbing type, and electrical panel condition are all critical checkpoints.</li>
         <li><strong>Value play:</strong> Camelot offers some of the most affordable per-square-foot pricing in Valrico. First-time buyers and investors should look here seriously.</li>
-        <li><strong>Renovation opportunity:</strong> Many homes are candidates for kitchen and bathroom updates. The bones are solid — it is the finishes that show age. Buy below market and renovate for instant equity.</li>
+        <li><strong>Renovation opportunity:</strong> Many homes are candidates for kitchen and bathroom updates. The bones are solid, it is the finishes that show age. Buy below market and renovate for instant equity.</li>
         <li><strong>Rentals:</strong> Affordable Valrico homes rent quickly. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
@@ -2325,11 +2325,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Mid-2000s single-family community on Carriage Park Drive in Valrico. Homes 2,597-3,453 sqft built 2004-2007. Concrete block with larger floor plans. No CDD. Durant-area school zone.",
     contentHtml: `
       <h3>What Is Carriage Park Like?</h3>
-      <p>Carriage Park is a single-family community on Carriage Park Drive in <a href="/valrico/">Valrico</a>, built between 2004 and 2007. These homes are newer and generally larger than many Valrico neighborhoods — ranging from about 2,597 to 3,453 square feet with 4-5 bedrooms and 3 bathrooms. If you need space for a growing family and want homes from the mid-2000s sweet spot (before the 2008 crash when builders were still competing on quality), Carriage Park delivers.</p>
+      <p>Carriage Park is a single-family community on Carriage Park Drive in <a href="/valrico/">Valrico</a>, built between 2004 and 2007. These homes are newer and generally larger than many Valrico neighborhoods, ranging from about 2,597 to 3,453 square feet with 4-5 bedrooms and 3 bathrooms. If you need space for a growing family and want homes from the mid-2000s sweet spot (before the 2008 crash when builders were still competing on quality), Carriage Park delivers.</p>
       <p>Construction is concrete block with tile or architectural shingle roofs. Floor plans are open with split bedroom layouts, formal and informal living areas, and 2-3 car garages. Most homes have screened lanais and well-maintained yards with room for a pool.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
-      <p>Carriage Park has an HOA with reasonable fees covering community maintenance and deed restriction enforcement. There is <strong>no CDD fee</strong>. For homes this size in Valrico, the total carrying cost is competitive — you would pay significantly more in newer communities with comparable square footage.</p>
+      <p>Carriage Park has an HOA with reasonable fees covering community maintenance and deed restriction enforcement. There is <strong>no CDD fee</strong>. For homes this size in Valrico, the total carrying cost is competitive, you would pay significantly more in newer communities with comparable square footage.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -2356,8 +2356,8 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Construction:</strong> 2004-2007 build means homes are 19-22 years old. The first HVAC replacement is likely coming soon (or has already happened). Check roof age — some original tile roofs may have 10-15 years left, but shingle roofs from 2005 are past their lifespan.</li>
-        <li><strong>Insurance:</strong> Concrete block and tile roof is the best combination for Florida insurance rates. If the home has shingle, get insurance quotes before offering — the difference can be $3,000-$5,000 per year.</li>
+        <li><strong>Construction:</strong> 2004-2007 build means homes are 19-22 years old. The first HVAC replacement is likely coming soon (or has already happened). Check roof age, some original tile roofs may have 10-15 years left, but shingle roofs from 2005 are past their lifespan.</li>
+        <li><strong>Insurance:</strong> Concrete block and tile roof is the best combination for Florida insurance rates. If the home has shingle, get insurance quotes before offering, the difference can be $3,000-$5,000 per year.</li>
         <li><strong>Space per dollar:</strong> Carriage Park homes offer some of the best square footage per dollar in Valrico for the mid-2000s era. If you need 3,000+ sqft and do not want to pay FishHawk prices, this is worth a look.</li>
         <li><strong>Rentals:</strong> Larger homes command premium rents. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
@@ -2399,13 +2399,13 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <ul>
         <li><strong><a href="/brandon-brook/">Brandon Brook</a></strong> (1 mile): Similar era and pricing. Larger community with more available homes at any given time.</li>
         <li><strong><a href="/camelot/">Camelot</a></strong> (1 mile): Same vintage, similar home sizes. Both are affordable Valrico options.</li>
-        <li><strong><a href="/valrico-village/">Valrico Village</a></strong> (1 mile): Comparable in every way — era, size, pricing, and character.</li>
+        <li><strong><a href="/valrico-village/">Valrico Village</a></strong> (1 mile): Comparable in every way, era, size, pricing, and character.</li>
         <li><strong><a href="/valrico-groves/">Valrico Groves</a></strong> (1.5 miles): Similar era, larger lots in some sections. Another solid value play.</li>
       </ul>
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Construction:</strong> Mid-1980s to early 1990s concrete block. At 35-40 years old, these homes need careful inspection. Polybutylene plumbing is common in homes from the mid-1980s — check before buying and get insurance quotes upfront.</li>
+        <li><strong>Construction:</strong> Mid-1980s to early 1990s concrete block. At 35-40 years old, these homes need careful inspection. Polybutylene plumbing is common in homes from the mid-1980s, check before buying and get insurance quotes upfront.</li>
         <li><strong>Affordability:</strong> Chatford is one of the more affordable entry points into Valrico. First-time buyers and investors looking for cash flow should look here.</li>
         <li><strong>Quiet location:</strong> The connected cul-de-sac layout means very little traffic. This is a neighborhood where kids ride bikes and neighbors walk in the evening.</li>
         <li><strong>Rentals:</strong> Affordable homes in Valrico rent quickly. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
@@ -2423,11 +2423,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Established 1979-1986 single-family neighborhood on Chelsea Woods Drive in south Valrico. Mature oaks, generous lots, well-maintained homes. Zoned for Newsome High School area.",
     contentHtml: `
       <h3>What Is Chelsea Woods Like?</h3>
-      <p>Chelsea Woods is one of the older established neighborhoods in south <a href="/valrico/">Valrico</a>, with homes built between 1979 and 1986 along Chelsea Woods Drive. What makes this community stand out is the maturity — 40+ years of tree growth means towering oaks, thick canopy cover, and the kind of established character that no amount of new construction can replicate. If you want a neighborhood that feels like it has been here forever, Chelsea Woods is it.</p>
+      <p>Chelsea Woods is one of the older established neighborhoods in south <a href="/valrico/">Valrico</a>, with homes built between 1979 and 1986 along Chelsea Woods Drive. What makes this community stand out is the maturity, 40+ years of tree growth means towering oaks, thick canopy cover, and the kind of established character that no amount of new construction can replicate. If you want a neighborhood that feels like it has been here forever, Chelsea Woods is it.</p>
       <p>Homes range from 3-4 bedrooms with varying square footage. Construction is concrete block, standard for the era. Lots are generous compared to anything built after 2000, with real backyards and side yards that give you breathing room between properties.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
-      <p>Chelsea Woods has minimal HOA oversight with very low fees. There is <strong>no CDD fee</strong>. Some sections may not have a formal HOA at all — check the specific property. This is one of the biggest advantages of older Valrico neighborhoods: your monthly carrying cost is just your mortgage, insurance, and taxes.</p>
+      <p>Chelsea Woods has minimal HOA oversight with very low fees. There is <strong>no CDD fee</strong>. Some sections may not have a formal HOA at all, check the specific property. This is one of the biggest advantages of older Valrico neighborhoods: your monthly carrying cost is just your mortgage, insurance, and taxes.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -2442,7 +2442,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>Which Schools Serve Chelsea Woods?</h3>
-      <p>Chelsea Woods is in the south Valrico area near the <strong>Newsome High School</strong> zone — one of the highest-rated high schools in Hillsborough County. Newsome-zoned properties command a pricing premium throughout Valrico. If you are buying in Chelsea Woods and it is Newsome-zoned, you are getting that premium school assignment at an older-home price point.</p>
+      <p>Chelsea Woods is in the south Valrico area near the <strong>Newsome High School</strong> zone, one of the highest-rated high schools in Hillsborough County. Newsome-zoned properties command a pricing premium throughout Valrico. If you are buying in Chelsea Woods and it is Newsome-zoned, you are getting that premium school assignment at an older-home price point.</p>
 
       <h3>How Does Chelsea Woods Compare to Nearby Neighborhoods?</h3>
       <ul>
@@ -2455,7 +2455,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Construction:</strong> 1979-1986 is the oldest construction era in Valrico. Inspect everything: roof, HVAC, plumbing (polybutylene is very common in this era), electrical panel (some may still have original panels), and windows. Budget $20,000-$40,000 for updates if the home has not been renovated.</li>
-        <li><strong>Insurance:</strong> Older homes cost more to insure. A new roof is the single biggest thing you can do to reduce premiums. Also verify plumbing type — many carriers will not insure polybutylene without a repipe.</li>
+        <li><strong>Insurance:</strong> Older homes cost more to insure. A new roof is the single biggest thing you can do to reduce premiums. Also verify plumbing type, many carriers will not insure polybutylene without a repipe.</li>
         <li><strong>Lot value:</strong> The land itself has value. These lots are larger than anything being built today. Some buyers purchase older homes here specifically for the lot, planning to renovate extensively or rebuild.</li>
         <li><strong>Rentals:</strong> Newsome zone rentals are in high demand. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
@@ -2472,11 +2472,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Upscale enclave of custom-built 3-5 bedroom homes near 4,000 sqft on large wooded lots in Valrico. Conservation backyards, minimal turnover. Near Buckhorn Springs Golf and Country Club.",
     contentHtml: `
       <h3>What Is Cimmaron Like?</h3>
-      <p>Cimmaron is one of <a href="/valrico/">Valrico's</a> hidden gems — a small, mature neighborhood of custom-built single-family homes, many close to 4,000 square feet, sitting on large wooded lots. This is not a tract-home subdivision. These are custom builds with gourmet kitchens, split floor plans, fireplaces, wainscoting, crown molding, and the kind of attention to detail that production builders skip.</p>
+      <p>Cimmaron is one of <a href="/valrico/">Valrico's</a> hidden gems, a small, mature neighborhood of custom-built single-family homes, many close to 4,000 square feet, sitting on large wooded lots. This is not a tract-home subdivision. These are custom builds with gourmet kitchens, split floor plans, fireplaces, wainscoting, crown molding, and the kind of attention to detail that production builders skip.</p>
       <p>The backyards are the real selling point. Most lots back up to conservation areas, giving you extraordinary privacy. Pools and lanais feel secluded because your backyard view is trees, not your neighbor's bedroom window. If privacy is your top priority, Cimmaron is hard to beat in Valrico.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
-      <p>Cimmaron has a homeowners association but the community is small and self-governing. There is <strong>no CDD fee</strong>. The neighborhood is renowned for pride of ownership and minimal turnover — people move here and stay, which tells you everything about the quality of life.</p>
+      <p>Cimmaron has a homeowners association but the community is small and self-governing. There is <strong>no CDD fee</strong>. The neighborhood is renowned for pride of ownership and minimal turnover, people move here and stay, which tells you everything about the quality of life.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -2491,7 +2491,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>Which Schools Serve Cimmaron?</h3>
-      <p>Cimmaron is in the <strong>Durant High School</strong> zone with <strong>Buckhorn Elementary</strong> nearby. The Buckhorn Elementary zoning is a major value driver — it is one of the highest-rated elementaries in Valrico and a primary reason families look in this corridor.</p>
+      <p>Cimmaron is in the <strong>Durant High School</strong> zone with <strong>Buckhorn Elementary</strong> nearby. The Buckhorn Elementary zoning is a major value driver, it is one of the highest-rated elementaries in Valrico and a primary reason families look in this corridor.</p>
 
       <h3>How Does Cimmaron Compare to Similar Neighborhoods?</h3>
       <ul>
@@ -2504,7 +2504,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Custom construction:</strong> Every home is different, which is great for uniqueness but tricky for appraisals. Your lender's appraiser may struggle to find direct comps. Work with an agent who knows how to manage custom home appraisals.</li>
-        <li><strong>Conservation lots:</strong> The conservation backyards are protected — no one can build behind you. But they also come with setback requirements and restrictions on clearing or modifying the buffer zone.</li>
+        <li><strong>Conservation lots:</strong> The conservation backyards are protected, no one can build behind you. But they also come with setback requirements and restrictions on clearing or modifying the buffer zone.</li>
         <li><strong>Scarcity:</strong> Minimal turnover means homes rarely come on the market. When one does, expect competition from buyers who have been waiting.</li>
         <li><strong>Size and maintenance:</strong> Homes near 4,000 sqft require more maintenance, higher insurance, and bigger utility bills. Make sure the total cost of ownership fits your budget, not just the mortgage.</li>
         <li><strong>Rentals:</strong> Premium custom homes command premium rents. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
@@ -2522,11 +2522,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Small established neighborhood on Cinnamon Trace Drive in south Valrico with homes built 1988-1996. Concrete block, 3-4 bedrooms. Quiet streets with mature landscaping near Lithia Pinecrest Road.",
     contentHtml: `
       <h3>What Is Cinnamon Trace Like?</h3>
-      <p>Cinnamon Trace is a small residential neighborhood on Cinnamon Trace Drive and Cinnamon Trace Circle in south <a href="/valrico/">Valrico</a>. Homes were built between 1988 and 1996, giving the community a staggered development that adds variety to the streetscape. This is not a subdivision where every home went up in the same year with the same three floor plans — the homes have individual character.</p>
-      <p>Construction is concrete block with 3-4 bedrooms and 2-car garages. Home sizes vary, and the lots benefit from nearly 30-40 years of tree growth. The streets are quiet with minimal traffic — the kind of neighborhood where you know which car belongs to which house.</p>
+      <p>Cinnamon Trace is a small residential neighborhood on Cinnamon Trace Drive and Cinnamon Trace Circle in south <a href="/valrico/">Valrico</a>. Homes were built between 1988 and 1996, giving the community a staggered development that adds variety to the streetscape. This is not a subdivision where every home went up in the same year with the same three floor plans, the homes have individual character.</p>
+      <p>Construction is concrete block with 3-4 bedrooms and 2-car garages. Home sizes vary, and the lots benefit from nearly 30-40 years of tree growth. The streets are quiet with minimal traffic, the kind of neighborhood where you know which car belongs to which house.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
-      <p>Cinnamon Trace has minimal HOA oversight with very low fees. There is <strong>no CDD fee</strong>. This is a simple, affordable neighborhood to own in — no surprise assessments, no escalating CDDs, just a small fee to keep things tidy.</p>
+      <p>Cinnamon Trace has minimal HOA oversight with very low fees. There is <strong>no CDD fee</strong>. This is a simple, affordable neighborhood to own in, no surprise assessments, no escalating CDDs, just a small fee to keep things tidy.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -2540,7 +2540,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>Which Schools Serve Cinnamon Trace?</h3>
-      <p>Cinnamon Trace is in the south Valrico school corridor. Verify specific school zoning with Hillsborough County — homes in this area may fall in either the Durant or Newsome High School zone depending on exact location. Newsome-zoned properties carry a pricing premium.</p>
+      <p>Cinnamon Trace is in the south Valrico school corridor. Verify specific school zoning with Hillsborough County, homes in this area may fall in either the Durant or Newsome High School zone depending on exact location. Newsome-zoned properties carry a pricing premium.</p>
 
       <h3>How Does Cinnamon Trace Compare to Nearby Neighborhoods?</h3>
       <ul>
@@ -2552,7 +2552,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Construction:</strong> 1988-1996 concrete block. The 1988 homes are nearly 40 years old — inspect roof, HVAC, plumbing (check for polybutylene in the earlier homes), and electrical. The 1996 homes are in better shape but still need inspection at 30 years.</li>
+        <li><strong>Construction:</strong> 1988-1996 concrete block. The 1988 homes are nearly 40 years old, inspect roof, HVAC, plumbing (check for polybutylene in the earlier homes), and electrical. The 1996 homes are in better shape but still need inspection at 30 years.</li>
         <li><strong>Insurance:</strong> Roof age and plumbing type are your insurance cost drivers. A home with a new roof and copper plumbing will insure for significantly less than one with an original roof and poly pipes.</li>
         <li><strong>Quiet living:</strong> If you want a neighborhood where the biggest excitement is deciding which direction to walk the dog, Cinnamon Trace delivers.</li>
         <li><strong>Rentals:</strong> Steady demand for south Valrico rentals. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
@@ -2570,11 +2570,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Established single-family subdivision in Valrico with affordable homes and no CDD. Quiet residential streets, mature landscaping, and convenient access to SR 60 and Brandon shopping.",
     contentHtml: `
       <h3>What Is Colony South Like?</h3>
-      <p>Colony South is an established residential subdivision in <a href="/valrico/">Valrico</a> with single-family homes on quiet streets. The community has been around for decades, giving it the mature landscaping and settled character that newer developments lack. Homes are typically 3-4 bedrooms with concrete block construction and 2-car garages — the standard Valrico formula that works for families, couples, and investors alike.</p>
+      <p>Colony South is an established residential subdivision in <a href="/valrico/">Valrico</a> with single-family homes on quiet streets. The community has been around for decades, giving it the mature landscaping and settled character that newer developments lack. Homes are typically 3-4 bedrooms with concrete block construction and 2-car garages, the standard Valrico formula that works for families, couples, and investors alike.</p>
       <p>The neighborhood does not have flashy amenities or a resort-style pool. What it has is straightforward: well-built homes on decent lots at prices that make sense. If you are shopping based on value and location rather than amenity packages, Colony South deserves a look.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
-      <p>Colony South has a minimal HOA with low fees. There is <strong>no CDD fee</strong>. Your monthly carrying cost is essentially mortgage, insurance, and taxes — the HOA is negligible. This is a real advantage when you compare the total cost of ownership to newer communities where HOA + CDD can add $300-$400 per month.</p>
+      <p>Colony South has a minimal HOA with low fees. There is <strong>no CDD fee</strong>. Your monthly carrying cost is essentially mortgage, insurance, and taxes, the HOA is negligible. This is a real advantage when you compare the total cost of ownership to newer communities where HOA + CDD can add $300-$400 per month.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -2603,7 +2603,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <ul>
         <li><strong>Construction:</strong> Established homes mean thorough inspection is critical. Roof, HVAC, plumbing, and electrical are all priorities. Budget for updates on older systems.</li>
         <li><strong>Affordability:</strong> Colony South is one of the more affordable Valrico neighborhoods. The low entry price combined with no CDD makes the numbers work for first-time buyers and investors.</li>
-        <li><strong>Renovation potential:</strong> Many homes are candidates for updates. The bones are solid — cosmetic renovations can add significant value.</li>
+        <li><strong>Renovation potential:</strong> Many homes are candidates for updates. The bones are solid, cosmetic renovations can add significant value.</li>
         <li><strong>Rentals:</strong> Affordable homes in Valrico rent quickly. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
@@ -2619,11 +2619,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Single-family community in south Valrico built 1997-2004. Homes 1,800-3,000 sqft with 3-5 bedrooms. Low HOA ($11-$44/mo) but CDD applies. Conservation lot options. Near FishHawk.",
     contentHtml: `
       <h3>What Is Cooper Ridge Like?</h3>
-      <p>Cooper Ridge is a single-family community in south <a href="/valrico/">Valrico</a> built between 1997 and 2004. Situated near the FishHawk area, Cooper Ridge offers modern open floor plans in the 1,800 to 3,000 square foot range with 3-5 bedrooms. Many homes back to conservation areas, which means protected views and no neighbors behind you — a premium feature that adds real value in the Florida suburbs.</p>
+      <p>Cooper Ridge is a single-family community in south <a href="/valrico/">Valrico</a> built between 1997 and 2004. Situated near the FishHawk area, Cooper Ridge offers modern open floor plans in the 1,800 to 3,000 square foot range with 3-5 bedrooms. Many homes back to conservation areas, which means protected views and no neighbors behind you, a premium feature that adds real value in the Florida suburbs.</p>
       <p>Construction is concrete block with a mix of tile and shingle roofs. The community has a suburban character with sidewalks, street lights, and well-maintained common areas. It sits in between the premium-priced <a href="/fishhawk-ranch/">FishHawk Ranch</a> to the south and the more affordable Buckhorn neighborhoods to the north.</p>
 
       <h3>What Does the HOA Cost and Is There a CDD?</h3>
-      <p>The HOA is very affordable at <strong>$11 to $44 per month</strong>. However, there is a <strong>CDD fee</strong> that shows up on your annual property tax bill. CDD fees in this area typically add $1,500-$2,500 per year. Make sure you factor this into your total cost of ownership — the HOA looks cheap, but the CDD adds meaningful cost.</p>
+      <p>The HOA is very affordable at <strong>$11 to $44 per month</strong>. However, there is a <strong>CDD fee</strong> that shows up on your annual property tax bill. CDD fees in this area typically add $1,500-$2,500 per year. Make sure you factor this into your total cost of ownership, the HOA looks cheap, but the CDD adds meaningful cost.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -2642,7 +2642,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>How Does Cooper Ridge Compare to Nearby Neighborhoods?</h3>
       <ul>
-        <li><strong><a href="/copper-ridge/">Copper Ridge</a></strong> (separate community): Do not confuse Cooper Ridge with Copper Ridge — they are different subdivisions with different characteristics. Copper Ridge has slightly different school zoning and home styles.</li>
+        <li><strong><a href="/copper-ridge/">Copper Ridge</a></strong> (separate community): Do not confuse Cooper Ridge with Copper Ridge, they are different subdivisions with different characteristics. Copper Ridge has slightly different school zoning and home styles.</li>
         <li><strong><a href="/buckhorn-preserve/">Buckhorn Preserve</a></strong> (2 miles north): Gated, community pool, Newsome zone. Higher entry price but gated lifestyle.</li>
         <li><strong><a href="/fishhawk-ranch/">FishHawk Ranch</a></strong> (3 miles south): The premium option. Master-planned with extensive amenities but significantly higher price point and HOA.</li>
         <li><strong><a href="/chelsea-woods/">Chelsea Woods</a></strong> (2 miles): Older homes (1979-1986), bigger lots, lower price. No CDD.</li>
@@ -2668,11 +2668,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Prestigious established community of expansive custom homes on lots up to one acre in south Valrico. 4-6 bedrooms, fireplaces, libraries, 3-car garages. Private tree-lined cul-de-sac setting.",
     contentHtml: `
       <h3>What Is Country Gate Like?</h3>
-      <p>Country Gate is one of <a href="/valrico/">Valrico's</a> most prestigious established neighborhoods. This is not a typical subdivision — it is a small collection of custom-built homes on lots up to one acre, set on quiet, tree-lined cul-de-sac streets. Each home in Country Gate is unique, with 4-6 bedrooms and high-end features like fireplaces, built-in libraries, tray ceilings, vaulted ceilings, gourmet kitchens with islands and custom cabinetry, and owners suites with private sitting areas and balconies.</p>
+      <p>Country Gate is one of <a href="/valrico/">Valrico's</a> most prestigious established neighborhoods. This is not a typical subdivision, it is a small collection of custom-built homes on lots up to one acre, set on quiet, tree-lined cul-de-sac streets. Each home in Country Gate is unique, with 4-6 bedrooms and high-end features like fireplaces, built-in libraries, tray ceilings, vaulted ceilings, gourmet kitchens with islands and custom cabinetry, and owners suites with private sitting areas and balconies.</p>
       <p>Some homes have 3-car garages and in-law suites. The backyards are private and wooded, giving the community a secluded feel that is rare in suburban Valrico. This is a neighborhood where people build their dream home and stay for decades.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
-      <p>Country Gate has a modest HOA appropriate for the small community size. There is <strong>no CDD fee</strong>. For a neighborhood of this caliber, the carrying costs are remarkably reasonable — you are paying for the land, the custom construction, and the location, not for an amenity package.</p>
+      <p>Country Gate has a modest HOA appropriate for the small community size. There is <strong>no CDD fee</strong>. For a neighborhood of this caliber, the carrying costs are remarkably reasonable, you are paying for the land, the custom construction, and the location, not for an amenity package.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -2700,8 +2700,8 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <ul>
         <li><strong>Custom home appraisals:</strong> Each home is one-of-a-kind, which makes appraisals challenging. Your lender may need to pull comps from multiple neighborhoods. Work with an experienced agent who can manage this process.</li>
         <li><strong>Lot size value:</strong> Lots up to one acre are nearly impossible to find in new Valrico construction. The land alone has significant value.</li>
-        <li><strong>Maintenance:</strong> Larger homes on larger lots require more maintenance — landscaping, exterior upkeep, pool care, and general repairs. Budget accordingly.</li>
-        <li><strong>Scarcity:</strong> Country Gate homes rarely come on the market. If you find one you like, do not hesitate — another buyer is probably looking at the same listing.</li>
+        <li><strong>Maintenance:</strong> Larger homes on larger lots require more maintenance, landscaping, exterior upkeep, pool care, and general repairs. Budget accordingly.</li>
+        <li><strong>Scarcity:</strong> Country Gate homes rarely come on the market. If you find one you like, do not hesitate, another buyer is probably looking at the same listing.</li>
         <li><strong>Rentals:</strong> Premium luxury rentals are a niche market. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
@@ -2721,7 +2721,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The community is gated, which adds security and exclusivity. Being near Fish Hawk means you get the benefit of that area's shopping, dining, and school corridor without paying FishHawk Ranch HOA fees.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
-      <p>As a new gated community, Creek Ridge Preserve has HOA fees that cover gate maintenance, common area landscaping, and community upkeep. Check with the builder or HOA management for current rates. There may be a <strong>CDD component</strong> — verify this before purchasing, as new communities in this area commonly carry CDDs that add to your annual tax bill.</p>
+      <p>As a new gated community, Creek Ridge Preserve has HOA fees that cover gate maintenance, common area landscaping, and community upkeep. Check with the builder or HOA management for current rates. There may be a <strong>CDD component</strong> verify this before purchasing, as new communities in this area commonly carry CDDs that add to your annual tax bill.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -2736,11 +2736,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>Which Schools Serve Creek Ridge Preserve?</h3>
-      <p>Creek Ridge Preserve is near the <strong>Newsome High School</strong> zone, one of the highest-rated high schools in Hillsborough County. Verify specific school zoning with the district — the Fish Hawk/Lithia area has some of the most sought-after school assignments in the county.</p>
+      <p>Creek Ridge Preserve is near the <strong>Newsome High School</strong> zone, one of the highest-rated high schools in Hillsborough County. Verify specific school zoning with the district, the Fish Hawk/Lithia area has some of the most sought-after school assignments in the county.</p>
 
       <h3>How Does Creek Ridge Preserve Compare to Nearby Communities?</h3>
       <ul>
-        <li><strong><a href="/fishhawk-ranch/">FishHawk Ranch</a></strong> (2 miles): The big comparison. FishHawk has extensive amenities — pools, sports courts, trails, community events. But the HOA is significantly higher. Creek Ridge Preserve is a smaller, more intimate option.</li>
+        <li><strong><a href="/fishhawk-ranch/">FishHawk Ranch</a></strong> (2 miles): The big comparison. FishHawk has extensive amenities, pools, sports courts, trails, community events. But the HOA is significantly higher. Creek Ridge Preserve is a smaller, more intimate option.</li>
         <li><strong><a href="/copper-ridge/">Copper Ridge</a></strong> (2 miles): Older (late 1990s-2000s), not gated. Lower price point but no new construction.</li>
         <li><strong><a href="/buckhorn-preserve/">Buckhorn Preserve</a></strong> (3 miles): Gated, community pool, 2002-2005 construction. Established alternative to Creek Ridge Preserve's new builds.</li>
         <li><strong><a href="/triple-creek/">Triple Creek</a></strong> (5 miles south): Another newer community. Larger and more master-planned.</li>
@@ -2767,10 +2767,10 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     contentHtml: `
       <h3>What Is Cypress Reserve Like?</h3>
       <p>Cypress Reserve is a family-friendly residential community of about 149 residents in south <a href="/valrico/">Valrico</a>, situated within the <a href="/river-hills-country-club/">River Hills Country Club</a> gated area along Cypress Landing Drive. Built in the late 1990s (primarily 1997-1998), Cypress Reserve gives you the benefit of living inside a 24-hour manned-gated community without paying full country club membership dues.</p>
-      <p>Homes are single-family with 3-5 bedrooms, concrete block construction, and well-maintained yards. The community is known for being safe, walkable, and genuinely family-oriented — neighbors report it as one of the best neighborhoods in Valrico for kids.</p>
+      <p>Homes are single-family with 3-5 bedrooms, concrete block construction, and well-maintained yards. The community is known for being safe, walkable, and genuinely family-oriented, neighbors report it as one of the best neighborhoods in Valrico for kids.</p>
 
       <h3>What Does the HOA Cover and How Much Does It Cost?</h3>
-      <p>HOA fees range from approximately <strong>$109 to $226 per month</strong> depending on the property. Your dues provide a <strong>luxury residential membership</strong> that grants access to River Hills Country Club restaurants, community pool, playground, and other amenities. That is significant value — you are getting club amenities included in your HOA rather than paying a separate membership on top.</p>
+      <p>HOA fees range from approximately <strong>$109 to $226 per month</strong> depending on the property. Your dues provide a <strong>luxury residential membership</strong> that grants access to River Hills Country Club restaurants, community pool, playground, and other amenities. That is significant value, you are getting club amenities included in your HOA rather than paying a separate membership on top.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -2797,7 +2797,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Gated access:</strong> 24-hour manned gate provides genuine security. Understand the guest access process before buying — it affects deliveries, visitors, and service providers.</li>
+        <li><strong>Gated access:</strong> 24-hour manned gate provides genuine security. Understand the guest access process before buying, it affects deliveries, visitors, and service providers.</li>
         <li><strong>Club membership:</strong> Your HOA includes luxury residential membership. If you use the pool, playground, and restaurants, this is excellent value. If you never use them, the higher HOA still gives you the gated lifestyle.</li>
         <li><strong>Construction:</strong> Late 1990s concrete block. Homes are 28+ years old. Inspect roof, HVAC, water heater, and plumbing. Some original systems may be due for replacement.</li>
         <li><strong>Rentals:</strong> Gated community rentals with club amenities are premium. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
@@ -2815,8 +2815,8 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Established 1970s-1980s neighborhood on Dillon Court in south Valrico with larger lots and custom-built homes by builders like Arthur Rutenberg. Mature trees, private setting.",
     contentHtml: `
       <h3>What Is Dillon Acres Like?</h3>
-      <p>Dillon Acres is a small, established neighborhood on Dillon Court in south <a href="/valrico/">Valrico</a>. Homes here date from the early 1970s through the early 1980s, with some built by respected custom builders like Arthur Rutenberg Homes. This is one of the older residential pockets in Valrico, and the maturity shows — towering trees, thick vegetation, and lots that feel more like country properties than suburban parcels.</p>
-      <p>The homes are single-family with 3-5 bedrooms, concrete block construction, and varying floor plans since many were custom built. Some have been extensively renovated over the years while others retain more original character. Lot sizes are generous — "acres" is in the name for a reason.</p>
+      <p>Dillon Acres is a small, established neighborhood on Dillon Court in south <a href="/valrico/">Valrico</a>. Homes here date from the early 1970s through the early 1980s, with some built by respected custom builders like Arthur Rutenberg Homes. This is one of the older residential pockets in Valrico, and the maturity shows, towering trees, thick vegetation, and lots that feel more like country properties than suburban parcels.</p>
+      <p>The homes are single-family with 3-5 bedrooms, concrete block construction, and varying floor plans since many were custom built. Some have been extensively renovated over the years while others retain more original character. Lot sizes are generous, "acres" is in the name for a reason.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
       <p>Dillon Acres has minimal or no formal HOA, which is typical of older Valrico neighborhoods from this era. There is <strong>no CDD fee</strong>. You maintain your own property on your own schedule without a management company telling you what shade of beige to paint your mailbox.</p>
@@ -2833,7 +2833,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>Which Schools Serve Dillon Acres?</h3>
-      <p>Dillon Acres is in south Valrico's school corridor. Verify specific zoning with Hillsborough County — this area may fall in either the Durant or Newsome High School zone. Both are well-regarded.</p>
+      <p>Dillon Acres is in south Valrico's school corridor. Verify specific zoning with Hillsborough County, this area may fall in either the Durant or Newsome High School zone. Both are well-regarded.</p>
 
       <h3>How Does Dillon Acres Compare to Nearby Neighborhoods?</h3>
       <ul>
@@ -2846,9 +2846,9 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Construction:</strong> 1970s-1980s is the oldest construction in Valrico. These homes need comprehensive inspection. Expect to find original plumbing (possibly polybutylene or even galvanized steel), older electrical panels, original windows, and roofs that have been replaced at least once. Budget $30,000-$50,000 for updates on unrenovated homes.</li>
-        <li><strong>Custom builder quality:</strong> Arthur Rutenberg and similar custom builders produced higher-quality homes than typical tract construction. The bones are often excellent even after 40-50 years — it is the systems (roof, HVAC, plumbing, electrical) that need updating.</li>
+        <li><strong>Custom builder quality:</strong> Arthur Rutenberg and similar custom builders produced higher-quality homes than typical tract construction. The bones are often excellent even after 40-50 years, it is the systems (roof, HVAC, plumbing, electrical) that need updating.</li>
         <li><strong>Lot value:</strong> The land has independent value. Large lots in south Valrico are increasingly rare. Some buyers purchase here for the lot, planning to renovate or eventually rebuild.</li>
-        <li><strong>Septic vs. sewer:</strong> Older homes on larger lots may be on septic systems rather than municipal sewer. Check before buying — septic inspection and potential replacement are significant cost considerations.</li>
+        <li><strong>Septic vs. sewer:</strong> Older homes on larger lots may be on septic systems rather than municipal sewer. Check before buying, septic inspection and potential replacement are significant cost considerations.</li>
         <li><strong>Rentals:</strong> Larger homes on acreage attract a specific renter profile. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
@@ -2864,11 +2864,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Small residential subdivision in the Valrico/Dover area with single-family homes. Quiet rural-suburban setting east of central Valrico near Plant City. Affordable entry point with larger lots.",
     contentHtml: `
       <h3>What Is Dover Ridge Like?</h3>
-      <p>Dover Ridge is a small residential subdivision in the eastern edge of the <a href="/valrico/">Valrico</a>/Dover area. The neighborhood has a rural-suburban character — more space between homes, larger lots, and a quieter pace than the subdivisions closer to SR 60 and Brandon. If you want to feel like you are in the country while still being within driving distance of Tampa Bay's employment centers, the Dover area neighborhoods deliver that.</p>
+      <p>Dover Ridge is a small residential subdivision in the eastern edge of the <a href="/valrico/">Valrico</a>/Dover area. The neighborhood has a rural-suburban character, more space between homes, larger lots, and a quieter pace than the subdivisions closer to SR 60 and Brandon. If you want to feel like you are in the country while still being within driving distance of Tampa Bay's employment centers, the Dover area neighborhoods deliver that.</p>
       <p>Homes are single-family with concrete block construction, typically 3-4 bedrooms with 2-car garages. The lots are generous, and many properties have room for workshops, sheds, or expanded outdoor living areas that would never fit in a newer subdivision.</p>
 
       <h3>How Much Are the HOA Fees?</h3>
-      <p>Dover Ridge has minimal HOA oversight. There is <strong>no CDD fee</strong>. The eastern Valrico/Dover area is known for low carrying costs — many neighborhoods have no HOA at all, and those that do keep fees nominal.</p>
+      <p>Dover Ridge has minimal HOA oversight. There is <strong>no CDD fee</strong>. The eastern Valrico/Dover area is known for low carrying costs, many neighborhoods have no HOA at all, and those that do keep fees nominal.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -2897,10 +2897,10 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Well and septic:</strong> Some homes in the Dover area use well water and septic systems rather than municipal water and sewer. Check this before buying — septic systems require inspection and periodic maintenance, and well water should be tested for quality.</li>
+        <li><strong>Well and septic:</strong> Some homes in the Dover area use well water and septic systems rather than municipal water and sewer. Check this before buying, septic systems require inspection and periodic maintenance, and well water should be tested for quality.</li>
         <li><strong>Flood zones:</strong> The eastern Valrico/Dover area has some flood-prone areas near the Alafia River and its tributaries. Check FEMA flood maps for your specific property.</li>
         <li><strong>Space advantage:</strong> The larger lots mean room for boats, RVs, workshops, and outdoor hobbies that newer neighborhoods prohibit. If you need space for toys and projects, Dover-area properties are your best bet.</li>
-        <li><strong>Rentals:</strong> Rural-suburban rentals attract a specific tenant — families who want space and are willing to commute. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
+        <li><strong>Rentals:</strong> Rural-suburban rentals attract a specific tenant, families who want space and are willing to commute. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles Valrico rentals.</li>
       </ul>
 
       <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth.</p>
@@ -2909,7 +2909,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
   },
 
   // =============================================================================
-  // VALRICO BATCH 1 — Gold-standard neighborhood descriptions
+  // VALRICO BATCH 1, Gold-standard neighborhood descriptions
   // Written July 2026 with real research data
   // =============================================================================
 
@@ -2921,7 +2921,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     contentHtml: `
       <h3>What Is Arista Like?</h3>
       <p>Arista is a small, gated neighborhood of roughly 60 single-family homes built by Taylor Morrison between 2006 and 2008. Tucked between Valrico Lake and the former Diamond Hill Golf Course off SR 60, Arista feels more exclusive than most <a href="/valrico/">Valrico</a> subdivisions because of its gated entry, generous lot sizes, and the caliber of construction Taylor Morrison brought to the community.</p>
-      <p>Homes here range from about 2,500 to 3,500+ square feet with 4-5 bedrooms, 3-4 bathrooms, and 2 to 3-car garages. Floor plans are open concept with high ceilings, formal living and dining spaces, and oversized owners suites. Most homes sit on quarter-acre lots — large enough for a pool, summer kitchen, and still have yard left over. Concrete block construction with tile roofs is standard throughout.</p>
+      <p>Homes here range from about 2,500 to 3,500+ square feet with 4-5 bedrooms, 3-4 bathrooms, and 2 to 3-car garages. Floor plans are open concept with high ceilings, formal living and dining spaces, and oversized owners suites. Most homes sit on quarter-acre lots, large enough for a pool, summer kitchen, and still have yard left over. Concrete block construction with tile roofs is standard throughout.</p>
 
       <h3>How Much Is the HOA and Are There CDD Fees?</h3>
       <p>Arista has an HOA that covers gated entry maintenance, common area landscaping, and community standards enforcement. Fees run in the range of <strong>$150-$200 per month</strong> depending on the section. The good news: there is <strong>no CDD fee</strong>. That matters because nearby newer communities like <a href="/copper-ridge/">Copper Ridge</a> carry CDD assessments that add $2,000+ per year to your tax bill on top of the HOA.</p>
@@ -2960,10 +2960,10 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know About Arista?</h3>
       <ul>
-        <li><strong>Construction:</strong> 2006-2008 Taylor Morrison build. These homes are approaching 20 years old. Inspect the roof carefully — original tile roofs should still have life, but underlayment may need attention. HVAC units from original construction are at or past typical replacement age.</li>
-        <li><strong>Insurance:</strong> Concrete block with tile roof is the ideal combination for Florida insurance rates. Get quotes before closing — rates vary widely between carriers.</li>
+        <li><strong>Construction:</strong> 2006-2008 Taylor Morrison build. These homes are approaching 20 years old. Inspect the roof carefully, original tile roofs should still have life, but underlayment may need attention. HVAC units from original construction are at or past typical replacement age.</li>
+        <li><strong>Insurance:</strong> Concrete block with tile roof is the ideal combination for Florida insurance rates. Get quotes before closing, rates vary widely between carriers.</li>
         <li><strong>Upgrades:</strong> Many original owners have updated kitchens and bathrooms. Look for homes with impact-rated windows (some owners added them post-construction) as they significantly reduce insurance premiums.</li>
-        <li><strong>Rentals:</strong> Check HOA rental restrictions before buying as an investment. Strong rental demand for gated Valrico homes in this size range — expect $2,800-$3,400/mo for a 4-bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
+        <li><strong>Rentals:</strong> Check HOA rental restrictions before buying as an investment. Strong rental demand for gated Valrico homes in this size range, expect $2,800-$3,400/mo for a 4-bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
       <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
@@ -2978,16 +2978,16 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Popular Valrico subdivision with 200+ homes built late 1990s-2000s. Community pool, tennis courts, and playground. Zoned for Newsome High School. Homes range 1,500-2,800 sqft. Active HOA with reasonable dues.",
     contentHtml: `
       <h3>What Is Bent Tree Estates Like?</h3>
-      <p>Bent Tree Estates is one of the more recognizable neighborhood names in <a href="/valrico/">Valrico</a>, and there is a reason for that — it has been a go-to for families since the late 1990s. The community was built across several phases from about 1997 through the mid-2000s, with roughly 200+ single-family homes spread across sub-sections including Bent Tree and Bent Tree South. The streets are wide with sidewalks, mature landscaping has filled in nicely, and the neighborhood has that established feel without looking dated.</p>
-      <p>Homes range from about 1,500 to 2,800 square feet, mostly 3-4 bedrooms with 2-car garages. Construction is concrete block with a mix of tile and shingle roofs. Floor plans vary by phase — earlier homes have more traditional layouts while later phases opened up to the more contemporary open-concept designs. Most homes have screened lanais, and many homeowners have added pools over the years.</p>
+      <p>Bent Tree Estates is one of the more recognizable neighborhood names in <a href="/valrico/">Valrico</a>, and there is a reason for that, it has been a go-to for families since the late 1990s. The community was built across several phases from about 1997 through the mid-2000s, with roughly 200+ single-family homes spread across sub-sections including Bent Tree and Bent Tree South. The streets are wide with sidewalks, mature landscaping has filled in nicely, and the neighborhood has that established feel without looking dated.</p>
+      <p>Homes range from about 1,500 to 2,800 square feet, mostly 3-4 bedrooms with 2-car garages. Construction is concrete block with a mix of tile and shingle roofs. Floor plans vary by phase, earlier homes have more traditional layouts while later phases opened up to the more contemporary open-concept designs. Most homes have screened lanais, and many homeowners have added pools over the years.</p>
 
       <h3>What Does the HOA Cover and How Much Does It Cost?</h3>
       <p>The Valrico Bent Tree Homeowners Association manages the community, covering common area maintenance, the community pool, tennis courts, playground, and deed restriction enforcement. HOA fees run approximately <strong>$100-$150 per quarter</strong> depending on the section. There is <strong>no CDD fee</strong>.</p>
-      <p>For the amenities you get — pool, tennis, playground, maintained common areas — the fees are competitive with anything in the Valrico market. Compare that to newer gated communities where you might pay $300+/month plus CDD, and Bent Tree starts looking even better on paper.</p>
+      <p>For the amenities you get, pool, tennis, playground, maintained common areas, the fees are competitive with anything in the Valrico market. Compare that to newer gated communities where you might pay $300+/month plus CDD, and Bent Tree starts looking even better on paper.</p>
 
       <h3>Why Do Families Choose Bent Tree Estates?</h3>
       <p>Two words: <strong>Newsome High</strong>. Bent Tree Estates sits in the Newsome High School zone, which is consistently one of the top-performing high schools in Hillsborough County. For families with school-age children or those planning ahead, this is the single biggest driver of home values in southern Valrico. The full school path includes strong elementary and middle school assignments as well.</p>
-      <p>Beyond schools, the community amenities get real use. The pool is busy in summer, the tennis courts see regular play, and the playground stays active. It is a neighborhood where kids ride bikes on the sidewalks and families walk in the evenings. That is not marketing copy — it is just how the neighborhood operates.</p>
+      <p>Beyond schools, the community amenities get real use. The pool is busy in summer, the tennis courts see regular play, and the playground stays active. It is a neighborhood where kids ride bikes on the sidewalks and families walk in the evenings. That is not marketing copy, it is just how the neighborhood operates.</p>
 
       <h3>How Close Is Everything?</h3>
       <p>Bent Tree Estates sits along the Lithia-Pinecrest Road corridor, which connects you to both the commercial areas of Valrico/Brandon and the more rural stretches toward Lithia and FishHawk:</p>
@@ -3016,7 +3016,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Roof age:</strong> Homes from the late 1990s may be on their second roof. Verify roof age and condition — shingle roofs from this era need replacement at 15-20 years, tile roofs last longer but check the underlayment.</li>
+        <li><strong>Roof age:</strong> Homes from the late 1990s may be on their second roof. Verify roof age and condition, shingle roofs from this era need replacement at 15-20 years, tile roofs last longer but check the underlayment.</li>
         <li><strong>HVAC:</strong> Original HVAC units have been replaced in most homes by now. Ask for the age and service history of the current system.</li>
         <li><strong>Plumbing:</strong> Late 1990s construction in Florida sometimes used CPVC supply lines. These can become brittle after 20+ years. Your inspector should check for this.</li>
         <li><strong>Resale value:</strong> Newsome High zoning protects your investment. Homes in this zone consistently sell faster and for more per square foot than comparable homes in Durant or Bloomingdale zones.</li>
@@ -3036,7 +3036,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     contentHtml: `
       <h3>What Is Bloomingdale Cove Like?</h3>
       <p>Bloomingdale Cove is a deed-restricted community of 253 single-family homes at the southern end of Culbreath Road in the <a href="/bloomingdale-community/">Bloomingdale</a> district of <a href="/valrico/">Valrico</a>. Built between 1996 and 2004, the neighborhood has matured into one of the more desirable pockets within the broader Bloomingdale community. Streets are tree-lined, yards are maintained, and the neighborhood has a quiet, family-focused atmosphere that attracts long-term residents.</p>
-      <p>Homes range from about 1,733 to 2,773 square feet with 3-4 bedrooms and 2-car garages. Construction is concrete block with a mix of tile and architectural shingle roofs. The lots are decent by Bloomingdale standards — not the postage-stamp sizes you see in some newer Valrico communities. Most homes have screened lanais, and many owners have added pools.</p>
+      <p>Homes range from about 1,733 to 2,773 square feet with 3-4 bedrooms and 2-car garages. Construction is concrete block with a mix of tile and architectural shingle roofs. The lots are decent by Bloomingdale standards, not the postage-stamp sizes you see in some newer Valrico communities. Most homes have screened lanais, and many owners have added pools.</p>
 
       <h3>What Does the HOA Cost and What Are the Rules?</h3>
       <p>HOA fees in Bloomingdale Cove run approximately <strong>$50-$200 per month</strong> depending on the section and what is covered. There is <strong>no CDD fee</strong>. The HOA enforces deed restrictions covering exterior maintenance, parking, landscaping, and general community standards. It is active enough to keep the neighborhood looking good without being overbearing.</p>
@@ -3073,7 +3073,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Construction age:</strong> 1996-2004 build. Homes in the older sections are approaching 30 years. Check roof condition, HVAC age, water heater, and plumbing carefully. Some early builds may have CPVC supply lines that become brittle with age.</li>
-        <li><strong>Insurance:</strong> Concrete block with tile roofs will get better insurance rates than shingle. Get multiple quotes — Florida insurance is volatile right now.</li>
+        <li><strong>Insurance:</strong> Concrete block with tile roofs will get better insurance rates than shingle. Get multiple quotes, Florida insurance is volatile right now.</li>
         <li><strong>Deed restrictions:</strong> The community has active enforcement. Read the restrictions before buying if you have plans for exterior modifications, additional vehicles, or commercial equipment storage.</li>
         <li><strong>Rentals:</strong> Good rental demand in the Bloomingdale school zone. Expect $2,000-$2,600/mo for a 3-4 bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
@@ -3090,14 +3090,14 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "New construction community by Onyx+East (branded Vivir) with ~82 modern two-story homes on Bloomingdale Avenue in Valrico. No CDD. Dog park, playground, fire pit. Zoned for Bloomingdale High.",
     contentHtml: `
       <h3>What Is Bloomingdale East Like?</h3>
-      <p>Bloomingdale East — marketed by the builder as <strong>Vivir</strong> — is one of the newest communities in the <a href="/bloomingdale-community/">Bloomingdale</a> district of <a href="/valrico/">Valrico</a>. Developed by Onyx+East and launched in 2024, the community sits on Bloomingdale Avenue with roughly 82 homesites of detached, modern two-story single-family homes. If you have been searching for new construction in the Bloomingdale High School zone, this is one of the few options that has come to market in the last decade.</p>
-      <p>Homes range from about 1,660 to 2,462 square feet with 3-4 bedrooms, gourmet kitchens, flex spaces, and attached garages. The design aesthetic is contemporary — cleaner lines, modern elevations, and open layouts that feel different from the typical Florida builder home. Onyx+East specializes in a more urban-inspired product, and it shows.</p>
+      <p>Bloomingdale East, marketed by the builder as <strong>Vivir</strong> is one of the newest communities in the <a href="/bloomingdale-community/">Bloomingdale</a> district of <a href="/valrico/">Valrico</a>. Developed by Onyx+East and launched in 2024, the community sits on Bloomingdale Avenue with roughly 82 homesites of detached, modern two-story single-family homes. If you have been searching for new construction in the Bloomingdale High School zone, this is one of the few options that has come to market in the last decade.</p>
+      <p>Homes range from about 1,660 to 2,462 square feet with 3-4 bedrooms, gourmet kitchens, flex spaces, and attached garages. The design aesthetic is contemporary, cleaner lines, modern elevations, and open layouts that feel different from the typical Florida builder home. Onyx+East specializes in a more urban-inspired product, and it shows.</p>
 
       <h3>What Are the Fees?</h3>
       <p>Bloomingdale East has a monthly HOA that covers common area maintenance, amenity upkeep, and community standards. The big win: <strong>no CDD fee</strong>. In a market where many new construction communities in the Valrico and Riverview area layer CDD assessments on top of HOA dues, this is a meaningful cost savings over the life of your ownership.</p>
 
       <h3>What Are the Community Amenities?</h3>
-      <p>The community includes a <strong>dog park</strong>, playground, hammock area, open green space, and a fire pit. These are intentionally social amenities — designed to get residents outside and interacting. It is a different vibe than the traditional pool-and-clubhouse setup. For dog owners and families with young kids, the outdoor spaces are genuinely useful rather than decorative.</p>
+      <p>The community includes a <strong>dog park</strong>, playground, hammock area, open green space, and a fire pit. These are intentionally social amenities, designed to get residents outside and interacting. It is a different vibe than the traditional pool-and-clubhouse setup. For dog owners and families with young kids, the outdoor spaces are genuinely useful rather than decorative.</p>
 
       <h3>How Close Is Everything?</h3>
       <p>Sitting directly on Bloomingdale Avenue gives you immediate access to one of Valrico's busiest commercial corridors:</p>
@@ -3112,7 +3112,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>Which Schools Are Zoned for Bloomingdale East?</h3>
-      <p>Bloomingdale East is zoned for <strong>Bloomingdale High School</strong>, which carries an 8/10 GreatSchools rating. Elementary and middle school assignments serve the broader Bloomingdale community. The high school is actually within walking distance for some residents — a rarity in suburban Florida.</p>
+      <p>Bloomingdale East is zoned for <strong>Bloomingdale High School</strong>, which carries an 8/10 GreatSchools rating. Elementary and middle school assignments serve the broader Bloomingdale community. The high school is actually within walking distance for some residents, a rarity in suburban Florida.</p>
 
       <h3>What Is the Flood Risk?</h3>
       <p>The community sits in <strong>FEMA Flood Zone X</strong> (minimal risk). As new construction, the homes are built to current Florida Building Code standards including wind mitigation features that help with insurance rates.</p>
@@ -3128,7 +3128,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>New construction advantages:</strong> Current building code compliance, impact-rated windows, modern insulation, and manufacturer warranties on major systems. Insurance rates are typically lower than older homes.</li>
-        <li><strong>Builder reputation:</strong> Onyx+East focuses on a modern aesthetic — verify that the design style matches your preferences. These homes look different from the typical Valrico builder product.</li>
+        <li><strong>Builder reputation:</strong> Onyx+East focuses on a modern aesthetic, verify that the design style matches your preferences. These homes look different from the typical Valrico builder product.</li>
         <li><strong>Two-story only:</strong> If you need a single-story home for accessibility or preference, Bloomingdale East may not have options. The floor plans are primarily two-story designs.</li>
         <li><strong>Resale:</strong> New communities take time to establish comparable sales. Early buyers may see slower appreciation until the community fills out and matures.</li>
         <li><strong>Rentals:</strong> New construction in the Bloomingdale zone rents well. Expect $2,400-$3,000/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
@@ -3146,12 +3146,12 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Established Bloomingdale-area community with homes from the 1980s-1990s on larger lots. Community pool, reasonable HOA. Zoned for Cimino Elementary and Bloomingdale High. One of the more affordable entries into the Bloomingdale school zone.",
     contentHtml: `
       <h3>What Is Bloomingdale Oaks Like?</h3>
-      <p>Bloomingdale Oaks is one of the established sections within the broader <a href="/bloomingdale-community/">Bloomingdale</a> master community in <a href="/valrico/">Valrico</a>. Most homes date from the late 1980s to mid-1990s, which puts them in a sweet spot — the neighborhood is fully mature with large oak canopy, established yards, and the kind of settled character that newer subdivisions simply cannot replicate. It is not flashy. It is solid, well-maintained, and quietly desirable.</p>
-      <p>Homes are primarily 3-4 bedrooms in the 1,400 to 2,200 square foot range, with a mix of single and two-story layouts. Construction is concrete block, which is standard for the era and holds up well in Florida. Lots are notably larger than what you will find in post-2000 construction — enough room for a real backyard, a pool, maybe a workshop or shed.</p>
+      <p>Bloomingdale Oaks is one of the established sections within the broader <a href="/bloomingdale-community/">Bloomingdale</a> master community in <a href="/valrico/">Valrico</a>. Most homes date from the late 1980s to mid-1990s, which puts them in a sweet spot, the neighborhood is fully mature with large oak canopy, established yards, and the kind of settled character that newer subdivisions simply cannot replicate. It is not flashy. It is solid, well-maintained, and quietly desirable.</p>
+      <p>Homes are primarily 3-4 bedrooms in the 1,400 to 2,200 square foot range, with a mix of single and two-story layouts. Construction is concrete block, which is standard for the era and holds up well in Florida. Lots are notably larger than what you will find in post-2000 construction, enough room for a real backyard, a pool, maybe a workshop or shed.</p>
 
       <h3>What Does the HOA Cover?</h3>
-      <p>Bloomingdale Oaks has a community pool and common areas maintained by the HOA. Dues are <strong>reasonable for the area</strong> — significantly less than newer communities with gated entries and resort-style amenities. The Bloomingdale Oaks Executive Park Association manages the community with standard deed restriction enforcement covering exterior maintenance, parking, and landscaping.</p>
-      <p>There is <strong>no CDD fee</strong>. For buyers comparing total monthly costs, that matters — newer Valrico communities can add $150-$250/month in CDD alone.</p>
+      <p>Bloomingdale Oaks has a community pool and common areas maintained by the HOA. Dues are <strong>reasonable for the area</strong> significantly less than newer communities with gated entries and resort-style amenities. The Bloomingdale Oaks Executive Park Association manages the community with standard deed restriction enforcement covering exterior maintenance, parking, and landscaping.</p>
+      <p>There is <strong>no CDD fee</strong>. For buyers comparing total monthly costs, that matters, newer Valrico communities can add $150-$250/month in CDD alone.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -3166,7 +3166,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>Which Schools Serve Bloomingdale Oaks?</h3>
-      <p>Bloomingdale Oaks is zoned for <strong>Cimino Elementary</strong> (or Alafia Elementary depending on section), <strong>Burns Middle School</strong>, and <strong>Bloomingdale High School</strong>. Bloomingdale High is right in the community — proximity that parents and high schoolers both appreciate. Verify the exact elementary assignment for your specific address, as boundaries within the Bloomingdale master community can vary by street.</p>
+      <p>Bloomingdale Oaks is zoned for <strong>Cimino Elementary</strong> (or Alafia Elementary depending on section), <strong>Burns Middle School</strong>, and <strong>Bloomingdale High School</strong>. Bloomingdale High is right in the community, proximity that parents and high schoolers both appreciate. Verify the exact elementary assignment for your specific address, as boundaries within the Bloomingdale master community can vary by street.</p>
 
       <h3>What Is the Flood Risk?</h3>
       <p>Bloomingdale Oaks sits in <strong>FEMA Flood Zone X</strong> (minimal risk). The Bloomingdale plateau is well-drained and sits at a higher elevation than the surrounding low areas. No flood insurance is required by lenders.</p>
@@ -3175,14 +3175,14 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <ul>
         <li><strong><a href="/bloomingdale-cove/">Bloomingdale Cove</a></strong> (0.5 miles): Newer (1996-2004), slightly higher price point, deed restricted with shared park. More contemporary homes but smaller lots.</li>
         <li><strong><a href="/brentwood-hills/">Brentwood Hills</a></strong> (1 mile): Same era, similar character. Larger lots in some sections, comparable pricing.</li>
-        <li><strong><a href="/bloomingdale-east/">Bloomingdale East</a></strong> (1 mile): Brand new construction — modern designs, higher price point. The opposite end of the spectrum from Bloomingdale Oaks' established character.</li>
+        <li><strong><a href="/bloomingdale-east/">Bloomingdale East</a></strong> (1 mile): Brand new construction, modern designs, higher price point. The opposite end of the spectrum from Bloomingdale Oaks' established character.</li>
         <li><strong><a href="/somerset/">Somerset</a></strong> (1 mile): Newer (2001-2006), more amenities, Lennar-built. Higher HOA but more community infrastructure.</li>
       </ul>
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Construction age:</strong> 1980s-1990s homes are 30-40+ years old. Budget for updates — kitchens, bathrooms, and possibly the electrical panel if original. Many homes have been renovated, but verify the scope of any claimed updates.</li>
-        <li><strong>Plumbing:</strong> Some homes from this era may have polybutylene (poly-B) pipes. If present, plan for a repipe — most insurers will not write a new policy on a home with poly-B, and buyers should negotiate accordingly.</li>
+        <li><strong>Construction age:</strong> 1980s-1990s homes are 30-40+ years old. Budget for updates, kitchens, bathrooms, and possibly the electrical panel if original. Many homes have been renovated, but verify the scope of any claimed updates.</li>
+        <li><strong>Plumbing:</strong> Some homes from this era may have polybutylene (poly-B) pipes. If present, plan for a repipe, most insurers will not write a new policy on a home with poly-B, and buyers should negotiate accordingly.</li>
         <li><strong>Roof:</strong> Most homes are on their second or third roof by now. Verify current roof age and condition. A new roof on concrete block construction is your best path to affordable insurance.</li>
         <li><strong>Value proposition:</strong> Bloomingdale Oaks is one of the most affordable entries into the Bloomingdale High zone. If school zoning matters and budget is tight, start here.</li>
         <li><strong>Rentals:</strong> Solid rental market. Expect $1,800-$2,400/mo for a 3-bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
@@ -3200,11 +3200,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Established Valrico community near Bloomingdale Avenue with mature oaks, larger lots, and homes from the late 1980s-1990s. Modest HOA, no CDD. Zoned for Bloomingdale High School.",
     contentHtml: `
       <h3>What Is Brentwood Hills Like?</h3>
-      <p>Brentwood Hills is one of those <a href="/valrico/">Valrico</a> neighborhoods that has genuinely aged well. Built mostly in the late 1980s and 1990s, the mature oak trees and established landscaping give the community a settled, shaded feel that newer subdivisions simply cannot match. The tree canopy is impressive — you will notice it the moment you drive in. It makes a tangible difference in the look and livability of the neighborhood, especially during Tampa Bay's brutal summer months.</p>
+      <p>Brentwood Hills is one of those <a href="/valrico/">Valrico</a> neighborhoods that has genuinely aged well. Built mostly in the late 1980s and 1990s, the mature oak trees and established landscaping give the community a settled, shaded feel that newer subdivisions simply cannot match. The tree canopy is impressive, you will notice it the moment you drive in. It makes a tangible difference in the look and livability of the neighborhood, especially during Tampa Bay's brutal summer months.</p>
       <p>Lot sizes are generally larger than what you find in developments built after 2000. Most homes are 3-4 bedrooms in the 1,500 to 2,500 square foot range, with a mix of one and two-story floor plans. Construction is concrete block with stucco exteriors, mostly tile roofs in the newer sections and shingle in the older. The neighborhood has a cohesive look without being cookie-cutter.</p>
 
       <h3>What Does the HOA Cost?</h3>
-      <p>The community has an HOA with <strong>modest dues</strong>. There is no gated entry, no elaborate amenity center, and no CDD. It is a straightforward residential neighborhood where the appeal is the homes themselves, the lots, and the location. The HOA maintains common areas and enforces basic deed restrictions — enough to keep the neighborhood standards up without micromanaging your life.</p>
+      <p>The community has an HOA with <strong>modest dues</strong>. There is no gated entry, no elaborate amenity center, and no CDD. It is a straightforward residential neighborhood where the appeal is the homes themselves, the lots, and the location. The HOA maintains common areas and enforces basic deed restrictions, enough to keep the neighborhood standards up without micromanaging your life.</p>
 
       <h3>How Close Is Everything?</h3>
       <p><a href="/bloomingdale-community/">Bloomingdale</a> Avenue access is a few minutes away, which puts you close to some of the best shopping and dining in the Valrico area:</p>
@@ -3219,7 +3219,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>Which Schools Serve Brentwood Hills?</h3>
-      <p>Brentwood Hills falls in the <strong>Bloomingdale High School</strong> zone, with <strong>Cimino Elementary</strong> and middle school assignments serving the area. Bloomingdale High is nearby and consistently well-rated — a major draw for families. School zone assignments can vary by specific address within the community, so verify with the Hillsborough County school district before making an offer.</p>
+      <p>Brentwood Hills falls in the <strong>Bloomingdale High School</strong> zone, with <strong>Cimino Elementary</strong> and middle school assignments serving the area. Bloomingdale High is nearby and consistently well-rated, a major draw for families. School zone assignments can vary by specific address within the community, so verify with the Hillsborough County school district before making an offer.</p>
 
       <h3>What Is the Flood Risk?</h3>
       <p>Brentwood Hills sits in <strong>FEMA Flood Zone X</strong> (minimal risk). The community is on well-drained ground at a good elevation. No flood insurance required by lenders.</p>
@@ -3228,14 +3228,14 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <ul>
         <li><strong><a href="/bloomingdale-oaks/">Bloomingdale Oaks</a></strong> (0.5 miles): Same era, similar character. Bloomingdale Oaks has a community pool; Brentwood Hills trades that for larger lots in some sections.</li>
         <li><strong><a href="/bloomingdale-cove/">Bloomingdale Cove</a></strong> (1 mile): Newer construction (1996-2004), deed restricted, shared park with Somerset. Higher price point but more contemporary homes.</li>
-        <li><strong><a href="/bloomingdale-east/">Bloomingdale East</a></strong> (1.5 miles): Brand new Onyx+East modern construction. Completely different product — higher price, modern design, smaller lots.</li>
+        <li><strong><a href="/bloomingdale-east/">Bloomingdale East</a></strong> (1.5 miles): Brand new Onyx+East modern construction. Completely different product, higher price, modern design, smaller lots.</li>
         <li><strong><a href="/valrico-oaks/">Valrico Oaks</a></strong> (1 mile): Similar vintage, moderate HOA, tree-lined streets. Very comparable in character and price.</li>
       </ul>
 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Budget for updates:</strong> Kitchens and bathrooms in some of the original homes are showing their age. A $15K-$30K kitchen renovation can significantly increase both livability and resale value.</li>
-        <li><strong>Check the plumbing:</strong> 1980s homes in Hillsborough County may have polybutylene pipes. If found, negotiate a repipe or price reduction — insurance companies will require it.</li>
+        <li><strong>Check the plumbing:</strong> 1980s homes in Hillsborough County may have polybutylene pipes. If found, negotiate a repipe or price reduction, insurance companies will require it.</li>
         <li><strong>Roof condition matters:</strong> Homes this age are on their second or third roof. A new roof on block construction is your best lever for affordable insurance premiums.</li>
         <li><strong>Value play:</strong> You get more house and more yard for the money compared to newer construction. If you are handy or willing to invest in updates, Brentwood Hills delivers square footage and lot size that newer communities cannot match at this price point.</li>
         <li><strong>Rentals:</strong> Steady rental demand. Expect $1,900-$2,400/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
@@ -3250,18 +3250,18 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
   "buckhorn": {
     summary:
-      "The original Buckhorn area of Valrico — a collection of subdivisions near Buckhorn Elementary built from the late 1980s through 2000s. Larger lots, mature landscaping, and strong school zoning. No CDD in most sections.",
+      "The original Buckhorn area of Valrico, a collection of subdivisions near Buckhorn Elementary built from the late 1980s through 2000s. Larger lots, mature landscaping, and strong school zoning. No CDD in most sections.",
     contentHtml: `
       <h3>What Is the Buckhorn Area Like?</h3>
-      <p>When people say "Buckhorn" in <a href="/valrico/">Valrico</a>, they are usually referring to the collection of neighborhoods clustered around Buckhorn Elementary School and the Buckhorn Springs Golf and Country Club. This is not a single subdivision — it is a corridor that includes Buckhorn Estates, Buckhorn Groves, Buckhorn Oaks, Buckhorn Hills, and several other pockets. Each has its own character, but they share the same general location, school zoning, and the feel of established Valrico living.</p>
-      <p>Homes in the broader Buckhorn area were built from the late 1980s through the mid-2000s. You will find everything from modest 3-bedroom ranches around 1,500 square feet to larger 4-5 bedroom homes over 3,500 square feet. Construction is predominantly concrete block. Lot sizes vary but tend to be more generous than what you will see in newer communities — quarter-acre to half-acre lots are common, especially in the Buckhorn Estates and Buckhorn Groves sections.</p>
+      <p>When people say "Buckhorn" in <a href="/valrico/">Valrico</a>, they are usually referring to the collection of neighborhoods clustered around Buckhorn Elementary School and the Buckhorn Springs Golf and Country Club. This is not a single subdivision, it is a corridor that includes Buckhorn Estates, Buckhorn Groves, Buckhorn Oaks, Buckhorn Hills, and several other pockets. Each has its own character, but they share the same general location, school zoning, and the feel of established Valrico living.</p>
+      <p>Homes in the broader Buckhorn area were built from the late 1980s through the mid-2000s. You will find everything from modest 3-bedroom ranches around 1,500 square feet to larger 4-5 bedroom homes over 3,500 square feet. Construction is predominantly concrete block. Lot sizes vary but tend to be more generous than what you will see in newer communities, quarter-acre to half-acre lots are common, especially in the Buckhorn Estates and Buckhorn Groves sections.</p>
 
       <h3>What About HOA and CDD Fees?</h3>
       <p>This is where it gets specific to each sub-neighborhood. <strong>Buckhorn Estates</strong> has an active HOA. <strong>Buckhorn Groves</strong> is deed-restricted with mandatory HOA. Most sections carry <strong>no CDD fee</strong>, which is a significant cost advantage over newer communities in the area. HOA fees generally run in the <strong>$50-$150/quarter range</strong> depending on the specific section.</p>
 
       <h3>Why Do Families Choose Buckhorn?</h3>
       <p>Schools. <strong>Buckhorn Elementary</strong> is consistently one of the highest-rated elementary schools in Hillsborough County, and it is the primary reason many families target this specific corridor. The full school path goes to <strong>Mulrennan Middle School</strong> and then <strong>Durant High School</strong>. Having a top elementary school literally in the neighborhood is a luxury that directly impacts property values.</p>
-      <p>Beyond schools, the Buckhorn Springs Golf and Country Club — the oldest private club in the Brandon/Valrico area — anchors the community. Club membership is separate and optional, but the presence of the club adds green space, mature landscaping, and a neighborhood identity that generic subdivisions lack.</p>
+      <p>Beyond schools, the Buckhorn Springs Golf and Country Club, the oldest private club in the Brandon/Valrico area, anchors the community. Club membership is separate and optional, but the presence of the club adds green space, mature landscaping, and a neighborhood identity that generic subdivisions lack.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -3276,7 +3276,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>What Is the Flood Risk?</h3>
-      <p>The Buckhorn area generally sits in <strong>FEMA Flood Zone X</strong> (minimal risk). Some lots near retention ponds or drainage easements may have different designations — always verify the specific parcel. The elevated terrain along Lithia Pinecrest Road provides good drainage throughout the corridor.</p>
+      <p>The Buckhorn area generally sits in <strong>FEMA Flood Zone X</strong> (minimal risk). Some lots near retention ponds or drainage easements may have different designations, always verify the specific parcel. The elevated terrain along Lithia Pinecrest Road provides good drainage throughout the corridor.</p>
 
       <h3>How Does Buckhorn Compare?</h3>
       <ul>
@@ -3307,11 +3307,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Small ~60-home bridge neighborhood where the Buckhorn corridor meets Bloomingdale in south Valrico. Concrete block homes, mature oaks, no CDD. Homes range $300K-$420K.",
     contentHtml: `
       <h3>What Is Buckhorn Bloomingdale Like?</h3>
-      <p>Buckhorn Bloomingdale occupies an interesting geographic pocket in south <a href="/valrico/">Valrico</a> where the Buckhorn corridor meets the northern edge of the <a href="/bloomingdale-community/">Bloomingdale</a> development. With roughly 60 single-family homes, it functions as a bridge neighborhood — carrying traits of both areas without belonging entirely to either one. The streets are residential and unhurried, with a mature oak canopy providing shade and a settled look that newer subdivisions cannot replicate.</p>
+      <p>Buckhorn Bloomingdale occupies an interesting geographic pocket in south <a href="/valrico/">Valrico</a> where the Buckhorn corridor meets the northern edge of the <a href="/bloomingdale-community/">Bloomingdale</a> development. With roughly 60 single-family homes, it functions as a bridge neighborhood, carrying traits of both areas without belonging entirely to either one. The streets are residential and unhurried, with a mature oak canopy providing shade and a settled look that newer subdivisions cannot replicate.</p>
       <p>Homes are concrete block construction with stucco exteriors, featuring 3-4 bedrooms, owners suites, attached 2-car garages, screened lanais, and open-concept layouts. You will find a mix of single-story and two-story floor plans. Home prices generally fall between $300,000 and $420,000, which positions the neighborhood as a solid mid-range option in the Valrico market.</p>
 
       <h3>What Are the Fees?</h3>
-      <p>Buckhorn Bloomingdale has a modest HOA covering basic community maintenance and deed restriction enforcement. There is <strong>no CDD fee</strong>. Total monthly carrying costs beyond the mortgage are manageable — one of the advantages of buying in an established neighborhood that did not need special tax districts to fund its infrastructure.</p>
+      <p>Buckhorn Bloomingdale has a modest HOA covering basic community maintenance and deed restriction enforcement. There is <strong>no CDD fee</strong>. Total monthly carrying costs beyond the mortgage are manageable, one of the advantages of buying in an established neighborhood that did not need special tax districts to fund its infrastructure.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -3325,7 +3325,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>Which Schools Are Zoned?</h3>
-      <p>Because Buckhorn Bloomingdale sits at the junction of two school corridors, your specific school assignment depends on your exact address. Generally, the area feeds into <strong>Buckhorn Elementary</strong> or Bloomingdale-area elementary schools, <strong>Mulrennan Middle</strong> or Burns Middle, and <strong>Durant High</strong> or <strong>Bloomingdale High</strong>. Always verify with the Hillsborough County school district — this is a boundary area where assignments can change by street.</p>
+      <p>Because Buckhorn Bloomingdale sits at the junction of two school corridors, your specific school assignment depends on your exact address. Generally, the area feeds into <strong>Buckhorn Elementary</strong> or Bloomingdale-area elementary schools, <strong>Mulrennan Middle</strong> or Burns Middle, and <strong>Durant High</strong> or <strong>Bloomingdale High</strong>. Always verify with the Hillsborough County school district, this is a boundary area where assignments can change by street.</p>
 
       <h3>What Is the Flood Risk?</h3>
       <p>Most of Buckhorn Bloomingdale sits in <strong>FEMA Flood Zone X</strong> (minimal risk). The community sits on higher ground between the two corridors. No flood insurance required by lenders.</p>
@@ -3342,7 +3342,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <ul>
         <li><strong>MLS search tip:</strong> Because this neighborhood sits at the intersection of two well-known corridors, listing descriptions sometimes categorize homes here under Buckhorn OR Bloomingdale depending on the agent. When searching, cast your net across both search terms to avoid missing inventory.</li>
         <li><strong>Construction age:</strong> Check roof, HVAC, and plumbing carefully. Homes in this corridor are mature and may need system updates.</li>
-        <li><strong>School zone verification:</strong> This is a boundary area. Do not assume — verify school assignments for the specific address before making an offer.</li>
+        <li><strong>School zone verification:</strong> This is a boundary area. Do not assume, verify school assignments for the specific address before making an offer.</li>
         <li><strong>Rentals:</strong> Good rental demand at this price point. Expect $1,900-$2,400/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
@@ -3358,11 +3358,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Small pocket neighborhood in the Buckhorn corridor of Valrico near Buckhorn Springs Golf and Country Club. Established homes from the 1990s-2000s. HOA maintained, no CDD. Zoned for Buckhorn Elementary.",
     contentHtml: `
       <h3>What Is Buckhorn Springs Manor Like?</h3>
-      <p>Buckhorn Springs Manor is a smaller residential pocket within the broader <a href="/buckhorn/">Buckhorn</a> corridor of <a href="/valrico/">Valrico</a>, situated near the Buckhorn Springs Golf and Country Club. It is not a large master-planned community — it is a quiet cluster of single-family homes that benefits from the established infrastructure and school zoning of the surrounding Buckhorn area.</p>
+      <p>Buckhorn Springs Manor is a smaller residential pocket within the broader <a href="/buckhorn/">Buckhorn</a> corridor of <a href="/valrico/">Valrico</a>, situated near the Buckhorn Springs Golf and Country Club. It is not a large master-planned community, it is a quiet cluster of single-family homes that benefits from the established infrastructure and school zoning of the surrounding Buckhorn area.</p>
       <p>Homes here were built primarily in the 1990s and early 2000s. Most are 3-4 bedrooms in the 1,500 to 2,500 square foot range with 2-car garages and screened lanais. Construction is concrete block with a mix of tile and shingle roofs. The neighborhood has matured nicely with established landscaping and well-maintained properties throughout.</p>
 
       <h3>What Are the Fees?</h3>
-      <p>Buckhorn Springs Manor has an HOA covering basic community standards and common area maintenance. Fees are <strong>modest</strong> — in line with the smaller Buckhorn-area subdivisions. There is <strong>no CDD fee</strong>. The total carrying cost beyond the mortgage is reasonable, which is one of the advantages of buying in an established neighborhood.</p>
+      <p>Buckhorn Springs Manor has an HOA covering basic community standards and common area maintenance. Fees are <strong>modest</strong> in line with the smaller Buckhorn-area subdivisions. There is <strong>no CDD fee</strong>. The total carrying cost beyond the mortgage is reasonable, which is one of the advantages of buying in an established neighborhood.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -3391,7 +3391,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Golf course proximity:</strong> Being near the country club adds green space and aesthetic value, but club membership is separate and optional. The club is private — do not assume access comes with the home.</li>
+        <li><strong>Golf course proximity:</strong> Being near the country club adds green space and aesthetic value, but club membership is separate and optional. The club is private, do not assume access comes with the home.</li>
         <li><strong>Construction age:</strong> 1990s-2000s homes should be inspected carefully for roof condition, HVAC age, and water heater replacement. Tile roofs from this era may need underlayment work even if the tiles themselves are in good shape.</li>
         <li><strong>Small community advantage:</strong> Fewer homes means fewer comparable sales when you list. Price carefully based on condition and upgrades, and hire an agent who knows the Buckhorn corridor specifically.</li>
         <li><strong>Rentals:</strong> Buckhorn Elementary zoning drives rental demand. Expect $2,000-$2,600/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
@@ -3409,11 +3409,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Gated community in south Valrico with community pool, tennis courts, and homes from 1997-present. Zoned for Newsome High School. Active HOA with well-maintained grounds.",
     contentHtml: `
       <h3>What Is Canterbury Oaks Like?</h3>
-      <p>Canterbury Oaks is a gated community in southern <a href="/valrico/">Valrico</a> that has been attracting families since 1997. The community features a controlled-access gate, community pool, tennis courts, and playground — the kind of amenity package that families with kids actually use. Homes were built across multiple phases from 1997 through the 2000s, giving the neighborhood a range of vintages while maintaining consistent architectural standards throughout.</p>
-      <p>Homes are primarily 3-5 bedrooms, ranging from about 1,800 to 3,200+ square feet. Construction is concrete block with tile roofs in most sections. Lot sizes are respectable — large enough for pools and outdoor living spaces, which is exactly what most Florida buyers want. The gated entry and HOA-maintained grounds give Canterbury Oaks a well-kept appearance that holds up year after year.</p>
+      <p>Canterbury Oaks is a gated community in southern <a href="/valrico/">Valrico</a> that has been attracting families since 1997. The community features a controlled-access gate, community pool, tennis courts, and playground, the kind of amenity package that families with kids actually use. Homes were built across multiple phases from 1997 through the 2000s, giving the neighborhood a range of vintages while maintaining consistent architectural standards throughout.</p>
+      <p>Homes are primarily 3-5 bedrooms, ranging from about 1,800 to 3,200+ square feet. Construction is concrete block with tile roofs in most sections. Lot sizes are respectable, large enough for pools and outdoor living spaces, which is exactly what most Florida buyers want. The gated entry and HOA-maintained grounds give Canterbury Oaks a well-kept appearance that holds up year after year.</p>
 
       <h3>What Does the HOA Cover?</h3>
-      <p>The Canterbury Oaks HOA maintains the gated entry, community pool, tennis courts, playground, common area landscaping, and enforces deed restrictions. Fees reflect the amenity level — expect <strong>$150-$250 per quarter</strong> depending on the section. There is <strong>no CDD fee</strong> in the original sections, though always verify for specific lots.</p>
+      <p>The Canterbury Oaks HOA maintains the gated entry, community pool, tennis courts, playground, common area landscaping, and enforces deed restrictions. Fees reflect the amenity level, expect <strong>$150-$250 per quarter</strong> depending on the section. There is <strong>no CDD fee</strong> in the original sections, though always verify for specific lots.</p>
 
       <h3>Why Do Families Choose Canterbury Oaks?</h3>
       <p>The school zone is the anchor. Canterbury Oaks is zoned for <strong>Newsome High School</strong>, which is consistently one of the top-performing high schools in Hillsborough County. Combined with strong elementary and middle school assignments, the school path from Canterbury Oaks is one of the best in the Valrico market. Families pay a premium for Newsome zoning, and Canterbury Oaks delivers it with the added security and amenities of a gated community.</p>
@@ -3446,7 +3446,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <ul>
         <li><strong>Gate access:</strong> Controlled entry adds security and keeps through traffic out. Make sure you understand the guest access system and any overnight parking rules before buying.</li>
         <li><strong>Construction age range:</strong> 1997-2000s means some homes are approaching 30 years old. Check roof age, HVAC vintage, and water heater condition. Newer phases will have fewer deferred maintenance concerns.</li>
-        <li><strong>Insurance:</strong> Concrete block with tile roof is the ideal Florida insurance combination. Get multiple quotes — gated communities sometimes qualify for additional discounts with certain carriers.</li>
+        <li><strong>Insurance:</strong> Concrete block with tile roof is the ideal Florida insurance combination. Get multiple quotes, gated communities sometimes qualify for additional discounts with certain carriers.</li>
         <li><strong>Newsome premium:</strong> You pay more per square foot for Newsome zoning than comparable homes in Durant or Bloomingdale zones. That premium holds on resale, making it a solid investment for families.</li>
         <li><strong>Rentals:</strong> Excellent rental demand in the Newsome zone. Expect $2,400-$3,200/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
@@ -3456,17 +3456,17 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     `,
   },
 
-  // copper-ridge-community removed — canonical is "copper-ridge" above
+  // copper-ridge-community removed, canonical is "copper-ridge" above
 
   // ===== CRESTWOOD ESTATES =====
 
   "crestwood-estates": {
     summary:
-      "Luxury new construction by Homes by WestBay — just 25 exclusive homesites in Valrico. Homes 2,562-4,828 sqft, $675K-$970K. No CDD. Tile roofs, paver driveways, 3-car garages standard. HOA $1,000/quarter.",
+      "Luxury new construction by Homes by WestBay, just 25 exclusive homesites in Valrico. Homes 2,562-4,828 sqft, $675K-$970K. No CDD. Tile roofs, paver driveways, 3-car garages standard. HOA $1,000/quarter.",
     contentHtml: `
       <h3>What Is Crestwood Estates Like?</h3>
-      <p>Crestwood Estates is the luxury new-construction play in <a href="/valrico/">Valrico</a> right now. Developed by Tampa Bay's largest private homebuilder, <strong>Homes by WestBay</strong>, the community consists of just 25 exclusive homesites on 70-foot-wide lots. This is WestBay's Artisan Collection — their premium product line — with tile roofs, paver driveways, and 3-car garages as standard features. When 25 is the total build-out, you are buying into exclusivity that larger communities cannot offer.</p>
-      <p>Homes range from 2,562 to 4,828 square feet with prices from $674,990 to $969,990. Floor plans are open concept with the high-end finishes WestBay is known for — quartz countertops, tile throughout main living areas, designer cabinetry, and covered outdoor living spaces. These homes are designed for the buyer who wants new construction with luxury-tier features without moving to FishHawk or South Tampa.</p>
+      <p>Crestwood Estates is the luxury new-construction play in <a href="/valrico/">Valrico</a> right now. Developed by Tampa Bay's largest private homebuilder, <strong>Homes by WestBay</strong>, the community consists of just 25 exclusive homesites on 70-foot-wide lots. This is WestBay's Artisan Collection, their premium product line, with tile roofs, paver driveways, and 3-car garages as standard features. When 25 is the total build-out, you are buying into exclusivity that larger communities cannot offer.</p>
+      <p>Homes range from 2,562 to 4,828 square feet with prices from $674,990 to $969,990. Floor plans are open concept with the high-end finishes WestBay is known for, quartz countertops, tile throughout main living areas, designer cabinetry, and covered outdoor living spaces. These homes are designed for the buyer who wants new construction with luxury-tier features without moving to FishHawk or South Tampa.</p>
 
       <h3>What Are the HOA and CDD Fees?</h3>
       <p>The HOA runs <strong>$1,000 per quarter</strong> ($333/month). That is higher than most Valrico communities, reflecting the smaller community size and the level of common area maintenance. The significant upside: <strong>no CDD fee</strong>. In the new construction market around Tampa Bay, no CDD is increasingly rare. That saves buyers $2,000-$4,000+ per year compared to CDD-heavy communities.</p>
@@ -3483,14 +3483,14 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>Which Schools Serve Crestwood Estates?</h3>
-      <p>School zoning for Crestwood Estates feeds into Hillsborough County public schools. The community is served by area elementary, <strong>Mulrennan Middle School</strong>, and the high school zone — verify the specific assignments with the school district as this is a newer community and boundaries may have been updated. If Newsome or Bloomingdale High zoning is a priority, confirm before purchasing.</p>
+      <p>School zoning for Crestwood Estates feeds into Hillsborough County public schools. The community is served by area elementary, <strong>Mulrennan Middle School</strong>, and the high school zone, verify the specific assignments with the school district as this is a newer community and boundaries may have been updated. If Newsome or Bloomingdale High zoning is a priority, confirm before purchasing.</p>
 
       <h3>What Is the Flood Risk?</h3>
       <p>As new construction, Crestwood Estates was engineered with modern stormwater management. The community sits in <strong>FEMA Flood Zone X</strong> (minimal risk). Current building code compliance includes elevated slab construction and drainage designed to handle Florida storm events.</p>
 
       <h3>How Does Crestwood Estates Compare?</h3>
       <ul>
-        <li><strong><a href="/northwood-estates/">Northwood Estates</a></strong> (nearby): Also WestBay Artisan Collection, also 35 lots, similar price point. Sold out — Crestwood Estates is the current alternative for buyers who missed Northwood.</li>
+        <li><strong><a href="/northwood-estates/">Northwood Estates</a></strong> (nearby): Also WestBay Artisan Collection, also 35 lots, similar price point. Sold out, Crestwood Estates is the current alternative for buyers who missed Northwood.</li>
         <li><strong><a href="/copper-ridge/">Copper Ridge</a></strong> (2 miles): Also newer, gated, Newsome zone. Lower price point but smaller homes and CDD fees that add to the monthly cost.</li>
         <li><strong><a href="/arista/">Arista</a></strong> (2 miles): Taylor Morrison build, gated, no CDD. Lower price point but 2006-2008 construction vs brand new. Smaller homes.</li>
         <li><strong><a href="/river-hills/">River Hills</a></strong> (3 miles): Gated golf community, larger lots, country club lifestyle. Comparable price range but 1988-2003 construction.</li>
@@ -3499,9 +3499,9 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Builder reputation:</strong> Homes by WestBay has been Tampa Bay's largest private builder for years. They have a track record of quality construction and responsive warranty service. That matters when you are spending $700K+ on a new home.</li>
-        <li><strong>25 homes only:</strong> Small community size means limited comparable sales for future resale. Price your home carefully when you eventually sell — an experienced Valrico agent who understands the luxury tier is essential.</li>
+        <li><strong>25 homes only:</strong> Small community size means limited comparable sales for future resale. Price your home carefully when you eventually sell, an experienced Valrico agent who understands the luxury tier is essential.</li>
         <li><strong>Insurance advantage:</strong> Brand new construction to current Florida Building Code gets the best possible insurance rates. Impact windows, modern roof systems, and current wind mitigation features can save $3,000-$5,000/year on premiums compared to older homes.</li>
-        <li><strong>Customization:</strong> If buying from the builder before completion, you may have options to customize finishes. Ask about available upgrades and their cost — the standard package is already strong, so be strategic about where you add.</li>
+        <li><strong>Customization:</strong> If buying from the builder before completion, you may have options to customize finishes. Ask about available upgrades and their cost, the standard package is already strong, so be strategic about where you add.</li>
       </ul>
 
       <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
@@ -3516,7 +3516,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Standard Pacific-built community of 100+ homes constructed 2007-2013 in Valrico. HOA $140/quarter. No CDD. Homes 1,800-3,000+ sqft. Zoned for Alafia Elementary, Mulrennan Middle, and Bloomingdale High.",
     contentHtml: `
       <h3>What Is Crosby Crossings Like?</h3>
-      <p>Crosby Crossings is a community of single-family homes built by <strong>Standard Pacific Homes</strong> (now part of CalAtlantic/Lennar) between 2007 and 2013 in <a href="/valrico/">Valrico</a>. The community sits in a well-positioned pocket with access to both the Bloomingdale and Buckhorn corridors. Standard Pacific was known for solid construction quality and practical floor plans, and Crosby Crossings reflects that — no frills, no shortcuts, just well-built homes on reasonable lots.</p>
+      <p>Crosby Crossings is a community of single-family homes built by <strong>Standard Pacific Homes</strong> (now part of CalAtlantic/Lennar) between 2007 and 2013 in <a href="/valrico/">Valrico</a>. The community sits in a well-positioned pocket with access to both the Bloomingdale and Buckhorn corridors. Standard Pacific was known for solid construction quality and practical floor plans, and Crosby Crossings reflects that, no frills, no shortcuts, just well-built homes on reasonable lots.</p>
       <p>Homes range from about 1,800 to 3,000+ square feet with 3-5 bedrooms and 2-car garages. Construction is concrete block with tile or architectural shingle roofs. The neighborhood has a mix of single and two-story plans, and most homes feature screened lanais and open-concept living areas. Streets are wide with sidewalks throughout.</p>
 
       <h3>What Are the Fees?</h3>
@@ -3549,7 +3549,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Construction quality:</strong> Standard Pacific built solid homes. Concrete block with tile roofs from this era holds up well. That said, 2007-2013 construction means some homes are now 13-19 years old — check HVAC age, water heater, and roof condition during inspection.</li>
+        <li><strong>Construction quality:</strong> Standard Pacific built solid homes. Concrete block with tile roofs from this era holds up well. That said, 2007-2013 construction means some homes are now 13-19 years old, check HVAC age, water heater, and roof condition during inspection.</li>
         <li><strong>Insurance:</strong> Concrete block with tile roof gets favorable rates. Homes from this era may also have hurricane clips or straps that qualify for additional wind mitigation credits.</li>
         <li><strong>Pricing:</strong> Crosby Crossings offers strong value per square foot compared to newer communities with CDD fees. The lack of CDD saves thousands over the life of your ownership.</li>
         <li><strong>Rentals:</strong> Good rental demand in the Bloomingdale school zone. Expect $2,100-$2,700/mo for a 3-4 bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
@@ -3567,8 +3567,8 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Small Valrico subdivision built 2001-2002 with midsize single-family homes ranging 2,200-2,800 sqft. Quiet streets, established landscaping. Zoned for Buckhorn Elementary, Mulrennan Middle, and Durant High.",
     contentHtml: `
       <h3>What Is Duncan Groves Like?</h3>
-      <p>Duncan Groves is one of those small <a href="/valrico/">Valrico</a> neighborhoods that flies under the radar — which is part of its charm. Built in 2001-2002, it is a compact community of single-family homes on a quiet residential street. There is no grand entrance, no community pool, and no resort-style clubhouse. What you get is a well-built home in a quiet pocket of Valrico with good schools and reasonable carrying costs. For many buyers, that is exactly what they want.</p>
-      <p>Homes range from about 2,200 to 2,800 square feet with 4 bedrooms, 3 bathrooms, and 2 to 3-car garages. Construction is concrete block with tile roofs — the Florida standard that keeps insurance costs reasonable. The lots have matured with established trees and landscaping, giving the neighborhood a settled, shaded feel.</p>
+      <p>Duncan Groves is one of those small <a href="/valrico/">Valrico</a> neighborhoods that flies under the radar, which is part of its charm. Built in 2001-2002, it is a compact community of single-family homes on a quiet residential street. There is no grand entrance, no community pool, and no resort-style clubhouse. What you get is a well-built home in a quiet pocket of Valrico with good schools and reasonable carrying costs. For many buyers, that is exactly what they want.</p>
+      <p>Homes range from about 2,200 to 2,800 square feet with 4 bedrooms, 3 bathrooms, and 2 to 3-car garages. Construction is concrete block with tile roofs, the Florida standard that keeps insurance costs reasonable. The lots have matured with established trees and landscaping, giving the neighborhood a settled, shaded feel.</p>
 
       <h3>What Are the Fees?</h3>
       <p>Duncan Groves has a basic HOA with <strong>low dues</strong> covering common area maintenance. There is <strong>no CDD fee</strong>. The total carrying cost beyond the mortgage is minimal, which is one of the quiet advantages of buying in a small, established subdivision.</p>
@@ -3585,7 +3585,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>Which Schools Are Zoned?</h3>
-      <p>Duncan Groves is zoned for <strong>Buckhorn Elementary</strong>, <strong>Mulrennan Middle School</strong>, and <strong>Durant High School</strong>. Buckhorn Elementary is the draw — one of the highest-rated elementaries in Hillsborough County. Parents targeting that school zone will find Duncan Groves offers a lower entry price than some of the more marketed communities nearby.</p>
+      <p>Duncan Groves is zoned for <strong>Buckhorn Elementary</strong>, <strong>Mulrennan Middle School</strong>, and <strong>Durant High School</strong>. Buckhorn Elementary is the draw, one of the highest-rated elementaries in Hillsborough County. Parents targeting that school zone will find Duncan Groves offers a lower entry price than some of the more marketed communities nearby.</p>
 
       <h3>What Is the Flood Risk?</h3>
       <p>Duncan Groves sits in <strong>FEMA Flood Zone X</strong> (minimal risk). No flood insurance required by lenders. The community is on higher ground with no significant water features nearby.</p>
@@ -3600,7 +3600,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Construction age:</strong> 2001-2002 homes are 24+ years old. Check the roof — original tile should still be in reasonable shape but verify underlayment condition. HVAC is likely on its second unit. Water heater replacement should be budgeted if original.</li>
+        <li><strong>Construction age:</strong> 2001-2002 homes are 24+ years old. Check the roof, original tile should still be in reasonable shape but verify underlayment condition. HVAC is likely on its second unit. Water heater replacement should be budgeted if original.</li>
         <li><strong>Small community means fewer comps:</strong> When you sell, there may only be 1-2 recent comparable sales in the neighborhood. An agent who knows the Valrico market specifically is essential for accurate pricing.</li>
         <li><strong>Quiet living:</strong> No community amenities means no pool maintenance drama, no clubhouse booking conflicts, and no multi-thousand-dollar special assessments for amenity repairs. Some buyers see that as a feature, not a bug.</li>
         <li><strong>Rentals:</strong> Buckhorn Elementary zoning creates steady rental demand. Expect $2,200-$2,700/mo for a 4-bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
@@ -3618,11 +3618,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Townhome community of 159 units built 2004-2005 in Valrico. HOA $356/mo covers pool, security, grounds, and building maintenance. Low-maintenance living with affordable entry point. Zoned for Mulrennan Middle and Durant High.",
     contentHtml: `
       <h3>What Is Kings Mill Like?</h3>
-      <p>Kings Mill is a townhome community of 159 units built in 2004-2005 in <a href="/valrico/">Valrico</a>. If you are looking for the most affordable entry into the Valrico market or want a low-maintenance lifestyle without the price tag of a single-family home, Kings Mill deserves a serious look. These are attached townhomes with shared walls — not single-family detached — so the trade-off is clear: lower price and less maintenance responsibility in exchange for shared-wall living.</p>
+      <p>Kings Mill is a townhome community of 159 units built in 2004-2005 in <a href="/valrico/">Valrico</a>. If you are looking for the most affordable entry into the Valrico market or want a low-maintenance lifestyle without the price tag of a single-family home, Kings Mill deserves a serious look. These are attached townhomes with shared walls, not single-family detached, so the trade-off is clear: lower price and less maintenance responsibility in exchange for shared-wall living.</p>
       <p>Units range from about 1,200 to 1,513 square feet with 2-3 bedrooms and 2-car attached garages. Construction is concrete block, which is standard and holds up well. The community is well-maintained with consistent landscaping and common area upkeep. For the price point, you get more square footage than a comparable condo and the privacy of a townhome layout with your own garage and entrance.</p>
 
       <h3>What Does the HOA Cover?</h3>
-      <p>The HOA fee is approximately <strong>$356 per month</strong>, which covers a significant amount: common area maintenance, grounds maintenance, building exterior maintenance, community roads, the <strong>community pool</strong>, and <strong>security</strong>. There is also a recreation room available to residents. The fee is higher than a typical single-family HOA, but the coverage is substantially more — you are not responsible for exterior painting, roof maintenance, or landscaping.</p>
+      <p>The HOA fee is approximately <strong>$356 per month</strong>, which covers a significant amount: common area maintenance, grounds maintenance, building exterior maintenance, community roads, the <strong>community pool</strong>, and <strong>security</strong>. There is also a recreation room available to residents. The fee is higher than a typical single-family HOA, but the coverage is substantially more, you are not responsible for exterior painting, roof maintenance, or landscaping.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -3654,7 +3654,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>HOA rules:</strong> With 159 units and shared building infrastructure, the HOA has more authority than a typical single-family HOA. Read the rules, declarations, and recent meeting minutes before buying. Check for any pending special assessments.</li>
         <li><strong>Construction age:</strong> 2004-2005 build means units are 21+ years old. The HOA handles exterior maintenance, but interior systems (HVAC, water heater, appliances) are your responsibility. Budget for replacements.</li>
         <li><strong>Investment potential:</strong> Kings Mill is one of the most affordable entries into the Valrico market. For investors, the price-to-rent ratio can work well. Expect $1,500-$1,800/mo in rental income. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
-        <li><strong>Parking:</strong> Each unit has a 2-car garage. Guest parking may be limited — check HOA policies for overnight guest vehicles.</li>
+        <li><strong>Parking:</strong> Each unit has a 2-car garage. Guest parking may be limited, check HOA policies for overnight guest vehicles.</li>
       </ul>
 
       <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. He lives in Valrico and knows every pocket neighborhood in the area. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a> to see what your property is worth right now.</p>
@@ -3669,14 +3669,14 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Lakefront community anchored by the 135-acre private Valrico Lake. Mix of 1960s-2000s homes, some with direct lake access. Very low HOA ($27-$35/mo) in newer sections. Peaceful, water-oriented lifestyle in central Valrico.",
     contentHtml: `
       <h3>What Is Lake Valrico Like?</h3>
-      <p>Lake Valrico is not a single subdivision — it is a collection of neighborhoods surrounding the roughly 135-acre private Valrico Lake, one of the most recognizable natural features in <a href="/valrico/">Valrico</a>. The lake and the homes around it create a distinct pocket with a water-oriented lifestyle that is genuinely different from the typical Florida subdivision. If lakefront living appeals to you and you do not want to pay FishHawk or South Tampa prices, this is one of the few places in eastern Hillsborough County where you can get it.</p>
-      <p>Homes surrounding the lake span multiple eras. <strong>Valrico Lake Estates</strong> dates back to the 1960s and 1970s with homes ranging from 1,583 to 2,277 square feet. The newer <strong>Valrico Lake</strong> section was built in 2003-2004 with homes from 2,318 to 2,946 square feet. The result is a wide range of price points and home styles — from modest ranch homes with character to newer construction with modern layouts.</p>
+      <p>Lake Valrico is not a single subdivision, it is a collection of neighborhoods surrounding the roughly 135-acre private Valrico Lake, one of the most recognizable natural features in <a href="/valrico/">Valrico</a>. The lake and the homes around it create a distinct pocket with a water-oriented lifestyle that is genuinely different from the typical Florida subdivision. If lakefront living appeals to you and you do not want to pay FishHawk or South Tampa prices, this is one of the few places in eastern Hillsborough County where you can get it.</p>
+      <p>Homes surrounding the lake span multiple eras. <strong>Valrico Lake Estates</strong> dates back to the 1960s and 1970s with homes ranging from 1,583 to 2,277 square feet. The newer <strong>Valrico Lake</strong> section was built in 2003-2004 with homes from 2,318 to 2,946 square feet. The result is a wide range of price points and home styles, from modest ranch homes with character to newer construction with modern layouts.</p>
 
       <h3>What Are the Fees?</h3>
-      <p>In the newer Valrico Lake sections, HOA fees are remarkably low: <strong>$27 to $35 per month</strong>. That covers basic common area maintenance. There is <strong>no CDD fee</strong>. The older Valrico Lake Estates sections may have different (or no) HOA structures — verify for the specific property you are considering.</p>
+      <p>In the newer Valrico Lake sections, HOA fees are remarkably low: <strong>$27 to $35 per month</strong>. That covers basic common area maintenance. There is <strong>no CDD fee</strong>. The older Valrico Lake Estates sections may have different (or no) HOA structures, verify for the specific property you are considering.</p>
 
       <h3>What Makes Lake Valrico Special?</h3>
-      <p>The lake itself. Valrico Lake is a private, natural lake — not a man-made retention pond. Residents with lakefront lots have direct water access for kayaking, fishing, and enjoying the water views. Even homes that do not directly front the lake benefit from the open space, the wildlife, and the lifestyle the lake creates. It is the kind of natural amenity that cannot be replicated in a newer community.</p>
+      <p>The lake itself. Valrico Lake is a private, natural lake, not a man-made retention pond. Residents with lakefront lots have direct water access for kayaking, fishing, and enjoying the water views. Even homes that do not directly front the lake benefit from the open space, the wildlife, and the lifestyle the lake creates. It is the kind of natural amenity that cannot be replicated in a newer community.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -3692,7 +3692,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>School zoning around Lake Valrico varies by specific address. Most properties are zoned for <strong>Buckhorn Elementary</strong> or nearby elementary schools, <strong>Mulrennan Middle School</strong>, and <strong>Durant High School</strong>. Always verify with Hillsborough County schools for the exact home you are considering.</p>
 
       <h3>What Is the Flood Risk?</h3>
-      <p>This is where you need to pay attention. <strong>Lakefront lots may carry FEMA flood zone designations other than Zone X.</strong> Lots directly on the lake or in low-lying areas near the shoreline may be in Zone AE or AH, which requires flood insurance. Lots further from the water are typically Zone X (minimal risk). Get a flood determination for the specific parcel before making an offer — flood insurance can add $1,000-$3,000+ per year to your carrying costs.</p>
+      <p>This is where you need to pay attention. <strong>Lakefront lots may carry FEMA flood zone designations other than Zone X.</strong> Lots directly on the lake or in low-lying areas near the shoreline may be in Zone AE or AH, which requires flood insurance. Lots further from the water are typically Zone X (minimal risk). Get a flood determination for the specific parcel before making an offer, flood insurance can add $1,000-$3,000+ per year to your carrying costs.</p>
 
       <h3>How Does Lake Valrico Compare?</h3>
       <ul>
@@ -3724,7 +3724,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     contentHtml: `
       <h3>What Is Lakemont Like?</h3>
       <p>Lakemont is one of <a href="/valrico/">Valrico</a>'s established, no-nonsense neighborhoods. There is no HOA collecting monthly dues, no architectural review board telling you what color to paint your front door, and no CDD fee padding your tax bill. What you get is a straightforward residential neighborhood with mature trees, pride of ownership, and the kind of old-Valrico character that is disappearing as newer subdivisions fill in the remaining open land.</p>
-      <p>Homes span multiple decades of construction, with a mix of styles and sizes. You will find everything from modest 3-bedroom ranches to larger custom-built homes. Lot sizes tend to be more generous than newer subdivisions — enough space for workshops, gardens, RV parking, or just a big backyard. The streets are shaded by mature oaks, and the overall feel is quiet and residential.</p>
+      <p>Homes span multiple decades of construction, with a mix of styles and sizes. You will find everything from modest 3-bedroom ranches to larger custom-built homes. Lot sizes tend to be more generous than newer subdivisions, enough space for workshops, gardens, RV parking, or just a big backyard. The streets are shaded by mature oaks, and the overall feel is quiet and residential.</p>
 
       <h3>What About HOA and Restrictions?</h3>
       <p>Lakemont has <strong>no HOA and no CDD</strong>. There are <strong>deed restrictions</strong> recorded against the property, which are separate from an HOA. Deed restrictions may cover basics like property use, outbuilding placement, and commercial activity, but there is no association collecting dues or enforcing architectural standards. For buyers who want freedom over their property, this is the appeal.</p>
@@ -3740,15 +3740,15 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>Which Schools Are Zoned?</h3>
-      <p>School zoning depends on the specific address within Lakemont. Most properties feed into the Hillsborough County public school system with strong area schools. Verify the exact elementary, middle, and high school assignments for your property — zoning lines in this part of Valrico can shift by street.</p>
+      <p>School zoning depends on the specific address within Lakemont. Most properties feed into the Hillsborough County public school system with strong area schools. Verify the exact elementary, middle, and high school assignments for your property, zoning lines in this part of Valrico can shift by street.</p>
 
       <h3>What Is the Flood Risk?</h3>
-      <p>Lakemont generally sits in <strong>FEMA Flood Zone X</strong> (minimal risk). Some parcels near water features may have different designations — verify for the specific lot. No flood insurance required by lenders for Zone X properties.</p>
+      <p>Lakemont generally sits in <strong>FEMA Flood Zone X</strong> (minimal risk). Some parcels near water features may have different designations, verify for the specific lot. No flood insurance required by lenders for Zone X properties.</p>
 
       <h3>How Does Lakemont Compare?</h3>
       <ul>
         <li><strong><a href="/valri-park/">Valri Park</a></strong> (1 mile): Newer KB Homes construction (2020), HOA managed. More contemporary but smaller lots and HOA oversight.</li>
-        <li><strong><a href="/diamond-hill/">Diamond Hill</a></strong> (2 miles): Similar character — larger lots, no HOA in many sections, mix of home ages. Comparable freedom and price range.</li>
+        <li><strong><a href="/diamond-hill/">Diamond Hill</a></strong> (2 miles): Similar character, larger lots, no HOA in many sections, mix of home ages. Comparable freedom and price range.</li>
         <li><strong><a href="/lake-valrico/">Lake Valrico</a></strong> (1 mile): Lakefront option nearby. Mix of old and new construction around the lake.</li>
         <li><strong><a href="/valrico-hills/">Valrico Hills</a></strong> (1.5 miles): Another no-HOA option with older homes and large lots. Very similar buyer profile.</li>
       </ul>
@@ -3774,11 +3774,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Tiny 28-home single-family community built 2003-2004 in Valrico. HOA ~$400/year. Quiet cul-de-sac living. Homes 2,400-2,900+ sqft with 4 bedrooms. Zoned for Buckhorn Elementary, Mulrennan Middle, and Durant High.",
     contentHtml: `
       <h3>What Is Legends Pass Like?</h3>
-      <p>Legends Pass is about as small as a named subdivision gets in <a href="/valrico/">Valrico</a> — just 28 single-family homes on a single street, built between 2003 and 2004. The community is essentially a cul-de-sac pocket where neighbors know each other and through traffic does not exist. If you want a quiet, intimate neighborhood where your kids can play in the street without worry, Legends Pass delivers that in a way that 300-home master-planned communities never will.</p>
-      <p>Homes here are substantial — mostly 4 bedrooms, 3 bathrooms, 2 to 3-car garages, ranging from about 2,400 to 2,900+ square feet. Construction is concrete block with tile roofs. Floor plans are open concept with screened lanais, and many homeowners have added pools and upgraded outdoor living spaces over the years. For the size of home you get, the price per square foot is very competitive.</p>
+      <p>Legends Pass is about as small as a named subdivision gets in <a href="/valrico/">Valrico</a> just 28 single-family homes on a single street, built between 2003 and 2004. The community is essentially a cul-de-sac pocket where neighbors know each other and through traffic does not exist. If you want a quiet, intimate neighborhood where your kids can play in the street without worry, Legends Pass delivers that in a way that 300-home master-planned communities never will.</p>
+      <p>Homes here are substantial, mostly 4 bedrooms, 3 bathrooms, 2 to 3-car garages, ranging from about 2,400 to 2,900+ square feet. Construction is concrete block with tile roofs. Floor plans are open concept with screened lanais, and many homeowners have added pools and upgraded outdoor living spaces over the years. For the size of home you get, the price per square foot is very competitive.</p>
 
       <h3>What Are the Fees?</h3>
-      <p>The Legends Pass Homeowners Association was established in 2001. HOA fees are approximately <strong>$400 per year</strong> — that is roughly $33/month, which is among the lowest in Valrico. There is <strong>no CDD fee</strong>. The HOA covers basic common area maintenance and community standards. Pets are allowed. With only 28 homes contributing, the community keeps costs lean.</p>
+      <p>The Legends Pass Homeowners Association was established in 2001. HOA fees are approximately <strong>$400 per year</strong> that is roughly $33/month, which is among the lowest in Valrico. There is <strong>no CDD fee</strong>. The HOA covers basic common area maintenance and community standards. Pets are allowed. With only 28 homes contributing, the community keeps costs lean.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -3792,14 +3792,14 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>Which Schools Are Zoned?</h3>
-      <p>Legends Pass is zoned for <strong>Buckhorn Elementary</strong>, <strong>Mulrennan Middle School</strong>, and <strong>Durant High School</strong>. Buckhorn Elementary is the draw — consistently one of the highest-rated elementary schools in Hillsborough County. Same school path as <a href="/abbey-grove/">Abbey Grove</a>, <a href="/duncan-groves/">Duncan Groves</a>, and the broader <a href="/buckhorn/">Buckhorn</a> corridor.</p>
+      <p>Legends Pass is zoned for <strong>Buckhorn Elementary</strong>, <strong>Mulrennan Middle School</strong>, and <strong>Durant High School</strong>. Buckhorn Elementary is the draw, consistently one of the highest-rated elementary schools in Hillsborough County. Same school path as <a href="/abbey-grove/">Abbey Grove</a>, <a href="/duncan-groves/">Duncan Groves</a>, and the broader <a href="/buckhorn/">Buckhorn</a> corridor.</p>
 
       <h3>What Is the Flood Risk?</h3>
       <p>Legends Pass sits in <strong>FEMA Flood Zone X</strong> (minimal risk). No flood insurance required by lenders. The community is on higher ground with no creek or river exposure.</p>
 
       <h3>How Does Legends Pass Compare?</h3>
       <ul>
-        <li><strong><a href="/abbey-grove/">Abbey Grove</a></strong> (0.5 miles): Similar concept — small, quiet, low HOA. Abbey Grove has 69 homes (still small) with slightly smaller homes (1,900-2,400 sqft). Same school zone.</li>
+        <li><strong><a href="/abbey-grove/">Abbey Grove</a></strong> (0.5 miles): Similar concept, small, quiet, low HOA. Abbey Grove has 69 homes (still small) with slightly smaller homes (1,900-2,400 sqft). Same school zone.</li>
         <li><strong><a href="/duncan-groves/">Duncan Groves</a></strong> (0.5 miles): Another small community, similar vintage. Comparable home sizes and school zoning.</li>
         <li><strong><a href="/arista/">Arista</a></strong> (1 mile): Gated, Taylor Morrison, larger homes. Higher price point but added security and more exclusive feel.</li>
         <li><strong><a href="/somerset/">Somerset</a></strong> (1 mile): 599 homes with resort amenities. Completely different scale and lifestyle. More neighbors, more amenities, higher HOA.</li>
@@ -3822,11 +3822,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
   "northwood-estates": {
     summary:
-      "Luxury 35-lot Homes by WestBay community built 2022-2023 in Valrico. Artisan Collection with 2,839-4,218 sqft homes. No CDD. HOA ~$500/mo. Sold out — resale only. Tile roofs, paver driveways, 3-car garages.",
+      "Luxury 35-lot Homes by WestBay community built 2022-2023 in Valrico. Artisan Collection with 2,839-4,218 sqft homes. No CDD. HOA ~$500/mo. Sold out, resale only. Tile roofs, paver driveways, 3-car garages.",
     contentHtml: `
       <h3>What Is Northwood Estates Like?</h3>
-      <p>Northwood Estates is one of the most exclusive small communities in <a href="/valrico/">Valrico</a> — just 35 premium homesites built by <strong>Homes by WestBay</strong> in 2022-2023. This is WestBay's Artisan Collection, the same luxury product line used in <a href="/crestwood-estates/">Crestwood Estates</a>. Every home sits on a 70-foot-wide lot with tile roof, paver driveway, and 3-car garage as standard features. The community is <strong>sold out</strong> from the builder, so you are looking at resale only.</p>
-      <p>Homes range from 2,839 to 4,218 square feet with premium finishes — quartz countertops, designer cabinetry, tile throughout main living areas, covered outdoor spaces, and the open-concept layouts that define WestBay's signature product. Prices originally ranged from $649,900 to $859,900, with current resale values reflecting the market.</p>
+      <p>Northwood Estates is one of the most exclusive small communities in <a href="/valrico/">Valrico</a> just 35 premium homesites built by <strong>Homes by WestBay</strong> in 2022-2023. This is WestBay's Artisan Collection, the same luxury product line used in <a href="/crestwood-estates/">Crestwood Estates</a>. Every home sits on a 70-foot-wide lot with tile roof, paver driveway, and 3-car garage as standard features. The community is <strong>sold out</strong> from the builder, so you are looking at resale only.</p>
+      <p>Homes range from 2,839 to 4,218 square feet with premium finishes, quartz countertops, designer cabinetry, tile throughout main living areas, covered outdoor spaces, and the open-concept layouts that define WestBay's signature product. Prices originally ranged from $649,900 to $859,900, with current resale values reflecting the market.</p>
 
       <h3>What Are the HOA and CDD Fees?</h3>
       <p>HOA fees run approximately <strong>$500-$528 per month</strong>, which is high by Valrico standards but reflects the small community size (35 homes sharing costs) and the level of common area maintenance. The critical advantage: <strong>no CDD fee</strong>. In the luxury new-construction segment, avoiding CDD saves thousands per year.</p>
@@ -3877,8 +3877,8 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Established Valrico community with ~55 homes built starting in 1988 in the Bloomingdale district. Low HOA fees. Mature landscaping, concrete block construction. Zoned for Bloomingdale High School.",
     contentHtml: `
       <h3>What Is River Crossing Like?</h3>
-      <p>River Crossing (also known as The Estates at River Crossing) is a mature community of approximately 55 homes tucked into the Bloomingdale corner of <a href="/valrico/">Valrico</a>. With homes dating back to 1988, River Crossing has the kind of established character that newer subdivisions spend decades trying to achieve — mature oak canopy, settled landscaping, and the quiet confidence of a neighborhood that has been taking care of itself for nearly four decades.</p>
-      <p>Homes are concrete block construction, primarily 3-4 bedrooms with 2-car garages. Floor plans vary — some are original single-story layouts from the late 1980s, others are two-story homes from later phases. Square footage ranges from about 1,500 to 2,500+. The lots are generous by today's standards, with real backyards and room to breathe.</p>
+      <p>River Crossing (also known as The Estates at River Crossing) is a mature community of approximately 55 homes tucked into the Bloomingdale corner of <a href="/valrico/">Valrico</a>. With homes dating back to 1988, River Crossing has the kind of established character that newer subdivisions spend decades trying to achieve, mature oak canopy, settled landscaping, and the quiet confidence of a neighborhood that has been taking care of itself for nearly four decades.</p>
+      <p>Homes are concrete block construction, primarily 3-4 bedrooms with 2-car garages. Floor plans vary, some are original single-story layouts from the late 1980s, others are two-story homes from later phases. Square footage ranges from about 1,500 to 2,500+. The lots are generous by today's standards, with real backyards and room to breathe.</p>
 
       <h3>What Are the Fees?</h3>
       <p>The Estates at River Crossing Homeowners Association maintains the community with <strong>low HOA fees</strong>. There is <strong>no CDD fee</strong>. The HOA enforces basic deed restrictions and maintains common areas. For a 55-home community with established infrastructure, the carrying cost is minimal.</p>
@@ -3897,7 +3897,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>River Crossing is in the <strong>Bloomingdale High School</strong> zone, with area elementary and middle school assignments. Bloomingdale High has strong ratings and is within the broader Bloomingdale community. Verify the specific elementary assignment for your address.</p>
 
       <h3>What Is the Flood Risk?</h3>
-      <p>River Crossing sits in <strong>FEMA Flood Zone X</strong> (minimal risk) for most properties. Verify the specific parcel — some lots near drainage features may have different designations. No flood insurance required for Zone X properties.</p>
+      <p>River Crossing sits in <strong>FEMA Flood Zone X</strong> (minimal risk) for most properties. Verify the specific parcel, some lots near drainage features may have different designations. No flood insurance required for Zone X properties.</p>
 
       <h3>How Does River Crossing Compare?</h3>
       <ul>
@@ -3910,7 +3910,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>1988 construction:</strong> Homes are 38+ years old. This means likely second or third roof, definitely second HVAC, and potentially plumbing that needs attention. Get a thorough inspection from an inspector who knows pre-1990s Florida construction.</li>
-        <li><strong>Plumbing alert:</strong> Late 1980s Hillsborough County homes may have polybutylene pipes. If present, budget for a whole-house repipe ($5,000-$8,000) — most insurance companies will not write a new policy on poly-B plumbing.</li>
+        <li><strong>Plumbing alert:</strong> Late 1980s Hillsborough County homes may have polybutylene pipes. If present, budget for a whole-house repipe ($5,000-$8,000), most insurance companies will not write a new policy on poly-B plumbing.</li>
         <li><strong>Electrical:</strong> Check the panel. Federal Pacific and Zinsco panels from this era are known safety concerns. Replacement runs $2,000-$4,000.</li>
         <li><strong>Value proposition:</strong> For what you pay, you get more lot, more square footage, and better access to the Selmon Expressway than newer communities further east. The trade-off is the age of the home and the updates needed.</li>
         <li><strong>Rentals:</strong> Good rental market. Expect $1,800-$2,300/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
@@ -3928,15 +3928,15 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Gated golf course community of 1,162+ homes built 1988-2003 by Arvida/JMB Partners in south Valrico. Joe Lee-designed 18-hole course, 24/7 guard gate, pool, tennis, fitness center. Homes $400K-$800K+. Zoned for Durant High.",
     contentHtml: `
       <h3>What Is River Hills Like?</h3>
-      <p>River Hills is the gated country club community in south <a href="/valrico/">Valrico</a> — 1,162+ single-family homes built between 1988 and 2003 by Arvida/JMB Partners, wrapped around an 18-hole Joe Lee-designed championship golf course. The guard gate is staffed 24/7 with surveillance. The clubhouse offers dining, a bar, a 24-hour fitness center, tennis courts, pickleball, and a heated pool. This is a genuine country club lifestyle, not a marketing gimmick.</p>
-      <p>Homes range from approximately 1,330 to over 5,200 square feet across several distinct villages within the community. You will find everything from 3-bedroom golf villas to 7-bedroom custom estates. Most homes are concrete block construction with tile or architectural shingle roofing. Lot sizes are generous — quarter-acre to a full acre is common, with many properties featuring golf course, conservation, or waterfront views.</p>
+      <p>River Hills is the gated country club community in south <a href="/valrico/">Valrico</a> 1,162+ single-family homes built between 1988 and 2003 by Arvida/JMB Partners, wrapped around an 18-hole Joe Lee-designed championship golf course. The guard gate is staffed 24/7 with surveillance. The clubhouse offers dining, a bar, a 24-hour fitness center, tennis courts, pickleball, and a heated pool. This is a genuine country club lifestyle, not a marketing gimmick.</p>
+      <p>Homes range from approximately 1,330 to over 5,200 square feet across several distinct villages within the community. You will find everything from 3-bedroom golf villas to 7-bedroom custom estates. Most homes are concrete block construction with tile or architectural shingle roofing. Lot sizes are generous, quarter-acre to a full acre is common, with many properties featuring golf course, conservation, or waterfront views.</p>
 
       <h3>How Does the HOA and Club Membership Work?</h3>
-      <p>River Hills has a master HOA covering gated entry, common area maintenance, and community standards. The <strong>River Hills Country Club</strong> is a separate entity — in 2019, the RHC Master Association purchased the country club to ensure long-term viability and community control. Some sections include mandatory club membership with separate dues; others offer social membership. Less than 25% of residents are full golf members, so buying here does not require you to play golf.</p>
-      <p>HOA and club fees vary by section and membership level. Budget for total monthly costs significantly above average Valrico neighborhoods — you are paying for 24/7 security, maintained grounds, and country club access.</p>
+      <p>River Hills has a master HOA covering gated entry, common area maintenance, and community standards. The <strong>River Hills Country Club</strong> is a separate entity, in 2019, the RHC Master Association purchased the country club to ensure long-term viability and community control. Some sections include mandatory club membership with separate dues; others offer social membership. Less than 25% of residents are full golf members, so buying here does not require you to play golf.</p>
+      <p>HOA and club fees vary by section and membership level. Budget for total monthly costs significantly above average Valrico neighborhoods, you are paying for 24/7 security, maintained grounds, and country club access.</p>
 
       <h3>What About the Golf Course?</h3>
-      <p>The 7,007-yard championship course is the centerpiece. Joe Lee designed some of Florida's most notable courses, and River Hills reflects his style — playable for recreational golfers but challenging enough for serious players. Practice facilities, a pro shop, and regular events round out the golf experience. Even if you do not play, the course provides protected green space, views, and a buffer from development that adds tangible value to every home in the community.</p>
+      <p>The 7,007-yard championship course is the centerpiece. Joe Lee designed some of Florida's most notable courses, and River Hills reflects his style, playable for recreational golfers but challenging enough for serious players. Practice facilities, a pro shop, and regular events round out the golf experience. Even if you do not play, the course provides protected green space, views, and a buffer from development that adds tangible value to every home in the community.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -3951,17 +3951,17 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>Which Schools Are Zoned?</h3>
-      <p>River Hills is zoned for <strong>Durant High School</strong>, with area elementary and middle school assignments. Durant is just minutes east on Durant Road. Families should note that River Hills is in the Durant zone, not Newsome — verify that the school path works for your family before committing.</p>
+      <p>River Hills is zoned for <strong>Durant High School</strong>, with area elementary and middle school assignments. Durant is just minutes east on Durant Road. Families should note that River Hills is in the Durant zone, not Newsome, verify that the school path works for your family before committing.</p>
 
       <h3>What Is the Flood Risk?</h3>
-      <p>Most of River Hills sits in <strong>FEMA Flood Zone X</strong> (minimal risk). However, some lots near the Alafia River corridor or low-lying conservation areas may carry AE designations requiring flood insurance. <strong>Always get a flood determination for the specific parcel</strong> — this is particularly important in River Hills where the topography varies across the community.</p>
+      <p>Most of River Hills sits in <strong>FEMA Flood Zone X</strong> (minimal risk). However, some lots near the Alafia River corridor or low-lying conservation areas may carry AE designations requiring flood insurance. <strong>Always get a flood determination for the specific parcel</strong> this is particularly important in River Hills where the topography varies across the community.</p>
 
       <h3>How Does River Hills Compare?</h3>
       <ul>
         <li><strong><a href="/river-hills-masters/">River Hills Masters</a></strong> (inside): A section within River Hills with some of the larger, premium homes. Same community, same amenities, typically higher price tier.</li>
         <li><strong><a href="/canterbury-oaks/">Canterbury Oaks</a></strong> (3 miles): Gated, Newsome zone, pool. No golf course. Lower price tier and monthly costs.</li>
         <li><strong><a href="/crestwood-estates/">Crestwood Estates</a></strong> (3 miles): New WestBay construction, luxury tier. Newer but only 25 homes and no country club amenities.</li>
-        <li><strong><a href="/diamond-hill/">Diamond Hill</a></strong> (2 miles): Larger lots, no HOA, more freedom. Completely different lifestyle — no gate, no club, no amenities.</li>
+        <li><strong><a href="/diamond-hill/">Diamond Hill</a></strong> (2 miles): Larger lots, no HOA, more freedom. Completely different lifestyle, no gate, no club, no amenities.</li>
       </ul>
 
       <h3>What Should Buyers Know?</h3>
@@ -3986,10 +3986,10 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     contentHtml: `
       <h3>What Is River Hills Masters Like?</h3>
       <p>River Hills Masters is a premium section within the larger <a href="/river-hills/">River Hills</a> gated community in south <a href="/valrico/">Valrico</a>. While all of River Hills shares the same guard gate, golf course, clubhouse, and amenities, the Masters section features some of the most desirable lots and larger custom-built homes in the community. If River Hills is the country club, Masters is the preferred tee time.</p>
-      <p>Homes in the Masters section tend to be at the upper end of the River Hills range — many are 3,000 to 5,000+ square feet with 4-7 bedrooms, custom floor plans, and premium lot positions. Golf course frontage, conservation views, and waterfront lots are more common here than in other River Hills sections. Construction quality reflects the custom-build nature — many homes were built to specific buyer specifications rather than production builder templates.</p>
+      <p>Homes in the Masters section tend to be at the upper end of the River Hills range, many are 3,000 to 5,000+ square feet with 4-7 bedrooms, custom floor plans, and premium lot positions. Golf course frontage, conservation views, and waterfront lots are more common here than in other River Hills sections. Construction quality reflects the custom-build nature, many homes were built to specific buyer specifications rather than production builder templates.</p>
 
       <h3>How Is It Different from the Rest of River Hills?</h3>
-      <p>The Masters section is part of the same River Hills Master Association, so you get the same 24/7 guard gate, Joe Lee championship golf course, clubhouse dining, fitness center, tennis, pickleball, and heated pool. The difference is the homes — they are typically larger, on premium lots, and command higher prices. Think of it as the same community infrastructure with a higher-end housing product.</p>
+      <p>The Masters section is part of the same River Hills Master Association, so you get the same 24/7 guard gate, Joe Lee championship golf course, clubhouse dining, fitness center, tennis, pickleball, and heated pool. The difference is the homes, they are typically larger, on premium lots, and command higher prices. Think of it as the same community infrastructure with a higher-end housing product.</p>
       <p>HOA structure and club membership options are the same as the broader River Hills community. See the <a href="/river-hills/">River Hills page</a> for full details on fees and membership tiers.</p>
 
       <h3>How Close Is Everything?</h3>
@@ -4013,7 +4013,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong><a href="/river-hills/">River Hills</a></strong> (same community): The broader community offers entry into the River Hills lifestyle at a lower price point. Masters is the upgrade for buyers who want the biggest homes on the best lots.</li>
         <li><strong><a href="/crestwood-estates/">Crestwood Estates</a></strong> (3 miles): New WestBay luxury construction. Comparable price range, brand new vs established, but only 25 homes and no country club.</li>
         <li><strong><a href="/northwood-estates/">Northwood Estates</a></strong> (3 miles): Also WestBay luxury, 35 homes, sold out. Newer but lacks the community scale and amenities of River Hills.</li>
-        <li><strong><a href="/fishhawk-ranch/">FishHawk Ranch</a></strong> (5 miles): Large master-planned community with comparable amenities. Different vibe — more suburban master-planned vs River Hills' country club identity.</li>
+        <li><strong><a href="/fishhawk-ranch/">FishHawk Ranch</a></strong> (5 miles): Large master-planned community with comparable amenities. Different vibe, more suburban master-planned vs River Hills' country club identity.</li>
       </ul>
 
       <h3>What Should Buyers Know?</h3>
@@ -4021,7 +4021,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Custom homes = unique:</strong> Because many Masters homes were custom-built, floor plans and finishes vary significantly. Your inspection and evaluation need to account for the specific home's construction quality, not just the subdivision average.</li>
         <li><strong>Premium pricing:</strong> You pay a premium for Masters section lots. The golf course views and custom construction justify it, but make sure you are comparing apples to apples when evaluating value.</li>
         <li><strong>Older custom homes:</strong> A custom home from 1990 may have unique architectural features but also unique maintenance requirements. Exotic materials, unusual HVAC configurations, or non-standard plumbing layouts can increase repair costs.</li>
-        <li><strong>Club integration:</strong> If you plan to be an active club member, the Masters section puts you closer to the social center of River Hills. If you plan to live here without golfing, that is perfectly fine — most residents are not full golf members.</li>
+        <li><strong>Club integration:</strong> If you plan to be an active club member, the Masters section puts you closer to the social center of River Hills. If you plan to live here without golfing, that is perfectly fine, most residents are not full golf members.</li>
         <li><strong>Rentals:</strong> Premium rental rates for large custom homes in a gated golf community. Expect $3,500-$5,000+/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
@@ -4037,8 +4037,8 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Newer Valrico community built 2015-2016 with no CDD and low HOA (~$102-$117/mo). Playground, family-friendly streets. Concrete block homes with modern floor plans. Zoned for area Valrico schools.",
     contentHtml: `
       <h3>What Is Shetland Ridge Like?</h3>
-      <p>Shetland Ridge is one of the newer communities in <a href="/valrico/">Valrico</a>, with homes built in 2015-2016. It is a single-family community that hits a sweet spot many buyers are looking for: newer construction with modern floor plans, no CDD fee, and a low HOA. The community is not massive — it has a neighborhood feel with quiet streets, a playground, and the kind of environment where kids can play outside and families walk in the evenings.</p>
-      <p>Homes are concrete block construction with modern finishes — open floor plans, granite or quartz counters, tile in wet areas, and screened lanais. Most homes are 3-5 bedrooms with 2-car garages. Many homeowners have added pools, taking advantage of the lot sizes that are respectable for the era of construction.</p>
+      <p>Shetland Ridge is one of the newer communities in <a href="/valrico/">Valrico</a>, with homes built in 2015-2016. It is a single-family community that hits a sweet spot many buyers are looking for: newer construction with modern floor plans, no CDD fee, and a low HOA. The community is not massive, it has a neighborhood feel with quiet streets, a playground, and the kind of environment where kids can play outside and families walk in the evenings.</p>
+      <p>Homes are concrete block construction with modern finishes, open floor plans, granite or quartz counters, tile in wet areas, and screened lanais. Most homes are 3-5 bedrooms with 2-car garages. Many homeowners have added pools, taking advantage of the lot sizes that are respectable for the era of construction.</p>
 
       <h3>What Are the Fees?</h3>
       <p>The Shetland Ridge HOA fee runs approximately <strong>$102-$117 per month</strong>. There is <strong>no CDD fee</strong>. For a community this new, that is a strong cost structure. The HOA maintains the playground and common areas and enforces community standards. The combination of low fees and no CDD makes Shetland Ridge one of the more cost-efficient newer communities in Valrico.</p>
@@ -4070,7 +4070,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Construction advantage:</strong> 2015-2016 homes are built to stricter energy codes than earlier construction. You will typically have better insulation, more efficient HVAC, and impact-rated windows or shutters — all of which help with both utility bills and insurance rates.</li>
+        <li><strong>Construction advantage:</strong> 2015-2016 homes are built to stricter energy codes than earlier construction. You will typically have better insulation, more efficient HVAC, and impact-rated windows or shutters, all of which help with both utility bills and insurance rates.</li>
         <li><strong>Warranty check:</strong> Some homes may still have transferable structural warranties from the builder. Ask the seller for documentation.</li>
         <li><strong>No CDD is the differentiator:</strong> In the 2015+ construction segment, most communities carry CDD. Shetland Ridge's lack of CDD saves $2,000-$3,000+ per year compared to CDD-heavy communities of the same vintage.</li>
         <li><strong>Playground but no pool:</strong> If a community pool is important to your family, Shetland Ridge does not have one. The trade-off is the lower HOA fee. Many residents build private pools instead.</li>
@@ -4089,8 +4089,8 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Large 599-home community built 2001-2006 by Lennar, US Home, and Windward Homes in Valrico. Resort-style pool, tennis, basketball, volleyball, dog park, 24-hour security. HOA $11-$265/mo by section. No CDD. Zoned for Buckhorn Elementary and Durant High.",
     contentHtml: `
       <h3>What Is Somerset Like?</h3>
-      <p>Somerset is one of the largest and most amenity-rich communities in central <a href="/valrico/">Valrico</a> — 599 single-family homes built between 2001 and 2006 by <strong>Lennar</strong>, <strong>US Home</strong>, and <strong>Windward Homes</strong>. If you want a neighborhood that actually feels like a community — where kids use the pool, families play at the courts, and dog owners have their own park — Somerset delivers more social infrastructure than most Valrico subdivisions combined.</p>
-      <p>Homes range from 1,026 to 3,820 square feet, though the majority fall in the 1,500-2,800 range with 3-4 bedrooms and 2-car garages. Construction is concrete block. The neighborhood is large enough to have internal variety — some sections feel more open, others are more intimate — but the consistent architectural standards and HOA maintenance keep the community looking cohesive throughout.</p>
+      <p>Somerset is one of the largest and most amenity-rich communities in central <a href="/valrico/">Valrico</a> 599 single-family homes built between 2001 and 2006 by <strong>Lennar</strong>, <strong>US Home</strong>, and <strong>Windward Homes</strong>. If you want a neighborhood that actually feels like a community, where kids use the pool, families play at the courts, and dog owners have their own park, Somerset delivers more social infrastructure than most Valrico subdivisions combined.</p>
+      <p>Homes range from 1,026 to 3,820 square feet, though the majority fall in the 1,500-2,800 range with 3-4 bedrooms and 2-car garages. Construction is concrete block. The neighborhood is large enough to have internal variety, some sections feel more open, others are more intimate, but the consistent architectural standards and HOA maintenance keep the community looking cohesive throughout.</p>
 
       <h3>What Are the Amenities?</h3>
       <p>This is where Somerset separates itself from most Valrico neighborhoods:</p>
@@ -4105,7 +4105,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Dog park</strong></li>
         <li><strong>24-hour security</strong></li>
       </ul>
-      <p>Somerset also shares a <strong>gated private park</strong> with neighboring <a href="/bloomingdale-cove/">Bloomingdale Cove</a>, adding additional green space. The amenity package is comparable to master-planned communities like FishHawk — at a fraction of the price.</p>
+      <p>Somerset also shares a <strong>gated private park</strong> with neighboring <a href="/bloomingdale-cove/">Bloomingdale Cove</a>, adding additional green space. The amenity package is comparable to master-planned communities like FishHawk, at a fraction of the price.</p>
 
       <h3>What Does the HOA Cost?</h3>
       <p>The Somerset Master HOA was established in 2001 and manages the entire community. Fees range from <strong>$11 to $265 per month</strong> depending on the specific section and what is covered. The wide range reflects different sub-associations within Somerset, each with different amenity access and maintenance coverage. There is <strong>no CDD fee</strong>.</p>
@@ -4124,14 +4124,14 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>Which Schools Are Zoned?</h3>
-      <p>Somerset is zoned for <strong>Buckhorn Elementary</strong> (or Nelson Elementary depending on section), <strong>Mulrennan Middle School</strong>, and <strong>Durant High School</strong>. Buckhorn Elementary is one of the highest-rated elementaries in Hillsborough County — a significant draw for families. Verify the exact elementary assignment for your address, as Somerset spans a large enough area that zoning may vary by section.</p>
+      <p>Somerset is zoned for <strong>Buckhorn Elementary</strong> (or Nelson Elementary depending on section), <strong>Mulrennan Middle School</strong>, and <strong>Durant High School</strong>. Buckhorn Elementary is one of the highest-rated elementaries in Hillsborough County, a significant draw for families. Verify the exact elementary assignment for your address, as Somerset spans a large enough area that zoning may vary by section.</p>
 
       <h3>What Is the Flood Risk?</h3>
       <p>Somerset sits in <strong>FEMA Flood Zone X</strong> (minimal risk). No flood insurance required by lenders. The community is on well-drained ground typical of central Valrico.</p>
 
       <h3>How Does Somerset Compare?</h3>
       <ul>
-        <li><strong><a href="/abbey-grove/">Abbey Grove</a></strong> (0.5 miles): Just 69 homes, $40/mo HOA, no amenities. The opposite extreme — minimal community infrastructure but maximum privacy and lowest fees.</li>
+        <li><strong><a href="/abbey-grove/">Abbey Grove</a></strong> (0.5 miles): Just 69 homes, $40/mo HOA, no amenities. The opposite extreme, minimal community infrastructure but maximum privacy and lowest fees.</li>
         <li><strong><a href="/savannah-landings/">Savannah Landings</a></strong> (0.5 miles): Gated townhomes, maintenance-free. Different product type but same general location.</li>
         <li><strong><a href="/bloomingdale-cove/">Bloomingdale Cove</a></strong> (adjacent): Shares the private park with Somerset. Smaller, deed restricted, slightly older. Bloomingdale High zone vs Somerset's Durant zone.</li>
         <li><strong><a href="/arista/">Arista</a></strong> (1 mile): Gated, Taylor Morrison, premium homes. More exclusive but only 60 homes and no resort amenities.</li>
@@ -4139,7 +4139,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Multiple builders = variation:</strong> Lennar, US Home, and Windward each built different sections with different quality levels and floor plans. Do not assume all Somerset homes are equal — inspect each home individually.</li>
+        <li><strong>Multiple builders = variation:</strong> Lennar, US Home, and Windward each built different sections with different quality levels and floor plans. Do not assume all Somerset homes are equal, inspect each home individually.</li>
         <li><strong>Construction age:</strong> 2001-2006 build means homes are 20-25 years old. Check roof, HVAC, and water heater age. Some homes may need kitchen and bathroom updates to feel current.</li>
         <li><strong>HOA section matters:</strong> The $11-$265/mo range is wide. Know exactly which sub-association your property falls under and what is included before buying.</li>
         <li><strong>Social neighborhood:</strong> With 599 homes and resort amenities, Somerset is active. If you prefer quiet anonymity, a smaller community may suit you better.</li>
@@ -4234,11 +4234,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "KB Homes community built in 2020 in Valrico with modern floor plans and energy-efficient construction. HOA managed by McNeil Management. Sidewalks throughout, minimum 50x120' lots. No CDD.",
     contentHtml: `
       <h3>What Is Valri Park Like?</h3>
-      <p>Valri Park is one of the most recent additions to the <a href="/valrico/">Valrico</a> housing market — a community of single-family homes built by <strong>KB Home</strong> in 2020. If you are looking for modern construction with energy-efficient features at a more accessible price point than the luxury builders, Valri Park is worth a look. KB Home is known for their Energy Star certified homes and customizable floor plans, and Valri Park reflects that approach.</p>
+      <p>Valri Park is one of the most recent additions to the <a href="/valrico/">Valrico</a> housing market, a community of single-family homes built by <strong>KB Home</strong> in 2020. If you are looking for modern construction with energy-efficient features at a more accessible price point than the luxury builders, Valri Park is worth a look. KB Home is known for their Energy Star certified homes and customizable floor plans, and Valri Park reflects that approach.</p>
       <p>The community is built across two phases. Minimum lot sizes are 50x120 feet (6,000 square feet), which is compact but standard for new construction in this price range. Homes feature modern open-concept layouts, 2-car garages, covered entries, and the energy-efficient construction that current Florida building codes require. Sidewalks run throughout the community, creating a pedestrian-friendly environment.</p>
 
       <h3>What Are the Fees?</h3>
-      <p>The HOA is managed by <strong>McNeil Management</strong>. There is <strong>no CDD fee</strong>, which is notable for a 2020 community. Most new construction communities built in the last decade carry CDD assessments — Valri Park's lack of CDD saves buyers $2,000-$3,000+ per year in additional costs.</p>
+      <p>The HOA is managed by <strong>McNeil Management</strong>. There is <strong>no CDD fee</strong>, which is notable for a 2020 community. Most new construction communities built in the last decade carry CDD assessments, Valri Park's lack of CDD saves buyers $2,000-$3,000+ per year in additional costs.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -4258,15 +4258,15 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>How Does Valri Park Compare?</h3>
       <ul>
-        <li><strong><a href="/shetland-ridge/">Shetland Ridge</a></strong> (1.5 miles): Also newer (2015-2016), no CDD, low HOA. Similar value proposition — newer construction without the CDD burden.</li>
+        <li><strong><a href="/shetland-ridge/">Shetland Ridge</a></strong> (1.5 miles): Also newer (2015-2016), no CDD, low HOA. Similar value proposition, newer construction without the CDD burden.</li>
         <li><strong><a href="/bloomingdale-east/">Bloomingdale East</a></strong> (2 miles): Onyx+East modern designs, 2024 construction. Higher price point, more contemporary aesthetic.</li>
-        <li><strong><a href="/lakemont/">Lakemont</a></strong> (1 mile): No HOA, older homes, larger lots. The opposite approach — freedom and space vs new construction and community.</li>
+        <li><strong><a href="/lakemont/">Lakemont</a></strong> (1 mile): No HOA, older homes, larger lots. The opposite approach, freedom and space vs new construction and community.</li>
         <li><strong><a href="/abbey-grove/">Abbey Grove</a></strong> (1 mile): 2003-2004 build, $40/mo HOA. More affordable entry, Buckhorn Elementary zone, but 17 years older.</li>
       </ul>
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>KB Home = customization:</strong> If buying from the builder (when available), KB Home allows buyers to choose from design options and personalize their home. Resale buyers should check what upgrades the original buyer selected — there can be significant variation between two homes with the same floor plan.</li>
+        <li><strong>KB Home = customization:</strong> If buying from the builder (when available), KB Home allows buyers to choose from design options and personalize their home. Resale buyers should check what upgrades the original buyer selected, there can be significant variation between two homes with the same floor plan.</li>
         <li><strong>Energy efficiency:</strong> 2020 construction means Energy Star certification, newer HVAC systems, better insulation, and impact-rated windows. These features translate to lower utility bills and insurance premiums compared to older Valrico homes.</li>
         <li><strong>Lot sizes:</strong> 50x120' minimum lots are compact. If a large yard is important, look at older Valrico neighborhoods where quarter-acre+ lots are common. The trade-off is new construction and lower maintenance.</li>
         <li><strong>Resale track record:</strong> The community sold out from the builder, so resale data is building. Initial buyers who purchased in 2020 have seen solid appreciation as Valrico home values have increased.</li>
@@ -4285,11 +4285,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Small 29-home cul-de-sac community in Valrico with larger lots and a quiet, intimate residential character. Established neighborhood with mature trees. No gated entry, minimal community infrastructure.",
     contentHtml: `
       <h3>What Is Wellington Like?</h3>
-      <p>Wellington is one of <a href="/valrico/">Valrico</a>'s smallest named neighborhoods — just 29 homes in a quiet cul-de-sac setting. This is not a master-planned community with a pool, clubhouse, and tennis courts. It is a small residential pocket where the lots are large (some approaching an acre), the trees are mature, and the neighbors have been here for years. If you value privacy, space, and quiet over community amenities, Wellington is worth discovering.</p>
+      <p>Wellington is one of <a href="/valrico/">Valrico</a>'s smallest named neighborhoods, just 29 homes in a quiet cul-de-sac setting. This is not a master-planned community with a pool, clubhouse, and tennis courts. It is a small residential pocket where the lots are large (some approaching an acre), the trees are mature, and the neighbors have been here for years. If you value privacy, space, and quiet over community amenities, Wellington is worth discovering.</p>
       <p>Homes here are a mix of styles and sizes, with some larger properties in the 3,500-4,000+ square foot range on nearly one-acre lots. The neighborhood has a rural-adjacent feel despite being centrally located in Valrico. Mature oaks provide shade and privacy, and the cul-de-sac layout eliminates through traffic entirely.</p>
 
       <h3>What Are the Fees?</h3>
-      <p>With only 29 homes and minimal community infrastructure, HOA structure is limited. Verify current HOA status and fees for the specific property — small communities sometimes operate with voluntary associations or minimal deed restriction enforcement. There is <strong>no CDD fee</strong>.</p>
+      <p>With only 29 homes and minimal community infrastructure, HOA structure is limited. Verify current HOA status and fees for the specific property, small communities sometimes operate with voluntary associations or minimal deed restriction enforcement. There is <strong>no CDD fee</strong>.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -4336,7 +4336,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Established unplatted area along Durant Road in south Valrico with a mix of older and updated homes on spacious lots. No HOA in most sections. Zoned for Durant High School.",
     contentHtml: `
       <h3>What Is the Durant Neighborhood Like?</h3>
-      <p>Durant is not a single subdivision with a fancy entrance sign — it is the broad residential corridor running along Durant Road in south <a href="/valrico/">Valrico</a>. Homes here range from modest 1960s block construction to fully renovated properties and newer custom builds. What ties the area together is the generous lot sizes, the rural-suburban feel, and the lack of HOA restrictions in most pockets. If you want elbow room without driving 30 minutes from civilization, Durant delivers.</p>
+      <p>Durant is not a single subdivision with a fancy entrance sign, it is the broad residential corridor running along Durant Road in south <a href="/valrico/">Valrico</a>. Homes here range from modest 1960s block construction to fully renovated properties and newer custom builds. What ties the area together is the generous lot sizes, the rural-suburban feel, and the lack of HOA restrictions in most pockets. If you want elbow room without driving 30 minutes from civilization, Durant delivers.</p>
       <p>Lot sizes commonly run a quarter-acre to over an acre, and a few properties push past five acres. That means room for a workshop, a boat, RVs in the driveway, or just a massive backyard. The mature oak canopy throughout the corridor gives the area a character that newer master-planned communities simply cannot replicate.</p>
 
       <h3>Are There HOA or CDD Fees?</h3>
@@ -4358,10 +4358,10 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>Which Schools Serve the Durant Area?</h3>
       <p>Properties along Durant Road are generally zoned for <strong>Buckhorn Elementary</strong> or <strong>Nelson Elementary</strong> (depending on exact location), <strong>Mulrennan Middle School</strong>, and <strong>Durant High School</strong>. Durant High is literally on Durant Road, which makes the commute for high schoolers about as easy as it gets.</p>
-      <p>School zoning in the Durant corridor is one reason families choose this area over the Newsome High zone further south — you get solid schools without the premium pricing that comes with <a href="/buckhorn-preserve/">Buckhorn Preserve</a> or <a href="/copper-ridge/">Copper Ridge</a> in the Newsome zone.</p>
+      <p>School zoning in the Durant corridor is one reason families choose this area over the Newsome High zone further south, you get solid schools without the premium pricing that comes with <a href="/buckhorn-preserve/">Buckhorn Preserve</a> or <a href="/copper-ridge/">Copper Ridge</a> in the Newsome zone.</p>
 
       <h3>What Is the Flood Risk?</h3>
-      <p>Most properties along the Durant corridor sit in <strong>FEMA Flood Zone X</strong> (minimal risk). However, individual parcels near drainage features or at lower elevations may carry higher designations. With larger lots, it is especially important to check the flood map for your specific parcel — one corner of a 2-acre property could be in Zone X while another sits in AE.</p>
+      <p>Most properties along the Durant corridor sit in <strong>FEMA Flood Zone X</strong> (minimal risk). However, individual parcels near drainage features or at lower elevations may carry higher designations. With larger lots, it is especially important to check the flood map for your specific parcel, one corner of a 2-acre property could be in Zone X while another sits in AE.</p>
 
       <h3>How Does Durant Compare to Nearby Neighborhoods?</h3>
       <ul>
@@ -4373,7 +4373,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Home age varies widely:</strong> You could be looking at a 1965 block home next to a 2020 custom build. Inspect accordingly — older homes may have polybutylene plumbing, outdated electrical panels, or septic systems.</li>
+        <li><strong>Home age varies widely:</strong> You could be looking at a 1965 block home next to a 2020 custom build. Inspect accordingly, older homes may have polybutylene plumbing, outdated electrical panels, or septic systems.</li>
         <li><strong>Septic vs. sewer:</strong> Many Durant corridor properties are on septic. Check whether the home has been connected to county sewer or if you are maintaining a septic system.</li>
         <li><strong>Well water:</strong> Some larger parcels still use well water. Confirm the water source before closing.</li>
         <li><strong>Rentals:</strong> Larger homes on big lots rent well to families who want space. Expect $2,200-$3,200/mo depending on size and condition. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
@@ -4391,11 +4391,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Small cul-de-sac community of custom-built single-family homes from the late 1980s on Durant Oaks Drive in Valrico. Large lots, mature landscaping, no mandatory HOA. Zoned for Durant High School.",
     contentHtml: `
       <h3>What Is Durant Oaks Like?</h3>
-      <p>Durant Oaks is a quiet pocket of custom-built homes on Durant Oaks Drive, just off Durant Road in south <a href="/valrico/">Valrico</a>. Built primarily around 1987, these are individually designed single-family homes — not cookie-cutter tract builds. Each home has its own character, from floor plan to exterior finish, because they were built by different custom builders on individual lots.</p>
-      <p>The community is small, with homes ranging from 3 to 5 bedrooms. Mature landscaping and large oak trees give the neighborhood an established, park-like feel that newer communities take decades to develop. The cul-de-sac layout means minimal through traffic — the only people driving down Durant Oaks Drive are people who live there or are visiting someone who does.</p>
+      <p>Durant Oaks is a quiet pocket of custom-built homes on Durant Oaks Drive, just off Durant Road in south <a href="/valrico/">Valrico</a>. Built primarily around 1987, these are individually designed single-family homes, not cookie-cutter tract builds. Each home has its own character, from floor plan to exterior finish, because they were built by different custom builders on individual lots.</p>
+      <p>The community is small, with homes ranging from 3 to 5 bedrooms. Mature landscaping and large oak trees give the neighborhood an established, park-like feel that newer communities take decades to develop. The cul-de-sac layout means minimal through traffic, the only people driving down Durant Oaks Drive are people who live there or are visiting someone who does.</p>
 
       <h3>What About the HOA?</h3>
-      <p>Durant Oaks operates with a <strong>voluntary HOA</strong>, which is exactly what it sounds like — you can participate or not. There is <strong>no CDD fee</strong>. For buyers who have had enough of HOA boards dictating their paint colors and mailbox styles, Durant Oaks offers a refreshing change. Deed restrictions exist but enforcement is community-based rather than heavy-handed.</p>
+      <p>Durant Oaks operates with a <strong>voluntary HOA</strong>, which is exactly what it sounds like, you can participate or not. There is <strong>no CDD fee</strong>. For buyers who have had enough of HOA boards dictating their paint colors and mailbox styles, Durant Oaks offers a refreshing change. Deed restrictions exist but enforcement is community-based rather than heavy-handed.</p>
       <p>Compare that to nearby <a href="/savannah-landings/">Savannah Landings</a> at $285/mo or <a href="/legacy-ridge/">Legacy Ridge</a> at $100-$450/mo, and the cost difference is significant over the life of a mortgage.</p>
 
       <h3>How Close Is Everything?</h3>
@@ -4428,7 +4428,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <ul>
         <li><strong>Home age:</strong> Built around 1987, these homes are nearly 40 years old. Check the roof (original tile may still be in good shape, shingle will likely need replacement), HVAC (probably on the third unit), plumbing type, and electrical panel.</li>
         <li><strong>Custom means unique:</strong> Each home is different, which is great for character but means fewer comparable sales for pricing. Work with an agent who knows the micro-neighborhood.</li>
-        <li><strong>Insurance:</strong> Concrete block construction helps with rates. Confirm the roof material and age — tile roofs are much cheaper to insure than aging shingle in Florida.</li>
+        <li><strong>Insurance:</strong> Concrete block construction helps with rates. Confirm the roof material and age, tile roofs are much cheaper to insure than aging shingle in Florida.</li>
         <li><strong>Rentals:</strong> Custom homes in this price range and location rent well. Expect $2,200-$2,800/mo for a 3-4 bedroom. <a href="https://valricopropertymgmt.com/neighborhoods/durant-oaks" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
@@ -4444,12 +4444,12 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Family-friendly single-family community in south Valrico with community pool, active HOA, and homes built in the early-to-mid 2000s. Managed by Charleston Management. Zoned for Durant High School.",
     contentHtml: `
       <h3>What Is Durant Trails Like?</h3>
-      <p>Durant Trails is a well-established single-family community in south <a href="/valrico/">Valrico</a>, built primarily in the early-to-mid 2000s. The neighborhood has an active HOA managed by Charleston Management, which keeps the community looking sharp and organizes seasonal social activities throughout the year. This is a neighborhood where people actually know their neighbors — the HOA sponsors events, clubs, and community gatherings that keep things connected.</p>
+      <p>Durant Trails is a well-established single-family community in south <a href="/valrico/">Valrico</a>, built primarily in the early-to-mid 2000s. The neighborhood has an active HOA managed by Charleston Management, which keeps the community looking sharp and organizes seasonal social activities throughout the year. This is a neighborhood where people actually know their neighbors, the HOA sponsors events, clubs, and community gatherings that keep things connected.</p>
       <p>Homes here are mostly 3-4 bedrooms with 2-car garages, concrete block construction, and screened lanais. The streets have sidewalks, and the layout includes cul-de-sacs that keep traffic manageable for families with kids and pets.</p>
 
       <h3>What Are the Community Amenities?</h3>
       <p>Durant Trails has a <strong>community swimming pool</strong> with a sunshade structure, open to all residents with active key-cards. The pool is a real asset during Florida's 8-month summer. The HOA also maintains common areas and organizes community events throughout the year.</p>
-      <p>The community enforces a no-solicitation policy, which residents appreciate. Architectural guidelines require ACC approval for exterior changes, and vehicles must be parked on improved surfaces (garage, driveway, or parking pad) — no parking on the lawn.</p>
+      <p>The community enforces a no-solicitation policy, which residents appreciate. Architectural guidelines require ACC approval for exterior changes, and vehicles must be parked on improved surfaces (garage, driveway, or parking pad), no parking on the lawn.</p>
 
       <h3>What Does the HOA Cost?</h3>
       <p>The HOA covers pool maintenance, common area upkeep, and community standards enforcement. There is <strong>no CDD fee</strong> on top of the HOA. Compared to newer master-planned communities like <a href="/legacy-ridge/">Legacy Ridge</a> or <a href="/crestwood-estates/">Crestwood Estates</a>, Durant Trails offers the community pool and organized neighborhood feel without the premium pricing that comes with brand-new construction.</p>
@@ -4501,11 +4501,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Spacious single-family community along Durant Road in Valrico with homes built from 1986 through 2022. Homes range from 2,375 to 3,518 sqft. Optional HOA, no CDD. Zoned for Durant High School.",
     contentHtml: `
       <h3>What Is Durant Woods Like?</h3>
-      <p>Durant Woods is one of the more established residential pockets along Durant Road in south <a href="/valrico/">Valrico</a>. What makes it interesting is the construction timeline — homes here were built between 1986 and 2022, which means you will see everything from original 1980s block homes with mature landscaping to modern custom builds with contemporary finishes. The community has evolved organically over nearly four decades.</p>
+      <p>Durant Woods is one of the more established residential pockets along Durant Road in south <a href="/valrico/">Valrico</a>. What makes it interesting is the construction timeline, homes here were built between 1986 and 2022, which means you will see everything from original 1980s block homes with mature landscaping to modern custom builds with contemporary finishes. The community has evolved organically over nearly four decades.</p>
       <p>Home sizes range from approximately <strong>2,375 to 3,518 square feet</strong>, which puts Durant Woods firmly in the "spacious" category. These are not starter homes. The lots are generous, giving you room for a pool, a workshop, or just open yard space that newer subdivisions rarely offer.</p>
 
       <h3>What About the HOA?</h3>
-      <p>Durant Woods has an <strong>optional HOA</strong> — fees have ranged from $7 to $167 per month depending on the section and participation level. There is <strong>no CDD fee</strong>. This flexibility is one of the community's biggest draws. You get the benefit of basic community standards without the rigid oversight and high monthly costs of communities like <a href="/arista/">Arista</a> or <a href="/buckhorn-preserve/">Buckhorn Preserve</a>.</p>
+      <p>Durant Woods has an <strong>optional HOA</strong> fees have ranged from $7 to $167 per month depending on the section and participation level. There is <strong>no CDD fee</strong>. This flexibility is one of the community's biggest draws. You get the benefit of basic community standards without the rigid oversight and high monthly costs of communities like <a href="/arista/">Arista</a> or <a href="/buckhorn-preserve/">Buckhorn Preserve</a>.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -4550,12 +4550,12 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
   "eaglewood-estates": {
     summary:
-      "Partially gated community of 49 homes in Valrico with two distinct sections — original estate homes on half-acre lots and newer David Weekley pool homes. No CDD. Zoned for Valrico Elementary and Durant High.",
+      "Partially gated community of 49 homes in Valrico with two distinct sections, original estate homes on half-acre lots and newer David Weekley pool homes. No CDD. Zoned for Valrico Elementary and Durant High.",
     contentHtml: `
       <h3>What Is Eaglewood Estates Like?</h3>
       <p>Eaglewood Estates is one of those <a href="/valrico/">Valrico</a> neighborhoods that has two personalities, and both are worth knowing about. The community dates back to 1998 and has about 49 homes total, split between two distinct sections.</p>
-      <p>The original un-gated section features larger estate-style homes on <strong>half-acre to one-acre+ lots</strong>. Some of these are wooden construction with garage workshops — built for homeowners who actually use their property, not just live on it. A few parcels push past five acres, which is rare this close to central Valrico.</p>
-      <p>The gated section is newer, built by <strong>David Weekley Homes</strong> with a more conventional Florida Transitional style. These are pool homes on quarter-acre lots with the upscale finishes Weekley is known for — impressive owners suites with 16x16 bedrooms and 15x11 sitting areas, open floor plans, and modern construction standards.</p>
+      <p>The original un-gated section features larger estate-style homes on <strong>half-acre to one-acre+ lots</strong>. Some of these are wooden construction with garage workshops, built for homeowners who actually use their property, not just live on it. A few parcels push past five acres, which is rare this close to central Valrico.</p>
+      <p>The gated section is newer, built by <strong>David Weekley Homes</strong> with a more conventional Florida Transitional style. These are pool homes on quarter-acre lots with the upscale finishes Weekley is known for, impressive owners suites with 16x16 bedrooms and 15x11 sitting areas, open floor plans, and modern construction standards.</p>
 
       <h3>What About the HOA?</h3>
       <p>Eaglewood Estates has an HOA but <strong>no CDD fee</strong>. The gated section has more structured oversight given the David Weekley community standards, while the original section operates with lighter-touch deed restrictions. This two-section model gives buyers a choice: HOA-managed pool home behind a gate, or estate-style living on acreage with more freedom.</p>
@@ -4577,7 +4577,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Eaglewood Estates is zoned for <strong>Valrico Elementary</strong>, <strong>Mulrennan Middle School</strong>, and <strong>Durant High School</strong>. Valrico Elementary earned a U.S. News Best Elementary Schools badge and consistently performs well. The combination of strong elementary zoning and reasonable home prices makes Eaglewood appealing to families.</p>
 
       <h3>What Is the Flood Risk?</h3>
-      <p>Most of Eaglewood Estates sits in <strong>FEMA Flood Zone X</strong> (minimal risk). With the larger lots in the un-gated section, check individual parcels — especially acreage properties that may have low spots or drainage features on a portion of the lot.</p>
+      <p>Most of Eaglewood Estates sits in <strong>FEMA Flood Zone X</strong> (minimal risk). With the larger lots in the un-gated section, check individual parcels, especially acreage properties that may have low spots or drainage features on a portion of the lot.</p>
 
       <h3>How Does Eaglewood Estates Compare?</h3>
       <ul>
@@ -4590,7 +4590,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Two very different products:</strong> A Weekley pool home behind the gate and an estate home on acreage in the original section are completely different buying decisions. Know which section you are looking at.</li>
-        <li><strong>Construction varies:</strong> The original section includes some wooden-frame homes (uncommon in Florida). Understand the insurance implications — block construction is cheaper to insure than frame in this market.</li>
+        <li><strong>Construction varies:</strong> The original section includes some wooden-frame homes (uncommon in Florida). Understand the insurance implications, block construction is cheaper to insure than frame in this market.</li>
         <li><strong>Only 49 homes:</strong> Inventory is rare. Set up alerts and be ready to act when something lists.</li>
         <li><strong>Rentals:</strong> The Weekley homes rent well to families and professionals. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
@@ -4607,7 +4607,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Established neighborhood of smaller, affordable single-family homes near the Brandon-Valrico border. Mostly 1,100-1,300 sqft ranch homes on manageable lots. Great entry point for first-time buyers.",
     contentHtml: `
       <h3>What Is East Brandon Estates Like?</h3>
-      <p>East Brandon Estates sits near the Brandon-<a href="/valrico/">Valrico</a> border and delivers exactly what the name suggests — affordable single-family homes in an established setting. These are primarily smaller ranch-style homes, most in the <strong>1,144 to 1,260 square foot</strong> range with 2-3 bedrooms and 1-2 bathrooms. They are not flashy, but they are practical, affordable, and well-located.</p>
+      <p>East Brandon Estates sits near the Brandon-<a href="/valrico/">Valrico</a> border and delivers exactly what the name suggests, affordable single-family homes in an established setting. These are primarily smaller ranch-style homes, most in the <strong>1,144 to 1,260 square foot</strong> range with 2-3 bedrooms and 1-2 bathrooms. They are not flashy, but they are practical, affordable, and well-located.</p>
       <p>The community has an older, mature feel with established yards and shade trees. Streets are quiet. Lot sizes are manageable, which appeals to buyers who do not want the maintenance burden of a half-acre property. This is a neighborhood where you can mow the lawn in 30 minutes and spend the rest of the weekend doing whatever you want.</p>
 
       <h3>What About the HOA?</h3>
@@ -4624,7 +4624,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Selmon Expressway:</strong> 4 miles</li>
         <li><strong>Downtown Tampa:</strong> 20 miles (25-30 minutes via Crosstown)</li>
       </ul>
-      <p>Being near the Brandon-Valrico border means you get the best of both worlds — Valrico's residential feel with Brandon's shopping and dining options minutes away.</p>
+      <p>Being near the Brandon-Valrico border means you get the best of both worlds, Valrico's residential feel with Brandon's shopping and dining options minutes away.</p>
 
       <h3>Which Schools Serve East Brandon Estates?</h3>
       <p>East Brandon Estates is zoned for Hillsborough County public schools in the Valrico/Brandon area. Verify the specific elementary, middle, and high school assignments for your address, as the border location means zoning can vary by street.</p>
@@ -4660,7 +4660,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Gated executive neighborhood of spacious Morrison-built homes in Valrico with 12-foot ceilings, large owners suites, and mature oak trees. Upscale finishes throughout. Zoned for Durant High School.",
     contentHtml: `
       <h3>What Is Eastmonte Like?</h3>
-      <p>Eastmonte is a gated executive neighborhood on Eastmonte Drive in <a href="/valrico/">Valrico</a>, built exclusively by Morrison Homes. This is not a cookie-cutter subdivision — these are expansive 3-to-5 bedroom, 2-to-4 bathroom single-family homes with the kind of upgrades you normally only see in custom builds. Think <strong>12-foot ceilings</strong>, owners suites with sitting rooms flanked by stately columns, and offices enclosed by glass French doors.</p>
+      <p>Eastmonte is a gated executive neighborhood on Eastmonte Drive in <a href="/valrico/">Valrico</a>, built exclusively by Morrison Homes. This is not a cookie-cutter subdivision, these are expansive 3-to-5 bedroom, 2-to-4 bathroom single-family homes with the kind of upgrades you normally only see in custom builds. Think <strong>12-foot ceilings</strong>, owners suites with sitting rooms flanked by stately columns, and offices enclosed by glass French doors.</p>
       <p>The homes back up to generous yards with mature oak trees, screened lanais with 8-foot sliders, and enough space for privacy, pets, and entertaining. The lots are larger than what you find in most gated Valrico communities, and the tree canopy creates a park-like setting throughout the neighborhood.</p>
 
       <h3>What Are the Home Features?</h3>
@@ -4725,7 +4725,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Small enclave of 16-17 large custom homes on generous half-acre to one-acre lots in Valrico. Built in the early 1990s. Homes range from 3,800 to 5,500+ sqft. Low-key HOA, no CDD.",
     contentHtml: `
       <h3>What Is Emerald Creek Like?</h3>
-      <p>Emerald Creek is one of <a href="/valrico/">Valrico</a>'s best-kept secrets — a compact enclave of roughly <strong>16-17 large custom homes</strong> built mostly in the early 1990s. This is not a subdivision with matching rooflines and identical floor plans. Every home here was individually designed and built, which gives the community a one-of-a-kind character that master-planned neighborhoods cannot replicate.</p>
+      <p>Emerald Creek is one of <a href="/valrico/">Valrico</a>'s best-kept secrets, a compact enclave of roughly <strong>16-17 large custom homes</strong> built mostly in the early 1990s. This is not a subdivision with matching rooflines and identical floor plans. Every home here was individually designed and built, which gives the community a one-of-a-kind character that master-planned neighborhoods cannot replicate.</p>
       <p>Home sizes are substantial, ranging from approximately <strong>3,800 to 5,500+ square feet</strong>. Lots run from half an acre up toward a full acre on the larger parcels. If you want a custom estate-quality home in Valrico without the country club membership fees, Emerald Creek is the short list.</p>
 
       <h3>What About the HOA?</h3>
@@ -4784,7 +4784,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>This is a mature community with established landscaping, shade trees, and that settled-in character that takes decades to develop. The streets are quiet, the neighbors are long-term residents, and the feel is suburban without being sterile. If you are coming from a newer subdivision and wondering where all the trees went, Erin Arbor has them.</p>
 
       <h3>What About the HOA?</h3>
-      <p>Erin Arbor has an <strong>active homeowners association</strong> that maintains community standards and common areas. The HOA has been in operation since 1990 — over 35 years — which means the governance is well-established and predictable. There is <strong>no CDD fee</strong>.</p>
+      <p>Erin Arbor has an <strong>active homeowners association</strong> that maintains community standards and common areas. The HOA has been in operation since 1990, over 35 years, which means the governance is well-established and predictable. There is <strong>no CDD fee</strong>.</p>
       <p>The HOA keeps the community looking consistent without being overbearing. For buyers comparing to the stricter HOAs at communities like <a href="/arista/">Arista</a> or <a href="/buckhorn-preserve/">Buckhorn Preserve</a>, Erin Arbor offers a more relaxed approach.</p>
 
       <h3>How Close Is Everything?</h3>
@@ -4815,9 +4815,9 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Home age:</strong> Built 1989-1991, these homes are 35+ years old. Check the roof (tile or shingle — tile may still be original), HVAC (likely on second or third unit), plumbing type, and electrical panel capacity.</li>
+        <li><strong>Home age:</strong> Built 1989-1991, these homes are 35+ years old. Check the roof (tile or shingle, tile may still be original), HVAC (likely on second or third unit), plumbing type, and electrical panel capacity.</li>
         <li><strong>Established community:</strong> Long-term residents mean less turnover, which is good for neighborhood stability but means fewer listings. Be patient and ready to act.</li>
-        <li><strong>Insurance:</strong> Concrete block construction typical of this era keeps insurance manageable. Get multiple quotes and check the roof age — that drives Florida insurance pricing more than almost anything else.</li>
+        <li><strong>Insurance:</strong> Concrete block construction typical of this era keeps insurance manageable. Get multiple quotes and check the roof age, that drives Florida insurance pricing more than almost anything else.</li>
         <li><strong>Rentals:</strong> Solid rental demand for established Valrico homes near the Bloomingdale corridor. Expect $1,900-$2,300/mo for a 3-4 bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
@@ -4833,7 +4833,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Family-friendly neighborhood in Valrico near Buckhorn Springs Golf & Country Club. Known for well-maintained homes, mature trees, walkability, and convenient access to SR 60 and Bloomingdale Avenue.",
     contentHtml: `
       <h3>What Is Fairway Park Like?</h3>
-      <p>Fairway Park is a peaceful, family-friendly neighborhood in <a href="/valrico/">Valrico</a> that lives up to its name — situated near the Buckhorn Springs Golf & Country Club, the community offers mature trees, well-maintained homes, and a suburban setting that consistently ranks among residents' favorites. With approximately <strong>2,836 residents</strong>, it is large enough to feel established but small enough that you recognize your neighbors.</p>
+      <p>Fairway Park is a peaceful, family-friendly neighborhood in <a href="/valrico/">Valrico</a> that lives up to its name, situated near the Buckhorn Springs Golf & Country Club, the community offers mature trees, well-maintained homes, and a suburban setting that consistently ranks among residents' favorites. With approximately <strong>2,836 residents</strong>, it is large enough to feel established but small enough that you recognize your neighbors.</p>
       <p>The neighborhood is known for its walkability, parks, and quiet streets. Residents cite convenience, trees, restaurants, and shopping access as the top reasons they love living here. The golf course proximity adds green space and views without requiring membership or fees.</p>
 
       <h3>What Are the Homes Like?</h3>
@@ -4869,7 +4869,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Golf course proximity:</strong> Properties backing to the course get views and green space but may deal with occasional golf ball landing in the yard. Factor in any course-adjacent deed restrictions.</li>
-        <li><strong>Home age:</strong> 1980s-1990s construction means checking all the usual suspects — roof age, HVAC vintage, plumbing type, and electrical panel. Budget for updates on older homes.</li>
+        <li><strong>Home age:</strong> 1980s-1990s construction means checking all the usual suspects, roof age, HVAC vintage, plumbing type, and electrical panel. Budget for updates on older homes.</li>
         <li><strong>Walkability:</strong> This is one of the more walkable Valrico neighborhoods, which is unusual for the area. Sidewalks, quiet streets, and park access make it genuinely pedestrian-friendly.</li>
         <li><strong>Rentals:</strong> Golf course-adjacent homes have consistent rental appeal. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
@@ -4887,7 +4887,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     contentHtml: `
       <h3>What Is Fairway Ridge Like?</h3>
       <p>Fairway Ridge is a small, established neighborhood of <strong>36 homes</strong> located at the corner of Miller and Durant Roads in <a href="/valrico/">Valrico</a>. Tucked between the Buckhorn Springs Golf & Country Club and central Valrico, the community offers a quiet residential experience with the convenience of being minutes from everything.</p>
-      <p>Homes here were built primarily in the early 1990s, with brick-front construction common throughout. Most sit on approximately <strong>0.33-acre lots</strong> — generous by today's standards but typical for early 1990s Valrico development. The combination of the golf course border and mature landscaping gives Fairway Ridge a settled, private feel despite its central location.</p>
+      <p>Homes here were built primarily in the early 1990s, with brick-front construction common throughout. Most sit on approximately <strong>0.33-acre lots</strong> generous by today's standards but typical for early 1990s Valrico development. The combination of the golf course border and mature landscaping gives Fairway Ridge a settled, private feel despite its central location.</p>
 
       <h3>What About the HOA?</h3>
       <p>Fairway Ridge has an <strong>active HOA</strong> with a community website (fairwayridge.communitysite.com) that provides information for residents. There is <strong>no CDD fee</strong>. The HOA maintains community standards and keeps the neighborhood looking sharp, which matters in a 36-home community where every property is visible.</p>
@@ -4923,7 +4923,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <ul>
         <li><strong>Only 36 homes:</strong> Inventory is extremely limited. Homes in Fairway Ridge list infrequently, so set up alerts and be prepared to move fast when one comes available.</li>
         <li><strong>Brick-front construction:</strong> Adds curb appeal and durability. Insurance can be favorable with brick and block construction.</li>
-        <li><strong>Home age:</strong> Early 1990s construction means these homes are 33+ years old. Inspect the roof carefully — original tile roofs from this era may still have life left, but shingle roofs likely need attention.</li>
+        <li><strong>Home age:</strong> Early 1990s construction means these homes are 33+ years old. Inspect the roof carefully, original tile roofs from this era may still have life left, but shingle roofs likely need attention.</li>
         <li><strong>Golf course views:</strong> Homes backing to the course get green space views but may have deed restrictions related to course operations. Worth checking before purchase.</li>
         <li><strong>Rentals:</strong> Small-community homes near golf courses have steady rental demand. Expect $2,100-$2,600/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
@@ -4940,7 +4940,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Small neighborhood of custom-built 3-5 bedroom homes on half-acre to one-acre lots in central Valrico. Built in the mid-1980s with features like vaulted ceilings, fireplaces, and oversized pools. Zoned for Buckhorn Elementary and Durant High.",
     contentHtml: `
       <h3>What Is Greenhills Like?</h3>
-      <p>Greenhills is a small neighborhood of custom-built homes along Greenhills Drive in central <a href="/valrico/">Valrico</a>. Built primarily in the mid-1980s, these are individually designed single-family homes on <strong>half-acre to one-acre parcels</strong> — the kind of lots that modern builders in this area simply do not offer anymore. Mature trees provide shade throughout, and the landscaping has had 40 years to establish a lush, park-like setting.</p>
+      <p>Greenhills is a small neighborhood of custom-built homes along Greenhills Drive in central <a href="/valrico/">Valrico</a>. Built primarily in the mid-1980s, these are individually designed single-family homes on <strong>half-acre to one-acre parcels</strong> the kind of lots that modern builders in this area simply do not offer anymore. Mature trees provide shade throughout, and the landscaping has had 40 years to establish a lush, park-like setting.</p>
       <p>What sets Greenhills apart from the typical 1980s subdivision is the attention to detail. These were custom builds, and the features reflect it: vaulted ceilings, skylights, fireplaces, wet bars, built-in bookshelves, crown molding, surround sound systems, and sunrooms are common throughout the community. The owners suites are generous, and split bedroom floor plans keep things private.</p>
 
       <h3>What Are the Homes Like?</h3>
@@ -4985,7 +4985,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Home age:</strong> Mid-1980s construction means these homes are 40+ years old. The custom quality tends to hold up well, but all original systems need careful evaluation — roofs, HVAC, pool equipment, plumbing, and electrical.</li>
+        <li><strong>Home age:</strong> Mid-1980s construction means these homes are 40+ years old. The custom quality tends to hold up well, but all original systems need careful evaluation, roofs, HVAC, pool equipment, plumbing, and electrical.</li>
         <li><strong>Pool maintenance:</strong> Most homes have pools. Heated pool and spa equipment from this era will likely need updates or replacement. Budget for pool resurfacing and equipment upgrades.</li>
         <li><strong>Lot size premium:</strong> Half-acre to one-acre lots in central Valrico are increasingly rare. The land value alone is significant and will hold or appreciate regardless of the home's condition.</li>
         <li><strong>Rentals:</strong> Large custom homes on big lots rent at premium rates. Expect $2,500-$3,200/mo depending on condition and pool status. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
@@ -5004,7 +5004,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     contentHtml: `
       <h3>What Is Harvest Field Like?</h3>
       <p>Harvest Field is a compact, well-kept community of <strong>49 single-family homes</strong> built by Southern Heritage Neighborhoods between April 2003 and August 2005. Located off Guiles Road between Bell Shoals Road and Lithia-Pinecrest Road in <a href="/valrico/">Valrico</a>, the community has a deed-restricted planned development structure that keeps things looking sharp without being overbearing.</p>
-      <p>The homes are concrete block construction with 3-4 bedrooms, 2-car garages, and screened lanais. The community is small enough that you know your neighbors but large enough to feel like a real neighborhood. Streets have sidewalks, and the layout is designed for families — quiet with limited through traffic.</p>
+      <p>The homes are concrete block construction with 3-4 bedrooms, 2-car garages, and screened lanais. The community is small enough that you know your neighbors but large enough to feel like a real neighborhood. Streets have sidewalks, and the layout is designed for families, quiet with limited through traffic.</p>
 
       <h3>What Does the HOA Cover?</h3>
       <p>Harvest Field has an <strong>active HOA with its own website</strong> (harvestfieldhoa.com), which is a sign that the association takes governance seriously. The HOA manages common areas, enforces deed restrictions, and maintains community standards. There is <strong>no CDD fee</strong>.</p>
@@ -5041,7 +5041,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Home age:</strong> Built 2003-2005, these homes are 21-23 years old. Roofs (shingle) are likely approaching or at replacement age. HVAC units may be on the second system. Water heaters are definitely past their lifespan if original.</li>
-        <li><strong>Southern Heritage quality:</strong> Southern Heritage Neighborhoods was a reputable local builder. Construction quality is generally solid for this era — concrete block, standard Florida construction methods.</li>
+        <li><strong>Southern Heritage quality:</strong> Southern Heritage Neighborhoods was a reputable local builder. Construction quality is generally solid for this era, concrete block, standard Florida construction methods.</li>
         <li><strong>Only 49 homes:</strong> Small community means few comps and infrequent listings. Price carefully when selling, and act quickly when buying.</li>
         <li><strong>Rentals:</strong> Well-maintained homes in this price range and location have consistent rental demand. Expect $2,000-$2,400/mo for a 3-4 bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
@@ -5058,7 +5058,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Established family-friendly neighborhood in Valrico with midsize homes ranging from 1,547 to 2,163 sqft. Known for well-maintained homes, mature landscaping, and a quiet, safe atmosphere near schools and shopping.",
     contentHtml: `
       <h3>What Is Highland Manor Like?</h3>
-      <p>Highland Manor is one of <a href="/valrico/">Valrico</a>'s well-established residential neighborhoods — the kind of community where the trees are full-grown, the yards are manicured, and the neighbors wave when you drive by. It is a peaceful, family-friendly area known for well-maintained homes, mature landscaping, and a quiet atmosphere that appeals to families and long-term residents.</p>
+      <p>Highland Manor is one of <a href="/valrico/">Valrico</a>'s well-established residential neighborhoods, the kind of community where the trees are full-grown, the yards are manicured, and the neighbors wave when you drive by. It is a peaceful, family-friendly area known for well-maintained homes, mature landscaping, and a quiet atmosphere that appeals to families and long-term residents.</p>
       <p>Homes here are midsize single-family residences ranging from approximately <strong>1,547 to 2,163 square feet</strong> with 3-4 bedrooms. They are reasonably priced for the area and represent solid value for buyers who want an established neighborhood without paying the premium that comes with newer construction.</p>
 
       <h3>What About the HOA?</h3>
@@ -5096,7 +5096,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Established community:</strong> Long-term residents and low turnover mean stability but also limited inventory. Homes list infrequently, so set up alerts.</li>
         <li><strong>Value play:</strong> Highland Manor offers more square footage per dollar than many newer Valrico subdivisions. You sacrifice modern finishes for established character and lower carrying costs.</li>
         <li><strong>Home condition varies:</strong> Some homes have been fully updated, others are original. The price spread reflects this, so inspect carefully and understand what updates are needed.</li>
-        <li><strong>Insurance:</strong> Concrete block construction typical of this area keeps insurance manageable. Roof age is the biggest variable — get quotes before making an offer.</li>
+        <li><strong>Insurance:</strong> Concrete block construction typical of this area keeps insurance manageable. Roof age is the biggest variable, get quotes before making an offer.</li>
         <li><strong>Rentals:</strong> Midsize Valrico homes in established neighborhoods rent well to families. Expect $1,800-$2,200/mo for a 3-bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
@@ -5112,7 +5112,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Historic-name neighborhood in Valrico along the SR 60 corridor, one of the oldest residential areas in the community. Mix of home ages and styles with a rural-suburban character.",
     contentHtml: `
       <h3>What Is the Hopewell Neighborhood Like?</h3>
-      <p>Hopewell is one of <a href="/valrico/">Valrico</a>'s oldest place names — Hopewell Road was the original name for what is now SR 60, promoted by land investors in the 1910s for agricultural development. The Hopewell residential area carries that history forward with a mix of home ages and styles that reflects over a century of gradual development along the corridor.</p>
+      <p>Hopewell is one of <a href="/valrico/">Valrico</a>'s oldest place names, Hopewell Road was the original name for what is now SR 60, promoted by land investors in the 1910s for agricultural development. The Hopewell residential area carries that history forward with a mix of home ages and styles that reflects over a century of gradual development along the corridor.</p>
       <p>This is not a master-planned subdivision with matching homes and a gate. Hopewell is an organic neighborhood where you will find older Florida block homes next to renovated properties and the occasional newer build. The character is rural-suburban, with larger lots, mature trees, and a feel that is distinct from the planned communities that dominate newer parts of Valrico.</p>
 
       <h3>What About the HOA?</h3>
@@ -5129,7 +5129,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Selmon Expressway:</strong> 5 miles</li>
         <li><strong>Downtown Tampa:</strong> 22 miles (30-35 minutes via Crosstown)</li>
       </ul>
-      <p>The SR 60 location means daily errands are effortless, but it also means traffic noise on properties closer to the main road. The properties set back from SR 60 on side streets offer the best of both worlds — convenience without the noise.</p>
+      <p>The SR 60 location means daily errands are effortless, but it also means traffic noise on properties closer to the main road. The properties set back from SR 60 on side streets offer the best of both worlds, convenience without the noise.</p>
 
       <h3>Which Schools Serve the Hopewell Area?</h3>
       <p>Properties in the Hopewell area are zoned for Hillsborough County public schools, typically including <strong>Buckhorn Elementary</strong>, <strong>Mulrennan Middle School</strong>, and <strong>Durant High School</strong>. Verify the specific assignment for your address, as this area spans a broad corridor.</p>
@@ -5170,7 +5170,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The community has easy access to Highway 60, which makes it one of the more conveniently located neighborhoods in Valrico. Streets are quiet, the homes are well-maintained, and the community attracts families and professionals who want a solid home in a good location without paying premium prices.</p>
 
       <h3>What Does the HOA Cost?</h3>
-      <p>Here is where Innergary Point really shines: the HOA is just <strong>$23 per month</strong>. That is one of the lowest HOA fees in all of Valrico — lower than even <a href="/abbey-grove/">Abbey Grove</a>'s $40/month. There is <strong>no CDD fee</strong> on top of it. The HOA covers basic community standards and deed restriction enforcement. You handle your own lawn and exterior maintenance.</p>
+      <p>Here is where Innergary Point really shines: the HOA is just <strong>$23 per month</strong>. That is one of the lowest HOA fees in all of Valrico, lower than even <a href="/abbey-grove/">Abbey Grove</a>'s $40/month. There is <strong>no CDD fee</strong> on top of it. The HOA covers basic community standards and deed restriction enforcement. You handle your own lawn and exterior maintenance.</p>
       <p>At $23/month, you are paying $276/year total. Compare that to <a href="/savannah-landings/">Savannah Landings</a> at $3,420/year or <a href="/legacy-ridge/">Legacy Ridge</a> at $1,200-$5,400/year. The savings are real and they add up over the life of a mortgage.</p>
 
       <h3>How Close Is Everything?</h3>
@@ -5221,7 +5221,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     contentHtml: `
       <h3>What Is King Mills Like?</h3>
       <p>King Mills (also known as Kings Mill) is a <strong>gated townhome community of 159 homes</strong> built between 2004 and 2005 in <a href="/valrico/">Valrico</a>. Located just off Highway 60, it offers one of the most affordable entry points into the Valrico real estate market. The median living area is approximately <strong>1,513 square feet</strong>, and homes typically feature 2-3 bedrooms with attached garages.</p>
-      <p>The gated entrance provides controlled access and adds a security layer that appeals to young professionals, small families, and investors. The community is well-maintained with consistent architectural standards throughout — because all homes were built in the same 2004-2005 window, there is a uniformity to the community that keeps it looking cohesive.</p>
+      <p>The gated entrance provides controlled access and adds a security layer that appeals to young professionals, small families, and investors. The community is well-maintained with consistent architectural standards throughout, because all homes were built in the same 2004-2005 window, there is a uniformity to the community that keeps it looking cohesive.</p>
 
       <h3>What About the HOA?</h3>
       <p>King Mills has an <strong>HOA</strong> that covers the gated entry system, common area maintenance, and exterior standards. There is <strong>no CDD fee</strong>. The HOA maintains the community's curb appeal, which is important in a townhome setting where your property value is closely tied to the overall community condition.</p>
@@ -5275,7 +5275,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Small established residential pocket in Valrico with affordable single-family homes. No-frills community near the SR 60 corridor with minimal HOA restrictions and convenient access to schools and shopping.",
     contentHtml: `
       <h3>What Is the Kings Neighborhood Like?</h3>
-      <p>Kings is a small, established residential pocket in <a href="/valrico/">Valrico</a> that offers straightforward, affordable single-family homes without the complexity of master-planned community living. This is not a place with a resort pool and a 200-page HOA handbook — it is a quiet neighborhood of homes where people live, raise families, and enjoy the central Valrico location.</p>
+      <p>Kings is a small, established residential pocket in <a href="/valrico/">Valrico</a> that offers straightforward, affordable single-family homes without the complexity of master-planned community living. This is not a place with a resort pool and a 200-page HOA handbook, it is a quiet neighborhood of homes where people live, raise families, and enjoy the central Valrico location.</p>
       <p>The homes are modest in size, mostly 3-4 bedrooms with practical floor plans. The lots are standard for the area, and the mature landscaping gives the neighborhood a settled character. The streets are quiet, through traffic is minimal, and the community has a comfortable, lived-in feel.</p>
 
       <h3>What About the HOA?</h3>
@@ -5327,11 +5327,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Small established single-family neighborhood in Valrico with affordable homes and minimal HOA restrictions. Quiet residential pocket convenient to SR 60 and Durant High School zone.",
     contentHtml: `
       <h3>What Is Kings Court Like?</h3>
-      <p>Kings Court is a small, established residential community in <a href="/valrico/">Valrico</a> that offers affordable single-family homes in a quiet setting. Like its neighbor <a href="/kings/">Kings</a>, this is a straightforward residential pocket — no fancy amenity center, no resort pool, no $400/month HOA. Just solid homes on decent lots in a convenient location.</p>
-      <p>The homes are primarily 3-4 bedrooms with standard Florida floor plans — concrete block construction, 2-car garages, and screened lanais. Lot sizes are manageable, and the neighborhood has the mature landscaping and established feel that takes decades to develop.</p>
+      <p>Kings Court is a small, established residential community in <a href="/valrico/">Valrico</a> that offers affordable single-family homes in a quiet setting. Like its neighbor <a href="/kings/">Kings</a>, this is a straightforward residential pocket, no fancy amenity center, no resort pool, no $400/month HOA. Just solid homes on decent lots in a convenient location.</p>
+      <p>The homes are primarily 3-4 bedrooms with standard Florida floor plans, concrete block construction, 2-car garages, and screened lanais. Lot sizes are manageable, and the neighborhood has the mature landscaping and established feel that takes decades to develop.</p>
 
       <h3>What About the HOA?</h3>
-      <p>Kings Court operates with <strong>minimal HOA</strong> structure and deed restrictions. There is <strong>no CDD fee</strong>. The governance is light-touch — enough to maintain basic community standards without the monthly fees and board drama that come with newer subdivisions.</p>
+      <p>Kings Court operates with <strong>minimal HOA</strong> structure and deed restrictions. There is <strong>no CDD fee</strong>. The governance is light-touch, enough to maintain basic community standards without the monthly fees and board drama that come with newer subdivisions.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -5380,7 +5380,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Small established residential pocket in north Valrico near the Brandon border. Older homes on manageable lots with no HOA restrictions. Convenient access to SR 60 and the Brandon commercial corridor.",
     contentHtml: `
       <h3>What Is the Knowles Neighborhood Like?</h3>
-      <p>Knowles is a small, established residential area in north <a href="/valrico/">Valrico</a>, near the Brandon border. This is one of those pocket neighborhoods that does not show up on the glossy real estate brochures but quietly delivers what a lot of buyers actually want — an affordable home on a manageable lot with no HOA telling you what to do, in a location that is convenient to everything.</p>
+      <p>Knowles is a small, established residential area in north <a href="/valrico/">Valrico</a>, near the Brandon border. This is one of those pocket neighborhoods that does not show up on the glossy real estate brochures but quietly delivers what a lot of buyers actually want, an affordable home on a manageable lot with no HOA telling you what to do, in a location that is convenient to everything.</p>
       <p>The homes are older single-family residences with the character and tree canopy that comes with decades of established landscaping. Lot sizes are standard for the area, and the neighborhood has a residential-only feel with minimal through traffic.</p>
 
       <h3>What About the HOA?</h3>
@@ -5400,7 +5400,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The Brandon border location means you are closer to the larger shopping and dining options along the Brandon corridor than most Valrico neighborhoods. This is a genuine advantage for daily convenience.</p>
 
       <h3>Which Schools Serve Knowles?</h3>
-      <p>Knowles is zoned for Hillsborough County public schools. The north Valrico location near the Brandon border means school assignments can vary — some addresses may fall in the Bloomingdale High zone while others may zone for Durant High. Verify the specific elementary, middle, and high school for your address.</p>
+      <p>Knowles is zoned for Hillsborough County public schools. The north Valrico location near the Brandon border means school assignments can vary, some addresses may fall in the Bloomingdale High zone while others may zone for Durant High. Verify the specific elementary, middle, and high school for your address.</p>
 
       <h3>What Is the Flood Risk?</h3>
       <p>Most of Knowles sits in <strong>FEMA Flood Zone X</strong> (minimal risk). As always, verify the specific parcel for any drainage features or low areas that could carry a different designation.</p>
@@ -5416,7 +5416,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Older construction:</strong> These homes predate modern building codes in many cases. Check for polybutylene plumbing, older electrical panels, roof condition, and HVAC age. Budget for system replacements.</li>
-        <li><strong>No HOA freedom:</strong> Park your boat, build a workshop, paint your house whatever color you want — within county code. For buyers escaping HOA restrictions, this is the appeal.</li>
+        <li><strong>No HOA freedom:</strong> Park your boat, build a workshop, paint your house whatever color you want, within county code. For buyers escaping HOA restrictions, this is the appeal.</li>
         <li><strong>Brandon proximity:</strong> Being closer to Brandon means more shopping and dining options within a shorter drive. You get the Valrico address with Brandon convenience.</li>
         <li><strong>Investment potential:</strong> Lower price points and no HOA restrictions make Knowles attractive for investors and house flippers. The location supports strong rental demand.</li>
         <li><strong>Rentals:</strong> Affordable Valrico homes near the Brandon border have consistent rental demand. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
@@ -5434,12 +5434,12 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Newer gated community of 67 executive-style homes built 2017-2020 by Homes by WestBay in Valrico. Homes range from 3,169 to 4,493 sqft. Community park with bark park. Two distinct neighborhoods within one development.",
     contentHtml: `
       <h3>What Is Legacy Ridge Like?</h3>
-      <p>Legacy Ridge is one of the newest and most upscale communities in <a href="/valrico/">Valrico</a> — a gated development of <strong>67 executive-style homes</strong> built between 2017 and 2020 by Homes by WestBay. The community is split into two distinct neighborhoods, with the main section of 57 homesites behind its own gated entrance. A <strong>2.5-acre community park</strong> with a "Bark Park" provides green space and a gathering spot for residents and their dogs.</p>
-      <p>Home sizes are substantial, ranging from <strong>3,169 to 4,493 square feet</strong>. These are 4-5 bedroom homes with the modern finishes and floor plans that WestBay is known for — open-concept living, large islands in the kitchens, covered lanais, and owners suites that feel like retreats. The construction is recent enough that you are getting modern building codes, hurricane impact windows, and energy-efficient systems throughout.</p>
+      <p>Legacy Ridge is one of the newest and most upscale communities in <a href="/valrico/">Valrico</a> a gated development of <strong>67 executive-style homes</strong> built between 2017 and 2020 by Homes by WestBay. The community is split into two distinct neighborhoods, with the main section of 57 homesites behind its own gated entrance. A <strong>2.5-acre community park</strong> with a "Bark Park" provides green space and a gathering spot for residents and their dogs.</p>
+      <p>Home sizes are substantial, ranging from <strong>3,169 to 4,493 square feet</strong>. These are 4-5 bedroom homes with the modern finishes and floor plans that WestBay is known for, open-concept living, large islands in the kitchens, covered lanais, and owners suites that feel like retreats. The construction is recent enough that you are getting modern building codes, hurricane impact windows, and energy-efficient systems throughout.</p>
 
       <h3>What Does the HOA Cost?</h3>
       <p>Legacy Ridge has an <strong>HOA managed through the Legacy Ridge Homeowners Association</strong> (legacyridgevalrico.com), with fees that have been reported between $100-$450/month depending on the section and assessment period. The HOA covers the gated entry, common area maintenance, the park and bark park, and community standards enforcement.</p>
-      <p>There may be <strong>additional assessments</strong> for capital improvements. The HOA maintains an active website with community documents, newsletters, and governance information — a sign of well-organized management.</p>
+      <p>There may be <strong>additional assessments</strong> for capital improvements. The HOA maintains an active website with community documents, newsletters, and governance information, a sign of well-organized management.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -5492,7 +5492,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     contentHtml: `
       <h3>What Is Lithia Ridge Like?</h3>
       <p>Lithia Ridge is a well-established <a href="/valrico/">Valrico</a> neighborhood of approximately 309 single-family homes built primarily in the mid-1990s. Located off the Lithia Pinecrest and Bryan Road corridor in southeast Hillsborough County, it sits in that transition zone between suburban Valrico and the more rural feel of <a href="/lithia/">Lithia</a> to the south. The homes are detached single-family residences, mostly concrete block construction, ranging from about 2,100 to 3,000 square feet across one-story and two-story plans on conventional lots.</p>
-      <p>What stands out about Lithia Ridge is the combination of size — 309 homes is large enough for a real sense of community — and the amenities you get without paying resort-level HOA fees. The neighborhood has a well-maintained park with a playground, soccer field, basketball courts, volleyball courts, and a large pavilion area. Walking trails connect through the community and lead directly to the nearby elementary school, which is a major draw for families with young children.</p>
+      <p>What stands out about Lithia Ridge is the combination of size, 309 homes is large enough for a real sense of community, and the amenities you get without paying resort-level HOA fees. The neighborhood has a well-maintained park with a playground, soccer field, basketball courts, volleyball courts, and a large pavilion area. Walking trails connect through the community and lead directly to the nearby elementary school, which is a major draw for families with young children.</p>
 
       <h3>How Much Does the HOA Cost and What Does It Cover?</h3>
       <p>Lithia Ridge has a low annual HOA fee with <strong>no CDD</strong>. The HOA covers maintenance of the community park, playground, sports courts, pavilion, and the walking trail system. For a community with this many amenities, the fee is notably reasonable compared to nearby neighborhoods. <a href="/somerset/">Somerset</a> charges more for similar amenities, and <a href="/copper-ridge/">Copper Ridge</a> stacks a CDD on top of its HOA that can add $2,000+ per year to your tax bill. Lithia Ridge gives you the park-and-playground lifestyle without the financial hit.</p>
@@ -5514,7 +5514,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The Lithia Pinecrest corridor has developed significantly over the past decade, so you have grocery stores, medical offices, restaurants, and gas stations all within a few minutes without needing to fight SR 60 traffic.</p>
 
       <h3>Which Schools Serve Lithia Ridge?</h3>
-      <p>Lithia Ridge is zoned for Hillsborough County public schools in the Bloomingdale corridor. The walking trails that connect directly to the elementary school are a genuine convenience — your kids can walk to school without crossing a major road. School zoning in this part of Valrico is a strong selling point, and homes in desirable zones tend to hold value better during market dips.</p>
+      <p>Lithia Ridge is zoned for Hillsborough County public schools in the Bloomingdale corridor. The walking trails that connect directly to the elementary school are a genuine convenience, your kids can walk to school without crossing a major road. School zoning in this part of Valrico is a strong selling point, and homes in desirable zones tend to hold value better during market dips.</p>
       <p>If the <a href="/buckhorn-preserve/">Buckhorn Preserve</a> or <a href="/arista-community/">Arista</a> price points in the Newsome High zone are stretching your budget, Lithia Ridge delivers a similar family-oriented experience with excellent school access at a more accessible price.</p>
 
       <h3>What Is the Flood Risk?</h3>
@@ -5532,7 +5532,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Construction era:</strong> Mid-1990s build means homes are 30+ years old. Prioritize roof condition (original roofs are past replacement age), HVAC vintage, and water heater age during your inspection.</li>
-        <li><strong>Insurance:</strong> Concrete block construction helps with rates. Roof age and type will be the biggest factor — a recently replaced roof can save you $1,000+/year on insurance.</li>
+        <li><strong>Insurance:</strong> Concrete block construction helps with rates. Roof age and type will be the biggest factor, a recently replaced roof can save you $1,000+/year on insurance.</li>
         <li><strong>Lot sizes:</strong> Conventional lots, not oversized. If you need a half-acre, look at <a href="/diamond-hill/">Diamond Hill</a> instead. But for a suburban neighborhood with community amenities, the lots are adequate and well-maintained.</li>
         <li><strong>Rentals:</strong> Strong rental demand in the Bloomingdale corridor. Expect $2,000-$2,400/mo for a 3-4 bedroom home in good condition. <a href="https://valricopropertymgmt.com/neighborhoods/lithia-ridge" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
@@ -5549,8 +5549,8 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Small, quiet cul-de-sac neighborhood in the Buckhorn area of Valrico with no HOA. Established homes on spacious lots near Buckhorn Elementary and Bloomingdale Avenue. No CDD fees.",
     contentHtml: `
       <h3>What Is Little Oak Like?</h3>
-      <p>Little Oak is one of those tucked-away <a href="/valrico/">Valrico</a> pockets that only locals know about. Located in the Buckhorn area just off Bloomingdale Avenue, this small neighborhood features homes nestled at the end of quiet cul-de-sacs where the only traffic is your neighbors. The properties sit on spacious lots with mature landscaping, and the overall vibe is private and peaceful — exactly what draws people here.</p>
-      <p>Homes in Little Oak typically feature 3-4 bedrooms and 2 bathrooms, with a range of sizes and styles reflecting the neighborhood's established character. Many properties include pools, screened lanais, and generous backyards. Recent sales in the area have ranged from the mid-$300s to the low $500s, averaging around $215 per square foot — competitive pricing for this part of Valrico.</p>
+      <p>Little Oak is one of those tucked-away <a href="/valrico/">Valrico</a> pockets that only locals know about. Located in the Buckhorn area just off Bloomingdale Avenue, this small neighborhood features homes nestled at the end of quiet cul-de-sacs where the only traffic is your neighbors. The properties sit on spacious lots with mature landscaping, and the overall vibe is private and peaceful, exactly what draws people here.</p>
+      <p>Homes in Little Oak typically feature 3-4 bedrooms and 2 bathrooms, with a range of sizes and styles reflecting the neighborhood's established character. Many properties include pools, screened lanais, and generous backyards. Recent sales in the area have ranged from the mid-$300s to the low $500s, averaging around $215 per square foot, competitive pricing for this part of Valrico.</p>
 
       <h3>Is There an HOA in Little Oak?</h3>
       <p>No. Little Oak has <strong>no HOA and no CDD</strong>. You pay property taxes and insurance, and that is it. No monthly dues, no architectural review board, no approval needed to paint your front door or park your boat in the driveway. For buyers who value that kind of freedom, this is a significant draw. Compare that to <a href="/savannah-landings/">Savannah Landings</a> at $285/month or <a href="/somerset/">Somerset</a> with its tiered HOA fees, and the savings add up quickly over the years.</p>
@@ -5661,7 +5661,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     contentHtml: `
       <h3>What Is Lumsden Reserve Like?</h3>
       <p>Lumsden Reserve is a small single-family neighborhood in the western part of <a href="/valrico/">Valrico</a>, situated along the Lumsden Road corridor near the Brandon border. Homes here were built in the early 2000s, featuring concrete block construction with 3-4 bedrooms, 2-car garages, and the open floor plans that were popular during that building era. The neighborhood has a quiet residential feel with well-maintained lots and mature landscaping that has had two decades to fill in.</p>
-      <p>What makes this pocket of west Valrico attractive is the location. You get a Valrico address and Valrico schools while being just minutes from Brandon's commercial corridor — Walmart, Publix, medical offices, and restaurants are all within a short drive. The trade-off is that you are closer to the suburban bustle of Brandon than the rural feel of south Valrico near <a href="/lithia/">Lithia</a>.</p>
+      <p>What makes this pocket of west Valrico attractive is the location. You get a Valrico address and Valrico schools while being just minutes from Brandon's commercial corridor, Walmart, Publix, medical offices, and restaurants are all within a short drive. The trade-off is that you are closer to the suburban bustle of Brandon than the rural feel of south Valrico near <a href="/lithia/">Lithia</a>.</p>
 
       <h3>How Much Does the HOA Cost?</h3>
       <p>Lumsden Reserve has a low HOA fee with <strong>no CDD</strong>. The HOA covers basic common area maintenance and community standards. Compared to nearby <a href="/lumsden-pointe/">Lumsden Pointe</a>, which ranges from $65-$392/month depending on product type, or <a href="/copper-ridge/">Copper Ridge</a> with its stacked HOA plus CDD, Lumsden Reserve keeps your monthly carrying costs manageable.</p>
@@ -5682,7 +5682,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>Which Schools Serve Lumsden Reserve?</h3>
       <p>Lumsden Reserve feeds into Hillsborough County schools along the Bloomingdale corridor. The school zones in this part of west Valrico are popular with families, and proximity to quality elementary schools drives much of the demand for homes in the Lumsden Road neighborhoods.</p>
-      <p>If school zoning is your primary driver, compare the specific zone assignments between Lumsden Reserve, <a href="/lumsden-pointe/">Lumsden Pointe</a>, and <a href="/lumsden-trace/">Lumsden Trace</a> — they are all in the same general area but may feed into slightly different schools depending on exact boundaries.</p>
+      <p>If school zoning is your primary driver, compare the specific zone assignments between Lumsden Reserve, <a href="/lumsden-pointe/">Lumsden Pointe</a>, and <a href="/lumsden-trace/">Lumsden Trace</a> they are all in the same general area but may feed into slightly different schools depending on exact boundaries.</p>
 
       <h3>What Is the Flood Risk?</h3>
       <p>Lumsden Reserve sits in <strong>FEMA Flood Zone X</strong> (minimal risk). The west Valrico corridor along Lumsden Road is elevated and well inland. No flood insurance required by lenders, though a basic policy is always smart in Florida.</p>
@@ -5715,7 +5715,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Executive 62-home subdivision built 1999-2002 by Paragon Homes on a former orange grove in Valrico. 4-bedroom homes with 3-car garages, formal living rooms, and large lanais. HOA is just $42/month including trash. No CDD.",
     contentHtml: `
       <h3>What Is Lumsden Trace Like?</h3>
-      <p>Lumsden Trace is a small, executive-style subdivision of 62 homes in <a href="/valrico/">Valrico</a>, built between 1999 and 2002 by Paragon Homes on what used to be an orange grove. That detail matters — the lots were carved from agricultural land rather than squeezed into an existing development, so you get generous lot sizes and a layout that feels intentional rather than cramped. Located about 25 minutes from downtown Tampa, the neighborhood offers a quiet residential experience with easy access to both Brandon and the greater Tampa Bay commuting corridors.</p>
+      <p>Lumsden Trace is a small, executive-style subdivision of 62 homes in <a href="/valrico/">Valrico</a>, built between 1999 and 2002 by Paragon Homes on what used to be an orange grove. That detail matters, the lots were carved from agricultural land rather than squeezed into an existing development, so you get generous lot sizes and a layout that feels intentional rather than cramped. Located about 25 minutes from downtown Tampa, the neighborhood offers a quiet residential experience with easy access to both Brandon and the greater Tampa Bay commuting corridors.</p>
       <p>Homes here are substantial: 4 bedrooms, 3 bathrooms, large office rooms, formal living rooms, and owners suites with premium finishes. Most homes have 3-car attached garages, which is increasingly rare in Valrico subdivisions. The screened lanais are oversized, and the lots back up to mature trees that filled in after the orange groves were cleared. Reclaimed water for the sprinkler system keeps your water bill manageable.</p>
 
       <h3>How Much Does the HOA Cost?</h3>
@@ -5744,17 +5744,17 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>How Does Lumsden Trace Compare to Nearby Neighborhoods?</h3>
       <ul>
         <li><strong><a href="/lumsden-pointe/">Lumsden Pointe</a></strong> (adjacent): Gated community with single-family and townhomes. Gate adds security but HOA is higher ($65-$392/mo). Homes are slightly smaller on average.</li>
-        <li><strong><a href="/lumsden-reserve/">Lumsden Reserve</a></strong> (nearby): Similar era and location. Compare lot sizes and floor plans directly — Lumsden Trace tends to be the larger, more executive product.</li>
+        <li><strong><a href="/lumsden-reserve/">Lumsden Reserve</a></strong> (nearby): Similar era and location. Compare lot sizes and floor plans directly, Lumsden Trace tends to be the larger, more executive product.</li>
         <li><strong><a href="/mason-oaks/">Mason Oaks</a></strong> (3 miles south): Also executive-style homes on 1/3+ acre lots. Newsome High zone, no CDD, but higher price point.</li>
         <li><strong><a href="/diamond-hill/">Diamond Hill</a></strong> (4 miles east): Larger lots, no HOA in many sections. Older homes but more land per dollar.</li>
       </ul>
-      <p>Lumsden Trace is the executive home option in the Lumsden Road corridor. If you want 4 bedrooms, a 3-car garage, a real office, and a $42/month HOA, there are very few neighborhoods in Valrico that deliver that combination. The trade-off is that only 62 homes means inventory is tight — when one comes to market, serious buyers need to move fast.</p>
+      <p>Lumsden Trace is the executive home option in the Lumsden Road corridor. If you want 4 bedrooms, a 3-car garage, a real office, and a $42/month HOA, there are very few neighborhoods in Valrico that deliver that combination. The trade-off is that only 62 homes means inventory is tight, when one comes to market, serious buyers need to move fast.</p>
 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Low inventory:</strong> With only 62 homes, listings are infrequent. Set up an alert and be ready to act. The median price has been around $470K.</li>
         <li><strong>Construction quality:</strong> Paragon Homes built a solid product. Concrete block, tile roofs on most units, and floor plans designed for families who need space. Still, at 24+ years old, inspect the roof, HVAC, and any original plumbing fixtures.</li>
-        <li><strong>3-car garage premium:</strong> In a market where 2-car garages are standard, the 3-car garage at Lumsden Trace adds real value — both for daily use and at resale.</li>
+        <li><strong>3-car garage premium:</strong> In a market where 2-car garages are standard, the 3-car garage at Lumsden Trace adds real value, both for daily use and at resale.</li>
         <li><strong>Rentals:</strong> Executive-style homes in this price range rent well to professionals and military families. Expect $2,200-$2,700/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
@@ -5770,11 +5770,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Upscale single-family neighborhood in Valrico with 4-bedroom homes ranging from 2,800 to 3,000+ sqft. Well-maintained community with spacious floor plans, priced in the $630K-$665K range.",
     contentHtml: `
       <h3>What Is Martins Garden Like?</h3>
-      <p>Martins Garden (sometimes listed as Martins Garden Estates) is a single-family neighborhood in <a href="/valrico/">Valrico</a> that attracts buyers looking for larger, well-built homes with room for a growing family. Homes here typically feature 4 bedrooms and 3 bathrooms, with square footage ranging from approximately 2,800 to 3,010 square feet. The floor plans are designed for families — open living areas, spacious owners suites, and enough bedrooms that everyone gets their own space.</p>
-      <p>The community has a polished feel. Homes are well-maintained, yards are manicured, and the streets are clean and quiet. This is not a budget neighborhood — recent listings have ranged from $630,000 to $665,000, putting Martins Garden firmly in the upper tier of Valrico pricing alongside communities like <a href="/mason-oaks/">Mason Oaks</a> and the premium sections of <a href="/river-hills-country-club/">River Hills</a>.</p>
+      <p>Martins Garden (sometimes listed as Martins Garden Estates) is a single-family neighborhood in <a href="/valrico/">Valrico</a> that attracts buyers looking for larger, well-built homes with room for a growing family. Homes here typically feature 4 bedrooms and 3 bathrooms, with square footage ranging from approximately 2,800 to 3,010 square feet. The floor plans are designed for families, open living areas, spacious owners suites, and enough bedrooms that everyone gets their own space.</p>
+      <p>The community has a polished feel. Homes are well-maintained, yards are manicured, and the streets are clean and quiet. This is not a budget neighborhood, recent listings have ranged from $630,000 to $665,000, putting Martins Garden firmly in the upper tier of Valrico pricing alongside communities like <a href="/mason-oaks/">Mason Oaks</a> and the premium sections of <a href="/river-hills-country-club/">River Hills</a>.</p>
 
       <h3>How Much Does the HOA Cost?</h3>
-      <p>Martins Garden has an HOA that covers common area maintenance and community standards enforcement. The fees are moderate for a neighborhood in this price range. There is <strong>no CDD fee</strong>, which is significant — in Valrico's newer developments, CDDs can add $1,500-$2,500 per year to your annual cost. Martins Garden avoids that entirely.</p>
+      <p>Martins Garden has an HOA that covers common area maintenance and community standards enforcement. The fees are moderate for a neighborhood in this price range. There is <strong>no CDD fee</strong>, which is significant, in Valrico's newer developments, CDDs can add $1,500-$2,500 per year to your annual cost. Martins Garden avoids that entirely.</p>
 
       <h3>How Close Is Everything?</h3>
       <p>Martins Garden benefits from Valrico's central location in Hillsborough County:</p>
@@ -5790,7 +5790,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>Which Schools Serve Martins Garden?</h3>
-      <p>Martins Garden is zoned for Hillsborough County public schools in the Valrico corridor. At this price point, most buyers are families with school-age children, and the school zoning is part of what supports the home values. The quality of nearby schools — combined with the size and condition of the homes — makes Martins Garden competitive with other premium Valrico neighborhoods.</p>
+      <p>Martins Garden is zoned for Hillsborough County public schools in the Valrico corridor. At this price point, most buyers are families with school-age children, and the school zoning is part of what supports the home values. The quality of nearby schools, combined with the size and condition of the homes, makes Martins Garden competitive with other premium Valrico neighborhoods.</p>
       <p>If you are comparing Martins Garden to <a href="/buckhorn-preserve/">Buckhorn Preserve</a> or <a href="/arista-community/">Arista</a> in the Newsome High zone, ask your agent to run a side-by-side comparison of the specific school ratings and feeder patterns. The right school zone can affect resale value by 5-10% in this part of Hillsborough County.</p>
 
       <h3>What Is the Flood Risk?</h3>
@@ -5824,8 +5824,8 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Executive 54-home community in Valrico with 3-6 bedroom homes on minimum 1/3-acre lots. No CDD, low HOA. Newsome High School zone. Homes range from 2,976 to 3,463 sqft with unique elevations, mature oaks, and oversized pools.",
     contentHtml: `
       <h3>What Is Mason Oaks Like?</h3>
-      <p>Mason Oaks is an executive-style neighborhood in <a href="/valrico/">Valrico</a> showcasing 54 single-family homes, each with unique elevations and a minimum of 1/3-acre lots. Established in 1988, the community features a mix of transitional and traditional architectural styles — some brick, some stone, some stucco, some siding, and many with a combination that gives each home distinct curb appeal. The streets are lined with sidewalks, street lanterns, and majestic mature oaks that create a canopy effect as you drive through.</p>
-      <p>Homes here are large: 3 to 6 bedrooms with square footage ranging from approximately 2,976 to 3,463 square feet. The lots are generous — 1/3 acre minimum means you actually have a yard, and many homeowners have taken advantage of that space with oversized screened pools and expansive outdoor living areas. The backyards are substantial enough for kids, dogs, and entertaining without feeling like you are on top of your neighbor.</p>
+      <p>Mason Oaks is an executive-style neighborhood in <a href="/valrico/">Valrico</a> showcasing 54 single-family homes, each with unique elevations and a minimum of 1/3-acre lots. Established in 1988, the community features a mix of transitional and traditional architectural styles, some brick, some stone, some stucco, some siding, and many with a combination that gives each home distinct curb appeal. The streets are lined with sidewalks, street lanterns, and majestic mature oaks that create a canopy effect as you drive through.</p>
+      <p>Homes here are large: 3 to 6 bedrooms with square footage ranging from approximately 2,976 to 3,463 square feet. The lots are generous, 1/3 acre minimum means you actually have a yard, and many homeowners have taken advantage of that space with oversized screened pools and expansive outdoor living areas. The backyards are substantial enough for kids, dogs, and entertaining without feeling like you are on top of your neighbor.</p>
 
       <h3>How Much Does the HOA Cost?</h3>
       <p>Mason Oaks has a <strong>low HOA with no CDD</strong>. For a community of executive homes in the Newsome High School zone, this is notable. Nearby <a href="/copper-ridge/">Copper Ridge</a> stacks a CDD that can add $2,000+/year, and <a href="/buckhorn-preserve/">Buckhorn Preserve</a> has higher monthly fees. Mason Oaks keeps your carrying costs predictable without sacrificing the neighborhood quality you expect at this price point.</p>
@@ -5846,7 +5846,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Shopping and dining are all within a few minutes on SR 60 and the surrounding corridors. You are close enough to everything to make daily errands effortless, but far enough from the main roads that your street stays quiet.</p>
 
       <h3>Which Schools Serve Mason Oaks?</h3>
-      <p>This is where Mason Oaks really shines: the community is in the <strong>Newsome High School</strong> zone. Newsome is one of the highest-rated high schools in Hillsborough County and one of the primary reasons families pay a premium for south Valrico homes. The Newsome zone commands higher prices throughout Valrico — homes in this zone typically sell for 5-10% more than comparable homes in the Durant or Bloomingdale zones.</p>
+      <p>This is where Mason Oaks really shines: the community is in the <strong>Newsome High School</strong> zone. Newsome is one of the highest-rated high schools in Hillsborough County and one of the primary reasons families pay a premium for south Valrico homes. The Newsome zone commands higher prices throughout Valrico, homes in this zone typically sell for 5-10% more than comparable homes in the Durant or Bloomingdale zones.</p>
       <p>The combination of Newsome High zoning, executive-style homes on 1/3+ acre lots, and no CDD makes Mason Oaks one of the strongest value propositions in the Newsome corridor. Compare to <a href="/arista-community/">Arista</a> or newer construction in the same zone, and you are getting more house, more land, and lower annual fees.</p>
 
       <h3>What Is the Flood Risk?</h3>
@@ -5880,8 +5880,8 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Established single-family neighborhood in Valrico with mid-size homes ranging from 1,808 to 4,368 sqft. Reasonably priced homes on well-maintained lots with mature landscaping. Convenient location near SR 60 and Bloomingdale corridors.",
     contentHtml: `
       <h3>What Is Meadowridge Estates Like?</h3>
-      <p>Meadowridge Estates (sometimes written as Meadow Ridge Estates) is an established single-family neighborhood in <a href="/valrico/">Valrico</a> that offers a wide range of home sizes — from approximately 1,808 to 4,368 square feet. That range means you will find everything from starter-size 3-bedroom homes to spacious 4-5 bedroom family homes, all within the same community. The variety makes Meadowridge Estates accessible to different buyer profiles, from first-time homebuyers to families looking for more space.</p>
-      <p>The neighborhood has a mature, settled feel. Landscaping has had decades to fill in, trees provide shade throughout the community, and the streets are quiet residential loops with no through traffic. Homes are well-maintained and the overall character is solidly middle-class Valrico — families, long-term residents, and people who chose this area specifically for the schools and location.</p>
+      <p>Meadowridge Estates (sometimes written as Meadow Ridge Estates) is an established single-family neighborhood in <a href="/valrico/">Valrico</a> that offers a wide range of home sizes, from approximately 1,808 to 4,368 square feet. That range means you will find everything from starter-size 3-bedroom homes to spacious 4-5 bedroom family homes, all within the same community. The variety makes Meadowridge Estates accessible to different buyer profiles, from first-time homebuyers to families looking for more space.</p>
+      <p>The neighborhood has a mature, settled feel. Landscaping has had decades to fill in, trees provide shade throughout the community, and the streets are quiet residential loops with no through traffic. Homes are well-maintained and the overall character is solidly middle-class Valrico, families, long-term residents, and people who chose this area specifically for the schools and location.</p>
 
       <h3>How Much Does the HOA Cost?</h3>
       <p>Meadowridge Estates has a modest HOA that covers basic common area maintenance. The fees are among the more affordable in Valrico, keeping your monthly costs predictable. There is <strong>no CDD</strong>. Compared to newer neighborhoods like <a href="/copper-ridge/">Copper Ridge</a> or <a href="/taho-woods/">Taho Woods</a> that carry CDDs or higher HOA fees, Meadowridge Estates keeps things simple and affordable.</p>
@@ -5900,7 +5900,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The central Valrico location puts you within easy reach of both the SR 60 and Bloomingdale Avenue commercial corridors. You are never more than a few minutes from everything you need daily.</p>
 
       <h3>Which Schools Serve Meadowridge Estates?</h3>
-      <p>Meadowridge Estates is zoned for Hillsborough County public schools in the Valrico corridor. The school zoning in this part of Valrico is a consistent draw for families. Whether you end up in the Durant, Newsome, or Bloomingdale High zone depends on the exact location within the neighborhood — always verify current zoning with <a href="https://www.hillsboroughschools.org/" target="_blank" rel="noopener">Hillsborough County Schools</a> before making an offer.</p>
+      <p>Meadowridge Estates is zoned for Hillsborough County public schools in the Valrico corridor. The school zoning in this part of Valrico is a consistent draw for families. Whether you end up in the Durant, Newsome, or Bloomingdale High zone depends on the exact location within the neighborhood, always verify current zoning with <a href="https://www.hillsboroughschools.org/" target="_blank" rel="noopener">Hillsborough County Schools</a> before making an offer.</p>
 
       <h3>What Is the Flood Risk?</h3>
       <p>Meadowridge Estates sits in <strong>FEMA Flood Zone X</strong> (minimal risk). The neighborhood is elevated and well-drained with no significant waterway exposure. No flood insurance required by lenders.</p>
@@ -5917,7 +5917,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Wide size range:</strong> A 1,808 sqft home and a 4,368 sqft home are fundamentally different products. Make sure you are comparing apples to apples when evaluating prices in this neighborhood.</li>
-        <li><strong>Home age:</strong> Many homes are 20-30+ years old. Inspect thoroughly — roof, HVAC, plumbing, and electrical are the big-ticket items.</li>
+        <li><strong>Home age:</strong> Many homes are 20-30+ years old. Inspect thoroughly, roof, HVAC, plumbing, and electrical are the big-ticket items.</li>
         <li><strong>Value pricing:</strong> Meadowridge Estates typically prices below newer construction in Valrico, which makes it popular with buyers who want more square footage per dollar and do not mind updating cosmetics.</li>
         <li><strong>Rentals:</strong> Mid-range Valrico homes rent well. Expect $1,800-$2,400/mo depending on size and condition. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
@@ -5934,11 +5934,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Established single-family neighborhood in Valrico with homes built from the 1970s through the 2000s. Mix of mid-size and larger homes on well-maintained lots. Ranked in the top 5% of family-friendly neighborhoods in Florida.",
     contentHtml: `
       <h3>What Is Oakdale Like?</h3>
-      <p>Oakdale (often listed as Oakdale Riverview Estates) is one of <a href="/valrico/">Valrico</a>'s more established neighborhoods, with homes dating from the 1970s through the 2000s. That span means you will see a genuine mix of architectural styles — from original 1970s concrete block ranch homes to updated and renovated properties with modern finishes. The variety is part of the character. This is not a cookie-cutter subdivision where every home looks identical.</p>
+      <p>Oakdale (often listed as Oakdale Riverview Estates) is one of <a href="/valrico/">Valrico</a>'s more established neighborhoods, with homes dating from the 1970s through the 2000s. That span means you will see a genuine mix of architectural styles, from original 1970s concrete block ranch homes to updated and renovated properties with modern finishes. The variety is part of the character. This is not a cookie-cutter subdivision where every home looks identical.</p>
       <p>The neighborhood is a mix of medium-sized (3-4 bedroom) and larger (4-5 bedroom) single-family homes. Lots are well-maintained, streets are quiet, and the overall atmosphere is family-oriented. NeighborhoodScout ranks the Oakdale area among the <strong>top 5.1% of family-friendly neighborhoods in the state of Florida</strong>, based on the combination of top public schools, low crime rates, and owner-occupied single-family homes.</p>
 
       <h3>Is There an HOA?</h3>
-      <p>HOA presence varies by section within the Oakdale area. Some sections have a voluntary or mandatory HOA with modest fees, while other sections have no HOA at all. This is common in neighborhoods that developed over multiple decades — different phases were platted with different deed restrictions. Always verify the HOA status for the specific lot you are considering.</p>
+      <p>HOA presence varies by section within the Oakdale area. Some sections have a voluntary or mandatory HOA with modest fees, while other sections have no HOA at all. This is common in neighborhoods that developed over multiple decades, different phases were platted with different deed restrictions. Always verify the HOA status for the specific lot you are considering.</p>
       <p>The no-HOA sections appeal to buyers who want freedom from monthly dues and architectural restrictions. The HOA sections appeal to buyers who want maintained standards. Both exist within Oakdale, so you can choose the setup that fits your lifestyle.</p>
 
       <h3>How Close Is Everything?</h3>
@@ -5988,11 +5988,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Single-family community in Valrico established in 2002 with mandatory HOA. Community amenities, well-maintained common areas, and strong school zoning make this a popular choice for families.",
     contentHtml: `
       <h3>What Is Oaks at Valrico Like?</h3>
-      <p>Oaks at Valrico is a single-family community in <a href="/valrico/">Valrico</a> with a mandatory homeowners association established in 2002. The HOA actively manages the community — maintaining common areas, enforcing architectural standards, and managing community amenities. This is a neighborhood where consistency matters, and the HOA keeps the overall appearance and property values stable.</p>
+      <p>Oaks at Valrico is a single-family community in <a href="/valrico/">Valrico</a> with a mandatory homeowners association established in 2002. The HOA actively manages the community, maintaining common areas, enforcing architectural standards, and managing community amenities. This is a neighborhood where consistency matters, and the HOA keeps the overall appearance and property values stable.</p>
       <p>Homes are typical of the early 2000s Valrico build style: concrete block construction, open floor plans with 3-4 bedrooms, 2-car garages, screened lanais, and the neutral finishes that were standard during that construction era. The community has a well-maintained feel with clean streets, manicured common areas, and a sense of order that comes from an active HOA.</p>
 
       <h3>How Much Does the HOA Cost and What Does It Cover?</h3>
-      <p>The Oaks at Valrico HOA is <strong>mandatory</strong> — if you buy here, you are in the HOA. Dues are collected regularly (monthly or quarterly depending on the current schedule) and cover common area maintenance, community amenities, and enforcement of the community's rules and policies. The HOA also maintains reserve funds for larger projects like replacements and repairs.</p>
+      <p>The Oaks at Valrico HOA is <strong>mandatory</strong> if you buy here, you are in the HOA. Dues are collected regularly (monthly or quarterly depending on the current schedule) and cover common area maintenance, community amenities, and enforcement of the community's rules and policies. The HOA also maintains reserve funds for larger projects like replacements and repairs.</p>
       <p>Compared to <a href="/abbey-grove/">Abbey Grove</a> at $40/month with minimal oversight, the Oaks at Valrico provides more structured community management. Compared to <a href="/savannah-landings/">Savannah Landings</a> at $285/month with full exterior maintenance, you are responsible for your own lawn and exterior but benefit from shared amenities.</p>
 
       <h3>How Close Is Everything?</h3>
@@ -6008,7 +6008,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
 
       <h3>Which Schools Serve Oaks at Valrico?</h3>
-      <p>Oaks at Valrico feeds into Hillsborough County public schools in the Valrico corridor. The school zoning is a key selling point — families move into this community specifically for the school access, and the mandatory HOA helps maintain property values that support continued investment in the area's schools and infrastructure.</p>
+      <p>Oaks at Valrico feeds into Hillsborough County public schools in the Valrico corridor. The school zoning is a key selling point, families move into this community specifically for the school access, and the mandatory HOA helps maintain property values that support continued investment in the area's schools and infrastructure.</p>
       <p>If you are weighing Oaks at Valrico against <a href="/somerset/">Somerset</a> or <a href="/copper-ridge/">Copper Ridge</a>, compare the specific school zone assignments. Small differences in location can mean different feeder patterns, and that matters for families planning ahead.</p>
 
       <h3>What Is the Flood Risk?</h3>
@@ -6042,7 +6042,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Established 1980s-1990s neighborhood in the heart of Valrico with a voluntary HOA and minimal fees. Homes range from 1,845 to 3,346 sqft. Nearly 3,000 residents. Walkable, dog-friendly, and known for its peaceful character and strong school zoning.",
     contentHtml: `
       <h3>What Is Original Buckhorn Estate Like?</h3>
-      <p>Original Buckhorn Estate is the neighborhood that gave the Buckhorn area of <a href="/valrico/">Valrico</a> its name. With nearly 3,000 residents, this is one of the larger established communities in the area, featuring single-family homes built predominantly in the 1980s and 1990s. The neighborhood has a peaceful, family-friendly character — residents consistently describe it as beautiful, clean, quiet, safe, and dog-friendly. The streets are walkable, neighbors know each other, and the community has the kind of lived-in warmth that newer subdivisions take years to develop.</p>
+      <p>Original Buckhorn Estate is the neighborhood that gave the Buckhorn area of <a href="/valrico/">Valrico</a> its name. With nearly 3,000 residents, this is one of the larger established communities in the area, featuring single-family homes built predominantly in the 1980s and 1990s. The neighborhood has a peaceful, family-friendly character, residents consistently describe it as beautiful, clean, quiet, safe, and dog-friendly. The streets are walkable, neighbors know each other, and the community has the kind of lived-in warmth that newer subdivisions take years to develop.</p>
       <p>Homes range from 1,845 to 3,346 square feet, with most offering 3-4 bedrooms and 2-car garages. The construction is primarily concrete block, which is what you want in Florida for both insurance rates and storm durability. Many homes have been updated over the years, and you will find everything from original-condition properties (great for buyers who want to renovate to their taste) to fully modernized homes with new kitchens, bathrooms, and impact windows.</p>
 
       <h3>How Much Does the HOA Cost?</h3>
@@ -6099,11 +6099,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Established enclave of expansive 4-5 bedroom luxury single-family homes in south Valrico. Elegant properties with mature oaks, crown molding, designer fixtures, and oversized lots. Ranked in the top 7% of family-friendly neighborhoods in Florida.",
     contentHtml: `
       <h3>What Is River Ridge Like?</h3>
-      <p>River Ridge (also known as River Ridge Reserve) is a quiet, established enclave of expansive single-family homes in south <a href="/valrico/">Valrico</a>. The community features 4 and 5-bedroom luxury homes nestled beneath mature oaks on generous lots. These are not tract homes — the properties here were built with attention to detail, featuring crown and base molding, designer ceiling fans and light fixtures, built-in shelving, and 18-inch brick-laid tile that gives the homes an elegant, custom feel.</p>
+      <p>River Ridge (also known as River Ridge Reserve) is a quiet, established enclave of expansive single-family homes in south <a href="/valrico/">Valrico</a>. The community features 4 and 5-bedroom luxury homes nestled beneath mature oaks on generous lots. These are not tract homes, the properties here were built with attention to detail, featuring crown and base molding, designer ceiling fans and light fixtures, built-in shelving, and 18-inch brick-laid tile that gives the homes an elegant, custom feel.</p>
       <p>River Ridge sits in the southern Valrico corridor, which offers a more private, almost semi-rural character compared to the busier neighborhoods along SR 60 and Bloomingdale Avenue. The streets are quiet, the lots are large, and the mature landscaping creates a sense of privacy that is hard to find in newer Valrico subdivisions. NeighborhoodScout ranks the River Ridge area among the <strong>top 7.1% of family-friendly neighborhoods in the state of Florida</strong>.</p>
 
       <h3>How Much Does the HOA Cost?</h3>
-      <p>River Ridge has an HOA that maintains the community's common areas and entrance. Fees are moderate for a neighborhood of this quality. There are deed restrictions in place to maintain the community's standards, and the HOA enforces them consistently. This is a neighborhood where the HOA works — it keeps the community looking sharp without being overbearing.</p>
+      <p>River Ridge has an HOA that maintains the community's common areas and entrance. Fees are moderate for a neighborhood of this quality. There are deed restrictions in place to maintain the community's standards, and the HOA enforces them consistently. This is a neighborhood where the HOA works, it keeps the community looking sharp without being overbearing.</p>
       <p>There is <strong>no CDD</strong>. In south Valrico, where many newer communities carry CDDs that add $1,500-$2,500/year, this is a meaningful savings that adds up over the life of your ownership.</p>
 
       <h3>How Close Is Everything?</h3>
@@ -6123,7 +6123,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>Which Schools Serve River Ridge?</h3>
       <p>River Ridge is zoned for Hillsborough County public schools in the south Valrico corridor. The school quality combined with the owner-occupied housing stock and low crime rates is what drives the top-7% family-friendly ranking. Families relocating from out of state often target this corridor specifically because the schools, safety, and home quality all align.</p>
-      <p>Compare River Ridge's school zoning to nearby <a href="/river-hills-country-club/">River Hills</a> (gated golf community) and <a href="/eagles-landing/">Eagles Landing</a> — all are in the south Valrico corridor with strong schools, but River Ridge offers the luxury home experience without the golf course or resort fees.</p>
+      <p>Compare River Ridge's school zoning to nearby <a href="/river-hills-country-club/">River Hills</a> (gated golf community) and <a href="/eagles-landing/">Eagles Landing</a> all are in the south Valrico corridor with strong schools, but River Ridge offers the luxury home experience without the golf course or resort fees.</p>
 
       <h3>What Is the Flood Risk?</h3>
       <p>Most of River Ridge sits in <strong>FEMA Flood Zone X</strong> (minimal risk). However, some properties in the southern portions may be closer to low-lying areas, so always verify the specific FEMA zone for any property you are considering. Homes on higher ground within the community have minimal flood exposure.</p>
@@ -6139,7 +6139,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Home quality:</strong> The custom features (crown molding, built-ins, designer fixtures) mean these homes were built to a higher standard than typical tract housing. That quality holds up at resale.</li>
-        <li><strong>Construction era:</strong> Many homes were built between the 1970s and 1990s. Inspect thoroughly — roof, HVAC, plumbing, and any original windows. Updated homes command a significant premium over original-condition properties.</li>
+        <li><strong>Construction era:</strong> Many homes were built between the 1970s and 1990s. Inspect thoroughly, roof, HVAC, plumbing, and any original windows. Updated homes command a significant premium over original-condition properties.</li>
         <li><strong>Large lot maintenance:</strong> Bigger lots mean higher landscaping costs. Budget for lawn care if you are coming from a smaller-lot community.</li>
         <li><strong>Rentals:</strong> Luxury Valrico homes on large lots rent well to families wanting space and privacy. Expect $2,400-$3,200/mo depending on size and condition. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
@@ -6156,11 +6156,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Single-family community built 2006-2012 in Valrico by Southern Oaks Homes. Homes range from 1,560 to 2,860 sqft. Low HOA ($30-$67/month), no CDD. Newer construction with modern floor plans in an established Valrico location.",
     contentHtml: `
       <h3>What Is Southern Oaks Grove Like?</h3>
-      <p>Southern Oaks Grove is a single-family community in <a href="/valrico/">Valrico</a> built between 2006 and 2012 by Southern Oaks Homes, a local custom builder. The homes range from approximately 1,560 to 2,860 square feet, offering a mix of 3-4 bedroom floor plans with 2-car garages and the more modern open layouts that became standard in the late 2000s. The construction is concrete block, and the homes reflect the building standards that tightened significantly after the 2004-2005 hurricane seasons — stronger windows, better tie-downs, and updated code requirements.</p>
+      <p>Southern Oaks Grove is a single-family community in <a href="/valrico/">Valrico</a> built between 2006 and 2012 by Southern Oaks Homes, a local custom builder. The homes range from approximately 1,560 to 2,860 square feet, offering a mix of 3-4 bedroom floor plans with 2-car garages and the more modern open layouts that became standard in the late 2000s. The construction is concrete block, and the homes reflect the building standards that tightened significantly after the 2004-2005 hurricane seasons, stronger windows, better tie-downs, and updated code requirements.</p>
       <p>What sets Southern Oaks Grove apart from the typical production builder subdivision is the custom builder touch. Southern Oaks Homes has a strong local reputation, and the floor plans show more thought than the cookie-cutter layouts you see from the national builders. The community is well-maintained, with clean streets and consistent upkeep throughout.</p>
 
       <h3>How Much Does the HOA Cost?</h3>
-      <p>The HOA at Southern Oaks Grove runs <strong>$30 to $67 per month</strong> with <strong>no CDD</strong>. At the low end of that range, this is one of the most affordable HOAs in Valrico. Even at the high end, $67/month is well below what you will pay at <a href="/somerset/">Somerset</a>, <a href="/savannah-landings/">Savannah Landings</a>, or any CDD community. The HOA covers basic common area maintenance and community standards — nothing fancy, just enough to keep the neighborhood looking good.</p>
+      <p>The HOA at Southern Oaks Grove runs <strong>$30 to $67 per month</strong> with <strong>no CDD</strong>. At the low end of that range, this is one of the most affordable HOAs in Valrico. Even at the high end, $67/month is well below what you will pay at <a href="/somerset/">Somerset</a>, <a href="/savannah-landings/">Savannah Landings</a>, or any CDD community. The HOA covers basic common area maintenance and community standards, nothing fancy, just enough to keep the neighborhood looking good.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -6189,7 +6189,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong><a href="/taho-woods/">Taho Woods</a></strong> (2 miles): Even newer (2018-2019 by D.R. Horton). Slightly higher HOA ($73-$87/mo). More modern floor plans but builder-grade finishes.</li>
         <li><strong><a href="/bloomingdale-community/">Bloomingdale</a></strong> (1 mile): Much larger, 1980s-1990s homes. More affordable entry but significantly older construction.</li>
       </ul>
-      <p>Southern Oaks Grove is the sweet spot between the older 1980s-1990s neighborhoods and the brand-new construction. You get post-2006 building codes, a low HOA with no CDD, and a custom builder's attention to detail — all without the new-construction premium pricing.</p>
+      <p>Southern Oaks Grove is the sweet spot between the older 1980s-1990s neighborhoods and the brand-new construction. You get post-2006 building codes, a low HOA with no CDD, and a custom builder's attention to detail, all without the new-construction premium pricing.</p>
 
       <h3>What Should Buyers Know?</h3>
       <ul>
@@ -6212,7 +6212,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     contentHtml: `
       <h3>What Is Sugarloaf Ridge Like?</h3>
       <p>Sugarloaf Ridge is one of the most private neighborhoods in <a href="/valrico/">Valrico</a>. With just 18 homes on a double cul-de-sac layout, this is the kind of community where every resident knows their neighbors by name and the only traffic is people who live there. No through traffic, no shortcutters, just a quiet residential pocket of custom executive homes on large, private lots.</p>
-      <p>The homes here are substantial: custom-built 4-bedroom, 3.5-bathroom floor plans with 3-car garages and 3,300+ square feet of living space — mostly one-story layouts. The lots are oversized compared to typical Valrico subdivisions, and many homeowners have built impressive screened pool enclosures and outdoor living areas that take advantage of the privacy. These are not production-builder homes; they were custom-built to individual owners' specifications, which means each home has unique features and finishes.</p>
+      <p>The homes here are substantial: custom-built 4-bedroom, 3.5-bathroom floor plans with 3-car garages and 3,300+ square feet of living space, mostly one-story layouts. The lots are oversized compared to typical Valrico subdivisions, and many homeowners have built impressive screened pool enclosures and outdoor living areas that take advantage of the privacy. These are not production-builder homes; they were custom-built to individual owners' specifications, which means each home has unique features and finishes.</p>
 
       <h3>How Much Does the HOA Cost?</h3>
       <p>The HOA at Sugarloaf Ridge is <strong>$500 per year</strong> ($42/month equivalent) with <strong>no CDD</strong>. For executive homes of this caliber on lots this size, $500/year is remarkable. Compare that to <a href="/river-hills-country-club/">River Hills</a> with its gated entry and country club fees, or any CDD community where the annual assessment alone exceeds $2,000. Sugarloaf Ridge keeps your carrying costs minimal while maintaining community standards through deed restrictions and a responsive HOA board.</p>
@@ -6231,14 +6231,14 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Despite the private, tucked-away feel, Sugarloaf Ridge is centrally located in Valrico with quick access to the main commercial corridors. You get the seclusion without the isolation.</p>
 
       <h3>Which Schools Serve Sugarloaf Ridge?</h3>
-      <p>Sugarloaf Ridge is zoned for Hillsborough County public schools in the Valrico corridor. At this price point and home size, school zoning is critical — families buying executive homes are specifically targeting strong school districts. The school zones in this part of Valrico consistently rank well and drive sustained demand.</p>
+      <p>Sugarloaf Ridge is zoned for Hillsborough County public schools in the Valrico corridor. At this price point and home size, school zoning is critical, families buying executive homes are specifically targeting strong school districts. The school zones in this part of Valrico consistently rank well and drive sustained demand.</p>
 
       <h3>What Is the Flood Risk?</h3>
       <p>Sugarloaf Ridge sits in <strong>FEMA Flood Zone X</strong> (minimal risk). The community is on elevated ground with no significant waterway exposure. No flood insurance required by lenders.</p>
 
       <h3>How Does Sugarloaf Ridge Compare to Nearby Neighborhoods?</h3>
       <ul>
-        <li><strong><a href="/mason-oaks/">Mason Oaks</a></strong> (nearby): 54 executive homes on 1/3+ acre lots. Newsome zone, low HOA. Similar caliber but 3x the homes — less private but more resale comps.</li>
+        <li><strong><a href="/mason-oaks/">Mason Oaks</a></strong> (nearby): 54 executive homes on 1/3+ acre lots. Newsome zone, low HOA. Similar caliber but 3x the homes, less private but more resale comps.</li>
         <li><strong><a href="/martins-garden/">Martins Garden</a></strong> (nearby): 4-bedroom homes in the $630K-$665K range. Larger community. Similar price per sqft but smaller lots than Sugarloaf Ridge.</li>
         <li><strong><a href="/river-hills-country-club/">River Hills</a></strong> (2 miles): Gated golf community. More amenities but significantly higher cost of ownership. River Hills is the lifestyle play; Sugarloaf Ridge is the privacy play.</li>
         <li><strong><a href="/diamond-hill/">Diamond Hill</a></strong> (3 miles): Large lots with no HOA. Older homes. More land per dollar but less refined community character.</li>
@@ -6262,14 +6262,14 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
   "taho-woods": {
     summary:
-      "Newer 2018-2019 D.R. Horton community in Valrico with 4-5 bedroom homes ranging from 1,508 to 2,526 sqft. HOA $73-$87/month, no CDD. Modern open floor plans, sidewalks, and street lights. Now sold out — resale only.",
+      "Newer 2018-2019 D.R. Horton community in Valrico with 4-5 bedroom homes ranging from 1,508 to 2,526 sqft. HOA $73-$87/month, no CDD. Modern open floor plans, sidewalks, and street lights. Now sold out, resale only.",
     contentHtml: `
       <h3>What Is Taho Woods Like?</h3>
-      <p>Taho Woods is one of the newer communities in <a href="/valrico/">Valrico</a>, built in 2018-2019 by D.R. Horton, the nation's largest homebuilder. The community features 4 and 5-bedroom single-family homes with 2-car garages, ranging from approximately 1,508 to 2,526 square feet. The open floor concept designs are what you would expect from a late-2010s build — great rooms that flow into kitchens, granite or quartz countertops, and the spacious feel that comes from eliminating unnecessary walls.</p>
-      <p>The community has a clean, contemporary look with sidewalks, street lights, and consistent landscaping throughout. Taho Woods is now sold out, which means all purchases are resale — no competition from the builder on new units. That is actually an advantage for sellers, as the homes have had a few years to season and buyers can see how the neighborhood has matured.</p>
+      <p>Taho Woods is one of the newer communities in <a href="/valrico/">Valrico</a>, built in 2018-2019 by D.R. Horton, the nation's largest homebuilder. The community features 4 and 5-bedroom single-family homes with 2-car garages, ranging from approximately 1,508 to 2,526 square feet. The open floor concept designs are what you would expect from a late-2010s build, great rooms that flow into kitchens, granite or quartz countertops, and the spacious feel that comes from eliminating unnecessary walls.</p>
+      <p>The community has a clean, contemporary look with sidewalks, street lights, and consistent landscaping throughout. Taho Woods is now sold out, which means all purchases are resale, no competition from the builder on new units. That is actually an advantage for sellers, as the homes have had a few years to season and buyers can see how the neighborhood has matured.</p>
 
       <h3>How Much Does the HOA Cost?</h3>
-      <p>HOA fees at Taho Woods run <strong>$73 to $87 per month</strong> with <strong>no CDD</strong>. That is moderate for a newer community — higher than <a href="/abbey-grove/">Abbey Grove</a> at $40/month or <a href="/southern-oaks-grove/">Southern Oaks Grove</a> at $30-$67/month, but significantly lower than communities with resort amenities or CDDs. The average annual property tax is approximately $4,349, which is in line with newer Valrico construction.</p>
+      <p>HOA fees at Taho Woods run <strong>$73 to $87 per month</strong> with <strong>no CDD</strong>. That is moderate for a newer community, higher than <a href="/abbey-grove/">Abbey Grove</a> at $40/month or <a href="/southern-oaks-grove/">Southern Oaks Grove</a> at $30-$67/month, but significantly lower than communities with resort amenities or CDDs. The average annual property tax is approximately $4,349, which is in line with newer Valrico construction.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -6285,7 +6285,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>Taho Woods benefits from Valrico's central location in Hillsborough County. You are within 10 minutes of the major shopping and commercial corridors along SR 60 and Bloomingdale Avenue.</p>
 
       <h3>Which Schools Serve Taho Woods?</h3>
-      <p>Taho Woods feeds into Hillsborough County public schools in the Valrico corridor. The school zoning is a strong selling point for families — newer construction in a desirable school zone at a price point that undercuts FishHawk and some of the premium Newsome-zoned communities. With 4-5 bedroom homes available, the community was purpose-built for growing families.</p>
+      <p>Taho Woods feeds into Hillsborough County public schools in the Valrico corridor. The school zoning is a strong selling point for families, newer construction in a desirable school zone at a price point that undercuts FishHawk and some of the premium Newsome-zoned communities. With 4-5 bedroom homes available, the community was purpose-built for growing families.</p>
 
       <h3>What Is the Flood Risk?</h3>
       <p>Taho Woods sits in <strong>FEMA Flood Zone X</strong> (minimal risk). Built in 2018-2019, the community was developed under current stormwater management standards, which are significantly more stringent than the codes applied to 1980s and 1990s communities. No flood insurance required by lenders.</p>
@@ -6294,10 +6294,10 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <ul>
         <li><strong><a href="/southern-oaks-grove/">Southern Oaks Grove</a></strong> (1 mile): Custom builder, 2006-2012 construction, lower HOA ($30-$67/mo). Slightly older but custom-built quality vs. D.R. Horton production.</li>
         <li><strong><a href="/the-highlands/">The Highlands</a></strong> (nearby): Pulte Homes community, also sold out. Compare floor plans, lot sizes, and HOA fees directly.</li>
-        <li><strong><a href="/valri-forest/">Valri Forest</a></strong> (nearby): Newer Pulte community from 2023-2024. Brand new construction — higher price but latest floor plans and finishes.</li>
+        <li><strong><a href="/valri-forest/">Valri Forest</a></strong> (nearby): Newer Pulte community from 2023-2024. Brand new construction, higher price but latest floor plans and finishes.</li>
         <li><strong><a href="/abbey-grove/">Abbey Grove</a></strong> (2 miles): 2003-2004 construction, $40/mo HOA. 15 years older but lower monthly costs and established landscaping.</li>
       </ul>
-      <p>Taho Woods gives you the newest construction available in Valrico at resale prices (since no builder competition exists). D.R. Horton homes are solidly built production homes — not custom, but dependable. If you want a modern floor plan, energy-efficient systems, and a home that was built to current Florida building codes, Taho Woods delivers without the premium of buying from a builder.</p>
+      <p>Taho Woods gives you the newest construction available in Valrico at resale prices (since no builder competition exists). D.R. Horton homes are solidly built production homes, not custom, but dependable. If you want a modern floor plan, energy-efficient systems, and a home that was built to current Florida building codes, Taho Woods delivers without the premium of buying from a builder.</p>
 
       <h3>What Should Buyers Know?</h3>
       <ul>
@@ -6319,11 +6319,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Large established neighborhood in the Bloomingdale area of Valrico with over 11,000 residents. Homes built 1996-2004, ranging from 1,733 to 2,773 sqft. Family-friendly community near Cimino Elementary with walkable streets and proximity to FishHawk Ranch.",
     contentHtml: `
       <h3>What Is The Cove Like?</h3>
-      <p>The Cove is a substantial neighborhood in the <a href="/bloomingdale-community/">Bloomingdale</a> area of <a href="/valrico/">Valrico</a>, with over 11,000 residents making it one of the most populated communities in the area. Located southeast of Bloomingdale West and northwest of FishHawk Ranch, The Cove occupies a prime position in the Valrico landscape — established enough to have mature landscaping and character, but close enough to newer developments to benefit from the commercial growth that followed.</p>
-      <p>Homes were built between 1996 and 2004, with approximately 200-250 single-family residences ranging from 1,733 to 2,773 square feet. The construction is concrete block, and the floor plans reflect the turn-of-the-millennium style — open living areas, screened lanais, and the 3-4 bedroom configurations that families need. The streets are walkable, the community is well-maintained, and residents describe The Cove as peaceful, safe, and family-friendly.</p>
+      <p>The Cove is a substantial neighborhood in the <a href="/bloomingdale-community/">Bloomingdale</a> area of <a href="/valrico/">Valrico</a>, with over 11,000 residents making it one of the most populated communities in the area. Located southeast of Bloomingdale West and northwest of FishHawk Ranch, The Cove occupies a prime position in the Valrico landscape, established enough to have mature landscaping and character, but close enough to newer developments to benefit from the commercial growth that followed.</p>
+      <p>Homes were built between 1996 and 2004, with approximately 200-250 single-family residences ranging from 1,733 to 2,773 square feet. The construction is concrete block, and the floor plans reflect the turn-of-the-millennium style, open living areas, screened lanais, and the 3-4 bedroom configurations that families need. The streets are walkable, the community is well-maintained, and residents describe The Cove as peaceful, safe, and family-friendly.</p>
 
       <h3>How Much Does the HOA Cost?</h3>
-      <p>HOA fees in The Cove range from approximately <strong>$2 to $200 per month</strong> depending on the section and what is included. That range is wide because The Cove encompasses multiple sub-sections with different HOA structures — some with full amenity access and higher fees, others with minimal oversight and near-zero cost. Always verify the exact HOA fee for the specific lot you are considering.</p>
+      <p>HOA fees in The Cove range from approximately <strong>$2 to $200 per month</strong> depending on the section and what is included. That range is wide because The Cove encompasses multiple sub-sections with different HOA structures, some with full amenity access and higher fees, others with minimal oversight and near-zero cost. Always verify the exact HOA fee for the specific lot you are considering.</p>
       <p>The lower-fee sections make The Cove one of the most affordable options in the Bloomingdale corridor. Compare to <a href="/savannah-landings/">Savannah Landings</a> at $285/month or <a href="/somerset/">Somerset</a> at $40-$265/month, and The Cove's flexibility on HOA cost is appealing.</p>
 
       <h3>How Close Is Everything?</h3>
@@ -6342,7 +6342,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The Bloomingdale Avenue location provides some of the best daily convenience in Valrico. Grocery stores, the library, the YMCA, and restaurants are all within a couple of minutes. You rarely need to venture to the busier SR 60 corridor for daily errands.</p>
 
       <h3>Which Schools Serve The Cove?</h3>
-      <p>The Cove is in the <strong>Cimino Elementary School</strong> zone — residents specifically cite Cimino as a top reason they love the neighborhood. The school quality combined with the walkable character and family-friendly atmosphere makes The Cove a go-to for families with elementary-age children. The middle and high school feeders serve the Bloomingdale corridor and consistently rank well.</p>
+      <p>The Cove is in the <strong>Cimino Elementary School</strong> zone, residents specifically cite Cimino as a top reason they love the neighborhood. The school quality combined with the walkable character and family-friendly atmosphere makes The Cove a go-to for families with elementary-age children. The middle and high school feeders serve the Bloomingdale corridor and consistently rank well.</p>
       <p>If you are comparing The Cove to other Bloomingdale-area options, <a href="/lithia-ridge/">Lithia Ridge</a> offers a similar family experience with more community amenities (park, sports courts), while <a href="/bloomingdale-community/">Bloomingdale</a> proper has more sections and architectural variety but older 1980s construction in many areas.</p>
 
       <h3>What Is the Flood Risk?</h3>
@@ -6359,7 +6359,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Should Buyers Know?</h3>
       <ul>
         <li><strong>Section matters:</strong> With 11,000+ residents across multiple sections, the HOA fees, deed restrictions, and community character can vary significantly from one block to the next. Tour multiple sections before deciding.</li>
-        <li><strong>Home age:</strong> 1996-2004 construction means homes are 22-30 years old. Roof condition is your priority — original shingle roofs from the late 1990s are past replacement age. HVAC and water heaters are likely on their second cycle.</li>
+        <li><strong>Home age:</strong> 1996-2004 construction means homes are 22-30 years old. Roof condition is your priority, original shingle roofs from the late 1990s are past replacement age. HVAC and water heaters are likely on their second cycle.</li>
         <li><strong>Walkability:</strong> Residents rate The Cove as walkable, which is increasingly rare in suburban Florida. Sidewalks, low traffic, and proximity to schools make this genuinely pedestrian-friendly for a Valrico neighborhood.</li>
         <li><strong>Rentals:</strong> Strong rental demand in the Bloomingdale corridor, especially for homes in the Cimino Elementary zone. Expect $1,900-$2,400/mo depending on size and updates. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
@@ -6376,12 +6376,12 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Sold-out Pulte Homes community of 106 single-family homes in Valrico with 2-5 bedrooms. HOA approximately $72/month covers common area landscaping, sidewalks, and entrance monument. No CDD. Modern floor plans with spacious yards.",
     contentHtml: `
       <h3>What Is The Highlands Like?</h3>
-      <p>The Highlands is a single-family community in <a href="/valrico/">Valrico</a> developed by Pulte Homes, one of the nation's most recognized builders. The community features 106 homes with 2-5 bedrooms and 2-4 bathrooms, with home sizes ranging from approximately 2,455 to 3,228 square feet. The community is now sold out, so all purchases are resale — no builder competition, which stabilizes pricing for homeowners.</p>
+      <p>The Highlands is a single-family community in <a href="/valrico/">Valrico</a> developed by Pulte Homes, one of the nation's most recognized builders. The community features 106 homes with 2-5 bedrooms and 2-4 bathrooms, with home sizes ranging from approximately 2,455 to 3,228 square feet. The community is now sold out, so all purchases are resale, no builder competition, which stabilizes pricing for homeowners.</p>
       <p>Pulte Homes is known for their "Life Tested" floor plans, which emphasize practical living spaces over show-home theatrics. Kitchens are designed for how families actually cook and gather, storage is built into the plans, and rooms serve real purposes rather than just looking good on the spec sheet. The result is homes that live bigger than their square footage suggests.</p>
 
       <h3>How Much Does the HOA Cost?</h3>
       <p>The HOA at The Highlands runs approximately <strong>$72 per month</strong>. That covers common area landscaping, community irrigation, sidewalk maintenance, street lights, entrance monument upkeep, and community association insurance. There is <strong>no CDD</strong>, which keeps your total monthly carrying cost predictable.</p>
-      <p>At $72/month, The Highlands sits in the middle of the Valrico HOA spectrum — more than <a href="/abbey-grove/">Abbey Grove</a> ($40/month) or <a href="/southern-oaks-grove/">Southern Oaks Grove</a> ($30-$67/month), but less than <a href="/savannah-landings/">Savannah Landings</a> ($285/month) or any community with a CDD. For a Pulte community with maintained common areas and a quality entrance, $72/month is fair.</p>
+      <p>At $72/month, The Highlands sits in the middle of the Valrico HOA spectrum, more than <a href="/abbey-grove/">Abbey Grove</a> ($40/month) or <a href="/southern-oaks-grove/">Southern Oaks Grove</a> ($30-$67/month), but less than <a href="/savannah-landings/">Savannah Landings</a> ($285/month) or any community with a CDD. For a Pulte community with maintained common areas and a quality entrance, $72/month is fair.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -6406,7 +6406,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>How Does The Highlands Compare to Nearby Neighborhoods?</h3>
       <ul>
         <li><strong><a href="/valri-forest/">Valri Forest</a></strong> (nearby): Also Pulte Homes, but 2023-2024 construction. Latest floor plans and finishes. Higher prices but brand new.</li>
-        <li><strong><a href="/taho-woods/">Taho Woods</a></strong> (nearby): D.R. Horton 2018-2019 build. Similar era, slightly lower price point. Production builder vs. production builder — compare floor plans and finishes.</li>
+        <li><strong><a href="/taho-woods/">Taho Woods</a></strong> (nearby): D.R. Horton 2018-2019 build. Similar era, slightly lower price point. Production builder vs. production builder, compare floor plans and finishes.</li>
         <li><strong><a href="/southern-oaks-grove/">Southern Oaks Grove</a></strong> (1 mile): Custom builder from 2006-2012. Older but custom-built quality. Lower HOA.</li>
         <li><strong><a href="/copper-ridge/">Copper Ridge</a></strong> (2 miles): Newsome High zone with CDD. Higher annual cost but premium school zoning.</li>
       </ul>
@@ -6414,7 +6414,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Pulte quality:</strong> Pulte builds a quality product — better than some national builders, though still production-grade. Expect builder-grade fixtures with good bones. Most homeowners upgrade kitchens and bathrooms over time.</li>
+        <li><strong>Pulte quality:</strong> Pulte builds a quality product, better than some national builders, though still production-grade. Expect builder-grade fixtures with good bones. Most homeowners upgrade kitchens and bathrooms over time.</li>
         <li><strong>Sold-out advantage:</strong> No builder model homes or inventory undercutting resale prices. The market sets the price, not the builder's incentive programs.</li>
         <li><strong>Spacious yards:</strong> Pulte communities tend to offer more outdoor space than some other national builders. The yards at The Highlands are adequate for pools, play sets, and entertaining.</li>
         <li><strong>Rentals:</strong> Newer Valrico homes from reputable builders rent well to families. Expect $2,100-$2,700/mo depending on size and bedroom count. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
@@ -6432,11 +6432,11 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Brand-new Pulte Homes community built 2023-2024 in Valrico with single-family homes ranging from 1,850 to 3,416 sqft. Modern floor plans with the latest energy-efficient features and finishes. Active community with new construction available.",
     contentHtml: `
       <h3>What Is Valri Forest Like?</h3>
-      <p>Valri Forest is the newest Pulte Homes community in <a href="/valrico/">Valrico</a>, with homes built in 2023-2024. This is current-generation new construction — the latest floor plans, the newest energy-efficient systems, and finishes that reflect what buyers want right now. Homes range from approximately 1,850 to 3,416 square feet, offering everything from efficient 3-bedroom plans to spacious 5-bedroom family homes.</p>
+      <p>Valri Forest is the newest Pulte Homes community in <a href="/valrico/">Valrico</a>, with homes built in 2023-2024. This is current-generation new construction, the latest floor plans, the newest energy-efficient systems, and finishes that reflect what buyers want right now. Homes range from approximately 1,850 to 3,416 square feet, offering everything from efficient 3-bedroom plans to spacious 5-bedroom family homes.</p>
       <p>Being brand new has genuine advantages. The homes were built to the most current Florida building codes (post-2020 updates), which means impact-rated windows and doors, the latest hurricane tie-down requirements, and energy-efficient HVAC systems that will keep your utility bills significantly lower than a comparable-sized 1990s or 2000s home. Insurance rates on new construction are also meaningfully lower than on older Valrico homes.</p>
 
       <h3>How Much Does the HOA Cost?</h3>
-      <p>Valri Forest has an HOA covering common area maintenance, landscaping, and community standards. As a newer Pulte community, expect fees in the range typical of their Florida developments — comparable to <a href="/the-highlands/">The Highlands</a> at $72/month. Verify the current fee schedule directly, as new community HOAs sometimes adjust fees in the first few years as the builder transitions control to the homeowners.</p>
+      <p>Valri Forest has an HOA covering common area maintenance, landscaping, and community standards. As a newer Pulte community, expect fees in the range typical of their Florida developments, comparable to <a href="/the-highlands/">The Highlands</a> at $72/month. Verify the current fee schedule directly, as new community HOAs sometimes adjust fees in the first few years as the builder transitions control to the homeowners.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -6453,7 +6453,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>Which Schools Serve Valri Forest?</h3>
       <p>Valri Forest feeds into Hillsborough County public schools in the Valrico corridor. For families, the combination of brand-new construction and strong school zoning is exactly what drives the demand for new communities in this area. You get a home that does not need updates or repairs for years, in a school district that families specifically relocate to join.</p>
-      <p>Note: Do not confuse Valri Forest with the older Valrico Forest neighborhood (built 1997-2001) — they are separate communities with different locations, builders, and characteristics.</p>
+      <p>Note: Do not confuse Valri Forest with the older Valrico Forest neighborhood (built 1997-2001), they are separate communities with different locations, builders, and characteristics.</p>
 
       <h3>What Is the Flood Risk?</h3>
       <p>Valri Forest sits in <strong>FEMA Flood Zone X</strong> (minimal risk). As a 2023-2024 development, the stormwater management system was designed to current standards, which are the most stringent in Florida's building history. No flood insurance required by lenders.</p>
@@ -6465,7 +6465,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong><a href="/southern-oaks-grove/">Southern Oaks Grove</a></strong> (1 mile): Custom builder from 2006-2012. Lower price per sqft but 12-18 years older. Custom quality vs. production quality.</li>
         <li><strong><a href="/copper-ridge/">Copper Ridge</a></strong> (2 miles): Newsome zone with CDD. Higher annual cost of ownership despite potentially lower purchase price.</li>
       </ul>
-      <p>Valri Forest is where you go when you want the newest thing in Valrico without building custom. Pulte's floor plans are practical, the construction quality is reliable, and the energy efficiency advantages of brand-new construction are real — lower insurance, lower utilities, and zero deferred maintenance for the first several years.</p>
+      <p>Valri Forest is where you go when you want the newest thing in Valrico without building custom. Pulte's floor plans are practical, the construction quality is reliable, and the energy efficiency advantages of brand-new construction are real, lower insurance, lower utilities, and zero deferred maintenance for the first several years.</p>
 
       <h3>What Should Buyers Know?</h3>
       <ul>
@@ -6487,7 +6487,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "The largest neighborhood complex in Tampa Bay with 5,200+ homes across 32 subdivisions. Built 1979-1999 with a mix of mandatory and voluntary HOAs. Bloomingdale High School, regional library, YMCA, and extensive trail system. Homes from the mid-$300s.",
     contentHtml: `
       <h3>What Is Valrico Bloomingdale Like?</h3>
-      <p>Valrico Bloomingdale — the full Bloomingdale community — is the largest neighborhood complex in the Tampa Bay area, comprising over 32 individual subdivisions and approximately 5,200 homes. This is not a single subdivision; it is effectively a small town within <a href="/valrico/">Valrico</a>. Construction began in 1979, and the Bloomingdale Neighborhood Association was established in 1980. By 1989, nearly 4,000 homes had been built along with a condominium complex and the Bloomingdale Golfers Club.</p>
+      <p>Valrico Bloomingdale, the full Bloomingdale community, is the largest neighborhood complex in the Tampa Bay area, comprising over 32 individual subdivisions and approximately 5,200 homes. This is not a single subdivision; it is effectively a small town within <a href="/valrico/">Valrico</a>. Construction began in 1979, and the Bloomingdale Neighborhood Association was established in 1980. By 1989, nearly 4,000 homes had been built along with a condominium complex and the Bloomingdale Golfers Club.</p>
       <p>The community spans both sides of Bloomingdale Avenue with neighborhoods stretching from Bell Shoals Road to the east and reaching south toward the Bloomingdale/Lithia Pinecrest corridor. The homes are predominantly 1980s and 1990s single-family construction, with lot sizes that are modest by today's standards but generous compared to what builders are putting up now. Prices typically start in the mid-$300,000s and climb through the $400,000s depending on size, condition, and updates.</p>
 
       <h3>How Does the HOA Work Across 32 Subdivisions?</h3>
@@ -6504,7 +6504,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Trail system:</strong> Network of walking and biking trails throughout the community</li>
         <li><strong>Multiple parks and playgrounds:</strong> Distributed across the 32 subdivisions</li>
       </ul>
-      <p>These are not HOA-funded private amenities — they are public and semi-public facilities embedded in the community. You get YMCA access, library proximity, and recreational facilities without them being baked into your HOA fee.</p>
+      <p>These are not HOA-funded private amenities, they are public and semi-public facilities embedded in the community. You get YMCA access, library proximity, and recreational facilities without them being baked into your HOA fee.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -6521,10 +6521,10 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>Which Schools Serve Bloomingdale?</h3>
       <p><strong>Bloomingdale High School</strong> is located right in the community, earning an 8 out of 10 GreatSchools rating with a high graduation rate. Elementary schools serving the area include Bloomingdale Elementary and Cimino Elementary, depending on the section. Randall Middle School serves as the primary middle school feeder.</p>
-      <p>Having the high school physically inside the community is a genuine advantage — no bus rides across town, and students can walk or bike to school. The school quality combined with the community's scale and amenities makes Bloomingdale one of the most popular areas in Hillsborough County for families.</p>
+      <p>Having the high school physically inside the community is a genuine advantage, no bus rides across town, and students can walk or bike to school. The school quality combined with the community's scale and amenities makes Bloomingdale one of the most popular areas in Hillsborough County for families.</p>
 
       <h3>What Is the Flood Risk?</h3>
-      <p>Most of Bloomingdale sits in <strong>FEMA Flood Zone X</strong> (minimal risk). However, with 5,200+ homes spread across a large area, some individual lots — particularly those near the former Bloomingdale Golf Course and low-lying areas — may have different flood zone designations. Always check the specific FEMA zone for any property you are considering.</p>
+      <p>Most of Bloomingdale sits in <strong>FEMA Flood Zone X</strong> (minimal risk). However, with 5,200+ homes spread across a large area, some individual lots, particularly those near the former Bloomingdale Golf Course and low-lying areas, may have different flood zone designations. Always check the specific FEMA zone for any property you are considering.</p>
 
       <h3>How Does Bloomingdale Compare to Nearby Areas?</h3>
       <ul>
@@ -6536,9 +6536,9 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
 
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Section research is essential:</strong> You are not just buying into "Bloomingdale" — you are buying into one of 32 sections, each with its own character, HOA, and fee structure. Tour multiple sections and compare.</li>
+        <li><strong>Section research is essential:</strong> You are not just buying into "Bloomingdale", you are buying into one of 32 sections, each with its own character, HOA, and fee structure. Tour multiple sections and compare.</li>
         <li><strong>Home age:</strong> Most homes are 1980s-1990s construction. Roof, plumbing (check for polybutylene pipes common in 1980s builds), HVAC, and electrical panels are your top inspection priorities.</li>
-        <li><strong>Former golf course:</strong> The Bloomingdale Golf Course has closed, and the land is in the redevelopment process. If you are buying adjacent to the former course, research the redevelopment plans — they will affect your property value and daily experience.</li>
+        <li><strong>Former golf course:</strong> The Bloomingdale Golf Course has closed, and the land is in the redevelopment process. If you are buying adjacent to the former course, research the redevelopment plans, they will affect your property value and daily experience.</li>
         <li><strong>Rentals:</strong> Bloomingdale's size and school quality create consistent rental demand. Expect $1,800-$2,300/mo depending on section, size, and condition. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
 
@@ -6558,8 +6558,8 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p>The community has had over two decades to mature, and it shows. Landscaping is full and established, trees provide shade, and the overall feel is of a settled, well-maintained neighborhood where residents take pride in their properties. Valrico Grove avoids the "brand new subdivision" look while still being recent enough that the homes are structurally sound and reasonably modern in layout.</p>
 
       <h3>How Much Does the HOA Cost?</h3>
-      <p>HOA fees at Valrico Grove range from <strong>$35 to $87 per month</strong> with <strong>no CDD</strong>. At the low end, $35/month is one of the most affordable HOA fees in Valrico — even <a href="/abbey-grove/">Abbey Grove</a> at $40/month is slightly higher. At the high end, $87/month is still very manageable. The average annual property tax is approximately $6,005, which reflects the larger home sizes and Valrico's tax rates.</p>
-      <p>The combination of low HOA and no CDD keeps your total carrying cost predictable. Compare to <a href="/copper-ridge/">Copper Ridge</a> where the CDD alone can add $2,000+ per year, or <a href="/savannah-landings/">Savannah Landings</a> at $285/month — Valrico Grove saves you real money every month.</p>
+      <p>HOA fees at Valrico Grove range from <strong>$35 to $87 per month</strong> with <strong>no CDD</strong>. At the low end, $35/month is one of the most affordable HOA fees in Valrico, even <a href="/abbey-grove/">Abbey Grove</a> at $40/month is slightly higher. At the high end, $87/month is still very manageable. The average annual property tax is approximately $6,005, which reflects the larger home sizes and Valrico's tax rates.</p>
+      <p>The combination of low HOA and no CDD keeps your total carrying cost predictable. Compare to <a href="/copper-ridge/">Copper Ridge</a> where the CDD alone can add $2,000+ per year, or <a href="/savannah-landings/">Savannah Landings</a> at $285/month, Valrico Grove saves you real money every month.</p>
 
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -6584,7 +6584,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>How Does Valrico Grove Compare to Nearby Neighborhoods?</h3>
       <ul>
         <li><strong><a href="/abbey-grove/">Abbey Grove</a></strong> (0.5 miles): Same school zoning, smaller 69-home community, 2003-2004 build. Slightly smaller homes (1,900-2,400 sqft). Lower end of Valrico Grove's range. $40/mo HOA.</li>
-        <li><strong><a href="/savannah-landings/">Savannah Landings</a></strong> (1 mile): Gated townhomes, $285/mo HOA with full exterior maintenance. Different product type entirely — maintenance-free vs. single-family responsibility.</li>
+        <li><strong><a href="/savannah-landings/">Savannah Landings</a></strong> (1 mile): Gated townhomes, $285/mo HOA with full exterior maintenance. Different product type entirely, maintenance-free vs. single-family responsibility.</li>
         <li><strong><a href="/somerset/">Somerset</a></strong> (1 mile): Larger community with resort amenities. More sections and more variety. Higher HOA in most sections.</li>
         <li><strong><a href="/oaks-at-valrico/">Oaks at Valrico</a></strong> (nearby): Similar era, mandatory HOA. Comparable home sizes and character. Compare specific amenities and fees.</li>
       </ul>
@@ -6610,7 +6610,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       "Single-family community built 2003-2004 in Valrico with homes ranging from 2,318 to 2,946 sqft. Located near Valrico Lake with a neighborhood feel that blends newer construction with established community character. Not to be confused with Valrico Lake Estates (1966-1979).",
     contentHtml: `
       <h3>What Is Valrico Lake Like?</h3>
-      <p>Valrico Lake is a single-family community in <a href="/valrico/">Valrico</a> built between 2003 and 2004. Homes range from approximately 2,318 to 2,946 square feet, placing this community in the solid mid-range for Valrico — large enough for a family of four or five, with 3-4 bedrooms, 2-car garages, and the open floor plans that were popular during the early 2000s building boom. Construction is concrete block, and the homes reflect the post-2002 Florida building standards that tightened after the 2001 revisions.</p>
+      <p>Valrico Lake is a single-family community in <a href="/valrico/">Valrico</a> built between 2003 and 2004. Homes range from approximately 2,318 to 2,946 square feet, placing this community in the solid mid-range for Valrico, large enough for a family of four or five, with 3-4 bedrooms, 2-car garages, and the open floor plans that were popular during the early 2000s building boom. Construction is concrete block, and the homes reflect the post-2002 Florida building standards that tightened after the 2001 revisions.</p>
       <p>Important: Valrico Lake is a separate community from <strong>Valrico Lake Estates</strong>, which is an older neighborhood built between 1966 and 1979. The two share a name but are different subdivisions with different construction eras, home styles, and price points. If you are searching for homes, make sure you are looking at the right one.</p>
 
       <h3>How Much Does the HOA Cost?</h3>
@@ -6629,13 +6629,13 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Downtown Tampa:</strong> 22 miles (30-35 minutes)</li>
         <li><strong>Lithia Springs Park:</strong> 6 miles (natural springs, kayaking, trails)</li>
       </ul>
-      <p>Valrico Lake benefits from the central Valrico location along the SR 60 corridor. Everything you need on a daily basis — grocery, gas, dining, medical — is within 5 minutes.</p>
+      <p>Valrico Lake benefits from the central Valrico location along the SR 60 corridor. Everything you need on a daily basis, grocery, gas, dining, medical, is within 5 minutes.</p>
 
       <h3>Which Schools Serve Valrico Lake?</h3>
-      <p>Valrico Lake feeds into Hillsborough County public schools in the central Valrico corridor. The school zoning is a key factor in the neighborhood's appeal — families moving to Valrico consistently target communities with strong elementary school access, and the central Valrico location puts multiple top-rated schools within reach. Verify the specific school assignments with <a href="https://www.hillsboroughschools.org/" target="_blank" rel="noopener">Hillsborough County Schools</a> before making an offer, as zone boundaries can shift.</p>
+      <p>Valrico Lake feeds into Hillsborough County public schools in the central Valrico corridor. The school zoning is a key factor in the neighborhood's appeal, families moving to Valrico consistently target communities with strong elementary school access, and the central Valrico location puts multiple top-rated schools within reach. Verify the specific school assignments with <a href="https://www.hillsboroughschools.org/" target="_blank" rel="noopener">Hillsborough County Schools</a> before making an offer, as zone boundaries can shift.</p>
 
       <h3>What Is the Flood Risk?</h3>
-      <p>The neighborhood's name references Valrico Lake, so flood zone status is worth extra attention. Most lots in the community sit in <strong>FEMA Flood Zone X</strong> (minimal risk), but properties directly adjacent to the lake or any low-lying drainage areas may carry different designations. Always pull the specific FEMA flood zone for any property you are considering — and if it is near the water, price a flood insurance quote before writing your offer.</p>
+      <p>The neighborhood's name references Valrico Lake, so flood zone status is worth extra attention. Most lots in the community sit in <strong>FEMA Flood Zone X</strong> (minimal risk), but properties directly adjacent to the lake or any low-lying drainage areas may carry different designations. Always pull the specific FEMA flood zone for any property you are considering, and if it is near the water, price a flood insurance quote before writing your offer.</p>
 
       <h3>How Does Valrico Lake Compare to Nearby Neighborhoods?</h3>
       <ul>
@@ -6664,10 +6664,10 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary: "Established Valrico subdivision built in the mid-1990s off South St. Cloud Avenue with deed restrictions, low HOA fees around $25/month, and homes ranging from 1,400 to 2,200 sqft. No CDD. Zoned for Mulrennan Middle and Durant High.",
     contentHtml: `
       <h3>What Is Bent Tree South Like?</h3>
-      <p>Bent Tree South is a quiet, deed-restricted subdivision in central <a href="/valrico/">Valrico</a>, tucked off South St. Cloud Avenue between Lumsden Road and State Road 60. Most homes were built in the mid-1990s, and the community has that settled, mature feel that comes from three decades of established landscaping, grown-in oak canopy, and neighbors who tend to stay put. There is no grand entrance or resort-style clubhouse here — just well-kept single-family homes on a network of residential streets with minimal through traffic.</p>
-      <p>Homes in Bent Tree South range from about 1,400 to 2,200 square feet, with a mix of 3 and 4-bedroom floor plans. Construction is concrete block, and you will find both one and two-story layouts. Most homes have 2-car garages, screened lanais, and open floor plans typical of the mid-1990s Florida build era. The lots are moderate — not as tight as newer construction, but not the half-acre parcels you find further east toward <a href="/durant-estates/">Durant Estates</a>.</p>
+      <p>Bent Tree South is a quiet, deed-restricted subdivision in central <a href="/valrico/">Valrico</a>, tucked off South St. Cloud Avenue between Lumsden Road and State Road 60. Most homes were built in the mid-1990s, and the community has that settled, mature feel that comes from three decades of established landscaping, grown-in oak canopy, and neighbors who tend to stay put. There is no grand entrance or resort-style clubhouse here, just well-kept single-family homes on a network of residential streets with minimal through traffic.</p>
+      <p>Homes in Bent Tree South range from about 1,400 to 2,200 square feet, with a mix of 3 and 4-bedroom floor plans. Construction is concrete block, and you will find both one and two-story layouts. Most homes have 2-car garages, screened lanais, and open floor plans typical of the mid-1990s Florida build era. The lots are moderate, not as tight as newer construction, but not the half-acre parcels you find further east toward <a href="/durant-estates/">Durant Estates</a>.</p>
       <h3>How Much Is the HOA and Are There Deed Restrictions?</h3>
-      <p>Bent Tree South operates under deed restrictions with a <strong>low HOA fee around $25 per month</strong>. That is one of the most affordable HOA fees in <a href="/valrico/">Valrico</a>. There is <strong>no CDD fee</strong>. The restrictions cover the basics — exterior maintenance standards, no commercial vehicles parked in driveways, and general upkeep requirements.</p>
+      <p>Bent Tree South operates under deed restrictions with a <strong>low HOA fee around $25 per month</strong>. That is one of the most affordable HOA fees in <a href="/valrico/">Valrico</a>. There is <strong>no CDD fee</strong>. The restrictions cover the basics, exterior maintenance standards, no commercial vehicles parked in driveways, and general upkeep requirements.</p>
       <p>For comparison, nearby <a href="/savannah-landings/">Savannah Landings</a> runs $285/mo for a maintenance-free townhome lifestyle, and <a href="/copper-ridge/">Copper Ridge</a> has CDD fees that add $2,000+ per year to your tax bill. Bent Tree South gives you single-family home ownership without the monthly fee burden.</p>
       <h3>How Close Is Everything?</h3>
       <ul>
@@ -6682,7 +6682,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Downtown Tampa:</strong> 22 miles (30-35 minutes via Crosstown)</li>
       </ul>
       <h3>Which Schools Serve Bent Tree South?</h3>
-      <p>Bent Tree South is zoned for <strong>Mulrennan Middle School</strong> and <strong>Durant High School</strong>. Elementary school zoning depends on the specific section — check with Hillsborough County Public Schools for the current assignment. Durant High has solid academics and athletics, and the Durant zone offers a lower entry price than the <a href="/canterbury-oaks/">Newsome High</a> zone further south.</p>
+      <p>Bent Tree South is zoned for <strong>Mulrennan Middle School</strong> and <strong>Durant High School</strong>. Elementary school zoning depends on the specific section, check with Hillsborough County Public Schools for the current assignment. Durant High has solid academics and athletics, and the Durant zone offers a lower entry price than the <a href="/canterbury-oaks/">Newsome High</a> zone further south.</p>
       <p>If you are specifically targeting the Newsome zone, look at <a href="/buckhorn-preserve/">Buckhorn Preserve</a> or <a href="/canterbury-oaks/">Canterbury Oaks</a>. But many families find the Durant zone delivers excellent schools at a more accessible price point.</p>
       <h3>What Is the Flood Risk?</h3>
       <p>Bent Tree South sits in <strong>FEMA Flood Zone X</strong> (minimal risk). No flood insurance required by lenders. The community is on higher ground with no creek or river exposure.</p>
@@ -6695,7 +6695,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Construction age:</strong> Mid-1990s build means homes are 30+ years old. Check the roof — original shingle roofs are past replacement age. HVAC is likely on its second or third unit.</li>
+        <li><strong>Construction age:</strong> Mid-1990s build means homes are 30+ years old. Check the roof, original shingle roofs are past replacement age. HVAC is likely on its second or third unit.</li>
         <li><strong>Insurance:</strong> Concrete block construction helps with rates. New roofs will significantly improve your insurance premiums in Florida's current market.</li>
         <li><strong>Resale value:</strong> Bent Tree South homes move well because of the low HOA and central location.</li>
         <li><strong>Rentals:</strong> Strong rental demand for affordable Valrico homes. Expect $1,800-$2,100/mo for a 3-bedroom. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
@@ -6711,13 +6711,13 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     contentHtml: `
       <h3>What Is Bloomingdale Trace Like?</h3>
       <p>Bloomingdale Trace is one of the many subdivisions that make up the larger <a href="/bloomingdale-community/">Bloomingdale</a> community in <a href="/valrico/">Valrico</a>. Bloomingdale is one of the biggest master-planned communities in the Tampa Bay area, with over 5,200 homes across 32+ individual subdivisions built between 1979 and 2013. Bloomingdale Trace is one of those sections, with homes built primarily in the 1980s and early 1990s.</p>
-      <p>Homes are single-family, concrete block construction, ranging from about 1,400 to 2,200 square feet. You will see a mix of ranch-style and two-story layouts with 3 to 4 bedrooms and 2-car garages. The lots have mature landscaping — full-grown oaks and established yards that newer subdivisions cannot replicate. The streets connect to the broader Bloomingdale trail network for walking and biking.</p>
+      <p>Homes are single-family, concrete block construction, ranging from about 1,400 to 2,200 square feet. You will see a mix of ranch-style and two-story layouts with 3 to 4 bedrooms and 2-car garages. The lots have mature landscaping, full-grown oaks and established yards that newer subdivisions cannot replicate. The streets connect to the broader Bloomingdale trail network for walking and biking.</p>
       <h3>What Does the HOA Cover?</h3>
       <p>Bloomingdale Trace has a mandatory HOA with fees typically <strong>under $100/month</strong> covering common area maintenance, trail upkeep, and deed restriction enforcement. There is <strong>no CDD fee</strong>. The broader Bloomingdale Neighborhood Association maintains trails, playgrounds, and common areas shared across all subdivisions.</p>
       <h3>How Close Is Everything?</h3>
       <ul>
         <li><strong>Publix on Bell Shoals:</strong> 1 mile</li>
-        <li><strong>Bloomingdale Avenue shopping:</strong> Direct access — restaurants, banks, medical offices</li>
+        <li><strong>Bloomingdale Avenue shopping:</strong> Direct access, restaurants, banks, medical offices</li>
         <li><strong>Bloomingdale High School:</strong> Within the community</li>
         <li><strong>Selmon Expressway:</strong> 3 miles (quick commute into Tampa)</li>
         <li><strong>I-75:</strong> 5 miles west (10 minutes)</li>
@@ -6753,10 +6753,10 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary: "Deed-restricted section of 57 single-family homes within the larger Bloomingdale community. HOA incorporated in 1996. Zoned for Bloomingdale High School with access to community trails.",
     contentHtml: `
       <h3>What Is Bloomingdale Village Like?</h3>
-      <p>Bloomingdale Village is a compact, deed-restricted section within the larger <a href="/bloomingdale-community/">Bloomingdale</a> community in <a href="/valrico/">Valrico</a>. With just 57 single-family homes, it is one of the smaller subdivisions in the 32-section Bloomingdale master plan. The BVHOA was incorporated in 1996, and the community carries that mid-1990s Florida construction quality — concrete block, tile or shingle roofs, and floor plans that give you legitimate living space.</p>
+      <p>Bloomingdale Village is a compact, deed-restricted section within the larger <a href="/bloomingdale-community/">Bloomingdale</a> community in <a href="/valrico/">Valrico</a>. With just 57 single-family homes, it is one of the smaller subdivisions in the 32-section Bloomingdale master plan. The BVHOA was incorporated in 1996, and the community carries that mid-1990s Florida construction quality, concrete block, tile or shingle roofs, and floor plans that give you legitimate living space.</p>
       <p>Homes are primarily 3 to 4 bedrooms, 1,500 to 2,400 square feet. Most have 2-car garages, screened lanais, and mature landscaping. The small size means you know your neighbors and the streets are quiet enough for evening walks.</p>
       <h3>What Does the HOA Cover?</h3>
-      <p>The BVHOA enforces deed restrictions and maintains community standards. Fees are <strong>reasonable</strong> with <strong>no CDD fee</strong>. The residents handbook covers exterior modifications, landscaping, parking, and general upkeep — practical rather than oppressive.</p>
+      <p>The BVHOA enforces deed restrictions and maintains community standards. Fees are <strong>reasonable</strong> with <strong>no CDD fee</strong>. The residents handbook covers exterior modifications, landscaping, parking, and general upkeep, practical rather than oppressive.</p>
       <h3>How Close Is Everything?</h3>
       <ul>
         <li><strong>Publix on Bell Shoals:</strong> 1.5 miles</li>
@@ -6829,7 +6829,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
       <h3>What Should Buyers and Renters Know?</h3>
       <ul>
-        <li><strong>Built 1986 but renovated:</strong> Check individual unit condition — some updated, others may have original finishes.</li>
+        <li><strong>Built 1986 but renovated:</strong> Check individual unit condition, some updated, others may have original finishes.</li>
         <li><strong>Condo vs. rental:</strong> Understand the association structure and rental restrictions before buying.</li>
         <li><strong>Insurance:</strong> Condo insurance (HO-6) is typically more affordable. Verify what the master policy covers.</li>
         <li><strong>Investment:</strong> Bloomingdale location and school zoning support strong rental demand. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
@@ -6844,10 +6844,10 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary: "Small established subdivision of roughly 40 single-family homes in North Valrico (33594). Mature landscaping, concrete block construction, no gate. Home prices typically $280K-$380K with generous lot sizes.",
     contentHtml: `
       <h3>What Is Boca Gardene Like?</h3>
-      <p>Boca Gardene is a small, established neighborhood tucked into the North <a href="/valrico/">Valrico</a> corridor with roughly 40 single-family homes. The trees are grown, the yards are kept, and the community carries the kind of settled energy that only comes with time. No gate, no resort clubhouse — just a quiet residential pocket where neighbors know each other.</p>
+      <p>Boca Gardene is a small, established neighborhood tucked into the North <a href="/valrico/">Valrico</a> corridor with roughly 40 single-family homes. The trees are grown, the yards are kept, and the community carries the kind of settled energy that only comes with time. No gate, no resort clubhouse, just a quiet residential pocket where neighbors know each other.</p>
       <p>Homes are concrete block construction with 3 to 4 bedrooms, 2-car garages, screened lanais, and open-concept living areas. Lot sizes are generous for the price point. Owners suites typically include walk-in closets and split bedroom layouts.</p>
       <h3>What Are the Costs?</h3>
-      <p>Home prices generally fall between <strong>$280,000 and $380,000</strong>. HOA structures vary by home — confirm fees for any property. There is typically <strong>no CDD fee</strong>. For comparison, gated communities like <a href="/copper-ridge/">Copper Ridge</a> or <a href="/canterbury-oaks/">Canterbury Oaks</a> command higher prices with CDD or elevated HOA fees.</p>
+      <p>Home prices generally fall between <strong>$280,000 and $380,000</strong>. HOA structures vary by home, confirm fees for any property. There is typically <strong>no CDD fee</strong>. For comparison, gated communities like <a href="/copper-ridge/">Copper Ridge</a> or <a href="/canterbury-oaks/">Canterbury Oaks</a> command higher prices with CDD or elevated HOA fees.</p>
       <h3>How Close Is Everything?</h3>
       <ul>
         <li><strong>Publix:</strong> 1.5 miles on SR 60</li>
@@ -6887,9 +6887,9 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     contentHtml: `
       <h3>What Is Brandon East Like?</h3>
       <p>Brandon East is one of the oldest established subdivisions in the <a href="/valrico/">Valrico</a>/Brandon corridor, with homes dating back to 1971. Over half a century of families and tree growth gives the streets a canopy and character you cannot get in a newer subdivision. Homes range from modest 1,230 sqft starters to spacious 2,590 sqft family homes.</p>
-      <p>Construction varies by era. Earlier homes may have carports (typical of the era), while later additions have attached 2-car garages. The lots are generous by today's standards — the kind of yard space builders stopped offering around 2005.</p>
+      <p>Construction varies by era. Earlier homes may have carports (typical of the era), while later additions have attached 2-car garages. The lots are generous by today's standards, the kind of yard space builders stopped offering around 2005.</p>
       <h3>What Are the Costs?</h3>
-      <p>Brandon East is one of the most affordable entry points into the Valrico market. There is <strong>no CDD fee</strong>. HOA presence varies — some sections have minimal HOA, others operate without one. If you are being priced out of <a href="/copper-ridge/">Copper Ridge</a> or <a href="/buckhorn-preserve/">Buckhorn Preserve</a>, Brandon East deserves a hard look.</p>
+      <p>Brandon East is one of the most affordable entry points into the Valrico market. There is <strong>no CDD fee</strong>. HOA presence varies, some sections have minimal HOA, others operate without one. If you are being priced out of <a href="/copper-ridge/">Copper Ridge</a> or <a href="/buckhorn-preserve/">Buckhorn Preserve</a>, Brandon East deserves a hard look.</p>
       <h3>How Close Is Everything?</h3>
       <ul>
         <li><strong>Publix:</strong> 2 miles on SR 60</li>
@@ -6903,7 +6903,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>Which Schools Serve Brandon East?</h3>
       <p>Properties may fall in the <strong>Durant High School</strong> or <strong>Bloomingdale High School</strong> zone depending on the section. Verify with Hillsborough County Public Schools.</p>
       <h3>What Is the Flood Risk?</h3>
-      <p>Most of Brandon East sits in <strong>FEMA Flood Zone X</strong> (minimal risk). Some properties near drainage areas may differ — always verify.</p>
+      <p>Most of Brandon East sits in <strong>FEMA Flood Zone X</strong> (minimal risk). Some properties near drainage areas may differ, always verify.</p>
       <h3>How Does Brandon East Compare?</h3>
       <ul>
         <li><strong><a href="/brandon-ridgeland/">Brandon Ridgeland</a></strong> (adjacent): Similar era, similar price range.</li>
@@ -6913,7 +6913,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Inspect everything:</strong> Homes dating to 1971 need thorough inspection — roof, electrical panels (Federal Pacific/Zinsco), plumbing type, foundation.</li>
+        <li><strong>Inspect everything:</strong> Homes dating to 1971 need thorough inspection, roof, electrical panels (Federal Pacific/Zinsco), plumbing type, foundation.</li>
         <li><strong>Renovation potential:</strong> Large lots and solid location make excellent renovation candidates.</li>
         <li><strong>Insurance:</strong> Older roofs and electrical systems inflate premiums. Factor in a new roof cost.</li>
         <li><strong>Rentals:</strong> Affordable Valrico homes rent quickly. Expect $1,600-$2,000/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
@@ -6928,7 +6928,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary: "Established Valrico subdivision with midsize homes from 1,242 to 1,779 sqft, built in the 1980s-1990s. Multiple phases. Affordable entry point with no CDD.",
     contentHtml: `
       <h3>What Is Brandon Ridgeland Like?</h3>
-      <p>Brandon Ridgeland is a well-established subdivision in western <a href="/valrico/">Valrico</a>, with homes built primarily in the 1980s and 1990s. The neighborhood includes multiple phases (Unit One, Unit Two, etc.) with variety in home styles. Homes range from 1,242 to 1,779 sqft — practical 3-bedroom floor plans with 2-car garages on lots that give you significantly more yard than anything built after 2005.</p>
+      <p>Brandon Ridgeland is a well-established subdivision in western <a href="/valrico/">Valrico</a>, with homes built primarily in the 1980s and 1990s. The neighborhood includes multiple phases (Unit One, Unit Two, etc.) with variety in home styles. Homes range from 1,242 to 1,779 sqft, practical 3-bedroom floor plans with 2-car garages on lots that give you significantly more yard than anything built after 2005.</p>
       <h3>What Are the Costs?</h3>
       <p>One of the more affordable options in Valrico. <strong>No CDD fee</strong>. HOA varies by section. The value proposition: lower total monthly cost than newer communities, with a bigger yard in a quieter setting.</p>
       <h3>How Close Is Everything?</h3>
@@ -6983,12 +6983,12 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
         <li><strong>Brandon Regional Hospital:</strong> 3 miles</li>
       </ul>
       <h3>Which Schools Serve Brandon Valrico Hills Estates?</h3>
-      <p>Properties may fall in <strong>Durant High</strong> or <strong>Bloomingdale High</strong> zone. Verify with the school district — boundary lines in this transitional area matter.</p>
+      <p>Properties may fall in <strong>Durant High</strong> or <strong>Bloomingdale High</strong> zone. Verify with the school district, boundary lines in this transitional area matter.</p>
       <h3>What Is the Flood Risk?</h3>
       <p><strong>FEMA Flood Zone X</strong> (minimal risk) for most properties.</p>
       <h3>How Does It Compare?</h3>
       <ul>
-        <li><strong><a href="/brandon-east/">Brandon East</a></strong> (adjacent): Similar profile — established, affordable, larger lots.</li>
+        <li><strong><a href="/brandon-east/">Brandon East</a></strong> (adjacent): Similar profile, established, affordable, larger lots.</li>
         <li><strong><a href="/brandon-ridgeland/">Brandon Ridgeland</a></strong> (1 mile): Similar era, more uniform sizes.</li>
         <li><strong><a href="/diamond-hill/">Diamond Hill</a></strong> (3 miles): Larger lots, no HOA in many sections.</li>
         <li><strong><a href="/somerset/">Somerset</a></strong> (2 miles): Newer with resort amenities. Higher price.</li>
@@ -7037,7 +7037,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Inspection priorities:</strong> Late 1980s/1990s — check roof, HVAC, water heater, plumbing type (polybutylene possible).</li>
+        <li><strong>Inspection priorities:</strong> Late 1980s/1990s, check roof, HVAC, water heater, plumbing type (polybutylene possible).</li>
         <li><strong>Insurance impact:</strong> A newer roof dramatically improves Florida insurance rates.</li>
         <li><strong>No amenities:</strong> No pool, no clubhouse, no gate. You are buying location and lot.</li>
         <li><strong>Rentals:</strong> Bloomingdale High zone supports solid demand. Expect $1,700-$2,100/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
@@ -7052,9 +7052,9 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary: "Established Valrico neighborhood built in the late 1980s with larger homes around 2,500 sqft. Very low HOA around $17/month, no CDD. Mature oak canopy and quiet streets.",
     contentHtml: `
       <h3>What Is Brooker Trace Like?</h3>
-      <p>Brooker Trace is a well-established neighborhood in <a href="/valrico/">Valrico</a> with homes built in the late 1980s. Homes here are substantial — around 2,500 square feet — with the construction quality and lot sizing that builders offered before land costs pushed everything tighter. Quiet streets with established oak canopy, 4 bedrooms, 2-car garages, screened lanais, and room for a pool.</p>
+      <p>Brooker Trace is a well-established neighborhood in <a href="/valrico/">Valrico</a> with homes built in the late 1980s. Homes here are substantial, around 2,500 square feet, with the construction quality and lot sizing that builders offered before land costs pushed everything tighter. Quiet streets with established oak canopy, 4 bedrooms, 2-car garages, screened lanais, and room for a pool.</p>
       <h3>What Does the HOA Cost?</h3>
-      <p>Roughly <strong>$17 per month</strong> — one of the lowest in Valrico, even lower than <a href="/abbey-grove/">Abbey Grove's</a> $40/mo. <strong>No CDD fee</strong>. Your total monthly fee burden is negligible compared to newer communities where HOA plus CDD can add $400-$600/month.</p>
+      <p>Roughly <strong>$17 per month</strong> one of the lowest in Valrico, even lower than <a href="/abbey-grove/">Abbey Grove's</a> $40/mo. <strong>No CDD fee</strong>. Your total monthly fee burden is negligible compared to newer communities where HOA plus CDD can add $400-$600/month.</p>
       <h3>How Close Is Everything?</h3>
       <ul>
         <li><strong>Publix:</strong> 2 miles on Lithia Pinecrest Road</li>
@@ -7093,9 +7093,9 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary: "Small, quiet residential pocket in Valrico with single-family homes on a circular street. No HOA in most sections, mature lots, affordable entry point.",
     contentHtml: `
       <h3>What Is Bryan Circle Like?</h3>
-      <p>Bryan Circle is one of those tiny <a href="/valrico/">Valrico</a> pockets that flies under the radar — a handful of single-family homes on a circular street layout. No gate, no community pool, no marketing brochure. Just homes on a quiet street where the traffic is local and the pace is slow. Concrete block construction, 3 to 4 bedrooms, 2-car garages, and generous lots with mature landscaping.</p>
+      <p>Bryan Circle is one of those tiny <a href="/valrico/">Valrico</a> pockets that flies under the radar, a handful of single-family homes on a circular street layout. No gate, no community pool, no marketing brochure. Just homes on a quiet street where the traffic is local and the pace is slow. Concrete block construction, 3 to 4 bedrooms, 2-car garages, and generous lots with mature landscaping.</p>
       <h3>What Are the Costs?</h3>
-      <p>Among the most affordable options in Valrico. Most properties have <strong>no HOA</strong> and <strong>no CDD fee</strong>. Your monthly cost is mortgage, taxes, and insurance — that is it.</p>
+      <p>Among the most affordable options in Valrico. Most properties have <strong>no HOA</strong> and <strong>no CDD fee</strong>. Your monthly cost is mortgage, taxes, and insurance, that is it.</p>
       <h3>How Close Is Everything?</h3>
       <ul>
         <li><strong>Publix:</strong> 2 miles on SR 60</li>
@@ -7133,10 +7133,10 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary: "Golf course community in the Buckhorn area of Valrico with homes from 1,500 to 3,300+ sqft overlooking Buckhorn Springs Golf and Country Club. HOA around $5/month, no CDD. Zoned for Buckhorn Elementary.",
     contentHtml: `
       <h3>What Is Buckhorn Golf Club Estates Like?</h3>
-      <p>Buckhorn Golf Club Estates is a residential community in the Buckhorn area of <a href="/valrico/">Valrico</a>, built around the Buckhorn Springs Golf and Country Club. One of several Buckhorn subdivisions sharing the corridor between Durant Road, Lithia Pinecrest Road, and Valrico Road — alongside <a href="/buckhorn-preserve/">Buckhorn Preserve</a>, <a href="/buckhorn-springs/">Buckhorn Springs</a>, and others. Many homes sit with fairway views, providing that open, unobstructed feel that golf course lots deliver.</p>
+      <p>Buckhorn Golf Club Estates is a residential community in the Buckhorn area of <a href="/valrico/">Valrico</a>, built around the Buckhorn Springs Golf and Country Club. One of several Buckhorn subdivisions sharing the corridor between Durant Road, Lithia Pinecrest Road, and Valrico Road, alongside <a href="/buckhorn-preserve/">Buckhorn Preserve</a>, <a href="/buckhorn-springs/">Buckhorn Springs</a>, and others. Many homes sit with fairway views, providing that open, unobstructed feel that golf course lots deliver.</p>
       <p>Homes range from 1,500 to over 3,300 sqft, 3 to 5 bedrooms, one and two-story layouts in concrete block. Mature landscaping frames golf course views and provides neighborhood shade.</p>
       <h3>What Does the HOA Cost?</h3>
-      <p>Approximately <strong>$5 per month</strong> — one of the lowest in all of Valrico. <strong>No CDD fee</strong>. Golf club membership is separate and optional.</p>
+      <p>Approximately <strong>$5 per month</strong> one of the lowest in all of Valrico. <strong>No CDD fee</strong>. Golf club membership is separate and optional.</p>
       <h3>How Close Is Everything?</h3>
       <ul>
         <li><strong>Publix on Lithia Pinecrest:</strong> 1.5 miles</li>
@@ -7150,7 +7150,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>Which Schools Serve Buckhorn Golf Club Estates?</h3>
       <p>Zoned for <strong>Buckhorn Elementary</strong> (one of the highest-rated in Hillsborough County), <strong>Mulrennan Middle School</strong>, and typically <strong>Durant High School</strong>. The Buckhorn Elementary zone is a primary driver of property values in this part of Valrico.</p>
       <h3>What Is the Flood Risk?</h3>
-      <p>Most lots sit in <strong>FEMA Flood Zone X</strong>. Some lots adjacent to the golf course may differ — always verify. Golf course lots can have drainage considerations during heavy rain.</p>
+      <p>Most lots sit in <strong>FEMA Flood Zone X</strong>. Some lots adjacent to the golf course may differ, always verify. Golf course lots can have drainage considerations during heavy rain.</p>
       <h3>How Does Buckhorn Golf Club Estates Compare?</h3>
       <ul>
         <li><strong><a href="/buckhorn-preserve/">Buckhorn Preserve</a></strong> (1 mile): Newer (2000s-2010s), community pool. Higher HOA but more amenities.</li>
@@ -7175,9 +7175,9 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary: "Established Valrico subdivision with larger homes from 2,366 to 2,817 sqft on Buckingham Loop Drive and Highgate Drive. Low HOA, no CDD. Mature landscaping and above-average square footage for the price.",
     contentHtml: `
       <h3>What Is Buckingham Like?</h3>
-      <p>Buckingham is a well-established subdivision in <a href="/valrico/">Valrico</a> that delivers larger homes at reasonable prices without excessive monthly fees. Homes range from 2,366 to 2,817 sqft across Buckingham Loop Drive and Highgate Drive. Mature landscaping, full-grown oaks, and serious curb appeal. Construction is concrete block with 4 to 5-bedroom floor plans, 2-car garages, and screened lanais — practical, livable space.</p>
+      <p>Buckingham is a well-established subdivision in <a href="/valrico/">Valrico</a> that delivers larger homes at reasonable prices without excessive monthly fees. Homes range from 2,366 to 2,817 sqft across Buckingham Loop Drive and Highgate Drive. Mature landscaping, full-grown oaks, and serious curb appeal. Construction is concrete block with 4 to 5-bedroom floor plans, 2-car garages, and screened lanais, practical, livable space.</p>
       <h3>What Are the Costs?</h3>
-      <p><strong>Low HOA</strong> and <strong>no CDD fee</strong>. Total monthly cost — mortgage, taxes, insurance, and HOA — will be lower than a comparable-sized home in <a href="/copper-ridge/">Copper Ridge</a> or <a href="/eagles-landing/">Eagles Landing</a>.</p>
+      <p><strong>Low HOA</strong> and <strong>no CDD fee</strong>. Total monthly cost, mortgage, taxes, insurance, and HOA, will be lower than a comparable-sized home in <a href="/copper-ridge/">Copper Ridge</a> or <a href="/eagles-landing/">Eagles Landing</a>.</p>
       <h3>How Close Is Everything?</h3>
       <ul>
         <li><strong>Publix:</strong> 1.5 miles on SR 60</li>
@@ -7244,7 +7244,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <ul>
         <li><strong>Size range matters:</strong> A 2,300 sqft home and a 4,800 sqft home are completely different products even on the same street.</li>
         <li><strong>Golf course adjacency:</strong> View premium comes with occasional golf balls and maintenance noise.</li>
-        <li><strong>Small gated community:</strong> 68 homes behind a gate — you will know your neighbors.</li>
+        <li><strong>Small gated community:</strong> 68 homes behind a gate, you will know your neighbors.</li>
         <li><strong>Rentals:</strong> Gated Bloomingdale High zone homes command premium rents. Expect $2,400-$3,500/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
       <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
@@ -7252,7 +7252,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     `,
   },
 
-  // canterbury-oaks-community removed — canonical is "canterbury-oaks" above
+  // canterbury-oaks-community removed, canonical is "canterbury-oaks" above
 
   // ===== CHICKASAW MEADOWS =====
   "chickasaw-meadows": {
@@ -7300,9 +7300,9 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary: "Deed-restricted Valrico subdivision built 2002-2009 on Citrus Wood Lane. HOA managed by McNeil Management, ~$500/year. No CDD. Solid 2000s-era construction with 3-4 bedroom floor plans.",
     contentHtml: `
       <h3>What Is Citrus Wood Like?</h3>
-      <p>Citrus Wood is a deed-restricted subdivision in <a href="/valrico/">Valrico</a> with homes built 2002 to 2009 on Citrus Wood Lane. The construction era is a sweet spot — newer than the 1980s-1990s neighborhoods that dominate western Valrico, but old enough that the landscaping is mature and build quality is proven. Concrete block, 3 to 4 bedrooms, 2-car garages, open floor plans, tile or shingle roofs, screened lanais, and split bedroom layouts.</p>
+      <p>Citrus Wood is a deed-restricted subdivision in <a href="/valrico/">Valrico</a> with homes built 2002 to 2009 on Citrus Wood Lane. The construction era is a sweet spot, newer than the 1980s-1990s neighborhoods that dominate western Valrico, but old enough that the landscaping is mature and build quality is proven. Concrete block, 3 to 4 bedrooms, 2-car garages, open floor plans, tile or shingle roofs, screened lanais, and split bedroom layouts.</p>
       <h3>What Does the HOA Cost?</h3>
-      <p>Managed by <strong>McNeil Management Services</strong> at approximately <strong>$500 per year ($41.67/month)</strong>. <strong>No CDD fee</strong>. McNeil also manages <a href="/savannah-landings/">Savannah Landings</a> and other local communities — a well-established management company.</p>
+      <p>Managed by <strong>McNeil Management Services</strong> at approximately <strong>$500 per year ($41.67/month)</strong>. <strong>No CDD fee</strong>. McNeil also manages <a href="/savannah-landings/">Savannah Landings</a> and other local communities, a well-established management company.</p>
       <h3>How Close Is Everything?</h3>
       <ul>
         <li><strong>Publix:</strong> 1.5 miles on SR 60</li>
@@ -7328,7 +7328,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <ul>
         <li><strong>2002-2009 range:</strong> Earlier homes are 24+ years old. Tile roofs may have a decade left; shingle roofs may need replacement.</li>
         <li><strong>Professional management:</strong> McNeil provides consistent enforcement and financial record-keeping. Homeowner portal available.</li>
-        <li><strong>Deed restrictions:</strong> Review before purchasing — covers exterior modifications, fencing, parking.</li>
+        <li><strong>Deed restrictions:</strong> Review before purchasing, covers exterior modifications, fencing, parking.</li>
         <li><strong>Rentals:</strong> 2000s-era Valrico homes rent well. Expect $2,000-$2,400/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles rentals in this area.</li>
       </ul>
       <p><a href="/about/">Barrett Henry</a> is a Broker Associate at <a href="/remax-collective/">REMAX Collective</a> with 23+ years of real estate experience. Call <a href="tel:+18137337907">(813) 733-7907</a> or <a href="/free-home-valuation/">get a free home valuation</a>.</p>
@@ -7343,7 +7343,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Is Clarissa Desiree Like?</h3>
       <p>Clarissa Desiree is one of those small, quiet residential pockets in <a href="/valrico/">Valrico</a> that most people outside the immediate area have never heard of. Single-family homes on residential streets with no pretense, no gate, and no resort amenities. What you get is a well-located home in Valrico at a price point that does not require a six-figure down payment. Concrete block construction, 3 to 4 bedrooms, fenced yards, mature landscaping.</p>
       <h3>What Are the Costs?</h3>
-      <p>Among the more <strong>affordable options</strong> in Valrico. HOA/deed restriction structures vary — verify for specific properties. Generally <strong>no CDD fee</strong>.</p>
+      <p>Among the more <strong>affordable options</strong> in Valrico. HOA/deed restriction structures vary, verify for specific properties. Generally <strong>no CDD fee</strong>.</p>
       <h3>How Close Is Everything?</h3>
       <ul>
         <li><strong>Publix:</strong> 2 miles on SR 60</li>
@@ -7383,7 +7383,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <h3>What Is Dixie Estates Like?</h3>
       <p>Dixie Estates is an older, established neighborhood in <a href="/valrico/">Valrico</a>. No gate, no pool, no clubhouse, no fancy entrance. Just single-family homes on quiet streets with larger lots and mature trees that provide shade and character only decades of growth can produce. Homes built across multiple decades, concrete block, 3 to 4 bedrooms. Lots are typically larger than subdivisions built after 2000.</p>
       <h3>What Are the Costs?</h3>
-      <p>One of the <strong>most affordable neighborhoods</strong> in Valrico. Most sections have <strong>no HOA and no CDD</strong>. Monthly cost is mortgage, taxes, and insurance — period.</p>
+      <p>One of the <strong>most affordable neighborhoods</strong> in Valrico. Most sections have <strong>no HOA and no CDD</strong>. Monthly cost is mortgage, taxes, and insurance, period.</p>
       <h3>How Close Is Everything?</h3>
       <ul>
         <li><strong>Publix:</strong> 2 miles on SR 60</li>
@@ -7400,7 +7400,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       <p><strong>FEMA Flood Zone X</strong> (minimal risk) for most properties.</p>
       <h3>How Does Dixie Estates Compare?</h3>
       <ul>
-        <li><strong><a href="/brandon-east/">Brandon East</a></strong> (1 mile): Similar — established, affordable, no-frills.</li>
+        <li><strong><a href="/brandon-east/">Brandon East</a></strong> (1 mile): Similar, established, affordable, no-frills.</li>
         <li><strong><a href="/valri-park/">Valri Park</a></strong> (1 mile): No HOA, larger lots. Same buyer demographic.</li>
         <li><strong><a href="/diamond-hill/">Diamond Hill</a></strong> (3 miles): Half-acre+ lots, no HOA. Similar freedom, further east.</li>
         <li><strong><a href="/abbey-grove/">Abbey Grove</a></strong> (2 miles): Newer, small community with low HOA.</li>
@@ -7422,7 +7422,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary: "Exclusive gated community of just 11 luxury homes on a cul-de-sac in Valrico. Built 2004-2007 with 4+ bedrooms, 3-car garages, hardwood floors, stone fireplaces, and outdoor kitchens. HOA covers gate and private road.",
     contentHtml: `
       <h3>What Is Dovewood Estates Like?</h3>
-      <p>Dovewood Estates is one of the most exclusive residential communities in <a href="/valrico/">Valrico</a> — just 11 homes on a single gated cul-de-sac. Built 2004-2007, these are custom-quality homes with 4+ bedrooms, 3.5+ bathrooms, and 3-car garages on generous lots. Luxury finishes include Somerset maple hardwood flooring, stone accent fireplaces, granite countertops, and GE Monogram built-in appliances. Many properties have screened pools with outdoor kitchens including gas grills, bar cabanas, and built-in speaker systems.</p>
+      <p>Dovewood Estates is one of the most exclusive residential communities in <a href="/valrico/">Valrico</a> just 11 homes on a single gated cul-de-sac. Built 2004-2007, these are custom-quality homes with 4+ bedrooms, 3.5+ bathrooms, and 3-car garages on generous lots. Luxury finishes include Somerset maple hardwood flooring, stone accent fireplaces, granite countertops, and GE Monogram built-in appliances. Many properties have screened pools with outdoor kitchens including gas grills, bar cabanas, and built-in speaker systems.</p>
       <h3>What Does the HOA Cover?</h3>
       <p><strong>Gated entry maintenance, exterior assistance, and private road upkeep</strong>. With 11 homes, the HOA is more cooperative than corporate. <strong>No CDD fee</strong>.</p>
       <h3>How Close Is Everything?</h3>
@@ -7462,9 +7462,9 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary: "Exclusive 10-home custom subdivision on Drakes Landing Court in the heart of Valrico. Established 1989 with large, individually designed homes on secluded cul-de-sac lots with 3-car garages and pools.",
     contentHtml: `
       <h3>What Is Drakes Place Like?</h3>
-      <p>Drakes Place is about as far from a cookie-cutter subdivision as you can get in <a href="/valrico/">Valrico</a>. Just 10 custom-built homes on Drakes Landing Court, a secluded cul-de-sac providing exceptional privacy. Established in 1989, homes were built as individual custom projects — each has its own character, floor plan, and personality. Large floor plans, 3-car garages, screened pools, covered lanais, and the kind of lot sizes that allow genuine outdoor living. Mature landscaping provides shade and seclusion.</p>
+      <p>Drakes Place is about as far from a cookie-cutter subdivision as you can get in <a href="/valrico/">Valrico</a>. Just 10 custom-built homes on Drakes Landing Court, a secluded cul-de-sac providing exceptional privacy. Established in 1989, homes were built as individual custom projects, each has its own character, floor plan, and personality. Large floor plans, 3-car garages, screened pools, covered lanais, and the kind of lot sizes that allow genuine outdoor living. Mature landscaping provides shade and seclusion.</p>
       <h3>What Are the Costs?</h3>
-      <p>Priced at the <strong>upper end of the Valrico market</strong>. Minimal HOA — with 10 homes, it operates like a neighborhood agreement. <strong>No CDD fee</strong>.</p>
+      <p>Priced at the <strong>upper end of the Valrico market</strong>. Minimal HOA, with 10 homes, it operates like a neighborhood agreement. <strong>No CDD fee</strong>.</p>
       <h3>How Close Is Everything?</h3>
       <ul>
         <li><strong>Publix:</strong> 2 miles</li>
@@ -7488,7 +7488,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
       </ul>
       <h3>What Should Buyers Know?</h3>
       <ul>
-        <li><strong>Extremely rare inventory:</strong> 10 homes — listings may come up once every few years. Set alerts and move fast.</li>
+        <li><strong>Extremely rare inventory:</strong> 10 homes, listings may come up once every few years. Set alerts and move fast.</li>
         <li><strong>Custom home inspection:</strong> Every home is different. Hire an inspector experienced with custom construction.</li>
         <li><strong>Community of 10:</strong> Personalities and relationships matter more than in a 500-home subdivision. Drive the street and talk to residents before committing.</li>
         <li><strong>Rentals:</strong> Custom homes on premium lots command $3,000-$4,000+/mo. <a href="https://valricopropertymgmt.com" target="_blank" rel="noopener">ViVi Property Management</a> handles luxury rentals.</li>
@@ -7503,7 +7503,7 @@ export const NEIGHBORHOOD_DESCRIPTIONS: Record<string, NeighborhoodDescription> 
     summary: "Family-friendly Valrico neighborhood built 2001-2002 with 4-bedroom, 3-bath homes featuring 2-3 car garages and open floor plans. Zoned for Buckhorn Elementary. Low HOA, no CDD. Median prices around $620K.",
     contentHtml: `
       <h3>What Is Duncan Grove Castle Key Like?</h3>
-      <p>Duncan Grove Castle Key is a peaceful, family-friendly neighborhood in <a href="/valrico/">Valrico</a> built 2001-2002. Known for well-kept homes, quiet streets, and green spaces. Residents describe it as clean, safe, walkable, and well-maintained — families plant roots and stay. Homes are 4 bedrooms, 3 baths, 2-3 car garages with open floor plans and split bedrooms. Spacious owners suites with sitting rooms, garden tubs, and separate showers. Many homes have in-ground pools and fenced backyards. Concrete block with tile roofs.</p>
+      <p>Duncan Grove Castle Key is a peaceful, family-friendly neighborhood in <a href="/valrico/">Valrico</a> built 2001-2002. Known for well-kept homes, quiet streets, and green spaces. Residents describe it as clean, safe, walkable, and well-maintained, families plant roots and stay. Homes are 4 bedrooms, 3 baths, 2-3 car garages with open floor plans and split bedrooms. Spacious owners suites with sitting rooms, garden tubs, and separate showers. Many homes have in-ground pools and fenced backyards. Concrete block with tile roofs.</p>
       <h3>What Are the Costs?</h3>
       <p>Low HOA covering common area maintenance. <strong>No CDD fee</strong>. Median prices around <strong>$620K</strong>, reflecting strong demand and quality homes. Monthly carrying cost beyond the mortgage is minimal.</p>
       <h3>How Close Is Everything?</h3>

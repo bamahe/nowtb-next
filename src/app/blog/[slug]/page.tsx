@@ -12,7 +12,7 @@ import { getAllPosts, getPostBySlug, getPostBySlugAsync, getPostThumbnail, getRe
 import { findRelatedPosts, getRelatedPostsTitle } from "@/lib/related-posts";
 import { cleanWpContent, metaDescription } from "@/lib/utils";
 // Single source of truth for Barrett's author entity and for speakable
-// selectors. See src/lib/schema.tsx — do not re-hardcode these values here.
+// selectors. See src/lib/schema.tsx, do not re-hardcode these values here.
 import { barrettAuthorPerson, speakableSelectorsForContent } from "@/lib/schema";
 import PhotoCredit from "@/components/ui/PhotoCredit";
 import SearchCategoryListings from "@/components/ui/SearchCategoryListings";
@@ -28,7 +28,7 @@ export const dynamicParams = true;
 // mid-article CTA only appeared on posts whose slug started with
 // "sell-home-fast" (about 84 posts), so 1,676 posts had no call to action in
 // the body at all. And the CTA at the bottom was hard-coded to the headline
-// "Thinking About Selling?" — which is nonsense on a post about FHA loans or
+// "Thinking About Selling?", which is nonsense on a post about FHA loans or
 // the best tacos in Brandon. A reader who feels mis-targeted does not call and
 // does not fill out a form, so that one wrong headline was quietly costing
 // leads on thousands of pages.
@@ -36,7 +36,7 @@ export const dynamicParams = true;
 // The fix: look at the post's slug + title, work out what the reader is
 // probably trying to DO (buy / sell / invest / learn about an area), and show
 // copy that matches. Then rotate between several copy variants so neighbouring
-// posts don't all repeat the same headline — repeated headlines read as
+// posts don't all repeat the same headline, repeated headlines read as
 // template spam to humans and to search engines.
 //
 // If it breaks, check:
@@ -49,7 +49,7 @@ export const dynamicParams = true;
 //     started using Math.random() or new Date(). Those return a different
 //     answer on the server than in the browser, and React treats that
 //     difference as a bug. The variant picker MUST stay a pure function of the
-//     slug — same slug in, same CTA out, forever.
+// slug, same slug in, same CTA out, forever.
 //   - A CTA link 404s on the live domain but works locally? New TOP-LEVEL
 //     routes have to be excluded from both :city flatten redirects in
 //     next.config. Every href used below (/free-home-valuation/, /properties/,
@@ -104,7 +104,7 @@ const INVESTOR_KEYWORDS = [
 
 // Seller is checked before buyer so that "for sale by owner" (a SELLER topic)
 // is not swallowed by the buyer phrase "for sale".
-// NOTE: bare "listing"/"listings" is deliberately NOT here — "new listings in
+// NOTE: bare "listing"/"listings" is deliberately NOT here, "new listings in
 // Riverview" is a BUYER search, not a seller topic.
 const SELLER_KEYWORDS = [
   "sell", "sells", "selling", "sold", "seller", "sellers",
@@ -171,7 +171,7 @@ const CITY_SLUGS_LONGEST_FIRST = [...cities]
 /**
  * Decide what a post's reader is most likely trying to do.
  *
- * Order matters — see the "If it breaks" note at the top of this block.
+ * Order matters, see the "If it breaks" note at the top of this block.
  */
 function classifyIntent(slug: string, title: string): PostIntent {
   const haystack = normalizeForMatching(slug, title);
@@ -196,7 +196,7 @@ function classifyIntent(slug: string, title: string): PostIntent {
  * the browser. If the server picked variant 2 and the browser picked variant 4,
  * React throws a hydration mismatch error and the page can visibly flicker or
  * break. Hashing the slug means a given post ALWAYS renders the same CTA,
- * while the post next to it gets a different one — which is the whole point.
+ * while the post next to it gets a different one, which is the whole point.
  */
 function stableHash(input: string): number {
   let hash = 5381;
@@ -209,7 +209,7 @@ function stableHash(input: string): number {
 
 /** Shape of one block of CTA copy. */
 interface CtaCopy {
-  /** The <h2> headline. Must be unique within its list — repeats look spammy. */
+  /** The <h2> headline. Must be unique within its list, repeats look spammy. */
   heading: string;
   /** One or two sentences of supporting copy. */
   body: string;
@@ -476,7 +476,7 @@ const HERO_CTA: Record<PostIntent, { label: string; href: string }> = {
 // --- IN-ARTICLE LEAD FORM copy ----------------------------------------------
 // `formType` is passed straight through to ContactForm's `type` prop, which is
 // what /api/contact uses to decide which n8n webhook (and which Follow Up Boss
-// treatment) the lead gets. Do NOT invent new values here — only the ones
+// treatment) the lead gets. Do NOT invent new values here, only the ones
 // ContactForm documents: contact | showing | valuation | newsletter | buyer-reg.
 const FORM_COPY: Record<
   PostIntent,
@@ -548,7 +548,7 @@ interface OpenTag {
   tag: string;
   /** The full original opening tag, e.g. `<div class="nowtb-post-content">`.
    *  We keep the whole thing so we can re-open it with the same classes and
-   *  inline styles — otherwise the second half of the article would lose its
+   * inline styles, otherwise the second half of the article would lose its
    *  width constraint and padding. */
   openTag: string;
 }
@@ -573,7 +573,7 @@ function openContainersAt(html: string, index: number): OpenTag[] {
     const tag = match[1].toLowerCase();
 
     if (match[0].startsWith("</")) {
-      // Closing tag — pop the nearest matching open tag off the stack.
+      // Closing tag, pop the nearest matching open tag off the stack.
       for (let i = stack.length - 1; i >= 0; i--) {
         if (stack[i].tag === tag) {
           stack.splice(i, 1);
@@ -594,7 +594,7 @@ function openContainersAt(html: string, index: number): OpenTag[] {
  *
  * Returns `after: ""` when no safe cut exists. The caller treats that as
  * "render the CTA ABOVE the body instead", so all 1,760 posts still get a
- * mid-article CTA — on a handful of posts it just sits at the top rather than
+ * mid-article CTA, on a handful of posts it just sits at the top rather than
  * risking mangled HTML.
  *
  * If it breaks, check:
@@ -603,7 +603,7 @@ function openContainersAt(html: string, index: number): OpenTag[] {
  *     <div> and not some tag missing from CONTAINER_TAGS above.
  *   - A CTA landed inside a dark callout box or a table? That cut should have
  *     been rejected. Only a cut where NOTHING (or just one plain wrapper) is
- *     open is accepted — see the `isSafeCut` check below. If a new box element
+ * open is accepted, see the `isSafeCut` check below. If a new box element
  *     shows up in the content, add its tag to CONTAINER_TAGS.
  *   - CTA at the very top of a long post? Either the post has fewer than six
  *     </p> tags, or every paragraph break in the middle 50% sat inside a box.
@@ -643,7 +643,7 @@ function splitContentForMidCta(html: string): { before: string; after: string } 
     // A cut is safe when the only thing open is the post's outer wrapper
     // (a plain <div> or <section>). If we are inside a table, a list, a
     // blockquote, or a nested callout box, closing and re-opening it would
-    // visibly split that box in two — so we skip that cut and try the next one.
+    // visibly split that box in two, so we skip that cut and try the next one.
     const isSafeCut =
       open.length === 0 ||
       (open.length === 1 && (open[0].tag === "div" || open[0].tag === "section"));
@@ -652,7 +652,7 @@ function splitContentForMidCta(html: string): { before: string; after: string } 
     // Close what is open (innermost first) at the end of the first half, then
     // re-open the same tags at the start of the second half. Each half is
     // handed to its own dangerouslySetInnerHTML, so each must be valid on its
-    // own — one half cannot be "repaired" by the other.
+    // own, one half cannot be "repaired" by the other.
     const closers = [...open].reverse().map((o) => `</${o.tag}>`).join("");
     const reopeners = open.map((o) => o.openTag).join("");
 
@@ -662,13 +662,13 @@ function splitContentForMidCta(html: string): { before: string; after: string } 
     };
   }
 
-  // Nothing safe found — render the body whole and put the CTA above it.
+  // Nothing safe found, render the body whole and put the CTA above it.
   return { before: html, after: "" };
 }
 
 // Typography classes for the post body. Pulled out into a constant because the
 // body is now rendered in TWO places (above and below the mid-article CTA) and
-// the two halves must look identical — if these ever drift apart, the font or
+// the two halves must look identical, if these ever drift apart, the font or
 // spacing visibly changes halfway down the article.
 const BODY_PROSE_CLASSES = `blog-content prose prose-lg font-body text-dark max-w-none
   prose-headings:font-heading prose-headings:text-primary
@@ -693,7 +693,7 @@ export async function generateMetadata({
   const description = metaDescription(post.excerpt, post.title);
 
   // ─── TITLE: one brand suffix, not two (fixed 2026-10-17) ───────────────────
-  // `title: post.title` was already correct — layout.tsx's
+  // `title: post.title` was already correct, layout.tsx's
   // `title.template = "%s | Barrett Henry"` appends the brand once, so the
   // <title> tag on blog posts was fine.
   //
@@ -701,7 +701,7 @@ export async function generateMetadata({
   // `${post.title} | Barrett Henry, REALTOR®` and passed it to openGraph.title
   // and twitter.title. Next.js applies the SAME title template to those two
   // fields (see node_modules/next/dist/lib/metadata/resolvers/resolve-opengraph.js
-  // — it calls resolveTitle(openGraph.title, titleTemplate) and the twitter
+  //, it calls resolveTitle(openGraph.title, titleTemplate) and the twitter
   // equivalent), so the social cards shipped a doubled suffix:
   //
   //   before:  og:title = "<post title> | Barrett Henry, REALTOR® | Barrett Henry"
@@ -714,23 +714,23 @@ export async function generateMetadata({
   // BUDGET: suffix is 16 characters against Google's ~60-character cut, so
   // post.title needs to stay at or under 44. Post titles come from
   // src/data/posts-export.json and are written by the content automation, which
-  // this file cannot police — long ones have to be shortened there.
+  // this file cannot police, long ones have to be shortened there.
   const title = post.title;
 
-  // ─── og:image — a real image, or the verified site-wide card ───────────────
+  // ─── og:image, a real image, or the verified site-wide card ───────────────
   // Every blog post sets twitter:card = summary_large_image, which PROMISES a
   // large image card. Until now none of them supplied openGraph.images, so the
   // promise was empty and posts shared as a blank grey rectangle everywhere.
   //
   // Why it wasn't inherited from layout.tsx: Next.js does not merge nested
   // metadata objects field-by-field. Declaring `openGraph` on a page replaces
-  // the root layout's entire openGraph object — and the resolver then runs
+  // the root layout's entire openGraph object, and the resolver then runs
   // `target.images = resolveImages(og.images, ...)` unconditionally, so a
   // missing `images` key becomes undefined rather than falling back.
   //
   // getPostThumbnail() is an fs.existsSync() check against
   // public/images/blog/<slug>.jpg, so a non-null result is a path proven to
-  // exist on disk — never a guessed filename. Two caveats worth knowing:
+  // exist on disk, never a guessed filename. Two caveats worth knowing:
   //  - Those hero files are NOT a uniform size (sampled: 1080x720, 1200x627,
   //    945x630 and others), so width/height are deliberately NOT declared for
   //    them. Stating 1200x630 over a 1080x720 file would be a false hint and
@@ -743,7 +743,7 @@ export async function generateMetadata({
   // The fallback was VERIFIED on disk before being referenced (2026-10-17):
   //   ls -la public/og-default.png  ->  exists, 41,673 bytes
   //   PNG header reports 1200 x 630 ->  matches the declared dimensions
-  // Do not swap this path without repeating that check — schema on this site
+  // Do not swap this path without repeating that check, schema on this site
   // once pointed at /images/barrett-henry-headshot.jpg, a file that has never
   // existed, and nobody noticed for months.
   const thumbnail = getPostThumbnail(post);
@@ -753,7 +753,7 @@ export async function generateMetadata({
         url: "/og-default.png",
         width: 1200,
         height: 630,
-        alt: "Barrett Henry, REALTOR® — Tampa Bay Homes for Sale",
+        alt: "Barrett Henry, REALTOR®, Tampa Bay Homes for Sale",
       };
 
   return {
@@ -767,7 +767,7 @@ export async function generateMetadata({
       type: "article",
       publishedTime: post.date,
       // siteName/locale restated for the same non-inheritance reason as images.
-      siteName: "Barrett Henry, REALTOR® — REMAX Collective",
+      siteName: "Barrett Henry, REALTOR®, REMAX Collective",
       locale: "en_US",
       images: [ogImage],
     },
@@ -816,7 +816,7 @@ export default async function BlogPostPage({
   // The `<h1>` demotion: 265 of 1,760 migrated posts carry an <h1> inside their
   // body HTML, left over from WordPress where the body WAS the whole page. This
   // template already renders the post title as the page's <h1> in the hero
-  // below, so those posts were shipping TWO <h1> elements — which splits the
+  // below, so those posts were shipping TWO <h1> elements, which splits the
   // topic signal and leaves Google guessing which one the page is actually
   // about. Demoting the body one to <h2> keeps the visible heading and the
   // outline intact while leaving exactly one <h1> per page.
@@ -938,11 +938,11 @@ export default async function BlogPostPage({
               "@type": "WebPage",
               "@id": canonicalUrl,
             },
-            // AUTHOR — now built from the shared helper in src/lib/schema.tsx
+            // AUTHOR, now built from the shared helper in src/lib/schema.tsx
             // instead of being retyped here (fixed 2026-10-17).
             //
             // The hand-written version this replaces pointed `image` at
-            // https://nowtb.com/images/barrett-henry-headshot.jpg — a file that
+            // https://nowtb.com/images/barrett-henry-headshot.jpg, a file that
             // has NEVER existed in public/images/. The real headshot is
             // barrett-headshot.png. Eight files across the repo carried that
             // same phantom path, so the author image on Barrett's most
@@ -950,7 +950,7 @@ export default async function BlogPostPage({
             //
             // barrettAuthorPerson() emits name, jobTitle, worksFor, url,
             // telephone, the verified headshot URL, sameAs, and his three real
-            // designations (e-PRO, MRP, SRS — he holds no others). One
+            // designations (e-PRO, MRP, SRS, he holds no others). One
             // definition means it cannot drift out of sync again.
             //
             // If it breaks, check: src/lib/schema.tsx owns these values now.
@@ -966,14 +966,14 @@ export default async function BlogPostPage({
               },
             },
             ...(thumbnail ? { image: thumbnail } : {}),
-            // SPEAKABLE — tells voice search and AI assistants which element on
+            // SPEAKABLE, tells voice search and AI assistants which element on
             // the page holds the quotable answer.
             //
             // The old hardcoded list was `[".quick-answer", "article h1",
             // "article h2 + p"]` and every selector in it matched NOTHING:
             //  - this template does not render <QuickAnswer>, so there is no
             //    element with class "quick-answer". The migrated WordPress
-            //    content uses "bbs-quick-answer", which is a DIFFERENT class —
+            // content uses "bbs-quick-answer", which is a DIFFERENT class 
             //    CSS matches whole class tokens, not substrings.
             //  - "article h1" fails because the <h1> lives up in the hero
             //    <section>, outside <article> entirely.
@@ -1033,7 +1033,7 @@ export default async function BlogPostPage({
           {/* === Above-the-fold CTA ===
               WHY it is here: most blog traffic arrives on a phone and a big
               share of those readers never scroll past the first screen. Before
-              this, the hero was a title and a date — nothing to tap. This is a
+              this, the hero was a title and a date, nothing to tap. This is a
               deliberately SLIM two-button bar (phone + one intent-matched
               action) rather than a form, because this is an article and a wall
               of fields at the top drives people straight back to Google.
@@ -1185,7 +1185,7 @@ export default async function BlogPostPage({
                 (or too tag-heavy) to cut safely. In that case we put the CTA
                 ABOVE the body instead of below it, so it never ends up stacked
                 against the end-of-article CTA. Either way, all 1,760 posts get
-                a mid-article CTA — the old code only showed one on the ~84
+                a mid-article CTA, the old code only showed one on the ~84
                 posts whose slug started with "sell-home-fast". */}
             {bodyParts.after ? (
               <>
@@ -1273,7 +1273,7 @@ export default async function BlogPostPage({
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start max-w-5xl mx-auto">
             {/* Left: the ask plus trust signals. On mobile this stacks ABOVE
-                the form, which is what we want — context first, then fields. */}
+                the form, which is what we want, context first, then fields. */}
             <div>
               <h2 className="heading-display text-2xl md:text-3xl text-primary mb-3">
                 {formCopy.heading}
@@ -1341,7 +1341,7 @@ export default async function BlogPostPage({
           linking block; dumping 15-20 links at the bottom of every post reads as
           link spam to both people and search engines. If you raise the number
           above, you are undoing that. Anchor text is the real post title, which
-          is already keyword-rich — never replace it with "read more". */}
+          is already keyword-rich, never replace it with "read more". */}
       {smartRelated.length > 0 && (
         <section className="bg-gray-50 py-12">
           <div className="container-wide">

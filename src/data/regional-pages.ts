@@ -1,5 +1,5 @@
 /**
- * Tampa Bay regional page data — 34 pages that cover the entire
+ * Tampa Bay regional page data, 34 pages that cover the entire
  * Tampa Bay metro area (not city-specific).
  * Includes both "tampa-bay-*" slugs and other city-prefixed pages
  * that aren't handled by the city spoke system.
@@ -35,7 +35,7 @@ export const regionalPages: RegionalPageData[] = [
   {
     slug: "cost-of-living-tampa-bay",
     title: "Cost of Living in Tampa Bay",
-    excerpt: "Complete cost of living breakdown for Tampa Bay — housing, utilities, groceries, transportation, and taxes.",
+    excerpt: "Complete cost of living breakdown for Tampa Bay, housing, utilities, groceries, transportation, and taxes.",
     category: "Relocation",
   },
   {
@@ -47,7 +47,7 @@ export const regionalPages: RegionalPageData[] = [
   {
     slug: "gated-communities-tampa-bay",
     title: "Gated Communities in Tampa Bay",
-    excerpt: "Find gated communities across Tampa Bay — guard-gated, deed-restricted, and resort-style neighborhoods.",
+    excerpt: "Find gated communities across Tampa Bay, guard-gated, deed-restricted, and resort-style neighborhoods.",
     category: "Lifestyle",
   },
   {
@@ -71,13 +71,13 @@ export const regionalPages: RegionalPageData[] = [
   {
     slug: "moving-to-tampa-bay",
     title: "Moving to Tampa Bay: Everything You Need to Know",
-    excerpt: "Complete relocation guide for moving to Tampa Bay — neighborhoods, cost of living, jobs, schools, and lifestyle.",
+    excerpt: "Complete relocation guide for moving to Tampa Bay, neighborhoods, cost of living, jobs, schools, and lifestyle.",
     category: "Relocation",
   },
   {
     slug: "moving-to-tampa-bay-checklist",
     title: "Moving to Tampa Bay Checklist",
-    excerpt: "Step-by-step checklist for relocating to Tampa Bay — timeline, utilities, DMV, voter registration, and more.",
+    excerpt: "Step-by-step checklist for relocating to Tampa Bay, timeline, utilities, DMV, voter registration, and more.",
     category: "Relocation",
   },
   {
@@ -100,7 +100,7 @@ export const regionalPages: RegionalPageData[] = [
   },
   {
     slug: "remax-agent-tampa-bay",
-    title: "REMAX Agent in Tampa Bay — Barrett Henry",
+    title: "REMAX Agent in Tampa Bay, Barrett Henry",
     // Was "...23+ years of real estate experience serving Tampa Bay", where the
     // participle "serving Tampa Bay" hangs directly off the year count and so
     // reads as 23 years of Tampa Bay service. Split into two sentences so the
@@ -112,7 +112,7 @@ export const regionalPages: RegionalPageData[] = [
   {
     slug: "retiring-to-tampa-bay",
     title: "Retiring to Tampa Bay: A Complete Guide",
-    excerpt: "Why retirees choose Tampa Bay — no state income tax, 55+ communities, healthcare, and year-round sunshine.",
+    excerpt: "Why retirees choose Tampa Bay, no state income tax, 55+ communities, healthcare, and year-round sunshine.",
     category: "Relocation",
   },
   {
@@ -162,7 +162,7 @@ export const regionalPages: RegionalPageData[] = [
   {
     slug: "tampa-bay-investment-property-guide",
     title: "Tampa Bay Investment Property Guide",
-    excerpt: "Complete guide to investing in Tampa Bay real estate — rental analysis, best neighborhoods, and ROI projections.",
+    excerpt: "Complete guide to investing in Tampa Bay real estate, rental analysis, best neighborhoods, and ROI projections.",
     category: "Investing",
   },
   {
@@ -174,12 +174,12 @@ export const regionalPages: RegionalPageData[] = [
   {
     slug: "tampa-bay-market-report",
     title: "Tampa Bay Real Estate Market Report",
-    excerpt: "Latest Tampa Bay housing market data — median prices, inventory, days on market, and trend analysis.",
+    excerpt: "Latest Tampa Bay housing market data, median prices, inventory, days on market, and trend analysis.",
     category: "Market Data",
   },
   {
     slug: "tampa-bay-real-estate-agent",
-    title: "Tampa Bay Real Estate Agent — Barrett Henry",
+    title: "Tampa Bay Real Estate Agent, Barrett Henry",
     // The experience figure is kept unlocalized on purpose: Barrett has been
     // licensed since September 2003 (23+ years of real estate experience) but
     // has only been in Florida about a decade. "23+ years of experience" sitting
@@ -190,14 +190,14 @@ export const regionalPages: RegionalPageData[] = [
   },
   {
     slug: "tampa-bay-real-estate-expert",
-    title: "Tampa Bay Real Estate Expert — Barrett Henry",
+    title: "Tampa Bay Real Estate Expert, Barrett Henry",
     excerpt: "Work with a Tampa Bay real estate expert. Barrett Henry, Broker Associate at REMAX Collective.",
     category: "Agent",
   },
   {
     slug: "tampa-bay-real-estate-market-2026",
     title: "Tampa Bay Real Estate Market 2026",
-    excerpt: "2026 Tampa Bay housing market forecast — price predictions, inventory trends, and what buyers and sellers should expect.",
+    excerpt: "2026 Tampa Bay housing market forecast, price predictions, inventory trends, and what buyers and sellers should expect.",
     category: "Market Data",
   },
   {
@@ -215,13 +215,13 @@ export const regionalPages: RegionalPageData[] = [
   {
     slug: "tampa-bay-schools-guide",
     title: "Tampa Bay Schools Guide",
-    excerpt: "Guide to Tampa Bay schools — public, private, charter, and magnet school options by county and city.",
+    excerpt: "Guide to Tampa Bay schools, public, private, charter, and magnet school options by county and city.",
     category: "Schools",
   },
   {
     slug: "tampa-bay-waterfront-homes",
     title: "Tampa Bay Waterfront Homes for Sale",
-    excerpt: "Browse waterfront homes across Tampa Bay — bayfront, riverfront, canal, and Gulf access properties.",
+    excerpt: "Browse waterfront homes across Tampa Bay, bayfront, riverfront, canal, and Gulf access properties.",
     category: "Search",
   },
   {

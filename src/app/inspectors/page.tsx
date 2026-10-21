@@ -1,5 +1,5 @@
 // =============================================================================
-// /inspectors — Home inspectors in Tampa Bay: why inspections matter,
+// /inspectors, Home inspectors in Tampa Bay: why inspections matter,
 // types of inspections, what to expect, and Barrett's inspector network
 // =============================================================================
 
@@ -11,7 +11,7 @@ import CountyGroup from "@/components/vendors/CountyGroup";
 import type { Vendor } from "@/components/vendors/VendorCard";
 import vendorData from "@/data/vendors/inspectors.json";
 
-// --- SEO metadata — keyword-first title, CTA in description ---
+// --- SEO metadata, keyword-first title, CTA in description ---
 export const metadata: Metadata = {
   title: "Home Inspectors Tampa Bay | Trusted Referrals | Barrett Henry",
   description:
@@ -127,7 +127,7 @@ export default function InspectorsPage() {
       </section>
 
 
-      {/* === Main content — prose styling for readability === */}
+      {/* === Main content, prose styling for readability === */}
       <section className="container-wide py-12">
         <div className="max-w-3xl mx-auto prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-link">
 
@@ -146,7 +146,7 @@ export default function InspectorsPage() {
           <p>
             A professional home inspection catches these issues before they become
             your financial responsibility. Roof age alone can determine whether you
-            qualify for homeowners insurance in Florida — many carriers will not write
+            qualify for homeowners insurance in Florida, many carriers will not write
             a policy on a roof older than 15 years. An inspector identifies the age,
             condition, and remaining useful life of every major system so you can make
             an informed decision.
@@ -160,41 +160,41 @@ export default function InspectorsPage() {
           </p>
           <ul>
             <li>
-              <strong>General Home Inspection</strong> — A comprehensive evaluation
+              <strong>General Home Inspection</strong> A comprehensive evaluation
               of the roof, structure, electrical, plumbing, HVAC, appliances, and
               overall condition. This is the standard inspection every buyer should
               get.
             </li>
             <li>
-              <strong>4-Point Inspection</strong> — Required by most Florida
+              <strong>4-Point Inspection</strong> Required by most Florida
               insurance companies for older homes. Covers four systems: roof,
               electrical, plumbing, and HVAC.
             </li>
             <li>
-              <strong>Wind Mitigation Inspection</strong> — Documents
+              <strong>Wind Mitigation Inspection</strong> Documents
               hurricane-resistant features such as roof-to-wall connections, roof
               covering type, opening protection, and roof deck attachment. Can save
               you hundreds per year on insurance premiums.
             </li>
             <li>
-              <strong>WDO/Termite Inspection</strong> — Checks for active
+              <strong>WDO/Termite Inspection</strong> Checks for active
               infestations and damage from termites, carpenter ants, wood-boring
               beetles, and other wood-destroying organisms. Often required by
               lenders.
             </li>
             <li>
-              <strong>Roof Inspection</strong> — A dedicated evaluation of the roof
+              <strong>Roof Inspection</strong> A dedicated evaluation of the roof
               covering, flashing, penetrations, and overall condition. Especially
               important for homes with roofs nearing the end of their expected
               lifespan.
             </li>
             <li>
-              <strong>Sewer Scope Inspection</strong> — A camera is fed through the
+              <strong>Sewer Scope Inspection</strong> A camera is fed through the
               main sewer line to check for cracks, root intrusion, bellied pipe, and
               other problems that are invisible from the surface.
             </li>
             <li>
-              <strong>Pool and Spa Inspection</strong> — Evaluates the pool shell,
+              <strong>Pool and Spa Inspection</strong> Evaluates the pool shell,
               pump, filter, heater, deck, barrier fencing, and safety features.
               Florida law requires specific pool barrier standards, and this
               inspection confirms compliance.
@@ -209,35 +209,35 @@ export default function InspectorsPage() {
           </p>
           <ul>
             <li>
-              <strong>Roof condition and age</strong> — shingle or tile integrity,
+              <strong>Roof condition and age</strong> shingle or tile integrity,
               flashing, underlayment, and evidence of prior repairs or storm damage.
             </li>
             <li>
-              <strong>Moisture and mold</strong> — water stains, musty odors,
+              <strong>Moisture and mold</strong> water stains, musty odors,
               moisture meter readings in walls and ceilings, and HVAC condensation
               issues.
             </li>
             <li>
-              <strong>Electrical system</strong> — panel condition, wiring type
+              <strong>Electrical system</strong> panel condition, wiring type
               (aluminum wiring is common in older Florida homes and can be a hazard),
               GFCI protection in wet areas, and grounding.
             </li>
             <li>
-              <strong>Plumbing</strong> — pipe material (polybutylene piping is a
+              <strong>Plumbing</strong> pipe material (polybutylene piping is a
               known problem in Florida homes built between 1978 and 1995), water
               pressure, water heater condition, and visible leaks.
             </li>
             <li>
-              <strong>HVAC performance</strong> — system age, refrigerant type,
+              <strong>HVAC performance</strong> system age, refrigerant type,
               temperature differential, ductwork condition, and drainage.
             </li>
             <li>
-              <strong>Structural integrity</strong> — foundation cracks, stucco
+              <strong>Structural integrity</strong> foundation cracks, stucco
               damage, window and door frames, and evidence of settling or sinkhole
               activity.
             </li>
             <li>
-              <strong>Hurricane readiness</strong> — impact windows or shutters,
+              <strong>Hurricane readiness</strong> impact windows or shutters,
               garage door bracing, roof-to-wall connections, and roof deck
               attachment.
             </li>
@@ -251,27 +251,27 @@ export default function InspectorsPage() {
           </p>
           <ul>
             <li>
-              <strong>Florida licensing</strong> — All home inspectors in Florida
+              <strong>Florida licensing</strong> All home inspectors in Florida
               must be licensed by the Department of Business and Professional
               Regulation (DBPR). Verify their license number before hiring.
             </li>
             <li>
-              <strong>Experience with Florida construction</strong> — Block
+              <strong>Experience with Florida construction</strong> Block
               construction, stucco, tile roofs, and hurricane-rated systems are
               standard here. Choose someone who inspects Florida homes daily, not
               occasionally.
             </li>
             <li>
-              <strong>Insurance and E&O coverage</strong> — A professional inspector
+              <strong>Insurance and E&O coverage</strong> A professional inspector
               carries general liability and errors-and-omissions insurance.
             </li>
             <li>
-              <strong>Detailed, photo-rich reports</strong> — Modern inspection
+              <strong>Detailed, photo-rich reports</strong> Modern inspection
               reports include photos of every deficiency, clear descriptions, and
               repair recommendations. Expect a report within 24 hours.
             </li>
             <li>
-              <strong>Availability for questions</strong> — A good inspector is
+              <strong>Availability for questions</strong> A good inspector is
               willing to walk through the findings with you after the inspection and
               answer follow-up questions later.
             </li>
@@ -280,26 +280,26 @@ export default function InspectorsPage() {
           {/* --- What happens if problems are found --- */}
           <h2>What Happens if the Inspection Finds Problems?</h2>
           <p>
-            Finding issues during the inspection is normal — every home has them. What
+            Finding issues during the inspection is normal, every home has them. What
             matters is how you handle them. In Florida, buyers typically have three
             options after reviewing the inspection report:
           </p>
           <ul>
             <li>
-              <strong>Negotiate repairs</strong> — Ask the seller to fix specific
+              <strong>Negotiate repairs</strong> Ask the seller to fix specific
               items before closing. This works well for safety issues, code
               violations, or major system failures.
             </li>
             <li>
-              <strong>Request a credit or price reduction</strong> — Instead of
+              <strong>Request a credit or price reduction</strong> Instead of
               repairs, ask the seller to reduce the purchase price or provide a
               closing cost credit so you can handle repairs on your own timeline with
               your own contractors.
             </li>
             <li>
-              <strong>Walk away</strong> — If the inspection reveals deal-breaking
-              issues — structural damage, active sinkholes, extensive mold, or costs
-              that exceed what you are willing to absorb — you can exercise your
+              <strong>Walk away</strong> If the inspection reveals deal-breaking
+              issues, structural damage, active sinkholes, extensive mold, or costs
+              that exceed what you are willing to absorb, you can exercise your
               inspection contingency and cancel the contract with your deposit
               returned.
             </li>

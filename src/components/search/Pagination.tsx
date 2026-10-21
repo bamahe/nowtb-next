@@ -1,5 +1,5 @@
 // src/components/search/Pagination.tsx
-// Page navigation for search results — shows result count, prev/next, and page X/Y
+// Page navigation for search results, shows result count, prev/next, and page X/Y
 "use client";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -23,7 +23,7 @@ export default function Pagination({ currentPage, totalResults, pageSize, onPage
         {totalResults.toLocaleString()} Properties
       </p>
       <div className="flex items-center gap-2">
-        {/* Previous page button — disabled on first page */}
+        {/* Previous page button, disabled on first page */}
         <button
           onClick={() => onPageChange(currentPage - 1)}
           disabled={currentPage <= 1}
@@ -37,7 +37,7 @@ export default function Pagination({ currentPage, totalResults, pageSize, onPage
         <span className="font-body text-sm text-primary font-medium">
           {currentPage} / {totalPages}
         </span>
-        {/* Next page button — disabled on last page */}
+        {/* Next page button, disabled on last page */}
         <button
           onClick={() => onPageChange(currentPage + 1)}
           disabled={currentPage >= totalPages}

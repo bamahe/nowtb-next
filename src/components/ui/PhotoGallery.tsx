@@ -1,5 +1,5 @@
 // =============================================================================
-// PhotoGallery — Full-width hero image + horizontal thumbnail strip below
+// PhotoGallery, Full-width hero image + horizontal thumbnail strip below
 // Click any thumbnail to swap the hero; click the hero to open lightbox
 // Lightbox has arrow navigation + thumbnail strip at the bottom
 // =============================================================================
@@ -72,7 +72,7 @@ export default function PhotoGallery({ photos, address, autoScroll = false }: Ph
 
   return (
     <>
-      {/* ===== Full-width hero image — click to open lightbox ===== */}
+      {/* ===== Full-width hero image, click to open lightbox ===== */}
       <div
         className="relative w-full overflow-hidden"
         onMouseEnter={() => setPaused(true)}
@@ -85,7 +85,7 @@ export default function PhotoGallery({ photos, address, autoScroll = false }: Ph
         >
           <Image
             src={photos[heroIndex].MediaURL}
-            alt={photos[heroIndex].ShortDescription || `${address} — photo ${heroIndex + 1}`}
+            alt={photos[heroIndex].ShortDescription || `${address}, photo ${heroIndex + 1}`}
             width={1200}
             height={600}
             sizes="100vw"
@@ -120,7 +120,7 @@ export default function PhotoGallery({ photos, address, autoScroll = false }: Ph
         </span>
       </div>
 
-      {/* ===== Thumbnail strip below the hero — horizontal scroll ===== */}
+      {/* ===== Thumbnail strip below the hero, horizontal scroll ===== */}
       {photos.length > 1 && (
         <div className="flex gap-1.5 overflow-x-auto py-2 scrollbar-thin">
           {photos.map((photo, index) => (
@@ -137,7 +137,7 @@ export default function PhotoGallery({ photos, address, autoScroll = false }: Ph
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={photo.MediaURL}
-                alt={photo.ShortDescription || `${address} — thumbnail ${index + 1}`}
+                alt={photo.ShortDescription || `${address}, thumbnail ${index + 1}`}
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -185,7 +185,7 @@ export default function PhotoGallery({ photos, address, autoScroll = false }: Ph
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={photos[lightboxIndex].MediaURL}
-              alt={photos[lightboxIndex].ShortDescription || `${address} — photo ${lightboxIndex + 1}`}
+              alt={photos[lightboxIndex].ShortDescription || `${address}, photo ${lightboxIndex + 1}`}
               className="w-full h-full object-contain"
             />
           </div>
@@ -222,7 +222,7 @@ export default function PhotoGallery({ photos, address, autoScroll = false }: Ph
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={photo.MediaURL}
-                      alt={photo.ShortDescription || `${address} — photo ${index + 1}`}
+                      alt={photo.ShortDescription || `${address}, photo ${index + 1}`}
                       className="w-full h-full object-cover"
                       loading="lazy"
                     />

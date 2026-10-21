@@ -1,7 +1,7 @@
 "use client";
 
 // =============================================================================
-// SellerIntakeForm — detailed property questionnaire for listing appointments
+// SellerIntakeForm, detailed property questionnaire for listing appointments
 //
 // Collects what Barrett otherwise has to chase by phone before a listing
 // appointment: utility costs, HOA, roof and system ages, updates, and
@@ -424,7 +424,7 @@ export default function SellerIntakeForm() {
             its own within a second or two. */}
         {!turnstileToken && status !== "submitting" && (
           <p className="font-body mt-2 text-xs text-muted">
-            Finishing the quick spam check. The button turns on in a second — your
+            Finishing the quick spam check. The button turns on in a second, your
             answers are safe.
           </p>
         )}

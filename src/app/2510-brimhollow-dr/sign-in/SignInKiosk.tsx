@@ -1,7 +1,7 @@
 "use client";
 
 // =============================================================================
-// SignInKiosk — the open house sign-in form.
+// SignInKiosk, the open house sign-in form.
 // Posts to /api/contact (same pipe as every other form, so leads land in FUB),
 // then shows a 4 second thank-you and resets itself for the next guest.
 //
@@ -69,7 +69,7 @@ export default function SignInKiosk() {
     // Everything that isn't a standard field gets folded into the message body
     // so it reaches Follow Up Boss without needing new API fields.
     const message = [
-      `OPEN HOUSE CHECK-IN — ${ADDRESS}`,
+      `OPEN HOUSE CHECK-IN, ${ADDRESS}`,
       agent && `Working with an agent: ${agent}`,
       represented && agentName && `Agent: ${agentName}`,
       represented && agentBrokerage && `Brokerage: ${agentBrokerage}`,
@@ -93,7 +93,7 @@ export default function SignInKiosk() {
             "OH 2510 Brimhollow",
             agent ? (represented ? "OH Represented" : "OH Unrepresented") : "",
           ].filter(Boolean),
-          // Hidden field — invisible to a guest, but scripts fill every input
+          // Hidden field, invisible to a guest, but scripts fill every input
           // they find. Anything in here means the submission is a bot.
           honeypot: hp,
           property: {
@@ -105,7 +105,7 @@ export default function SignInKiosk() {
         }),
       });
     } catch {
-      // Never show an error at an open house — a failed POST must not stop the
+      // Never show an error at an open house, a failed POST must not stop the
       // line at the door. The guest still sees the thank-you.
     }
     setStatus("done");
@@ -126,7 +126,7 @@ export default function SignInKiosk() {
             Welcome to {ADDRESS}. I&rsquo;m here if you have questions.
           </p>
           {/* Points at the existing /card route, which builds the .vcf and
-              triggers the download. Do not invent a static .vcf path here —
+              triggers the download. Do not invent a static .vcf path here 
               there isn't one in public/. */}
           <a
             href="/card/"
@@ -268,7 +268,7 @@ export default function SignInKiosk() {
           )}
         </button>
 
-        {/* TCPA consent — same wording as the Request a Showing form */}
+        {/* TCPA consent, same wording as the Request a Showing form */}
         <p className="text-center font-body text-xs text-muted leading-relaxed pb-6">
           By submitting this form, you consent to receive calls, texts, and emails from Barrett
           Henry, The NOW Team, REMAX Collective, and affiliated partners at the number and email
@@ -280,7 +280,7 @@ export default function SignInKiosk() {
   );
 }
 
-// Oversized inputs — 24px text stops iOS from zooming on focus
+// Oversized inputs, 24px text stops iOS from zooming on focus
 const INPUT =
   "w-full rounded-xl border-2 border-border bg-white px-5 py-5 text-2xl text-primary focus:border-accent focus:outline-none";
 
@@ -296,7 +296,7 @@ function Field({ label, required, children }: { label: string; required?: boolea
   );
 }
 
-// Big tap-target button group — faster than a dropdown on a touchscreen
+// Big tap-target button group, faster than a dropdown on a touchscreen
 function Choice({
   label, options, value, onChange,
 }: { label: string; options: string[]; value: string; onChange: (v: string) => void }) {

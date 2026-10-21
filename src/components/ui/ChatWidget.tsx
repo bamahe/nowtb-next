@@ -1,6 +1,6 @@
 // =============================================================================
-// ChatWidget — Floating AI chatbot for nowtb.com
-// "NOW Team Assistant" — answers Tampa Bay real estate questions, helps
+// ChatWidget, Floating AI chatbot for nowtb.com
+// "NOW Team Assistant", answers Tampa Bay real estate questions, helps
 // navigate the site, and connects visitors with Barrett Henry.
 //
 // Features:
@@ -29,10 +29,10 @@ interface ChatMessage {
 /**
  * Where the lead-capture card is in its life. Kept as one value rather than
  * four booleans so it is impossible to be in two states at once.
- *  hidden  — nothing shown yet (visitor hasn't earned the ask)
- *  offered — "Want Barrett to follow up?" with Yes / No thanks
- *  form    — the 3-field form is open
- *  sent    — it reached /api/contact successfully
+ * hidden, nothing shown yet (visitor hasn't earned the ask)
+ * offered, "Want Barrett to follow up?" with Yes / No thanks
+ * form, the 3-field form is open
+ * sent, it reached /api/contact successfully
  */
 type CaptureStage = "hidden" | "offered" | "form" | "sent";
 
@@ -52,17 +52,17 @@ const PHONE_HREF = "tel:+18137337907";
 
 // ─── WHEN WE ASK FOR CONTACT DETAILS ──────────────────────────────────────────
 // Never on the first reply. Gating the opening answer behind a form is how you
-// kill a conversation before it starts — and this widget's whole problem was
+// kill a conversation before it starts, and this widget's whole problem was
 // that it captured NOTHING, not that it asked too late.
 //
 // Two ways a visitor earns the ask:
-//  1. They have sent this many messages — they are clearly engaged.
+// 1. They have sent this many messages, they are clearly engaged.
 //  2. Their message contains high-intent language (they want to see a house,
 //     sell one, get pre-approved). One of those is worth more than ten
 //     "what's the weather in Tampa" questions.
 const MIN_USER_MESSAGES_BEFORE_ASK = 2;
 
-// High-intent phrases. Deliberately about the TRANSACTION — we ask what they
+// High-intent phrases. Deliberately about the TRANSACTION, we ask what they
 // want to do, never anything personal. (Barrett's rule: no creepy CTAs. Never
 // ask about children, ages, income, marital status or anything like it.)
 const HIGH_INTENT_PATTERN =
@@ -85,7 +85,7 @@ function saveHistory(messages: ChatMessage[]) {
   try {
     sessionStorage.setItem(STORAGE_KEY, JSON.stringify(messages));
   } catch {
-    // sessionStorage might be full or unavailable — fail silently
+    // sessionStorage might be full or unavailable, fail silently
   }
 }
 
@@ -142,7 +142,7 @@ export default function ChatWidget() {
   const [leadEmail, setLeadEmail] = useState("");
   const [isSubmittingLead, setIsSubmittingLead] = useState(false);
   // Empty string = no error. Shown above the form, with the phone number, if
-  // the POST fails — we never fake a success.
+  // the POST fails, we never fake a success.
   const [leadError, setLeadError] = useState("");
   // Cloudflare Turnstile token. TurnstileWidget hands us either a real token or
   // one of its documented sentinel values when the challenge could not run.
@@ -173,13 +173,13 @@ export default function ChatWidget() {
 
   // Auto-scroll to the bottom when new messages arrive.
   // captureStage is a dependency so the lead-capture card scrolls into view the
-  // moment it appears — otherwise it can render below the fold of the panel and
+  // moment it appears, otherwise it can render below the fold of the panel and
   // the visitor never sees the ask.
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isLoading, captureStage]);
 
-  // Proactive chat tooltip — show after 30s if not already shown this session
+  // Proactive chat tooltip, show after 30s if not already shown this session
   useEffect(() => {
     // Skip if already shown this session or chat is already open
     if (typeof window === "undefined") return;
@@ -230,7 +230,7 @@ export default function ChatWidget() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           message: trimmed,
-          history: messages, // Send previous messages (NOT including this one — it's in "message")
+          history: messages, // Send previous messages (NOT including this one, it's in "message")
         }),
       });
 
@@ -323,7 +323,7 @@ export default function ChatWidget() {
   }, [input, isLoading, messages]);
 
   // ───────────────────────────────────────────────────────────────────────────
-  // LEAD CAPTURE — decide when to offer it
+  // LEAD CAPTURE, decide when to offer it
   //
   // THE PROBLEM THIS SOLVES: this widget is on all ~3,400 pages and captured
   // nothing. Someone would ask three questions about Riverview schools, get a
@@ -335,13 +335,13 @@ export default function ChatWidget() {
   // (so the card never interrupts a reply mid-stream).
   // ───────────────────────────────────────────────────────────────────────────
   useEffect(() => {
-    // Already offered, open, or submitted — nothing to do.
+    // Already offered, open, or submitted, nothing to do.
     if (captureStage !== "hidden") return;
     // Already handled earlier this session (they submitted or said no thanks).
     try {
       if (sessionStorage.getItem(CAPTURE_STATE_KEY)) return;
     } catch {
-      // sessionStorage unavailable (private mode) — carry on, worst case we
+      // sessionStorage unavailable (private mode), carry on, worst case we
       // offer again on the next page. Better than crashing the widget.
     }
     // Don't interrupt a reply that is still streaming in.
@@ -350,7 +350,7 @@ export default function ChatWidget() {
     const userMessages = messages.filter((m) => m.role === "user");
     if (userMessages.length === 0) return;
 
-    // The assistant must have actually answered — the last message is a
+    // The assistant must have actually answered, the last message is a
     // non-empty assistant turn.
     const last = messages[messages.length - 1];
     if (!last || last.role !== "assistant" || !last.content.trim()) return;
@@ -368,7 +368,7 @@ export default function ChatWidget() {
     try {
       sessionStorage.setItem(CAPTURE_STATE_KEY, how);
     } catch {
-      // Non-fatal — see note above.
+      // Non-fatal, see note above.
     }
   }, []);
 
@@ -403,7 +403,7 @@ export default function ChatWidget() {
   /**
    * POST the captured lead to /api/contact.
    *
-   * CONFORMS TO THE EXISTING CONTRACT — this sends exactly the shape
+   * CONFORMS TO THE EXISTING CONTRACT, this sends exactly the shape
    * ContactForm.tsx sends, because /api/contact destructures
    * { type, turnstileToken, honeypot, extraTags, ...formData }:
    *   - type: "contact"  → the only sensible existing type. There is NO "chat"
@@ -421,7 +421,7 @@ export default function ChatWidget() {
    *
    * If it breaks, check:
    *  - A 403 means Turnstile rejected it. The sentinel escape hatch lives in
-   *    src/app/api/contact/route.ts — look for `widgetFallback`.
+   * src/app/api/contact/route.ts, look for `widgetFallback`.
    *  - A 400 "Invalid form type" means someone changed `type` below to a value
    *    that isn't a key of that route's webhookMap.
    *  - A 200 with no lead in FUB means the FUB_API_KEY is bad; the route logs
@@ -463,28 +463,28 @@ export default function ChatWidget() {
 
       if (!res.ok) throw new Error(`Server responded with ${res.status}`);
 
-      // Success — tell them in the conversation, not with a popup.
+      // Success, tell them in the conversation, not with a popup.
       setCaptureStage("sent");
       rememberCaptureHandled("sent");
       setMessages((prev) => [
         ...prev,
         {
           role: "assistant",
-          content: `Got it, ${name.split(" ")[0]} — Barrett has your details and will reach out personally, usually within 2 hours. If you'd rather not wait, call him directly at ${PHONE_DISPLAY}. Anything else I can help with in the meantime?`,
+          content: `Got it, ${name.split(" ")[0]}, Barrett has your details and will reach out personally, usually within 2 hours. If you'd rather not wait, call him directly at ${PHONE_DISPLAY}. Anything else I can help with in the meantime?`,
         },
       ]);
 
-      // Conversion event. No personal data is sent to Google — just the fact
+      // Conversion event. No personal data is sent to Google, just the fact
       // that a chat lead was captured and which page it happened on.
       trackChatLeadCaptured(
         typeof window !== "undefined" ? window.location.pathname : "unknown"
       );
     } catch (err) {
       // BE HONEST ON FAILURE. Showing "thanks, we'll be in touch!" when the
-      // lead never arrived is worse than showing nothing — they stop trying.
+      // lead never arrived is worse than showing nothing, they stop trying.
       console.error("Chat lead capture failed:", err);
       setLeadError(
-        `That didn't go through. Please call or text Barrett at ${PHONE_DISPLAY} — or try sending again.`
+        `That didn't go through. Please call or text Barrett at ${PHONE_DISPLAY}, or try sending again.`
       );
     } finally {
       setIsSubmittingLead(false);
@@ -520,7 +520,7 @@ export default function ChatWidget() {
         <div
           // z-[80] = the "dialog/overlay" tier of the stacking scale in
           // src/app/layout.tsx. The panel was z-50, which put it UNDER the
-          // cookie banner (z-90 at the time) — a first-time visitor could open
+          // cookie banner (z-90 at the time), a first-time visitor could open
           // the chat and have the banner sitting across the bottom of it. A
           // dialog the visitor deliberately opened outranks a banner.
           className="fixed z-[80] flex flex-col
@@ -586,7 +586,7 @@ export default function ChatWidget() {
               </div>
             ))}
 
-            {/* Typing indicator — shown while waiting for AI response */}
+            {/* Typing indicator, shown while waiting for AI response */}
             {isLoading && (
               <div className="flex justify-start">
                 <div className="flex gap-2">
@@ -606,7 +606,7 @@ export default function ChatWidget() {
 
             {/* ── Lead capture card ───────────────────────────────────────
                 Appears inside the conversation after a real exchange. Three
-                fields only — name, phone, email. Nothing else is ever asked;
+                fields only, name, phone, email. Nothing else is ever asked;
                 no "how many kids", no budget interrogation, no personal
                 details. ──────────────────────────────────────────────────── */}
             {captureStage === "offered" && !isLoading && (
@@ -628,7 +628,7 @@ export default function ChatWidget() {
                                px-3 py-2 rounded-lg hover:bg-primary/90 transition-colors"
                   >
                     <Phone size={13} strokeWidth={2.5} aria-hidden="true" />
-                    Yes — have Barrett reach out
+                    Yes, have Barrett reach out
                   </button>
                   <button
                     type="button"
@@ -652,7 +652,7 @@ export default function ChatWidget() {
                   Where should Barrett reach you?
                 </p>
 
-                {/* Honest failure state — shows the phone number rather than a
+                {/* Honest failure state, shows the phone number rather than a
                     fake "thanks!". The API returning anything but 200 lands
                     here. */}
                 {leadError && (
@@ -775,7 +775,7 @@ export default function ChatWidget() {
               </button>
             </div>
             <p className="text-[10px] text-muted text-center mt-1.5 font-body">
-              AI assistant — for personalized advice, call{" "}
+              AI assistant, for personalized advice, call{" "}
               <a
                 href={PHONE_HREF}
                 onClick={() => trackPhoneTap("chat-panel-footer")}
@@ -793,7 +793,7 @@ export default function ChatWidget() {
         <div
           // z-[45] = the "chat bubble" tier (below MobileBottomBar's z-50 so
           // the Call button always wins). marginBottom lifts it clear of the
-          // cookie banner while that banner is on screen — the variable is
+          // cookie banner while that banner is on screen, the variable is
           // published by CookieConsent.tsx and is 0px otherwise.
           style={{ marginBottom: "var(--cookie-banner-lift, 0px)" }}
           className="fixed z-[45] right-4 bottom-28 sm:bottom-32 md:bottom-20"

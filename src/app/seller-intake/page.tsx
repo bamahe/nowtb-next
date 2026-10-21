@@ -1,5 +1,5 @@
 // =============================================================================
-// /seller-intake — Seller property questionnaire
+// /seller-intake, Seller property questionnaire
 // Collects the details that otherwise get chased down by phone before a
 // listing appointment: utilities, HOA, roof and system ages, updates.
 // =============================================================================

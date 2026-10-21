@@ -1,5 +1,5 @@
 // =============================================================================
-// /account — User Dashboard (Server Component Wrapper)
+// /account, User Dashboard (Server Component Wrapper)
 // Handles auth check + data fetching, delegates rendering to AccountDashboard
 // Redirects to /login if not authenticated
 // =============================================================================
@@ -10,7 +10,7 @@ import SignOutButton from "@/components/ui/SignOutButton";
 import AccountDashboard from "@/components/ui/AccountDashboard";
 import type { Metadata } from "next";
 
-// --- SEO metadata (noindex — this is a private account page) ---
+// --- SEO metadata (noindex, this is a private account page) ---
 export const metadata: Metadata = {
   title: "My Account | Barrett Henry | REMAX Collective",
   description:

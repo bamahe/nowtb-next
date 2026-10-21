@@ -23,7 +23,7 @@ import { getBeachCondoSlugs } from "@/data/beach-condo-pages";
 // WHY: Next.js treats `sitemap.ts` as a static route by default. Without a
 // `revalidate` (or `dynamic`) export, Next renders this file ONCE at build time
 // and bakes the result into a static sitemap.xml file. Google then fetches that
-// frozen snapshot forever — every page the content automation adds after the
+// frozen snapshot forever, every page the content automation adds after the
 // last deploy is invisible to Google until somebody happens to redeploy.
 //
 // This site has a cron (see vercel.json: /api/cron/generate-post every 3 days,
@@ -42,11 +42,11 @@ import { getBeachCondoSlugs } from "@/data/beach-condo-pages";
 //    and diff the <loc> count. If identical after a new post went live, this
 //    export got removed or something above it is throwing at module load.
 //  - Need it truly live on every request instead? Use
-//    `export const dynamic = "force-dynamic";` — but that re-reads every data
+// `export const dynamic = "force-dynamic";`, but that re-reads every data
 //    file and the Bridge-backed helpers on every crawl, which is expensive and
 //    not worth it for a file Google fetches a few times a day.
 // =============================================================================
-export const revalidate = 3600; // 1 hour — see the block comment above
+export const revalidate = 3600; // 1 hour, see the block comment above
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Strip any trailing slash(es) off the env value before building URLs.
@@ -67,8 +67,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // `trailingSlash: true`, and src/app/page.tsx declares its canonical as
     // "https://nowtb.com/". A bare "https://nowtb.com" in the sitemap would not
     // match that canonical string exactly, which is a needless mismatch for
-    // Google to resolve. (It resolves to the same resource either way — the
-    // root path is always at least "/" — so this is tidiness, not a bug fix.)
+    // Google to resolve. (It resolves to the same resource either way, the
+    // root path is always at least "/", so this is tidiness, not a bug fix.)
     { url: `${siteUrl}/`, lastModified: now, changeFrequency: "daily", priority: 1.0 },
     { url: `${siteUrl}/properties/`, lastModified: now, changeFrequency: "hourly", priority: 0.9 },
     { url: `${siteUrl}/buyers/`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
@@ -85,7 +85,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/guides/`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: `${siteUrl}/mortgage-calculator/`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     // NOTE: /home-valuation/ is deliberately NOT listed here.
-    // WHY: src/app/home-valuation/page.tsx is a redirect stub — it calls
+    // WHY: src/app/home-valuation/page.tsx is a redirect stub, it calls
     // redirect("/free-home-valuation/") and never returns HTML. Google's sitemap
     // guidelines say a sitemap should only contain canonical URLs that return
     // 200. Listing a redirecting URL wastes crawl budget on ~3,400 pages worth
@@ -123,7 +123,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // which is the page that actually holds the internal link equity. Listing
     // the redirecting URL here just told Google to crawl a URL that bounces,
     // wasting a crawl on every pass. src/app/new-construction/page.tsx is now
-    // dead code behind that redirect — left in place, not deleted.
+    // dead code behind that redirect, left in place, not deleted.
     // If it breaks, check: if that redirect is ever removed, add the slug back.
     "55-plus-communities", "condos", "golf-homes", "land-acreage",
     "no-hoa", "pool-homes", "price-reduced",

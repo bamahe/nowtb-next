@@ -1,5 +1,5 @@
 // =============================================================================
-// MortgageCalc — Client-side mortgage + affordability calculator
+// MortgageCalc, Client-side mortgage + affordability calculator
 // Two tabs: Monthly Payment Calculator and Affordability Calculator
 // Uses the site's luxury minimalist design system (navy + steel blue)
 // =============================================================================
@@ -82,7 +82,7 @@ function SliderInput({
         <span className="font-heading text-lg text-primary">{displayValue}</span>
       </div>
 
-      {/* Range slider — styled with accent color */}
+      {/* Range slider, styled with accent color */}
       <input
         type="range"
         min={min}
@@ -190,7 +190,7 @@ function PaymentCalculator() {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-      {/* Left column — Inputs */}
+      {/* Left column, Inputs */}
       <div>
         <p className="heading-label mb-8">Adjust Your Loan Details</p>
 
@@ -229,7 +229,7 @@ function PaymentCalculator() {
           format="percent"
         />
 
-        {/* Loan term — button group instead of slider */}
+        {/* Loan term, button group instead of slider */}
         <div className="mb-6">
           <label className="block font-body text-sm font-semibold text-primary tracking-wide uppercase mb-3">
             Loan Term
@@ -253,7 +253,7 @@ function PaymentCalculator() {
         </div>
       </div>
 
-      {/* Right column — Results */}
+      {/* Right column, Results */}
       <div>
         <p className="heading-label mb-6">Your Estimated Payment</p>
 
@@ -324,7 +324,7 @@ function PaymentCalculator() {
 }
 
 // =============================================================================
-// Affordability Calculator — uses 28/36 DTI rule
+// Affordability Calculator, uses 28/36 DTI rule
 // =============================================================================
 function AffordabilityCalculator() {
   const [income, setIncome] = useState(100000);
@@ -383,7 +383,7 @@ function AffordabilityCalculator() {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-      {/* Left column — Inputs */}
+      {/* Left column, Inputs */}
       <div>
         <p className="heading-label mb-8">Your Financial Details</p>
 
@@ -397,7 +397,7 @@ function AffordabilityCalculator() {
           format="currency"
         />
 
-        {/* Monthly debts — number input for precision */}
+        {/* Monthly debts, number input for precision */}
         <div className="mb-6">
           <label className="block font-body text-sm font-semibold text-primary tracking-wide uppercase mb-2">
             Monthly Debts (car, student loans, credit cards)
@@ -439,7 +439,7 @@ function AffordabilityCalculator() {
           format="percent"
         />
 
-        {/* Loan term — button group */}
+        {/* Loan term, button group */}
         <div className="mb-6">
           <label className="block font-body text-sm font-semibold text-primary tracking-wide uppercase mb-3">
             Loan Term
@@ -463,7 +463,7 @@ function AffordabilityCalculator() {
         </div>
       </div>
 
-      {/* Right column — Results */}
+      {/* Right column, Results */}
       <div>
         <p className="heading-label mb-6">What You Can Afford</p>
 
@@ -533,7 +533,7 @@ function AffordabilityCalculator() {
 }
 
 // =============================================================================
-// Main export — tabbed calculator with CTA
+// Main export, tabbed calculator with CTA
 // =============================================================================
 export default function MortgageCalc() {
   const [activeTab, setActiveTab] = useState<"payment" | "affordability">("payment");
@@ -594,7 +594,7 @@ export default function MortgageCalc() {
         </div>
       </section>
 
-      {/* === How it works — brief explainer === */}
+      {/* === How it works, brief explainer === */}
       <section className="section-light">
         <div className="container-wide">
           <div className="text-center mb-12">

@@ -35,7 +35,7 @@ export const testimonials: Testimonial[] = [
     source: "google",
   },
   {
-    quote: "Barrett was straight with us from day one — no fluff, just honest advice about what we could get for our money in this market.",
+    quote: "Barrett was straight with us from day one, no fluff, just honest advice about what we could get for our money in this market.",
     name: "Savannah Waldron",
     location: "Tampa Bay",
     stars: 5,

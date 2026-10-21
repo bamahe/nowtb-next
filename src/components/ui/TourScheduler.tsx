@@ -1,5 +1,5 @@
 // =============================================================================
-// TourScheduler — Interactive tour scheduling widget for listing detail pages
+// TourScheduler, Interactive tour scheduling widget for listing detail pages
 // "use client" because it manages tab state, date selection, and form submission
 // =============================================================================
 
@@ -32,7 +32,7 @@ type TimeSlot = "morning" | "afternoon" | "evening";
 type FormStatus = "idle" | "loading" | "success" | "error";
 
 // -----------------------------------------------------------------------------
-// Helpers — build the next 7 calendar days for the date picker
+// Helpers, build the next 7 calendar days for the date picker
 // -----------------------------------------------------------------------------
 
 /** Short day names for the buttons */
@@ -112,7 +112,7 @@ export default function TourScheduler({
   }, []);
 
   // ---------------------------------------------------------------------------
-  // Submit handler — posts to /api/contact with type="showing"
+  // Submit handler, posts to /api/contact with type="showing"
   // ---------------------------------------------------------------------------
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -170,7 +170,7 @@ export default function TourScheduler({
         Schedule a Tour
       </h3>
 
-      {/* === Success state — replaces the form === */}
+      {/* === Success state, replaces the form === */}
       {status === "success" ? (
         <div className="text-center py-8">
           <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
@@ -241,7 +241,7 @@ export default function TourScheduler({
             </button>
           </div>
 
-          {/* === Date picker — next 7 days as buttons === */}
+          {/* === Date picker, next 7 days as buttons === */}
           <div className="mb-5">
             <p className="heading-label mb-3">Pick a Day</p>
             <div className="grid grid-cols-7 gap-1.5">

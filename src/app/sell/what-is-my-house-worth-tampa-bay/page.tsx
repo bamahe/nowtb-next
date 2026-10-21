@@ -13,7 +13,7 @@
 //
 // IMPORTANT: the figures are NOT hardcoded here. They come from the data file,
 // so when that file is refreshed this page updates with it. Do not paste
-// numbers into the prose — read them from CITY_ROWS below.
+// numbers into the prose, read them from CITY_ROWS below.
 //
 // ROUTING NOTE: nested under /sell/, which is already excluded in BOTH :city
 // flatten redirect lookaheads in next.config.mjs. Do not add a top-level route.
@@ -45,7 +45,7 @@ const SLUG = "sell/what-is-my-house-worth-tampa-bay";
 const CANONICAL = `https://nowtb.com/${SLUG}/`;
 
 // 43 characters. layout.tsx appends " | Barrett Henry" (16), so the rendered
-// title is 59 — inside the ~60 character SERP limit.
+// title is 59, inside the ~60 character SERP limit.
 const TITLE = "What Is My House Worth? Tampa Bay 2026 Data";
 const DESCRIPTION =
   "Median closed-sale prices and days on market for 13 Tampa Bay cities, why a Zestimate misses, and how to get a real number on your house.";
@@ -101,7 +101,7 @@ const VALRICO = getCityMarketStats("valrico");
 const BRANDON = getCityMarketStats("brandon");
 const LITHIA = getCityMarketStats("lithia");
 
-/** Total closed sales represented by the table — a credibility number. */
+/** Total closed sales represented by the table, a credibility number. */
 const TOTAL_SALES = CITY_ROWS.reduce(
   (sum, r) => sum + (r.stats?.totalSales ?? 0),
   0
@@ -149,7 +149,7 @@ const faqs: Faq[] = [
       SF_LOW
     )} to ${usd(
       SF_HIGH
-    )} — ${usd(TAMPA?.sfMedian ?? 0)} in Tampa, ${usd(
+    )}, ${usd(TAMPA?.sfMedian ?? 0)} in Tampa, ${usd(
       BRANDON?.sfMedian ?? 0
     )} in Brandon, ${usd(VALRICO?.sfMedian ?? 0)} in Valrico and ${usd(
       LITHIA?.sfMedian ?? 0
@@ -160,7 +160,7 @@ const faqs: Faq[] = [
   {
     question: "How accurate is a Zestimate or an online home value estimate?",
     answer:
-      "Automated valuation models are far more accurate on homes that are actively listed, because the asking price is an input, than on off-market homes where the model is guessing. Zillow publishes a median error rate for the Zestimate and the off-market figure has run in the range of roughly 7 percent — check Zillow's own Zestimate page for the current number, since it moves. On a $420,000 house a 7 percent miss is around $29,000 in either direction, and because that figure is a median, half of all homes are off by more than it. AVMs cannot see your renovation, your roof age, your view, your flood zone or the fact that the comparable sale three doors down was a family transfer.",
+      "Automated valuation models are far more accurate on homes that are actively listed, because the asking price is an input, than on off-market homes where the model is guessing. Zillow publishes a median error rate for the Zestimate and the off-market figure has run in the range of roughly 7 percent, check Zillow's own Zestimate page for the current number, since it moves. On a $420,000 house a 7 percent miss is around $29,000 in either direction, and because that figure is a median, half of all homes are off by more than it. AVMs cannot see your renovation, your roof age, your view, your flood zone or the fact that the comparable sale three doors down was a family transfer.",
   },
   {
     question: "What is the difference between a CMA and an appraisal?",
@@ -252,7 +252,7 @@ export default function WhatIsMyHouseWorthPage() {
             <p>
               Single-family closed-sale medians across {CITY_ROWS.length} Tampa
               Bay cities ran from <strong>{usd(SF_LOW)} to {usd(SF_HIGH)}</strong>{" "}
-              over the twelve months ending October 2026 —{" "}
+              over the twelve months ending October 2026, {" "}
               {usd(TAMPA?.sfMedian ?? 0)} in Tampa, {usd(BRANDON?.sfMedian ?? 0)}{" "}
               in Brandon, {usd(VALRICO?.sfMedian ?? 0)} in Valrico and{" "}
               {usd(LITHIA?.sfMedian ?? 0)} in Lithia, drawn from{" "}
@@ -317,12 +317,12 @@ export default function WhatIsMyHouseWorthPage() {
                       {usd(r.stats!.sfMedian as number)}
                     </td>
                     <td className="font-body text-dark py-3 pr-4 text-sm whitespace-nowrap">
-                      {r.stats!.sfDom !== null ? `${r.stats!.sfDom} days` : "—"}
+                      {r.stats!.sfDom !== null ? `${r.stats!.sfDom} days` : ", "}
                     </td>
                     <td className="font-body text-muted py-3 text-sm whitespace-nowrap">
                       {r.stats!.allMedian !== null
                         ? usd(r.stats!.allMedian)
-                        : "—"}
+                        : ", "}
                     </td>
                   </tr>
                 ))}
@@ -331,7 +331,7 @@ export default function WhatIsMyHouseWorthPage() {
           </div>
           <p className="font-body text-muted text-sm mt-4 leading-relaxed">
             The &ldquo;all property types&rdquo; column is usually lower than the
-            single-family column, and that gap is not a discount — it is
+            single-family column, and that gap is not a discount, it is
             townhomes and condominiums pulling the number down. If you own a
             single-family home, the middle column is your market and the right
             column is a mix you are not competing in.
@@ -442,7 +442,7 @@ export default function WhatIsMyHouseWorthPage() {
                   <td className="font-body text-dark py-3 pr-4 text-sm">Free</td>
                   <td className="font-body text-dark py-3 pr-4 text-sm">No</td>
                   <td className="font-body text-muted py-3 text-sm">
-                    Nothing related to market value — it is a tax figure
+                    Nothing related to market value, it is a tax figure
                   </td>
                 </tr>
               </tbody>
@@ -495,8 +495,8 @@ export default function WhatIsMyHouseWorthPage() {
             Start with the free automated estimate so you have a bracket, then
             get a pricing opinion from somebody who will walk the house. I will
             bring closed comparable sales from the last 60 to 90 days in your
-            immediate area — including the homes that beat yours, because those
-            are the ones that tell you the truth — plus what is actively
+            immediate area, including the homes that beat yours, because those
+            are the ones that tell you the truth, plus what is actively
             competing with you right now and how long it is taking to go under
             contract.
           </p>

@@ -1,5 +1,5 @@
 // =============================================================================
-// CountyPage — County-level overview page component
+// CountyPage, County-level overview page component
 // Rendered inside the [citySlug] route when the slug matches a county pattern
 // (e.g. /hillsborough-county, /pinellas-county)
 // =============================================================================
@@ -54,7 +54,7 @@ export default async function CountyPage({
   const canonicalUrl = `https://nowtb.com/${countySlug}/`;
 
   // Geographic centre of the county, averaged from the VERIFIED lat/lng of every
-  // city in src/data/cities.ts. This is computed, never guessed — if a county
+  // city in src/data/cities.ts. This is computed, never guessed, if a county
   // somehow has no cities on file we omit geo entirely rather than ship a 0,0
   // coordinate pointing at the Atlantic Ocean.
   const geoCenter =
@@ -114,12 +114,12 @@ export default async function CountyPage({
       {/* --- JSON-LD: LocalBusiness ---
            NOTE: the geo sits on `areaServed`, not on the business itself. The
            business geo is supposed to be the office location, and we have no
-           verified coordinates for the REMAX Collective street address —
+           verified coordinates for the REMAX Collective street address 
            inventing them would be fabricating data. The areaServed coordinates
            ARE factual: they are the centre of the county being served. */}
       <JsonLd
         data={localBusinessSchema({
-          name: `Barrett Henry, REALTOR® — ${countyName} County, FL`,
+          name: `Barrett Henry, REALTOR®, ${countyName} County, FL`,
           description: `Real estate services across ${countyName} County, Florida from Barrett Henry, Broker Associate at REMAX Collective.`,
           url: canonicalUrl,
           areaServed: {
@@ -138,7 +138,7 @@ export default async function CountyPage({
         })}
       />
 
-      {/* === Hero — compact with breadcrumb + CTA (matches spoke page pattern) === */}
+      {/* === Hero, compact with breadcrumb + CTA (matches spoke page pattern) === */}
       <section className="bg-primary pt-36 pb-16">
         <div className="container-wide">
           {/* Breadcrumb trail */}
@@ -153,7 +153,7 @@ export default async function CountyPage({
             {countyName} County Real Estate
           </h1>
           <p className="font-body text-white/70 text-lg max-w-2xl mb-6">
-            Florida — Updated daily from Stellar MLS
+            Florida, Updated daily from Stellar MLS
           </p>
 
           {/* CTA row */}
@@ -177,13 +177,13 @@ export default async function CountyPage({
       {/* === QUICK ANSWER ===
            A direct, up-front answer to the page's primary question. This is the
            block AI answer engines lift, and it is also the element the
-           `.quick-answer` speakable selector above points at — so this section
+           `.quick-answer` speakable selector above points at, so this section
            and that schema must stay together. If you remove this, remove
            `.quick-answer` from the speakable selectors too, or the schema will
            be pointing at an element that no longer exists.
 
            Every number here comes from real data (cities.length, the county
-           name) — no invented market statistics. */}
+           name), no invented market statistics. */}
       <section className="container-wide pt-12">
         <QuickAnswer heading={`What to know about ${countyName} County real estate`}>
           <p>
@@ -205,7 +205,7 @@ export default async function CountyPage({
         </QuickAnswer>
       </section>
 
-      {/* === Cities in this county — clickable grid of city hub links === */}
+      {/* === Cities in this county, clickable grid of city hub links === */}
       <section className="container-wide py-12">
         <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2 text-center">
           Cities in {countyName} County
@@ -275,7 +275,7 @@ export default async function CountyPage({
         subtitle={`Browse active homes for sale across ${countyName} County, Florida.`}
       />
 
-      {/* === MLS disclaimer — only shown when listings are displayed === */}
+      {/* === MLS disclaimer, only shown when listings are displayed === */}
       {listings.length > 0 && (
         <section className="container-wide pb-4">
           <p className="font-body text-xs text-muted/60 leading-relaxed max-w-4xl">
@@ -295,7 +295,7 @@ export default async function CountyPage({
               {countyName} County is one of the most sought-after areas in the
               Tampa Bay region. With a mix of suburban neighborhoods, waterfront
               communities, and growing urban centers, {countyName} County offers
-              something for every buyer — from first-time homeowners to luxury
+              something for every buyer, from first-time homeowners to luxury
               estate seekers.
             </p>
             <p>
@@ -339,7 +339,7 @@ export default async function CountyPage({
         </div>
       </section>
 
-      {/* === CTA bar — dark bg with call + message buttons === */}
+      {/* === CTA bar, dark bg with call + message buttons === */}
       <section className="bg-primary py-12">
         <div className="container-wide flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
@@ -347,7 +347,7 @@ export default async function CountyPage({
               Buying or Selling in {countyName} County?
             </h2>
             <p className="font-body text-white/70 text-sm">
-              REALTOR&reg; &amp; Broker Associate — 23+ years of real estate experience
+              REALTOR&reg; &amp; Broker Associate, 23+ years of real estate experience
             </p>
           </div>
           <div className="flex gap-3 flex-shrink-0">

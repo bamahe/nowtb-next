@@ -1,7 +1,7 @@
 // =============================================================================
-// POST /api/fub-event — Receives front-end events and pushes them to FUB
+// POST /api/fub-event, Receives front-end events and pushes them to FUB
 // Used for: PropertyViewed, PropertyFavorited, SearchSaved
-// Fire-and-forget from the client — never blocks the UI.
+// Fire-and-forget from the client, never blocks the UI.
 // =============================================================================
 
 import { NextRequest, NextResponse } from "next/server";
@@ -73,7 +73,7 @@ export async function POST(request: NextRequest) {
           ? ` ($${body.property.price.toLocaleString()})`
           : "";
         const mls = body.property?.mlsNumber
-          ? ` — MLS# ${body.property.mlsNumber}`
+          ? `, MLS# ${body.property.mlsNumber}`
           : "";
 
         await pushEventToFub({
@@ -107,7 +107,7 @@ export async function POST(request: NextRequest) {
         if (filters.min_price || filters.max_price) {
           const min = filters.min_price ? `$${Number(filters.min_price).toLocaleString()}` : "Any";
           const max = filters.max_price ? `$${Number(filters.max_price).toLocaleString()}` : "Any";
-          filterLines.push(`Price: ${min} — ${max}`);
+          filterLines.push(`Price: ${min}, ${max}`);
         }
         if (filters.beds) filterLines.push(`Beds: ${filters.beds}+`);
         if (filters.baths) filterLines.push(`Baths: ${filters.baths}+`);

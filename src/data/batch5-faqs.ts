@@ -1,5 +1,5 @@
 // =============================================================================
-// Batch 5 city FAQs — Bartow, Dundee, Fort Meade, Haines City, Lake Wales,
+// Batch 5 city FAQs, Bartow, Dundee, Fort Meade, Haines City, Lake Wales,
 // Mulberry, Polk City, Zephyrhills
 // Created: 2026-07-18
 // Import into valrico-faqs.ts and spread into CITY_FAQS
@@ -10,7 +10,7 @@ import type { CityFAQ } from "./valrico-faqs";
 export const BATCH5_FAQS: Record<string, CityFAQ[]> = {
 
   // ===========================================================================
-  // BARTOW — Polk County seat, historic downtown, ZIP 33830
+  // BARTOW, Polk County seat, historic downtown, ZIP 33830
   // ===========================================================================
 
   bartow: [
@@ -52,7 +52,7 @@ export const BATCH5_FAQS: Record<string, CityFAQ[]> = {
   ],
 
   // ===========================================================================
-  // DUNDEE — small Polk County lake town, ZIP 33838
+  // DUNDEE, small Polk County lake town, ZIP 33838
   // ===========================================================================
 
   dundee: [
@@ -87,7 +87,7 @@ export const BATCH5_FAQS: Record<string, CityFAQ[]> = {
   ],
 
   // ===========================================================================
-  // FORT MEADE — historic southern Polk County, ZIP 33841
+  // FORT MEADE, historic southern Polk County, ZIP 33841
   // ===========================================================================
 
   "fort-meade": [
@@ -122,7 +122,7 @@ export const BATCH5_FAQS: Record<string, CityFAQ[]> = {
   ],
 
   // ===========================================================================
-  // HAINES CITY — growing I-4 corridor city, ZIPs 33844/33845
+  // HAINES CITY, growing I-4 corridor city, ZIPs 33844/33845
   // ===========================================================================
 
   "haines-city": [
@@ -164,7 +164,7 @@ export const BATCH5_FAQS: Record<string, CityFAQ[]> = {
   ],
 
   // ===========================================================================
-  // LAKE WALES — Ridge city with Bok Tower, ZIPs 33853/33859
+  // LAKE WALES, Ridge city with Bok Tower, ZIPs 33853/33859
   // ===========================================================================
 
   "lake-wales": [
@@ -206,7 +206,7 @@ export const BATCH5_FAQS: Record<string, CityFAQ[]> = {
   ],
 
   // ===========================================================================
-  // MULBERRY — small Polk County town, phosphate heritage, ZIP 33860
+  // MULBERRY, small Polk County town, phosphate heritage, ZIP 33860
   // ===========================================================================
 
   mulberry: [
@@ -241,7 +241,7 @@ export const BATCH5_FAQS: Record<string, CityFAQ[]> = {
   ],
 
   // ===========================================================================
-  // POLK CITY — small town near LEGOLAND and Green Swamp, ZIP 33868
+  // POLK CITY, small town near LEGOLAND and Green Swamp, ZIP 33868
   // ===========================================================================
 
   "polk-city": [
@@ -276,7 +276,7 @@ export const BATCH5_FAQS: Record<string, CityFAQ[]> = {
   ],
 
   // ===========================================================================
-  // ZEPHYRHILLS — natural springs, east Pasco County, ZIPs 33540/33541/33542
+  // ZEPHYRHILLS, natural springs, east Pasco County, ZIPs 33540/33541/33542
   // ===========================================================================
 
   zephyrhills: [

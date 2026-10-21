@@ -1,5 +1,5 @@
 // =============================================================================
-// FavoriteButton — Heart icon that saves favorites
+// FavoriteButton, Heart icon that saves favorites
 // Always saves to localStorage (works without login).
 // If Supabase is configured AND user is logged in, also syncs to DB.
 // =============================================================================
@@ -80,7 +80,7 @@ export default function FavoriteButton({
         .single();
 
       if (data && !localFav) {
-        // Synced from Supabase — also save to localStorage
+        // Synced from Supabase, also save to localStorage
         toggleLocalFavorite(listingKey);
         setIsFavorited(true);
       }
@@ -131,7 +131,7 @@ export default function FavoriteButton({
                 },
               }),
             }).catch(() => {
-              // FUB push failed — no big deal, the favorite is already saved
+              // FUB push failed, no big deal, the favorite is already saved
             });
           }
         } else {
@@ -142,7 +142,7 @@ export default function FavoriteButton({
             .eq("listing_key", listingKey);
         }
       } catch {
-        // DB sync failed — localStorage still has the favorite, no big deal
+        // DB sync failed, localStorage still has the favorite, no big deal
       }
     },
     [listingKey, listingData]

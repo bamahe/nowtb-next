@@ -71,7 +71,7 @@ export default function MapView({
         zoomControl: true,
       });
 
-      // OpenStreetMap tiles — free, no API key
+      // OpenStreetMap tiles, free, no API key
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
         maxZoom: 18,
@@ -117,7 +117,7 @@ export default function MapView({
         // Price-label text for the pin (e.g. "$339K")
         const priceLabel = compactPrice(listing.ListPrice);
 
-        // Custom divIcon — navy pill with white price text
+        // Custom divIcon, navy pill with white price text
         const pinIcon = L.divIcon({
           className: "",
           html: `<div style="
@@ -148,8 +148,8 @@ export default function MapView({
                 ${address}
               </p>
               <p style="margin:0 0 8px;font-size:12px;color:#6b7a8d;">
-                ${listing.BedroomsTotal ?? "—"} bed &middot;
-                ${listing.BathroomsTotalInteger ?? "—"} bath
+                ${listing.BedroomsTotal ?? ", "} bed &middot;
+                ${listing.BathroomsTotalInteger ?? ", "} bath
                 ${listing.LivingArea ? ` &middot; ${listing.LivingArea.toLocaleString()} sqft` : ""}
               </p>
               <a href="${url}"
@@ -191,7 +191,7 @@ export default function MapView({
           />
         </div>
 
-        {/* Loading skeleton — horizontal rows with thumbnail placeholder */}
+        {/* Loading skeleton, horizontal rows with thumbnail placeholder */}
         {loading && (
           <div className="p-4 space-y-4">
             {Array.from({ length: 6 }).map((_, i) => (
@@ -227,7 +227,7 @@ export default function MapView({
 
       {/* ── Right panel: Leaflet map ── */}
       <div className="flex-1 relative bg-light">
-        {/* Map container — Leaflet fills this absolutely */}
+        {/* Map container, Leaflet fills this absolutely */}
         <div ref={mapContainerRef} className="absolute inset-0" />
         {/* Loading overlay on top of map while fetching */}
         {loading && (

@@ -2,14 +2,14 @@
 // Structured data for key Valrico/Brandon/Riverview neighborhoods.
 // Used to power stats strips, school info, commute tables, HOA notes,
 // comparison tables, and FAQ sections on neighborhood detail pages.
-// DO NOT invent data — every field here must match verified source data.
+// DO NOT invent data, every field here must match verified source data.
 
 export interface NeighborhoodStat {
   // Key stats strip
-  priceRange: string;        // e.g. "$300K–$500K"
+  priceRange: string; // e.g. "$300K to $500K"
   zip: string;               // e.g. "33596"
   totalHomes?: string;       // e.g. "5,200+"
-  yearBuilt?: string;        // e.g. "1980s–2000s"
+  yearBuilt?: string; // e.g. "1980s, 2000s"
   gated?: boolean;
   communityPool?: boolean;
   golf?: boolean;
@@ -26,7 +26,7 @@ export interface NeighborhoodStat {
 
   // HOA
   hoaRequired: "yes" | "no" | "varies";
-  hoaRange?: string;         // e.g. "$50–$200/mo"
+  hoaRange?: string; // e.g. "$50 to $200/mo"
   hoaNote?: string;
   cdd?: boolean;
 
@@ -36,7 +36,7 @@ export interface NeighborhoodStat {
   // Target buyers
   idealFor: string[];
 
-  // FAQ — natural Q&A pairs, answers 2-3 sentences max
+  // FAQ, natural Q&A pairs, answers 2-3 sentences max
   faqs: { question: string; answer: string }[];
 
   // Amenities highlights
@@ -47,10 +47,10 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
 
   // ─── Bloomingdale ──────────────────────────────────────────────────────────
   "bloomingdale-community": {
-    priceRange: "$300K–$500K",
+    priceRange: "$300K to $500K",
     zip: "33596",
     totalHomes: "5,200+",
-    yearBuilt: "1980s–2000s",
+    yearBuilt: "1980s, 2000s",
     gated: false,
     communityPool: false,
     golf: false,
@@ -61,22 +61,22 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
     elementarySchools: ["Alafia Elementary", "Cimino Elementary", "Brooker Elementary"],
 
     commutes: [
-      { destination: "I-75 on-ramp",       distance: "~6 mi",  time: "12–15 min" },
-      { destination: "Downtown Tampa",      distance: "~20 mi", time: "28–40 min" },
-      { destination: "MacDill AFB",         distance: "~24 mi", time: "35–45 min" },
-      { destination: "Brandon Town Center", distance: "~5 mi",  time: "10–15 min" },
-      { destination: "Tampa Airport",       distance: "~27 mi", time: "35–45 min" },
+      { destination: "I-75 on-ramp", distance: "~6 mi", time: "12 to 15 min" },
+      { destination: "Downtown Tampa", distance: "~20 mi", time: "28 to 40 min" },
+      { destination: "MacDill AFB", distance: "~24 mi", time: "35 to 45 min" },
+      { destination: "Brandon Town Center", distance: "~5 mi", time: "10 to 15 min" },
+      { destination: "Tampa Airport", distance: "~27 mi", time: "35 to 45 min" },
     ],
 
     hoaRequired: "varies",
-    hoaRange: "$50–$200/mo",
+    hoaRange: "$50 to $200/mo",
     hoaNote: "Roughly half of Bloomingdale sub-neighborhoods have a mandatory HOA. Several sections have no HOA at all.",
 
     comparisons: [
-      { name: "Buckhorn",          slug: "buckhorn-bloomingdale", price: "$350K–$500K",   distinction: "Newsome HS zone" },
-      { name: "Brentwood Hills",   slug: "brentwood-hills",       price: "$340K–$475K",   distinction: "Community pool included" },
-      { name: "River Hills",       slug: "river-hills",           price: "$500K–$1M+",    distinction: "Gated golf community" },
-      { name: "Bloomingdale Oaks", slug: "bloomingdale-oaks",     price: "$350K–$475K",   distinction: "Popular sub-section of Bloomingdale" },
+      { name: "Buckhorn", slug: "buckhorn-bloomingdale", price: "$350K to $500K", distinction: "Newsome HS zone" },
+      { name: "Brentwood Hills", slug: "brentwood-hills", price: "$340K to $475K", distinction: "Community pool included" },
+      { name: "River Hills", slug: "river-hills", price: "$500K to $1M+", distinction: "Gated golf community" },
+      { name: "Bloomingdale Oaks", slug: "bloomingdale-oaks", price: "$350K to $475K", distinction: "Popular sub-section of Bloomingdale" },
     ],
 
     idealFor: [
@@ -104,7 +104,7 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
       },
       {
         question: "Is HOA required in Bloomingdale?",
-        answer: "It depends on the sub-neighborhood. About half of Bloomingdale's sections have a mandatory HOA ranging from $50–$200/mo, while others have no HOA at all — making it one of the few large communities where HOA-free homes are still available.",
+        answer: "It depends on the sub-neighborhood. About half of Bloomingdale's sections have a mandatory HOA ranging from $50 to $200/mo, while others have no HOA at all, making it one of the few large communities where HOA-free homes are still available.",
       },
       {
         question: "Can I find a home in Bloomingdale with no HOA?",
@@ -112,7 +112,7 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
       },
       {
         question: "How far is Bloomingdale from I-75?",
-        answer: "The I-75 on-ramp is approximately 6 miles from most Bloomingdale addresses, typically a 12–15 minute drive. This makes it easy to reach Downtown Tampa in about 28–40 minutes.",
+        answer: "The I-75 on-ramp is approximately 6 miles from most Bloomingdale addresses, typically a 12 to 15 minute drive. This makes it easy to reach Downtown Tampa in about 28 to 40 minutes.",
       },
       {
         question: "How many sub-neighborhoods are in Bloomingdale?",
@@ -120,14 +120,14 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
       },
       {
         question: "How does Bloomingdale compare to Buckhorn or River Hills?",
-        answer: "Buckhorn is priced similarly ($350K–$500K) but sits in the Newsome HS zone rather than Bloomingdale HS. River Hills is a gated golf community starting around $500K with a significantly higher price ceiling — Bloomingdale offers more variety and no-gate options at a lower price point.",
+        answer: "Buckhorn is priced similarly ($350K to $500K) but sits in the Newsome HS zone rather than Bloomingdale HS. River Hills is a gated golf community starting around $500K with a significantly higher price ceiling, Bloomingdale offers more variety and no-gate options at a lower price point.",
       },
     ],
   },
 
   // ─── River Hills ───────────────────────────────────────────────────────────
   "river-hills": {
-    priceRange: "$400K–$800K+",
+    priceRange: "$400K to $800K+",
     zip: "33596",
     totalHomes: "~1,326",
     yearBuilt: undefined,
@@ -141,20 +141,20 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
 
     commutes: [
       { destination: "I-75 on-ramp",       distance: "~7 mi",  time: "~15 min" },
-      { destination: "Downtown Tampa",      distance: "~22 mi", time: "30–42 min" },
-      { destination: "MacDill AFB",         distance: "~25 mi", time: "35–45 min" },
+      { destination: "Downtown Tampa", distance: "~22 mi", time: "30 to 42 min" },
+      { destination: "MacDill AFB", distance: "~25 mi", time: "35 to 45 min" },
       { destination: "Brandon Town Center", distance: "~7 mi",  time: "~14 min" },
-      { destination: "Tampa Airport",       distance: "~30 mi", time: "35–45 min" },
+      { destination: "Tampa Airport", distance: "~30 mi", time: "35 to 45 min" },
     ],
 
     hoaRequired: "yes",
     hoaNote: "HOA covers 24/7 guard gate, community pools, tennis courts, and trail maintenance. Country club membership is separate and optional.",
 
     comparisons: [
-      { name: "River Hills Masters", slug: "river-hills-masters", price: "$350K–$550K",   distinction: "Same gate and amenities at a lower price point" },
-      { name: "Bloomingdale",        slug: "bloomingdale-community", price: "$375K–$600K", distinction: "No gate, larger selection of homes" },
-      { name: "Diamond Hill",        slug: "diamond-hill",          price: "$400K–$700K+", distinction: "Gated golf, different course and vibe" },
-      { name: "Arista",              slug: "arista",                price: "$425K–$575K",  distinction: "Newer construction, no golf" },
+      { name: "River Hills Masters", slug: "river-hills-masters", price: "$350K to $550K", distinction: "Same gate and amenities at a lower price point" },
+      { name: "Bloomingdale", slug: "bloomingdale-community", price: "$375K to $600K", distinction: "No gate, larger selection of homes" },
+      { name: "Diamond Hill", slug: "diamond-hill", price: "$400K to $700K+", distinction: "Gated golf, different course and vibe" },
+      { name: "Arista", slug: "arista", price: "$425K to $575K", distinction: "Newer construction, no golf" },
     ],
 
     idealFor: [
@@ -188,7 +188,7 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
       },
       {
         question: "What does the HOA in River Hills cover?",
-        answer: "The HOA covers the 24/7 guard gate, community pools, tennis courts, and trail maintenance. Country club membership — including golf — is separate and not required for residents.",
+        answer: "The HOA covers the 24/7 guard gate, community pools, tennis courts, and trail maintenance. Country club membership, including golf, is separate and not required for residents.",
       },
       {
         question: "Do I have to join the golf club to live in River Hills?",
@@ -203,33 +203,33 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
 
   // ─── Diamond Hill ──────────────────────────────────────────────────────────
   "diamond-hill": {
-    priceRange: "$350K–$550K+",
+    priceRange: "$350K to $550K+",
     zip: "33594",
     gated: true,
     communityPool: true,
     golf: true,
 
-    highSchool: "varies by address — Bloomingdale HS or Newsome HS",
+    highSchool: "varies by address, Bloomingdale HS or Newsome HS",
     schoolNote: "School zoning varies by address within Diamond Hill. Newsome HS zones typically command a premium. Always verify with Hillsborough County Schools.",
 
     commutes: [
-      { destination: "I-75 on-ramp",       distance: "~4 mi",  time: "8–10 min" },
-      { destination: "Downtown Tampa",      distance: "~18 mi", time: "25–35 min" },
-      { destination: "MacDill AFB",         distance: "~22 mi", time: "30–40 min" },
+      { destination: "I-75 on-ramp", distance: "~4 mi", time: "8 to 10 min" },
+      { destination: "Downtown Tampa", distance: "~18 mi", time: "25 to 35 min" },
+      { destination: "MacDill AFB", distance: "~22 mi", time: "30 to 40 min" },
       { destination: "Brandon Town Center", distance: "~6 mi",  time: "~12 min" },
-      { destination: "Tampa Airport",       distance: "~25 mi", time: "30–40 min" },
+      { destination: "Tampa Airport", distance: "~25 mi", time: "30 to 40 min" },
     ],
 
     hoaRequired: "yes",
-    hoaRange: "$150–$300/mo",
+    hoaRange: "$150 to $300/mo",
     hoaNote: "HOA includes gate access, Olympic-size pool, fitness center, clubhouse, playground, basketball courts, and tennis courts.",
     cdd: true,
 
     comparisons: [
-      { name: "River Hills",     slug: "river-hills",        price: "$600K–$1.2M+",  distinction: "Premium golf with higher price point" },
-      { name: "Arista",          slug: "arista",             price: "$425K–$575K",   distinction: "Newer construction, no golf" },
-      { name: "Heritage Crest",  slug: "heritage-crest",     price: "$400K–$500K",   distinction: "Newer construction without golf community" },
-      { name: "Crestwood Estates", slug: "crestwood-estates", price: "$500K–$900K",  distinction: "Estate lots" },
+      { name: "River Hills", slug: "river-hills", price: "$600K to $1.2M+", distinction: "Premium golf with higher price point" },
+      { name: "Arista", slug: "arista", price: "$425K to $575K", distinction: "Newer construction, no golf" },
+      { name: "Heritage Crest", slug: "heritage-crest", price: "$400K to $500K", distinction: "Newer construction without golf community" },
+      { name: "Crestwood Estates", slug: "crestwood-estates", price: "$500K to $900K", distinction: "Estate lots" },
     ],
 
     idealFor: [
@@ -261,7 +261,7 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
       },
       {
         question: "How much is the HOA in Diamond Hill?",
-        answer: "HOA fees typically run $150–$300/mo and include the guard gate, Olympic pool, fitness center, clubhouse, playground, basketball, and tennis courts. CDD fees may also apply to some sections.",
+        answer: "HOA fees typically run $150 to $300/mo and include the guard gate, Olympic pool, fitness center, clubhouse, playground, basketball, and tennis courts. CDD fees may also apply to some sections.",
       },
       {
         question: "Is the golf membership required to live in Diamond Hill?",
@@ -280,7 +280,7 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
 
   // ─── Brentwood Hills ───────────────────────────────────────────────────────
   "brentwood-hills": {
-    priceRange: "$340K–$475K",
+    priceRange: "$340K to $475K",
     zip: "33594/33596",  // straddles both ZIPs
     communityPool: true,
 
@@ -290,20 +290,20 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
     elementarySchools: ["Alafia Elementary", "Cimino Elementary"],
 
     commutes: [
-      { destination: "I-75 on-ramp",       distance: "~5 mi",  time: "10–14 min" },
-      { destination: "Downtown Tampa",      distance: "~19 mi", time: "26–38 min" },
-      { destination: "MacDill AFB",         distance: "~23 mi", time: "33–43 min" },
-      { destination: "Brandon Town Center", distance: "~4 mi",  time: "8–12 min" },
-      { destination: "Tampa Airport",       distance: "~26 mi", time: "34–44 min" },
+      { destination: "I-75 on-ramp", distance: "~5 mi", time: "10 to 14 min" },
+      { destination: "Downtown Tampa", distance: "~19 mi", time: "26 to 38 min" },
+      { destination: "MacDill AFB", distance: "~23 mi", time: "33 to 43 min" },
+      { destination: "Brandon Town Center", distance: "~4 mi", time: "8 to 12 min" },
+      { destination: "Tampa Airport", distance: "~26 mi", time: "34 to 44 min" },
     ],
 
     hoaRequired: "yes",
     hoaNote: "HOA maintains the community pool and common areas. Sidewalks run throughout the neighborhood.",
 
     comparisons: [
-      { name: "Bloomingdale",        slug: "bloomingdale-community", price: "$300K–$500K", distinction: "Largest selection in the area" },
-      { name: "Bloomingdale Oaks",   slug: "bloomingdale-oaks",      price: "$350K–$475K", distinction: "Similar pricing in same school zone" },
-      { name: "Buckhorn",            slug: "buckhorn-bloomingdale",  price: "$350K–$500K", distinction: "Newsome HS zone rather than Bloomingdale HS" },
+      { name: "Bloomingdale", slug: "bloomingdale-community", price: "$300K to $500K", distinction: "Largest selection in the area" },
+      { name: "Bloomingdale Oaks", slug: "bloomingdale-oaks", price: "$350K to $475K", distinction: "Similar pricing in same school zone" },
+      { name: "Buckhorn", slug: "buckhorn-bloomingdale", price: "$350K to $500K", distinction: "Newsome HS zone rather than Bloomingdale HS" },
     ],
 
     idealFor: [
@@ -332,11 +332,11 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
       },
       {
         question: "What ZIP code is Brentwood Hills in?",
-        answer: "Brentwood Hills straddles both 33594 and 33596. Check the specific address to confirm which ZIP applies — this can matter for insurance and some lender zip-code-based programs.",
+        answer: "Brentwood Hills straddles both 33594 and 33596. Check the specific address to confirm which ZIP applies, this can matter for insurance and some lender zip-code-based programs.",
       },
       {
         question: "How close is Brentwood Hills to the highway?",
-        answer: "The I-75 on-ramp is approximately 5 miles away, a 10–14 minute drive. Brandon Town Center is only about 4 miles away, making everyday errands quick.",
+        answer: "The I-75 on-ramp is approximately 5 miles away, a 10 to 14 minute drive. Brandon Town Center is only about 4 miles away, making everyday errands quick.",
       },
       {
         question: "Are there sidewalks in Brentwood Hills?",
@@ -351,10 +351,10 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
 
   // ─── Abbey Grove ───────────────────────────────────────────────────────────
   "abbey-grove": {
-    priceRange: "$350K–$425K",
+    priceRange: "$350K to $425K",
     zip: "33594",
     totalHomes: "69",
-    yearBuilt: "2003–2004",
+    yearBuilt: "2003 to 2004",
 
     highSchool: "Durant HS",
     middleSchool: "Mulrennan Middle",
@@ -362,7 +362,7 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
 
     commutes: [
       { destination: "I-75 on-ramp",   distance: "~5 mi",  time: "~10 min" },
-      { destination: "Downtown Tampa", distance: "~20 mi", time: "28–38 min" },
+      { destination: "Downtown Tampa", distance: "~20 mi", time: "28 to 38 min" },
     ],
 
     hoaRequired: "yes",
@@ -371,8 +371,8 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
     cdd: false,
 
     comparisons: [
-      { name: "Savannah Landings", slug: "savannah-landings", price: "$350K–$450K", distinction: "Higher HOA at $285/mo" },
-      { name: "Copper Ridge",      slug: "copper-ridge",      price: "$375K–$475K", distinction: "Has CDD fees on top of HOA" },
+      { name: "Savannah Landings", slug: "savannah-landings", price: "$350K to $450K", distinction: "Higher HOA at $285/mo" },
+      { name: "Copper Ridge", slug: "copper-ridge", price: "$375K to $475K", distinction: "Has CDD fees on top of HOA" },
     ],
 
     idealFor: [
@@ -391,7 +391,7 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
       },
       {
         question: "What are typical lot sizes in Abbey Grove?",
-        answer: "Abbey Grove was built in 2003–2004 with 69 homes. Lot sizes vary — a local agent can pull exact specs for any active or sold listing within the community.",
+        answer: "Abbey Grove was built in 2003 to 2004 with 69 homes. Lot sizes vary, a local agent can pull exact specs for any active or sold listing within the community.",
       },
       {
         question: "What school zone is Abbey Grove in?",
@@ -402,7 +402,7 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
 
   // ─── Buckhorn / Buckhorn-Bloomingdale ──────────────────────────────────────
   "buckhorn-bloomingdale": {
-    priceRange: "$350K–$500K",
+    priceRange: "$350K to $500K",
     zip: "33596",
 
     highSchool: "Newsome HS",
@@ -411,18 +411,18 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
     elementarySchools: ["Buckhorn Elementary", "Mintz Elementary"],
 
     commutes: [
-      { destination: "I-75 on-ramp",       distance: "~5 mi",  time: "10–14 min" },
-      { destination: "Downtown Tampa",      distance: "~20 mi", time: "28–40 min" },
-      { destination: "MacDill AFB",         distance: "~24 mi", time: "35–45 min" },
+      { destination: "I-75 on-ramp", distance: "~5 mi", time: "10 to 14 min" },
+      { destination: "Downtown Tampa", distance: "~20 mi", time: "28 to 40 min" },
+      { destination: "MacDill AFB", distance: "~24 mi", time: "35 to 45 min" },
     ],
 
     hoaRequired: "varies",
     hoaNote: "HOA requirements vary by sub-neighborhood within the Buckhorn area. Some sections have mandatory HOAs; others do not.",
 
     comparisons: [
-      { name: "Bloomingdale",  slug: "bloomingdale-community", price: "$300K–$500K",  distinction: "Bloomingdale HS zone, larger selection" },
-      { name: "Diamond Hill",  slug: "diamond-hill",           price: "$350K–$550K",  distinction: "Gated golf community" },
-      { name: "River Hills",   slug: "river-hills",            price: "$500K–$1M+",   distinction: "Premium gated golf" },
+      { name: "Bloomingdale", slug: "bloomingdale-community", price: "$300K to $500K", distinction: "Bloomingdale HS zone, larger selection" },
+      { name: "Diamond Hill", slug: "diamond-hill", price: "$350K to $550K", distinction: "Gated golf community" },
+      { name: "River Hills", slug: "river-hills", price: "$500K to $1M+", distinction: "Premium gated golf" },
     ],
 
     idealFor: [
@@ -452,7 +452,7 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
 
   // ─── FishHawk Ranch ────────────────────────────────────────────────────────
   "fishhawk-ranch": {
-    priceRange: "$400K–$700K+",
+    priceRange: "$400K to $700K+",
     zip: "33547",
     gated: true,  // some sections
     communityPool: true,
@@ -463,18 +463,18 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
     schoolNote: "Multiple elementary schools serve FishHawk Ranch. Verify by exact address.",
 
     commutes: [
-      { destination: "I-75 on-ramp",   distance: "~8 mi",  time: "15–20 min" },
-      { destination: "Downtown Tampa", distance: "~25 mi", time: "35–45 min" },
+      { destination: "I-75 on-ramp", distance: "~8 mi", time: "15 to 20 min" },
+      { destination: "Downtown Tampa", distance: "~25 mi", time: "35 to 45 min" },
     ],
 
     hoaRequired: "yes",
-    hoaNote: "FishHawk Ranch has both HOA and CDD fees. Combined monthly costs typically run $300–$500+/mo depending on the section.",
+    hoaNote: "FishHawk Ranch has both HOA and CDD fees. Combined monthly costs typically run $300 to $500+/mo depending on the section.",
     cdd: true,
 
     comparisons: [
-      { name: "Waterset",      slug: "waterset",              price: "$375K–$550K",  distinction: "Newer master-planned community" },
-      { name: "Bloomingdale",  slug: "bloomingdale-community", price: "$300K–$500K", distinction: "Lower cost, established community" },
-      { name: "River Hills",   slug: "river-hills",            price: "$500K–$1M+",  distinction: "Gated golf community" },
+      { name: "Waterset", slug: "waterset", price: "$375K to $550K", distinction: "Newer master-planned community" },
+      { name: "Bloomingdale", slug: "bloomingdale-community", price: "$300K to $500K", distinction: "Lower cost, established community" },
+      { name: "River Hills", slug: "river-hills", price: "$500K to $1M+", distinction: "Gated golf community" },
     ],
 
     idealFor: [
@@ -499,28 +499,28 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
       },
       {
         question: "How much are the CDD fees in FishHawk Ranch?",
-        answer: "FishHawk Ranch has both an HOA and a CDD fee. Combined, these costs typically run $300–$500+/mo. The exact amount varies by section, so always request a full fee disclosure before making an offer.",
+        answer: "FishHawk Ranch has both an HOA and a CDD fee. Combined, these costs typically run $300 to $500+/mo. The exact amount varies by section, so always request a full fee disclosure before making an offer.",
       },
       {
         question: "What school zone is FishHawk Ranch in?",
-        answer: "FishHawk Ranch is zoned for Newsome High School (A-rated) and Randall Middle School. Multiple elementary schools serve the community — verify by exact address with Hillsborough County Schools.",
+        answer: "FishHawk Ranch is zoned for Newsome High School (A-rated) and Randall Middle School. Multiple elementary schools serve the community, verify by exact address with Hillsborough County Schools.",
       },
       {
         question: "What amenities does FishHawk Ranch offer?",
-        answer: "FishHawk Ranch features multiple pools, splash pads, miles of trails, sports courts, a skate park, and several clubhouses — giving it a true resort-community feel that's hard to match in the area.",
+        answer: "FishHawk Ranch features multiple pools, splash pads, miles of trails, sports courts, a skate park, and several clubhouses, giving it a true resort-community feel that's hard to match in the area.",
       },
       {
         question: "How does FishHawk Ranch compare to Waterset?",
-        answer: "Waterset (Apollo Beach) is newer and priced slightly lower ($375K–$550K), while FishHawk Ranch ($400K–$700K+) is more established with a wider variety of home styles. Both have HOA and CDD fees and resort-style amenities.",
+        answer: "Waterset (Apollo Beach) is newer and priced slightly lower ($375K to $550K), while FishHawk Ranch ($400K to $700K+) is more established with a wider variety of home styles. Both have HOA and CDD fees and resort-style amenities.",
       },
     ],
   },
 
   // ─── Copper Ridge ──────────────────────────────────────────────────────────
   "copper-ridge": {
-    priceRange: "$375K–$475K",
+    priceRange: "$375K to $475K",
     zip: "33594",
-    yearBuilt: "2005–2008",
+    yearBuilt: "2005 to 2008",
 
     highSchool: "Durant HS",
     middleSchool: "Mulrennan Middle",
@@ -533,8 +533,8 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
     cdd: true,
 
     comparisons: [
-      { name: "Abbey Grove",    slug: "abbey-grove",    price: "$350K–$425K", distinction: "Just $40/mo HOA with no CDD fees" },
-      { name: "Heritage Crest", slug: "heritage-crest", price: "$400K–$500K", distinction: "Newer construction (2015–2020)" },
+      { name: "Abbey Grove", slug: "abbey-grove", price: "$350K to $425K", distinction: "Just $40/mo HOA with no CDD fees" },
+      { name: "Heritage Crest", slug: "heritage-crest", price: "$400K to $500K", distinction: "Newer construction (2015 to 2020)" },
     ],
 
     idealFor: [
@@ -552,16 +552,16 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
       },
       {
         question: "How does Copper Ridge compare to Abbey Grove?",
-        answer: "Abbey Grove offers a lower price range ($350K–$425K) and only $40/mo HOA with no CDD. Copper Ridge is slightly newer and pricier but comes with CDD fees — buyers focused on total monthly cost often prefer Abbey Grove.",
+        answer: "Abbey Grove offers a lower price range ($350K to $425K) and only $40/mo HOA with no CDD. Copper Ridge is slightly newer and pricier but comes with CDD fees, buyers focused on total monthly cost often prefer Abbey Grove.",
       },
     ],
   },
 
   // ─── Heritage Crest ────────────────────────────────────────────────────────
   "heritage-crest": {
-    priceRange: "$400K–$500K",
+    priceRange: "$400K to $500K",
     zip: "33594",
-    yearBuilt: "2015–2020",
+    yearBuilt: "2015 to 2020",
 
     highSchool: "Durant HS",
     middleSchool: "Mulrennan Middle",
@@ -573,8 +573,8 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
     cdd: true,
 
     comparisons: [
-      { name: "Copper Ridge",  slug: "copper-ridge",  price: "$375K–$475K", distinction: "Slightly older construction (2005–2008)" },
-      { name: "Diamond Hill",  slug: "diamond-hill",  price: "$350K–$550K", distinction: "Gated golf community" },
+      { name: "Copper Ridge", slug: "copper-ridge", price: "$375K to $475K", distinction: "Slightly older construction (2005 to 2008)" },
+      { name: "Diamond Hill", slug: "diamond-hill", price: "$350K to $550K", distinction: "Gated golf community" },
     ],
 
     idealFor: [
@@ -596,14 +596,14 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
       },
       {
         question: "How does Heritage Crest compare to Diamond Hill?",
-        answer: "Diamond Hill is a gated golf community with a wider price range ($350K–$550K+) and an Olympic pool, fitness center, and other resort amenities. Heritage Crest is newer and similarly priced but without the golf, gated entry, or full amenity package.",
+        answer: "Diamond Hill is a gated golf community with a wider price range ($350K to $550K+) and an Olympic pool, fitness center, and other resort amenities. Heritage Crest is newer and similarly priced but without the golf, gated entry, or full amenity package.",
       },
     ],
   },
 
   // ─── Eagles Landing ────────────────────────────────────────────────────────
   "eagles-landing": {
-    priceRange: "$325K–$400K",
+    priceRange: "$325K to $400K",
     zip: "33594",
 
     highSchool: "Durant HS",
@@ -616,8 +616,8 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
     hoaNote: "Eagles Landing has a low HOA fee. Specific monthly amount should be confirmed through HOA documents or a local agent.",
 
     comparisons: [
-      { name: "Abbey Grove",   slug: "abbey-grove",  price: "$350K–$425K", distinction: "Similar low-HOA feel, same school zone" },
-      { name: "Copper Ridge",  slug: "copper-ridge", price: "$375K–$475K", distinction: "Newer construction, has CDD fees" },
+      { name: "Abbey Grove", slug: "abbey-grove", price: "$350K to $425K", distinction: "Similar low-HOA feel, same school zone" },
+      { name: "Copper Ridge", slug: "copper-ridge", price: "$375K to $475K", distinction: "Newer construction, has CDD fees" },
     ],
 
     idealFor: [
@@ -628,7 +628,7 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
     faqs: [
       {
         question: "What is the price range in Eagles Landing?",
-        answer: "Eagles Landing homes typically sell in the $325K–$400K range, making it one of the more affordable gateways into Valrico. It is a good option for first-time buyers who want to stay in the Durant HS zone.",
+        answer: "Eagles Landing homes typically sell in the $325K to $400K range, making it one of the more affordable gateways into Valrico. It is a good option for first-time buyers who want to stay in the Durant HS zone.",
       },
       {
         question: "What school zone is Eagles Landing in?",
@@ -636,16 +636,16 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
       },
       {
         question: "How much is the HOA in Eagles Landing?",
-        answer: "Eagles Landing has a low HOA fee. The exact amount should be confirmed through the community's HOA documents or disclosure — a local agent can pull this before you make an offer.",
+        answer: "Eagles Landing has a low HOA fee. The exact amount should be confirmed through the community's HOA documents or disclosure, a local agent can pull this before you make an offer.",
       },
     ],
   },
 
   // ─── Southoak ──────────────────────────────────────────────────────────────
   "southoak": {
-    priceRange: "$575K–$1M+",
+    priceRange: "$575K to $1M+",
     zip: "33511",
-    yearBuilt: "1983–1990",
+    yearBuilt: "1983 to 1990",
     gated: false,
     communityPool: false,
     golf: false,
@@ -656,22 +656,22 @@ export const NEIGHBORHOOD_STATS: Record<string, NeighborhoodStat> = {
     schoolNote: "School boundaries can shift over time. Confirm by address before writing an offer.",
 
     commutes: [
-      { destination: "I-75 on-ramp",       distance: "~6 mi",  time: "12–15 min" },
-      { destination: "Downtown Tampa",      distance: "~22 mi", time: "30–40 min" },
-      { destination: "Brandon Town Center", distance: "~6 mi",  time: "12–15 min" },
-      { destination: "Tampa Airport",       distance: "~28 mi", time: "35–45 min" },
-      { destination: "HCA FL Brandon Hosp", distance: "~5 mi",  time: "10–12 min" },
+      { destination: "I-75 on-ramp", distance: "~6 mi", time: "12 to 15 min" },
+      { destination: "Downtown Tampa", distance: "~22 mi", time: "30 to 40 min" },
+      { destination: "Brandon Town Center", distance: "~6 mi", time: "12 to 15 min" },
+      { destination: "Tampa Airport", distance: "~28 mi", time: "35 to 45 min" },
+      { destination: "HCA FL Brandon Hosp", distance: "~5 mi", time: "10 to 12 min" },
     ],
 
     hoaRequired: "yes",
-    hoaRange: "$500–$550/yr",
+    hoaRange: "$500 to $550/yr",
     hoaNote: "Southoak is deed restricted with a mandatory HOA, the South Oak Community Association, with annual dues confirmed at $500 to $550 depending on section. No CDD. Golf carts are allowed in the community.",
     cdd: false,
 
     comparisons: [
-      { name: "Bloomingdale",    slug: "bloomingdale",    price: "$300K–$500K",   distinction: "Larger community, smaller lots" },
-      { name: "River Hills",     slug: "river-hills",     price: "$500K–$1M+",    distinction: "Gated golf community" },
-      { name: "FishHawk Ranch",  slug: "fishhawk-ranch",  price: "$400K–$800K+",  distinction: "Master-planned, newer construction" },
+      { name: "Bloomingdale", slug: "bloomingdale", price: "$300K to $500K", distinction: "Larger community, smaller lots" },
+      { name: "River Hills", slug: "river-hills", price: "$500K to $1M+", distinction: "Gated golf community" },
+      { name: "FishHawk Ranch", slug: "fishhawk-ranch", price: "$400K to $800K+", distinction: "Master-planned, newer construction" },
     ],
 
     idealFor: [

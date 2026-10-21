@@ -1,5 +1,5 @@
 // =============================================================================
-// Supabase browser client — use in Client Components ("use client")
+// Supabase browser client, use in Client Components ("use client")
 // Creates a Supabase client that works with cookies for auth session tracking
 // =============================================================================
 
@@ -13,7 +13,7 @@ export function createClient() {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-  // Return null if Supabase isn't configured — callers must handle this
+  // Return null if Supabase isn't configured, callers must handle this
   if (!supabaseUrl || !supabaseKey) return null;
 
   return createBrowserClient(

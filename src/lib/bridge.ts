@@ -1,6 +1,6 @@
 // =============================================================================
 // Server-side Bridge API client
-// NEVER import this in client components — it uses server-only env vars
+// NEVER import this in client components, it uses server-only env vars
 // =============================================================================
 
 import { Listing, ListingSearchParams, BridgeResponse } from './types';
@@ -13,7 +13,7 @@ const DATASET = process.env.BRIDGE_DATASET;
 
 // Fail fast if required env vars are missing (except during build)
 if (!DATASET && process.env.NEXT_PHASE !== 'phase-production-build') {
-  console.error('[Bridge] BRIDGE_DATASET env var is missing — listings will not load');
+  console.error('[Bridge] BRIDGE_DATASET env var is missing, listings will not load');
 }
 
 // Skip API calls during build to avoid rate limits (3,400+ pages all fetching at once).
@@ -21,7 +21,7 @@ if (!DATASET && process.env.NEXT_PHASE !== 'phase-production-build') {
 const IS_BUILD_TIME = process.env.NEXT_PHASE === 'phase-production-build';
 
 // -----------------------------------------------------------------------------
-// Rate limit protection — tracks 429s and auto-pauses API calls for 5 minutes
+// Rate limit protection, tracks 429s and auto-pauses API calls for 5 minutes
 // This prevents cascading failures if Bridge throttles us
 // -----------------------------------------------------------------------------
 
@@ -41,12 +41,12 @@ export function isRateLimited(): boolean {
  * All calls during cooldown will return empty results instead of hammering Bridge.
  */
 function markRateLimited(): void {
-  rateLimitedUntil = Date.now() + 60 * 1000; // 1-minute cooldown (was 5 min — too aggressive)
-  console.warn('[Bridge] Rate limited — pausing API calls for 1 minute');
+  rateLimitedUntil = Date.now() + 60 * 1000; // 1-minute cooldown (was 5 min, too aggressive)
+  console.warn('[Bridge] Rate limited, pausing API calls for 1 minute');
 }
 
 // -----------------------------------------------------------------------------
-// Base fetcher — adds auth header, builds URL, caches with ISR (5 min)
+// Base fetcher, adds auth header, builds URL, caches with ISR (5 min)
 // Includes rate limit detection and a single retry with 2-second backoff
 // -----------------------------------------------------------------------------
 
@@ -60,7 +60,7 @@ async function bridgeFetch<T>(
   endpoint: string,
   params?: Record<string, string>
 ): Promise<BridgeResponse<T>> {
-  // If in cooldown from a recent 429, log but still try — the ISR cache
+  // If in cooldown from a recent 429, log but still try, the ISR cache
   // means we only call once per 30 min, so we should always attempt the call.
   // The old approach of throwing here caused cascading failures across all pages.
   if (isRateLimited()) {
@@ -89,10 +89,10 @@ async function bridgeFetch<T>(
     next: { revalidate: 1800 },
   });
 
-  // If rate limited, activate cooldown immediately — don't waste another request
+  // If rate limited, activate cooldown immediately, don't waste another request
   if (res.status === 429) {
     markRateLimited();
-    throw new Error('Bridge API rate limited — cooldown active for 30 minutes');
+    throw new Error('Bridge API rate limited, cooldown active for 30 minutes');
   }
 
   // If Bridge returns any other error, throw so callers can handle it
@@ -104,7 +104,7 @@ async function bridgeFetch<T>(
 }
 
 // -----------------------------------------------------------------------------
-// OData filter builder — converts friendly search params to OData $filter
+// OData filter builder, converts friendly search params to OData $filter
 // -----------------------------------------------------------------------------
 
 /**
@@ -115,7 +115,7 @@ function buildFilter(params: ListingSearchParams): string {
   const filters: string[] = [];
 
   // Location filter: prefer zip_codes (multiple ZIPs with OR), fall back to city name
-  // Many communities (Carrollwood, Brandon, etc.) aren't MLS "cities" — they're
+  // Many communities (Carrollwood, Brandon, etc.) aren't MLS "cities", they're
   // under Tampa or unincorporated county. ZIP codes always work.
   if (params.zip_codes && params.zip_codes.length > 0) {
     const zipFilters = params.zip_codes.map(z => `PostalCode eq '${z}'`).join(' or ');
@@ -147,7 +147,7 @@ function buildFilter(params: ListingSearchParams): string {
   if (params.single_story) filters.push(`Levels/any(l: l eq 'One')`);
   if (params.rental) filters.push(`PropertyType eq 'Residential Lease'`);
   if (params.exclude_rental) filters.push(`PropertyType ne 'Residential Lease'`);
-  // open_house filter is handled separately by getOpenHouses() — skip here
+  // open_house filter is handled separately by getOpenHouses(), skip here
   // The OData Property endpoint does not support OpenHouseStartTime filtering
 
   // Advanced FilterPanel filters
@@ -177,7 +177,7 @@ function buildFilter(params: ListingSearchParams): string {
 }
 
 // -----------------------------------------------------------------------------
-// Public API functions — import these in Server Components / Route Handlers
+// Public API functions, import these in Server Components / Route Handlers
 // -----------------------------------------------------------------------------
 
 /**
@@ -191,7 +191,7 @@ export async function getListings(
     return { bundle: 'build-skip', total: 0, value: [] };
   }
 
-  // CHECK CACHE — same query within 5 min returns cached response
+  // CHECK CACHE, same query within 5 min returns cached response
   const cacheKey = makeCacheKey('listings', params as Record<string, string | undefined>);
   const cached = getCached<BridgeResponse<Listing>>(cacheKey);
   if (cached) return cached;
@@ -380,7 +380,7 @@ export async function getRecentSales(zipCodes: string[], excludeKey?: string): P
 }
 
 /**
- * Get featured listings for the homepage — newest active listings
+ * Get featured listings for the homepage, newest active listings
  * across Barrett's 8-county Tampa Bay service area.
  * Uses a representative set of ZIP codes from each county to ensure
  * geographic spread. Sorted by most recently listed.
@@ -388,7 +388,7 @@ export async function getRecentSales(zipCodes: string[], excludeKey?: string): P
 export async function getFeaturedListings(): Promise<Listing[]> {
   if (IS_BUILD_TIME) return [];
   try {
-    // Priority city ZIPs only — fewer ZIPs = smaller filter = faster API response
+    // Priority city ZIPs only, fewer ZIPs = smaller filter = faster API response
     const serviceAreaZips = [
       '33602','33606','33609','33611','33614','33619', // Tampa (core)
       '33510','33511', // Brandon
@@ -562,7 +562,7 @@ export async function getOpenHouseForListing(
     url.searchParams.set('OpenHouseStartTime.gte', now);
     url.searchParams.set('sortBy', 'OpenHouseStartTime');
     // Fetch ALL upcoming open houses, not just one. The API's sort order is not
-    // guaranteed ascending, so limit=1 could return the furthest-out slot — which
+    // guaranteed ascending, so limit=1 could return the furthest-out slot, which
     // made the detail-page banner disagree with the listing card. We sort locally
     // instead, exactly like getOpenHouses() does for the cards.
     url.searchParams.set('limit', '50');

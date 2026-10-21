@@ -1,4 +1,4 @@
-// /price-reduced — Tampa Bay Price-Reduced Homes
+// /price-reduced, Tampa Bay Price-Reduced Homes
 import type { Metadata } from "next";
 import HeroSection from "@/components/ui/HeroSection";
 import SearchBar from "@/components/ui/SearchBar";
@@ -9,11 +9,11 @@ import type { Listing } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Tampa Bay Price-Reduced Homes | Barrett Henry, REALTOR®",
-  description: "Price-reduced homes in Tampa Bay — motivated sellers, recent price drops. Updated daily. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
+  description: "Price-reduced homes in Tampa Bay, motivated sellers, recent price drops. Updated daily. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
   alternates: { canonical: "/price-reduced/" },
   openGraph: {
     title: "Tampa Bay Price-Reduced Homes | Barrett Henry, REALTOR®",
-    description: "Price-reduced homes in Tampa Bay — motivated sellers, recent price drops. Updated daily. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
+    description: "Price-reduced homes in Tampa Bay, motivated sellers, recent price drops. Updated daily. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
     type: "website",
   },
 };
@@ -29,7 +29,7 @@ export default async function PriceReducedPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([{ name: "Home", url: "https://nowtb.com/" }, { name: "Price Reduced", url: "https://nowtb.com/price-reduced/" }])} />
-      <HeroSection label="Tampa Bay Deals" title="Price-Reduced Homes" subtitle="Homes with recent price reductions — motivated sellers ready to negotiate. Updated daily."><SearchBar /></HeroSection>
+      <HeroSection label="Tampa Bay Deals" title="Price-Reduced Homes" subtitle="Homes with recent price reductions, motivated sellers ready to negotiate. Updated daily."><SearchBar /></HeroSection>
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <h2 className="text-2xl font-heading font-bold text-primary mb-6">{listings.length > 0 ? `${listings.length}+ Price-Reduced Homes` : "Loading..."}</h2>
         <ListingGrid listings={listings} />

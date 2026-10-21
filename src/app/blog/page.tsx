@@ -1,5 +1,5 @@
 // =============================================================================
-// /blog — Blog index page
+// /blog, Blog index page
 // Displays a paginated grid of blog post cards (24 per page).
 // Posts come from the WordPress JSON export via src/lib/posts.ts.
 // =============================================================================
@@ -16,7 +16,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Tampa Bay Real Estate Blog | Barrett Henry, REALTOR®",
   description:
-    "Tampa Bay real estate insights — market updates, buying and selling tips, neighborhood guides from Barrett Henry, Broker Associate at REMAX Collective.",
+    "Tampa Bay real estate insights, market updates, buying and selling tips, neighborhood guides from Barrett Henry, Broker Associate at REMAX Collective.",
   alternates: {
     canonical: "/blog/",
   },
@@ -91,7 +91,7 @@ export default async function BlogIndexPage({
   const posts = allPosts.slice(startIdx, startIdx + POSTS_PER_PAGE);
 
   // ------------------------------------------------------------------
-  // A-Z ARCHIVE INDEX — the fix for 204 orphaned blog posts.
+  // A-Z ARCHIVE INDEX, the fix for 204 orphaned blog posts.
   //
   // THE PROBLEM: this page paginates with query strings (?page=2, ?page=3 …).
   // Google largely does not crawl query-string pagination, so of 1,760 posts
@@ -100,7 +100,7 @@ export default async function BlogIndexPage({
   // crawl depth 4 or worse.
   //
   // WHY THIS APPROACH and not the obvious alternative: path-based pagination
-  // (/blog/page/2/) is the textbook fix, and it is IMPOSSIBLE here —
+  // (/blog/page/2/) is the textbook fix, and it is IMPOSSIBLE here 
   // next.config.mjs line ~423 already 301s "/blog/page/:num" straight back to
   // "/blog/". Shipping /blog/page/2/ would just redirect to page 1 and change
   // nothing. That config file belongs to another owner, so the fix has to work
@@ -170,7 +170,7 @@ export default async function BlogIndexPage({
         subtitle="Market updates, buying and selling tips, neighborhood guides, and expert insights from Barrett Henry."
       />
 
-      {/* === Breadcrumb trail — Home > Blog === */}
+      {/* === Breadcrumb trail, Home > Blog === */}
       <div className="w-full border-b border-gray-200 bg-white">
         <nav
           aria-label="Breadcrumb"
@@ -185,7 +185,7 @@ export default async function BlogIndexPage({
       {/* === Category filter buttons === */}
       <section className="container-wide pt-8 pb-2">
         <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
-          {/* "All" button — resets category filter */}
+          {/* "All" button, resets category filter */}
           <Link
             href="/blog/"
             className={`px-4 py-2 rounded-full text-xs font-body font-semibold tracking-wide uppercase transition-colors ${
@@ -197,7 +197,7 @@ export default async function BlogIndexPage({
             All ({everyPost.length})
           </Link>
 
-          {/* One button per category — links to /blog?category=CategoryName */}
+          {/* One button per category, links to /blog?category=CategoryName */}
           {availableCategories.map((cat) => {
             const count = everyPost.filter((p) => categorizePost(p.slug) === cat).length;
             return (
@@ -218,7 +218,7 @@ export default async function BlogIndexPage({
 
         {/* Post count + page info */}
         <p className="font-body text-muted text-sm text-center">
-          Showing {startIdx + 1}–{Math.min(startIdx + POSTS_PER_PAGE, allPosts.length)} of{" "}
+          Showing {startIdx + 1}, {Math.min(startIdx + POSTS_PER_PAGE, allPosts.length)} of{" "}
           {allPosts.length} {activeCategory !== "All" ? `${activeCategory} ` : ""}posts
         </p>
       </section>
@@ -234,7 +234,7 @@ export default async function BlogIndexPage({
               href={`/blog/${post.slug}/`}
               className="group card overflow-hidden hover:shadow-lg transition-shadow"
             >
-              {/* Post thumbnail — extracted from content, or gradient fallback */}
+              {/* Post thumbnail, extracted from content, or gradient fallback */}
               {thumbnail ? (
                 <div className="h-48 overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -259,7 +259,7 @@ export default async function BlogIndexPage({
                   {post.title}
                 </h2>
 
-                {/* Excerpt — strip HTML and truncate to 150 chars */}
+                {/* Excerpt, strip HTML and truncate to 150 chars */}
                 <p className="font-body text-muted text-sm mb-3 line-clamp-3">
                   {truncateExcerpt(post.excerpt || post.content, 150)}
                 </p>
@@ -298,7 +298,7 @@ export default async function BlogIndexPage({
             </span>
           )}
 
-          {/* Page numbers — show up to 7 pages around current */}
+          {/* Page numbers, show up to 7 pages around current */}
           {Array.from({ length: totalPages }, (_, i) => i + 1)
             .filter((p) => {
               // Always show first, last, and pages near current
@@ -360,14 +360,14 @@ export default async function BlogIndexPage({
             href="#browse-all-articles"
             className="font-semibold text-accent hover:text-primary transition-colors"
           >
-            Browse all {allPosts.length} articles A&ndash;Z
+            Browse all {allPosts.length} articles A, Z
           </a>
         </p>
       </section>
         );
       })()}
 
-      {/* === A-Z archive index — every post, crawlable ===
+      {/* === A-Z archive index, every post, crawlable ===
            See the long comment next to `archiveGroups` above for why this
            exists and why path-based pagination was not an option.
 
@@ -375,10 +375,10 @@ export default async function BlogIndexPage({
            markup (and therefore every link) is present in the HTML on first
            load whether or not a group is expanded, which is what crawlers read.
            Collapsed <details> content is still indexed and its links are still
-           followed — this is the normal HTML-sitemap pattern, not cloaking. */}
+           followed, this is the normal HTML-sitemap pattern, not cloaking. */}
       <section id="browse-all-articles" className="container-wide pb-16 border-t border-gray-200 pt-12">
         <h2 className="font-heading font-bold text-2xl text-primary mb-2">
-          Browse Every Article A&ndash;Z
+          Browse Every Article A, Z
         </h2>
         <p className="font-body text-muted text-sm mb-6 max-w-2xl">
           All {everyPost.length} Tampa Bay real estate articles, grouped by
@@ -401,7 +401,7 @@ export default async function BlogIndexPage({
                 {groupPosts.map((post) => (
                   <li key={post.slug}>
                     {/* Blog posts live at /blog/<slug>/. The trailing slash is
-                        required — next.config.mjs sets `trailingSlash: true`, so
+                        required, next.config.mjs sets `trailingSlash: true`, so
                         "/blog/<slug>" is answered with a 308 redirect and is
                         never served directly. The anchor text is the post title,
                         which is the descriptive keyword phrase we want; never

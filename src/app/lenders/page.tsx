@@ -1,5 +1,5 @@
 // =============================================================================
-// /lenders — Mortgage lenders resource page
+// /lenders, Mortgage lenders resource page
 // Full content: lender types, loan programs, choosing a lender, pre-approval
 // checklist, Barrett's lender network, and FAQ
 // =============================================================================
@@ -117,7 +117,7 @@ const faqs = [
   {
     question: "How do I know which type of lender is right for me?",
     answer:
-      "It depends on your financial profile and goals. A mortgage broker can shop multiple lenders on your behalf, while a direct lender may close faster. Barrett helps you narrow the field by connecting you with a lender whose strengths match your situation — whether that is a first-time buyer needing FHA flexibility, a veteran qualifying for a VA loan, or an investor using DSCR financing.",
+      "It depends on your financial profile and goals. A mortgage broker can shop multiple lenders on your behalf, while a direct lender may close faster. Barrett helps you narrow the field by connecting you with a lender whose strengths match your situation, whether that is a first-time buyer needing FHA flexibility, a veteran qualifying for a VA loan, or an investor using DSCR financing.",
   },
   {
     question: "Does Barrett receive referral fees or kickbacks from lenders?",
@@ -132,7 +132,7 @@ const faqs = [
   {
     question: "How long does mortgage pre-approval take?",
     answer:
-      "With all documentation ready, many lenders can issue a pre-approval letter within 24 to 48 hours. Some offer same-day pre-approvals for straightforward applications. Getting your documents organized ahead of time — tax returns, pay stubs, bank statements — makes the process significantly faster.",
+      "With all documentation ready, many lenders can issue a pre-approval letter within 24 to 48 hours. Some offer same-day pre-approvals for straightforward applications. Getting your documents organized ahead of time, tax returns, pay stubs, bank statements, makes the process significantly faster.",
   },
   {
     question: "Should I get pre-approved before looking at homes?",
@@ -211,7 +211,7 @@ export default function LendersPage() {
               dollars over the life of your loan. Interest rates, closing costs,
               lender fees, and communication quality vary dramatically from one
               company to the next. A lender who is slow to respond or sloppy with
-              paperwork can cost you the home you want — especially in a competitive
+              paperwork can cost you the home you want, especially in a competitive
               market where sellers expect fast, clean closings.
             </p>
             <p>
@@ -322,7 +322,7 @@ export default function LendersPage() {
           <div className="font-body text-muted space-y-4 text-lg">
             <p>
               Start by getting quotes from at least two or three lenders. Compare
-              the Loan Estimate documents side by side — not just the interest
+              the Loan Estimate documents side by side, not just the interest
               rate, but the full picture: origination fees, discount points,
               third-party charges, and estimated closing costs. A lender with a
               slightly higher rate but lower fees may actually cost you less.
@@ -337,7 +337,7 @@ export default function LendersPage() {
             <p>
               Ask about their average time from application to clear-to-close.
               Most lenders should be able to close a purchase loan in 30 days or
-              less. If they are quoting 45 to 60 days, that is a red flag — and
+              less. If they are quoting 45 to 60 days, that is a red flag, and
               it may make your offer less attractive to sellers.
             </p>
             <p>
@@ -387,7 +387,7 @@ export default function LendersPage() {
           <p className="font-body text-white/70 mb-6">
             Barrett connects buyers with mortgage professionals who close on
             time, communicate clearly, and fight for the best rates. No
-            kickbacks, no conflicts of interest — just trusted referrals from
+            kickbacks, no conflicts of interest, just trusted referrals from
             23+ years of real estate experience.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -410,7 +410,7 @@ export default function LendersPage() {
           <div className="font-body text-muted space-y-4 text-lg">
             <p>
               Over 23+ years in real estate, Barrett Henry has built relationships
-              with mortgage professionals across every loan category —
+              with mortgage professionals across every loan category 
               conventional, FHA, VA, USDA, jumbo, construction, and investor
               DSCR loans. These are not paid partnerships. Barrett does not
               receive referral fees, kickbacks, or any form of compensation from
@@ -434,7 +434,7 @@ export default function LendersPage() {
         </div>
       </section>
 
-      {/* === Lender directory — preferred first, then all by county === */}
+      {/* === Lender directory, preferred first, then all by county === */}
       <section className="container-wide py-16">
         <h2 className="heading-section text-display-sm text-primary text-center mb-2">
           Tampa Bay Mortgage Lender Directory
@@ -444,7 +444,7 @@ export default function LendersPage() {
           Google ratings shown are current and subject to change.
         </p>
 
-        {/* Preferred lenders — shown first with "Barrett Recommends" badge */}
+        {/* Preferred lenders, shown first with "Barrett Recommends" badge */}
         {preferredLenders.length > 0 && (
           <div className="mb-10">
             <h3 className="font-body text-xs font-medium tracking-[0.2em] uppercase text-accent mb-4">

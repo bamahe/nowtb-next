@@ -1,5 +1,5 @@
 // =============================================================================
-// CityContent — "About {City}" content section
+// CityContent, "About {City}" content section
 // Server component. Tries to load REAL WordPress content first. If none found,
 // falls back to auto-generated placeholder paragraphs.
 // Includes Barrett's phone number and a CTA.
@@ -66,7 +66,7 @@ export default function CityContent({ city, topic }: CityContentProps) {
   const zipList = formatZipList(city.zip_codes);
 
   // Clean WordPress artifacts: strip shortcodes, fix image URLs
-  // Also demote H2→H3 since CityContent already has an H2 wrapper —
+  // Also demote H2→H3 since CityContent already has an H2 wrapper 
   // prevents duplicate H2 headings that hurt SEO
   const cleanContent = wpContent
     ? cleanWpContent(wpContent)
@@ -76,7 +76,7 @@ export default function CityContent({ city, topic }: CityContentProps) {
 
   return (
     <section className="container-wide py-12">
-      {/* First-person intro — demonstrates EEAT first-hand experience */}
+      {/* First-person intro, demonstrates EEAT first-hand experience */}
       <div className="flex flex-col md:flex-row gap-6 items-start mb-8">
         <Image
           src="/images/barrett-headshot.png"
@@ -107,7 +107,7 @@ export default function CityContent({ city, topic }: CityContentProps) {
                 Broker Associate with <strong>REMAX Collective</strong> with 23+ years of real
                 estate experience. Call me at{" "}
                 <strong><a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a></strong>{" "}
-                — I&apos;d love to help you find your next home.
+                 I&apos;d love to help you find your next home.
               </>
             )}
           </p>
@@ -122,13 +122,13 @@ export default function CityContent({ city, topic }: CityContentProps) {
       </h2>
 
       {cleanContent ? (
-        // ---- REAL WordPress content found — render it (shortcodes stripped) ----
+        // ---- REAL WordPress content found, render it (shortcodes stripped) ----
         <div
           className="blog-content prose prose-lg max-w-none text-muted font-body"
           dangerouslySetInnerHTML={{ __html: cleanContent }}
         />
       ) : (
-        // ---- No WP content — fall back to generated placeholder ----
+        // ---- No WP content, fall back to generated placeholder ----
         <div className="prose prose-lg max-w-none text-muted font-body space-y-4">
           {topic ? (
             // ---- Spoke page placeholder: topic-specific rich content ----
@@ -148,7 +148,7 @@ export default function CityContent({ city, topic }: CityContentProps) {
                 transaction. As a local market expert, I help buyers and
                 sellers in {city.name} navigate pricing, negotiations, and
                 inspections with confidence. My goal is to make your home search
-                straightforward — we will find the right fit and close on your terms.
+                straightforward, we will find the right fit and close on your terms.
               </p>
               <p>
                 Ready to explore homes in {city.name}? Call{" "}
@@ -167,7 +167,7 @@ export default function CityContent({ city, topic }: CityContentProps) {
         </div>
       )}
 
-      {/* Outbound links — authoritative external resources for SEO credibility */}
+      {/* Outbound links, authoritative external resources for SEO credibility */}
       <div className="mt-8 p-6 bg-gray-50 rounded-lg border border-gray-200">
         <h3 className="font-heading font-bold text-lg text-primary mb-3">
           Helpful Resources for {city.name} Home Buyers
@@ -182,7 +182,7 @@ export default function CityContent({ city, topic }: CityContentProps) {
             >
               {SCHOOL_DISTRICT_LINKS[city.county]?.name ?? "Hillsborough County Public Schools"}
             </a>{" "}
-            — School zones, ratings, and enrollment info
+             School zones, ratings, and enrollment info
           </li>
           <li>
             <a
@@ -193,7 +193,7 @@ export default function CityContent({ city, topic }: CityContentProps) {
             >
               Florida DBPR License Verification
             </a>{" "}
-            — Verify any Florida real estate license
+             Verify any Florida real estate license
           </li>
           <li>
             <a
@@ -204,7 +204,7 @@ export default function CityContent({ city, topic }: CityContentProps) {
             >
               FEMA Flood Map Service Center
             </a>{" "}
-            — Check flood zones before you buy
+             Check flood zones before you buy
           </li>
           <li>
             <a
@@ -213,7 +213,7 @@ export default function CityContent({ city, topic }: CityContentProps) {
             >
               Florida Foreclosure Help
             </a>{" "}
-            — Free foreclosure prevention resources for Florida homeowners
+             Free foreclosure prevention resources for Florida homeowners
           </li>
           <li>
             <a
@@ -222,7 +222,7 @@ export default function CityContent({ city, topic }: CityContentProps) {
             >
               First-Time Home Buyer Tampa Bay
             </a>{" "}
-            — Down payment assistance, FHA guides, and first-time buyer programs
+             Down payment assistance, FHA guides, and first-time buyer programs
           </li>
           <li>
             <a
@@ -231,19 +231,19 @@ export default function CityContent({ city, topic }: CityContentProps) {
             >
               ViVi Property Management
             </a>{" "}
-            — Professional property management for {city.county} County landlords
+             Professional property management for {city.county} County landlords
           </li>
           <li>
             <a href="https://valoantb.com/" className="text-link hover:underline">
               VA Loan Tampa Bay
             </a>{" "}
-            — VA home loan guides and eligibility info for veterans
+             VA home loan guides and eligibility info for veterans
           </li>
           <li>
             <a href="https://tampabaydownpayment.com/" className="text-link hover:underline">
               Tampa Bay Down Payment Assistance
             </a>{" "}
-            — Down payment programs and grants for Tampa Bay home buyers
+             Down payment programs and grants for Tampa Bay home buyers
           </li>
 
           {/* Valrico-specific cross-links */}
@@ -253,13 +253,13 @@ export default function CityContent({ city, topic }: CityContentProps) {
                 <a href="https://valricoagent.com/" className="text-link hover:underline">
                   Valrico Real Estate Agent
                 </a>{" "}
-                — Barrett Henry, your local Valrico REALTOR&reg;
+                 Barrett Henry, your local Valrico REALTOR&reg;
               </li>
               <li>
                 <a href="https://valrico.blog/" className="text-link hover:underline">
                   Valrico Blog
                 </a>{" "}
-                — Local news, restaurants, events, and neighborhood guides for Valrico
+                 Local news, restaurants, events, and neighborhood guides for Valrico
               </li>
             </>
           )}
@@ -284,7 +284,7 @@ function formatZipList(zips: string[]): string {
 }
 
 // =============================================================================
-// SpokeTopicContent — renders topic-specific placeholder paragraphs
+// SpokeTopicContent, renders topic-specific placeholder paragraphs
 // Each spoke topic gets its own rich content template with internal links,
 // genuinely useful info, and city/county interpolation.
 // =============================================================================
@@ -330,7 +330,7 @@ function SpokeTopicContent({
             {city.name} has inventory worth exploring.
           </p>
           <p>
-            When you work with me, you get direct MLS access with real-time alerts — not
+            When you work with me, you get direct MLS access with real-time alerts, not
             the delayed data from third-party portals. I analyze comparable sales, review
             price history, and negotiate aggressively so you buy at the right number. Use
             my <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a>{" "}
@@ -350,7 +350,7 @@ function SpokeTopicContent({
             Florida and pools go together, and <strong>{city.name}</strong> is no exception.
             Pool homes in <strong>{city.county} County</strong> range from modest screened-in
             splash pools to resort-style saltwater setups with spas and outdoor kitchens.
-            Screened enclosures (also called &ldquo;lanais&rdquo;) are the standard in Florida — they
+            Screened enclosures (also called &ldquo;lanais&rdquo;) are the standard in Florida, they
             keep out bugs and debris while letting you enjoy the pool year-round. If you
             find a home with an open (unscreened) pool, budget $8,000 to $15,000 to add a
             cage later.
@@ -359,7 +359,7 @@ function SpokeTopicContent({
             Pool maintenance in the Tampa Bay area typically runs $100 to $200 per month for
             professional service, and resurfacing costs $5,000 to $15,000 depending on size
             and finish. During the buying process, I always recommend a dedicated{" "}
-            <strong>pool inspection</strong> separate from the general home inspection — it
+            <strong>pool inspection</strong> separate from the general home inspection, it
             checks the pump, heater, surface condition, and deck drainage. I will connect
             you with trusted local inspectors in {city.name} who specialize in pool systems.
             Explore all property types in the{" "}
@@ -386,7 +386,7 @@ function SpokeTopicContent({
           <p>
             One important cost to understand is the <strong>CDD (Community Development
             District) fee</strong>. Many new communities in Florida use CDDs to fund
-            infrastructure — roads, utilities, amenity centers — and those fees appear as
+            infrastructure, roads, utilities, amenity centers, and those fees appear as
             a separate line item on your tax bill, often $1,500 to $4,000 per year. I help
             you compare the total cost of ownership, including CDD, HOA, and property
             taxes, so there are no surprises. And here is something most buyers do not
@@ -416,8 +416,8 @@ function SpokeTopicContent({
             home theaters, multi-car garages, resort-style pools, and smart-home
             automation. Many luxury homes in <strong>{city.county} County</strong> sit on
             oversized lots or within gated communities that offer golf, tennis, and
-            private clubhouses. The lifestyle component — proximity to top-rated schools,
-            waterfront access, and walkability — is just as important as the home itself.
+            private clubhouses. The lifestyle component, proximity to top-rated schools,
+            waterfront access, and walkability, is just as important as the home itself.
           </p>
           <p>
             Financing a luxury home often means a{" "}
@@ -446,7 +446,7 @@ function SpokeTopicContent({
       return (
         <>
           <p>
-            Waterfront living in <strong>{city.name}</strong> comes in many forms — lakefront
+            Waterfront living in <strong>{city.name}</strong> comes in many forms, lakefront
             lots, canal-front homes with Gulf access, riverfront properties, and bayfront
             estates. In <strong>{city.county} County</strong>, waterfront homes command a
             premium, but the lifestyle is hard to beat: fishing from your backyard, kayaking
@@ -459,7 +459,7 @@ function SpokeTopicContent({
             and <strong>seawall condition</strong>. Florida requires flood insurance on
             properties in FEMA-designated flood zones, and premiums vary significantly
             based on elevation, zone rating, and whether the home has been elevated. Seawall
-            inspections are critical — replacing a deteriorated seawall can cost $300 to
+            inspections are critical, replacing a deteriorated seawall can cost $300 to
             $800 per linear foot. I coordinate these specialized inspections so you know
             exactly what you are buying. Check your flood zone on the{" "}
             <a href="https://msc.fema.gov/portal/home" target="_blank" rel="noopener noreferrer" className="text-link hover:underline">FEMA Flood Map Service Center</a>{" "}
@@ -486,7 +486,7 @@ function SpokeTopicContent({
             typically feature clubhouses, fitness centers, pools, pickleball and tennis
             courts, walking trails, and organized events. Under the federal Housing for
             Older Persons Act (HOPA), at least 80 percent of occupied units must have one
-            resident who is 55 or older — so age verification is part of the buying
+            resident who is 55 or older, so age verification is part of the buying
             process.
           </p>
           <p>
@@ -495,7 +495,7 @@ function SpokeTopicContent({
             who want to enjoy retirement without yard work. Monthly HOA fees typically range
             from $200 to $600 depending on the community and what is included. Some
             communities also carry CDD assessments. I will break down the total monthly
-            cost — mortgage, taxes, insurance, HOA, and CDD — so you can compare
+            cost, mortgage, taxes, insurance, HOA, and CDD, so you can compare
             communities accurately. Try the{" "}
             <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a>{" "}
             for a quick estimate.
@@ -524,10 +524,10 @@ function SpokeTopicContent({
           </p>
           <p>
             Here is how to get the most out of open houses: bring a pre-approval letter
-            (or at least know your budget — use
+            (or at least know your budget, use
             the <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a> to
             estimate), take photos and notes at each home, and pay attention to things
-            photos do not show — street noise, natural light, and the condition of
+            photos do not show, street noise, natural light, and the condition of
             neighboring properties. If you find a home you love, having a Broker Associate
             on your side means you can write an offer the same day with confidence.
           </p>
@@ -552,12 +552,12 @@ function SpokeTopicContent({
             job market, and year-round rental demand create favorable conditions for
             long-term buy-and-hold strategies. When evaluating investment properties, I
             help you analyze cap rate, cash-on-cash return, projected rent, vacancy rates,
-            and total operating expenses so you buy based on numbers — not emotion.
+            and total operating expenses so you buy based on numbers, not emotion.
           </p>
           <p>
             Financing options for investors include conventional loans (typically 20 to
             25 percent down for non-owner-occupied), <strong>DSCR loans</strong> (Debt
-            Service Coverage Ratio — qualified based on the property&apos;s rental income
+            Service Coverage Ratio, qualified based on the property&apos;s rental income
             rather than your personal income), and portfolio loans for buyers building a
             larger portfolio. I work with lenders who specialize in investor products
             and can close quickly. Use the{" "}
@@ -594,7 +594,7 @@ function SpokeTopicContent({
             low down payment options, or use
             the <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a>{" "}
             to see what fits your budget. I set up custom MLS alerts for my clients so
-            you get notified the moment a matching property hits the market — before it
+            you get notified the moment a matching property hits the market, before it
             shows up on Zillow or Realtor.com.
           </p>
           <p>
@@ -615,7 +615,7 @@ function SpokeTopicContent({
             Single-story homes (also called ranch-style or one-level homes) are among the
             most popular property types in <strong>{city.name}</strong>. Florida&apos;s flat
             terrain makes single-story construction practical and cost-effective, and
-            buyers love the convenience of having everything on one floor — no stairs to
+            buyers love the convenience of having everything on one floor, no stairs to
             navigate, easier maintenance, and better accessibility for all ages. In{" "}
             <strong>{city.county} County</strong>, single-story homes range from cozy
             3-bedroom starters to sprawling 5-bedroom estates on half-acre lots.
@@ -623,7 +623,7 @@ function SpokeTopicContent({
           <p>
             Single-story living is especially appealing for aging-in-place planning.
             Features like wider doorways, walk-in showers, and open floor plans are
-            not just comfortable now — they add long-term value and make the home
+            not just comfortable now, they add long-term value and make the home
             adaptable as your needs change. First-time buyers also appreciate single-story
             homes for their lower insurance costs (no second-floor wind exposure) and
             simpler roof maintenance. Explore financing options like{" "}
@@ -646,7 +646,7 @@ function SpokeTopicContent({
         <>
           <p>
             Buying land in <strong>{city.name}</strong> gives you the freedom to build
-            exactly the home you want — your floor plan, your finishes, your timeline.
+            exactly the home you want, your floor plan, your finishes, your timeline.
             Vacant lots in <strong>{city.county} County</strong> range from quarter-acre
             infill parcels in established neighborhoods to multi-acre tracts in rural
             areas. Before purchasing, you need to verify several things: zoning (residential
@@ -657,7 +657,7 @@ function SpokeTopicContent({
           </p>
           <p>
             Impact fees in {city.county} County cover schools, transportation, parks, and
-            utilities — and they can add $15,000 to $30,000 or more to a new build. I
+            utilities, and they can add $15,000 to $30,000 or more to a new build. I
             help you research these costs upfront so your budget is realistic. The
             building timeline from land purchase to move-in is typically 8 to 14 months
             depending on permitting, site work (clearing, fill, grading), and
@@ -684,7 +684,7 @@ function SpokeTopicContent({
             alternative to single-family homes. In <strong>{city.county} County</strong>,
             you will find everything from affordable starter condos to luxury waterfront
             units. Condo living means the association handles exterior maintenance, roofing,
-            landscaping, and often insurance on the building structure — you focus on the
+            landscaping, and often insurance on the building structure, you focus on the
             interior. Townhomes give you a bit more space and typically include a small
             private yard or patio.
           </p>
@@ -697,7 +697,7 @@ function SpokeTopicContent({
             reserves for structural maintenance. I review HOA financials, reserve studies,
             and recent inspection reports so you know the true health of any building
             before you buy. Be aware that some condo projects are{" "}
-            <strong>not FHA-approved</strong>, which limits financing options — I will
+            <strong>not FHA-approved</strong>, which limits financing options, I will
             verify approval status early in the process.
           </p>
           <p>
@@ -720,14 +720,14 @@ function SpokeTopicContent({
             in <strong>{city.county} County</strong> range from updated units in smaller
             complexes to high-rise buildings with pools, fitness centers, and concierge
             services. Monthly HOA fees typically cover water, sewer, trash, building
-            insurance, exterior maintenance, and shared amenity upkeep — so your out-of-pocket
+            insurance, exterior maintenance, and shared amenity upkeep, so your out-of-pocket
             beyond the mortgage is predictable.
           </p>
           <p>
             Florida&apos;s <strong>milestone inspection law</strong> requires structural
             inspections for buildings 3+ stories at 25 years of age (20 years near the
             coast). Associations must also fund reserves for major structural components
-            — no more deferring roof or concrete repairs. Before making an offer, I
+             no more deferring roof or concrete repairs. Before making an offer, I
             request and review the HOA&apos;s budget, reserve study, meeting minutes, and
             any pending special assessments. Financing a condo can be trickier than a
             house: FHA and VA loans require the project to be on an approved list, and
@@ -753,7 +753,7 @@ function SpokeTopicContent({
             Townhomes in <strong>{city.name}</strong> blend the space and privacy of a
             single-family home with the low-maintenance benefits of condo living. Most
             townhomes in <strong>{city.county} County</strong> include 2 to 3 bedrooms,
-            an attached garage, and a small private yard or patio — ideal for first-time
+            an attached garage, and a small private yard or patio, ideal for first-time
             buyers, young families, and downsizers. Exterior maintenance and landscaping
             are typically handled by the HOA, so you can spend weekends enjoying{" "}
             {city.name} instead of mowing the lawn.
@@ -795,7 +795,7 @@ function SpokeTopicContent({
             potentially <strong>CDD fees</strong> (if the community was built with
             Community Development District financing for infrastructure). Monthly HOA
             fees typically range from $200 to $800 depending on the level of amenities.
-            I break down every recurring cost — HOA, CDD, property taxes, insurance —
+            I break down every recurring cost, HOA, CDD, property taxes, insurance 
             so you know the true monthly expense before you make an offer. Use
             the <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a>{" "}
             to estimate total costs.
@@ -816,7 +816,7 @@ function SpokeTopicContent({
           <p>
             Choosing a neighborhood in <strong>{city.name}</strong> is just as important
             as choosing a home. Each community in <strong>{city.county} County</strong>{" "}
-            has its own personality — from established neighborhoods with mature trees
+            has its own personality, from established neighborhoods with mature trees
             and larger lots to newer developments with modern amenities and HOA-maintained
             common areas. School zones, commute times, walkability, and proximity to
             shopping and dining all factor into the decision.
@@ -867,7 +867,7 @@ function SpokeTopicContent({
           <p>
             For a neighborhood-by-neighborhood breakdown, visit
             the <a href={`/${city.slug}/`} className="text-link hover:underline">{city.name} city guide</a>.
-            Call <PhoneLink /> for a free, no-obligation market analysis — whether you are
+            Call <PhoneLink /> for a free, no-obligation market analysis, whether you are
             buying, selling, or just curious about your home&apos;s current value.
           </p>
         </>
@@ -887,7 +887,7 @@ function SpokeTopicContent({
             wash racks, and riding arenas.
           </p>
           <p>
-            Zoning is the most critical factor — not every large lot in Florida allows
+            Zoning is the most critical factor, not every large lot in Florida allows
             horses, and some HOAs restrict livestock even when county zoning permits it.
             I verify zoning, deed restrictions, and HOA rules before you waste time on
             a property that will not work. You should also consider water access for

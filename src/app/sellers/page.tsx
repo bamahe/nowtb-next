@@ -1,5 +1,5 @@
 // =============================================================================
-// /sellers — Seller Landing Page
+// /sellers, Seller Landing Page
 // Luxury minimalist: alternating sections, light-weight headings,
 // accent dividers, large stat numbers, generous whitespace
 // Content covers: selling strategy, marketing plan, pricing, staging,
@@ -33,7 +33,7 @@ const pillars = [
     step: 1,
     title: "Honest Pricing",
     description:
-      "I pull the comps, run the numbers, and give you a price that's based on data — not ego. Overpricing kills deals. I won't let that happen to you.",
+      "I pull the comps, run the numbers, and give you a price that's based on data, not ego. Overpricing kills deals. I won't let that happen to you.",
   },
   {
     step: 2,
@@ -45,7 +45,7 @@ const pillars = [
     step: 3,
     title: "Relentless Negotiation",
     description:
-      "23+ years of deal-making means I know how to get you more at the closing table. Better terms, stronger counter-offers, and more net proceeds — that's the whole point.",
+      "23+ years of deal-making means I know how to get you more at the closing table. Better terms, stronger counter-offers, and more net proceeds, that's the whole point.",
   },
   {
     step: 4,
@@ -119,7 +119,7 @@ export default function SellersPage() {
         }}
       />
 
-      {/* FAQPage schema — matches the question-format H2s on this page */}
+      {/* FAQPage schema, matches the question-format H2s on this page */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -132,7 +132,7 @@ export default function SellersPage() {
                 name: "What does it take to sell a home in Tampa Bay?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Selling a home successfully comes down to three things: accurate pricing, aggressive marketing, and a listing agent who actually negotiates. Barrett Henry brings 23+ years of real estate experience and a full-service approach — professional photography, MLS syndication, digital advertising, and hands-on guidance from first meeting through closing day.",
+                  text: "Selling a home successfully comes down to three things: accurate pricing, aggressive marketing, and a listing agent who actually negotiates. Barrett Henry brings 23+ years of real estate experience and a full-service approach, professional photography, MLS syndication, digital advertising, and hands-on guidance from first meeting through closing day.",
                 },
               },
               {
@@ -180,14 +180,14 @@ export default function SellersPage() {
         }}
       />
 
-      {/* ---- Hero Section — full viewport ---- */}
+      {/* ---- Hero Section, full viewport ---- */}
       <HeroSection
         title="Sell Your Home"
         label="BARRETT HENRY | THE NOW TEAM"
         subtitle="I don't guess on price and I don't cut corners on marketing. 23+ years of getting sellers top dollar."
       />
 
-      {/* ---- Seller Lead Form — right after hero ---- */}
+      {/* ---- Seller Lead Form, right after hero ---- */}
       <section className="section-light">
         <div className="container-wide max-w-xl mx-auto">
           <ContactForm
@@ -199,7 +199,7 @@ export default function SellersPage() {
         </div>
       </section>
 
-      {/* ---- Selling Process Overview — white bg ---- */}
+      {/* ---- Selling Process Overview, white bg ---- */}
       <section className="section-white">
         <div className="container-wide max-w-3xl mx-auto">
           <div className="text-center mb-12">
@@ -220,7 +220,7 @@ export default function SellersPage() {
               With 23+ years of real estate experience and a track record of selling homes
               across Hillsborough, Pinellas, Pasco, Polk, and Manatee counties, I bring a
               level of market knowledge that newer agents simply cannot match. Every listing
-              gets the same full-service treatment — professional photography, MLS syndication,
+              gets the same full-service treatment, professional photography, MLS syndication,
               digital advertising, and hands-on guidance from our first meeting through closing
               day. No shortcuts, no bait-and-switch, and no handing you off to an assistant.
             </p>
@@ -240,7 +240,7 @@ export default function SellersPage() {
         </div>
       </section>
 
-      {/* ---- Barrett's Selling Strategy — light bg, numbered steps ---- */}
+      {/* ---- Barrett's Selling Strategy, light bg, numbered steps ---- */}
       <section className="section-light">
         <div className="container-wide">
           <div className="text-center mb-16">
@@ -255,7 +255,7 @@ export default function SellersPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 max-w-4xl mx-auto">
             {pillars.map((p) => (
               <div key={p.title} className="flex gap-6">
-                {/* Large step number — ultra-light weight */}
+                {/* Large step number, ultra-light weight */}
                 <div className="flex-shrink-0">
                   <span className="font-heading text-5xl font-extralight text-accent/40 leading-none">
                     {String(p.step).padStart(2, "0")}
@@ -275,7 +275,7 @@ export default function SellersPage() {
         </div>
       </section>
 
-      {/* ---- How Barrett Markets Your Home — white bg ---- */}
+      {/* ---- How Barrett Markets Your Home, white bg ---- */}
       <section className="section-white">
         <div className="container-wide max-w-3xl mx-auto">
           <div className="text-center mb-12">
@@ -287,7 +287,7 @@ export default function SellersPage() {
           </div>
           <div className="font-body text-muted font-light text-base md:text-lg leading-relaxed space-y-5">
             <p>
-              Great marketing is not optional — it is the reason your home sells faster and
+              Great marketing is not optional, it is the reason your home sells faster and
               for more money. Every listing I take gets a full marketing launch that includes
               professional HDR photography, drone aerials (where applicable), and 3D virtual
               tours so buyers can walk through your home from anywhere.
@@ -309,7 +309,7 @@ export default function SellersPage() {
         </div>
       </section>
 
-      {/* ---- Pricing Strategy — light bg ---- */}
+      {/* ---- Pricing Strategy, light bg ---- */}
       <section className="section-light">
         <div className="container-wide max-w-3xl mx-auto">
           <div className="text-center mb-12">
@@ -334,7 +334,7 @@ export default function SellersPage() {
               qualified buyers and maximizes your net proceeds.
             </p>
             <p>
-              I will always tell you the truth about your home&apos;s value — even when the
+              I will always tell you the truth about your home&apos;s value, even when the
               number is not what you want to hear. That honesty is what gets homes sold.{" "}
               <Link href="/home-valuation/" className="text-link underline underline-offset-4 hover:text-accent/80">
                 Request a free home valuation
@@ -345,7 +345,7 @@ export default function SellersPage() {
         </div>
       </section>
 
-      {/* ---- Staging Tips — white bg ---- */}
+      {/* ---- Staging Tips, white bg ---- */}
       <section className="section-white">
         <div className="container-wide max-w-3xl mx-auto">
           <div className="text-center mb-12">
@@ -362,14 +362,14 @@ export default function SellersPage() {
               tell every seller before we go live:
             </p>
             <ul className="list-disc list-inside space-y-2 pl-2">
-              <li>Declutter every room — less furniture makes spaces feel larger</li>
+              <li>Declutter every room, less furniture makes spaces feel larger</li>
               <li>Deep clean kitchens and bathrooms (buyers notice grout and fixtures first)</li>
               <li>Neutralize bold paint colors if they dominate a room</li>
               <li>Boost curb appeal with fresh mulch, trimmed hedges, and a clean front door</li>
               <li>Replace burned-out bulbs and open all blinds for natural light</li>
               <li>Remove personal photos and religious items so buyers can picture themselves living there</li>
               <li>Stage the owners suite with clean, neutral bedding and minimal furniture</li>
-              <li>Address small repairs — leaky faucets, loose handles, cracked switch plates</li>
+              <li>Address small repairs, leaky faucets, loose handles, cracked switch plates</li>
             </ul>
             <p>
               I walk every listing before photos are taken and give you a room-by-room prep
@@ -380,7 +380,7 @@ export default function SellersPage() {
         </div>
       </section>
 
-      {/* ---- Florida Seller Disclosures — light bg ---- */}
+      {/* ---- Florida Seller Disclosures, light bg ---- */}
       <section className="section-light">
         <div className="container-wide max-w-3xl mx-auto">
           <div className="text-center mb-12">
@@ -406,7 +406,7 @@ export default function SellersPage() {
             </ul>
             <p>
               I walk through every disclosure form with my sellers and make sure nothing gets
-              missed. Honest disclosure protects you legally and builds trust with buyers — both
+              missed. Honest disclosure protects you legally and builds trust with buyers, both
               of which lead to smoother closings. If you have questions about what you need to
               disclose,{" "}
               <Link href="/contact/" className="text-link underline underline-offset-4 hover:text-accent/80">
@@ -418,7 +418,7 @@ export default function SellersPage() {
         </div>
       </section>
 
-      {/* ---- Listing-to-Closing Timeline — dark bg ---- */}
+      {/* ---- Listing-to-Closing Timeline, dark bg ---- */}
       <section className="section-dark">
         <div className="container-wide max-w-3xl mx-auto">
           <div className="text-center mb-16">
@@ -463,7 +463,7 @@ export default function SellersPage() {
         </div>
       </section>
 
-      {/* ---- Home Valuation CTA — light bg ---- */}
+      {/* ---- Home Valuation CTA, light bg ---- */}
       <section className="section-light">
         <div className="container-wide text-center">
           <p className="heading-label mb-6">Free Valuation</p>
@@ -472,7 +472,7 @@ export default function SellersPage() {
           </h2>
           <div className="section-divider" />
           <p className="font-body text-muted font-light text-base md:text-lg max-w-2xl mx-auto mb-10">
-            I&apos;ll run the numbers on your home — no obligation, no pressure.
+            I&apos;ll run the numbers on your home, no obligation, no pressure.
             Find out what buyers are actually paying in your neighborhood right now.
           </p>
           <Link href="/sell-your-home/" className="btn-primary">
@@ -481,7 +481,7 @@ export default function SellersPage() {
         </div>
       </section>
 
-      {/* ---- Market Stats — white bg, large stat numbers ---- */}
+      {/* ---- Market Stats, white bg, large stat numbers ---- */}
       <section className="section-white">
         <div className="container-wide">
           <div className="text-center mb-16">

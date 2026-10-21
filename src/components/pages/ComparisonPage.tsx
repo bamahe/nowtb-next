@@ -1,5 +1,5 @@
 // =============================================================================
-// ComparisonPage — City-vs-city or concept comparison page
+// ComparisonPage, City-vs-city or concept comparison page
 // Pulls live MLS data for both sides and renders real stats + content
 // =============================================================================
 
@@ -199,7 +199,7 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
 
   // ---------------------------------------------------------------------------
   // STRUCTURED DATA
-  // This template emitted NO BreadcrumbList and NO WebPage entity — only the
+  // This template emitted NO BreadcrumbList and NO WebPage entity, only the
   // concept layout had FAQPage markup. The visible breadcrumb nav below was
   // never backed by schema, so search engines saw no trail at all.
   // ---------------------------------------------------------------------------
@@ -209,7 +209,7 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
   if (category === "concept" && conceptData) {
     return (
       <>
-        {/* === JSON-LD: BreadcrumbList — mirrors the visible nav below === */}
+        {/* === JSON-LD: BreadcrumbList, mirrors the visible nav below === */}
         <JsonLd
           data={breadcrumbSchema([
             { name: "Home", url: "https://nowtb.com" },
@@ -233,7 +233,7 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
         />
 
         {/* === JSON-LD: FAQPage ===
-             Built from conceptData.faq — the exact same array the accordion
+             Built from conceptData.faq, the exact same array the accordion
              below renders, so markup and schema cannot drift apart. */}
         {conceptData.faq.length > 0 && (
           <JsonLd data={faqSchema(conceptData.faq)} />
@@ -373,7 +373,7 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
                 Need help deciding between {sideA.toLowerCase()} and {sideB.toLowerCase()}?
               </p>
               <p className="font-body text-white/70 text-sm">
-                Barrett Henry, Broker Associate at REMAX Collective — 23+ years of real estate experience
+                Barrett Henry, Broker Associate at REMAX Collective, 23+ years of real estate experience
               </p>
             </div>
             <div className="flex gap-3">
@@ -439,7 +439,7 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
 
   return (
     <>
-      {/* === JSON-LD: BreadcrumbList — mirrors the visible nav below === */}
+      {/* === JSON-LD: BreadcrumbList, mirrors the visible nav below === */}
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", url: "https://nowtb.com" },
@@ -453,7 +453,7 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
            `.quick-answer` is safe to claim because the "So Which Is Better"
            box below carries that class.
 
-           NOTE: no FAQPage on this layout — the city comparison renders no
+           NOTE: no FAQPage on this layout, the city comparison renders no
            question-and-answer section. Emitting FAQ schema for questions a
            visitor cannot see would be a structured-data violation. */}
       <JsonLd
@@ -509,8 +509,8 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
                 </tr>
                 <tr className="border-b border-gray-100">
                   <td className="py-3 px-4 text-muted font-semibold">Price Range</td>
-                  <td className="py-3 px-4 text-dark">{formatPrice(statsA.low)} – {formatPrice(statsA.high)}</td>
-                  <td className="py-3 px-4 text-dark">{formatPrice(statsB.low)} – {formatPrice(statsB.high)}</td>
+                  <td className="py-3 px-4 text-dark">{formatPrice(statsA.low)}, {formatPrice(statsA.high)}</td>
+                  <td className="py-3 px-4 text-dark">{formatPrice(statsB.low)}, {formatPrice(statsB.high)}</td>
                 </tr>
                 <tr className="border-b border-gray-100">
                   <td className="py-3 px-4 text-muted font-semibold">Avg. Price / Sq Ft</td>
@@ -712,7 +712,7 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
               Explore Both Areas
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              {/* Hub page links — direct links to the city hub pages */}
+              {/* Hub page links, direct links to the city hub pages */}
               <Link href={`/${slugA}/`} className="block rounded-lg bg-white border border-gray-200 p-4 text-center hover:shadow-md hover:border-accent/30 transition-all no-underline">
                 <p className="font-heading font-bold text-primary text-sm">All {sideA} Homes</p>
                 <p className="font-body text-xs text-muted mt-1">City hub</p>
@@ -721,7 +721,7 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
                 <p className="font-heading font-bold text-primary text-sm">All {sideB} Homes</p>
                 <p className="font-body text-xs text-muted mt-1">City hub</p>
               </Link>
-              {/* Spoke links — homes-for-sale and housing-market pages */}
+              {/* Spoke links, homes-for-sale and housing-market pages */}
               <Link href={`/${slugA}-homes-for-sale/`} className="block rounded-lg bg-white border border-gray-200 p-4 text-center hover:shadow-md hover:border-accent/30 transition-all no-underline">
                 <p className="font-heading font-bold text-primary text-sm">{sideA} Homes</p>
                 <p className="font-body text-xs text-muted mt-1">Browse listings</p>

@@ -1,5 +1,5 @@
 // =============================================================================
-// SaveSearchButton — Saves current search filters to Supabase or localStorage
+// SaveSearchButton, Saves current search filters to Supabase or localStorage
 // Shows on the properties page when filters are active
 // =============================================================================
 
@@ -84,7 +84,7 @@ export default function SaveSearchButton() {
                 search: { name, filters },
               }),
             }).catch(() => {
-              // FUB push failed — search is already saved, no worries
+              // FUB push failed, search is already saved, no worries
             });
           }
           return;

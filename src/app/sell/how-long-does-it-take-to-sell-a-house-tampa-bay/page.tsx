@@ -92,7 +92,7 @@ const FASTEST_CITY = CITY_ROWS[0];
 const SLOWEST_CITY = CITY_ROWS[CITY_ROWS.length - 1];
 
 /** Simple median of the per-city medians. This is a median OF MEDIANS and the
- *  prose says so — it is not the median days on market for the whole region,
+ * prose says so, it is not the median days on market for the whole region,
  *  which would need every sale weighted individually. Being precise about what
  *  a statistic is is the whole reason anyone should trust the rest of them. */
 function medianOf(values: number[]): number {
@@ -144,7 +144,7 @@ const TIMELINE = [
   },
   {
     stage: "4. Active on the market until a signed contract",
-    typical: `Median ${DOM_FAST} to ${DOM_SLOW} days by city — see the table below`,
+    typical: `Median ${DOM_FAST} to ${DOM_SLOW} days by city, see the table below`,
     who: "The market, and your list price",
     shorten:
       "Price at the closed comparable sales. This is the only stage where a single decision can cut weeks, and it is the stage where most of the time is lost.",
@@ -227,7 +227,7 @@ const faqs: Faq[] = [
   {
     question: "How long does it take to close after I accept an offer?",
     answer:
-      "On a cash purchase, as fast as the title work allows — frequently one to three weeks, because there is no lender and no appraisal. On a financed purchase the length is set by the buyer's lender, and the closing date written into the contract is a target rather than a guarantee. Ask who the lender is and whether the buyer is fully underwritten rather than just pre-qualified, because that single question predicts more about your closing date than the contract line does.",
+      "On a cash purchase, as fast as the title work allows, frequently one to three weeks, because there is no lender and no appraisal. On a financed purchase the length is set by the buyer's lender, and the closing date written into the contract is a target rather than a guarantee. Ask who the lender is and whether the buyer is fully underwritten rather than just pre-qualified, because that single question predicts more about your closing date than the contract line does.",
   },
   {
     question: "What is the most common last-minute delay in a Florida sale?",
@@ -249,7 +249,7 @@ const sources: Source[] = [
     )} closed sales across ${CITY_ROWS.length} cities.`,
   },
   {
-    name: "Florida Statute 720.30851 — HOA Estoppel Certificates",
+    name: "Florida Statute 720.30851, HOA Estoppel Certificates",
     used: "The 10-business-day deadline for an association to deliver an estoppel certificate, and the fact that expedited delivery within three business days carries an additional capped fee.",
     href: "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799%2F0720%2FSections%2F0720.30851.html",
   },
@@ -500,7 +500,7 @@ export default function HowLongToSellTampaBayPage() {
               >
                 selling a Tampa Bay house fast
               </Link>{" "}
-              next — it compares a cash offer against a priced-right listing on
+              next, it compares a cash offer against a priced-right listing on
               eight dimensions. If the date has some give, the two numbers that
               set your calendar are{" "}
               <Link
@@ -562,7 +562,7 @@ export default function HowLongToSellTampaBayPage() {
             General information about the Florida selling process, not legal,
             tax or accounting advice. Market figures describe closed sales over
             a past window and do not predict how long any individual home will
-            take. Contract deadlines are negotiated between the parties —
+            take. Contract deadlines are negotiated between the parties 
             confirm yours with your attorney and your closing agent.
           </p>
         </div>

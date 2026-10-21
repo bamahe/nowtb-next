@@ -232,7 +232,7 @@ export default function Header() {
   return (
     // z-[60] = the "Header bar" tier of the site-wide stacking scale documented
     // at the top of src/app/layout.tsx. It was z-50, which tied with the chat
-    // bubble and sat BEHIND nothing in particular — and crucially it must stay
+    // bubble and sat BEHIND nothing in particular, and crucially it must stay
     // above in-page sticky bars (the property search filter bar), which the
     // scale caps at z-30.
     <header className="fixed top-0 left-0 right-0 z-[60] w-full">
@@ -365,7 +365,7 @@ export default function Header() {
           {/* ── Mobile: tap-to-call button + hamburger ──────────────────────
               WHY THIS EXISTS: the phone block above is `hidden md:flex`, so on
               a phone the header used to show a logo and a hamburger and NOTHING
-              ELSE — no way to reach Barrett without first opening the menu.
+              ELSE, no way to reach Barrett without first opening the menu.
               Most real estate traffic is mobile, so that was the site's single
               biggest conversion leak, and it broke the standing rule that the
               phone number is visible on mobile and never hidden.
@@ -379,13 +379,13 @@ export default function Header() {
 
               If it breaks, check: if anything is ever added to this row, shrink
               the number to the icon plus "Call" rather than letting the row
-              wrap — a wrapped header changes height and makes the sticky
+              wrap, a wrapped header changes height and makes the sticky
               header jump on scroll. ───────────────────────────────────────── */}
           <div className="flex items-center gap-2 md:hidden">
             <a
               href="tel:+18137337907"
               // trackPhoneTap is a no-op until NEXT_PUBLIC_GA_ID exists in
-              // Vercel — see src/lib/analytics.ts. It can never throw, which
+              // Vercel, see src/lib/analytics.ts. It can never throw, which
               // matters here: an exception in this handler would cancel the
               // call the visitor was trying to place.
               onClick={() => trackPhoneTap("header-mobile")}

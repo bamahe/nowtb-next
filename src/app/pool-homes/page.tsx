@@ -1,4 +1,4 @@
-// /pool-homes — Tampa Bay Pool Homes for Sale
+// /pool-homes, Tampa Bay Pool Homes for Sale
 
 import type { Metadata } from "next";
 import HeroSection from "@/components/ui/HeroSection";

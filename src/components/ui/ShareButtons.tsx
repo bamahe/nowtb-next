@@ -1,5 +1,5 @@
 // =============================================================================
-// ShareButtons — Social share buttons for listings, blog posts, and pages
+// ShareButtons, Social share buttons for listings, blog posts, and pages
 // "use client" because it reads window.location for share URLs
 // =============================================================================
 
@@ -8,7 +8,7 @@
 import { useState } from "react";
 import { Share2, Mail, Link2, Check } from "lucide-react";
 
-// Facebook "f" logo (brand icon — Lucide doesn't have brand icons)
+// Facebook "f" logo (brand icon, Lucide doesn't have brand icons)
 const FacebookIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
@@ -66,7 +66,7 @@ export default function ShareButtons({
       try {
         await navigator.share({ title, text: description, url: getUrl() });
       } catch {
-        // User cancelled — ignore
+        // User cancelled, ignore
       }
     }
   };
@@ -79,7 +79,7 @@ export default function ShareButtons({
 
   return (
     <div className={`flex ${layout === "column" ? "flex-col" : "flex-row"} gap-2`}>
-      {/* Facebook — opens share dialog via link (not button, to avoid popup blockers) */}
+      {/* Facebook, opens share dialog via link (not button, to avoid popup blockers) */}
       <a
         href={`https://www.facebook.com/sharer/sharer.php?u=${typeof window !== "undefined" ? encodeURIComponent(window.location.href) : ""}`}
         target="_blank"
@@ -90,7 +90,7 @@ export default function ShareButtons({
         <FacebookIcon />
       </a>
 
-      {/* Twitter/X — button opens tweet compose in popup */}
+      {/* Twitter/X, button opens tweet compose in popup */}
       <button
         type="button"
         className={buttonClass}
@@ -125,7 +125,7 @@ export default function ShareButtons({
         {copied ? <Check size={16} className="text-green-600" /> : <Link2 size={16} />}
       </button>
 
-      {/* Native share (mobile only — shows share sheet) */}
+      {/* Native share (mobile only, shows share sheet) */}
       {typeof navigator !== "undefined" && "share" in navigator && (
         <button
           onClick={handleNativeShare}

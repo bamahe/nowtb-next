@@ -1,5 +1,5 @@
 // =============================================================================
-// ListingCard — Luxury property card with glass-morphism overlay
+// ListingCard, Luxury property card with glass-morphism overlay
 // Server component (no "use client" directive)
 // Info overlaid on the image bottom with backdrop-blur, no separate white section
 // =============================================================================
@@ -20,7 +20,7 @@ interface ListingCardProps {
   listing: Listing;
 }
 
-/** Format open house date/time for display: "Sat, Jul 12 · 2:00–4:00 PM" */
+/** Format open house date/time for display: "Sat, Jul 12 · 2:00 to 4:00 PM" */
 // Forces America/New_York timezone so server-rendered times match Florida local time
 const TZ = 'America/New_York';
 function formatOpenHouse(start?: string, end?: string): string {
@@ -31,12 +31,12 @@ function formatOpenHouse(start?: string, end?: string): string {
   if (end) {
     const e = new Date(end);
     const endTime = e.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: TZ }).replace(' ', '');
-    return `${dayStr} · ${startTime}–${endTime}`;
+    return `${dayStr} · ${startTime}, ${endTime}`;
   }
   return `${dayStr} · ${startTime}`;
 }
 
-/** Format ALL open houses for a listing: "Sat, Aug 1 · 2:00–4:00 PM | Sun, Aug 2 · 2:00–4:00 PM" */
+/** Format ALL open houses for a listing: "Sat, Aug 1 · 2:00 to 4:00 PM | Sun, Aug 2 · 2:00 to 4:00 PM" */
 function formatAllOpenHouses(houses?: { start: string; end: string }[]): string[] {
   if (!houses || houses.length === 0) return [];
   return houses.map(h => formatOpenHouse(h.start, h.end)).filter(Boolean);
@@ -77,7 +77,7 @@ export default function ListingCard({ listing }: ListingCardProps) {
     <Link
       href={url}
       className="group block overflow-hidden relative"
-      aria-label={`View details for ${displayAddress} — ${formatPrice(listing.ListPrice)}`}
+      aria-label={`View details for ${displayAddress}, ${formatPrice(listing.ListPrice)}`}
     >
       {/* --- Photo with tall aspect ratio and hover scale --- */}
       <div className="relative aspect-[3/4] w-full overflow-hidden bg-primary/10">
@@ -89,13 +89,13 @@ export default function ListingCard({ listing }: ListingCardProps) {
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
         />
 
-        {/* --- Gradient overlay on image — dark at bottom for text --- */}
+        {/* --- Gradient overlay on image, dark at bottom for text --- */}
         <div
           className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"
           aria-hidden="true"
         />
 
-        {/* --- Open House Banner — show ALL upcoming open houses --- */}
+        {/* --- Open House Banner, show ALL upcoming open houses --- */}
         {listing.OpenHouseStartTime && new Date(listing.OpenHouseStartTime) > new Date() && (() => {
           const allOH = formatAllOpenHouses(listing.OpenHouses);
           // Fall back to single open house if OpenHouses array not populated
@@ -114,7 +114,7 @@ export default function ListingCard({ listing }: ListingCardProps) {
           ) : null;
         })()}
 
-        {/* --- Status Badge — glass-morphism effect over photo --- */}
+        {/* --- Status Badge, glass-morphism effect over photo --- */}
         <span
           className={cn(
             "absolute left-4 px-3 py-1.5 text-[10px] font-medium font-body uppercase tracking-[0.15em] backdrop-blur-sm",
@@ -127,7 +127,7 @@ export default function ListingCard({ listing }: ListingCardProps) {
           {listing.StandardStatus}
         </span>
 
-        {/* --- Favorite heart button — top right corner --- */}
+        {/* --- Favorite heart button, top right corner --- */}
         <FavoriteButton
           listingKey={listing.ListingKey}
           listingData={{
@@ -144,18 +144,18 @@ export default function ListingCard({ listing }: ListingCardProps) {
 
         {/* --- Info overlay at bottom with backdrop-blur glass effect --- */}
         <div className="absolute bottom-0 left-0 right-0 p-5 backdrop-blur-[2px]">
-          {/* Price — light weight heading font */}
+          {/* Price, light weight heading font */}
           <p className="font-heading font-light text-xl tracking-wide text-white mb-1">
             {formatPrice(listing.ListPrice)}
           </p>
 
-          {/* Address — slightly transparent white */}
+          {/* Address, slightly transparent white */}
           <p className="font-body text-sm text-white/80 font-light truncate">
             {displayAddress}
           </p>
           <p className="font-body text-xs text-white/60 mb-3">{cityStateZip}</p>
 
-          {/* Beds / Baths / SqFt — tiny uppercase stats */}
+          {/* Beds / Baths / SqFt, tiny uppercase stats */}
           <div className="flex items-center gap-3 text-[10px] text-white/60 font-body tracking-widest uppercase">
             {listing.BedroomsTotal != null && (
               <span>{listing.BedroomsTotal} Bed</span>

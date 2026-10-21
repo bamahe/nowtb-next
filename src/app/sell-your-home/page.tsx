@@ -1,6 +1,6 @@
 // =============================================================================
-// /sell-your-home — Home Valuation Pillar Page
-// Server component — the interactive form is extracted into ValuationForm
+// /sell-your-home, Home Valuation Pillar Page
+// Server component, the interactive form is extracted into ValuationForm
 // =============================================================================
 
 import type { Metadata } from "next";
@@ -61,7 +61,7 @@ const sellingSteps = [
     step: 6,
     title: "Close & Celebrate",
     description:
-      "Inspections, appraisal, title work, and final walkthrough — all coordinated so you can close with confidence.",
+      "Inspections, appraisal, title work, and final walkthrough, all coordinated so you can close with confidence.",
   },
 ];
 
@@ -83,7 +83,7 @@ export default function SellYourHomePage() {
         }}
       />
 
-      {/* HowTo schema — step-by-step selling process for SEO/AEO */}
+      {/* HowTo schema, step-by-step selling process for SEO/AEO */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -92,7 +92,7 @@ export default function SellYourHomePage() {
             "@type": "HowTo",
             name: "How to Sell Your Home in Tampa Bay",
             description:
-              "A step-by-step guide to selling your Tampa Bay home — from free home valuation to closing day, with expert guidance from Barrett Henry, Broker Associate at REMAX Collective.",
+              "A step-by-step guide to selling your Tampa Bay home, from free home valuation to closing day, with expert guidance from Barrett Henry, Broker Associate at REMAX Collective.",
             step: [
               {
                 "@type": "HowToStep",
@@ -128,7 +128,7 @@ export default function SellYourHomePage() {
                 "@type": "HowToStep",
                 position: 6,
                 name: "Close and Celebrate",
-                text: "Inspections, appraisal, title work, and final walkthrough — all coordinated so you can close with confidence.",
+                text: "Inspections, appraisal, title work, and final walkthrough, all coordinated so you can close with confidence.",
               },
             ],
           }),
@@ -232,7 +232,7 @@ export default function SellYourHomePage() {
                 &ldquo;Barrett Sold my house and did an excellent job. The process was quick and easy. Definitely will use Barrett again in the future!&rdquo;
               </blockquote>
               <p className="font-body text-primary font-medium text-sm">Rachel Mauk</p>
-              <p className="font-body text-muted text-xs">Tampa Bay — Google Review</p>
+              <p className="font-body text-muted text-xs">Tampa Bay, Google Review</p>
             </div>
             <div className="border border-border p-8">
               <p className="text-accent text-lg mb-4">★★★★★</p>

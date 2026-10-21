@@ -1,5 +1,5 @@
 // =============================================================================
-// /market-updates/[slug] — Individual market update page
+// /market-updates/[slug], Individual market update page
 // =============================================================================
 
 import fs from "fs";
@@ -45,7 +45,7 @@ export async function generateMetadata({
     : "/og-default.png";
   return {
     title: update.title,
-    description: update.excerpt || `${update.title} — latest housing market data from Barrett Henry, REALTOR® at REMAX Collective.`,
+    description: update.excerpt || `${update.title}, latest housing market data from Barrett Henry, REALTOR® at REMAX Collective.`,
     alternates: { canonical: `/market-updates/${slug}/` },
     openGraph: {
       title: update.title,
@@ -76,7 +76,7 @@ export async function generateMetadata({
  *
  * If it breaks, check: this resolves against process.cwd()/public, which is the
  * repo root during `next build`. The 36 missing files are also rendering a
- * broken <img> in the hero — that is a separate fix in src/lib/market-updates.ts.
+ * broken <img> in the hero, that is a separate fix in src/lib/market-updates.ts.
  */
 function publicFileExists(sitePath: string): boolean {
   try {
@@ -117,7 +117,7 @@ export default async function MarketUpdatePage({
   const canonicalUrl = `https://nowtb.com/market-updates/${slug}/`;
   const description =
     update.excerpt ||
-    `${update.title} — latest housing market data from Barrett Henry, REALTOR® at REMAX Collective.`;
+    `${update.title}, latest housing market data from Barrett Henry, REALTOR® at REMAX Collective.`;
 
   // ---------------------------------------------------------------------------
   // Clean the WordPress HTML ONCE, then use that exact string for BOTH the
@@ -125,7 +125,7 @@ export default async function MarketUpdatePage({
   //
   // WHY: FAQPage structured data has to describe FAQs the visitor can actually
   // see. Deriving the schema from the same string we render makes a mismatch
-  // impossible — if the content ever loses its FAQ section, extractFaqsFromHtml
+  // impossible, if the content ever loses its FAQ section, extractFaqsFromHtml
   // returns [] and we emit no FAQ schema instead of lying about it.
   // ---------------------------------------------------------------------------
   const contentHtml = cleanWpContent(update.content);
@@ -139,7 +139,7 @@ export default async function MarketUpdatePage({
   // three matched nothing: this template never renders <QuickAnswer>, the <h1>
   // lives in the hero <section> OUTSIDE <article>, and the exported content puts
   // its answer block in `.bbs-quick-answer-text` (which `.quick-answer` does NOT
-  // match — class selectors match whole tokens, not substrings).
+  // match, class selectors match whole tokens, not substrings).
   const speakableSelectors = speakableSelectorsForContent(contentHtml);
 
   // Only publish the lead image in schema if the file is actually there.
@@ -181,7 +181,7 @@ export default async function MarketUpdatePage({
            Only emitted when the page really does display 3+ questions. */}
       {faqs.length > 0 && <JsonLd data={faqSchema(faqs)} />}
 
-      {/* === Header — the market update photo is the hero background ===
+      {/* === Header, the market update photo is the hero background ===
            The image sits behind the title with a navy scrim over it so the
            white headline stays readable on light photos. */}
       <section className="relative bg-primary pt-32 pb-16 overflow-hidden">
@@ -194,7 +194,7 @@ export default async function MarketUpdatePage({
               loading="eager"
               // eslint-disable-next-line @next/next/no-img-element
             />
-            {/* Scrim — dark enough that the headline passes contrast on any photo */}
+            {/* Scrim, dark enough that the headline passes contrast on any photo */}
             <div className="absolute inset-0 bg-primary/80" aria-hidden="true" />
           </>
         )}
@@ -281,7 +281,7 @@ export default async function MarketUpdatePage({
 
           {/* Main content */}
           <article className="lg:col-span-3 order-1 lg:order-2">
-            {/* The photo now lives in the page header above — it was here in the
+            {/* The photo now lives in the page header above, it was here in the
                 body, which pushed it below the fold on the article. */}
             <div
               className="blog-content prose prose-lg font-body text-dark max-w-none

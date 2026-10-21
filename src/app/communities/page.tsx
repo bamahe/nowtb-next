@@ -1,5 +1,5 @@
 // =============================================================================
-// /communities — Communities index page listing all cities by county
+// /communities, Communities index page listing all cities by county
 // =============================================================================
 
 import type { Metadata } from "next";
@@ -10,7 +10,7 @@ import SearchBar from "@/components/ui/SearchBar";
 import { cities } from "@/data/cities";
 import { communityPages } from "@/data/community-pages";
 
-// Leaflet requires window/DOM — load client-side only
+// Leaflet requires window/DOM, load client-side only
 const TampaBayMap = dynamic(() => import("@/components/ui/TampaBayMap"), {
   ssr: false,
   loading: () => (
@@ -23,14 +23,14 @@ const TampaBayMap = dynamic(() => import("@/components/ui/TampaBayMap"), {
 export const metadata: Metadata = {
   title: "Tampa Bay Communities | 78+ Cities | Barrett Henry, REALTOR®",
   description:
-    "Explore all Tampa Bay communities by county — Hillsborough, Pinellas, Pasco, Manatee, Polk, Sarasota, Hernando, and Citrus. Browse homes for sale with Barrett Henry at REMAX Collective.",
+    "Explore all Tampa Bay communities by county, Hillsborough, Pinellas, Pasco, Manatee, Polk, Sarasota, Hernando, and Citrus. Browse homes for sale with Barrett Henry at REMAX Collective.",
   alternates: {
     canonical: "/communities/",
   },
   openGraph: {
     title: "Tampa Bay Communities | 78+ Cities | Barrett Henry, REALTOR®",
     description:
-      "Explore all Tampa Bay communities by county — Hillsborough, Pinellas, Pasco, Manatee, Polk, Sarasota, Hernando, and Citrus. Browse homes for sale with Barrett Henry.",
+      "Explore all Tampa Bay communities by county, Hillsborough, Pinellas, Pasco, Manatee, Polk, Sarasota, Hernando, and Citrus. Browse homes for sale with Barrett Henry.",
     url: "/communities/",
     type: "website",
   },
@@ -70,7 +70,7 @@ export default function CommunitiesPage() {
         <SearchBar />
       </HeroSection>
 
-      {/* === Intro text — unique content about Tampa Bay communities === */}
+      {/* === Intro text, unique content about Tampa Bay communities === */}
       <section className="container-wide pt-12 pb-2">
         <div className="max-w-3xl mx-auto text-center">
           <p className="font-body text-muted font-light text-lg leading-relaxed">
@@ -83,7 +83,7 @@ export default function CommunitiesPage() {
         </div>
       </section>
 
-      {/* === Interactive Tampa Bay Area Map — click cities to explore === */}
+      {/* === Interactive Tampa Bay Area Map, click cities to explore === */}
       <section className="container-wide pt-8 pb-6">
         <p className="heading-label text-center mb-6">Tampa Bay Service Area</p>
         <TampaBayMap
@@ -92,7 +92,7 @@ export default function CommunitiesPage() {
             lat: c.lat,
             lng: c.lng,
             href: `/${c.slug}/`,
-            label: `${c.name} — ${c.county} County`,
+            label: `${c.name}, ${c.county} County`,
             type: "city" as const,
           }))}
         />
@@ -179,7 +179,7 @@ export default function CommunitiesPage() {
             Not Sure Where to Start?
           </h2>
           {/* "knows every corner of Tampa Bay AFTER 23+ years" claimed the 23
-              years were spent in Tampa Bay. They were not — the 23+ figure is
+              years were spent in Tampa Bay. They were not, the 23+ figure is
               his license, held since September 2003, and is independent of where
               he has lived. Local knowledge is asserted on its own, with no year
               count attached. */}

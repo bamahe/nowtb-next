@@ -1,5 +1,5 @@
 // =============================================================================
-// /insurance-partners — Tampa Bay Insurance Partners Resource Directory
+// /insurance-partners, Tampa Bay Insurance Partners Resource Directory
 // Independent agencies that shop multiple carriers for homeowners, flood, auto
 // =============================================================================
 
@@ -12,7 +12,7 @@ import vendorData from "@/data/vendors/insurance.json";
 export const metadata: Metadata = {
   title: "Tampa Bay Insurance Partners | Homeowners, Flood & Auto | Barrett Henry",
   description:
-    "Trusted independent insurance agencies across all 8 Tampa Bay counties. Homeowners, flood, and auto coverage — agents who shop multiple carriers for the best rate. Recommended by Barrett Henry, REALTOR®.",
+    "Trusted independent insurance agencies across all 8 Tampa Bay counties. Homeowners, flood, and auto coverage, agents who shop multiple carriers for the best rate. Recommended by Barrett Henry, REALTOR®.",
   alternates: { canonical: "/insurance-partners/" },
   openGraph: {
     title: "Tampa Bay Insurance Partners Directory",
@@ -72,7 +72,7 @@ export default function InsurancePartnersPage() {
       <section className="container-wide py-12">
         <div className="max-w-3xl mx-auto prose prose-lg font-body text-dark">
           <p>
-            Florida insurance is complicated — and expensive. The agencies listed below are
+            Florida insurance is complicated, and expensive. The agencies listed below are
             independent brokers Barrett Henry has vetted and recommends to his buyers and sellers.
             They shop multiple carriers to find the best rate and coverage, and they&apos;re used to
             working on tight real estate closing timelines.
@@ -80,13 +80,13 @@ export default function InsurancePartnersPage() {
           <p>
             <strong>Why independent?</strong> Unlike captive agents who sell one company&apos;s
             products, independent agencies compare quotes from dozens of carriers. In Florida&apos;s
-            volatile insurance market, that flexibility matters — especially for homeowners,
+            volatile insurance market, that flexibility matters, especially for homeowners,
             flood zones, and older roofs.
           </p>
         </div>
       </section>
 
-      {/* County sections — rendered from JSON via CountyGroup + VendorCard */}
+      {/* County sections, rendered from JSON via CountyGroup + VendorCard */}
       <section className="container-wide py-8">
         {agenciesByCounty.map(({ county, vendors }) => (
           <CountyGroup key={county} county={county} vendors={vendors} />

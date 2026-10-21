@@ -1,5 +1,5 @@
 // =============================================================================
-// RegionalPage — Tampa Bay regional and city-prefixed pages
+// RegionalPage, Tampa Bay regional and city-prefixed pages
 // Rendered inside [citySlug] route for slugs like /tampa-bay-luxury-homes
 // (34 regional pages)
 // =============================================================================
@@ -28,7 +28,7 @@ export default function RegionalPage({ page }: RegionalPageProps) {
       {/* === Hero ===
            The hero now carries an above-the-fold conversion path as well as the
            search bar. Before this, all 36 regional pages rendered with no phone
-           number ANYWHERE on the page — a visitor who wanted to talk to Barrett
+           number ANYWHERE on the page, a visitor who wanted to talk to Barrett
            had to scroll to the very bottom and fill in a form.
 
            Note on `hidden md:block`: it is deliberately NOT used on the phone
@@ -89,7 +89,7 @@ export default function RegionalPage({ page }: RegionalPageProps) {
                   <h2>Why Work with Barrett When Buying New Construction?</h2>
                   <p>
                     Builder sales agents represent the builder, not you. Having your own
-                    REALTOR costs you nothing — the builder pays the commission — and Barrett
+                    REALTOR costs you nothing, the builder pays the commission, and Barrett
                     negotiates upgrades, lot premiums, and closing costs on your behalf.
                   </p>
                 </>

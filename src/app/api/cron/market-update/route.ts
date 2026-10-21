@@ -1,5 +1,5 @@
 // =============================================================================
-// Quarterly Market Update Cron — /api/cron/market-update
+// Quarterly Market Update Cron, /api/cron/market-update
 // Triggered by Vercel Cron on the 1st of each quarter (Jan, Apr, Jul, Oct)
 // Updates all generic market update pages with the latest quarter's data
 // =============================================================================

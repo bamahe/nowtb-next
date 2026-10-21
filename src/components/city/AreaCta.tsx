@@ -1,5 +1,5 @@
 // =============================================================================
-// AreaCta — lead capture + varied CTA copy for the big location templates
+// AreaCta, lead capture + varied CTA copy for the big location templates
 //
 // WHY THIS FILE EXISTS
 // --------------------
@@ -12,7 +12,7 @@
 // Two problems had to be solved at once:
 //
 //   1. Put a REAL form on those pages. "Real" means the existing ContactForm
-//      component in src/components/ui/ContactForm.tsx — the one wired into
+// component in src/components/ui/ContactForm.tsx, the one wired into
 //      Turnstile spam protection, /api/contact, lead validation and Follow Up
 //      Boss. A hand-rolled <form> with its own fetch() would look identical and
 //      silently drop every lead, because it would skip all of that plumbing.
@@ -29,7 +29,7 @@
 // We must NOT use Math.random(). These pages are server-rendered and then
 // hydrated in the browser. If the server picked variant 3 and the browser picked
 // variant 7, React would throw a hydration mismatch and the page would flash or
-// break. Instead we hash the slug — a pure function of the URL — so the server
+// break. Instead we hash the slug, a pure function of the URL, so the server
 // and the browser always land on the same variant, and /valrico/ keeps the same
 // copy on every single visit while /brandon/ gets different copy.
 //
@@ -54,7 +54,7 @@ import ContactForm from "@/components/ui/ContactForm";
 // SINGLE-SEGMENT routes (verified present under src/app/): /free-home-valuation/,
 // /sell-your-home/, /contact/, /buyers/, /sellers/.
 //
-// IMPORTANT ROUTING NOTE — do not "improve" these into nested paths.
+// IMPORTANT ROUTING NOTE, do not "improve" these into nested paths.
 // next.config.mjs has `:city` flatten redirects. A nested route (two or more
 // path segments, e.g. /valrico/sell/) 404s or redirect-loops on the LIVE domain
 // unless it is excluded from BOTH redirect lookaheads, while working perfectly in
@@ -74,22 +74,22 @@ const CONVERSION_LINKS = {
 interface CtaVariant {
   /** H2 above the form. Must NOT be the banned "Ready to Make X Home?" pattern. */
   heading: (area: string) => string;
-  /** One or two supporting sentences. Plain text — no stats, no invented numbers. */
+  /** One or two supporting sentences. Plain text, no stats, no invented numbers. */
   blurb: (area: string) => string;
   /** Label on the submit button. */
   submitLabel: string;
   /** Short headline for the dark CTA bar at the very bottom of the page. */
   barHeading: (area: string) => string;
   /** The in-body conversion link this variant pushes, with keyword anchor text.
-   *  Never "click here" — the anchor text is a ranking signal. */
+   * Never "click here", the anchor text is a ranking signal. */
   link: { href: string; label: (area: string) => string };
 }
 
 // -----------------------------------------------------------------------------
-// THE VARIANT BANK — 10 distinct sets of copy
+// THE VARIANT BANK, 10 distinct sets of copy
 //
 // Rules baked into this copy, so nobody has to remember them while editing:
-//   - "23+ years of real estate experience" — never a higher number, and NEVER
+// - "23+ years of real estate experience", never a higher number, and NEVER
 //     attached to a place. Barrett has been licensed since September 2003 but has
 //     only been in Florida about a decade, so "23 years in Tampa Bay" / "23 years
 //     of local knowledge" / "after 23 years here" would all be FALSE. Local
@@ -105,7 +105,7 @@ const CTA_VARIANTS: CtaVariant[] = [
   {
     heading: (a) => `Let's Find Your Place in ${a}`,
     blurb: (a) =>
-      `Tell me what you're after and I'll send back the ${a} homes that actually fit — not a dump of every listing in the ZIP code. Barrett Henry, Broker Associate with REMAX Collective, 23+ years of real estate experience.`,
+      `Tell me what you're after and I'll send back the ${a} homes that actually fit, not a dump of every listing in the ZIP code. Barrett Henry, Broker Associate with REMAX Collective, 23+ years of real estate experience.`,
     submitLabel: "Send My Criteria",
     barHeading: (a) => `Start Your ${a} Home Search`,
     link: { href: CONVERSION_LINKS.buyers, label: (a) => `${a} home buyer resources` },
@@ -113,7 +113,7 @@ const CTA_VARIANTS: CtaVariant[] = [
   {
     heading: (a) => `Talk to a Local ${a} Expert`,
     blurb: (a) =>
-      `Questions about a specific street, an HOA, a CDD assessment, or a home you drove past in ${a}? Ask me directly — no sign-up wall, no drip campaign you can't get out of.`,
+      `Questions about a specific street, an HOA, a CDD assessment, or a home you drove past in ${a}? Ask me directly, no sign-up wall, no drip campaign you can't get out of.`,
     submitLabel: "Ask Barrett",
     barHeading: (a) => `Get Answers About ${a} Real Estate`,
     link: { href: CONVERSION_LINKS.contact, label: () => `contact Barrett Henry directly` },
@@ -121,7 +121,7 @@ const CTA_VARIANTS: CtaVariant[] = [
   {
     heading: (a) => `Tour ${a} Homes on Your Schedule`,
     blurb: (a) =>
-      `Pick the homes you want to see in ${a} and I'll line up the showings around your week — evenings and weekends included. Out of state? Video walkthroughs on request.`,
+      `Pick the homes you want to see in ${a} and I'll line up the showings around your week, evenings and weekends included. Out of state? Video walkthroughs on request.`,
     submitLabel: "Request a Showing",
     barHeading: (a) => `Schedule a Showing in ${a}`,
     link: { href: CONVERSION_LINKS.buyers, label: (a) => `how to buy a home in ${a}` },
@@ -129,7 +129,7 @@ const CTA_VARIANTS: CtaVariant[] = [
   {
     heading: (a) => `What Is Your ${a} Home Worth Today?`,
     blurb: (a) =>
-      `Automated estimates miss the things that move a price — condition, updates, which side of the street you're on. I'll pull the real comparable sales for your ${a} block and walk you through them.`,
+      `Automated estimates miss the things that move a price, condition, updates, which side of the street you're on. I'll pull the real comparable sales for your ${a} block and walk you through them.`,
     submitLabel: "Get My Home Value",
     barHeading: (a) => `Find Out What Your ${a} Home Is Worth`,
     link: { href: CONVERSION_LINKS.valuation, label: (a) => `free ${a} home valuation` },
@@ -161,7 +161,7 @@ const CTA_VARIANTS: CtaVariant[] = [
   {
     heading: (a) => `Your ${a} Home Search Starts Here`,
     blurb: (a) =>
-      `Pre-approval, inspections, insurance quotes, closing — I run buyers through all of it in ${a} every month and can tell you where the delays usually show up.`,
+      `Pre-approval, inspections, insurance quotes, closing, I run buyers through all of it in ${a} every month and can tell you where the delays usually show up.`,
     submitLabel: "Get Started",
     barHeading: (a) => `Buying in ${a}?`,
     link: { href: CONVERSION_LINKS.buyers, label: () => `first-time home buyer resources` },
@@ -169,7 +169,7 @@ const CTA_VARIANTS: CtaVariant[] = [
   {
     heading: (a) => `Have a Question About ${a}? Ask It.`,
     blurb: (a) =>
-      `Schools, flood zones, HOA rules, which ${a} streets are worth the premium — send the question and you'll get a real answer back, not a brochure.`,
+      `Schools, flood zones, HOA rules, which ${a} streets are worth the premium, send the question and you'll get a real answer back, not a brochure.`,
     submitLabel: "Send My Question",
     barHeading: (a) => `Ask About Living in ${a}`,
     link: { href: CONVERSION_LINKS.contact, label: (a) => `ask about ${a} real estate` },
@@ -177,7 +177,7 @@ const CTA_VARIANTS: CtaVariant[] = [
   {
     heading: (a) => `Buying and Selling in ${a} at the Same Time?`,
     blurb: (a) =>
-      `Lining up a sale and a purchase is the hardest timing problem in real estate. I do it constantly in ${a} — contingencies, bridge options, and a realistic closing calendar.`,
+      `Lining up a sale and a purchase is the hardest timing problem in real estate. I do it constantly in ${a}, contingencies, bridge options, and a realistic closing calendar.`,
     submitLabel: "Plan My Move",
     barHeading: (a) => `Moving Within ${a}?`,
     link: { href: CONVERSION_LINKS.sellers, label: () => `home seller resources` },
@@ -185,7 +185,7 @@ const CTA_VARIANTS: CtaVariant[] = [
 ];
 
 // -----------------------------------------------------------------------------
-// hashSlug — turn a URL slug into a stable number
+// hashSlug, turn a URL slug into a stable number
 //
 // This is the classic djb2 string hash. Walk the characters, and for each one do
 // `hash = hash * 33 + charCode`. The `| 0` forces the result back into a 32-bit
@@ -210,7 +210,7 @@ function hashSlug(slug: string): number {
 
 /**
  * Pick the CTA copy for a page. Pure function of the slug: same slug in, same
- * copy out, forever — which is what keeps server render and client hydration in
+ * copy out, forever, which is what keeps server render and client hydration in
  * agreement and keeps the page stable for Google between crawls.
  *
  * Exported so other templates in this folder can reuse the same copy bank.
@@ -220,14 +220,14 @@ export function getAreaCtaVariant(slug: string): CtaVariant {
 }
 
 // =============================================================================
-// AreaHeroCtaButtons — the above-the-fold buttons
+// AreaHeroCtaButtons, the above-the-fold buttons
 //
 // These sit in the dark hero on every city, spoke and neighborhood page, so they
 // are visible WITHOUT scrolling, which is where most of this traffic converts
 // because most of it is on a phone.
 //
 // The phone number is rendered as plain, always-visible text. It is deliberately
-// NOT wrapped in `hidden md:block` — hiding Barrett's phone number on mobile is
+// NOT wrapped in `hidden md:block`, hiding Barrett's phone number on mobile is
 // an explicit rule violation on this project, and mobile is the majority of this
 // traffic. tel: makes it one tap to dial.
 // =============================================================================
@@ -250,7 +250,7 @@ export function AreaHeroCtaButtons({
       </a>
 
       {/* Same-page jump to the form below. A plain <a href="#..."> is correct
-          here — next/link is for route changes, not in-page anchors. */}
+          here, next/link is for route changes, not in-page anchors. */}
       <a
         href={`#${formAnchor}`}
         className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded text-sm hover:bg-white/10 transition-colors"
@@ -259,7 +259,7 @@ export function AreaHeroCtaButtons({
       </a>
 
       {/* Secondary route for sellers, who are a different visitor than a buyer
-          scrolling listings. Single-segment route — safe under the :city
+          scrolling listings. Single-segment route, safe under the :city
           flatten redirects (see the routing note at the top of this file). */}
       <Link
         href={CONVERSION_LINKS.valuation}
@@ -272,7 +272,7 @@ export function AreaHeroCtaButtons({
 }
 
 // =============================================================================
-// AreaLeadCapture — the actual lead form block
+// AreaLeadCapture, the actual lead form block
 //
 // Reuses ContactForm, which already owns:
 //   - Turnstile spam protection (submit stays disabled until it passes)
@@ -281,7 +281,7 @@ export function AreaHeroCtaButtons({
 //   - the legal consent text and trust signals
 //
 // The only thing we add is area context so Barrett can tell in FUB WHICH page
-// produced the lead — a Riverview buyer and a Bloomingdale seller need different
+// produced the lead, a Riverview buyer and a Bloomingdale seller need different
 // follow-up, and that routing information is the whole point.
 // =============================================================================
 export function AreaLeadCapture({
@@ -292,7 +292,7 @@ export function AreaLeadCapture({
 }: {
   /** Display name used in the copy: "Valrico", "Bloomingdale". */
   areaName: string;
-  /** Page slug — drives which CTA variant this page gets. */
+  /** Page slug, drives which CTA variant this page gets. */
   slug: string;
   /** Goes to Follow Up Boss as the lead source, e.g. "valrico-city-hub".
    *  Keep these readable: Barrett filters smart lists on them. */
@@ -339,7 +339,7 @@ export function AreaLeadCapture({
           {/* ---- In-body conversion links ----
               Required on every page: at least one link to a conversion page.
               Anchor text is keyword-bearing ("free Valrico home valuation"),
-              never "click here" — the anchor text is what Google and the AI
+              never "click here", the anchor text is what Google and the AI
               answer engines read as the topic of the destination. */}
           <ul className="font-body text-sm text-muted space-y-2">
             <li>
@@ -377,7 +377,7 @@ export function AreaLeadCapture({
             area page the lead came from. `property.city` carries the area name in
             the structured payload as well, which is what FUB displays alongside
             the enquiry. Both are optional pass-throughs on /api/contact, so this
-            cannot break the pipeline — it only adds context. */}
+            cannot break the pipeline, it only adds context. */}
         <div>
           <ContactForm
             webhookUrl="/api/contact"
@@ -394,7 +394,7 @@ export function AreaLeadCapture({
 }
 
 // =============================================================================
-// AreaCtaBar — the dark bar at the very bottom of the page
+// AreaCtaBar, the dark bar at the very bottom of the page
 //
 // This replaces the old hard-coded "Looking for homes in {city}?" bar. That one
 // sentence was rendering on ~3,200 pages with nothing but the place name
@@ -421,7 +421,7 @@ export function AreaCtaBar({
             {variant.barHeading(areaName)}
           </p>
           <p className="font-body text-white/70 text-sm">
-            Barrett Henry, REALTOR&reg; &mdash; 23+ years of real estate experience
+            Barrett Henry, REALTOR&reg;, 23+ years of real estate experience
           </p>
         </div>
         <div className="flex flex-wrap gap-3 flex-shrink-0">

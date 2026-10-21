@@ -1,5 +1,5 @@
 // =============================================================================
-// Guide content loader — reads real WordPress content from guides-content.json
+// Guide content loader, reads real WordPress content from guides-content.json
 // Falls back to placeholder sections from guides.ts if no WP content found.
 // Only runs server-side (uses fs/path).
 // =============================================================================

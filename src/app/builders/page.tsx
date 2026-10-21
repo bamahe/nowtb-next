@@ -1,5 +1,5 @@
 // =============================================================================
-// /builders — Tampa Bay New Construction & Home Builders
+// /builders, Tampa Bay New Construction & Home Builders
 // Full content page: hero, builder directory, buyer representation,
 // new construction process, common mistakes, FAQ
 // =============================================================================
@@ -13,7 +13,7 @@ import ContactForm from "@/components/ui/ContactForm";
 export const metadata: Metadata = {
   title: "Tampa Bay Home Builders | New Construction | Barrett Henry",
   description:
-    "Top home builders in Tampa Bay — Lennar, DR Horton, Pulte, Taylor Morrison, Toll Brothers, and more. Free buyer representation from a Broker with 23+ years of experience. Call (813) 733-7907.",
+    "Top home builders in Tampa Bay, Lennar, DR Horton, Pulte, Taylor Morrison, Toll Brothers, and more. Free buyer representation from a Broker with 23+ years of experience. Call (813) 733-7907.",
   alternates: {
     canonical: "/builders/",
   },
@@ -31,7 +31,7 @@ const builders = [
     name: "Lennar",
     slug: "lennar-homes-tampa-bay",
     tagline: "Everything's Included",
-    desc: "One of the largest builders in the country, Lennar is known for its Everything's Included program — smart home tech, premium appliances, and designer finishes come standard. Active across Hillsborough, Pasco, and Polk counties with communities ranging from first-time buyer townhomes to estate-sized single-family homes.",
+    desc: "One of the largest builders in the country, Lennar is known for its Everything's Included program, smart home tech, premium appliances, and designer finishes come standard. Active across Hillsborough, Pasco, and Polk counties with communities ranging from first-time buyer townhomes to estate-sized single-family homes.",
   },
   {
     name: "DR Horton",
@@ -43,7 +43,7 @@ const builders = [
     name: "Pulte Homes",
     slug: "pulte-homes-tampa-bay",
     tagline: "Life Tested",
-    desc: "Pulte's Life Tested floor plans are designed around how people actually live — dedicated home offices, open kitchens, and flexible bonus rooms. Their Del Webb brand is one of the most recognized names in 55+ active adult communities.",
+    desc: "Pulte's Life Tested floor plans are designed around how people actually live, dedicated home offices, open kitchens, and flexible bonus rooms. Their Del Webb brand is one of the most recognized names in 55+ active adult communities.",
   },
   {
     name: "Taylor Morrison",
@@ -73,7 +73,7 @@ const builders = [
     name: "Meritage Homes",
     slug: "meritage-homes-tampa-bay",
     tagline: "Energy-Efficient Living",
-    desc: "Meritage builds every home to ENERGY STAR standards with advanced insulation, HVAC, and solar-ready design. Their focus on energy efficiency translates to lower utility bills from day one — a real selling point in Florida's heat.",
+    desc: "Meritage builds every home to ENERGY STAR standards with advanced insulation, HVAC, and solar-ready design. Their focus on energy efficiency translates to lower utility bills from day one, a real selling point in Florida's heat.",
   },
 ];
 
@@ -82,7 +82,7 @@ const processSteps = [
   {
     step: 1,
     title: "Choose Your Community and Lot",
-    desc: "Location drives value. We tour communities together, compare HOA fees, CDD assessments, school zones, and future development plans. Lot selection matters — premiums for water views, conservation backing, or corner lots can add $10K to $80K or more.",
+    desc: "Location drives value. We tour communities together, compare HOA fees, CDD assessments, school zones, and future development plans. Lot selection matters, premiums for water views, conservation backing, or corner lots can add $10K to $80K or more.",
   },
   {
     step: 2,
@@ -102,12 +102,12 @@ const processSteps = [
   {
     step: 5,
     title: "Construction and Inspections",
-    desc: "New construction typically takes 5 to 9 months depending on the builder and community. I recommend independent inspections at pre-drywall and final stages — the builder's inspector works for them, not you.",
+    desc: "New construction typically takes 5 to 9 months depending on the builder and community. I recommend independent inspections at pre-drywall and final stages, the builder's inspector works for them, not you.",
   },
   {
     step: 6,
     title: "Final Walkthrough and Closing",
-    desc: "We do a detailed walkthrough to document any punch list items before you sign. Paint touch-ups, cabinet alignment, grout issues, appliance function — everything gets checked and documented before closing day.",
+    desc: "We do a detailed walkthrough to document any punch list items before you sign. Paint touch-ups, cabinet alignment, grout issues, appliance function, everything gets checked and documented before closing day.",
   },
 ];
 
@@ -119,7 +119,7 @@ const mistakes = [
   },
   {
     title: "Trusting the Builder's Preferred Lender Blindly",
-    desc: "Builders offer incentives — closing cost credits, rate buydowns — for using their preferred lender. Sometimes the deal is real. Other times an outside lender beats them outright. Always get a competing quote before committing.",
+    desc: "Builders offer incentives, closing cost credits, rate buydowns, for using their preferred lender. Sometimes the deal is real. Other times an outside lender beats them outright. Always get a competing quote before committing.",
   },
   {
     title: "Overspending at the Design Center",
@@ -139,11 +139,11 @@ const mistakes = [
 const faqs = [
   {
     q: "Do I need a REALTOR to buy new construction in Tampa Bay?",
-    a: "You are not legally required to have a REALTOR, but going without one means the only agent in the transaction works for the builder. The builder pays the buyer agent's commission, so having Barrett Henry represent you costs nothing extra. You get contract review, negotiation leverage, and an advocate who works for you — not the builder.",
+    a: "You are not legally required to have a REALTOR, but going without one means the only agent in the transaction works for the builder. The builder pays the buyer agent's commission, so having Barrett Henry represent you costs nothing extra. You get contract review, negotiation leverage, and an advocate who works for you, not the builder.",
   },
   {
     q: "How much does it cost to have Barrett Henry represent me with a builder?",
-    a: "Nothing. The builder pays the buyer agent's commission as part of their marketing budget. You receive full representation — contract negotiation, inspection coordination, design center guidance, and closing support — at no cost to you.",
+    a: "Nothing. The builder pays the buyer agent's commission as part of their marketing budget. You receive full representation, contract negotiation, inspection coordination, design center guidance, and closing support, at no cost to you.",
   },
   {
     q: "What is a CDD and how does it affect my monthly payment?",
@@ -155,7 +155,7 @@ const faqs = [
   },
   {
     q: "Should I get a home inspection on new construction?",
-    a: "Absolutely. New construction homes go through municipal code inspections, but code inspectors check for minimum compliance — not quality. An independent pre-drywall inspection catches framing, plumbing, and electrical issues before walls are sealed. A final inspection before closing documents cosmetic defects, appliance function, and punch list items. Barrett coordinates both inspections for every new construction client.",
+    a: "Absolutely. New construction homes go through municipal code inspections, but code inspectors check for minimum compliance, not quality. An independent pre-drywall inspection catches framing, plumbing, and electrical issues before walls are sealed. A final inspection before closing documents cosmetic defects, appliance function, and punch list items. Barrett coordinates both inspections for every new construction client.",
   },
 ];
 
@@ -200,7 +200,7 @@ export default function BuildersPage() {
       <HeroSection
         title="New Construction Homes"
         label="TAMPA BAY HOME BUILDERS"
-        subtitle="Browse communities from the area's top builders — and get a Broker with 23+ years of experience representing you at no cost."
+        subtitle="Browse communities from the area's top builders, and get a Broker with 23+ years of experience representing you at no cost."
       >
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
           <Link href="/new-construction-homes-tampa-bay/" className="btn-primary">
@@ -229,13 +229,13 @@ export default function BuildersPage() {
                 Every new construction sales office has a friendly agent ready to help you.
                 What most buyers do not realize is that agent works for the builder. Their
                 job is to sell the builder's inventory at the builder's price on the
-                builder's terms. They are not negotiating on your behalf — they are
+                builder's terms. They are not negotiating on your behalf, they are
                 negotiating against you.
               </p>
               <p>
                 Having your own REALTOR levels the playing field. Barrett Henry reviews
                 builder contracts, negotiates pricing and incentives, coordinates independent
-                inspections, and advises on design center selections — all at no cost to
+                inspections, and advises on design center selections, all at no cost to
                 you. The builder pays the buyer agent's commission regardless, so the only
                 question is whether that commission goes to someone working for you or gets
                 kept by the builder's brokerage.
@@ -288,7 +288,7 @@ export default function BuildersPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Builder detail pages live at /builders/<slug>/ — that is the real
+            {/* Builder detail pages live at /builders/<slug>/, that is the real
                 route (src/app/builders/[slug]/page.tsx) and the canonical URL its
                 generateMetadata declares. This grid used to link the bare root
                 form, "/lennar-homes-tampa-bay/", which is NOT a route: the
@@ -297,7 +297,7 @@ export default function BuildersPage() {
                 404s. Result: all 8 builder pages had zero working inbound links
                 and were orphaned from the whole site.
 
-                The trailing slash is also mandatory — next.config.mjs sets
+                The trailing slash is also mandatory, next.config.mjs sets
                 `trailingSlash: true`, so "/builders/lennar-homes-tampa-bay"
                 without it is a guaranteed 308 redirect rather than a page.
 
@@ -409,7 +409,7 @@ export default function BuildersPage() {
             <div className="section-divider" />
           </div>
 
-          {/* Steps grid — large step numbers beside content */}
+          {/* Steps grid, large step numbers beside content */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
             {processSteps.map((s) => (
               <div key={s.step} className="flex gap-6">
@@ -463,7 +463,7 @@ export default function BuildersPage() {
         </div>
       </section>
 
-      {/* ---- CTA — dark navy ---- */}
+      {/* ---- CTA, dark navy ---- */}
       <section className="section-dark">
         <div className="container-wide text-center">
           <p className="heading-label text-white/50 mb-6">New Construction</p>

@@ -1,5 +1,5 @@
 // =============================================================================
-// BuyingPower — Loan programs, down payment assistance, and qualification
+// BuyingPower, Loan programs, down payment assistance, and qualification
 // Shows on every listing detail page to generate leads
 // "use client" for interactive qualification check
 // =============================================================================
@@ -99,11 +99,11 @@ export default function BuyingPower({ listingPrice, city, county, listingTerms }
   // Normalize listing terms to lowercase for matching
   const terms = (listingTerms || []).map(t => t.toLowerCase());
 
-  // If listing only accepts Cash — hide the entire financing section
+  // If listing only accepts Cash, hide the entire financing section
   const cashOnly = terms.length > 0 && terms.every(t => t === 'cash');
   if (cashOnly) return null;
 
-  // Luxury threshold — homes $800K+ get jumbo/luxury loan options
+  // Luxury threshold, homes $800K+ get jumbo/luxury loan options
   const isLuxury = listingPrice >= 800000;
 
   // Filter loan programs based on listing's accepted financing terms
@@ -125,7 +125,7 @@ export default function BuyingPower({ listingPrice, city, county, listingTerms }
   // If no loan programs match after filtering, hide the section
   if (LOAN_PROGRAMS.length === 0) return null;
 
-  // DPA only for non-luxury homes — assistance programs don't apply to $800K+ purchases
+  // DPA only for non-luxury homes, assistance programs don't apply to $800K+ purchases
   const countyShip = county ? COUNTY_SHIP[county.toUpperCase()] : null;
   const DPA_PROGRAMS = isLuxury ? [] : [...STATE_DPA, ...(countyShip ? [countyShip] : [])];
   const [showQualify, setShowQualify] = useState(false);
@@ -149,7 +149,7 @@ export default function BuyingPower({ listingPrice, city, county, listingTerms }
       setResult(`Based on your income, you may qualify for this home! Estimated payment: ${fmt(Math.round(totalPayment))}/mo with FHA financing. Call Barrett at (813) 733-7907 to get pre-approved.`);
     } else {
       const maxHome = Math.round((maxPayment - 150) / (rate * Math.pow(1 + rate, n) / (Math.pow(1 + rate, n) - 1) + 0.011/12) / 0.965);
-      setResult(`With FHA financing, your estimated max is around ${fmt(maxHome)}. But don't count yourself out — down payment assistance programs can change the picture. Call Barrett at (813) 733-7907 for a personalized analysis.`);
+      setResult(`With FHA financing, your estimated max is around ${fmt(maxHome)}. But don't count yourself out, down payment assistance programs can change the picture. Call Barrett at (813) 733-7907 for a personalized analysis.`);
     }
   }
 
@@ -179,7 +179,7 @@ export default function BuyingPower({ listingPrice, city, county, listingTerms }
         ))}
       </div>
 
-      {/* === Down Payment Assistance — only for non-luxury homes === */}
+      {/* === Down Payment Assistance, only for non-luxury homes === */}
       {DPA_PROGRAMS.length > 0 && <div className="bg-primary p-6 md:p-8 mb-10">
         <h3 className="font-heading font-bold text-white text-lg mb-4">
           Florida Down Payment Assistance Programs
@@ -198,13 +198,13 @@ export default function BuyingPower({ listingPrice, city, county, listingTerms }
         </div>
       </div>}
 
-      {/* === Quick Qualification Check — hidden for luxury homes === */}
+      {/* === Quick Qualification Check, hidden for luxury homes === */}
       {!isLuxury && <div className="bg-gray-50 border border-border p-6 md:p-8">
         <h3 className="font-heading font-bold text-primary text-lg mb-2">
           Can You Afford This Home?
         </h3>
         <p className="font-body text-muted text-sm mb-4">
-          Quick check based on the 28% debt-to-income rule. Not a guarantee — just a starting point.
+          Quick check based on the 28% debt-to-income rule. Not a guarantee, just a starting point.
         </p>
 
         {!showQualify ? (

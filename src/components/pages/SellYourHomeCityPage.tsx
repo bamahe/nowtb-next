@@ -1,5 +1,5 @@
 // =============================================================================
-// SellYourHomeCityPage — City-specific seller landing page
+// SellYourHomeCityPage, City-specific seller landing page
 // Rendered inside the [citySlug] route for slugs like /sell-your-home-valrico
 // (17 city pages)
 // =============================================================================
@@ -20,7 +20,7 @@ interface SellYourHomeCityPageProps {
   cityName: string;
   /** URL slug for the city (e.g. "valrico") */
   citySlug: string;
-  /** ZIP codes for the city — used to query Bridge API for live stats */
+  /** ZIP codes for the city, used to query Bridge API for live stats */
   zipCodes: string[];
 }
 
@@ -33,18 +33,18 @@ export default async function SellYourHomeCityPage({
   const agent = getPrimaryAgent();
 
   // ------------------------------------------------------------------
-  // CONTEXTUAL BODY LINKS — why this block exists.
+  // CONTEXTUAL BODY LINKS, why this block exists.
   //
   // All 93 of these seller pages used to have exactly ONE outbound link (the
   // "Sell Your Home Overview" back-link in the hero) and zero links in the body
-  // copy. This is the template closest to an actual listing appointment — the
-  // highest-value page type on the site — and it was a dead end: every visitor
+  // copy. This is the template closest to an actual listing appointment, the
+  // highest-value page type on the site, and it was a dead end: every visitor
   // who wanted market data, a valuation, or the seller playbook had to leave via
   // the header nav, and crawlers found nothing to follow.
   //
   // The links below are woven into the copy where a seller would genuinely want
   // them, not stacked in a bare "related links" list. Each destination is
-  // verified to exist, and each anchor is a real keyword phrase — never
+  // verified to exist, and each anchor is a real keyword phrase, never
   // "click here" or "read more", because the anchor text is what tells Google
   // and the AI answer engines what the destination page is about.
   //
@@ -94,7 +94,7 @@ export default async function SellYourHomeCityPage({
       // Active listing count (use API's total count if available, else sample size)
       activeCount = String(total);
 
-      // Median list price — sort prices, pick the middle value
+      // Median list price, sort prices, pick the middle value
       const prices = listings
         .map((l) => l.ListPrice)
         .filter((p): p is number => typeof p === "number" && p > 0)
@@ -137,7 +137,7 @@ export default async function SellYourHomeCityPage({
       }
     }
   } catch {
-    // API error — stats stay at "--", page still renders fine
+    // API error, stats stay at "--", page still renders fine
   }
 
   return (
@@ -163,7 +163,7 @@ export default async function SellYourHomeCityPage({
                 // Trailing slashes here too. `trailingSlash: true` means the
                 // canonical URL of every page on this site ends in "/", so a
                 // schema `item` without one points at a redirect rather than at
-                // the page — a mismatched signal for anything reading the graph.
+                // the page, a mismatched signal for anything reading the graph.
                 item: "https://nowtb.com/sell-your-home/",
               },
               {
@@ -242,7 +242,7 @@ export default async function SellYourHomeCityPage({
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Pillar 1 — Pricing */}
+          {/* Pillar 1, Pricing */}
           <div className="card p-6">
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
@@ -261,7 +261,7 @@ export default async function SellYourHomeCityPage({
             </div>
           </div>
 
-          {/* Pillar 2 — Preparation */}
+          {/* Pillar 2, Preparation */}
           <div className="card p-6">
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
@@ -280,7 +280,7 @@ export default async function SellYourHomeCityPage({
             </div>
           </div>
 
-          {/* Pillar 3 — Marketing */}
+          {/* Pillar 3, Marketing */}
           <div className="card p-6">
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
@@ -299,7 +299,7 @@ export default async function SellYourHomeCityPage({
             </div>
           </div>
 
-          {/* Pillar 4 — Negotiation */}
+          {/* Pillar 4, Negotiation */}
           <div className="card p-6">
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
@@ -366,7 +366,7 @@ export default async function SellYourHomeCityPage({
             </div>
           </div>
 
-          {/* Contextual links straight after the numbers — this is the point in
+          {/* Contextual links straight after the numbers, this is the point in
               the page where a seller wants more detail, so it is the natural
               place to hand them the deeper pages instead of a dead end. */}
           <p className="font-body text-muted text-sm text-center mt-6 max-w-3xl mx-auto leading-relaxed">
@@ -426,7 +426,7 @@ export default async function SellYourHomeCityPage({
           </h2>
           <p className="font-body text-muted mb-4">
             Professional photography, strategic pricing, MLS syndication to Zillow, Realtor.com, and Redfin,
-            targeted social media marketing, and aggressive negotiation — Barrett&apos;s 23+ years of real estate
+            targeted social media marketing, and aggressive negotiation, Barrett&apos;s 23+ years of real estate
             experience means your {cityName} home gets maximum exposure and top dollar.
           </p>
           <p className="font-body text-muted mb-4">

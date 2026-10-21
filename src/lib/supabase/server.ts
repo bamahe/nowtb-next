@@ -1,5 +1,5 @@
 // =============================================================================
-// Supabase server client — use in Server Components, Route Handlers, Actions
+// Supabase server client, use in Server Components, Route Handlers, Actions
 // Reads/writes auth cookies on the server side
 // =============================================================================
 
@@ -15,7 +15,7 @@ export async function createClient() {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-  // Return null if Supabase isn't configured — callers must handle this
+  // Return null if Supabase isn't configured, callers must handle this
   if (!supabaseUrl || !supabaseKey) return null;
 
   const cookieStore = await cookies();
@@ -35,7 +35,7 @@ export async function createClient() {
             );
           } catch {
             // setAll can fail in Server Components (read-only context)
-            // This is fine — the middleware handles cookie refresh
+            // This is fine, the middleware handles cookie refresh
           }
         },
       },
@@ -45,7 +45,7 @@ export async function createClient() {
 
 /**
  * Creates a Supabase admin client using the service role key.
- * Bypasses RLS — only use for server-side admin operations.
+ * Bypasses RLS, only use for server-side admin operations.
  */
 export function createAdminClient() {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;

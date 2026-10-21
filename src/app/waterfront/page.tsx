@@ -1,4 +1,4 @@
-// /waterfront — Tampa Bay Waterfront Homes for Sale
+// /waterfront, Tampa Bay Waterfront Homes for Sale
 
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -12,11 +12,11 @@ import type { Listing } from "@/lib/types";
 export const metadata: Metadata = {
   title: "Tampa Bay Waterfront Homes for Sale | Barrett Henry, REALTOR®",
   description:
-    "Waterfront homes for sale in Tampa Bay — lakefront, bayfront, canal-access, and Gulf-front properties. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
+    "Waterfront homes for sale in Tampa Bay, lakefront, bayfront, canal-access, and Gulf-front properties. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
   alternates: { canonical: "/waterfront/" },
   openGraph: {
     title: "Tampa Bay Waterfront Homes for Sale | Barrett Henry, REALTOR®",
-    description: "Waterfront homes for sale in Tampa Bay — lakefront, bayfront, canal-access, and Gulf-front properties. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
+    description: "Waterfront homes for sale in Tampa Bay, lakefront, bayfront, canal-access, and Gulf-front properties. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
     type: "website",
   },
 };

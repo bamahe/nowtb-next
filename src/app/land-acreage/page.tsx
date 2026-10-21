@@ -1,4 +1,4 @@
-// /land-acreage — Tampa Bay Land & Acreage for Sale
+// /land-acreage, Tampa Bay Land & Acreage for Sale
 import type { Metadata } from "next";
 import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";

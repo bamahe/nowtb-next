@@ -1,5 +1,5 @@
 // =============================================================================
-// ContactForm — Reusable client-side contact form with webhook submission
+// ContactForm, Reusable client-side contact form with webhook submission
 // "use client" because it manages form state and handles submit events
 // =============================================================================
 
@@ -24,14 +24,14 @@ interface PropertyContext {
 }
 
 interface ContactFormProps {
-  /** URL the form data will be POSTed to — always use "/api/contact" */
+  /** URL the form data will be POSTed to, always use "/api/contact" */
   webhookUrl: string;
   /** Identifies where this form lives (page URL or form ID) */
   source: string;
-  /** Form type — tells /api/contact which n8n webhook to forward to
+  /** Form type, tells /api/contact which n8n webhook to forward to
    *  Options: "contact" | "showing" | "valuation" | "newsletter" | "buyer-reg" */
   type?: string;
-  /** Property details to attach — used on listing pages for showing requests */
+  /** Property details to attach, used on listing pages for showing requests */
   property?: PropertyContext;
   /** Optional heading displayed above the form */
   title?: string;
@@ -70,7 +70,7 @@ export default function ContactForm({
     setTurnstileToken(token);
   }, []);
 
-  /** Handle form submission — POST data as JSON to the webhook */
+  /** Handle form submission, POST data as JSON to the webhook */
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("loading");
@@ -112,7 +112,7 @@ export default function ContactForm({
         <h3 className="heading-section text-xl text-primary mb-6">{title}</h3>
       )}
 
-      {/* --- Success Message — replaces the form after submission --- */}
+      {/* --- Success Message, replaces the form after submission --- */}
       {status === "success" ? (
         <div className="text-center py-8">
           <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
@@ -148,7 +148,7 @@ export default function ContactForm({
       )}
 
       <form onSubmit={handleSubmit} className="space-y-4">
-        {/* Hidden source field — tells us where the lead came from */}
+        {/* Hidden source field, tells us where the lead came from */}
         <input type="hidden" name="source" value={source} />
 
         {/* Name (required) */}
@@ -226,10 +226,10 @@ export default function ContactForm({
           />
         </div>
 
-        {/* Turnstile spam protection — must verify before submitting */}
+        {/* Turnstile spam protection, must verify before submitting */}
         <TurnstileWidget onVerify={handleTurnstileVerify} />
 
-        {/* Submit Button — disabled until Turnstile passes */}
+        {/* Submit Button, disabled until Turnstile passes */}
         <button
           type="submit"
           disabled={status === "loading" || !turnstileToken}

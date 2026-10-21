@@ -1,9 +1,9 @@
 // =============================================================================
-// /login layout — exports metadata for the client component page
+// /login layout, exports metadata for the client component page
 //
 // The page itself is "use client" (it talks to Supabase auth in the browser),
 // and Next.js will not read an `export const metadata` out of a client
-// component — the build fails outright. A co-located layout.tsx is a server
+// component, the build fails outright. A co-located layout.tsx is a server
 // component by default, so metadata for the route goes here. Same pattern as
 // src/app/card/layout.tsx and src/app/properties/search/layout.tsx.
 // =============================================================================
@@ -28,23 +28,23 @@ export const metadata: Metadata = {
     canonical: "/login/",
   },
 
-  // index: false  — a sign-in form has nothing a searcher wants, and letting it
+  // index: false, a sign-in form has nothing a searcher wants, and letting it
   //                 into the index means it competes with real pages for the
   //                 site's relevance budget.
-  // follow: true  — changed from the previous `follow: false`. noindex,nofollow
+  // follow: true, changed from the previous `follow: false`. noindex,nofollow
   //                 told Google to throw away every link on the page. There is
   //                 no reason to burn those signals; noindex,follow keeps the
   //                 page out of the index while still letting crawl equity flow
   //                 onward. nofollow is for links you distrust, not your own.
   //
-  // IMPORTANT — this tag is probably never actually read by Google.
+  // IMPORTANT, this tag is probably never actually read by Google.
   // src/app/robots.ts disallows /login/ for user-agent *, and a URL that is
   // disallowed in robots.txt is never fetched, so the noindex in this HTML is
   // never seen. robots.txt is doing the real work today; this is a safety net
   // for crawlers that ignore robots.txt and for the day /login/ is removed from
   // that disallow list. Do not treat the two as interchangeable: if you ever
   // need a URL definitively de-indexed, it must be CRAWLABLE and noindex, not
-  // blocked. (Google's own guidance — blocked URLs can still get indexed from
+  // blocked. (Google's own guidance, blocked URLs can still get indexed from
   // external links, with no snippet, because the noindex was unreadable.)
   robots: {
     index: false,

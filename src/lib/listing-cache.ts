@@ -1,15 +1,15 @@
 // =============================================================================
-// Listing cache — server-readable snapshot of active MLS inventory
+// Listing cache, server-readable snapshot of active MLS inventory
 //
 // WHY THIS EXISTS
 // City pages used to load listings client-side to avoid burning the Bridge API
-// rate limit (one API call per visitor). That worked, but AI crawlers — GPTBot,
-// ClaudeBot, PerplexityBot — don't run JavaScript, so they saw city pages with
+// rate limit (one API call per visitor). That worked, but AI crawlers, GPTBot,
+// ClaudeBot, PerplexityBot, don't run JavaScript, so they saw city pages with
 // zero homes on them. Search Console confirmed it: property pages drew 15 of
 // 43,287 AI impressions.
 //
 // The fix is to stop fetching per-visitor entirely. A cron job refreshes this
-// cache on a fixed schedule, and every page reads from Supabase — which costs
+// cache on a fixed schedule, and every page reads from Supabase, which costs
 // no Bridge quota at all. Net result is FEWER Bridge calls than before, not
 // more, because the cost is now per-interval instead of per-visitor.
 //
@@ -27,7 +27,7 @@ const MAX_AGE_HOURS = 12;
 
 /**
  * Read cached active listings covering any of the given ZIP codes.
- * Returns [] on any failure — callers fall back to the client-side loader,
+ * Returns [] on any failure, callers fall back to the client-side loader,
  * so a cache miss degrades to today's behaviour rather than an empty page.
  */
 export async function getCachedListings(
@@ -60,7 +60,7 @@ export async function getCachedListings(
 
 /**
  * Replace the cached rows for one ZIP. Called by the refresh cron.
- * Deletes first so sold and withdrawn listings disappear rather than linger —
+ * Deletes first so sold and withdrawn listings disappear rather than linger 
  * showing an off-market home is an IDX violation, not just a stale page.
  */
 export async function writeCachedListings(
@@ -69,7 +69,7 @@ export async function writeCachedListings(
 ): Promise<number> {
   const supabase = createAdminClient();
   if (!supabase) {
-    console.warn("[listing-cache] no service role key — skipping write");
+    console.warn("[listing-cache] no service role key, skipping write");
     return 0;
   }
 

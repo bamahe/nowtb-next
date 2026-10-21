@@ -1,5 +1,5 @@
 /**
- * Guide page data — 51 buyer/seller/investor guides from nowtb.com
+ * Guide page data, 51 buyer/seller/investor guides from nowtb.com
  * Each guide has a slug, title, excerpt, category, and placeholder sections.
  * Content will be replaced with WP exports as they become available.
  * Auto-generated 2026-05-12.
@@ -38,7 +38,7 @@ export const guides: GuideData[] = [
   {
     slug: "first-time-home-buyer-guide",
     title: "First-Time Home Buyer Guide",
-    excerpt: "Step-by-step walkthrough of buying your first home in Florida — from budgeting and pre-approval through closing day.",
+    excerpt: "Step-by-step walkthrough of buying your first home in Florida, from budgeting and pre-approval through closing day.",
     date: "2026-04-10",
     category: "Buying",
     readingTime: "12 min read",
@@ -83,7 +83,7 @@ export const guides: GuideData[] = [
   {
     slug: "how-to-choose-a-realtor",
     title: "How to Choose a REALTOR",
-    excerpt: "What to look for when hiring a real estate agent — questions to ask, red flags, and why experience matters.",
+    excerpt: "What to look for when hiring a real estate agent, questions to ask, red flags, and why experience matters.",
     date: "2026-02-28",
     category: "Buying",
     readingTime: "6 min read",
@@ -97,7 +97,7 @@ export const guides: GuideData[] = [
   {
     slug: "how-to-buy-a-condo-tampa-bay",
     title: "How to Buy a Condo in Tampa Bay",
-    excerpt: "Condo-buying guide for Tampa Bay — HOA rules, milestone inspections, insurance, and financing.",
+    excerpt: "Condo-buying guide for Tampa Bay, HOA rules, milestone inspections, insurance, and financing.",
     date: "2026-03-05",
     category: "Buying",
     readingTime: "9 min read",
@@ -112,7 +112,7 @@ export const guides: GuideData[] = [
   {
     slug: "hoa-buyers-guide",
     title: "HOA Buyer's Guide",
-    excerpt: "Everything buyers need to know about HOA communities — fees, rules, reserves, and what to check before buying.",
+    excerpt: "Everything buyers need to know about HOA communities, fees, rules, reserves, and what to check before buying.",
     date: "2026-03-10",
     category: "Buying",
     readingTime: "8 min read",
@@ -127,7 +127,7 @@ export const guides: GuideData[] = [
   {
     slug: "condo-milestone-inspection-guide",
     title: "Condo Milestone Inspection Guide",
-    excerpt: "Florida's condo milestone inspection requirements — what they are, who pays, and how they affect buyers.",
+    excerpt: "Florida's condo milestone inspection requirements, what they are, who pays, and how they affect buyers.",
     date: "2026-03-12",
     category: "Buying",
     readingTime: "7 min read",
@@ -141,7 +141,7 @@ export const guides: GuideData[] = [
   {
     slug: "all-cash-offer-guide-tampa-bay",
     title: "All-Cash Offer Guide for Tampa Bay",
-    excerpt: "How to make and win with all-cash offers in Tampa Bay real estate — strategy, proof of funds, and closing timeline.",
+    excerpt: "How to make and win with all-cash offers in Tampa Bay real estate, strategy, proof of funds, and closing timeline.",
     date: "2026-02-20",
     category: "Buying",
     readingTime: "7 min read",
@@ -155,7 +155,7 @@ export const guides: GuideData[] = [
   {
     slug: "new-construction-guide",
     title: "New Construction Home Guide",
-    excerpt: "Everything you need to know about buying new construction in Florida — builders, upgrades, timelines, and negotiation.",
+    excerpt: "Everything you need to know about buying new construction in Florida, builders, upgrades, timelines, and negotiation.",
     date: "2026-03-01",
     category: "Buying",
     readingTime: "10 min read",
@@ -170,7 +170,7 @@ export const guides: GuideData[] = [
   {
     slug: "new-construction-builders-guide",
     title: "New Construction Builders Guide",
-    excerpt: "Overview of major homebuilders in Tampa Bay — DR Horton, Lennar, Pulte, Taylor Morrison, and more.",
+    excerpt: "Overview of major homebuilders in Tampa Bay, DR Horton, Lennar, Pulte, Taylor Morrison, and more.",
     date: "2026-03-01",
     category: "Buying",
     readingTime: "9 min read",
@@ -214,7 +214,7 @@ export const guides: GuideData[] = [
   {
     slug: "macdill-afb-housing-guide",
     title: "MacDill AFB Housing Guide",
-    excerpt: "Housing options near MacDill Air Force Base — on-base, off-base, neighborhoods, and commute times.",
+    excerpt: "Housing options near MacDill Air Force Base, on-base, off-base, neighborhoods, and commute times.",
     date: "2026-02-10",
     category: "Buying",
     readingTime: "9 min read",
@@ -228,7 +228,7 @@ export const guides: GuideData[] = [
   {
     slug: "snowbird-guide-tampa-bay",
     title: "Snowbird Guide to Tampa Bay",
-    excerpt: "Seasonal living in Tampa Bay — best 55+ communities, property management, and snowbird lifestyle tips.",
+    excerpt: "Seasonal living in Tampa Bay, best 55+ communities, property management, and snowbird lifestyle tips.",
     date: "2026-01-15",
     category: "Buying",
     readingTime: "8 min read",
@@ -281,7 +281,7 @@ export const guides: GuideData[] = [
   {
     slug: "mortgage-rate-lock-guide",
     title: "Mortgage Rate Lock Guide",
-    excerpt: "When and how to lock your mortgage rate — timing strategies, float-down options, and lock periods.",
+    excerpt: "When and how to lock your mortgage rate, timing strategies, float-down options, and lock periods.",
     date: "2026-03-22",
     category: "Financing",
     readingTime: "6 min read",
@@ -295,7 +295,7 @@ export const guides: GuideData[] = [
   {
     slug: "conventional-loan-guide",
     title: "Conventional Loan Guide",
-    excerpt: "Everything you need to know about conventional loans — requirements, down payment, PMI, and advantages.",
+    excerpt: "Everything you need to know about conventional loans, requirements, down payment, PMI, and advantages.",
     date: "2026-03-08",
     category: "Financing",
     readingTime: "7 min read",
@@ -309,16 +309,16 @@ export const guides: GuideData[] = [
   {
     slug: "florida-hometown-heroes-program",
     title: "Florida Hometown Heroes Program",
-    excerpt: "Florida Hometown Heroes offers up to $35,000 in down payment and closing cost assistance for first-time buyers in over 50 eligible professions — teachers, nurses, law enforcement, firefighters, and more.",
+    excerpt: "Florida Hometown Heroes offers up to $35,000 in down payment and closing cost assistance for first-time buyers in over 50 eligible professions, teachers, nurses, law enforcement, firefighters, and more.",
     date: "2026-07-06",
     category: "Financing",
     readingTime: "9 min read",
     sections: makeSections("Florida Hometown Heroes Program", [
       "What Is the Hometown Heroes Program?",
-      "Who Qualifies — Eligible Professions",
+      "Who Qualifies, Eligible Professions",
       "Income Limits by County",
       "How Much Assistance Can You Get?",
-      "How to Apply — Step by Step",
+      "How to Apply, Step by Step",
       "Hometown Heroes vs. Other FL Programs",
       "Combining Hometown Heroes with FHA or VA Loans",
       "Current Program Status and Funding",
@@ -327,7 +327,7 @@ export const guides: GuideData[] = [
   {
     slug: "fl-assist-down-payment-program",
     title: "FL Assist Down Payment Program",
-    excerpt: "The Florida Assist program provides up to $10,000 as a deferred second mortgage for down payment and closing cost help — available to FHA, VA, and USDA borrowers through Florida Housing.",
+    excerpt: "The Florida Assist program provides up to $10,000 as a deferred second mortgage for down payment and closing cost help, available to FHA, VA, and USDA borrowers through Florida Housing.",
     date: "2026-07-06",
     category: "Financing",
     readingTime: "7 min read",
@@ -337,14 +337,14 @@ export const guides: GuideData[] = [
       "How the Deferred Second Mortgage Works",
       "Income and Purchase Price Limits",
       "How to Apply Through an Approved Lender",
-      "FL Assist vs. Hometown Heroes — Which Is Better?",
+      "FL Assist vs. Hometown Heroes, Which Is Better?",
       "Combining FL Assist with Other Programs",
     ]),
   },
   {
     slug: "fha-loan-guide",
     title: "FHA Loan Guide",
-    excerpt: "FHA loan requirements, benefits, and how to qualify — ideal for first-time buyers with lower down payments.",
+    excerpt: "FHA loan requirements, benefits, and how to qualify, ideal for first-time buyers with lower down payments.",
     date: "2026-03-08",
     category: "Financing",
     readingTime: "7 min read",
@@ -358,7 +358,7 @@ export const guides: GuideData[] = [
   {
     slug: "va-home-loan-guide",
     title: "VA Home Loan Guide",
-    excerpt: "Complete guide to VA home loans — eligibility, benefits, zero down payment, and the VA funding fee.",
+    excerpt: "Complete guide to VA home loans, eligibility, benefits, zero down payment, and the VA funding fee.",
     date: "2026-03-08",
     category: "Financing",
     readingTime: "8 min read",
@@ -373,7 +373,7 @@ export const guides: GuideData[] = [
   {
     slug: "usda-loan-guide",
     title: "USDA Loan Guide",
-    excerpt: "USDA rural development loan guide — eligible areas in Florida, income limits, and zero down payment.",
+    excerpt: "USDA rural development loan guide, eligible areas in Florida, income limits, and zero down payment.",
     date: "2026-03-08",
     category: "Financing",
     readingTime: "7 min read",
@@ -387,7 +387,7 @@ export const guides: GuideData[] = [
   {
     slug: "jumbo-loan-guide",
     title: "Jumbo Loan Guide",
-    excerpt: "Jumbo loan guide for Florida buyers — conforming limits, requirements, and luxury home financing.",
+    excerpt: "Jumbo loan guide for Florida buyers, conforming limits, requirements, and luxury home financing.",
     date: "2026-03-08",
     category: "Financing",
     readingTime: "6 min read",
@@ -401,7 +401,7 @@ export const guides: GuideData[] = [
   {
     slug: "dscr-loan-guide",
     title: "DSCR Loan Guide",
-    excerpt: "DSCR (Debt Service Coverage Ratio) loans for real estate investors — how they work and who qualifies.",
+    excerpt: "DSCR (Debt Service Coverage Ratio) loans for real estate investors, how they work and who qualifies.",
     date: "2026-02-25",
     category: "Investing",
     readingTime: "7 min read",
@@ -419,7 +419,7 @@ export const guides: GuideData[] = [
   {
     slug: "home-selling-guide",
     title: "Home Selling Guide",
-    excerpt: "Everything sellers need to know — from pricing strategy and staging to marketing and closing.",
+    excerpt: "Everything sellers need to know, from pricing strategy and staging to marketing and closing.",
     date: "2026-03-28",
     category: "Selling",
     readingTime: "10 min read",
@@ -449,7 +449,7 @@ export const guides: GuideData[] = [
   {
     slug: "how-to-price-your-home",
     title: "How to Price Your Home",
-    excerpt: "Data-driven pricing strategies for sellers — CMAs, market conditions, and avoiding common pricing mistakes.",
+    excerpt: "Data-driven pricing strategies for sellers, CMAs, market conditions, and avoiding common pricing mistakes.",
     date: "2026-03-25",
     category: "Selling",
     readingTime: "7 min read",
@@ -463,7 +463,7 @@ export const guides: GuideData[] = [
   {
     slug: "home-staging-guide",
     title: "Home Staging Guide",
-    excerpt: "How to stage your home for maximum appeal and faster sale — room-by-room tips and professional vs. DIY staging.",
+    excerpt: "How to stage your home for maximum appeal and faster sale, room-by-room tips and professional vs. DIY staging.",
     date: "2026-03-20",
     category: "Selling",
     readingTime: "8 min read",
@@ -477,7 +477,7 @@ export const guides: GuideData[] = [
   {
     slug: "sellers-disclosure-guide",
     title: "Seller's Disclosure Guide",
-    excerpt: "What Florida sellers must disclose — legal requirements, common issues, and how to protect yourself.",
+    excerpt: "What Florida sellers must disclose, legal requirements, common issues, and how to protect yourself.",
     date: "2026-03-15",
     category: "Selling",
     readingTime: "7 min read",
@@ -491,7 +491,7 @@ export const guides: GuideData[] = [
   {
     slug: "listing-agreement-guide",
     title: "Listing Agreement Guide",
-    excerpt: "Understanding listing agreements — types, terms, commission structure, and what to negotiate.",
+    excerpt: "Understanding listing agreements, types, terms, commission structure, and what to negotiate.",
     date: "2026-03-10",
     category: "Selling",
     readingTime: "6 min read",
@@ -505,7 +505,7 @@ export const guides: GuideData[] = [
   {
     slug: "open-house-guide-for-sellers",
     title: "Open House Guide for Sellers",
-    excerpt: "How to prepare for an open house — preparation checklist, safety tips, and maximizing buyer interest.",
+    excerpt: "How to prepare for an open house, preparation checklist, safety tips, and maximizing buyer interest.",
     date: "2026-03-05",
     category: "Selling",
     readingTime: "6 min read",
@@ -523,7 +523,7 @@ export const guides: GuideData[] = [
   {
     slug: "closing-costs-guide-florida",
     title: "Closing Costs Guide for Florida",
-    excerpt: "Breakdown of buyer and seller closing costs in Florida — title insurance, doc stamps, and typical amounts.",
+    excerpt: "Breakdown of buyer and seller closing costs in Florida, title insurance, doc stamps, and typical amounts.",
     date: "2026-03-20",
     category: "Buying",
     readingTime: "8 min read",
@@ -538,7 +538,7 @@ export const guides: GuideData[] = [
   {
     slug: "closing-day-guide",
     title: "Closing Day Guide",
-    excerpt: "What to expect on closing day — documents, final walkthrough, funding, and getting your keys.",
+    excerpt: "What to expect on closing day, documents, final walkthrough, funding, and getting your keys.",
     date: "2026-03-20",
     category: "Buying",
     readingTime: "6 min read",
@@ -552,7 +552,7 @@ export const guides: GuideData[] = [
   {
     slug: "florida-escrow-guide",
     title: "Florida Escrow Guide",
-    excerpt: "How escrow works in Florida real estate — earnest money deposits, escrow agents, and dispute resolution.",
+    excerpt: "How escrow works in Florida real estate, earnest money deposits, escrow agents, and dispute resolution.",
     date: "2026-03-10",
     category: "Buying",
     readingTime: "7 min read",
@@ -566,7 +566,7 @@ export const guides: GuideData[] = [
   {
     slug: "florida-flood-insurance-guide",
     title: "Florida Flood Insurance Guide",
-    excerpt: "Flood insurance in Florida — zones, requirements, NFIP vs. private, and how to save on premiums.",
+    excerpt: "Flood insurance in Florida, zones, requirements, NFIP vs. private, and how to save on premiums.",
     date: "2026-02-20",
     category: "Insurance",
     readingTime: "8 min read",
@@ -580,7 +580,7 @@ export const guides: GuideData[] = [
   {
     slug: "florida-property-insurance-guide",
     title: "Florida Property Insurance Guide",
-    excerpt: "Property insurance in Florida — coverage types, hurricane deductibles, and tips for lower premiums.",
+    excerpt: "Property insurance in Florida, coverage types, hurricane deductibles, and tips for lower premiums.",
     date: "2026-02-20",
     category: "Insurance",
     readingTime: "9 min read",
@@ -610,7 +610,7 @@ export const guides: GuideData[] = [
   {
     slug: "florida-property-tax-guide",
     title: "Florida Property Tax Guide",
-    excerpt: "How property taxes work in Florida — millage rates, exemptions, and how to appeal your assessment.",
+    excerpt: "How property taxes work in Florida, millage rates, exemptions, and how to appeal your assessment.",
     date: "2026-01-20",
     category: "Taxes",
     readingTime: "8 min read",
@@ -624,7 +624,7 @@ export const guides: GuideData[] = [
   {
     slug: "florida-property-survey-guide",
     title: "Florida Property Survey Guide",
-    excerpt: "When and why you need a property survey in Florida — types, costs, and what they reveal.",
+    excerpt: "When and why you need a property survey in Florida, types, costs, and what they reveal.",
     date: "2026-02-15",
     category: "Buying",
     readingTime: "6 min read",
@@ -638,7 +638,7 @@ export const guides: GuideData[] = [
   {
     slug: "title-insurance-guide",
     title: "Title Insurance Guide",
-    excerpt: "Title insurance in Florida — what it covers, who pays, and why it matters for buyers and sellers.",
+    excerpt: "Title insurance in Florida, what it covers, who pays, and why it matters for buyers and sellers.",
     date: "2026-02-28",
     category: "Buying",
     readingTime: "6 min read",
@@ -652,7 +652,7 @@ export const guides: GuideData[] = [
   {
     slug: "home-warranty-guide",
     title: "Home Warranty Guide",
-    excerpt: "Home warranty guide for buyers and sellers — coverage, costs, and whether it's worth it.",
+    excerpt: "Home warranty guide for buyers and sellers, coverage, costs, and whether it's worth it.",
     date: "2026-02-25",
     category: "Buying",
     readingTime: "6 min read",
@@ -666,7 +666,7 @@ export const guides: GuideData[] = [
   {
     slug: "hurricane-prep-guide",
     title: "Hurricane Preparedness Guide",
-    excerpt: "How to prepare your Florida home for hurricane season — supplies, shutters, insurance, and evacuation plans.",
+    excerpt: "How to prepare your Florida home for hurricane season, supplies, shutters, insurance, and evacuation plans.",
     date: "2026-02-01",
     category: "Homeownership",
     readingTime: "8 min read",
@@ -699,7 +699,7 @@ export const guides: GuideData[] = [
   {
     slug: "1031-exchange-guide",
     title: "1031 Exchange Guide",
-    excerpt: "How 1031 exchanges work — rules, timelines, qualified intermediaries, and strategies for real estate investors.",
+    excerpt: "How 1031 exchanges work, rules, timelines, qualified intermediaries, and strategies for real estate investors.",
     date: "2026-02-15",
     category: "Investing",
     readingTime: "9 min read",
@@ -714,7 +714,7 @@ export const guides: GuideData[] = [
   {
     slug: "real-estate-investment-guide",
     title: "Real Estate Investment Guide",
-    excerpt: "Complete guide to real estate investing in Tampa Bay — rental properties, flips, and long-term wealth building.",
+    excerpt: "Complete guide to real estate investing in Tampa Bay, rental properties, flips, and long-term wealth building.",
     date: "2026-02-15",
     category: "Investing",
     readingTime: "12 min read",
@@ -729,7 +729,7 @@ export const guides: GuideData[] = [
   {
     slug: "house-hacking-guide",
     title: "House Hacking Guide",
-    excerpt: "How to house hack in Tampa Bay — live in one unit, rent the others, and build wealth.",
+    excerpt: "How to house hack in Tampa Bay, live in one unit, rent the others, and build wealth.",
     date: "2026-02-10",
     category: "Investing",
     readingTime: "7 min read",
@@ -743,7 +743,7 @@ export const guides: GuideData[] = [
   {
     slug: "short-term-rental-guide-tampa-bay",
     title: "Short-Term Rental Guide: Tampa Bay",
-    excerpt: "Tampa Bay-specific guide to short-term rental investing — local regulations, top areas, and earning potential.",
+    excerpt: "Tampa Bay-specific guide to short-term rental investing, local regulations, top areas, and earning potential.",
     date: "2026-02-05",
     category: "Investing",
     readingTime: "9 min read",
@@ -757,7 +757,7 @@ export const guides: GuideData[] = [
   {
     slug: "vacation-rental-guide",
     title: "Vacation Rental Guide",
-    excerpt: "Buying a vacation rental in Florida — location, financing, management, and tax implications.",
+    excerpt: "Buying a vacation rental in Florida, location, financing, management, and tax implications.",
     date: "2026-01-25",
     category: "Investing",
     readingTime: "8 min read",

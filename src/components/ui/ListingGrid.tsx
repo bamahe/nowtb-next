@@ -1,5 +1,5 @@
 // =============================================================================
-// ListingGrid — Clean responsive grid of ListingCard components
+// ListingGrid, Clean responsive grid of ListingCard components
 // Server component (no "use client" directive)
 // Minimal heading treatment, generous gaps, let the cards breathe
 // =============================================================================
@@ -18,7 +18,7 @@ interface ListingGridProps {
   subtitle?: string;
   /** Optional className override for the outer wrapper (e.g. remove padding when nested) */
   className?: string;
-  /** Heading level for the section title — h2 (default) or h3 for secondary sections */
+  /** Heading level for the section title, h2 (default) or h3 for secondary sections */
   headingLevel?: "h2" | "h3";
   /** Optional area name for contextual CTA ("Want to see what your {areaName} property is worth?") */
   areaName?: string;
@@ -48,7 +48,7 @@ export default function ListingGrid({
         )}
         <div className="text-center max-w-lg mx-auto">
           <p className="font-body text-muted text-base leading-relaxed">
-            No listings currently available. New listings hit the MLS daily — call
+            No listings currently available. New listings hit the MLS daily, call
             Barrett at{" "}
             <a href="tel:+18137337907" className="text-accent font-semibold hover:underline">
               (813) 733-7907
@@ -62,7 +62,7 @@ export default function ListingGrid({
 
   return (
     <section className={className ?? "container-wide py-24 md:py-32"}>
-      {/* --- Section Heading — clean, minimal --- */}
+      {/* --- Section Heading, clean, minimal --- */}
       {title && (
         <div className="text-center mb-16">
           {headingLevel === "h3" ? (
@@ -79,14 +79,14 @@ export default function ListingGrid({
         </div>
       )}
 
-      {/* --- Responsive Grid — generous gaps for breathing room ---
+      {/* --- Responsive Grid, generous gaps for breathing room ---
            1 col on mobile, 2 on sm, 3 on lg, 4 on xl */}
       <div className="grid grid-cols-1 gap-8 md:gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {listings.map((listing, index) => (
           <Fragment key={listing.ListingKey}>
             <ListingCard listing={listing} />
 
-            {/* --- Inline CTA card — injected after the 8th listing --- */}
+            {/* --- Inline CTA card, injected after the 8th listing --- */}
             {/* Buyer CTA after 8th listing */}
             {index === 7 && listings.length >= 8 && (
               <div

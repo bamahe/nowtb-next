@@ -1,6 +1,6 @@
 // =============================================================================
 // FAQs for Pinellas, Pasco, Manatee, Polk, Sarasota, Hernando, Citrus counties
-// Auto-generated — real local info, natural language
+// Auto-generated, real local info, natural language
 // =============================================================================
 
 import type { CityFAQ } from './valrico-faqs';
@@ -30,8 +30,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Anna Maria a good place to live?",
-      answer: "Anna Maria is located in Manatee County, Florida, known for Gulf access and growing master-planned communities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Anna Maria neighborhoods.",
-      answerHtml: '<a href="/anna-maria/" class="text-link hover:underline">Anna Maria</a> is located in Manatee County, known for Gulf access and growing master-planned communities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Anna Maria neighborhoods.',
+      answer: "Anna Maria is located in Manatee County, Florida, known for Gulf access and growing master-planned communities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Anna Maria neighborhoods.",
+      answerHtml: '<a href="/anna-maria/" class="text-link hover:underline">Anna Maria</a> is located in Manatee County, known for Gulf access and growing master-planned communities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Anna Maria neighborhoods.',
     },
     {
       question: "Are there HOA communities in Anna Maria?",
@@ -63,8 +63,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Bradenton a good place to live?",
-      answer: "Bradenton is located in Manatee County, Florida, known for Gulf access and growing master-planned communities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Bradenton neighborhoods.",
-      answerHtml: '<a href="/bradenton/" class="text-link hover:underline">Bradenton</a> is located in Manatee County, known for Gulf access and growing master-planned communities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Bradenton neighborhoods.',
+      answer: "Bradenton is located in Manatee County, Florida, known for Gulf access and growing master-planned communities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Bradenton neighborhoods.",
+      answerHtml: '<a href="/bradenton/" class="text-link hover:underline">Bradenton</a> is located in Manatee County, known for Gulf access and growing master-planned communities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Bradenton neighborhoods.',
     },
     {
       question: "Are there HOA communities in Bradenton?",
@@ -96,8 +96,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Bradenton Beach a good place to live?",
-      answer: "Bradenton Beach is located in Manatee County, Florida, known for Gulf access and growing master-planned communities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Bradenton Beach neighborhoods.",
-      answerHtml: '<a href="/bradenton-beach/" class="text-link hover:underline">Bradenton Beach</a> is located in Manatee County, known for Gulf access and growing master-planned communities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Bradenton Beach neighborhoods.',
+      answer: "Bradenton Beach is located in Manatee County, Florida, known for Gulf access and growing master-planned communities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Bradenton Beach neighborhoods.",
+      answerHtml: '<a href="/bradenton-beach/" class="text-link hover:underline">Bradenton Beach</a> is located in Manatee County, known for Gulf access and growing master-planned communities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Bradenton Beach neighborhoods.',
     },
     {
       question: "Are there HOA communities in Bradenton Beach?",
@@ -129,8 +129,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Ellenton a good place to live?",
-      answer: "Ellenton is located in Manatee County, Florida, known for Gulf access and growing master-planned communities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Ellenton neighborhoods.",
-      answerHtml: '<a href="/ellenton/" class="text-link hover:underline">Ellenton</a> is located in Manatee County, known for Gulf access and growing master-planned communities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Ellenton neighborhoods.',
+      answer: "Ellenton is located in Manatee County, Florida, known for Gulf access and growing master-planned communities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Ellenton neighborhoods.",
+      answerHtml: '<a href="/ellenton/" class="text-link hover:underline">Ellenton</a> is located in Manatee County, known for Gulf access and growing master-planned communities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Ellenton neighborhoods.',
     },
     {
       question: "Are there HOA communities in Ellenton?",
@@ -162,8 +162,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Holmes Beach a good place to live?",
-      answer: "Holmes Beach is located in Manatee County, Florida, known for Gulf access and growing master-planned communities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Holmes Beach neighborhoods.",
-      answerHtml: '<a href="/holmes-beach/" class="text-link hover:underline">Holmes Beach</a> is located in Manatee County, known for Gulf access and growing master-planned communities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Holmes Beach neighborhoods.',
+      answer: "Holmes Beach is located in Manatee County, Florida, known for Gulf access and growing master-planned communities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Holmes Beach neighborhoods.",
+      answerHtml: '<a href="/holmes-beach/" class="text-link hover:underline">Holmes Beach</a> is located in Manatee County, known for Gulf access and growing master-planned communities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Holmes Beach neighborhoods.',
     },
     {
       question: "Are there HOA communities in Holmes Beach?",
@@ -195,8 +195,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Lakewood Ranch a good place to live?",
-      answer: "Lakewood Ranch is located in Manatee County, Florida, known for Gulf access and growing master-planned communities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Lakewood Ranch neighborhoods.",
-      answerHtml: '<a href="/lakewood-ranch/" class="text-link hover:underline">Lakewood Ranch</a> is located in Manatee County, known for Gulf access and growing master-planned communities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Lakewood Ranch neighborhoods.',
+      answer: "Lakewood Ranch is located in Manatee County, Florida, known for Gulf access and growing master-planned communities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Lakewood Ranch neighborhoods.",
+      answerHtml: '<a href="/lakewood-ranch/" class="text-link hover:underline">Lakewood Ranch</a> is located in Manatee County, known for Gulf access and growing master-planned communities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Lakewood Ranch neighborhoods.',
     },
     {
       question: "Are there HOA communities in Lakewood Ranch?",
@@ -228,8 +228,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Palmetto a good place to live?",
-      answer: "Palmetto is located in Manatee County, Florida, known for Gulf access and growing master-planned communities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Palmetto neighborhoods.",
-      answerHtml: '<a href="/palmetto/" class="text-link hover:underline">Palmetto</a> is located in Manatee County, known for Gulf access and growing master-planned communities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Palmetto neighborhoods.',
+      answer: "Palmetto is located in Manatee County, Florida, known for Gulf access and growing master-planned communities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Palmetto neighborhoods.",
+      answerHtml: '<a href="/palmetto/" class="text-link hover:underline">Palmetto</a> is located in Manatee County, known for Gulf access and growing master-planned communities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Palmetto neighborhoods.',
     },
     {
       question: "Are there HOA communities in Palmetto?",
@@ -261,8 +261,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Parrish a good place to live?",
-      answer: "Parrish is located in Manatee County, Florida, known for Gulf access and growing master-planned communities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Parrish neighborhoods.",
-      answerHtml: '<a href="/parrish/" class="text-link hover:underline">Parrish</a> is located in Manatee County, known for Gulf access and growing master-planned communities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Parrish neighborhoods.',
+      answer: "Parrish is located in Manatee County, Florida, known for Gulf access and growing master-planned communities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Parrish neighborhoods.",
+      answerHtml: '<a href="/parrish/" class="text-link hover:underline">Parrish</a> is located in Manatee County, known for Gulf access and growing master-planned communities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Parrish neighborhoods.',
     },
     {
       question: "Are there HOA communities in Parrish?",
@@ -294,8 +294,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Dade City a good place to live?",
-      answer: "Dade City is located in Pasco County, Florida, known for rapid growth and affordable new construction. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Dade City neighborhoods.",
-      answerHtml: '<a href="/dade-city/" class="text-link hover:underline">Dade City</a> is located in Pasco County, known for rapid growth and affordable new construction. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Dade City neighborhoods.',
+      answer: "Dade City is located in Pasco County, Florida, known for rapid growth and affordable new construction. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Dade City neighborhoods.",
+      answerHtml: '<a href="/dade-city/" class="text-link hover:underline">Dade City</a> is located in Pasco County, known for rapid growth and affordable new construction. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Dade City neighborhoods.',
     },
     {
       question: "Are there HOA communities in Dade City?",
@@ -327,8 +327,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Holiday a good place to live?",
-      answer: "Holiday is located in Pasco County, Florida, known for rapid growth and affordable new construction. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Holiday neighborhoods.",
-      answerHtml: '<a href="/holiday/" class="text-link hover:underline">Holiday</a> is located in Pasco County, known for rapid growth and affordable new construction. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Holiday neighborhoods.',
+      answer: "Holiday is located in Pasco County, Florida, known for rapid growth and affordable new construction. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Holiday neighborhoods.",
+      answerHtml: '<a href="/holiday/" class="text-link hover:underline">Holiday</a> is located in Pasco County, known for rapid growth and affordable new construction. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Holiday neighborhoods.',
     },
     {
       question: "Are there HOA communities in Holiday?",
@@ -360,8 +360,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Hudson a good place to live?",
-      answer: "Hudson is located in Pasco County, Florida, known for rapid growth and affordable new construction. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Hudson neighborhoods.",
-      answerHtml: '<a href="/hudson/" class="text-link hover:underline">Hudson</a> is located in Pasco County, known for rapid growth and affordable new construction. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Hudson neighborhoods.',
+      answer: "Hudson is located in Pasco County, Florida, known for rapid growth and affordable new construction. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Hudson neighborhoods.",
+      answerHtml: '<a href="/hudson/" class="text-link hover:underline">Hudson</a> is located in Pasco County, known for rapid growth and affordable new construction. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Hudson neighborhoods.',
     },
     {
       question: "Are there HOA communities in Hudson?",
@@ -393,8 +393,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Land O Lakes a good place to live?",
-      answer: "Land O Lakes is located in Pasco County, Florida, known for rapid growth and affordable new construction. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Land O Lakes neighborhoods.",
-      answerHtml: '<a href="/land-o-lakes/" class="text-link hover:underline">Land O Lakes</a> is located in Pasco County, known for rapid growth and affordable new construction. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Land O Lakes neighborhoods.',
+      answer: "Land O Lakes is located in Pasco County, Florida, known for rapid growth and affordable new construction. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Land O Lakes neighborhoods.",
+      answerHtml: '<a href="/land-o-lakes/" class="text-link hover:underline">Land O Lakes</a> is located in Pasco County, known for rapid growth and affordable new construction. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Land O Lakes neighborhoods.',
     },
     {
       question: "Are there HOA communities in Land O Lakes?",
@@ -426,8 +426,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is New Port Richey a good place to live?",
-      answer: "New Port Richey is located in Pasco County, Florida, known for rapid growth and affordable new construction. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about New Port Richey neighborhoods.",
-      answerHtml: '<a href="/new-port-richey/" class="text-link hover:underline">New Port Richey</a> is located in Pasco County, known for rapid growth and affordable new construction. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about New Port Richey neighborhoods.',
+      answer: "New Port Richey is located in Pasco County, Florida, known for rapid growth and affordable new construction. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about New Port Richey neighborhoods.",
+      answerHtml: '<a href="/new-port-richey/" class="text-link hover:underline">New Port Richey</a> is located in Pasco County, known for rapid growth and affordable new construction. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about New Port Richey neighborhoods.',
     },
     {
       question: "Are there HOA communities in New Port Richey?",
@@ -459,8 +459,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Odessa a good place to live?",
-      answer: "Odessa is located in Pasco County, Florida, known for rapid growth and affordable new construction. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Odessa neighborhoods.",
-      answerHtml: '<a href="/odessa/" class="text-link hover:underline">Odessa</a> is located in Pasco County, known for rapid growth and affordable new construction. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Odessa neighborhoods.',
+      answer: "Odessa is located in Pasco County, Florida, known for rapid growth and affordable new construction. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Odessa neighborhoods.",
+      answerHtml: '<a href="/odessa/" class="text-link hover:underline">Odessa</a> is located in Pasco County, known for rapid growth and affordable new construction. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Odessa neighborhoods.',
     },
     {
       question: "Are there HOA communities in Odessa?",
@@ -492,8 +492,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Port Richey a good place to live?",
-      answer: "Port Richey is located in Pasco County, Florida, known for rapid growth and affordable new construction. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Port Richey neighborhoods.",
-      answerHtml: '<a href="/port-richey/" class="text-link hover:underline">Port Richey</a> is located in Pasco County, known for rapid growth and affordable new construction. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Port Richey neighborhoods.',
+      answer: "Port Richey is located in Pasco County, Florida, known for rapid growth and affordable new construction. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Port Richey neighborhoods.",
+      answerHtml: '<a href="/port-richey/" class="text-link hover:underline">Port Richey</a> is located in Pasco County, known for rapid growth and affordable new construction. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Port Richey neighborhoods.',
     },
     {
       question: "Are there HOA communities in Port Richey?",
@@ -525,8 +525,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is San Antonio a good place to live?",
-      answer: "San Antonio is located in Pasco County, Florida, known for rapid growth and affordable new construction. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about San Antonio neighborhoods.",
-      answerHtml: '<a href="/san-antonio-fl/" class="text-link hover:underline">San Antonio</a> is located in Pasco County, known for rapid growth and affordable new construction. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about San Antonio neighborhoods.',
+      answer: "San Antonio is located in Pasco County, Florida, known for rapid growth and affordable new construction. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about San Antonio neighborhoods.",
+      answerHtml: '<a href="/san-antonio-fl/" class="text-link hover:underline">San Antonio</a> is located in Pasco County, known for rapid growth and affordable new construction. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about San Antonio neighborhoods.',
     },
     {
       question: "Are there HOA communities in San Antonio?",
@@ -558,8 +558,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Trinity a good place to live?",
-      answer: "Trinity is located in Pasco County, Florida, known for rapid growth and affordable new construction. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Trinity neighborhoods.",
-      answerHtml: '<a href="/trinity/" class="text-link hover:underline">Trinity</a> is located in Pasco County, known for rapid growth and affordable new construction. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Trinity neighborhoods.',
+      answer: "Trinity is located in Pasco County, Florida, known for rapid growth and affordable new construction. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Trinity neighborhoods.",
+      answerHtml: '<a href="/trinity/" class="text-link hover:underline">Trinity</a> is located in Pasco County, known for rapid growth and affordable new construction. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Trinity neighborhoods.',
     },
     {
       question: "Are there HOA communities in Trinity?",
@@ -591,8 +591,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Wesley Chapel a good place to live?",
-      answer: "Wesley Chapel is located in Pasco County, Florida, known for rapid growth and affordable new construction. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Wesley Chapel neighborhoods.",
-      answerHtml: '<a href="/wesley-chapel/" class="text-link hover:underline">Wesley Chapel</a> is located in Pasco County, known for rapid growth and affordable new construction. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Wesley Chapel neighborhoods.',
+      answer: "Wesley Chapel is located in Pasco County, Florida, known for rapid growth and affordable new construction. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Wesley Chapel neighborhoods.",
+      answerHtml: '<a href="/wesley-chapel/" class="text-link hover:underline">Wesley Chapel</a> is located in Pasco County, known for rapid growth and affordable new construction. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Wesley Chapel neighborhoods.',
     },
     {
       question: "Are there HOA communities in Wesley Chapel?",
@@ -624,8 +624,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Zephyrhills a good place to live?",
-      answer: "Zephyrhills is located in Pasco County, Florida, known for rapid growth and affordable new construction. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Zephyrhills neighborhoods.",
-      answerHtml: '<a href="/zephyrhills/" class="text-link hover:underline">Zephyrhills</a> is located in Pasco County, known for rapid growth and affordable new construction. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Zephyrhills neighborhoods.',
+      answer: "Zephyrhills is located in Pasco County, Florida, known for rapid growth and affordable new construction. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Zephyrhills neighborhoods.",
+      answerHtml: '<a href="/zephyrhills/" class="text-link hover:underline">Zephyrhills</a> is located in Pasco County, known for rapid growth and affordable new construction. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Zephyrhills neighborhoods.',
     },
     {
       question: "Are there HOA communities in Zephyrhills?",
@@ -657,8 +657,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Belleair a good place to live?",
-      answer: "Belleair is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Belleair neighborhoods.",
-      answerHtml: '<a href="/belleair/" class="text-link hover:underline">Belleair</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Belleair neighborhoods.',
+      answer: "Belleair is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Belleair neighborhoods.",
+      answerHtml: '<a href="/belleair/" class="text-link hover:underline">Belleair</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Belleair neighborhoods.',
     },
     {
       question: "Are there HOA communities in Belleair?",
@@ -690,8 +690,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Clearwater a good place to live?",
-      answer: "Clearwater is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Clearwater neighborhoods.",
-      answerHtml: '<a href="/clearwater/" class="text-link hover:underline">Clearwater</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Clearwater neighborhoods.',
+      answer: "Clearwater is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Clearwater neighborhoods.",
+      answerHtml: '<a href="/clearwater/" class="text-link hover:underline">Clearwater</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Clearwater neighborhoods.',
     },
     {
       question: "Are there HOA communities in Clearwater?",
@@ -723,8 +723,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Dunedin a good place to live?",
-      answer: "Dunedin is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Dunedin neighborhoods.",
-      answerHtml: '<a href="/dunedin/" class="text-link hover:underline">Dunedin</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Dunedin neighborhoods.',
+      answer: "Dunedin is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Dunedin neighborhoods.",
+      answerHtml: '<a href="/dunedin/" class="text-link hover:underline">Dunedin</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Dunedin neighborhoods.',
     },
     {
       question: "Are there HOA communities in Dunedin?",
@@ -756,8 +756,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Gulfport a good place to live?",
-      answer: "Gulfport is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Gulfport neighborhoods.",
-      answerHtml: '<a href="/gulfport/" class="text-link hover:underline">Gulfport</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Gulfport neighborhoods.',
+      answer: "Gulfport is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Gulfport neighborhoods.",
+      answerHtml: '<a href="/gulfport/" class="text-link hover:underline">Gulfport</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Gulfport neighborhoods.',
     },
     {
       question: "Are there HOA communities in Gulfport?",
@@ -789,8 +789,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Indian Rocks Beach a good place to live?",
-      answer: "Indian Rocks Beach is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Indian Rocks Beach neighborhoods.",
-      answerHtml: '<a href="/indian-rocks-beach/" class="text-link hover:underline">Indian Rocks Beach</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Indian Rocks Beach neighborhoods.',
+      answer: "Indian Rocks Beach is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Indian Rocks Beach neighborhoods.",
+      answerHtml: '<a href="/indian-rocks-beach/" class="text-link hover:underline">Indian Rocks Beach</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Indian Rocks Beach neighborhoods.',
     },
     {
       question: "Are there HOA communities in Indian Rocks Beach?",
@@ -822,8 +822,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Kenneth City a good place to live?",
-      answer: "Kenneth City is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Kenneth City neighborhoods.",
-      answerHtml: '<a href="/kenneth-city/" class="text-link hover:underline">Kenneth City</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Kenneth City neighborhoods.',
+      answer: "Kenneth City is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Kenneth City neighborhoods.",
+      answerHtml: '<a href="/kenneth-city/" class="text-link hover:underline">Kenneth City</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Kenneth City neighborhoods.',
     },
     {
       question: "Are there HOA communities in Kenneth City?",
@@ -855,8 +855,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Largo a good place to live?",
-      answer: "Largo is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Largo neighborhoods.",
-      answerHtml: '<a href="/largo/" class="text-link hover:underline">Largo</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Largo neighborhoods.',
+      answer: "Largo is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Largo neighborhoods.",
+      answerHtml: '<a href="/largo/" class="text-link hover:underline">Largo</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Largo neighborhoods.',
     },
     {
       question: "Are there HOA communities in Largo?",
@@ -888,8 +888,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Longboat Key a good place to live?",
-      answer: "Longboat Key is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Longboat Key neighborhoods.",
-      answerHtml: '<a href="/longboat-key/" class="text-link hover:underline">Longboat Key</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Longboat Key neighborhoods.',
+      answer: "Longboat Key is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Longboat Key neighborhoods.",
+      answerHtml: '<a href="/longboat-key/" class="text-link hover:underline">Longboat Key</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Longboat Key neighborhoods.',
     },
     {
       question: "Are there HOA communities in Longboat Key?",
@@ -921,8 +921,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Madeira Beach a good place to live?",
-      answer: "Madeira Beach is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Madeira Beach neighborhoods.",
-      answerHtml: '<a href="/madeira-beach/" class="text-link hover:underline">Madeira Beach</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Madeira Beach neighborhoods.',
+      answer: "Madeira Beach is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Madeira Beach neighborhoods.",
+      answerHtml: '<a href="/madeira-beach/" class="text-link hover:underline">Madeira Beach</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Madeira Beach neighborhoods.',
     },
     {
       question: "Are there HOA communities in Madeira Beach?",
@@ -954,8 +954,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Oldsmar a good place to live?",
-      answer: "Oldsmar is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Oldsmar neighborhoods.",
-      answerHtml: '<a href="/oldsmar/" class="text-link hover:underline">Oldsmar</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Oldsmar neighborhoods.',
+      answer: "Oldsmar is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Oldsmar neighborhoods.",
+      answerHtml: '<a href="/oldsmar/" class="text-link hover:underline">Oldsmar</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Oldsmar neighborhoods.',
     },
     {
       question: "Are there HOA communities in Oldsmar?",
@@ -987,8 +987,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Palm Harbor a good place to live?",
-      answer: "Palm Harbor is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Palm Harbor neighborhoods.",
-      answerHtml: '<a href="/palm-harbor/" class="text-link hover:underline">Palm Harbor</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Palm Harbor neighborhoods.',
+      answer: "Palm Harbor is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Palm Harbor neighborhoods.",
+      answerHtml: '<a href="/palm-harbor/" class="text-link hover:underline">Palm Harbor</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Palm Harbor neighborhoods.',
     },
     {
       question: "Are there HOA communities in Palm Harbor?",
@@ -1020,8 +1020,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Pinellas Park a good place to live?",
-      answer: "Pinellas Park is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Pinellas Park neighborhoods.",
-      answerHtml: '<a href="/pinellas-park/" class="text-link hover:underline">Pinellas Park</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Pinellas Park neighborhoods.',
+      answer: "Pinellas Park is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Pinellas Park neighborhoods.",
+      answerHtml: '<a href="/pinellas-park/" class="text-link hover:underline">Pinellas Park</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Pinellas Park neighborhoods.',
     },
     {
       question: "Are there HOA communities in Pinellas Park?",
@@ -1053,8 +1053,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Safety Harbor a good place to live?",
-      answer: "Safety Harbor is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Safety Harbor neighborhoods.",
-      answerHtml: '<a href="/safety-harbor/" class="text-link hover:underline">Safety Harbor</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Safety Harbor neighborhoods.',
+      answer: "Safety Harbor is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Safety Harbor neighborhoods.",
+      answerHtml: '<a href="/safety-harbor/" class="text-link hover:underline">Safety Harbor</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Safety Harbor neighborhoods.',
     },
     {
       question: "Are there HOA communities in Safety Harbor?",
@@ -1086,8 +1086,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Seminole a good place to live?",
-      answer: "Seminole is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Seminole neighborhoods.",
-      answerHtml: '<a href="/seminole/" class="text-link hover:underline">Seminole</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Seminole neighborhoods.',
+      answer: "Seminole is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Seminole neighborhoods.",
+      answerHtml: '<a href="/seminole/" class="text-link hover:underline">Seminole</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Seminole neighborhoods.',
     },
     {
       question: "Are there HOA communities in Seminole?",
@@ -1119,8 +1119,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is St. Pete Beach a good place to live?",
-      answer: "St. Pete Beach is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about St. Pete Beach neighborhoods.",
-      answerHtml: '<a href="/st-pete-beach/" class="text-link hover:underline">St. Pete Beach</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about St. Pete Beach neighborhoods.',
+      answer: "St. Pete Beach is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about St. Pete Beach neighborhoods.",
+      answerHtml: '<a href="/st-pete-beach/" class="text-link hover:underline">St. Pete Beach</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about St. Pete Beach neighborhoods.',
     },
     {
       question: "Are there HOA communities in St. Pete Beach?",
@@ -1152,8 +1152,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is St. Petersburg a good place to live?",
-      answer: "St. Petersburg is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about St. Petersburg neighborhoods.",
-      answerHtml: '<a href="/st-petersburg/" class="text-link hover:underline">St. Petersburg</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about St. Petersburg neighborhoods.',
+      answer: "St. Petersburg is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about St. Petersburg neighborhoods.",
+      answerHtml: '<a href="/st-petersburg/" class="text-link hover:underline">St. Petersburg</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about St. Petersburg neighborhoods.',
     },
     {
       question: "Are there HOA communities in St. Petersburg?",
@@ -1185,8 +1185,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Tarpon Springs a good place to live?",
-      answer: "Tarpon Springs is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Tarpon Springs neighborhoods.",
-      answerHtml: '<a href="/tarpon-springs/" class="text-link hover:underline">Tarpon Springs</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Tarpon Springs neighborhoods.',
+      answer: "Tarpon Springs is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Tarpon Springs neighborhoods.",
+      answerHtml: '<a href="/tarpon-springs/" class="text-link hover:underline">Tarpon Springs</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Tarpon Springs neighborhoods.',
     },
     {
       question: "Are there HOA communities in Tarpon Springs?",
@@ -1218,8 +1218,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Treasure Island a good place to live?",
-      answer: "Treasure Island is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Treasure Island neighborhoods.",
-      answerHtml: '<a href="/treasure-island/" class="text-link hover:underline">Treasure Island</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Treasure Island neighborhoods.',
+      answer: "Treasure Island is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Treasure Island neighborhoods.",
+      answerHtml: '<a href="/treasure-island/" class="text-link hover:underline">Treasure Island</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Treasure Island neighborhoods.',
     },
     {
       question: "Are there HOA communities in Treasure Island?",
@@ -1251,8 +1251,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Auburndale a good place to live?",
-      answer: "Auburndale is located in Polk County, Florida, known for affordable living between Tampa and Orlando. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Auburndale neighborhoods.",
-      answerHtml: '<a href="/auburndale/" class="text-link hover:underline">Auburndale</a> is located in Polk County, known for affordable living between Tampa and Orlando. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Auburndale neighborhoods.',
+      answer: "Auburndale is located in Polk County, Florida, known for affordable living between Tampa and Orlando. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Auburndale neighborhoods.",
+      answerHtml: '<a href="/auburndale/" class="text-link hover:underline">Auburndale</a> is located in Polk County, known for affordable living between Tampa and Orlando. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Auburndale neighborhoods.',
     },
     {
       question: "Are there HOA communities in Auburndale?",
@@ -1284,8 +1284,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Bartow a good place to live?",
-      answer: "Bartow is located in Polk County, Florida, known for affordable living between Tampa and Orlando. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Bartow neighborhoods.",
-      answerHtml: '<a href="/bartow/" class="text-link hover:underline">Bartow</a> is located in Polk County, known for affordable living between Tampa and Orlando. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Bartow neighborhoods.',
+      answer: "Bartow is located in Polk County, Florida, known for affordable living between Tampa and Orlando. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Bartow neighborhoods.",
+      answerHtml: '<a href="/bartow/" class="text-link hover:underline">Bartow</a> is located in Polk County, known for affordable living between Tampa and Orlando. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Bartow neighborhoods.',
     },
     {
       question: "Are there HOA communities in Bartow?",
@@ -1317,8 +1317,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Davenport a good place to live?",
-      answer: "Davenport is located in Polk County, Florida, known for affordable living between Tampa and Orlando. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Davenport neighborhoods.",
-      answerHtml: '<a href="/davenport/" class="text-link hover:underline">Davenport</a> is located in Polk County, known for affordable living between Tampa and Orlando. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Davenport neighborhoods.',
+      answer: "Davenport is located in Polk County, Florida, known for affordable living between Tampa and Orlando. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Davenport neighborhoods.",
+      answerHtml: '<a href="/davenport/" class="text-link hover:underline">Davenport</a> is located in Polk County, known for affordable living between Tampa and Orlando. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Davenport neighborhoods.',
     },
     {
       question: "Are there HOA communities in Davenport?",
@@ -1350,8 +1350,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Dundee a good place to live?",
-      answer: "Dundee is located in Polk County, Florida, known for affordable living between Tampa and Orlando. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Dundee neighborhoods.",
-      answerHtml: '<a href="/dundee/" class="text-link hover:underline">Dundee</a> is located in Polk County, known for affordable living between Tampa and Orlando. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Dundee neighborhoods.',
+      answer: "Dundee is located in Polk County, Florida, known for affordable living between Tampa and Orlando. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Dundee neighborhoods.",
+      answerHtml: '<a href="/dundee/" class="text-link hover:underline">Dundee</a> is located in Polk County, known for affordable living between Tampa and Orlando. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Dundee neighborhoods.',
     },
     {
       question: "Are there HOA communities in Dundee?",
@@ -1383,8 +1383,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Fort Meade a good place to live?",
-      answer: "Fort Meade is located in Polk County, Florida, known for affordable living between Tampa and Orlando. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Fort Meade neighborhoods.",
-      answerHtml: '<a href="/fort-meade/" class="text-link hover:underline">Fort Meade</a> is located in Polk County, known for affordable living between Tampa and Orlando. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Fort Meade neighborhoods.',
+      answer: "Fort Meade is located in Polk County, Florida, known for affordable living between Tampa and Orlando. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Fort Meade neighborhoods.",
+      answerHtml: '<a href="/fort-meade/" class="text-link hover:underline">Fort Meade</a> is located in Polk County, known for affordable living between Tampa and Orlando. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Fort Meade neighborhoods.',
     },
     {
       question: "Are there HOA communities in Fort Meade?",
@@ -1416,8 +1416,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Haines City a good place to live?",
-      answer: "Haines City is located in Polk County, Florida, known for affordable living between Tampa and Orlando. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Haines City neighborhoods.",
-      answerHtml: '<a href="/haines-city/" class="text-link hover:underline">Haines City</a> is located in Polk County, known for affordable living between Tampa and Orlando. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Haines City neighborhoods.',
+      answer: "Haines City is located in Polk County, Florida, known for affordable living between Tampa and Orlando. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Haines City neighborhoods.",
+      answerHtml: '<a href="/haines-city/" class="text-link hover:underline">Haines City</a> is located in Polk County, known for affordable living between Tampa and Orlando. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Haines City neighborhoods.',
     },
     {
       question: "Are there HOA communities in Haines City?",
@@ -1449,8 +1449,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Lake Wales a good place to live?",
-      answer: "Lake Wales is located in Polk County, Florida, known for affordable living between Tampa and Orlando. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Lake Wales neighborhoods.",
-      answerHtml: '<a href="/lake-wales/" class="text-link hover:underline">Lake Wales</a> is located in Polk County, known for affordable living between Tampa and Orlando. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Lake Wales neighborhoods.',
+      answer: "Lake Wales is located in Polk County, Florida, known for affordable living between Tampa and Orlando. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Lake Wales neighborhoods.",
+      answerHtml: '<a href="/lake-wales/" class="text-link hover:underline">Lake Wales</a> is located in Polk County, known for affordable living between Tampa and Orlando. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Lake Wales neighborhoods.',
     },
     {
       question: "Are there HOA communities in Lake Wales?",
@@ -1482,8 +1482,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Lakeland a good place to live?",
-      answer: "Lakeland is located in Polk County, Florida, known for affordable living between Tampa and Orlando. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Lakeland neighborhoods.",
-      answerHtml: '<a href="/lakeland/" class="text-link hover:underline">Lakeland</a> is located in Polk County, known for affordable living between Tampa and Orlando. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Lakeland neighborhoods.',
+      answer: "Lakeland is located in Polk County, Florida, known for affordable living between Tampa and Orlando. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Lakeland neighborhoods.",
+      answerHtml: '<a href="/lakeland/" class="text-link hover:underline">Lakeland</a> is located in Polk County, known for affordable living between Tampa and Orlando. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Lakeland neighborhoods.',
     },
     {
       question: "Are there HOA communities in Lakeland?",
@@ -1515,8 +1515,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Mulberry a good place to live?",
-      answer: "Mulberry is located in Polk County, Florida, known for affordable living between Tampa and Orlando. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Mulberry neighborhoods.",
-      answerHtml: '<a href="/mulberry/" class="text-link hover:underline">Mulberry</a> is located in Polk County, known for affordable living between Tampa and Orlando. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Mulberry neighborhoods.',
+      answer: "Mulberry is located in Polk County, Florida, known for affordable living between Tampa and Orlando. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Mulberry neighborhoods.",
+      answerHtml: '<a href="/mulberry/" class="text-link hover:underline">Mulberry</a> is located in Polk County, known for affordable living between Tampa and Orlando. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Mulberry neighborhoods.',
     },
     {
       question: "Are there HOA communities in Mulberry?",
@@ -1548,8 +1548,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Polk City a good place to live?",
-      answer: "Polk City is located in Polk County, Florida, known for affordable living between Tampa and Orlando. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Polk City neighborhoods.",
-      answerHtml: '<a href="/polk-city/" class="text-link hover:underline">Polk City</a> is located in Polk County, known for affordable living between Tampa and Orlando. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Polk City neighborhoods.',
+      answer: "Polk City is located in Polk County, Florida, known for affordable living between Tampa and Orlando. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Polk City neighborhoods.",
+      answerHtml: '<a href="/polk-city/" class="text-link hover:underline">Polk City</a> is located in Polk County, known for affordable living between Tampa and Orlando. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Polk City neighborhoods.',
     },
     {
       question: "Are there HOA communities in Polk City?",
@@ -1581,8 +1581,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Winter Haven a good place to live?",
-      answer: "Winter Haven is located in Polk County, Florida, known for affordable living between Tampa and Orlando. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Winter Haven neighborhoods.",
-      answerHtml: '<a href="/winter-haven/" class="text-link hover:underline">Winter Haven</a> is located in Polk County, known for affordable living between Tampa and Orlando. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Winter Haven neighborhoods.',
+      answer: "Winter Haven is located in Polk County, Florida, known for affordable living between Tampa and Orlando. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Winter Haven neighborhoods.",
+      answerHtml: '<a href="/winter-haven/" class="text-link hover:underline">Winter Haven</a> is located in Polk County, known for affordable living between Tampa and Orlando. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Winter Haven neighborhoods.',
     },
     {
       question: "Are there HOA communities in Winter Haven?",
@@ -1614,8 +1614,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Sarasota a good place to live?",
-      answer: "Sarasota is located in Sarasota County, Florida, known for world-class beaches, arts, and upscale living. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Sarasota neighborhoods.",
-      answerHtml: '<a href="/sarasota/" class="text-link hover:underline">Sarasota</a> is located in Sarasota County, known for world-class beaches, arts, and upscale living. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Sarasota neighborhoods.',
+      answer: "Sarasota is located in Sarasota County, Florida, known for world-class beaches, arts, and upscale living. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Sarasota neighborhoods.",
+      answerHtml: '<a href="/sarasota/" class="text-link hover:underline">Sarasota</a> is located in Sarasota County, known for world-class beaches, arts, and upscale living. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Sarasota neighborhoods.',
     },
     {
       question: "Are there HOA communities in Sarasota?",
@@ -1647,8 +1647,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Venice a good place to live?",
-      answer: "Venice is located in Sarasota County, Florida, known for world-class beaches, arts, and upscale living. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Venice neighborhoods.",
-      answerHtml: '<a href="/venice/" class="text-link hover:underline">Venice</a> is located in Sarasota County, known for world-class beaches, arts, and upscale living. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Venice neighborhoods.',
+      answer: "Venice is located in Sarasota County, Florida, known for world-class beaches, arts, and upscale living. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Venice neighborhoods.",
+      answerHtml: '<a href="/venice/" class="text-link hover:underline">Venice</a> is located in Sarasota County, known for world-class beaches, arts, and upscale living. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Venice neighborhoods.',
     },
     {
       question: "Are there HOA communities in Venice?",
@@ -1680,8 +1680,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is North Port a good place to live?",
-      answer: "North Port is located in Sarasota County, Florida, known for world-class beaches, arts, and upscale living. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about North Port neighborhoods.",
-      answerHtml: '<a href="/north-port/" class="text-link hover:underline">North Port</a> is located in Sarasota County, known for world-class beaches, arts, and upscale living. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about North Port neighborhoods.',
+      answer: "North Port is located in Sarasota County, Florida, known for world-class beaches, arts, and upscale living. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about North Port neighborhoods.",
+      answerHtml: '<a href="/north-port/" class="text-link hover:underline">North Port</a> is located in Sarasota County, known for world-class beaches, arts, and upscale living. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about North Port neighborhoods.',
     },
     {
       question: "Are there HOA communities in North Port?",
@@ -1713,8 +1713,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Englewood a good place to live?",
-      answer: "Englewood is located in Sarasota County, Florida, known for world-class beaches, arts, and upscale living. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Englewood neighborhoods.",
-      answerHtml: '<a href="/englewood/" class="text-link hover:underline">Englewood</a> is located in Sarasota County, known for world-class beaches, arts, and upscale living. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Englewood neighborhoods.',
+      answer: "Englewood is located in Sarasota County, Florida, known for world-class beaches, arts, and upscale living. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Englewood neighborhoods.",
+      answerHtml: '<a href="/englewood/" class="text-link hover:underline">Englewood</a> is located in Sarasota County, known for world-class beaches, arts, and upscale living. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Englewood neighborhoods.',
     },
     {
       question: "Are there HOA communities in Englewood?",
@@ -1746,8 +1746,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Osprey a good place to live?",
-      answer: "Osprey is located in Sarasota County, Florida, known for world-class beaches, arts, and upscale living. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Osprey neighborhoods.",
-      answerHtml: '<a href="/osprey/" class="text-link hover:underline">Osprey</a> is located in Sarasota County, known for world-class beaches, arts, and upscale living. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Osprey neighborhoods.',
+      answer: "Osprey is located in Sarasota County, Florida, known for world-class beaches, arts, and upscale living. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Osprey neighborhoods.",
+      answerHtml: '<a href="/osprey/" class="text-link hover:underline">Osprey</a> is located in Sarasota County, known for world-class beaches, arts, and upscale living. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Osprey neighborhoods.',
     },
     {
       question: "Are there HOA communities in Osprey?",
@@ -1779,8 +1779,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Nokomis a good place to live?",
-      answer: "Nokomis is located in Sarasota County, Florida, known for world-class beaches, arts, and upscale living. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Nokomis neighborhoods.",
-      answerHtml: '<a href="/nokomis/" class="text-link hover:underline">Nokomis</a> is located in Sarasota County, known for world-class beaches, arts, and upscale living. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Nokomis neighborhoods.',
+      answer: "Nokomis is located in Sarasota County, Florida, known for world-class beaches, arts, and upscale living. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Nokomis neighborhoods.",
+      answerHtml: '<a href="/nokomis/" class="text-link hover:underline">Nokomis</a> is located in Sarasota County, known for world-class beaches, arts, and upscale living. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Nokomis neighborhoods.',
     },
     {
       question: "Are there HOA communities in Nokomis?",
@@ -1812,8 +1812,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Siesta Key a good place to live?",
-      answer: "Siesta Key is located in Sarasota County, Florida, known for world-class beaches, arts, and upscale living. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Siesta Key neighborhoods.",
-      answerHtml: '<a href="/siesta-key/" class="text-link hover:underline">Siesta Key</a> is located in Sarasota County, known for world-class beaches, arts, and upscale living. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Siesta Key neighborhoods.',
+      answer: "Siesta Key is located in Sarasota County, Florida, known for world-class beaches, arts, and upscale living. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Siesta Key neighborhoods.",
+      answerHtml: '<a href="/siesta-key/" class="text-link hover:underline">Siesta Key</a> is located in Sarasota County, known for world-class beaches, arts, and upscale living. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Siesta Key neighborhoods.',
     },
     {
       question: "Are there HOA communities in Siesta Key?",
@@ -1845,8 +1845,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Brooksville a good place to live?",
-      answer: "Brooksville is located in Hernando County, Florida, known for affordable homes, natural springs, and Nature Coast access. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Brooksville neighborhoods.",
-      answerHtml: '<a href="/brooksville/" class="text-link hover:underline">Brooksville</a> is located in Hernando County, known for affordable homes, natural springs, and Nature Coast access. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Brooksville neighborhoods.',
+      answer: "Brooksville is located in Hernando County, Florida, known for affordable homes, natural springs, and Nature Coast access. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Brooksville neighborhoods.",
+      answerHtml: '<a href="/brooksville/" class="text-link hover:underline">Brooksville</a> is located in Hernando County, known for affordable homes, natural springs, and Nature Coast access. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Brooksville neighborhoods.',
     },
     {
       question: "Are there HOA communities in Brooksville?",
@@ -1878,8 +1878,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Spring Hill a good place to live?",
-      answer: "Spring Hill is located in Hernando County, Florida, known for affordable homes, natural springs, and Nature Coast access. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Spring Hill neighborhoods.",
-      answerHtml: '<a href="/spring-hill/" class="text-link hover:underline">Spring Hill</a> is located in Hernando County, known for affordable homes, natural springs, and Nature Coast access. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Spring Hill neighborhoods.',
+      answer: "Spring Hill is located in Hernando County, Florida, known for affordable homes, natural springs, and Nature Coast access. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Spring Hill neighborhoods.",
+      answerHtml: '<a href="/spring-hill/" class="text-link hover:underline">Spring Hill</a> is located in Hernando County, known for affordable homes, natural springs, and Nature Coast access. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Spring Hill neighborhoods.',
     },
     {
       question: "Are there HOA communities in Spring Hill?",
@@ -1911,8 +1911,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Weeki Wachee a good place to live?",
-      answer: "Weeki Wachee is located in Hernando County, Florida, known for affordable homes, natural springs, and Nature Coast access. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Weeki Wachee neighborhoods.",
-      answerHtml: '<a href="/weeki-wachee/" class="text-link hover:underline">Weeki Wachee</a> is located in Hernando County, known for affordable homes, natural springs, and Nature Coast access. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Weeki Wachee neighborhoods.',
+      answer: "Weeki Wachee is located in Hernando County, Florida, known for affordable homes, natural springs, and Nature Coast access. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Weeki Wachee neighborhoods.",
+      answerHtml: '<a href="/weeki-wachee/" class="text-link hover:underline">Weeki Wachee</a> is located in Hernando County, known for affordable homes, natural springs, and Nature Coast access. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Weeki Wachee neighborhoods.',
     },
     {
       question: "Are there HOA communities in Weeki Wachee?",
@@ -1944,8 +1944,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Hernando Beach a good place to live?",
-      answer: "Hernando Beach is located in Hernando County, Florida, known for affordable homes, natural springs, and Nature Coast access. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Hernando Beach neighborhoods.",
-      answerHtml: '<a href="/hernando-beach/" class="text-link hover:underline">Hernando Beach</a> is located in Hernando County, known for affordable homes, natural springs, and Nature Coast access. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Hernando Beach neighborhoods.',
+      answer: "Hernando Beach is located in Hernando County, Florida, known for affordable homes, natural springs, and Nature Coast access. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Hernando Beach neighborhoods.",
+      answerHtml: '<a href="/hernando-beach/" class="text-link hover:underline">Hernando Beach</a> is located in Hernando County, known for affordable homes, natural springs, and Nature Coast access. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Hernando Beach neighborhoods.',
     },
     {
       question: "Are there HOA communities in Hernando Beach?",
@@ -1977,8 +1977,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Ridge Manor a good place to live?",
-      answer: "Ridge Manor is located in Hernando County, Florida, known for affordable homes, natural springs, and Nature Coast access. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Ridge Manor neighborhoods.",
-      answerHtml: '<a href="/ridge-manor/" class="text-link hover:underline">Ridge Manor</a> is located in Hernando County, known for affordable homes, natural springs, and Nature Coast access. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Ridge Manor neighborhoods.',
+      answer: "Ridge Manor is located in Hernando County, Florida, known for affordable homes, natural springs, and Nature Coast access. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Ridge Manor neighborhoods.",
+      answerHtml: '<a href="/ridge-manor/" class="text-link hover:underline">Ridge Manor</a> is located in Hernando County, known for affordable homes, natural springs, and Nature Coast access. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Ridge Manor neighborhoods.',
     },
     {
       question: "Are there HOA communities in Ridge Manor?",
@@ -2010,8 +2010,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Crystal River a good place to live?",
-      answer: "Crystal River is located in Citrus County, Florida, known for Nature Coast living with springs, manatees, and rural charm. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Crystal River neighborhoods.",
-      answerHtml: '<a href="/crystal-river/" class="text-link hover:underline">Crystal River</a> is located in Citrus County, known for Nature Coast living with springs, manatees, and rural charm. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Crystal River neighborhoods.',
+      answer: "Crystal River is located in Citrus County, Florida, known for Nature Coast living with springs, manatees, and rural charm. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Crystal River neighborhoods.",
+      answerHtml: '<a href="/crystal-river/" class="text-link hover:underline">Crystal River</a> is located in Citrus County, known for Nature Coast living with springs, manatees, and rural charm. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Crystal River neighborhoods.',
     },
     {
       question: "Are there HOA communities in Crystal River?",
@@ -2043,8 +2043,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Inverness a good place to live?",
-      answer: "Inverness is located in Citrus County, Florida, known for Nature Coast living with springs, manatees, and rural charm. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Inverness neighborhoods.",
-      answerHtml: '<a href="/inverness/" class="text-link hover:underline">Inverness</a> is located in Citrus County, known for Nature Coast living with springs, manatees, and rural charm. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Inverness neighborhoods.',
+      answer: "Inverness is located in Citrus County, Florida, known for Nature Coast living with springs, manatees, and rural charm. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Inverness neighborhoods.",
+      answerHtml: '<a href="/inverness/" class="text-link hover:underline">Inverness</a> is located in Citrus County, known for Nature Coast living with springs, manatees, and rural charm. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Inverness neighborhoods.',
     },
     {
       question: "Are there HOA communities in Inverness?",
@@ -2076,8 +2076,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Homosassa a good place to live?",
-      answer: "Homosassa is located in Citrus County, Florida, known for Nature Coast living with springs, manatees, and rural charm. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Homosassa neighborhoods.",
-      answerHtml: '<a href="/homosassa/" class="text-link hover:underline">Homosassa</a> is located in Citrus County, known for Nature Coast living with springs, manatees, and rural charm. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Homosassa neighborhoods.',
+      answer: "Homosassa is located in Citrus County, Florida, known for Nature Coast living with springs, manatees, and rural charm. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Homosassa neighborhoods.",
+      answerHtml: '<a href="/homosassa/" class="text-link hover:underline">Homosassa</a> is located in Citrus County, known for Nature Coast living with springs, manatees, and rural charm. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Homosassa neighborhoods.',
     },
     {
       question: "Are there HOA communities in Homosassa?",
@@ -2109,8 +2109,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Lecanto a good place to live?",
-      answer: "Lecanto is located in Citrus County, Florida, known for Nature Coast living with springs, manatees, and rural charm. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Lecanto neighborhoods.",
-      answerHtml: '<a href="/lecanto/" class="text-link hover:underline">Lecanto</a> is located in Citrus County, known for Nature Coast living with springs, manatees, and rural charm. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Lecanto neighborhoods.',
+      answer: "Lecanto is located in Citrus County, Florida, known for Nature Coast living with springs, manatees, and rural charm. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Lecanto neighborhoods.",
+      answerHtml: '<a href="/lecanto/" class="text-link hover:underline">Lecanto</a> is located in Citrus County, known for Nature Coast living with springs, manatees, and rural charm. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Lecanto neighborhoods.',
     },
     {
       question: "Are there HOA communities in Lecanto?",
@@ -2142,8 +2142,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Floral City a good place to live?",
-      answer: "Floral City is located in Citrus County, Florida, known for Nature Coast living with springs, manatees, and rural charm. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Floral City neighborhoods.",
-      answerHtml: '<a href="/floral-city/" class="text-link hover:underline">Floral City</a> is located in Citrus County, known for Nature Coast living with springs, manatees, and rural charm. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Floral City neighborhoods.',
+      answer: "Floral City is located in Citrus County, Florida, known for Nature Coast living with springs, manatees, and rural charm. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Floral City neighborhoods.",
+      answerHtml: '<a href="/floral-city/" class="text-link hover:underline">Floral City</a> is located in Citrus County, known for Nature Coast living with springs, manatees, and rural charm. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Floral City neighborhoods.',
     },
     {
       question: "Are there HOA communities in Floral City?",
@@ -2175,8 +2175,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Indian Shores a good place to live?",
-      answer: "Indian Shores is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Indian Shores neighborhoods.",
-      answerHtml: '<a href="/indian-shores/" class="text-link hover:underline">Indian Shores</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Indian Shores neighborhoods.',
+      answer: "Indian Shores is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Indian Shores neighborhoods.",
+      answerHtml: '<a href="/indian-shores/" class="text-link hover:underline">Indian Shores</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Indian Shores neighborhoods.',
     },
     {
       question: "Are there HOA communities in Indian Shores?",
@@ -2208,8 +2208,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Redington Beach a good place to live?",
-      answer: "Redington Beach is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Redington Beach neighborhoods.",
-      answerHtml: '<a href="/redington-beach/" class="text-link hover:underline">Redington Beach</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Redington Beach neighborhoods.',
+      answer: "Redington Beach is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Redington Beach neighborhoods.",
+      answerHtml: '<a href="/redington-beach/" class="text-link hover:underline">Redington Beach</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Redington Beach neighborhoods.',
     },
     {
       question: "Are there HOA communities in Redington Beach?",
@@ -2241,8 +2241,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Tierra Verde a good place to live?",
-      answer: "Tierra Verde is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Tierra Verde neighborhoods.",
-      answerHtml: '<a href="/tierra-verde/" class="text-link hover:underline">Tierra Verde</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Tierra Verde neighborhoods.',
+      answer: "Tierra Verde is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Tierra Verde neighborhoods.",
+      answerHtml: '<a href="/tierra-verde/" class="text-link hover:underline">Tierra Verde</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Tierra Verde neighborhoods.',
     },
     {
       question: "Are there HOA communities in Tierra Verde?",
@@ -2274,8 +2274,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is South Pasadena a good place to live?",
-      answer: "South Pasadena is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about South Pasadena neighborhoods.",
-      answerHtml: '<a href="/south-pasadena/" class="text-link hover:underline">South Pasadena</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about South Pasadena neighborhoods.',
+      answer: "South Pasadena is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about South Pasadena neighborhoods.",
+      answerHtml: '<a href="/south-pasadena/" class="text-link hover:underline">South Pasadena</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about South Pasadena neighborhoods.',
     },
     {
       question: "Are there HOA communities in South Pasadena?",
@@ -2307,8 +2307,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is East Lake a good place to live?",
-      answer: "East Lake is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about East Lake neighborhoods.",
-      answerHtml: '<a href="/east-lake/" class="text-link hover:underline">East Lake</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about East Lake neighborhoods.',
+      answer: "East Lake is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about East Lake neighborhoods.",
+      answerHtml: '<a href="/east-lake/" class="text-link hover:underline">East Lake</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about East Lake neighborhoods.',
     },
     {
       question: "Are there HOA communities in East Lake?",
@@ -2340,8 +2340,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Crystal Beach a good place to live?",
-      answer: "Crystal Beach is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Crystal Beach neighborhoods.",
-      answerHtml: '<a href="/crystal-beach/" class="text-link hover:underline">Crystal Beach</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Crystal Beach neighborhoods.',
+      answer: "Crystal Beach is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Crystal Beach neighborhoods.",
+      answerHtml: '<a href="/crystal-beach/" class="text-link hover:underline">Crystal Beach</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Crystal Beach neighborhoods.',
     },
     {
       question: "Are there HOA communities in Crystal Beach?",
@@ -2373,8 +2373,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Ozona a good place to live?",
-      answer: "Ozona is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Ozona neighborhoods.",
-      answerHtml: '<a href="/ozona/" class="text-link hover:underline">Ozona</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Ozona neighborhoods.',
+      answer: "Ozona is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Ozona neighborhoods.",
+      answerHtml: '<a href="/ozona/" class="text-link hover:underline">Ozona</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Ozona neighborhoods.',
     },
     {
       question: "Are there HOA communities in Ozona?",
@@ -2406,8 +2406,8 @@ export const REMAINING_COUNTY_FAQS: Record<string, CityFAQ[]> = {
     },
     {
       question: "Is Redington Shores a good place to live?",
-      answer: "Redington Shores is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Redington Shores neighborhoods.",
-      answerHtml: '<a href="/redington-shores/" class="text-link hover:underline">Redington Shores</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities — commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Redington Shores neighborhoods.',
+      answer: "Redington Shores is located in Pinellas County, Florida, known for Gulf Coast beaches and urban amenities. Like any area, whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. Contact Barrett for honest, specific guidance about Redington Shores neighborhoods.",
+      answerHtml: '<a href="/redington-shores/" class="text-link hover:underline">Redington Shores</a> is located in Pinellas County, known for Gulf Coast beaches and urban amenities. Whether it is right for you depends on your priorities, commute, schools, budget, and lifestyle. <a href="/contact/" class="text-link hover:underline">Contact Barrett</a> for honest guidance about Redington Shores neighborhoods.',
     },
     {
       question: "Are there HOA communities in Redington Shores?",

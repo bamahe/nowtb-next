@@ -1,6 +1,6 @@
 "use client";
 
-// ClientMarketSnapshot — Client-side market stats for housing-market spoke pages.
+// ClientMarketSnapshot, Client-side market stats for housing-market spoke pages.
 // Fetches live listings and displays key stats without blocking server render.
 
 import { useState, useEffect } from "react";

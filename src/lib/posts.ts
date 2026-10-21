@@ -84,7 +84,7 @@ async function loadSupabasePosts(): Promise<BlogPost[]> {
  * Supabase posts override JSON posts with the same slug.
  */
 function loadPosts(): BlogPost[] {
-  // Synchronous path for backward compatibility — only uses JSON
+  // Synchronous path for backward compatibility, only uses JSON
   // Async callers should use loadAllPosts() instead
   return loadJsonPosts();
 }
@@ -153,7 +153,7 @@ export function getPostsByCategory(category: string): BlogPost[] {
 }
 
 /**
- * Blog filter categories — maps a human-readable label to slug patterns.
+ * Blog filter categories, maps a human-readable label to slug patterns.
  * Used by the blog index page for category filtering.
  */
 const BLOG_CATEGORIES: { label: string; pattern: RegExp }[] = [

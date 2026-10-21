@@ -1,5 +1,5 @@
 // =============================================================================
-// TampaBayMap — Interactive Leaflet map showing Tampa Bay cities and offices
+// TampaBayMap, Interactive Leaflet map showing Tampa Bay cities and offices
 // "use client" because Leaflet requires browser DOM access
 // =============================================================================
 

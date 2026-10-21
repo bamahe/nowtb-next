@@ -1,5 +1,5 @@
 // =============================================================================
-// ValuationForm — Multi-step home valuation request form
+// ValuationForm, Multi-step home valuation request form
 //
 // WHY MULTI-STEP:
 // This is the destination of the seller CTA on ~1,760 blog posts, so it is the
@@ -8,17 +8,17 @@
 // they type anything.
 //
 // HOW IT WORKS NOW:
-//   Step 1 — address + name + email + phone. Nothing else. That is already a
+// Step 1, address + name + email + phone. Nothing else. That is already a
 //            complete, callable lead, and the submit button is live on step 1,
 //            so somebody who stops there is NOT lost.
-//   Step 2 — property details (beds, baths, sqft, etc). Optional.
-//   Step 3 — condition, upgrades, timeline, notes. Optional.
+// Step 2, property details (beds, baths, sqft, etc). Optional.
+// Step 3, condition, upgrades, timeline, notes. Optional.
 //
 // IMPORTANT STRUCTURAL NOTE: this is still ONE <form> with ONE submit handler
 // and ONE Turnstile widget mounted outside the step conditionals. The steps are
 // just conditionally rendered field groups. Two reasons:
 //   1. Every answer lives in top-level useState, so moving between steps never
-//      loses what was typed — React keeps the state, the fields just unmount.
+// loses what was typed, React keeps the state, the fields just unmount.
 //   2. Unmounting TurnstileWidget per step would tear down and re-render the
 //      Cloudflare challenge each time, which is exactly how you end up with no
 //      token and a dead submit button.
@@ -50,7 +50,7 @@ const sectionHeadingClasses =
 const STEP_LABELS = ["Your home", "The details", "Condition"];
 const TOTAL_STEPS = STEP_LABELS.length;
 
-/** Optional props — initialCity pre-fills the city field on city spoke pages */
+/** Optional props, initialCity pre-fills the city field on city spoke pages */
 interface ValuationFormProps {
   initialCity?: string;
 }
@@ -108,7 +108,7 @@ export default function ValuationForm({ initialCity }: ValuationFormProps) {
 
   // Is step 1 filled in well enough to be a real lead Barrett can act on?
   // This gates BOTH moving forward and submitting. It has to exist in JS, not
-  // just as HTML `required`, because steps 2 and 3 unmount step 1's inputs —
+  // just as HTML `required`, because steps 2 and 3 unmount step 1's inputs 
   // and the browser cannot validate a field that is no longer in the document,
   // so without this check somebody could jump to step 3 and submit with no name.
   const step1Complete = Boolean(
@@ -272,7 +272,7 @@ export default function ValuationForm({ initialCity }: ValuationFormProps) {
               <p className="font-body mt-3 text-xs text-muted">
                 Step {step} of {TOTAL_STEPS}.{" "}
                 {step === 1
-                  ? "Step 1 is all I need to get started — the rest is optional and only makes the number sharper."
+                  ? "Step 1 is all I need to get started, the rest is optional and only makes the number sharper."
                   : "Optional. You can send what you have at any point."}
               </p>
             </div>
@@ -280,7 +280,7 @@ export default function ValuationForm({ initialCity }: ValuationFormProps) {
             <form onSubmit={handleSubmit} className="space-y-8">
 
               {/* ============================================================= */}
-              {/* STEP 1: Address + contact — the only required step            */}
+              {/* STEP 1: Address + contact, the only required step */}
               {/* ============================================================= */}
               {step === 1 && (
                 <div>
@@ -390,7 +390,7 @@ export default function ValuationForm({ initialCity }: ValuationFormProps) {
               )}
 
               {/* ============================================================= */}
-              {/* STEP 2: Property details — optional                           */}
+              {/* STEP 2: Property details, optional */}
               {/* ============================================================= */}
               {step === 2 && (
                 <div>
@@ -562,7 +562,7 @@ export default function ValuationForm({ initialCity }: ValuationFormProps) {
               )}
 
               {/* ============================================================= */}
-              {/* STEP 3: Condition, upgrades, timeline — optional              */}
+              {/* STEP 3: Condition, upgrades, timeline, optional */}
               {/* ============================================================= */}
               {step === 3 && (
                 <div>
@@ -702,13 +702,13 @@ export default function ValuationForm({ initialCity }: ValuationFormProps) {
               )}
 
               {/* ============================================================= */}
-              {/* Honeypot + Turnstile + Submit — ALWAYS mounted, every step     */}
+              {/* Honeypot + Turnstile + Submit, ALWAYS mounted, every step */}
               {/* Do not move these inside a step conditional. Remounting the    */}
               {/* Turnstile widget restarts the challenge and leaves the submit  */}
               {/* button dead with no token.                                     */}
               {/* ============================================================= */}
               <div>
-                {/* Honeypot — hidden decoy field. Real users never see or fill
+                {/* Honeypot, hidden decoy field. Real users never see or fill
                     this; bots fill everything. aria-hidden + tabIndex keep it
                     away from screen readers and keyboard navigation, so it
                     stays invisible to humans using assistive tech too. */}
@@ -739,7 +739,7 @@ export default function ValuationForm({ initialCity }: ValuationFormProps) {
                 {/* Turnstile spam protection */}
                 <TurnstileWidget onVerify={handleTurnstileVerify} />
 
-                {/* Submit button — benefit-labelled, not "Submit". Live on
+                {/* Submit button, benefit-labelled, not "Submit". Live on
                     EVERY step, including step 1, so a visitor who stops after
                     the address and their name is still a finished lead. */}
                 <button
@@ -762,7 +762,7 @@ export default function ValuationForm({ initialCity }: ValuationFormProps) {
 
                 {/* Step navigation. "Add more detail" is type="button" so it can
                     never submit the form by accident, and it stays disabled
-                    until step 1 is complete — that guarantees we always have a
+                    until step 1 is complete, that guarantees we always have a
                     contactable lead before the optional questions start. */}
                 <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                   {step > 1 ? (
@@ -802,7 +802,7 @@ export default function ValuationForm({ initialCity }: ValuationFormProps) {
                 )}
                 {step1Complete && !turnstileToken && status !== "loading" && (
                   <p className="font-body mt-2 text-center text-xs text-muted">
-                    Finishing the quick spam check — the button turns on in a second.
+                    Finishing the quick spam check, the button turns on in a second.
                   </p>
                 )}
 
@@ -811,7 +811,7 @@ export default function ValuationForm({ initialCity }: ValuationFormProps) {
                   By submitting this form, you consent to receive calls, texts, and emails from Barrett Henry, The NOW Team, REMAX Collective, and affiliated partners at the number and email provided. Message and data rates may apply. You may opt out at any time. This is not a condition of purchase.
                 </p>
 
-                {/* Trust signals — who you are handing this to, and what we
+                {/* Trust signals, who you are handing this to, and what we
                     will not do with it. Sits right under the button on purpose;
                     that is the moment people hesitate. */}
                 <div className="mt-3 space-y-1 text-center text-xs text-muted/70 font-body">

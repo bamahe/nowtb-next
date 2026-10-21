@@ -1,5 +1,5 @@
 // =============================================================================
-// /guides/[slug] — Individual guide page
+// /guides/[slug], Individual guide page
 // Long-form article layout with table of contents sidebar, content sections,
 // inline CTAs, and related guides. (51 guide pages from nowtb.com)
 // =============================================================================
@@ -14,7 +14,7 @@ import PortabilityCalc from "@/components/ui/PortabilityCalc";
 import { getPrimaryAgent } from "@/data/agents";
 import { cleanWpContent } from "@/lib/utils";
 // Single source of truth for Barrett's author entity and for speakable
-// selectors. See src/lib/schema.tsx — do not re-hardcode these values here.
+// selectors. See src/lib/schema.tsx, do not re-hardcode these values here.
 import { barrettAuthorPerson, speakableSelectorsForContent } from "@/lib/schema";
 import {
   guides,
@@ -34,7 +34,7 @@ function formatDate(dateStr: string): string {
   });
 }
 
-// --- generateStaticParams — pre-render all known guides at build ---
+// --- generateStaticParams, pre-render all known guides at build ---
 export async function generateStaticParams() {
   return guides.map((guide) => ({ slug: guide.slug }));
 }
@@ -57,7 +57,7 @@ const GUIDE_OG_IMAGE = {
   url: "/og-default.png",
   width: 1200,
   height: 630,
-  alt: "Barrett Henry, REALTOR® — Tampa Bay Homes for Sale",
+  alt: "Barrett Henry, REALTOR®, Tampa Bay Homes for Sale",
 };
 
 // --- Dynamic SEO metadata ---
@@ -72,7 +72,7 @@ export async function generateMetadata({
 
   // ─── TITLE: the brand is deliberately NOT in this string ───────────────────
   // src/app/layout.tsx sets `title.template = "%s | Barrett Henry"`, and Next.js
-  // applies that template to a plain-string `title` — and ALSO to
+  // applies that template to a plain-string `title`, and ALSO to
   // `openGraph.title` and `twitter.title`. (Confirmed in the installed copy of
   // Next 14: node_modules/next/dist/lib/metadata/resolvers/resolve-opengraph.js
   // calls resolveTitle(openGraph.title, titleTemplate) and the same for twitter.)
@@ -86,7 +86,7 @@ export async function generateMetadata({
   //
   // Google truncates around 60 characters, so the duplicate was eating the part
   // of the title that actually ranks. ONE source of truth for the brand: the
-  // template in layout.tsx. The REALTOR® credential is not lost — it is stated
+  // template in layout.tsx. The REALTOR® credential is not lost, it is stated
   // properly in the Person/author schema further down this file, which is where
   // search and AI answer engines read credentials from.
   //
@@ -115,8 +115,8 @@ export async function generateMetadata({
       publishedTime: guide.date,
       // siteName/locale are repeated here because a child `openGraph` object
       // REPLACES the root layout's openGraph wholesale rather than merging into
-      // it — same reason `images` has to be repeated, see below.
-      siteName: "Barrett Henry, REALTOR® — REMAX Collective",
+      // it, same reason `images` has to be repeated, see below.
+      siteName: "Barrett Henry, REALTOR®, REMAX Collective",
       locale: "en_US",
       // ─── og:image is REQUIRED here, it is NOT inherited ───────────────────
       // layout.tsx declares a site-wide openGraph.images, but Next.js does not
@@ -165,7 +165,7 @@ export default async function GuidePage({
   // feature-detected against the SAME string that reaches the DOM further down
   // (the dangerouslySetInnerHTML below reuses this const). Guides with no
   // WordPress export fall back to generated placeholder sections, which never
-  // contain a quick-answer block — hence null, which yields just "h1".
+  // contain a quick-answer block, hence null, which yields just "h1".
   const cleanedBody = wpContent ? cleanWpContent(wpContent) : null;
 
   return (
@@ -180,7 +180,7 @@ export default async function GuidePage({
             headline: guide.title,
             description: guide.excerpt,
             datePublished: guide.date,
-            // AUTHOR — built from the shared helper in src/lib/schema.tsx
+            // AUTHOR, built from the shared helper in src/lib/schema.tsx
             // rather than retyped here (fixed 2026-10-17).
             //
             // The hand-written version this replaces had its own `image`, its
@@ -190,7 +190,7 @@ export default async function GuidePage({
             // near-identical Person nodes read as three weaker entities instead
             // of one strong one. barrettAuthorPerson() emits the verified
             // headshot URL, the full sameAs set, and his three real
-            // designations (e-PRO, MRP, SRS — he holds no others).
+            // designations (e-PRO, MRP, SRS, he holds no others).
             //
             // If it breaks, check: src/lib/schema.tsx owns these values now.
             // Fix them there, not here.
@@ -200,7 +200,7 @@ export default async function GuidePage({
               name: "Barrett Henry, REALTOR\u00AE",
               url: "https://nowtb.com",
             },
-            // SPEAKABLE — tells voice search and AI assistants which element
+            // SPEAKABLE, tells voice search and AI assistants which element
             // holds the quotable answer.
             //
             // The old hardcoded list was `[".quick-answer", "article h1",
@@ -208,7 +208,7 @@ export default async function GuidePage({
             //  - this template never renders <QuickAnswer>, so nothing on the
             //    page has class "quick-answer". The migrated WordPress content
             //    uses "bbs-quick-answer" instead, and CSS class selectors match
-            //    whole tokens, not substrings — ".quick-answer" does not match
+            // whole tokens, not substrings, ".quick-answer" does not match
             //    "bbs-quick-answer".
             //  - "article h1" fails because the <h1> is in the hero <section>,
             //    outside <article>.
@@ -320,7 +320,7 @@ export default async function GuidePage({
 
             {/* Main content */}
             <article className="lg:col-span-3 order-1 lg:order-2">
-              {/* Portability calculator — top of homestead guide */}
+              {/* Portability calculator, top of homestead guide */}
               {guide.slug === "florida-homestead-exemption-save-our-homes" && (
                 <PortabilityCalc />
               )}
@@ -409,7 +409,7 @@ export default async function GuidePage({
               </div>
             </aside>
 
-            {/* Main guide content — placeholder sections */}
+            {/* Main guide content, placeholder sections */}
             <article className="lg:col-span-3 order-1 lg:order-2">
               {guide.sections.map((section, index) => (
                 <div key={section.id} id={section.id} className="mb-12">
@@ -477,7 +477,7 @@ export default async function GuidePage({
         </section>
       )}
 
-      {/* === Contact form CTA — placed before related guides and FAQ === */}
+      {/* === Contact form CTA, placed before related guides and FAQ === */}
       <section className="py-16">
         <div className="container-wide max-w-2xl">
           <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2 text-center">

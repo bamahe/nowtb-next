@@ -1,5 +1,5 @@
 // =============================================================================
-// /thank-you — Post-submission confirmation page
+// /thank-you, Post-submission confirmation page
 // 3-step timeline, call-now box, and next-step links so the lead
 // doesn't hit a dead end after submitting a form.
 // =============================================================================
@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
 
-// --- SEO metadata (noindex via robots.ts — this page has no search value) ---
+// --- SEO metadata (noindex via robots.ts, this page has no search value) ---
 export const metadata: Metadata = {
   title: "Thank You | Barrett Henry, REALTOR®",
   description:
@@ -25,7 +25,7 @@ const timelineSteps = [
   {
     step: 1,
     title: "Barrett Reviews Your Request",
-    description: "Your message lands directly in Barrett's inbox — no assistants, no runaround.",
+    description: "Your message lands directly in Barrett's inbox, no assistants, no runaround.",
   },
   {
     step: 2,
@@ -35,7 +35,7 @@ const timelineSteps = [
   {
     step: 3,
     title: "We'll Put Together a Plan",
-    description: "Whether you're buying, selling, or just exploring — Barrett will map out your next steps.",
+    description: "Whether you're buying, selling, or just exploring, Barrett will map out your next steps.",
   },
 ];
 
@@ -52,7 +52,7 @@ const nextStepLinks = [
 export default function ThankYouPage() {
   return (
     <>
-      {/* BreadcrumbList schema — Home > Thank You */}
+      {/* BreadcrumbList schema, Home > Thank You */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -85,7 +85,7 @@ export default function ThankYouPage() {
             <div className="section-divider" />
           </div>
 
-          {/* Timeline — 3 columns on desktop, stacked on mobile */}
+          {/* Timeline, 3 columns on desktop, stacked on mobile */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {timelineSteps.map((item) => (
               <div key={item.step} className="text-center px-4">
@@ -107,7 +107,7 @@ export default function ThankYouPage() {
         </div>
       </section>
 
-      {/* ---- Call Now Box — for urgent requests ---- */}
+      {/* ---- Call Now Box, for urgent requests ---- */}
       <section className="section-dark">
         <div className="container-wide">
           <div className="max-w-xl mx-auto text-center">
@@ -118,7 +118,7 @@ export default function ThankYouPage() {
             <div className="section-divider" />
             <p className="font-body text-white/70 font-light mb-8">
               For urgent questions or time-sensitive situations, skip the inbox and call directly.
-              Barrett picks up — and if he misses you, he&apos;ll call back.
+              Barrett picks up, and if he misses you, he&apos;ll call back.
             </p>
             <a
               href="tel:+18137337907"
@@ -127,13 +127,13 @@ export default function ThankYouPage() {
               Call (813) 733-7907
             </a>
             <p className="font-body text-white/40 text-xs mt-4">
-              Monday – Friday 9 AM – 6 PM &bull; Saturday 10 AM – 4 PM &bull; Sunday by appointment
+              Monday, Friday 9 AM to 6 PM &bull; Saturday 10 AM to 4 PM &bull; Sunday by appointment
             </p>
           </div>
         </div>
       </section>
 
-      {/* ---- Next Steps — 6 recommended links ---- */}
+      {/* ---- Next Steps, 6 recommended links ---- */}
       <section className="section-light">
         <div className="container-wide">
           <div className="text-center mb-12">
@@ -144,7 +144,7 @@ export default function ThankYouPage() {
             <div className="section-divider" />
           </div>
 
-          {/* 6-link grid — 2 cols mobile, 3 cols desktop */}
+          {/* 6-link grid, 2 cols mobile, 3 cols desktop */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
             {nextStepLinks.map((link) => (
               <Link

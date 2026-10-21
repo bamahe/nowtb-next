@@ -165,7 +165,7 @@ export interface Listing {
 
 /**
  * Search/filter parameters for listing queries.
- * All fields are optional — omitted fields are not filtered.
+ * All fields are optional, omitted fields are not filtered.
  * Values are strings because they come from URL search params.
  */
 export interface ListingSearchParams {
@@ -219,7 +219,7 @@ export interface BridgeResponse<T> {
 }
 
 // =============================================================================
-// Form submission types — used by contact/lead-capture forms
+// Form submission types, used by contact/lead-capture forms
 // =============================================================================
 
 /** General contact form (footer, about page, etc.) */

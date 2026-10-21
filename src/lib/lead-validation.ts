@@ -1,5 +1,5 @@
 // =============================================================================
-// Lead Validation — spam scoring for inbound form submissions
+// Lead Validation, spam scoring for inbound form submissions
 //
 // WHY THIS EXISTS:
 // Bots were filling out nowtb.com forms with junk like:
@@ -7,8 +7,8 @@
 // Those fake emails bounce, which wrecks our sending reputation.
 //
 // TWO LEVELS OF DEFENSE (this is the important idea):
-//   1. REJECT  — definitely a bot. Throw the submission away entirely.
-//   2. SUSPECT — probably junk, but we're not sure. Save the lead to Follow Up
+// 1. REJECT, definitely a bot. Throw the submission away entirely.
+// 2. SUSPECT, probably junk, but we're not sure. Save the lead to Follow Up
 //                Boss so Barrett can judge it, but DON'T send the auto-responder
 //                email. That protects our email reputation without losing a
 //                real lead to an over-eager filter.
@@ -27,7 +27,7 @@ export interface LeadVerdict {
   reasons: string[];
 }
 
-/** Throwaway/disposable email domains — nobody buying a house uses these. */
+/** Throwaway/disposable email domains, nobody buying a house uses these. */
 const DISPOSABLE_DOMAINS = new Set([
   "mailinator.com", "guerrillamail.com", "10minutemail.com", "tempmail.com",
   "temp-mail.org", "throwawaymail.com", "yopmail.com", "trashmail.com",
@@ -62,13 +62,13 @@ function checkEmail(email: string): { reject?: string; suspect?: string } {
   //   1. It rejects real people. "barrett.a.b.henry@gmail.com" is a perfectly
   //      normal address, and so is any first.middle.last.suffix pattern.
   //   2. The thing this whole file exists to prevent is BOUNCES wrecking our
-  //      sending reputation. A dotted gmail address does not bounce — Gmail
+  // sending reputation. A dotted gmail address does not bounce, Gmail
   //      ignores dots, so it delivers to the same real inbox either way. So
   //      the rule was blocking leads without protecting anything.
   //
   // The honeypot, the rate limit, and the signals below still catch the bots.
   // If dot-spam ever becomes a real problem again, flag it as `suspect` (lead
-  // reaches Follow Up Boss, no auto-responder sent) — never `reject`.
+  // reaches Follow Up Boss, no auto-responder sent), never `reject`.
 
   // --- Random-string local part ---
   // Flag (don't reject) local parts with a long run of consonants, which is
@@ -116,7 +116,7 @@ function checkPhone(phone: string): string | null {
 
 /**
  * Checks a name for machine-generated gibberish.
- * Only ever flags (never rejects) — real names are wildly diverse and
+ * Only ever flags (never rejects), real names are wildly diverse and
  * rejecting on a name would eventually cost us a genuine client.
  */
 function checkName(name: string): string | null {
@@ -134,10 +134,10 @@ function checkName(name: string): string | null {
 }
 
 /**
- * Main entry point — scores one form submission.
+ * Main entry point, scores one form submission.
  *
  * @param data.name    submitted name (optional)
- * @param data.email   submitted email (optional — open-house walk-ins may omit)
+ * @param data.email submitted email (optional, open-house walk-ins may omit)
  * @param data.phone   submitted phone (optional)
  * @param data.honeypot  hidden field value; ANY content means a bot filled it
  * @param data.allowNoContact  skip the "must have email or phone" rejection.
@@ -204,17 +204,17 @@ export function validateLead(data: {
   //
   // This used to hard-reject at TWO soft flags. Two weak signals is not proof:
   // a seller who mistypes their phone number AND has an unusual short name
-  // (think "Ngoc Tran" — the no-vowel word check flags words like that) hit the
+  // (think "Ngoc Tran", the no-vowel word check flags words like that) hit the
   // limit and had their lead thrown away while the website told them "Message
   // Sent!". That is the worst possible outcome on the site.
   //
-  // Now it takes THREE independent flags — which means a bad phone AND a
+  // Now it takes THREE independent flags, which means a bad phone AND a
   // gibberish name AND a machine-looking email address, all at once, in one
   // submission. That is a bot, not a person having a bad typing day.
   //
   // What happens at one or two flags instead: `suspect` stays true (any single
   // flag sets it). The lead still lands in Follow Up Boss so Barrett can call
-  // it, but we do NOT send the auto-responder email — which is the actual
+  // it, but we do NOT send the auto-responder email, which is the actual
   // protection we needed, since bounces are what damage our sending
   // reputation. We keep the lead and skip the risky email.
   //

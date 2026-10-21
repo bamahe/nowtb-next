@@ -1,5 +1,5 @@
 // =============================================================================
-// MiscCatchAllPage — Generic page for miscellaneous/uncategorized pages
+// MiscCatchAllPage, Generic page for miscellaneous/uncategorized pages
 // Rendered inside [citySlug] route for slugs that match misc-pages.ts
 // These are placeholder pages that will be replaced with WP content exports.
 // =============================================================================
@@ -34,7 +34,7 @@ export default async function MiscCatchAllPage({ page }: MiscCatchAllPageProps) 
   // ---------------------------------------------------------------------------
   // STRUCTURED DATA
   // Before October 2026 this template emitted NO schema at all, which meant 32
-  // live pages were invisible to the AI answer engines — they had no breadcrumb
+  // live pages were invisible to the AI answer engines, they had no breadcrumb
   // trail, no page entity, and no FAQ markup even though 17 of them display a
   // full FAQ section. Everything below is derived from real page data.
   // ---------------------------------------------------------------------------
@@ -43,7 +43,7 @@ export default async function MiscCatchAllPage({ page }: MiscCatchAllPageProps) 
   // FAQs are pulled out of the SAME cleaned HTML string we render below, so the
   // FAQPage markup can only ever describe questions the visitor can see. Pages
   // with no content (10 of the 32 fall back to the placeholder copy) and pages
-  // with fewer than 3 questions correctly get no FAQPage node — we do not invent
+  // with fewer than 3 questions correctly get no FAQPage node, we do not invent
   // questions to fill the schema.
   const faqs = extractFaqsFromHtml(pageContent);
 
@@ -63,7 +63,7 @@ export default async function MiscCatchAllPage({ page }: MiscCatchAllPageProps) 
       />
 
       {/* === JSON-LD: WebPage ===
-           `about` is passed explicitly — webPageSchema() defaults to a condo
+           `about` is passed explicitly, webPageSchema() defaults to a condo
            topic that would be wrong for these pages. */}
       <JsonLd
         data={webPageSchema({
@@ -75,7 +75,7 @@ export default async function MiscCatchAllPage({ page }: MiscCatchAllPageProps) 
         })}
       />
 
-      {/* === JSON-LD: FAQPage — only when 3+ questions are actually visible === */}
+      {/* === JSON-LD: FAQPage, only when 3+ questions are actually visible === */}
       {faqs.length > 0 && <JsonLd data={faqSchema(faqs)} />}
 
       {/* === Hero === */}
@@ -86,13 +86,13 @@ export default async function MiscCatchAllPage({ page }: MiscCatchAllPageProps) 
       {/* === Content === */}
       <section className="container-wide py-12">
         {pageContent ? (
-          // Real WordPress content found — render it with blog styling
+          // Real WordPress content found, render it with blog styling
           <div
             className="blog-content prose prose-lg max-w-none font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-link"
             dangerouslySetInnerHTML={{ __html: pageContent }}
           />
         ) : (
-          // No WP content yet — show a minimal fallback with contact info
+          // No WP content yet, show a minimal fallback with contact info
           <div className="prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-link">
             <p>
               {page.excerpt} Barrett Henry, Broker Associate at REMAX Collective,

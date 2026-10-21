@@ -1,5 +1,5 @@
 // =============================================================================
-// /investing — Investment property landing page
+// /investing, Investment property landing page
 // =============================================================================
 
 import type { Metadata } from "next";
@@ -12,14 +12,14 @@ import { cities } from "@/data/cities";
 export const metadata: Metadata = {
   title: "Investment Properties Tampa Bay | Real Estate Investing",
   description:
-    "Tampa Bay investment property opportunities — rental analysis, ROI projections, and expert investor guidance from Barrett Henry, REMAX Collective. Call (813) 733-7907.",
+    "Tampa Bay investment property opportunities, rental analysis, ROI projections, and expert investor guidance from Barrett Henry, REMAX Collective. Call (813) 733-7907.",
   alternates: {
     canonical: "/investing/",
   },
   openGraph: {
     title: "Investment Properties Tampa Bay | Real Estate Investing",
     description:
-      "Tampa Bay investment property opportunities — rental analysis, ROI projections, and expert investor guidance from Barrett Henry, REMAX Collective.",
+      "Tampa Bay investment property opportunities, rental analysis, ROI projections, and expert investor guidance from Barrett Henry, REMAX Collective.",
     url: "/investing/",
     type: "website",
   },
@@ -116,7 +116,7 @@ export default function InvestingPage() {
             Full-Service Investor Support
           </h2>
           <p className="font-body text-muted mb-8">
-            Barrett doesn&apos;t just help you buy investment properties &mdash; he provides
+            Barrett doesn&apos;t just help you buy investment properties, he provides
             the full ecosystem. Need professional property management?{" "}
             <a href="https://vivipm.com" target="_blank" rel="noopener noreferrer" className="text-link underline hover:text-primary">
               ViVi PM

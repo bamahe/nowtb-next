@@ -1,7 +1,7 @@
 // =============================================================================
-// MiniCalc — Inline mortgage calculator for listing detail pages
+// MiniCalc, Inline mortgage calculator for listing detail pages
 // Shows estimated monthly payment based on the listing price.
-// Renders inline (not floating) — placed below TourScheduler in the sidebar.
+// Renders inline (not floating), placed below TourScheduler in the sidebar.
 // =============================================================================
 
 "use client";
@@ -46,7 +46,7 @@ export default function MiniCalc({ listingPrice }: MiniCalcProps) {
 
   return (
     <div className="bg-white border border-border shadow-sm mt-6">
-      {/* Header — always visible, toggles detail view */}
+      {/* Header, always visible, toggles detail view */}
       <button
         onClick={() => setExpanded(!expanded)}
         className="w-full bg-primary px-5 py-3 flex items-center justify-between"
@@ -69,7 +69,7 @@ export default function MiniCalc({ listingPrice }: MiniCalcProps) {
         </div>
       </button>
 
-      {/* Expandable body — sliders + breakdown */}
+      {/* Expandable body, sliders + breakdown */}
       {expanded && (
         <div className="p-5 space-y-4">
           {/* Price display */}

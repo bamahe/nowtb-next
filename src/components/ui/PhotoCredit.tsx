@@ -1,4 +1,4 @@
-// Small photo credit line — shows attribution for Wikimedia Commons and other credited images
+// Small photo credit line, shows attribution for Wikimedia Commons and other credited images
 import fs from "fs";
 import path from "path";
 
@@ -10,7 +10,7 @@ try {
     creditsMap = JSON.parse(fs.readFileSync(creditsPath, "utf-8"));
   }
 } catch {
-  // No credits file — that's fine
+  // No credits file, that's fine
 }
 
 interface PhotoCreditProps {

@@ -1,5 +1,5 @@
 // src/components/search/ListingCard.tsx
-// Large listing card for Gallery view — photo, price overlay, beds/baths/sqft/acres/year,
+// Large listing card for Gallery view, photo, price overlay, beds/baths/sqft/acres/year,
 // full address, subdivision, MLS #, and listing office.
 // Includes open house date/time badge when listing has upcoming open house data.
 "use client";
@@ -66,7 +66,7 @@ export default function SearchListingCard({ listing }: { listing: Listing }) {
   // Fall back to gray badge if status isn't in our map
   const badgeClass = statusColors[listing.StandardStatus] ?? "bg-gray-600 text-white";
 
-  // Build open house badge text(s) — show ALL upcoming open houses
+  // Build open house badge text(s), show ALL upcoming open houses
   const openHouseLines: string[] = listing.OpenHouses?.length
     ? listing.OpenHouses.map(oh => formatOpenHouseBadge(oh.start, oh.end)).filter(Boolean)
     : [formatOpenHouseBadge(listing.OpenHouseStartTime, listing.OpenHouseEndTime)].filter(Boolean);
@@ -89,7 +89,7 @@ export default function SearchListingCard({ listing }: { listing: Listing }) {
           className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
 
-        {/* Open house banner — full width across the top of the photo */}
+        {/* Open house banner, full width across the top of the photo */}
         {hasOpenHouse && (
           <div className="absolute top-0 left-0 right-0 bg-blue-600 text-white px-3 py-1.5 text-center z-10">
             <p className="text-[10px] font-bold uppercase tracking-wider">
@@ -103,7 +103,7 @@ export default function SearchListingCard({ listing }: { listing: Listing }) {
           </div>
         )}
 
-        {/* Status badge — pushed down if open house banner is visible */}
+        {/* Status badge, pushed down if open house banner is visible */}
         <span
           className={`absolute left-2 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded ${badgeClass} ${
             hasOpenHouse ? (openHouseLines.length > 1 ? "top-16" : "top-12") : "top-2"
@@ -112,7 +112,7 @@ export default function SearchListingCard({ listing }: { listing: Listing }) {
           {listing.StandardStatus === "Active" ? "New" : listing.StandardStatus}
         </span>
 
-        {/* Price overlay — bottom gradient */}
+        {/* Price overlay, bottom gradient */}
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent pt-8 pb-3 px-3">
           <p className="font-heading font-bold text-white text-xl">
             {formatPrice(listing.ListPrice)}
@@ -171,7 +171,7 @@ export default function SearchListingCard({ listing }: { listing: Listing }) {
         <div className="flex items-center gap-2 mt-2 text-[10px] text-muted/60 font-body">
           {listing.ListingId && <span>MLS # {listing.ListingId}</span>}
         </div>
-        {/* Listing office — shown at smallest size to match MLS compliance */}
+        {/* Listing office, shown at smallest size to match MLS compliance */}
         {listing.ListOfficeName && (
           <p className="text-[10px] text-muted/50 font-body mt-0.5 truncate">
             Listed by {listing.ListOfficeName}

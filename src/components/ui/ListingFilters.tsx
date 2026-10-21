@@ -1,5 +1,5 @@
 // =============================================================================
-// ListingFilters — Filter bar for ClientListings on hub/spoke/neighborhood pages
+// ListingFilters, Filter bar for ClientListings on hub/spoke/neighborhood pages
 // Min Price, Max Price, Beds, Baths, Sort, Pool, Waterfront checkboxes
 // =============================================================================
 

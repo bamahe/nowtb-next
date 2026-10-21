@@ -1,5 +1,5 @@
 // =============================================================================
-// RecentlyViewedTracker — Invisible client component
+// RecentlyViewedTracker, Invisible client component
 // Saves the current listing to localStorage "nowtb_recently_viewed" array
 // Max 20 items, newest first, deduped by listing_key
 // Drop this on the listing detail page to auto-track views
@@ -74,10 +74,10 @@ export default function RecentlyViewedTracker({
 
       localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
     } catch {
-      // localStorage unavailable or full — silently ignore
+      // localStorage unavailable or full, silently ignore
     }
   }, [listingKey, address, city, price, beds, baths, sqft, photo]);
 
-  // Renders nothing — purely a side-effect component
+  // Renders nothing, purely a side-effect component
   return null;
 }

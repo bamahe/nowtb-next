@@ -15,21 +15,21 @@
 // thin pages.
 //
 // -----------------------------------------------------------------------------
-// ADDING AN ENTRY — read this first, it has broken the live site before
+// ADDING AN ENTRY, read this first, it has broken the live site before
 // -----------------------------------------------------------------------------
 // The CANONICAL URL for a community is the NESTED one in `href`
 // (/auburndale/gapway-lakes-estates/). Four places have to agree on that, and
 // they already do automatically EXCEPT the first one:
 //
-//   1. next.config.mjs — the ":city flatten" redirect turns /{city}/{anything}
+// 1. next.config.mjs, the ":city flatten" redirect turns /{city}/{anything}
 //      into /{anything}/. Any slug in this file must be excluded from it, or the
 //      flatten and the redirect in step 2 bounce off each other forever (308 ->
 //      308 -> 308...). As of 2026-10-17 that exclusion list is GENERATED from
 //      this file by getCommunityFlattenExclusions(), so a new entry excludes
 //      itself. Do not hardcode slugs back into that regex.
-//   2. src/app/[citySlug]/page.tsx — sends the bare /{slug}/ to `href` with one
+// 2. src/app/[citySlug]/page.tsx, sends the bare /{slug}/ to `href` with one
 //      308. Driven by getCommunityPageBySlug() below, so it needs no edit.
-//   3. src/app/sitemap.ts — emits `${siteUrl}${c.href}`, so it needs no edit.
+// 3. src/app/sitemap.ts, emits `${siteUrl}${c.href}`, so it needs no edit.
 //   4. The actual page file must exist at src/app/{citySlug}/{slug}/page.tsx.
 //      Nothing here creates the route; this file only registers and links it.
 //

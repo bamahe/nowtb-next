@@ -1,10 +1,10 @@
 // =============================================================================
-// /30935-whitlock-dr — Single-property landing page for the QR code / sign
+// /30935-whitlock-dr, Single-property landing page for the QR code / sign
 // rider. Data pulled from Stellar MLS TB8556541. Photos pulled from the listing
 // feed and stored locally in /public/images/listings/30935-whitlock-dr/ so the
 // page keeps working if the feed URL ever rotates.
 //
-// This is the destination the permanent printed QR codes currently point at —
+// This is the destination the permanent printed QR codes currently point at 
 // see the CURRENT OPEN HOUSE block at the top of next.config.mjs.
 // =============================================================================
 
@@ -42,7 +42,7 @@ const L = {
   subdivision: "Meadow Pointe III",
 };
 
-// Barrett's phone — defined once so it can never drift out of sync
+// Barrett's phone, defined once so it can never drift out of sync
 const PHONE = "(813) 733-7907";
 const PHONE_TEL = "8137337907";
 const EMAIL = "barrett@nowtb.com";
@@ -51,14 +51,14 @@ const PRICE_FMT = `$${L.price.toLocaleString()}`;
 const FULL_ADDRESS = `${L.address}, ${L.city}, ${L.state} ${L.zip}`;
 
 // Open house details, straight off the two Stellar open house records
-// (Oct 10 and Oct 11, 18:00–20:00 UTC = 2:00–4:00 PM Eastern). Update this one
-// string when the next weekend is scheduled — the printed QR never changes.
-const OPEN_HOUSE = "Saturday, October 10 & Sunday, October 11 · 2:00 – 4:00 PM";
+// (Oct 10 and Oct 11, 18:00 to 20:00 UTC = 2:00 to 4:00 PM Eastern). Update this one
+// string when the next weekend is scheduled, the printed QR never changes.
+const OPEN_HOUSE = "Saturday, October 10 & Sunday, October 11 · 2:00 to 4:00 PM";
 
-// Unbranded Stellar virtual tour — fine to link publicly under IDX rules
+// Unbranded Stellar virtual tour, fine to link publicly under IDX rules
 const TOUR_URL = "https://www.propertypanorama.com/instaview/stellar/TB8556541";
 
-// Lender joining the open house. Set to null when nobody is confirmed — every
+// Lender joining the open house. Set to null when nobody is confirmed, every
 // lender block on the page is wrapped in a check, so leaving it null simply
 // removes the sidebar card and the kiosk's "want an intro?" question.
 //
@@ -81,7 +81,7 @@ const DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${L.l
 const PHOTO_COUNT = 35;
 const photos = Array.from({ length: PHOTO_COUNT }, (_, i) => ({
   MediaURL: `/images/listings/30935-whitlock-dr/photo-${String(i + 1).padStart(3, "0")}.jpg`,
-  ShortDescription: `${FULL_ADDRESS} — photo ${i + 1} of ${PHOTO_COUNT}`,
+  ShortDescription: `${FULL_ADDRESS}, photo ${i + 1} of ${PHOTO_COUNT}`,
   Order: i,
 }));
 
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
     `Gated 3 bed, 2 bath, 2 car garage villa backing to conservation in Meadow Pointe III. 1,626 sqft, single story, new AC 2025, HOA covers roof and lawn. MLS ${L.mls}. Call Barrett Henry at ${PHONE}.`,
   alternates: { canonical: "/30935-whitlock-dr/" },
   openGraph: {
-    title: "Open House Sat & Sun 2p–4p — 30935 Whitlock Dr, Wesley Chapel FL",
+    title: "Open House Sat & Sun 2p, 4p, 30935 Whitlock Dr, Wesley Chapel FL",
     description:
       "Lock-and-leave 3 bed, 2 bath, 2 car garage villa in gated Meadow Pointe III, backing to conservation. New AC 2025, no carpet, screened lanai. Open house Saturday and Sunday, 2:00 to 4:00.",
     url: "/30935-whitlock-dr/",
@@ -101,13 +101,13 @@ export const metadata: Metadata = {
         url: "/images/listings/30935-whitlock-dr/og-open-house.jpg",
         width: 1200,
         height: 630,
-        alt: "Open House Saturday and Sunday 2p to 4p — 30935 Whitlock Dr, Wesley Chapel FL, $274,900",
+        alt: "Open House Saturday and Sunday 2p to 4p, 30935 Whitlock Dr, Wesley Chapel FL, $274,900",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Open House Sat & Sun 2p–4p — 30935 Whitlock Dr, Wesley Chapel FL",
+    title: "Open House Sat & Sun 2p, 4p, 30935 Whitlock Dr, Wesley Chapel FL",
     description: "Gated 3 bed, 2 bath, 2 car garage villa backing to conservation in Meadow Pointe III. $274,900.",
     images: ["/images/listings/30935-whitlock-dr/og-open-house.jpg"],
   },
@@ -126,7 +126,7 @@ const FACTS = [
 const INTERIOR = [
   "Ceiling Fan(s)", "Owners Suite Main Floor", "Eating Space in Kitchen",
   "Breakfast Bar", "Solar Tube / Skylight", "Window Treatments & Blinds",
-  "Ceramic Tile Throughout — No Carpet", "Fresh Neutral Paint",
+  "Ceramic Tile Throughout, No Carpet", "Fresh Neutral Paint",
   "Wood Cabinetry", "Gas Range", "Inside Laundry Closet",
 ];
 
@@ -140,15 +140,15 @@ const APPLIANCES = [
   "Dryer", "Microwave", "Range (Gas)", "Refrigerator", "Washer",
 ];
 
-// Recent big-ticket updates — the questions every buyer asks first
+// Recent big-ticket updates, the questions every buyer asks first
 const UPDATES = [
-  { item: "AC & gas furnace", year: "2025 — American Standard, 10 yr warranty" },
+  { item: "AC & gas furnace", year: "2025, American Standard, 10 yr warranty" },
   { item: "Owners suite windows", year: "2025" },
   { item: "Interior paint", year: "Fresh neutral" },
   { item: "Roof & exterior paint", year: "Maintained by the HOA" },
 ];
 
-// What the HOA actually covers — the whole argument for a villa at this price
+// What the HOA actually covers, the whole argument for a villa at this price
 const HOA_COVERS = [
   "Roof", "Exterior paint", "Lawn & grounds care", "Pest control",
   "Private road", "Gated entry", "Escrow reserves", "Management",
@@ -178,14 +178,14 @@ const DETAILS = [
   { label: "Construction", value: "Block & Stucco" },
   { label: "Roof", value: "Shingle (maintained by HOA)" },
   { label: "Cooling / Heating", value: "Central Air (new 2025) / Central Natural Gas (new 2025)" },
-  { label: "Flooring", value: "Ceramic Tile — no carpet" },
+  { label: "Flooring", value: "Ceramic Tile, no carpet" },
   { label: "Foundation", value: "Slab" },
   { label: "HOA", value: `$${L.hoaMonthly}/mo villa HOA + $${L.hoaAnnual2}/yr Meadow Pointe III ($${L.totalAnnualFees.toLocaleString()}/yr total)` },
   { label: "CDD Assessment", value: `$${L.cdd.toLocaleString()} per year (billed on the annual tax bill)` },
   { label: "Annual Taxes", value: `$${L.taxes.toLocaleString()} (2025, includes CDD)` },
   { label: "Flood Zone", value: "X" },
   { label: "Financing", value: "Cash, Conventional, FHA, VA" },
-  { label: "Minimum Lease", value: "1–2 years · pets allowed" },
+  { label: "Minimum Lease", value: "1 to 2 years · pets allowed" },
   { label: "Subdivision", value: "Meadow Pointe III, Phase 1 Unit 1C-2" },
   { label: "County", value: "Pasco" },
 ];
@@ -234,7 +234,7 @@ export default function WhitlockListingPage() {
         ])}
       />
 
-      {/* ---------- Open house banner — first thing a QR scanner sees ----------
+      {/* ---------- Open house banner, first thing a QR scanner sees ----------
            pt-24 clears the fixed 80px site header, which otherwise sits on top
            of this band and hides the directions button. */}
       <section className="bg-accent text-primary pt-24">
@@ -341,15 +341,15 @@ export default function WhitlockListingPage() {
             <div className="space-y-4 font-body text-base leading-relaxed text-body">
               <p>
                 This one is behind the gate in the Whitlock villa enclave, tucked against protected
-                conservation land and ringed by ponds — so the view out back is trees, not a
+                conservation land and ringed by ponds, so the view out back is trees, not a
                 neighbor&rsquo;s window. That is the part you feel first. The second is the fee
                 structure: the HOA handles the roof, the exterior paint, the lawn and grounds, and
                 pest control, which means your weekends belong to you and the two biggest surprise
                 expenses in Florida homeownership are not yours to carry.
               </p>
               <p>
-                Inside, {L.sqft.toLocaleString()} square feet runs on ceramic tile end to end — no
-                carpet anywhere — under fresh neutral paint, ceiling fans, and a solar tube that drops
+                Inside, {L.sqft.toLocaleString()} square feet runs on ceramic tile end to end, no
+                carpet anywhere, under fresh neutral paint, ceiling fans, and a solar tube that drops
                 daylight into the middle of the floorplan. The kitchen keeps rich wood cabinetry with
                 a gas range, a breakfast bar, and a real eat-in space, so it works for a weeknight
                 dinner and for everyone standing around it on a holiday. The owners suite sits on the
@@ -365,14 +365,14 @@ export default function WhitlockListingPage() {
               </p>
             </div>
 
-            {/* HOA coverage — the single biggest selling point, called out */}
+            {/* HOA coverage, the single biggest selling point, called out */}
             <h2 className="font-heading text-2xl font-light uppercase tracking-wide text-primary mt-10 mb-5">
               What Does the HOA Actually Cover?
             </h2>
             <div className="bg-surface border border-border rounded p-6">
               <p className="font-body text-base text-body leading-relaxed mb-4">
                 The villa HOA runs ${L.hoaMonthly} a month, plus a ${L.hoaAnnual2} annual Meadow
-                Pointe III master association fee — ${L.totalAnnualFees.toLocaleString()} a year all
+                Pointe III master association fee, ${L.totalAnnualFees.toLocaleString()} a year all
                 in. For that, these items stop being your problem:
               </p>
               <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2">
@@ -412,7 +412,7 @@ export default function WhitlockListingPage() {
                 Meadow Pointe III is one of the established master-planned communities that made
                 Wesley Chapel what it is, and the CDD amenity center is about three minutes from this
                 front door. That gets you a resort-style pool, a splash pad, a fitness center, tennis
-                courts, sand volleyball, a playground, and the clubhouse — the kind of amenity package
+                courts, sand volleyball, a playground, and the clubhouse, the kind of amenity package
                 that is normally priced into a much higher monthly fee somewhere else.
               </p>
               <p>
@@ -535,14 +535,14 @@ export default function WhitlockListingPage() {
                   {PHONE}
                 </a>
                 <a
-                  href={`mailto:${EMAIL}?subject=${encodeURIComponent(`Showing request — ${FULL_ADDRESS}`)}`}
+                  href={`mailto:${EMAIL}?subject=${encodeURIComponent(`Showing request, ${FULL_ADDRESS}`)}`}
                   className="flex items-center justify-center gap-2 border border-white/40 px-4 py-3 rounded hover:bg-white/10 transition"
                 >
                   <Mail className="h-4 w-4" />
                   Email Barrett
                 </a>
 
-                {/* Save-my-contact QR. Encodes a vCard, not a URL — scanning it
+                {/* Save-my-contact QR. Encodes a vCard, not a URL, scanning it
                     opens the phone's "Add Contact" card directly, so a buyer
                     walking the open house leaves with Barrett already in their
                     phone instead of a business card in a pocket. */}
@@ -564,11 +564,11 @@ export default function WhitlockListingPage() {
                 </div>
 
                 <p className="font-body text-xs text-white/60 mt-4 leading-relaxed">
-                  23+ years of real estate experience. Text or call anytime — I answer my own phone.
+                  23+ years of real estate experience. Text or call anytime, I answer my own phone.
                 </p>
               </div>
 
-              {/* Lender on site — only renders when one is confirmed */}
+              {/* Lender on site, only renders when one is confirmed */}
               {LENDER && (
                 <div className="bg-surface border border-border rounded p-6">
                   <p className="font-body text-xs uppercase tracking-wide text-muted mb-2">
@@ -594,7 +594,7 @@ export default function WhitlockListingPage() {
                     </div>
                   </div>
 
-                  {/* Apply QR — a buyer can start the application from the
+                  {/* Apply QR, a buyer can start the application from the
                       living room without typing a URL off a business card. */}
                   <a
                     href={LENDER.applyUrl}
@@ -623,7 +623,7 @@ export default function WhitlockListingPage() {
                     {LENDER.phone}
                   </a>
                   <a
-                    href={`mailto:${LENDER.email}?subject=${encodeURIComponent(`Pre-approval question — ${FULL_ADDRESS}`)}`}
+                    href={`mailto:${LENDER.email}?subject=${encodeURIComponent(`Pre-approval question, ${FULL_ADDRESS}`)}`}
                     className="flex items-center justify-center gap-2 border border-border px-4 py-2.5 rounded text-primary hover:bg-white transition"
                   >
                     <Mail className="h-4 w-4" />
@@ -690,7 +690,7 @@ export default function WhitlockListingPage() {
         <div className="max-w-6xl mx-auto px-4">
           <p className="font-body text-xs text-muted leading-relaxed">
             Listing courtesy of REMAX Collective. MLS {L.mls}. Open house hosted by Barrett Henry,
-            Broker Associate, REMAX Collective. Information deemed reliable but not guaranteed —
+            Broker Associate, REMAX Collective. Information deemed reliable but not guaranteed 
             buyer and buyer&rsquo;s agent should independently verify all measurements, lot
             dimensions, flood zone, HOA and CDD fees, taxes, lease restrictions, and school
             assignments. Equal Housing Opportunity.

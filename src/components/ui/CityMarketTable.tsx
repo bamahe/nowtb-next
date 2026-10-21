@@ -1,10 +1,10 @@
 // =============================================================================
-// CityMarketTable — verified closed-sale breakdown by property type
+// CityMarketTable, verified closed-sale breakdown by property type
 //
 // WHY THIS EXISTS:
 // The city hub already renders a stat bar, but it only surfaces 4 numbers
 // (total sales, median house, house DOM, and ONE of median condo/townhome).
-// `city-market-stats.ts` actually holds up to 13 verified figures per city —
+// `city-market-stats.ts` actually holds up to 13 verified figures per city 
 // sales count, median price and median days-on-market for single-family,
 // condo AND townhome, plus the all-types median. The rest were sitting in the
 // data file unrendered.
@@ -22,7 +22,7 @@
 //
 // If it breaks, check: getCityMarketStats returns undefined for cities with no
 // reliable data (Ridge Manor, Ozona, anything under 20 sales). The caller must
-// handle undefined — this component never renders a placeholder or a guess.
+// handle undefined, this component never renders a placeholder or a guess.
 // =============================================================================
 
 import {
@@ -60,7 +60,7 @@ export default function CityMarketTable({ stats, cityName }: CityMarketTableProp
     { label: "Condo", sales: stats.condoSales, median: stats.condoMedian, dom: stats.condoDom },
   ].filter((r) => r.sales > 0);
 
-  // Nothing worth showing — caller should not have rendered us, but guard anyway.
+  // Nothing worth showing, caller should not have rendered us, but guard anyway.
   if (rows.length === 0) return null;
 
   // Share of market, computed off the same total the MLS gave us so the
@@ -100,7 +100,7 @@ export default function CityMarketTable({ stats, cityName }: CityMarketTableProp
         <div className="overflow-x-auto">
           <table className="w-full font-body text-sm min-w-[560px]">
             <caption className="sr-only">
-              {cityName}, Florida closed home sales by property type — median price and
+              {cityName}, Florida closed home sales by property type, median price and
               median days on market
             </caption>
             <thead>
@@ -136,7 +136,7 @@ export default function CityMarketTable({ stats, cityName }: CityMarketTableProp
                     <td className="py-3 px-4 text-right text-dark">
                       {share(r.sales) < 1 ? "<1%" : `${share(r.sales)}%`}
                     </td>
-                    {/* Below MIN_SAMPLE a median is noise — suppress rather than mislead */}
+                    {/* Below MIN_SAMPLE a median is noise, suppress rather than mislead */}
                     <td className="py-3 px-4 text-right text-dark">
                       {reliable && r.median !== null ? formatPrice(r.median) : (
                         <span className="text-muted">Too few sales</span>
@@ -144,7 +144,7 @@ export default function CityMarketTable({ stats, cityName }: CityMarketTableProp
                     </td>
                     <td className="py-3 pl-4 text-right text-dark">
                       {reliable && r.dom !== null ? r.dom : (
-                        <span className="text-muted">&mdash;</span>
+                        <span className="text-muted"></span>
                       )}
                     </td>
                   </tr>
@@ -160,24 +160,24 @@ export default function CityMarketTable({ stats, cityName }: CityMarketTableProp
                 </td>
                 <td className="py-3 px-4 text-right font-bold text-primary">100%</td>
                 <td className="py-3 px-4 text-right font-bold text-primary">
-                  {stats.allMedian !== null ? formatPrice(stats.allMedian) : <span className="text-muted">&mdash;</span>}
+                  {stats.allMedian !== null ? formatPrice(stats.allMedian) : <span className="text-muted"></span>}
                 </td>
                 <td className="py-3 pl-4 text-right font-bold text-primary">
-                  {stats.allDom !== null ? stats.allDom : <span className="text-muted">&mdash;</span>}
+                  {stats.allDom !== null ? stats.allDom : <span className="text-muted"></span>}
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        {/* Provenance — a number without a source is not a fact */}
+        {/* Provenance, a number without a source is not a fact */}
         <p className="font-body text-xs text-muted mt-4 max-w-3xl">
           Source: {statsSourceNote(stats, cityName)}
           {anySuppressed && (
             <>
               {" "}
               Property types with fewer than {MIN_SAMPLE} closed sales show the sale count
-              only — a median built on a handful of sales is not meaningful.
+              only, a median built on a handful of sales is not meaningful.
             </>
           )}
         </p>

@@ -1,5 +1,5 @@
 // =============================================================================
-// /the-now-team — The NOW Team at REMAX Collective
+// /the-now-team, The NOW Team at REMAX Collective
 // Barrett Henry's real estate team since 2015. Full content page with hero,
 // philosophy, services, coverage, credentials, differentiators, and FAQ.
 // =============================================================================
@@ -171,8 +171,8 @@ export default function TheNowTeamPage() {
           <div className="font-body text-muted font-light space-y-6 text-base md:text-lg leading-relaxed">
             <p>
               The NOW Team is Barrett Henry&apos;s real estate team at REMAX
-              Collective, formed in 2015. Led by Barrett — a licensed Broker
-              Associate with 23+ years of real estate experience — the team
+              Collective, formed in 2015. Led by Barrett, a licensed Broker
+              Associate with 23+ years of real estate experience, the team
               serves buyers, sellers, and investors across 8 counties in the
               Tampa Bay region.
             </p>
@@ -192,7 +192,7 @@ export default function TheNowTeamPage() {
         </div>
       </section>
 
-      {/* ---- Team Philosophy — dark navy section ---- */}
+      {/* ---- Team Philosophy, dark navy section ---- */}
       <section className="section-dark">
         <div className="container-wide max-w-3xl mx-auto text-center">
           <p className="heading-label text-white/50 mb-6">Our Approach</p>
@@ -204,7 +204,7 @@ export default function TheNowTeamPage() {
             <p>
               The NOW Team runs on four principles: honesty, data, speed, and
               results. Every recommendation we make is backed by current market
-              data — not guesswork, not wishful thinking, and not what you want
+              data, not guesswork, not wishful thinking, and not what you want
               to hear. We tell you the truth, even when it is uncomfortable,
               because that is what gets you the best outcome.
             </p>
@@ -216,7 +216,7 @@ export default function TheNowTeamPage() {
             </p>
             <p>
               Client-first is not a slogan here. It is the business model.
-              Barrett&apos;s repeat and referral rate speaks for itself — when
+              Barrett&apos;s repeat and referral rate speaks for itself, when
               your agent actually delivers, you come back.
             </p>
           </div>
@@ -299,7 +299,7 @@ export default function TheNowTeamPage() {
         </div>
       </section>
 
-      {/* ---- Barrett's Credentials — dark section ---- */}
+      {/* ---- Barrett's Credentials, dark section ---- */}
       <section className="section-dark">
         <div className="container-wide max-w-3xl mx-auto text-center">
           <p className="heading-label text-white/50 mb-6">Team Lead</p>
@@ -364,7 +364,7 @@ export default function TheNowTeamPage() {
           </div>
           <div className="font-body text-muted font-light space-y-6 text-base md:text-lg leading-relaxed">
             <p>
-              Most real estate teams are built around volume — sign as many
+              Most real estate teams are built around volume, sign as many
               clients as possible, hand them off to the newest agent, and hope
               for the best. The NOW Team is the opposite. Barrett personally
               handles every transaction because his name and reputation are on
@@ -380,7 +380,7 @@ export default function TheNowTeamPage() {
             <p>
               Barrett&apos;s approach is data-driven and transparent. He shows
               you the comparable sales, explains the market conditions, and
-              gives you a realistic game plan — not inflated promises designed
+              gives you a realistic game plan, not inflated promises designed
               to win your listing. That honesty is why clients come back and
               refer their friends, family, and coworkers.
             </p>
@@ -404,7 +404,7 @@ export default function TheNowTeamPage() {
         </div>
       </section>
 
-      {/* ---- Beyond Buying & Selling — cross-site links ---- */}
+      {/* ---- Beyond Buying & Selling, cross-site links ---- */}
       <section className="section-white">
         <div className="container-wide max-w-3xl mx-auto">
           <div className="text-center mb-16">

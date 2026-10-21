@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * CookieConsent.tsx — Bottom banner for cookie/tracking consent.
+ * CookieConsent.tsx, Bottom banner for cookie/tracking consent.
  * Shows on first visit. Stores choice in localStorage as "cookie-consent".
  * "OK" accepts all. "Manage Preferences" lets users toggle categories.
  */
@@ -11,7 +11,7 @@ import { useState, useEffect, useRef, type CSSProperties } from "react";
 // The CSS custom property this banner publishes on <html> while it is visible.
 // Floating buttons (BackToTop, the chat bubble) add it to their bottom margin
 // so they lift clear of the banner instead of being buried under it. Declared
-// here as a constant so the name can't drift out of sync between files — grep
+// here as a constant so the name can't drift out of sync between files, grep
 // for it to find every consumer.
 const LIFT_VAR = "--cookie-banner-lift";
 
@@ -47,13 +47,13 @@ export default function CookieConsent() {
   //
   // THE BUG THIS FIXES: this banner used to be z-[90] while the chat bubble was
   // z-50 and BackToTop was z-40, so on a first visit the banner covered both of
-  // them — on mobile, for the one visitor most worth converting. Raising or
+  // them, on mobile, for the one visitor most worth converting. Raising or
   // lowering z-index alone cannot fix it, because the banner and the buttons
   // occupy the same strip of screen: one of them has to physically move.
   //
   // So the banner measures itself and writes its height onto <html> as a CSS
   // variable. BackToTop and the chat bubble add that variable to their bottom
-  // margin — which, on a `fixed` element, stacks on top of its `bottom` value
+  // margin, which, on a `fixed` element, stacks on top of its `bottom` value
   // and pushes it up. Using margin (not `bottom`, not `transform`) is
   // deliberate: it leaves their responsive `bottom-*` classes and their
   // show/hide translate animations completely untouched.
@@ -66,7 +66,7 @@ export default function CookieConsent() {
   //  - In DevTools, inspect <html> and look for the `--cookie-banner-lift`
   //    style. It should be a pixel value while the banner shows, "0px" after.
   //  - If the buttons stay lifted after dismissing the banner, the cleanup
-  //    below didn't run — the variable is only reset here and on unmount.
+  // below didn't run, the variable is only reset here and on unmount.
   //  - ResizeObserver is guarded because it doesn't exist in very old browsers;
   //    without it we still measure once and on window resize.
   // ───────────────────────────────────────────────────────────────────────────
@@ -74,7 +74,7 @@ export default function CookieConsent() {
     const root = document.documentElement;
     const el = bannerRef.current;
 
-    // Not showing (or not mounted yet) — make sure nothing stays lifted.
+    // Not showing (or not mounted yet), make sure nothing stays lifted.
     if (!visible || !el) {
       root.style.setProperty(LIFT_VAR, "0px");
       return;
@@ -127,7 +127,7 @@ export default function CookieConsent() {
       role="dialog"
       aria-label="Cookie consent"
       // POSITION: on mobile the banner sits ABOVE the MobileBottomBar so it can
-      // never cover the Call button — the primary mobile conversion. It used to
+      // never cover the Call button, the primary mobile conversion. It used to
       // be a flat `bottom-16` (64px), which is taller than the bar on most
       // phones but NOT on a notched iPhone, where the bar grows by the
       // safe-area inset (~34px) and poked out from under the banner. The
@@ -139,7 +139,7 @@ export default function CookieConsent() {
       // Z-INDEX: z-[70] is the "CookieConsent" tier of the scale documented in
       // src/app/layout.tsx. It was z-[90], above everything including the chat
       // panel. Now it sits above the header (z-[60]) but below an open chat
-      // dialog (z-[80]) — a conversation the visitor deliberately started
+      // dialog (z-[80]), a conversation the visitor deliberately started
       // outranks a banner they have not answered yet.
       style={
         // Cast needed because TypeScript's style object doesn't know about
@@ -174,15 +174,15 @@ export default function CookieConsent() {
         </div>
       </div>
 
-      {/* Preferences panel — slides open when "Manage Preferences" is clicked */}
+      {/* Preferences panel, slides open when "Manage Preferences" is clicked */}
       {prefsOpen && (
         <div className="border-t border-white/10 bg-[#333] px-4 py-4">
           <div className="max-w-5xl mx-auto space-y-3">
-            {/* Essential — always on */}
+            {/* Essential, always on */}
             <label className="flex items-center justify-between text-sm">
               <div>
                 <span className="font-semibold">Essential</span>
-                <span className="text-white/50 ml-2">— Required for site operation</span>
+                <span className="text-white/50 ml-2"> Required for site operation</span>
               </div>
               <span className="text-white/40 text-xs">Always on</span>
             </label>
@@ -191,7 +191,7 @@ export default function CookieConsent() {
             <label className="flex items-center justify-between text-sm cursor-pointer">
               <div>
                 <span className="font-semibold">Analytics</span>
-                <span className="text-white/50 ml-2">— Usage data to improve the site</span>
+                <span className="text-white/50 ml-2"> Usage data to improve the site</span>
               </div>
               <input
                 type="checkbox"
@@ -205,7 +205,7 @@ export default function CookieConsent() {
             <label className="flex items-center justify-between text-sm cursor-pointer">
               <div>
                 <span className="font-semibold">Advertising</span>
-                <span className="text-white/50 ml-2">— Personalized ads and retargeting</span>
+                <span className="text-white/50 ml-2"> Personalized ads and retargeting</span>
               </div>
               <input
                 type="checkbox"

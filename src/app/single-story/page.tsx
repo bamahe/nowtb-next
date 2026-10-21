@@ -1,4 +1,4 @@
-// /single-story — Tampa Bay Single-Story Homes
+// /single-story, Tampa Bay Single-Story Homes
 import type { Metadata } from "next";
 import HeroSection from "@/components/ui/HeroSection";
 import SearchBar from "@/components/ui/SearchBar";
@@ -29,7 +29,7 @@ export default async function SingleStoryPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([{ name: "Home", url: "https://nowtb.com/" }, { name: "Single-Story Homes", url: "https://nowtb.com/single-story/" }])} />
-      <HeroSection label="Tampa Bay Real Estate" title="Single-Story Homes" subtitle="One-level living — no stairs, accessible design. Popular with downsizers, retirees, and families."><SearchBar /></HeroSection>
+      <HeroSection label="Tampa Bay Real Estate" title="Single-Story Homes" subtitle="One-level living, no stairs, accessible design. Popular with downsizers, retirees, and families."><SearchBar /></HeroSection>
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <h2 className="text-2xl font-heading font-bold text-primary mb-6">{listings.length > 0 ? `${listings.length}+ Single-Story Homes` : "Loading..."}</h2>
         <ListingGrid listings={listings} />

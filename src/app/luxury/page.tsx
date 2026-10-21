@@ -1,5 +1,5 @@
 // =============================================================================
-// /luxury — Tampa Bay Luxury Real Estate ($750K+)
+// /luxury, Tampa Bay Luxury Real Estate ($750K+)
 // Full content page: market overview, top luxury areas, property types,
 // what defines luxury, why Barrett for luxury transactions
 // =============================================================================
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Luxury Homes for Sale in Tampa Bay | Barrett Henry",
     description:
-      "Browse luxury real estate across Tampa Bay — waterfront estates, gated communities, and premium properties from $750K. 23+ years of real estate experience.",
+      "Browse luxury real estate across Tampa Bay, waterfront estates, gated communities, and premium properties from $750K. 23+ years of real estate experience.",
     type: "website",
   },
 };
@@ -94,7 +94,7 @@ const luxuryCategories = [
   {
     title: "Waterfront Luxury",
     description:
-      "Tampa Bay's 700+ miles of coastline create one of the largest waterfront luxury markets in the Southeast. From Gulf-front estates on Longboat Key to bayfront homes along Bayshore Boulevard, waterfront properties command premium prices and offer a lifestyle built around the water. Seawall condition, flood zone classification, dock permits, and water depth for boats all factor into waterfront valuations — details that require an experienced agent to navigate.",
+      "Tampa Bay's 700+ miles of coastline create one of the largest waterfront luxury markets in the Southeast. From Gulf-front estates on Longboat Key to bayfront homes along Bayshore Boulevard, waterfront properties command premium prices and offer a lifestyle built around the water. Seawall condition, flood zone classification, dock permits, and water depth for boats all factor into waterfront valuations, details that require an experienced agent to navigate.",
   },
   {
     title: "Golf Community Luxury",
@@ -104,7 +104,7 @@ const luxuryCategories = [
   {
     title: "New Construction Luxury",
     description:
-      "Builders like Arthur Rutenberg, Homes by WestBay, and custom local builders are delivering luxury new construction across Tampa Bay. Buyers can choose from spec homes in planned communities or fully custom builds on individual lots. New construction luxury typically includes impact-rated windows, whole-home generators, smart home automation, and energy-efficient construction — features that resale homes often lack.",
+      "Builders like Arthur Rutenberg, Homes by WestBay, and custom local builders are delivering luxury new construction across Tampa Bay. Buyers can choose from spec homes in planned communities or fully custom builds on individual lots. New construction luxury typically includes impact-rated windows, whole-home generators, smart home automation, and energy-efficient construction, features that resale homes often lack.",
   },
 ];
 
@@ -222,7 +222,7 @@ export default async function LuxuryPage() {
         <SearchBar />
       </HeroSection>
 
-      {/* === Market Overview — white background === */}
+      {/* === Market Overview, white background === */}
       <section className="section-white">
         <div className="container-wide">
           <div className="text-center mb-16">
@@ -249,7 +249,7 @@ export default async function LuxuryPage() {
               <Link href="/davis-islands/" className="text-link hover:underline">Davis Islands</Link>,
               the Gulf-front lifestyle of{" "}
               <Link href="/clearwater-beach/" className="text-link hover:underline">Clearwater Beach</Link>,
-              or the quiet elegance of barrier island communities like Longboat Key and Siesta Key —
+              or the quiet elegance of barrier island communities like Longboat Key and Siesta Key 
               all within the same metropolitan area.
             </p>
             <p className="font-body text-base text-muted font-light leading-relaxed">
@@ -262,7 +262,7 @@ export default async function LuxuryPage() {
         </div>
       </section>
 
-      {/* === Top Luxury Areas — cream background === */}
+      {/* === Top Luxury Areas, cream background === */}
       <section className="section-light">
         <div className="container-wide">
           <div className="text-center mb-16">
@@ -299,7 +299,7 @@ export default async function LuxuryPage() {
         subtitle="Active listings priced at $750,000 and above across the Tampa Bay area. Updated hourly from Stellar MLS."
       />
 
-      {/* === Luxury Property Types — white background === */}
+      {/* === Luxury Property Types, white background === */}
       <section className="section-white">
         <div className="container-wide">
           <div className="text-center mb-16">
@@ -326,7 +326,7 @@ export default async function LuxuryPage() {
         </div>
       </section>
 
-      {/* === What Defines Luxury — cream background === */}
+      {/* === What Defines Luxury, cream background === */}
       <section className="section-light">
         <div className="container-wide">
           <div className="text-center mb-16">
@@ -360,7 +360,7 @@ export default async function LuxuryPage() {
         </div>
       </section>
 
-      {/* === Why Barrett for Luxury — dark navy === */}
+      {/* === Why Barrett for Luxury, dark navy === */}
       <section className="section-dark">
         <div className="container-wide text-center">
           <p className="heading-label text-white/50 mb-6">Your Luxury Specialist</p>
@@ -380,7 +380,7 @@ export default async function LuxuryPage() {
               For sellers, Barrett's luxury marketing plan includes professional architectural
               photography, 3D Matterport tours, aerial drone footage, targeted digital advertising
               to qualified buyer demographics, and syndication to luxury real estate portals. Every
-              listing receives a custom marketing strategy — not a template.
+              listing receives a custom marketing strategy, not a template.
             </p>
             <p className="font-body text-white/70 font-light text-base leading-relaxed">
               For buyers, Barrett provides access to off-market and pre-market luxury inventory,
@@ -410,7 +410,7 @@ export default async function LuxuryPage() {
         </div>
       </section>
 
-      {/* === FAQ Section — white background === */}
+      {/* === FAQ Section, white background === */}
       <section className="section-white">
         <div className="container-wide max-w-3xl mx-auto">
           <div className="text-center mb-16">
@@ -429,7 +429,7 @@ export default async function LuxuryPage() {
               <p className="font-body text-sm text-muted font-light leading-relaxed">
                 In Tampa Bay, luxury real estate generally starts at $750,000 and ranges well above
                 $5 million for waterfront estates and custom-built homes in communities like South
-                Tampa, Davis Islands, and Longboat Key. The threshold varies by submarket — a
+                Tampa, Davis Islands, and Longboat Key. The threshold varies by submarket, a
                 $750K home in Belleair carries different expectations than a $750K home in Lakewood Ranch.
               </p>
             </div>
@@ -477,7 +477,7 @@ export default async function LuxuryPage() {
         </div>
       </section>
 
-      {/* === Contact Form — cream background === */}
+      {/* === Contact Form, cream background === */}
       <section className="section-light">
         <div className="container-wide max-w-xl mx-auto">
           <ContactForm

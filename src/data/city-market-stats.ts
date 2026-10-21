@@ -1,5 +1,5 @@
 // =============================================================================
-// city-market-stats — verified closed-sale medians per city
+// city-market-stats, verified closed-sale medians per city
 //
 // Why this file exists: the city hub market stats bar was dead code. It only
 // rendered when a client-side listings array was non-empty, and that array was
@@ -9,12 +9,12 @@
 //
 // Source: Stellar MLS closed sales via the Bridge API, trailing 12 months,
 // lease records and manufactured/mobile housing excluded. Every row was fully
-// paginated — complete datasets, not samples.
+// paginated, complete datasets, not samples.
 // 91 communities, 93,058 closed sales (85 by city, 6 by ZIP).
 //
 // Two bases, because the MLS does not file every community under its own name:
-//   basis "city" — matched on the MLS City field.
-//   basis "zip"  — matched on the community's ZIP codes, used where the MLS
+// basis "city", matched on the MLS City field.
+// basis "zip", matched on the community's ZIP codes, used where the MLS
 //                  files the area under a parent city. Westchase, Carrollwood
 //                  and Town 'n' Country come through as Tampa, FishHawk as
 //                  Lithia, East Lake as Palm Harbor, Siesta Key as Sarasota.
@@ -41,7 +41,7 @@ export const MIN_SAMPLE = 20;
 
 export interface CityMarketStats {
   slug: string;
-  /** How the sales were matched — see the file header */
+  /** How the sales were matched, see the file header */
   basis: "city" | "zip";
   /** ZIP codes used when basis is "zip"; null for city-matched rows */
   zips: string[] | null;

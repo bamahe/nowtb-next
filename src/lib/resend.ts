@@ -1,6 +1,6 @@
 // =============================================================================
-// Resend email client — alert emails to Barrett when a lead comes in
-// NEVER import this in client components — uses server-only API key
+// Resend email client, alert emails to Barrett when a lead comes in
+// NEVER import this in client components, uses server-only API key
 //
 // If RESEND_API_KEY is not set, all functions are no-ops (won't crash the form)
 // =============================================================================
@@ -25,7 +25,7 @@ interface LeadEmailData {
   /** Property the lead was looking at (showing requests) */
   propertyAddress?: string;
   /** Extra question/answer pairs (seller intake). Rendered as a table in the
-   *  alert — without this the answers only ever reach n8n. */
+   * alert, without this the answers only ever reach n8n. */
   details?: { label: string; value: string }[];
 }
 
@@ -36,7 +36,7 @@ interface LeadEmailData {
 export async function sendBarrettAlert(lead: LeadEmailData): Promise<void> {
   const resend = getResend();
   if (!resend) {
-    // Resend not configured — n8n handles email alerts instead
+    // Resend not configured, n8n handles email alerts instead
     return;
   }
 
@@ -48,7 +48,7 @@ export async function sendBarrettAlert(lead: LeadEmailData): Promise<void> {
       to: ["barretthenry@gmail.com"],
       subject: `New lead from nowtb.com: ${lead.name} (${formTypeLabel})`,
       html: `
-        <h2>New Lead — nowtb.com</h2>
+        <h2>New Lead, nowtb.com</h2>
         <p><strong>Form:</strong> ${formTypeLabel}</p>
         <p><strong>Name:</strong> ${lead.name}</p>
         <p><strong>Email:</strong> ${lead.email}</p>
@@ -75,7 +75,7 @@ export async function sendBarrettAlert(lead: LeadEmailData): Promise<void> {
       `,
     });
   } catch (err) {
-    // Log but never block — FUB already has the lead
+    // Log but never block, FUB already has the lead
     console.warn("[Resend] Alert email failed:", err);
   }
 }
@@ -94,7 +94,7 @@ export async function sendLeadAutoResponder(lead: LeadEmailData): Promise<void> 
     await resend.emails.send({
       from: "Barrett Henry <barrett@nowtb.com>",
       to: [lead.email],
-      subject: `${firstName}, I got your message — here's what's next`,
+      subject: `${firstName}, I got your message, here's what's next`,
       html: `
         <h2>Thanks for reaching out, ${firstName}.</h2>
         <p>I received your message and I'll get back to you within 2 hours.</p>
@@ -116,7 +116,7 @@ export async function sendLeadAutoResponder(lead: LeadEmailData): Promise<void> 
       `,
     });
   } catch (err) {
-    // Log but never block — not critical
+    // Log but never block, not critical
     console.warn("[Resend] Auto-responder email failed:", err);
   }
 }
@@ -126,7 +126,7 @@ export async function sendLeadAutoResponder(lead: LeadEmailData): Promise<void> 
  *
  * This exists because of a real incident. The Follow Up Boss API key in
  * production was invalid, pushLeadToFub failed on every submission, the route
- * caught the error and returned {"success":true} anyway — so visitors saw a
+ * caught the error and returned {"success":true} anyway, so visitors saw a
  * thank-you page and the leads went nowhere. Nobody noticed for months.
  *
  * Now a failed push emails the full lead immediately. Even with every
@@ -138,13 +138,13 @@ export async function sendLeadFailureAlert(
   reason: string
 ): Promise<void> {
   const resend = getResend();
-  if (!resend) return; // Nothing more we can do — already logged by the caller
+  if (!resend) return; // Nothing more we can do, already logged by the caller
 
   try {
     await resend.emails.send({
       from: "nowtb.com Alerts <leads@nowtb.com>",
       to: ["barretthenry@gmail.com"],
-      subject: `⚠️ LEAD NOT SAVED TO FUB — ${lead.name} — action needed`,
+      subject: `⚠️ LEAD NOT SAVED TO FUB, ${lead.name}, action needed`,
       html: `
         <h2 style="color:#b91c1c;">A lead did not reach Follow Up Boss</h2>
         <p>The website captured this lead, but writing it to Follow Up Boss failed.
@@ -166,7 +166,7 @@ export async function sendLeadFailureAlert(
       `,
     });
   } catch (err) {
-    // Last resort — if even the alert can't send, make sure it's in the logs
+    // Last resort, if even the alert can't send, make sure it's in the logs
     console.error("[Resend] FAILED TO SEND LEAD-FAILURE ALERT:", err, lead);
   }
 }
@@ -176,7 +176,7 @@ export async function sendLeadFailureAlert(
  *
  * Sent a short while AFTER they sign in, so it lands while the house is still
  * fresh in their mind but they are no longer standing in the doorway. Resend
- * queues it server-side via `scheduledAt` — verified against the live API,
+ * queues it server-side via `scheduledAt`, verified against the live API,
  * which reports the message as status "scheduled" until it fires. That means
  * no cron job, no queue, and no function kept alive waiting.
  *
@@ -217,7 +217,7 @@ export async function scheduleFeedbackRequest(opts: {
             Share your feedback
           </a>
         </p>
-        <p>And if it is not the one, tell me what was missing — that is usually
+        <p>And if it is not the one, tell me what was missing, that is usually
         the fastest way for me to find the house that is.</p>
         <hr>
         <p>Talk soon,<br>
@@ -229,7 +229,7 @@ export async function scheduleFeedbackRequest(opts: {
       `,
     });
   } catch (err) {
-    // Log but never block — the guest is already signed in and in FUB.
+    // Log but never block, the guest is already signed in and in FUB.
     console.warn("[Resend] Feedback request scheduling failed:", err);
   }
 }

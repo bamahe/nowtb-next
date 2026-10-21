@@ -1,7 +1,7 @@
 "use client";
 
 // =============================================================================
-// Login Page — Google OAuth + Email Magic Link
+// Login Page, Google OAuth + Email Magic Link
 // Uses Supabase auth for both sign-in methods
 // =============================================================================
 
@@ -46,7 +46,7 @@ export default function LoginPage() {
         options: { redirectTo: `${window.location.origin}/auth/callback` },
       });
 
-      // If signInWithOAuth returns an error (rare — usually redirects)
+      // If signInWithOAuth returns an error (rare, usually redirects)
       if (error) {
         setErrorMessage(error.message);
         setStatus("error");
@@ -63,7 +63,7 @@ export default function LoginPage() {
     setStatus("loading");
     setErrorMessage("");
 
-    // Email validation — must be a real-looking address, not just "has an @".
+    // Email validation, must be a real-looking address, not just "has an @".
     // Every invalid address we accept here becomes a bounced Supabase email.
     const emailShape = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
     if (!email || !emailShape.test(email.trim())) {
@@ -81,7 +81,7 @@ export default function LoginPage() {
       // account and email that person a "Confirm your email address" link from
       // noreply@nowtb.com. Bots found it: 58 accounts were created between
       // 2026-06-30 and 2026-09-19, 21 of them Gmail dot-abuse addresses, and
-      // exactly ONE account has ever actually signed in — Barrett's own, via
+      // exactly ONE account has ever actually signed in, Barrett's own, via
       // Google. So every one of those emails was unsolicited mail sent to a
       // stranger on our sending domain, and at least one recipient reported it
       // as spam. That threatens the Resend reputation the lead alerts ride on.
@@ -92,7 +92,7 @@ export default function LoginPage() {
       //
       // NOTE: this only protects the form. The Supabase anon key ships in the
       // client bundle, so a bot can call the auth endpoint directly and set its
-      // own options. The complete fix is server-side — turn OFF "Allow new
+      // own options. The complete fix is server-side, turn OFF "Allow new
       // users to sign up" in the Supabase dashboard (Authentication →
       // Sign In / Providers).
       const { error } = await supabase.auth.signInWithOtp({
@@ -117,7 +117,7 @@ export default function LoginPage() {
         );
         setStatus("error");
       } else {
-        // Success — tell user to check their inbox
+        // Success, tell user to check their inbox
         setStatus("magic-link-sent");
       }
     } catch (err) {
@@ -129,7 +129,7 @@ export default function LoginPage() {
   return (
     <main className="section-light min-h-screen pt-24">
       <div className="container-narrow flex items-center justify-center py-16 md:py-24">
-        {/* Card container — centered, max width for a clean login form */}
+        {/* Card container, centered, max width for a clean login form */}
         <div className="card w-full max-w-md p-10 md:p-14">
 
           {/* ── Header ── */}
@@ -283,7 +283,7 @@ export default function LoginPage() {
 
               {/* ── Helper text ── */}
               <p className="font-body text-xs text-muted text-center mt-6 leading-relaxed">
-                No password needed — we&apos;ll email you a secure login link.
+                No password needed, we&apos;ll email you a secure login link.
               </p>
             </>
           )}

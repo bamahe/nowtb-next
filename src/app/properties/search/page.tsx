@@ -1,5 +1,5 @@
 // src/app/properties/search/page.tsx
-// Property search page shell — manages state + URL params, renders filter bar
+// Property search page shell, manages state + URL params, renders filter bar
 // and delegates to GalleryView or MapView depending on the active mode.
 // Route: /properties/search/
 "use client";
@@ -83,7 +83,7 @@ const MORE_FILTER_KEYS = [
 
 /**
  * useSearchParams() must sit inside a Suspense boundary. This page owns its own
- * rather than leaning on a root app/loading.tsx — a root-level loading.tsx puts
+ * rather than leaning on a root app/loading.tsx, a root-level loading.tsx puts
  * the whole app behind a streaming boundary, which flushes a 200 status before
  * notFound() can run and turns every 404 on the site into a soft 404.
  * If it breaks, check: this Suspense wrapper is still around SearchPageInner.
@@ -137,7 +137,7 @@ function SearchPageInner() {
   /** Count how many "More Filters" keys have active values */
   const activeMoreFilters = MORE_FILTER_KEYS.filter((k) => searchParams.get(k)).length;
 
-  // ── URL param updater — resets page on filter change ──
+  // ── URL param updater, resets page on filter change ──
 
   const updateParams = useCallback(
     (updates: Record<string, string | null>) => {
@@ -171,7 +171,7 @@ function SearchPageInner() {
         if (page > 1) {
           apiParams.set("offset", String((page - 1) * PAGE_SIZE));
         }
-        apiParams.delete("page"); // API doesn't accept "page" — uses "offset"
+        apiParams.delete("page"); // API doesn't accept "page", uses "offset"
 
         // Fetch listings and open houses in parallel so we can show
         // open house date/time badges on search result cards
@@ -260,7 +260,7 @@ function SearchPageInner() {
   return (
     <>
       {/* ================================================================
-          STICKY FILTER BAR — pinned below the site header
+          STICKY FILTER BAR, pinned below the site header
           ================================================================ */}
       <div className="sticky top-0 z-40 bg-white border-b border-border shadow-sm">
         <div className="px-4 py-2.5">
@@ -305,7 +305,7 @@ function SearchPageInner() {
                 className="flex-1 font-body text-sm text-primary bg-transparent
                            focus:outline-none placeholder:text-muted/50"
               />
-              {/* Clear button — only shown when there's text */}
+              {/* Clear button, only shown when there's text */}
               {searchInput && (
                 <button
                   type="button"
@@ -318,7 +318,7 @@ function SearchPageInner() {
               )}
             </div>
 
-            {/* Min Price — hidden on smaller screens to save space */}
+            {/* Min Price, hidden on smaller screens to save space */}
             <select
               value={getParam("min_price")}
               onChange={(e) => updateParams({ min_price: e.target.value || null })}
@@ -332,7 +332,7 @@ function SearchPageInner() {
               ))}
             </select>
 
-            {/* Max Price — hidden on smaller screens */}
+            {/* Max Price, hidden on smaller screens */}
             <select
               value={getParam("max_price")}
               onChange={(e) => updateParams({ max_price: e.target.value || null })}
@@ -347,7 +347,7 @@ function SearchPageInner() {
               ))}
             </select>
 
-            {/* Beds — hidden on mobile */}
+            {/* Beds, hidden on mobile */}
             <select
               value={getParam("beds")}
               onChange={(e) => updateParams({ beds: e.target.value || null })}
@@ -362,7 +362,7 @@ function SearchPageInner() {
               ))}
             </select>
 
-            {/* Baths — hidden on mobile */}
+            {/* Baths, hidden on mobile */}
             <select
               value={getParam("baths")}
               onChange={(e) => updateParams({ baths: e.target.value || null })}
@@ -377,7 +377,7 @@ function SearchPageInner() {
               ))}
             </select>
 
-            {/* Property Type — hidden until XL */}
+            {/* Property Type, hidden until XL */}
             <select
               value={getParam("property_type")}
               onChange={(e) => updateParams({ property_type: e.target.value || null })}
@@ -392,7 +392,7 @@ function SearchPageInner() {
               ))}
             </select>
 
-            {/* More Filters button — badge shows count of active advanced filters */}
+            {/* More Filters button, badge shows count of active advanced filters */}
             <button
               type="button"
               onClick={() => setFilterPanelOpen(true)}
@@ -414,7 +414,7 @@ function SearchPageInner() {
               )}
             </button>
 
-            {/* Sort — hidden on mobile */}
+            {/* Sort, hidden on mobile */}
             <select
               value={getParam("sort")}
               onChange={(e) => updateParams({ sort: e.target.value || null })}
@@ -428,14 +428,14 @@ function SearchPageInner() {
               ))}
             </select>
 
-            {/* Save Search — saves current URL params for the user */}
+            {/* Save Search, saves current URL params for the user */}
             <SaveSearchButton />
           </form>
         </div>
       </div>
 
       {/* ================================================================
-          VIEW — Gallery (card grid) or Map (split panel)
+          VIEW, Gallery (card grid) or Map (split panel)
           ================================================================ */}
       {viewMode === "gallery" ? (
         <GalleryView
@@ -460,7 +460,7 @@ function SearchPageInner() {
       )}
 
       {/* ================================================================
-          FILTER PANEL — slide-out overlay from the right
+          FILTER PANEL, slide-out overlay from the right
           ================================================================ */}
       <FilterPanel
         isOpen={filterPanelOpen}

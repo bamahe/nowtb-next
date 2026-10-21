@@ -1,5 +1,5 @@
 // =============================================================================
-// CountyGroup — Groups vendors by county with a county label header
+// CountyGroup, Groups vendors by county with a county label header
 // Renders a responsive grid of VendorCard components
 // =============================================================================
 
@@ -15,7 +15,7 @@ export default function CountyGroup({ county, vendors }: CountyGroupProps) {
 
   return (
     <div className="mb-10">
-      {/* County label — small uppercase like the site's heading-label style */}
+      {/* County label, small uppercase like the site's heading-label style */}
       <h3 className="font-body text-xs font-medium tracking-[0.2em] uppercase text-accent mb-4">
         {county} County
       </h3>

@@ -1,5 +1,5 @@
 // =============================================================================
-// API Response Cache — prevents Bridge API from getting hammered
+// API Response Cache, prevents Bridge API from getting hammered
 //
 // Problem: Every client-side listing fetch goes through /api/listings which
 // calls Bridge with zero caching. 10 visitors = 10 identical API calls.
@@ -37,7 +37,7 @@ export function getCached<T>(key: string): T | undefined {
  * Set a cached value with automatic TTL.
  */
 export function setCached<T>(key: string, data: T): void {
-  // Prevent cache from growing unbounded — evict old entries if over 500
+  // Prevent cache from growing unbounded, evict old entries if over 500
   if (cache.size > 500) {
     const now = Date.now();
     const keysToDelete: string[] = [];

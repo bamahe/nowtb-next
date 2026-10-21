@@ -14,11 +14,11 @@ interface FilterPanelProps {
   currentFilters: Record<string, string>;
   /** Called with the updated filter delta when user clicks Apply */
   onApply: (filters: Record<string, string | null>) => void;
-  /** Called when user clicks Reset — clears everything */
+  /** Called when user clicks Reset, clears everything */
   onReset: () => void;
 }
 
-// ── Accordion section wrapper — each section expands/collapses independently ──
+// ── Accordion section wrapper, each section expands/collapses independently ──
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
   return (
@@ -39,7 +39,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
   );
 }
 
-// ── Checkbox filter row — controlled checkbox with label ──
+// ── Checkbox filter row, controlled checkbox with label ──
 function CheckFilter({
   label, checked, onChange,
 }: { label: string; checked: boolean; onChange: (v: boolean) => void }) {
@@ -57,7 +57,7 @@ function CheckFilter({
 }
 
 export default function FilterPanel({ isOpen, onClose, currentFilters, onApply, onReset }: FilterPanelProps) {
-  // Local state holds pending changes — nothing updates the URL until Apply is clicked
+  // Local state holds pending changes, nothing updates the URL until Apply is clicked
   const [local, setLocal] = useState<Record<string, string | null>>({});
 
   /**
@@ -68,7 +68,7 @@ export default function FilterPanel({ isOpen, onClose, currentFilters, onApply, 
     return (local[key] !== undefined ? local[key] : currentFilters[key]) || "";
   }
 
-  /** Read a boolean filter — returns true only if value is the string "true" */
+  /** Read a boolean filter, returns true only if value is the string "true" */
   function getBool(key: string): boolean {
     const v = local[key] !== undefined ? local[key] : currentFilters[key];
     return v === "true";
@@ -98,10 +98,10 @@ export default function FilterPanel({ isOpen, onClose, currentFilters, onApply, 
 
   return (
     <>
-      {/* ── Backdrop — clicking it closes the panel ── */}
+      {/* ── Backdrop, clicking it closes the panel ── */}
       <div className="fixed inset-0 bg-black/40 z-[100]" onClick={onClose} aria-hidden="true" />
 
-      {/* ── Slide-in panel — comes in from the right ── */}
+      {/* ── Slide-in panel, comes in from the right ── */}
       <div
         className="fixed top-0 right-0 bottom-0 w-full max-w-[400px] bg-white z-[101]
                    shadow-2xl flex flex-col animate-slide-in-right"

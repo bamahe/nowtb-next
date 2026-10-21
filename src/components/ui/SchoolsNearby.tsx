@@ -1,6 +1,6 @@
 // =============================================================================
-// SchoolsNearby — Displays elementary, middle, and high school cards
-// Server component — no "use client" needed, renders static school info
+// SchoolsNearby, Displays elementary, middle, and high school cards
+// Server component, no "use client" needed, renders static school info
 // Links each school to a GreatSchools.org search page for more details
 // =============================================================================
 
@@ -22,7 +22,7 @@ interface SchoolsNearbyProps {
 }
 
 // -----------------------------------------------------------------------------
-// Helper — build a GreatSchools.org search link for a school name + city
+// Helper, build a GreatSchools.org search link for a school name + city
 // -----------------------------------------------------------------------------
 
 function greatSchoolsUrl(schoolName: string, city: string): string {
@@ -78,7 +78,7 @@ export default function SchoolsNearby({
               rel="noopener noreferrer"
               className="card p-6 block group"
             >
-              {/* Level label — small uppercase accent text */}
+              {/* Level label, small uppercase accent text */}
               <p className="heading-label mb-2">{label}</p>
 
               {/* School name with icon */}

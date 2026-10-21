@@ -1,5 +1,5 @@
 // =============================================================================
-// /guides — Guide index page listing all buyer/seller/investor guides
+// /guides, Guide index page listing all buyer/seller/investor guides
 // Groups guides by category with links to individual guide pages
 // =============================================================================
 
@@ -10,8 +10,8 @@ import SearchBar from "@/components/ui/SearchBar";
 import { guides } from "@/data/guides";
 
 export const metadata: Metadata = {
-  // TITLE BUDGET (fixed 2026-10-17). layout.tsx appends " | Barrett Henry" —
-  // 16 characters — to every plain-string title, and Google truncates search
+  // TITLE BUDGET (fixed 2026-10-17). layout.tsx appends " | Barrett Henry" 
+  // 16 characters, to every plain-string title, and Google truncates search
   // results at roughly 60. So the string below has a 44-character ceiling.
   //
   //   before:  "Real Estate Guides Tampa Bay | Free Buyer & Seller Guides"  (57)
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   //            renders as 49 characters, fits whole
   //
   // The dropped half ("Free Buyer & Seller Guides") was a near-duplicate of the
-  // first half, so nothing unique was lost — "Free" moved to the front where it
+  // first half, so nothing unique was lost, "Free" moved to the front where it
   // still carries the benefit. Buyer/seller intent is covered by the category
   // headings and the description below.
   title: "Free Tampa Bay Real Estate Guides",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     canonical: "/guides/",
   },
   // NOTE: there is deliberately NO `openGraph` block here. Next.js does not
-  // merge nested metadata objects — declaring `openGraph` on a page REPLACES the
+  // merge nested metadata objects, declaring `openGraph` on a page REPLACES the
   // root layout's entire openGraph object, images and all. By staying silent,
   // this page inherits layout.tsx's verified /og-default.png card. If you ever
   // add an openGraph block here, you MUST also restate `images`, or this page

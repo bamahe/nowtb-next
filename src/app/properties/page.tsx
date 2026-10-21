@@ -1,5 +1,5 @@
 // =============================================================================
-// Properties Search Page — Browse all Tampa Bay listings with filters
+// Properties Search Page, Browse all Tampa Bay listings with filters
 // Server component: reads URL search params and fetches listings server-side
 // =============================================================================
 
@@ -27,7 +27,7 @@ export const revalidate = 300;
 // -----------------------------------------------------------------------------
 
 // The page used to be blanket `noindex`, which fought with sitemap.ts (it lists
-// /properties/ at priority 0.9, changeFrequency hourly — the second-highest
+// /properties/ at priority 0.9, changeFrequency hourly, the second-highest
 // priority on the site). Google was being told "this is one of our most important
 // pages, recrawl it hourly" and then "do not index it."
 //
@@ -36,8 +36,8 @@ export const revalidate = 300;
 // Google index those creates near-duplicate faceted search pages. That is a
 // reason to noindex the FILTERED views, not the clean entry point.
 //
-// So: the bare /properties/ is indexable — it is the primary commercial-intent
-// "Tampa Bay homes for sale" landing page and the top of the IDX funnel — and any
+// So: the bare /properties/ is indexable, it is the primary commercial-intent
+// "Tampa Bay homes for sale" landing page and the top of the IDX funnel, and any
 // URL carrying query params is noindex,follow. "follow" is kept in both cases so
 // crawlers still walk through to individual listing pages, which hold their own
 // canonicals at /properties/StellarMLS/{id}/{city}/{address}.
@@ -94,7 +94,7 @@ function buildFilterSummary(params: ListingSearchParams): string {
   if (params.zip) parts.push(`ZIP ${params.zip}`);
   if (params.min_price && params.max_price) {
     parts.push(
-      `${formatPrice(Number(params.min_price))} – ${formatPrice(Number(params.max_price))}`
+      `${formatPrice(Number(params.min_price))}, ${formatPrice(Number(params.max_price))}`
     );
   } else if (params.min_price) {
     parts.push(`${formatPrice(Number(params.min_price))}+`);
@@ -137,7 +137,7 @@ export default async function PropertiesPage({
   // Await and extract search params from the URL
   const rawParams = await searchParams;
 
-  // Parse the free-text "q" param from SearchBar — could be a city name or ZIP code
+  // Parse the free-text "q" param from SearchBar, could be a city name or ZIP code
   const qRaw = typeof rawParams.q === "string" ? rawParams.q.trim() : "";
   const qIsZip = /^\d{5}$/.test(qRaw); // 5-digit number = ZIP code
   const qIsAddress = /^\d+\s+\w/.test(qRaw); // Starts with number + word = address
@@ -167,7 +167,7 @@ export default async function PropertiesPage({
     property_type:
       typeof rawParams.property_type === "string" ? rawParams.property_type : undefined,
     sort: typeof rawParams.sort === "string" ? rawParams.sort : undefined,
-    // Topic filters — boolean flags from URL params
+    // Topic filters, boolean flags from URL params
     pool: rawParams.pool === "true" || undefined,
     waterfront: rawParams.waterfront === "true" || undefined,
     new_construction: rawParams.new_construction === "true" || undefined,
@@ -175,7 +175,7 @@ export default async function PropertiesPage({
     single_story: rawParams.single_story === "true" || undefined,
     open_house: rawParams.open_house === "true" || undefined,
     rental: rawParams.rental === "true" || undefined,
-    // Exclude rentals by default — only show rentals when explicitly requested
+    // Exclude rentals by default, only show rentals when explicitly requested
     exclude_rental: rawParams.rental === "true" ? undefined : true,
     limit: String(PAGE_SIZE),
     offset:
@@ -241,9 +241,9 @@ export default async function PropertiesPage({
       />
 
       {/* =================================================================
-          SECTION 1: Hero — shorter 50vh with search bar
+          SECTION 1: Hero, shorter 50vh with search bar
           ================================================================= */}
-      {/* H1 is "Tampa Bay Homes for Sale", not "Properties" — now that this page
+      {/* H1 is "Tampa Bay Homes for Sale", not "Properties", now that this page
           is indexable (see generateMetadata above) the single H1 needs to carry
           the target keyword and match the title tag. HeroSection renders `title`
           as the page's only <h1>. */}
@@ -255,7 +255,7 @@ export default async function PropertiesPage({
       />
 
       {/* =================================================================
-          SECTION 2: Interactive filter bar — sort, type, features
+          SECTION 2: Interactive filter bar, sort, type, features
           Wrapped in Suspense because PropertyFilters uses useSearchParams
           ================================================================= */}
       <Suspense fallback={<div className="container-wide py-5 border-b border-black/5" />}>
@@ -290,7 +290,7 @@ export default async function PropertiesPage({
       {listings.length > 0 ? (
         <ListingGrid listings={listings} />
       ) : (
-        /* Empty state — helpful suggestions to broaden the search */
+        /* Empty state, helpful suggestions to broaden the search */
         <section className="container-wide py-24 md:py-32 text-center">
           <p className="heading-label mb-6">No Results</p>
           <h2 className="heading-section text-xl text-primary mb-4">
@@ -321,10 +321,10 @@ export default async function PropertiesPage({
       )}
 
       {/* =================================================================
-          SECTION 4: Pagination — prev/next links
+          SECTION 4: Pagination, prev/next links
           ================================================================= */}
       {/* =================================================================
-          SECTION 4: Pagination — minimal prev/next with page indicator
+          SECTION 4: Pagination, minimal prev/next with page indicator
           ================================================================= */}
       {totalPages > 1 && (
         <nav

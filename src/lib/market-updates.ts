@@ -1,5 +1,5 @@
 // =============================================================================
-// Market update data helper — loads housing market posts from JSON export
+// Market update data helper, loads housing market posts from JSON export
 // Reads src/data/market-updates-export.json once and caches in memory.
 // Only runs server-side (uses fs/path).
 // =============================================================================
@@ -48,7 +48,7 @@ export function getAllMarketUpdateSlugs(): string[] {
 
 /** Get the featured image for a market update. */
 export function getMarketUpdateThumbnail(post: MarketUpdate): string {
-  // Always use the dedicated blog image — every market update has one
+  // Always use the dedicated blog image, every market update has one
   return `/images/blog/${post.slug}.jpg`;
 }
 

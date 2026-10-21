@@ -1,7 +1,7 @@
 // =============================================================================
 // Intelligent Related Posts Engine
 // Finds 6-8 related blog posts using a 3-tier matching strategy:
-//   1. Same city (highest priority — fixes the zero cross-link problem)
+// 1. Same city (highest priority, fixes the zero cross-link problem)
 //   2. Same topic (schools, cost-of-living, neighborhoods, etc.)
 //   3. Same county (geographic proximity fallback)
 // Used at build time by the blog post template to generate cross-links.
@@ -10,7 +10,7 @@
 import { cities, type CityData } from "@/data/cities";
 import type { BlogPost } from "@/lib/posts";
 
-// Topic keywords extracted from slugs — used for second-priority matching
+// Topic keywords extracted from slugs, used for second-priority matching
 const TOPIC_PATTERNS: { topic: string; pattern: RegExp }[] = [
   { topic: "schools", pattern: /school|education|elementary|middle-school|high-school/ },
   { topic: "cost-of-living", pattern: /cost-of-living|cost-to-live|affordable|expenses/ },
@@ -101,16 +101,16 @@ export function findRelatedPosts(
       const postCity = extractCity(post.slug);
       const postTopics = extractTopics(post.slug);
 
-      // Priority 1: Same city — biggest SEO win (cross-links within city cluster)
+      // Priority 1: Same city, biggest SEO win (cross-links within city cluster)
       if (currentCity && postCity && currentCity.slug === postCity.slug) {
         score += 10;
       }
 
-      // Priority 2: Same topic(s) — topical relevance
+      // Priority 2: Same topic(s), topical relevance
       const sharedTopics = currentTopics.filter((t) => postTopics.includes(t));
       score += sharedTopics.length * 5;
 
-      // Priority 3: Same county — geographic proximity fallback
+      // Priority 3: Same county, geographic proximity fallback
       if (
         currentCounty &&
         postCity &&
@@ -121,7 +121,7 @@ export function findRelatedPosts(
         score += 3;
       }
 
-      // Recency bonus — slightly prefer newer content
+      // Recency bonus, slightly prefer newer content
       const postDate = new Date(post.date).getTime();
       const oneYearAgo = Date.now() - 365 * 24 * 60 * 60 * 1000;
       if (postDate > oneYearAgo) {

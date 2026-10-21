@@ -1,5 +1,5 @@
 // =============================================================================
-// /commercial — Commercial real estate in Tampa Bay
+// /commercial, Commercial real estate in Tampa Bay
 // Barrett Henry, Broker Associate at REMAX Collective
 // =============================================================================
 
@@ -18,7 +18,7 @@ export const revalidate = 3600; // 1 hour, matches the hourly refresh-listings c
 export const metadata: Metadata = {
   title: "Commercial Real Estate Tampa Bay | Barrett Henry, REALTOR®",
   description:
-    "Tampa Bay commercial real estate — office, retail, industrial, multifamily, and land. 23+ years of experience. Barrett Henry, REMAX Collective. (813) 733-7907.",
+    "Tampa Bay commercial real estate, office, retail, industrial, multifamily, and land. 23+ years of experience. Barrett Henry, REMAX Collective. (813) 733-7907.",
   alternates: {
     canonical: "/commercial/",
   },
@@ -185,7 +185,7 @@ export default async function CommercialPage() {
               },
               {
                 title: "Vacant Land",
-                desc: "Development-ready parcels, agricultural land for conversion, and infill lots in established submarkets. Zoning analysis, environmental review, and entitlement research are critical — Barrett coordinates with land-use attorneys and engineers.",
+                desc: "Development-ready parcels, agricultural land for conversion, and infill lots in established submarkets. Zoning analysis, environmental review, and entitlement research are critical, Barrett coordinates with land-use attorneys and engineers.",
               },
               {
                 title: "Mixed-Use Development",
@@ -351,27 +351,27 @@ export default async function CommercialPage() {
               <tbody className="font-body text-muted text-sm">
                 <tr className="border-b border-gray-100">
                   <td className="py-3 px-4 font-semibold">Multifamily</td>
-                  <td className="py-3 px-4">5.0% &ndash; 7.0%</td>
+                  <td className="py-3 px-4">5.0% to 7.0%</td>
                   <td className="py-3 px-4">Population growth, rental demand, occupancy rates</td>
                 </tr>
                 <tr className="border-b border-gray-100">
                   <td className="py-3 px-4 font-semibold">Retail</td>
-                  <td className="py-3 px-4">5.5% &ndash; 8.0%</td>
+                  <td className="py-3 px-4">5.5% to 8.0%</td>
                   <td className="py-3 px-4">Traffic counts, tenant credit, lease terms</td>
                 </tr>
                 <tr className="border-b border-gray-100">
                   <td className="py-3 px-4 font-semibold">Office</td>
-                  <td className="py-3 px-4">6.0% &ndash; 8.5%</td>
+                  <td className="py-3 px-4">6.0% to 8.5%</td>
                   <td className="py-3 px-4">Location, building class, tenant mix</td>
                 </tr>
                 <tr className="border-b border-gray-100">
                   <td className="py-3 px-4 font-semibold">Industrial</td>
-                  <td className="py-3 px-4">5.0% &ndash; 7.5%</td>
+                  <td className="py-3 px-4">5.0% to 7.5%</td>
                   <td className="py-3 px-4">E-commerce demand, port access, ceiling height</td>
                 </tr>
                 <tr className="border-b border-gray-100">
                   <td className="py-3 px-4 font-semibold">Mixed-Use</td>
-                  <td className="py-3 px-4">5.5% &ndash; 7.5%</td>
+                  <td className="py-3 px-4">5.5% to 7.5%</td>
                   <td className="py-3 px-4">Urban location, walkability, zoning flexibility</td>
                 </tr>
               </tbody>
@@ -396,8 +396,8 @@ export default async function CommercialPage() {
               engagement.
             </p>
             <p>
-              Barrett works across all seven Tampa Bay counties &mdash; Hillsborough, Pinellas,
-              Pasco, Manatee, Sarasota, Hernando, and Polk &mdash; giving investors and
+              Barrett works across all seven Tampa Bay counties, Hillsborough, Pinellas,
+              Pasco, Manatee, Sarasota, Hernando, and Polk, giving investors and
               business owners access to a broader set of opportunities. He coordinates with
               commercial lenders, environmental consultants, land-use attorneys, and 1031
               exchange intermediaries to keep transactions on track.
@@ -460,7 +460,7 @@ export default async function CommercialPage() {
               className="card p-4 text-center hover:shadow-lg transition-shadow"
             >
               <span className="font-heading font-bold text-sm text-primary">
-                Commercial RE Research &mdash; hencre.com
+                Commercial RE Research, hencre.com
               </span>
             </a>
           </div>

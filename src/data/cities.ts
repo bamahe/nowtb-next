@@ -20,7 +20,7 @@ export interface CityData {
   lng: number;
 }
 
-/** Spoke topics — each becomes a /{city}-{topic} page
+/** Spoke topics, each becomes a /{city}-{topic} page
  *  Matches all 15 property-type spokes from the WordPress site */
 export const SPOKE_TOPICS = [
   { slug: "homes-for-sale", label: "Homes for Sale", filter: {} },
@@ -47,7 +47,7 @@ export const SPOKE_TOPICS = [
   { slug: "property-management", label: "Property Management", filter: {} },
 ] as const;
 
-/** Additional city page types — not property-type spokes */
+/** Additional city page types, not property-type spokes */
 export const CITY_PAGE_TYPES = [
   { slug: "realtor", label: "Your {City} REALTOR®" },
   { slug: "sell-your-home", prefix: "sell-your-home-", label: "Sell Your {City} Home" },
@@ -1139,11 +1139,11 @@ export function getCityByName(mlsCity: string | null | undefined): CityData | un
   return undefined;
 }
 
-/** All topic slugs as a flat array — used to populate every city's topics */
+/** All topic slugs as a flat array, used to populate every city's topics */
 export const ALL_TOPIC_SLUGS = SPOKE_TOPICS.map((t) => t.slug);
 
 /** Cities where horse/equestrian properties (2+ acre lots) actually exist.
- *  Rural and semi-rural areas only — no beaches, islands, or urban cores. */
+ * Rural and semi-rural areas only, no beaches, islands, or urban cores. */
 const HORSE_PROPERTY_CITIES = new Set([
   "dover", "lithia", "plant-city", "thonotosassa", "parrish", "dade-city",
   "san-antonio-fl", "odessa", "lutz", "land-o-lakes", "brooksville", "spring-hill",

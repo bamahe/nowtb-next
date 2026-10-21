@@ -1,5 +1,5 @@
 // =============================================================================
-// /agents — Team Roster Page
+// /agents, Team Roster Page
 // Displays all agents from the agents data file with cards
 // =============================================================================
 
@@ -14,14 +14,14 @@ import { agents } from "@/data/agents";
 export const metadata: Metadata = {
   title: "Tampa Bay Real Estate Team | The NOW Team | REMAX Collective",
   description:
-    "Meet Barrett Henry and The NOW Team at REMAX Collective. Experienced REALTORS serving Tampa Bay's 8 counties — residential sales, investment properties, and more. Call (813) 733-7907.",
+    "Meet Barrett Henry and The NOW Team at REMAX Collective. Experienced REALTORS serving Tampa Bay's 8 counties, residential sales, investment properties, and more. Call (813) 733-7907.",
   alternates: {
     canonical: "/agents/",
   },
   openGraph: {
     title: "Tampa Bay Real Estate Team | Barrett Henry, REALTOR®",
     description:
-      "The NOW Team at REMAX Collective — experienced agents serving all of Tampa Bay.",
+      "The NOW Team at REMAX Collective, experienced agents serving all of Tampa Bay.",
     type: "website",
   },
 };
@@ -48,7 +48,7 @@ export default function AgentsPage() {
       {/* ---- Hero Section ---- */}
       <HeroSection
         title="Meet Your Tampa Bay Real Estate Team"
-        subtitle="The NOW Team at REMAX Collective — experienced agents ready to help you buy, sell, or invest"
+        subtitle="The NOW Team at REMAX Collective, experienced agents ready to help you buy, sell, or invest"
       />
 
       {/* ---- Agent Cards ---- */}
@@ -56,13 +56,13 @@ export default function AgentsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {agents.map((agent) => (
             <div key={agent.id} className="card overflow-hidden">
-              {/* Agent photo — real image for Barrett, initials avatar for others */}
+              {/* Agent photo, real image for Barrett, initials avatar for others */}
               <div className="aspect-[4/3] bg-gray-100 relative overflow-hidden flex items-center justify-center">
                 {agent.id === "barrett-henry" ? (
                   // Barrett's actual headshot
                   <Image
                     src="/images/barrett-agent-photo.png"
-                    alt="Barrett Henry, REALTOR® — Broker Associate at REMAX Collective"
+                    alt="Barrett Henry, REALTOR®, Broker Associate at REMAX Collective"
                     fill
                     className="object-cover object-top"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -113,7 +113,7 @@ export default function AgentsPage() {
                   </p>
                 </div>
 
-                {/* Bio excerpt — first 150 chars */}
+                {/* Bio excerpt, first 150 chars */}
                 <p className="font-body text-muted text-sm mb-4">
                   {agent.bio.length > 150
                     ? `${agent.bio.substring(0, 150)}...`

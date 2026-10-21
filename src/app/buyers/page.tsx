@@ -1,5 +1,5 @@
 // =============================================================================
-// /buyers — Buyer Landing Page
+// /buyers, Buyer Landing Page
 // Luxury minimalist: alternating sections, light-weight headings,
 // large step numbers, generous spacing, accent dividers
 // =============================================================================
@@ -30,7 +30,7 @@ const benefits = [
   {
     title: "I Know This Market",
     description:
-      "I work across all 8 Tampa Bay counties every day. You get real pricing data, honest neighborhood insights, and investment-grade analysis — not guesswork from a part-timer.",
+      "I work across all 8 Tampa Bay counties every day. You get real pricing data, honest neighborhood insights, and investment-grade analysis, not guesswork from a part-timer.",
   },
   {
     title: "I Fight for Your Deal",
@@ -40,7 +40,7 @@ const benefits = [
   {
     title: "The NOW Team Has Your Back",
     description:
-      "From pre-approval to closing day, my team and I handle every detail — lender referrals, inspections, title coordination, and everything in between. You're never on your own.",
+      "From pre-approval to closing day, my team and I handle every detail, lender referrals, inspections, title coordination, and everything in between. You're never on your own.",
   },
 ];
 
@@ -56,7 +56,7 @@ const buyingSteps = [
     step: 2,
     title: "Define Your Criteria",
     description:
-      "Bedrooms, neighborhoods, school districts, commute — I'll nail down exactly what you need so we're only looking at homes that actually fit your life.",
+      "Bedrooms, neighborhoods, school districts, commute, I'll nail down exactly what you need so we're only looking at homes that actually fit your life.",
   },
   {
     step: 3,
@@ -74,7 +74,7 @@ const buyingSteps = [
     step: 5,
     title: "Inspections & Appraisal",
     description:
-      "Home inspection, appraisal, and any specialty inspections happen here. The NOW Team handles repair negotiations if anything comes up — you won't be left guessing.",
+      "Home inspection, appraisal, and any specialty inspections happen here. The NOW Team handles repair negotiations if anything comes up, you won't be left guessing.",
   },
   {
     step: 6,
@@ -89,12 +89,12 @@ const buyerChecklist = [
   {
     title: "Pre-Approval Letter",
     description:
-      "A lender reviews your income, credit, and assets to determine how much home you can afford. This letter tells sellers you're financially qualified — without it, most sellers won't entertain your offer.",
+      "A lender reviews your income, credit, and assets to determine how much home you can afford. This letter tells sellers you're financially qualified, without it, most sellers won't entertain your offer.",
   },
   {
     title: "A Buyer's Agent",
     description:
-      "Your agent represents your interests exclusively. I negotiate on your behalf, identify red flags during showings, and handle the paperwork from contract to closing. In most transactions, the seller pays the buyer's agent commission — so my representation typically costs you nothing out of pocket.",
+      "Your agent represents your interests exclusively. I negotiate on your behalf, identify red flags during showings, and handle the paperwork from contract to closing. In most transactions, the seller pays the buyer's agent commission, so my representation typically costs you nothing out of pocket.",
   },
   {
     title: "Down Payment & Closing Costs",
@@ -104,7 +104,7 @@ const buyerChecklist = [
   {
     title: "Patience & Flexibility",
     description:
-      "The right home doesn't always appear on day one. Tampa Bay's market moves fast, and having clear priorities — plus the willingness to act quickly when the right property hits — makes all the difference.",
+      "The right home doesn't always appear on day one. Tampa Bay's market moves fast, and having clear priorities, plus the willingness to act quickly when the right property hits, makes all the difference.",
   },
 ];
 
@@ -113,7 +113,7 @@ const assistancePrograms = [
   {
     title: "Florida Hometown Heroes Program",
     description:
-      "Designed for first-time buyers who work in over 50 eligible professions — teachers, nurses, law enforcement, firefighters, and more. Offers up to $35,000 in down payment and closing cost assistance as a 0% interest, non-amortizing, 30-year deferred second mortgage.",
+      "Designed for first-time buyers who work in over 50 eligible professions, teachers, nurses, law enforcement, firefighters, and more. Offers up to $35,000 in down payment and closing cost assistance as a 0% interest, non-amortizing, 30-year deferred second mortgage.",
     href: "/guides/florida-hometown-heroes-program/",
     cta: "Read the Full Guide",
   },
@@ -189,7 +189,7 @@ export default function BuyersPage() {
                 name: "How long does it take to buy a home in Tampa Bay?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "The typical home purchase in Tampa Bay takes 30-60 days from accepted offer to closing. The full process — including getting pre-approved, searching for homes, and closing — usually takes 2-4 months total. Having your pre-approval in hand before you start touring homes speeds things up significantly.",
+                  text: "The typical home purchase in Tampa Bay takes 30-60 days from accepted offer to closing. The full process, including getting pre-approved, searching for homes, and closing, usually takes 2-4 months total. Having your pre-approval in hand before you start touring homes speeds things up significantly.",
                 },
               },
             ],
@@ -197,14 +197,14 @@ export default function BuyersPage() {
         }}
       />
 
-      {/* ---- Hero Section — full viewport ---- */}
+      {/* ---- Hero Section, full viewport ---- */}
       <HeroSection
         title="Buying a Home"
         label="BARRETT HENRY | THE NOW TEAM"
         subtitle="I've helped hundreds of buyers find the right home at the right price. Here's how we do it."
       />
 
-      {/* ---- Buyer Representation Overview — white background ---- */}
+      {/* ---- Buyer Representation Overview, white background ---- */}
       <section className="section-white">
         <div className="container-wide max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -219,7 +219,7 @@ export default function BuyersPage() {
             <p className="font-body text-muted font-light leading-relaxed">
               When you work with me as your buyer&apos;s agent, I represent your interests
               exclusively throughout the entire transaction. That means I&apos;m negotiating
-              for the lowest price, the best terms, and the strongest protections — not
+              for the lowest price, the best terms, and the strongest protections, not
               trying to close a quick deal. With 23+ years of real estate experience, I&apos;ve
               seen every scenario that can come up between contract and closing, and I know
               how to handle each one.
@@ -227,8 +227,8 @@ export default function BuyersPage() {
             <p className="font-body text-muted font-light leading-relaxed">
               Here&apos;s what most buyers don&apos;t realize: in the majority of Tampa Bay
               transactions, the seller pays the buyer&apos;s agent commission. That means you
-              get full professional representation — market analysis, negotiation, contract
-              management, and closing coordination — typically at no direct cost to you.
+              get full professional representation, market analysis, negotiation, contract
+              management, and closing coordination, typically at no direct cost to you.
               There is no good reason to go through this process without an experienced agent
               in your corner.
             </p>
@@ -243,7 +243,7 @@ export default function BuyersPage() {
         </div>
       </section>
 
-      {/* ---- Why Work With Barrett — cream background ---- */}
+      {/* ---- Why Work With Barrett, cream background ---- */}
       <section className="section-light">
         <div className="container-wide">
           <div className="text-center mb-16">
@@ -254,7 +254,7 @@ export default function BuyersPage() {
             <div className="section-divider" />
           </div>
 
-          {/* 3-column minimal cards — no card background, just content */}
+          {/* 3-column minimal cards, no card background, just content */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
             {benefits.map((b) => (
               <div key={b.title} className="text-center">
@@ -272,7 +272,7 @@ export default function BuyersPage() {
         </div>
       </section>
 
-      {/* ---- The Buying Process — white bg, large step numbers ---- */}
+      {/* ---- The Buying Process, white bg, large step numbers ---- */}
       <section className="section-white">
         <div className="container-wide">
           <div className="text-center mb-16">
@@ -283,11 +283,11 @@ export default function BuyersPage() {
             <div className="section-divider" />
           </div>
 
-          {/* Steps grid — large ultra-light numbers beside content */}
+          {/* Steps grid, large ultra-light numbers beside content */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
             {buyingSteps.map((s) => (
               <div key={s.step} className="flex gap-6">
-                {/* Large step number — ultra-light weight */}
+                {/* Large step number, ultra-light weight */}
                 <div className="flex-shrink-0">
                   <span className="font-heading text-5xl font-extralight text-accent/40 leading-none">
                     {String(s.step).padStart(2, "0")}
@@ -307,7 +307,7 @@ export default function BuyersPage() {
         </div>
       </section>
 
-      {/* ---- What Buyers Need — cream bg, checklist-style ---- */}
+      {/* ---- What Buyers Need, cream bg, checklist-style ---- */}
       <section className="section-light">
         <div className="container-wide">
           <div className="text-center mb-16">
@@ -338,7 +338,7 @@ export default function BuyersPage() {
         </div>
       </section>
 
-      {/* ---- Down Payment Assistance Programs — white bg ---- */}
+      {/* ---- Down Payment Assistance Programs, white bg ---- */}
       <section className="section-white">
         <div className="container-wide">
           <div className="text-center mb-16">
@@ -349,7 +349,7 @@ export default function BuyersPage() {
             <div className="section-divider" />
             <p className="font-body text-muted font-light text-base md:text-lg max-w-2xl mx-auto mt-6">
               Florida offers several programs that help buyers cover down payment and
-              closing costs. These are real dollars — not tax credits — and I&apos;ve helped
+              closing costs. These are real dollars, not tax credits, and I&apos;ve helped
               many buyers take advantage of them.
             </p>
           </div>
@@ -388,7 +388,7 @@ export default function BuyersPage() {
         </div>
       </section>
 
-      {/* ---- Tampa Bay Buyer Tips — cream bg ---- */}
+      {/* ---- Tampa Bay Buyer Tips, cream bg ---- */}
       <section className="section-light">
         <div className="container-wide max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -404,14 +404,14 @@ export default function BuyersPage() {
               Tampa Bay is one of the most active real estate markets in the Southeast.
               Inventory levels, interest rates, and seasonal patterns all affect how
               quickly homes move and what you&apos;ll pay. Homes in desirable neighborhoods
-              can go under contract within days of listing — sometimes hours. Having your
+              can go under contract within days of listing, sometimes hours. Having your
               pre-approval ready and your agent on speed dial is not optional here.
             </p>
             <p className="font-body text-muted font-light leading-relaxed">
               Insurance is a major factor in Florida home buying. Flood zones, wind
               mitigation credits, roof age, and the condition of the property all affect
               your insurance premiums. I help buyers evaluate these costs before making an
-              offer — not after. Understanding your total monthly cost (mortgage, taxes,
+              offer, not after. Understanding your total monthly cost (mortgage, taxes,
               insurance, HOA) is the difference between a comfortable purchase and a
               financial headache.
             </p>
@@ -431,7 +431,7 @@ export default function BuyersPage() {
         </div>
       </section>
 
-      {/* ---- Loan Types — explore financing options ---- */}
+      {/* ---- Loan Types, explore financing options ---- */}
       <section className="section-light">
         <div className="container-wide">
           <div className="text-center mb-12">
@@ -442,7 +442,7 @@ export default function BuyersPage() {
             <div className="section-divider mx-auto" />
             <p className="font-body text-muted font-light text-base max-w-2xl mx-auto">
               Every buyer&apos;s financial situation is different. Here are the major
-              loan programs available to Florida home buyers — Barrett can connect
+              loan programs available to Florida home buyers, Barrett can connect
               you with lenders who specialize in each.
             </p>
           </div>
@@ -483,7 +483,7 @@ export default function BuyersPage() {
         </div>
       </section>
 
-      {/* ---- Search CTA — dark navy ---- */}
+      {/* ---- Search CTA, dark navy ---- */}
       <section className="section-dark">
         <div className="container-wide text-center">
           <p className="heading-label text-white/50 mb-6">Browse Listings</p>
@@ -492,7 +492,7 @@ export default function BuyersPage() {
           </h2>
           <div className="section-divider" />
           <p className="font-body text-white/70 font-light text-base md:text-lg max-w-2xl mx-auto mb-10">
-            Browse active listings across Tampa Bay — updated hourly from
+            Browse active listings across Tampa Bay, updated hourly from
             Stellar MLS. See something you like? Call me directly at{" "}
             <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a>.
           </p>
@@ -502,7 +502,7 @@ export default function BuyersPage() {
         </div>
       </section>
 
-      {/* ---- Buyer Registration Form — white bg ---- */}
+      {/* ---- Buyer Registration Form, white bg ---- */}
       <section className="section-white">
         <div className="container-wide max-w-xl mx-auto">
           <ContactForm

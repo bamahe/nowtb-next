@@ -1,5 +1,5 @@
 // =============================================================================
-// /relocation — Tampa Bay Relocation Services
+// /relocation, Tampa Bay Relocation Services
 // Full-service relocation page: why Tampa Bay, checklist, areas by lifestyle,
 // school overview, cost of living, how Barrett helps, FAQ with schema
 // =============================================================================
@@ -12,7 +12,7 @@ import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 
 // --- SEO metadata + Open Graph tags ---
 export const metadata: Metadata = {
-  // layout.tsx appends " | Barrett Henry, REALTOR®" — do not repeat the name here.
+  // layout.tsx appends " | Barrett Henry, REALTOR®", do not repeat the name here.
   title: "Tampa Bay Relocation REALTOR®",
   description:
     "Relocating to Tampa Bay? Barrett Henry, MRP relocation specialist at REMAX Collective. Taxes, insurance, remote closing. Call (813) 733-7907.",
@@ -78,7 +78,7 @@ const checklistAfter = [
   "Transfer utilities, internet, and home services to your new address",
   "Register children in their new school district",
   "Establish care with local doctors, dentists, and veterinarians",
-  "Explore your new community — Barrett sends a curated local guide after closing",
+  "Explore your new community, Barrett sends a curated local guide after closing",
 ];
 
 // --- Areas by lifestyle ---
@@ -413,7 +413,7 @@ export default function RelocationPage() {
               </h3>
               <p className="font-body text-sm text-white/70 font-light leading-relaxed">
                 Barrett conducts live video tours via FaceTime or Zoom so you can walk
-                through homes, explore neighborhoods, and ask questions in real time —
+                through homes, explore neighborhoods, and ask questions in real time 
                 no matter where you currently live.
               </p>
             </div>

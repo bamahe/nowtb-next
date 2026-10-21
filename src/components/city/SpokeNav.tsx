@@ -1,5 +1,5 @@
 // =============================================================================
-// SpokeNav — grid of spoke page links for a given city
+// SpokeNav, grid of spoke page links for a given city
 // Server component. Shows all topic pages available for this city.
 // Highlights the current topic if viewing a spoke page.
 // =============================================================================
@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import type { CityData } from "@/data/cities";
 import { getCityTopics } from "@/data/cities";
 // Used to confirm the "Sell My {City} House Fast" blog post actually exists
-// before linking it — see the comment at that link below.
+// before linking it, see the comment at that link below.
 import { getPostBySlug } from "@/lib/posts";
 
 interface SpokeNavProps {
@@ -26,7 +26,7 @@ export default function SpokeNav({ city, currentTopic }: SpokeNavProps) {
   // Only link the "sell fast" article for cities that actually have one.
   // 84 of the 93 cities do; the other 9 (Ozona, Tierra Verde, Crystal Beach,
   // and six more small Pinellas/Citrus communities) have no such post, and the
-  // tile was pointing at a slug that does not exist in posts-export.json — a
+  // tile was pointing at a slug that does not exist in posts-export.json, a
   // hard 404 on every page that renders this nav for those cities.
   // If it breaks, check: posts-export.json is owned by Barrett's content
   // automation, so a city gains this tile automatically once the post ships.
@@ -40,12 +40,12 @@ export default function SpokeNav({ city, currentTopic }: SpokeNavProps) {
         Explore {city.name} Real Estate
       </h2>
 
-      {/* Grid of topic links — styled as pill/card buttons */}
+      {/* Grid of topic links, styled as pill/card buttons */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         {topics.map((topic) => {
           const isActive = currentTopic === topic.slug;
           // TRAILING SLASH REQUIRED. next.config.mjs sets `trailingSlash: true`,
-          // so "/brandon-homes-for-sale" is not a page — it is a 308 redirect to
+          // so "/brandon-homes-for-sale" is not a page, it is a 308 redirect to
           // "/brandon-homes-for-sale/". This grid renders up to 22 tiles on every
           // city hub, every city spoke and every neighborhood page, which is how
           // one missing character here turned into 46,440 measured redirects.
@@ -114,7 +114,7 @@ export default function SpokeNav({ city, currentTopic }: SpokeNavProps) {
         >
           {city.name} Property Management
         </Link>
-        {/* Guarded — see hasSellFastPost above. Blog posts live at
+        {/* Guarded, see hasSellFastPost above. Blog posts live at
             /blog/<slug>/; the bare root form 308s away. */}
         {hasSellFastPost && (
           <Link

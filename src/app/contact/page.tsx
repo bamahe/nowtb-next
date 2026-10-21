@@ -1,5 +1,5 @@
 // =============================================================================
-// /contact — Contact Page
+// /contact, Contact Page
 // Luxury minimalist: full-viewport hero, spacious 2-column layout
 // Left: large heading + contact details. Right: minimal contact form.
 // =============================================================================
@@ -57,7 +57,7 @@ export default function ContactPage() {
           }),
         }}
       />
-      {/* ---- Hero Section — full viewport ---- */}
+      {/* ---- Hero Section, full viewport ---- */}
       <HeroSection
         title="Let's Talk"
         label="BARRETT HENRY | THE NOW TEAM"
@@ -68,7 +68,7 @@ export default function ContactPage() {
       <section className="section-white">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-            {/* Left column — Barrett's photo + contact details */}
+            {/* Left column, Barrett's photo + contact details */}
             <div className="py-8">
               {/* Barrett's headshot */}
               <div className="mb-8 w-32 h-32 relative overflow-hidden">
@@ -87,7 +87,7 @@ export default function ContactPage() {
               </h2>
               <div className="section-divider !mx-0 !ml-0" />
 
-              {/* Phone — large and prominent, primary CTA */}
+              {/* Phone, large and prominent, primary CTA */}
               <div className="mb-10">
                 <p className="heading-label mb-3">Call Me</p>
                 <a
@@ -141,16 +141,16 @@ export default function ContactPage() {
               <div>
                 <p className="heading-label mb-3">Hours</p>
                 <p className="font-body text-muted font-light">
-                  Monday – Friday: 9:00 AM – 6:00 PM
+                  Monday, Friday: 9:00 AM to 6:00 PM
                   <br />
-                  Saturday: 10:00 AM – 4:00 PM
+                  Saturday: 10:00 AM to 4:00 PM
                   <br />
                   Sunday: By Appointment
                 </p>
               </div>
             </div>
 
-            {/* Right column — Contact form */}
+            {/* Right column, Contact form */}
             <div className="py-8">
               <ContactForm
                 webhookUrl="/api/contact"
@@ -163,7 +163,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ---- Testimonials — first 3 Google reviews for social proof ---- */}
+      {/* ---- Testimonials, first 3 Google reviews for social proof ---- */}
       <section className="section-dark">
         <div className="container-wide">
           <div className="text-center mb-12">
@@ -220,15 +220,15 @@ export default function ContactPage() {
         <div className="container-wide">
           <p className="heading-label text-center mb-4">Our Offices</p>
           <h2 className="heading-section text-xl text-primary text-center mb-12">
-            REMAX Collective — 3 Tampa Bay Locations
+            REMAX Collective, 3 Tampa Bay Locations
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Tampa Office — links to /remax-tampa/ */}
+            {/* Tampa Office, links to /remax-tampa/ */}
             <div className="bg-white overflow-hidden shadow-sm">
               <Link href="/remax-tampa/" className="block overflow-hidden">
                 <Image
                   src="/images/office-tampa.jpg"
-                  alt="REMAX Collective Tampa Office — 14310 N. Dale Mabry Hwy"
+                  alt="REMAX Collective Tampa Office, 14310 N. Dale Mabry Hwy"
                   width={400}
                   height={192}
                   className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
@@ -257,12 +257,12 @@ export default function ContactPage() {
                 </Link>
               </div>
             </div>
-            {/* Largo Office — links to /remax-largo/ */}
+            {/* Largo Office, links to /remax-largo/ */}
             <div className="bg-white overflow-hidden shadow-sm">
               <Link href="/remax-largo/" className="block overflow-hidden">
                 <Image
                   src="/images/office-largo.jpg"
-                  alt="REMAX Collective Largo Office — 11200 Seminole Blvd"
+                  alt="REMAX Collective Largo Office, 11200 Seminole Blvd"
                   width={400}
                   height={192}
                   className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
@@ -291,12 +291,12 @@ export default function ContactPage() {
                 </Link>
               </div>
             </div>
-            {/* Brandon Office — links to /remax-brandon/ */}
+            {/* Brandon Office, links to /remax-brandon/ */}
             <div className="bg-white overflow-hidden shadow-sm">
               <Link href="/remax-brandon/" className="block overflow-hidden">
                 <Image
                   src="/images/office-brandon.jpg"
-                  alt="REMAX Collective Brandon Office — 417 Lithia Pinecrest Rd"
+                  alt="REMAX Collective Brandon Office, 417 Lithia Pinecrest Rd"
                   width={400}
                   height={192}
                   className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
@@ -329,7 +329,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ---- Serving Tampa Bay's 8 Counties — dark navy ---- */}
+      {/* ---- Serving Tampa Bay's 8 Counties, dark navy ---- */}
       <section className="section-dark">
         <div className="container-wide text-center">
           <p className="heading-label text-white/50 mb-6">Service Area</p>
@@ -348,7 +348,7 @@ export default function ContactPage() {
           <div className="section-divider mt-12" />
           <p className="font-body text-white/50 font-light mt-8 text-sm">
             Whether you&apos;re buying, selling, or investing anywhere in the
-            Tampa Bay metro — call Barrett directly at{" "}
+            Tampa Bay metro, call Barrett directly at{" "}
             <a href="tel:+18137337907" className="text-white/70 hover:text-accent transition-colors duration-300">
               (813) 733-7907
             </a>.

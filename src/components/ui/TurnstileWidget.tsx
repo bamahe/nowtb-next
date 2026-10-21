@@ -16,10 +16,10 @@ const MAX_ERROR_RETRIES = 2;
  * Is this Turnstile error code worth retrying?
  *
  * Cloudflare's error codes are grouped by first digits:
- *   1xxxxx / 4xxxxx — configuration problems. Wrong sitekey, or the sitekey is
+ * 1xxxxx / 4xxxxx, configuration problems. Wrong sitekey, or the sitekey is
  *                     real but this hostname isn't on it (400020 / 110200).
  *                     Retrying is pointless; it will fail identically forever.
- *   3xxxxx / 6xxxxx — network hiccup, challenge timed out, visitor failed the
+ * 3xxxxx / 6xxxxx, network hiccup, challenge timed out, visitor failed the
  *                     interactive challenge. A fresh challenge can succeed.
  *
  * If it breaks, check: Cloudflare dashboard → Turnstile → the widget's allowed
@@ -110,19 +110,19 @@ export default function TurnstileWidget({ onVerify }: TurnstileProps) {
           // Cloudflare refreshes on its own schedule, which raced our reset
           // below and made the behaviour impossible to reason about. "manual"
           // hands expiry to our expired-callback; the worst case if our reset
-          // somehow doesn't fire is a refresh button inside the widget — still
+          // somehow doesn't fire is a refresh button inside the widget, still
           // recoverable without reloading the page.
           "refresh-expired": "manual",
           "refresh-timeout": "manual",
 
           // --- Token went stale while they were still typing ---
           // Clear the parent's token FIRST (so a dead token can never be
-          // POSTed — that is a guaranteed 403), then start a fresh challenge.
+          // POSTed, that is a guaranteed 403), then start a fresh challenge.
           // The callback above re-enables the submit button a moment later.
           "expired-callback": () => {
             stableOnVerify("");
             if (!resetWidget()) {
-              // Couldn't reset — don't leave the visitor with a permanently
+              // Couldn't reset, don't leave the visitor with a permanently
               // dead submit button. Fall through to the sentinel the API
               // already allows, same as a render failure.
               stableOnVerify("turnstile-render-failed");

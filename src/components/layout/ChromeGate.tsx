@@ -1,7 +1,7 @@
 "use client";
 
 // =============================================================================
-// ChromeGate — hides the site header, footer and mobile bottom bar on kiosk
+// ChromeGate, hides the site header, footer and mobile bottom bar on kiosk
 // routes and on private client packets.
 //
 // Client packets under /clients/ are a private link sent to one buyer. They
@@ -15,7 +15,7 @@
 // the site one is redundant as well as risky.
 //
 // Children are passed through from the server layout, so Header and Footer stay
-// server components — this only decides whether to render them.
+// server components, this only decides whether to render them.
 // =============================================================================
 
 import { usePathname } from "next/navigation";

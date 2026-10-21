@@ -6,7 +6,7 @@ import type { Listing } from "@/lib/types";
 export const dynamic = "force-dynamic";
 
 /**
- * GET /api/open-houses — Open houses in the next 7 days
+ * GET /api/open-houses, Open houses in the next 7 days
  * CACHED: Same request within 5 min returns cached response.
  */
 export async function GET() {

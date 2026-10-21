@@ -1,5 +1,5 @@
 // =============================================================================
-// CityResources — comprehensive internal linking section for city hub pages
+// CityResources, comprehensive internal linking section for city hub pages
 // Server component. Renders neighborhood grid, loan guides, buyer/seller
 // resources, nearby cities, related guides, and recent blog posts.
 // Designed to boost internal linking density for the 10 priority cities.
@@ -9,7 +9,7 @@ import Link from "next/link";
 import type { CityData } from "@/data/cities";
 // getCityBySlug + getCityTopics let us verify a spoke page actually exists for a
 // nearby city before we link it. Topic lists are per-city (see getCityTopics in
-// src/data/cities.ts — beach cities drop horse-properties, for example), so
+// src/data/cities.ts, beach cities drop horse-properties, for example), so
 // emitting a spoke URL blind would manufacture 404s.
 import { getCityBySlug, getCityTopics } from "@/data/cities";
 import { getNeighborhoodsByCity } from "@/data/neighborhoods";
@@ -80,7 +80,7 @@ const BUYER_SELLER_RESOURCES = [
 //    in next.config.mjs emits a 301 from every root-level guide slug to its
 //    /guides/ form, and src/app/[citySlug]/page.tsx permanentRedirects the same
 //    way as a fallback. Linking the root form therefore cost a redirect on every
-//    hit — the audit measured 1,116 of them from this one block.
+// hit, the audit measured 1,116 of them from this one block.
 // 2. Every slug must exist in src/data/guides.ts. "florida-homestead-exemption-guide"
 //    did not: the real page is "florida-homestead-exemption-save-our-homes", so
 //    that tile was a hard 404 on all 93 city pages. Fixed below.
@@ -114,7 +114,7 @@ export default function CityResources({ city }: CityResourcesProps) {
   // Resolve each nearby slug to real city data so we can (a) use its proper
   // display name and (b) confirm the "-homes-for-sale" spoke exists for it
   // before linking. Capped at 5 so this stays a readable set of 2-3 links per
-  // area instead of a link dump — a tile with 40 links passes almost no signal
+  // area instead of a link dump, a tile with 40 links passes almost no signal
   // per link and reads as spam.
   //
   // If it breaks, check: a nearby tile disappears => that slug is not in
@@ -150,7 +150,7 @@ export default function CityResources({ city }: CityResourcesProps) {
   const allCityPosts = allPosts.filter((p) => p.slug.includes(city.slug));
   const cityPosts = allCityPosts.slice(0, 12);
 
-  // If no nearby cities and no neighborhoods, this isn't a priority city — skip rendering
+  // If no nearby cities and no neighborhoods, this isn't a priority city, skip rendering
   if (nearbySlugs.length === 0 && cityNeighborhoods.length === 0 && allCityPosts.length === 0) {
     return null;
   }
@@ -166,7 +166,7 @@ export default function CityResources({ city }: CityResourcesProps) {
       </p>
 
       {/* ================================================================= */}
-      {/* NEIGHBORHOOD GRID — all neighborhoods in this city                 */}
+      {/* NEIGHBORHOOD GRID, all neighborhoods in this city */}
       {/* ================================================================= */}
       {cityNeighborhoods.length > 0 && (
         <div className="mb-10">
@@ -188,7 +188,7 @@ export default function CityResources({ city }: CityResourcesProps) {
       )}
 
       {/* ================================================================= */}
-      {/* LOAN GUIDE LINKS — all 8 Florida loan types                        */}
+      {/* LOAN GUIDE LINKS, all 8 Florida loan types */}
       {/* ================================================================= */}
       <div className="mb-10">
         <h3 className="font-heading font-bold text-lg text-primary mb-4">
@@ -271,7 +271,7 @@ export default function CityResources({ city }: CityResourcesProps) {
       </div>
 
       {/* ================================================================= */}
-      {/* NEARBY CITIES — cross-links to neighboring priority cities          */}
+      {/* NEARBY CITIES, cross-links to neighboring priority cities */}
       {/* ================================================================= */}
       {nearbyCities.length > 0 && (
         <div className="mb-10">
@@ -288,7 +288,7 @@ export default function CityResources({ city }: CityResourcesProps) {
                 key={nearby.slug}
                 className="border border-gray-200 bg-white px-4 py-3"
               >
-                {/* City hub — the overview page */}
+                {/* City hub, the overview page */}
                 <Link
                   href={`/${nearby.slug}/`}
                   className="block text-sm font-semibold text-primary transition-colors hover:text-accent"
@@ -297,7 +297,7 @@ export default function CityResources({ city }: CityResourcesProps) {
                 </Link>
                 {/* The two high-intent spokes. These carry the strongest buying
                     signal of any page type on the site and, before this change,
-                    nothing anywhere linked them — only the bare hub was linked,
+                    nothing anywhere linked them, only the bare hub was linked,
                     which is how 1,384 pages ended up with zero inbound links.
                     Anchor text is the real keyword ("Brandon Homes for Sale"),
                     never "click here", because the anchor is what tells Google
@@ -325,7 +325,7 @@ export default function CityResources({ city }: CityResourcesProps) {
       )}
 
       {/* ================================================================= */}
-      {/* COMPARE CITIES — links to comparison pages featuring this city      */}
+      {/* COMPARE CITIES, links to comparison pages featuring this city */}
       {/* ================================================================= */}
       {cityComparisons.length > 0 && (
         <div className="mb-10">
@@ -350,7 +350,7 @@ export default function CityResources({ city }: CityResourcesProps) {
       )}
 
       {/* ================================================================= */}
-      {/* RELATED GUIDES — helpful guides for buyers and sellers              */}
+      {/* RELATED GUIDES, helpful guides for buyers and sellers */}
       {/* ================================================================= */}
       <div className="mb-10">
         <h3 className="font-heading font-bold text-lg text-primary mb-4">
@@ -360,7 +360,7 @@ export default function CityResources({ city }: CityResourcesProps) {
           {RELATED_GUIDES.map((guide) => (
             <Link
               key={guide.slug}
-              /* Canonical /guides/ path — the bare /<slug>/ form 301s. See the
+              /* Canonical /guides/ path, the bare /<slug>/ form 301s. See the
                  RELATED_GUIDES comment at the top of this file. */
               href={`/guides/${guide.slug}/`}
               className="block border border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:bg-accent/10 hover:text-accent"
@@ -372,7 +372,7 @@ export default function CityResources({ city }: CityResourcesProps) {
       </div>
 
       {/* ================================================================= */}
-      {/* RECENT BLOG POSTS — city-specific articles                          */}
+      {/* RECENT BLOG POSTS, city-specific articles */}
       {/* ================================================================= */}
       {cityPosts.length > 0 && (
         <div>
@@ -380,7 +380,7 @@ export default function CityResources({ city }: CityResourcesProps) {
             Recent Articles About {city.name}
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {/* Blog posts live at /blog/<slug>/ — that is the only real route
+            {/* Blog posts live at /blog/<slug>/, that is the only real route
                 (src/app/blog/[slug]/page.tsx). The bare root form "/<slug>/"
                 is what WordPress used; today it is a redirect, not a page:
                 src/app/[citySlug]/page.tsx matches the slug against
@@ -420,7 +420,7 @@ export default function CityResources({ city }: CityResourcesProps) {
           {/* "View all" link when there are more posts than shown */}
           {allCityPosts.length > cityPosts.length && (
             <div className="text-center mt-6">
-              {/* Was `/blog/?q={city}` — a dead parameter. src/app/blog/page.tsx
+              {/* Was `/blog/?q={city}`, a dead parameter. src/app/blog/page.tsx
                   only reads `page` and `category` from searchParams, so `q` was
                   silently ignored and this link just dropped the visitor on
                   page 1 of the blog with no filter applied and a promise the

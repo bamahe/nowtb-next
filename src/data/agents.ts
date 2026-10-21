@@ -1,5 +1,5 @@
 /**
- * Team roster — Barrett Henry & The NOW Team
+ * Team roster, Barrett Henry & The NOW Team
  * Static data for /agents page and team sections.
  */
 

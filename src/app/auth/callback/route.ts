@@ -1,5 +1,5 @@
 // =============================================================================
-// Auth Callback — handles the redirect after Google login or magic link click
+// Auth Callback, handles the redirect after Google login or magic link click
 // Exchanges the auth code for a session and redirects to the site
 // =============================================================================
 
@@ -31,7 +31,7 @@ export async function GET(request: NextRequest) {
       }
       console.error("[Auth Callback] Session exchange error:", error.message);
     } else {
-      console.error("[Auth Callback] Supabase client is null — env vars missing?");
+      console.error("[Auth Callback] Supabase client is null, env vars missing?");
     }
   } else {
     console.error("[Auth Callback] No code parameter in URL:", request.url);

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   // 149 characters. Target is 120-155 so it does not get truncated in the SERP.
   // WHY the wording changed: the old copy read "23+ years serving Tampa Bay
   // buyers, sellers, and investors", which claims 23 years of Tampa Bay service.
-  // False — Barrett has been licensed since September 2003 (23+ years of real
+  // False, Barrett has been licensed since September 2003 (23+ years of real
   // estate experience) but has only been in Florida about a decade. Here the
   // number modifies "real estate experience" and "Tampa Bay" modifies the
   // clients, so the two facts stay separate.

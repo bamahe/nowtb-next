@@ -1,5 +1,5 @@
 // =============================================================================
-// ListingCarousel — horizontal scroll carousel of listing cards
+// ListingCarousel, horizontal scroll carousel of listing cards
 // Used for Just Listed, Price Reduced, Recently Sold sections
 // =============================================================================
 

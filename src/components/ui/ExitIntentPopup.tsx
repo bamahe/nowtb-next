@@ -1,5 +1,5 @@
 // =============================================================================
-// ExitIntentPopup — Offers a free CMA when user is about to leave the site.
+// ExitIntentPopup, Offers a free CMA when user is about to leave the site.
 // Desktop: triggers when mouse leaves the viewport (mouseout near top).
 // Mobile: triggers after 45 seconds on the page.
 // Only shows once per session (sessionStorage flag).
@@ -15,7 +15,7 @@ import TurnstileWidget from "@/components/ui/TurnstileWidget";
 // Possible form states
 type FormStatus = "idle" | "loading" | "success" | "error";
 
-// sessionStorage key — prevents showing popup more than once per session
+// sessionStorage key, prevents showing popup more than once per session
 const STORAGE_KEY = "exit-intent-shown";
 
 export type ExitIntentVariant = "buyer" | "seller" | "general";
@@ -29,7 +29,7 @@ interface ExitIntentPopupProps {
 const VARIANT_COPY: Record<ExitIntentVariant, { headline: string; subtitle: string; submitLabel: string; successMessage: string; source: string; type: string; formMessage: string }> = {
   buyer: {
     headline: "Looking for Homes in Tampa Bay?",
-    subtitle: "Tell Barrett what you're looking for — he'll send you a curated list of matching properties within 24 hours.",
+    subtitle: "Tell Barrett what you're looking for, he'll send you a curated list of matching properties within 24 hours.",
     submitLabel: "Send My Criteria",
     successMessage: "Barrett will send your personalized home matches within 24 hours.",
     source: "exit-intent-buyer",
@@ -38,7 +38,7 @@ const VARIANT_COPY: Record<ExitIntentVariant, { headline: string; subtitle: stri
   },
   seller: {
     headline: "Thinking About Selling?",
-    subtitle: "Get a free Comparative Market Analysis (CMA) for your home — Barrett will prepare it within 24 hours.",
+    subtitle: "Get a free Comparative Market Analysis (CMA) for your home, Barrett will prepare it within 24 hours.",
     submitLabel: "Get My Free CMA",
     successMessage: "Barrett will prepare your personalized CMA and reach out within 24 hours.",
     source: "exit-intent-seller",
@@ -46,7 +46,7 @@ const VARIANT_COPY: Record<ExitIntentVariant, { headline: string; subtitle: stri
     formMessage: "Exit-intent seller CMA request",
   },
   general: {
-    headline: "Before You Go — Get Your Free Home Value Report",
+    headline: "Before You Go, Get Your Free Home Value Report",
     subtitle: "Barrett Henry will prepare a personalized CMA for your property within 24 hours.",
     submitLabel: "Get My Free Report",
     successMessage: "Barrett will prepare your personalized CMA and reach out within 24 hours.",
@@ -172,7 +172,7 @@ export default function ExitIntentPopup({ variant = "general" }: ExitIntentPopup
     return () => document.removeEventListener("keydown", handleTrapKeyDown);
   }, [visible]);
 
-  /** Handle form submission — POST to /api/contact */
+  /** Handle form submission, POST to /api/contact */
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("loading");
@@ -221,7 +221,7 @@ export default function ExitIntentPopup({ variant = "general" }: ExitIntentPopup
       aria-modal="true"
       aria-label="Free home value report offer"
     >
-      {/* --- Popup card — stop clicks inside from closing the overlay --- */}
+      {/* --- Popup card, stop clicks inside from closing the overlay --- */}
       <div
         ref={popupRef}
         className="relative bg-primary text-white rounded-xl shadow-2xl max-w-md w-full p-8 sm:p-10"
@@ -249,7 +249,7 @@ export default function ExitIntentPopup({ variant = "general" }: ExitIntentPopup
           </svg>
         </button>
 
-        {/* --- Success state — replaces form after submission --- */}
+        {/* --- Success state, replaces form after submission --- */}
         {status === "success" ? (
           <div className="text-center py-4">
             <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-4">

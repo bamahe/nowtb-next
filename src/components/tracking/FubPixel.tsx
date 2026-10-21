@@ -1,5 +1,5 @@
 // =============================================================================
-// Follow Up Boss Tracking Pixel — tracks page views so you can see
+// Follow Up Boss Tracking Pixel, tracks page views so you can see
 // which listings and pages leads browse before they contact you.
 // Loads the FUB website tracking script on every page.
 // Also identifies logged-in Supabase users so their browsing history
@@ -29,7 +29,7 @@ declare global {
  * browsing history so you see exactly what properties they viewed.
  *
  * If the user is logged in via Supabase, we also call FUB.identify()
- * which connects ALL their page views to their FUB contact — even
+ * which connects ALL their page views to their FUB contact, even
  * before they fill out a form. This gives Barrett full browsing
  * history for every registered user.
  */
@@ -50,7 +50,7 @@ export default function FubPixel() {
         user.user_metadata?.first_name ||
         "";
 
-      // Retry a few times — FUB script might not be ready yet
+      // Retry a few times, FUB script might not be ready yet
       let attempts = 0;
       const tryIdentify = () => {
         if (window.FUB?.identify) {

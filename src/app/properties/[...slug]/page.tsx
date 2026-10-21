@@ -1,5 +1,5 @@
 // =============================================================================
-// Single Listing Detail Page — /properties/[...slug]
+// Single Listing Detail Page, /properties/[...slug]
 // Handles new SEO URLs: /properties/StellarMLS/{MlsId}/{city}/{address}
 // Also handles old URLs: /properties/{address-slug}-{listingKey} via redirect
 // =============================================================================
@@ -45,7 +45,7 @@ interface ListingPageProps {
 }
 
 // -----------------------------------------------------------------------------
-// Resolve listing from URL segments — new format or old format with redirect
+// Resolve listing from URL segments, new format or old format with redirect
 // -----------------------------------------------------------------------------
 
 async function resolveListing(segments: string[]): Promise<Listing | 'not-found' | 'rate-limited' | { redirect: string }> {
@@ -55,10 +55,10 @@ async function resolveListing(segments: string[]): Promise<Listing | 'not-found'
     // Try MLS ID lookup first, fall back to treating it as a ListingKey prefix
     const listing = await getListingByMlsId(mlsId);
     if (listing) return listing;
-    // MLS ID lookup failed — might be rate limited. Try direct key lookup as fallback.
+    // MLS ID lookup failed, might be rate limited. Try direct key lookup as fallback.
     const byKey = await getListing(mlsId);
     if (byKey) return byKey;
-    // If the API is rate limited, don't 404 — show a soft "try again" message
+    // If the API is rate limited, don't 404, show a soft "try again" message
     if (isRateLimited()) return 'rate-limited';
     return 'not-found';
   }
@@ -116,17 +116,17 @@ export async function generateMetadata({ params }: ListingPageProps): Promise<Me
 
 function getQuickStats(listing: Listing) {
   return [
-    { icon: Bed, label: "Beds", value: listing.BedroomsTotal ?? "—" },
-    { icon: Bath, label: "Baths", value: listing.BathroomsTotalInteger ?? "—" },
-    { icon: Ruler, label: "Sq Ft", value: listing.LivingArea ? formatSqFt(listing.LivingArea) : "—" },
-    { icon: Calendar, label: "Year Built", value: listing.YearBuilt ?? "—" },
-    { icon: LandPlot, label: "Lot Size", value: listing.LotSizeAcres ? `${listing.LotSizeAcres.toFixed(2)} acres` : "—" },
-    { icon: Car, label: "Garage", value: listing.GarageSpaces ?? "—" },
+    { icon: Bed, label: "Beds", value: listing.BedroomsTotal ?? ", " },
+    { icon: Bath, label: "Baths", value: listing.BathroomsTotalInteger ?? ", " },
+    { icon: Ruler, label: "Sq Ft", value: listing.LivingArea ? formatSqFt(listing.LivingArea) : ", " },
+    { icon: Calendar, label: "Year Built", value: listing.YearBuilt ?? ", " },
+    { icon: LandPlot, label: "Lot Size", value: listing.LotSizeAcres ? `${listing.LotSizeAcres.toFixed(2)} acres` : ", " },
+    { icon: Car, label: "Garage", value: listing.GarageSpaces ?? ", " },
   ];
 }
 
 // -----------------------------------------------------------------------------
-// Carousel data loaders — wrapped in async components for Suspense streaming
+// Carousel data loaders, wrapped in async components for Suspense streaming
 // -----------------------------------------------------------------------------
 
 async function JustListedSection({ zipCodes, city, excludeKey }: { zipCodes: string[]; city: string; excludeKey: string }) {
@@ -158,7 +158,7 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
   // 404 if listing genuinely doesn't exist
   if (result === 'not-found') notFound();
 
-  // Soft error if the Bridge API is rate limited — don't 404, show a retry page
+  // Soft error if the Bridge API is rate limited, don't 404, show a retry page
   // If rate limited, redirect to search instead of showing ugly error page
   if (result === 'rate-limited') {
     const city = slug[2] || 'tampa-bay';
@@ -171,10 +171,10 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
   const listing = result;
 
   // Check if this listing has an upcoming open house
-  // (Bridge Property endpoint doesn't include open house data — separate endpoint)
+  // (Bridge Property endpoint doesn't include open house data, separate endpoint)
   // Always refetch: a listing arriving from a cached list may carry a stale or
   // non-soonest slot. getOpenHouseForListing sorts ascending, so oh.start is the
-  // next upcoming open house — the same one the listing card shows.
+  // next upcoming open house, the same one the listing card shows.
   {
     const oh = await getOpenHouseForListing(listing.ListingKey);
     if (oh) {
@@ -329,7 +329,7 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
         }}
       />
 
-      {/* === BREADCRUMBS — city backlink for SEO/AEO/GEO === */}
+      {/* === BREADCRUMBS, city backlink for SEO/AEO/GEO === */}
       <nav aria-label="Breadcrumb" className="container-wide pt-24 pb-2">
         <ol className="flex items-center gap-1.5 text-sm font-body text-muted">
           <li>
@@ -371,14 +371,14 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
                 <p className="font-body text-sm">
                   {/* MLS open house times are UTC. Without an explicit timeZone
                       these render in the server's zone (UTC on Vercel), printing
-                      raw UTC digits — a 12:00PM ET open house showed as 4:00PM.
+                      raw UTC digits, a 12:00PM ET open house showed as 4:00PM.
                       The listing cards already pin America/New_York; this banner
                       did not, which is why the two disagreed. */}
                   {new Date(listing.OpenHouseStartTime).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: OPEN_HOUSE_TZ })}
                   {' · '}
                   {new Date(listing.OpenHouseStartTime).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: OPEN_HOUSE_TZ })}
                   {listing.OpenHouseEndTime && (
-                    <>–{new Date(listing.OpenHouseEndTime).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: OPEN_HOUSE_TZ })}</>
+                    <>{new Date(listing.OpenHouseEndTime).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: OPEN_HOUSE_TZ })}</>
                   )}
                 </p>
               </div>
@@ -398,7 +398,7 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
         <PhotoGallery photos={photos} address={listing.UnparsedAddress} autoScroll />
       </section>
 
-      {/* === SOLD SUMMARY — closed listings only ===
+      {/* === SOLD SUMMARY, closed listings only ===
            Sale price, sale date and terms sit above the fold so the page
            reads as a completed sale record rather than something for sale. */}
       {isClosed && (
@@ -456,7 +456,7 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
         </section>
       )}
 
-      {/* === LISTING HEADER — price, address, status === */}
+      {/* === LISTING HEADER, price, address, status === */}
       <section className="container-wide pb-8">
         <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
           <div>
@@ -481,7 +481,7 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
               </a>
             )}
             <ShareButtons
-              title={`${listing.UnparsedAddress} — ${formatPrice(listing.ListPrice)}`}
+              title={`${listing.UnparsedAddress}, ${formatPrice(listing.ListPrice)}`}
               description={`${listing.BedroomsTotal || 0} bed, ${listing.BathroomsTotalInteger || 0} bath home in ${listing.City}, FL`}
             />
             <FavoriteButton
@@ -737,7 +737,7 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
         city={listing.City}
       />
 
-      {/* === BUYING POWER — residential only, and not on sold listings ===
+      {/* === BUYING POWER, residential only, and not on sold listings ===
            This is the other payment estimator on the page. Leaving it up on a
            closed listing invites a buyer to work out a mortgage on a home that
            is already gone. */}
@@ -745,7 +745,7 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
         <BuyingPower listingPrice={listing.ListPrice} city={listing.City} county={listing.CountyOrParish} listingTerms={listing.ListingTerms} />
       )}
 
-      {/* === SIMILAR LISTINGS — removed server-side carousels to save API calls
+      {/* === SIMILAR LISTINGS, removed server-side carousels to save API calls
            SimilarListings, JustListed, PriceReduced, RecentSales were making
            4 additional API calls per property page. Replaced with a simple
            link to the city's listings page. === */}
@@ -775,7 +775,7 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
         </section>
       )}
 
-      {/* === BOTTOM LINKS — different for commercial vs residential === */}
+      {/* === BOTTOM LINKS, different for commercial vs residential === */}
       {isCommercial ? (
         <section className="container-wide py-12">
           <h2 className="heading-section text-2xl text-primary mb-6">

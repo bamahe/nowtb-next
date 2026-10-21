@@ -1,10 +1,10 @@
 // =============================================================================
-// /properties/search layout — exports metadata for the client component page
+// /properties/search layout, exports metadata for the client component page
 //
 // WHY THE METADATA LIVES HERE AND NOT IN page.tsx:
 // src/app/properties/search/page.tsx starts with "use client" because it uses
 // useSearchParams/useState to drive the filter bar. Next.js refuses to read an
-// `export const metadata` (or generateMetadata) out of a client component — the
+// `export const metadata` (or generateMetadata) out of a client component, the
 // build fails with "You are attempting to export \"metadata\" from a component
 // marked with \"use client\"". A co-located layout.tsx is a server component by
 // default, so this is the standard place to put metadata for a client page.
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   // 51 characters. Primary keyword ("Tampa Bay Homes for Sale") leads, because
   // Google weights the front of the title and truncates past ~60. The previous
   // title was "Search Homes for Sale in Tampa Bay | Barrett Henry | REMAX
-  // Collective" — 69 characters, so the brand got cut off in the SERP anyway
+  // Collective", 69 characters, so the brand got cut off in the SERP anyway
   // and the keyword was buried behind the word "Search".
   title: "Tampa Bay Homes for Sale | Search Live MLS Listings",
 
@@ -51,13 +51,13 @@ export const metadata: Metadata = {
     // and consolidates its ranking signals onto the one base URL. That is the
     // behaviour we want: the filtered views exist for humans, not for Google.
     //
-    // The trailing slash is required — next.config.mjs sets trailingSlash: true,
+    // The trailing slash is required, next.config.mjs sets trailingSlash: true,
     // so /properties/search (no slash) 308-redirects to /properties/search/.
     // A canonical pointing at the redirecting form makes every crawl a hop.
     //
     // If a specific filtered view ever deserves to rank on its own (e.g.
     // waterfront under $500k), the right fix is a real static route with its own
-    // content — there are already pages like /waterfront/ and /condos/ doing
+    // content, there are already pages like /waterfront/ and /condos/ doing
     // exactly that. Do not start generating per-parameter canonicals here.
     canonical: "/properties/search/",
   },

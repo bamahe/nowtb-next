@@ -7,7 +7,7 @@ import Link from "next/link";
  * WHY THIS EXISTS: this page used to export no metadata at all, so it inherited
  * whatever the root layout declared. The root layout declared the homepage as
  * its canonical URL, which meant every missing URL on the site was telling
- * Google "the canonical version of me is the homepage" — an instruction to fold
+ * Google "the canonical version of me is the homepage", an instruction to fold
  * dead URLs into the homepage's identity.
  *
  * `index: false` keeps 404s out of the index where they belong. `follow: true`
@@ -15,7 +15,7 @@ import Link from "next/link";
  * crawlers follow those links means link equity reaching a dead URL is passed
  * on to live pages instead of being thrown away.
  *
- * No `alternates.canonical` here — a 404 has no canonical version.
+ * No `alternates.canonical` here, a 404 has no canonical version.
  */
 export const metadata: Metadata = {
   title: "Page Not Found",
@@ -25,14 +25,14 @@ export const metadata: Metadata = {
 };
 
 /**
- * Custom 404 page — catches all unmatched routes.
+ * Custom 404 page, catches all unmatched routes.
  * Navy-themed design with multiple CTAs to keep visitors engaged.
  */
 export default function NotFound() {
   return (
     <section className="bg-primary min-h-[70vh] flex items-center justify-center px-4">
       <div className="text-center max-w-xl">
-        {/* Large 404 number — faded accent for visual impact */}
+        {/* Large 404 number, faded accent for visual impact */}
         <p className="font-heading text-[8rem] md:text-[10rem] font-extrabold leading-none text-accent/20 select-none">
           404
         </p>
@@ -48,7 +48,7 @@ export default function NotFound() {
           Let&apos;s get you back on track.
         </p>
 
-        {/* CTAs — go home, search properties, or call */}
+        {/* CTAs, go home, search properties, or call */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="/"
@@ -66,7 +66,7 @@ export default function NotFound() {
           </Link>
         </div>
 
-        {/* Phone CTA — prominent with headshot */}
+        {/* Phone CTA, prominent with headshot */}
         <div className="mt-10 flex flex-col items-center gap-4">
           <img
             src="/images/barrett-headshot.png"

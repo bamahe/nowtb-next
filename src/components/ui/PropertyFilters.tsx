@@ -1,5 +1,5 @@
 // =============================================================================
-// PropertyFilters — Unified search + filter bar for the properties page
+// PropertyFilters, Unified search + filter bar for the properties page
 // "use client" because it reads/writes URL search params on user interaction
 // =============================================================================
 
@@ -71,7 +71,7 @@ export default function PropertyFilters() {
     <div className="container-wide py-4 border-b border-black/5">
       {/* === Row 1: Search bar + filter toggle === */}
       <form onSubmit={handleSearch} className="flex items-center gap-3">
-        {/* Search input — city, neighborhood, ZIP, or address */}
+        {/* Search input, city, neighborhood, ZIP, or address */}
         <div className="flex-1 flex items-center gap-2 border border-border px-3 py-2.5 bg-white">
           <Search className="h-4 w-4 text-muted flex-shrink-0" />
           <input
@@ -173,7 +173,7 @@ export default function PropertyFilters() {
                            focus:outline-none focus:border-accent
                            [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
               />
-              <span className="text-muted text-xs">–</span>
+              <span className="text-muted text-xs"></span>
               <input
                 type="number"
                 placeholder="Max $"

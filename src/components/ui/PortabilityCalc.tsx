@@ -1,5 +1,5 @@
 // =============================================================================
-// PortabilityCalc — Save Our Homes portability calculator
+// PortabilityCalc, Save Our Homes portability calculator
 // Client component: calculates how much SOH benefit transfers when moving
 // =============================================================================
 
@@ -28,7 +28,7 @@ export default function PortabilityCalc() {
   // Portability calculation
   const isUpsizing = newMarket >= currentMarket;
   // Upsizing: full benefit transfers (capped at $500K)
-  // Downsizing: proportional — (new value / old value) * benefit
+  // Downsizing: proportional, (new value / old value) * benefit
   const portedBenefit = isUpsizing
     ? Math.min(sohBenefit, 500000)
     : Math.round((newMarket / currentMarket) * sohBenefit);
@@ -106,7 +106,7 @@ export default function PortabilityCalc() {
           </div>
           <div className="bg-gray-50 rounded-lg p-4 mt-2">
             <p className="font-body text-xs text-muted">
-              {isUpsizing ? "Upsizing" : "Downsizing"} — {isUpsizing
+              {isUpsizing ? "Upsizing" : "Downsizing"}, {isUpsizing
                 ? "full SOH benefit transfers (up to $500K cap)"
                 : `${Math.round((newMarket / currentMarket) * 100)}% of your benefit transfers`}
             </p>

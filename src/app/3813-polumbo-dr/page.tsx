@@ -1,5 +1,5 @@
 // =============================================================================
-// /3813-polumbo-dr — Single-property landing page for the QR code / sign rider
+// /3813-polumbo-dr, Single-property landing page for the QR code / sign rider
 // Data pulled from Stellar MLS TB8534534. Photos by Febre Frameworks, stored
 // locally in /public/images/listings/3813-polumbo-dr/ so the page keeps working
 // if the photographer's tour link ever expires.
@@ -34,7 +34,7 @@ const L = {
   subdivision: "Bloomingdale",
 };
 
-// Barrett's phone — defined once so it can never drift out of sync
+// Barrett's phone, defined once so it can never drift out of sync
 const PHONE = "(813) 733-7907";
 const PHONE_TEL = "8137337907";
 const EMAIL = "barrett@nowtb.com";
@@ -42,9 +42,9 @@ const EMAIL = "barrett@nowtb.com";
 const PRICE_FMT = `$${L.price.toLocaleString()}`;
 const FULL_ADDRESS = `${L.address}, ${L.city}, ${L.state} ${L.zip}`;
 
-// Open house details. Deliberately no calendar dates — this QR code goes on the
+// Open house details. Deliberately no calendar dates, this QR code goes on the
 // open house signs and gets reused every weekend, so dates would go stale.
-const OPEN_HOUSE = "Saturday & Sunday · 2:00 – 4:00 PM";
+const OPEN_HOUSE = "Saturday & Sunday · 2:00 to 4:00 PM";
 
 // Turn-by-turn navigation straight to the driveway. Uses lat/lng rather than the
 // address string so the phone never geocodes it to the wrong end of the street.
@@ -57,7 +57,7 @@ const DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${L.l
 const PHOTO_COUNT = 119;
 const photos = Array.from({ length: PHOTO_COUNT }, (_, i) => ({
   MediaURL: `/images/listings/3813-polumbo-dr/photo-${String(i + 1).padStart(3, "0")}.jpg`,
-  ShortDescription: `${FULL_ADDRESS} — photo ${i + 1} of ${PHOTO_COUNT}`,
+  ShortDescription: `${FULL_ADDRESS}, photo ${i + 1} of ${PHOTO_COUNT}`,
   Order: i,
 }));
 
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     `Renovated 4 bed, 3 bath, 3 car garage pool home on .64 acres in Bloomingdale. 2,271 sqft, single story, no CDD. MLS ${L.mls}. Call Barrett Henry at ${PHONE}.`,
   alternates: { canonical: "/3813-polumbo-dr/" },
   openGraph: {
-    title: "Open House Sat & Sun 2p–4p — 3813 Polumbo Dr, Valrico FL",
+    title: "Open House Sat & Sun 2p, 4p, 3813 Polumbo Dr, Valrico FL",
     description:
       "4 bed, 3 bath, 3 car garage on .64 acres with a screened pool. Fully renovated, single story, optional HOA and no CDD. Open house Saturday and Sunday, 2:00 to 4:00.",
     url: "/3813-polumbo-dr/",
@@ -77,13 +77,13 @@ export const metadata: Metadata = {
         url: "/images/listings/3813-polumbo-dr/og-open-house.jpg",
         width: 1200,
         height: 630,
-        alt: "Open House Saturday and Sunday 2p to 4p — 3813 Polumbo Dr, Valrico FL, $550,000",
+        alt: "Open House Saturday and Sunday 2p to 4p, 3813 Polumbo Dr, Valrico FL, $550,000",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Open House Sat & Sun 2p–4p — 3813 Polumbo Dr, Valrico FL",
+    title: "Open House Sat & Sun 2p, 4p, 3813 Polumbo Dr, Valrico FL",
     description: "4 bed, 3 bath, 3 car garage pool home on .64 acres in Bloomingdale. $550,000.",
     images: ["/images/listings/3813-polumbo-dr/og-open-house.jpg"],
   },
@@ -117,7 +117,7 @@ const APPLIANCES = [
   "Exhaust Fan", "Microwave", "Range", "Refrigerator",
 ];
 
-// Recent big-ticket updates — the questions every buyer asks first
+// Recent big-ticket updates, the questions every buyer asks first
 const UPDATES = [
   { item: "Roof", year: "2022" },
   { item: "HVAC", year: "2020" },
@@ -194,7 +194,7 @@ export default function PolumboListingPage() {
         ])}
       />
 
-      {/* ---------- Open house banner — first thing a QR scanner sees ----------
+      {/* ---------- Open house banner, first thing a QR scanner sees ----------
            pt-24 clears the fixed 80px site header, which otherwise sits on top
            of this band and hides the directions button. */}
       <section className="bg-accent text-primary pt-24">
@@ -300,7 +300,7 @@ export default function PolumboListingPage() {
 
             <div className="space-y-4 font-body text-base leading-relaxed text-body">
               <p>
-                Single story, fully renovated, and centered on a screened pool — this{" "}
+                Single story, fully renovated, and centered on a screened pool, this{" "}
                 {L.beds} bedroom, {L.baths} full bath, {L.garage} car garage Bloomingdale home
                 delivers {L.sqft.toLocaleString()} square feet of move-in ready living. The kitchen
                 and all three baths have been completely updated with modern finishes, and the open
@@ -312,14 +312,14 @@ export default function PolumboListingPage() {
                 and set apart, opening through its own slider to the lanai with two separate closets
                 and a spa-style bath featuring a freestanding soaking tub and frameless walk-in
                 shower. At the opposite end, a bedroom and full bath close off behind a pocket door
-                to create a private guest or in-law suite with its own entry from the lanai — and
+                to create a private guest or in-law suite with its own entry from the lanai, and
                 that bath doubles as the pool bath, so swimmers never cross the living space. Two
                 more bedrooms and a third full bath sit between them.
               </p>
               <p>
                 Big-ticket items are handled: roof replaced 2022, HVAC 2020, irrigation updated
                 2023. Add a .64 acre parcel per county records, including a .39 acre easement area
-                at the rear, plus Flood Zone X, optional HOA, and no CDD. And yes — that optional
+                at the rear, plus Flood Zone X, optional HOA, and no CDD. And yes, that optional
                 HOA means the boat or RV can come too, per county code. A side service door off the
                 garage keeps yard gear and trash day out of the main bay.
               </p>
@@ -443,7 +443,7 @@ export default function PolumboListingPage() {
                   {PHONE}
                 </a>
                 <a
-                  href={`mailto:${EMAIL}?subject=${encodeURIComponent(`Showing request — ${FULL_ADDRESS}`)}`}
+                  href={`mailto:${EMAIL}?subject=${encodeURIComponent(`Showing request, ${FULL_ADDRESS}`)}`}
                   className="flex items-center justify-center gap-2 border border-white/40 px-4 py-3 rounded hover:bg-white/10 transition"
                 >
                   <Mail className="h-4 w-4" />
@@ -451,7 +451,7 @@ export default function PolumboListingPage() {
                 </a>
 
                 <p className="font-body text-xs text-white/60 mt-4 leading-relaxed">
-                  23+ years of real estate experience. Text or call anytime — I answer my own phone.
+                  23+ years of real estate experience. Text or call anytime, I answer my own phone.
                 </p>
               </div>
 
@@ -513,7 +513,7 @@ export default function PolumboListingPage() {
         <div className="max-w-6xl mx-auto px-4">
           <p className="font-body text-xs text-muted leading-relaxed">
             Listed by Barrett Henry, Broker Associate, REMAX Collective. MLS {L.mls}. Information
-            deemed reliable but not guaranteed — buyer and buyer&rsquo;s agent should independently
+            deemed reliable but not guaranteed, buyer and buyer&rsquo;s agent should independently
             verify all measurements, lot dimensions, easements, flood zone, HOA status, taxes, and
             school assignments. Photography by Febre Frameworks. Equal Housing Opportunity.
           </p>

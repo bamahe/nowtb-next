@@ -1,5 +1,5 @@
 // =============================================================================
-// /market-updates — Housing Market Updates index page
+// /market-updates, Housing Market Updates index page
 // Data cards with stats instead of photos
 // =============================================================================
 
@@ -50,7 +50,7 @@ function MarketCard({ update, quarter }: { update: MarketUpdate; quarter: string
       href={`/market-updates/${update.slug}/`}
       className="group block border border-gray-200 rounded-lg overflow-hidden hover:border-accent hover:shadow-lg transition-all"
     >
-      {/* Stats header — dark navy like the site's design */}
+      {/* Stats header, dark navy like the site's design */}
       <div className="bg-primary p-5">
         <div className="grid grid-cols-2 gap-3">
           {medianPrice && (
@@ -162,7 +162,7 @@ export default function MarketUpdatesPage() {
         </section>
       )}
 
-      {/* === CTA — lead capture for market updates === */}
+      {/* === CTA, lead capture for market updates === */}
       <section className="bg-primary py-16">
         <div className="container-wide text-center max-w-2xl">
           <h2 className="font-heading font-extralight text-3xl tracking-[0.1em] uppercase text-white mb-4">
@@ -171,7 +171,7 @@ export default function MarketUpdatesPage() {
           <div className="w-12 h-px bg-accent mx-auto mb-6" />
           <p className="font-body text-white/70 font-light text-lg leading-relaxed mb-8">
             Stay ahead of the Tampa Bay housing market. Barrett Henry sends quarterly
-            market reports with pricing trends, inventory data, and forecasts — straight
+            market reports with pricing trends, inventory data, and forecasts, straight
             to your inbox.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

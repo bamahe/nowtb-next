@@ -1,5 +1,5 @@
 // =============================================================================
-// AccountDashboard — Full-featured consumer dashboard (Client Component)
+// AccountDashboard, Full-featured consumer dashboard (Client Component)
 // Tabs: Favorites | Saved Searches | Recently Viewed | Settings
 // Merges localStorage data with Supabase data when user is logged in
 // =============================================================================
@@ -169,7 +169,7 @@ export default function AccountDashboard({
         setFavorites((prev) => [...prev, ...localOnlyFavs]);
       }
     } catch {
-      // localStorage parse failure — ignore
+      // localStorage parse failure, ignore
     }
 
     // -- Merge saved searches from localStorage --
@@ -212,7 +212,7 @@ export default function AccountDashboard({
   // Handlers
   // ---------------------------------------------------------------------------
 
-  /** Remove a favorite — from Supabase AND localStorage */
+  /** Remove a favorite, from Supabase AND localStorage */
   const removeFavorite = useCallback(
     async (fav: FavoriteListing) => {
       // Optimistically remove from UI
@@ -245,14 +245,14 @@ export default function AccountDashboard({
               .eq("user_id", user.id);
           }
         } catch {
-          // DB delete failed — already removed from UI
+          // DB delete failed, already removed from UI
         }
       }
     },
     []
   );
 
-  /** Delete a saved search — from Supabase or localStorage */
+  /** Delete a saved search, from Supabase or localStorage */
   const deleteSearch = useCallback(
     async (search: SavedSearch) => {
       // Optimistically remove from UI
@@ -278,7 +278,7 @@ export default function AccountDashboard({
             method: "POST",
           });
         } catch {
-          // API call failed — already removed from UI
+          // API call failed, already removed from UI
         }
       }
     },
@@ -365,7 +365,7 @@ export default function AccountDashboard({
       setSettingsSaved(true);
       setTimeout(() => setSettingsSaved(false), 3000);
     } catch {
-      // save failed — silently ignore
+      // save failed, silently ignore
     } finally {
       setSettingsSaving(false);
     }
@@ -378,7 +378,7 @@ export default function AccountDashboard({
   return (
     <main className="pt-24 font-body">
       {/* ================================================================= */}
-      {/* HEADER — user info + sign out                                      */}
+      {/* HEADER, user info + sign out */}
       {/* ================================================================= */}
       <section className="bg-white py-12">
         <div className="container-wide">
@@ -531,7 +531,7 @@ function FavoritesTab({
             key={fav.id}
             className="card overflow-hidden group relative"
           >
-            {/* Remove button — X in top-right corner */}
+            {/* Remove button, X in top-right corner */}
             <button
               onClick={() => onRemove(fav)}
               className="absolute top-2 right-2 z-10 bg-white/80 backdrop-blur-sm rounded-full p-2 shadow-sm hover:bg-red-50 hover:text-red-500 transition-colors cursor-pointer"
@@ -682,7 +682,7 @@ function SavedSearchesTab({
                     ? "text-green-600 border-green-300 hover:border-green-500"
                     : "text-muted border-border hover:border-muted",
                 ].join(" ")}
-                title={search.email_alerts ? "Alerts ON — click to turn off" : "Alerts OFF — click to turn on"}
+                title={search.email_alerts ? "Alerts ON, click to turn off" : "Alerts OFF, click to turn on"}
               >
                 {search.email_alerts ? <Bell size={12} /> : <BellOff size={12} />}
                 {search.email_alerts ? "Alerts On" : "Alerts Off"}
@@ -923,7 +923,7 @@ function SettingsTab({
             onChange={onAlertStatusChangesChange}
           />
 
-          {/* Alert frequency — radio buttons */}
+          {/* Alert frequency, radio buttons */}
           <div className="pt-4 border-t border-border">
             <p className="font-body text-sm font-medium text-dark mb-3">
               Alert Frequency

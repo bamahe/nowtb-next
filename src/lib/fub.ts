@@ -1,12 +1,12 @@
 // =============================================================================
-// Follow Up Boss API client — pushes leads directly into FUB
-// NEVER import this in client components — uses server-only API key
+// Follow Up Boss API client, pushes leads directly into FUB
+// NEVER import this in client components, uses server-only API key
 // =============================================================================
 
 const FUB_API_KEY = process.env.FUB_API_KEY || "";
 const FUB_BASE = "https://api.followupboss.com/v1";
 
-// Shared auth header builder — keeps it DRY
+// Shared auth header builder, keeps it DRY
 function fubAuthHeader(): string {
   return `Basic ${Buffer.from(FUB_API_KEY + ":").toString("base64")}`;
 }
@@ -18,11 +18,11 @@ function fubAuthHeader(): string {
  */
 interface FubLeadData {
   name: string;
-  /** Optional — open-house walk-ins often give a phone but no email */
+  /** Optional, open-house walk-ins often give a phone but no email */
   email?: string;
   phone?: string;
   message?: string;
-  source: string;       // e.g. "nowtb.com — Showing Request"
+  source: string; // e.g. "nowtb.com, Showing Request"
   /** Property details to attach to the lead's note */
   property?: {
     address?: string;
@@ -37,7 +37,7 @@ interface FubLeadData {
   };
   /** Raw source identifier for internal tracking (e.g. "showing-request:MLS123") */
   sourceId?: string;
-  /** Extra question/answer pairs (seller intake). Appended to the FUB note —
+  /** Extra question/answer pairs (seller intake). Appended to the FUB note 
    *  without this the answers reach n8n only and never show up in the CRM. */
   details?: { label: string; value: string }[];
   /** Tags to apply to the lead in FUB */
@@ -67,7 +67,7 @@ export async function pushLeadToFub(data: FubLeadData): Promise<boolean> {
     };
 
     // Include whatever contact info we have. FUB needs at least one of
-    // email/phone to create a person — so phone-only walk-ins still land.
+    // email/phone to create a person, so phone-only walk-ins still land.
     if (data.email) {
       personPayload.emails = [{ value: data.email }];
     }
@@ -121,7 +121,7 @@ export async function pushLeadToFub(data: FubLeadData): Promise<boolean> {
       noteParts.push(propLines.join("\n"));
     }
 
-    // Seller intake answers — utilities, HOA, roof age, updates, etc.
+    // Seller intake answers, utilities, HOA, roof age, updates, etc.
     if (data.details?.length) {
       const detailLines = ["--- Seller Intake ---"];
       for (const d of data.details) {
@@ -140,7 +140,7 @@ export async function pushLeadToFub(data: FubLeadData): Promise<boolean> {
         body: JSON.stringify({
           personId,
           subject: data.property
-            ? `Showing Request — ${data.property.address || "Property"}`
+            ? `Showing Request, ${data.property.address || "Property"}`
             : "Website Inquiry",
           body: noteParts.join("\n\n"),
         }),
@@ -150,7 +150,7 @@ export async function pushLeadToFub(data: FubLeadData): Promise<boolean> {
     // --- Step 3: Log an event so it shows in the timeline ---
     //
     // ONLY when we have an email. FUB's /events endpoint matches an existing
-    // contact by EMAIL ONLY — verified against the live API: posting an event
+    // contact by EMAIL ONLY, verified against the live API: posting an event
     // with a matching email returns 200 and reuses the contact, while posting
     // one with only a phone returns 201 and creates a SECOND contact. Adding
     // the name to the person payload does not help.
@@ -174,7 +174,7 @@ export async function pushLeadToFub(data: FubLeadData): Promise<boolean> {
         source: data.source,
         type: "Registration",
         message: data.property
-          ? `Requested showing for ${data.property.address || "a property"} (MLS# ${data.property.mlsNumber || "N/A"}) — ${data.property.price ? "$" + data.property.price.toLocaleString() : "price N/A"}`
+          ? `Requested showing for ${data.property.address || "a property"} (MLS# ${data.property.mlsNumber || "N/A"}), ${data.property.price ? "$" + data.property.price.toLocaleString() : "price N/A"}`
           : data.message || "Submitted contact form on nowtb.com",
         description: data.message || "",
         property: data.property
@@ -204,9 +204,9 @@ export async function pushLeadToFub(data: FubLeadData): Promise<boolean> {
 }
 
 // =============================================================================
-// pushEventToFub — Logs an event to a contact's FUB timeline
+// pushEventToFub, Logs an event to a contact's FUB timeline
 // Used for property views, favorites, saved searches, etc.
-// FUB matches the person by email — creates them if they don't exist.
+// FUB matches the person by email, creates them if they don't exist.
 // =============================================================================
 
 interface FubEventData {
@@ -228,7 +228,7 @@ interface FubEventData {
 
 export async function pushEventToFub(data: FubEventData): Promise<boolean> {
   if (!FUB_API_KEY) {
-    console.warn("[FUB] No API key — skipping event push");
+    console.warn("[FUB] No API key, skipping event push");
     return false;
   }
 
@@ -263,7 +263,7 @@ export async function pushEventToFub(data: FubEventData): Promise<boolean> {
 }
 
 // =============================================================================
-// pushNoteToFub — Adds a note to a contact in FUB (matched by email)
+// pushNoteToFub, Adds a note to a contact in FUB (matched by email)
 // Used for saved search criteria, detailed property notes, etc.
 // Creates the person first if they don't exist, then attaches the note.
 // =============================================================================
@@ -276,7 +276,7 @@ interface FubNoteData {
 
 export async function pushNoteToFub(data: FubNoteData): Promise<boolean> {
   if (!FUB_API_KEY) {
-    console.warn("[FUB] No API key — skipping note push");
+    console.warn("[FUB] No API key, skipping note push");
     return false;
   }
 

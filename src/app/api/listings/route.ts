@@ -7,8 +7,8 @@ import type { Listing } from "@/lib/types";
 export const dynamic = "force-dynamic";
 
 /**
- * GET /api/listings — Search listings with filters
- * CACHED: Same query within 5 min returns cached response — zero Bridge API calls.
+ * GET /api/listings, Search listings with filters
+ * CACHED: Same query within 5 min returns cached response, zero Bridge API calls.
  * This is the #1 fix for Bridge API throttling.
  */
 export async function GET(request: NextRequest) {
@@ -72,7 +72,7 @@ export async function GET(request: NextRequest) {
       garage: searchParams.get("garage") === "true" || undefined,
     };
 
-    // CHECK CACHE FIRST — same query within 5 min returns cached data
+    // CHECK CACHE FIRST, same query within 5 min returns cached data
     const cacheKey = makeCacheKey("listings", params as Record<string, string | undefined>);
     const cached = getCached<BridgeResponse<Listing>>(cacheKey);
     if (cached) {
@@ -84,7 +84,7 @@ export async function GET(request: NextRequest) {
       });
     }
 
-    // CACHE MISS — call Bridge API
+    // CACHE MISS, call Bridge API
     // When open_house=true, use the dedicated getOpenHouses() function
     // which queries the Bridge openhouses endpoint (OData Property endpoint
     // does NOT support OpenHouseStartTime filtering)

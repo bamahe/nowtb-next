@@ -1,5 +1,5 @@
 // =============================================================================
-// POST /api/webhooks/fub — Receives webhook events FROM Follow Up Boss
+// POST /api/webhooks/fub, Receives webhook events FROM Follow Up Boss
 // FUB fires webhooks when things happen in the CRM:
 //   - Lead status changes, tags added/removed, deals updated, etc.
 // This endpoint logs all incoming events for now. Later we can build:
@@ -11,7 +11,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 // Secret key to verify webhook requests are really from FUB
-// Set FUB_WEBHOOK_SECRET in .env.local — FUB sends this in the request headers
+// Set FUB_WEBHOOK_SECRET in .env.local, FUB sends this in the request headers
 const WEBHOOK_SECRET = process.env.FUB_WEBHOOK_SECRET || "";
 
 export async function POST(request: NextRequest) {
@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
       const querySecret = new URL(request.url).searchParams.get("secret") || "";
 
       if (authHeader !== WEBHOOK_SECRET && querySecret !== WEBHOOK_SECRET) {
-        console.warn("[FUB Webhook] Unauthorized request — bad secret");
+        console.warn("[FUB Webhook] Unauthorized request, bad secret");
         return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
       }
     }
@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
       personId: payload.personId || payload.person?.id,
       email: payload.person?.emails?.[0]?.value || "unknown",
       timestamp: new Date().toISOString(),
-      // Don't log the full payload in production — just the key fields
+      // Don't log the full payload in production, just the key fields
     }));
 
     // --- Handle specific event types (expand as needed) ---

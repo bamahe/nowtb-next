@@ -1,6 +1,6 @@
 // =============================================================================
-// MobileNav — Full-screen luxury mobile menu overlay
-// Client component — manages open/close state and body scroll lock
+// MobileNav, Full-screen luxury mobile menu overlay
+// Client component, manages open/close state and body scroll lock
 // Centered links in heading font, generous spacing, contact at bottom
 // =============================================================================
 
@@ -25,7 +25,7 @@ const NAV_LINKS = [
 ];
 
 interface MobileNavProps {
-  /** Whether the header is in scrolled (solid bg) state — controls icon color */
+  /** Whether the header is in scrolled (solid bg) state, controls icon color */
   scrolled?: boolean;
   /** Notify parent when mobile menu opens/closes */
   onOpenChange?: (open: boolean) => void;
@@ -72,7 +72,7 @@ export default function MobileNav({ scrolled = false, onOpenChange }: MobileNavP
 
   return (
     <>
-      {/* ── Hamburger toggle — only visible below md breakpoint ── */}
+      {/* ── Hamburger toggle, only visible below md breakpoint ── */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         aria-label={isOpen ? "Close menu" : "Open menu"}
@@ -95,7 +95,7 @@ export default function MobileNav({ scrolled = false, onOpenChange }: MobileNavP
           ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
         `}
       >
-        {/* Full-screen dark overlay — fully opaque, no bleed-through */}
+        {/* Full-screen dark overlay, fully opaque, no bleed-through */}
         <div
           className={`
             absolute inset-0 bg-[#0c1829]
@@ -104,7 +104,7 @@ export default function MobileNav({ scrolled = false, onOpenChange }: MobileNavP
             ${isOpen ? "scale-100" : "scale-95"}
           `}
         >
-          {/* ── Navigation links — large heading font, centered, generous gaps ── */}
+          {/* ── Navigation links, large heading font, centered, generous gaps ── */}
           <nav className="flex flex-col items-center gap-8">
             {NAV_LINKS.map((link) => {
               const isActive =
@@ -128,7 +128,7 @@ export default function MobileNav({ scrolled = false, onOpenChange }: MobileNavP
             })}
           </nav>
 
-          {/* ── Bottom section — auth + contact info ── */}
+          {/* ── Bottom section, auth + contact info ── */}
           <div className="absolute bottom-12 left-0 right-0 flex flex-col items-center gap-4">
             {/* Sign In / Account link */}
             <Link

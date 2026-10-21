@@ -1,5 +1,5 @@
 // =============================================================================
-// Page Content Loader — reads real WordPress content from pages-content.json
+// Page Content Loader, reads real WordPress content from pages-content.json
 // This file is only used at build time / server-side (fs module).
 // The JSON file contains ~1,065 pages exported from the WordPress site.
 // =============================================================================
@@ -30,8 +30,8 @@ function loadPages(): PageContent[] {
     _pages = JSON.parse(raw);
     return _pages!;
   } catch {
-    // File missing or corrupt — fall back to empty (placeholder content will render)
-    console.warn("[page-content] Could not load pages-content.json — using placeholder content");
+    // File missing or corrupt, fall back to empty (placeholder content will render)
+    console.warn("[page-content] Could not load pages-content.json, using placeholder content");
     return [];
   }
 }

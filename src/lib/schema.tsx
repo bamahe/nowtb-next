@@ -21,7 +21,7 @@ const EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "barrett@nowtb.com";
 // the AI answer engines (ChatGPT, Perplexity, Google AI Overviews) decide that
 // "Barrett Henry" on this site is the SAME person they've seen elsewhere. If two
 // pages describe him differently, the engines split him into two weak entities
-// instead of one strong one. So these values live here ONCE and get imported —
+// instead of one strong one. So these values live here ONCE and get imported 
 // never retyped inline in a template.
 // -----------------------------------------------------------------------------
 
@@ -39,13 +39,13 @@ const EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "barrett@nowtb.com";
  */
 export const BARRETT_HEADSHOT_PATH = "/images/barrett-headshot.png";
 
-/** Absolute URL version — schema.org requires absolute URLs for images. */
+/** Absolute URL version, schema.org requires absolute URLs for images. */
 export const BARRETT_HEADSHOT_URL = `${SITE_URL}${BARRETT_HEADSHOT_PATH}`;
 
 /**
  * Barrett's social profiles.
  *
- * VERIFIED BY FETCH 2026-10-18 — not by asking Barrett. An earlier version of
+ * VERIFIED BY FETCH 2026-10-18, not by asking Barrett. An earlier version of
  * this comment claimed "Barrett confirmed"; he never did, and a confirmation
  * nobody gave must not sit in source looking authoritative. The pair below was
  * instead checked directly:
@@ -53,7 +53,7 @@ export const BARRETT_HEADSHOT_URL = `${SITE_URL}${BARRETT_HEADSHOT_PATH}`;
  *                                          bio lists (813) 733-7907
  *     facebook.com/BarrettHenryREALTOR  -> live, "Barrett Henry Realtor | Tampa FL"
  *
- * Re-check with a real browser fetch before trusting this again — Instagram
+ * Re-check with a real browser fetch before trusting this again, Instagram
  * returns HTTP 200 even for handles that do not exist, so a status-code check
  * proves nothing here.
  *
@@ -62,14 +62,14 @@ export const BARRETT_HEADSHOT_URL = `${SITE_URL}${BARRETT_HEADSHOT_PATH}`;
  * both, so the site now publishes ONE identity instead of two.
  *
  * Honest limit on that: a fetch of instagram.com/nowtampa was inconclusive, so
- * it is NOT proven dead — it is simply unverified, and publishing two competing
+ * it is NOT proven dead, it is simply unverified, and publishing two competing
  * identities splits the entity either way. If Barrett says that pair is also
  * live, the right fix is to add it back alongside the verified pair, not to
  * swap back to it. A `sameAs` URL that does not resolve asks an answer engine
  * to confirm Barrett's entity against nothing, which weakens the graph.
  *
  * This constant is the single source of truth. Any JSON-LD needing social
- * profiles must import BARRETT_SOCIAL_PROFILES rather than inlining handles —
+ * profiles must import BARRETT_SOCIAL_PROFILES rather than inlining handles 
  * inlining is exactly how the two pairs drifted apart in the first place.
  */
 export const BARRETT_SOCIAL_PROFILES = [
@@ -88,7 +88,7 @@ export const BARRETT_SOCIAL_PROFILES = [
 export const BARRETT_SAME_AS = [
   SITE_URL,
   "https://barretthenry.remax.com",
-  // Barrett's other domains — one operator across all of them
+  // Barrett's other domains, one operator across all of them
   "https://vivipm.com",
   "https://hencre.com",
   "https://valrico.blog",
@@ -103,7 +103,7 @@ export const BARRETT_SAME_AS = [
 
 /**
  * Barrett's designations, as schema.org credential objects.
- * He holds e-PRO, MRP and SRS — and NO others. Never add a credential here
+ * He holds e-PRO, MRP and SRS, and NO others. Never add a credential here
  * without a certificate to back it up; a fabricated credential in structured
  * data is a trust violation.
  */
@@ -118,13 +118,13 @@ export const BARRETT_CREDENTIALS = [
  *
  * `speakable` tells voice search and AI assistants which element on the page
  * holds the quotable answer. A selector that matches NO element is worse than
- * useless — it is a promise the page doesn't keep.
+ * useless, it is a promise the page doesn't keep.
  *
  * If it breaks, check: before you point a template at `.quick-answer`, make
  * sure that template actually renders <QuickAnswer> (components/ui/QuickAnswer.tsx
  * is what emits `class="quick-answer"`). Note that the WordPress content export
  * uses a DIFFERENT class, `bbs-quick-answer`, which `.quick-answer` does NOT
- * match — CSS class selectors match whole tokens, not substrings.
+ * match, CSS class selectors match whole tokens, not substrings.
  */
 export const DEFAULT_SPEAKABLE_SELECTORS = [".quick-answer", "h1"];
 
@@ -182,7 +182,7 @@ export function realEstateAgentSchema() {
     url: SITE_URL,
     telephone: PHONE,
     email: EMAIL,
-    // Same headshot everywhere — see BARRETT_HEADSHOT_PATH for why this is a constant
+    // Same headshot everywhere, see BARRETT_HEADSHOT_PATH for why this is a constant
     image: BARRETT_HEADSHOT_URL,
     address: {
       "@type": "PostalAddress",
@@ -229,7 +229,7 @@ export function realEstateAgentSchema() {
 }
 
 /**
- * LocalBusiness schema — for about/contact pages and for county/area pages.
+ * LocalBusiness schema, for about/contact pages and for county/area pages.
  *
  * Every argument is OPTIONAL and every default reproduces the original
  * zero-argument output exactly, so existing callers (and the previous
@@ -237,7 +237,7 @@ export function realEstateAgentSchema() {
  *
  * NOTE ON `geo`: a LocalBusiness `geo` is supposed to be where the business
  * physically sits. We do NOT have verified coordinates for the REMAX Collective
- * street address, and inventing lat/lng would be fabricating data — so the
+ * street address, and inventing lat/lng would be fabricating data, so the
  * business node carries no `geo` by default. Area pages instead pass
  * `areaServed`, whose geo comes from real coordinates in src/data/cities.ts.
  */
@@ -248,7 +248,7 @@ export function localBusinessSchema(options?: {
   description?: string;
   /** Canonical URL of the page this node is published on */
   url?: string;
-  /** The place(s) this page says Barrett serves — carry real geo here */
+  /** The place(s) this page says Barrett serves, carry real geo here */
   areaServed?: Record<string, unknown> | Record<string, unknown>[];
   /** Only pass this if you have VERIFIED coordinates for the office itself */
   geo?: { latitude: number; longitude: number };
@@ -256,7 +256,7 @@ export function localBusinessSchema(options?: {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: options?.name || "Barrett Henry, REALTOR® — REMAX Collective",
+    name: options?.name || "Barrett Henry, REALTOR®, REMAX Collective",
     ...(options?.description ? { description: options.description } : {}),
     telephone: PHONE,
     email: EMAIL,
@@ -283,7 +283,7 @@ export function localBusinessSchema(options?: {
   };
 }
 
-/** RealEstateListing schema — for individual listing pages */
+/** RealEstateListing schema, for individual listing pages */
 export function realEstateListingSchema(listing: Listing) {
   const photos = listing.Media?.map((m) => m.MediaURL).filter(Boolean) || [];
   const address = [
@@ -338,7 +338,7 @@ export function realEstateListingSchema(listing: Listing) {
 }
 
 /**
- * Place schema for a city — the factual entity behind every city hub and spoke
+ * Place schema for a city, the factual entity behind every city hub and spoke
  * page. Gives Google and the AI crawlers real coordinates, the county it sits
  * in, and the ZIPs it covers, so "homes for sale in X" resolves to a real
  * location rather than just a page title.
@@ -378,7 +378,7 @@ export function cityPlaceSchema(city: {
 /**
  * ItemList of property listings shown on a page. Search engines and LLMs read
  * this to understand that the page is a real inventory of homes, not just prose
- * — which is what makes it eligible to be cited for "homes for sale in X".
+ *, which is what makes it eligible to be cited for "homes for sale in X".
  * Pass only the listings actually rendered, so the markup matches the page.
  */
 export function listingItemListSchema(
@@ -399,7 +399,7 @@ export function listingItemListSchema(
   };
 }
 
-/** BreadcrumbList schema — for spoke pages */
+/** BreadcrumbList schema, for spoke pages */
 export function breadcrumbSchema(
   items: { name: string; url: string }[]
 ) {
@@ -431,7 +431,7 @@ export function articleSchema(article: {
   image?: string | string[];
   /**
    * Override the speakable selectors. Only pass selectors you have CONFIRMED
-   * match a real element in this template — see DEFAULT_SPEAKABLE_SELECTORS.
+   * match a real element in this template, see DEFAULT_SPEAKABLE_SELECTORS.
    */
   speakableSelectors?: string[];
 }) {
@@ -447,7 +447,7 @@ export function articleSchema(article: {
       "@type": "WebPage",
       "@id": article.url,
     },
-    // Full Person node, not a bare string — see barrettAuthorPerson()
+    // Full Person node, not a bare string, see barrettAuthorPerson()
     author: barrettAuthorPerson(),
     publisher: {
       "@type": "RealEstateAgent",
@@ -470,7 +470,7 @@ export function articleSchema(article: {
   };
 }
 
-/** FAQPage schema — pass the same questions rendered on the page */
+/** FAQPage schema, pass the same questions rendered on the page */
 export function faqSchema(faqs: { question: string; answer: string }[]) {
   return {
     "@context": "https://schema.org",
@@ -544,12 +544,12 @@ export function webPageSchema(page: {
 }
 
 /**
- * AdministrativeArea schema for a county — the county-level twin of
+ * AdministrativeArea schema for a county, the county-level twin of
  * cityPlaceSchema(). Gives the answer engines a real, resolvable place instead
  * of just a page title, so "homes for sale in Hillsborough County" can match.
  *
  * `lat`/`lng` must come from real data. CountyPage computes the centroid of the
- * county's cities from the verified coordinates in src/data/cities.ts — it does
+ * county's cities from the verified coordinates in src/data/cities.ts, it does
  * not guess.
  */
 export function countyAreaSchema(county: {
@@ -605,8 +605,8 @@ function decodeEntities(s: string): string {
     .replace(/&#8216;|&lsquo;/gi, "‘")
     .replace(/&#8220;|&ldquo;/gi, "“")
     .replace(/&#8221;|&rdquo;/gi, "”")
-    .replace(/&#8211;|&ndash;/gi, "–")
-    .replace(/&#8212;|&mdash;/gi, "—")
+    .replace(/, |, /gi, ", ")
+    .replace(/, |, /gi, ", ")
     .replace(/&#0?39;|&apos;/gi, "'")
     // &amp; must come last, otherwise "&amp;quot;" double-decodes
     .replace(/&amp;/gi, "&");
@@ -644,7 +644,7 @@ function stripTags(html: string): string {
  * the current data exceeds 10, so nothing is actually dropped today.
  *
  * If it breaks, check: run this against the CLEANED html (after cleanWpContent),
- * never the raw export — otherwise the schema can describe FAQs that the page
+ * never the raw export, otherwise the schema can describe FAQs that the page
  * trimmed off, which is the exact violation this function exists to prevent.
  */
 export function extractFaqsFromHtml(
@@ -745,7 +745,7 @@ export function speakableSelectorsForContent(html: string | null | undefined) {
     }
     // WordPress export: prefer the inner text node when it exists, otherwise
     // fall back to the wrapper (which is itself a clean, quotable paragraph).
-    // Never list both — the wrapper already contains the text node.
+    // Never list both, the wrapper already contains the text node.
     if (hasClassToken(html, WP_QUICK_ANSWER_TEXT_CLASS)) {
       selectors.push(`.${WP_QUICK_ANSWER_TEXT_CLASS}`);
     } else if (hasClassToken(html, WP_QUICK_ANSWER_CLASS)) {
@@ -753,7 +753,7 @@ export function speakableSelectorsForContent(html: string | null | undefined) {
     }
   }
 
-  // "h1" always resolves — every template renders exactly one — so it is the
+  // "h1" always resolves, every template renders exactly one, so it is the
   // guaranteed floor. It goes last because it is the least specific.
   selectors.push("h1");
   return selectors;

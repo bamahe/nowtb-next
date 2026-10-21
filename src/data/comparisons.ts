@@ -1,5 +1,5 @@
 /**
- * Comparison page data — 24 city-vs-city and topic comparison pages
+ * Comparison page data, 24 city-vs-city and topic comparison pages
  * from nowtb.com WordPress site. Each comparison contrasts two areas
  * or approaches for Tampa Bay buyers.
  * Auto-generated 2026-05-12.
@@ -26,7 +26,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "apollo-beach-vs-ruskin",
     title: "Apollo Beach vs Ruskin: Which Neighborhood Is Right for You?",
-    excerpt: "Compare Apollo Beach and Ruskin — home prices, lifestyle, schools, and commute times to help you choose.",
+    excerpt: "Compare Apollo Beach and Ruskin, home prices, lifestyle, schools, and commute times to help you choose.",
     sideA: "Apollo Beach",
     sideB: "Ruskin",
     category: "city",
@@ -34,7 +34,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "brandon-vs-riverview",
     title: "Brandon vs Riverview: Complete Comparison Guide",
-    excerpt: "Compare Brandon and Riverview — cost of living, schools, new construction, and lifestyle for Tampa Bay buyers.",
+    excerpt: "Compare Brandon and Riverview, cost of living, schools, new construction, and lifestyle for Tampa Bay buyers.",
     sideA: "Brandon",
     sideB: "Riverview",
     category: "city",
@@ -42,7 +42,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "brandon-vs-valrico",
     title: "Brandon vs Valrico: Which Is Better for Families?",
-    excerpt: "Compare Brandon and Valrico — home values, school zones, amenities, and neighborhood character.",
+    excerpt: "Compare Brandon and Valrico, home values, school zones, amenities, and neighborhood character.",
     sideA: "Brandon",
     sideB: "Valrico",
     category: "city",
@@ -50,7 +50,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "clearwater-beach-vs-siesta-key",
     title: "Clearwater Beach vs Siesta Key: Beach Living Compared",
-    excerpt: "Compare Clearwater Beach and Siesta Key — real estate prices, beach quality, dining, and lifestyle.",
+    excerpt: "Compare Clearwater Beach and Siesta Key, real estate prices, beach quality, dining, and lifestyle.",
     sideA: "Clearwater Beach",
     sideB: "Siesta Key",
     category: "city",
@@ -58,7 +58,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "dunedin-vs-safety-harbor",
     title: "Dunedin vs Safety Harbor: Small-Town Charm Compared",
-    excerpt: "Compare Dunedin and Safety Harbor — walkability, dining, arts scene, and real estate values.",
+    excerpt: "Compare Dunedin and Safety Harbor, walkability, dining, arts scene, and real estate values.",
     sideA: "Dunedin",
     sideB: "Safety Harbor",
     category: "city",
@@ -66,7 +66,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "fishhawk-ranch-vs-south-shore",
     title: "FishHawk Ranch vs South Shore: Master-Planned Communities Compared",
-    excerpt: "Compare FishHawk Ranch and South Shore — amenities, home prices, schools, and community feel.",
+    excerpt: "Compare FishHawk Ranch and South Shore, amenities, home prices, schools, and community feel.",
     sideA: "FishHawk Ranch",
     sideB: "South Shore",
     category: "city",
@@ -74,7 +74,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "fishhawk-ranch-vs-waterset",
     title: "FishHawk Ranch vs Waterset: Which Community Is Better?",
-    excerpt: "Compare FishHawk Ranch and Waterset — new construction, lot sizes, amenities, and commute times.",
+    excerpt: "Compare FishHawk Ranch and Waterset, new construction, lot sizes, amenities, and commute times.",
     sideA: "FishHawk Ranch",
     sideB: "Waterset",
     category: "city",
@@ -82,7 +82,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "land-o-lakes-vs-lutz",
     title: "Land O' Lakes vs Lutz: North Tampa Suburbs Compared",
-    excerpt: "Compare Land O' Lakes and Lutz — home prices, schools, shopping, and new developments.",
+    excerpt: "Compare Land O' Lakes and Lutz, home prices, schools, shopping, and new developments.",
     sideA: "Land O' Lakes",
     sideB: "Lutz",
     category: "city",
@@ -90,7 +90,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "living-in-tampa-vs-st-pete",
     title: "Living in Tampa vs St. Petersburg: Which City Is Right for You?",
-    excerpt: "Compare living in Tampa and St. Pete — lifestyle, cost of living, nightlife, and neighborhoods.",
+    excerpt: "Compare living in Tampa and St. Pete, lifestyle, cost of living, nightlife, and neighborhoods.",
     sideA: "Tampa",
     sideB: "St. Petersburg",
     category: "city",
@@ -98,7 +98,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "new-port-richey-vs-trinity",
     title: "New Port Richey vs Trinity: Pasco County Comparison",
-    excerpt: "Compare New Port Richey and Trinity — home values, lifestyle, schools, and future development.",
+    excerpt: "Compare New Port Richey and Trinity, home values, lifestyle, schools, and future development.",
     sideA: "New Port Richey",
     sideB: "Trinity",
     category: "city",
@@ -106,7 +106,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "new-tampa-vs-wesley-chapel",
     title: "New Tampa vs Wesley Chapel: Growth Corridor Compared",
-    excerpt: "Compare New Tampa and Wesley Chapel — new construction, schools, shopping, and commute to downtown.",
+    excerpt: "Compare New Tampa and Wesley Chapel, new construction, schools, shopping, and commute to downtown.",
     sideA: "New Tampa",
     sideB: "Wesley Chapel",
     category: "city",
@@ -114,7 +114,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "odessa-vs-land-o-lakes",
     title: "Odessa vs Land O' Lakes: Northwest Hillsborough Compared",
-    excerpt: "Compare Odessa and Land O' Lakes — lot sizes, home styles, schools, and rural vs. suburban feel.",
+    excerpt: "Compare Odessa and Land O' Lakes, lot sizes, home styles, schools, and rural vs. suburban feel.",
     sideA: "Odessa",
     sideB: "Land O' Lakes",
     category: "city",
@@ -122,7 +122,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "odessa-vs-westchase",
     title: "Odessa vs Westchase: Which Fits Your Lifestyle?",
-    excerpt: "Compare Odessa and Westchase — home prices, lot sizes, amenities, and neighborhood vibe.",
+    excerpt: "Compare Odessa and Westchase, home prices, lot sizes, amenities, and neighborhood vibe.",
     sideA: "Odessa",
     sideB: "Westchase",
     category: "city",
@@ -130,7 +130,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "palm-harbor-vs-tarpon-springs",
     title: "Palm Harbor vs Tarpon Springs: Pinellas North Compared",
-    excerpt: "Compare Palm Harbor and Tarpon Springs — waterfront living, schools, dining, and community character.",
+    excerpt: "Compare Palm Harbor and Tarpon Springs, waterfront living, schools, dining, and community character.",
     sideA: "Palm Harbor",
     sideB: "Tarpon Springs",
     category: "city",
@@ -138,7 +138,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "south-tampa-vs-st-pete",
     title: "South Tampa vs St. Pete: Urban Living Compared",
-    excerpt: "Compare South Tampa and St. Pete — walkability, dining, nightlife, home prices, and neighborhood character.",
+    excerpt: "Compare South Tampa and St. Pete, walkability, dining, nightlife, home prices, and neighborhood character.",
     sideA: "South Tampa",
     sideB: "St. Petersburg",
     category: "city",
@@ -146,7 +146,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "wesley-chapel-vs-land-o-lakes",
     title: "Wesley Chapel vs Land O' Lakes: North Pasco Compared",
-    excerpt: "Compare Wesley Chapel and Land O' Lakes — new communities, shopping, schools, and growth trends.",
+    excerpt: "Compare Wesley Chapel and Land O' Lakes, new communities, shopping, schools, and growth trends.",
     sideA: "Wesley Chapel",
     sideB: "Land O' Lakes",
     category: "city",
@@ -154,7 +154,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "wesley-chapel-vs-riverview",
     title: "Wesley Chapel vs Riverview: Growth Markets Compared",
-    excerpt: "Compare Wesley Chapel and Riverview — new construction, commute to Tampa, schools, and value.",
+    excerpt: "Compare Wesley Chapel and Riverview, new construction, commute to Tampa, schools, and value.",
     sideA: "Wesley Chapel",
     sideB: "Riverview",
     category: "city",
@@ -162,7 +162,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "westchase-vs-carrollwood",
     title: "Westchase vs Carrollwood: West Tampa Suburbs Compared",
-    excerpt: "Compare Westchase and Carrollwood — HOA communities, home prices, schools, and Tampa commute.",
+    excerpt: "Compare Westchase and Carrollwood, HOA communities, home prices, schools, and Tampa commute.",
     sideA: "Westchase",
     sideB: "Carrollwood",
     category: "city",
@@ -172,7 +172,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "valrico-vs-fishhawk",
     title: "Valrico vs FishHawk Ranch: Which Community Is Right for You?",
-    excerpt: "Compare Valrico and FishHawk Ranch — home prices, schools, amenities, HOA fees, and lifestyle.",
+    excerpt: "Compare Valrico and FishHawk Ranch, home prices, schools, amenities, HOA fees, and lifestyle.",
     sideA: "Valrico",
     sideB: "FishHawk Ranch",
     category: "city",
@@ -180,7 +180,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "plant-city-vs-dover",
     title: "Plant City vs Dover: Rural Hillsborough Living Compared",
-    excerpt: "Compare Plant City and Dover FL — acreage, prices, schools, and small-town lifestyle.",
+    excerpt: "Compare Plant City and Dover FL, acreage, prices, schools, and small-town lifestyle.",
     sideA: "Plant City",
     sideB: "Dover",
     category: "city",
@@ -188,7 +188,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "seffner-vs-brandon",
     title: "Seffner vs Brandon: Which Is the Better Buy?",
-    excerpt: "Compare Seffner and Brandon FL — home prices, value, commute times, and neighborhood options.",
+    excerpt: "Compare Seffner and Brandon FL, home prices, value, commute times, and neighborhood options.",
     sideA: "Seffner",
     sideB: "Brandon",
     category: "city",
@@ -196,7 +196,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "apollo-beach-vs-riverview",
     title: "Apollo Beach vs Riverview: Waterfront vs Suburban Value",
-    excerpt: "Compare Apollo Beach and Riverview FL — waterfront access, prices, schools, and lifestyle.",
+    excerpt: "Compare Apollo Beach and Riverview FL, waterfront access, prices, schools, and lifestyle.",
     sideA: "Apollo Beach",
     sideB: "Riverview",
     category: "city",
@@ -204,7 +204,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "thonotosassa-vs-dover",
     title: "Thonotosassa vs Dover: Country Living Compared",
-    excerpt: "Compare Thonotosassa and Dover FL — lot sizes, prices, zoning, and rural lifestyle.",
+    excerpt: "Compare Thonotosassa and Dover FL, lot sizes, prices, zoning, and rural lifestyle.",
     sideA: "Thonotosassa",
     sideB: "Dover",
     category: "city",
@@ -214,7 +214,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "valrico-vs-riverview",
     title: "Valrico vs Riverview: Schools, Prices, and Lifestyle Compared",
-    excerpt: "Compare Valrico and Riverview FL — home prices, school zones, commute times, neighborhoods, and which is the better fit for your family.",
+    excerpt: "Compare Valrico and Riverview FL, home prices, school zones, commute times, neighborhoods, and which is the better fit for your family.",
     sideA: "Valrico",
     sideB: "Riverview",
     category: "city",
@@ -222,7 +222,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "valrico-vs-lithia",
     title: "Valrico vs Lithia: Suburban Living vs Rural Luxury",
-    excerpt: "Compare Valrico and Lithia FL — lot sizes, prices, FishHawk Ranch vs Bloomingdale, school zones, and lifestyle differences.",
+    excerpt: "Compare Valrico and Lithia FL, lot sizes, prices, FishHawk Ranch vs Bloomingdale, school zones, and lifestyle differences.",
     sideA: "Valrico",
     sideB: "Lithia",
     category: "city",
@@ -230,7 +230,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "valrico-vs-seffner",
     title: "Valrico vs Seffner: Which Hillsborough Suburb Offers Better Value?",
-    excerpt: "Compare Valrico and Seffner FL — prices, neighborhoods, I-4 access, school zones, and which is the better buy in 2026.",
+    excerpt: "Compare Valrico and Seffner FL, prices, neighborhoods, I-4 access, school zones, and which is the better buy in 2026.",
     sideA: "Valrico",
     sideB: "Seffner",
     category: "city",
@@ -238,7 +238,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "valrico-vs-plant-city",
     title: "Valrico vs Plant City: Suburban vs Small-Town Living",
-    excerpt: "Compare Valrico and Plant City FL — home values, acreage, schools, commute to Tampa, and lifestyle.",
+    excerpt: "Compare Valrico and Plant City FL, home values, acreage, schools, commute to Tampa, and lifestyle.",
     sideA: "Valrico",
     sideB: "Plant City",
     category: "city",
@@ -254,7 +254,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "fsbo-vs-realtor",
     title: "FSBO vs REALTOR: Selling Your Home Yourself vs. Hiring an Agent",
-    excerpt: "Compare selling FSBO vs. using a REALTOR — costs, time, marketing, negotiation, and net proceeds.",
+    excerpt: "Compare selling FSBO vs. using a REALTOR, costs, time, marketing, negotiation, and net proceeds.",
     sideA: "For Sale by Owner",
     sideB: "Hiring a REALTOR",
     category: "concept",
@@ -262,7 +262,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "new-construction-vs-resale",
     title: "New Construction vs Resale: Which Is the Better Buy?",
-    excerpt: "Compare buying new construction vs. resale homes — cost, customization, timelines, and hidden costs.",
+    excerpt: "Compare buying new construction vs. resale homes, cost, customization, timelines, and hidden costs.",
     sideA: "New Construction",
     sideB: "Resale Home",
     category: "concept",
@@ -270,7 +270,7 @@ export const comparisons: ComparisonData[] = [
   {
     slug: "renting-vs-buying",
     title: "Renting vs Buying: A Complete Financial Comparison",
-    excerpt: "The math behind renting vs. buying a home — when each makes sense and how to decide.",
+    excerpt: "The math behind renting vs. buying a home, when each makes sense and how to decide.",
     sideA: "Renting",
     sideB: "Buying",
     category: "concept",

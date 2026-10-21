@@ -1,6 +1,6 @@
 // =============================================================================
-// SimilarListings — Shows 4 listings in the same ZIP with a similar price
-// Server component — fetches from Bridge API at render time (ISR cached)
+// SimilarListings, Shows 4 listings in the same ZIP with a similar price
+// Server component, fetches from Bridge API at render time (ISR cached)
 // =============================================================================
 
 import { getListings } from "@/lib/bridge";
@@ -14,9 +14,9 @@ import ListingCard from "@/components/ui/ListingCard";
 interface SimilarListingsProps {
   /** ListingKey of the current listing (excluded from results) */
   currentListingKey: string;
-  /** ZIP code to search in — same neighborhood feel */
+  /** ZIP code to search in, same neighborhood feel */
   zipCode: string;
-  /** Current listing price — used to build a +/-20% price range */
+  /** Current listing price, used to build a +/-20% price range */
   price: number;
   /** City name for the section heading */
   city: string;

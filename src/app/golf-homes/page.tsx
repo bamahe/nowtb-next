@@ -1,4 +1,4 @@
-// /golf-homes — Tampa Bay Golf Course Homes
+// /golf-homes, Tampa Bay Golf Course Homes
 import type { Metadata } from "next";
 import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
@@ -10,11 +10,11 @@ import type { Listing } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Tampa Bay Golf Course Homes for Sale | Barrett Henry, REALTOR®",
-  description: "Golf course homes in Tampa Bay — fairway views, golf community living. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
+  description: "Golf course homes in Tampa Bay, fairway views, golf community living. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
   alternates: { canonical: "/golf-homes/" },
   openGraph: {
     title: "Tampa Bay Golf Course Homes for Sale | Barrett Henry, REALTOR®",
-    description: "Golf course homes in Tampa Bay — fairway views, golf community living. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
+    description: "Golf course homes in Tampa Bay, fairway views, golf community living. Barrett Henry, REALTOR® at REMAX Collective. (813) 733-7907.",
     type: "website",
   },
 };
@@ -23,7 +23,7 @@ export const revalidate = 3600; // 1 hour, matches the hourly refresh-listings c
 export default async function GolfPage() {
   let listings: Listing[] = [];
   try {
-    // Golf homes don't have a direct MLS filter — show luxury homes as proxy
+    // Golf homes don't have a direct MLS filter, show luxury homes as proxy
     const res = await getListings({ min_price: "500000", limit: "24", exclude_rental: true, sort: "ListPrice desc" });
     listings = res.value || [];
   } catch { listings = []; }

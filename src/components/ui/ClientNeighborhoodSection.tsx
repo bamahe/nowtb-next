@@ -1,6 +1,6 @@
 "use client";
 
-// ClientNeighborhoodSection — Client-side listings for neighborhood pages.
+// ClientNeighborhoodSection, Client-side listings for neighborhood pages.
 // Fetches and displays active listings in the neighborhood area without
 // blocking the server render or burning Bridge API rate limits at build time.
 

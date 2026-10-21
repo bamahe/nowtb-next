@@ -1,5 +1,5 @@
 // =============================================================================
-// Homepage — Barrett Henry, REALTOR® | Tampa Bay Homes for Sale
+// Homepage, Barrett Henry, REALTOR® | Tampa Bay Homes for Sale
 // Server component: fetches featured listings at build/revalidation time
 // =============================================================================
 
@@ -21,7 +21,7 @@ import { testimonials } from "@/data/testimonials";
 export const revalidate = 3600; // 1 hour, matches the hourly refresh-listings cron
 
 // -----------------------------------------------------------------------------
-// Metadata — SEO title, description, and Open Graph tags
+// Metadata, SEO title, description, and Open Graph tags
 // -----------------------------------------------------------------------------
 
 export const metadata: Metadata = {
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 };
 
 // -----------------------------------------------------------------------------
-// Value proposition data — rendered as a 3-column grid
+// Value proposition data, rendered as a 3-column grid
 // -----------------------------------------------------------------------------
 
 const VALUE_PROPS = [
@@ -50,19 +50,19 @@ const VALUE_PROPS = [
     icon: Shield,
     title: "23+ Years Closing Deals",
     description:
-      "I've been in this business since 2003. That means I've seen every market cycle, every curveball, and every creative solution. Experience isn't a bullet point — it's your safety net.",
+      "I've been in this business since 2003. That means I've seen every market cycle, every curveball, and every creative solution. Experience isn't a bullet point, it's your safety net.",
   },
   {
     icon: TrendingUp,
     title: "Numbers Don't Lie",
     description:
-      "I price homes with data, not wishful thinking. My team and I pull the comps, track the trends, and give you the honest numbers so you make smart moves — not emotional ones.",
+      "I price homes with data, not wishful thinking. My team and I pull the comps, track the trends, and give you the honest numbers so you make smart moves, not emotional ones.",
   },
   {
     icon: Users,
     title: "Tampa Bay, Inside and Out",
     description:
-      "From Riverview to St. Pete, Brandon to Sarasota — I know the neighborhoods, the school zones, the flood maps, and what's actually happening on the ground across all 8 counties.",
+      "From Riverview to St. Pete, Brandon to Sarasota, I know the neighborhoods, the school zones, the flood maps, and what's actually happening on the ground across all 8 counties.",
   },
 ] as const;
 
@@ -168,7 +168,7 @@ export default async function HomePage() {
           so the site has a single canonical WebSite entity. */}
 
       {/* =================================================================
-          SECTION 1: Hero — full viewport, content at bottom, luxury feel
+          SECTION 1: Hero, full viewport, content at bottom, luxury feel
           ================================================================= */}
       <HeroSection
         title="Tampa Bay Homes for Sale"
@@ -177,7 +177,7 @@ export default async function HomePage() {
         bgImage="/images/hero-desktop.jpg"
         bgVideo="/images/tampa-aerial-bg.mp4"
       >
-        {/* Dual CTA buttons — transparent with white border for luxury feel */}
+        {/* Dual CTA buttons, transparent with white border for luxury feel */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link href="/properties/" className="btn-secondary">
             Search Properties
@@ -194,7 +194,7 @@ export default async function HomePage() {
       </HeroSection>
 
       {/* =================================================================
-          SECTION 1b: Quick-action CTA row — big buttons between hero & listings
+          SECTION 1b: Quick-action CTA row, big buttons between hero & listings
           ================================================================= */}
       <section className="bg-primary/95 border-t border-white/10">
         <div className="container-wide py-6">
@@ -232,11 +232,11 @@ export default async function HomePage() {
       </section>
 
       {/* =================================================================
-          SECTION 2: Featured Listings — dark navy, label-only heading
+          SECTION 2: Featured Listings, dark navy, label-only heading
           ================================================================= */}
       <section className="section-dark">
         <div className="container-wide">
-          {/* Minimal heading — just label + divider, no heavy h2 */}
+          {/* Minimal heading, just label + divider, no heavy h2 */}
           <div className="text-center mb-16">
             <p className="heading-label mb-6">Featured Properties</p>
             <div className="section-divider" />
@@ -250,7 +250,7 @@ export default async function HomePage() {
             showFilters={false}
           />
 
-          {/* "View All" link — minimal uppercase style */}
+          {/* "View All" link, minimal uppercase style */}
           {featuredListings.length > 0 && (
             <div className="text-center mt-16">
               <Link
@@ -265,12 +265,12 @@ export default async function HomePage() {
       </section>
 
       {/* =================================================================
-          SECTION 3: City Grid — white background for visual contrast
+          SECTION 3: City Grid, white background for visual contrast
           CityGrid gets className + hideHeading so we control the wrapper
           and heading from here instead of inside the component.
           ================================================================= */}
       {/* =================================================================
-          SECTION 3: Communities — white background, label + heading
+          SECTION 3: Communities, white background, label + heading
           ================================================================= */}
       <section className="section-white">
         <div className="container-wide">
@@ -287,7 +287,7 @@ export default async function HomePage() {
             </p>
           </div>
 
-          {/* City grid tiles — bare mode: parent handles section wrapper + heading */}
+          {/* City grid tiles, bare mode: parent handles section wrapper + heading */}
           <CityGrid bare />
 
           {/* Supporting copy about service area */}
@@ -300,10 +300,10 @@ export default async function HomePage() {
       </section>
 
       {/* =================================================================
-          SECTION 4: Value Props — soft gray background, 3 premium cards
+          SECTION 4: Value Props, soft gray background, 3 premium cards
           ================================================================= */}
       {/* =================================================================
-          SECTION 4: Value Props — warm cream bg, minimal card style
+          SECTION 4: Value Props, warm cream bg, minimal card style
           ================================================================= */}
       <section className="section-light">
         <div className="container-wide">
@@ -313,7 +313,7 @@ export default async function HomePage() {
             <div className="section-divider" />
           </div>
 
-          {/* 3-column card grid — minimal style, no card background */}
+          {/* 3-column card grid, minimal style, no card background */}
           <div className="grid grid-cols-1 gap-16 md:grid-cols-3">
             {VALUE_PROPS.map((prop) => {
               const Icon = prop.icon;
@@ -322,12 +322,12 @@ export default async function HomePage() {
                   key={prop.title}
                   className="text-center"
                 >
-                  {/* Icon — bare, no circular background */}
+                  {/* Icon, bare, no circular background */}
                   <div className="mx-auto mb-8">
                     <Icon className="h-8 w-8 text-accent mx-auto" strokeWidth={1} />
                   </div>
 
-                  {/* Card heading — light weight, uppercase, tracked */}
+                  {/* Card heading, light weight, uppercase, tracked */}
                   <h3 className="heading-section text-sm text-primary mb-4">
                     {prop.title}
                   </h3>
@@ -344,7 +344,7 @@ export default async function HomePage() {
       </section>
 
       {/* =================================================================
-          SECTION 5: Testimonials — real Google reviews
+          SECTION 5: Testimonials, real Google reviews
           ================================================================= */}
       <section className="section-dark">
         <div className="container-wide">
@@ -380,7 +380,7 @@ export default async function HomePage() {
       </section>
 
       {/* =================================================================
-          SECTION 5b: Lead Capture Form — navy bg, compact 3-field form
+          SECTION 5b: Lead Capture Form, navy bg, compact 3-field form
           ================================================================= */}
       <section className="bg-primary py-20">
         <div className="container-wide max-w-xl mx-auto text-center">
@@ -400,7 +400,7 @@ export default async function HomePage() {
       </section>
 
       {/* =================================================================
-          SECTION 6: Quick Links — internal navigation to key pages
+          SECTION 6: Quick Links, internal navigation to key pages
           ================================================================= */}
       <section className="section-light">
         <div className="container-wide">
@@ -455,7 +455,7 @@ export default async function HomePage() {
       </section>
 
       {/* =================================================================
-          SECTION 6: CTA — clean, minimal dark navy
+          SECTION 6: CTA, clean, minimal dark navy
           ================================================================= */}
       <section className="section-dark">
         <div className="container-wide text-center">
@@ -465,7 +465,7 @@ export default async function HomePage() {
           </h2>
           <div className="section-divider" />
 
-          {/* Phone number — large and prominent, light weight */}
+          {/* Phone number, large and prominent, light weight */}
           <p className="font-heading text-white text-3xl md:text-4xl font-extralight tracking-wide mt-8 mb-10">
             <a
               href={`tel:${agent.phone}`}

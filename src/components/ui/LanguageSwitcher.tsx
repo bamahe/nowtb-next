@@ -1,5 +1,5 @@
 // =============================================================================
-// LanguageSwitcher — Google Translate dropdown for multi-language support
+// LanguageSwitcher, Google Translate dropdown for multi-language support
 // "use client" because it loads the Google Translate script dynamically
 // =============================================================================
 

@@ -82,7 +82,7 @@ export default function SearchCategoryListings({ slug }: { slug: string }) {
     <ClientListings
       zipCodes={config.zipCodes}
       title={config.title}
-      subtitle="Active listings from Stellar MLS — updated daily"
+      subtitle="Active listings from Stellar MLS, updated daily"
       limit={config.limit || 12}
       filters={config.filters || {}}
       areaName="Tampa Bay"

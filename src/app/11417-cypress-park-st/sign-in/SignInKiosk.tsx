@@ -1,7 +1,7 @@
 "use client";
 
 // =============================================================================
-// SignInKiosk — the actual open house sign-in form.
+// SignInKiosk, the actual open house sign-in form.
 // Posts to /api/contact (same pipe as every other form, so leads land in FUB),
 // then shows a 4 second thank-you and resets itself for the next guest.
 // =============================================================================
@@ -13,14 +13,14 @@ const ADDRESS = "11417 Cypress Park St";
 const CITY_LINE = "Tampa, FL 33624";
 const PHONE = "(813) 733-7907";
 
-// Lender working the open house. Name only is enough for the kiosk — guests
+// Lender working the open house. Name only is enough for the kiosk, guests
 // just need to know who to walk over to.
 const LENDER_FIRST = "Christian";
 const LENDER_NAME = "Christian Gardner";
 
-// Radio-button groups. Kept short on purpose — long forms kill sign-in rates.
+// Radio-button groups. Kept short on purpose, long forms kill sign-in rates.
 const AGENT_OPTIONS = ["No, I'm on my own", "Yes, I have an agent"];
-const TIMEFRAME_OPTIONS = ["ASAP", "1–3 months", "3–6 months", "Just looking"];
+const TIMEFRAME_OPTIONS = ["ASAP", "1 to 3 months", "3 to 6 months", "Just looking"];
 const FINANCING_OPTIONS = ["Pre-approved", "Need a lender", "Cash", "Not yet"];
 const LENDER_OPTIONS = ["Yes, introduce me", "No thanks"];
 const HEARD_OPTIONS = ["Drove by / sign", "Zillow", "Realtor.com", "Facebook / Instagram", "Friend", "Other"];
@@ -64,7 +64,7 @@ export default function SignInKiosk() {
     // Everything that isn't a standard field gets folded into the message body
     // so it still reaches Follow Up Boss without needing new API fields.
     const message = [
-      `OPEN HOUSE SIGN-IN — ${ADDRESS}`,
+      `OPEN HOUSE SIGN-IN, ${ADDRESS}`,
       agent && `Working with an agent: ${agent}${agentName ? ` (${agentName})` : ""}`,
       timeframe && `Timeframe: ${timeframe}`,
       financing && `Financing: ${financing}`,
@@ -83,7 +83,7 @@ export default function SignInKiosk() {
           // Tagged onto the FUB contact. The address and today's date are added
           // server-side, so this only carries who was on site.
           extraTags: [LENDER_NAME],
-          // Hidden field — invisible to a guest, but scripts fill every input
+          // Hidden field, invisible to a guest, but scripts fill every input
           // they find. Anything in here means the submission is a bot.
           honeypot: hp,
           property: {
@@ -95,7 +95,7 @@ export default function SignInKiosk() {
         }),
       });
     } catch {
-      // Never show an error at an open house — a failed POST must not stop the
+      // Never show an error at an open house, a failed POST must not stop the
       // line at the door. The guest still sees the thank-you.
     }
     setStatus("done");
@@ -113,7 +113,7 @@ export default function SignInKiosk() {
             Thank You
           </h1>
           <p className="font-body text-2xl text-white/80">
-            Enjoy the home — I&rsquo;m here if you have questions.
+            Enjoy the home, I&rsquo;m here if you have questions.
           </p>
           <p className="font-body text-lg text-white/50 mt-10">Ready for the next guest…</p>
         </div>
@@ -127,7 +127,7 @@ export default function SignInKiosk() {
       {/* Header */}
       <div className="bg-primary text-white px-8 pt-10 pb-7 text-center">
         <h1 className="font-heading text-4xl md:text-5xl font-light uppercase tracking-wide">
-          Welcome — Please Sign In
+          Welcome, Please Sign In
         </h1>
         <p className="font-body text-xl text-accent mt-2">
           {ADDRESS} &middot; {CITY_LINE}
@@ -209,7 +209,7 @@ export default function SignInKiosk() {
         <Choice label="When are you looking to move?" options={TIMEFRAME_OPTIONS} value={timeframe} onChange={setTimeframe} />
         <Choice label="Financing" options={FINANCING_OPTIONS} value={financing} onChange={setFinancing} />
 
-        {/* The lender is standing right here today — ask while they are in the
+        {/* The lender is standing right here today, ask while they are in the
             house, not three days later over email. */}
         <Choice
           label={`${LENDER_FIRST} is our lender here today. Want a quick intro?`}
@@ -243,7 +243,7 @@ export default function SignInKiosk() {
   );
 }
 
-// Oversized inputs — 24px text stops iOS from zooming on focus
+// Oversized inputs, 24px text stops iOS from zooming on focus
 const INPUT =
   "w-full rounded-xl border-2 border-border bg-white px-5 py-5 text-2xl text-primary focus:border-accent focus:outline-none";
 
@@ -259,7 +259,7 @@ function Field({ label, required, children }: { label: string; required?: boolea
   );
 }
 
-// Big tap-target button group — faster than a dropdown on a touchscreen
+// Big tap-target button group, faster than a dropdown on a touchscreen
 function Choice({
   label, options, value, onChange,
 }: { label: string; options: string[]; value: string; onChange: (v: string) => void }) {

@@ -1,5 +1,5 @@
 // =============================================================================
-// /api/cron/refresh-listings — keeps the server-side listing cache warm
+// /api/cron/refresh-listings, keeps the server-side listing cache warm
 //
 // Runs hourly via Vercel Cron. Pulls active inventory for every ZIP the site
 // serves and writes it to Supabase, so city pages can render real homes into
@@ -16,7 +16,7 @@ import { cities } from "@/data/cities";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
-export const maxDuration = 300; // ZIP sweeps take a while — allow the full 5 min
+export const maxDuration = 300; // ZIP sweeps take a while, allow the full 5 min
 
 /** How many listings to keep per ZIP. Pages render ~12, so this leaves headroom. */
 const PER_ZIP = 24;
@@ -35,7 +35,7 @@ export async function GET(request: Request) {
     }
   }
 
-  // Every ZIP the site covers, de-duplicated — many cities share ZIPs
+  // Every ZIP the site covers, de-duplicated, many cities share ZIPs
   const zips = Array.from(
     new Set(cities.flatMap((c) => c.zip_codes || []))
   ).filter(Boolean);
@@ -48,7 +48,7 @@ export async function GET(request: Request) {
     // Leave a safety margin before Vercel's maxDuration kills the function,
     // so a partial sweep still commits what it managed to fetch.
     if (Date.now() - startedAt > 270_000) {
-      console.warn(`[refresh-listings] stopping early at ${zip} — time budget`);
+      console.warn(`[refresh-listings] stopping early at ${zip}, time budget`);
       break;
     }
 

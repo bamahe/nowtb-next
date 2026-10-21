@@ -1,5 +1,5 @@
 // =============================================================================
-// RealtorPage — Comprehensive city-specific REALTOR landing page
+// RealtorPage, Comprehensive city-specific REALTOR landing page
 // Targets "[City] realtor", "[City] real estate agent" long-tail searches
 // 1,000+ words of unique content per city with neighborhood links,
 // service breakdowns, credentials, FAQs with schema, and testimonials.
@@ -17,7 +17,7 @@ import { testimonials } from "@/data/testimonials";
 import type { CityData } from "@/data/cities";
 
 interface RealtorPageProps {
-  /** Full city data object — includes name, slug, county, zip_codes, etc. */
+  /** Full city data object, includes name, slug, county, zip_codes, etc. */
   city: CityData;
 }
 
@@ -48,7 +48,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
   // high-intent "-homes-for-sale" and "-realtor" spoke links further down) and
   // the remainder (plain hub links, exactly as before). See the long comment at
   // the neighborhood grid for why this is capped instead of applied to all of
-  // them — Valrico alone has 139 neighborhoods.
+  // them, Valrico alone has 139 neighborhoods.
   const SPOTLIGHT_COUNT = 8;
   const spotlightNeighborhoods = cityNeighborhoods.slice(0, SPOTLIGHT_COUNT);
   const remainingNeighborhoods = cityNeighborhoods.slice(SPOTLIGHT_COUNT);
@@ -217,7 +217,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
           </nav>
 
           <h1 className="heading-display text-display md:text-display-lg text-white mb-3">
-            {city.name} REALTOR&reg; &mdash; Barrett Henry
+            {city.name} REALTOR&reg;, Barrett Henry
           </h1>
           <p className="font-body text-white/80 text-lg max-w-3xl mb-4 leading-relaxed">
             Broker Associate with REMAX Collective serving {city.name}, {city.county} County, and the
@@ -247,12 +247,12 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
       </section>
 
       {/* ================================================================== */}
-      {/* WHY BARRETT — Deep value proposition                               */}
+      {/* WHY BARRETT, Deep value proposition */}
       {/* ================================================================== */}
       <section className="section-white">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            {/* Left — About Barrett + credentials */}
+            {/* Left, About Barrett + credentials */}
             <div>
               <p className="heading-label mb-4">YOUR {city.name.toUpperCase()} REALTOR&reg;</p>
               <h2 className="font-heading font-extralight text-2xl md:text-3xl tracking-[0.08em] uppercase text-primary mb-6">
@@ -262,7 +262,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
                 <p>
                   Finding the right REALTOR&reg; in {city.name} can make the difference between a smooth transaction
                   and a stressful one. <strong>Barrett Henry</strong> is a licensed Florida Real Estate{" "}
-                  <strong>Broker Associate</strong> with REMAX Collective &mdash; not a sales agent learning on
+                  <strong>Broker Associate</strong> with REMAX Collective, not a sales agent learning on
                   your deal. With <strong>23+ years of real estate experience</strong>, Barrett brings the market
                   knowledge, negotiation skill, and local expertise that {city.name} buyers and sellers need to
                   win in today&apos;s competitive market.
@@ -272,7 +272,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
                   in gross commissions during his REMAX career. He holds three professional designations:{" "}
                   <strong>e-PRO</strong> (digital marketing and technology), <strong>MRP</strong> (Military
                   Relocation Professional), and <strong>SRS</strong> (Seller Representative Specialist). These
-                  aren&apos;t participation trophies &mdash; they represent specialized training that directly
+                  aren&apos;t participation trophies, they represent specialized training that directly
                   benefits clients.
                 </p>
                 <p>
@@ -283,7 +283,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
                 </p>
               </div>
             </div>
-            {/* Right — Quick stats + contact card */}
+            {/* Right, Quick stats + contact card */}
             <div className="space-y-6">
               <div className="bg-primary p-8 text-white">
                 <h3 className="font-heading font-bold text-lg mb-6">Barrett Henry at a Glance</h3>
@@ -332,7 +332,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
       </section>
 
       {/* ================================================================== */}
-      {/* SERVICES — What Barrett does in this city                          */}
+      {/* SERVICES, What Barrett does in this city */}
       {/* ================================================================== */}
       <section className="section-light">
         <div className="container-wide">
@@ -341,7 +341,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
             Real Estate Services in {city.name}
           </h2>
           <p className="font-body text-muted font-light text-center max-w-3xl mx-auto mb-12 leading-relaxed">
-            Barrett Henry and The NOW Team handle every type of real estate transaction in {city.name} &mdash;
+            Barrett Henry and The NOW Team handle every type of real estate transaction in {city.name} 
             from first-time buyers to luxury estates, investment properties to commercial deals. Here&apos;s
             what Barrett brings to the table.
           </p>
@@ -351,13 +351,13 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
             {[
               {
                 title: `Buying a Home in ${city.name}`,
-                desc: `Looking for homes in ${city.name}? Barrett helps buyers at every price point — from starter homes to luxury properties. You get Barrett's direct guidance on neighborhoods, school zones, flood maps, HOA rules, and pricing strategy. Buyer representation typically costs you nothing out of pocket.`,
+                desc: `Looking for homes in ${city.name}? Barrett helps buyers at every price point, from starter homes to luxury properties. You get Barrett's direct guidance on neighborhoods, school zones, flood maps, HOA rules, and pricing strategy. Buyer representation typically costs you nothing out of pocket.`,
                 link: `/${city.slug}-homes-for-sale/`,
                 linkText: "Browse Homes for Sale",
               },
               {
                 title: `Selling Your ${city.name} Home`,
-                desc: `Barrett's seller clients benefit from professional photography, MLS exposure, targeted digital marketing, and the global reach of the REMAX network (145,000+ agents in 120+ countries). Every listing gets a custom pricing strategy backed by current MLS comp data — not a Zestimate.`,
+                desc: `Barrett's seller clients benefit from professional photography, MLS exposure, targeted digital marketing, and the global reach of the REMAX network (145,000+ agents in 120+ countries). Every listing gets a custom pricing strategy backed by current MLS comp data, not a Zestimate.`,
                 link: `/sell-your-home-${city.slug}/`,
                 linkText: "Selling Resources",
               },
@@ -369,7 +369,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
               },
               {
                 title: "New Construction",
-                desc: `${city.name} has active new-construction communities with builder incentives that change monthly. Barrett knows every builder, every phase, and which incentives are actually worth taking. Having your own REALTOR® in a new-construction deal protects your interests — the builder's agent works for the builder, not you.`,
+                desc: `${city.name} has active new-construction communities with builder incentives that change monthly. Barrett knows every builder, every phase, and which incentives are actually worth taking. Having your own REALTOR® in a new-construction deal protects your interests, the builder's agent works for the builder, not you.`,
                 link: `/${city.slug}-new-construction/`,
                 linkText: "New Construction",
               },
@@ -381,7 +381,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
               },
               {
                 title: "Commercial Real Estate",
-                desc: `Through REMAX Commercial, Barrett handles commercial transactions in ${city.name} including retail, office, multifamily, industrial, and land. REMAX Commercial agents have access to CoStar, LoopNet Premium, and Crexi Professional — the same tools used by the largest commercial brokerages.`,
+                desc: `Through REMAX Commercial, Barrett handles commercial transactions in ${city.name} including retail, office, multifamily, industrial, and land. REMAX Commercial agents have access to CoStar, LoopNet Premium, and Crexi Professional, the same tools used by the largest commercial brokerages.`,
                 link: "/contact/",
                 linkText: "Discuss a Commercial Deal",
               },
@@ -399,7 +399,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
       </section>
 
       {/* ================================================================== */}
-      {/* PROPERTY SEARCH LINKS — Spoke topic grid for SEO internal linking  */}
+      {/* PROPERTY SEARCH LINKS, Spoke topic grid for SEO internal linking */}
       {/* ================================================================== */}
       <section className="section-white">
         <div className="container-wide">
@@ -422,7 +422,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
       </section>
 
       {/* ================================================================== */}
-      {/* LISTINGS — Active homes for sale                                   */}
+      {/* LISTINGS, Active homes for sale */}
       {/* ================================================================== */}
       {listings.length > 0 && (
         <ListingGrid
@@ -443,7 +443,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
       )}
 
       {/* ================================================================== */}
-      {/* NEIGHBORHOODS — Every neighborhood in this city, linked            */}
+      {/* NEIGHBORHOODS, Every neighborhood in this city, linked */}
       {/* ================================================================== */}
       {cityNeighborhoods.length > 0 && (
         <section className="section-light">
@@ -457,11 +457,11 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
               you&apos;re buying, selling, or just exploring, Barrett knows the streets, the schools, the HOAs,
               and the price trends in each of these communities.
             </p>
-            {/* Tier 1 — the first few neighborhoods get the full three-link
+            {/* Tier 1, the first few neighborhoods get the full three-link
                 treatment: the neighborhood page plus its "-homes-for-sale" and
                 "-realtor" spokes. Those spoke pages are real routes (served by
                 src/app/[citySlug]/page.tsx, see its neighborhood-spoke and
-                neighborhood-realtor cases) but nothing on the site linked them —
+                neighborhood-realtor cases) but nothing on the site linked them 
                 this grid emitted the bare hub URL only, which is a big part of
                 how 1,384 high-intent pages ended up with zero inbound links.
 
@@ -481,7 +481,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
                     >
                       {n.name}
                     </Link>
-                    {/* Keyword anchor text, never "click here" — the anchor is
+                    {/* Keyword anchor text, never "click here", the anchor is
                         what tells Google and the AI answer engines what the
                         destination page is for. */}
                     <div className="mt-1 flex flex-col gap-0.5">
@@ -503,7 +503,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
               </div>
             )}
 
-            {/* Tier 2 — every other neighborhood in the city, hub links only */}
+            {/* Tier 2, every other neighborhood in the city, hub links only */}
             {remainingNeighborhoods.length > 0 && (
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
                 {remainingNeighborhoods.map((n) => (
@@ -522,7 +522,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
       )}
 
       {/* ================================================================== */}
-      {/* REMAX BRAND — Why REMAX matters for this city                      */}
+      {/* REMAX BRAND, Why REMAX matters for this city */}
       {/* ================================================================== */}
       <section className="section-dark">
         <div className="container-wide">
@@ -537,11 +537,11 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
                   When you work with Barrett Henry, you get the full power of the most recognized real estate brand
                   on the planet. REMAX operates in <strong>120+ countries</strong> with <strong>145,000+ agents</strong> and
                   over <strong>50 years</strong> of proven results. REMAX agents average <strong>11.9 transaction
-                  sides per year</strong> &mdash; more than double the industry average of 5.3.
+                  sides per year</strong> more than double the industry average of 5.3.
                 </p>
                 <p>
                   For sellers in {city.name}, that brand recognition translates directly into more eyeballs on
-                  your listing. REMAX has <strong>32.9% unaided brand awareness</strong> &mdash; more people name
+                  your listing. REMAX has <strong>32.9% unaided brand awareness</strong> more people name
                   REMAX first, without prompting, than any other real estate company. When your listing has the
                   REMAX name behind it, buyers pay attention.
                 </p>
@@ -582,7 +582,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
       </section>
 
       {/* ================================================================== */}
-      {/* TESTIMONIALS — Real Google reviews                                 */}
+      {/* TESTIMONIALS, Real Google reviews */}
       {/* ================================================================== */}
       <section className="section-white">
         <div className="container-wide">
@@ -604,7 +604,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
       </section>
 
       {/* ================================================================== */}
-      {/* THE BUYING PROCESS — Educational SEO content                       */}
+      {/* THE BUYING PROCESS, Educational SEO content */}
       {/* ================================================================== */}
       <section className="section-light">
         <div className="container-wide max-w-3xl">
@@ -622,22 +622,22 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
               {
                 step: "2",
                 title: "Pre-Approval & Strategy",
-                desc: "Barrett connects you with trusted local lenders for pre-approval. He'll help you understand your buying power across different loan programs — FHA, VA, conventional, USDA, and down payment assistance programs specific to your county.",
+                desc: "Barrett connects you with trusted local lenders for pre-approval. He'll help you understand your buying power across different loan programs, FHA, VA, conventional, USDA, and down payment assistance programs specific to your county.",
               },
               {
                 step: "3",
                 title: "Home Search & Showings",
-                desc: `Barrett sets up custom MLS alerts based on your exact criteria — neighborhood, price range, features, school zones. You'll see new listings within minutes of hitting the market. Barrett schedules and attends every showing with you, pointing out things you might miss.`,
+                desc: `Barrett sets up custom MLS alerts based on your exact criteria, neighborhood, price range, features, school zones. You'll see new listings within minutes of hitting the market. Barrett schedules and attends every showing with you, pointing out things you might miss.`,
               },
               {
                 step: "4",
                 title: "Offer & Negotiation",
-                desc: `Barrett writes competitive offers backed by comp analysis, not emotion. He negotiates on your behalf — price, closing costs, repairs, timelines, contingencies. With 23+ years of real estate experience, Barrett knows how to win in multiple-offer situations without overpaying.`,
+                desc: `Barrett writes competitive offers backed by comp analysis, not emotion. He negotiates on your behalf, price, closing costs, repairs, timelines, contingencies. With 23+ years of real estate experience, Barrett knows how to win in multiple-offer situations without overpaying.`,
               },
               {
                 step: "5",
                 title: "Under Contract to Close",
-                desc: "Barrett manages inspections, appraisals, title, and lender coordination. He stays on top of every deadline so nothing falls through the cracks. You'll know exactly where things stand at every step — no surprises, no last-minute scrambles.",
+                desc: "Barrett manages inspections, appraisals, title, and lender coordination. He stays on top of every deadline so nothing falls through the cracks. You'll know exactly where things stand at every step, no surprises, no last-minute scrambles.",
               },
             ].map((item) => (
               <div key={item.step} className="flex gap-6">
@@ -655,7 +655,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
       </section>
 
       {/* ================================================================== */}
-      {/* RELOCATION — targets "[city] relocation realtor" / "moving to [city]" */}
+      {/* RELOCATION, targets "[city] relocation realtor" / "moving to [city]" */}
       {/* ================================================================== */}
       <section className="section-light">
         <div className="container-wide max-w-3xl">
@@ -667,7 +667,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
             Relocation is a different job than a local move, and most of what trips people up in
             Florida has nothing to do with the house itself. Barrett Henry holds the{" "}
             <strong>MRP (Military Relocation Professional)</strong> designation and works relocating
-            buyers into {city.name} and {city.county} County regularly &mdash; including remote
+            buyers into {city.name} and {city.county} County regularly, including remote
             buyers who tour and close without flying down twice. Here is what actually matters.
           </p>
 
@@ -682,7 +682,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
                   <strong>Save Our Homes</strong> cap limits how much a homesteaded property&apos;s
                   assessed value can rise each year, so a neighbor who has owned since 2012 may pay a
                   fraction of what you will on an identical house. You are not inheriting their
-                  number &mdash; you reset to market value at purchase.
+                  number, you reset to market value at purchase.
                 </p>
                 <p>
                   And <strong>portability does not help you</strong> on a move into Florida. It
@@ -714,7 +714,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
                   the roof is 15 or older, an inspection showing <strong>five or more years of
                   remaining useful life</strong> gives you the same protection. Separately, a{" "}
                   <strong>four-point inspection</strong> is not required by Florida law at all
-                  &mdash; it is a carrier underwriting requirement, and Citizens triggers one on
+                   it is a carrier underwriting requirement, and Citizens triggers one on
                   properties more than 20 years old.
                 </p>
                 <p>
@@ -753,7 +753,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
               <div className="font-body text-muted font-light leading-relaxed">
                 <p>
                   A {city.name} mailing address does not always mean the property sits inside{" "}
-                  {city.name} city limits &mdash; Tampa Bay is full of unincorporated pockets with
+                  {city.name} city limits, Tampa Bay is full of unincorporated pockets with
                   city mailing addresses. The distinction is not cosmetic: it changes your{" "}
                   <strong>property tax millage</strong>, <strong>who issues your permits</strong>,
                   your <strong>floodplain repair rules</strong>, and even your{" "}
@@ -774,7 +774,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
                   walkthroughs on request rather than canned listing tours, honest read-outs on
                   condition, electronic signatures, and coordination with a title company that closes
                   remotely. Military families moving to MacDill AFB on a PCS timeline are a regular
-                  part of the work &mdash; that is what the MRP designation is for. See the{" "}
+                  part of the work, that is what the MRP designation is for. See the{" "}
                   <Link href="/remote-seller-process/" className="text-link hover:underline">
                     remote process
                   </Link>{" "}
@@ -791,7 +791,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
             </h3>
             <p className="font-body text-white/70 text-sm leading-relaxed mb-6">
               Tell Barrett your timeline, your must-haves, and where you are coming from. You will get
-              a straight read on neighborhoods, taxes, and insurance before you book a trip &mdash; not
+              a straight read on neighborhoods, taxes, and insurance before you book a trip, not
               a drip campaign.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -832,12 +832,12 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
       </section>
 
       {/* ================================================================== */}
-      {/* FAQ — Comprehensive, targeting long-tail "[city] realtor" queries   */}
+      {/* FAQ, Comprehensive, targeting long-tail "[city] realtor" queries */}
       {/* ================================================================== */}
       <section className="section-white">
         <div className="container-wide max-w-3xl">
           <h2 className="font-heading font-bold text-2xl text-primary mb-8">
-            Frequently Asked Questions &mdash; {city.name} REALTOR&reg;
+            Frequently Asked Questions, {city.name} REALTOR&reg;
           </h2>
           <div className="space-y-6">
             <div className="border-b border-gray-100 pb-6">
@@ -846,11 +846,11 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
             </div>
             <div className="border-b border-gray-100 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">Who is the best realtor in {city.name} for relocation?</h3>
-              <p className="font-body text-muted font-light">Barrett Henry holds the <strong>MRP (Military Relocation Professional)</strong> designation and works relocating buyers into {city.name} and {city.county} County regularly &mdash; including remote buyers who tour and close without flying down twice. Relocation takes more than listing access: Florida property taxes reset to market value at purchase instead of carrying over the seller&apos;s capped assessment, homestead portability only transfers between Florida homesteads so an out-of-state buyer starts fresh, and insurance underwriting on roof age and flood zone kills more deals than the inspection does. Call <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a>.</p>
+              <p className="font-body text-muted font-light">Barrett Henry holds the <strong>MRP (Military Relocation Professional)</strong> designation and works relocating buyers into {city.name} and {city.county} County regularly, including remote buyers who tour and close without flying down twice. Relocation takes more than listing access: Florida property taxes reset to market value at purchase instead of carrying over the seller&apos;s capped assessment, homestead portability only transfers between Florida homesteads so an out-of-state buyer starts fresh, and insurance underwriting on roof age and flood zone kills more deals than the inspection does. Call <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a>.</p>
             </div>
             <div className="border-b border-gray-100 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">Will my {city.name} property taxes match the seller&apos;s current bill?</h3>
-              <p className="font-body text-muted font-light">Almost certainly not. Florida&apos;s <strong>Save Our Homes</strong> cap limits annual assessed-value increases on a homesteaded property, so a long-time owner may pay a fraction of what you will on an identical house &mdash; you reset to market value at purchase. <strong>Portability transfers only between Florida homesteads</strong>, so moving in from out of state you start fresh: apply for homestead exemption with the county property appraiser and the cap protects you going forward. A second home or rental gets the 10% non-homestead cap instead, with no exemption. See our <a href="/blog/homestead-exemption-florida-guide/" className="text-link hover:underline">Florida homestead exemption guide</a>.</p>
+              <p className="font-body text-muted font-light">Almost certainly not. Florida&apos;s <strong>Save Our Homes</strong> cap limits annual assessed-value increases on a homesteaded property, so a long-time owner may pay a fraction of what you will on an identical house, you reset to market value at purchase. <strong>Portability transfers only between Florida homesteads</strong>, so moving in from out of state you start fresh: apply for homestead exemption with the county property appraiser and the cap protects you going forward. A second home or rental gets the 10% non-homestead cap instead, with no exemption. See our <a href="/blog/homestead-exemption-florida-guide/" className="text-link hover:underline">Florida homestead exemption guide</a>.</p>
             </div>
             <div className="border-b border-gray-100 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">Can I buy a home in {city.name} without flying to Florida?</h3>
@@ -870,18 +870,18 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
             </div>
             <div className="border-b border-gray-100 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">How much does a REALTOR&reg; cost in {city.name}?</h3>
-              <p className="font-body text-muted font-light">Buyer representation with Barrett Henry typically costs you nothing out of pocket — the seller usually pays the buyer&apos;s agent commission. For sellers, Barrett offers competitive commission structures with full-service marketing, professional photography, MLS exposure, and global reach through REMAX&apos;s 145,000+ agent network.</p>
+              <p className="font-body text-muted font-light">Buyer representation with Barrett Henry typically costs you nothing out of pocket, the seller usually pays the buyer&apos;s agent commission. For sellers, Barrett offers competitive commission structures with full-service marketing, professional photography, MLS exposure, and global reach through REMAX&apos;s 145,000+ agent network.</p>
             </div>
             <div className="pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">What is the {city.name} real estate market like right now?</h3>
-              <p className="font-body text-muted font-light">{totalListings > 0 ? `There are currently ${totalListings}+ active listings in ${city.name}.` : `The ${city.name} market is active.`} Market conditions change daily — Barrett monitors MLS data in real time and can provide a current market analysis for {city.name} in minutes. Call <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a> for the latest numbers.</p>
+              <p className="font-body text-muted font-light">{totalListings > 0 ? `There are currently ${totalListings}+ active listings in ${city.name}.` : `The ${city.name} market is active.`} Market conditions change daily, Barrett monitors MLS data in real time and can provide a current market analysis for {city.name} in minutes. Call <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a> for the latest numbers.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* ================================================================== */}
-      {/* SPOKE NAV — Explore more about this city                           */}
+      {/* SPOKE NAV, Explore more about this city */}
       {/* ================================================================== */}
       <SpokeNav city={city} currentTopic="realtor" />
 

@@ -1,5 +1,5 @@
 // =============================================================================
-// /property-management — ViVi PM property management landing page
+// /property-management, ViVi PM property management landing page
 // =============================================================================
 
 import type { Metadata } from "next";
@@ -29,7 +29,7 @@ const services = [
   { title: "Tenant Screening", desc: "Full background checks, credit reports, income verification, and rental history review before any lease is signed." },
   { title: "Lease Preparation", desc: "Legally compliant lease agreements tailored to Florida landlord-tenant law, executed and stored digitally." },
   { title: "Rent Collection", desc: "On-time rent collection with online payment portals and direct disbursement to your account." },
-  { title: "24/7 Maintenance", desc: "Round-the-clock maintenance coordination with trusted local vendors — fast response, competitive rates." },
+  { title: "24/7 Maintenance", desc: "Round-the-clock maintenance coordination with trusted local vendors, fast response, competitive rates." },
   { title: "Financial Reporting", desc: "Monthly owner statements, year-end tax documents, and full transparency on every dollar." },
   { title: "Property Inspections", desc: "Regular move-in, move-out, and periodic inspections to protect your investment." },
   { title: "Eviction Management", desc: "If it comes to it, we handle the legal process from notice to court filing so you don't have to." },
@@ -56,7 +56,7 @@ export default function PropertyManagementPage() {
       <HeroSection
         title="Property Management"
         label="VIVI PM | BARRETT HENRY"
-        subtitle="Professional management for your Tampa Bay rental properties. We handle everything — you collect the income."
+        subtitle="Professional management for your Tampa Bay rental properties. We handle everything, you collect the income."
       />
 
       {/* === Intro Section === */}
@@ -88,7 +88,7 @@ export default function PropertyManagementPage() {
                 <p className="heading-label text-white/50 mb-4">Why ViVi PM?</p>
                 <ul className="space-y-4">
                   {[
-                    "No hidden fees — flat monthly rate",
+                    "No hidden fees, flat monthly rate",
                     "Trusted local vendor network for fast maintenance",
                     "23+ years of real estate experience",
                     "Online owner portal with real-time reporting",
@@ -152,7 +152,7 @@ export default function PropertyManagementPage() {
               <p className="font-body text-white/70 font-light text-lg leading-relaxed mb-8">
                 Whether you have one rental or a portfolio, Barrett Henry and the ViVi PM
                 team will give you a straight answer on what it costs and what you can expect.
-                No sales pitch — just numbers.
+                No sales pitch, just numbers.
               </p>
               <div className="space-y-4">
                 <a

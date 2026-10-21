@@ -3,7 +3,7 @@
 //
 // WHAT THIS PAGE IS: the page that competes with cash-buyer sites for
 // "sell my house fast Tampa Bay." Those sites own the query today because
-// nowtb.com had nothing. The angle is NOT "never take a cash offer" — that is
+// nowtb.com had nothing. The angle is NOT "never take a cash offer", that is
 // transparently self-serving and readers smell it. The angle is: here is the
 // real speed data, here is what speed costs, get both numbers in writing and
 // choose. A seller who genuinely needs a cash sale should get an honest answer.
@@ -22,7 +22,7 @@
 //  - 404 live but 200 locally? The "sell" exclusion fell out of next.config.mjs.
 //  - Days-on-market numbers look off? They are computed from
 //    src/data/city-market-stats.ts. Fix the data file, not this page.
-//  - TITLE contains "22-69 Days" — those are DOM_FAST and DOM_SLOW below. If
+// - TITLE contains "22-69 Days", those are DOM_FAST and DOM_SLOW below. If
 //    the market data file is refreshed and those change, update the title too.
 //    A title tag cannot be computed, so this is the one number that can drift.
 // =============================================================================
@@ -46,7 +46,7 @@ const SLUG = "sell/sell-my-house-fast-tampa-bay";
 const CANONICAL = `https://nowtb.com/${SLUG}/`;
 
 // 40 characters + the 16-char " | Barrett Henry" suffix = 56 rendered.
-// The "22-69" is the DOM_FAST/DOM_SLOW spread computed below — see the header
+// The "22-69" is the DOM_FAST/DOM_SLOW spread computed below, see the header
 // note about keeping it in sync.
 const TITLE = "Sell My House Fast Tampa Bay: 22-69 Days";
 const DESCRIPTION =
@@ -102,7 +102,7 @@ const pathComparison = [
   },
   {
     dimension: "Time from contract to closing",
-    cash: "As fast as the title work allows — commonly 7 to 21 days, because there is no lender and no appraisal.",
+    cash: "As fast as the title work allows, commonly 7 to 21 days, because there is no lender and no appraisal.",
     listing:
       "Driven by the buyer's loan. A cash buyer on the open market closes on the same short timeline; a financed buyer takes longer.",
   },
@@ -140,7 +140,7 @@ const pathComparison = [
     dimension: "Closing costs",
     cash: "Some cash buyers absorb seller closing costs; many quote 'no fees' and simply price it in. Read the net sheet, not the headline.",
     listing:
-      "Itemized and predictable — doc stamps, title, recording, prorations.",
+      "Itemized and predictable, doc stamps, title, recording, prorations.",
   },
 ];
 
@@ -168,7 +168,7 @@ const speedLevers = [
     lever: "Pre-listing inspection and a roof document package",
     effect:
       "In Florida the roof age drives the buyer's insurance quote, and an unanswered question becomes a price cut. Documentation beats a discount.",
-    cost: "The inspection fee, plus disclosing what it finds — which you are obligated to do anyway.",
+    cost: "The inspection fee, plus disclosing what it finds, which you are obligated to do anyway.",
   },
   {
     lever: "Make-ready work targeted at the two or three items buyers mention",
@@ -187,22 +187,22 @@ const speedLevers = [
 const faqs: Faq[] = [
   {
     question: "How fast can I sell my house in Tampa Bay?",
-    answer: `Over the twelve months ending October 2026, single-family homes across Tampa Bay went under contract in a median of ${DOM_FAST} to ${DOM_SLOW} days depending on the city — ${DOM_FAST} days in Brandon at one end and ${DOM_SLOW} days in Apollo Beach at the other, per Stellar MLS closed sales. A correctly priced, well-photographed home with open showing access frequently beats its city median. A genuine cash sale can produce a signed contract in 24 to 72 hours and close in roughly one to three weeks, because there is no lender and no appraisal in the way.`,
+    answer: `Over the twelve months ending October 2026, single-family homes across Tampa Bay went under contract in a median of ${DOM_FAST} to ${DOM_SLOW} days depending on the city, ${DOM_FAST} days in Brandon at one end and ${DOM_SLOW} days in Apollo Beach at the other, per Stellar MLS closed sales. A correctly priced, well-photographed home with open showing access frequently beats its city median. A genuine cash sale can produce a signed contract in 24 to 72 hours and close in roughly one to three weeks, because there is no lender and no appraisal in the way.`,
   },
   {
     question: "How much less will a cash buyer pay?",
     answer:
-      "Less than the open market, because you are buying speed and certainty and that has a price. I am not going to publish a percentage, because the honest answer is that the discount depends on your condition, your location and that specific buyer's resale plan — and most of the percentages floating around online come from companies that benefit from the number they chose. Here is how to find your real number: get the cash offer in writing, ask me for a current pricing opinion and a net sheet on the same house, and put the two net figures side by side. The gap is the cost of speed for your house specifically. Then you can decide whether it is worth it, which it sometimes genuinely is.",
+      "Less than the open market, because you are buying speed and certainty and that has a price. I am not going to publish a percentage, because the honest answer is that the discount depends on your condition, your location and that specific buyer's resale plan, and most of the percentages floating around online come from companies that benefit from the number they chose. Here is how to find your real number: get the cash offer in writing, ask me for a current pricing opinion and a net sheet on the same house, and put the two net figures side by side. The gap is the cost of speed for your house specifically. Then you can decide whether it is worth it, which it sometimes genuinely is.",
   },
   {
     question: "Is a cash offer actually faster than listing?",
     answer:
-      "To a signed contract, almost always yes — days instead of weeks. To closing, the gap narrows, because a cash buyer found on the open market closes on the same short timeline as an off-market one. The real comparison is not cash versus listing, it is cash-today versus market-price-in-a-few-weeks. If your deadline is three months out, listing usually wins on net proceeds by a wide margin. If your deadline is next Friday, it does not.",
+      "To a signed contract, almost always yes, days instead of weeks. To closing, the gap narrows, because a cash buyer found on the open market closes on the same short timeline as an off-market one. The real comparison is not cash versus listing, it is cash-today versus market-price-in-a-few-weeks. If your deadline is three months out, listing usually wins on net proceeds by a wide margin. If your deadline is next Friday, it does not.",
   },
   {
     question: "What makes a house sell in the first two weeks?",
     answer:
-      "Price first, photography second, access third. Your listing gets its largest audience in the first ten to fourteen days, when it hits every saved search as a new listing. A price that is even modestly above the closed comparable sales spends that window being skipped, and no amount of marketing later recovers the buyers who already scrolled past. Everything else — staging, make-ready, launch timing — amplifies a correct price and cannot rescue a wrong one.",
+      "Price first, photography second, access third. Your listing gets its largest audience in the first ten to fourteen days, when it hits every saved search as a new listing. A price that is even modestly above the closed comparable sales spends that window being skipped, and no amount of marketing later recovers the buyers who already scrolled past. Everything else, staging, make-ready, launch timing, amplifies a correct price and cannot rescue a wrong one.",
   },
   {
     question: "When is selling to a cash buyer the right call?",
@@ -217,12 +217,12 @@ const sources: Source[] = [
     used: `Every days-on-market and median price figure on this page, including the ${DOM_FAST}-to-${DOM_SLOW} day median spread. Fully paginated complete datasets rather than samples, with lease records excluded.`,
   },
   {
-    name: "Florida Statute 201.02 — Documentary Stamp Tax",
+    name: "Florida Statute 201.02, Documentary Stamp Tax",
     used: "The $0.70 per $100 deed tax referenced in the closing-cost comparison, which applies whether the buyer is paying cash or financing.",
     href: "https://floridarevenue.com/taxes/taxesfees/pages/doc_stamp.aspx",
   },
   {
-    name: "Florida Administrative Code R. 69O-186.003 — Title Insurance Rates",
+    name: "Florida Administrative Code R. 69O-186.003, Title Insurance Rates",
     used: "The point that the owner's title policy premium is promulgated by the state and is therefore identical regardless of which buyer you sell to.",
     href: "https://www.law.cornell.edu/regulations/florida/Fla-Admin-Code-Ann-R-69O-186-003",
   },
@@ -281,7 +281,7 @@ export default function SellMyHouseFastTampaBayPage() {
               <strong>
                 median of {DOM_FAST} to {DOM_SLOW} days
               </strong>{" "}
-              depending on the city over the twelve months ending October 2026 —{" "}
+              depending on the city over the twelve months ending October 2026, {" "}
               {DOM_FAST} days in Brandon at the fast end, {DOM_SLOW} days in
               Apollo Beach at the slow end, from Stellar MLS closed sales. A
               correctly priced home with real photography and open showing
@@ -307,7 +307,7 @@ export default function SellMyHouseFastTampaBayPage() {
           </h2>
           <p className="font-body text-muted mb-8 leading-relaxed">
             Eight dimensions that matter, with no thumb on the scale. Read the
-            price row and the certainty row together — those two are where the
+            price row and the certainty row together, those two are where the
             real decision lives.
           </p>
           <div className="overflow-x-auto">
@@ -410,7 +410,7 @@ export default function SellMyHouseFastTampaBayPage() {
             </li>
             <li>
               Subtract your carrying cost for the extra weeks a listing would
-              take — mortgage, taxes, insurance, utilities. That is the honest
+              take, mortgage, taxes, insurance, utilities. That is the honest
               offset in the cash buyer&apos;s favor, and sometimes it closes most
               of the gap.
             </li>
@@ -418,7 +418,7 @@ export default function SellMyHouseFastTampaBayPage() {
           <p className="font-body text-dark leading-relaxed">
             Watch the words &ldquo;no fees&rdquo; and &ldquo;we pay all closing
             costs.&rdquo; Those costs exist either way. A buyer who absorbs them
-            has priced them into the offer, which is fine — just make sure you
+            has priced them into the offer, which is fine, just make sure you
             are comparing nets, not slogans.
           </p>
         </div>

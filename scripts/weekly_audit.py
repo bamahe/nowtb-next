@@ -1266,6 +1266,59 @@ def check_exit_intent_scope():
             evidence=[f"{rel(layout)}  rendered={rendered}"])
 
 
+def check_no_dashes_in_copy():
+    """Em and en dashes must not appear in client-facing copy.
+
+    Barrett does not use them. In October 2026 there were 12,000+ across the
+    site and a sweep removed them. This check exists so they do not grow back,
+    because the content generators had been emitting them nightly.
+
+    TWO ENCODINGS. A literal em dash and "&mdash;" render identically, and an
+    earlier pass missed 1,700 of them by grepping only for the literal
+    character. Both forms are checked here.
+
+    Scoped to content, not code: a dash in a source COMMENT is never published,
+    so src/*.ts and src/*.tsx are only checked inside quoted strings and JSX
+    text, and .bak files are skipped entirely.
+    """
+    literal = re.compile(r"[\u2013\u2014]")
+    entity = re.compile(r"&mdash;|&ndash;|&#8212;|&#8211;|&#x201[34];", re.I)
+
+    offenders = []
+    for path in sorted(DATA.glob("*.json")):
+        if path.name.endswith(".bak") or ".bak." in path.name:
+            continue
+        t = read(path)
+        n = len(literal.findall(t)) + len(entity.findall(t))
+        if n:
+            offenders.append((rel(path), n))
+
+    for path in list(APP.rglob("*.tsx")) + list(APP.rglob("*.ts")) + \
+                list(COMPONENTS.rglob("*.tsx")) + list(COMPONENTS.rglob("*.ts")):
+        t = read(path)
+        skip = comment_lines(t)
+        n = 0
+        for ln, line in lines_matching(t, literal):
+            if ln not in skip:
+                n += 1
+        for ln, line in lines_matching(t, entity):
+            if ln not in skip:
+                n += 1
+        if n:
+            offenders.append((rel(path), n))
+
+    if offenders:
+        total = sum(n for _, n in offenders)
+        add("content", "high",
+            f"Em or en dashes reintroduced in client-facing copy ({total} across {len(offenders)} files)",
+            "Barrett does not use em or en dashes. Replace with a comma, or the word "
+            '"to" for ranges ("2 to 4 PM"). Check BOTH the literal character and the '
+            "&mdash; entity form: they render the same and an earlier sweep missed "
+            "1,700 entity-encoded ones. Whichever generator wrote these needs the same fix.",
+            pages_affected=total,
+            evidence=[f"{f}  {n}" for f, n in sorted(offenders, key=lambda x: -x[1])[:12]])
+
+
 def check_root_layout_canonical():
     """The root layout must never declare a canonical URL.
 
@@ -1618,6 +1671,7 @@ def main():
         check_money_query_coverage,
         check_trailing_slashes,
         check_exit_intent_scope,
+        check_no_dashes_in_copy,
         check_root_layout_canonical,
         check_missing_assets,
         check_title_length_with_template,

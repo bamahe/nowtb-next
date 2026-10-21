@@ -1,4 +1,4 @@
-// /55-plus-communities — Tampa Bay 55+ Active Adult Homes
+// /55-plus-communities, Tampa Bay 55+ Active Adult Homes
 
 import type { Metadata } from "next";
 import Link from "next/link";

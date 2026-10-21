@@ -1,5 +1,5 @@
 // =============================================================================
-// DELETE /api/saved-searches/[id]/delete — Remove a saved search
+// DELETE /api/saved-searches/[id]/delete, Remove a saved search
 // Accepts POST (from HTML form) to delete a user's saved search from Supabase
 // Redirects back to /account after deletion
 // =============================================================================
@@ -27,7 +27,7 @@ export async function POST(
     return NextResponse.redirect(new URL("/login", _request.url));
   }
 
-  // Delete the saved search — only if it belongs to this user
+  // Delete the saved search, only if it belongs to this user
   await supabase
     .from("saved_searches")
     .delete()

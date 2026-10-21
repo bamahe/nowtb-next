@@ -1,5 +1,5 @@
 // =============================================================================
-// NeighborhoodGuidePage — Scrollable neighborhood guide for a city
+// NeighborhoodGuidePage, Scrollable neighborhood guide for a city
 // Rendered as the spoke page for the "neighborhood-guide" topic.
 //
 // Layout:
@@ -33,12 +33,12 @@ import NeighborhoodListingPreview from "@/components/ui/NeighborhoodListingPrevi
 // -----------------------------------------------------------------------------
 
 interface NeighborhoodGuidePageProps {
-  /** Full city object — provides name, slug, county, zip_codes, etc. */
+  /** Full city object, provides name, slug, county, zip_codes, etc. */
   city: CityData;
 }
 
 // =============================================================================
-// SERVER COMPONENT — static content renders at build/request time.
+// SERVER COMPONENT, static content renders at build/request time.
 // The listing mini-grids are delegated to the NeighborhoodListingPreview
 // client component to keep Bridge API calls out of SSR.
 // =============================================================================
@@ -84,12 +84,12 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
            `about` passed explicitly; the helper's default topic is condos. */}
       <JsonLd
         data={webPageSchema({
-          name: `Neighborhood Guide — ${city.name}, FL`,
+          name: `Neighborhood Guide, ${city.name}, FL`,
           description: pageDescription,
           url: canonicalUrl,
           about: `${city.name}, Florida neighborhoods`,
           // The <QuickAnswer> block below is what makes `.quick-answer` resolve
-          // — and it only renders when the city actually has neighborhoods on
+          //, and it only renders when the city actually has neighborhoods on
           // file, so the selector is only claimed in that same case. "h1"
           // always resolves. Never advertise a selector the page might not render.
           speakableSelectors:
@@ -103,7 +103,7 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
            for the brokerage street address, and we do not invent coordinates. */}
       <JsonLd
         data={localBusinessSchema({
-          name: `Barrett Henry, REALTOR® — ${city.name}, FL`,
+          name: `Barrett Henry, REALTOR®, ${city.name}, FL`,
           description: `Neighborhood-level real estate guidance in ${city.name}, ${city.county} County, Florida from Barrett Henry, Broker Associate at REMAX Collective.`,
           url: canonicalUrl,
           areaServed: {
@@ -123,7 +123,7 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
       />
 
       {/* ======================================================================
-          HERO — navy background, breadcrumb, H1, subtitle, CTA row
+          HERO, navy background, breadcrumb, H1, subtitle, CTA row
       ====================================================================== */}
       <section className="bg-primary pt-36 pb-16">
         <div className="container-wide">
@@ -148,7 +148,7 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
 
           {/* Page title */}
           <h1 className="heading-display text-display md:text-display-lg text-white mb-3">
-            Neighborhood Guide — {city.name}, FL
+            Neighborhood Guide, {city.name}, FL
           </h1>
 
           {/* Subtitle */}
@@ -177,7 +177,7 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
       </section>
 
       {/* ======================================================================
-          QUICK ANSWER — direct answer to "what neighborhoods are in {city}?"
+          QUICK ANSWER, direct answer to "what neighborhoods are in {city}?"
 
           This is the block AI answer engines lift, and it is the element the
           `.quick-answer` speakable selector in the WebPage schema above points
@@ -185,7 +185,7 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
           remove `.quick-answer` from those selectors, otherwise the schema
           points at an element that does not exist.
 
-          Everything stated here is derived from real data — the neighborhood
+          Everything stated here is derived from real data, the neighborhood
           count and names come straight from src/data/neighborhoods.ts.
       ====================================================================== */}
       {neighborhoodCount > 0 && (
@@ -220,7 +220,7 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
       )}
 
       {/* ======================================================================
-          TABLE OF CONTENTS — compact jump-link grid so users can skip to any
+          TABLE OF CONTENTS, compact jump-link grid so users can skip to any
           neighborhood without scrolling the entire page.
       ====================================================================== */}
       {neighborhoodCount > 0 && (
@@ -229,7 +229,7 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
             <p className="font-body text-xs text-muted uppercase tracking-widest mb-4 font-semibold">
               Jump to a Neighborhood
             </p>
-            {/* Responsive grid — more columns on wider screens */}
+            {/* Responsive grid, more columns on wider screens */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
               {cityNeighborhoods.map((neighborhood) => (
                 <a
@@ -246,7 +246,7 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
       )}
 
       {/* ======================================================================
-          NEIGHBORHOOD SECTIONS — one per neighborhood in the city
+          NEIGHBORHOOD SECTIONS, one per neighborhood in the city
       ====================================================================== */}
       <div className="container-wide py-12 space-y-0">
         {neighborhoodCount === 0 ? (
@@ -287,7 +287,7 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
                   // scroll-mt-24 offsets the sticky header so the anchor
                   // doesn't land behind the nav when jumped to
                 >
-                  {/* H2 heading — linked to the neighborhood's own page */}
+                  {/* H2 heading, linked to the neighborhood's own page */}
                   <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-1">
                     <Link
                       href={`/${neighborhood.slug}/`}
@@ -307,13 +307,13 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
                       Priority: curated contentHtml → generic 2-paragraph fallback
                   ------------------------------------------------------- */}
                   {description ? (
-                    // Curated description — real, useful content about this neighborhood
+                    // Curated description, real, useful content about this neighborhood
                     <div
                       className="prose prose-lg max-w-none font-body text-dark mb-8"
                       dangerouslySetInnerHTML={{ __html: description.contentHtml }}
                     />
                   ) : (
-                    // Generic fallback — honest, non-fluffy placeholder
+                    // Generic fallback, honest, non-fluffy placeholder
                     <div className="prose prose-lg max-w-none font-body text-dark mb-8">
                       <p>
                         {neighborhood.name} is a residential community in {city.name},{" "}
@@ -325,7 +325,7 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
                       <p>
                         Barrett Henry, Broker Associate at REMAX Collective, knows the{" "}
                         {city.name} market well and can walk you through everything
-                        currently available in {neighborhood.name} — active listings,
+                        currently available in {neighborhood.name}, active listings,
                         recent sales, and what comparable homes are fetching right now.
                         Call{" "}
                         <a href="tel:+18137337907" className="text-link">
@@ -337,7 +337,7 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
                   )}
 
                   {/* -------------------------------------------------------
-                      Mini listing grid — CLIENT-SIDE fetch, 4 listings max
+                      Mini listing grid, CLIENT-SIDE fetch, 4 listings max
                       Rendered by NeighborhoodListingPreview to avoid SSR
                       API calls. Falls back gracefully when no listings found.
                   ------------------------------------------------------- */}
@@ -350,7 +350,7 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
                 </section>
 
                 {/* -------------------------------------------------------
-                    Mid-guide CTA — appears after every 5th neighborhood.
+                    Mid-guide CTA, appears after every 5th neighborhood.
                     Navy box with phone + contact link.
                 ------------------------------------------------------- */}
                 {insertCtaAfter && (
@@ -360,7 +360,7 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
                         Need help finding the right neighborhood?
                       </p>
                       <p className="font-body text-white/70 text-sm">
-                        Barrett Henry, REALTOR® — 23+ years of real estate experience.
+                        Barrett Henry, REALTOR®, 23+ years of real estate experience.
                         Local knowledge, no pressure.
                       </p>
                     </div>
@@ -387,12 +387,12 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
       </div>
 
       {/* ======================================================================
-          SPOKE NAV — explore more {City} pages
+          SPOKE NAV, explore more {City} pages
       ====================================================================== */}
       <SpokeNav city={city} currentTopic="neighborhood-guide" />
 
       {/* ======================================================================
-          BOTTOM CTA BAR — dark bar, matches SpokePage / NeighborhoodPage pattern
+          BOTTOM CTA BAR, dark bar, matches SpokePage / NeighborhoodPage pattern
       ====================================================================== */}
       <section className="bg-primary py-12">
         <div className="container-wide flex flex-col md:flex-row items-center justify-between gap-6">
@@ -401,7 +401,7 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
               Ready to explore {city.name} neighborhoods in person?
             </h2>
             <p className="font-body text-white/70 text-sm">
-              Barrett Henry, REALTOR® at REMAX Collective — 23+ years of real estate experience
+              Barrett Henry, REALTOR® at REMAX Collective, 23+ years of real estate experience
             </p>
           </div>
           <div className="flex gap-3 flex-shrink-0">

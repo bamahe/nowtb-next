@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 /**
- * robots.txt — allow all crawlers including AI bots, block spam bots,
+ * robots.txt, allow all crawlers including AI bots, block spam bots,
  * point to sitemap.
  *
  * AI crawlers (GPTBot, ClaudeBot, PerplexityBot, etc.) are explicitly
@@ -23,7 +23,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/admin/", "/auth/", "/account/", "/login/", "/card/", "/thank-you/", "/compare/", "/c/", "/clients/"],
       },
       // Explicitly allow AI crawlers for AEO/GEO visibility.
-      // Each still gets /c/ disallowed — an unqualified allow:"/" would
+      // Each still gets /c/ disallowed, an unqualified allow:"/" would
       // otherwise invite them straight into the private client packets.
       { userAgent: "GPTBot", allow: "/", disallow: ["/c/", "/clients/"] },
       { userAgent: "ClaudeBot", allow: "/", disallow: ["/c/", "/clients/"] },

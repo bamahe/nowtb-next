@@ -4,7 +4,7 @@ import { getCached, setCached } from "@/lib/api-cache";
 import type { Listing } from "@/lib/types";
 
 /**
- * GET /api/listings/[id] — Single listing by ListingKey
+ * GET /api/listings/[id], Single listing by ListingKey
  * CACHED: Same listing key within 5 min returns cached response.
  */
 export async function GET(

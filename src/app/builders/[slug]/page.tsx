@@ -1,4 +1,4 @@
-// /builders/[slug] — Individual builder detail page
+// /builders/[slug], Individual builder detail page
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -26,7 +26,7 @@ export async function generateMetadata({
 
   return {
     title: `${builder.name} Homes in Tampa Bay | Barrett Henry, REALTOR®`,
-    description: `${builder.name} new construction homes in Tampa Bay. ${builder.priceRange || ""} — communities, floor plans, and current incentives. Free buyer representation from Barrett Henry at REMAX Collective.`,
+    description: `${builder.name} new construction homes in Tampa Bay. ${builder.priceRange || ""}, communities, floor plans, and current incentives. Free buyer representation from Barrett Henry at REMAX Collective.`,
     alternates: { canonical: `/builders/${slug}/` },
   };
 }
@@ -42,7 +42,7 @@ export default async function BuilderDetailPage({
   const builder = getBuilderBySlug(slug);
   if (!builder) notFound();
 
-  // Fetch new construction listings — use builder name as keyword proxy
+  // Fetch new construction listings, use builder name as keyword proxy
   let listings: Listing[] = [];
   try {
     const res = await getListings({
@@ -174,7 +174,7 @@ export default async function BuilderDetailPage({
           </h2>
           <p className="text-blue-100 mb-6 font-body">
             Barrett Henry provides free buyer representation on all {builder.name}{" "}
-            homes. The builder pays the agent commission — you get an expert
+            homes. The builder pays the agent commission, you get an expert
             negotiator at no cost. 23+ years of real estate experience.
           </p>
           <div className="flex gap-3 justify-center flex-wrap">

@@ -7,7 +7,7 @@ import { rateLimit, getClientIp } from "@/lib/rate-limit";
 const N8N_BASE = process.env.N8N_WEBHOOK_BASE || "";
 
 // Max form submissions allowed from one IP address per 10 minutes.
-// Set generously — a real person comparing a few listings might legitimately
+// Set generously, a real person comparing a few listings might legitimately
 // send 2-3 showing requests in a sitting. Bots send dozens.
 const RATE_LIMIT_MAX = 5;
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
@@ -18,7 +18,7 @@ const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
 const KIOSK_RATE_LIMIT_MAX = 120;
 
 // How long after SIGN-IN to email an open house guest asking what they thought.
-// Measured from the moment they walk in, not when they leave — set too short
+// Measured from the moment they walk in, not when they leave, set too short
 // and the email arrives while they are still in the kitchen.
 const FEEDBACK_DELAY_MINUTES = 10;
 
@@ -43,7 +43,7 @@ function mergeExtraTags(baseTags: string[], extraTags: unknown): string[] {
 
 /**
  * Tags for an open house lead: the standard type tags plus the things Barrett
- * actually filters on later — which house, which day, and which lender was on
+ * actually filters on later, which house, which day, and which lender was on
  * site.
  */
 function buildOpenHouseTags(
@@ -71,14 +71,14 @@ function buildOpenHouseTags(
 
 // Map form type → FUB source label (shows up in FUB's "Source" column)
 const fubSourceMap: Record<string, string> = {
-  contact: "nowtb.com — Contact Form",
-  showing: "nowtb.com — Showing Request",
-  "open-house": "nowtb.com — Open House Sign In",
-  "open-house-feedback": "nowtb.com — Open House Feedback",
-  valuation: "nowtb.com — Home Valuation",
-  "seller-intake": "nowtb.com — Seller Intake",
-  newsletter: "nowtb.com — Newsletter",
-  "buyer-reg": "nowtb.com — Buyer Registration",
+  contact: "nowtb.com, Contact Form",
+  showing: "nowtb.com, Showing Request",
+  "open-house": "nowtb.com, Open House Sign In",
+  "open-house-feedback": "nowtb.com, Open House Feedback",
+  valuation: "nowtb.com, Home Valuation",
+  "seller-intake": "nowtb.com, Seller Intake",
+  newsletter: "nowtb.com, Newsletter",
+  "buyer-reg": "nowtb.com, Buyer Registration",
   // Community interest lists (Gapway Lakes Estates and any future pre-development
   // community). Deliberately the bare domain: these leads are tagged with the
   // community name, so a per-community source label would only fragment Barrett's
@@ -101,7 +101,7 @@ const fubTagMap: Record<string, string[]> = {
 };
 
 /**
- * POST /api/contact — Handles all form submissions from the site.
+ * POST /api/contact, Handles all form submissions from the site.
  * 1. Verifies Cloudflare Turnstile (spam protection)
  * 2. Pushes the lead to Follow Up Boss with property details + tags
  * 3. Forwards to n8n webhook for automations (email alerts, drip campaigns)
@@ -159,12 +159,12 @@ export async function POST(request: NextRequest) {
     // junk leads into Follow Up Boss and emailing fake addresses.
     //
     // The kiosks are exempt. They send no token, so this gate was returning 403
-    // for every walk-in while the kiosk still showed its "Thank You" screen —
+    // for every walk-in while the kiosk still showed its "Thank You" screen 
     // silently discarding 100% of open house sign-ins. Rate limiting and the
     // content validation below still apply to these submissions.
     const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
     if (turnstileSecret && !isOpenHouseKiosk) {
-      // A missing token means the request didn't come from our form at all —
+      // A missing token means the request didn't come from our form at all 
       // a bot POSTing straight to this endpoint. Reject it.
       if (!turnstileToken) {
         console.warn(`[SPAM] Missing Turnstile token from IP ${ip} on "${type}" form`);
@@ -176,7 +176,7 @@ export async function POST(request: NextRequest) {
 
       // These sentinel values are emitted by TurnstileWidget when the challenge
       // could not run (script blocked, render failed). A real browser with an
-      // ad-blocker can hit this, so we let it through rather than lose the lead —
+      // ad-blocker can hit this, so we let it through rather than lose the lead 
       // the validation checks below are the safety net for these.
       const widgetFallback =
         turnstileToken === "no-turnstile-key-configured" ||
@@ -211,7 +211,7 @@ export async function POST(request: NextRequest) {
           }
         } catch (err) {
           // Cloudflare itself is unreachable. Don't punish real users for an
-          // outage on their end — allow through and lean on validation below.
+          // outage on their end, allow through and lean on validation below.
           console.warn("Turnstile verification error (allowing, validation still applies):", err);
         }
       }
@@ -230,7 +230,7 @@ export async function POST(request: NextRequest) {
 
     if (verdict.reject) {
       console.warn(
-        `[SPAM] Rejected "${type}" submission from IP ${ip} —`,
+        `[SPAM] Rejected "${type}" submission from IP ${ip}, `,
         verdict.reasons.join("; "),
         { name: formData.name, email: formData.email, phone: formData.phone }
       );
@@ -260,24 +260,24 @@ export async function POST(request: NextRequest) {
             type,
             propertyAddress: formData.property?.address,
           },
-          `Spam validation REJECTED this submission, so it was never written to Follow Up Boss — ${verdict.reasons.join("; ")}. ` +
+          `Spam validation REJECTED this submission, so it was never written to Follow Up Boss, ${verdict.reasons.join("; ")}. ` +
             `If this is a real person, add them by hand and loosen the matching rule in src/lib/lead-validation.ts.`
         );
       }
 
       // Return 200 with success:true on purpose. If we told the bot it was
       // blocked, whoever runs it would tune it until it got through. Letting it
-      // think it worked means it keeps sending junk we silently discard — and
+      // think it worked means it keeps sending junk we silently discard, and
       // now the alert above means "silently" only applies to the bot, not to us.
       return NextResponse.json({ success: true });
     }
 
     if (verdict.suspect) {
-      // Not confident enough to throw the lead away — Barrett still gets it in
-      // Follow Up Boss — but we will NOT email this address. That is what
+      // Not confident enough to throw the lead away, Barrett still gets it in
+      // Follow Up Boss, but we will NOT email this address. That is what
       // protects our sending reputation from bounces.
       console.warn(
-        `[SUSPECT] Accepting "${type}" lead but skipping auto-responder —`,
+        `[SUSPECT] Accepting "${type}" lead but skipping auto-responder, `,
         verdict.reasons.join("; ")
       );
     }
@@ -311,7 +311,7 @@ export async function POST(request: NextRequest) {
     // --- Push lead to Follow Up Boss ---
     // FUB dedupes by email, so repeat submissions update the existing contact
     // Property details are attached as a note so Barrett sees what they want.
-    // Push whenever we have any way to reach them — open-house walk-ins often
+    // Push whenever we have any way to reach them, open-house walk-ins often
     // give a name + phone but no email, and those must still land in FUB.
     if (formData.email || formData.phone) {
       try {
@@ -340,11 +340,11 @@ export async function POST(request: NextRequest) {
           details: formData.details || undefined,
         });
         // pushLeadToFub RETURNS false on an API rejection rather than throwing,
-        // so the catch below never fires for the most common failure — a bad or
+        // so the catch below never fires for the most common failure, a bad or
         // expired API key. That is exactly how an invalid FUB_API_KEY silently
         // dropped every website lead for months. Check the return value.
         if (!fubOk) {
-          console.error("[LEAD AT RISK] FUB push returned false —", formData.email || formData.phone);
+          console.error("[LEAD AT RISK] FUB push returned false, ", formData.email || formData.phone);
           await sendLeadFailureAlert(
             {
               name: formData.name || "Unknown",
@@ -358,7 +358,7 @@ export async function POST(request: NextRequest) {
           );
         }
       } catch (fubError) {
-        console.error("[LEAD AT RISK] FUB push threw —", fubError);
+        console.error("[LEAD AT RISK] FUB push threw, ", fubError);
         await sendLeadFailureAlert(
           {
             name: formData.name || "Unknown",
@@ -374,11 +374,11 @@ export async function POST(request: NextRequest) {
     }
 
     // --- Send Resend alert email to Barrett + auto-responder to lead ---
-    // Both are no-ops if RESEND_API_KEY is not configured — won't block the form
+    // Both are no-ops if RESEND_API_KEY is not configured, won't block the form
     //
     // Open house kiosks alert unconditionally. Gating on email/phone meant a
     // guest who signed in with just a name, or left anonymous feedback, never
-    // reached Barrett at all — the one notification that has to arrive while
+    // reached Barrett at all, the one notification that has to arrive while
     // the guest is still standing in the house.
     if (formData.email || formData.phone || isOpenHouseKiosk) {
       // Always alert Barrett so he sees the walk-in; only auto-respond when we
@@ -396,7 +396,7 @@ export async function POST(request: NextRequest) {
       ];
       // Only auto-respond when we have an email AND it passed validation.
       // Emailing a suspect address is how bounces pile up and get our sending
-      // privileges restricted — Barrett still gets the lead either way.
+      // privileges restricted, Barrett still gets the lead either way.
       if (formData.email && !verdict.suspect) {
         emailTasks.push(
           sendLeadAutoResponder({
@@ -409,7 +409,7 @@ export async function POST(request: NextRequest) {
       // Open house sign-in with an email address: queue the "what did you
       // think?" note for a few minutes from now. Resend holds it server-side,
       // so it still goes out even though this function has long since exited.
-      // Only on sign-in — emailing the feedback form to someone who just
+      // Only on sign-in, emailing the feedback form to someone who just
       // FILLED IN the feedback form would be daft.
       if (
         type === "open-house" &&
@@ -428,13 +428,13 @@ export async function POST(request: NextRequest) {
         );
       }
 
-      // Fire in parallel — neither blocks the response if they fail
+      // Fire in parallel, neither blocks the response if they fail
       Promise.all(emailTasks).catch((err) => console.warn("[Resend] Email batch failed:", err));
     }
 
     // --- Forward to n8n for additional automations ---
     // n8n handles: email/SMS notifications, drip sequences, etc.
-    // This is fire-and-forget — don't block the response if n8n is slow
+    // This is fire-and-forget, don't block the response if n8n is slow
     try {
       await fetch(webhookUrl, {
         method: "POST",
@@ -446,7 +446,7 @@ export async function POST(request: NextRequest) {
         }),
       });
     } catch (n8nError) {
-      // Log but don't fail — FUB already has the lead, n8n is a bonus
+      // Log but don't fail, FUB already has the lead, n8n is a bonus
       console.warn("n8n webhook failed (non-critical):", n8nError);
     }
 

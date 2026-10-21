@@ -1,4 +1,4 @@
-// /no-hoa — Tampa Bay Homes with No HOA
+// /no-hoa, Tampa Bay Homes with No HOA
 import type { Metadata } from "next";
 import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";

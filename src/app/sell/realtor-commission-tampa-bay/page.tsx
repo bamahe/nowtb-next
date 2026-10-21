@@ -28,7 +28,7 @@
 // If it breaks, check:
 //  - 404 live but 200 locally? The "sell" exclusion fell out of next.config.mjs.
 //  - Lead not arriving? That is /api/contact and Turnstile. Do not hand-roll a
-//    fetch in this file — a bespoke form bypasses validation and Follow Up Boss.
+// fetch in this file, a bespoke form bypasses validation and Follow Up Boss.
 // =============================================================================
 
 import type { Metadata } from "next";
@@ -73,7 +73,7 @@ const beforeAfter = [
     before:
       "An offer of compensation to the buyer's broker appeared in the MLS listing record.",
     after:
-      "Offers of compensation cannot be communicated through the MLS at all — not in a field, not in public remarks, not in private remarks.",
+      "Offers of compensation cannot be communicated through the MLS at all, not in a field, not in public remarks, not in private remarks.",
     seller:
       "You decide separately whether to offer anything, and it is a negotiation rather than a default.",
   },
@@ -175,7 +175,7 @@ const faqs: Faq[] = [
   {
     question: "What changed about commissions after the 2024 NAR settlement?",
     answer:
-      "Two practice changes took effect on August 17, 2024. First, offers of compensation to a buyer's broker can no longer be communicated through the MLS in any field or remark. Second, an MLS participant working with a buyer must have a written agreement with that buyer before touring a home. Compensation remained negotiable before and after — the change is where it is discussed and documented, not whether it can be negotiated. For a seller, the practical effect is that any contribution to the buyer's side is now a term you evaluate inside a specific offer.",
+      "Two practice changes took effect on August 17, 2024. First, offers of compensation to a buyer's broker can no longer be communicated through the MLS in any field or remark. Second, an MLS participant working with a buyer must have a written agreement with that buyer before touring a home. Compensation remained negotiable before and after, the change is where it is discussed and documented, not whether it can be negotiated. For a seller, the practical effect is that any contribution to the buyer's side is now a term you evaluate inside a specific offer.",
   },
   {
     question: "Do I have to pay the buyer's agent?",
@@ -207,7 +207,7 @@ const sources: Source[] = [
   },
   {
     name: "Florida Statute 201.02 and Florida Administrative Code R. 69O-186.003",
-    used: "The distinction drawn on this page between costs that are fixed by law — the deed documentary stamp tax and the promulgated title insurance premium — and compensation, which is not.",
+    used: "The distinction drawn on this page between costs that are fixed by law, the deed documentary stamp tax and the promulgated title insurance premium, and compensation, which is not.",
     href: "https://floridarevenue.com/taxes/taxesfees/pages/doc_stamp.aspx",
   },
 ];
@@ -267,7 +267,7 @@ export default function RealtorCommissionTampaBayPage() {
               Compensation is negotiable in every single transaction and is not
               set by statute, by any brokerage, or by any REALTOR&reg;
               association. Two costs on your closing statement <em>are</em> fixed
-              by law — the deed documentary stamp tax at $0.70 per $100 under
+              by law, the deed documentary stamp tax at $0.70 per $100 under
               Florida Statute 201.02, and the owner&apos;s title insurance
               premium, which Florida promulgates by rule. Compensation is not one
               of them.
@@ -434,7 +434,7 @@ export default function RealtorCommissionTampaBayPage() {
           <p className="font-body text-muted mb-8 leading-relaxed">
             Ask both agents the same six questions and write the answers down.
             The difference between proposals is almost never the headline number
-            — it is what is in column two.
+             it is what is in column two.
           </p>
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse min-w-[660px]">
@@ -466,7 +466,7 @@ export default function RealtorCommissionTampaBayPage() {
             One more test that costs nothing: ask each agent what they would
             change about your house before it goes live, and whether they would
             tell you not to list. An agent who will only agree with you is not
-            giving you information. That is also most of why listings expire —
+            giving you information. That is also most of why listings expire 
             see{" "}
             <Link
               href="/sell/why-didnt-my-house-sell/"
@@ -492,7 +492,7 @@ export default function RealtorCommissionTampaBayPage() {
             for-sale-by-owner transactions fell to 5 percent of all sales, an
             all-time low, while a record 91 percent of sellers used an agent.
             NAR reported a FSBO median price of $360,000 against $425,000 for
-            agent-assisted sales — but NAR itself cautions that FSBO sales skew
+            agent-assisted sales, but NAR itself cautions that FSBO sales skew
             toward lower-cost property types and rural locations, so that gap is
             not evidence of a $65,000 agent premium and I am not going to
             present it as one.

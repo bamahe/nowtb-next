@@ -1,5 +1,5 @@
 // =============================================================================
-// FubListingView — Invisible tracker that pushes "PropertyViewed" events to FUB
+// FubListingView, Invisible tracker that pushes "PropertyViewed" events to FUB
 // Only fires for logged-in Supabase users.
 // Debounced: only pushes ONCE per listing per browser session to avoid spam.
 // Drop this on listing detail pages alongside RecentlyViewedTracker.
@@ -19,7 +19,7 @@ interface FubListingViewProps {
   state?: string;
 }
 
-// Session-level dedup set — tracks which listings we already pushed this session.
+// Session-level dedup set, tracks which listings we already pushed this session.
 // Uses a module-level Set so it persists across re-renders but resets on page refresh.
 const pushedThisSession = new Set<string>();
 
@@ -32,7 +32,7 @@ export default function FubListingView({
   state = "FL",
 }: FubListingViewProps) {
   useEffect(() => {
-    // Already pushed this listing in this browser session — skip
+    // Already pushed this listing in this browser session, skip
     if (pushedThisSession.has(listingKey)) return;
 
     const supabase = createClient();
@@ -63,12 +63,12 @@ export default function FubListingView({
           },
         }),
       }).catch(() => {
-        // FUB push failed — remove from dedup set so it can retry next navigation
+        // FUB push failed, remove from dedup set so it can retry next navigation
         pushedThisSession.delete(listingKey);
       });
     })();
   }, [listingKey, address, city, price, mlsNumber, state]);
 
-  // Renders nothing — purely a side-effect component
+  // Renders nothing, purely a side-effect component
   return null;
 }

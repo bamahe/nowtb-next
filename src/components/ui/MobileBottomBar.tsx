@@ -1,5 +1,5 @@
 // =============================================================================
-// MobileBottomBar — Sticky bottom bar on mobile with Call + Contact buttons
+// MobileBottomBar, Sticky bottom bar on mobile with Call + Contact buttons
 // Only visible on small screens (md:hidden). Uses safe-area inset padding
 // so it doesn't overlap the iPhone home indicator.
 // =============================================================================
@@ -23,11 +23,11 @@ export default function MobileBottomBar() {
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
     >
       <div className="flex items-stretch">
-        {/* Call button — takes 1/2 of the width, green/accent background */}
+        {/* Call button, takes 1/2 of the width, green/accent background */}
         <a
           href="tel:+18137337907"
           // Conversion tracking. Safe no-op until NEXT_PUBLIC_GA_ID is set in
-          // Vercel — see src/lib/analytics.ts. Wrapped so it can never throw
+          // Vercel, see src/lib/analytics.ts. Wrapped so it can never throw
           // and cancel the call the visitor is placing.
           onClick={() => trackPhoneTap("mobile-bottom-bar")}
           className="flex-[2] flex items-center justify-center gap-2
@@ -39,7 +39,7 @@ export default function MobileBottomBar() {
           Call (813) 733-7907
         </a>
 
-        {/* Text button — takes 1/4 of the width */}
+        {/* Text button, takes 1/4 of the width */}
         <a
           href="sms:+18137337907"
           className="flex-[1] flex items-center justify-center gap-1.5
@@ -52,7 +52,7 @@ export default function MobileBottomBar() {
           Text
         </a>
 
-        {/* Contact button — takes 1/4 of the width */}
+        {/* Contact button, takes 1/4 of the width */}
         <Link
           href="/contact/"
           className="flex-[1] flex items-center justify-center gap-1.5

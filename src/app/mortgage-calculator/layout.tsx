@@ -1,5 +1,5 @@
 // =============================================================================
-// /mortgage-calculator layout — exports metadata for the client component page
+// /mortgage-calculator layout, exports metadata for the client component page
 // The page itself is "use client" so metadata must live here.
 // =============================================================================
 
