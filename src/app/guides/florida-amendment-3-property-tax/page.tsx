@@ -207,26 +207,6 @@ export default function Amendment3Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(election) }}
       />
 
-      {/* Breadcrumb trail. Pairs with the BreadcrumbList schema above. */}
-      <nav
-        aria-label="Breadcrumb"
-        className="border-b border-gray-200 bg-white"
-      >
-        <div className="mx-auto max-w-6xl px-4 py-3 text-sm text-gray-600">
-          <Link href="/" className="hover:underline">
-            Home
-          </Link>
-          <span className="mx-2 text-gray-400">/</span>
-          <Link href="/guides" className="hover:underline">
-            Guides
-          </Link>
-          <span className="mx-2 text-gray-400">/</span>
-          <span aria-current="page" className="font-semibold text-[#0c1829]">
-            Florida Amendment 3
-          </span>
-        </div>
-      </nav>
-
       {/* Hero */}
       <header className="bg-[#0c1829] py-12">
         <div className="mx-auto max-w-6xl px-4">
@@ -260,6 +240,28 @@ export default function Amendment3Page() {
           </div>
         </div>
       </header>
+
+      {/* Breadcrumb trail, BELOW the hero on purpose. Above it, the site's
+          sticky header overlaps the bar and the crumbs scroll underneath it.
+          Pairs with the BreadcrumbList schema above. */}
+      <nav
+        aria-label="Breadcrumb"
+        className="border-b border-gray-200 bg-white"
+      >
+        <div className="mx-auto max-w-6xl px-4 py-3 text-sm text-gray-600">
+          <Link href="/" className="hover:underline">
+            Home
+          </Link>
+          <span className="mx-2 text-gray-400">/</span>
+          <Link href="/guides" className="hover:underline">
+            Guides
+          </Link>
+          <span className="mx-2 text-gray-400">/</span>
+          <span aria-current="page" className="font-semibold text-[#0c1829]">
+            Florida Amendment 3
+          </span>
+        </div>
+      </nav>
 
       <div className="mx-auto max-w-6xl px-4 py-10">
         <div className="lg:grid lg:grid-cols-[1fr_280px] lg:gap-10">

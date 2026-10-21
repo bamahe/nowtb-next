@@ -5,7 +5,7 @@
   "src/data/amendment-3-faqs.ts": "e103293e46f19b6e656f63f6c7d39204a36890022c0cf38bd73a08a2b6593004",
   "src/data/amendment-3-outcomes.ts": "f7d91581620535a7dfac0b603ad3a27f4f2f6971352ccde917dd27f923331704",
   "src/lib/amendment3.ts": "52d8bec1fbdb436d8d495e3bf79c5d17359a49a8c0d4f8ef5e2ff28120e37908",
-  "src/app/guides/florida-amendment-3-property-tax/page.tsx": "cf9072133bbdd70323439b1730dccf137ecd07d33d5a8fe2d8d7d107a3dc2593",
+  "src/app/guides/florida-amendment-3-property-tax/page.tsx": "91afd9e154c7352a1c19a66213c1d92c92a8aa2cebb5cfa4b6b3f1c843936511",
   "src/components/amendment3/SavingsCalculator.tsx": "720a5a040517d57c6eefc35e8770b74a5f87a496639e561318f6f9bc5c8c0685",
   "src/components/amendment3/ResidencyChecker.tsx": "d33ea611f931936d22cff33c12645d1b06ae4010d21f41caf8794bdb5d2c536a",
   "src/components/amendment3/StatusBanner.tsx": "54a2fd91582d56d317d8c6c65b4a28d836831a25e181b5f0956ee61dc15d5cc4",
