@@ -168,8 +168,9 @@ const nextConfig = {
       // it REPLACES the existing $51,411 rather than stacking on it, which is
       // the single most misunderstood thing about this amendment.
       //
-      // 301, not 308, because this is a permanent editorial consolidation and
-      // we want the equity to move.
+      // permanent: true emits a 308, not a 301. Google treats 308 as a
+      // permanent redirect and passes equity the same way, so this is the
+      // right call for an editorial consolidation.
       //
       // NOTE: the post still exists in src/data/posts-export.json. That file
       // is owned by the content automation, so it is deliberately NOT edited
@@ -546,7 +547,7 @@ const nextConfig = {
       // only captures up to the last hyphen, so for "gapway-lakes-estates" it
       // tries "gapway-lakes" — which does not start with the full slug, so an
       // unanchored lookahead passes and the loop survives.
-      { source: `/:city((?!blog|api|auth|clients|properties|guides|images|wp-content|_next|compare|market-updates|builders|communities|account|sell|resources|3813-polumbo-dr|11417-cypress-park-st|30935-whitlock-dr|2510-brimhollow-dr).[^/]+)/:topicCity((?!(?:${communityFlattenExclusions})(?:$|/))[^/]+)-:topic`, destination: "/:topicCity-:topic/", permanent: true },
+      { source: `/:city((?!blog|api|auth|clients|properties|guides|images|amendment-3|wp-content|_next|compare|market-updates|builders|communities|account|sell|resources|3813-polumbo-dr|11417-cypress-park-st|30935-whitlock-dr|2510-brimhollow-dr).[^/]+)/:topicCity((?!(?:${communityFlattenExclusions})(?:$|/))[^/]+)-:topic`, destination: "/:topicCity-:topic/", permanent: true },
 
       // ── WordPress nested neighborhood pages → flat structure ──
       // The :neighborhood param excludes every slug in community-pages.ts (plus
@@ -565,7 +566,7 @@ const nextConfig = {
       // city name (e.g. /auburndale/auburndale-homes-for-sale) and so can never
       // match a community slug. Adding cities to the ":city" lists instead would
       // break legacy WordPress flattening for that whole city.
-      { source: `/:city((?!blog|api|auth|clients|properties|guides|images|wp-content|_next|compare|market-updates|builders|communities|account|sell|resources|3813-polumbo-dr|11417-cypress-park-st|30935-whitlock-dr|2510-brimhollow-dr).[^/]+)/:neighborhood((?!${communityFlattenExclusions}).[^/]+)`, destination: "/:neighborhood/", permanent: true },
+      { source: `/:city((?!blog|api|auth|clients|properties|guides|images|amendment-3|wp-content|_next|compare|market-updates|builders|communities|account|sell|resources|3813-polumbo-dr|11417-cypress-park-st|30935-whitlock-dr|2510-brimhollow-dr).[^/]+)/:neighborhood((?!${communityFlattenExclusions}).[^/]+)`, destination: "/:neighborhood/", permanent: true },
 
       // ── WordPress Showcase IDX property pages ──
       // Old IDX used /properties/slug-name format. Bridge uses /properties/ListingKey.
