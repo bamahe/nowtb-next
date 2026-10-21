@@ -1,0 +1,13 @@
+{
+  "status": "pending",
+  "certified": false,
+  "yesPercent": null,
+  "noPercent": null,
+  "totalVotes": null,
+  "precinctsReportingPercent": null,
+  "primarySource": null,
+  "corroboratingSource": null,
+  "calledAt": null,
+  "checkedAt": "2026-10-20T00:00:00Z",
+  "note": "BOT OWNED, Nov 4 2026 onward. status is the ONLY switch the page reads: pending | passed | failed. Each maps to copy Barrett wrote in advance in branches.ts."
+}

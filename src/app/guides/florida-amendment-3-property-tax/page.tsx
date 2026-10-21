@@ -20,6 +20,8 @@ import Link from "next/link";
 import { Phone } from "lucide-react";
 import SavingsCalculator from "@/components/amendment3/SavingsCalculator";
 import ResidencyChecker from "@/components/amendment3/ResidencyChecker";
+import StatusBanner from "@/components/amendment3/StatusBanner";
+import NewsFeed from "@/components/amendment3/NewsFeed";
 import { AMD3_BLOCKS } from "@/data/amendment-3-content";
 import { AMD3_FAQS } from "@/data/amendment-3-faqs";
 import { BARRETT_TAKE } from "@/data/amendment-3-take";
@@ -251,6 +253,11 @@ export default function Amendment3Page() {
           <main>
             {/* Quick answer. The .quick-answer class is what the site's
                 speakable selectors target, so AI engines lift this block. */}
+            {/* Status banner. Pre-election this says "nothing changes yet";
+                on Nov 4 the updater flips one enum and this becomes the
+                passed or failed branch. See src/data/amendment-3/branches.ts. */}
+            <StatusBanner />
+
             {quickAnswer ? (
               <div
                 className="quick-answer mb-8 rounded-lg border-l-4 border-[#0c1829] bg-gray-50 p-5
@@ -279,6 +286,10 @@ export default function Amendment3Page() {
                 {block.id === TAKE_AFTER ? <BarrettTake /> : null}
               </section>
             ))}
+
+            {/* Bot-maintained news feed. Renders nothing when empty, which is
+                deliberate: an empty feed beats a stale or padded one. */}
+            <NewsFeed />
 
             {/* Sources. On a page making dollar claims this is not decoration,
                 it is the reason another site will cite this one. */}

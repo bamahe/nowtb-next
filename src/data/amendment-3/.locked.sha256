@@ -1,0 +1,11 @@
+{
+  "src/data/amendment-3/branches.ts": "c71eb58fde2babc931286e7fe5b989e43e6ca264de40c100663ef9e2e26aecd3",
+  "src/data/amendment-3-take.ts": "4ae69633de89e0c436c48b5115112429a871c0331f4ede670cd4683f6bc5d3e8",
+  "src/data/amendment-3-content.ts": "89d9f5b0d8b2683321e7f25789afc326fa2c603ce0f09b63b8aaec3ce5a378d6",
+  "src/data/amendment-3-faqs.ts": "e103293e46f19b6e656f63f6c7d39204a36890022c0cf38bd73a08a2b6593004",
+  "src/data/amendment-3-outcomes.ts": "f7d91581620535a7dfac0b603ad3a27f4f2f6971352ccde917dd27f923331704",
+  "src/lib/amendment3.ts": "52d8bec1fbdb436d8d495e3bf79c5d17359a49a8c0d4f8ef5e2ff28120e37908",
+  "src/app/guides/florida-amendment-3-property-tax/page.tsx": "805657970d89c8f4fa9d66682b20454fb309e5aa02cbb1b909673862ce56109c",
+  "src/components/amendment3/SavingsCalculator.tsx": "720a5a040517d57c6eefc35e8770b74a5f87a496639e561318f6f9bc5c8c0685",
+  "src/components/amendment3/ResidencyChecker.tsx": "d33ea611f931936d22cff33c12645d1b06ae4010d21f41caf8794bdb5d2c536a"
+}
