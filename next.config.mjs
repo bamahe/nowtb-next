@@ -156,6 +156,35 @@ const nextConfig = {
     const communityFlattenExclusions = getCommunityFlattenExclusions().join('|');
 
     return [
+      // ── AMENDMENT 3 CONSOLIDATION ───────────────────────────────────────────
+      // /blog/florida-property-tax-amendment-2026/ (published Oct 6 2026) and
+      // /guides/florida-amendment-3-property-tax/ were both targeting
+      // "florida amendment 3". Two pages competing for one query split the
+      // link equity and neither wins.
+      //
+      // The guide supersedes the post: 8,600 words against 2,500, a savings
+      // calculator, a residency checker, and the correction the post is
+      // missing. The post says the exemption rises to $150,000 without saying
+      // it REPLACES the existing $51,411 rather than stacking on it, which is
+      // the single most misunderstood thing about this amendment.
+      //
+      // 301, not 308, because this is a permanent editorial consolidation and
+      // we want the equity to move.
+      //
+      // NOTE: the post still exists in src/data/posts-export.json. That file
+      // is owned by the content automation, so it is deliberately NOT edited
+      // here. This redirect sits in front of the route instead.
+      {
+        source: "/blog/florida-property-tax-amendment-2026",
+        destination: "/guides/florida-amendment-3-property-tax/",
+        permanent: true,
+      },
+      {
+        source: "/florida-property-tax-amendment-2026",
+        destination: "/guides/florida-amendment-3-property-tax/",
+        permanent: true,
+      },
+
       // ── CURRENT OPEN HOUSE — the reusable printed QR ────────────────────────
       // The QR codes printed for the 3813 Polumbo open house are physical cards
       // and sign riders. Rather than reprint them for every new listing, those

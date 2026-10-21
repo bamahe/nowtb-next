@@ -43,6 +43,10 @@ const PROTECTED = [
   "src/app/guides/florida-amendment-3-property-tax/page.tsx",
   "src/components/amendment3/SavingsCalculator.tsx",
   "src/components/amendment3/ResidencyChecker.tsx",
+  "src/components/amendment3/StatusBanner.tsx",
+  "src/components/amendment3/NewsFeed.tsx",
+  "src/components/amendment3/PollingBlock.tsx",
+  "src/components/amendment3/CountyTable.tsx",
 ];
 
 /** The ONLY files the pre-election / election jobs may stage. */

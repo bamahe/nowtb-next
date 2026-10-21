@@ -22,6 +22,8 @@ import SavingsCalculator from "@/components/amendment3/SavingsCalculator";
 import ResidencyChecker from "@/components/amendment3/ResidencyChecker";
 import StatusBanner from "@/components/amendment3/StatusBanner";
 import NewsFeed from "@/components/amendment3/NewsFeed";
+import CountyTable from "@/components/amendment3/CountyTable";
+import PollingBlock from "@/components/amendment3/PollingBlock";
 import { AMD3_BLOCKS } from "@/data/amendment-3-content";
 import { AMD3_FAQS } from "@/data/amendment-3-faqs";
 import { BARRETT_TAKE } from "@/data/amendment-3-take";
@@ -72,14 +74,25 @@ const TOOL_AFTER: Record<string, "calculator" | "residency"> = {
     "residency",
 };
 
+/**
+ * `mirror` points at our own copy under /public/amendment-3/. Government PDFs
+ * get moved and re-slugged constantly. When those links rot across the rest of
+ * the search results, ours still resolve, and that is a large part of why
+ * another site would cite this page instead of the original.
+ *
+ * The mirrors are verbatim downloads, not edited. Always show the official
+ * link first; the mirror is the fallback.
+ */
 const SOURCES = [
   {
     label: "Enrolled CS/HJR 1F, full text (Florida Senate)",
     url: "https://www.flsenate.gov/Session/Bill/2026F/1F/BillText/er/PDF",
+    mirror: "/amendment-3/cs-hjr-1f-enrolled.pdf",
   },
   {
     label: "Florida 2026 constitutional amendment booklet (Department of State)",
     url: "https://files.floridados.gov/media/711369/eng-2026-booklet-constitutional-amendpub-updated-20260903.pdf",
+    mirror: "/amendment-3/fl-2026-amendment-booklet.pdf",
   },
   {
     label: "Pinellas County Property Appraiser, Amendment 3 FAQ",
@@ -278,7 +291,12 @@ export default function Amendment3Page() {
                   dangerouslySetInnerHTML={{ __html: block.html }}
                 />
                 {TOOL_AFTER[block.id] === "calculator" ? (
-                  <SavingsCalculator />
+                  <>
+                    <SavingsCalculator />
+                    {/* Static, crawlable twin of the calculator. A client
+                        component renders as an empty shell to a crawler. */}
+                    <CountyTable />
+                  </>
                 ) : null}
                 {TOOL_AFTER[block.id] === "residency" ? (
                   <ResidencyChecker />
@@ -289,6 +307,7 @@ export default function Amendment3Page() {
 
             {/* Bot-maintained news feed. Renders nothing when empty, which is
                 deliberate: an empty feed beats a stale or padded one. */}
+            <PollingBlock />
             <NewsFeed />
 
             {/* Sources. On a page making dollar claims this is not decoration,
@@ -308,6 +327,19 @@ export default function Amendment3Page() {
                     >
                       {s.label}
                     </a>
+                    {"mirror" in s && s.mirror ? (
+                      <>
+                        {" "}
+                        <a
+                          href={s.mirror}
+                          className="text-gray-500 hover:underline"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          (mirrored copy)
+                        </a>
+                      </>
+                    ) : null}
                   </li>
                 ))}
               </ul>
