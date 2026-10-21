@@ -2968,3 +2968,38 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** 1046655 — pushed to `origin/main`
+
+---
+
+## Batch 82 — October 21, 2026
+
+**Pages updated:** 10 (8 Seminole FL + 2 Belleair FL)
+**Strategy:** Expand ~6,500-char stubs to 29,000-34,000 chars with full SEO/AEO/GEO treatment
+
+### Seminole FL Posts (8)
+
+1. **seminole-fl-homes-for-sale-guide** — Expanded stub to 32,105 chars. Added: metaTitle/metaDescription; BreadcrumbList + Article + FAQPage JSON-LD schemas; 5-row price table (condos $280K-$380K through waterfront $700K-$2M+); 4 neighborhood profiles (Seminole Lakes 33777, Bay Pointe 33776, Seminole Road Corridor 33772, 74th Ave/Starkey 33777); 5-step buyer process (pre-approval with SHIP DPA reference, flood zone check msc.fema.gov, HOA review, 4-point + wind mitigation inspection, insurance quote before contract); 5-row market comparison table (Seminole vs Largo vs Clearwater vs Dunedin vs St. Pete); 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+
+2. **seminole-fl-schools-guide** — Expanded stub to 29,573 chars. Added: PCS district office (301 4th St SW Largo FL 33770, (727) 588-6000, pinellasschools.org); Seminole Elementary (10955 74th Ave, (727) 547-7642); Rawlings Elementary (10800 66th St N); Bauder Elementary (10045 66th St N PP); Osceola Middle (10251 98th Ave N, (727) 547-7682); Seminole Middle (8701 131st St); Seminole High (8401 131st St N, (727) 547-7478); Largo High (410 Missouri Ave N); Keswick Christian School (10350 66th St N, (727) 541-8474); St. Patrick Catholic School (4936 126th Ave N Clearwater); Calvary Christian Academy; Step Up for Students reference; 5-row school zone table; 22-link grid; bio; 5-Q&A FAQ.
+
+3. **seminole-fl-commute-guide** — Expanded stub to 29,216 chars. Added: 27-mile Tampa distance context; Howard Frankland Bridge route detail (US-19 N to I-275 E); Gandy Bridge route detail; 11-row commute matrix (Downtown Tampa 35-50/50-70 peak through Safety Harbor 25-35/30-48 peak); PSTA transit note (pstapinellas.com, routes 19/52/59, SunRunner connection); internet service section (Spectrum/Frontier Fiber); co-working spaces (downtown Clearwater 15-20 min, St. Pete 20-30 min); 22-link grid; bio; 5-Q&A FAQ.
+
+4. **is-seminole-fl-good-place-to-live** — Expanded stub to 33,943 chars. Added: 6 pros (beach 10-15 min to IRB/Madeira, established neighborhoods, Seminole HS quality, no state income tax + homestead exemption, Pinellas density = value retention, Pinellas Trail); 5 cons (Tampa commute 35-70 min, very limited new construction, higher prices vs inland, flood insurance many areas, car-dependent); 8-row buyer profile table; 5-row community comparison table (Seminole vs Largo vs Dunedin vs Clearwater vs Safety Harbor); 22-link grid; bio; 5-Q&A FAQ.
+
+5. **seminole-fl-real-estate-guide** — Expanded stub to 28,749 chars. Added: 8-row market metrics table (median $390K-$450K SFH, $265-$330/sqft, 30-50 DOM, 97-99% STL ratio, 20-35% concession rate, ~25-30% cash); 5 neighborhood price profiles (Bay Pointe/33776 $420K-$600K, Seminole Lakes/33777 $380K-$520K, Seminole Estates $350K-$480K, Harbor View/Bay Isle $500K-$1.2M, PP/Sem border $320K-$430K); buyer strategy (pre-approval, NAR settlement buyer agreement note, due diligence steps); seller strategy (pricing, preparation, timing); 22-link grid; bio; 5-Q&A FAQ.
+
+6. **seminole-fl-cost-of-living** — Expanded stub to 31,912 chars. Added: 9-row monthly cost table ($420K purchase, 20% down, $336K at 6.875%: mortgage $2,208, taxes $625-$750, insurance $250-$500, flood $100-$400, HOA $0-$350, CDD $0, FPL $130-$280, water $70-$130, internet $60-$100; total $3,400-$4,900/mo); homestead exemption + SOH cap + portability mechanics; insurance cost detail (Citizens reference, wind mitigation 10-40% discount); 5-row cost comparison table (Seminole vs Largo vs Clearwater vs Dunedin vs St. Pete); 22-link grid; bio; 5-Q&A FAQ.
+
+7. **seminole-fl-property-taxes** — Expanded stub to 30,508 chars. Added: Pinellas PAO (315 Court St Clearwater FL 33756, (727) 464-3207, pinellaspao.org) and Tax Collector ((727) 464-7777, pinellastaxcollector.com) contact details; 7-row millage breakdown table (~5.5 county, ~6.5-7.0 school, ~0.25 SWFWMD, ~1.0-2.0 EMS/fire, ~0.5 library, 0 city for unincorporated Seminole; total ~18-21 mills); 3 sample calculations ($420K no homestead $8,400, homestead $7,400, long-term SOH $6,980); 5 exemption types (standard $50K, senior additional, disability, veteran, widow $500); full Pinellas County tax calendar (Jan 1 to March 31); 22-link grid; bio; 5-Q&A FAQ.
+
+8. **seminole-fl-new-construction** — Expanded stub to 31,442 chars. Added: Pinellas County density/built-out context; teardown-rebuild ($700K-$1.2M+ total), gut renovation ($150K-$300K on top of purchase), infill lot ($150K-$350K+ lots) options; 3-option comparison table (Seminole teardown $700K-$1.2M+ vs Pinellas Park new $380K-$550K vs Pasco County $330K-$650K+); Pinellas Park new construction note; Pasco County cross-bay options (Wesley Chapel, Land O Lakes); New vs Resale 7-row comparison table (price, customization, warranty, maintenance, location, timeline, financing); Florida Statute 553.84 warranty (1/2/10 yr); independent inspection recommendation; 22-link grid; bio; 5-Q&A FAQ.
+
+### Belleair FL Posts (2)
+
+9. **belleair-fl-schools-guide** — Expanded stub to 30,959 chars. Added: PCS district info; Mildred Helms Elementary (2726 Fallon Dr, Clearwater FL 33759) as Belleair 33756 elementary; Largo Middle (155 8th Ave NE, Largo FL 33770) as middle school; Largo High (410 Missouri Ave N, (727) 588-3521) as high school; note on high private school usage in Belleair; Calvary Christian Academy, St. Cecelia School (Clearwater), PCS magnets, Academy at the Lakes (Land O Lakes, ~45-55 min); Step Up for Students and FES scholarship references; 5-row community school comparison table; 22-link Belleair grid; bio; 5-Q&A FAQ.
+
+10. **belleair-fl-commute-guide** — Expanded stub to 30,107 chars. Added: 27-32 mile Tampa distance context; no Suncoast Pkwy access (south Pinellas); Howard Frankland route (US-19 N to I-275 E, 35-50/50-70 peak); SR-60 E to I-275 N weekend option; Gandy Bridge route (38-52/55-75 peak); Sunshine Skyway context (Sarasota only); 11-row commute matrix (Downtown Tampa through Pinellas Park 15-20/18-28 peak); PSTA periphery service note; Clearwater Beach trolley seasonal note; internet service (Spectrum/Frontier, verify by address); Belleair Country Club recreation note; co-working (Clearwater 8-12 min, St. Pete 22-30 min); 22-link Belleair grid; bio; 5-Q&A FAQ.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `package-lock.json`, `AUDIT-LOG.md`
+**Git commit:** 5877a0e — pushed to `origin/main`
