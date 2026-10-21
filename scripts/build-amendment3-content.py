@@ -174,7 +174,11 @@ def main():
     for f in sorted(x for x in os.listdir(SRC) if re.match(r"section-\d+\.md$", x)):
         raw = open(os.path.join(SRC, f)).read()
         first, _, rest = raw.partition("\n")
-        heading = first.lstrip("#").strip()
+        # lstrip("#") alone is not enough: the source lines look like
+        # "# ## Heading", so it strips the first hash, hits the space, and
+        # stops, leaving a literal "##" in the sidebar nav. Strip hashes AND
+        # whitespace repeatedly.
+        heading = re.sub(r"^[#\s]+", "", first).strip()
         body = convert(rest.strip())
         slug = re.sub(r"[^a-z0-9]+", "-", heading.lower()).strip("-")
         ok &= no_dashes(f, body)
