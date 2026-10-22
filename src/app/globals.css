@@ -123,6 +123,22 @@ select {
 .blog-content p { @apply font-body text-dark leading-relaxed mb-4; }
 .blog-content ul, .blog-content ol { @apply mb-4 pl-6; }
 .blog-content li { @apply mb-2; }
+/* Dark navy CTA boxes inside posts (~940 posts use them). The p rule above
+   forces dark text, which made these boxes unreadable (dark on navy).
+   Force white text and links inside any inline dark-background div.
+   If it breaks: a new dark box color needs its own selector line here. */
+.blog-content div[style*="background:#0f172a"],
+.blog-content div[style*="background: #0f172a"],
+.blog-content div[style*="background:#1e293b"],
+.blog-content div[style*="background: #1e293b"] { color: #fff !important; }
+.blog-content div[style*="background:#0f172a"] :is(p, h2, h3, h4, li, strong, span, em),
+.blog-content div[style*="background: #0f172a"] :is(p, h2, h3, h4, li, strong, span, em),
+.blog-content div[style*="background:#1e293b"] :is(p, h2, h3, h4, li, strong, span, em),
+.blog-content div[style*="background: #1e293b"] :is(p, h2, h3, h4, li, strong, span, em) { color: #fff !important; }
+.blog-content div[style*="background:#0f172a"] a:not([style*="background"]),
+.blog-content div[style*="background: #0f172a"] a:not([style*="background"]),
+.blog-content div[style*="background:#1e293b"] a:not([style*="background"]),
+.blog-content div[style*="background: #1e293b"] a:not([style*="background"]) { color: #fff !important; text-decoration: underline !important; }
 /* Prevent WP content from overflowing on mobile */
 .blog-content { overflow-x: hidden; word-wrap: break-word; overflow-wrap: break-word; }
 .blog-content table { display: block; overflow-x: auto; max-width: 100%; }
