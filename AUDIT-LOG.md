@@ -4,6 +4,42 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-10-23 (Batch 82 — Safety Harbor FL x4 + St. Pete Beach FL x6)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, 4+ H2 headings, 6+ H3 subheadings, comparison tables, 5-Q&A FAQ, 12+ internal links, Barrett Henry REMAX Collective bio. Content dated 2026-10-22.)
+
+**Safety Harbor FL (ZIP 34695, Pinellas County, Old Tampa Bay shore):**
+
+1. **safety-harbor-fl-commute-guide** — Expanded 6,658 → 30,097 chars. Added: 10-destination drive time matrix (Tampa 30-70 min, TPA 30-65 min, St. Pete 20-50 min, PIE 20-40 min, Clearwater 15-35 min, Dunedin 20-45 min, MacDill 38-80 min, Wesley Chapel 40-85 min); Bayside Bridge corridor analysis; PSTA Route 52 transit overview; no commuter rail reality; 4-airport comparison table (TPA/PIE/SRQ/MCO); 6-community commuter comparison table; seasonal traffic patterns Nov-Apr; 5-Q&A FAQ. Date: 2026-10-22.
+
+2. **safety-harbor-fl-investment-property** — Expanded 6,652 → 26,029 chars. Added: 6-property-type LTR rental rate table ($1,600-$4,500+/mo); full NOI model ($520K SFH: net cap rate 1.6% pre-financing, appreciation drives returns); FL DBPR STR registration; Pinellas TDT 5% + FL sales tax 6% compliance table; STR viability analysis ($35K-$55K gross/yr); 6-market investor comparison table (Safety Harbor vs Clearwater/Oldsmar/Dunedin/Tarpon Springs/St. Pete Beach); ViVi Property Management reference; 5-Q&A FAQ. Date: 2026-10-22.
+
+3. **safety-harbor-fl-property-taxes** — Expanded 6,654 → 26,641 chars. Added: 8-authority millage breakdown table (~18-22 mills total: county general, school operational, school capital, City of Safety Harbor, SWFWMD, EMS/fire); assessed value reassessment warning for new buyers; homestead exemption $50K two-layer explanation; Save Our Homes 3% cap mechanics with example (2018 buyer assessed value gap); senior/disability/veterans exemptions; 8-scenario tax table ($350K-$1.2M, homestead vs non-homestead); step-by-step pcpao.gov application (315 Court St Clearwater, March 1 deadline); portability DR-501T; 6-community millage comparison; 5-Q&A FAQ. Date: 2026-10-22.
+
+4. **safety-harbor-fl-schools-guide** — Expanded 6,661 → 25,395 chars. Added: 3-school public summary table (Safety Harbor Elementary 400 2nd St N, Safety Harbor Middle 901 1st Ave N, Countryside High 3000 SR-580 Clearwater); Florida school grade system explanation; Pinellas County magnet/choice programs table (Fundamental, STEM, IB, Fine Arts, Cambridge); private schools table (Espiritu Santo Catholic $5,500-$9,000/yr; Tampa Bay Christian Academy; Clearwater Academy International); Step Up/Family Empowerment scholarships; school zone premium analysis; zone verification at pcsb.org; 6-community school comparison table; 5-Q&A FAQ. Date: 2026-10-22.
+
+**St. Pete Beach FL (ZIP 33706, Pinellas County, Gulf barrier island):**
+
+5. **st-pete-beach-fl-cost-of-living** — Expanded 6,650 → 33,406 chars. Added: 3-scenario monthly cost tables (Scenario 1: $750K inland SFH ~$6,372/mo; Scenario 2: $1.4M waterfront SFH ~$11,675/mo; Scenario 3: $2.8M Gulf-front estate ~$21,100+/mo); 5-type wind/HO insurance table ($4K-$20K+/yr); 4-zone flood insurance table (Zone X $400-$800 to Zone VE $6K-$20K+/yr); NFIP Risk Rating 2.0 property-specific pricing explanation; Duke Energy electricity ($150-$250/mo); City of St. Pete Beach water/sewer ($60-$120/mo); no piped gas; propane alternative; 6-community cost comparison table; 5-Q&A FAQ. Date: 2026-10-22.
+
+6. **st-pete-beach-fl-real-estate-guide** — Expanded 6,653 → 25,045 chars. Added: 6-type price tier table ($400K condo to $6M+ Gulf-front with flood zones and typical DOM); 2026 market snapshot table (median $750K-$950K SFH, 55-90 DOM, 4-7 months supply, 93-97% list-to-sale); 3 key buyer risks (flood insurance, SB 4-D condo, wind availability); SB 4-D structural integrity requirement explanation; 3-step buyer strategy; seller strategy (document elevation cert, wind mitigation report); 6-community barrier island comparison table; 5-Q&A FAQ. Date: 2026-10-22.
+
+7. **is-st-pete-beach-fl-good-place-to-live** — Expanded 6,654 → 23,349 chars. Added: 4-pro analysis (direct Gulf beach, Corey Ave walkability, small community identity ~10K residents, central location 20 min to St. Pete / 35 min to Tampa); 4-con analysis (insurance $8K-$25K+/yr combined, Zone A hurricane evacuation reality, 6-month tourist season congestion, off-island schooling for grades 6-12); 8-row buyer-type fit table; 6-community comparison table (St. Pete Beach vs Treasure Island/Gulfport/St. Pete mainland/Seminole/Clearwater Beach); 5-Q&A FAQ. Date: 2026-10-22.
+
+8. **st-pete-beach-fl-waterfront-homes** — Expanded 6,654 → 23,571 chars. Added: 5-waterfront-type price table (Gulf-front Zone VE $2.5M-$10M+ to canalfront Zone AE $1.2M-$3M with annual flood insurance estimates); Zone VE open pile construction requirements; Zone AE BFE mechanics (7-11 ft NAVD88); 8-step waterfront due diligence checklist with costs (elevation cert $300-$500, seawall inspection, dock/lift inspection, water depth, SB 4-D check); seawall replacement cost table (5 condition tiers: $50-$1,500+/LF); 5-agency dock permit stack with timelines (City/FL DEP/Army Corps/SWFWMD/Pinellas); 5-Q&A FAQ. Date: 2026-10-22.
+
+9. **st-pete-beach-fl-homes-for-sale-guide** — Expanded 6,656 → 20,907 chars. Added: 4-neighborhood profiles (Pass-a-Grille historic southern tip $900K-$3M+; central Gulf Blvd corridor $650K-$950K SFH; Corey Ave district $600K-$900K; Dolphin Cay 24-hr gated $850K-$2.5M); 8-type price range table ($400K condo to $10M+ Gulf-front); 4-step listing evaluation process (flood zone at msc.fema.gov, insurance quote, full monthly cost model, HOA SB 4-D review); full internal link grid to all related SPB guides; 5-Q&A FAQ. Date: 2026-10-22.
+
+10. **st-pete-beach-fl-investment-property** — Expanded 6,660 → 30,165 chars. Added: 7-type STR gross revenue table ($45K-$280K+/yr by property type and water access); full NOI model ($900K non-waterfront STR: gross $90K, net $26,140, 2.9% cap rate; total return 7-9% with appreciation); 4-type LTR rate table ($2,800-$8,000+/mo); City of St. Pete Beach vacation rental license; FL DBPR registration; 3-row tax compliance table (FL 6% + Pinellas TDT 5% = 11% combined); 6-market STR investment comparison table (SPB vs Treasure Island/Madeira Beach/Clearwater Beach/Gulfport/New Port Richey); ViVi Property Management reference; 5-Q&A FAQ. Date: 2026-10-22.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** 4952eca
+
+---
+
 ## 2026-10-17 (Batch 81 — Dunedin FL x8 + Belleair FL x2)
 
 **Pages improved: 10**
