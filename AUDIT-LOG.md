@@ -4,6 +4,40 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-10-25 (Batch 84 — Indian Rocks Beach FL x10)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, 4+ H2 headings, 6+ H3 subheadings, comparison tables, 5-Q&A FAQ, 22-link internal grid, Barrett Henry REMAX Collective bio. Content dated 2026-10-24.)
+
+**Indian Rocks Beach FL (ZIP 33785, Pinellas County, Gulf barrier island — all 10 stubs expanded from ~6,700 chars):**
+
+1. **indian-rocks-beach-fl-homes-for-sale-guide** — Expanded 6,700 → 30,119 chars. Added: 2026 market snapshot table (median $650K-$750K SFH, 45-90 DOM, 4-6 months supply); 6-neighborhood profiles (Gulf-front, Intracoastal, mid-island, beach cottages); 5-buyer-type fit table; FEMA flood zone impact analysis; SB 4-D condo milestone inspection warning; 6-community barrier island comparison table; 22-link internal grid; 5-Q&A FAQ. Date: 2026-10-24.
+
+2. **indian-rocks-beach-fl-schools-guide** — Expanded 6,700 → 29,164 chars. Added: 3-school public summary table (Anona Elementary 12255 Indian Rocks Rd Largo FL 33774 (727) 547-7678; Seminole Middle 8701 131st St (727) 547-7488; Seminole High 8401 131st St N (727) 547-7478); PCS magnet/choice programs table (Fundamental, STEM, IB, Fine Arts, Cambridge); PCS contact (301 4th St SW Largo FL 33770, (727) 588-6000); private school alternatives; school zone verification at pcsb.org; zone premium analysis; 6-community school comparison table; 5-Q&A FAQ. Date: 2026-10-24.
+
+3. **indian-rocks-beach-fl-commute-guide** — Expanded 6,700 → 28,998 chars. Added: 10-destination drive time matrix (Tampa 45-65 min off-peak via I-275; TPA 35-60 min; St. Pete 30-50 min; PIE 20-35 min; Clearwater 15-30 min; Largo 10-20 min; Dunedin 25-45 min; MacDill 55-85 min; Sarasota 60-90 min; Orlando 90-120 min); Belleair Causeway and Indian Rocks Rd route analysis; no commuter rail reality; airport comparison table; PSTA overview; 6-community commuter comparison table; 5-Q&A FAQ. Date: 2026-10-24.
+
+4. **is-indian-rocks-beach-fl-good-place-to-live** — Expanded 6,700 → 29,473 chars. Added: 5-pro analysis (direct Gulf beach access, ~4,000 resident small town identity, Intracoastal waterway, central Pinellas location, Old Florida character); 5-con analysis (combined insurance $8K-$25K+/yr, Zone A/AE hurricane evacuation, mid-island schooling grades 6-12, 6-month tourist congestion, limited walkable retail); 8-row buyer-type fit table; 6-community comparison table (IRB vs Clearwater Beach/Madeira Beach/Treasure Island/Belleair/Seminole); 5-Q&A FAQ. Date: 2026-10-24.
+
+5. **indian-rocks-beach-fl-real-estate-guide** — Expanded 6,700 → 28,778 chars. Added: 6-property-type price tier table ($350K studio condo to $5M+ Gulf-front SFH with flood zones and typical DOM); 2026 market metrics table (median $650K-$850K, 45-80 DOM, 93-97% list-to-sale, 4-7 months supply); 3 key buyer risks (flood insurance, SB 4-D condo, wind availability); 3-step buyer strategy; seller strategy (elevation cert, wind mitigation report, pre-list inspection); 6-community comparison table; 5-Q&A FAQ. Date: 2026-10-24.
+
+6. **indian-rocks-beach-fl-cost-of-living** — Expanded 6,700 → 29,522 chars. Added: 3-scenario monthly cost tables (Scenario 1: $550K non-waterfront SFH ~$5,100/mo; Scenario 2: $950K Intracoastal SFH ~$8,650/mo; Scenario 3: $2.2M Gulf-front estate ~$18,500+/mo); 5-type wind/HO insurance table ($3,500-$18,000+/yr); 4-zone NFIP flood insurance table (Zone X $400-$700 to Zone VE $5K-$18K+/yr); Duke Energy electricity ($140-$240/mo); Pinellas County water/sewer rates; NFIP Risk Rating 2.0 explanation; 6-community cost comparison table; 5-Q&A FAQ. Date: 2026-10-24.
+
+7. **indian-rocks-beach-fl-property-taxes** — Expanded 6,700 → 30,050 chars. Added: 8-authority millage breakdown table (~18-22 mills total: Pinellas County general, school operational, school capital, no city levy for IRB unincorporated, SWFWMD, EMS/fire); homestead exemption $50K two-layer explanation; Save Our Homes 3% cap mechanics with example; senior/disability/veterans exemptions; 8-scenario tax table ($400K-$1.5M, homestead vs non-homestead); Pinellas PAO contact (315 Court St Clearwater FL 33756, (727) 464-3207) with step-by-step application; portability DR-501T; millage comparison table; 5-Q&A FAQ. Date: 2026-10-24.
+
+8. **indian-rocks-beach-fl-new-construction** — Expanded 6,700 → 29,225 chars. Added: Teardown-rebuild reality analysis (no subdivision lots, land $500K-$2.5M+, total new build $1.5M-$5M+); 5-step new construction process with costs; FEMA flood zone elevation requirements (Zone AE BFE 8-12 ft, Zone VE open pile required); Pinellas County building permit process; alternative market comparison table (IRB vs Seminole/Largo/Clearwater/Dunedin/Safety Harbor for new construction options); cost-per-sqft analysis; 5-Q&A FAQ. Date: 2026-10-24.
+
+9. **indian-rocks-beach-fl-investment-property** — Expanded 6,700 → 30,714 chars. Added: 7-type STR gross revenue table ($40K-$220K+/yr by property type and water access); full NOI model ($700K non-waterfront STR: gross $70K, net ~$19K, 2.7% cap rate; total return 6-9% with appreciation); 5-type LTR rate table ($2,200-$7,500+/mo); Pinellas County STR license requirements; FL DBPR registration; 3-row tax compliance table (FL 6% + Pinellas TDT 5% = 11% combined); 6-market STR investment comparison table (IRB vs Madeira Beach/Clearwater Beach/Treasure Island/St. Pete Beach/Dunedin); ViVi Property Management reference; 5-Q&A FAQ. Date: 2026-10-24.
+
+10. **indian-rocks-beach-fl-waterfront-homes** — Expanded 6,700 → 28,371 chars. Added: 5-waterfront-type price table (Gulf-front Zone VE $2M-$8M+ to canalfront Zone AE $800K-$2.5M with annual flood insurance estimates); Zone VE open pile construction requirements; Zone AE BFE mechanics (8-12 ft NAVD88); 8-step waterfront due diligence checklist with costs (elevation cert $300-$500, seawall inspection, dock/lift inspection, water depth, SB 4-D check); seawall cost table (5 condition tiers: $50-$1,500+/LF); 5-agency dock permit stack (City/FL DEP/Army Corps/SWFWMD/Pinellas); 5-Q&A FAQ. Date: 2026-10-24.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** c921852
+
+---
+
 ## 2026-10-23 (Batch 82 — Safety Harbor FL x4 + St. Pete Beach FL x6)
 
 **Pages improved: 10**
