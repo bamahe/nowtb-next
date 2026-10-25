@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, DM_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/layout/Header";
@@ -81,19 +81,35 @@ export const TITLE_SUFFIX = " | Barrett Henry";
 export const TITLE_BUDGET = 60 - TITLE_SUFFIX.length;
 
 // Heading font, Playfair Display 800 (editorial, elegant)
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "700", "800"],
+/* Fonts are SELF-HOSTED from src/fonts on purpose. next/font/google
+   re-downloads them from fonts.gstatic.com on every build, and one failed
+   request there fails the entire production deploy with a module-not-found
+   on the generated font CSS, even when nothing in the commit is wrong.
+   Shipping the woff2 files takes the network out of the build.
+   Latin subset, pulled 2026-10-25. Both families are SIL Open Font License. */
+
+const playfair = localFont({
+  src: [
+    { path: "../fonts/playfair-display-400.woff2", weight: "400", style: "normal" },
+    { path: "../fonts/playfair-display-700.woff2", weight: "700", style: "normal" },
+    { path: "../fonts/playfair-display-800.woff2", weight: "800", style: "normal" },
+  ],
   variable: "--font-playfair",
   display: "swap",
+  adjustFontFallback: "Times New Roman",
 });
 
 // Body font, DM Sans 400/500/600 (clean, modern)
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+const dmSans = localFont({
+  src: [
+    { path: "../fonts/dm-sans-400.woff2", weight: "400", style: "normal" },
+    { path: "../fonts/dm-sans-500.woff2", weight: "500", style: "normal" },
+    { path: "../fonts/dm-sans-600.woff2", weight: "600", style: "normal" },
+    { path: "../fonts/dm-sans-700.woff2", weight: "700", style: "normal" },
+  ],
   variable: "--font-dm-sans",
   display: "swap",
+  adjustFontFallback: "Arial",
 });
 
 export const metadata: Metadata = {
