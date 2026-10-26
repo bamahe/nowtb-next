@@ -398,7 +398,7 @@ export default function WhyDidntMyHouseSellPage() {
             <a href="tel:+18137337907" className="text-link hover:underline font-semibold">
               (813) 733-7907
             </a>
-            . Barrett Henry, Broker Associate, REMAX Collective. 23+ years of real
+            . Barrett Henry, Licensed Florida Real Estate Broker, REMAX Collective. 23+ years of real
             estate experience, REMAX Hall of Fame 2024.
           </p>
         </div>

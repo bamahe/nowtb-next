@@ -114,7 +114,7 @@ export default function BeachCondoFooterBlock({
             Last updated: {BEACH_CONDO_LAST_UPDATED}. Sources: {sources} Status,
             pricing, and rules change. Verify current documents with the
             association and your lender before you write an offer. Barrett
-            Henry is a licensed Florida Broker Associate with REMAX Collective,
+            Henry is a licensed Florida real estate broker with REMAX Collective,
             not an attorney, lender, engineer, or tax advisor.
           </p>
         </div>

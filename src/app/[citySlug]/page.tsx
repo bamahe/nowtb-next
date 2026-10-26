@@ -344,7 +344,7 @@ export async function generateMetadata({
         title: ofc?.metaTitle || `REMAX ${cityName} | REMAX Collective`,
         description:
           ofc?.metaDescription ||
-          `Barrett Henry, Broker Associate at REMAX Collective ${cityName}. 23+ years of real estate experience. Search homes, get market data. Call (813) 733-7907.`,
+          `Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective ${cityName}. 23+ years of real estate experience. Search homes, get market data. Call (813) 733-7907.`,
         alternates: { canonical },
         openGraph: {
           title: `REMAX ${cityName}, Barrett Henry, REALTOR®`,
@@ -398,7 +398,7 @@ export async function generateMetadata({
       const realtorTitle = withReloc.length <= TITLE_BUDGET ? withReloc : realtorBase;
       return {
         title: realtorTitle,
-        description: `Buying, selling, or relocating to ${parsed.city.name}, FL? Barrett Henry, Broker Associate at REMAX Collective. MRP relocation specialist. Call (813) 733-7907.`,
+        description: `Buying, selling, or relocating to ${parsed.city.name}, FL? Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective. MRP relocation specialist. Call (813) 733-7907.`,
         alternates: { canonical },
         openGraph: {
           title: `${parsed.city.name} REALTOR®, Barrett Henry | REMAX Collective`,
@@ -411,7 +411,7 @@ export async function generateMetadata({
     case "sell-city":
       return {
         title: `Sell Your ${parsed.city.name} Home | Free Valuation`,
-        description: `Sell your ${parsed.city.name} home for top dollar. Free home valuation from Barrett Henry, Broker Associate at REMAX Collective. Call (813) 733-7907.`,
+        description: `Sell your ${parsed.city.name} home for top dollar. Free home valuation from Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective. Call (813) 733-7907.`,
         alternates: { canonical },
         openGraph: {
           title: `Sell Your ${parsed.city.name} Home | Free Valuation`,
@@ -536,7 +536,7 @@ export async function generateMetadata({
     if (topic.slug === "home-valuation") {
       return {
         title: `Free Home Valuation in ${city.name}, FL`,
-        description: `Find out what your ${city.name} home is worth. Get a free Comparative Market Analysis from Barrett Henry, Broker Associate at REMAX Collective. Call (813) 733-7907.`,
+        description: `Find out what your ${city.name} home is worth. Get a free Comparative Market Analysis from Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective. Call (813) 733-7907.`,
         alternates: { canonical },
         robots: { index: true, follow: true },
         openGraph: {
@@ -558,7 +558,7 @@ export async function generateMetadata({
         robots: { index: true, follow: true },
         openGraph: {
           title: `${city.name} Property Management | ViVi PM`,
-          description: `Full-service property management in ${city.name}, FL by ViVi PM. Barrett Henry, Broker Associate at REMAX Collective.`,
+          description: `Full-service property management in ${city.name}, FL by ViVi PM. Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective.`,
           url: canonical,
           type: "website",
           images: [{ url: "/og-default.png", width: 1200, height: 630 }],
@@ -584,7 +584,7 @@ export async function generateMetadata({
   // Hub page metadata
   return {
     title: `${city.name} Real Estate & Homes for Sale`,
-    description: `Search ${city.name} real estate and homes for sale in FL. Updated daily from Stellar MLS. Barrett Henry, Broker Associate at REMAX Collective. Call (813) 733-7907.`,
+    description: `Search ${city.name} real estate and homes for sale in FL. Updated daily from Stellar MLS. Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective. Call (813) 733-7907.`,
     alternates: { canonical },
     openGraph: {
       title: `${city.name} Homes for Sale | Barrett Henry, REALTOR®`,
@@ -1577,7 +1577,7 @@ function HomeValuationSpokePage({ city }: { city: CityData }) {
             Free Home Valuation in {city.name}, FL
           </h1>
           <p className="font-body text-white/70 text-lg max-w-2xl mb-6">
-            Find out what your {city.name} home is worth with a professional Comparative Market Analysis from Barrett Henry, Broker Associate at REMAX Collective.
+            Find out what your {city.name} home is worth with a professional Comparative Market Analysis from Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective.
           </p>
 
           {/* CTA row */}
@@ -1820,8 +1820,8 @@ function PropertyManagementSpokePage({ city }: { city: CityData }) {
     },
     {
       question: `Can I still sell my ${city.name} rental property while it is managed by ViVi PM?`,
-      answerText: `Yes. Barrett Henry is both a Broker Associate at REMAX Collective and the owner of ViVi PM. If you decide to sell your ${city.name} investment property, Barrett can handle the sale while managing the tenant relationship through closing.`,
-      answerHtml: `Yes. <strong>Barrett Henry</strong> is both a Broker Associate at REMAX Collective and the owner of ViVi PM. If you decide to sell your <strong>${city.name}</strong> investment property, Barrett can handle the sale while managing the tenant relationship through closing.`,
+      answerText: `Yes. Barrett Henry is both a licensed Florida real estate broker at REMAX Collective and the owner of ViVi PM. If you decide to sell your ${city.name} investment property, Barrett can handle the sale while managing the tenant relationship through closing.`,
+      answerHtml: `Yes. <strong>Barrett Henry</strong> is both a licensed Florida real estate broker at REMAX Collective and the owner of ViVi PM. If you decide to sell your <strong>${city.name}</strong> investment property, Barrett can handle the sale while managing the tenant relationship through closing.`,
     },
   ];
 
@@ -1934,7 +1934,7 @@ function PropertyManagementSpokePage({ city }: { city: CityData }) {
               protect your investment and maximize your returns.
             </p>
             <p>
-              Barrett Henry, Broker Associate at REMAX Collective, founded ViVi PM to give Tampa Bay rental owners a management
+              Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective, founded ViVi PM to give Tampa Bay rental owners a management
               option backed by 23+ years of real estate experience. That means your property manager is also a licensed broker
               who understands {city.name} property values, rental comps, and the local market inside and out.
             </p>

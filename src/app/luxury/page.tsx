@@ -16,7 +16,7 @@ import { getListings } from "@/lib/bridge";
 export const metadata: Metadata = {
   title: "Luxury Homes Tampa Bay | $750K+ Estates | Barrett Henry, REALTOR®",
   description:
-    "Tampa Bay luxury homes for sale starting at $750K. Waterfront estates, golf communities, and new construction. Barrett Henry, Broker Associate, REMAX Collective. (813) 733-7907.",
+    "Tampa Bay luxury homes for sale starting at $750K. Waterfront estates, golf communities, and new construction. Barrett Henry, Licensed Florida Real Estate Broker, REMAX Collective. (813) 733-7907.",
   alternates: {
     canonical: "/luxury/",
   },
@@ -386,7 +386,7 @@ export default async function LuxuryPage() {
               For buyers, Barrett provides access to off-market and pre-market luxury inventory,
               coordinates private showings on your schedule, and handles complex negotiations
               involving waterfront zoning, seawall inspections, dock permits, and flood insurance
-              considerations. As a Broker Associate with REMAX Collective, Barrett brings the
+              considerations. As a licensed Florida real estate broker with REMAX Collective, Barrett brings the
               resources of an international brand with the personal attention of an independent agent.
             </p>
             <p className="font-body text-white/70 font-light text-base leading-relaxed">

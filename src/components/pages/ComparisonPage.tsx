@@ -373,7 +373,7 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
                 Need help deciding between {sideA.toLowerCase()} and {sideB.toLowerCase()}?
               </p>
               <p className="font-body text-white/70 text-sm">
-                Barrett Henry, Broker Associate at REMAX Collective, 23+ years of real estate experience
+                Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective, 23+ years of real estate experience
               </p>
             </div>
             <div className="flex gap-3">
@@ -684,7 +684,7 @@ export default async function ComparisonPage({ comparison }: ComparisonPageProps
               Need help choosing between {sideA} and {sideB}?
             </p>
             <p className="font-body text-white/70 text-sm">
-              Barrett Henry, Broker Associate at REMAX Collective
+              Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective
             </p>
           </div>
           <div className="flex gap-3">

@@ -106,7 +106,7 @@ export const regionalPages: RegionalPageData[] = [
     // reads as 23 years of Tampa Bay service. Split into two sentences so the
     // number stays on the license (September 2003) and the service area stands
     // on its own. See the longer note on the tampa-bay-real-estate-agent entry.
-    excerpt: "Barrett Henry is a REMAX Collective Broker Associate serving Tampa Bay. 23+ years of real estate experience.",
+    excerpt: "Barrett Henry is a REMAX Collective licensed Florida real estate broker serving Tampa Bay. 23+ years of real estate experience.",
     category: "Agent",
   },
   {
@@ -191,7 +191,7 @@ export const regionalPages: RegionalPageData[] = [
   {
     slug: "tampa-bay-real-estate-expert",
     title: "Tampa Bay Real Estate Expert, Barrett Henry",
-    excerpt: "Work with a Tampa Bay real estate expert. Barrett Henry, Broker Associate at REMAX Collective.",
+    excerpt: "Work with a Tampa Bay real estate expert. Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective.",
     category: "Agent",
   },
   {

@@ -12,7 +12,7 @@ import ValuationForm from "@/components/ui/ValuationForm";
 export const metadata: Metadata = {
   title: "What Is Your Tampa Bay Home Worth? | Free Home Valuation",
   description:
-    "Free Tampa Bay home valuation from Barrett Henry, Broker Associate at REMAX Collective. Find out what your home is worth today. Call (813) 733-7907.",
+    "Free Tampa Bay home valuation from Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective. Find out what your home is worth today. Call (813) 733-7907.",
   alternates: {
     canonical: "/sell-your-home/",
   },
@@ -92,7 +92,7 @@ export default function SellYourHomePage() {
             "@type": "HowTo",
             name: "How to Sell Your Home in Tampa Bay",
             description:
-              "A step-by-step guide to selling your Tampa Bay home, from free home valuation to closing day, with expert guidance from Barrett Henry, Broker Associate at REMAX Collective.",
+              "A step-by-step guide to selling your Tampa Bay home, from free home valuation to closing day, with expert guidance from Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective.",
             step: [
               {
                 "@type": "HowToStep",

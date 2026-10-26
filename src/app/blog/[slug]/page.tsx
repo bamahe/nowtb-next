@@ -296,7 +296,7 @@ const MID_CTA_VARIANTS: Record<PostIntent, CtaCopy[]> = {
     },
     {
       heading: "Add a Rental Without Guessing",
-      body: "Acquisition, rent-ready scope, and management all handled under one roof. Barrett Henry, Broker Associate at REMAX Collective, 23+ years of real estate experience.",
+      body: "Acquisition, rent-ready scope, and management all handled under one roof. Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective, 23+ years of real estate experience.",
       ctaLabel: "Start With Investment Options",
       ctaHref: "/investing/",
     },
@@ -322,7 +322,7 @@ const MID_CTA_VARIANTS: Record<PostIntent, CtaCopy[]> = {
     },
     {
       heading: "Planning a Move Around Here?",
-      body: "Barrett Henry, REALTOR® and Broker Associate at REMAX Collective, helps buyers and sellers across Tampa Bay and has called the area home for over a decade.",
+      body: "Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective, helps buyers and sellers across Tampa Bay and has called the area home for over a decade.",
       ctaLabel: "Message Barrett Henry",
       ctaHref: "/contact/",
     },
@@ -342,7 +342,7 @@ const MID_CTA_VARIANTS: Record<PostIntent, CtaCopy[]> = {
     },
     {
       heading: "Want a Second Opinion?",
-      body: "Barrett Henry, Broker Associate at REMAX Collective, is happy to be a sounding board whether you are a year out or under contract tomorrow.",
+      body: "Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective, is happy to be a sounding board whether you are a year out or under contract tomorrow.",
       ctaLabel: "Talk to Barrett",
       ctaHref: "/contact/",
     },
@@ -442,7 +442,7 @@ const END_CTA_VARIANTS: Record<PostIntent, CtaCopy[]> = {
   default: [
     {
       heading: "Let's Talk About Your Situation",
-      body: "Barrett Henry, REALTOR® and Broker Associate at REMAX Collective, with 23+ years of real estate experience. No obligation, no pressure.",
+      body: "Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective, with 23+ years of real estate experience. No obligation, no pressure.",
       ctaLabel: "Contact Barrett Henry",
       ctaHref: "/contact/",
     },
@@ -873,7 +873,7 @@ export default async function BlogPostPage({
             Barrett Henry, REALTOR&reg;
           </p>
           <p className="font-body text-muted text-xs mt-1">
-            Broker Associate, REMAX Collective
+            Licensed Florida Real Estate Broker, REMAX Collective
           </p>
           <p className="font-body text-muted text-xs mt-1">
             23+ years of real estate experience
@@ -1065,7 +1065,7 @@ export default async function BlogPostPage({
             </Link>
           </div>
           <p className="mt-3 font-body text-[11px] text-white/70">
-            Barrett Henry, REALTOR&reg;, Broker Associate, REMAX Collective
+            Barrett Henry, REALTOR&reg;, Licensed Florida Real Estate Broker, REMAX Collective
             &middot; 23+ years of real estate experience &middot; No obligation
           </p>
         </div>

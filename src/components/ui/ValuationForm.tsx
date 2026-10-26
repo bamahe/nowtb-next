@@ -817,7 +817,7 @@ export default function ValuationForm({ initialCity }: ValuationFormProps) {
                 <div className="mt-3 space-y-1 text-center text-xs text-muted/70 font-body">
                   <p>
                     <span className="font-semibold text-muted">Barrett Henry, REALTOR&reg;</span>
-                    {" "}&bull; Broker Associate, REMAX Collective
+                    {" "}&bull; Licensed Florida Real Estate Broker, REMAX Collective
                   </p>
                   <p>23+ years of real estate experience &bull; FL License #BK3313308</p>
                   <p>No obligation &bull; Your information is never sold</p>

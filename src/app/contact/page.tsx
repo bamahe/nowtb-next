@@ -16,7 +16,7 @@ import { testimonials } from "@/data/testimonials";
 export const metadata: Metadata = {
   title: "Contact Barrett Henry | Tampa Bay REALTOR® | (813) 733-7907",
   description:
-    "Get in touch with Barrett Henry, Broker Associate with REMAX Collective. Call (813) 733-7907 or send a message. Serving Tampa Bay's 8 counties.",
+    "Get in touch with Barrett Henry, Licensed Florida Real Estate Broker with REMAX Collective. Call (813) 733-7907 or send a message. Serving Tampa Bay's 8 counties.",
   alternates: {
     canonical: "/contact/",
   },
@@ -74,7 +74,7 @@ export default function ContactPage() {
               <div className="mb-8 w-32 h-32 relative overflow-hidden">
                 <Image
                   src="/images/barrett-headshot.png"
-                  alt="Barrett Henry, REALTOR® and Broker Associate"
+                  alt="Barrett Henry, Licensed Florida Real Estate Broker"
                   width={128}
                   height={128}
                   className="object-cover w-full h-full"

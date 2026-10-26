@@ -296,7 +296,7 @@ export default async function GuidePage({
                 <div className="card p-5 bg-primary/5">
                   <Image
                     src="/images/barrett-headshot.png"
-                    alt="Barrett Henry, REALTOR® and Broker Associate at REMAX Collective"
+                    alt="Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective"
                     width={80}
                     height={80}
                     className="rounded-full mx-auto mb-3"
@@ -387,7 +387,7 @@ export default async function GuidePage({
                 <div className="card p-5 bg-primary/5">
                   <Image
                     src="/images/barrett-headshot.png"
-                    alt="Barrett Henry, REALTOR® and Broker Associate at REMAX Collective"
+                    alt="Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective"
                     width={80}
                     height={80}
                     className="rounded-full mx-auto mb-3"

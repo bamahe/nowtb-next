@@ -20,12 +20,12 @@ export const agents: Agent[] = [
   {
     id: "barrett-henry",
     name: "Barrett Henry",
-    title: "Broker Associate | Team Lead",
+    title: "Licensed Florida Real Estate Broker | Team Lead",
     phone: "(813) 733-7907",
     email: "barrett@nowtb.com",
-    bio: "Barrett Henry is a licensed real estate Broker Associate with REMAX Collective and team lead of The NOW Team. With 23+ years of real estate experience, Barrett specializes in residential and commercial sales, property management, investment properties, new construction, and military relocation across Tampa Bay's 8-county region. Known for data-driven market analysis, relentless negotiation, and a no-nonsense approach to getting deals closed.",
+    bio: "Barrett Henry is a licensed Florida real estate broker with REMAX Collective and team lead of The NOW Team. With 23+ years of real estate experience, Barrett specializes in residential and commercial sales, property management, investment properties, new construction, and military relocation across Tampa Bay's 8-county region. Known for data-driven market analysis, relentless negotiation, and a no-nonsense approach to getting deals closed.",
     photoUrl: "/images/barrett-henry.jpg",
-    designations: ["Broker Associate", "MRP", "e-PRO", "SRS"],
+    designations: ["Licensed Florida Real Estate Broker", "MRP", "e-PRO", "SRS"],
     specialties: [
       "Residential Sales",
       "Commercial Real Estate",

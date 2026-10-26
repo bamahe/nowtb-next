@@ -549,7 +549,7 @@ export default function HowLongToSellTampaBayPage() {
             >
               (813) 733-7907
             </a>
-            . Barrett Henry, Broker Associate, REMAX Collective, license
+            . Barrett Henry, Licensed Florida Real Estate Broker, REMAX Collective, license
             BK3313308, with 23+ years of real estate experience and a decade
             plus working the east Hillsborough market. More on how I run a
             listing on the{" "}

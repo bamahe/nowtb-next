@@ -19,7 +19,7 @@ function downloadVCard() {
     "N:Henry;Barrett;;;",
     "FN:Barrett Henry",
     "ORG:REMAX Collective",
-    "TITLE:Broker Associate",
+    "TITLE:Licensed Florida Real Estate Broker",
     "TEL;TYPE=CELL:+18137337907",
     "EMAIL:barrett@nowtb.com",
     "URL:https://nowtb.com",
@@ -48,7 +48,7 @@ function downloadVCard() {
 function shareCard() {
   const shareData = {
     title: "Barrett Henry, REMAX Collective",
-    text: "Barrett Henry, Broker Associate at REMAX Collective, Tampa Bay real estate.",
+    text: "Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective, Tampa Bay real estate.",
     url: "https://nowtb.com/card/",
   };
   if (navigator.share) {
@@ -88,7 +88,7 @@ export default function CardPage() {
           <div className="relative w-full aspect-[4/3] overflow-hidden">
             <Image
               src="/images/barrett-henry-pro.png"
-              alt="Barrett Henry, Broker Associate at REMAX Collective"
+              alt="Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective"
               fill
               priority
               className="object-cover object-top"
@@ -115,7 +115,7 @@ export default function CardPage() {
               Barrett Henry
             </h1>
             <p className="text-[15px] font-semibold text-white/70 mt-1">
-              Broker Associate &bull; REALTOR&reg;
+              Licensed Florida Real Estate Broker &bull; REALTOR&reg;
             </p>
             <div className="flex items-center gap-3 mt-3">
               <Image

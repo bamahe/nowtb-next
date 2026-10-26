@@ -6,7 +6,7 @@
 //
 // *** READ THIS BEFORE EDITING ***
 // This is the single most legally sensitive page on the site. Barrett is a
-// licensed Florida Broker Associate. Commission rates are an antitrust topic.
+// licensed Florida real estate broker. Commission rates are an antitrust topic.
 // The rules for this file are absolute:
 //
 //   1. NEVER print a specific rate as "standard," "typical," "average," "the
@@ -560,7 +560,7 @@ export default function RealtorCommissionTampaBayPage() {
             >
               (813) 733-7907
             </a>
-            . Barrett Henry, Broker Associate, REMAX Collective, license
+            . Barrett Henry, Licensed Florida Real Estate Broker, REMAX Collective, license
             BK3313308, with 23+ years of real estate experience and the e-PRO,
             MRP and SRS designations. More background{" "}
             <Link href="/about/" className="text-link hover:underline">

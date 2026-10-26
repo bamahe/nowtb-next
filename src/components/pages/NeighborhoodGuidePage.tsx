@@ -104,7 +104,7 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
       <JsonLd
         data={localBusinessSchema({
           name: `Barrett Henry, REALTOR®, ${city.name}, FL`,
-          description: `Neighborhood-level real estate guidance in ${city.name}, ${city.county} County, Florida from Barrett Henry, Broker Associate at REMAX Collective.`,
+          description: `Neighborhood-level real estate guidance in ${city.name}, ${city.county} County, Florida from Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective.`,
           url: canonicalUrl,
           areaServed: {
             "@type": "City",
@@ -207,7 +207,7 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
               you book a single showing.
             </p>
             <p>
-              Not sure which area fits? Barrett Henry, Broker Associate at REMAX
+              Not sure which area fits? Barrett Henry, Licensed Florida Real Estate Broker at REMAX
               Collective, has 23+ years of real estate experience. Call{" "}
               <a href="tel:+18137337907" className="text-link font-semibold">
                 (813) 733-7907
@@ -323,7 +323,7 @@ export default function NeighborhoodGuidePage({ city }: NeighborhoodGuidePagePro
                         shopping.
                       </p>
                       <p>
-                        Barrett Henry, Broker Associate at REMAX Collective, knows the{" "}
+                        Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective, knows the{" "}
                         {city.name} market well and can walk you through everything
                         currently available in {neighborhood.name}, active listings,
                         recent sales, and what comparable homes are fetching right now.

@@ -91,7 +91,7 @@ const OFFICES: Record<string, OfficeData> = {
     // layout.tsx appends " | Barrett Henry, REALTOR®", do not repeat the name here.
     metaTitle: "REMAX Tampa, Hillsborough Realtor",
     metaDescription:
-      "Barrett Henry, Broker Associate at REMAX Collective Tampa, 14310 N. Dale Mabry. Real Tampa MLS data, tax millage, flood zones. Call (813) 733-7907.",
+      "Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective Tampa, 14310 N. Dale Mabry. Real Tampa MLS data, tax millage, flood zones. Call (813) 733-7907.",
     h1: "REMAX Realtor in Tampa, FL",
     image: "/images/office-tampa.jpg",
     mapLink: "https://www.google.com/maps/place/Barrett+Henry,+REALTOR%C2%AE+-+REMAX+Collective/@28.075781,-82.508415,17z",
@@ -112,7 +112,7 @@ const OFFICES: Record<string, OfficeData> = {
     ],
     deep: {
       quickAnswer:
-        "Barrett Henry is a licensed Florida Broker Associate at the REMAX Collective office at 14310 N. Dale Mabry Hwy in Tampa, serving the city and all of Hillsborough County. Tampa\u2019s market splits hard right now: single-family homes sold at a $460,000 median in 27 days over the past year while condos sold at $260,000 and took 48 days. Whether a parcel sits inside City of Tampa limits or in unincorporated Hillsborough also changes your tax bill by about 1.6 mills. Call (813) 733-7907 with an address for a straight read.",
+        "Barrett Henry is a licensed Florida real estate broker at the REMAX Collective office at 14310 N. Dale Mabry Hwy in Tampa, serving the city and all of Hillsborough County. Tampa\u2019s market splits hard right now: single-family homes sold at a $460,000 median in 27 days over the past year while condos sold at $260,000 and took 48 days. Whether a parcel sits inside City of Tampa limits or in unincorporated Hillsborough also changes your tax bill by about 1.6 mills. Call (813) 733-7907 with an address for a straight read.",
 
       realities: [
         {
@@ -324,7 +324,7 @@ const OFFICES: Record<string, OfficeData> = {
     metaTitle: "REMAX Largo FL, Pinellas Realtor",
     h1: "REMAX Realtor in Largo, FL",
     metaDescription:
-      "Barrett Henry, Broker Associate at REMAX Collective Largo, 11200 Seminole Blvd. Largo and Pinellas flood zones, taxes, condo rules. Call (813) 733-7907.",
+      "Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective Largo, 11200 Seminole Blvd. Largo and Pinellas flood zones, taxes, condo rules. Call (813) 733-7907.",
     image: "/images/office-largo.jpg",
     mapLink: "https://www.google.com/maps/search/?api=1&query=11200+Seminole+Blvd+Ste+202+Largo+FL+33778",
     intro: "The REMAX Collective Largo office sits in the Largo Professional Center on Seminole Boulevard \u2014 Pinellas County\u2019s geographic center and the third-largest city in the county. From here, Barrett Henry and The NOW Team serve the beaches, barrier islands, and mainland communities of the Pinellas peninsula. If you\u2019re buying or selling anywhere from Clearwater Beach to St. Pete, this is your REMAX office.",
@@ -345,7 +345,7 @@ const OFFICES: Record<string, OfficeData> = {
     // ─── Deep, locally-researched content. Every figure traces to `sources`. ───
     deep: {
       quickAnswer:
-        "Barrett Henry is a licensed Florida Broker Associate at the REMAX Collective office at 11200 Seminole Blvd in Largo, serving Largo and all of Pinellas County. In this market three things decide most deals: whether your address sits in the City of Largo or unincorporated Pinellas, how much you can legally spend repairing a flood-zone home before the county forces you to elevate it, and whether a condo building has funded its structural reserves. Call (813) 733-7907 with an address and you will get a straight read on where each of those stands and who has to sign off on it.",
+        "Barrett Henry is a licensed Florida real estate broker at the REMAX Collective office at 11200 Seminole Blvd in Largo, serving Largo and all of Pinellas County. In this market three things decide most deals: whether your address sits in the City of Largo or unincorporated Pinellas, how much you can legally spend repairing a flood-zone home before the county forces you to elevate it, and whether a condo building has funded its structural reserves. Call (813) 733-7907 with an address and you will get a straight read on where each of those stands and who has to sign off on it.",
 
       realities: [
         {
@@ -727,7 +727,7 @@ const OFFICES: Record<string, OfficeData> = {
     // layout.tsx appends " | Barrett Henry, REALTOR®", do not repeat the name here.
     metaTitle: "REMAX Brandon FL Realtor",
     metaDescription:
-      "Barrett Henry, Broker Associate at REMAX Collective Brandon, 417 Lithia Pinecrest Rd. Real Brandon MLS data, taxes, HOA dues. Call (813) 733-7907.",
+      "Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective Brandon, 417 Lithia Pinecrest Rd. Real Brandon MLS data, taxes, HOA dues. Call (813) 733-7907.",
     h1: "REMAX Realtor in Brandon, FL",
     image: "/images/office-brandon.jpg",
     mapLink: "https://maps.app.goo.gl/gjvqfQH6TqnuN2XA8",
@@ -748,7 +748,7 @@ const OFFICES: Record<string, OfficeData> = {
     ],
     deep: {
       quickAnswer:
-        "Barrett Henry is a licensed Florida Broker Associate at the REMAX Collective office at 417 Lithia Pinecrest Rd in Brandon, serving East Hillsborough County. The first thing to understand about Brandon: it is not a city. There is no City of Brandon government, which means Hillsborough County issues your permits, enforces code, and sets your floodplain rules \u2014 and your parcel pays no municipal property tax. Brandon single-family homes also move faster than anywhere else in the metro, at a 22-day median. Call (813) 733-7907 with an address.",
+        "Barrett Henry is a licensed Florida real estate broker at the REMAX Collective office at 417 Lithia Pinecrest Rd in Brandon, serving East Hillsborough County. The first thing to understand about Brandon: it is not a city. There is no City of Brandon government, which means Hillsborough County issues your permits, enforces code, and sets your floodplain rules \u2014 and your parcel pays no municipal property tax. Brandon single-family homes also move faster than anywhere else in the metro, at a 22-day median. Call (813) 733-7907 with an address.",
 
       realities: [
         {
@@ -1036,9 +1036,9 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
                   name: f.q,
                   acceptedAnswer: { "@type": "Answer", text: toPlainText(f.a) },
                 })),
-                { "@type": "Question", name: `Where is the REMAX office in ${office.city}?`, acceptedAnswer: { "@type": "Answer", text: `The REMAX Collective ${office.city} office is located at ${office.address}. Barrett Henry is a Broker Associate at this location. Call (813) 733-7907.` } },
+                { "@type": "Question", name: `Where is the REMAX office in ${office.city}?`, acceptedAnswer: { "@type": "Answer", text: `The REMAX Collective ${office.city} office is located at ${office.address}. Barrett Henry is a licensed Florida real estate broker at this location. Call (813) 733-7907.` } },
                 { "@type": "Question", name: `Why should I choose REMAX in ${office.city}?`, acceptedAnswer: { "@type": "Answer", text: `REMAX is the most recognized real estate brand in the world, operating in 120+ countries with 145,000+ agents. REMAX agents averaged 11.7 transaction sides in 2025 versus 5.4 for agents at competing large brokerages \u2014 more than double, per the 2026 RealTrends Verified rankings. Barrett Henry at REMAX Collective ${office.city} brings 23+ years of real estate experience and the full power of REMAX\u2019s global network to every client.` } },
-                { "@type": "Question", name: `Who is the best REMAX agent in ${office.city}?`, acceptedAnswer: { "@type": "Answer", text: `Barrett Henry is a top-producing Broker Associate at REMAX Collective in ${office.city} with 23+ years of real estate experience, FL Broker License #BK3313308, and designations including e-PRO, MRP, and SRS. Barrett is a REMAX Hall of Fame member.` } },
+                { "@type": "Question", name: `Who is the best REMAX agent in ${office.city}?`, acceptedAnswer: { "@type": "Answer", text: `Barrett Henry is a top-producing licensed Florida real estate broker at REMAX Collective in ${office.city} with 23+ years of real estate experience, FL Broker License #BK3313308, and designations including e-PRO, MRP, and SRS. Barrett is a REMAX Hall of Fame member.` } },
                 { "@type": "Question", name: `Does REMAX ${office.city} handle commercial real estate?`, acceptedAnswer: { "@type": "Answer", text: `Yes. Through REMAX Commercial, Barrett Henry handles commercial transactions including retail, office, multifamily, industrial, and land deals in ${office.city} and the Tampa Bay area. REMAX Commercial agents have access to CoStar, LoopNet Premium, and Crexi Professional.` } },
                 { "@type": "Question", name: `How does the REMAX referral network work?`, acceptedAnswer: { "@type": "Answer", text: `REMAX operates the largest agent-to-agent referral network in real estate with 145,000+ agents in 120+ countries. If you\u2019re moving to or from ${office.city}, Barrett connects you with a vetted REMAX agent at your destination through MAXRefer, the AI-powered global referral platform REMAX launched in 2025.` } },
                 { "@type": "Question", name: `How do I contact REMAX in ${office.city}?`, acceptedAnswer: { "@type": "Answer", text: `Call Barrett Henry directly at (813) 733-7907 or email barrett@nowtb.com. The ${office.city} office is at ${office.address}.` } },
@@ -1062,7 +1062,7 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
               "@type": "RealEstateAgent",
               "@id": `https://nowtb.com/remax-${officeKey}/#agent`,
               name: "Barrett Henry, REALTOR®",
-              description: `Barrett Henry is a licensed Florida Broker Associate with REMAX Collective ${office.city}, serving ${office.county} County. 23+ years of real estate experience.`,
+              description: `Barrett Henry is a licensed Florida real estate broker with REMAX Collective ${office.city}, serving ${office.county} County. 23+ years of real estate experience.`,
               url: `https://nowtb.com/remax-${officeKey}/`,
               telephone: "+1-813-733-7907",
               email: "barrett@nowtb.com",
@@ -1093,7 +1093,7 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
               employee: {
                 "@type": "Person",
                 name: "Barrett Henry",
-                jobTitle: "Broker Associate",
+                jobTitle: "Licensed Florida Real Estate Broker",
                 image: "https://nowtb.com/images/barrett-henry.jpg",
                 telephone: "+1-813-733-7907",
                 email: "barrett@nowtb.com",
@@ -1135,7 +1135,7 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
             {office.intro}
           </p>
           <p className="font-body text-white/60 text-sm mb-8">
-            Barrett Henry, Broker Associate &bull; FL License #BK3313308 &bull; 23+ years of real estate experience
+            Barrett Henry, Licensed Florida Real Estate Broker &bull; FL License #BK3313308 &bull; 23+ years of real estate experience
           </p>
           <div className="flex flex-wrap gap-3">
             <a href="tel:+18137337907" className="inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 text-sm hover:bg-accent/90 transition-colors">
@@ -1178,11 +1178,11 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
             <div>
               <p className="heading-label mb-4">Your REMAX {office.city} Agent</p>
               <h2 className="font-heading font-extralight text-2xl md:text-3xl tracking-[0.08em] uppercase text-primary mb-6">
-                Barrett Henry, Broker Associate
+                Barrett Henry, Licensed Florida Real Estate Broker
               </h2>
               <div className="font-body text-muted font-light space-y-4 leading-relaxed">
                 <p>
-                  <strong>Barrett Henry</strong> is a licensed Florida Real Estate <strong>Broker Associate</strong> with
+                  <strong>Barrett Henry</strong> is a licensed Florida Real Estate <strong>Licensed Florida Real Estate Broker</strong> with
                   REMAX Collective. With <strong>23+ years of real estate experience</strong>, Barrett brings deep market
                   knowledge, strong negotiation skills, and a no-nonsense approach to every transaction. Barrett is a
                   <strong> REMAX Hall of Fame</strong> member and holds the <strong>e-PRO</strong>, <strong>MRP</strong> (Military
@@ -1494,7 +1494,7 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
             <p>
               Barrett Henry doesn&apos;t just list homes in {office.city}, he knows the inventory, the comps,
               the school zones, the flood maps, the HOA restrictions, and the price trends block by block. That&apos;s
-              the difference between a REMAX Broker Associate with 23+ years of real estate experience and an agent who
+              the difference between a REMAX Licensed Florida Real Estate Broker with 23+ years of real estate experience and an agent who
               just got their license last year.
             </p>
           </div>
@@ -1920,7 +1920,7 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
             ))}
             <div className="border-b border-gray-200 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">Where is the REMAX office in {office.city}?</h3>
-              <p className="font-body text-muted font-light">The REMAX Collective {office.city} office is at <strong>{office.address}</strong>. Barrett Henry is a Broker Associate at this location. Call <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a> to schedule an appointment or just walk in.</p>
+              <p className="font-body text-muted font-light">The REMAX Collective {office.city} office is at <strong>{office.address}</strong>. Barrett Henry is a licensed Florida real estate broker at this location. Call <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a> to schedule an appointment or just walk in.</p>
             </div>
             <div className="border-b border-gray-200 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">Why should I choose REMAX over other brokerages in {office.city}?</h3>
@@ -1928,7 +1928,7 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
             </div>
             <div className="border-b border-gray-200 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">Who is the best REMAX agent in {office.city}?</h3>
-              <p className="font-body text-muted font-light">Barrett Henry is a top-producing Broker Associate and REMAX Hall of Fame member at REMAX Collective in {office.city}. With 23+ years of real estate experience, FL Broker License #BK3313308, and designations including e-PRO, MRP, and SRS, Barrett has the credentials and track record that matter.</p>
+              <p className="font-body text-muted font-light">Barrett Henry is a top-producing licensed Florida real estate broker and REMAX Hall of Fame member at REMAX Collective in {office.city}. With 23+ years of real estate experience, FL Broker License #BK3313308, and designations including e-PRO, MRP, and SRS, Barrett has the credentials and track record that matter.</p>
             </div>
             <div className="border-b border-gray-200 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">Does REMAX {office.city} handle commercial real estate?</h3>
@@ -2012,7 +2012,7 @@ export default async function RemaxOfficePage({ officeKey }: { officeKey: string
               Ready to Work with REMAX {office.city}?
             </h2>
             <p className="font-body text-white/70 text-sm">
-              Barrett Henry, Broker Associate &bull; REMAX Hall of Fame &bull; 23+ years of real estate experience
+              Barrett Henry, Licensed Florida Real Estate Broker &bull; REMAX Hall of Fame &bull; 23+ years of real estate experience
             </p>
           </div>
           <div className="flex gap-3 flex-shrink-0">

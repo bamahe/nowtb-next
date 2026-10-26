@@ -105,7 +105,7 @@ const CTA_VARIANTS: CtaVariant[] = [
   {
     heading: (a) => `Let's Find Your Place in ${a}`,
     blurb: (a) =>
-      `Tell me what you're after and I'll send back the ${a} homes that actually fit, not a dump of every listing in the ZIP code. Barrett Henry, Broker Associate with REMAX Collective, 23+ years of real estate experience.`,
+      `Tell me what you're after and I'll send back the ${a} homes that actually fit, not a dump of every listing in the ZIP code. Barrett Henry, Licensed Florida Real Estate Broker with REMAX Collective, 23+ years of real estate experience.`,
     submitLabel: "Send My Criteria",
     barHeading: (a) => `Start Your ${a} Home Search`,
     link: { href: CONVERSION_LINKS.buyers, label: (a) => `${a} home buyer resources` },
@@ -367,7 +367,7 @@ export function AreaLeadCapture({
           </ul>
 
           <p className="font-body text-xs text-muted/70 mt-6 leading-relaxed">
-            Barrett Henry &bull; Broker Associate, REMAX Collective &bull; 23+ years of
+            Barrett Henry &bull; Licensed Florida Real Estate Broker, REMAX Collective &bull; 23+ years of
             real estate experience &bull; FL License #BK3313308
           </p>
         </div>

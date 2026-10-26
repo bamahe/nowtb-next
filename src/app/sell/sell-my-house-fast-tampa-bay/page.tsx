@@ -547,7 +547,7 @@ export default function SellMyHouseFastTampaBayPage() {
             >
               (813) 733-7907
             </a>
-            . Barrett Henry, Broker Associate, REMAX Collective, license
+            . Barrett Henry, Licensed Florida Real Estate Broker, REMAX Collective, license
             BK3313308, with 23+ years of real estate experience. You can also
             start with a{" "}
             <Link href="/free-home-valuation/" className="text-link hover:underline">

@@ -304,9 +304,9 @@ export default function GapwayLakesEstatesPage() {
           "@type": "RealEstateAgent",
           "@id": `${SITE}/#barrett-henry`,
           name: "Barrett Henry, REALTOR®",
-          jobTitle: "Broker Associate",
+          jobTitle: "Licensed Florida Real Estate Broker",
           description:
-            "Licensed Florida Broker Associate with REMAX Collective. 23+ years of real estate experience.",
+            "Licensed Florida real estate broker with REMAX Collective. 23+ years of real estate experience.",
           url: SITE,
           telephone: PHONE,
           email: EMAIL,
@@ -841,7 +841,7 @@ export default function GapwayLakesEstatesPage() {
           <div className="flex flex-col md:flex-row gap-8 items-start max-w-4xl">
             <Image
               src="/images/barrett-headshot.png"
-              alt="Barrett Henry, REALTOR® and Broker Associate at REMAX Collective"
+              alt="Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective"
               width={160}
               height={160}
               className="flex-shrink-0 rounded-lg"
@@ -851,7 +851,7 @@ export default function GapwayLakesEstatesPage() {
                 Barrett Henry
               </h2>
               <p className="font-body text-sm text-white/70 mb-4">
-                Broker Associate, REMAX Collective · 23+ years of real estate experience
+                Licensed Florida Real Estate Broker, REMAX Collective · 23+ years of real estate experience
               </p>
               <p className="font-body text-white/80 leading-relaxed mb-6">
                 I have been tracking Gapway Lakes Estates since the developer&apos;s

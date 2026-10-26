@@ -422,7 +422,7 @@ export default function PolumboListingPage() {
                 <div className="flex items-center gap-3 mb-4">
                   <Image
                     src="/images/barrett-headshot.png"
-                    alt="Barrett Henry, REALTOR and Broker Associate at REMAX Collective"
+                    alt="Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective"
                     width={56}
                     height={56}
                     className="rounded-full object-cover"
@@ -430,7 +430,7 @@ export default function PolumboListingPage() {
                   <div>
                     <p className="font-body font-bold">Barrett Henry</p>
                     <p className="font-body text-xs text-white/70">
-                      Broker Associate, REMAX Collective
+                      Licensed Florida Real Estate Broker, REMAX Collective
                     </p>
                   </div>
                 </div>
@@ -512,7 +512,7 @@ export default function PolumboListingPage() {
       <section className="bg-white py-8">
         <div className="max-w-6xl mx-auto px-4">
           <p className="font-body text-xs text-muted leading-relaxed">
-            Listed by Barrett Henry, Broker Associate, REMAX Collective. MLS {L.mls}. Information
+            Listed by Barrett Henry, Licensed Florida Real Estate Broker, REMAX Collective. MLS {L.mls}. Information
             deemed reliable but not guaranteed, buyer and buyer&rsquo;s agent should independently
             verify all measurements, lot dimensions, easements, flood zone, HOA status, taxes, and
             school assignments. Photography by Febre Frameworks. Equal Housing Opportunity.

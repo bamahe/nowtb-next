@@ -1,6 +1,6 @@
 // =============================================================================
 // /commercial, Commercial real estate in Tampa Bay
-// Barrett Henry, Broker Associate at REMAX Collective
+// Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective
 // =============================================================================
 
 import type { Metadata } from "next";
@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     q: "Do I need a commercial real estate license to buy commercial property in Florida?",
-    a: "No. Buyers do not need a license to purchase commercial property in Florida. However, working with a licensed REALTOR who understands commercial transactions, zoning regulations, environmental due diligence, and lease analysis is strongly recommended. Barrett Henry holds a Florida Broker Associate license and has 23+ years of real estate experience.",
+    a: "No. Buyers do not need a license to purchase commercial property in Florida. However, working with a licensed REALTOR who understands commercial transactions, zoning regulations, environmental due diligence, and lease analysis is strongly recommended. Barrett Henry holds a Florida real estate broker license and has 23+ years of real estate experience.",
   },
   {
     q: "Which Tampa Bay corridors are best for commercial investment?",
@@ -149,7 +149,7 @@ export default async function CommercialPage() {
               evaluating land opportunities, Tampa Bay delivers.
             </p>
             <p>
-              Barrett Henry is a Broker Associate at REMAX Collective with 23+ years of real
+              Barrett Henry is a licensed Florida real estate broker at REMAX Collective with 23+ years of real
               estate experience. He works with buyers, sellers, tenants, and investors on
               commercial transactions ranging from small retail storefronts to multifamily
               apartment complexes. Barrett provides market analysis, property evaluation,
@@ -392,7 +392,7 @@ export default async function CommercialPage() {
               They involve longer due diligence periods, environmental assessments, zoning
               verification, lease audits, tenant estoppels, and financial underwriting that
               residential agents rarely encounter. Barrett Henry brings 23+ years of real
-              estate experience and a Broker Associate license to every commercial
+              estate experience and a licensed Florida real estate broker license to every commercial
               engagement.
             </p>
             <p>

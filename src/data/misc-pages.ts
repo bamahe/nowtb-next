@@ -39,7 +39,7 @@ export const miscPages: MiscPageData[] = [
   { slug: "relocation", title: "Tampa Bay Relocation Services", excerpt: "Relocating to Tampa Bay? Barrett Henry provides full relocation services for individuals, families, and military.", handling: "static-page" },
   { slug: "fair-housing", title: "Fair Housing Statement", excerpt: "Our commitment to fair housing, equal opportunity in housing for all.", handling: "static-page" },
   { slug: "dmca-notice", title: "DMCA Notice", excerpt: "DMCA copyright notice and takedown request process for nowtb.com.", handling: "static-page" },
-  { slug: "card", title: "Barrett Henry, Digital Business Card", excerpt: "Barrett Henry's digital business card, REALTOR and Broker Associate at REMAX Collective.", handling: "static-page" },
+  { slug: "card", title: "Barrett Henry, Digital Business Card", excerpt: "Barrett Henry's digital business card, Licensed Florida Real Estate Broker at REMAX Collective.", handling: "static-page" },
 
   // --- Catch-all pages handled by [citySlug] route ---
   { slug: "credit-score-for-home-buying", title: "Credit Score for Home Buying", excerpt: "What credit score do you need to buy a home? Minimum scores for FHA, VA, conventional, and jumbo loans.", handling: "catch-all" },
@@ -63,9 +63,9 @@ export const miscPages: MiscPageData[] = [
   { slug: "first-time-buyers", title: "First-Time Buyers", excerpt: "Resources for first-time home buyers in Tampa Bay, programs, guides, and expert help.", handling: "catch-all" },
 
   // --- REMAX office pages ---
-  { slug: "remax-brandon", title: "REMAX Brandon, Barrett Henry", excerpt: "Barrett Henry, Broker Associate at REMAX Collective serving Brandon, FL and surrounding areas.", handling: "catch-all" },
-  { slug: "remax-largo", title: "REMAX Largo, Barrett Henry", excerpt: "Barrett Henry, Broker Associate at REMAX Collective serving Largo, FL and Pinellas County.", handling: "catch-all" },
-  { slug: "remax-tampa", title: "REMAX Tampa, Barrett Henry", excerpt: "Barrett Henry, Broker Associate at REMAX Collective serving Tampa, FL and Hillsborough County.", handling: "catch-all" },
+  { slug: "remax-brandon", title: "REMAX Brandon, Barrett Henry", excerpt: "Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective serving Brandon, FL and surrounding areas.", handling: "catch-all" },
+  { slug: "remax-largo", title: "REMAX Largo, Barrett Henry", excerpt: "Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective serving Largo, FL and Pinellas County.", handling: "catch-all" },
+  { slug: "remax-tampa", title: "REMAX Tampa, Barrett Henry", excerpt: "Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective serving Tampa, FL and Hillsborough County.", handling: "catch-all" },
 
   // --- Loan city pages ---
   { slug: "fha-loans-tampa", title: "FHA Loans in Tampa", excerpt: "FHA loan guide for Tampa home buyers, eligibility, down payment, and loan limits.", handling: "catch-all" },

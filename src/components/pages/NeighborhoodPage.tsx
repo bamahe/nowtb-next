@@ -292,7 +292,7 @@ export default async function NeighborhoodPage({
                 and proximity to schools, parks, and local shopping.
               </p>
               <p>
-                Barrett Henry, Broker Associate at REMAX Collective, knows the
+                Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective, knows the
                 {" "}{city} market well and can walk you through everything currently
                 available in {name}, active listings, recent sales, and what
                 comparable homes are fetching right now.

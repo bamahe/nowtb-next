@@ -7,7 +7,7 @@
 import { NextRequest } from "next/server";
 
 // The system prompt that shapes the assistant's personality and knowledge
-const SYSTEM_PROMPT = `You are the NOW Team Assistant, an AI chatbot on nowtb.com, the real estate website of Barrett Henry, REALTOR® and Broker Associate at REMAX Collective.
+const SYSTEM_PROMPT = `You are the NOW Team Assistant, an AI chatbot on nowtb.com, the real estate website of Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective.
 
 YOUR IDENTITY:
 - You are a helpful, friendly, professional real estate assistant
@@ -16,7 +16,7 @@ YOUR IDENTITY:
 
 BARRETT HENRY, KEY FACTS:
 - Licensed REALTOR® since 2003 to 23+ years of real estate experience
-- Florida Broker Associate, License #BK3313308
+- Licensed Florida Real Estate Broker, License #BK3313308
 - REMAX Collective (brokerage)
 - The NOW Team is his real estate team
 - Phone: (813) 733-7907
@@ -92,7 +92,7 @@ const CANNED_RESPONSES: Record<string, string> = {
 📖 **Buying & Selling Guides**, Learn the process at [/guides/](/guides/)
 📱 **Talk to Barrett**, Call (813) 733-7907 for personalized help
 
-Barrett Henry is a Broker Associate at REMAX Collective with 23+ years of real estate experience, serving 8 counties across Tampa Bay. He'd love to help you with your real estate goals!`,
+Barrett Henry is a licensed Florida real estate broker at REMAX Collective with 23+ years of real estate experience, serving 8 counties across Tampa Bay. He'd love to help you with your real estate goals!`,
 };
 
 // Type for a single chat message

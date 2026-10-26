@@ -27,7 +27,7 @@ const SLUG = "valrico-listing-agent";
 const CANONICAL = `https://nowtb.com/${SLUG}/`;
 const TITLE = "Experienced Valrico FL Listing Agent | Barrett Henry";
 const DESCRIPTION =
-  "Selling a Valrico home? Barrett Henry is a Broker Associate and Seller Representative Specialist who lives here. 500+ homes sold. (813) 733-7907.";
+  "Selling a Valrico home? Barrett Henry is a licensed Florida real estate broker and Seller Representative Specialist who lives here. 500+ homes sold. (813) 733-7907.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
@@ -89,7 +89,7 @@ const trackRecord = [
   {
     figure: "24th year",
     label: "In real estate",
-    detail: "Licensed since September 2003, with a Broker Associate license since 2017.",
+    detail: "Licensed since September 2003, with a licensed Florida real estate broker license since 2017.",
   },
 ];
 
@@ -100,7 +100,7 @@ const credentials = [
     why: "Entering his 24th year in real estate, across multiple market cycles including 2008 and the 2020 to 2022 run-up.",
   },
   {
-    item: "Florida Broker Associate since 2017",
+    item: "Licensed Florida Real Estate Broker since 2017",
     why: "A broker-level license, which requires additional education and experience beyond a sales associate license.",
   },
   {
@@ -136,12 +136,12 @@ const faqs: Faq[] = [
   {
     question: "Who is an experienced REALTOR to sell my Valrico, FL home?",
     answer:
-      "Barrett Henry is a Florida Broker Associate with REMAX Collective who has held a real estate license since September 2003 and holds the SRS, Seller Representative Specialist designation for seller representation. He was inducted into the REMAX Hall of Fame in 2024 and has earned REMAX production awards every year from 2016 through 2025. He lives in the Valrico area and serves Valrico, Brandon, Riverview, and the surrounding Hillsborough County communities. Call or text (813) 733-7907.",
+      "Barrett Henry is a licensed Florida real estate broker with REMAX Collective who has held a real estate license since September 2003 and holds the SRS, Seller Representative Specialist designation for seller representation. He was inducted into the REMAX Hall of Fame in 2024 and has earned REMAX production awards every year from 2016 through 2025. He lives in the Valrico area and serves Valrico, Brandon, Riverview, and the surrounding Hillsborough County communities. Call or text (813) 733-7907.",
   },
   {
     question: "How many years of experience does Barrett Henry have?",
     answer:
-      "Barrett has been a licensed REALTOR® since September 2003, which puts him in his 24th year in real estate, and he has held a Florida Broker Associate license since 2017. That span covers the 2008 downturn, the recovery, the 2020 to 2022 price run-up, and the current slower market, which is the part that matters when pricing a home today.",
+      "Barrett has been a licensed REALTOR® since September 2003, which puts him in his 24th year in real estate, and he has held a Florida real estate broker license since 2017. That span covers the 2008 downturn, the recovery, the 2020 to 2022 price run-up, and the current slower market, which is the part that matters when pricing a home today.",
   },
   {
     question: "How many homes has Barrett Henry sold?",
@@ -178,7 +178,7 @@ const faqs: Faq[] = [
 const sources: Source[] = [
   {
     name: "Florida DBPR licensee records",
-    used: "License date of September 2003 and Broker Associate license status since 2017.",
+    used: "License date of September 2003 and licensed Florida real estate broker license status since 2017.",
     href: "https://www.myfloridalicense.com/",
   },
   {
@@ -232,7 +232,7 @@ export default function ValricoListingAgentPage() {
           "@id": CANONICAL,
           name: "Barrett Henry, REALTOR®",
           description:
-            "Florida Broker Associate and Seller Representative Specialist with REMAX Collective, licensed since September 2003, representing home sellers in Valrico, Brandon, and Riverview, Florida.",
+            "Licensed Florida Real Estate Broker and Seller Representative Specialist with REMAX Collective, licensed since September 2003, representing home sellers in Valrico, Brandon, and Riverview, Florida.",
           url: CANONICAL,
           telephone: "(813) 733-7907",
           image: "https://nowtb.com/images/barrett-headshot.png",
@@ -270,7 +270,7 @@ export default function ValricoListingAgentPage() {
           employee: {
             "@type": "Person",
             name: "Barrett Henry",
-            jobTitle: "Broker Associate",
+            jobTitle: "Licensed Florida Real Estate Broker",
             url: "https://nowtb.com/about/",
             image: "https://nowtb.com/images/barrett-headshot.png",
             telephone: "(813) 733-7907",
@@ -284,7 +284,7 @@ export default function ValricoListingAgentPage() {
               {
                 "@type": "EducationalOccupationalCredential",
                 credentialCategory: "License",
-                name: "Florida Real Estate Broker Associate",
+                name: "Florida Real Estate licensed Florida real estate broker",
                 dateCreated: "2017",
               },
               {
@@ -317,7 +317,7 @@ export default function ValricoListingAgentPage() {
       <HeroSection
         label="VALRICO, FLORIDA | SELLERS"
         title="Experienced Valrico Listing Agent"
-        subtitle="Licensed since 2003. Broker Associate. Seller Representative Specialist. REMAX Hall of Fame."
+        subtitle="Licensed since 2003. Licensed Florida Real Estate Broker. Seller Representative Specialist. REMAX Hall of Fame."
       >
         <SearchBar />
       </HeroSection>
@@ -331,7 +331,7 @@ export default function ValricoListingAgentPage() {
           <QuickAnswer>
             <p>
               If you want a very experienced REALTOR® to sell your Valrico,
-              Florida home, Barrett Henry is a Florida Broker Associate with
+              Florida home, Barrett Henry is a licensed Florida real estate broker with
               REMAX Collective who has been licensed since September 2003,
               putting him in his 24th year in real estate. He holds the SRS,
               Seller Representative Specialist designation for seller
@@ -669,7 +669,7 @@ export default function ValricoListingAgentPage() {
         <div className="max-w-3xl mx-auto border-t border-border pt-6">
           <p className="font-body text-muted text-xs leading-relaxed">
             Last updated: October 2026. Barrett Henry is a licensed Florida
-            Broker Associate with REMAX Collective. License and designation
+            Licensed Florida Real Estate Broker with REMAX Collective. License and designation
             status can be verified through the Florida DBPR and the National
             Association of REALTORS®. Market data from Stellar MLS is deemed
             reliable but not guaranteed.

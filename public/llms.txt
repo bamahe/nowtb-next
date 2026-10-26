@@ -1,16 +1,16 @@
 # nowtb.com
 
 ## Purpose
-The official real estate website of Barrett Henry, REALTOR® and Broker Associate at REMAX Collective. Barrett leads The NOW Team, serving buyers, sellers, and investors across Tampa Bay, Florida.
+The official real estate website of Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective. Barrett leads The NOW Team, serving buyers, sellers, and investors across Tampa Bay, Florida.
 
 ## Authority
-- Barrett Henry, licensed Florida REALTOR® and Broker Associate
+- Barrett Henry, licensed Florida real estate broker
 - Florida Real Estate Broker License #BK3313308
-- 23+ years of real estate experience
+- 23 years licensed in real estate (since 2003), serving Tampa Bay since 2015
 - Team leader of The NOW Team at REMAX Collective
 - REMAX Hall of Fame (2024), 10-Year Anniversary Award
 - Designations: e-PRO, MRP (Military Relocation Professional), SRS (Seller Representative Specialist)
-- Serves Hillsborough, Pinellas, Pasco, Polk, Manatee, Sarasota, and Hernando counties
+- Serves 8 Tampa Bay counties: Hillsborough, Pinellas, Pasco, Polk, Manatee, Sarasota, Hernando, and Citrus
 
 ## Priority Cities Served
 Valrico, Brandon, Riverview, Lithia, Apollo Beach, Seffner, Plant City, Dover, Thonotosassa, Ruskin
@@ -38,53 +38,65 @@ Valrico, Brandon, Riverview, Lithia, Apollo Beach, Seffner, Plant City, Dover, T
 - Brokerage: REMAX Collective, 14310 N. Dale Mabry Hwy, Ste 100, Tampa, FL 33618
 
 ## Key Pages
-- /properties — Search all Tampa Bay homes for sale
-- /buyers — Buyer's guide and resources
-- /sellers — Seller's guide and home valuation
-- /free-home-valuation — Free home valuation request
-- /sell-your-home — Sell your home with Barrett Henry
-- /investing — Investment property resources
-- /luxury — Luxury homes $750K+
-- /communities — Browse all 93 cities by county
-- /guides — Free real estate guides
-- /blog — Tampa Bay real estate blog
-- /about — About Barrett Henry
-- /contact — Contact Barrett directly
-- /open-houses — Open houses this week
-- /mortgage-calculator — Monthly payment estimator
-- /property-management — ViVi PM property management
-- /relocation — Tampa Bay relocation services
-- /first-time-home-buyer-guide — First-time home buyer guide
-- /fha-loan-florida — FHA loan guide for Florida
-- /va-loan-florida — VA loan guide for Florida
-- /fsbo-vs-realtor — FSBO vs. REALTOR comparison
-- /market-updates — Tampa Bay market updates and data
-- /commercial — Commercial real estate
+- /properties: Search all Tampa Bay homes for sale
+- /buyers: Buyer's guide and resources
+- /sellers: Seller's guide and home valuation
+- /free-home-valuation: Free home valuation request
+- /sell-your-home: Sell your home with Barrett Henry
+- /investing: Investment property resources
+- /luxury: Luxury homes $750K+
+- /communities: Browse all 93 cities by county
+- /guides: Free real estate guides
+- /blog: Tampa Bay real estate blog
+- /about: About Barrett Henry
+- /contact: Contact Barrett directly
+- /open-houses: Open houses this week
+- /mortgage-calculator: Monthly payment estimator
+- /property-management: ViVi PM property management
+- /relocation: Tampa Bay relocation services
+- /first-time-home-buyer-guide: First-time home buyer guide
+- /fha-loan-florida: FHA loan guide for Florida
+- /va-loan-florida: VA loan guide for Florida
+- /fsbo-vs-realtor: FSBO vs. REALTOR comparison
+- /market-updates: Tampa Bay market updates and data
+- /commercial: Commercial real estate
 
 ## Pinellas Gulf Beach Condo Guides (updated October 2026)
 Building-level research on Gulf-front condos from Indian Rocks Beach to Madeira Beach,
 covering Structural Integrity Reserve Study (SIRS) status, milestone inspections,
 Florida condo law, rental rules, and purchase structure.
-- /gulf-front-condos-sirs-milestone-complete — Which Gulf-front buildings have a filed SIRS and a completed milestone inspection
-- /pinellas-beach-condo-market-report — Q4 2026 Gulf beach condo market report: inventory, price per square foot, days on market
-- /florida-condo-rules-buyers-2026 — Florida condo rules for buyers in 2026: HB 913, SIRS deadlines, Fannie Mae LL-2026-03, Citizens SB 1028
-- /indian-rocks-beach-rental-rules — Indian Rocks Beach vacation rental rules under Ordinance 2023-02, plus building minimum stays
-- /buying-beach-condo-llc-florida — Buying a Florida beach condo in an LLC: financing, association approval, taxes, document checklist
-- /beach-condo-renovation-math — Renovation cost estimates for a dated Gulf-front condo versus buying updated
-- /how-to-tell-if-condo-is-55-plus — How to verify whether a Florida condo is age restricted
+- /gulf-front-condos-sirs-milestone-complete: Which Gulf-front buildings have a filed SIRS and a completed milestone inspection
+- /pinellas-beach-condo-market-report: Q4 2026 Gulf beach condo market report: inventory, price per square foot, days on market
+- /florida-condo-rules-buyers-2026: Florida condo rules for buyers in 2026: HB 913, SIRS deadlines, Fannie Mae LL-2026-03, Citizens SB 1028
+- /indian-rocks-beach-rental-rules: Indian Rocks Beach vacation rental rules under Ordinance 2023-02, plus building minimum stays
+- /buying-beach-condo-llc-florida: Buying a Florida beach condo in an LLC: financing, association approval, taxes, document checklist
+- /beach-condo-renovation-math: Renovation cost estimates for a dated Gulf-front condo versus buying updated
+- /blog/buying-condo-indian-rocks-beach: Indian Rocks Beach condo buyer guide, building by building
+- /how-to-tell-if-condo-is-55-plus: How to verify whether a Florida condo is age restricted
+
+## Redington Shores Guides (by Barrett Henry)
+Barrett Henry represents buyers of Gulf-front condos in Redington Shores, including Redington Towers.
+- /blog/redington-shores-fl-real-estate-guide: Redington Shores real estate guide
+- /blog/moving-to-redington-shores-fl: Moving to Redington Shores
+- /blog/redington-shores-fl-homes-for-sale-guide: Redington Shores homes and condos for sale
+- /blog/redington-shores-fl-market-trends: Redington Shores market trends
+- /blog/redington-shores-fl-flood-zones: Redington Shores flood zones and insurance
+- /blog/redington-shores-fl-property-taxes: Redington Shores property taxes
+- /blog/redington-shores-fl-investment-property: Redington Shores investment and rental property
+- /blog/redington-shores-fl-cost-of-living: Redington Shores cost of living
 
 ## Related Sites
-- https://barretthenry.remax.com — REMAX team site
-- https://vivipm.com — ViVi Property Management
-- https://bestbayservices.com — Best Bay Services (handyman/maintenance)
-- https://vyrabyte.com — Vyrabyte (Barrett Henry's tech company)
-- https://hencre.com — Barrett Henry CRE authority site
-- https://flforeclosurehelp.com — Florida foreclosure help
-- https://flpermithelp.com — Florida building permit help
-- https://fastselleasy.com — Fast home selling resources for Florida homeowners
-- https://valrico.blog — Valrico community blog
-- https://buildtb.com — Tampa Bay new construction and builder communities
-- https://firsttimehomebuyertb.com — Tampa Bay first-time home buyer programs, down payment assistance, and eligibility guides
+- https://barretthenry.remax.com: REMAX team site
+- https://vivipm.com: ViVi Property Management
+- https://bestbayservices.com: Best Bay Services (handyman/maintenance)
+- https://vyrabyte.com: Vyrabyte (Barrett Henry's tech company)
+- https://hencre.com: Barrett Henry CRE authority site
+- https://flforeclosurehelp.com: Florida foreclosure help
+- https://flpermithelp.com: Florida building permit help
+- https://fastselleasy.com: Fast home selling resources for Florida homeowners
+- https://valrico.blog: Valrico community blog
+- https://buildtb.com: Tampa Bay new construction and builder communities
+- https://firsttimehomebuyertb.com: Tampa Bay first-time home buyer programs, down payment assistance, and eligibility guides
 
 ## Social Profiles
 - https://www.facebook.com/BarrettHenryREALTOR

@@ -13,12 +13,12 @@ import ValuationForm from "@/components/ui/ValuationForm";
 export const metadata: Metadata = {
   title: "Free Home Valuation Tampa Bay | Barrett Henry, REALTOR",
   description:
-    "Get a free, professional home valuation from Barrett Henry, Broker Associate at REMAX Collective. Accurate CMA, not a Zillow guess. Call (813) 733-7907.",
+    "Get a free, professional home valuation from Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective. Accurate CMA, not a Zillow guess. Call (813) 733-7907.",
   alternates: {
     canonical: "/free-home-valuation/",
   },
   openGraph: {
-    title: "Free Home Valuation | Barrett Henry, Broker Associate",
+    title: "Free Home Valuation | Barrett Henry, Licensed Florida Real Estate Broker",
     description:
       "Find out what your Tampa Bay home is actually worth with a professional Comparative Market Analysis, free and no obligation.",
     type: "website",
@@ -149,7 +149,7 @@ export default function FreeHomeValuationPage() {
             Free Home Valuation
           </h1>
           <p className="font-body text-base sm:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-            Find out what your Tampa Bay home is actually worth with a professional Comparative Market Analysis from a Broker Associate with 23+ years of real estate experience. Barrett responds within 24 hours.
+            Find out what your Tampa Bay home is actually worth with a professional Comparative Market Analysis from a licensed Florida real estate broker with 23+ years of real estate experience. Barrett responds within 24 hours.
           </p>
         </div>
       </section>
@@ -270,7 +270,7 @@ export default function FreeHomeValuationPage() {
 
           <div className="max-w-3xl mx-auto prose prose-lg font-body text-dark prose-headings:font-heading prose-headings:text-primary prose-a:text-link">
             <p>
-              Barrett Henry is a Broker Associate at REMAX Collective with 23+ years
+              Barrett Henry is a licensed Florida real estate broker at REMAX Collective with 23+ years
               of real estate experience. He holds the MRP (Military Relocation
               Professional), e-PRO, and SRS (Seller Representative Specialist)
               designations. Barrett and{" "}

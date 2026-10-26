@@ -21,7 +21,7 @@ export const revalidate = 0;
 export const metadata: Metadata = {
   title: "Open Houses Tampa Bay This Week | Barrett Henry, REALTOR®",
   description:
-    "Browse open houses in Tampa Bay this week. Tips for buyers and sellers, virtual tour options, and live MLS listings. Barrett Henry, Broker Associate at REMAX Collective. (813) 733-7907.",
+    "Browse open houses in Tampa Bay this week. Tips for buyers and sellers, virtual tour options, and live MLS listings. Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective. (813) 733-7907.",
   alternates: {
     canonical: "/open-houses/",
   },

@@ -80,7 +80,7 @@ export default function CityContent({ city, topic }: CityContentProps) {
       <div className="flex flex-col md:flex-row gap-6 items-start mb-8">
         <Image
           src="/images/barrett-headshot.png"
-          alt="Barrett Henry, REALTOR® and Broker Associate at REMAX Collective"
+          alt="Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective"
           width={160}
           height={160}
           className="rounded-lg flex-shrink-0"
@@ -93,7 +93,7 @@ export default function CityContent({ city, topic }: CityContentProps) {
                 <strong>{city.name}</strong>. Here&apos;s what I tell every client: start with
                 the neighborhoods, understand the pricing trends, and always get a local
                 expert who knows the <strong>{city.county} County</strong> market inside and out.
-                My name is <strong>Barrett Henry</strong>, and I&apos;m a licensed Broker Associate
+                My name is <strong>Barrett Henry</strong>, and I&apos;m a licensed Florida real estate broker
                 with <strong>REMAX Collective</strong>. Call me at{" "}
                 <strong><a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a></strong>{" "}
                 and I&apos;ll walk you through every option.
@@ -104,7 +104,7 @@ export default function CityContent({ city, topic }: CityContentProps) {
                 Here&apos;s what I tell every client: know the neighborhoods, understand the
                 pricing, and work with someone who knows <strong>{city.county} County</strong>{" "}
                 inside and out. My name is <strong>Barrett Henry</strong>, and I&apos;m a licensed
-                Broker Associate with <strong>REMAX Collective</strong> with 23+ years of real
+                Licensed Florida Real Estate Broker with <strong>REMAX Collective</strong> with 23+ years of real
                 estate experience. Call me at{" "}
                 <strong><a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a></strong>{" "}
                  I&apos;d love to help you find your next home.
@@ -391,7 +391,7 @@ function SpokeTopicContent({
             you compare the total cost of ownership, including CDD, HOA, and property
             taxes, so there are no surprises. And here is something most buyers do not
             know: the builder&apos;s sales agent represents the builder, not you. Having your
-            own Broker Associate costs you nothing and ensures someone is reviewing
+            own licensed Florida real estate broker costs you nothing and ensures someone is reviewing
             contracts, upgrades, and inspection timelines on your behalf.
           </p>
           <p>
@@ -528,7 +528,7 @@ function SpokeTopicContent({
             the <a href="/mortgage-calculator/" className="text-link hover:underline">mortgage calculator</a> to
             estimate), take photos and notes at each home, and pay attention to things
             photos do not show, street noise, natural light, and the condition of
-            neighboring properties. If you find a home you love, having a Broker Associate
+            neighboring properties. If you find a home you love, having a licensed Florida real estate broker
             on your side means you can write an offer the same day with confidence.
           </p>
           <p>

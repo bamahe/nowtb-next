@@ -88,7 +88,7 @@ export default function LoanGuidePage({
   const siblingLoanGuides = ALL_LOAN_GUIDES.filter((l) => l.slug !== slug).slice(0, 4);
 
   // Default content when specific loan data isn't provided yet
-  const defaultDescription = `A ${loanType} is a popular mortgage option for Florida homebuyers. Barrett Henry, Broker Associate at REMAX Collective, can connect you with trusted lenders who specialize in ${loanType}s and help you navigate the home-buying process from pre-approval to closing.`;
+  const defaultDescription = `A ${loanType} is a popular mortgage option for Florida homebuyers. Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective, can connect you with trusted lenders who specialize in ${loanType}s and help you navigate the home-buying process from pre-approval to closing.`;
 
   const defaultRequirements = [
     "Meet minimum credit score requirements set by the program",

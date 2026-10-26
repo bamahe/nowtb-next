@@ -27,14 +27,14 @@ export const revalidate = 3600; // 1 hour, matches the hourly refresh-listings c
 export const metadata: Metadata = {
   title: "Tampa Bay Homes for Sale | Barrett Henry, REALTOR®",
   description:
-    "Search Tampa Bay homes for sale with Barrett Henry, Broker Associate at REMAX Collective. 23+ years of experience. Call (813) 733-7907.",
+    "Search Tampa Bay homes for sale with Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective. 23+ years of experience. Call (813) 733-7907.",
   alternates: {
     canonical: "https://nowtb.com/",
   },
   openGraph: {
     title: "Tampa Bay Homes for Sale | Barrett Henry, REALTOR®",
     description:
-      "Search Tampa Bay homes for sale with Barrett Henry, Broker Associate at REMAX Collective. 23+ years of real estate experience.",
+      "Search Tampa Bay homes for sale with Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective. 23+ years of real estate experience.",
     url: "https://nowtb.com/",
     type: "website",
     images: [{ url: "/og-default.png", width: 1200, height: 630 }],
@@ -173,7 +173,7 @@ export default async function HomePage() {
       <HeroSection
         title="Tampa Bay Homes for Sale"
         label="BARRETT HENRY | THE NOW TEAM"
-        subtitle="Broker Associate with 23+ years in the business. I help buyers, sellers, and investors across Tampa Bay get the deal done."
+        subtitle="Licensed Florida Real Estate Broker with 23+ years in the business. I help buyers, sellers, and investors across Tampa Bay get the deal done."
         bgImage="/images/hero-desktop.jpg"
         bgVideo="/images/tampa-aerial-bg.mp4"
       >

@@ -167,7 +167,7 @@ export const metadata: Metadata = {
     shortcut: "/remax-favicon-32.png",
   },
   description:
-    "Barrett Henry is a licensed real estate Broker Associate with REMAX Collective serving Tampa Bay. 23+ years of real estate experience. Search homes, get market data, and connect with a trusted local expert.",
+    "Barrett Henry is a licensed Florida real estate broker with REMAX Collective serving Tampa Bay. 23+ years of real estate experience. Search homes, get market data, and connect with a trusted local expert.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://nowtb.com"),
   openGraph: {
     type: "website",
@@ -251,9 +251,9 @@ export default function RootLayout({
               "@type": "Person",
               "@id": "https://nowtb.com/#barrett-henry",
               "name": "Barrett Henry",
-              "jobTitle": "Broker Associate",
+              "jobTitle": "Licensed Florida Real Estate Broker",
               "description":
-                "Licensed REALTOR\u00ae and Broker Associate with REMAX Collective, serving Tampa Bay with 23+ years of real estate experience.",
+                "Licensed Florida real estate broker with REMAX Collective, serving Tampa Bay with 23+ years of real estate experience.",
               "image": "https://nowtb.com/images/barrett-headshot.png",
               "url": "https://nowtb.com/about/",
               "telephone": "+1-813-733-7907",
@@ -262,7 +262,7 @@ export default function RootLayout({
                 {
                   "@type": "EducationalOccupationalCredential",
                   "credentialCategory": "Real Estate License",
-                  "name": "Florida Broker Associate",
+                  "name": "Licensed Florida Real Estate Broker",
                   "recognizedBy": {
                     "@type": "Organization",
                     "name": "Florida DBPR",
@@ -299,6 +299,11 @@ export default function RootLayout({
                 "Property Management",
                 "First-Time Home Buyers",
                 "Investment Properties",
+                "Pinellas Gulf Beach Condos",
+                "Redington Shores Real Estate",
+                "Indian Rocks Beach Real Estate",
+                "Florida Condo Law (SIRS and Milestone Inspections)",
+                "Buying a Condo in an LLC",
               ],
               "sameAs": [
                 "https://nowtb.com",

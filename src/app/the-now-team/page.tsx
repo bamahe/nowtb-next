@@ -62,7 +62,7 @@ const faqLd = {
       name: "What designations does Barrett Henry hold?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Barrett Henry is a licensed Florida Broker Associate and holds three professional designations: e-PRO (digital marketing), MRP (Military Relocation Professional), and SRS (Seller Representative Specialist). He was also inducted into the REMAX Hall of Fame in 2024.",
+        text: "Barrett Henry is a licensed Florida real estate broker and holds three professional designations: e-PRO (digital marketing), MRP (Military Relocation Professional), and SRS (Seller Representative Specialist). He was also inducted into the REMAX Hall of Fame in 2024.",
       },
     },
     {
@@ -180,7 +180,7 @@ export default function TheNowTeamPage() {
               Barrett&apos;s personal brand drives every client interaction.
               When you work with The NOW Team, you work directly with Barrett.
               There is no handoff to a junior agent, no call center, and no
-              runaround. You get an experienced Broker Associate who answers
+              runaround. You get an experienced licensed Florida real estate broker who answers
               the phone, writes the contracts, and negotiates the deal.
             </p>
             <p>
@@ -308,7 +308,7 @@ export default function TheNowTeamPage() {
           </h2>
           <div className="section-divider" />
           <p className="font-body text-white/70 font-light text-base md:text-lg leading-relaxed mb-12">
-            Barrett Henry is a licensed Florida Broker Associate and the driving
+            Barrett Henry is a licensed Florida real estate broker and the driving
             force behind The NOW Team. With 23+ years of real estate experience,
             Barrett holds three professional designations and was inducted into the
             REMAX Hall of Fame in 2024.
@@ -317,7 +317,7 @@ export default function TheNowTeamPage() {
           {/* Credentials grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
             {[
-              { label: "Broker Associate", detail: "Florida Licensed" },
+              { label: "Licensed Florida Real Estate Broker", detail: "Florida Licensed" },
               { label: "e-PRO", detail: "Digital Marketing" },
               { label: "MRP", detail: "Military Relocation" },
               { label: "SRS", detail: "Seller Representative" },
@@ -492,7 +492,7 @@ export default function TheNowTeamPage() {
                 What designations does Barrett Henry hold?
               </h3>
               <p className="font-body text-muted font-light text-base leading-relaxed">
-                Barrett Henry is a licensed Florida Broker Associate and holds
+                Barrett Henry is a licensed Florida real estate broker and holds
                 three professional designations: e-PRO (digital marketing
                 expertise), MRP (Military Relocation Professional), and SRS
                 (Seller Representative Specialist). He was inducted into the

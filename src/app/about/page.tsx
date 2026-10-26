@@ -14,7 +14,7 @@ import { testimonials } from "@/data/testimonials";
 
 // --- SEO metadata + Open Graph tags ---
 export const metadata: Metadata = {
-  title: "About Barrett Henry | Broker Associate | REMAX Collective",
+  title: "About Barrett Henry | Licensed Florida Real Estate Broker | REMAX Collective",
   // 149 characters. Target is 120-155 so it does not get truncated in the SERP.
   // WHY the wording changed: the old copy read "23+ years serving Tampa Bay
   // buyers, sellers, and investors", which claims 23 years of Tampa Bay service.
@@ -23,14 +23,14 @@ export const metadata: Metadata = {
   // number modifies "real estate experience" and "Tampa Bay" modifies the
   // clients, so the two facts stay separate.
   description:
-    "Barrett Henry, Broker Associate at REMAX Collective, brings 23+ years of real estate experience to Tampa Bay buyers and sellers. Call (813) 733-7907.",
+    "Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective, brings 23+ years of real estate experience to Tampa Bay buyers and sellers. Call (813) 733-7907.",
   alternates: {
     canonical: "/about/",
   },
   openGraph: {
-    title: "About Barrett Henry | Broker Associate | REMAX Collective",
+    title: "About Barrett Henry | Licensed Florida Real Estate Broker | REMAX Collective",
     description:
-      "23+ years of real estate experience. Broker Associate with REMAX Collective serving Tampa Bay.",
+      "23+ years of real estate experience. Licensed Florida Real Estate Broker with REMAX Collective serving Tampa Bay.",
     type: "website",
   },
 };
@@ -41,7 +41,7 @@ const jsonLd = {
   "@type": "LocalBusiness",
   name: "Barrett Henry, REALTOR®",
   description:
-    "Licensed real estate Broker Associate with REMAX Collective serving Tampa Bay. 23+ years of real estate experience.",
+    "Licensed Florida real estate broker with REMAX Collective serving Tampa Bay. 23+ years of real estate experience.",
   telephone: "(813) 733-7907",
   email: "barrett@nowtb.com",
   url: "https://nowtb.com",
@@ -77,12 +77,12 @@ const personLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Barrett Henry",
-  jobTitle: "Broker Associate",
-  // Was "Licensed Florida REALTOR and Broker Associate with 23+ years of real
+  jobTitle: "Licensed Florida Real Estate Broker",
+  // Was "Licensed Florida real estate broker with 23+ years of real
   // estate experience." Google reads schema literally, and hanging the year
   // count off "Licensed Florida REALTOR" implies 23 years licensed in Florida.
   // He has only been in Florida about a decade, so the sentences are split.
-  description: "Licensed Florida Broker Associate with REMAX Collective. 23+ years of real estate experience.",
+  description: "Licensed Florida real estate broker with REMAX Collective. 23+ years of real estate experience.",
   url: "https://nowtb.com/about",
   image: "https://nowtb.com/images/barrett-henry.jpg",
   telephone: "(813) 733-7907",
@@ -139,7 +139,7 @@ const verifiableRecord = [
     why: "Entering his 24th year in real estate, across the 2008 downturn, the recovery, the 2020 to 2022 run-up, and the slower market since. License status is public through the Florida Department of Business and Professional Regulation.",
   },
   {
-    item: "Florida Broker Associate since 2017",
+    item: "Licensed Florida Real Estate Broker since 2017",
     why: "A broker-level license, which requires additional education and experience beyond a sales associate license.",
   },
   {
@@ -202,7 +202,7 @@ export default function AboutPage() {
             <div className="aspect-[3/4] bg-[#e8e4df] overflow-hidden">
               <Image
                 src="/images/barrett-headshot.png"
-                alt="Barrett Henry, REALTOR® and Broker Associate at REMAX Collective, with 23+ years of real estate experience, serving Tampa Bay"
+                alt="Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective, with 23+ years of real estate experience, serving Tampa Bay"
                 width={378}
                 height={373}
                 className="w-full h-full object-cover object-top"
@@ -212,7 +212,7 @@ export default function AboutPage() {
 
             {/* Bio text (right column), first-person, personal tone */}
             <div className="py-8">
-              <p className="heading-label mb-4">Broker Associate | REMAX Collective</p>
+              <p className="heading-label mb-4">Licensed Florida Real Estate Broker | REMAX Collective</p>
               <h2 className="font-heading font-extralight text-3xl md:text-4xl tracking-[0.1em] uppercase text-primary mb-2">
                 Barrett Henry
               </h2>
@@ -220,7 +220,7 @@ export default function AboutPage() {
               <div className="font-body text-muted font-light space-y-4 leading-relaxed">
                 <p>
                   I&apos;ve been in real estate since 2003 to 23+ years and
-                  counting. I&apos;m a licensed Broker Associate with REMAX
+                  counting. I&apos;m a licensed Florida real estate broker with REMAX
                   Collective and the team lead of The NOW Team. My focus is
                   simple: get my clients the best possible outcome, whether
                   that&apos;s buying, selling, or investing.

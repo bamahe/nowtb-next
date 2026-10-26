@@ -37,7 +37,7 @@ export default function AgentsPage() {
         "@context": "https://schema.org",
         "@type": "RealEstateAgent",
         name: "Barrett Henry",
-        jobTitle: "Broker Associate",
+        jobTitle: "Licensed Florida Real Estate Broker",
         worksFor: { "@type": "RealEstateAgent", name: "REMAX Collective" },
         telephone: "(813) 733-7907",
         email: "barrett@nowtb.com",
@@ -62,7 +62,7 @@ export default function AgentsPage() {
                   // Barrett's actual headshot
                   <Image
                     src="/images/barrett-agent-photo.png"
-                    alt="Barrett Henry, REALTOR®, Broker Associate at REMAX Collective"
+                    alt="Barrett Henry, REALTOR®, Licensed Florida Real Estate Broker at REMAX Collective"
                     fill
                     className="object-cover object-top"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

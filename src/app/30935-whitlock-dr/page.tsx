@@ -514,7 +514,7 @@ export default function WhitlockListingPage() {
                 <div className="flex items-center gap-3 mb-4">
                   <Image
                     src="/images/barrett-headshot.png"
-                    alt="Barrett Henry, REALTOR and Broker Associate at REMAX Collective"
+                    alt="Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective"
                     width={56}
                     height={56}
                     className="rounded-full object-cover"
@@ -522,7 +522,7 @@ export default function WhitlockListingPage() {
                   <div>
                     <p className="font-body font-bold">Barrett Henry</p>
                     <p className="font-body text-xs text-white/70">
-                      Broker Associate, REMAX Collective
+                      Licensed Florida Real Estate Broker, REMAX Collective
                     </p>
                   </div>
                 </div>
@@ -690,7 +690,7 @@ export default function WhitlockListingPage() {
         <div className="max-w-6xl mx-auto px-4">
           <p className="font-body text-xs text-muted leading-relaxed">
             Listing courtesy of REMAX Collective. MLS {L.mls}. Open house hosted by Barrett Henry,
-            Broker Associate, REMAX Collective. Information deemed reliable but not guaranteed 
+            Licensed Florida Real Estate Broker, REMAX Collective. Information deemed reliable but not guaranteed 
             buyer and buyer&rsquo;s agent should independently verify all measurements, lot
             dimensions, flood zone, HOA and CDD fees, taxes, lease restrictions, and school
             assignments. Equal Housing Opportunity.

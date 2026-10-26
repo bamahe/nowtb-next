@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mortgage Lenders Tampa Bay | Barrett Henry, REALTOR",
     description:
-      "Trusted mortgage lender referrals from a Broker Associate with 23+ years of real estate experience. No kickbacks, no conflicts of interest.",
+      "Trusted mortgage lender referrals from a licensed Florida real estate broker with 23+ years of real estate experience. No kickbacks, no conflicts of interest.",
     type: "website",
   },
 };

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Relocating to Tampa Bay | Barrett Henry, REALTOR®",
     description:
-      "Full-service relocation support from a Broker Associate with 23+ years of real estate experience. Virtual tours, area research, and seamless coordination.",
+      "Full-service relocation support from a licensed Florida real estate broker with 23+ years of real estate experience. Virtual tours, area research, and seamless coordination.",
     type: "website",
   },
 };
@@ -164,7 +164,7 @@ export default function RelocationPage() {
         <div className="container-wide max-w-3xl">
           <p className="heading-label mb-3">THE SHORT ANSWER</p>
           <p className="font-body text-primary text-base md:text-lg leading-relaxed">
-            Barrett Henry is a licensed Florida Broker Associate at REMAX Collective who holds the{" "}
+            Barrett Henry is a licensed Florida real estate broker at REMAX Collective who holds the{" "}
             <strong>MRP (Military Relocation Professional)</strong> designation and handles relocation
             buyers and sellers across all eight Tampa Bay counties. Relocating here takes more than
             listing access: Florida property taxes reset to market value at purchase rather than
@@ -443,7 +443,7 @@ export default function RelocationPage() {
 
           <div className="mt-12">
             <p className="font-body text-white/70 font-light text-base max-w-2xl mx-auto mb-8">
-              Barrett Henry is a Broker Associate at REMAX Collective with 23+ years of
+              Barrett Henry is a licensed Florida real estate broker at REMAX Collective with 23+ years of
               real estate experience, MRP certification for military relocations, and a
               deep knowledge of every Tampa Bay community. Call{" "}
               <a href="tel:+18137337907" className="text-link hover:underline">

@@ -153,7 +153,7 @@ export function barrettAuthorPerson() {
   return {
     "@type": "Person",
     name: "Barrett Henry",
-    jobTitle: "Broker Associate",
+    jobTitle: "Licensed Florida Real Estate Broker",
     worksFor: {
       "@type": "RealEstateAgent",
       name: "REMAX Collective",
@@ -178,7 +178,7 @@ export function realEstateAgentSchema() {
     "@type": "RealEstateAgent",
     name: "Barrett Henry, REALTOR®",
     description:
-      "Licensed real estate Broker Associate with REMAX Collective serving Tampa Bay. 23+ years of real estate experience, licensed since September 2003.",
+      "Licensed Florida real estate broker with REMAX Collective serving Tampa Bay. 23+ years of real estate experience, licensed since September 2003.",
     url: SITE_URL,
     telephone: PHONE,
     email: EMAIL,
@@ -210,6 +210,11 @@ export function realEstateAgentSchema() {
       "New Construction",
       "Military Relocation",
       "First-Time Home Buyers",
+      "Pinellas Gulf Beach Condos",
+      "Redington Shores Real Estate",
+      "Indian Rocks Beach Real Estate",
+      "Florida Condo Law (SIRS and Milestone Inspections)",
+      "Buying a Condo in an LLC",
     ],
     // Shared entity set (see BARRETT_SAME_AS) plus the extra niche domains that
     // only apply to him as an agent. Array spread + Set removes duplicates so
@@ -417,7 +422,7 @@ export function breadcrumbSchema(
 
 /**
  * Article schema for editorial content pages (market reports, rules guides).
- * Author is always Barrett Henry, Broker Associate at REMAX Collective, and the
+ * Author is always Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective, and the
  * publisher reuses the site's RealEstateAgent entity so Google and the AI
  * crawlers tie the page back to one consistent author.
  */

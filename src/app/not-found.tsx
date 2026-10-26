@@ -70,13 +70,13 @@ export default function NotFound() {
         <div className="mt-10 flex flex-col items-center gap-4">
           <img
             src="/images/barrett-headshot.png"
-            alt="Barrett Henry, REALTOR® and Broker Associate at REMAX Collective"
+            alt="Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective"
             width={80}
             height={80}
             className="rounded-full border-2 border-accent/40"
           />
           <p className="font-body text-white/60 text-sm">
-            Barrett Henry, REALTOR® &amp; Broker Associate
+            Barrett Henry, Licensed Florida Real Estate Broker
           </p>
           <a
             href="tel:+18137337907"

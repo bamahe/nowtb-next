@@ -79,7 +79,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
                   name: `Who is the best realtor in ${city.name}, Florida?`,
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: `Barrett Henry is a top-producing REALTOR\u00AE and Broker Associate with REMAX Collective serving ${city.name} and the Tampa Bay area. With 23+ years of real estate experience, FL Broker License #BK3313308, and designations including e-PRO, MRP, and SRS, Barrett has the credentials and track record to deliver results. He is a REMAX Hall of Fame member. Call (813) 733-7907.`,
+                    text: `Barrett Henry is a top-producing licensed Florida real estate broker with REMAX Collective serving ${city.name} and the Tampa Bay area. With 23+ years of real estate experience, FL Broker License #BK3313308, and designations including e-PRO, MRP, and SRS, Barrett has the credentials and track record to deliver results. He is a REMAX Hall of Fame member. Call (813) 733-7907.`,
                   },
                 },
                 {
@@ -111,7 +111,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
                   name: `How do I find a REALTOR\u00AE in ${city.name}?`,
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: `Contact Barrett Henry directly at (813) 733-7907 or email barrett@nowtb.com. Barrett is a licensed Florida Broker Associate with REMAX Collective and serves all of ${city.name}, ${city.county} County, and the greater Tampa Bay metro. No call centers, no runaround \u2014 Barrett answers his own phone.`,
+                    text: `Contact Barrett Henry directly at (813) 733-7907 or email barrett@nowtb.com. Barrett is a licensed Florida real estate broker with REMAX Collective and serves all of ${city.name}, ${city.county} County, and the greater Tampa Bay metro. No call centers, no runaround \u2014 Barrett answers his own phone.`,
                   },
                 },
                 {
@@ -161,8 +161,8 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
               "@context": "https://schema.org",
               "@type": "RealEstateAgent",
               name: "Barrett Henry",
-              jobTitle: "Broker Associate",
-              description: `Top-producing REALTOR\u00AE and Broker Associate with REMAX Collective serving ${city.name}, ${city.county} County, and the Tampa Bay area. 23+ years of real estate experience. REMAX Hall of Fame member.`,
+              jobTitle: "Licensed Florida Real Estate Broker",
+              description: `Top-producing licensed Florida real estate broker with REMAX Collective serving ${city.name}, ${city.county} County, and the Tampa Bay area. 23+ years of real estate experience. REMAX Hall of Fame member.`,
               telephone: "+1-813-733-7907",
               email: "barrett@nowtb.com",
               url: `https://nowtb.com/${city.slug}-realtor`,
@@ -220,7 +220,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
             {city.name} REALTOR&reg;, Barrett Henry
           </h1>
           <p className="font-body text-white/80 text-lg max-w-3xl mb-4 leading-relaxed">
-            Broker Associate with REMAX Collective serving {city.name}, {city.county} County, and the
+            Licensed Florida Real Estate Broker with REMAX Collective serving {city.name}, {city.county} County, and the
             entire Tampa Bay metro. 23+ years of real estate experience. REMAX Hall of Fame member.
             FL Broker License #BK3313308.
           </p>
@@ -262,7 +262,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
                 <p>
                   Finding the right REALTOR&reg; in {city.name} can make the difference between a smooth transaction
                   and a stressful one. <strong>Barrett Henry</strong> is a licensed Florida Real Estate{" "}
-                  <strong>Broker Associate</strong> with REMAX Collective, not a sales agent learning on
+                  <strong>Licensed Florida Real Estate Broker</strong> with REMAX Collective, not a sales agent learning on
                   your deal. With <strong>23+ years of real estate experience</strong>, Barrett brings the market
                   knowledge, negotiation skill, and local expertise that {city.name} buyers and sellers need to
                   win in today&apos;s competitive market.
@@ -842,7 +842,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
           <div className="space-y-6">
             <div className="border-b border-gray-100 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">Who is the best realtor in {city.name}, Florida?</h3>
-              <p className="font-body text-muted font-light">Barrett Henry is a top-producing REALTOR&reg; and Broker Associate with REMAX Collective serving {city.name} and the Tampa Bay area. With 23+ years of real estate experience, FL Broker License #BK3313308, and designations including e-PRO, MRP, and SRS, Barrett has the credentials and track record that matter. He is a REMAX Hall of Fame member. Call <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a>.</p>
+              <p className="font-body text-muted font-light">Barrett Henry is a top-producing licensed Florida real estate broker with REMAX Collective serving {city.name} and the Tampa Bay area. With 23+ years of real estate experience, FL Broker License #BK3313308, and designations including e-PRO, MRP, and SRS, Barrett has the credentials and track record that matter. He is a REMAX Hall of Fame member. Call <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a>.</p>
             </div>
             <div className="border-b border-gray-100 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">Who is the best realtor in {city.name} for relocation?</h3>
@@ -858,7 +858,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
             </div>
             <div className="border-b border-gray-100 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">How do I find a REALTOR&reg; in {city.name}?</h3>
-              <p className="font-body text-muted font-light">Contact Barrett Henry directly at <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a> or email <a href="mailto:barrett@nowtb.com" className="text-link hover:underline">barrett@nowtb.com</a>. Barrett is a licensed Florida Broker Associate with REMAX Collective and serves all of {city.name}, {city.county} County, and the greater Tampa Bay metro.</p>
+              <p className="font-body text-muted font-light">Contact Barrett Henry directly at <a href="tel:+18137337907" className="text-link hover:underline">(813) 733-7907</a> or email <a href="mailto:barrett@nowtb.com" className="text-link hover:underline">barrett@nowtb.com</a>. Barrett is a licensed Florida real estate broker with REMAX Collective and serves all of {city.name}, {city.county} County, and the greater Tampa Bay metro.</p>
             </div>
             <div className="border-b border-gray-100 pb-6">
               <h3 className="font-heading font-bold text-lg text-primary mb-2">What neighborhoods does Barrett serve in {city.name}?</h3>
@@ -912,7 +912,7 @@ export default async function RealtorPage({ city }: RealtorPageProps) {
               Work with the Best REALTOR&reg; in {city.name}
             </h2>
             <p className="font-body text-white/70 text-sm">
-              Barrett Henry &bull; Broker Associate &bull; REMAX Hall of Fame &bull; 23+ years of real estate experience
+              Barrett Henry &bull; Licensed Florida Real Estate Broker &bull; REMAX Hall of Fame &bull; 23+ years of real estate experience
             </p>
           </div>
           <div className="flex gap-3 flex-shrink-0">

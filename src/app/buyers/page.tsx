@@ -13,7 +13,7 @@ import ContactForm from "@/components/ui/ContactForm";
 export const metadata: Metadata = {
   title: "Buy a Home in Tampa Bay | Buyer Guide | Barrett Henry",
   description:
-    "Step-by-step guide to buying a home in Tampa Bay. Barrett Henry, Broker Associate at REMAX Collective, 23+ years of experience. Call (813) 733-7907.",
+    "Step-by-step guide to buying a home in Tampa Bay. Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective, 23+ years of experience. Call (813) 733-7907.",
   alternates: {
     canonical: "/buyers/",
   },
@@ -173,7 +173,7 @@ export default function BuyersPage() {
                 name: "Does a buyer pay their real estate agent in Florida?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "In most Florida real estate transactions, the seller pays the buyer's agent commission as part of the listing agreement. This means buyers typically receive professional representation at no direct cost to them. Barrett Henry, Broker Associate with REMAX Collective, represents buyers across all 8 Tampa Bay counties.",
+                  text: "In most Florida real estate transactions, the seller pays the buyer's agent commission as part of the listing agreement. This means buyers typically receive professional representation at no direct cost to them. Barrett Henry, Licensed Florida Real Estate Broker with REMAX Collective, represents buyers across all 8 Tampa Bay counties.",
                 },
               },
               {
