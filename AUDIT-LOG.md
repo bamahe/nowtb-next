@@ -4,6 +4,38 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-10-26 (Batch 85 — Pinellas Park FL x8 + St. Pete Beach FL x2)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, 4+ H2 headings, 6+ H3 subheadings, comparison tables, 5-Q&A FAQ, 22-link internal grid, Barrett Henry REMAX Collective bio. Content dated 2026-10-25.)
+
+**Pinellas Park FL (ZIP 33781/33782, Pinellas County — 8 stubs expanded from ~6,600 chars):**
+
+1. **pinellas-park-fl-homes-for-sale-guide** — Expanded 6,669 → 33,589 chars. Added: 2026 market snapshot table (median $320K-$380K SFH, 30-60 DOM, 3-5 months supply); 6-neighborhood profiles (Heritage Hills, Pinellas Park Heights, Park Station, Lealman, Park Lakes, West Park); 5-buyer-type fit table; FEMA Zone X no-flood-insurance analysis; SB 4-D condo milestone inspection warning; 6-community Pinellas comparison table; 22-link internal grid; 5-Q&A FAQ. Date: 2026-10-25.
+
+2. **pinellas-park-fl-schools-guide** — Expanded 6,683 → 27,361 chars. Added: 3-school public summary table (Pinellas Park Elementary 7698 44th St N (727) 547-7918; Pinellas Park Middle 6940 70th Ave N (727) 547-7930; Pinellas Park High 6305 118th Ave N (727) 547-7943); PCS magnet/choice programs table; PCS contact (301 4th St SW Largo FL 33770, (727) 588-6000); private school alternatives (Canterbury, Pinellas Prep, Plato Academy); school zone verification; zone premium analysis; 6-community school comparison table; 5-Q&A FAQ. Date: 2026-10-25.
+
+3. **pinellas-park-fl-commute-guide** — Expanded 6,680 → 24,668 chars. Added: 10-destination drive time matrix (Tampa 20-35 min via I-275; TPA 25-45 min; St. Pete 15-30 min; PIE 15-25 min; Clearwater 20-35 min; Largo 10-20 min; Dunedin 30-50 min; MacDill 30-50 min; Sarasota 55-80 min; Orlando 90-120 min); US-19/I-275 route analysis; no commuter rail reality; PSTA bus overview; 6-community commuter comparison table; 5-Q&A FAQ. Date: 2026-10-25.
+
+4. **is-pinellas-park-fl-good-place-to-live** — Expanded 6,668 → 29,894 chars. Added: 5-pro analysis (affordable mid-Pinellas location, Zone X flood safety, central access, no beach congestion, value-buy market); 5-con analysis (US-19 commercial corridor, limited walkable retail, older housing stock, no Gulf beach, industrial pocket near US-19); 8-row buyer-type fit table; 6-community comparison table (PP vs St. Pete/Largo/Clearwater/Seminole/Safety Harbor); 5-Q&A FAQ. Date: 2026-10-25.
+
+5. **pinellas-park-fl-real-estate-guide** — Expanded 6,667 → 27,108 chars. Added: 6-property-type price tier table ($180K 2/1 bungalow to $600K+ renovated pool home with flood zones and typical DOM); 2026 market metrics table (median $320K-$380K, 30-60 DOM, 97-99% list-to-sale, 3-5 months supply); 3 key buyer opportunities (value vs coastal, Zone X insurance savings, investor SFH rental yield); 3-step buyer strategy; seller strategy; 6-community comparison table; 5-Q&A FAQ. Date: 2026-10-25.
+
+6. **pinellas-park-fl-cost-of-living** — Expanded 6,664 → 28,176 chars. Added: 3-scenario monthly cost tables (Scenario 1: $280K starter SFH ~$2,300/mo; Scenario 2: $380K updated pool home ~$3,100/mo; Scenario 3: $550K renovated estate ~$4,500/mo); wind/HO insurance table ($2,000-$5,000/yr vs coastal $8K-$25K); Zone X NFIP optional table ($400-$700/yr); Duke Energy electricity; Pinellas County water/sewer rates; 6-community cost comparison table; 5-Q&A FAQ. Date: 2026-10-25.
+
+7. **pinellas-park-fl-property-taxes** — Expanded 6,676 → 29,010 chars. Added: 8-authority millage breakdown table (~19-22 mills total: Pinellas County general, school operational, school capital, City of Pinellas Park levy, SWFWMD, EMS/fire); homestead exemption $50K two-layer explanation; Save Our Homes 3% cap mechanics; senior/disability/veterans exemptions; 8-scenario tax table ($250K-$700K, homestead vs non-homestead); Pinellas PAO contact (315 Court St Clearwater FL 33756, (727) 464-3207); Tax Collector (727) 464-7777; portability DR-501T; millage comparison table; 5-Q&A FAQ. Date: 2026-10-25.
+
+8. **pinellas-park-fl-new-construction** — Expanded 6,674 → 25,986 chars. Added: Teardown-rebuild reality analysis (infill lots $150K-$350K, total build $700K-$1.3M+); 4-path comparison table (teardown/rebuild vs new subdivision vs pre-construction condo vs pre-owned SFH); FL Statute 553.84 1-year workmanship warranty; Zone X vs AE elevation requirement analysis; Pinellas County building permit process; Pasco alternatives comparison; cost-per-sqft analysis; 5-Q&A FAQ. Date: 2026-10-25.
+
+**St. Pete Beach FL (ZIP 33706, Pinellas County, Gulf barrier island — 2 stubs expanded from ~6,660 chars):**
+
+9. **st-pete-beach-fl-schools-guide** — Expanded 6,667 → 26,228 chars. Added: 3-school public summary table (Gulf Beaches Elementary 200 128th Ave Treasure Island FL 33706 (727) 588-3891; Azalea Middle 7855 22nd Ave N St. Pete (727) 893-2148; Boca Ciega High 924 Pasadena Ave S South Pasadena FL 33707 (727) 588-3521); PCS magnet/choice programs; private school alternatives (Canterbury, Shorecrest, St. Pete Catholic, Academy Prep); school zone verification; zone premium analysis; 6-community school comparison table; 5-Q&A FAQ. Date: 2026-10-25.
+
+10. **st-pete-beach-fl-property-taxes** — Expanded 6,660 → 30,906 chars. Added: 8-authority millage breakdown table (~19-23 mills total: Pinellas County general, school operational, school capital, City of St. Pete Beach levy, SWFWMD, EMS/fire); homestead exemption explanation; Save Our Homes 3% cap mechanics; 8-scenario tax table ($600K-$2.5M, homestead vs non-homestead); investment property guide (no homestead, NFIP required Zone AE/VE, higher effective rate); assessment appeal process; PAO contact; 22-link internal grid; 5-Q&A FAQ. Date: 2026-10-25.
+
+---
+
 ## 2026-10-25 (Batch 84 — Indian Rocks Beach FL x10)
 
 **Pages improved: 10**
