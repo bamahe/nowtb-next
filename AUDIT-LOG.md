@@ -3140,3 +3140,38 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** cd89444 — pushed to `origin/main`
+
+---
+
+## Batch 84 — October 27, 2026
+
+**Pages updated:** 10 (9 Tarpon Springs FL + 1 St. Pete Beach FL)
+**Strategy:** Expand ~6,700-char stubs to 25,000–29,000 chars with full SEO/AEO/GEO treatment
+
+### Tarpon Springs FL Posts (9)
+
+1. **tarpon-springs-fl-homes-for-sale-guide** — Expanded stub to 26,390 chars. metaTitle: "Tarpon Springs FL Homes for Sale: Buyer Guide 2026". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 6-row price tier table (condos under $300K through waterfront $1M+); neighborhood profiles (Sponge Docks area, Lake Tarpon corridor, east residential); buying process steps; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+
+2. **tarpon-springs-fl-real-estate-guide** — Expanded stub to 25,474 chars. metaTitle: "Tarpon Springs FL Real Estate Guide 2026 | Barrett Henry". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; market metrics table (median $390K–$450K SFH, 30–55 DOM, 96–99% STL); property type profiles (SFH, condos, waterfront, investment); buyer and seller strategy; 5-row comparison table (Tarpon Springs vs Dunedin vs Palm Harbor vs Holiday vs New Port Richey); 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+
+3. **is-tarpon-springs-fl-good-place-to-live** — Expanded stub to 28,441 chars. metaTitle: "Is Tarpon Springs FL a Good Place to Live? Honest 2026 Review". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 6 pros (Greek cultural heritage, Anclote River access, walkable Sponge Docks, Pinellas school quality, lower prices vs coastal cities, no state income tax); 5 cons (US-19 peak congestion, flood insurance in AE zones, limited new construction, Tampa commute 40–80 min, older housing stock); 8-row buyer profile table; community comparison table; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+
+4. **tarpon-springs-fl-cost-of-living** — Expanded stub to 26,624 chars. metaTitle: "Tarpon Springs FL Cost of Living 2026: What Buyers Need to Know". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; monthly cost table ($420K purchase, 20% down, 6.875% rate; total $3,200–$4,200/mo); two buyer scenarios (starter $320K vs waterfront $850K); 5-row comparison table (Tarpon Springs vs Clearwater vs Dunedin vs Palm Harbor vs Holiday); homestead exemption + SOH cap; insurance breakdown; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+
+5. **tarpon-springs-fl-commute-guide** — Expanded stub to 28,291 chars. metaTitle: "Tarpon Springs FL Commute Guide 2026: Times, Routes, Options". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 6-row destination table (Tampa 40–80 min, St. Pete 50–75 min, Clearwater 25–35 min, Dunedin 15–25 min, New Port Richey 20–30 min, Sarasota 80–110 min); US-19 vs Suncoast Pkwy (SR-589) comparison; remote work impact section; PSTA bus transit notes; 5-row commuter profile table; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+
+6. **tarpon-springs-fl-schools-guide** — Expanded stub to 28,184 chars. metaTitle: "Tarpon Springs FL Schools Guide 2026 | Pinellas County". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; Pinellas County Schools contact (301 4th St SW Largo FL 33770, (727) 588-6000, pinellasschools.org); elementary, middle, and high school profiles (Tarpon Springs HS at 1411 Gulf Rd (727) 942-5600; East Lake HS at 1300 Silver Eagle Dr (727) 724-9800; Tarpon Springs MS at 501 N Florida Ave (727) 942-5469); private school overview; 5-row school comparison table; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+
+7. **tarpon-springs-fl-new-construction** — Expanded stub to 26,360 chars. metaTitle: "New Construction in Tarpon Springs FL 2026 | Homes and Options". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; why new construction is limited (built-out Pinellas land, incorporated zoning, coastal wetland constraints); 3-option comparison table (infill teardown $700K–$1.2M vs gut renovation vs nearby Pasco County new $380K–$550K); Florida Statute 553.84 warranty; 4-row alternative areas table; new vs resale comparison; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+
+8. **tarpon-springs-fl-investment-property** — Expanded stub to 26,662 chars. metaTitle: "Tarpon Springs FL Investment Property Guide 2026". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; rental rate table (SFH 2BR $1,800–$2,400/mo through vacation rental $2,000–$5,000+/mo); gross yield analysis (5.5–6.5% gross, 3–4% net NOI); Tarpon Springs STR ordinance notes; long-term vs vacation rental strategy; ViVi Property Management link; 3 risk factors; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+
+9. **tarpon-springs-fl-property-taxes** — Expanded stub to 28,471 chars. metaTitle: "Tarpon Springs FL Property Taxes 2026: Rates and Exemptions". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; Pinellas PAO (315 Court St Clearwater FL 33756, (727) 464-3207, pinellaspao.org) and Tax Collector ((727) 464-7777, pinellastaxcollector.com); 7-row millage table (~19–23 mills total including City of Tarpon Springs municipal ~5–6 mills); 5-row sample calculations ($390K no homestead ~$7,800 through waterfront $1.2M ~$24,000); exemption table (homestead $50K, senior, disability, veteran, widow/widower); SOH cap + portability mechanics; Pinellas County tax calendar; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+
+### St. Pete Beach FL Posts (1)
+
+10. **st-pete-beach-fl-new-construction** — Expanded stub to 28,971 chars. metaTitle: "New Construction in St. Pete Beach FL 2026 | Homes and Options". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; why new construction is rare (barrier island, Pinellas coastal density, FEMA flood zone constraints); 3-option table (teardown/rebuild $1.5M–$3M+ vs renovation $200K–$500K on top of purchase vs nearby mainland alternatives); alternatives guide (Treasure Island, Madeira Beach, Gulfport); new vs resale 7-row comparison; 22-link SPB internal grid; Barrett Henry bio; 5-Q&A FAQ.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** 23afbcc — pushed to `origin/main`
