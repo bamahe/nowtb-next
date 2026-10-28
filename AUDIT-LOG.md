@@ -3175,3 +3175,38 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** 23afbcc — pushed to `origin/main`
+
+---
+
+## Batch 85 — October 28, 2026
+
+**Cities covered:** St. Petersburg FL (posts 1–5), Treasure Island FL (posts 6–10)
+**Goal:** Expand stub posts to 23,000–32,000 chars with full SEO/AEO/GEO optimization
+
+### St. Petersburg FL Posts (5)
+
+1. **st-pete-beach-fl-commute-guide** — Expanded to 30,186 chars. metaTitle: "St. Pete Beach FL Commute Guide 2026: Times, Routes, and Options". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 6-row destination table (Tampa 45–80 min, St. Pete 20–35 min, Clearwater 30–50 min, Sarasota 75–100 min, Orlando 2.5–3.5 hr, Miami 5–6 hr); I-275 vs US-41/19 comparison; remote work impact; PSTA bus transit notes; 5-row commuter profile table; 22-link internal grid; Barrett Henry bio; 7-Q&A FAQ.
+
+2. **st-petersburg-fl-cost-of-living** — Expanded to 32,745 chars. metaTitle: "Cost of Living in St. Petersburg FL: 2026 Full Breakdown". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; $385K median SFH monthly cost table ($2,014/mo P&I at 6.875%, total $3,200–$4,500/mo); two buyer scenarios (walkable downtown condo $425K vs suburban SFH $380K); rental market overview ($1,600–$2,200/mo median 1BR); flood zone insurance detail (AE vs X); 5-row comparison table (St. Pete vs Clearwater vs Tampa vs Sarasota vs Gulfport); 22-link internal grid; Barrett Henry bio; 8-Q&A FAQ.
+
+3. **st-petersburg-fl-real-estate-guide** — Expanded to 28,619 chars. metaTitle: "St. Petersburg FL Real Estate Guide: Buyers & Sellers 2026". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; price range table by property type (historic bungalow $350K–$650K vs waterfront SFH $700K–$2M+ vs downtown condo $300K–$900K+ vs suburban SFH $300K–$550K); neighborhood profiles (Historic Kenwood, Old Northeast, Snell Isle, Shore Acres, Jungle Prada, Grand Central, Midtown, Riviera Bay); 6-step buyer process; seller advice; 22-link internal grid; Barrett Henry bio; 8-Q&A FAQ.
+
+4. **st-petersburg-fl-property-taxes** — Expanded to 31,066 chars. metaTitle: "St. Petersburg FL Property Taxes: Rates & Exemptions 2026". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 7-row millage table (County ~5.05 mills + School ~6.19 mills + City ~6.75 mills + others, combined ~19.5–24 mills); 5-row sample calculations ($350K homestead ~$5,780 through $1.5M non-homestead ~$30,000); exemption table (homestead $50K, senior, disability, veteran, widow/widower); SOH cap + portability mechanics; Pinellas County tax calendar (Nov 1 bills, 4%/3%/2%/1% discounts, March 31 delinquent); 5-row city comparison table; VAB appeal process; 22-link internal grid; Barrett Henry bio; 8-Q&A FAQ.
+
+5. **is-st-petersburg-fl-good-place-to-live** — Expanded to 29,972 chars. metaTitle: "Is St. Petersburg FL a Good Place to Live? 2026 Review". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 6 pros (Dali/arts, Gulf beaches 20 min, walkable downtown, major employers Raymond James/Johns Hopkins All Children's/BayCare, no state income tax, Tampa Bay waterfront parks); 5 cons (flood risk/insurance, Tampa commute 45–70 min peak, summer heat, hurricane season, US-19/I-275 traffic); 8-row buyer profile table; 5-row comparison table (St. Pete vs Tampa vs Clearwater vs Sarasota vs Gulfport); real monthly cost breakdown; 22-link internal grid; Barrett Henry bio; 7-Q&A FAQ.
+
+### Treasure Island FL Posts (5)
+
+6. **treasure-island-fl-cost-of-living** — Expanded to 27,179 chars. metaTitle: "Cost of Living in Treasure Island FL: 2026 Full Breakdown". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; $700K SFH baseline 20% down 6.875% = $3,667/mo P&I, total $5,527–$8,207/mo; flood insurance NFIP Risk Rating 2.0 detail (Zone VE $4K–$10K/yr, Zone AE $2.5K–$6K/yr, elevation certificate impact); two buyer scenarios (canal-front SFH $750K vs Gulf-front condo $600K); SB 4-D/SB 154 reserve study warning; 5-row comparison table (TI vs St. Pete Beach vs Madeira Beach vs St. Pete vs Gulfport); 22-link internal grid; Barrett Henry bio; 7-Q&A FAQ.
+
+7. **treasure-island-fl-real-estate-guide** — Expanded to 26,325 chars. metaTitle: "Treasure Island FL Real Estate Guide: Buyers & Sellers 2026". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 6-row price range table (canal-front SFH $750K–$1.2M, Gulf-front SFH $1.5M–$4M+, interior SFH $550K–$750K, Gulf-front condo $400K–$900K, mid-island condo $250K–$500K, Paradise Island SFH $700K–$1.5M); FEMA flood zones VE/AE/X explained with premium ranges; SB 4-D/SB 154 condo milestone rules; 6-step buyer process; seller advice; STR zoning notes; ViVi Property Management mention; 22-link internal grid; Barrett Henry bio; 8-Q&A FAQ.
+
+8. **is-treasure-island-fl-good-place-to-live** — Expanded to 23,322 chars. metaTitle: "Is Treasure Island FL a Good Place to Live? 2026 Honest Review". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 6 pros (Gulf beach access without Clearwater crowds, small-town scale ~4,500 residents, boating/ICW access, no state income tax, year-round Gulf water temps, St. Pete arts proximity); 5 cons (combined flood+wind insurance $8K–$15K+/yr, no walkable grocery store, Gulf Blvd traffic, Zone A evacuation, condo milestone uncertainty); 8-row buyer profile table; 6-row community comparison table; real monthly cost breakdown ($750K canal-front with insurance); 22-link internal grid; Barrett Henry bio; 8-Q&A FAQ.
+
+9. **treasure-island-fl-property-taxes** — Expanded to 25,820 chars. metaTitle: "Treasure Island FL Property Taxes: Rates & Exemptions 2026". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 8-row millage table (County ~5.05 + School ~6.19 + City of TI ~3.78 + others, combined ~17–22 mills); 6-row sample calculations (interior SFH $600K homestead ~$11K through non-homestead investment $750K ~$15K); exemption table (homestead $50K, senior, veteran disability, widow/widower); SOH cap + portability mechanics; Pinellas County tax calendar; 6-row city comparison table (TI vs St. Pete Beach vs Madeira Beach vs St. Pete vs Clearwater vs unincorporated Pinellas); VAB appeal process; Pinellas PAO (727) 464-3207 + Tax Collector (727) 464-7777; 22-link internal grid; Barrett Henry bio; 8-Q&A FAQ.
+
+10. **treasure-island-fl-homes-for-sale-guide** — Expanded to 23,951 chars. metaTitle: "Treasure Island FL Homes for Sale: Complete Buyer's Guide 2026". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 5 property type profiles (Gulf-front SFH, canal-front SFH with dock, interior SFH, condos, Paradise Island); 5-step insurance cost calculation guide (flood zone check, elevation certificate, NFIP quote, wind quote, total monthly cost); condo due diligence document checklist (milestone inspection, SIRS, minutes, financials, insurance, special assessments, declaration); negotiation leverage points; Florida closing process; ViVi Property Management mention; 22-link internal grid; Barrett Henry bio; 8-Q&A FAQ.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** 151c88b — pushed to `origin/main`
