@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>1074 Woodbrook Dr S Home Value Report</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+body{margin:0}
+
+/* Layout: client home value report. Navy header, price summary, options, interactive net sheet, comps. */
+:root{
+  --navy:#1A2744; --blue:#003DA5; --red:#DC1C2E; --slate:#5B6676; --line:#D9DFE8;
+  --bg:#F5F7FA; --paper:#FFFFFF; --fg:#18202E; --soft:#EEF2F8; --onnavy:#FFFFFF; --head:#1A2744;
+  --good-bg:#E2F4E8; --good-fg:#1F6B3A; --act-bg:#E3EDFF; --act-fg:#003DA5; --can-bg:#F3E4E6; --can-fg:#9B1C2A;
+  --display:"DM Serif Display",Georgia,serif; --body:"DM Sans",system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --navy:#22345C; --blue:#7FA6EE; --red:#F0606C; --slate:#A3ADBD; --line:#2E3A52;
+  --bg:#0F1522; --paper:#161E2E; --fg:#E8ECF3; --soft:#1C2639; --onnavy:#FFFFFF; --head:#E8ECF3;
+  --good-bg:#183526; --good-fg:#8FD6A8; --act-bg:#1B2B4B; --act-fg:#9DBBF2; --can-bg:#3A1E24; --can-fg:#F09AA4; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --navy:#22345C; --blue:#7FA6EE; --red:#F0606C; --slate:#A3ADBD; --line:#2E3A52;
+  --bg:#0F1522; --paper:#161E2E; --fg:#E8ECF3; --soft:#1C2639; --onnavy:#FFFFFF; --head:#E8ECF3;
+  --good-bg:#183526; --good-fg:#8FD6A8; --act-bg:#1B2B4B; --act-fg:#9DBBF2; --can-bg:#3A1E24; --can-fg:#F09AA4; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:14px;line-height:1.5}
+.page{max-width:880px;margin:0 auto;padding-block:20px;padding-inline:16px}
+.sheet{background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+header{background:var(--navy);color:var(--onnavy);padding:20px 24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:flex-end}
+header h1{font-family:var(--display);font-weight:400;font-size:28px;margin:0;line-height:1.1;text-wrap:balance}
+header .sub{opacity:.85;font-size:13px;margin-top:4px}
+header .agent{text-align:right;font-size:12.5px;opacity:.92}
+header .agent b{font-size:14px;display:block}
+main{padding:20px 24px;display:grid;gap:26px}
+h2{font-family:var(--display);font-weight:400;font-size:21px;margin:0 0 10px;color:var(--head)}
+.kicker{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--slate);font-weight:700;margin:0 0 6px}
+.lead{margin:0;max-width:65ch}
+.hero{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.box{border:1px solid var(--line);border-radius:5px;padding:12px 14px;min-width:0}
+.box.main{background:var(--soft);border-left:4px solid var(--red)}
+.box span{font-size:10.5px;color:var(--slate);text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+.box strong{display:block;font-family:var(--display);font-weight:400;font-size:26px;line-height:1.15;color:var(--head);font-variant-numeric:tabular-nums}
+.box p{margin:4px 0 0;font-size:12.5px;color:var(--slate)}
+@media (max-width:640px){.hero{grid-template-columns:1fr} header .agent{text-align:left}}
+
+/* timeline */
+.tl{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.tl li{display:grid;grid-template-columns:118px 18px 1fr;gap:10px;align-items:start}
+.tl .when{font-weight:700;font-size:13px;text-align:right;padding-top:1px;font-variant-numeric:tabular-nums}
+.tl .dot{position:relative;height:100%;min-height:44px}
+.tl .dot::before{content:"";position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--line)}
+.tl .dot::after{content:"";position:absolute;left:3px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--blue)}
+.tl li.now .dot::after{background:var(--red);border-color:var(--red)}
+.tl li.goal .dot::after{background:var(--blue)}
+.tl li:last-child .dot::before{bottom:auto;height:10px}
+.tl .what{padding-bottom:14px;min-width:0}
+.tl .what b{display:block}
+.tl .what small{color:var(--slate);font-size:12.5px}
+@media (max-width:520px){.tl li{grid-template-columns:84px 18px 1fr}.tl .when{font-size:12px}}
+
+/* net sheet */
+.ns{border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.ns-top{background:var(--navy);color:var(--onnavy);padding:14px 16px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.ns-top label{font-size:12px;text-transform:uppercase;letter-spacing:.08em;opacity:.85;font-weight:700}
+.pricewrap{display:flex;align-items:center;gap:4px;background:rgba(255,255,255,.12);border-radius:4px;padding:4px 10px}
+.pricewrap span{font-family:var(--display);font-size:24px}
+#price{background:transparent;border:none;color:var(--onnavy);font-family:var(--display);font-size:24px;width:150px;font-variant-numeric:tabular-nums}
+#price:focus{outline:2px solid #fff;outline-offset:2px;border-radius:2px}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}
+.tabs button{font:inherit;background:var(--paper);color:var(--fg);border:none;border-right:1px solid var(--line);padding:10px 8px;cursor:pointer;text-align:center}
+.tabs button:last-child{border-right:none}
+.tabs button b{display:block;font-size:16px}
+.tabs button small{color:var(--slate);font-size:11.5px}
+.tabs button[aria-selected="true"]{background:var(--soft);box-shadow:inset 0 -3px 0 var(--blue)}
+.tabs button:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
+.ns table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:13px}
+.ns td{padding:7px 16px;border-bottom:1px solid var(--line)}
+.ns td.r{text-align:right;white-space:nowrap}
+.ns tr.sec td{background:var(--soft);font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--slate);padding-block:5px}
+.ns tr.sub td{font-weight:700}
+.net{background:var(--navy);color:var(--onnavy);display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 16px;flex-wrap:wrap}
+.net span{font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;opacity:.9}
+.net strong{font-family:var(--display);font-weight:400;font-size:30px;font-variant-numeric:tabular-nums}
+.fine{font-size:11.5px;color:var(--slate);margin:8px 0 0;max-width:80ch}
+
+/* comps */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}
+@media (max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{border:1px solid var(--line);border-radius:4px;padding:8px 10px}
+.stat span{font-size:10.5px;color:var(--slate);text-transform:uppercase;letter-spacing:.06em}
+.stat strong{display:block;font-size:17px;font-variant-numeric:tabular-nums;color:var(--blue)}
+.tw{overflow-x:auto}
+.ct{width:100%;border-collapse:collapse;font-size:12.5px;font-variant-numeric:tabular-nums}
+.ct th{text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--slate);border-bottom:2px solid var(--navy);padding:5px 6px;white-space:nowrap}
+.ct td{padding:5px 6px;border-bottom:1px solid var(--line);white-space:nowrap}
+.ct .r{text-align:right}
+.ct a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}
+.ct a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.tag{display:inline-block;font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;text-transform:uppercase;letter-spacing:.04em}
+.t-sold{background:var(--good-bg);color:var(--good-fg)}.t-act{background:var(--act-bg);color:var(--act-fg)}.t-pen{background:var(--good-bg);color:var(--good-fg)}.t-can{background:var(--can-bg);color:var(--can-fg)}
+.handle{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 20px;margin:0;padding:0;list-style:none}
+.handle li{padding-left:18px;position:relative}
+.handle li::before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;background:var(--blue);border-radius:2px}
+@media (max-width:640px){.handle{grid-template-columns:1fr}}
+footer{background:var(--navy);color:var(--onnavy);text-align:center;padding:10px;font-size:11px;letter-spacing:.2em;font-weight:700}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.opts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.opts .box b{display:block;font-size:15px;margin:2px 0 4px}@media (max-width:640px){.opts{grid-template-columns:1fr}}
+</style>
+
+</head>
+<body>
+<div class="page"><div class="sheet">
+<header>
+  <div>
+    <h1>1074 Woodbrook Drive South</h1>
+    <div class="sub">Largo, FL 33770 &middot; Home value report prepared for Terence Canestraro &middot; October 29, 2026</div>
+  </div>
+  <div class="agent"><b>Barrett Henry, Licensed Florida Real Estate Broker</b>REMAX Collective &middot; (813) 733-7907<br>barrett@nowtb.com &middot; BK3313308</div>
+</header>
+
+<main>
+  <section>
+    <p class="kicker">Your home in one line</p>
+    <p class="lead">Updated two bedroom, two bath homes on your streets are selling for <b>$325,000 to $355,000</b>. If your home is in updated condition, I would list it at <b>$339,900</b> and expect a sale between <b>$328,000 and $342,000</b>. Roof, AC and window age are what move you up or down in that range, so a quick look inside lets me sharpen the number.</p>
+  </section>
+
+  <section class="hero">
+    <div class="box main"><span>Suggested list price</span><strong>$339,900</strong><p>Updated 2/2, 1,050 sq ft, 1 car garage.</p></div>
+    <div class="box"><span>Likely sale range</span><strong>$328K to $342K</strong><p>Based on the closest sales in the last 6 months.</p></div>
+    <div class="box"><span>Est. net at 6%</span><strong id="heroNet">$0</strong><p>Worst case, before any mortgage payoff.</p></div>
+  </section>
+
+  <section>
+    <h2>Your three options</h2>
+    <div class="opts">
+      <div class="box"><span>Option 1</span><b>List and sell</b><p>Top dollar. Priced right, homes here go under contract in 1 to 6 weeks. You can sign everything electronically from Canada.</p></div>
+      <div class="box"><span>Option 2</span><b>Sell as is for cash</b><p>Fastest and easiest, no showings or repairs. Recent as is cash sales nearby ran $218,000 to $260,000.</p></div>
+      <div class="box"><span>Option 3</span><b>Keep it and rent it</b><p>Estimated rent is about $2,000 a month. My property management team can lease and manage it for you.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Estimated net proceeds</h2>
+    <div class="ns">
+      <div class="ns-top">
+        <label for="price">Sale price</label>
+        <div class="pricewrap"><span>$</span><input id="price" type="text" inputmode="numeric" value="339,900" aria-label="Sale price"></div>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Who brings the buyer">
+        <button role="tab" id="t1" data-rate="0.01" aria-selected="false"><b>1%</b><small>You bring the buyer</small></button>
+        <button role="tab" id="t4" data-rate="0.04" aria-selected="false"><b>4%</b><small>My marketing brings the buyer</small></button>
+        <button role="tab" id="t6" data-rate="0.06" aria-selected="true"><b>6%</b><small>Two agents involved</small></button>
+      </div>
+      <table>
+        <tbody id="rows"></tbody>
+      </table>
+      <div class="net"><span>Estimated net to seller<br><small style="text-transform:none;letter-spacing:0;font-weight:400;opacity:.85">Before any mortgage payoff</small></span><strong id="net">$0</strong></div>
+    </div>
+    <p class="fine">Estimate for discussion only. Assumes a mid December closing with estimated 2026 property taxes (about $4,935) prorated and paid by the seller. No HOA. Actual figures come from the title company. Because you live outside the U.S., federal rules (FIRPTA) usually require part of the sale price to be held back at closing for taxes; it can often be reduced or refunded, so loop in your CPA early. Not legal or tax advice.</p>
+  </section>
+
+  <section>
+    <h2>What the market says</h2>
+    <p class="kicker">Similar homes within 1 mile, last 6 months (Stellar MLS)</p>
+    <div class="stats">
+      <div class="stat"><span>Closest 3 sales avg</span><strong>$340,000</strong></div>
+      <div class="stat"><span>Updated 2/2 $ / sq ft</span><strong>$320 to $350</strong></div>
+      <div class="stat"><span>Days to contract, priced right</span><strong>5 to 40</strong></div>
+      <div class="stat"><span>Sale to list</span><strong>98%</strong></div>
+    </div>
+    <div class="tw"><table class="ct">
+      <thead><tr><th>Address</th><th>Status</th><th class="r">Price</th><th>Date</th><th>Bd/Ba</th><th class="r">Sq ft</th><th class="r">$/sf</th><th>Garage</th><th class="r">DOM</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/TB8543119/largo/1021-san-marco-drive/" target="_blank" rel="noopener">1021 San Marco Dr</a></td><td><span class="tag t-sold">Sold</span></td><td class="r">$340,000</td><td>10/07/26</td><td>2/2</td><td class="r">1,060</td><td class="r">$321</td><td>1 car</td><td class="r">5</td></tr>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/TB8509199/largo/970-8th-avenue-ne/" target="_blank" rel="noopener">970 8th Ave NE</a></td><td><span class="tag t-sold">Sold</span></td><td class="r">$325,000</td><td>08/07/26</td><td>2/1.5</td><td class="r">1,009</td><td class="r">$322</td><td>1 car</td><td class="r">40</td></tr>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/NS1087923/largo/641-cork-street/" target="_blank" rel="noopener">641 Cork St</a></td><td><span class="tag t-sold">Sold</span></td><td class="r">$355,000</td><td>05/29/26</td><td>2/1</td><td class="r">1,014</td><td class="r">$350</td><td>1 car</td><td class="r">8</td></tr>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/TB8520515/clearwater/1342-edmonton-drive/" target="_blank" rel="noopener">1342 Edmonton Dr</a></td><td><span class="tag t-sold">Sold</span></td><td class="r">$312,500</td><td>07/27/26</td><td>2/2</td><td class="r">1,040</td><td class="r">$300</td><td>2 car</td><td class="r">5</td></tr>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/TB8548794/clearwater/1653-s-evergreen-avenue/" target="_blank" rel="noopener">1653 S Evergreen Ave</a></td><td><span class="tag t-sold">Sold</span></td><td class="r">$365,000</td><td>10/27/26</td><td>2/1.5</td><td class="r">1,158</td><td class="r">$315</td><td>2 car</td><td class="r">9</td></tr>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/TB8549070/largo/1130-7th-avenue-ne/" target="_blank" rel="noopener">1130 7th Ave NE</a></td><td><span class="tag t-sold">Sold</span></td><td class="r">$390,000</td><td>10/15/26</td><td>3/2</td><td class="r">1,157</td><td class="r">$337</td><td>1 car</td><td class="r">8</td></tr>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/TB8490793/largo/1130-8th-avenue-ne/" target="_blank" rel="noopener">1130 8th Ave NE</a></td><td><span class="tag t-sold">Sold</span></td><td class="r">$380,000</td><td>06/18/26</td><td>3/2</td><td class="r">1,036</td><td class="r">$367</td><td>2 car</td><td class="r">2</td></tr>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/TB8539617/largo/969-6th-avenue-ne/" target="_blank" rel="noopener">969 6th Ave NE</a></td><td><span class="tag t-pen">Pending</span></td><td class="r">$320,000</td><td></td><td>2/1</td><td class="r">1,026</td><td class="r">$312</td><td>2 car</td><td class="r">46</td></tr>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/TB8530102/largo/890-7th-avenue-ne/" target="_blank" rel="noopener">890 7th Ave NE</a></td><td><span class="tag t-pen">Pending</span></td><td class="r">$310,000</td><td></td><td>3/1</td><td class="r">1,195</td><td class="r">$259</td><td>1 car</td><td class="r">98</td></tr>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/TB8533226/largo/105-judy-lee-drive/" target="_blank" rel="noopener">105 Judy Lee Dr</a></td><td><span class="tag t-act">Active</span></td><td class="r">$335,000</td><td></td><td>2/2</td><td class="r">988</td><td class="r">$339</td><td>1 car</td><td class="r">92</td></tr>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/TB8525596/largo/610-1st-avenue-ne/" target="_blank" rel="noopener">610 1st Ave NE</a></td><td><span class="tag t-act">Active</span></td><td class="r">$310,000</td><td></td><td>2/2</td><td class="r">1,016</td><td class="r">$305</td><td>None</td><td class="r">115</td></tr>
+        <tr><td><a href="https://nowtb.com/properties/StellarMLS/TB8519780/clearwater/1806-vancouver-drive/" target="_blank" rel="noopener">1806 Vancouver Dr</a></td><td><span class="tag t-act">Active</span></td><td class="r">$379,900</td><td></td><td>3/2</td><td class="r">1,013</td><td class="r">$375</td><td>1 car</td><td class="r">128</td></tr>
+      </tbody>
+    </table></div>
+    <p class="fine">Why $339,900: 1021 San Marco Dr, one block over, is almost a twin to your home (2/2, 1,060 sq ft, 1969, 1 car garage) and sold for $340,000 in 5 days with a 2024 roof, 2024 AC and impact windows. 970 8th Ave NE sold for $325,000 with one and a half baths. Homes listed above $330,000 without those updates are sitting 90 days or more. Your public record: 2 bed, 2 bath, 1,050 heated sq ft, built 1968, block construction, 1 car garage, 160 sq ft enclosed porch, 0.17 acre lot.</p>
+  </section>
+
+  <section>
+    <h2>Next step</h2>
+    <ul class="handle">
+      <li>Tell me the roof, AC and window ages and what you have updated</li>
+      <li>Photos or a quick video walkthrough work fine from Canada</li>
+      <li>I tighten the price and send your final net sheet</li>
+      <li>Pick the option that fits you: sell, cash sale, or rent</li>
+    </ul>
+  </section>
+</main>
+<footer>MOVE WITH CONFIDENCE</footer>
+</div></div>
+
+<script>
+(function(){
+  var rate = 0.06;
+  var TAXES = 4935, CLOSE_DAY = 349; // Dec 15 = day 349 of 2026
+  var priceEl = document.getElementById('price');
+  var fmt = function(n){ return '$' + Math.round(n).toLocaleString('en-US'); };
+  function title(p){ return p <= 100000 ? p*0.00575 : 575 + (p-100000)*0.005; }
+  function calc(p, r){
+    var items = [
+      ['Documentary stamp tax on deed', p*0.007],
+      ["Owner's title insurance policy", title(p)],
+      ['Title search, exam and settlement', 750],
+      ['Deed preparation', 175],
+      ['Recording fees', 45],
+      ['Municipal lien search', 225],
+      ['Wire fee', 50],
+      ['Property tax proration (Jan 1 to closing)', TAXES*CLOSE_DAY/365]
+    ];
+    var closing = items.reduce(function(s,i){return s+i[1];},0);
+    var comm = p*r, tsf = 495;
+    return {items:items, closing:closing, comm:comm, tsf:tsf, net:p-closing-comm-tsf};
+  }
+  function row(label, val, cls){ return '<tr'+(cls?' class="'+cls+'"':'')+'><td>'+label+'</td><td class="r">'+val+'</td></tr>'; }
+  function render(){
+    var p = parseFloat(String(priceEl.value).replace(/[^0-9.]/g,'')) || 0;
+    var c = calc(p, rate);
+    var h = row('Sale proceeds','', 'sec') + row('Sale price', fmt(p));
+    h += row('Closing costs','', 'sec');
+    c.items.forEach(function(i){ h += row(i[0], '&minus;' + fmt(i[1])); });
+    h += row('Total closing costs', '&minus;' + fmt(c.closing), 'sub');
+    h += row('Commission and brokerage','', 'sec');
+    h += row('Real estate commission (' + Math.round(rate*100) + '%)', '&minus;' + fmt(c.comm));
+    h += row('Transaction services fee', '&minus;' + fmt(c.tsf));
+    document.getElementById('rows').innerHTML = h;
+    document.getElementById('net').textContent = fmt(c.net);
+    document.getElementById('heroNet').textContent = fmt(calc(339900,0.06).net);
+  }
+  priceEl.addEventListener('input', render);
+  priceEl.addEventListener('blur', function(){
+    var p = parseFloat(String(priceEl.value).replace(/[^0-9.]/g,'')) || 0;
+    priceEl.value = Math.round(p).toLocaleString('en-US');
+  });
+  document.querySelectorAll('.tabs button').forEach(function(b){
+    b.addEventListener('click', function(){
+      document.querySelectorAll('.tabs button').forEach(function(x){ x.setAttribute('aria-selected','false'); });
+      b.setAttribute('aria-selected','true');
+      rate = parseFloat(b.dataset.rate);
+      render();
+    });
+  });
+  render();
+})();
+</script>
+
+</body>
+</html>
