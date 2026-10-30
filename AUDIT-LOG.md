@@ -4,6 +4,44 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-10-29 (Batch 87 — San Antonio FL x4 + Venice FL x1 + Brooksville FL x1 + Dover/Plant City x1 + East Lake FL x3)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, 4+ H2 headings, 6+ H3 subheadings, comparison/buyer tables, 5-6 Q&A FAQ, 22-link internal grid, Barrett Henry REMAX Collective bio. Content dated 2026-10-29.)
+
+**San Antonio FL (ZIP 33576, Pasco County — 4 stubs expanded from ~5,357 chars each):**
+
+1. **is-san-antonio-fl-good-place-to-live** — Expanded 5,357 → 31,445 chars. Pros/cons (rural pace, Lake Jovita proximity, Pasco County low density, no direct beach, limited retail, SR-52 commute); 8-buyer-type fit table; community comparison table (San Antonio vs Dade City/Zephyrhills/Wesley Chapel/Land O Lakes/New Tampa/Lutz); cost breakdown table; Saint Leo University (PO Box 6665, Saint Leo FL 33574); Lake Jovita Golf (17214 Draper Lake Dr); Pasco County contacts; 5-Q&A FAQ. Date: 2026-10-29.
+
+2. **best-neighborhoods-san-antonio-fl** — Expanded 5,357 → 27,476 chars. 5 area profiles (Lake Jovita community, Saint Leo area, rural north, US-301 corridor, Quail Hollow); area comparison table (price/HOA/flood/commute/acreage); what-to-check section (septic/well/millage/rural restrictions); 22-link internal grid; 5-Q&A FAQ. Date: 2026-10-29.
+
+3. **moving-to-san-antonio-fl** — Expanded 5,357 → 28,920 chars. Relocation checklist; housing options table; utilities setup (Duke Energy, TECO, Pasco County Utilities, Frontier); county contacts table (Pasco PA/Tax Collector/DMV/Schools); cost of living table (home, taxes, insurance, HOA); schools section (San Antonio Elementary, Pasco Middle, Pasco High); 5-Q&A FAQ. Date: 2026-10-29.
+
+4. **things-to-do-san-antonio-fl** — Expanded 5,357 → 27,342 chars. Saint Leo University cultural events section; Lake Jovita Golf full profile; outdoor recreation (Withlacoochee SF, Hillsborough River SP, Croom Tract); dining guide by area (SR-52, US-301 Dade City corridor, Zephyrhills); annual events (Florida Strawberry Festival nearby, Dade City Pioneer Days); day trips table (Tampa 40 min, Tarpon Springs 45 min, Ocala 90 min, Orlando 75 min); 5-Q&A FAQ. Date: 2026-10-29.
+
+**Venice FL (Sarasota County):**
+
+5. **best-neighborhoods-venice-fl** — Expanded 5,329 → 52,361 chars. 6 neighborhood profiles: Venice Island (beachside walkable, AE/VE flood zones, $450K-$1.2M+), Gran Paradiso (55+ DiVosta, HOA $350-$500/mo, CDD warning), Sarasota National (55+ WCI, Pete Dye golf, 1,200-ac preserve, $390K-$750K), Wellen Park (master-planned, 5 villages comparison table, CDD $1,500-$3,500/yr, families + active adults), South Venice (no-HOA grid, SVCA ferry, $280K-$450K), Pelican Pointe (non-age-restricted golf, $330K-$600K); full comparison table; schools table (Garden Elementary, Venice Middle, Venice High, Pine View); flood risk section; wind mitigation section; 22-link grid; 6-Q&A FAQ. Date: 2026-10-29.
+
+**Brooksville FL (Hernando County):**
+
+6. **best-neighborhoods-brooksville-fl** — Expanded 5,390 → 42,333 chars. 5 area profiles: Historic District (Victorian/Craftsman downtown, Rogers Christmas House, $190K-$400K), Silverthorn (gated golf, non-age-restricted, $300K-$600K, HOA $200-$350/mo), Southern Hills Plantation (Pete Dye golf, equestrian, $450K-$900K+), Spring Ridge/Cortez Blvd corridor (no-HOA affordable newer construction, $220K-$360K), Spring Hill comparison (115K population, Suncoast Pkwy commute); millage rate table (~14-15 mills); septic/well section; Withlacoochee SF recreation; schools table (Brooksville Elementary, D.S. Parrott Middle, Hernando High); 22-link grid; 6-Q&A FAQ. Date: 2026-10-29.
+
+**East Hillsborough County:**
+
+7. **dover-fl-vs-plant-city** — Expanded 4,890 → 34,012 chars. Distance/commute table (Dover 18 mi to Tampa vs Plant City 27 mi); price range comparison table (entry through acreage); Dover neighborhood profiles (McIntosh Rd area, SR-60 corridor, US-92 corridor); Plant City neighborhood profiles (Walden Lake HOA/amenities, historic downtown, Coronet Farms, north Plant City); lifestyle identity section (FL Strawberry Festival 500K+ visitors, Keel and Curley Winery, Alafia River); schools table (both Hillsborough County SD); who-should-choose-each buyer analysis; flood risk section; property tax comparison (city levy Plant City vs unincorporated Dover); 22-link grid; 6-Q&A FAQ. Date: 2026-10-29.
+
+**East Lake FL (Pinellas County — 3 posts expanded):**
+
+8. **is-east-lake-fl-good-place-to-live** — Expanded 10,876 → 27,826 chars. Fast facts table (Pinellas County unincorporated, 34688/34689 ZIP, ~30-35K pop, John Chestnut Sr. Park); schools detail table (Cypress Woods Elementary, East Lake Elementary, East Lake Middle STEM magnet, East Lake High); commute matrix (Tampa 35-55 min via Veteran's Expressway, TPA 30-45 min, Clearwater Beach 30-40 min, St. Pete 50-65 min); Lake Tarpon/John Chestnut Park recreation; flood zone X analysis; is-right-for-you binary table; 22-link grid; 6-Q&A FAQ. Date: 2026-10-29.
+
+9. **best-neighborhoods-east-lake-fl** — Expanded 11,175 → 30,231 chars. 5 community profiles: East Lake Woodlands (gated, 2 golf courses, layered HOA $200-$600/mo, $430K-$1.1M+), Lansbrook (master-planned, public golf, Lake Tarpon ramp, 10 mi trails, $430K-$780K, $100-$250/mo HOA), Windmill Pointe ($360K-$480K, low HOA, East Lake school zone), Floresta ($340K-$450K, minimal HOA), East Lake Oaks ($370K-$500K); full 5-community comparison table; what-to-ask section (HOA layers, flood zone, school zone boundary); 22-link grid; 6-Q&A FAQ. Date: 2026-10-29.
+
+10. **east-lake-fl-homes-for-sale-guide** — Expanded 13,566 → 29,849 chars. 2025 market snapshot table (ELW $540K-$680K median, 25-50 DOM; Lansbrook $490K-$580K, 20-40 DOM); true monthly cost breakdown table ($500K Lansbrook: $2,528 P+I + $675 taxes + $330 insurance + $175 HOA = ~$3,708/mo); property type table (villa $280K-$380K through waterfront $600K-$1.5M+); 4-step buying process (pre-approval, HOA disclosure review, FL-specific inspection priorities, 2025 negotiation reality); buyer's agent role section; FL insurance reality; Pinellas PAO estimator reference; 22-link grid; 6-Q&A FAQ. Date: 2026-10-29.
+
+---
+
 ## 2026-10-26 (Batch 85 — Pinellas Park FL x8 + St. Pete Beach FL x2)
 
 **Pages improved: 10**
