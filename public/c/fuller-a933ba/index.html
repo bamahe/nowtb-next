@@ -51,7 +51,7 @@ ul{padding-left:18px}
 li{margin:4px 0}
 /* Net sheet */
 .ns{border:1px solid var(--line);border-radius:14px;overflow:hidden}
-.ns .top{background:var(--navy);color:#fff;padding:16px 18px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.ns .top{background:var(--navy);color:#fff;padding:16px 18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .ns label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:1px;opacity:.85;margin-bottom:4px}
 .ns input{width:100%;font:inherit;font-size:18px;font-weight:700;color:var(--navy);background:#fff;border:0;border-radius:8px;padding:9px 10px}
 .tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-bottom:1px solid var(--line)}
@@ -150,7 +150,6 @@ footer{margin-top:18px;text-align:center;font-weight:700;letter-spacing:3px;colo
     <div class="top">
       <div><label for="price">Sale price</label><input id="price" inputmode="numeric" value="415,000"></div>
       <div><label for="close">Closing date</label><input id="close" type="date" value="2027-02-26"></div>
-      <div><label for="payoff">Mortgage payoff (optional)</label><input id="payoff" inputmode="numeric" placeholder="0"></div>
     </div>
     <div class="tabs" role="tablist">
       <button data-r="0.01"><b>1%</b>Seller brings buyer</button>
@@ -174,7 +173,6 @@ footer{margin-top:18px;text-align:center;font-weight:700;letter-spacing:3px;colo
       <tr><td id="o_commlbl">Total commission</td><td class="n" id="o_comm"></td></tr>
       <tr><td>Transaction services fee</td><td class="n">$495</td></tr>
       <tr class="tot"><td>Total costs</td><td class="n" id="o_total"></td></tr>
-      <tr id="row_payoff" style="display:none"><td>Mortgage payoff</td><td class="n" id="o_payoff"></td></tr>
     </table>
     <div class="net"><div><div class="cap" id="netcap">Estimated net proceeds, before mortgage payoff</div><div class="amt" id="o_net"></div></div><div class="cap" id="o_pct"></div></div>
     <div class="disc">This is an estimate for discussion purposes only. Actual closing costs will be calculated by the title company and may vary. Property tax proration assumes 2027 taxes similar to 2025 and a seller credit from January 1 to closing. Commission shown is the total paid at closing under the listing agreement.</div>
@@ -202,27 +200,24 @@ footer{margin-top:18px;text-align:center;font-weight:700;letter-spacing:3px;colo
   var num=function(v){return parseFloat(String(v).replace(/[^0-9.]/g,''))||0};
   function title(p){return p<=100000?p*0.00575:575+(p-100000)*0.005}
   function calc(){
-    var p=num($('price').value), payoff=num($('payoff').value);
+    var p=num($('price').value);
     var d=new Date($('close').value+'T12:00:00'); if(isNaN(d)) d=new Date('2027-02-26T12:00:00');
     var start=new Date(d.getFullYear(),0,1), days=Math.round((d-start)/86400000);
     var tax=TAX*days/365, doc=p*0.007, tl=title(p), comm=p*rate;
     var fixed=750+175+30+225+250+50+495;
-    var total=doc+tl+tax+comm+fixed, net=p-total-payoff;
+    var total=doc+tl+tax+comm+fixed, net=p-total;
     $('o_price').textContent=fmt(p); $('o_doc').textContent=fmt(doc); $('o_title').textContent=fmt(tl);
     $('o_tax').textContent=fmt(tax); $('o_comm').textContent=fmt(comm);
     $('o_commlbl').textContent='Total commission ('+(rate*100)+'%)';
     $('o_total').textContent=fmt(total);
-    $('row_payoff').style.display=payoff>0?'':'none'; $('o_payoff').textContent=fmt(payoff);
-    $('netcap').textContent=payoff>0?'Estimated net proceeds to you':'Estimated net proceeds, before mortgage payoff';
     $('o_net').textContent=fmt(net);
     $('o_pct').textContent=p?('Costs are about '+(total/p*100).toFixed(1)+'% of the price'):'';
   }
   document.querySelectorAll('.tabs button').forEach(function(b){b.addEventListener('click',function(){
     document.querySelectorAll('.tabs button').forEach(function(x){x.classList.remove('on')});
     b.classList.add('on'); rate=parseFloat(b.dataset.r); calc();});});
-  $('price').addEventListener('input',calc); $('payoff').addEventListener('input',calc); $('close').addEventListener('change',calc);
+  $('price').addEventListener('input',calc); $('close').addEventListener('change',calc);
   $('price').addEventListener('blur',function(){var v=num(this.value); if(v) this.value=Math.round(v).toLocaleString('en-US')});
-  $('payoff').addEventListener('blur',function(){var v=num(this.value); this.value=v?Math.round(v).toLocaleString('en-US'):''});
   calc();
 })();
 </script>
