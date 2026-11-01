@@ -3317,3 +3317,47 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** e69e53b — pushed to `origin/main`
+
+## Batch 88 — October 30, 2026
+
+**Cities covered:** Seffner FL (posts 1–2), Dover FL (post 3)
+**Goal:** Expand 10 stub posts to 20,000–25,000 chars with full SEO/AEO/GEO optimization
+
+### Posts Expanded (3 of 10 completed in this batch run)
+
+1. **seffner-fl-schools-guide-2026** — Expanded to 24,492 chars (was 8,402). metaTitle: "Seffner FL Schools Guide 2026: Armwood High Zone & Options". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; Armwood High programs table (Criminal Justice Academy, AP, Dual Enrollment, CTE, JROTC, Fine Arts, Athletics); elementary/middle school tables; comparison table (Seffner vs FishHawk, Brandon, Temple Terrace, Valrico); magnet and school choice options; private school alternatives; HCPS zone verification guidance; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+
+2. **seffner-fl-real-estate-guide-2026** — Expanded to 24,919 chars (was 8,441). metaTitle: "Seffner FL Real Estate Guide 2026: Prices & Neighborhoods". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; market overview table; neighborhoods (Mango, Seffner rural, US-92 corridor); commute table (Tampa, Brandon, Riverview, Valrico, Temple Terrace); home price tier table; cost of living breakdown; pros/cons analysis; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+
+3. **is-dover-fl-good-place-to-live** — Expanded to 22,900 chars (was 8,447). metaTitle: "Is Dover FL a Good Place to Live? 2026 Honest Guide". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; pros/cons tables; well/septic considerations; flood zone details; commute table; comparison table (Dover vs Plant City, Brandon, Valrico, Seffner); buyer profile guidance; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`
+**Git commit:** 3201929 — pushed to `origin/main`
+
+---
+
+## Batch 89 — October 31, 2026
+
+**Cities covered:** Lithia FL (posts 4, 6, 7), Brandon FL (posts 5, 9, 10), Florida statewide (post 8)
+**Goal:** Expand remaining 7 stub posts from Batch 89 selection to 20,000–27,000 chars
+
+### Posts Expanded (10 total including Batch 88 carryover)
+
+4. **lithia-fl-alafia-river-living** — Expanded to 26,362 chars (was 8,523). metaTitle: "Alafia River Lithia FL: Properties, Recreation & Lifestyle 2026". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; Lithia Springs Park features table; property types comparison (true waterfront, acreage near river, FishHawk Ranch proximity, Lithia Pinecrest); FEMA flood zones table (AE/A/X); well and septic section; Alafia River State Park highlights table; schools table (Newsome HS, Randall MS, FishHawk Creek Elem); commute distances; buyer right/wrong analysis; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+
+5. **brandon-fl-home-insurance** — Expanded to 21,719 chars (was 8,530). metaTitle: "Brandon FL Home Insurance 2026: Costs, Tips & Savings Guide". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; cost table by home profile ($2,800–$7,000+/yr); 5 major cost drivers (roof age/type, wind mitigation, construction year, flood zone, deductibles); flood insurance NFIP/private options; Citizens Insurance 2026 depopulation context; savings strategies table; insurance timeline for buyers; Brandon neighborhood flood zone comparison; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+
+6. **lithia-fl-luxury-estates** — Expanded to 20,844 chars (was 8,554). metaTitle: "Lithia FL Luxury Estates 2026: FishHawk & Custom Acreage Guide". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; luxury price tiers table ($600K–$1.5M+); FishHawk Ranch premium sections table (Trails, Hawk Reserve, standard, West); FishHawk community amenities; rural estate property types; roads/corridors table; due diligence (taxes, flood zone, well quality, custom builder); Tampa Bay market comparison table; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+
+7. **lithia-fl-real-estate-guide-2026** — Expanded to 21,315 chars (was 8,593). metaTitle: "Lithia FL Real Estate Guide 2026: Prices, Schools & Neighborhoods". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; market overview table; neighborhood guide (FishHawk Ranch, FishHawk Ranch West, FishHawk Trails, rural Lithia); school zone lineup table; monthly cost breakdown table; comparison table vs Riverview, Valrico, Brandon, Plant City; buyer right/wrong analysis; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+
+8. **foreclosure-process-florida-guide** — Expanded to 23,825 chars (was 8,410). metaTitle: "Florida Foreclosure Process 2026: Timeline, Rights & Options". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 9-stage foreclosure timeline table; homeowner options before/after lis pendens; right of redemption; foreclosure defenses table (standing, improper notice, HAMP, statute of limitations); deficiency judgment rules; Florida auction process (online, Hillsborough County); HUD/legal resources; alternatives comparison table (modification vs short sale vs deed in lieu vs Ch13 vs foreclosure); buyer due diligence for distressed purchases; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+
+9. **brandon-fl-golf-courses** — Expanded to 20,079 chars (was 8,608). metaTitle: "Golf Courses Near Brandon FL 2026: Best Options & Communities". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; golf courses table (Heritage Isles, Summerfield, TopGolf, River Hills, Buckhorn Springs, Saddlebrook, Westchase); Bloomingdale golf community section; golf community due diligence checklist; membership options/cost table; River Hills Country Club profile; Buckhorn Springs profile; buyer search guidance; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+
+10. **brandon-fl-luxury-homes-guide** — Expanded to 21,904 chars (was 8,645). metaTitle: "Brandon FL Luxury Homes 2026: Where to Buy at $500K-$1M+". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; luxury price tiers table ($500K–$1M+); neighborhood profiles (La Collina, Bloomingdale upper tier, Arbor Oaks/Valrico border, acreage); Tampa Bay market comparison table; luxury features table by price tier; due diligence (property taxes, insurance, HOA/CDD, inspection scope); schools section; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `package-lock.json`, `AUDIT-LOG.md`
+**Git commit:** fb65bbd — pushed to `origin/main`
