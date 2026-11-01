@@ -14,21 +14,20 @@ import { testimonials } from "@/data/testimonials";
 
 // --- SEO metadata + Open Graph tags ---
 export const metadata: Metadata = {
-  title: "About Barrett Henry | Licensed Florida Real Estate Broker | REMAX Collective",
-  // 149 characters. Target is 120-155 so it does not get truncated in the SERP.
-  // WHY the wording changed: the old copy read "23+ years serving Tampa Bay
-  // buyers, sellers, and investors", which claims 23 years of Tampa Bay service.
-  // False, Barrett has been licensed since September 2003 (23+ years of real
-  // estate experience) but has only been in Florida about a decade. Here the
-  // number modifies "real estate experience" and "Tampa Bay" modifies the
-  // clients, so the two facts stay separate.
+  title: "About Barrett Henry | Florida Real Estate Broker | REMAX",
+  // Title: 60 chars. Description: target 120-155 chars.
+  // WHY the title changed: previous title was 76 chars (over the 60-char SERP limit).
+  // WHY the description changed: previous was 168 chars (over the 155-char limit).
+  // WHY "23+ years" modifies "real estate experience" not Tampa Bay service:
+  // Barrett has been licensed since September 2003 but has been in Florida
+  // about a decade, so the number must not imply 23 years of Tampa Bay service.
   description:
-    "Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective, brings 23+ years of real estate experience to Tampa Bay buyers and sellers. Call (813) 733-7907.",
+    "Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective. 23+ years experience serving Tampa Bay buyers and sellers. (813) 733-7907.",
   alternates: {
     canonical: "/about/",
   },
   openGraph: {
-    title: "About Barrett Henry | Licensed Florida Real Estate Broker | REMAX Collective",
+    title: "About Barrett Henry | Florida Real Estate Broker | REMAX",
     description:
       "23+ years of real estate experience. Licensed Florida Real Estate Broker with REMAX Collective serving Tampa Bay.",
     type: "website",

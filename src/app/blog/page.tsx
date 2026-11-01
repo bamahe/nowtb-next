@@ -16,7 +16,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Tampa Bay Real Estate Blog | Barrett Henry, REALTOR®",
   description:
-    "Tampa Bay real estate insights, market updates, buying and selling tips, neighborhood guides from Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective.",
+    "Tampa Bay real estate tips, market updates, and neighborhood guides from Barrett Henry, Licensed Florida Real Estate Broker at REMAX Collective.",
   alternates: {
     canonical: "/blog/",
   },
