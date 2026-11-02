@@ -4,6 +4,46 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-11-02 (Batch 90 — Brandon FL x1 + Seffner x1 + FishHawk Ranch Schools x1 + Valrico Schools x1 + Temple Terrace x1 + Solar Lease Topic x1 + Sell Fast x4)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, H2/H3 hierarchy, comparison tables, 5-Q&A FAQ, 12-link internal grid, Barrett Henry REMAX Collective CTA. Content dated 2026-11-02.)
+
+**Brandon FL:**
+
+1. **brandon-fl-churches** — Expanded → 34,832 chars. Faith communities buyer guide for Brandon FL; denomination coverage (Catholic, Baptist, Episcopal, nondenominational megachurch, etc.); proximity-to-neighborhoods analysis; how church proximity affects home search; ZIP 33510/33511/33527 mapping; internal links to Brandon neighborhoods; 5-Q&A FAQ. metaTitle: "Brandon FL Churches 2026: Complete Faith Community Guide". Date: 2026-11-02.
+
+**Seffner FL:**
+
+2. **is-seffner-fl-safe** — Expanded → 27,646 chars. Safety and crime context guide for Seffner FL; FBI Part 1 crime categories explained; how Hillsborough County Sheriff data is read; neighborhood-level context; comparison table Seffner vs Brandon vs Valrico vs Temple Terrace; FEMA flood zone exposure; lighting/infrastructure observations; 5-Q&A FAQ. metaTitle: "Is Seffner FL Safe? 2026 Honest Safety Guide". Date: 2026-11-02.
+
+**Schools Guides:**
+
+3. **fishhawk-ranch-schools-guide** — Expanded → 23,647 chars. Complete HCPS school zone guide for FishHawk Ranch (Lithia FL); elementary/middle/high school assignment breakdown; school zone verification process; how school zone affects home value and resale; private/charter alternatives near FishHawk; seasonal enrollment changes; 5-Q&A FAQ. metaTitle: "FishHawk Ranch Schools Guide 2026: HCPS Zones & Buyer Tips". Date: 2026-11-02.
+
+4. **valrico-fl-schools-guide-2026** — Expanded → 21,578 chars. Valrico FL school zone buyer guide; HCPS elementary/middle/high assignments by subdivision; how to verify zone before closing; comparison to FishHawk Ranch school zones; impact on home values; 5-Q&A FAQ. metaTitle: "Valrico FL Schools Guide 2026: HCPS Zones, Ratings & Buyer Tips". Date: 2026-11-02.
+
+**Real Estate Guides:**
+
+5. **temple-terrace-fl-real-estate-guide** — Expanded → 22,982 chars. Complete 2026 buyer and seller guide to Temple Terrace FL; price range breakdown by property type; HOA/non-HOA community overview; commute to USF/Tampa/Brandon; comparison table Temple Terrace vs Seffner vs Brandon vs Valrico; neighborhood character overview; 5-Q&A FAQ. metaTitle: "Temple Terrace FL Real Estate Guide 2026: Prices, HOAs, Schools". Date: 2026-11-02.
+
+**Topic Guide:**
+
+6. **solar-lease-transfer-florida-selling** — Expanded → 22,367 chars. Complete Florida guide to selling a home with a solar lease or PPA; lease vs loan vs PPA distinction; transfer approval process; buyer qualification requirements; impact on FHA/VA financing; documentary stamp considerations; comparison table: owned solar vs leased solar vs no solar for sellers; 5-Q&A FAQ. metaTitle: "Solar Lease Transfer Florida: Selling a Home with Solar 2026". Date: 2026-11-02.
+
+**Sell Fast Guides:**
+
+7. **sell-home-fast-fishhawk** — Expanded → 23,179 chars. Honest guide to selling quickly in FishHawk Ranch / Lithia FL; pricing strategy; CDD disclosure requirements; HOA resale packet timeline; days-on-market context; comparison table FishHawk vs Riverview vs Brandon vs Valrico for seller timeline; Barrett Henry REMAX Collective CTA; 5-Q&A FAQ. metaTitle: "Sell Home Fast FishHawk Ranch FL 2026: Honest Seller Guide". Date: 2026-11-02.
+
+8. **sell-home-fast-gulfport** — Expanded → 23,251 chars. Honest seller guide for Gulfport FL (Pinellas County); pricing context; flood zone disclosure (Zone AE/VE exposure); waterfront vs inland pricing split; days-on-market context; comparison table Gulfport vs St. Pete vs Treasure Island for sellers; Barrett Henry REMAX Collective CTA; 5-Q&A FAQ. metaTitle: "Sell Home Fast Gulfport FL 2026: Honest Seller Guide". Date: 2026-11-02.
+
+9. **sell-home-fast-ellenton** — Expanded → 23,093 chars. Honest seller guide for Ellenton FL (Manatee County); Ellenton Premium Outlets proximity context; commuter corridor pricing; days-on-market context; comparison table Ellenton vs Palmetto vs Bradenton vs Parrish for sellers; Barrett Henry REMAX Collective CTA; 5-Q&A FAQ. metaTitle: "Sell Home Fast Ellenton FL 2026: Honest Seller Guide". Date: 2026-11-02.
+
+10. **sell-home-fast-venice** — Expanded → 23,000 chars. Honest seller guide for Venice FL (Sarasota County); seasonal retiree buyer market context; Venice Island vs mainland pricing distinction; days-on-market context; comparison table Venice vs Osprey vs Nokomis vs Englewood for sellers; Barrett Henry REMAX Collective CTA; 5-Q&A FAQ. metaTitle: "Sell Home Fast Venice FL 2026: Honest Seller Guide". Date: 2026-11-02.
+
+---
+
 ## 2026-10-31 (Batch 88 — FishHawk Ranch x2 + Valrico x1 + Tampa Bay Buyer Topics x4 + Hillsborough County x3)
 
 **Pages improved: 10**
