@@ -3404,11 +3404,12 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 
 ---
 
-## 2026-11-02 (Batch 88 — South Hillsborough County x10: Apollo Beach, Ruskin, Lithia, Plant City, Dover)
+## Batch 90 — November 2, 2026
 
-**Pages improved: 10**
+**Cities covered:** Apollo Beach FL (posts 1, 10), Ruskin FL (posts 2, 8, 10), Lithia FL (posts 3, 4, 5), Plant City FL (posts 6, 7), Dover FL (post 9)
+**Goal:** Expand 10 stub posts to 17,000–27,000 chars with full SEO/AEO/GEO optimization
 
-### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, 4+ H2 headings, 6+ H3 subheadings, comparison/buyer tables, 5-6 Q&A FAQ, internal links grid, Barrett Henry REMAX Collective bio. Content dated 2026-11-02.)
+### Posts Expanded (10 total, all posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, 4+ H2 headings, 6+ H3 subheadings, comparison/buyer tables, 5-6 Q&A FAQ, internal links grid, Barrett Henry REMAX Collective bio. Content dated 2026-11-02.)
 
 1. **apollo-beach-fl-real-estate-2026** — Expanded to 27,028 chars. metaTitle: "Apollo Beach FL Real Estate 2026: Prices, Neighborhoods & Guide". Added: Quick Answer box; waterfront vs non-waterfront price table; Waterset/MiraBay/Andalucia neighborhood breakdowns; 8-row full comparison table; flood insurance analysis (Zone AE/VE, $2,500-$8,000/yr); commute table; school zone table; buyer profile guidance; BreadcrumbList + Article + FAQPage JSON-LD; 6-Q&A FAQ. Date: 2026-11-02.
 
@@ -3431,4 +3432,5 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 10. **ruskin-fl-vs-apollo-beach** — Expanded to 21,462 chars. metaTitle: "Ruskin FL vs Apollo Beach: Which Is Better to Buy in 2026?". Added: Quick Answer box; 5-tier price comparison table; Ruskin/Apollo Beach neighborhood breakdowns; 12-row full comparison table; insurance cost analysis (Zone X vs Zone AE/VE); school zone comparison; who-should-buy-in-each guidance; ViVi Property Management link; BreadcrumbList + Article + FAQPage JSON-LD; 5-Q&A FAQ. Date: 2026-11-02.
 
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
-**Files changed:** src/data/posts-export.json, AUDIT-LOG.md
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** e30f86e — pushed to `origin/main`
