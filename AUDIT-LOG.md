@@ -3401,3 +3401,34 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `package-lock.json`, `AUDIT-LOG.md`
 **Git commit:** fb65bbd — pushed to `origin/main`
+
+---
+
+## 2026-11-02 (Batch 88 — South Hillsborough County x10: Apollo Beach, Ruskin, Lithia, Plant City, Dover)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, 4+ H2 headings, 6+ H3 subheadings, comparison/buyer tables, 5-6 Q&A FAQ, internal links grid, Barrett Henry REMAX Collective bio. Content dated 2026-11-02.)
+
+1. **apollo-beach-fl-real-estate-2026** — Expanded to 27,028 chars. metaTitle: "Apollo Beach FL Real Estate 2026: Prices, Neighborhoods & Guide". Added: Quick Answer box; waterfront vs non-waterfront price table; Waterset/MiraBay/Andalucia neighborhood breakdowns; 8-row full comparison table; flood insurance analysis (Zone AE/VE, $2,500-$8,000/yr); commute table; school zone table; buyer profile guidance; BreadcrumbList + Article + FAQPage JSON-LD; 6-Q&A FAQ. Date: 2026-11-02.
+
+2. **ruskin-fl-real-estate-guide-2026** — Expanded to 23,708 chars. metaTitle: "Ruskin FL Real Estate Guide 2026: Prices, Neighborhoods & Commute". Added: Quick Answer box; 4-tier price table ($270K-$560K+); neighborhood profiles (Masonboro, Shell Cove, Hawkstone, Cypress Creek, historic riverfront); market stats; school zone table; commute table; investor yield analysis; BreadcrumbList + Article + FAQPage JSON-LD; 6-Q&A FAQ. Date: 2026-11-02.
+
+3. **lithia-fl-commute-guide** — Expanded to 17,999 chars. metaTitle: "Lithia FL Commute Guide 2026: Drive Times to Tampa & Beyond". Added: Quick Answer box; 5-destination commute table; 3 route options; peak vs off-peak breakdown; HART bus 32 options; buyer profile guidance; BreadcrumbList + Article + FAQPage JSON-LD; 5-Q&A FAQ. Date: 2026-11-02.
+
+4. **fishhawk-vs-waterset** — Expanded to 19,312 chars. metaTitle: "FishHawk Ranch vs Waterset: Which Is Better in 2026?". Added: Quick Answer box; 12-row side-by-side comparison table; school comparison; commute table; buyer profile guidance for each community; BreadcrumbList + Article + FAQPage JSON-LD; 6-Q&A FAQ. Date: 2026-11-02.
+
+5. **lithia-fl-vs-valrico** — Expanded to 16,889 chars. metaTitle: "Lithia FL vs Valrico FL: Which Is Better to Buy in 2026?". Added: Quick Answer box; 10-row side-by-side comparison table; school comparison; price-per-sq-ft analysis; buyer profile section; BreadcrumbList + Article + FAQPage JSON-LD; 5-Q&A FAQ. Date: 2026-11-02.
+
+6. **plant-city-fl-real-estate-guide-2026** — Expanded to 19,078 chars. metaTitle: "Plant City FL Real Estate Guide 2026: Prices & Neighborhoods". Added: Quick Answer box; 4-tier price table; neighborhood profiles; commute table; school zone table; investor yield analysis; BreadcrumbList + Article + FAQPage JSON-LD; 5-Q&A FAQ. Date: 2026-11-02.
+
+7. **is-plant-city-fl-good-place-to-live** — Expanded to 17,887 chars. metaTitle: "Is Plant City FL a Good Place to Live? 2026 Honest Review". Added: Quick Answer box; pros and cons table (12 factors); cost of living comparison; commute reality table; who-should-buy/who-should-skip guidance; BreadcrumbList + Article + FAQPage JSON-LD; 5-Q&A FAQ. Date: 2026-11-02.
+
+8. **ruskin-fl-market-trends** — Expanded to 17,055 chars. metaTitle: "Ruskin FL Housing Market Trends 2026: Data & Forecast". Added: Quick Answer box; market stats table; price trend analysis 2021-2026; inventory analysis; 3-year forecast; new construction pipeline; investment market section; BreadcrumbList + Article + FAQPage JSON-LD; 5-Q&A FAQ. Date: 2026-11-02.
+
+9. **dover-fl-real-estate-guide-2026** — Expanded to 21,885 chars. metaTitle: "Dover FL Real Estate Guide 2026: Prices, Neighborhoods & Schools". Added: Quick Answer box; 4-tier price table including equestrian; neighborhood profiles; Dover vs Brandon/Valrico/Plant City 3-table comparison; commute table; school zone table; equestrian/agricultural property section; buyer tips (flood zone, well/septic, no city services); BreadcrumbList + Article + FAQPage JSON-LD; 5-Q&A FAQ. Date: 2026-11-02.
+
+10. **ruskin-fl-vs-apollo-beach** — Expanded to 21,462 chars. metaTitle: "Ruskin FL vs Apollo Beach: Which Is Better to Buy in 2026?". Added: Quick Answer box; 5-tier price comparison table; Ruskin/Apollo Beach neighborhood breakdowns; 12-row full comparison table; insurance cost analysis (Zone X vs Zone AE/VE); school zone comparison; who-should-buy-in-each guidance; ViVi Property Management link; BreadcrumbList + Article + FAQPage JSON-LD; 5-Q&A FAQ. Date: 2026-11-02.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** src/data/posts-export.json, AUDIT-LOG.md
