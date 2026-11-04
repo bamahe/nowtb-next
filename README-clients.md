@@ -224,3 +224,54 @@ tail. Treat it like an unlisted link, not a password.
 - **Build fails with "Cannot find module .next/server/app/[citySlug]/page.js".**
   Stale build cache, nothing to do with these pages. Run `rm -rf .next` and
   build again.
+
+---
+
+# Client Timeline (showings + deal milestones)
+
+A private, phone-friendly page that shows a client every showing and every
+deal step in order, with photos, directions, nowtb.com listing links, and a
+call/text button. Example: https://nowtb.com/clients/t/demo-5ac827/
+
+**The only file you edit:** `data/timelines/<slug>.json`
+
+Make the slug the client's last name plus a random code, for example
+`johnson-4f9a21`, so nobody can guess it.
+
+## Top of the file
+
+| Field | What goes in it |
+|---|---|
+| `client` | Name shown big at the top, e.g. "Allison and Justin" |
+| `headline` | Optional short line, e.g. "Home search, New Tampa" |
+| `agent` | Optional. Leave it out and it shows Barrett. Any piece you add overrides just that piece (`name`, `title`, `brokerage`, `phone`, `email`, `photo`) |
+| `events` | The list of steps, in the order they happen |
+
+## Each step in `events`
+
+| Field | What goes in it |
+|---|---|
+| `kind` | `showing`, `open_house`, `offer_sent`, `offer_accepted`, `escrow_deposit`, `inspection`, `appraisal`, `loan_approval`, `final_walkthrough`, `closing`, `other` |
+| `title` | Big line, e.g. "Property Showing" |
+| `when` | Tampa local time, e.g. `"2026-11-08T10:00"`. No time zone needed, daylight saving is handled. Leave it out for "Date to be set" |
+| `allDay` | `true` for deadlines where the clock time doesn't matter |
+| `status` | `scheduled` (default), `done` (green check), or `canceled` (grayed and struck) |
+| `note` | One or two plain sentences for the client |
+| `address`, `city`, `zip` | Showings. Powers the Directions button |
+| `mls` | Showings. Powers the View Listing button (nowtb.com link) |
+| `price`, `beds`, `baths`, `sqft` | Showings. Optional facts on the card |
+| `photo` | Full https link to a listing photo. Leave out for a clean placeholder |
+| `gateCode` | Gate code only |
+
+> **NEVER put lockbox, Supra, or combo codes in this file.** The client sees
+> everything on this page. Gate codes only.
+
+Showings on the same day are numbered Stop 1, Stop 2, Stop 3 automatically.
+A step with no date stays where you listed it.
+
+## If it breaks, check this
+
+- Page 404s: the file name must match the slug exactly and end in `.json`.
+- Build fails: a missing comma or quote in the JSON. Paste it into jsonlint.com.
+- Wrong time: `when` needs the `T`, e.g. `2026-11-08T10:00`, not `2026-11-08 10:00`.
+- View Listing missing: that step needs both `address` and `mls`.

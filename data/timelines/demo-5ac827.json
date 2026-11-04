@@ -1,0 +1,79 @@
+{
+  "client": "Sample Buyer",
+  "headline": "Home search, Brandon / Valrico / Riverview",
+  "events": [
+    {
+      "kind": "showing",
+      "title": "Property Showing",
+      "when": "2026-11-01T10:00",
+      "status": "done",
+      "note": "Loved the open kitchen. Backyard smaller than we want.",
+      "address": "100 Sample Oak Dr",
+      "city": "Valrico",
+      "zip": "33594",
+      "mls": "TB0000001",
+      "price": 449900,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 2140
+    },
+    {
+      "kind": "showing",
+      "title": "Property Showing",
+      "when": "2026-11-01T10:45",
+      "status": "done",
+      "address": "200 Example Pine Ct",
+      "city": "Brandon",
+      "zip": "33511",
+      "mls": "TB0000002",
+      "price": 425000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1890,
+      "gateCode": "#1234"
+    },
+    {
+      "kind": "offer_sent",
+      "title": "Offer Submitted",
+      "when": "2026-11-02T18:00",
+      "status": "done",
+      "note": "Offer sent on 200 Example Pine Ct. Seller response expected within 48 hours."
+    },
+    {
+      "kind": "offer_accepted",
+      "title": "Offer Accepted",
+      "when": "2026-11-04T12:00",
+      "status": "done",
+      "note": "You're under contract. Congrats!"
+    },
+    {
+      "kind": "escrow_deposit",
+      "title": "Escrow Deposit Due",
+      "when": "2026-11-07T17:00",
+      "allDay": true,
+      "note": "Wire or deliver your deposit to the title company. Always call title at a known number to confirm wiring instructions before sending."
+    },
+    {
+      "kind": "inspection",
+      "title": "Home Inspection",
+      "when": "2026-11-10T09:00",
+      "note": "Plan for about 3 hours. You're welcome to come for the last 30 minutes walkthrough."
+    },
+    {
+      "kind": "appraisal",
+      "title": "Appraisal",
+      "note": "Your lender orders this. We'll post the date once it's scheduled."
+    },
+    {
+      "kind": "final_walkthrough",
+      "title": "Final Walkthrough",
+      "when": "2026-12-03T15:00"
+    },
+    {
+      "kind": "closing",
+      "title": "Closing Day",
+      "when": "2026-12-04T10:00",
+      "note": "Bring a government ID. Keys are yours once it records."
+    }
+  ]
+}
