@@ -3480,3 +3480,17 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 
 **Build:** Passed. New post and edited posts render 200 locally.
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+## Batch 93: November 4, 2026
+
+**Goal:** Remove auto-generated junk FAQPage schema ("What is real estate like in [truncated title]?") that did not match any visible page content.
+
+- **103 posts affected** (earlier estimate of 69 was low).
+- **49 rebuilt:** post has a real visible FAQ section, so FAQPage JSON-LD was regenerated from those visible Q&As.
+- **54 removed:** post has no visible FAQ, so the junk block was deleted (Google requires FAQ schema to match on-page content).
+- Also: best-time-to-move-to-tampa-bay rewritten in Barrett's first-person voice (commit 24a9613).
+
+**Known issue, not fixed this batch:** 48 posts contain JSON-LD blocks that are invalid JSON (pre-existing; Google ignores them). Candidates for a future batch.
+
+**Build:** Passed (559 static pages).
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
