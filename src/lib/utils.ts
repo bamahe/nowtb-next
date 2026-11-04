@@ -161,10 +161,24 @@ const BOILERPLATE_WRAPPER_CLASSES = [
  * carries extra classes still matches. Not global, we re-search after each
  * excision because indexes shift.
  */
-const BOILERPLATE_WRAPPER_RE = new RegExp(
-  `class="[^"]*\\b(?:${BOILERPLATE_WRAPPER_CLASSES.join('|')})\\b[^"]*"`,
-  'i'
-);
+//
+// WRITTEN AS A REGEX LITERAL ON PURPOSE (fixed 2026-11-04). This used to be
+//   new RegExp(`class="[^"]*\\b(?:${BOILERPLATE_WRAPPER_CLASSES.join('|')})\\b[^"]*"`, 'i')
+// which is correct in source, but the production minifier (SWC in Next 14.2)
+// rewrote the template literal into a single-quoted string as '...\\\b...',
+// turning each `\b` word boundary into a literal backspace character. The
+// regex then never matched, so Rule 1 silently never ran in production and
+// every legacy footer block rendered, including image-less "Related Articles"
+// cards that collapsed into stray floating link text near the top of posts.
+// A regex literal is emitted verbatim by the minifier. If you add a class to
+// BOILERPLATE_WRAPPER_CLASSES, add it here too; the check below enforces it.
+const BOILERPLATE_WRAPPER_RE =
+  /class="[^"]*\b(?:nowtb-footer-section|nowtb-related|nowtb-communities|nowtb-resources|nowtb-about|nowtb-disclaimer)\b[^"]*"/i;
+for (const cls of BOILERPLATE_WRAPPER_CLASSES) {
+  if (!BOILERPLATE_WRAPPER_RE.test(`class="${cls}"`)) {
+    throw new Error(`BOILERPLATE_WRAPPER_RE is missing class: ${cls}`);
+  }
+}
 
 /**
  * Headings that MIGHT introduce a link directory. On their own these prove
@@ -255,7 +269,15 @@ function findElementSpan(
  */
 function exciseBlock(html: string, start: number, end: number): string | null {
   const removed = html.slice(start, end);
-  if (FAQ_CONTENT_GUARD.test(removed)) return null; // hard invariant, keep it
+  // Test the guard against the span WITHOUT its JSON-LD. A FAQPage schema
+  // block inside the span is rescued below (re-inserted in place), so it can
+  // never be lost and must not block the excision. Before this (fixed
+  // 2026-11-04), a FAQPage <script> sitting inside a nowtb-footer-section made
+  // the guard refuse, so the legacy "Related Articles" grid rendered on the
+  // page, and its image-less cards collapsed into stray floating link text.
+  // A visible "Frequently Asked Questions" heading inside the span still
+  // refuses the excision, exactly as before.
+  if (FAQ_CONTENT_GUARD.test(removed.replace(JSON_LD_RE, ''))) return null; // hard invariant, keep it
   const rescued = (removed.match(JSON_LD_RE) || []).join('\n');
   return html.slice(0, start) + (rescued ? `\n${rescued}\n` : '') + html.slice(end);
 }

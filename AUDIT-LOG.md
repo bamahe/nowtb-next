@@ -3510,3 +3510,15 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 - Em dashes removed from the 13 touched best-realtor posts and One Tampa.
 
 **Build:** Passed (559 static pages).
+
+## Batch 95: November 4, 2026
+
+**Bug:** Stray "Investment Property Tampa Bay" link floating near the top of posts (reported on best-realtor-riverview, mobile).
+
+**Root cause:** `BOILERPLATE_WRAPPER_RE` in `src/lib/utils.ts` was built with `new RegExp(` + template literal containing `\\b`. The production minifier (SWC, Next 14.2) constant-folded it into a single-quoted string as `'\\\b'`, turning each `\b` into a backspace character. The regex never matched in production, so legacy WordPress footer blocks (Related Articles cards, Explore Communities, Helpful Resources, duplicated bio, disclaimer) rendered on all 540 posts that carry them. Image-less Related Articles cards collapsed to zero height and their captions floated as stray links.
+
+**Fix:**
+1. Rewrote the regex as a literal (minifier emits it verbatim), with a startup check that every class in `BOILERPLATE_WRAPPER_CLASSES` is covered.
+2. `exciseBlock` FAQ guard now ignores JSON-LD inside the span (it is rescued and re-inserted anyway), so a FAQPage schema sitting inside a footer no longer blocks removal. A visible FAQ heading still blocks it.
+
+**Verified:** Compiled chunk contains `\b` correctly. Sample of 12 server-rendered posts: legacy footer gone, FAQ schema preserved wherever the source has it, "Need Help" CTA preserved. Mobile screenshot clean.
