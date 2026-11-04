@@ -3494,3 +3494,19 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 
 **Build:** Passed (559 static pages).
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+## Batch 94: November 4, 2026
+
+**Goal:** Fix every invalid JSON-LD block on the site (48 posts). Sitewide unparseable JSON-LD: 48 to 0.
+
+- **Auto-linker damage (33 blocks):** `<a href>` tags had been injected inside JSON strings. Links stripped from schema text.
+- **Doubled braces (10 Dundee posts):** `{{ }}` template artifacts fixed. 7 rebuilt from visible FAQ where schema questions did not match the page.
+- **Bad escapes (4 posts):** `\'` replaced with plain apostrophes.
+- **Missing quotes (3 Redington/South Pasadena posts):** closing quotes restored.
+- **one-tampa-residences:** a full "One Tampa 2026 Construction and Sales Update" section (~3,900 chars) was trapped inside a JSON-LD block and invisible. Rescued into the page body; junk templated FAQ schema removed.
+- **14 posts (13 best-realtor-[area] + buying-home-apollo-beach-guide):** FAQ schema had good answers but no visible FAQ on page. Added a visible "Frequently Asked Questions" section matching the schema.
+- **2 luxury posts (St Pete Beach, St Petersburg):** junk truncated-title FAQ schema removed.
+- **south-tampa-luxury-real-estate-guide:** FAQ schema rebuilt from the visible FAQ.
+- Em dashes removed from the 13 touched best-realtor posts and One Tampa.
+
+**Build:** Passed (559 static pages).
