@@ -3467,3 +3467,16 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** 0868d32 — pushed to `origin/main`
+
+## Batch 92: November 4, 2026
+
+**Goal:** Fill the "best time to move to Tampa Bay" content gap and clean up the main relocation guide.
+
+1. **NEW: best-time-to-move-to-tampa-bay** (id:91762). Month-by-month table (weather, storm risk, housing competition), best window by situation (families, retirees, remote workers, military, buyers, renters), hurricane season and snowbird season sections, summer moving tips, moving timeline checklist with homestead March 1 deadline, Quick Answer box, 5-Q&A FAQ with FAQPage JSON-LD, 12-link internal grid.
+2. **FIX: ultimate-tampa-bay-relocation-guide** (id:4238). Removed fully duplicated body (every section appeared twice). Replaced broken auto-generated FAQPage schema ("The Ultimate Tampa Bay Relocat") with schema matching the visible FAQ. Replaced junk excerpt. Removed double-hyphen dashes. Added link to new post in Hurricane Season section. 40,499 to 29,060 chars.
+3. **Cross-links to new post** added in: tampa-bay-weather-guide, best-time-buy-home-tampa-bay-2026, moving-to-brandon-fl-relocation-guide, moving-to-tampa-bay-from-up-north.
+
+**Known issue, not fixed this batch:** about 69 other posts carry the same broken auto-generated FAQ schema pattern ("What is real estate like in [truncated title]?").
+
+**Build:** Passed. New post and edited posts render 200 locally.
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
