@@ -3434,3 +3434,36 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** e30f86e — pushed to `origin/main`
+
+---
+
+## Batch 91 — November 4, 2026
+
+**Cities covered:** Siesta Key FL, Longboat Key FL, North Port FL, Port Richey FL, Brooksville FL, Inverness FL, Englewood FL, Homosassa FL, Holmes Beach FL (Anna Maria Island), Brandon FL medical facilities
+**Goal:** Expand 10 stub posts to 20,000+ chars with full SEO/AEO/GEO optimization
+
+### Posts Expanded (10 total, all posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, 4+ H2 headings, 6+ H3 subheadings, comparison/pricing tables, 5-Q&A FAQ, internal links grid. Content dated 2026-11-03.)
+
+1. **sell-home-fast-siesta-key** (id:20841) — Expanded to 20,000+ chars. metaTitle: "Sell Your Home Fast in Siesta Key FL 2026: Pricing & Timeline". Added: Quick Answer box; STR implications; condo SB 4-D disclosures; Zone AE/VE pricing tiers (Gulf-front $900K-$3M+ to interior $450K-$900K); DOM 30-60 days; seller closing costs; buyer profiles; 12-link internal grid.
+
+2. **sell-home-fast-longboat-key** (id:20818) — Expanded to 20,000+ chars. metaTitle: "Sell Your Home Fast in Longboat Key FL 2026 | Barrett Henry". Added: Quick Answer box; ultra-luxury pricing ($600K-$20M+); non-warrantable condo buildings; cash buyers dominant above $2M; DOM 45-180+ days; flood zone/FEMA disclosures; 12-link internal grid.
+
+3. **sell-home-fast-north-port** (id:20837) — Expanded to 20,000+ chars. metaTitle: "Sell Your Home Fast in North Port FL 2026: Price & Timeline". Added: Quick Answer box; new construction competition factor; pricing $280K-$550K; DOM 25-45 days; Warm Mineral Springs; CDD fee disclosures; 12-link internal grid.
+
+4. **sell-home-fast-port-richey** (id:20811) — Expanded to 20,000+ chars. metaTitle: "Sell Your Home Fast in Port Richey FL 2026: Pricing Guide". Added: Quick Answer box; aging housing stock (1960s-1990s); roof/HVAC/electrical issues; Cotee River waterfront; pricing $180K-$700K+; DOM 20-40 days; 12-link internal grid.
+
+5. **sell-home-fast-brooksville** (id:20842) — Expanded to 20,000+ chars. metaTitle: "Sell Your Home Fast in Brooksville FL 2026: Pricing Guide". Added: Quick Answer box; equestrian/rural property; well and septic disclosures; Suncoast Parkway commute; pricing $200K-$900K+; DOM 30-120 days; 12-link internal grid.
+
+6. **sell-home-fast-inverness** (id:20848) — Expanded to 20,000+ chars. metaTitle: "Sell Your Home Fast in Inverness FL 2026 | Citrus County". Added: Quick Answer box; Lake Henderson/Lake Tsala Apopka chain; retirement market; well and septic; Crystal River proximity; pricing $160K-$750K+; DOM 45-120 days; 12-link internal grid.
+
+7. **sell-home-fast-englewood** (id:20838) — Expanded to 20,000+ chars. metaTitle: "Sell Your Home Fast in Englewood FL 2026: Pricing & Timeline". Added: Quick Answer box; Charlotte/Sarasota County border complexities; Lemon Bay; Hurricane Ian disclosure requirements; canal-front Gulf access; pricing $250K-$2M+; DOM 30-70 days; 12-link internal grid.
+
+8. **sell-home-fast-homosassa** (id:20849) — Expanded to 20,000+ chars. metaTitle: "Sell Your Home Fast in Homosassa FL 2026 | Citrus County". Added: Quick Answer box; Homosassa River; manatee/wildlife appeal; fishing/boating; well and septic; pricing $175K-$1M+; DOM 50-120 days; 12-link internal grid.
+
+9. **sell-home-fast-holmes-beach** (id:20804) — Expanded to 20,000+ chars. metaTitle: "Sell Your Home Fast in Holmes Beach FL 2026 | Anna Maria Island". Added: Quick Answer box; STR permit documentation; Zone VE/AE pricing tiers (Gulf-front $2.5M-$5M+ to interior condos $500K-$900K); Hurricane Ian disclosures; Manatee County taxes; cap rate analysis for investor buyers; DOM 30-60 days; 12-link internal grid.
+
+10. **brandon-fl-medical-facilities** (id:20975) — Major expansion to 20,000+ chars. metaTitle: "Brandon FL Medical Facilities Guide 2026: Hospitals & Clinics". Added: Quick Answer box; Brandon Regional Hospital full profile (422 beds, Level II trauma, cardiac, NICU, robotic surgery); AdventHealth Brandon section; urgent care comparison table (5 providers); specialist directory by specialty (cardiology, orthopedics, neurology, oncology, gastro, dermatology, ophthalmology, urology, OB/GYN, ENT, pulmonology); pediatric care section with nearby children's hospitals; senior/geriatric services; mental health resources; dialysis/infusion centers; telemedicine options; insurance section; neighborhood proximity to Brandon Regional table; healthcare as home-buying factor analysis; 12-link internal grid.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** 0868d32 — pushed to `origin/main`
