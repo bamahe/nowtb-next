@@ -1,6 +1,6 @@
 // =============================================================================
 // /the-now-team, The NOW Team at REMAX Collective
-// Barrett Henry's real estate team since 2015. Full content page with hero,
+// Barrett Henry's real estate team. Full content page with hero,
 // philosophy, services, coverage, credentials, differentiators, and FAQ.
 // =============================================================================
 
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "The NOW Team | Tampa Bay Real Estate | REMAX Collective",
     description:
-      "Barrett Henry's real estate team at REMAX Collective serving Tampa Bay since 2015. 23+ years of real estate experience.",
+      "Barrett Henry's real estate team at REMAX Collective serving Tampa Bay. 23+ years of real estate experience.",
     type: "website",
   },
 };
@@ -46,7 +46,7 @@ const faqLd = {
       name: "What is The NOW Team?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The NOW Team is Barrett Henry's real estate team at REMAX Collective, serving Tampa Bay since 2015. The team handles residential buying, selling, investing, new construction, military relocation, and property management across 8 Florida counties.",
+        text: "The NOW Team is Barrett Henry's real estate team at REMAX Collective, serving Tampa Bay. The team handles residential buying, selling, investing, new construction, military relocation, and property management across 8 Florida counties.",
       },
     },
     {
@@ -141,7 +141,7 @@ export default function TheNowTeamPage() {
       {/* ---- Hero Section ---- */}
       <HeroSection
         title="The NOW Team"
-        subtitle="Barrett Henry's real estate team at REMAX Collective, serving Tampa Bay since 2015."
+        subtitle="Barrett Henry's real estate team at REMAX Collective, serving Tampa Bay."
         label="BARRETT HENRY | REMAX COLLECTIVE"
       >
         {/* CTA in hero */}
@@ -465,7 +465,7 @@ export default function TheNowTeamPage() {
               </h3>
               <p className="font-body text-muted font-light text-base leading-relaxed">
                 The NOW Team is Barrett Henry&apos;s real estate team at REMAX
-                Collective, serving Tampa Bay since 2015. The team handles
+                Collective, serving Tampa Bay. The team handles
                 residential buying, selling, investing, new construction,
                 military relocation, and property management across 8 Florida
                 counties. Barrett personally leads every transaction.
