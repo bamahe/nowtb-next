@@ -4,6 +4,34 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-11-05 (Batch 96 — Sell Fast x10: Dundee, Osprey, Lecanto, Nokomis, Mulberry, Polk City, Fort Meade, Ridge Manor, Kenneth City, Spring Hill)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, H2/H3 hierarchy, Market Snapshot table, Price Tiers table, location-specific section, comparison table, seller closing costs table, 5-Q&A FAQ, 12-link internal grid, Barrett Henry REMAX Collective CTA. Content dated 2026-11-05.)
+
+1. **sell-home-fast-dundee** — Expanded 8,651 → 22,872 chars. Polk County ridge lakes market; Zone X; Chain of Lakes proximity; median ~$255,000; 25-45 DOM; 5-Q&A FAQ. metaTitle: "Sell Your Home Fast in Dundee FL 2026 | Barrett Henry". Date: 2026-11-05.
+
+2. **sell-home-fast-osprey** — Expanded 8,655 → 20,473 chars. Sarasota County coastal community; Zone AE flood awareness; Pine View School district; median ~$465,000; 25-45 DOM; well/septic considerations; 5-Q&A FAQ. metaTitle: "Sell Your Home Fast in Osprey FL 2026 | Barrett Henry". Date: 2026-11-05.
+
+3. **sell-home-fast-lecanto** — Expanded 8,676 → 21,102 chars. Rural Citrus County; well/septic common; retirement market; median ~$225,000; 35-60 DOM; comparison to Crystal River/Inverness/Beverly Hills; 5-Q&A FAQ. metaTitle: "Sell Your Home Fast in Lecanto FL 2026 | Barrett Henry". Date: 2026-11-05.
+
+4. **sell-home-fast-nokomis** — Expanded 8,678 → 19,675 chars. Sarasota County Intracoastal; Zone AE/VE flood exposure; Old Florida character; median ~$420,000; 25-45 DOM; flood insurance disclosure; 5-Q&A FAQ. metaTitle: "Sell Your Home Fast in Nokomis FL 2026 | Barrett Henry". Date: 2026-11-05.
+
+5. **sell-home-fast-mulberry** — Expanded 8,697 → 20,264 chars. Polk County phosphate mining heritage; affordable market; median ~$220,000; 30-55 DOM; comparison to Bartow/Lakeland/Fort Meade/Plant City; 5-Q&A FAQ. metaTitle: "Sell Your Home Fast in Mulberry FL 2026 | Barrett Henry". Date: 2026-11-05.
+
+6. **sell-home-fast-polk-city** — Expanded 8,720 → 19,287 chars. Polk County Chain of Lakes; Lake Hatchineha; Zone AE lakefront considerations; median ~$265,000; 30-55 DOM; 5-Q&A FAQ. metaTitle: "Sell Your Home Fast in Polk City FL 2026 | Barrett Henry". Date: 2026-11-05.
+
+7. **sell-home-fast-fort-meade** — Expanded 8,743 → 18,985 chars. South Polk County; Peace River flood zone; rural character; median ~$195,000; 35-65 DOM; comparison to Bartow/Avon Park/Wauchula/Sebring; 5-Q&A FAQ. metaTitle: "Sell Your Home Fast in Fort Meade FL 2026 | Barrett Henry". Date: 2026-11-05.
+
+8. **sell-home-fast-ridge-manor** — Expanded 8,777 → 19,475 chars. Withlacoochee River corridor; Pasco/Hernando county line; US-301 commute; well/septic; median ~$215,000; 35-65 DOM; 5-Q&A FAQ. metaTitle: "Sell Your Home Fast in Ridge Manor FL 2026 | Barrett Henry". Date: 2026-11-05.
+
+9. **sell-home-fast-kenneth-city** — Expanded 8,793 → 21,013 chars. Small Pinellas County municipality; 1950s-1980s housing stock; Zone X; median ~$285,000; 20-40 DOM; comparison to Pinellas Park/St. Pete/Clearwater; 5-Q&A FAQ. metaTitle: "Sell Your Home Fast in Kenneth City FL 2026 | Barrett Henry". Date: 2026-11-05.
+
+10. **sell-home-fast-spring-hill** — Expanded 8,805 → 22,001 chars. Large Hernando County community; Suncoast Parkway commute; Weeki Wachee Springs; well/septic common; median ~$295,000; 25-50 DOM; comparison to Brooksville/Wesley Chapel/New Port Richey; 5-Q&A FAQ. metaTitle: "Sell Your Home Fast in Spring Hill FL 2026 | Barrett Henry". Date: 2026-11-05.
+
+---
+
 ## 2026-11-02 (Batch 90 — Brandon FL x1 + Seffner x1 + FishHawk Ranch Schools x1 + Valrico Schools x1 + Temple Terrace x1 + Solar Lease Topic x1 + Sell Fast x4)
 
 **Pages improved: 10**
