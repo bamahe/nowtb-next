@@ -4,6 +4,34 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## 2026-11-06 (Batch 97 — Sell Fast x6 + Lithia Investment x1 + Pool Homes Valrico x1 + Ruskin Things to Do x1 + Lithia Schools x1)
+
+**Pages improved: 10**
+
+### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, H2/H3 hierarchy, comparison tables, 8-Q&A FAQ, 12-link internal grid, Barrett Henry REMAX Collective CTA. Content dated 2026-11-05.)
+
+1. **sell-home-fast-weeki-wachee** — Expanded → 23,419 chars. Hernando County rural market; well/septic common; sinkhole disclosure requirements; equestrian properties; Zone X/AE; median ~$290,000; 30-55 DOM; comparison to Spring Hill/Brooksville/Dade City. metaTitle: "Sell Your Home Fast in Weeki Wachee FL 2026 | Barrett Henry". Date: 2026-11-05.
+
+2. **sell-home-fast-crystal-river** — Expanded → 20,172 chars. Citrus County manatee tourism hub; Crystal River National Wildlife Refuge; STR demand; retirement and second-home buyer market; well/septic; median ~$265,000; 30-60 DOM; comparison to Inverness/Lecanto/Homosassa. metaTitle: "Sell Your Home Fast in Crystal River FL 2026 | Barrett Henry". Date: 2026-11-05.
+
+3. **sell-home-fast-hernando-beach** — Expanded → 17,708 chars. Hernando County canal-front community; Zone AE; dock permits; Hernando Beach waterway system; Hurricane Idalia context; median ~$295,000; 25-50 DOM; flood insurance requirements. metaTitle: "Sell Your Home Fast in Hernando Beach FL 2026 | Barrett Henry". Date: 2026-11-05.
+
+4. **sell-home-fast-bradenton-beach** — Expanded → 18,069 chars. Anna Maria Island; Zone VE/AE; SB 4-D condo law implications; STR demand; vacation home market; median ~$775,000; 40-80 DOM; comparison to Holmes Beach/Anna Maria/Longboat Key. metaTitle: "Sell Your Home Fast in Bradenton Beach FL 2026 | Barrett Henry". Date: 2026-11-05.
+
+5. **sell-home-fast-treasure-island** — Expanded → 18,250 chars. Pinellas barrier island; Zone VE/AE; SB 4-D condo law; STR market; Sunset Beach and Treasure Island Beach; median ~$640,000; 35-70 DOM; comparison to St. Pete Beach/Madeira Beach/Indian Rocks Beach. metaTitle: "Sell Your Home Fast in Treasure Island FL 2026 | Barrett Henry". Date: 2026-11-05.
+
+6. **sell-home-fast-indian-rocks-beach** — Expanded → 19,302 chars. Pinellas County barrier island; Zone VE/AE; SB 4-D condo law; STR; residential small-town character; median ~$595,000; 35-70 DOM; comparison to Belleair Beach/Indian Shores/Redington Beach. metaTitle: "Sell Your Home Fast in Indian Rocks Beach FL 2026 | Barrett Henry". Date: 2026-11-05.
+
+7. **lithia-fl-investment-properties** — Expanded → 20,426 chars. FishHawk Ranch investment analysis; school zone premium; HOA restrictions on STR; long-term appreciation vs yield trade-off; Newsome HS feeder; ViVi Property Management; median rental vs purchase analysis; comparison to Riverview/Valrico/Brandon/Wesley Chapel. metaTitle: "Lithia FL Investment Properties: Rentals and Long-Term Growth 2026". Date: 2026-11-05.
+
+8. **pool-homes-valrico-fl-guide** — Expanded → 19,124 chars. Pool home buyer guide for Valrico FL; pricing premiums ($25K-$60K); saltwater vs chlorine trade-offs; inspection checklist (screen enclosure, equipment, resurfacing); HOA rules on pools; annual ownership cost breakdown; comparison to Brandon/Lithia/Riverview pool market. metaTitle: "Pool Homes for Sale in Valrico FL: 2026 Buyer Guide | Barrett Henry". Date: 2026-11-05.
+
+9. **ruskin-fl-things-to-do** — Expanded → 25,684 chars. EG Simmons Conservation Area; Little Manatee River State Park paddling and hiking; Circles Waterfront Restaurant; local farm stands and tomato heritage; fishing (bay, river, pier); school zone (Lennard HS); flood zone considerations; Ruskin vs Apollo Beach vs Sun City Center comparison table; commute times to Tampa/Sarasota. metaTitle: "Things to Do in Ruskin FL: Parks, Dining, and Local Guide 2026". Date: 2026-11-05.
+
+10. **lithia-fl-schools-newsome-high** — Expanded → 25,837 chars. Newsome High School A-rating; Barrington Middle School; FishHawk Creek Elementary; Stowers Elementary; AP/IB program details; school zone premium analysis; HOA vs school zone distinction; zone boundary change risk; magnet programs; private school alternatives; ViVi PM rental angle for school-zone tenants; Hillsborough County comparison table. metaTitle: "Lithia FL Schools: Newsome High School and FishHawk District Guide 2026". Date: 2026-11-05.
+
+---
+
 ## 2026-11-05 (Batch 96 — Sell Fast x10: Dundee, Osprey, Lecanto, Nokomis, Mulberry, Polk City, Fort Meade, Ridge Manor, Kenneth City, Spring Hill)
 
 **Pages improved: 10**
