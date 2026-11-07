@@ -4,138 +4,6 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
-## 2026-11-06 (Batch 97 — Sell Fast x6 + Lithia Investment x1 + Pool Homes Valrico x1 + Ruskin Things to Do x1 + Lithia Schools x1)
-
-**Pages improved: 10**
-
-### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, H2/H3 hierarchy, comparison tables, 8-Q&A FAQ, 12-link internal grid, Barrett Henry REMAX Collective CTA. Content dated 2026-11-05.)
-
-1. **sell-home-fast-weeki-wachee** — Expanded → 23,419 chars. Hernando County rural market; well/septic common; sinkhole disclosure requirements; equestrian properties; Zone X/AE; median ~$290,000; 30-55 DOM; comparison to Spring Hill/Brooksville/Dade City. metaTitle: "Sell Your Home Fast in Weeki Wachee FL 2026 | Barrett Henry". Date: 2026-11-05.
-
-2. **sell-home-fast-crystal-river** — Expanded → 20,172 chars. Citrus County manatee tourism hub; Crystal River National Wildlife Refuge; STR demand; retirement and second-home buyer market; well/septic; median ~$265,000; 30-60 DOM; comparison to Inverness/Lecanto/Homosassa. metaTitle: "Sell Your Home Fast in Crystal River FL 2026 | Barrett Henry". Date: 2026-11-05.
-
-3. **sell-home-fast-hernando-beach** — Expanded → 17,708 chars. Hernando County canal-front community; Zone AE; dock permits; Hernando Beach waterway system; Hurricane Idalia context; median ~$295,000; 25-50 DOM; flood insurance requirements. metaTitle: "Sell Your Home Fast in Hernando Beach FL 2026 | Barrett Henry". Date: 2026-11-05.
-
-4. **sell-home-fast-bradenton-beach** — Expanded → 18,069 chars. Anna Maria Island; Zone VE/AE; SB 4-D condo law implications; STR demand; vacation home market; median ~$775,000; 40-80 DOM; comparison to Holmes Beach/Anna Maria/Longboat Key. metaTitle: "Sell Your Home Fast in Bradenton Beach FL 2026 | Barrett Henry". Date: 2026-11-05.
-
-5. **sell-home-fast-treasure-island** — Expanded → 18,250 chars. Pinellas barrier island; Zone VE/AE; SB 4-D condo law; STR market; Sunset Beach and Treasure Island Beach; median ~$640,000; 35-70 DOM; comparison to St. Pete Beach/Madeira Beach/Indian Rocks Beach. metaTitle: "Sell Your Home Fast in Treasure Island FL 2026 | Barrett Henry". Date: 2026-11-05.
-
-6. **sell-home-fast-indian-rocks-beach** — Expanded → 19,302 chars. Pinellas County barrier island; Zone VE/AE; SB 4-D condo law; STR; residential small-town character; median ~$595,000; 35-70 DOM; comparison to Belleair Beach/Indian Shores/Redington Beach. metaTitle: "Sell Your Home Fast in Indian Rocks Beach FL 2026 | Barrett Henry". Date: 2026-11-05.
-
-7. **lithia-fl-investment-properties** — Expanded → 20,426 chars. FishHawk Ranch investment analysis; school zone premium; HOA restrictions on STR; long-term appreciation vs yield trade-off; Newsome HS feeder; ViVi Property Management; median rental vs purchase analysis; comparison to Riverview/Valrico/Brandon/Wesley Chapel. metaTitle: "Lithia FL Investment Properties: Rentals and Long-Term Growth 2026". Date: 2026-11-05.
-
-8. **pool-homes-valrico-fl-guide** — Expanded → 19,124 chars. Pool home buyer guide for Valrico FL; pricing premiums ($25K-$60K); saltwater vs chlorine trade-offs; inspection checklist (screen enclosure, equipment, resurfacing); HOA rules on pools; annual ownership cost breakdown; comparison to Brandon/Lithia/Riverview pool market. metaTitle: "Pool Homes for Sale in Valrico FL: 2026 Buyer Guide | Barrett Henry". Date: 2026-11-05.
-
-9. **ruskin-fl-things-to-do** — Expanded → 25,684 chars. EG Simmons Conservation Area; Little Manatee River State Park paddling and hiking; Circles Waterfront Restaurant; local farm stands and tomato heritage; fishing (bay, river, pier); school zone (Lennard HS); flood zone considerations; Ruskin vs Apollo Beach vs Sun City Center comparison table; commute times to Tampa/Sarasota. metaTitle: "Things to Do in Ruskin FL: Parks, Dining, and Local Guide 2026". Date: 2026-11-05.
-
-10. **lithia-fl-schools-newsome-high** — Expanded → 25,837 chars. Newsome High School A-rating; Barrington Middle School; FishHawk Creek Elementary; Stowers Elementary; AP/IB program details; school zone premium analysis; HOA vs school zone distinction; zone boundary change risk; magnet programs; private school alternatives; ViVi PM rental angle for school-zone tenants; Hillsborough County comparison table. metaTitle: "Lithia FL Schools: Newsome High School and FishHawk District Guide 2026". Date: 2026-11-05.
-
----
-
-## 2026-11-05 (Batch 96 — Sell Fast x10: Dundee, Osprey, Lecanto, Nokomis, Mulberry, Polk City, Fort Meade, Ridge Manor, Kenneth City, Spring Hill)
-
-**Pages improved: 10**
-
-### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, H2/H3 hierarchy, Market Snapshot table, Price Tiers table, location-specific section, comparison table, seller closing costs table, 5-Q&A FAQ, 12-link internal grid, Barrett Henry REMAX Collective CTA. Content dated 2026-11-05.)
-
-1. **sell-home-fast-dundee** — Expanded 8,651 → 22,872 chars. Polk County ridge lakes market; Zone X; Chain of Lakes proximity; median ~$255,000; 25-45 DOM; 5-Q&A FAQ. metaTitle: "Sell Your Home Fast in Dundee FL 2026 | Barrett Henry". Date: 2026-11-05.
-
-2. **sell-home-fast-osprey** — Expanded 8,655 → 20,473 chars. Sarasota County coastal community; Zone AE flood awareness; Pine View School district; median ~$465,000; 25-45 DOM; well/septic considerations; 5-Q&A FAQ. metaTitle: "Sell Your Home Fast in Osprey FL 2026 | Barrett Henry". Date: 2026-11-05.
-
-3. **sell-home-fast-lecanto** — Expanded 8,676 → 21,102 chars. Rural Citrus County; well/septic common; retirement market; median ~$225,000; 35-60 DOM; comparison to Crystal River/Inverness/Beverly Hills; 5-Q&A FAQ. metaTitle: "Sell Your Home Fast in Lecanto FL 2026 | Barrett Henry". Date: 2026-11-05.
-
-4. **sell-home-fast-nokomis** — Expanded 8,678 → 19,675 chars. Sarasota County Intracoastal; Zone AE/VE flood exposure; Old Florida character; median ~$420,000; 25-45 DOM; flood insurance disclosure; 5-Q&A FAQ. metaTitle: "Sell Your Home Fast in Nokomis FL 2026 | Barrett Henry". Date: 2026-11-05.
-
-5. **sell-home-fast-mulberry** — Expanded 8,697 → 20,264 chars. Polk County phosphate mining heritage; affordable market; median ~$220,000; 30-55 DOM; comparison to Bartow/Lakeland/Fort Meade/Plant City; 5-Q&A FAQ. metaTitle: "Sell Your Home Fast in Mulberry FL 2026 | Barrett Henry". Date: 2026-11-05.
-
-6. **sell-home-fast-polk-city** — Expanded 8,720 → 19,287 chars. Polk County Chain of Lakes; Lake Hatchineha; Zone AE lakefront considerations; median ~$265,000; 30-55 DOM; 5-Q&A FAQ. metaTitle: "Sell Your Home Fast in Polk City FL 2026 | Barrett Henry". Date: 2026-11-05.
-
-7. **sell-home-fast-fort-meade** — Expanded 8,743 → 18,985 chars. South Polk County; Peace River flood zone; rural character; median ~$195,000; 35-65 DOM; comparison to Bartow/Avon Park/Wauchula/Sebring; 5-Q&A FAQ. metaTitle: "Sell Your Home Fast in Fort Meade FL 2026 | Barrett Henry". Date: 2026-11-05.
-
-8. **sell-home-fast-ridge-manor** — Expanded 8,777 → 19,475 chars. Withlacoochee River corridor; Pasco/Hernando county line; US-301 commute; well/septic; median ~$215,000; 35-65 DOM; 5-Q&A FAQ. metaTitle: "Sell Your Home Fast in Ridge Manor FL 2026 | Barrett Henry". Date: 2026-11-05.
-
-9. **sell-home-fast-kenneth-city** — Expanded 8,793 → 21,013 chars. Small Pinellas County municipality; 1950s-1980s housing stock; Zone X; median ~$285,000; 20-40 DOM; comparison to Pinellas Park/St. Pete/Clearwater; 5-Q&A FAQ. metaTitle: "Sell Your Home Fast in Kenneth City FL 2026 | Barrett Henry". Date: 2026-11-05.
-
-10. **sell-home-fast-spring-hill** — Expanded 8,805 → 22,001 chars. Large Hernando County community; Suncoast Parkway commute; Weeki Wachee Springs; well/septic common; median ~$295,000; 25-50 DOM; comparison to Brooksville/Wesley Chapel/New Port Richey; 5-Q&A FAQ. metaTitle: "Sell Your Home Fast in Spring Hill FL 2026 | Barrett Henry". Date: 2026-11-05.
-
----
-
-## 2026-11-02 (Batch 90 — Brandon FL x1 + Seffner x1 + FishHawk Ranch Schools x1 + Valrico Schools x1 + Temple Terrace x1 + Solar Lease Topic x1 + Sell Fast x4)
-
-**Pages improved: 10**
-
-### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, H2/H3 hierarchy, comparison tables, 5-Q&A FAQ, 12-link internal grid, Barrett Henry REMAX Collective CTA. Content dated 2026-11-02.)
-
-**Brandon FL:**
-
-1. **brandon-fl-churches** — Expanded → 34,832 chars. Faith communities buyer guide for Brandon FL; denomination coverage (Catholic, Baptist, Episcopal, nondenominational megachurch, etc.); proximity-to-neighborhoods analysis; how church proximity affects home search; ZIP 33510/33511/33527 mapping; internal links to Brandon neighborhoods; 5-Q&A FAQ. metaTitle: "Brandon FL Churches 2026: Complete Faith Community Guide". Date: 2026-11-02.
-
-**Seffner FL:**
-
-2. **is-seffner-fl-safe** — Expanded → 27,646 chars. Safety and crime context guide for Seffner FL; FBI Part 1 crime categories explained; how Hillsborough County Sheriff data is read; neighborhood-level context; comparison table Seffner vs Brandon vs Valrico vs Temple Terrace; FEMA flood zone exposure; lighting/infrastructure observations; 5-Q&A FAQ. metaTitle: "Is Seffner FL Safe? 2026 Honest Safety Guide". Date: 2026-11-02.
-
-**Schools Guides:**
-
-3. **fishhawk-ranch-schools-guide** — Expanded → 23,647 chars. Complete HCPS school zone guide for FishHawk Ranch (Lithia FL); elementary/middle/high school assignment breakdown; school zone verification process; how school zone affects home value and resale; private/charter alternatives near FishHawk; seasonal enrollment changes; 5-Q&A FAQ. metaTitle: "FishHawk Ranch Schools Guide 2026: HCPS Zones & Buyer Tips". Date: 2026-11-02.
-
-4. **valrico-fl-schools-guide-2026** — Expanded → 21,578 chars. Valrico FL school zone buyer guide; HCPS elementary/middle/high assignments by subdivision; how to verify zone before closing; comparison to FishHawk Ranch school zones; impact on home values; 5-Q&A FAQ. metaTitle: "Valrico FL Schools Guide 2026: HCPS Zones, Ratings & Buyer Tips". Date: 2026-11-02.
-
-**Real Estate Guides:**
-
-5. **temple-terrace-fl-real-estate-guide** — Expanded → 22,982 chars. Complete 2026 buyer and seller guide to Temple Terrace FL; price range breakdown by property type; HOA/non-HOA community overview; commute to USF/Tampa/Brandon; comparison table Temple Terrace vs Seffner vs Brandon vs Valrico; neighborhood character overview; 5-Q&A FAQ. metaTitle: "Temple Terrace FL Real Estate Guide 2026: Prices, HOAs, Schools". Date: 2026-11-02.
-
-**Topic Guide:**
-
-6. **solar-lease-transfer-florida-selling** — Expanded → 22,367 chars. Complete Florida guide to selling a home with a solar lease or PPA; lease vs loan vs PPA distinction; transfer approval process; buyer qualification requirements; impact on FHA/VA financing; documentary stamp considerations; comparison table: owned solar vs leased solar vs no solar for sellers; 5-Q&A FAQ. metaTitle: "Solar Lease Transfer Florida: Selling a Home with Solar 2026". Date: 2026-11-02.
-
-**Sell Fast Guides:**
-
-7. **sell-home-fast-fishhawk** — Expanded → 23,179 chars. Honest guide to selling quickly in FishHawk Ranch / Lithia FL; pricing strategy; CDD disclosure requirements; HOA resale packet timeline; days-on-market context; comparison table FishHawk vs Riverview vs Brandon vs Valrico for seller timeline; Barrett Henry REMAX Collective CTA; 5-Q&A FAQ. metaTitle: "Sell Home Fast FishHawk Ranch FL 2026: Honest Seller Guide". Date: 2026-11-02.
-
-8. **sell-home-fast-gulfport** — Expanded → 23,251 chars. Honest seller guide for Gulfport FL (Pinellas County); pricing context; flood zone disclosure (Zone AE/VE exposure); waterfront vs inland pricing split; days-on-market context; comparison table Gulfport vs St. Pete vs Treasure Island for sellers; Barrett Henry REMAX Collective CTA; 5-Q&A FAQ. metaTitle: "Sell Home Fast Gulfport FL 2026: Honest Seller Guide". Date: 2026-11-02.
-
-9. **sell-home-fast-ellenton** — Expanded → 23,093 chars. Honest seller guide for Ellenton FL (Manatee County); Ellenton Premium Outlets proximity context; commuter corridor pricing; days-on-market context; comparison table Ellenton vs Palmetto vs Bradenton vs Parrish for sellers; Barrett Henry REMAX Collective CTA; 5-Q&A FAQ. metaTitle: "Sell Home Fast Ellenton FL 2026: Honest Seller Guide". Date: 2026-11-02.
-
-10. **sell-home-fast-venice** — Expanded → 23,000 chars. Honest seller guide for Venice FL (Sarasota County); seasonal retiree buyer market context; Venice Island vs mainland pricing distinction; days-on-market context; comparison table Venice vs Osprey vs Nokomis vs Englewood for sellers; Barrett Henry REMAX Collective CTA; 5-Q&A FAQ. metaTitle: "Sell Home Fast Venice FL 2026: Honest Seller Guide". Date: 2026-11-02.
-
----
-
-## 2026-10-31 (Batch 88 — FishHawk Ranch x2 + Valrico x1 + Tampa Bay Buyer Topics x4 + Hillsborough County x3)
-
-**Pages improved: 10**
-
-### Blog Posts — Full Expansion (All posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, multiple H2/H3 headings, buyer-focused tables, 5-Q&A FAQ, 22-link internal grid, Barrett Henry REMAX Collective bio. Content dated 2026-10-30.)
-
-**FishHawk Ranch (Lithia FL, Hillsborough County):**
-
-1. **fishhawk-ranch-luxury-estates** — Expanded → 28,957 chars. Luxury estate buyer guide covering $700K–$1.5M+ price tiers; estate community profiles; HOA/CDD breakdown; builder vs resale tradeoffs; REMAX Collective buyer representation; 5-Q&A FAQ. metaTitle: "FishHawk Ranch Luxury Estates: Homes $700K–$1.5M+ in 2026". Date: 2026-10-30.
-
-2. **fishhawk-ranch-starter-homes** — Expanded → 23,571 chars. Entry-level buyer guide for FishHawk Ranch; townhomes, villas, and starter SFH; HOA/CDD cost breakdown; school zone verification; comparison to nearby markets (Brandon, Riverview, Valrico); 5-Q&A FAQ. metaTitle: "FishHawk Ranch Starter Homes 2026: Entry-Level Buyer Guide". Date: 2026-10-30.
-
-**Valrico FL:**
-
-3. **best-neighborhoods-valrico-fl-families** — Expanded → 24,476 chars. 2026 family community guide; neighborhood-by-neighborhood breakdown; school zone research process; HOA structure overview; commute analysis; comparison table Valrico vs Brandon vs Riverview vs FishHawk Ranch; 5-Q&A FAQ. metaTitle: "Best Neighborhoods in Valrico FL for Families 2026". Date: 2026-10-30.
-
-**Tampa Bay Buyer Topics:**
-
-4. **buying-foreclosure-homes-tampa-bay-guide** — Expanded → 24,387 chars. Complete 2026 guide to buying foreclosures in Tampa Bay; REO vs short sale vs auction distinction; financing options; title insurance importance; inspection priorities on distressed properties; 5-Q&A FAQ. metaTitle: "Buying Foreclosure Homes in Tampa Bay: 2026 Guide". Date: 2026-10-30.
-
-5. **solar-panel-liens-florida-home-buying** — Expanded → 21,745 chars. Florida solar panel liens buyer protection guide; PACE financing vs traditional loan; title search requirements; how to protect yourself when buying a home with solar; 5-Q&A FAQ. metaTitle: "Solar Panel Liens in Florida: What Buyers Need to Know". Date: 2026-10-30.
-
-6. **first-time-home-buyer-tampa-bay-2026** — Expanded → 24,062 chars. Complete first-time buyer guide for Tampa Bay; pre-approval process; down payment assistance programs; closing cost breakdown; neighborhood selection by budget; Barrett Henry buyer representation; 5-Q&A FAQ. metaTitle: "First-Time Home Buyer Tampa Bay 2026: Complete Guide". Date: 2026-10-30.
-
-7. **seffner-vs-temple-terrace** — Expanded → 23,307 chars. Honest 2026 comparison of Seffner and Temple Terrace FL; price comparison tables; commute analysis; school zone differences; lifestyle tradeoffs; who should choose each; 5-Q&A FAQ. metaTitle: "Seffner vs Temple Terrace FL 2026: Honest Comparison". Date: 2026-10-30.
-
-**Hillsborough County Stubs:**
-
-8. **plant-city-fl-schools-guide-2026** — Expanded → 16,802 chars. School zone guide for Plant City FL families; Hillsborough County zone verification process; how zones affect home values; seasonal zone change risk; private/charter alternatives; 5-Q&A FAQ. metaTitle: "Plant City FL Schools Guide 2026: Zones, Ratings, Family Buyer Tips". Date: 2026-10-30.
-
-9. **best-time-buy-home-tampa-bay-2026** — Expanded → 18,603 chars. Honest market timing guide for Tampa Bay 2026; seasonal buyer patterns; rate considerations; buyer readiness checklist; submarket analysis; 5-Q&A FAQ. metaTitle: "Best Time to Buy a Home in Tampa Bay 2026: Honest Market Guide". Date: 2026-10-30.
-
-10. **brandon-fl-pet-friendly** — Expanded → 18,262 chars. Pet-friendly home buyer guide for Brandon FL; HOA breed/weight restriction overview; yard configuration tips; multi-pet household HOA review; insurance considerations; Brandon vs nearby markets for pet owners; 5-Q&A FAQ. metaTitle: "Brandon FL Pet Friendly Homes 2026: HOA Rules, Yards, Dog Owner Guide". Date: 2026-10-30.
-
----
-
 ## 2026-10-29 (Batch 87 — San Antonio FL x4 + Venice FL x1 + Brooksville FL x1 + Dover/Plant City x1 + East Lake FL x3)
 
 **Pages improved: 10**
@@ -3414,167 +3282,32 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** e69e53b — pushed to `origin/main`
 
-## Batch 88 — October 30, 2026
-
-**Cities covered:** Seffner FL (posts 1–2), Dover FL (post 3)
-**Goal:** Expand 10 stub posts to 20,000–25,000 chars with full SEO/AEO/GEO optimization
-
-### Posts Expanded (3 of 10 completed in this batch run)
-
-1. **seffner-fl-schools-guide-2026** — Expanded to 24,492 chars (was 8,402). metaTitle: "Seffner FL Schools Guide 2026: Armwood High Zone & Options". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; Armwood High programs table (Criminal Justice Academy, AP, Dual Enrollment, CTE, JROTC, Fine Arts, Athletics); elementary/middle school tables; comparison table (Seffner vs FishHawk, Brandon, Temple Terrace, Valrico); magnet and school choice options; private school alternatives; HCPS zone verification guidance; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
-
-2. **seffner-fl-real-estate-guide-2026** — Expanded to 24,919 chars (was 8,441). metaTitle: "Seffner FL Real Estate Guide 2026: Prices & Neighborhoods". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; market overview table; neighborhoods (Mango, Seffner rural, US-92 corridor); commute table (Tampa, Brandon, Riverview, Valrico, Temple Terrace); home price tier table; cost of living breakdown; pros/cons analysis; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
-
-3. **is-dover-fl-good-place-to-live** — Expanded to 22,900 chars (was 8,447). metaTitle: "Is Dover FL a Good Place to Live? 2026 Honest Guide". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; pros/cons tables; well/septic considerations; flood zone details; commute table; comparison table (Dover vs Plant City, Brandon, Valrico, Seffner); buyer profile guidance; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
-
-**Build:** Passed (Next.js build, all routes pre-rendered successfully)
-**Files changed:** `src/data/posts-export.json`
-**Git commit:** 3201929 — pushed to `origin/main`
-
 ---
 
-## Batch 89 — October 31, 2026
+## Batch 98 — 2026-11-06
 
-**Cities covered:** Lithia FL (posts 4, 6, 7), Brandon FL (posts 5, 9, 10), Florida statewide (post 8)
-**Goal:** Expand remaining 7 stub posts from Batch 89 selection to 20,000–27,000 chars
+**Posts expanded (10 total):**
 
-### Posts Expanded (10 total including Batch 88 carryover)
+1. **cost-of-living-valrico-fl** — Expanded to 31,684 chars. metaTitle: "Cost of Living in Valrico FL 2026: Full Breakdown". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 7-row housing cost table (median home $325K–$450K, rent SFH $1,900–$2,400); utilities, groceries, transportation, healthcare cost sections; Valrico vs Brandon/Riverview/Wesley Chapel 5-row comparison table; no-HOA neighborhoods detail; well/septic considerations; 12-link internal grid; Barrett Henry bio; 6-Q&A FAQ.
 
-4. **lithia-fl-alafia-river-living** — Expanded to 26,362 chars (was 8,523). metaTitle: "Alafia River Lithia FL: Properties, Recreation & Lifestyle 2026". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; Lithia Springs Park features table; property types comparison (true waterfront, acreage near river, FishHawk Ranch proximity, Lithia Pinecrest); FEMA flood zones table (AE/A/X); well and septic section; Alafia River State Park highlights table; schools table (Newsome HS, Randall MS, FishHawk Creek Elem); commute distances; buyer right/wrong analysis; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+2. **cost-of-living-seffner-fl** — Expanded to 25,808 chars. metaTitle: "Cost of Living in Seffner FL 2026: What You Need to Know". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; housing cost breakdown (median SFH $280K–$380K); older housing stock detail; I-4 corridor commute analysis; well/septic prevalence; 5-row Seffner vs Valrico/Brandon comparison; 12-link internal grid; Barrett Henry bio; 6-Q&A FAQ.
 
-5. **brandon-fl-home-insurance** — Expanded to 21,719 chars (was 8,530). metaTitle: "Brandon FL Home Insurance 2026: Costs, Tips & Savings Guide". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; cost table by home profile ($2,800–$7,000+/yr); 5 major cost drivers (roof age/type, wind mitigation, construction year, flood zone, deductibles); flood insurance NFIP/private options; Citizens Insurance 2026 depopulation context; savings strategies table; insurance timeline for buyers; Brandon neighborhood flood zone comparison; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+3. **cost-of-living-riverview-fl** — Expanded to 27,413 chars. metaTitle: "Cost of Living in Riverview FL 2026: Full Breakdown". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; CDD fee table by named community (Panther Trace, South Fork, Summerfield Crossings, Triple Creek, Boyette Park, Summerfield Village); 7-row housing cost table; utilities; Riverview vs Brandon/Valrico/Wesley Chapel 5-row comparison; 12-link internal grid; Barrett Henry bio; 6-Q&A FAQ.
 
-6. **lithia-fl-luxury-estates** — Expanded to 20,844 chars (was 8,554). metaTitle: "Lithia FL Luxury Estates 2026: FishHawk & Custom Acreage Guide". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; luxury price tiers table ($600K–$1.5M+); FishHawk Ranch premium sections table (Trails, Hawk Reserve, standard, West); FishHawk community amenities; rural estate property types; roads/corridors table; due diligence (taxes, flood zone, well quality, custom builder); Tampa Bay market comparison table; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+4. **apollo-beach-fl-boat-access** — Expanded to 27,925 chars. metaTitle: "Apollo Beach FL Boat Access 2026: Canals, Docks & Launch Ramps". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; canal tier table (deep-water direct access vs secondary canal vs end-of-canal); TECO warm water manatee zone detail; dock permit process (SWFWMD, USFWS, FWC); FEMA flood zone (AE vs X); boat ramp locations; 12-link internal grid; Barrett Henry bio; 6-Q&A FAQ.
 
-7. **lithia-fl-real-estate-guide-2026** — Expanded to 21,315 chars (was 8,593). metaTitle: "Lithia FL Real Estate Guide 2026: Prices, Schools & Neighborhoods". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; market overview table; neighborhood guide (FishHawk Ranch, FishHawk Ranch West, FishHawk Trails, rural Lithia); school zone lineup table; monthly cost breakdown table; comparison table vs Riverview, Valrico, Brandon, Plant City; buyer right/wrong analysis; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+5. **is-valrico-fl-safe** — Expanded to 22,511 chars. metaTitle: "Is Valrico FL Safe? Crime Rates, Neighborhoods & Safety 2026". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; HCSO crime data context; safest streets/subdivisions by area; 5-row neighborhood comparison table; sex offender registry guidance; flood zone safety (mostly Zone X); 12-link internal grid; Barrett Henry bio; 6-Q&A FAQ.
 
-8. **foreclosure-process-florida-guide** — Expanded to 23,825 chars (was 8,410). metaTitle: "Florida Foreclosure Process 2026: Timeline, Rights & Options". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 9-stage foreclosure timeline table; homeowner options before/after lis pendens; right of redemption; foreclosure defenses table (standing, improper notice, HAMP, statute of limitations); deficiency judgment rules; Florida auction process (online, Hillsborough County); HUD/legal resources; alternatives comparison table (modification vs short sale vs deed in lieu vs Ch13 vs foreclosure); buyer due diligence for distressed purchases; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+6. **brandon-fl-starter-homes** — Expanded to 24,071 chars. metaTitle: "Brandon FL Starter Homes 2026: Prices, Neighborhoods & Tips". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 5-row price tier table ($220K–$450K); FHA appraisal condition concerns on older Brandon homes (Oakwood, Providence Lakes, Four Winds); 12-link internal grid; Barrett Henry bio; 6-Q&A FAQ.
 
-9. **brandon-fl-golf-courses** — Expanded to 20,079 chars (was 8,608). metaTitle: "Golf Courses Near Brandon FL 2026: Best Options & Communities". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; golf courses table (Heritage Isles, Summerfield, TopGolf, River Hills, Buckhorn Springs, Saddlebrook, Westchase); Bloomingdale golf community section; golf community due diligence checklist; membership options/cost table; River Hills Country Club profile; Buckhorn Springs profile; buyer search guidance; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+7. **apollo-beach-mirabay-guide** — Expanded to 23,020 chars. metaTitle: "Apollo Beach MiraBay Community Guide 2026: Homes & HOA". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; MiraBay HOA fee breakdown ($180–$220/mo CDD $2,400–$3,200/yr); amenity detail (resort pool, fitness, kayak launch, playground, clubhouse); canal home pricing tiers; manatee zone intersection; MiraBay vs Waterset 5-row comparison; 12-link internal grid; Barrett Henry bio; 6-Q&A FAQ.
 
-10. **brandon-fl-luxury-homes-guide** — Expanded to 21,904 chars (was 8,645). metaTitle: "Brandon FL Luxury Homes 2026: Where to Buy at $500K-$1M+". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; luxury price tiers table ($500K–$1M+); neighborhood profiles (La Collina, Bloomingdale upper tier, Arbor Oaks/Valrico border, acreage); Tampa Bay market comparison table; luxury features table by price tier; due diligence (property taxes, insurance, HOA/CDD, inspection scope); schools section; 22-link internal grid; Barrett Henry bio; 5-Q&A FAQ.
+8. **short-sale-vs-foreclosure-florida** — Expanded to 26,879 chars. metaTitle: "Short Sale vs Foreclosure Florida 2026: Full Comparison Guide". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; FL judicial foreclosure timeline (12–36 months); deficiency judgment rules (1-year filing window); short sale process step-by-step; deed-in-lieu requirements; loan modification types; Chapter 7/13 bankruptcy intersection; buyer guidance for distressed properties; 10-row side-by-side comparison table; 12-link internal grid; Barrett Henry bio; 6-Q&A FAQ.
 
-**Build:** Passed (Next.js build, all routes pre-rendered successfully)
-**Files changed:** `src/data/posts-export.json`, `package-lock.json`, `AUDIT-LOG.md`
-**Git commit:** fb65bbd — pushed to `origin/main`
+9. **brandon-fl-fha-homes** — Expanded to 26,632 chars. metaTitle: "Brandon FL FHA Homes 2026: Loan Limits, Credit Scores & Best Areas". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; $524,250 Hillsborough County FHA limit; credit score tiers (500/580/620/640/680/720); MIP calculation (UFMIP 1.75% + annual 0.55%); DTI limits with worked example; FHA appraisal condition items table; best Brandon neighborhoods for FHA (Oakwood Estates, Providence Lakes, Four Winds); down payment assistance programs (Florida Housing, Hometown Heroes); 12-link internal grid; Barrett Henry bio; 6-Q&A FAQ.
 
----
-
-## Batch 90 — November 2, 2026
-
-**Cities covered:** Apollo Beach FL (posts 1, 10), Ruskin FL (posts 2, 8, 10), Lithia FL (posts 3, 4, 5), Plant City FL (posts 6, 7), Dover FL (post 9)
-**Goal:** Expand 10 stub posts to 17,000–27,000 chars with full SEO/AEO/GEO optimization
-
-### Posts Expanded (10 total, all posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, 4+ H2 headings, 6+ H3 subheadings, comparison/buyer tables, 5-6 Q&A FAQ, internal links grid, Barrett Henry REMAX Collective bio. Content dated 2026-11-02.)
-
-1. **apollo-beach-fl-real-estate-2026** — Expanded to 27,028 chars. metaTitle: "Apollo Beach FL Real Estate 2026: Prices, Neighborhoods & Guide". Added: Quick Answer box; waterfront vs non-waterfront price table; Waterset/MiraBay/Andalucia neighborhood breakdowns; 8-row full comparison table; flood insurance analysis (Zone AE/VE, $2,500-$8,000/yr); commute table; school zone table; buyer profile guidance; BreadcrumbList + Article + FAQPage JSON-LD; 6-Q&A FAQ. Date: 2026-11-02.
-
-2. **ruskin-fl-real-estate-guide-2026** — Expanded to 23,708 chars. metaTitle: "Ruskin FL Real Estate Guide 2026: Prices, Neighborhoods & Commute". Added: Quick Answer box; 4-tier price table ($270K-$560K+); neighborhood profiles (Masonboro, Shell Cove, Hawkstone, Cypress Creek, historic riverfront); market stats; school zone table; commute table; investor yield analysis; BreadcrumbList + Article + FAQPage JSON-LD; 6-Q&A FAQ. Date: 2026-11-02.
-
-3. **lithia-fl-commute-guide** — Expanded to 17,999 chars. metaTitle: "Lithia FL Commute Guide 2026: Drive Times to Tampa & Beyond". Added: Quick Answer box; 5-destination commute table; 3 route options; peak vs off-peak breakdown; HART bus 32 options; buyer profile guidance; BreadcrumbList + Article + FAQPage JSON-LD; 5-Q&A FAQ. Date: 2026-11-02.
-
-4. **fishhawk-vs-waterset** — Expanded to 19,312 chars. metaTitle: "FishHawk Ranch vs Waterset: Which Is Better in 2026?". Added: Quick Answer box; 12-row side-by-side comparison table; school comparison; commute table; buyer profile guidance for each community; BreadcrumbList + Article + FAQPage JSON-LD; 6-Q&A FAQ. Date: 2026-11-02.
-
-5. **lithia-fl-vs-valrico** — Expanded to 16,889 chars. metaTitle: "Lithia FL vs Valrico FL: Which Is Better to Buy in 2026?". Added: Quick Answer box; 10-row side-by-side comparison table; school comparison; price-per-sq-ft analysis; buyer profile section; BreadcrumbList + Article + FAQPage JSON-LD; 5-Q&A FAQ. Date: 2026-11-02.
-
-6. **plant-city-fl-real-estate-guide-2026** — Expanded to 19,078 chars. metaTitle: "Plant City FL Real Estate Guide 2026: Prices & Neighborhoods". Added: Quick Answer box; 4-tier price table; neighborhood profiles; commute table; school zone table; investor yield analysis; BreadcrumbList + Article + FAQPage JSON-LD; 5-Q&A FAQ. Date: 2026-11-02.
-
-7. **is-plant-city-fl-good-place-to-live** — Expanded to 17,887 chars. metaTitle: "Is Plant City FL a Good Place to Live? 2026 Honest Review". Added: Quick Answer box; pros and cons table (12 factors); cost of living comparison; commute reality table; who-should-buy/who-should-skip guidance; BreadcrumbList + Article + FAQPage JSON-LD; 5-Q&A FAQ. Date: 2026-11-02.
-
-8. **ruskin-fl-market-trends** — Expanded to 17,055 chars. metaTitle: "Ruskin FL Housing Market Trends 2026: Data & Forecast". Added: Quick Answer box; market stats table; price trend analysis 2021-2026; inventory analysis; 3-year forecast; new construction pipeline; investment market section; BreadcrumbList + Article + FAQPage JSON-LD; 5-Q&A FAQ. Date: 2026-11-02.
-
-9. **dover-fl-real-estate-guide-2026** — Expanded to 21,885 chars. metaTitle: "Dover FL Real Estate Guide 2026: Prices, Neighborhoods & Schools". Added: Quick Answer box; 4-tier price table including equestrian; neighborhood profiles; Dover vs Brandon/Valrico/Plant City 3-table comparison; commute table; school zone table; equestrian/agricultural property section; buyer tips (flood zone, well/septic, no city services); BreadcrumbList + Article + FAQPage JSON-LD; 5-Q&A FAQ. Date: 2026-11-02.
-
-10. **ruskin-fl-vs-apollo-beach** — Expanded to 21,462 chars. metaTitle: "Ruskin FL vs Apollo Beach: Which Is Better to Buy in 2026?". Added: Quick Answer box; 5-tier price comparison table; Ruskin/Apollo Beach neighborhood breakdowns; 12-row full comparison table; insurance cost analysis (Zone X vs Zone AE/VE); school zone comparison; who-should-buy-in-each guidance; ViVi Property Management link; BreadcrumbList + Article + FAQPage JSON-LD; 5-Q&A FAQ. Date: 2026-11-02.
+10. **fishhawk-ranch-community-guide-2026** — Expanded to 28,656 chars. metaTitle: "Fishhawk Ranch Community Guide 2026: Villages, Prices & Schools". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; village breakdown (Fishhawk Ranch $450K–$1.2M+, Fishhawk Ranch West $420K–$650K, Starling at Fishhawk $380K–$530K, Hawk Park townhomes $340K–$480K); school table (Fishhawk Creek/Bevis/Stowers Elementary all A-rated, Randall Middle A, Newsome High A); HOA + CDD fee table per village; Fishhawk vs competing communities 5-row comparison; Flood Zone X advantage; 12-link internal grid; Barrett Henry bio; 6-Q&A FAQ.
 
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
-**Git commit:** e30f86e — pushed to `origin/main`
-
----
-
-## Batch 91 — November 4, 2026
-
-**Cities covered:** Siesta Key FL, Longboat Key FL, North Port FL, Port Richey FL, Brooksville FL, Inverness FL, Englewood FL, Homosassa FL, Holmes Beach FL (Anna Maria Island), Brandon FL medical facilities
-**Goal:** Expand 10 stub posts to 20,000+ chars with full SEO/AEO/GEO optimization
-
-### Posts Expanded (10 total, all posts: BreadcrumbList + Article + FAQPage JSON-LD schemas, Quick Answer AEO box, H1 distinct from title, 4+ H2 headings, 6+ H3 subheadings, comparison/pricing tables, 5-Q&A FAQ, internal links grid. Content dated 2026-11-03.)
-
-1. **sell-home-fast-siesta-key** (id:20841) — Expanded to 20,000+ chars. metaTitle: "Sell Your Home Fast in Siesta Key FL 2026: Pricing & Timeline". Added: Quick Answer box; STR implications; condo SB 4-D disclosures; Zone AE/VE pricing tiers (Gulf-front $900K-$3M+ to interior $450K-$900K); DOM 30-60 days; seller closing costs; buyer profiles; 12-link internal grid.
-
-2. **sell-home-fast-longboat-key** (id:20818) — Expanded to 20,000+ chars. metaTitle: "Sell Your Home Fast in Longboat Key FL 2026 | Barrett Henry". Added: Quick Answer box; ultra-luxury pricing ($600K-$20M+); non-warrantable condo buildings; cash buyers dominant above $2M; DOM 45-180+ days; flood zone/FEMA disclosures; 12-link internal grid.
-
-3. **sell-home-fast-north-port** (id:20837) — Expanded to 20,000+ chars. metaTitle: "Sell Your Home Fast in North Port FL 2026: Price & Timeline". Added: Quick Answer box; new construction competition factor; pricing $280K-$550K; DOM 25-45 days; Warm Mineral Springs; CDD fee disclosures; 12-link internal grid.
-
-4. **sell-home-fast-port-richey** (id:20811) — Expanded to 20,000+ chars. metaTitle: "Sell Your Home Fast in Port Richey FL 2026: Pricing Guide". Added: Quick Answer box; aging housing stock (1960s-1990s); roof/HVAC/electrical issues; Cotee River waterfront; pricing $180K-$700K+; DOM 20-40 days; 12-link internal grid.
-
-5. **sell-home-fast-brooksville** (id:20842) — Expanded to 20,000+ chars. metaTitle: "Sell Your Home Fast in Brooksville FL 2026: Pricing Guide". Added: Quick Answer box; equestrian/rural property; well and septic disclosures; Suncoast Parkway commute; pricing $200K-$900K+; DOM 30-120 days; 12-link internal grid.
-
-6. **sell-home-fast-inverness** (id:20848) — Expanded to 20,000+ chars. metaTitle: "Sell Your Home Fast in Inverness FL 2026 | Citrus County". Added: Quick Answer box; Lake Henderson/Lake Tsala Apopka chain; retirement market; well and septic; Crystal River proximity; pricing $160K-$750K+; DOM 45-120 days; 12-link internal grid.
-
-7. **sell-home-fast-englewood** (id:20838) — Expanded to 20,000+ chars. metaTitle: "Sell Your Home Fast in Englewood FL 2026: Pricing & Timeline". Added: Quick Answer box; Charlotte/Sarasota County border complexities; Lemon Bay; Hurricane Ian disclosure requirements; canal-front Gulf access; pricing $250K-$2M+; DOM 30-70 days; 12-link internal grid.
-
-8. **sell-home-fast-homosassa** (id:20849) — Expanded to 20,000+ chars. metaTitle: "Sell Your Home Fast in Homosassa FL 2026 | Citrus County". Added: Quick Answer box; Homosassa River; manatee/wildlife appeal; fishing/boating; well and septic; pricing $175K-$1M+; DOM 50-120 days; 12-link internal grid.
-
-9. **sell-home-fast-holmes-beach** (id:20804) — Expanded to 20,000+ chars. metaTitle: "Sell Your Home Fast in Holmes Beach FL 2026 | Anna Maria Island". Added: Quick Answer box; STR permit documentation; Zone VE/AE pricing tiers (Gulf-front $2.5M-$5M+ to interior condos $500K-$900K); Hurricane Ian disclosures; Manatee County taxes; cap rate analysis for investor buyers; DOM 30-60 days; 12-link internal grid.
-
-10. **brandon-fl-medical-facilities** (id:20975) — Major expansion to 20,000+ chars. metaTitle: "Brandon FL Medical Facilities Guide 2026: Hospitals & Clinics". Added: Quick Answer box; Brandon Regional Hospital full profile (422 beds, Level II trauma, cardiac, NICU, robotic surgery); AdventHealth Brandon section; urgent care comparison table (5 providers); specialist directory by specialty (cardiology, orthopedics, neurology, oncology, gastro, dermatology, ophthalmology, urology, OB/GYN, ENT, pulmonology); pediatric care section with nearby children's hospitals; senior/geriatric services; mental health resources; dialysis/infusion centers; telemedicine options; insurance section; neighborhood proximity to Brandon Regional table; healthcare as home-buying factor analysis; 12-link internal grid.
-
-**Build:** Passed (Next.js build, all routes pre-rendered successfully)
-**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
-**Git commit:** 0868d32 — pushed to `origin/main`
-
-## Batch 92: November 4, 2026
-
-**Goal:** Fill the "best time to move to Tampa Bay" content gap and clean up the main relocation guide.
-
-1. **NEW: best-time-to-move-to-tampa-bay** (id:91762). Month-by-month table (weather, storm risk, housing competition), best window by situation (families, retirees, remote workers, military, buyers, renters), hurricane season and snowbird season sections, summer moving tips, moving timeline checklist with homestead March 1 deadline, Quick Answer box, 5-Q&A FAQ with FAQPage JSON-LD, 12-link internal grid.
-2. **FIX: ultimate-tampa-bay-relocation-guide** (id:4238). Removed fully duplicated body (every section appeared twice). Replaced broken auto-generated FAQPage schema ("The Ultimate Tampa Bay Relocat") with schema matching the visible FAQ. Replaced junk excerpt. Removed double-hyphen dashes. Added link to new post in Hurricane Season section. 40,499 to 29,060 chars.
-3. **Cross-links to new post** added in: tampa-bay-weather-guide, best-time-buy-home-tampa-bay-2026, moving-to-brandon-fl-relocation-guide, moving-to-tampa-bay-from-up-north.
-
-**Known issue, not fixed this batch:** about 69 other posts carry the same broken auto-generated FAQ schema pattern ("What is real estate like in [truncated title]?").
-
-**Build:** Passed. New post and edited posts render 200 locally.
-**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
-
-## Batch 93: November 4, 2026
-
-**Goal:** Remove auto-generated junk FAQPage schema ("What is real estate like in [truncated title]?") that did not match any visible page content.
-
-- **103 posts affected** (earlier estimate of 69 was low).
-- **49 rebuilt:** post has a real visible FAQ section, so FAQPage JSON-LD was regenerated from those visible Q&As.
-- **54 removed:** post has no visible FAQ, so the junk block was deleted (Google requires FAQ schema to match on-page content).
-- Also: best-time-to-move-to-tampa-bay rewritten in Barrett's first-person voice (commit 24a9613).
-
-**Known issue, not fixed this batch:** 48 posts contain JSON-LD blocks that are invalid JSON (pre-existing; Google ignores them). Candidates for a future batch.
-
-**Build:** Passed (559 static pages).
-**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
-
-## Batch 94: November 4, 2026
-
-**Goal:** Fix every invalid JSON-LD block on the site (48 posts). Sitewide unparseable JSON-LD: 48 to 0.
-
-- **Auto-linker damage (33 blocks):** `<a href>` tags had been injected inside JSON strings. Links stripped from schema text.
-- **Doubled braces (10 Dundee posts):** `{{ }}` template artifacts fixed. 7 rebuilt from visible FAQ where schema questions did not match the page.
-- **Bad escapes (4 posts):** `\'` replaced with plain apostrophes.
-- **Missing quotes (3 Redington/South Pasadena posts):** closing quotes restored.
-- **one-tampa-residences:** a full "One Tampa 2026 Construction and Sales Update" section (~3,900 chars) was trapped inside a JSON-LD block and invisible. Rescued into the page body; junk templated FAQ schema removed.
-- **14 posts (13 best-realtor-[area] + buying-home-apollo-beach-guide):** FAQ schema had good answers but no visible FAQ on page. Added a visible "Frequently Asked Questions" section matching the schema.
-- **2 luxury posts (St Pete Beach, St Petersburg):** junk truncated-title FAQ schema removed.
-- **south-tampa-luxury-real-estate-guide:** FAQ schema rebuilt from the visible FAQ.
-- Em dashes removed from the 13 touched best-realtor posts and One Tampa.
-
-**Build:** Passed (559 static pages).
-
-## Batch 95: November 4, 2026
-
-**Bug:** Stray "Investment Property Tampa Bay" link floating near the top of posts (reported on best-realtor-riverview, mobile).
-
-**Root cause:** `BOILERPLATE_WRAPPER_RE` in `src/lib/utils.ts` was built with `new RegExp(` + template literal containing `\\b`. The production minifier (SWC, Next 14.2) constant-folded it into a single-quoted string as `'\\\b'`, turning each `\b` into a backspace character. The regex never matched in production, so legacy WordPress footer blocks (Related Articles cards, Explore Communities, Helpful Resources, duplicated bio, disclaimer) rendered on all 540 posts that carry them. Image-less Related Articles cards collapsed to zero height and their captions floated as stray links.
-
-**Fix:**
-1. Rewrote the regex as a literal (minifier emits it verbatim), with a startup check that every class in `BOILERPLATE_WRAPPER_CLASSES` is covered.
-2. `exciseBlock` FAQ guard now ignores JSON-LD inside the span (it is rescued and re-inserted anyway), so a FAQPage schema sitting inside a footer no longer blocks removal. A visible FAQ heading still blocks it.
-
-**Verified:** Compiled chunk contains `\b` correctly. Sample of 12 server-rendered posts: legacy footer gone, FAQ schema preserved wherever the source has it, "Need Help" CTA preserved. Mobile screenshot clean.
+**Git commit:** TBD — to be filled after push
