@@ -3284,6 +3284,32 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 
 ---
 
+## Batch 99 — 2026-11-08
+
+**Posts expanded (10 total):**
+
+1. **valrico-fl-homes-with-acreage** — Expanded to 24,969 chars. Quick Answer box; 5-row acreage pricing table (0.5-1 ac $420K, 1-2 ac $480K, 2-5 ac $550K, 5-10 ac $680K, 10+ ac $850K+); 5-row comparison table vs Lithia/Dover/Thonotosassa/Plant City; well/septic cost details; FL Statute 193.461 agricultural exemption; building process; 22-link grid; 6-FAQ; 3 JSON-LD scripts. Date: 2026-11-07.
+
+2. **apollo-beach-fl-vs-riverview** — Expanded to 20,626 chars. Quick Answer box; 10-row comparison table (price/flood/HOA/commute/schools/lifestyle/boating/walkability/new construction/investment); schools table; flood insurance comparison (Zone AE $3K-$8K vs Zone X); neighborhood profiles for Apollo Beach and Riverview; 6-FAQ; 3 JSON-LD scripts. Date: 2026-11-07.
+
+3. **first-time-buyer-valrico-fl** — Expanded to 22,107 chars. Quick Answer box; price table by property type; DPA programs table (Hometown Heroes $35K / FL Assist $10K / FL HLP $10K / SHIP); loan comparison (FHA/Conventional/VA/USDA); closing costs breakdown; Valrico school ratings; 22-link grid; 6-FAQ; 3 JSON-LD scripts. Date: 2026-11-07.
+
+4. **fishhawk-ranch-hoa-cdd-fees** — Expanded to 19,477 chars. Quick Answer box; HOA by village table (Phase 1-3 and FishHawk Preserve); fees comparison table vs Panther Trace/Triple Creek/Waterset/Westchase; monthly cost example ($500K home approx $3,809/mo total); 22-link grid; 4-FAQ; 3 JSON-LD scripts. Date: 2026-11-07.
+
+5. **seffner-fl-homes-under-350k** — Expanded to 17,636 chars. Quick Answer box; 4-row price tier table ($250K-$350K); 5-row comparison vs Valrico/Brandon/Plant City/Dover; FHA condition requirements list; neighborhood profiles; 22-link grid; 5-FAQ; 3 JSON-LD scripts. Date: 2026-11-07.
+
+6. **brandon-fl-no-hoa-homes** — Expanded to 18,655 chars. Quick Answer box; 5-row price-by-area table; HOA vs no-HOA comparison table; Hillsborough County code rules section; top no-HOA neighborhoods; 22-link grid; 5-FAQ; 3 JSON-LD scripts. Date: 2026-11-07.
+
+7. **is-fishhawk-ranch-good-place-to-live** — Expanded to 22,066 chars. Quick Answer box; pros/cons table (7 rows each side); FishHawk vs Panther Trace/Westchase/Waterset/Triple Creek comparison; who it's best/worst for sections; 22-link grid; 6-FAQ; 3 JSON-LD scripts. Date: 2026-11-07.
+
+8. **lithia-fl-horse-properties** — Expanded to 19,156 chars. Quick Answer box; 4-row pricing table with horse count; 5-row comparison vs Thonotosassa/Dover/Wimauma/Polk County; equestrian infrastructure section; due diligence checklist (zoning/pasture/well/barn/fence/ag tax); 22-link grid; 4-FAQ; 3 JSON-LD scripts. Date: 2026-11-07.
+
+9. **cost-of-living-plant-city-fl** — Expanded to 19,610 chars. Quick Answer box; 5-row housing table; 7-row monthly budget breakdown table (total approx $3,670-$4,750/mo); 5-row comparison vs Seffner/Brandon/Valrico/Lakeland; utility detail section; 22-link grid; 4-FAQ; 3 JSON-LD scripts. Date: 2026-11-07.
+
+10. **brandon-fl-why-buyers-choose** — Expanded to 18,522 chars. Quick Answer box; all 10 reasons expanded (affordability/commute/schools/neighborhood variety/retail/military/healthcare/recreation/new construction/investment); schools table; Brandon vs Riverview/Valrico/Wesley Chapel comparison; buyer profiles; 22-link grid; 4-FAQ; 3 JSON-LD scripts. Date: 2026-11-07.
+
+---
+
 ## Batch 98 — 2026-11-06
 
 **Posts expanded (10 total):**
