@@ -3337,3 +3337,33 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** 436bfb5 — pushed to `origin/main`
+
+---
+
+## Batch 100 — 2026-11-09
+
+**Posts expanded (10 total):**
+
+1. **sell-home-fast-bartow** — Expanded to 24,719 chars. metaTitle: "Sell Your Home Fast in Bartow FL: 2026 Seller Guide". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 5-row pricing table by home type; local buyer demand (Polk County courthouse, hospital, CSX commuters); prep checklist; closing costs table; 6-Q&A FAQ; 22-link internal grid.
+
+2. **sell-home-fast-holiday** — Expanded to 23,230 chars. metaTitle: "Sell Your Home Fast in Holiday FL: 2026 Seller Guide". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 5-row pricing table (retirement, waterfront, fixer); cash buyer presence; Pasco County flood zone detail; prep checklist; closing costs table; 6-Q&A FAQ; 22-link internal grid.
+
+3. **sell-home-fast-anna-maria** — Expanded to 24,404 chars. metaTitle: "Sell Your Home Fast in Anna Maria FL: 2026 Island Guide". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 5-row island pricing table (Gulf-view cottage to bay-front home); STR income as value driver; hurricane insurance disclosure; post-2004 construction premium; marketing (drone/out-of-state/STR presentation); closing costs table; 6-Q&A FAQ; 22-link internal grid.
+
+4. **dover-fl-homes-with-acreage** — Expanded to 22,259 chars. metaTitle: "Dover FL Homes with Acreage: Land and Horse Properties 2026". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; ASC-1 zoning explanation; 5-row acreage pricing table ($290K–$1.4M); livestock/zoning rules; FL Statute 193.461 agricultural exemption; well/septic checklist; best areas (Sydney Road, Gallagher Road, Turkey Creek); 5-row comparison table (Valrico/Thonotosassa/Lithia/Plant City); 6-Q&A FAQ; 22-link internal grid.
+
+5. **dover-fl-property-taxes** — Expanded to 24,729 chars. metaTitle: "Dover FL Property Taxes: Rates and Exemptions 2026". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; tax calculation formula; 7-row millage table; homestead exemption; SOH cap; senior/veteran exemptions; FL Statute 193.461 agricultural classification; 5-row sample tax calculation table; 5-row city comparison (Dover/Tampa/Brandon/Plant City/Valrico); payment schedule with discounts; VAB appeal process; 6-Q&A FAQ; 22-link internal grid.
+
+6. **thonotosassa-fl-real-estate-2026** — Expanded to 18,281 chars. metaTitle: "Thonotosassa FL Real Estate 2026: Homes, Land and Market Guide". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 5-row pricing table by home type; Lake Thonotosassa waterfront detail (930 acres, 25-45% premium); zoning breakdown (ASC-1/AR/A/RSC-6); commute analysis (I-4/US-301, 20-30 min to Tampa); school assignments; well/septic checklist; agricultural exemption (FS 193.461); seller marketing advice; 6-Q&A FAQ; 22-link internal grid.
+
+7. **apollo-beach-fl-flood-insurance** — Expanded to 18,531 chars. metaTitle: "Apollo Beach FL Flood Insurance: Rates, Zones and What to Expect". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 5-row FEMA zone table (AE/AH/VE/X-shaded/X); NFIP Risk Rating 2.0 factors; 5-row premium table by property type ($900–$6,000+); elevation certificate detail; NFIP vs private flood insurance comparison; Hurricane Helene 2024 disclosure; FS 689.302 disclosure requirements; 6-Q&A FAQ; 22-link internal grid.
+
+8. **plant-city-fl-things-to-do** — Expanded to 16,354 chars. metaTitle: "Plant City FL Things to Do: Local Guide for Residents 2026". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; Florida Strawberry Festival detail (Feb 26–Mar 8, 2026, 500K+ visitors); Dinosaur World; downtown historic district dining; parks (Rotary, Ragan, McCall); golf (Plant City Golf Club); community character analysis; schools; median price comparison vs Brandon/Valrico; 6-Q&A FAQ; 22-link internal grid.
+
+9. **sell-home-fast-gibsonton** — Expanded to 16,505 chars. metaTitle: "Sell Your Home Fast in Gibsonton FL: 2026 Seller Guide". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; buyer type analysis (commuters/boating/first-time/investors/no-HOA seekers); 5-row pricing table; deal-killer items (roof/HVAC/flood/permits); flood zone disclosure (FS 689.302); closing costs table; 6-Q&A FAQ; 22-link internal grid.
+
+10. **sell-home-fast-dade-city** — Expanded to 17,078 chars. metaTitle: "Sell Your Home Fast in Dade City FL: 2026 Seller Guide". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; buyer type analysis (retirees/first-time/commuters/remote workers); 5-row pricing table by area type; historic downtown walkability premium; new construction competition analysis; sinkhole disclosure (Pasco County karst geology, FS 689.302); closing costs table; 6-Q&A FAQ; 22-link internal grid.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** 0b81f4f — pushed to `origin/main`
