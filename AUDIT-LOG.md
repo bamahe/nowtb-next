@@ -3367,3 +3367,33 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** 0b81f4f — pushed to `origin/main`
+
+---
+
+## Batch 101 — 2026-11-10
+
+**Posts expanded (10 total):**
+
+1. **things-to-do-valrico-fl** — Expanded to 19,943 chars. metaTitle: "Things to Do in Valrico FL: Local Guide for Residents". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; activity type comparison table; parks/trails guide (Alafia River SP, Lithia Springs); dining/shopping overview; community events; commute analysis; 6-Q&A FAQ; 10+ internal link grid.
+
+2. **sell-home-fast-san-antonio-fl** — Expanded to 15,663 chars. metaTitle: "Sell Your Home Fast in San Antonio FL: 2026 Seller Guide". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; 5-row pricing table by home type; buyer demand analysis (Saint Leo University, rural lifestyle seekers); prep checklist; closing costs table; 6-Q&A FAQ; 10+ internal link grid.
+
+3. **plant-city-fl-homes-with-land** — Expanded to 17,181 chars. metaTitle: "Plant City FL Homes with Land: Acreage and Horse Properties 2026". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; zoning/acreage pricing table; FL Statute 193.461 agricultural exemption; well/septic checklist; area comparison table (Plant City vs Dover/Thonotosassa/Lithia); 6-Q&A FAQ; 10+ internal link grid.
+
+4. **sell-home-fast-st-pete-beach** — Expanded to 14,205 chars. metaTitle: "Sell Your Home Fast in St Pete Beach FL: 2026 Seller Guide". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; island pricing table; STR income as value driver; flood/FEMA zone disclosure (FS 689.302); closing costs table; 6-Q&A FAQ; 10+ internal link grid.
+
+5. **sell-home-fast-auburndale** — Expanded to 13,793 chars. metaTitle: "Sell Your Home Fast in Auburndale FL: 2026 Seller Guide". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; pricing table by property type; buyer demand analysis (I-4 corridor workers, lakefront seekers); prep checklist; closing costs table; 6-Q&A FAQ; 10+ internal link grid.
+
+6. **apollo-beach-fl-waterfront-guide** — Expanded to 16,243 chars. metaTitle: "Apollo Beach FL Waterfront Guide: Canals, Docks and Boating 2026". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; waterfront type comparison table; dock/lift permit detail; FEMA flood zone disclosure (AE/VE); HOA/CDD fee disclosures; 6-Q&A FAQ; 10+ internal link grid.
+
+7. **sell-home-fast-lake-wales** — Expanded to 13,211 chars. metaTitle: "Sell Your Home Fast in Lake Wales FL: 2026 Seller Guide". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; pricing table by property type; buyer demand analysis (Bok Tower Gardens, Ridge area retirees); prep checklist; closing costs table; 6-Q&A FAQ; 10+ internal link grid.
+
+8. **sell-home-fast-zephyrhills** — Expanded to 13,034 chars. metaTitle: "Sell Your Home Fast in Zephyrhills FL: 2026 Seller Guide". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; pricing table by property type; buyer demand analysis (55+ communities, rural lifestyle, Pasco County commuters); prep checklist; closing costs table; 6-Q&A FAQ; 10+ internal link grid.
+
+9. **sell-home-fast-pinellas-park** — Expanded to 14,840 chars. metaTitle: "Sell Your Home Fast in Pinellas Park FL: 2026 Seller Guide". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; pricing table by home type; buyer demand analysis (central Pinellas location, no-HOA seekers); prep checklist; closing costs table; 6-Q&A FAQ; 10+ internal link grid.
+
+10. **thonotosassa-fl-schools-guide** — Expanded to 15,887 chars. metaTitle: "Thonotosassa FL Schools Guide: Elementary, Middle and High 2026". Added: BreadcrumbList + Article + FAQPage JSON-LD; Quick Answer box; school assignment table by area; Hillsborough County schools overview; private school options; magnet/choice program detail; home values by school zone table; 6-Q&A FAQ; 10+ internal link grid.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** 271cff7 — pushed to `origin/main`
