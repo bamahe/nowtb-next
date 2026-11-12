@@ -3456,4 +3456,4 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
-**Git commit:** TBD — pushed to `origin/main`
+**Git commit:** d54b4ac — pushed to `origin/main`
