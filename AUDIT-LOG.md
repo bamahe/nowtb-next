@@ -3427,3 +3427,33 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** 348d067 — pushed to `origin/main`
+
+---
+
+## Batch 103 — 2026-11-12
+
+**Posts improved (10 total):**
+
+1. **valrico-fl-property-taxes-2026** — Shortened title to "Valrico FL Property Taxes 2026: Rates and Exemptions" (52 chars). Trimmed excerpt to 182 chars. Added: BreadcrumbList + Article + FAQPage JSON-LD schemas; Quick Answer box; 5-Q FAQ schema.
+
+2. **sell-home-fast-town-n-country** — Shortened title to "Sell Home Fast in Town 'n' Country FL: 2026 Guide" (49 chars). Trimmed excerpt. Added: BreadcrumbList + Article + FAQPage JSON-LD schemas; Quick Answer box; 5-Q FAQ schema.
+
+3. **sell-home-fast-temple-terrace** — Shortened title to "Sell Home Fast in Temple Terrace FL: 2026 Guide" (47 chars). Trimmed excerpt. Added: BreadcrumbList + Article + FAQPage JSON-LD schemas; Quick Answer box; 5-Q FAQ schema.
+
+4. **sell-home-fast-sun-city-center** — Shortened title to "Sell Home Fast in Sun City Center FL: 2026 Guide" (48 chars). Trimmed excerpt. Added: BreadcrumbList + Article + FAQPage JSON-LD schemas; Quick Answer box; 5-Q FAQ schema with 55+ community specifics.
+
+5. **sell-home-fast-carrollwood** — Shortened title to "Sell Home Fast in Carrollwood FL: 2026 Guide" (44 chars). Trimmed excerpt. Added: BreadcrumbList + Article + FAQPage JSON-LD schemas; Quick Answer box; 5-Q FAQ schema.
+
+6. **sell-home-fast-apollo-beach** — Shortened title to "Sell Home Fast in Apollo Beach FL: 2026 Guide" (45 chars). Trimmed excerpt. Added: BreadcrumbList + Article + FAQPage JSON-LD schemas; Quick Answer box; 5-Q FAQ schema with waterfront and flood disclosure specifics.
+
+7. **sell-home-fast-plant-city** — Shortened title to "Sell Home Fast in Plant City FL: 2026 Guide" (43 chars). Trimmed excerpt. Added: BreadcrumbList + Article + FAQPage JSON-LD schemas; Quick Answer box; 5-Q FAQ schema with well/septic specifics.
+
+8. **brandon-fl-flood-insurance** — Shortened title to "Flood Insurance in Brandon FL: Costs and Requirements" (53 chars). Trimmed excerpt. Added: BreadcrumbList + Article + FAQPage JSON-LD schemas; Quick Answer box; 5-Q FAQ schema with FEMA zone and NFIP specifics.
+
+9. **sell-home-fast-winter-haven** — Shortened title to "Sell Home Fast in Winter Haven FL: 2026 Guide" (45 chars). Trimmed excerpt. Added: BreadcrumbList + Article + FAQPage JSON-LD schemas; Quick Answer box; 5-Q FAQ schema with lakefront specifics.
+
+10. **sell-home-fast-wesley-chapel** — Shortened title to "Sell Home Fast in Wesley Chapel FL: 2026 Guide" (46 chars). Trimmed excerpt. Added: BreadcrumbList + Article + FAQPage JSON-LD schemas; Quick Answer box; 5-Q FAQ schema with new construction competition specifics.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** TBD — pushed to `origin/main`
