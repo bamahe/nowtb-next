@@ -3487,3 +3487,33 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** 28d9109 — pushed to `origin/main`
+
+---
+
+## Batch 105 — 2026-11-14
+
+**Posts improved (10 total):**
+
+1. **valrico-new-construction-communities-2026** — metaTitle: "Valrico FL New Construction Communities 2026: Builder Guide" (59 chars). Added: metaDescription (135 chars); h1 "Valrico FL New Construction Communities: 2026 Builder's Guide"; BreadcrumbList + Article + FAQPage JSON-LD schemas; Quick Answer box covering builder names, pricing range $380K-$700K+, ZIP codes 33594/33596. 5-Q FAQ schema.
+
+2. **valrico-fl-flood-zones** — metaTitle confirmed 48 chars. Added: metaDescription (155 chars); h1 covering FEMA maps, insurance costs, verification steps; BreadcrumbList + Article + FAQPage JSON-LD schemas; Quick Answer box. 5-Q FAQ schema covering Zone X vs Zone AE, NFIP costs, how to verify address.
+
+3. **valrico-55-plus-communities** — metaTitle confirmed 50 chars. Added: metaDescription (162 chars); h1 "Valrico FL 55+ Communities: Active Adult Living Near Tampa in 2026"; BreadcrumbList + Article + FAQPage JSON-LD schemas; Quick Answer box. 5-Q FAQ schema covering HOPA rules, HOA fees, healthcare access.
+
+4. **va-home-loans-tampa-bay-guide-2026** — metaTitle shortened from 76 to 53 chars: "VA Home Loans Tampa Bay 2026: Zero Down, No PMI Guide". Added: metaDescription (150 chars); h1 "VA Home Loans in Tampa Bay 2026: Complete Veterans Buyer's Guide"; BreadcrumbList + Article + FAQPage JSON-LD schemas; Quick Answer box mentioning MRP designation. 5-Q FAQ schema covering loan limits, all 8 counties, MacDill AFB neighborhoods, zero down, surviving spouse eligibility.
+
+5. **thonotosassa-homes-for-sale-guide** — metaTitle confirmed 50 chars. Added: metaDescription (162 chars); h1 "Thonotosassa FL Homes for Sale: What Every Buyer Needs to Know in 2026"; BreadcrumbList + Article + FAQPage JSON-LD schemas; Quick Answer box covering rural acreage, ZIP 33592, price range $350K-$2M+. 5-Q FAQ schema.
+
+6. **guide-to-living-in-lakeland-fl** — metaTitle updated to "Living in Lakeland FL: Complete Resident Guide 2026" (51 chars). Added: metaDescription (150 chars); h1 "The Complete Guide to Living in Lakeland FL in 2026"; BreadcrumbList + Article + FAQPage JSON-LD schemas; Quick Answer box covering Polk County, $280K-$350K prices, I-4 access. 5-Q FAQ schema.
+
+7. **guide-to-living-in-new-port-richey-fl** — metaTitle updated to "Living in New Port Richey FL: Resident Guide 2026" (49 chars). Added: metaDescription (157 chars); h1 "The Complete Guide to Living in New Port Richey FL in 2026"; BreadcrumbList + Article + FAQPage JSON-LD schemas; Quick Answer box covering Pasco County, $220K-$380K prices, Cotee River downtown. 5-Q FAQ schema.
+
+8. **guide-to-living-in-odessa-fl** — metaTitle updated to "Living in Odessa FL: Complete Resident Guide 2026" (49 chars). Added: metaDescription (157 chars); h1 "The Complete Guide to Living in Odessa FL in 2026"; BreadcrumbList + Article + FAQPage JSON-LD schemas; Quick Answer box covering Starkey Ranch, Asturia, $400K-$1.5M prices, 15-20 mi from Tampa. 5-Q FAQ schema.
+
+9. **guide-to-living-in-trinity-fl** — metaTitle updated to "Living in Trinity FL: Complete Resident Guide 2026" (50 chars). Added: metaDescription (157 chars); h1 "The Complete Guide to Living in Trinity FL in 2026"; BreadcrumbList + Article + FAQPage JSON-LD schemas; Quick Answer box covering Fox Wood, Trinity Oaks, J.W. Mitchell HS, $320K-$900K prices. 5-Q FAQ schema.
+
+10. **guide-to-living-in-pinellas-park-fl** — metaTitle updated to "Living in Pinellas Park FL: Complete Guide 2026" (47 chars). Added: metaDescription (157 chars); h1 "The Complete Guide to Living in Pinellas Park FL in 2026"; BreadcrumbList + Article + FAQPage JSON-LD schemas; Quick Answer box covering $280K-$450K prices, central Pinellas location. 5-Q FAQ schema.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** 1801ace — pushed to `origin/main`
