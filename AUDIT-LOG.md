@@ -3517,3 +3517,33 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** 1801ace — pushed to `origin/main`
+
+---
+
+## Batch 106 — 2026-11-15
+
+**Posts improved (10 total):**
+
+1. **gibsonton-fl-schools-guide** — Added metaTitle "Gibsonton FL Schools Guide: East Bay HS and Zone 2026" (53 chars). Added: BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-15. Already had metaDescription (156 chars), h1, FAQPage schema.
+
+2. **gibsonton-fl-commute-guide** — Added metaTitle "Gibsonton FL Commute Guide: Drive Times 2026" (44 chars). Added: BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-15. Already had metaDescription (163 chars), h1, FAQPage schema.
+
+3. **is-gibsonton-fl-good-place-to-live** — Added metaTitle "Is Gibsonton FL a Good Place to Live? 2026 Review" (49 chars). Added: metaDescription (133 chars); h1 "Is Gibsonton FL a Good Place to Live? Honest Pros and Cons from a Local Agent"; BreadcrumbList + Article JSON-LD schemas; Quick Answer box.
+
+4. **gibsonton-fl-new-construction** — Added metaTitle "New Construction Near Gibsonton FL 33534: 2026 Guide" (52 chars). Fixed metaDescription to 155 chars. Added: BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-15.
+
+5. **gibsonton-fl-investment-property** — Added metaTitle "Gibsonton FL Investment Property: Rentals and ROI 2026" (54 chars). Added: metaDescription (154 chars); h1 "Investing in Gibsonton FL Real Estate: Rental Properties and ROI in 2026"; BreadcrumbList + Article JSON-LD schemas; Quick Answer box.
+
+6. **gibsonton-fl-real-estate-guide** — Added metaTitle "Gibsonton FL Real Estate Guide 2026: Buyer and Market" (53 chars). Fixed metaDescription to 154 chars. Added: BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-15.
+
+7. **lutz-fl-commute-guide** — Added metaTitle "Lutz FL Commute Guide: Drive Times to Tampa 2026" (48 chars). Added: metaDescription (153 chars); h1 "Lutz FL Commute Guide: Drive Times, Routes, and Rush Hour Reality in 2026"; BreadcrumbList + Article JSON-LD schemas; Quick Answer box.
+
+8. **lutz-fl-new-construction** — Added metaTitle "New Construction Homes in Lutz FL: 2026 Community Guide" (55 chars). Added: metaDescription (157 chars); h1 "New Construction Homes in Lutz FL: What Buyers Need to Know in 2026"; BreadcrumbList + Article JSON-LD schemas.
+
+9. **lutz-fl-real-estate-guide** — Added metaTitle "Lutz FL Real Estate Guide 2026: Prices and Buyer Data" (53 chars). Added: metaDescription (156 chars); h1 "Lutz FL Real Estate: Complete Buyer and Seller Guide for 2026"; BreadcrumbList + Article JSON-LD schemas.
+
+10. **sun-city-center-fl-schools-guide** — Added metaTitle "Sun City Center FL Schools Guide: Families and Zones 2026" (57 chars). Added: metaDescription (161 chars); h1 "Sun City Center FL Schools Guide: What Families and Investors Need to Know"; BreadcrumbList + Article JSON-LD schemas.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** TBD — pushed to `origin/main`
