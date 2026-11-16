@@ -3547,3 +3547,34 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** TBD — pushed to `origin/main`
+
+---
+
+## Batch 107 — 2026-11-16
+
+**Posts improved (10 total):**
+
+1. **sun-city-center-fl-commute-guide** — Added metaTitle "Sun City Center FL Commute Guide: Drive Times 2026" (50 chars). Added: metaDescription (151 chars); h1 "Sun City Center FL Commute Guide: Drive Times, Routes, and What Commuters Need to Know in 2026"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-16. Already had FAQPage schema.
+
+2. **is-sun-city-center-fl-good-place-to-live** — Added metaTitle "Is Sun City Center FL a Good Place to Live? 2026" (48 chars). Added: metaDescription (150 chars); h1 "Is Sun City Center FL a Good Place to Live? Honest Pros and Cons from a Local Agent"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-16.
+
+3. **sun-city-center-fl-real-estate-guide** — Added metaTitle "Sun City Center FL Real Estate Guide 2026: Prices" (49 chars). Added: metaDescription (153 chars); h1 "Sun City Center FL Real Estate: Complete Buyer and Seller Guide for 2026"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-16.
+
+4. **sun-city-center-fl-investment-property** — Added metaTitle "Sun City Center FL Investment Property: ROI 2026" (48 chars). Added: metaDescription (150 chars); h1 "Investing in Sun City Center FL Real Estate: Rental Properties and ROI in 2026"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-16.
+
+5. **temple-terrace-fl-schools-guide** — Added metaTitle "Temple Terrace FL Schools Guide: Ratings and Zones 2026" (55 chars). Added: metaDescription (144 chars); h1 "Temple Terrace FL Schools Guide: School Zones, Ratings, and What Buyers Need to Know"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-16.
+
+6. **temple-terrace-fl-commute-guide** — Added metaTitle "Temple Terrace FL Commute Guide: Drive Times 2026" (49 chars). Added: metaDescription (149 chars); h1 "Temple Terrace FL Commute Guide: Drive Times, Routes, and Rush Hour Reality in 2026"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-16.
+
+7. **is-temple-terrace-fl-good-place-to-live** — Added metaTitle "Is Temple Terrace FL a Good Place to Live? 2026" (47 chars). Added: metaDescription (151 chars); h1 "Is Temple Terrace FL a Good Place to Live? Honest Pros and Cons from a Local Agent"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-16.
+
+8. **town-n-country-fl-schools-guide** — Added metaTitle "Town N Country FL Schools Guide: Ratings and Zones 2026" (55 chars). Added: metaDescription (149 chars); h1 "Town 'n' Country FL Schools Guide: School Zones, Ratings, and What Buyers Need to Know"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-16.
+
+9. **town-n-country-fl-commute-guide** — Added metaTitle "Town N Country FL Commute Guide: Drive Times 2026" (49 chars). Added: metaDescription (150 chars); h1 "Town 'n' Country FL Commute Guide: Drive Times, Routes, and Airport Access in 2026"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-16.
+
+10. **is-town-n-country-fl-good-place-to-live** — Added metaTitle "Is Town N Country FL a Good Place to Live? 2026" (47 chars). Added: metaDescription (142 chars); h1 "Is Town 'n' Country FL a Good Place to Live? Honest Pros and Cons from a Local Agent"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-16.
+
+**Build:** Passed (Next.js build, all 559 routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** TBD — pushed to `origin/main`
+
