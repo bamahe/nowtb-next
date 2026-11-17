@@ -4,6 +4,35 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## Batch 108 — 2026-11-17
+
+**Posts improved (10 total):**
+
+1. **how-to-check-permit-history-hillsborough-county** — metaTitle: "How to Check Permit History in Hillsborough County FL" (53 chars). Added: metaDescription (153 chars); h1 "How to Check Permit History for Any Hillsborough County FL Home"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-17.
+
+2. **how-to-find-cdd-fees-florida-home** — metaTitle: "How to Find CDD Fees on a Florida Home: 2026 Guide" (50 chars). Added: metaDescription (160 chars); h1 "How to Find CDD Fees Before Buying a Florida Home: A Step-by-Step Guide"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-17.
+
+3. **buyer-due-diligence-checklist-tampa-bay** — metaTitle: "Buyer Due Diligence Checklist for Tampa Bay Homes 2026" (54 chars). Added: metaDescription (146 chars); h1 "Tampa Bay Home Buyer Due Diligence Checklist: Everything to Verify Before You Close"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-17.
+
+4. **buying-home-with-solar-panels-florida** — metaTitle: "Buying a Home With Solar Panels in Florida: 2026 Guide" (54 chars). Added: metaDescription (147 chars); h1 "Buying a Florida Home With Solar Panels: What Every Buyer Needs to Know"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-17.
+
+5. **selling-home-with-solar-panels-florida** — metaTitle: "Selling Your Florida Home With Solar Panels: 2026 Guide" (55 chars). Added: metaDescription (142 chars); h1 "Selling a Florida Home With Solar Panels: What to Disclose and How to Maximize Value"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-17.
+
+6. **westchase-home-valuation-guide** — metaTitle: "Westchase FL Home Valuation Guide: What Drives Value 2026" (57 chars). Added: metaDescription (150 chars); h1 "Westchase FL Home Valuation: What Your Home Is Really Worth in 2026"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-17.
+
+7. **solar-lease-transfer-florida-selling** — Added h1 "Solar Lease Transfer When Selling a Florida Home: A Step-by-Step Guide"; updatedAt 2026-11-17. Already had metaTitle (58 chars), metaDescription (166 chars), BreadcrumbList + Article schemas in content.
+
+8. **temple-terrace-fl-real-estate-guide** — Added h1 "Temple Terrace FL Real Estate Guide 2026: Prices, Neighborhoods and Market Trends"; fixed metaDescription to 141 chars; updatedAt 2026-11-17. Already had metaTitle (64 chars), BreadcrumbList + Article schemas in content.
+
+9. **town-n-country-fl-real-estate-guide** — metaTitle: "Town N Country FL Real Estate Guide 2026: Prices" (48 chars). Added: metaDescription (155 chars); h1 "Town 'n' Country FL Real Estate: Complete Buyer and Seller Guide for 2026"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-17.
+
+10. **town-n-country-fl-investment-property** — metaTitle: "Town N Country FL Investment Property: ROI 2026" (47 chars). Added: metaDescription (147 chars); h1 "Investing in Town 'n' Country FL Real Estate: Rental Properties and ROI in 2026"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-17.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+---
+
 ## 2026-10-29 (Batch 87 — San Antonio FL x4 + Venice FL x1 + Brooksville FL x1 + Dover/Plant City x1 + East Lake FL x3)
 
 **Pages improved: 10**
