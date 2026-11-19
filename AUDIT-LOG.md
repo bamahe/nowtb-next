@@ -4,6 +4,36 @@ Track completed pages here to avoid repeating work each day.
 
 ---
 
+## Batch 110 — 2026-11-19
+
+**Posts improved (10 total):**
+
+1. **valrico-vs-riverview-2026** — metaTitle: "Valrico vs Riverview FL: Which Is Better? 2026" (46 chars). Added: metaDescription (148 chars); h1 "Valrico vs Riverview FL: Full 2026 Comparison for Home Buyers"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-19. Already had FAQPage schema.
+
+2. **valrico-vs-brandon-2026** — metaTitle: "Valrico vs Brandon FL: Which Suburb Wins? 2026" (46 chars). Added: metaDescription (145 chars); h1 "Valrico vs Brandon FL: Which Tampa Suburb Is Right for You in 2026?"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-19. Already had FAQPage schema.
+
+3. **plant-city-fl-fha-va-homes** — metaTitle: "FHA and VA Homes in Plant City FL: 2026 Buyer Guide" (51 chars). Added: metaDescription (132 chars); h1 "Buying a Home in Plant City FL with FHA or VA Financing: 2026 Guide"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-19. Already had FAQPage schema.
+
+4. **dover-fl-fha-va-homes** — metaTitle: "FHA and VA Homes in Dover FL: Rural Acreage Loans 2026" (54 chars). Added: metaDescription (149 chars); h1 "Buying a Home in Dover FL with FHA, VA, or USDA Financing in 2026"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-19. Already had FAQPage schema.
+
+5. **brandon-fl-vs-tampa** — metaTitle: "Brandon FL vs Tampa: Which Is Right for You? 2026" (49 chars). Added: metaDescription (137 chars); h1 "Brandon FL vs Tampa: Side-by-Side Comparison for 2026 Buyers"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-19. Already had FAQPage schema.
+
+6. **thonotosassa-fl-vs-dover** — metaTitle: "Thonotosassa vs Dover FL: Rural Acreage Compared 2026" (53 chars). Added: metaDescription (151 chars); h1 "Thonotosassa FL vs Dover FL: Rural Acreage Comparison for 2026 Buyers"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-19. Already had FAQPage schema.
+
+7. **dover-fl-commute-guide** — metaTitle: "Dover FL Commute Guide: Drive Times to Tampa 2026" (49 chars). Added: metaDescription (145 chars); h1 "Dover FL Commute Guide: Drive Times, Routes, and Rush Hour Reality in 2026"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-19. Already had FAQPage schema.
+
+8. **best-neighborhoods-lithia** — metaTitle: "Best Neighborhoods in Lithia FL: 2026 Guide" (43 chars). Added: metaDescription (144 chars); h1 "Best Neighborhoods in Lithia FL: Where to Live in 2026"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-19. Fixed excerpt (was pulling raw QUICK ANSWER box text). Already had FAQPage schema.
+
+9. **riverview-fl-new-communities-2026** — metaTitle: "New Communities in Riverview FL: 2026 Development Guide" (55 chars). Added: metaDescription (145 chars); h1 "Newest Master-Planned Communities in Riverview FL in 2026"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-19. Already had FAQPage schema.
+
+10. **guide-to-living-in-clearwater-fl** — metaTitle: "Living in Clearwater FL: Complete Resident Guide 2026" (53 chars). Added: metaDescription (147 chars); h1 "The Complete Guide to Living in Clearwater FL in 2026"; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-19. Fixed excerpt (was missing space between "FL" and "Expert"). Already had FAQPage schema.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** 557a768 — pushed to `origin/main`
+
+---
+
 ## Batch 108 — 2026-11-17
 
 **Posts improved (10 total):**
