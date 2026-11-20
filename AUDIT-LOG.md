@@ -3667,3 +3667,33 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** 8e17ec9 — pushed to `origin/main`
+
+---
+
+## Batch 110 — 2026-11-20
+
+**Posts improved (10 total):**
+
+1. **guide-to-living-in-st-petersburg-fl** — metaTitle: "Living in St. Petersburg FL: Complete Guide 2026" (48 chars). Added: metaDescription (140 chars); h1 "The Complete Guide to Living in St. Petersburg FL in 2026"; updatedAt 2026-11-19; BreadcrumbList + Article + FAQPage JSON-LD schemas. 5-Q FAQ schema covering cost of living, best neighborhoods, job market, family suitability, housing market.
+
+2. **ultimate-tampa-bay-relocation-guide** — metaTitle: "Tampa Bay Relocation Guide 2026: What You Need to Know" (54 chars). Added: metaDescription (131 chars); h1 "The Complete Tampa Bay Relocation Guide for 2026"; BreadcrumbList + Article + FAQPage JSON-LD schemas. 5-Q FAQ schema.
+
+3. **brandon-vs-riverview-vs-valrico** — metaTitle: "Brandon vs Riverview vs Valrico FL: Where Should You Buy?" (57 chars). Added: metaDescription (140 chars); h1 "Brandon FL vs Riverview vs Valrico: Side-by-Side Buyer Comparison 2026"; BreadcrumbList + Article + FAQPage JSON-LD schemas. 4-Q FAQ schema.
+
+4. **largo-fl-schools-guide** — metaTitle: "Largo FL Schools Guide: Ratings and Zones 2026" (46 chars). Added: metaDescription (137 chars); h1 "Largo FL Schools Guide: School Zones, Ratings, and What Families Need to Know"; BreadcrumbList + Article + FAQPage JSON-LD schemas. 4-Q FAQ schema.
+
+5. **cost-of-living-largo-fl** — metaTitle: "Cost of Living in Largo FL: 2026 Breakdown" (42 chars). Added: metaDescription (131 chars); h1 "Cost of Living in Largo FL: What to Expect in 2026"; BreadcrumbList + Article + FAQPage JSON-LD schemas. 4-Q FAQ schema covering affordability, property taxes, insurance, Clearwater comparison.
+
+6. **things-to-do-largo-fl** — metaTitle: "Things to Do in Largo FL: Local Guide 2026" (42 chars). Added: metaDescription (136 chars); h1 "Things to Do in Largo FL: A Local's Complete Guide for 2026"; BreadcrumbList + Article + FAQPage JSON-LD schemas. 4-Q FAQ schema.
+
+7. **buying-home-largo-guide** — metaTitle: "Buying a Home in Largo FL: Complete Guide 2026" (46 chars). Added: metaDescription (148 chars); h1 "Complete Guide to Buying a Home in Largo FL in 2026"; BreadcrumbList + Article + FAQPage JSON-LD schemas. 4-Q FAQ schema covering average prices, market conditions, flood insurance.
+
+8. **selling-home-largo-fl** — metaTitle: "Selling Your Home in Largo FL: Complete Guide 2026" (50 chars). Added: metaDescription (147 chars); h1 "Selling Your Home in Largo FL: What You Need to Know in 2026"; BreadcrumbList + Article + FAQPage JSON-LD schemas. 4-Q FAQ schema.
+
+9. **largo-homes-under-400k** — metaTitle: "Largo FL Homes for Sale Under $400K: 2026 Guide" (47 chars). Added: metaDescription (149 chars); h1 "Largo FL Homes for Sale Under $400,000: What Buyers Need to Know in 2026"; BreadcrumbList + Article + FAQPage JSON-LD schemas. 4-Q FAQ schema.
+
+10. **largo-vs-clearwater-vs-seminole** — metaTitle: "Largo vs Clearwater vs Seminole FL: 2026 Buyer Guide" (52 chars). Added: metaDescription (152 chars); h1 "Largo vs Clearwater vs Seminole FL: Where Should You Buy in 2026?"; BreadcrumbList + Article + FAQPage JSON-LD schemas. 4-Q FAQ schema.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** e6cbb19 — pushed to `origin/main`
