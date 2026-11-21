@@ -3697,3 +3697,33 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** e6cbb19 — pushed to `origin/main`
+
+---
+
+## Batch 111 — 2026-11-21
+
+**Posts improved (10 total):**
+
+1. **florida-homestead-exemption-guide** — metaTitle: "Florida Homestead Exemption Guide: Save on Property Taxes" (57 chars). Added: metaDescription (157 chars); h1 "Florida Homestead Exemption: What Every Florida Homeowner Needs to Know"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-21. Existing Article + FAQPage schemas preserved.
+
+2. **55-plus-communities-clearwater-fl** — metaTitle: "55+ Communities in Clearwater FL: 2026 Active Adult Guide" (57 chars). Added: metaDescription (153 chars); h1 "Best 55+ Communities in Clearwater FL: What Active Adults Need to Know"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-21. Existing FAQPage schema preserved.
+
+3. **55-plus-communities-largo-fl** — metaTitle: "55+ Communities in Largo FL: 2026 Active Adult Guide" (52 chars). Added: metaDescription (148 chars); h1 "Best 55+ Communities in Largo FL: What Active Adults Need to Know"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-21. Existing FAQPage schema preserved.
+
+4. **55-plus-communities-sarasota-fl** — metaTitle: "55+ Communities in Sarasota FL: 2026 Active Adult Guide" (55 chars). Added: metaDescription (152 chars); h1 "Best 55+ Communities in Sarasota FL: What Active Adults Need to Know"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-21. Existing FAQPage schema preserved.
+
+5. **55-plus-communities-venice-fl** — metaTitle: "55+ Communities in Venice FL: 2026 Active Adult Guide" (53 chars). Added: metaDescription (150 chars); h1 "Best 55+ Communities in Venice FL: What Active Adults Need to Know"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-21. Existing FAQPage schema preserved.
+
+6. **55-plus-communities-lakeland-fl** — metaTitle: "55+ Communities in Lakeland FL: 2026 Active Adult Guide" (55 chars). Added: metaDescription (152 chars); h1 "Best 55+ Communities in Lakeland FL: What Active Adults Need to Know"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-21. Existing FAQPage schema preserved.
+
+7. **55-plus-communities-spring-hill-fl** — metaTitle: "55+ Communities in Spring Hill FL: 2026 Active Adult Guide" (58 chars). Added: metaDescription (154 chars); h1 "Best 55+ Communities in Spring Hill FL: What Active Adults Need to Know"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-21. Existing FAQPage schema preserved.
+
+8. **55-plus-communities-apollo-beach-ruskin** — metaTitle: "55+ Communities Apollo Beach and Ruskin FL: 2026 Guide" (54 chars). Added: metaDescription (144 chars); h1 "55+ Communities Near Apollo Beach and Ruskin FL: Verified Age-Restricted Guide"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-21. Existing FAQPage schema preserved.
+
+9. **riverview-homes-under-400k** — metaTitle: "Riverview FL Homes for Sale Under $400K: 2026 Guide" (51 chars). Added: metaDescription (140 chars); h1 "Riverview FL Homes Under $400,000: Where to Buy and What to Expect in 2026"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-21. Existing FAQPage schema preserved.
+
+10. **valrico-homes-under-500k** — metaTitle: "Valrico FL Homes for Sale Under $500K: 2026 Guide" (49 chars). Added: metaDescription (126 chars); h1 "Valrico FL Homes Under $500,000: Where to Buy and What to Expect in 2026"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-21. Existing FAQPage schema preserved.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** 37510c5 — pushed to `origin/main`
