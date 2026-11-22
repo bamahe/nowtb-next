@@ -3727,3 +3727,32 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** 37510c5 — pushed to `origin/main`
+
+---
+
+## Batch 112 — 2026-11-22
+
+**Posts improved (10 total):**
+
+1. **thonotosassa-fl-commute-guide** — metaTitle: "Thonotosassa FL Commute Guide: Drive Times 2026" (47 chars). Added: metaDescription (152 chars); h1 "Thonotosassa FL Commute Guide: Drive Times, Routes, and What to Expect in 2026"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-22. Existing FAQPage schema preserved.
+
+2. **pinellas-county-flood-zones** — metaTitle: "Pinellas County Flood Zones: Buyer's Guide 2026" (47 chars). Added: metaDescription (149 chars); h1 "Pinellas County Flood Zones: What Every Buyer and Homeowner Needs to Know"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-22. Existing FAQPage schema preserved.
+
+3. **tampa-bay-beaches-relocation-guide** — metaTitle: "Tampa Bay Beaches for New Residents: 2026 Guide" (47 chars). Added: metaDescription (152 chars); h1 "Tampa Bay Beaches for New Residents: What You Need to Know Before You Move"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-22. Existing FAQPage schema preserved.
+
+4. **pool-homes-brandon-fl** — metaTitle: "Pool Homes in Brandon FL: Costs and What to Know 2026" (53 chars). Added: metaDescription (156 chars); h1 "Pool Homes in Brandon FL: Costs, Maintenance, and What Every Buyer Needs to Know"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-22. Existing FAQPage schema preserved.
+
+5. **history-of-largo-fl** — metaTitle: "History of Largo FL: From Citrus Groves to City" (47 chars). Added: metaDescription (158 chars); h1 "History of Largo FL: From Citrus Groves to Pinellas County's Third-Largest City"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-22. Existing FAQPage schema preserved.
+
+6. **best-neighborhoods-pinellas-park-fl** — metaTitle: "Best Neighborhoods in Pinellas Park FL: 2026 Guide" (50 chars). Added: metaDescription (158 chars); h1 "Best Neighborhoods in Pinellas Park FL: Where to Live in 2026"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-22. Existing FAQPage schema preserved.
+
+7. **moving-to-florida-with-pets** — metaTitle: "Moving to Florida with Pets: Complete Guide 2026" (48 chars). Added: metaDescription (151 chars); h1 "Moving to Florida with Pets: What You Need to Know Before the Move"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-22. Existing FAQPage schema preserved.
+
+8. **new-construction-lakeland-guide** — metaTitle: "New Construction Homes in Lakeland FL: 2026 Guide" (49 chars). Added: metaDescription (158 chars); h1 "New Construction Homes in Lakeland FL: Builders, Communities, and What to Expect"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-22. Existing FAQPage schema preserved.
+
+9. **luxury-homes-lakeland-guide** — metaTitle: "Luxury Homes in Lakeland FL: What Your Money Gets You" (53 chars). Added: metaDescription (162 chars); h1 "Luxury Living in Lakeland FL: What Your Money Gets You in 2026"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-22. Existing FAQPage schema preserved.
+
+10. **waterfront-homes-holiday-guide** — metaTitle: "Waterfront Homes in Holiday FL: Pricing and Flood Zones" (55 chars). Added: metaDescription (162 chars); h1 "Waterfront Homes in Holiday FL: What Every Buyer Needs to Know About Pricing and Flood Zones"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-22. Existing FAQPage schema preserved.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
