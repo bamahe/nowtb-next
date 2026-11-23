@@ -3756,3 +3756,33 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+---
+
+## Batch 113 — 2026-11-23
+
+**Posts improved (10 total):**
+
+1. **buy-before-you-sell-brandon** — metaTitle: "How to Buy Before You Sell in Brandon FL: 5 Options" (51 chars). Added: metaDescription (167 chars); h1 "How to Buy a Home in Brandon FL Before You Sell: 5 Real Strategies"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-22. Existing FAQPage schema preserved.
+
+2. **buying-condo-indian-rocks-beach** — metaTitle: "Buying a Condo in Indian Rocks Beach FL: 2026 Guide" (51 chars). Added: metaDescription (146 chars); h1 "Buying a Condo in Indian Rocks Beach FL: What Every Buyer Must Check First"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-22. Existing FAQPage schema preserved.
+
+3. **florida-property-tax-amendment-2026** — metaTitle: "Florida Property Tax Amendment 3: 2026 Voter Guide" (50 chars). Added: metaDescription (147 chars); h1 "Florida Property Tax Amendment 3: What Every Homeowner Needs to Know Before November 2026"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-22. Existing FAQPage schema preserved.
+
+4. **sell-or-rent-my-house-tampa-bay** — metaTitle: "Should I Sell or Rent My House in Tampa Bay? 2026" (49 chars). Added: metaDescription (148 chars); h1 "Should I Sell or Rent My House in Tampa Bay? An Honest Answer for 2026"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-22. Existing FAQPage schema preserved.
+
+5. **selling-house-with-past-sinkhole-claim-florida** — metaTitle: "Selling a Florida House With a Sinkhole Claim: Guide" (52 chars). Added: metaDescription (147 chars); h1 "Selling a Florida House With a Past Sinkhole Claim: What You Must Disclose"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-22. Existing FAQPage schema preserved.
+
+6. **va-loan-duplex-triplex-tampa** — metaTitle: "VA Loan for a Duplex or Triplex in Tampa FL: 2026 Guide" (55 chars). Added: metaDescription (145 chars); h1 "Using a VA Loan to Buy a Duplex or Triplex in Tampa FL: How It Works"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-22. Existing FAQPage schema preserved.
+
+7. **what-fails-florida-4-point-inspection** — metaTitle: "What Fails a Florida 4-Point Inspection? Complete Guide" (55 chars). Added: metaDescription (145 chars); h1 "What Fails a Florida 4-Point Inspection? Everything Insurers Look At"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-22. Existing FAQPage schema preserved.
+
+8. **selmon-expressway-construction-brandon-commuters** — metaTitle: "Selmon Expressway Construction 2026-2030: Brandon Guide" (55 chars). Added: metaDescription (155 chars); h1 "Selmon Expressway Construction 2026 to 2030: What Brandon and Riverview Commuters Need to Know"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; updatedAt 2026-11-22. Existing FAQPage schema preserved.
+
+9. **aviary-at-rutland-ranch-parrish-builder-incentives** — metaTitle: "Aviary at Rutland Ranch Incentives: Parrish FL 2026" (51 chars). Added: metaDescription (149 chars); h1 "Aviary at Rutland Ranch: Builder Incentives and New Homes in Parrish FL (November 2026)"; H1 injected into content; updatedAt 2026-11-22. Existing BreadcrumbList + Article JSON-LD schemas preserved.
+
+10. **where-did-the-word-penthouse-come-from** — metaTitle already set "Where Did the Word Penthouse Come From? (It Was a Shed)" (55 chars). Added: h1 "Where Did the Word Penthouse Come From? It Started as a Lean-To Shed"; H1 injected into content; updatedAt 2026-11-22. Existing BreadcrumbList + Article JSON-LD schemas preserved.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** a2b5239 — pushed to `origin/main`
