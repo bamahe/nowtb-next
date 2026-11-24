@@ -3786,3 +3786,33 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** a2b5239 — pushed to `origin/main`
+
+---
+
+## Batch 114 — 2026-11-24
+
+**Posts improved (10 total):**
+
+1. **valrico-new-construction-communities-2026** — metaTitle: "Valrico FL New Construction Communities 2026: Builder Guide" (57 chars). Added: h1 "Valrico FL New Construction Communities: 2026 Complete Builder's Guide"; H1 injected into content; BreadcrumbList + Article + FAQPage JSON-LD schemas; updatedAt 2026-11-24.
+
+2. **valrico-fl-schools-guide-2026** — metaTitle: "Valrico FL Schools Guide 2026: Bloomingdale High Zone & Ratings" (61 chars). Added: h1 "Valrico FL Schools Guide 2026: Elementary, Middle, and High School Zones"; H1 injected into content; BreadcrumbList + Article + FAQPage JSON-LD schemas; updatedAt 2026-11-24.
+
+3. **apollo-beach-fl-waterfront-guide** — metaTitle: "Apollo Beach FL Waterfront Homes Guide 2026: Canals & Docks" (59 chars). Added: h1 "Apollo Beach FL Waterfront Homes: What Buyers Need to Know About Canals and Docks in 2026"; H1 injected into content; BreadcrumbList + Article + FAQPage JSON-LD schemas; updatedAt 2026-11-24.
+
+4. **va-home-loans-tampa-bay-guide-2026** — metaTitle: "VA Home Loans Tampa Bay 2026: Zero Down, No PMI Guide" (51 chars). Added: BreadcrumbList + Article + FAQPage JSON-LD schemas; updatedAt 2026-11-24. Existing h1 preserved.
+
+5. **things-to-do-valrico-fl** — metaTitle: "Things to Do in Valrico FL 2026: Parks, Dining & More" (52 chars). Added: h1 "Things to Do in Valrico FL in 2026: Parks, Restaurants, and Family Activities"; H1 injected into content; BreadcrumbList + Article + FAQPage JSON-LD schemas; updatedAt 2026-11-24.
+
+6. **guide-to-living-in-lakeland-fl** — metaTitle: "Living in Lakeland FL: Complete Resident Guide 2026" (50 chars). Added: BreadcrumbList + Article + FAQPage JSON-LD schemas; updatedAt 2026-11-24. Existing h1 preserved.
+
+7. **fishhawk-ranch-pool-homes** — metaTitle: "FishHawk Ranch Pool Homes 2026: Prices & What to Know" (52 chars). Added: h1 "FishHawk Ranch Pool Homes in 2026: Pricing, HOA Rules, and What Every Buyer Needs to Know"; H1 injected into content; BreadcrumbList + Article + FAQPage JSON-LD schemas; updatedAt 2026-11-24.
+
+8. **seffner-fl-homes-under-350k** — metaTitle: "Seffner FL Homes Under $350K: Best Neighborhoods 2026" (52 chars). Added: h1 "Seffner FL Homes Under $350,000: Best Neighborhoods and What to Expect in 2026"; H1 injected into content; BreadcrumbList + Article + FAQPage JSON-LD schemas; updatedAt 2026-11-24.
+
+9. **thonotosassa-homes-for-sale-guide** — metaTitle: "Thonotosassa FL Homes for Sale: Buyer's Guide 2026" (49 chars). Added: BreadcrumbList + Article + FAQPage JSON-LD schemas; updatedAt 2026-11-24. Existing h1 preserved.
+
+10. **valrico-fl-flood-zones** — metaTitle: "Valrico FL Flood Zones: What Buyers Need to Know" (47 chars). Added: BreadcrumbList + Article + FAQPage JSON-LD schemas; updatedAt 2026-11-24. Existing h1 preserved.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** e824f9f — pushed to `origin/main`
