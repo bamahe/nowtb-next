@@ -3816,3 +3816,32 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** e824f9f — pushed to `origin/main`
+
+---
+
+## Batch 115 — 2026-11-25
+
+**Posts improved (10 total):**
+
+1. **best-time-to-move-to-tampa-bay** — metaTitle: "Best Time to Move to Tampa Bay (2026 Guide)" (43 chars). H1 "Best Time to Move to Tampa Bay: Month-by-Month Guide" injected into content; FAQPage (5 Q&As) + BreadcrumbList (Home > Blog) + Article JSON-LD schemas added/updated; updatedAt 2026-11-25.
+
+2. **how-to-check-permit-history-hillsborough-county** — metaTitle: "How to Check Permit History in Hillsborough County FL" (53 chars). H1 "How to Check Permit History for Any Hillsborough County FL Home" injected into content; FAQPage (5 Q&As) + BreadcrumbList (Home > Blog) + Article JSON-LD schemas refreshed; dateModified updated to 2026-11-25.
+
+3. **how-to-find-cdd-fees-florida-home** — metaTitle: "How to Find CDD Fees on a Florida Home: 2026 Guide" (50 chars). H1 "How to Find CDD Fees Before Buying a Florida Home: A Step-by-Step Guide" injected into content; FAQPage (5 Q&As) + BreadcrumbList + Article JSON-LD schemas refreshed; updatedAt 2026-11-25.
+
+4. **solar-panel-liens-florida-home-buying** — metaTitle: "Solar Panel Liens in Florida: What Buyers Need to Know" (54 chars). H1 "Solar Panel Liens in Florida: How to Protect Yourself When Buying" injected; FAQPage (5 Q&As) + BreadcrumbList + Article schemas refreshed; updatedAt 2026-11-25.
+
+5. **buyer-due-diligence-checklist-tampa-bay** — metaTitle: "Buyer Due Diligence Checklist for Tampa Bay Homes 2026" (54 chars). H1 "Tampa Bay Home Buyer Due Diligence Checklist: Everything to Verify Before You Close" injected; FAQPage (3 Q&As) + BreadcrumbList + Article schemas refreshed; updatedAt 2026-11-25.
+
+6. **buying-home-with-solar-panels-florida** — metaTitle: "Buying a Home With Solar Panels in Florida: 2026 Guide" (54 chars). H1 "Buying a Florida Home With Solar Panels: What Every Buyer Needs to Know" injected; FAQPage (5 Q&As) + BreadcrumbList + Article schemas refreshed; updatedAt 2026-11-25.
+
+7. **selling-home-with-solar-panels-florida** — metaTitle: "Selling Your Florida Home With Solar Panels: 2026 Guide" (55 chars). H1 "Selling a Florida Home With Solar Panels: What to Disclose and How to Maximize Value" injected; FAQPage (4 Q&As) + BreadcrumbList + Article schemas refreshed; updatedAt 2026-11-25.
+
+8. **solar-lease-transfer-florida-selling** — metaTitle: "Solar Lease Transfer Florida: How to Sell Your Home (2026)" (58 chars). H1 "Solar Lease Transfer When Selling a Florida Home: A Step-by-Step Guide" injected; FAQPage (5 Q&As) + BreadcrumbList + Article schemas refreshed; updatedAt 2026-11-25.
+
+9. **westchase-home-valuation-guide** — metaTitle: "Westchase FL Home Valuation Guide: What Drives Value 2026" (57 chars). H1 "Westchase FL Home Valuation: What Your Home Is Really Worth in 2026" injected; FAQPage (3 Q&As) + BreadcrumbList (Home > Westchase) + Article schemas refreshed; updatedAt 2026-11-25.
+
+10. **gibsonton-fl-real-estate-guide** — metaTitle: "Gibsonton FL Real Estate Guide 2026: Buyer and Market" (53 chars). H1 "Gibsonton FL Real Estate: A Complete Buyer and Seller Guide (2026)" injected; FAQPage (5 Q&As) + BreadcrumbList (Home > Gibsonton) + Article schemas refreshed; updatedAt 2026-11-25.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
