@@ -3845,3 +3845,32 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+---
+
+## Batch 116 — 2026-11-26
+
+**Posts improved (10 total):**
+
+1. **valrico-fl-homes-with-acreage** — metaTitle: "Valrico FL Homes with Acreage: Land for Sale 2026" (49 chars, existing). Added: h1 "Valrico FL Homes with Acreage: What Buyers Need to Know About Rural Living Near Tampa"; H1 injected into content; updatedAt 2026-11-25.
+
+2. **thonotosassa-fl-schools-guide** — metaTitle: "Thonotosassa FL Schools Guide 2026: Ratings & Assignments" (57 chars, existing). Added: h1 "Thonotosassa FL Schools Guide: Where Your Kids Will Go and What to Expect in 2026"; H1 injected into content after existing schema scripts; updatedAt 2026-11-25.
+
+3. **trusted-auto-mechanic-tampa** — Added: metaTitle "Best Auto Mechanic Near Tampa Bay: Why I Trust Auto Rx" (54 chars); metaDescription (156 chars); h1 "Best Auto Mechanic Near Tampa Bay: Barrett Henry's Honest Recommendation"; H1 injected into content; updatedAt 2026-11-25.
+
+4. **tampa-dining-guide-locals-recommend** — Added: metaTitle "Where Tampa Locals Eat: Best Restaurants 2026 Guide" (50 chars); metaDescription (165 chars); h1 "Where Tampa Locals Actually Eat: The Real 2026 Dining Guide"; H1 injected into content; updatedAt 2026-11-25.
+
+5. **new-construction-holiday-guide** — Added: metaTitle "New Construction Homes in Holiday FL: 2026 Guide" (48 chars); metaDescription (163 chars); h1 "New Construction Homes in Holiday FL: Builders, Communities, and What to Expect"; H1 injected into content; updatedAt 2026-11-25.
+
+6. **luxury-homes-holiday-guide** — Added: metaTitle "Luxury Homes in Holiday FL: What Your Money Gets You" (51 chars); metaDescription (165 chars); h1 "Luxury Homes in Holiday FL: What Your Budget Gets You in 2026"; H1 injected into content; updatedAt 2026-11-25.
+
+7. **waterfront-homes-san-antonio-guide** — Added: metaTitle "Waterfront Homes in San Antonio FL: Pricing 2026" (47 chars); metaDescription (160 chars); h1 "Waterfront Homes in San Antonio FL: What Buyers Need to Know About Pricing and Flood Zones"; H1 injected into content; updatedAt 2026-11-25.
+
+8. **new-construction-san-antonio-guide** — Added: metaTitle "New Construction Homes in San Antonio FL: 2026 Guide" (51 chars); metaDescription (155 chars); h1 "New Construction Homes in San Antonio FL: Builders, Communities, and What to Expect"; H1 injected into content; updatedAt 2026-11-25.
+
+9. **waterfront-homes-dade-city-guide** — Added: metaTitle "Waterfront Homes in Dade City FL: Pricing and Flood Info" (56 chars); metaDescription (165 chars); h1 "Waterfront Homes in Dade City FL: What Buyers Need to Know About Pricing and Flood Zones"; H1 injected into content; updatedAt 2026-11-25.
+
+10. **new-construction-zephyrhills-guide** — Added: metaTitle "New Construction Homes in Zephyrhills FL: 2026 Guide" (52 chars); metaDescription (167 chars); h1 "New Construction Homes in Zephyrhills FL: Builders, Communities, and What to Expect"; H1 injected into content; updatedAt 2026-11-25.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
