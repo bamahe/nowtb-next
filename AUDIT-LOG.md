@@ -3874,3 +3874,33 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+
+---
+
+## Batch 117 — 2026-11-27
+
+**Posts improved (10 total):**
+
+1. **luxury-homes-san-antonio-guide** — metaTitle: "Luxury Homes in San Antonio FL: What Your Money Gets You" (56 chars). Added: metaDescription (140 chars); h1 "Luxury Homes in San Antonio FL: What Your Budget Gets You in 2026"; H1 injected into content; BreadcrumbList + Article JSON-LD schemas; fixed FAQPage schema with city-specific questions replacing template placeholders; updatedAt 2026-11-27.
+
+2. **new-construction-dade-city-guide** — metaTitle: "New Construction Homes in Dade City FL: 2026 Guide" (50 chars). Added: metaDescription (142 chars); h1 "New Construction Homes in Dade City FL: Builders, Communities, and What to Expect"; H1 injected; BreadcrumbList + Article schemas; fixed FAQPage; updatedAt 2026-11-27.
+
+3. **luxury-homes-dade-city-guide** — metaTitle: "Luxury Homes in Dade City FL: What Your Money Gets You" (54 chars). Added: metaDescription (143 chars); h1 "Luxury Homes in Dade City FL: What Your Budget Gets You in 2026"; H1 injected; BreadcrumbList + Article schemas; fixed FAQPage; updatedAt 2026-11-27.
+
+4. **waterfront-homes-zephyrhills-guide** — metaTitle: "Waterfront Homes in Zephyrhills FL: Pricing and Flood Zones" (59 chars). Added: metaDescription (151 chars); h1 "Waterfront Homes in Zephyrhills FL: What Buyers Need to Know About Pricing and Flood Zones"; H1 injected; BreadcrumbList + Article schemas; fixed FAQPage; updatedAt 2026-11-27.
+
+5. **luxury-homes-zephyrhills-guide** — metaTitle: "Luxury Homes in Zephyrhills FL: What Your Money Gets You" (56 chars). Added: metaDescription (150 chars); h1 "Luxury Homes in Zephyrhills FL: What Your Budget Gets You in 2026"; H1 injected; BreadcrumbList + Article schemas; fixed FAQPage; updatedAt 2026-11-27.
+
+6. **waterfront-homes-hudson-guide** — metaTitle: "Waterfront Homes in Hudson FL: Canals, Pricing & Flood Zones" (60 chars). Added: metaDescription (143 chars); h1 "Waterfront Homes in Hudson FL: What Buyers Need to Know About Canals, Pricing, and Flood Zones"; H1 injected; BreadcrumbList + Article schemas; fixed FAQPage; updatedAt 2026-11-27.
+
+7. **new-construction-hudson-guide** — metaTitle: "New Construction Homes in Hudson FL: 2026 Builder Guide" (55 chars). Added: metaDescription (147 chars); h1 "New Construction Homes in Hudson FL: Builders, Communities, and What to Expect"; H1 injected; BreadcrumbList + Article schemas; fixed FAQPage; updatedAt 2026-11-27.
+
+8. **luxury-homes-hudson-guide** — metaTitle: "Luxury Homes in Hudson FL: What Your Money Gets You" (51 chars). Added: metaDescription (149 chars); h1 "Luxury Homes in Hudson FL: What Your Budget Gets You in 2026"; H1 injected; BreadcrumbList + Article schemas; fixed FAQPage; updatedAt 2026-11-27.
+
+9. **waterfront-homes-port-richey-guide** — metaTitle: "Waterfront Homes in Port Richey FL: Pricing and Flood Zones" (59 chars). Added: metaDescription (148 chars); h1 "Waterfront Homes in Port Richey FL: What Buyers Need to Know About Pricing and Flood Zones"; H1 injected; BreadcrumbList + Article schemas; fixed FAQPage; updatedAt 2026-11-27.
+
+10. **new-construction-port-richey-guide** — metaTitle: "New Construction Homes in Port Richey FL: 2026 Guide" (52 chars). Added: metaDescription (144 chars); h1 "New Construction Homes in Port Richey FL: Builders, Communities, and What to Expect"; H1 injected; BreadcrumbList + Article schemas; fixed FAQPage; updatedAt 2026-11-27.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** 6247cba — pushed to `origin/main`
