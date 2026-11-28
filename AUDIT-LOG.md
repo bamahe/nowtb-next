@@ -3904,3 +3904,33 @@ All 10 Valrico spoke pages replaced boilerplate (~4,200 chars each) with topic-s
 **Build:** Passed (Next.js build, all routes pre-rendered successfully)
 **Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
 **Git commit:** 6247cba — pushed to `origin/main`
+
+---
+
+## Batch 118 — 2026-11-28
+
+**Posts improved (10 total):**
+
+1. **luxury-homes-port-richey-guide** — metaTitle: "Luxury Homes in Port Richey FL: What Your Money Gets You" (56 chars). Added: metaDescription (150 chars); h1 "Luxury Homes in Port Richey FL: What Your Budget Gets You in 2026"; H1 injected; BreadcrumbList + Article schemas; fixed FAQPage with city-specific questions; updatedAt 2026-11-28.
+
+2. **waterfront-homes-new-port-richey-guide** — metaTitle: "Waterfront Homes in New Port Richey FL: Pricing & Flood Zones" (61 chars). Added: metaDescription (156 chars); h1 "Waterfront Homes in New Port Richey FL: What Buyers Need to Know About Pricing and Flood Zones"; H1 injected; BreadcrumbList + Article schemas; fixed FAQPage; updatedAt 2026-11-28.
+
+3. **new-construction-new-port-richey-guide** — metaTitle: "New Construction Homes in New Port Richey FL: 2026 Guide" (56 chars). Added: metaDescription (156 chars); h1 "New Construction Homes in New Port Richey FL: Builders, Communities, and What to Expect"; H1 injected; BreadcrumbList + Article schemas; fixed FAQPage; updatedAt 2026-11-28.
+
+4. **luxury-homes-new-port-richey-guide** — metaTitle: "Luxury Homes in New Port Richey FL: What Your Money Gets You" (60 chars). Added: metaDescription (153 chars); h1 "Luxury Homes in New Port Richey FL: What Your Budget Gets You in 2026"; H1 injected; BreadcrumbList + Article schemas; fixed FAQPage; updatedAt 2026-11-28.
+
+5. **waterfront-homes-tarpon-springs-guide** — metaTitle: "Waterfront Homes in Tarpon Springs FL: Pricing 2026" (51 chars). Added: metaDescription (164 chars); h1 "Waterfront Homes in Tarpon Springs FL: What Buyers Need to Know About Pricing and Flood Zones"; H1 injected; BreadcrumbList + Article schemas; fixed FAQPage; updatedAt 2026-11-28.
+
+6. **new-construction-tarpon-springs-guide** — metaTitle: "New Construction Homes in Tarpon Springs FL: 2026 Guide" (55 chars). Added: metaDescription (155 chars); h1 "New Construction Homes in Tarpon Springs FL: Builders, Communities, and What to Expect"; H1 injected; BreadcrumbList + Article schemas; fixed FAQPage; updatedAt 2026-11-28.
+
+7. **luxury-homes-tarpon-springs-guide** — metaTitle: "Luxury Homes in Tarpon Springs FL: What Your Money Gets You" (59 chars). Added: metaDescription (148 chars); h1 "Luxury Homes in Tarpon Springs FL: What Your Budget Gets You in 2026"; H1 injected; BreadcrumbList + Article schemas; fixed FAQPage; updatedAt 2026-11-28.
+
+8. **spring-hill-fl-waterfront-homes** — metaTitle: "Spring Hill FL Waterfront Homes: Canal & River Listings 2026" (60 chars). Fixed metaDescription to 146 chars; h1 "Spring Hill FL Waterfront Homes: Canal and River Properties for Every Budget"; H1 injected; BreadcrumbList + Article schemas added (FAQPage preserved); updatedAt 2026-11-28.
+
+9. **sell-home-fast-spring-hill** — updatedAt refreshed to 2026-11-28. Existing metaTitle, metaDesc, H1, and schemas preserved.
+
+10. **sell-home-fast-tarpon-springs** — metaTitle: "Sell Your Home Fast in Tarpon Springs FL 2026 | Barrett Henry" (61 chars). Added: metaDescription (159 chars); h1 "Sell Your Tarpon Springs FL Home Fast: Pricing, Strategy, and What Local Sellers Need to Know"; H1 injected; BreadcrumbList + Article + FAQPage schemas added; updatedAt 2026-11-28.
+
+**Build:** Passed (Next.js build, all routes pre-rendered successfully)
+**Files changed:** `src/data/posts-export.json`, `AUDIT-LOG.md`
+**Git commit:** 5849ff2 — pushed to `origin/main`
